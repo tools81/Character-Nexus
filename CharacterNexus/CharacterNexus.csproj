@@ -21,15 +21,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AmazingTales\AmazingTales.csproj" />
-    <ProjectReference Include="..\AzureBlobStorage\AzureBlobStorage.csproj" />
-    <ProjectReference Include="..\EverydayHeroes\EverydayHeroes.csproj" />
-    <ProjectReference Include="..\GiJoe\GiJoe.csproj" />
-    <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
-    <ProjectReference Include="..\Starfinder\Starfinder.csproj" />
-    <ProjectReference Include="..\Transformers\Transformers.csproj" />
-    <ProjectReference Include="..\VampireTheMasquerade\VampireTheMasquerade.csproj" />
-    <ProjectReference Include="..\WerewolfTheApocalypse\WerewolfTheApocalypse.csproj" />
+    <ProjectReference Include="..\Ruleset.AmazingTales\Ruleset.AmazingTales.csproj" />
+    <ProjectReference Include="..\Storage.AzureBlobStorage\Storage.AzureBlobStorage.csproj" />
+    <ProjectReference Include="..\Ruleset.EverydayHeroes\Ruleset.EverydayHeroes.csproj" />
+    <ProjectReference Include="..\Ruleset.GiJoe\Ruleset.GiJoe.csproj" />
+    <ProjectReference Include="..\Utility\Utility.csproj" />
+    <ProjectReference Include="..\Ruleset.Starfinder\Ruleset.Starfinder.csproj" />
+    <ProjectReference Include="..\Ruleset.Transformers\Ruleset.Transformers.csproj" />
+    <ProjectReference Include="..\Ruleset.VampireTheMasquerade\Ruleset.VampireTheMasquerade.csproj" />
+    <ProjectReference Include="..\Ruleset.WerewolfTheApocalypse\Ruleset.WerewolfTheApocalypse.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

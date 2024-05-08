@@ -1,0 +1,486 @@
+{
+  "Archetypes": {
+    "Strong": {
+      "description": "You have trained your body for strength and explosive power. You hit hard, excelling in close combat. As a hero, you fight because others can't./r/nStrong heroes are dubale fighters who make high damage attacks. They specialize in melee attacks, whether they favor unarmed strikes or close combat weapons.'",
+      "hitdice": "1d10",
+      "hitpoints": 10,
+      "hitpointmodifier": "Constitution",
+      "Defense": "10",
+      "DefenseModifier": "Strength",
+      "ProficiencyBonus": [ 2, 2, 2, 2, 3, 3, 3, 3, 4, 4 ],
+      "DefenseBonus": [ 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ],
+      "Talents": [
+        [ "Reckless Attack" ],
+        [ "Power Attack" ]
+      ],
+      "Classes": {
+        "Brawler": {
+          "description": "",
+          "skillproficiencycount": 2,
+          "expertisecount": 1,
+          "proficiencies": [
+            {
+              "type": "SavingThrow",
+              "targets": [ "Strength", "Constitution" ]
+            },
+            {
+              "type": "Skill",
+              "targets": [ "Acrobatics", "Athletics", "Endurance", "Intimidation", "Mechanics", "Streetwise" ]
+            },
+            {
+              "type": "Equipment",
+              "targets": [ "Basic", "Improvised" ]
+            }
+          ],
+          "Talents": [
+            [ "Crush", "Hurt", "Smash" ],
+            [],
+            [ "Rampage" ],
+            [],
+            [ "Bits and Pieces", "Haymaker" ],
+            [],
+            [ "Unstoppable" ],
+            [],
+            [ "Ultimate Brutality" ]
+          ]
+        },
+        "Heavy Gunner": {
+          "description": "",
+          "skillproficiencycount": 2,
+          "expertisecount": 1,
+          "proficiencies": [
+            {
+              "type": "SavingThrow",
+              "targets": [ "Strength", "Constitution" ]
+            },
+            {
+              "type": "Skill",
+              "targets": [ "Acrobatics", "Endurance", "Intimidation", "Mechanics", "Natural Sciences", "Vehicles" ]
+            },
+            {
+              "type": "Equipment",
+              "targets": [ "Basic", "Advanced", "Military" ]
+            }
+          ],
+          "Talents": [
+            [ "Big Guns", "Salvo" ],
+            [],
+            [ "Big Boom" ],
+            [],
+            [ "Advanced Combat Training", "Got You Covered" ],
+            [],
+            [ "Make a mess", "Bigger Boom" ],
+            [],
+            [ "Ultimate Carnage" ]
+          ]
+        },
+        "MMA Fighter": {
+          "description": "",
+          "skillproficiencycount": 3,
+          "expertisecount": 1,
+          "proficiencies": [
+            {
+              "type": "SavingThrow",
+              "targets": [ "Strength", "Dexterity" ]
+            },
+            {
+              "type": "Skill",
+              "targets": [ "Acrobatics", "Athletics", "Deception", "Endurance", "Intimidation", "Medicine", "Streetwise" ]
+            },
+            {
+              "type": "Equipment",
+              "targets": [ "Basic" ]
+            },
+            {
+              "type": "Expertise",
+              "targets": [ "Acrobatics", "Athletics", "Endurance" ]
+            }
+          ],
+          "Talents": [
+            [ "Heavy Hands", "Pin", "Submission Move" ],
+            [],
+            [ "Jab", "Takedown" ],
+            [],
+            [ "Advanced Combat Training" ],
+            [],
+            [ "Improved Heavy Hands", "Master Grappler" ],
+            [],
+            [ "KO Punch", "Sleeper Hold" ]
+          ]
+        }
+      }
+    },
+    "Agile": {
+      "description": "you are a master of speed and precision. You have honed your reflexes to the point you can act faster than you can think. Your pinpoint accuracty makes you a deadly foe in any fight./r/nAgile heroes focus on ranged attacks and light weapons. Their high mobility and rapid attacks make them deadly heroes in combat.",
+      "hitdice": "1d8",
+      "hitpoints": 8,
+      "hitpointmodifier": "Constitution",
+      "Defense": "10",
+      "DefenseModifier": "Dexterity",
+      "ProficiencyBonus": [ 2, 2, 2, 2, 3, 3, 3, 3, 4, 4 ],
+      "DefenseBonus": [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3 ],
+      "Talents": [
+        [ "Fast Reflexes" ],
+        [ "Quickness" ]
+      ],
+      "Classes": {
+        "Martial Artist": {
+          "description": "",
+          "skillproficiencycount": 2,
+          "expertisecount": 1,
+          "proficiencies": [
+            {
+              "type": "SavingThrow",
+              "targets": [ "Strength", "Dexterity" ]
+            },
+            {
+              "type": "Skill",
+              "targets": [ "Acrobatics", "Athletics", "Endurance", "Performance", "Sleight of Hand", "Stealth" ]
+            },
+            {
+              "type": "Equipment",
+              "targets": [ "Basic", "Historical" ]
+            }
+          ],
+          "Talents": [
+            [ "Martial Arts" ],
+            [],
+            [ "Lightning Strikes", "Parkour" ],
+            [],
+            [ "Advanced Combat Training" ],
+            [],
+            [ "Evasion", "Advanced Martial Arts" ],
+            [],
+            [ "Lightning Strikes Twice" ]
+          ]
+        },
+        "Scoundrel": {
+          "description": "",
+          "skillproficiencycount": 3,
+          "expertisecount": 1,
+          "proficiencies": [
+            {
+              "type": "SavingThrow",
+              "targets": [ "Charisma", "Dexterity" ]
+            },
+            {
+              "type": "Skill",
+              "targets": [ "Acrobatics", "Deception", "Intimidation", "Security", "Sleight of Hand", "Stealth", "Streetwise", "Vehicles" ]
+            },
+            {
+              "type": "Equipment",
+              "targets": [ "Basic", "Advanced" ]
+            },
+            {
+              "type": "Expertise",
+              "targets": [ "Deception", "Security", "Sleight of Hand", "Stealth", "Streetwise" ]
+            }
+          ],
+          "Talents": [
+            [ "Vital Strike" ],
+            [],
+            [ "Swift", "Surprise Strike" ],
+            [],
+            [ "Roll With It" ],
+            [],
+            [ "Covert Expertise" ],
+            [],
+            [ "Master of Subterfuge" ]
+          ]
+        },
+        "Sharpshooter": {
+          "description": "",
+          "skillproficiencycount": 2,
+          "expertisecount": 1,
+          "proficiencies": [
+            {
+              "type": "SavingThrow",
+              "targets": [ "Intelligence", "Dexterity" ]
+            },
+            {
+              "type": "Skill",
+              "targets": [ "Acrobatics", "Intimidation", "Mechanics", "Perception", "Sleight of Hand", "Stealth", "Vehicles" ]
+            },
+            {
+              "type": "Equipment",
+              "targets": [ "Basic", "Advanced" ]
+            }
+          ],
+          "Talents": [
+            [ "Gunslinging", "Sharpshooting" ],
+            [],
+            [ "Improved Gunslinging", "Improved Sharpshooting" ],
+            [],
+            [ "Advanced Combat Training" ],
+            [],
+            [ "Headshot" ],
+            [],
+            [ "Supreme Ranged Combat Training" ]
+          ]
+        }
+      }
+    },
+    "Tough": {
+      "description": "You don't know what it means to give up. No matter what knocks you down, you get up again. Where there is a fight to be found, you'll be in the thick of it, often risking your life to protect others./r/nTough heroes are durable characters, sometimes at the expense of offensive options or out of combat abilities. Many excel at protecting their teammates.",
+      "hitdice": "1d12",
+      "hitpoints": 12,
+      "hitpointmodifier": "Constitution",
+      "Defense": "10",
+      "DefenseModifier": "Constitution|Dexterity",
+      "ProficiencyBonus": [ 2, 2, 2, 2, 3, 3, 3, 3, 4, 4 ],
+      "DefenseBonus": [ 2, 2, 2, 2, 3, 3, 3, 3, 4, 4 ],
+      "Talents": [
+        [ "Payback" ],
+        [ "Tough as Nails" ]
+      ],
+      "Classes": {
+        "Bodyguard": {
+          "description": "",
+          "skillproficiencycount": 3,
+          "expertisecount": 1,
+          "proficiencies": [
+            {
+              "type": "SavingThrow",
+              "targets": [ "Strength", "Constitution" ]
+            },
+            {
+              "type": "Skill",
+              "targets": [ "Athletics", "Endurance", "Medicine", "Perception", "Security", "Streetwise", "Survival" ]
+            },
+            {
+              "type": "Equipment",
+              "targets": [ "Basic", "Advanced" ]
+            },
+            {
+              "type": "Expertise",
+              "targets": [ "Endurance", "Intimidation", "Security" ]
+            }
+          ],
+          "Talents": [
+            [ "Get Down", "Take a Bullet" ],
+            [],
+            [ "Come Get Some", "Friendly Fire" ],
+            [],
+            [ "Advanced Combat Training", "Pin Them Down" ],
+            [],
+            [ "Vigilance" ],
+            [],
+            [ "Human Shield" ]
+          ]
+        },
+        "Commando": {
+          "description": "",
+          "skillproficiencycount": 2,
+          "expertisecount": 1,
+          "proficiencies": [
+            {
+              "type": "SavingThrow",
+              "targets": [ "Strength", "Constitution" ]
+            },
+            {
+              "type": "Skill",
+              "targets": [ "Athletics", "Endurance", "Mechanics", "Persuasion", "Streetwise", "Survival", "Vehicles" ]
+            },
+            {
+              "type": "Equipment",
+              "targets": [ "Basic", "Advanced", "Military" ]
+            }
+          ],
+          "Talents": [
+            [ "Fighting Spirit", "Watch Your Six" ],
+            [],
+            [ "Extra Effort", "Grenadier" ],
+            [],
+            [ "Advanced Combat Training" ],
+            [],
+            [ "Maximum Effort", "Situational Awareness" ],
+            [],
+            [ "Master of Arms" ]
+          ]
+        },
+        "Scrapper": {
+          "description": "",
+          "skillproficiencycount": 1,
+          "expertisecount": 1,
+          "proficiencies": [
+            {
+              "type": "SavingThrow",
+              "targets": [ "Intelligence", "Constitution" ]
+            },
+            {
+              "type": "Skill",
+              "targets": [ "Acrobatics", "Athletics", "Endurance", "Intimidation", "Persuasion", "Streetwise", "Vehicles" ]
+            },
+            {
+              "type": "Equipment",
+              "targets": [ "Basic", "Advanced", "Improvised" ]
+            }
+          ],
+          "Talents": [
+            [ "Opportunist" ],
+            [],
+            [ "Frenzy", "With Interest" ],
+            [],
+            [ "Roll With It" ],
+            [],
+            [ "Anger Issues", "Indomitable" ],
+            [],
+            [ "Ultimate Brutality" ]
+          ]
+        }
+      }
+    },
+    "Smart": {
+      "description": "While other are playing checkers, you're playing 4-dimensional chess. The human mind is the ultimate weapon, and yours is honed to a razor's edge./r/nSmart Heroes use their genius to enact plans. Plans are powerful but limited effects that can break the fourth wall, effectively changing the past to affect the present.",
+      "hitdice": "1d6",
+      "hitpoints": 6,
+      "hitpointmodifier": "Constitution",
+      "Defense": "10",
+      "DefenseModifier": "Intelligence",
+      "ProficiencyBonus": [ 2, 2, 2, 2, 3, 3, 3, 3, 4, 4 ],
+      "DefenseBonus": [ 0, 0, 0, 0, 1, 1, 1, 1, 2, 2 ],
+      "Talents": [
+        [ "Plans", "Genius" ],
+        [ "Mental Refresh" ]
+      ],
+      "Classes": {
+        "Engineer": {
+          "description": "",
+          "skillproficiencycount": 3,
+          "expertisecount": 1,
+          "proficiencies": [
+            {
+              "type": "SavingThrow",
+              "targets": [ "Intelligence", "Dexterity" ]
+            },
+            {
+              "type": "Skill",
+              "targets": [ "Arts and Crafts", "Computers", "Investigation", "Mechanics", "Natural Sciences", "Security", "Vehicles" ]
+            },
+            {
+              "type": "Equipment",
+              "targets": [ "Basic" ]
+            },
+            {
+              "type": "Expertise",
+              "targets": [ "Computers", "Mechanics", "Vehicles" ]
+            }
+          ],
+          "Talents": [
+            [ "Mechanical Companion", "Field Repairs" ],
+            [],
+            [ "Fine Tuning", "Plans Improve" ],
+            [],
+            [ "Plans Improve" ],
+            [],
+            [ "Plans Improve" ],
+            [],
+            [ "Plans Improve" ]
+          ]
+        },
+        "Hacker": {
+          "description": "",
+          "skillproficiencycount": 4,
+          "expertisecount": 1,
+          "proficiencies": [
+            {
+              "type": "SavingThrow",
+              "targets": [ "Intelligence", "Wisdom" ]
+            },
+            {
+              "type": "Skill",
+              "targets": [ "Computers", "Deception", "Investigation", "Insight", "Mechanics", "Natural Sciences", "Security", "Social Sciences", "Stealth", "Streetwise" ]
+            },
+            {
+              "type": "Equipment",
+              "targets": [ "Basic" ]
+            },
+            {
+              "type": "Expertise",
+              "targets": [ "Computers", "Security" ]
+            }
+          ],
+          "Talents": [
+            [ "Digital Ghost", "Its For You" ],
+            [],
+            [ "Plans Improve" ],
+            [],
+            [ "Plans Improve" ],
+            [],
+            [ "Plans Improve" ],
+            [],
+            [ "Plans Improve" ]
+          ]
+        },
+        "Mastermind": {
+          "description": "",
+          "skillproficiencycount": 4,
+          "expertisecount": 2,
+          "proficiencies": [
+            {
+              "type": "SavingThrow",
+              "targets": [ "Intelligence", "Wisdom" ]
+            },
+            {
+              "type": "Skill",
+              "targets": [ "Computers", "Deception", "Insight", "Investigation", "Medicine", "Natural Sciences", "Perception", "Persuasion", "Security", "Social Sciences", "Streetwise" ]
+            },
+            {
+              "type": "Equipment",
+              "targets": [ "Basic" ]
+            },
+            {
+              "type": "Expertise",
+              "targets": [ "Computers", "Deception", "Insight", "Investigation", "Perception", "Persuasion", "Security", "Social Sciences", "Streetwise" ]
+            }
+          ],
+          "Talents": [
+            [ "Know-It-All", "Youre Doing It Wrong" ],
+            [],
+            [ "Plans Improve" ],
+            [],
+            [ "Plans Improve" ],
+            [],
+            [ "Plans Improve" ],
+            [],
+            [ "Plans Improve" ]
+          ]
+        }
+      }
+    },
+    "Wise": {
+      "description": "You are known as a person who thinks before you act. You observe the world around you and move with its rhythms instead of struggling against the tide. By first knowing yourself, you can reach out and make the world a better place./r/nWise Heroes are thematically diverse, but they all have a Focus mechanic that can be spent to activate special actions and abilities.",
+      "hitdice": "1d10",
+      "hitpoints": 10,
+      "hitpointmodifier": "Constitution",
+      "Defense": "10",
+      "DefenseModifier": "Wisdom|Dexterity",
+      "ProficiencyBonus": [ 2, 2, 2, 2, 3, 3, 3, 3, 4, 4 ],
+      "DefenseBonus": [ 2, 2, 2, 2, 3, 3, 3, 3, 4, 4 ],
+      "Talents": [
+        [ "Focus", "Concentration" ],
+        [ "One Step Ahead" ]
+      ],
+      "Classes": {
+
+      }
+    },
+    "Charming": {
+      "description": "When you smile, the whole world smiles with you. It might be your beauty, your golden voice, or your way with words, but your ability to influence others is the key to your success./r/nCharming heroes use influence dice to boost their other die rolls. They focus on helping allies and hindering enemies in combat rather than relying on their own strengths.",
+      "hitdice": "1d8",
+      "hitpoints": 8,
+      "hitpointmodifier": "Constitution",
+      "Defense": "1d10",
+      "DefenseModifier": "Charisma|Dexterity",
+      "ProficiencyBonus": [ 2, 2, 2, 2, 3, 3, 3, 3, 4, 4 ],
+      "DefenseBonus": [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3 ],
+      "Talents": [
+        [ "Influence", "Tricks" ],
+        [ "Charm" ]
+      ],
+      "Classes": {
+
+      }
+    }
+  }
+}

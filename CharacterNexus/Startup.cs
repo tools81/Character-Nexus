@@ -1,4 +1,4 @@
-using Interfaces;
+using Utility.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -40,11 +40,13 @@ namespace CharacterNexus
 
             services.AddSingleton<IRuleset, AmazingTales.Ruleset>();
             services.AddSingleton<IRuleset, EverydayHeroes.Ruleset>();
-            services.AddSingleton<IRuleset, GiJoe.Ruleset>();
-            services.AddSingleton<IRuleset, Starfinder.Ruleset>();
-            services.AddSingleton<IRuleset, Transformers.Ruleset>();
-            services.AddSingleton<IRuleset, VampireTheMasquerade.Ruleset>();
-            services.AddSingleton<IRuleset, WerewolfTheApocalypse.Ruleset>();
+            //services.AddSingleton<IRuleset, GiJoe.Ruleset>();
+            //services.AddSingleton<IRuleset, Marvel.Ruleset>();
+            //services.AddSingleton<IRuleset, Starfinder.Ruleset>();
+            //services.AddSingleton<IRuleset, Transformers.Ruleset>();
+            //services.AddSingleton<IRuleset, VampireTheMasquerade.Ruleset>();
+            //services.AddSingleton<IRuleset, WerewolfTheApocalypse.Ruleset>();
+
             services.AddSingleton<IStorage, AzureBlobStorage.Storage>();
         }
 

@@ -2,7 +2,7 @@
 using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
 using Azure.Storage.Blobs.Specialized;
-using Utility.Interfaces;
+using Utility;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

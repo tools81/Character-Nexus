@@ -5,11 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AmazingTales
+namespace EverydayHeroes
 {
     public class Attribute : IAttribute
     {
         public string Description { get; set; }
         public int Value { get; set; }
+        public int Modifier { get => GetModifierValue(); }
+
+        private int GetModifierValue()
+        {
+            return (Value - 10) / 2;
+        }
     }
 }

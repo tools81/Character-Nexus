@@ -1,4 +1,4 @@
-﻿using Utility.Interfaces;
+﻿using Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +22,7 @@ namespace AmazingTales
                 using (var reader = new StreamReader(stream))
                 {
                     var jsonContent = reader.ReadToEnd();
-                    character.Attributes = Utility.JsonToDictionary.ConvertAttribute<Attribute>(jsonContent);
+                    character.Attributes = JsonTo.Dictionary<Attribute>(jsonContent);
                 }
             }
 

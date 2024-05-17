@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace EverydayHeroes.Enums
 {
-    public enum AbilityType
-    {
-        Talent,
-        Feat,
-        Other
+    public enum FeatScale 
+    { 
+        Minor,
+        Major
     }
 }

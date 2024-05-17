@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Utility.Interfaces;
+using Utility;
 
 namespace EverydayHeroes
 {
@@ -13,12 +13,12 @@ namespace EverydayHeroes
         public string Description { get; set; } 
         public string HitDice { get; set; }
         public int Hitpoints { get; set; }
-        public Attribute HitpointModifier { get; set; }
-        public int Defense { get; set; }
-        public Attribute DefenseModifier { get; set; }
+        public int HitpointsPerLevel { get; set; }
+        public string HitpointModifier { get; set; }
+        public string DefenseModifier { get; set; }
         public List<int> ProficiencyBonus { get; set; }
         public List<int> DefenseBonus { get; set; }     
-        public List<List<Ability>> Talents { get; set; }
+        public List<List<string>> Talents { get; set; }
         public List<Class> Classes { get; set; }
     }
 }

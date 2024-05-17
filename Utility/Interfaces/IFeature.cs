@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Utility
 {
-    public interface IAbility
+    public interface IFeature
     {
 
     }

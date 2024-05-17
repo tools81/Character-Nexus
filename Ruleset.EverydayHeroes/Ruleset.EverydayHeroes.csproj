@@ -10,6 +10,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Utility\Utility.csproj" />
+    <EmbeddedResource Include="Json\Attributes.json" />
+    <EmbeddedResource Include="Json\Skills.json" />
+    <EmbeddedResource Include="Json\Archetypes.json" />
+    <EmbeddedResource Include="Json\Abilities.json" />
+    <EmbeddedResource Include="Json\Features.json" />
   </ItemGroup>
 
 </Project>

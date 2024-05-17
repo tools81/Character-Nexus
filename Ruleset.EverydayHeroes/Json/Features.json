@@ -1,0 +1,3268 @@
+{
+  "Features": {
+    "Backgrounds": {
+      "Activist": {
+        "description": "Growing up, you were motivated to act on behalf of a social or political cause. You know how to influence people by your deeds and actions.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Intimidation",
+              "Persuasion"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "An old campaign button from your youth, a bullhorn",
+        "specialfeature": "Political Speech. You have advantage on Charisma (Persuasion) checks made to promote a cause or convince people to support it."
+      },
+      "Art Lover": {
+        "description": "You have loved art since you were a child and developed a significant talent in one or more forms of artistic expression. The knowledge and practice gives you something to talk about at parties.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Arts and Crafts",
+              "Performance"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "A large collection of your unsold art or clips of your performances",
+        "specialfeature": "It's Beautiful. You gain advantage on Charisma (Persuasion) checks when the subject involves art, such as selling a painting, convincing someone to see a show, or sparing the life of an artist."
+      },
+      "Bookworm": {
+        "description": "As a child, you spent your free time reading anything you could get your hands on. You absorbed practical knowledge as you immersed yourself in wonderful stories.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Wisdom",
+              "Intelligence"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Natural Sciences",
+              "Social Sciences"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "A first edition or a rare book, a well-used bookmark",
+        "language": "Choose one additional language",
+        "specialfeature": "Have You Ever Read. You can use your proficiency bonus on any ability check to recall knowledge on the subject of authors and literature."
+      },
+      "Caregiver": {
+        "description": "You spent a significant portion of your childhood taking care of someone dear to you. It’s given you a strong sense of compassion, as well as experience in medical care.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Medicine"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "A first aid kit, a small memento",
+        "specialfeature": "Soothing. You gain advantage on Charisma (Persuasion) checks when dealing with people who are angry, afraid, or in pain."
+      },
+      "Cosmopolitan": {
+        "description": "You traveled or read widely and picked up useful knowledge from various cultures. You have the gift of feeling at home wherever you roam.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Wisdom"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Social Sciences"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "A valuable piece of art from a foreign country",
+        "language": "Choose one additional language",
+        "specialfeature": "Common Tongue. You know basic informational phrases in a large number of languages and can understand simple replies. This allows rudimentary communication no matter where you go or what language the people speak there."
+      },
+      "Gamer": {
+        "description": "You grew up playing games: computer games, roleplaying games, and/or board games. Whatever happens in life, you have a strategy for it.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Dexterity",
+              "Intelligence"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Computers",
+              "Insight"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "A portable gaming console with a tremendous assortment of games",
+        "language": "Choose one additional language",
+        "specialfeature": "Exploit. When you roll a 1 on an ability check, you can reroll the die and must use the new roll. You cannot use this ability again until you finish a long rest."
+      },
+      "Immigrant": {
+        "description": "You straddle the line between two cultures—that of your native country and that of your new home. Despite challenges, you are stronger for your experiences.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Wisdom",
+              "Constitution"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Endurance",
+              "Insight",
+              "Streetwise"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "A flag from your swearing-in ceremony",
+        "language": "Choose one additional language",
+        "specialfeature": "One of Us. You gain advantage on Charisma checks when attempting to influence members of the same immigrant culture."
+      },
+      "Juvenile Deliquent": {
+        "description": "As a kid, you went looking for trouble and found it in abundance: fighting, stealing, vandalism, or general mayhem. You either grew out of it or learned how to behave in a socially accepted manner",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Charisma"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Deception",
+              "Sleight of Hand",
+              "Stealth",
+              "Streetwise"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "A switchblade knife with a skull on it",
+        "specialfeature": "Underworld Contacts. You gain advantage on Wisdom (Streetwise) checks to buy or sell illicit goods and services."
+      },
+      "Larper": {
+        "description": "You spent your weekends pretending to be a warrior of a past era, wizard, vampire, or the like. While the pastime didn't necessarily prepare you for modern life, it did give you some unusual skills.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "A flag from your swearing-in ceremony",
+        "language": "Choose one invented language",
+        "specialfeature": "Playing Possum. You gain advantage on Charisma (Deception) checks made to appear dead or wounded."
+      },
+      "Military Tradition": {
+        "description": "Your family has a strong tradition of service in the armed forces. No matter what you do later in life, this culture still influences you.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Constitution"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic",
+              "Advanced"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": " A parent's antique 9mm service pistol",
+        "specialfeature": "Military Solidarity. You gain advantage on Charisma (Persuasion) and Charisma (Intimidation) checks when interacting with members of the armed forces."
+      },
+      "Misfit": {
+        "description": "For whatever reason, you never fit in with your peers. While growing up was sometimes lonely, your isolation made you a keen observer of your surroundings.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Intelligence",
+              "Wisdom"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Insight",
+              "Perception"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "A one-of-a-kind jean jacket from an iconic band",
+        "specialfeature": "Devil in the Details. You gain advantage on Wisdom checks made to discern personal details about someone by directly observing them."
+      },
+      "On The Run": {
+        "description": "You spent a portion of your life on the run. You might still be running from the law, a personal vendetta, or bill collectors. You're accustomed to looking over your shoulder for your persecutors.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Dexterity",
+              "Constitution"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Perception"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "A fake ID, a loose-fitting hoodie, sunglasses",
+        "specialfeature": "On Edge. Whenever you roll initiative, you can reroll once and must use the new result."
+      },
+      "Ordinary": {
+        "description": "You don't have exciting stories in your background. You grew up solidly middle class and had an unremarkable childhood.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Intelligence",
+              "Wisdom"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Acrobatics",
+              "Arts and Crafts",
+              "Athletics",
+              "Computers",
+              "Deception",
+              "Endurance",
+              "Insight",
+              "Intimidation",
+              "Investigation",
+              "Mechanics",
+              "Medicine",
+              "Natural Sciences",
+              "Perception",
+              "Performance",
+              "Persuasion",
+              "Security",
+              "Sleight of Hand",
+              "Social Sciences",
+              "Stealth",
+              "Streetwise",
+              "Survival",
+              "Vehicles"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "Bag stuff and pocket stuff",
+        "specialfeature": "Blend In. You gain advantage on ability checks made to blend in with a crowd."
+      },
+      "Orphan": {
+        "description": "Your childhood contains a tragedy, since you lost both your parents. Raised in part by the state, you learned to make connections wherever you could.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Constitution",
+              "Charisma"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Endurance",
+              "Persuasion"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "Your father's watch or your mother's pendant",
+        "specialfeature": "Survivor. You can reroll one failed saving throw. You cannot use this feature again until you finish a long rest."
+      },
+      "Person of Mystery": {
+        "description": "Your background is a mystery, even to you. You have no official records and only dim recollections of your life. It's not a topic you feel comfortable discussing with others.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Intelligence",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "A mysterious locket",
+        "specialfeature": "It's Coming Back to Me. A forgotten skill and language rise from your foggy memory.<br>At any point during play, you can decide what single additional skill proficiency you learned in your mysterious past. Once the choice is made, it is permanent.<br>At any point during play, you can decide what single additional language you learned in your mysterious past. Once the choice is made, it is permanent."
+      },
+      "Poor Family": {
+        "description": "Your family didn't have much money while you were growing up. Whether you felt deprived of childhood pleasures or celebrate your ability to make do without much, you know what it takes to make your way in the world.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Intelligence",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Arts and Crafts",
+              "Mechanics",
+              "Streetwise",
+              "Survival"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "An old photograph of where you grew up",
+        "specialfeature": "Making Do. You can ignore disadvantage from not having the correct professional tools on hand when performing an ability check."
+      },
+      "Raised By Assassins": {
+        "description": "Yours was not a usual childhood. A surrogate parent, government agency, or band of ninjas raised you from a young age to be a cold-hearted killer.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Dexterity",
+              "Constitution"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Deception"
+            ],
+            "count": 1
+          },
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic",
+              "Advanced"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "A memento of your lost childhood innocence",
+        "language": "Choose one additional language and keep it secret from your team"
+      },
+      "Religious Tradition": {
+        "description": "You grew up in a family with strong faith. Whether you still believe today, the practice left you with insight into the human condition.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Wisdom"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Insight",
+              "Performance",
+              "Social Sciences"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "A religious symbol or pendant representing your faith",
+        "specialfeature": "Positive Reinforcement. Through words of encouragement or prayer, as a reaction, you can give advantage to an ally on a single saving throw. You cannot use this feature again until you finish a long rest."
+      },
+      "Rural Family": {
+        "description": "You grew up outside the cities and among straightforward, honest folk. You learned the value of hard work and gained practical skills.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Constitution"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Mechanics",
+              "Survival"
+            ],
+            "count": 2
+          },
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "Your family’s old pickup truck ('she still runs great')"
+      },
+      "Social Butterfly": {
+        "description": "You had a knack for making friends from an early age. Your popularity and congeniality opens doors for you.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Charisma"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Deception",
+              "Persuasion"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "One-of-a-kind fashionable couture",
+        "specialfeature": "Life of the Party. You gain advantage on Charisma (Deception) and Charisma (Persuasion) checks made while at a party or other social event."
+      },
+      "Student Athlete": {
+        "description": "From an early age, you loved to compete and show off your athleticism. Even if you didn't continue on to pro sports, your love of fitness and your fighting spirit live on.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Acrobatics",
+              "Athletics"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "Your letter jacket from school",
+        "specialfeature": "Give It Your All. You gain advantage on Strength (Athletics) and Dexterity (Acrobatics) checks made in the course of playing any sport."
+      },
+      "Subsistence": {
+        "description": "You grew up off the grid and learned to live off the land and your own resourcefulness. Whether due to religious, political, or shared social beliefs, you are proud of your self-sufficiency.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Wisdom"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Survival",
+              "Athletics"
+            ],
+            "count": 1
+          },
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "A hunting rifle, a camping kit, a small remote cabin",
+        "specialfeature": "Natural Medicine. You can use Wisdom (Survival) in place of Intelligence (Medicine) to treat minor wounds and illnesses."
+      },
+      "Survivor": {
+        "description": "Something horrible happened to you when you were young. The event left you emotionally scarred but determined to thrive despite your trauma.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Constitution",
+              "Wisdom"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Endurance",
+              "Insight"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "A memento from your tragic past that gives you hope",
+        "specialfeature": "True Survivor. You need two successful death saving throws to stabilize, rather than three."
+      },
+      "Technophile": {
+        "description": "You have loved technology since an early age. Your skills make you the person all your friends call when they have computer problems.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Intelligence"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Computers",
+              "Mechanics",
+              "Security"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "A not-yet-released smartphone",
+        "specialfeature": "There's an App for That. You always have the latest and greatest cell phone before the general public. Your phone can substitute as any plausible tool in the equipment list. The GM has final say on what is plausible for your phone to do."
+      },
+      "Wealthy Family": {
+        "description": "You were born into wealth and privilege. You understand money and how to make it, though that doesn't necessarily mean you know how to keep it.",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Intelligence",
+              "Charisma"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Intimidation",
+              "Vehicles"
+            ],
+            "count": 1
+          }
+        ],
+        "specialfeature": "Silver Spoon. Choose one of the following:<br><ul><li>Sweet Ride: Any nonmilitary personal vehicle</li><li>Trust Fund: +1 starting Wealth Level, to a maximum of 5</li><li>Your Pad: A great rent-free apartment and a cleaning service to keep it tidy</li><li>Family Lawyer: A lawyer who can get you out of non-felony legal trouble, at least temporarily</li><li>Powerful Friends: The ability to speak with people of power and influence after a few phone calls</li></ul>"
+      }
+    },
+    "Professions": {
+      "Academia": {
+        "description": "You're dedicated to the pursuit of knowledge and to sharing it with the next generation. You work with a university, library, museum, or other institution of culture and learning.",
+        "samplecareers": "Librarian, museum docent, preschool teacher, private school teacher, public school teacher, university professor",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Intelligence"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 2
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Persuasion"
+            ],
+            "count": 1
+          },
+          {
+            "type": "Skill",
+            "choices": [
+              "Natural Sciences",
+              "Social Sciences"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "Laptop computer, laser pointer, school ID card",
+        "language": "Choose one additional language",
+        "wealthlevel": 3,
+        "specialfeature": "Debate. You can use Intelligence instead of Charisma on checks involving persuasion, as long as the check relates to topics of academia. You gain advantage on such checks."
+      },
+      "Agriculture": {
+        "description": "You work in an ancient profession of the civilized world: raising plants and animals for produce and trade. Your work involves established techniques and modern technology.",
+        "samplecareers": "Animal trainer, breeder, cowhand, crop scientist, farmer, rancher",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Dexterity",
+              "Constitution",
+              "Intelligence",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 2
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Mechanics",
+              "Natural Sciences",
+              "Survival",
+              "Vehicles"
+            ],
+            "count": 4
+          },
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "A double-barrel shotgun, a dirty pickup truck, mechanics kit, a copy of the Farmer's Almanac",
+        "wealthlevel": 3,
+        "specialfeature": "Animal Husbandry. You gain advantage on Wisdom and Charisma checks made to influence animal behavior."
+      },
+      "Athletics": {
+        "description": "You make your living as an athlete. Choose your emphasis from among the many varieties of sport and fitness activities.",
+        "samplecareers": "Baseball, basketball, football, hockey, or soccer player, boxer, golfer, gymnast, martial artist, skater, Olympic athlete, professional athlete, swimmer, wrestler",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution"
+            ],
+            "count": 3
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Endurance"
+            ],
+            "count": 1
+          },
+          {
+            "type": "Skill",
+            "choices": [
+              "Acrobatics",
+              "Athletics"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "Sporting equipment, your team jersey, sponsored shoes, an autograph pen",
+        "wealthlevel": 3,
+        "specialfeature": "Sports. Choose one real-world sport. You gain advantage on Strength, Dexterity, and Constitution checks when performing an action performed as part of that sport."
+      },
+      "Counseling": {
+        "description": "You work as a therapist, helping people cope with the emotional stresses of life. Your deep understanding of the human psyche gives you insight into people's motives and emotions.",
+        "samplecareers": "Behavioral therapist, crisis counselor, marriage counselor, psychologist",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Wisdom"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Intelligence",
+              "Charisma"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Insight",
+              "Persuasion",
+              "Social Sciences"
+            ],
+            "count": 3
+          }
+        ],
+        "iconicequipment": "Professional attire, a pencil and notepad, a copy of the DSM",
+        "wealthlevel": 3,
+        "specialfeature": "Crisis Management. You have advantage on Charisma (Persuasion) checks made to calm someone down or to persuade someone against violent action."
+      },
+      "Creative": {
+        "description": "You're a professional artist or entertainer. Your creativity and dedication to your craft can carry you from busking for spare change to superstardom.",
+        "samplecareers": "Actor, artist, dancer, editor, game designer, graphic designer, musician, online personality, photographer, singer, songwriter, stage magician, writer",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Charisma"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Intelligence",
+              "Wisdom"
+            ],
+            "count": 2
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Insight"
+            ],
+            "count": 1
+          },
+          {
+            "type": "Skill",
+            "choices": [
+              "Arts and Crafts",
+              "Performance"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "Artisan's tools (for your artistic focus), fashionable clothing, examples of your work",
+        "language": "Choose one additional language",
+        "wealthlevel": 3,
+        "specialfeature": "Artistic Focus. Choose one type of performance or art as your specialty. You gain advantage on ability checks when practicing the chosen type of art or performance."
+      },
+      "Crime": {
+        "description": "You break the law to make your living. Regardless of your particular flavor of criminality, you must stay one step ahead of law enforcement and navigate a world where business disputes are settled by violence rather than lawyers.",
+        "samplecareers": "Bank robber, cat burglar, con artist, enforcer, forger, gang member, grifter, hitman, jewel thief",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Dexterity"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Constitution",
+              "Intelligence",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 2
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Deception",
+              "Intimidation",
+              "Security",
+              "Sleight of Hand",
+              "Stealth",
+              "Streetwise"
+            ],
+            "count": 3
+          },
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic",
+              "Advanced"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "Concealed carry pistol, cool jacket, a stolen luxury car with clean plates",
+        "wealthlevel": 2,
+        "specialfeature": "Criminal Record. You have advantage on Charisma checks when interacting with the criminal underworld. You have disadvantage on Charisma checks when interacting with anyone from a law enforcement or private security profession, if they know about your record."
+      },
+      "Customer Service": {
+        "description": "You work on the front lines of capitalism, greeting customers, taking their money, answering questions, and taking the heat for things you have no power over.",
+        "samplecareers": "Assistant manager, cashier, front desk, greeter, phone support, sales assistant, server, stocker, usher",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Charisma"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Intelligence",
+              "Wisdom"
+            ],
+            "count": 3
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Deception",
+              "Persuasion"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "Uniform, bottle of aspirin, name tag, employee of the month certificate",
+        "wealthlevel": 1,
+        "specialfeature": "De-escalation. You gain advantage on Charisma checks to calm angry people or to persuade someone to show you mercy."
+      },
+      "Daredevil": {
+        "description": "You make your living doing dangerous things. Whatever the specifics, you put your life on the line every time you go to work. If that which does not kill you makes you stronger, you must be very strong indeed.",
+        "samplecareers": "Extreme sports enthusiast, search and rescue expert, skydiver, street racer, stunt performer, test pilot, test subject, treasure hunter",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Dexterity"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Constitution",
+              "Intelligence",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 3
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Acrobatics",
+              "Athletics",
+              "Vehicles"
+            ],
+            "count": 3
+          },
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic",
+              "Improvised"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "First aid kit, rugged clothes, a cool muscle car",
+        "wealthlevel": 3,
+        "specialfeature": "Safety First. You take half damage as a passenger in a vehicle crash. (Drivers are also considered passengers in the vehicle rules.)"
+      },
+      "Emergency Services": {
+        "description": "You dedicate yourself to saving lives by standing among the ranks of the nation's first responders. The work may be stressful, but it is also personally rewarding.",
+        "samplecareers": "Ambulance driver, emergency medical technician, firefighter, paramedic, rescue worker",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Dexterity"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Constitution",
+              "Intelligence",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 2
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Medicine",
+              "Vehicles"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "A first aid kit and a firefighters axe",
+        "wealthlevel": 3,
+        "specialfeature": "Emergency Medicine. If you successfully use the First Aid action to stabilize an ally, the ally can spend one Hit Die to recover hit points equal to the appropriate die roll plus their Constitution modifier."
+      },
+      "Espionage": {
+        "description": "You work as a clandestine field agent. Though most of your work involves collecting intelligence through your contacts, you must occasionally put your life on the line for the sake of your country.",
+        "samplecareers": "Diplomatic attaché, field operative, secret agent, spy",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Dexterity",
+              "Intelligence"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Deception",
+              "Security",
+              "Stealth"
+            ],
+            "count": 3
+          },
+          {
+            "type": "Skill",
+            "choices": [
+              "Acrobatics",
+              "Athletics"
+            ],
+            "count": 1
+          },
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic",
+              "Advanced"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "A concealed carry pistol or a holdout pistol, fake passport and ID, surveillance kit, a memento from the spy who loved you",
+        "language": "Choose one additional language not commonly spoken in your country of origin",
+        "wealthlevel": 3,
+        "specialfeature": "Safe House. While employed by the agency, you have access to a level 3 safe house somewhere in the city. This safe house serves as a secure haven that no one else knows about and can be used for a long rest. (See chapter 6 for details on safe houses.)"
+      },
+      "Faith": {
+        "description": "You dedicate your life to your religious faith. This work involves both the rigors of scholarship and becoming a spiritual leader for your parishioners.",
+        "samplecareers": "Ordained clergy of any faith, religious studies expert, theological scholar",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Wisdom"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Intelligence",
+              "Charisma"
+            ],
+            "count": 2
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Insight",
+              "Persuasion",
+              "Social Sciences"
+            ],
+            "count": 3
+          }
+        ],
+        "iconicequipment": "Vestments of your faith, a symbol of your faith, a holy book or scroll",
+        "wealthlevel": 2,
+        "specialfeature": "Trusted. You gain advantage on Charisma checks when dealing with committed members of your faith."
+      },
+      "Finance": {
+        "description": "In a capitalist world, capital is king. Whether you own a sizable business, provide venture capital, or play the markets for a living, your job involves turning money into more money.",
+        "samplecareers": "Accountant, day trader, finance advisor, investment banker, venture capitalist",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Intelligence"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Insight",
+              "Persuasion"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "A large office, professional clothes, a luxury car",
+        "wealthlevel": 5,
+        "specialfeature": "Personal Assistant. You employ a personal assistant who runs routine errands for you whenever you need them."
+      },
+      "Independent": {
+        "description": "You're independently wealthy, deriving your income from your considerable standing assets such as family holdings and trust funds. You spend your time in leisure, pursuing volunteer work, or whatever interests you.",
+        "samplecareers": "Dilettante, trust fund kid, well-off pensioner or retiree",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Charisma"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Intelligence",
+              "Wisdom"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Acrobatics",
+              "Arts and Crafts",
+              "Athletics",
+              "Computers",
+              "Deception",
+              "Endurance",
+              "Insight",
+              "Intimidation",
+              "Investigation",
+              "Mechanics",
+              "Medicine",
+              "Natural Sciences",
+              "Perception",
+              "Performance",
+              "Persuasion",
+              "Security",
+              "Sleight of Hand",
+              "Social Sciences",
+              "Stealth",
+              "Streetwise",
+              "Survival",
+              "Vehicles"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "Tasteful clothing, platinum engraved debit card, a monogrammed scarf",
+        "wealthlevel": 4,
+        "specialfeature": "Pulling Strings. You know how to wheedle favors from others and gain advantage on Charisma checks to receive special privileges, such as backstage access, tickets to a sold-out show, or a meeting with a public official."
+      },
+      "Information Technology": {
+        "description": "As an IT professional, you are one of the most sought-after professionals in the modern world. Whatever your specialty, you’re a person of the information era, plugged in and churning through the dataverse.",
+        "samplecareers": "Hacker, IT support, software developer, software engineer",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Intelligence"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Computers",
+              "Security"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "Laptop computer, mobile hotspot, an energy drink, and a protein bar",
+        "wealthlevel": 4,
+        "specialfeature": "Tech Support. You gain advantage on Intelligence (Computer) checks to fix a broken computer system or to understand how to operate a computer system correctly."
+      },
+      "Intelligence": {
+        "description": "You work for a government intelligence agency or private security firm, collecting and analyzing actionable information for your employer.",
+        "samplecareers": "Analyst, counterterrorism expert, cryptographer, handler, operations officer, profiler",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Intelligence"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Computers",
+              "Investigation"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "Laptop computer, security clearance card, a secure briefcase",
+        "language": "Choose one additional language",
+        "wealthlevel": 4,
+        "specialfeature": "That's Need to Know. Your extensive access to classified government data gives you advantage on Intelligence (Investigation) checks made to gather information about people and organizations."
+      },
+      "Investigative Services": {
+        "description": "You work for the private sector, dealing with civil investigations and protecting your clients’ assets from thieves and saboteurs.",
+        "samplecareers": "Bounty hunter, corporate security, military contractor, private investigator, repo specialist",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Intelligence"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Insight",
+              "Investigation",
+              "Security"
+            ],
+            "count": 3
+          },
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic",
+              "Advanced"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "Inconspicuous clothing, laptop computer, concealed carry pistol, SLR camera, security license",
+        "wealthlevel": 3,
+        "specialfeature": "Investigative Expertise. You gain expertise in either Investigation or Security. You must be proficient in a skill to gain expertise in that skill."
+      },
+      "Journalism": {
+        "description": "You're passionate about uncovering things people want to keep hidden and then presenting an engaging report to inform the public about it. Along the way, you discover nefarious deeds, injustices, and buried truths.",
+        "samplecareers": "Blogger, investigative reporter, journalist, news anchor, paparazzi, photojournalist",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Wisdom"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Intelligence",
+              "Charisma"
+            ],
+            "count": 2
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Insight",
+              "Investigation",
+              "Streetwise"
+            ],
+            "count": 3
+          }
+        ],
+        "iconicequipment": "Digital recorder, notepad and pencil, press credentials, laptop computer",
+        "language": "Choose one additional language",
+        "wealthlevel": 2,
+        "specialfeature": "I'm with the Press. You gain advantage on Charisma (Persuasion) checks made to convince people to talk with you and answer basic questions. At the GM's discretion, your credentials may allow you to access off-limit areas."
+      },
+      "Law": {
+        "description": "You apply the written law to real world situations, working for the government, a company, a law firm, or in private practice. Your expertise in legal matters is invaluable to your clients.",
+        "samplecareers": "Corporate lawyer, judge, patent lawyer, prosecutor, public defender",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Intelligence"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Investigation",
+              "Social Sciences"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "Professional clothing, briefcase, bar license, supreme court autographed photo",
+        "wealthlevel": 4,
+        "specialfeature": "Dangerous Mind. You can use Intelligence instead of Charisma on checks involving intimidation or persuasion as long as you cite the law when doing so."
+      },
+      "Law Encforcement": {
+        "description": "Enforcing the law isn't an easy job. You take pride in your work and strive to serve and protect the public.",
+        "samplecareers": "Border agent, detective, narcotics agent, FBI agent, parole officer, police officer, state trooper, S.W.A.T., undercover cop, U.S. marshal",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Constitution"
+            ],
+            "count": 2
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Investigation",
+              "Perception",
+              "Vehicles"
+            ],
+            "count": 3
+          },
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic",
+              "Advanced"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "Police uniform, 9mm semi-auto service pistol, TASER, badge, handcuffs, police radio, use of an official vehicle",
+        "wealthlevel": 3,
+        "specialfeature": "Police Powers. You can make arrests, investigate suspected crimes, and call for backup using your police radio."
+      },
+      "Medicine": {
+        "description": "Your dedication to the practice of medicine has given you the opportunity to save many lives and make a difference for everyday people. The practice is both an intellectual challenge and a weighty responsibility.",
+        "samplecareers": "Dentist, ER doctor, general practice physician, nurse, psychiatrist, specialist physician, surgeon, veterinarian",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Intelligence"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 2
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Insight",
+              "Medicine"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "Medical license, a prescription pad, a first aid kit",
+        "wealthlevel": 3,
+        "specialfeature": "Prescriptions. You have access to a range of prescription pharmaceuticals and otherwise-restricted drugs pertaining to your medical discipline. Abuse of this power can put you in serious legal jeopardy."
+      },
+      "Military": {
+        "description": "You are a proud member of the national armed forces. As career military, you're trained for fighting and learned a range of useful skills.",
+        "samplecareers": "Air Force special tactics, Army ranger, enlisted soldier, Green Beret, Marine, Military police, Navy SEAL, officer, pilot, seaman",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Constitution"
+            ],
+            "count": 2
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Athletics",
+              "Perception",
+              "Stealth"
+            ],
+            "count": 3
+          },
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic",
+              "Advanced",
+              "Military"
+            ],
+            "count": 3
+          }
+        ],
+        "iconicequipment": "Military uniform, assault rifle (enlisted) or 9mm semi-auto service pistol (officer), medium ballistic vest, ballistic helmet, military ID, a letter from your sweetheart",
+        "wealthlevel": 2,
+        "specialfeature": "Servicemember. You gain the following benefits:<br><ul><li>When on mission or on base, you have access to military weapons, vehicles, and equipment. This includes the weapons and armor in your iconic equipment.</li><li>You can travel for free to many destinations if you're traveling alone.</li><li>You are provided with room and board while living on base.</li></ul>"
+      },
+      "Outdoors": {
+        "description": "You prefer to work in the great outdoors rather than participate in the indoor rat race. The pay is not great, but you much prefer the company you keep.",
+        "samplecareers": "Conservationist, explorer, fish and game warden, hunter, mountain climber, park ranger, survivalist, wildlife photographer",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Constitution"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Intelligence",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Athletics",
+              "Perception",
+              "Stealth",
+              "Survival"
+            ],
+            "count": 4
+          },
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic",
+              "Advanced"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "A hunting rifle, a 4-wheel drive vehicle, frame backpack, camping kit",
+        "wealthlevel": 2,
+        "specialfeature": "Tracker. You gain advantage on Wisdom (Survival) checks to track in a wilderness setting."
+      },
+      "Politics": {
+        "description": "A passion for helping others or a desire for power drew you into public service. The job does grant both power and privilege. Just don’t let it go to your head.",
+        "samplecareers": "Councilmember, governor, legislator, mayor, political consultant",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Charisma"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Intelligence",
+              "Wisdom"
+            ],
+            "count": 2
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Deception",
+              "Persuasion"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "A trunk full of campaign posters and buttons, nonthreatening attire, a stump speech",
+        "wealthlevel": 3,
+        "specialfeature": "Grassroots Organizing. You have a cadre of dedicated constituents you can call on for tasks, such as picketing a corporation or marching for a cause. Their willingness to act is at the GM's discretion."
+      },
+      "Private Security": {
+        "description": "You ensure that people, places, or things under your protection come to no harm while you remain on guard. It's rarely exciting, but the job gives you plenty of time to reflect.",
+        "samplecareers": "Bodyguard, bouncer, mall cop, night guard, security guard",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Wisdom"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Intelligence",
+              "Charisma"
+            ],
+            "count": 2
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Intimidation",
+              "Perception",
+              "Security"
+            ],
+            "count": 3
+          },
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "Your trusty flashlight, an official-looking badge, orthopedic shoe inserts",
+        "wealthlevel": 2,
+        "specialfeature": "I'm Calling the Police. You have a good relationship with law enforcement. You gain advantage on Charisma checks when dealing with law enforcement. Furthermore, the police respond if you call to report a security problem related to your official duties."
+      },
+      "Science": {
+        "description": "You are dedicated to advancing the systems of knowledge, whether for public good or personal gain. You might be a resident scientist at a research institute, working for a large corporation, or a mad genius tinkering in your basement.",
+        "samplecareers": "Data analyst, engineer, inventor, lab researcher, mathematician, product developer, research scientist",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Intelligence"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 2
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Computers",
+              "Natural Sciences"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "Lab coat, laptop computer, a patent application",
+        "wealthlevel": 3,
+        "specialfeature": "Science Lessons. When you use the Help action, you do not need to be within reach of the person you're helping and can do so from anywhere they can hear your voice, including over the phone."
+      },
+      "Student": {
+        "description": "You're currently a student in high school, college, or graduate school. You might have a job, but you put your focus and energy into your studies.",
+        "samplecareers": "Blood donor, intern, part-time work, teacher's aide, volunteer",
+        "attributebonuses": [
+          {
+            "choices": [
+              "Intelligence"
+            ],
+            "count": 1
+          },
+          {
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 3
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Computers"
+            ],
+            "count": 1
+          },
+          {
+            "type": "Skill",
+            "choices": [
+              "Natural Sciences",
+              "Social Sciences"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "A small backpack full of books and school supplies, a library card",
+        "wealthlevel": 1,
+        "specialfeature": "All-Nighter. You can remove one level of Exhaustion from yourself. You must finish a long rest before you can do this again."
+      },
+      "Trades": {
+        "description": "You enjoy working with your hands and your mind, building and fixing useful things. If they don't find you handsome, they will at least find you handy.",
+        "samplecareers": "Carpenter, construction worker, electrician, flooring specialist, plumber, shoemaker, tailor",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Dexterity"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Constitution",
+              "Intelligence",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 2
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Arts and Crafts",
+              "Mechanics"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "Toolbelt, mechanic's kit, laptop computer, small workshop",
+        "wealthlevel": 3,
+        "specialfeature": "Handy. Choose a specific trade you focus on. You gain advantage on Intelligence checks for activities performed in the practice of that trade."
+      },
+      "Transportation": {
+        "description": "You're an expert in operating some kind of vehicle. Whether you work in the civilian sector or military, you are on a path of mastery in your chosen form of transportation.",
+        "samplecareers": "Boat captain, bus driver, commercial pilot, rideshare driver, taxi driver, race car driver",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Dexterity"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Constitution",
+              "Intelligence",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 3
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Mechanics",
+              "Vehicles"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "A vehicle appropriate to your type of work, a dashboard buddy, a pair of leather gloves",
+        "wealthlevel": 2,
+        "specialfeature": "Experienced Driver. You can ignore the effects from the first level of the Body Damage, Loss of Control, and Loss of Power conditions when driving a vehicle."
+      },
+      "Unemployed": {
+        "description": "For whatever reason, you don't have regular work and haven't had a paying job in a long time. You make your way by resourcefulness, charity, or some mix of the two.",
+        "samplecareers": "Beggar, hermit, hobo, institutionalized person, prisoner, recluse",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Constitution"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Intelligence",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 3
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Endurance"
+            ],
+            "count": 1
+          },
+          {
+            "type": "Skill",
+            "choices": [
+              "Streetwise",
+              "Survival"
+            ],
+            "count": 1
+          }
+        ],
+        "iconicequipment": "A small backpack, a sleeping bag, a knife, various handmade items",
+        "wealthlevel": 1,
+        "specialfeature": "Colorful Character. The story of the trials you have overcome in life gives you advantage on Charisma (Persuasion) checks made to ask for help or acts of mercy."
+      },
+      "White Collar": {
+        "description": "You work in an office, tending to the minutia of everyday life. Your true potential is yet to be revealed, you're certain of it.",
+        "samplecareers": "Accountant, human resources, mail clerk, management consultant, marketer, office manager, salesperson, tax preparer",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Intelligence"
+            ],
+            "count": 1
+          },
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Computers",
+              "Persuasion"
+            ],
+            "count": 2
+          }
+        ],
+        "iconicequipment": "Laptop computer, briefcase, favorite coffee mug",
+        "wealthlevel": 3,
+        "specialfeature": "Management Material. You can use the Help action as a bonus action. You must finish a short rest (coffee break) before you can do this again."
+      }
+    },
+    "Feats": {
+      "Ability Score Training": {
+        "description": "You have trained your mind and/or body to increase your overall human potential. Each time you take this feat, you can increase any ability score by 1 to a maximum of 20.",
+        "type": "Basic",
+        "scale": "Minor",
+        "attributebonuses": [
+          {
+            "type": "AbilityScore",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Intelligence",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Advanced Skill Training": {
+        "description": "You love to acquire new skills and abilities through constant study and practice. Each time you take this feat, you gain expertise in a skill of your choice that you are already proficient in.",
+        "type": "Basic",
+        "scale": "Minor",
+        "proficiencies": [
+          {
+            "type": "Expertise",
+            "choices": [
+              "Acrobatics",
+              "Arts and Crafts",
+              "Athletics",
+              "Computers",
+              "Deception",
+              "Endurance",
+              "Insight",
+              "Intimidation",
+              "Investigation",
+              "Mechanics",
+              "Medicine",
+              "Natural Sciences",
+              "Perception",
+              "Performance",
+              "Persuasion",
+              "Security",
+              "Sleight of Hand",
+              "Social Sciences",
+              "Stealth",
+              "Streetwise",
+              "Survival",
+              "Vehicles"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Equipment Training": {
+        "description": "You have trained to use various kinds of combat equipment.",
+        "type": "Basic",
+        "scale": "Minor",
+        "proficiencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic"
+            ],
+            "count": 1
+          },
+          {
+            "type": "Equipment",
+            "choices": [
+              "Advanced",
+              "Historical",
+              "Improvised",
+              "Military"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Investments": {
+        "description": "You have either made wise investments or come into an inheritance of some kind. Each time you take this feat, you gain +1 Wealth Level (maximum 5).",
+        "type": "Basic",
+        "scale": "Minor",
+        "bonusadjustments": [
+          {
+            "type": "WealthLevel",
+            "value": 1
+          }
+        ]
+      },
+      "Skill Training": {
+        "description": "You love to acquire new skills and abilities through constant study and practice. Each time you take this feat, you gain proficiency in two skills of your choice.",
+        "type": "Basic",
+        "scale": "Minor",
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Acrobatics",
+              "Arts and Crafts",
+              "Athletics",
+              "Computers",
+              "Deception",
+              "Endurance",
+              "Insight",
+              "Intimidation",
+              "Investigation",
+              "Mechanics",
+              "Medicine",
+              "Natural Sciences",
+              "Perception",
+              "Performance",
+              "Persuasion",
+              "Security",
+              "Sleight of Hand",
+              "Social Sciences",
+              "Stealth",
+              "Streetwise",
+              "Survival",
+              "Vehicles"
+            ],
+            "count": 2
+          }
+        ]
+      },
+      "Survival Training": {
+        "description": "You have hardened yourself against various hazards. Each time you take this feat, you gain proficiency with one type of saving throw of your choice.",
+        "type": "Basic",
+        "scale": "Minor",
+        "profeciencies": [
+          {
+            "type": "SavingThrow",
+            "choices": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Intelligence",
+              "Wisdom",
+              "Charisma"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Animal Whisperer": {
+        "description": "You form a special bond with your pets and are good with animals.<br>You gain advantage on ability checks made to influence animals.<br>You can train a tiny- to large-sized animal to perform a variety of behaviors at your command:<br><ul><li>Fetch objects, whether thrown, within sight, or in a location known to the animal (at the GM's discretion.)</li><li>Search for specific objects, scents, sounds, or other stimuli the animal can naturally detect.</li><li>Deliver an object to a location known to the animal</li><li>Raise alarm when an unknown person or animal enters a location the animal is in</li><li>Perform physical stunts or tricks within its range of capabilities</li></ul><br>This animal's stat block is that of an average member of its species.<br>If the pet dies, you can train a new pet in 30 days.<br>The actions of the animal, outside of the specified behaviors, are always at the GM's discretion. This feat does not allow a pet to make attacks in combat.<br>If you have a class talent that grants a special animal companion, this feat can both apply to that animal and any others you may choose to train.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Artful Dodger": {
+        "description": "While you prefer to stay on the defensive, you have learned how to mix in an attack when it counts. You can make an off-hand attack after taking a Dodge action, waiving the requirement to have taken the Attack action this turn.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Awesome Reflexes": {
+        "description": "You have trained yourself to reflexively catch objects that come speeding at you and can even throw them back.<br>When someone throws a weapon at you, you can spend a reaction to try to catch it, then throw it back at the attacker. Before the attacker rolls to hit, make a Dexterity saving throw with a DC equal to the attacker's Defense. If you succeed, the attacker is hit and takes damage from the attack. If you fail, their attack resolves normally.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Battlefield Medic": {
+        "description": "You've trained in first aid and emergency medicine.<br><ul><li>When using a first aid kit to stabilize someone, that person also recovers 1 hit point.</li><li>As an action, you can use a first aid kit to treat a conscious person adjacent to you. Make a DC 10 Intelligence (Medicine) check. If successful, the target may spend one Hit Die to regain hit points. This action cannot be used again on the same person until after they have taken a short or long rest.</li><li>If you don’t have a first aid kit at hand, you can try to improvise. Make a DC 15 Wisdom (Survival) check. If successful, you don't need a first aid kit. If the check fails, you cannot find the materials needed.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Blade Master": {
+        "description": "You are an expert in using bladed weapons to deal crippling cuts to your opponents.<br><ul><li>Once per turn when you hit a opponent with an attack that deals slashing damage, you can reduce the speed of the target by 10 feet until the start of your next turn.</li><li>After you score a critical hit that deals slashing damage to an opponent, until the start of your next turn, the target has disadvantage on all attack rolls.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Blind Fighting": {
+        "description": "Through rigorous training, you have learned to use your hearing and other senses to keep track of enemies on the battlefield.<br><ul><li>Opponents don't have advantage on attack rolls targeting you because you cannot see them.</li><li>You do not have disadvantage on attack rolls due to visibility limitations.</li><li>You may make ability checks normally requiring sight while you cannot see, provided the GM feels another sense could be substituted with sufficient practice.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Brute": {
+        "description": "You know how to knock heads and put your opponents off balance.<br><ul><li>Once per turn, when you hit an opponent with an attack that deals bludgeoning damage, you can move them 5 feet to an unoccupied space, provided the target is large size or smaller.</li><li>When you score a critical hit that deals bludgeoning damage to a opponent, attack rolls against that combatant have advantage until the start of your next turn.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Cross Training": {
+        "description": "You're an all-around athlete, able to leverage your strengths to overcome your weaknesses. Choose one ability score from Strength, Dexterity, or Constitution. You can always use that ability score when making Athletics, Acrobatics, or Endurance ability checks.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Defensive Driving": {
+        "description": "You've trained to operate vehicles under hostile and dangerous conditions.<br><ul><li>You have advantage on Dexterity (Vehicles) checks made to avoid a crash.</li><li>You give your vehicle advantage on saving throws made against complications.</li><li>While you operate a vehicle, increase its Constitution modifier by 2.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Diehard": {
+        "description": "You're tough as nails and don't go down easily. When you are reduced to 0 hit points but not killed, you automatically and immediately stabilize.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Fast Feet": {
+        "description": "You're especially quick on your feet.<br><ul><li>Your base speed increases by 10.</li><li>When using the Dash action, you ignore difficult terrain.</li><li>You gain advantage on Strength (Athletics) checks made during a foot chase.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Fast Hands": {
+        "description": "You've trained extensively with firearms.<br><ul><li>You can reload a weapon with a bonus action reload speed as a free action.</li><li>You can reload a weapon with an action reload speed as a bonus action.</li><li>You can clear a jam as a bonus action.</li><li>As an action, you can disassemble a gun you are holding.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Free Running": {
+        "description": "You've practiced the art of running through environments filled with obstacles and hazards without slowing down.<br><ul><li>Climbing is not considered difficult movement for you.</li><li>You can ignore movement requirements for jumps.</li><li>You can jump down up to 15 feet without taking damage and land on your feet. This does not prevent falling damage.</li><li>You gain advantage on Dexterity (Acrobatics) checks made during a foot chase.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Global Contacts": {
+        "description": "You have built up a network of friends and contacts all over the world.<br><ul><li>Wherever you travel, you can call on a friend for favors such as a ride, translation, food and lodging, local information, bail (where available), or discreet rescue (when feasible).</li><li>You can gain advantage on Wisdom (Streetwise) checks by calling a friend and asking for tips.</li><li>You can borrow up to three items with a price level of 3 or less per month from your local friend. Be the type of hero who returns what you borrow!</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Grappler": {
+        "description": "You've developed the skills necessary to hold your own in close-quarters combat.<br><ul><li>You have advantage on attack rolls against a opponent you are grappling.</li><li>If you currently have an opponent Grappled, you can make a special attack to pin them. No attack roll or ability check is made, success is automatic. You and the opponent are considered Restrained until the grapple is broken.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Great Cook": {
+        "description": "You can prepare food so that it tastes great and provides optimal nourishment.<br><ul><li>You have advantage on Charisma (Persuasion) checks made with anyone eating a meal you have prepared for them.</li><li>When you or one of your companions eats food that you have prepared, they can regain up to two spent Hit Dice. They cannot do so again until they finish a long rest.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Gunfighter": {
+        "description": "You have a quick trigger finger and can shoot accurately in close quarters.<br><ul><li>You don't suffer disadvantage for attacking with a firearm against an adjacent opponent.</li><li>You can take a bonus action to treat any firearm you wield that does not have the slow-firing property as if it had the Burst 3 property until the end of your turn.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Gunner": {
+        "description": "You're trained at using ranged weapons from a moving vehicle or while mounted. You do not have disadvantage when making ranged attacks due to being mounted or in a moving vehicle.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Hardy": {
+        "description": "You keep in good health and know how to take care of yourself. When rolling a Hit Die to regain hit points, you gain at least twice your Constitution modifier or 2 hit points, whichever is higher.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Impaler": {
+        "description": "You have a talent for stabbing opponents where it hurts.<br><ul><li>Once per turn, when you hit an opponent with an attack that deals piercing damage, you can reroll one of the attack's damage dice.</li><li>When you score a critical hit that deals piercing damage to an opponent, you can roll damage twice and take the better of the two results rather than only one die.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Impersonator": {
+        "description": "You have mastered the art of copying the voice and mannerisms of others.<br><ul><li>You have advantage on Charisma (Performance) checks when impersonating other people, animal sounds, or object sounds.</li><li>You have advantage on Charisma (Performance) checks to disguise your own identity, or to appear as someone else.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Jack of All Trades": {
+        "description": "You're well read and good at anything you set your mind to. You can add half your proficiency bonus (rounded down) to any ability check calling for a skill you are not proficient in. You may not use this bonus if no skill is applicable.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Language Expert": {
+        "description": "You have learned multiple languages and studied the nature of language, giving you insights into symbology and communication.<br><ul><li>Choose two additional languages.</li><li>You can learn new languages becoming proficient in 6 weeks as long as you have a manual in a language you know or access to a willing teacher proficient in it.</li><li>You are adept at deciphering linguistic or symbolic codes, gaining advantage on Intelligence (Social Sciences) checks to decipher or understand them.<li>You can also create ciphers and coded messages. Unless provided with the means to decode them, they can only be deciphered with an Intelligence check with a DC of your Intelligence score + your proficiency bonus.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Lead By Example": {
+        "description": "You're good at showing others how to do something and leading them to success. When in a team making a group ability check, you may make your check first. If you succeed, other members of the team have advantage on their checks.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Pack Rat": {
+        "description": "You have a strong back and are adept at packing efficiently.<br><ul><li>You can carry an additional 5 bulk without penalty.</li><li>You can take items from a carrying case as a bonus action in combat.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Perfect Throw": {
+        "description": "You're an expert at throwing objects at stationary targets. When throwing or launching a grenade or other object at a space or an immobile object, you do not need to make an attack roll, you automatically hit.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Pinning Fire": {
+        "description": "You ensure that an opponent can't easily escape your suppressive fire.<br><ul><li>When using the Suppressive Fire action, you can choose a single visible opponent target. Until the suppressive fire ends, or until your next turn begins, you can change the area targeted by your suppressive fire to wherever the target is visible, as long as you have a clear line of fire to that location. Changing the area targeted does not take any action.</li></ul><br>This makes the Dive for Cover reaction impossible for the target unless there is total cover within reach of their movement, as the hero can follow their movement. The target should use their Dive for Cover reaction before any other combatants in the area of fire do so. After the target has had that opportunity, then check for any other combatants in the new area of fire.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Poison Specialist": {
+        "description": "You’re practiced in making and applying poisons safely.<br><ul><li>You have advantage on Intelligence (Medicine) and Wisdom (Survival) checks to identify and treat poisons.</li><li>You can handle poison without needing to make an ability check to avoid injury.</li><li>You can apply poison to a piece of ammunition or weapon as a bonus action.</li><li>The use of poison by heroes is at the GM's discretion, so consult with your GM before taking this feat.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Punisher": {
+        "description": "You're talented at kicking people while they are down and otherwise taking advantage of opportunities.<br><ul><li>You can make an opportunity attack when an adjacent opponent stands up from Prone.</li><li>You can make an opportunity attack when an adjacent opponent picks an object up from the ground or uses a device.</li><li>You can make an opportunity attack when an adjacent opponent makes a special attack against you.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Racer": {
+        "description": "You know how to push a vehicle to its limits, going faster and maneuvering better than others.<br><ul><li>While you operate a vehicle, increase its Strength modifier by 2.</li><li>While you operate a vehicle, increase its Dexterity modifier by 2.</li><li>You gain advantage on Dexterity (Vehicles) checks called for by complications.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Renaissance Thinking": {
+        "description": "You're able to look at challenges from both a philosophical and intellectual approach. You can substitute your Intelligence modifier for your Wisdom modifier and vice versa when making ability checks with skills you are proficient in.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Resilient": {
+        "description": "Through repeated exposures to bodily punishment, you have gained significant resilience. You have advantage on saving throws to avoid, resist, and recover from the following conditions: Exhaustion, Intoxication, Paralyzed, Sickened, and Stunned.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Resistant": {
+        "description": "You have built up resistances to numerous ailments and toxins through healthy living and past exposures.<br><ul><li>You have advantage on saving throws to resist the effects of poisons and diseases.</li><li>You have damage reduction 5 against poison.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Resourceful": {
+        "description": "You have the uncanny ability to make just about anything you need out of whatever happens to be lying around. Given 10 minutes, you can create a makeshift invention that allows you to attempt any ability check you are proficient in without needing the tools, materials, or equipment you might normally need, and you negate any situational disadvantage applied to the check.<br>This process of improvisational invention involves dismantling and breaking other perfectly good tools or objects you have on hand.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Scout": {
+        "description": "You have honed your awareness to pick up on small details in your environment allowing you to spot danger and opportunity.<br><ul><li>You gain advantage on passive Perception checks. (Remember that advantage on a passive check is simply a +5 bonus.)</li><li>You have advantage on ability checks made to defeat traps.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Seducer": {
+        "description": "You have developed undeniable sex appeal through a combination of looks and attitude. You gain advantage on Charisma (Persuasion) and Charisma (Deception) checks with people who are attracted to your gender.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Skirmisher": {
+        "description": "You're quick on your feet in combat and always wary of your opponents.<br><ul><li>As a reaction, you can cause one opportunity attack made against you to automatically miss.</li><li>If you hit an opponent with a melee attack, they cannot make an opportunity attack against you until the start of your next turn.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Snatch Victory": {
+        "description": "You have a strange knack for turning a potential disaster into stunning success. When you roll a 1 on a d20, you can treat it as if you rolled 20. You cannot do this again until you finish a long rest.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Sticky Fingers": {
+        "description": "You're very fast at pick pocketing and adept at using combat as a cover for your larceny.<br><ul><li>You can make Dexterity (Sleight of Hand) checks to pickpocket as a bonus action in combat provided you have a free hand.</li><li>If you have hit an opponent with a melee attack this round, you have advantage on Dexterity (Sleight of Hand) checks against that opponent this round.</li></ul><br>Pickpocketing is usually handled as a contest between the thief's Dexterity (Sleight of Hand) check against the defender's passive Perception. You can steal any reasonable item on the person that they are not holding or wearing. Grenade pins and weapons are popular choices in combat.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Touch of Grace": {
+        "description": "You have an unusual knack for rolling with life's punches and coming out from under difficulty. You can add half your proficiency bonus (rounded down) to saving throws you are not proficient in. This does not apply to death saving throws, but can apply to armor saving throws.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Tumbling": {
+        "description": "You have mastered moving in unusual ways and circumstances.<br><ul><li>You don't need to spend any movement to stand from Prone.</li><li>Crawling is not considered difficult movement for you.</li><li>You can move through spaces occupied by opponents.</li><li>Moving through a space occupied by someone is not difficult terrain for you.</li></ul>",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Walking Dead": {
+        "description": "With grim determination you fight on, not stopping until your last breath. When reduced to 0 hit points but not killed, instead of falling Unconscious, you gain two levels of Exhaustion and fall Prone. You remain at 0 hit points and must make death saving throws normally. If you recover hit points while at 0 hit points you may remove these two levels of Exhaustion.",
+        "type": "Advanced",
+        "scale": "Minor"
+      },
+      "Fortunes Fool": {
+        "description": "You have learned to trust in providence, and somehow it has come to treat you kindly in return for your faith.<br><ul><li>You gain 3 luck points, which are replenished each time you take a long rest.</li><li>You may spend a luck point to reroll an attack roll, saving throw, or ability check after the roll but before you know the result.</li></ul><br>If multiple d20s are rolled due to advantage or disadvantage, you choose only one to be re-rolled.",
+        "type": "Advanced",
+        "scale": "Major",
+        "bonusadjustments": [
+          {
+            "type": "LuckPoints",
+            "Value": 3
+          }
+        ]
+      },
+      "Guerilla": {
+        "description": "You're among the very best at hiding in shadows and striking from the darkness.<br><ul><li>You can ignore the effects of poor visibility.</li><li>You can attempt to hide from an opponent from whom you have poor visibility.</li><li>While hiding, if you miss with a ranged attack, the attack does not automatically reveal your position.</li></ul>",
+        "type": "Advanced",
+        "scale": "Major"
+      },
+      "Harrier": {
+        "description": "You're adept at melee combat and can protect yourself from close quarters combatants.<br><ul><li>If you are hit with a melee attack while wielding a melee weapon you are proficient in, you may use your reaction to add your proficiency bonus to your defense against that attack, potentially turning the hit into a miss.</li><li>After taking the Disengage action, you can make a single ranged attack as a bonus action.</li></ul>",
+        "type": "Advanced",
+        "scale": "Major"
+      },
+      "Healthy": {
+        "description": "Through rigorous activity and good living, you have become more resilient to injury and fatigue in battle.<br><ul><li>On taking this feat, increase your hit point maximum by 2 per character level.</li><li>Each time you gain a level, increase your hit point maximum by 2.</li></ul>",
+        "type": "Advanced",
+        "scale": "Major",
+        "bonusadjustments": [
+          {
+            "type": "Hitpoints",
+            "value": 2
+          }
+        ]
+      },
+      "Perfect Shot": {
+        "description": "You have perfected the technique of hitting multiple opponents with a single shot.<br><ul><li>When you make a ranged attack with a ballistic weapon using armor-piercing rounds, you can attack multiple targets by shooting through one and into the next. All targets you attack this way must be in your line of fire. Attack the closest target first. If you hit, roll for damage normally and you may then roll an attack on the next target in your line of fire. If subsequent targets are hit they take the same damage. If you miss any attack, or any damage is stopped by armor, you can make no further attacks. You can attack a number of targets up to the Penetration Value of your weapon.</li><li>Rifles and machine guns are loaded with armor penetrating rounds by default, while pistols and shotguns are not. Ballistic weapons with a PV of 3 or greater are armor piercing.</li><li>If you are not playing with a map or miniatures, ask the GM how many targets you can line up in a given situation. Two would be the most common, and you would need to reposition yourself to line them up for the perfect shot.</li></ul>",
+        "type": "Advanced",
+        "scale": "Major"
+      },
+      "Power Slam": {
+        "description": "You have a knack for slamming people violently into the ground and tackling them with great force.<br><ul><li>You have advantage on shoving/tripping attempts.</li><li>If you successfully shove or trip an opponent, you can deal your unarmed strike damage to them including your melee ability score modifier.</li></ul>",
+        "type": "Advanced",
+        "scale": "Major"
+      },
+      "Signature Weapon": {
+        "description": "You're dedicated to the use of a specific weapon and feel more confident when wielding it.<br>Choose a specific weapon as your signature weapon, describe it, and give it a name. All further benefits of this feat require you to be wielding this weapon.<br><ul><li>You can ignore one source of disadvantage when making an attack roll.</li><li>You have advantage on ability checks to avoid being disarmed.</li><li>You have advantage on Charisma (Intimidation) checks.</li><li>Your signature weapon will not break as a result of your own actions, abilities, or class talents.</li><li>If some horrible foe or other calamity destroys your precious signature weapon, you can designate and name a new one after an appropriate mourning period of 1 week.</li></ul>",
+        "type": "Advanced",
+        "scale": "Major"
+      },
+      "Sweeping Attack": {
+        "description": "Using larger weapons, you are able to deal with crowds of opponents by making a wide sweeping attack.<br><ul><li>Once during your turn, if you are attacking with a two-handed melee weapon or a versatile melee weapon in two hands, you may treat your attack as a sweeping attack. During a sweeping attack, you make one melee attack against each opponent within your melee reach.</li></ul><br>Any attack modifiers that are limited in the number of uses for any reason, are applied individually to individual attacks you make, not universally to all the attacks you make during a sweeping attack.",
+        "type": "Advanced",
+        "scale": "Major"
+      },
+      "Strong Hero Training": {
+        "description": "You have learned how to use your strength to focus an aggressive offense.<br><ul><li>You gain Basic Equipment proficiency.</li><li>You gain proficiency in one of the following skills: Athletics, Acrobatics, or Endurance.</li><li>Before making an attack, you can declare you are being reckless. You gain advantage on all melee weapon attack rolls but all opponents attacking you have advantage on their attack rolls. This lasts until the start of your next turn.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a Strong Hero archetype, Strength 13+, Level 2+",
+        "profeciencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic"
+            ], 
+            "count": 1
+          },
+          {
+            "type": "Skill",
+            "choices": [
+              "Athletics",
+              "Acrobatics",
+              "Endurance"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Brawler Training": {
+        "description": "You have trained yourself to be an engine of destruction, letting nothing stand between you and your target.<br><ul><li>You gain Improvised Equipment proficiency.</li><li>You have advantage on any Strength check you make to break an object. In addition, your melee attacks have +1 Penetration Value.</li><li>As a bonus action, you can move up to your speed, but you must move toward an opponent. If there are no enemies present, you may move toward an obviously dangerous situation instead.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Strong Hero archetype OR Strong Hero Training feat, not a brawler (class), Level 4+",
+        "profeciencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Improvised"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Advanced Brawler Training": {
+        "description": "Few opponents or weapons can survive the powerful blows you deliver.<br><ul><li>Once during your turn, when you hit an opponent with an attack with a melee weapon, you can choose to deal an additional 2d6 damage. If you do, and you did not attack with an unarmed strike, the weapon is destroyed. You can't use this talent with explosives attacks.</li><li>You have advantage on ability checks and saving throws to avoid or escape being Grappled, Restrained, Stunned, or Paralyzed.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a brawler (class), Brawler Training feat, Level 8+"
+      },
+      "Heavy Gunner Training": {
+        "description": "You like big guns and you cannot lie, someone does you wrong and they are gonna die.<br><ul><li>You gain Advanced Equipment proficiency.</li><li>You may use Strength instead of Dexterity when you make a ranged attack with a non-light ranged weapon.</li><li>You can ignore the stationary property of weapons.</li><li>Before making an attack with a non-light ranged weapon you can declare you are being reckless. You gain advantage on your attack rolls with that weapon but all opponents attacking you have advantage on their attack rolls. This lasts until the start of your next turn.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Strong Hero archetype OR Strong Hero Training feat, not a heavy gunner (class), Level 4+",
+        "profeciencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Advanced"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Advanced Heavy Gunner Training": {
+        "description": "The sound of explosives and heavy machine gun fire are music to your ears.<br><ul><li>You gain Military Equipment proficiency.</li><li>When you damage any target with Suppressive Fire or an explosive, the damage is increased by double your proficiency bonus.</li><li>When you take the Suppressive Fire action, you can double the area covered.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a heavy gunner (class), Heavy Gunner Training feat, Level 8+",
+        "profeciencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Military"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "MMA Fighter Training": {
+        "description": "Through hard training you have become skilled in a range of martial arts disciplines.<br><ul><li>If you have an opponent Grappled, you can apply a submission move as a special attack. You automatically deal your unarmed strike damage to the opponent. You cannot use Power Attack or Improved Power attack when making a Submission Move.</li><li>Your unarmed strike damage is improved by one die step.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Strong Hero archetype OR Strong Hero Training feat, not an MMA fighter (class), Level 4+"
+      }, 
+      "Advanced MMA Fighter Training": {
+        "description": "You have hardened your fists and honed your technique making you a very dangerous unarmed combatant.<br><ul><li>You gain advantage on Strength (Athletic) checks made to initiate or escape a grapple.</li><li>Once during your turn, before rolling to hit with an unarmed strike, you can declare it is a takedown. If the takedown hits, you deal damage, and may make a free unarmed special attack against the target.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not an MMA fighter (class), MMA Fighter Training feat, Level 8+"
+      },
+      "Agile Hero Training": {
+        "description": "You have trained your reflexes to a razor's edge. Your movements are both swift and elegant.<br><ul><li>You gain Basic Equipment proficiency.</li><li>Choose one from Acrobatics, Sleight of Hand, Stealth, and Vehicles. You gain proficiency in the chosen skill.<li>You can take the Dash or Disengage action as a bonus action.</li><li>During a foot chase, you have advantage on Strength (Athletics) checks made as part of a Gain Ground action.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not an Agile Hero archetype, Dexterity 13+, Level 2+",
+        "profeciencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic"
+            ],
+            "count": 1
+          },
+          {
+            "type": "Skill",
+            "choices": [
+              "Acrobatics",
+              "Sleight of Hand",
+              "Stealth",
+              "Vehicles"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Martial Arts Training": {
+        "description": "Your heightened awareness and reflexes have made you a difficult target and adept at off-hand strikes.<br><ul><li>Your unarmed strike damage is improved by one die step.</li><li>You ignore difficult terrain when you move.</li><li>You treat all melee weapons that don't have the heavy property as if they had the finesse property.</li><li>When you make a Dexterity saving throw to take half damage from an effect, you take no damage on a successful save, and half damage on a failed one.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a martial artist (class), Martial Artist Training feat, Level 8+",
+        "profeciencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Historical"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Advanced Martial Arts Training": {
+        "description": "You have trained to strike efficiently with your hands and feet and are skilled in weapons used for sport and training.<br><ul><li>You gain Historical Equipment proficiency.</li><li>Your unarmed strike damage is improved by one die step.</li><li>You can make an unarmed strike as a bonus action.</li><li>Climbing and swimming are not difficult movement for you.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Agile Hero archetype OR Agile Hero Training feat, not a martial artist (class), Level 4+",
+        "profeciencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Historical"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Scoudrel Training": {
+        "description": "You have gotten pretty good at getting the upper hand through under-handed tactics.<br><ul><li>You gain Advanced Equipment proficiency.</li><li>Choose one from Acrobatics, Deception, Intimidation, Security, Sleight of Hand, Stealth, and Streetwise. You gain proficiency in the chosen skill.</li><li>You can Hide, Object Interaction, or make a Security or Sleight of Hand check as a bonus action.</li><li>You have advantage on attack rolls against any opponent that has not acted this combat.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Agile Hero archetype OR Agile Hero Training feat, not a scoundrel (class), Level 4+",
+        "profeciencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Advanced"
+            ],
+            "count": 1
+          },
+          {
+            "type": "Skill",
+            "choices": [
+              "Acrobatics",
+              "Deception",
+              "Intimidation",
+              "Security",
+              "Sleight of Hand",
+              "Stealth",
+              "Streetwise"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Advanced Scoudrel Training": {
+        "description": "You have learned all the best ways to hurt a person when they don't see it coming.<br><ul><li>Choose one from Acrobatics, Deception, Intimidation, Security, Sleight of Hand, Stealth, and Streetwise. You gain expertise in the chosen skill.</li><li>Once during your turn, when you hit a target with an attack, if you had advantage on that attack or an ally is within 5 feet of that target, you can choose to deal an additional 2d6 damage. You cannot deal this additional damage if the attack had disadvantage.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a scoundrel (class), Scoundrel Training feat, Level 8+",
+        "profeciencies": [
+          {
+            "type": "Expertise",
+            "choices": [
+              "Acrobatics",
+              "Deception",
+              "Intimidation",
+              "Security",
+              "Sleight of Hand",
+              "Stealth",
+              "Streetwise"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Sharpshooter Training": {
+        "description": "Handling ranged weapons has become second nature to you and using them requires about as much thought as breathing.<br><ul><li>You gain Advanced Equipment proficiency.</li><li>You can draw two one-handed light weapons as a free action.</li><li>You can reload two ranged weapons with the same action, without needing a free hand.</li><li>You can ignore the slow-firing property on ranged weapons.</li><li>When using a two-handed ranged weapon, you do not have disadvantage with attack rolls at long range.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Agile Hero archetype OR Agile Hero Training feat, not a sharpshooter (class), Level 4+",
+        "profeciencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Advanced"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Advanced Sharpshooter Training": {
+        "description": "Your mastery of ranged weapons has made you an opponent to be feared by all.<br><ul><li>You can add your Dexterity modifier to damage rolls made with off-hand ranged attacks.</li><li>When using a two-handed ranged weapon, you can ignore half cover when making ranged attacks at targets in cover.</li><li>When using a two-handed ranged weapon, you treat targets in three-fourths cover as being in half cover. (This changes the cover defense from 20 to 16.)</li><li>You score a critical hit on a roll of 19 or 20 when making ranged attacks.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a sharpshooter (class), Sharpshooter Training feat, Level 8+",
+        "profeciencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Advanced"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Tough Hero Training": {
+        "description": "You have toughened yourself up to where you find a little pain and exertion rather exhilarating.<br><ul><li>You gain Basic Equipment proficiency.</li><li>You gain damage reduction (against all damage types) equal to your proficiency bonus.</li><li>Once during your turn, when you attack an opponent that has damaged you since the end of your last turn, you gain a +2 bonus on the attack roll.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a Tough Hero archetype, Constitution 13+, Level 2+",
+        "profeciencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic"
+            ],
+            "count": 1
+          }
+        ],
+        "bonusadjustments": [
+          {
+            "type": "HasDamageReduction",
+            "value": 1
+          }
+        ]
+      },
+      "Bodyguard Training": {
+        "description": "You gladly put yourself in danger to protect others, and have trained to do exactly that.<br><ul><li>You gain Advanced Equipment proficiency.</li><li>When an ally within 5 feet is hit by an attack, you can use your reaction to cause the attack to hit you instead.</li><li>If you are in cover and adjacent to a willing ally, you can take a bonus action on your turn to move that ally into cover. You can move up to 5 feet during this action to make room for your ally</li><li>You do not damage allies if you roll a critical miss when firing into melee combat.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Tough Hero archetype OR Tough Hero Training feat, not a bodyguard (class), Level 4+",
+        "profeciencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Advanced"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Advanced Bodyguard Training": {
+        "description": "Ever vigilant, you have further honed your ability to keep those you protect from harm.<br><ul><li>You can ignore cover provided by your allies in your line of fire or in melee combat with your target.</li><li>When an opponent uses Dive for Cover as a reaction to one of your attacks or actions, their movement speed becomes 0 on their next turn.</li><li>You can take up to two reactions between each of your turns.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a bodyguard (class), Bodyguard Training feat, Level 8+"
+      },
+      "Commando Training": {
+        "description": "You give your all in combat, making you a very difficult target to take down.<br><ul><li>You gain Advanced Equipment proficiency.</li><li>You can take the Second Wind action as a bonus action.</li><li>You can draw, arm, and throw a grenade as a bonus action. You must have a free hand or already be holding the grenade to do this.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Tough Hero archetype OR Tough Hero feat, not a commando (class), Level 4+",
+        "profeciencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Advanced"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Advanced Commando Training": {
+        "description": "You're an especially dangerous person, capable of feats in combat few others can match.<br><ul><li>You gain Military Equipment proficiency.</li><li>By pushing yourself to the limit, you can take an additional action during your turn. You can do this only once before you finish a long rest.</li><li>You gain a +2 bonus to your Defense.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a commando (class), Commando Training feat, Level 8+",
+        "profeciencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Military"
+            ],
+            "count": 1
+          }
+        ],
+        "bonusadjustments": [
+          {
+            "type": "Defense",
+            "value": 2
+          }
+        ]
+      },
+      "Scrapper Training": {
+        "description": "You love one-on-one combat and seek to force a confrontation with your chosen opponent.<br><ul><li>You gain Advanced Equipment proficiency.</li><li>Enemies taking the Disengage action provoke opportunity attacks from you before leaving your reach.</li><li>Enemies within your reach that attack one of your allies other than you provoke an opportunity attack from you.</li><li>When you damage an opponent with an opportunity attack, their speed becomes 0 until the end of their current turn, preventing further movement.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Tough Hero archetype OR Tough Hero Training feat, not a scrapper (class), Level 4+",
+        "profeciencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Advanced"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Advanced Scrapper Training": {
+        "description": "You have an uncanny knack for surviving all kinds of pain and punishment.<br><ul><li>When you take damage from an attack, you can use your reaction to halve that attack's damage against you.</li><li>After rolling any saving throw, you may reroll that saving throw. You can't do this again until you finish a short rest.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a scrapper (class), Scrapper Training feat, Level 8+"
+      },
+      "Smart Hero Training": {
+        "description": "You have sharpened your wits to a razor's edge and turned your mind into the greatest weapon of all.<br><ul><li>You gain 2 Genius points. You can enact any plan you know by spending 1 Genius point. Genius points recharge when you finish a long rest. Your Plan DC formula is 8 + your Intelligence modifier + your proficiency bonus.</li><li>You learn two plans from the Shared Plans list for Smart Heroes.</li><li>You can only use shared plan enhancements up to Level 1.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a Smart Hero archetype, Intelligence 13+, Level 2+",
+        "bonusadjustments": [
+          {
+            "type": "GeniusPoints",
+            "value": 2
+          }
+        ],
+        "abilities": [
+          {
+            "type": "Plans",
+            "choices": [
+              "Shared"
+            ],
+            "count": 2
+          }
+        ]
+      },
+      "Engineer Training": {
+        "description": "You have studied the worlds of technology and machinery and have gained startling insights.<br><ul><li>You gain proficiency in Mechanics.</li><li>You gain a Mechanical Companion from the engineer's list of mechanical companions. (This does not include talents related to the Mechanical Companion. The companion follows standard companion rules.)</li><li>You learn 1 additional plan from the engineer plan list.</li><li>You can only use engineer plan enhancements up to Level 3.</li><li>If you are not a Smart Hero archetype, you can use shared plan enhancements only up to Level 3.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Smart Hero archetype OR Smart Hero Training feat, not an engineer (class), Level 4+",
+        "profeciencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Mechanics"
+            ],
+            "count": 1
+          }
+        ],
+        "abilities": [
+          {
+            "type": "Plans",
+            "choices": [
+              "Engineer"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Advanced Engineer Training": {
+        "description": "Your mastering of the technical world is impressive enough to put most people in awe of your skills.<br><ul><li>You gain expertise in Mechanics.</li><li>You gain an additional 1 Genius point.</li><li>You learn 2 additional plans, either from the Engineer or shared plan list.</li><li>You can only use Engineer plan enhancements up to Level 5.</li><li>If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 5.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not an engineer (class), Engineer Training feat, Level 8+",
+        "profeciencies": [
+          {
+            "type": "Expertise",
+            "choices": [
+              "Mechanics"
+            ],
+            "count": 1
+          }
+        ],
+        "abilities": [
+          {
+            "type": "Plans",
+            "choices": [
+              "Shared",
+              "Engineer"
+            ],
+            "count": 2
+          }
+        ],
+        "bonusadjustments": [
+          {
+            "type": "GeniusPoints",
+            "value": 1
+          }
+        ]
+      },
+      "Hacker Training": {
+        "description": "You have dived deeply into the digital ocean and become one of the elites of that realm.<br><ul><li>You gain proficiency in Computers.</li><li>You gain an additional 1 Genius point.</li><li>You learn 1 additional plan from the hacker plan list.</li><li>You can only use hacker plan enhancements up to Level 3.</li><li>If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 3.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Smart Hero archetype OR Smart Hero Training feat, not a hacker (class), Level 4+",
+        "profeciencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Computers"
+            ],
+            "count": 1
+          }
+        ],
+        "abilities": [
+          {
+            "type": "Plans",
+            "choices": [
+              "Hacker"
+            ],
+            "count": 1
+          }
+        ],
+        "bonusadjustments": [
+          {
+            "type": "GeniusPoints",
+            "value": 1
+          }
+        ]
+      },
+      "Advanced Hacker Training": {
+        "description": "When sysops hear your name they either tremble in fear, or stand in awe of your elite skills.<br><ul><li>You gain expertise in Computers.</li><li>You gain an additional 1 Genius point.</li><li>You learn two additional plans, either from the Hacker or shared plan list.</li><li>You can only use hacker plan enhancements up to Level 5.</li><li>If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 5.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a hacker (class), Hacker Training feat, Level 8+",
+        "profeciencies": [
+          {
+            "type": "Expertise",
+            "choices": [
+              "Computers"
+            ],
+            "count": 1
+          }
+        ],
+        "abilities": [
+          {
+            "type": "Plans",
+            "choices": [
+              "Shared",
+              "Hacker"
+            ],
+            "count": 2
+          }
+        ],
+        "bonusadjustments": [
+          {
+            "type": "GeniusPoints",
+            "value": 1
+          }
+        ]
+      },
+      "Mastermind Training": {
+        "description": "You have spent an awful lot of time trying to outsmart everyone, and it's working.<br><li>Choose either Investigation or Social Sciences. You gain proficiency in the chosen skill.</li><li>You gain an additional 1 Genius point.</li><li>You learn 1 additional plan from the mastermind plan list.</li><li>You can only use mastermind plan enhancements up to Level 3.</li><li>If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 3.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Smart Hero archetype OR Smart Hero Training feat, not a mastermind (class), Level 4+",
+        "profeciencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Investigation",
+              "Social Sciences"
+            ],
+            "count": 1
+          }
+        ],
+        "abilities": [
+          {
+            "type": "Plans",
+            "choices": [
+              "Mastermind"
+            ],
+            "count": 1
+          }
+        ],
+        "bonusadjustments": [
+          {
+            "type": "GeniusPoints",
+            "value": 1
+          }
+        ]
+      },
+      "Advanced Mastermind Training": {
+        "description": "You have devised plans within plans within plans. How about two more plans?<br><ul><li>Choose either Investigation or Social Sciences. You gain expertise in the chosen skill.</li><li>You gain an additional 1 Genius point.</li><li>You learn 2 additional plans from the mastermind or shared plan list.</li><li>You can only use mastermind plan enhancements up to Level 5.</li><li>If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 5.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a mastermind (class), Mastermind Training feat, Level 8+",
+        "profeciencies": [
+          {
+            "type": "Expertise",
+            "choices": [
+              "Investigation",
+              "Social Sciences"
+            ],
+            "count": 1
+          }
+        ],
+        "abilities": [
+          {
+            "type": "Plans",
+            "choices": [
+              "Shared",
+              "Mastermind"
+            ],
+            "count": 2
+          }
+        ],
+        "bonusadjustments": [
+          {
+            "type": "GeniusPoints",
+            "value": 1
+          }
+        ]
+      },
+      "Scientist Training": {
+        "description": "For those willing to master knowledge, the universe can be your sandbox.<br><ul><li>Choose either Medicine or Natural Sciences. You gain proficiency in the chosen skill.</li><li>You gain an additional 1 Genius point.</li><li>You learn 1 additional plan from the scientist plan list.</li><li>You can only use scientist plan enhancements up to Level 3.</li><li>If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 3.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Smart Hero archetype OR Smart Hero Training feat, not a scientist (class), Level 4+",
+        "profeciencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Medicine",
+              "Natural Sciences"
+            ],
+            "count": 1
+          }
+        ],
+        "abilities": [
+          {
+            "type": "Plans",
+            "choices": [
+              "Scientist"
+            ],
+            "count": 1
+          }
+        ],
+        "bonusadjustments": [
+          {
+            "type": "GeniusPoints",
+            "value": 1
+          }
+        ]
+      },
+      "Advanced Scientist Training": {
+        "description": "Your mastery of the elements of nature knows few equals.<br><ul><li>Choose either Medicine or Natural Sciences. You gain expertise in the chosen skill.</li><li>You gain an additional 1 Genius point.</li><li>You learn 2 additional plans from the scientist or shared plan list.</li><li>You can only use scientist plan enhancements up to Level 5. If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 5.</ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a scientist (class), Scientist Training feat, Level 8+",
+        "profeciencies": [
+          {
+            "type": "Expertise",
+            "choices": [
+              "Medicine",
+              "Natural Sciences"
+            ],
+            "count": 1
+          }
+        ],
+        "abilities": [
+          {
+            "type": "Plans",
+            "choices": [
+              "Shared",
+              "Scientist"
+            ],
+            "count": 2
+          }
+        ],
+        "bonusadjustments": [
+          {
+            "type": "GeniusPoints",
+            "value": 1
+          }
+        ]
+      },
+      "Wise Hero Training": {
+        "description": "You have learned to act with efficiency rather than speed, carefully choosing the correct course of action.<br><ul><li>You gain Basic Equipment proficiency.</li><li>Choose one from Insight, Perception, Streetwise, and Survival. You gain proficiency in the chosen skill.</li><li>You gain 2 focus points. Your Focus recharges whenever you finish a short or long rest.</li><li>You can spend one focus point to reroll a failed Wisdom ability check. This may only be done once per ability check.</li><li>You can choose not to fall Prone when you Dive for Cover.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a Wise Hero archetype, Wisdom 13+, Level 2+",
+        "bonusadjustments": [
+          {
+            "type": "FocusPoints",
+            "value": 2
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic"
+            ],
+            "count": 1
+          },
+          {
+            "type": "Skill",
+            "choices": [
+              "Insight",
+              "Perception",
+              "Streetwise",
+              "Survival"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Hunter Training": {
+        "description": "You have learned the art of tracking prey and bringing them to ground.<br><li>You gain the Advanced Equipment proficiency.</li><li>Choose one from Perception, Stealth, and Survival. You gain proficiency in the chosen skill.<li>You gain 1 additional Focus point.<li>As a bonus action, you can spend 1 Focus to mark one target opponent you can see.<li>You gain advantage on Wisdom (Perception) checks against a marked target.<li>You gain advantage on Wisdom (Streetwise) and Wisdom (Survival) checks made to track or find a marked target.<li>You can spend 1 Focus to reroll a damage roll you make against a marked target. If multiple dice are rolled for damage, you reroll all damage dice. You may only do this once per attack.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Wise Hero archetype OR Wise Hero Training feat, not a hunter (class), Level 4+",
+        "bonusadjustments": [
+          {
+            "type": "FocusPoints",
+            "value": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Advanced"
+            ],
+            "count": 1
+          },
+          {
+            "type": "Skill",
+            "choices": [
+              "Perception",
+              "Stealth",
+              "Survival"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Advanced Hunter Training": {
+        "description": "You have further honed your hunting skills, focusing on what it takes to survive encounters with dangerous prey.<br><li>Choose one from Perception, Stealth, or Survival. You must be proficient in the chosen skill. You gain Expertise in the chosen skill.</li><li>You gain 1 additional Focus point.</li><li>You can spend 1 Focus to reroll a missed attack roll against a marked target made by you or your hunting companion. You may only do this once per attack.</li><li>After an opponent hits you with an attack, you gain a +4 bonus to Defense against any further attacks that same opponent makes against you until the start of your next turn.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a hunter (class), Hunter Training feat, Level 8+",
+        "bonusadjustments": [
+          {
+            "type": "FocusPoints",
+            "value": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Expertise",
+            "choices": [
+              "Perception",
+              "Stealth",
+              "Survival"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Master Training": {
+        "description": "Your contemplative meditation has brought you to a state of inner harmony and butt-kicking.<br><li>You gain Improvised Equipment proficiency.</li><li>You gain 1 additional focus point.</li><li>You have damage reduction 15 against falling.</li><li>You can spend 1 focus point to take the Dash, Disengage, or Dodge action as a bonus action.</li><li>You can spend 1 focus to make an unarmed strike as a bonus action.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Wise Hero archetype OR Wise Hero Training feat, not a master (class), Level 4+",
+        "bonusadjustments": [
+          {
+            "type": "FocusPoints",
+            "value": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Improvised"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Advanced Master Training": {
+        "description": "Your great wisdom and inner peace have given you the ability to elegantly avoid danger and knock people's lights out.<br><ul><li>You gain 1 additional focus point.</li><li>When an opponent's attack misses you, and you are adjacent to a different opponent, you may take a reaction to cause the missed attack to hit the adjacent opponent.</li><li>When you hit a target with an unarmed strike, simple melee weapon, or improvised weapon, you can spend 1 focus point to attempt to stun that target. It must make a Constitution saving throw or be Stunned until the end of your next turn. The save DC is 8 + your Wisdom modifier + your proficiency bonus.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a master (class), Master Training feat, Level 8+",
+        "bonusadjustments": [
+          {
+            "type": "FocusPoints",
+            "value": 1
+          }
+        ]
+      },
+      "Sleuth Training": {
+        "description": "You have honed your awareness of your environment and are adept at spotting an opponent's weaknesses.<br><ul><li>You gain Advanced Equipment proficiency.</li><li>Choose one from Insight, Investigation, Perception, Security, and Streetwise. You gain proficiency in the chosen skill.</li><li>You cannot be surprised.</li><li>You can take the Search action as a bonus action.</li><li>You gain 1 additional Focus point.</li><li>You can spend 1 Focus point to reroll a failed Intelligence ability check. This may only be done once per ability check.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Wise Hero archetype OR Wise Hero Training feat, not a sleuth (class), Level 4+",
+        "bonusadjustments": [
+          {
+            "type": "FocusPoints",
+            "value": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Advanced"
+            ],
+            "count": 1
+          },
+          {
+            "type": "Skill",
+            "choices": [
+              "Insight",
+              "Investigation",
+              "Perception",
+              "Security",
+              "Streetwise"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Advanced Sleuth Training": {
+        "description": "Your intuition has given you the ability to get the drop on your enemies and hit them where it hurts.<br><ul><li>Choose one from Insight, Investigation, Perception, Security, and Streetwise. You gain expertise in the chosen skill.</li><li>You gain 1 additional Focus point.</li><li>As a bonus action, you can spend 1 Focus point to gain advantage on your next attack roll. If the attack hits, you deal an additional 2d6 damage to the target.</li><li>When you make a Dexterity saving throw to take half damage from an effect, you take no damage on a successful save, and half damage on a failed one.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a sleuth (class), Sleuth Training feat, Level 8+",
+        "bonusadjustments": [
+          {
+            "type": "FocusPoints",
+            "value": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Expertise",
+            "choices": [
+              "Insight",
+              "Investigation",
+              "Perception",
+              "Security",
+              "Streetwise"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Charming Hero Training": {
+        "description": "You have a way with words and/or looks that could kill.<br><ul><li>Choose two from Deception, Intimidation, Performance, and Persuasion. You gain proficiency in the chosen skills.</li><li>Choose one from Deception, Intimidation, Performance, and Persuasion). You must be proficient in the chosen skill. You gain expertise in the chosen skill.</li><li>You have two influence dice, which are d6s. An influence die is expended when it is rolled. You regain all of your expended influence dice when you finish a short or long rest.</li><li>When you make a Charisma check, after rolling but before determining the result, you can roll an influence die and add it to your result.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a Charming Hero archetype, Charisma 13+, Level 2+",
+        "bonusadjustments": [
+          {
+            "type": "InfluencePoints",
+            "value": 2
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Skill",
+            "choices": [
+              "Deception",
+              "Intimidation",
+              "Performance",
+              "Persuasion"
+            ],
+            "count": 2
+          },
+          {
+            "type": "Expertise",
+            "choices": [
+              "Deception",
+              "Intimidation",
+              "Performance",
+              "Persuasion"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Duelist Training": {
+        "description": "You have learned the ancient art of grace in combat, keeping you one step ahead of your opponent.<br><ul><li>Basic Equipment and Historical Equipment proficiency.</li><li>You gain 1 additional influence die.</li><li>While wielding a finesse weapon, your Defense bonus is increased by +1.</li><li>You learn two tricks, chosen from the list of duelist tricks.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Charming Hero archetype OR Charming Hero Training feat, not a Duelist (class), Level 4+",
+        "bonusadjustments": [
+          {
+            "type": "InfluencePoints",
+            "value": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic",
+              "Historical"
+            ],
+            "count": 2
+          }
+        ],
+        "abilities": [
+          {
+            "type": "Tricks",
+            "choices": [
+              "Duelist"
+            ],
+            "count": 2
+          }
+        ]
+      },
+      "Advanced Duelist Training": {
+        "description": "You have become an expert in the lunge and parry maneuvers, dancing around opponents and striking when they are most vulnerable.<br><ul><li>You gain 1 additional influence die.</li><li>Your influence dice are now d8 instead of d6. (Ignore this if your archetype is Charming Hero.)</li><li>You can add your Charisma modifier to initiative.</li><li>Opportunity attacks made against you have disadvantage.</li><li>You learn one additional trick chosen from the list of duelist tricks.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a duelist (class), Duelist Training feat, Level 8+",
+        "bonusadjustments": [
+          {
+            "type": "InfluencePoints",
+            "value": 1
+          }
+        ],
+        "abilities": [
+          {
+            "type": "Tricks",
+            "choices": [
+              "Duelist"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Icon Training": {
+        "description": "You are the bee's knees, the cat's pajamas, and perhaps the GOAT!<br><ul><li>You gain Basic Equipment and Advanced Equipment proficiencies.</li><li>You gain 1 additional influence die.</li><li>You learn two tricks, chosen from the list of icon tricks.</li><li>As a bonus action, you can give your allies an opening by drawing the attention of an opponent you are aware of who can hear you within 60 feet. The next attack one of your allies makes against that target before the start of your next turn has advantage.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Charming Hero archetype OR Charming Hero Training feat, not an icon (class), Level 4+",
+        "bonusadjustments": [
+          {
+            "type": "InfluencePoints",
+            "value": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic",
+              "Advanced"
+            ],
+            "count": 2
+          }
+        ],
+        "abilities": [
+          {
+            "type": "Tricks",
+            "choices": [
+              "Icon"
+            ],
+            "count": 2
+          }
+        ]
+      },
+      "Advanced Icon Training": {
+        "description": "You are definitely the GOAT, don't let anyone tell you differently!<br><ul><li>You gain 1 additional influence die.</li><li>Your influence dice are now d8 instead of d6. (Ignore this if your archetype is Charming Hero.)</li><li>You learn one additional trick chosen from the list of Icon tricks.</li><li>Whenever you roll a 1 on an influence die or a damage die, you can reroll that die once, taking the new result.</li><li>As a reaction, when an opponent within 5 feet that can see you targets you with an attack, you can cause that attack to have disadvantage. They cannot change targets in reaction to you doing this.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not an icon (class), Icon Training feat, Level 8+",
+        "bonusadjustments": [
+          {
+            "type": "InfluencePoints",
+            "value": 1
+          }
+        ],
+        "abilities": [
+          {
+            "type": "Tricks",
+            "choices": [
+              "Icon"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Leader Training": {
+        "description": "Your allies respect your wisdom and advice allowing you to direct them in combat and lift their spirits in rest.<br><ul><li>You gain Basic and Advanced Equipment proficiency.</li><li>You gain 1 additional influence die.</li><li>You learn two tricks, chosen from the list of leader tricks.</li><li>As an action, you can command one of your allies. That ally can use a reaction to make one attack or move up to its speed.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Charming Hero archetype OR Charming Hero Training feat, not a leader (class), Level 4+",
+        "bonusadjustments": [
+          {
+            "type": "InfluencePoints",
+            "value": 1
+          }
+        ],
+        "proficiencies": [
+          {
+            "type": "Equipment",
+            "choices": [
+              "Basic",
+              "Advanced"
+            ],
+            "count": 2
+          }
+        ],
+        "abilities": [
+          {
+            "type": "Tricks",
+            "choices": [
+              "Leader"
+            ],
+            "count": 2
+          }
+        ]
+      },
+      "Advanced Leader Training": {
+        "description": "You have further developed your leadership skills allowing you to better direct and motivate your allies.<br><ul><li>You gain 1 additional influence die.</li><li>Your influence dice are now d8 instead of d6. (Ignore this if your archetype is Charming Hero.)</li><li>You learn one additional trick chosen from the list of Leader tricks.</li><li>You encourage camaraderie among your allies. Whenever you and your allies finish a short rest, you and any ally that can hear you each regain 1 spent Hit Die, whether it was spent during this rest or earlier. You can do this only once before finishing a long rest.</li><li>As an action you can grant yourself and up to 6 allies that can hear you temporary hit points equal to your Hero level plus your Charisma modifier. You cannot take this action again until you finish a short or long rest.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a leader (class), Leader Training feat, Level 8+",
+        "bonusadjustments": [
+          {
+            "type": "InfluencePoints",
+            "value": 1
+          }
+        ],
+        "abilities": [
+          {
+            "type": "Tricks",
+            "choices": [
+              "Leader"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "Maniputator Training": {
+        "description": "You have learned the art of not only influencing others, but bending them to your will.<br><ul><li>You gain 1 additional influence die.</li><li>You learn two tricks, chosen from the list of Manipulator tricks.</li><li>You can demoralize an opponent within 60 feet as an action. The target must make a Wisdom saving throw against a DC of 8 + your Charisma modifier + your proficiency bonus. On a failed save, the target has disadvantage on attack rolls, disadvantage on ability checks, and attack rolls against the target have advantage. This effect lasts until the end of your next turn.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Charming Hero archetype OR Charming Hero Training feat, not a manipulator (class), Level 4+",
+        "bonusadjustments": [
+          {
+            "type": "InfluencePoints",
+            "value": 1
+          }
+        ],
+        "abilities": [
+          {
+            "type": "Tricks",
+            "choices": [
+              "Manipulator"
+            ],
+            "count": 2
+          }
+        ]
+      },
+      "Advanced Maniputator Training": {
+        "description": "You not only get into the heads of your enemies, you live there rent-free.<br><ul><li>You gain 1 additional influence die.</li><li>Your influence dice are now d8 instead of d6. (Ignore this if your archetype is Charming Hero.)</li><li>You learn one additional trick, chosen from the list of Manipulator tricks.</li><li>You can perfectly mimic the voice of another person, as long as you have heard them speak for at least 1 minute. A successful Wisdom (Insight) check contested by your Charisma (Deception) check allows a listener to determine that the voice is fake.</li><li>You can use your Demoralize ability as a bonus action. You can still use it as an action as well, allowing you to use it twice during your turn if you like.</li></ul>",
+        "type": "Multiclass",
+        "scale": "Major",
+        "prerequisite": "Not a manipulator (class), Manipulator Training feat, Level 8+",
+        "bonusadjustments": [
+          {
+            "type": "InfluencePoints",
+            "value": 1
+          }
+        ],
+        "abilities": [
+          {
+            "type": "Tricks",
+            "choices": [
+              "Manipulator"
+            ],
+            "count": 1
+          }
+        ]
+      }
+    }
+  }
+}

@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Utility.Interfaces
+namespace Utility
 {
-    public class ISkill
+    public interface ISkill
     {
-        public string Description { get; }
-        public int Value { get; set; }
+        public string Description { get; set; }
     }
 }

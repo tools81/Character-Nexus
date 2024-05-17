@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace EverydayHeroes
 {
-    public class Proficiency
+    public class BonusAdjustment
     {
-        public ProficiencyType Type { get; set; }
-        public List<string> Targets { get; set; }
+        public BonusType Type { get; set; }
+        public int Value { get; set; }
     }
 }

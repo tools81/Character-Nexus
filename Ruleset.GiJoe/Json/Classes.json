@@ -1,0 +1,174 @@
+{
+	"Classes": {
+		"Roles": {
+			"Commando": {
+				"description": "",
+				"health": 1,
+				"proficiencies": [
+					{
+					  "type": "Essence",
+					  "choices": [
+						"Speed",
+						"Social"
+					  ],
+					  "count": 2
+					},
+					{
+					  "type": "Skill",
+					  "choices": [
+						"Acrobatics",
+						"Deception",
+						"Infiltration",
+						"Streetwise"
+					  ],
+					  "count": 2
+					},
+					{
+					  "type": "Expertise",
+					  "choices": [
+						"Acrobatics",
+						"Deception",
+						"Infiltration",
+						"Streetwise"
+					  ],
+					  "count": 2
+					}
+					{
+					  "type": "Equipment",
+					  "choices": [
+						"Standard"
+					  ],
+					  "count": 1
+					},
+					{
+					  "type": "Vehicle",
+					  "choices": [
+						"Standard"
+					  ],
+					  "count": 1
+					},
+					{
+					  "type": "Training",
+					  "choices": [
+						"Light Armor",
+						"Grenades",
+						"Finesse and Silent weapons"
+					  ],
+					  "count": 1
+					},
+					{
+					  "type": "Qualification",
+					  "choices": [
+						"Tactical Armor",
+						"Submachine Gun"
+					  ],
+					  "count": 1
+					}
+				],
+				"perks": [
+					[
+						"All Warfare Is Deception",
+						"Sneak Attack",
+						"Friend of Darkness"
+					],
+					[
+						"Think Fast",
+						"Mobility"
+					],
+					[],
+					[],
+					[
+						"Takedown",
+						"Just a Graze"
+					],
+					[],
+					[
+						"First Strike"
+					],
+					[],
+					[
+						"Seconds Between Click and Boom",
+						"Ghost"
+					],
+					[],
+					[],
+					[
+						"Everythings a Weapon",
+						"Every Tick in the Book"
+					],
+					[
+						"Psychological Warfare"
+					],
+					[
+						"Safecracker"
+					],
+					[],
+					[
+						"Debilitating Strike"
+					],
+					[],
+					[
+						"Paranoia"
+					],
+					[],
+					[]
+				],
+				"focus": {
+					"Infiltrator": {
+						"description": "The Infiltrator works best when unseen, creeping past defenses and striking from the shadows.",
+						"proficiencies": [
+							{
+							  "type": "Essence",
+							  "choices": [
+								"Speed"
+							  ],
+							  "count": 1
+							},
+							{
+							  "type": "Skill",
+							  "choices": [
+								"Infiltration"
+							  ],
+							  "count": 1
+							}
+						]
+						"perks": [
+							[
+								"Shadow"
+							],
+							[],
+							[
+								"Night Eyes"
+							],
+							[],
+							[],
+							[
+								"Wire Work",
+								"Takedown Expert"
+							],
+							[],
+							[],
+							[],
+							[
+								"Never Heard It Coming",
+								"Silent Strider"
+							],
+							[],
+							[],
+							[],
+							[],
+							[],
+							[],
+							[
+								"Phantom"
+							],
+							[
+								"Quiet as the Grave"
+							]
+						]
+					}
+				}
+			}
+		}
+	}
+}

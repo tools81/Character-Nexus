@@ -1,0 +1,56 @@
+{
+	"Features": {
+		"Influences": {
+			"Adventurer": {
+				"description": "",
+				"perk": ""
+				"hangup": "",
+				"characteristics": "",
+				"bonds": [
+					"",
+					""
+				]
+			}
+		},
+		"Origin": {
+			"Soldier": {
+				"description": "",
+				"health": 2,
+				"movement": 35,
+				"benefit": "If It Shoots..."
+				"benefitdescription": "You are trained in all weapons, other than unique weapons.",
+				"proficiencies": [
+					{
+					  "type": "Essence",
+					  "choices": [
+						"Strength",
+						"Speed"
+					  ],
+					  "count": 1
+					},
+					{
+						"type": "Skill",
+					  "choices": [
+						"Athletics",
+						"Conditioning",
+						"Targeting",
+						"Initiative"
+					  ],
+					  "count": 1
+					},
+					{
+					  "type": "Equipment",
+					  "choices": [
+						"Standard",
+						"Limited",
+						"Restricted",
+						"Prototypical"
+					  ],
+					  "count": 1
+					}
+				],
+				"languages": ""
+			}
+		}
+	}
+}

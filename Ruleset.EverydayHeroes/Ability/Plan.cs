@@ -8,8 +8,9 @@ using Utility;
 
 namespace EverydayHeroes
 {
-    public class Ability : IAbility
+    public class Plan
     {
-        public Dictionary<string, Talent> Talents { get; set; }        
+        public string Description { get; set; }
+        public string Class { get; set; }
     }
 }

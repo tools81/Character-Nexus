@@ -40,7 +40,7 @@ namespace EverydayHeroes
 
         public IEnumerable<IClass> GetClassList()
         {
-            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("EverydayHeroes.Json.Archetypes.json"))
+            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("EverydayHeroes.Json.Classes.json"))
             {
                 using (var reader = new StreamReader(stream))
                 {

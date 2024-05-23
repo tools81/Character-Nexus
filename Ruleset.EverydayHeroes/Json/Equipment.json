@@ -1,0 +1,2992 @@
+{
+	"Equipment": {
+		"Weapons": {
+			"Unarmed Strike": {
+				"tier": "Basic",
+				"category": "Melee",
+				"damage": "1d4 bludgeoning",
+				"range": "",
+				"penetration": 1,
+				"properties": [
+					"Finesse",
+					"Light",
+					"Special"
+				],
+				"price": 0,
+				"bulk": 0,
+				"description": "Unarmed strikes are most commonly punches, but they include any move that has the potential to deliver a punishing blow whether via kicks, headbutts, knees to the groin, or elbows to the face. It's one of the few attacks you don't need a hand to perform and you are always armed with it."
+			},
+			"Club, small metal": {
+				"tier": "Basic",
+				"category": "Melee",
+				"damage": "1d6 bludgeoning",
+				"range": "",
+				"penetration": 1,
+				"properties": [],
+				"price": 1,
+				"bulk": 1,
+				"description": "When all else fails, there is always a trusty club at hand. From a carefully crafted police baton to an awkward but effective pipe wrench, clubs come in varying shapes and sizes."
+			},
+			"Club, small wooden": {
+				"tier": "Basic",
+				"category": "Melee",
+				"damage": "1d4 bludgeoning",
+				"range": "",
+				"penetration": 1,
+				"properties": [
+					"Light"
+				],
+				"price": 1,
+				"bulk": 1,
+				"description": "When all else fails, there is always a trusty club at hand. From a carefully crafted police baton to an awkward but effective pipe wrench, clubs come in varying shapes and sizes."
+			},
+			"Club, large metal": {
+				"tier": "Basic",
+				"category": "Melee",
+				"damage": "1d10 bludgeoning",
+				"range": "",
+				"penetration": 1,
+				"properties": [
+					"Two-Handed"
+				],
+				"price": 1,
+				"bulk": 2,
+				"description": "When all else fails, there is always a trusty club at hand. From a carefully crafted police baton to an awkward but effective pipe wrench, clubs come in varying shapes and sizes."
+			},
+			"Club, large wooden": {
+				"tier": "Basic",
+				"category": "Melee",
+				"damage": "1d6/1d8 bludgeoning",
+				"range": "",
+				"penetration": 1,
+				"properties": [
+					"Two-Handed",
+					"Versatile"
+				],
+				"price": 1,
+				"bulk": 2,
+				"description": "When all else fails, there is always a trusty club at hand. From a carefully crafted police baton to an awkward but effective pipe wrench, clubs come in varying shapes and sizes."
+			},
+			"Dagger": {
+				"tier": "Basic",
+				"category": "Melee",
+				"damage": "1d4 piercing",
+				"range": "40/80",
+				"penetration": 2,
+				"properties": [
+					"Finesse",
+					"Light",
+					"Thrown"
+				],
+				"price": 1,
+				"bulk": 1,
+				"description": "Daggers are designed for stabbing rather than cutting and feature thin blades that puncture through or slip around armor. They can also be thrown with excellent accuracy."
+			},
+			"Knife, small": {
+				"tier": "Basic",
+				"category": "Melee",
+				"damage": "1d4 slashing",
+				"range": "30/60",
+				"penetration": 1,
+				"properties": [
+					"Finesse",
+					"Light",
+					"Thrown"
+				],
+				"price": 1,
+				"bulk": 1,
+				"description": "This entry represents knives suitable for fighting, with a good sturdy handle and a strong blade. Smaller utility knives and utensils are considered improvised weapons if used in a fight."
+			},
+			"Knife, large": {
+				"tier": "Basic",
+				"category": "Melee",
+				"damage": "1d6 slashing",
+				"range": "",
+				"penetration": 1,
+				"properties": [],
+				"price": 1,
+				"bulk": 2,
+				"description": "This entry represents knives suitable for fighting, with a good sturdy handle and a strong blade. Smaller utility knives and utensils are considered improvised weapons if used in a fight."
+			},
+			"Stun Gun": {
+				"tier": "Basic",
+				"category": "Melee",
+				"damage": "1d4 electrical",
+				"range": "",
+				"penetration": 0,
+				"properties": [
+					"Finesse",
+					"Stunning"
+				],
+				"price": 1,
+				"bulk": 1,
+				"description": "Not a true gun, a stun gun is a handheld device that delivers a strong electric shock when it touches a person. Stun guns work only against exposed skin or through thin clothing."
+			},
+			"Crossbow, modern": {
+				"tier": "Basic",
+				"category": "Ranged",
+				"damage": "1d8 piercing",
+				"range": "200/400",
+				"rounds": "0",
+				"reload": "",
+				"penetration": 1,
+				"properties": [
+					"Slow-Firing",
+					"Two-Handed"
+				],
+				"price": 2,
+				"bulk": 2,
+				"description": "These hunting weapons remain popular in the modern era. Modern crossbows are smaller and easier to load than their ancient counterparts, firing smaller projectiles with less force at higher speeds."
+			},
+			"Pepper Spray": {
+				"tier": "Basic",
+				"category": "Ranged",
+				"damage": "1d4 piercing",
+				"range": "10",
+				"rounds": "10",
+				"reload": "",
+				"penetration": 0,
+				"properties": [
+					"Blinding"
+				],
+				"price": 1,
+				"bulk": 0,
+				"description": "This chemical poison spray in an aerosol canister must be sprayed into an opponent's face to have an effect, but a direct hit can take the fight out of someone. Opponents with eye protection won't enjoy it but are immune to its effects."
+			},
+			"Pistol, heavy revolver": {
+				"tier": "Basic",
+				"category": "Ranged",
+				"damage": "1d10 ballistic",
+				"range": "100/200",
+				"rounds": "6",
+				"reload": "Action",
+				"penetration": 3,
+				"properties": [
+					"Loud"
+				],
+				"price": 2,
+				"bulk": 1,
+				"description": "This type of pistol 'won the West.' It was the standard army sidearm of the Civil War and post-Civil War period. Today, these revolvers are popular sporting pistols and collectibles."
+			},
+			"Pistol, pocket .38": {
+				"tier": "Basic",
+				"category": "Ranged",
+				"damage": "1d6/1d8 ballistic",
+				"range": "50/100",
+				"rounds": "5",
+				"reload": "Action",
+				"penetration": 2,
+				"properties": [
+					"Light",
+					"Loud",
+					"Versatile"
+				],
+				"price": 2,
+				"bulk": 1,
+				"description": "These small .38 revolvers can be carried in a jacket pocket. They are designed with smooth lines so they can be pulled out quickly with no snags. Due to a snub nose barrel, they are not accurate, but they do pack a punch."
+			},
+			"Rifle, hunting": {
+				"tier": "Basic",
+				"category": "Ranged",
+				"damage": "1d10 ballistic",
+				"range": "750/2200",
+				"rounds": "6",
+				"reload": "Bonus",
+				"penetration": 4,
+				"properties": [
+					"Loud",
+					"Slow-Firing",
+					"Two-Handed"
+				],
+				"price": 2,
+				"bulk": 2,
+				"description": "A huge variety of rifles have been designed for hunting. Range and accuracy are more important than ammunition capacity or reloading speed. For this reason, most are bolt-action weapons. They are dangerous firearms in the hands of a skilled sharpshooter."
+			},
+			"Slingshot": {
+				"tier": "Basic",
+				"category": "Ranged",
+				"damage": "1d4 bludgeoning",
+				"range": "50/100",
+				"rounds": "",
+				"reload": "",
+				"penetration": 1,
+				"properties": [],
+				"price": 1,
+				"bulk": 1,
+				"description": "Modern slingshots use a rubber strap on a metal frame strapped to the wrist. When used with a sling bullet, it's a deadly weapon against small pest animals."
+			},
+			"Shotgun, double-barrel": {
+				"tier": "Basic",
+				"category": "Ranged",
+				"damage": "2d6 ballistic",
+				"range": "200/400",
+				"rounds": "2",
+				"reload": "Action",
+				"penetration": 3,
+				"properties": [
+					"Burst 2",
+					"Loud",
+					"Shot",
+					"Two-Handed"
+				],
+				"price": 2,
+				"bulk": 2,
+				"description": "Shotguns are produced as long-barrel hunting guns, but short-barreled versions are employed as self-defense weapons. The barrels can be fired separately or together. Like most shotguns, they are deadly at short ranges and one of the most versatile and reliable firearms ever devised."
+			},
+			"Brass Knuckles": {
+				"tier": "Advanced",
+				"category": "Melee",
+				"damage": "1d6 bludgeoning",
+				"range": "",
+				"penetration": 1,
+				"properties": [
+					"Finesse",
+					"Light"
+				],
+				"price": 1,
+				"bulk": 0,
+				"description": "This entry covers a range of implements you can use to protect your fists while delivering heavier blows. Brass knuckles do more damage than an unarmed strike."
+			},
+			"Fire Axe": {
+				"tier": "Advanced",
+				"category": "Melee",
+				"damage": "1d8/1d10 slashing",
+				"range": "",
+				"penetration": 2,
+				"properties": [
+					"Versatile"
+				],
+				"price": 1,
+				"bulk": 2,
+				"description": "The trusty fire axe is a versatile implement, meant to save lives rather than take them. Any woodcutting axe can be covered by this entry."
+			},
+			"Hatchet": {
+				"tier": "Advanced",
+				"category": "Melee",
+				"damage": "1d6 slashing",
+				"range": "20/40",
+				"penetration": 1,
+				"properties": [
+					"Light",
+					"Thrown"
+				],
+				"price": 1,
+				"bulk": 2,
+				"description": "Hatchets are excellent tools to have in the wilderness, and as a weapon it is useful both up close and at short range."
+			},
+			"Sledgehammer": {
+				"tier": "Advanced",
+				"category": "Melee",
+				"damage": "1d12 bludgeoning",
+				"range": "",
+				"penetration": 2,
+				"properties": [
+					"Heavy",
+					"Two-Handed"
+				],
+				"price": 1,
+				"bulk": 3,
+				"description": "In reality a sledgehammer makes for an unwieldy weapon, but if you have the strength, it can put the hurt on your opponents and bypasses conventional armor, brick walls, and other obstacles."
+			},
+			"Bow, modern compound": {
+				"tier": "Advanced",
+				"category": "Ranged",
+				"damage": "1d10 piercing",
+				"range": "200/600",
+				"rounds": "",
+				"reload": "",
+				"penetration": 1,
+				"properties": [
+					"Two-Handed"
+				],
+				"price": 2,
+				"bulk": 2,
+				"description": "Modern bows for hunting or sport are more compact than their ancient counterparts, but they pack as much or greater power. Hunting arrows use bladed tips, while target arrows are pointed."
+			},
+			"Harpoon Gun": {
+				"tier": "Advanced",
+				"category": "Ranged",
+				"damage": "1d8 piercing",
+				"range": "30/60",
+				"rounds": "2",
+				"reload": "Action",
+				"penetration": 2,
+				"properties": [
+					"Aquatic"
+				],
+				"price": 2,
+				"bulk": 2,
+				"description": "This weapon is designed to be fired underwater. The range is short, but the harpoons are designed to minimize resistance and deliver a fatal wound to sea creatures."
+			},
+			"Pistol, 9mm semi-auto": {
+				"tier": "Advanced",
+				"category": "Ranged",
+				"damage": "1d10 ballistic",
+				"range": "100/200",
+				"rounds": "21",
+				"reload": "Bonus",
+				"penetration": 2,
+				"properties": [
+					"Loud",
+					"Semi-Auto"
+				],
+				"price": 2,
+				"bulk": 1,
+				"description": "These standard sidearms are used by the armed forces and police and exceedingly popular on the civilian market. They balance stopping power with ammunition capacity and use inexpensive cartridges."
+			},
+			"Pistol, concealed carry": {
+				"tier": "Advanced",
+				"category": "Ranged",
+				"damage": "1d8/1d10 ballistic",
+				"range": "100/200",
+				"rounds": "8",
+				"reload": "Bonus",
+				"penetration": 2,
+				"properties": [
+					"Light",
+					"Loud",
+					"Semi-Auto",
+					"Versatile"
+				],
+				"price": 2,
+				"bulk": 1,
+				"description": "These compact versions of the standard 9mm pistol are used by undercover police and civilians who want to be armed but keep a low profile. They are typically carried in a concealed holster and chambered for 9mm rounds."
+			},
+			"Pistol, hand cannon": {
+				"tier": "Advanced",
+				"category": "Ranged",
+				"damage": "1d12 ballistic",
+				"range": "100/200",
+				"rounds": "7",
+				"reload": "Bonus",
+				"penetration": 3,
+				"properties": [
+					"Loud",
+					"Semi-Auto"
+				],
+				"price": 3,
+				"bulk": 1,
+				"description": "Heavy pistols fire large caliber rounds such as .50s and .45 magnums. While they have considerable stopping power and penetration, they are difficult to handle and have limited ammunition capacity."
+			},
+			"Pistol, holdout": {
+				"tier": "Advanced",
+				"category": "Ranged",
+				"damage": "1d6 ballistic",
+				"range": "50/100",
+				"rounds": "1",
+				"reload": "Action",
+				"penetration": 2,
+				"properties": [
+					"Disguised",
+					"Light",
+					"Loud",
+					"Slow-Firing"
+				],
+				"price": 2,
+				"bulk": 0,
+				"description": "These small firearms are designed to be concealed nearly anywhere. They have one or two shots and are breech loaded. Larger models can have two shots."
+			},
+			"Rifle, sniper": {
+				"tier": "Advanced",
+				"category": "Ranged",
+				"damage": "2d8 ballistic",
+				"range": "2000/6000",
+				"rounds": "10",
+				"reload": "Bonus",
+				"penetration": 4,
+				"properties": [
+					"Heavy",
+					"Loud",
+					"Slow-Firing",
+					"Two-Handed"
+				],
+				"price": 4,
+				"bulk": 3,
+				"description": "Sniper rifles are designed for accuracy and penetrating power at long range. They fire high-caliber, armor-piercing rounds and use high-magnification scopes to assist in aiming. While it is possible to fire a sniper rifle while standing, most prefer to fire from a braced position for better accuracy."
+			},
+			"Rifle, tactical": {
+				"tier": "Advanced",
+				"category": "Ranged",
+				"damage": "1d12 ballistic",
+				"range": "600/1200",
+				"rounds": "30",
+				"reload": "Bonus",
+				"penetration": 3,
+				"properties": [
+					"Loud",
+					"Semi-Auto",
+					"Two-Handed"
+				],
+				"price": 3,
+				"bulk": 2,
+				"description": "The tactical rifle is the civilian equivalent of the military assault rifle, but without fully automatic fire. In the civilian world, they are used as a self-defense weapon, though there is intense debate as to whether they are appropriate for civilian use."
+			},
+			"Rifle, tranquilizer": {
+				"tier": "Advanced",
+				"category": "Ranged",
+				"damage": "1 piercing",
+				"range": "50/100",
+				"rounds": "1",
+				"reload": "Action",
+				"penetration": 1,
+				"properties": [
+					"Restricted",
+					"Slow-Firing",
+					"Special",
+					"Two-Handed"
+				],
+				"price": 3,
+				"bulk": 2,
+				"description": "This air rifle is specially designed to fire a hypodermic dart intended to tranquilize an animal. Each dart must be prepared with enough tranquilizer for the animal's weight and metabolism to bring them down, but not permanently harm them. They have a short range due to the large and delicate projectile they fire. (See “Poison” in chapter 12 for details.)"
+			},
+			"Shotgun, pump-action": {
+				"tier": "Advanced",
+				"category": "Ranged",
+				"damage": "2d6 ballistic",
+				"range": "200/400",
+				"rounds": "9",
+				"reload": "Action",
+				"penetration": 3,
+				"properties": [
+					"Loud",
+					"Shot",
+					"Two-Handed"
+				],
+				"price": 2,
+				"bulk": 2,
+				"description": "Pump-action shotguns offer high reliability and a good number of shots from their internal magazines. Individual cartridges can be quickly loaded. Hunters use this feature to load different cartridges depending on the intended target and range. Police and military sometimes use shotguns for clearing buildings."
+			},
+			"Taser": {
+				"tier": "Advanced",
+				"category": "Ranged",
+				"damage": "1d4 electrical",
+				"range": "15",
+				"rounds": "2",
+				"reload": "",
+				"penetration": 0,
+				"properties": [
+					"Light",
+					"Stunning"
+				],
+				"price": 2,
+				"bulk": 1,
+				"description": "These nonlethal guns fire small metal darts connected by thin wires to the device. Once embedded, these darts deliver a strong electric shock intended to stun the target for a short time. TASER is a trademark held by the company that makes these devices rather than a generic term."
+			},
+			"Grenade, flare": {
+				"tier": "Advanced",
+				"category": "Explosive",
+				"damage": "",
+				"range": "40/80",
+				"radius": "30 feet",
+				"penetration": 0,
+				"properties": [
+					"Grenade",
+					"Illuminating",
+					"Thrown"
+				],
+				"price": 1,
+				"bulk": 1,
+				"description": "Flare grenades are used at night to provide illumination on targets or to light up a landing area for a helicopter or the like."
+			},
+			"Grenade, smoke": {
+				"tier": "Advanced",
+				"category": "Explosive",
+				"damage": "",
+				"range": "40/80",
+				"radius": "15 feet",
+				"penetration": 0,
+				"properties": [
+					"Grenade",
+					"Special",
+					"Thrown"
+				],
+				"price": 1,
+				"bulk": 1,
+				"description": "These grenades create a cloud of smoke in a 15-foot radius, useful both as a signaling device for aircraft and to reduce enemy sight. The area covered by the smoke has no visibility. The smoke lasts for 1 minute. Strong winds can blow the smoke in the direction of the wind, reducing the duration by half."
+			},
+			"Boomerang": {
+				"tier": "Historical",
+				"category": "Melee",
+				"damage": "1d6 bludgeoning",
+				"range": "40/80",
+				"penetration": 1,
+				"properties": [
+					"Returning",
+					"Thrown"
+				],
+				"price": 1,
+				"bulk": 1,
+				"description": "These unique wooden throwing weapons originated with Aboriginal Australians. They are used to hunt small game, but they can deliver a telling blow. Boomerangs that return when thrown are more useful for recreation than hunting."
+			},
+			"Javelin": {
+				"tier": "Historical",
+				"category": "Melee",
+				"damage": "1d6 piercing",
+				"range": "100/200",
+				"penetration": 1,
+				"properties": [
+					"Thrown"
+				],
+				"price": 2,
+				"bulk": 1,
+				"description": "These thin shafts about two to four feet in length have a sharp metal tip designed for throwing at long distances."
+			},
+			"Net": {
+				"tier": "Historical",
+				"category": "Melee",
+				"damage": "",
+				"range": "10",
+				"penetration": 0,
+				"properties": [
+					"Special",
+					"Thrown"
+				],
+				"price": 2,
+				"bulk": 2,
+				"description": "A net can be used against Small, Medium, or Large targets. A successful attack does not cause damage, but the target is Restrained. The target can free itself by making a successful DC 10 Strength check as an action or by dealing 15 points of slashing damage to the net."
+			},
+			"Nunchucks": {
+				"tier": "Historical",
+				"category": "Melee",
+				"damage": "1d6 bludgeoning",
+				"range": "",
+				"penetration": 1,
+				"properties": [
+					"Finesse",
+					"Light"
+				],
+				"price": 1,
+				"bulk": 1,
+				"description": "These are made by linking two short wooden rods with a short chain or rope. They are associated with traditional Eastern martial arts."
+			},
+			"Poignard": {
+				"tier": "Historical",
+				"category": "Melee",
+				"damage": "1d6 piercing",
+				"range": "",
+				"penetration": 1,
+				"properties": [
+					"Finesse",
+					"Light"
+				],
+				"price": 2,
+				"bulk": 1,
+				"description": "A poignard is a long steel dagger meant for stabbing and parrying, popular in the Renaissance period but first documented in the Middle Ages."
+			},
+			"Quarterstaff": {
+				"tier": "Historical",
+				"category": "Melee",
+				"damage": "1d8 bludgeoning",
+				"range": "",
+				"penetration": 1,
+				"properties": [
+					"Finesse",
+					"Two-Handed"
+				],
+				"price": 1,
+				"bulk": 2,
+				"description": "A smooth wooden stick about 5 feet long, the quarterstaff is both an effective, easy-to-use weapon and a practical walking stick."
+			},
+			"Rapier": {
+				"tier": "Historical",
+				"category": "Melee",
+				"damage": "1d8 piercing",
+				"range": "",
+				"penetration": 1,
+				"properties": [
+					"Finesse"
+				],
+				"price": 2,
+				"bulk": 2,
+				"description": "These thin-bladed swords are popular with fencers and Renaissance fair actors. Among the range of fencing swords, the rapier is one of the heavier options."
+			},
+			"Shuriken": {
+				"tier": "Historical",
+				"category": "Melee",
+				"damage": "1d4 piercing",
+				"range": "30/60",
+				"penetration": 1,
+				"properties": [
+					"Finesse",
+					"Light",
+					"Thrown"
+				],
+				"price": 1,
+				"bulk": 0,
+				"description": "These small, sharpened bits of metal are easy to throw but rarely deliver a fatal wound. Traditionally they were used as a distraction or poisoned to facilitate an assassination."
+			},
+			"Spear": {
+				"tier": "Historical",
+				"category": "Melee",
+				"damage": "1d10 piercing",
+				"range": "30/60",
+				"penetration": 1,
+				"properties": [
+					"Reach 10",
+					"Thrown",
+					"Two-Handed"
+				],
+				"price": 2,
+				"bulk": 2,
+				"description": "Among the most versatile weapons, spears are cheap, light, can be thrown, and have the advantage of reach in comparison to other melee weapons."
+			},
+			"Sword": {
+				"tier": "Historical",
+				"category": "Melee",
+				"damage": "1d8/1d10 slashing",
+				"range": "",
+				"penetration": 1,
+				"properties": [
+					"Versatile"
+				],
+				"price": 3,
+				"bulk": 2,
+				"description": "This entry represents a typical fantasy longsword, cavalry saber, or katana. It's a one-handed blade, but it can be used two-handed for additional speed and power."
+			},
+			"Sword cane": {
+				"tier": "Historical",
+				"category": "Melee",
+				"damage": "1d8 piercing",
+				"range": "",
+				"penetration": 1,
+				"properties": [
+					"Disguised"
+				],
+				"price": 3,
+				"bulk": 2,
+				"description": "This thin blade disguised as a walking stick isn't especially durable or well balanced, but it is dangerous in the right hands and difficult to detect."
+			},
+			"Sword, two-handed": {
+				"tier": "Historical",
+				"category": "Melee",
+				"damage": "2d6 slashing",
+				"range": "",
+				"penetration": 1,
+				"properties": [
+					"Heavy",
+					"Two-Handed"
+				],
+				"price": 3,
+				"bulk": 3,
+				"description": "These large, two-handed blades are potentially devastating but rarely carried in modern times. Nothing attracts unwanted attention like wandering around with a greatsword strapped to your back."
+			}, 
+			"Whip": {
+				"tier": "Historical",
+				"category": "Melee",
+				"damage": "1d4 slashing",
+				"range": "",
+				"penetration": 0,
+				"properties": [
+					"Finesse",
+					"Reach 15"
+				],
+				"price": 1,
+				"bulk": 1,
+				"description": "What robber of ancient tombs would be complete without a cracking bullwhip? It's employed more often as a tool for ranchers to intimidate livestock, but in a pinch it could be used as a weapon."
+			},
+			"Blowgun": {
+				"tier": "Historical",
+				"category": "Ranged",
+				"damage": "1 piercing",
+				"range": "30/60",
+				"rounds": "1",
+				"reload": "Bonus",
+				"penetration": 0,
+				"properties": [
+					"Slow-Firing"
+				],
+				"price": 2,
+				"bulk": 1,
+				"description": "Blowguns consist of a hollow tube fitted with small, feathered darts. When the user blows into the tube, it propels the dart toward the target. With their short range they are mainly used to deliver poisoned darts, since otherwise they are little more than a painful nuisance."
+			},
+			"Crossbow": {
+				"tier": "Historical",
+				"category": "Ranged",
+				"damage": "1d10 piercing",
+				"range": "200/400",
+				"rounds": "1",
+				"reload": "Action",
+				"penetration": 2,
+				"properties": [
+					"Slow-Firing",
+					"Two-Handed"
+				],
+				"price": 2,
+				"bulk": 3,
+				"description": "Archaic crossbows are easy weapons to use: you load, point, and shoot. They can range from massive siege weapons to tiny toys; the statistics represent an average-sized crossbow."
+			},
+			"Crossbow, hand": {
+				"tier": "Historical",
+				"category": "Ranged",
+				"damage": "1d4 piercing",
+				"range": "60/120",
+				"rounds": "1",
+				"reload": "Bonus",
+				"penetration": 1,
+				"properties": [
+					"Light",
+					"Slow-Firing"
+				],
+				"price": 2,
+				"bulk": 2,
+				"description": "Scholars debate whether these items were toys or weapons. They don't have much power but can be loaded quickly and fired in one hand. If used with a poison bolt they might pose a danger, but they're otherwise too slow to be a significant threat."
+			},
+			"Longbow": {
+				"tier": "Historical",
+				"category": "Ranged",
+				"damage": "1d10 piercing",
+				"range": "250/750",
+				"rounds": "",
+				"reload": "",
+				"penetration": 1,
+				"properties": [
+					"Two-Handed"
+				],
+				"price": 2,
+				"bulk": 3,
+				"description": "Before rifles, the longbow was the terror of the battlefield. These large ancient bows can fire arrows over huge distances and with startling accuracy in the hands of a skilled archer."
+			},
+			"Chainsaw": {
+				"tier": "Improvised",
+				"category": "Melee",
+				"damage": "1d12 slashing",
+				"range": "",
+				"penetration": 2,
+				"properties": [
+					"Heavy",
+					"Improvised",
+					"Loud",
+					"Two-Handed"
+				],
+				"price": 2,
+				"bulk": 3,
+				"description": "Chainsaws are not intended for hand-to-hand combat, but few tools are more intimidating when used as melee weapons. A favorite of deranged killers and aggrieved foresters, they make short work of doors, tables, and other obstacles."
+			},
+			"Object, breakable": {
+				"tier": "Improvised",
+				"category": "Melee",
+				"damage": "1d6 bludgeoning",
+				"range": "",
+				"penetration": 1,
+				"properties": [
+					"Improvised",
+					"Special"
+				],
+				"price": 0,
+				"bulk": 0,
+				"description": "This category of objects, when adjacent to you and your opponent, hurt to smash into but will break or give way under the assault. Examples include a bathroom stall, a mirror, a window, a bookshelf, or a big screen TV."
+			},
+			"Object, unbreakable": {
+				"tier": "Improvised",
+				"category": "Melee",
+				"damage": "1d8 bludgeoning",
+				"range": "",
+				"penetration": 1,
+				"properties": [
+					"Improvised",
+					"Special"
+				],
+				"price": 0,
+				"bulk": 0,
+				"description": "This category of objects, when adjacent to you and your opponent, hurt to smash into and probably won't break. Examples include a marble countertop, a steel railing, a brick wall, or a flagpole."
+			},
+			"Object, scary-dangerous": {
+				"tier": "Improvised",
+				"category": "Melee",
+				"damage": "1d12 slashing or piercing",
+				"range": "",
+				"penetration": 1,
+				"properties": [
+					"Improvised",
+					"Special"
+				],
+				"price": 0,
+				"bulk": 0,
+				"description": "This category of objects, when adjacent to you and your opponent, have brutal effects when you smash someone into them. Examples include a mass of sharp spikes, the whirling blades of a woodchipper, a boat propeller, and similar delights."
+			},
+			"Salon Flamer": {
+				"tier": "Improvised",
+				"category": "Melee",
+				"damage": "1d4 fire",
+				"range": "",
+				"penetration": 0,
+				"properties": [
+					"Improvised",
+					"Light",
+					"Two-Handed"
+				],
+				"price": 1,
+				"bulk": 1,
+				"description": "The salon flamer consists of a lighter and a can of hairspray or other propellant. You hold the lighter in front of the spray and blast people with fire. It's not tremendously effective, but it can be intimidating. You can also apply this entry to a blowtorch or similar tool used as a weapon."
+			},
+			"Thing, tiny ouchie": {
+				"tier": "Improvised",
+				"category": "Melee",
+				"damage": "1d4 variable",
+				"range": "40/80",
+				"penetration": 1,
+				"properties": [
+					"Finesse",
+					"Improvised",
+					"Light",
+					"Thrown"
+				],
+				"price": 0,
+				"bulk": 0,
+				"description": "Things are objects you pick up and turn into weapons. You and the GM decide on the size and if it deals bludgeoning, piercing, or slashing damage. None of these things are fun to get hit with!"
+			},
+			"Thing, small painful": {
+				"tier": "Improvised",
+				"category": "Melee",
+				"damage": "1d6 variable",
+				"range": "70/140",
+				"penetration": 1,
+				"properties": [
+					"Improvised",
+					"Thrown"
+				],
+				"price": 0,
+				"bulk": 1,
+				"description": "Things are objects you pick up and turn into weapons. You and the GM decide on the size and if it deals bludgeoning, piercing, or slashing damage. None of these things are fun to get hit with!"
+			},
+			"Thing, medium hurtful": {
+				"tier": "Improvised",
+				"category": "Melee",
+				"damage": "1d8/1d10 variable",
+				"range": "50/100",
+				"penetration": 1,
+				"properties": [
+					"Improvised",
+					"Thrown",
+					"Versatile"
+				],
+				"price": 0,
+				"bulk": 2,
+				"description": "Things are objects you pick up and turn into weapons. You and the GM decide on the size and if it deals bludgeoning, piercing, or slashing damage. None of these things are fun to get hit with!"
+			},
+			"Thing, large agonizing": {
+				"tier": "Improvised",
+				"category": "Melee",
+				"damage": "1d12 variable",
+				"range": "20/40",
+				"penetration": 2,
+				"properties": [
+					"Heavy",
+					"Improvised",
+					"Thrown",
+					"Two-Handed"
+				],
+				"price": 0,
+				"bulk": 3,
+				"description": "Things are objects you pick up and turn into weapons. You and the GM decide on the size and if it deals bludgeoning, piercing, or slashing damage. None of these things are fun to get hit with!"
+			},
+			"Molotov Cocktail": {
+				"tier": "Improvised",
+				"category": "Explosive",
+				"damage": "1d4 fire",
+				"range": "40/80",
+				"radius": "10 feet",
+				"penetration": 0,
+				"properties": [
+					"Grenade",
+					"Improvised",
+					"Indirect",
+					"Special",
+					"Thrown"
+				],
+				"price": 1,
+				"bulk": 1,
+				"description": "A Molotov cocktail is a bottle of highly flammable liquid with a cloth wick. When lit and thrown, it is designed to break on a hard surface and ignite surrounding material.<br>Like other grenades, it is thrown at a location rather than a combatant. Any flammable material in the area of effect gains the Burning condition, including combatants who fail their Dexterity saving throw against explosives and did not successfully dive for cover."
+			},
+			"TNT Stick": {
+				"tier": "Improvised",
+				"category": "Explosive",
+				"damage": "3d6 explosive",
+				"range": "40/80",
+				"radius": "10 feet",
+				"penetration": 4,
+				"properties": [
+					"Grenade",
+					"Improvised",
+					"Indirect",
+					"Restricted",
+					"Thrown"
+				],
+				"price": 1,
+				"bulk": 1,
+				"description": "TNT is dangerous, but more to those trying to throw it than those having it thrown at them. It's not designed for anti-personnel use and the actual blast is dangerous only at close ranges."
+			},
+			"Grenade Launcher": {
+				"tier": "Military",
+				"category": "Ranged",
+				"damage": "Grenade",
+				"range": "300/600",
+				"rounds": "1",
+				"reload": "Bonus",
+				"penetration": 0,
+				"properties": [
+					"Indirect",
+					"Restricted",
+					"Two-Handed"
+				],
+				"price": 3,
+				"bulk": 2,
+				"description": "Grenade launchers are often attached to an assault rifle, but standalone launchers exist. They fire a large grenade cartridge at greater ranges than they could be thrown. Launched grenades are designed to explode on impact rather than based on a timer."
+			},
+			"Machine Gun, light": {
+				"tier": "Military",
+				"category": "Ranged",
+				"damage": "2d6 Ballistic",
+				"range": "900/1800",
+				"rounds": "30 or Belt",
+				"reload": "Action",
+				"penetration": 3,
+				"properties": [
+					"Belt",
+					"Full-Auto",
+					"Heavy",
+					"Loud",
+					"Restricted",
+					"Two-Handed"
+				],
+				"price": 3,
+				"bulk": 4,
+				"description": "Machine guns are strictly military weapons designed to create fire superiority and provide covering fire for troops. They are fed by an ammunition belt, though light machine guns may use magazines rather than belts and fire the same ammunition as assault rifles.<br>Machine guns can be used to make a normal attack."
+			},
+			"Machine Gun, medium": {
+				"tier": "Military",
+				"category": "Ranged",
+				"damage": "2d8 Ballistic",
+				"range": "900/1800",
+				"rounds": "30 or Belt",
+				"reload": "Action",
+				"penetration": 4,
+				"properties": [
+					"Belt",
+					"Full-Auto",
+					"Heavy",
+					"Loud",
+					"Stationary",
+					"Restricted",
+					"Two-Handed"
+				],
+				"price": 4,
+				"bulk": 6,
+				"description": "Medium machine guns use larger caliber rounds than their light counterparts and are too heavy to be fired without being mount or braced on the ground. They are always belt-fed and their primary mission is to provide covering fire on enemy positions or to threaten light vehicles.<br>Machine guns can be used to make a normal attack."
+			},
+			"Machine Gun, heavy": {
+				"tier": "Military",
+				"category": "Ranged",
+				"damage": "2d10 Ballistic",
+				"range": "1200/2400",
+				"rounds": "Belt",
+				"reload": "Action",
+				"penetration": 5,
+				"properties": [
+					"Belt",
+					"Full-Auto",
+					"Heavy",
+					"Loud",
+					"Stationary",
+					"Restricted",
+					"Two-Handed"
+				],
+				"price": 4,
+				"bulk": 8,
+				"description": "An individual soldier can barely carry this massive gun, so they're usually mounted onto a vehicle or defensive position. These weapons can shred light vehicles and fortifications as well as infantry.<br>Machine guns can be used to makea normal attack."
+			},
+			"Rifle, anti-material": {
+				"tier": "Military",
+				"category": "Ranged",
+				"damage": "2d10 Ballistic",
+				"range": "2000/6000",
+				"rounds": "10",
+				"reload": "Action",
+				"penetration": 5,
+				"properties": [
+					"Heavy",
+					"Loud",
+					"Semi-Auto",
+					"Stationary",
+					"Two-Handed"
+				],
+				"price": 4,
+				"bulk": 4,
+				"description": "Similar to sniper rifles, these rifles are intended for taking out military equipment rather than people. Their powerful armor-piercing rounds can rip through concrete walls and crack an engine block from more than a mile away."
+			},
+			"Rifle, assault": {
+				"tier": "Military",
+				"category": "Ranged",
+				"damage": "1d12 Ballistic",
+				"range": "900/1800",
+				"rounds": "30",
+				"reload": "Bonus",
+				"penetration": 3,
+				"properties": [
+					"Burst 3",
+					"Full-Auto",
+					"Loud",
+					"Restricted",
+					"Two-Handed"
+				],
+				"price": 2,
+				"bulk": 3,
+				"description": "The AK-47 is a Cold War era design from the USSR. It is the most common gun on Earth with more than 150 million in circulation. While not as accurate as the M-16, it is legendary for its simplicity and reliability. Most of those sold today are copycat guns using the same design."
+			},
+			"Rifle, assault carbine": {
+				"tier": "Military",
+				"category": "Ranged",
+				"damage": "1d12 Ballistic",
+				"range": "800/1600",
+				"rounds": "30",
+				"reload": "Bonus",
+				"penetration": 3,
+				"properties": [
+					"Burst 3",
+					"Full-Auto",
+					"Loud",
+					"Restricted",
+					"Two-Handed"
+				],
+				"price": 3,
+				"bulk": 2,
+				"description": "Assault carbine rifles are a military classification for fully automatic combat rifles that strike a balance between accuracy at range, automatic fire, ammunition capacity, weight, and reliability. Most combat troops carry them into battle in the modern era. The M4 Carbine is the U.S. standard combat weapon, replacing the M-16. The two designs are similar but the M4 is a shorter and lighter configuration."
+			},
+			"Rocket Launcher": {
+				"tier": "Military",
+				"category": "Ranged",
+				"damage": "Rocket",
+				"range": "500/1500",
+				"rounds": "1",
+				"reload": "",
+				"penetration": 0,
+				"properties": [
+					"Restricted",
+					"Two-Handed"
+				],
+				"price": 5,
+				"bulk": 4,
+				"description": "Rocket launchers are single-use anti-tank or anti-air weapons, primarily designed for use against vehicles or fortified positions. Among the multiple types of rockets, the most common are armor-piercing rockets for use against tanks."
+			},
+			"SMG": {
+				"tier": "Military",
+				"category": "Ranged",
+				"damage": "1d10 Ballistic",
+				"range": "100/200",
+				"rounds": "30",
+				"reload": "Bonus",
+				"penetration": 2,
+				"properties": [
+					"Burst 3",
+					"Full-Auto",
+					"Loud",
+					"Restricted"
+				],
+				"price": 3,
+				"bulk": 1,
+				"description": "Submachine guns are fully automatic, short-barreled firearms designed for relatively short ranges. They offer considerable stopping power for a small weapon but are not effective against military body armor. The MAC 10 is a famous SMG that packs serious firepower but with questionable accuracy. It was designed for use with an attached suppressor that acted as a forward grip."
+			},
+			"SMG, spec-ops": {
+				"tier": "Military",
+				"category": "Ranged",
+				"damage": "1d8 Ballistic",
+				"range": "350/700",
+				"rounds": "50",
+				"reload": "Bonus",
+				"penetration": 2,
+				"properties": [
+					"Burst 3",
+					"Full-Auto",
+					"Restricted"
+				],
+				"price": 3,
+				"bulk": 2,
+				"description": "This class of submachine guns was designed for use by support personnel to counter armored paratroopers from the Soviet Union. While they were never used for that purpose, they became popular for special forces units that want a small armor penetrating, fully automatic weapon."
+			},
+			"C4 plastic explosive": {
+				"tier": "Military",
+				"category": "Explosive",
+				"damage": "4d6 explosive",
+				"range": "",
+				"radius": "10 feet",
+				"penetration": 3,
+				"properties": [
+					"Loud",
+					"Restricted",
+					"DC 15"
+				],
+				"price": 2,
+				"bulk": 1,
+				"description": "C4 is used as a demolition charge and delivers an incredibly fast and damaging explosion. For anti-personnel purposes, it needs to be combined with shrapnel to increase its lethal range."
+			},
+			"Grenade, flashbang": {
+				"tier": "Military",
+				"category": "Explosive",
+				"damage": "1d4 explosive",
+				"range": "75/150",
+				"radius": "30 feet",
+				"penetration": 1,
+				"properties": [
+					"Deafening",
+					"Grenade",
+					"Loud",
+					"Restricted",
+					"Stunning"
+				],
+				"price": 1,
+				"bulk": 1,
+				"description": "Flashbangs are incredibly useful tactical weapons. They both stun and deafen enemies for a short time, creating the perfect opportunity for an assault or to force a surrender. Targets make one saving throw to resist both effects."
+			},
+			"Grenade, fragmentation": {
+				"tier": "Military",
+				"category": "Explosive",
+				"damage": "4d8 explosive",
+				"range": "75/150",
+				"radius": "20 feet",
+				"penetration": 3,
+				"properties": [
+					"Grenade",
+					"Loud",
+					"Restricted"
+				],
+				"price": 1,
+				"bulk": 1,
+				"description": "Frag grenades are the standard anti-personnel grenade used by militaries the world over. They are lethal and cheap to make. The biggest limitation on grenades is their short range, which explains the creation of grenade launchers."
+			},
+			"Grenade, incendiary": {
+				"tier": "Military",
+				"category": "Explosive",
+				"damage": "",
+				"range": "75/150",
+				"radius": "",
+				"penetration": 5,
+				"properties": [
+					"Grenade",
+					"Restricted",
+					"Special"
+				],
+				"price": 1,
+				"bulk": 1,
+				"description": "Incendiary grenades are intended to set equipment and structures on fire. They are not useful directly against personnel in combat since they are easily avoided and do not explode. They burn at incredibly high temperatures, enough to melt through thick steel and ignite nearly any combustible material. It takes 1 round per AV of the target material to burn through and ignite."
+			},
+			"Mine, blast": {
+				"tier": "Military",
+				"category": "Explosive",
+				"damage": "2d6 explosive",
+				"range": "",
+				"radius": "",
+				"penetration": 4,
+				"properties": [
+					"Loud",
+					"Restricted",
+					"DC 15"
+				],
+				"price": 1,
+				"bulk": 1,
+				"description": "Blast mines are the scourge of the battlefield, designed more to maim than kill. They are especially horrifying weapons of war because they remain dangerous long after the battles have ended."
+			},
+			"Mine, fragmentation": {
+				"tier": "Military",
+				"category": "Explosive",
+				"damage": "4d8 explosive",
+				"range": "",
+				"radius": "20 feet",
+				"penetration": 3,
+				"properties": [
+					"Loud",
+					"Restricted",
+					"DC 15"
+				],
+				"price": 1,
+				"bulk": 1,
+				"description": "These mines are designed to eject a small fragmentation grenade that sprays shrapnel in a wide swath. They are far more lethal than blasting mines, but more expensive and prone to misfires."
+			},
+			"Rocket, anti-tank": {
+				"tier": "Military",
+				"category": "Explosive",
+				"damage": "8d8 explosive",
+				"range": "",
+				"radius": "10 feet",
+				"penetration": 6,
+				"properties": [
+					"Heavy",
+					"Loud",
+					"Restricted"
+				],
+				"price": 5,
+				"bulk": 4,
+				"description": "Anti-tank rockets employ a number of tricks to defeat armor and other defensive measures. One of the most effective is a Russian rocket that fires two rockets in tandem: the first defeats countermeasures while the second goes for the kill."
+			}
+		},
+		"Armors": {
+			"Armored Clothing": {
+				"tier": "Basic",
+				"category": "Garment",
+				"value": 1,
+				"properties": [],
+				"price": 1,
+				"bulk": 1,
+				"description": "This category includes heavy leather jackets, padded vests, chain shirts, or other partial armor made of non-ballistic materials. It offers slim protection against melee weapons but does nothing against bullets and other projectiles. A favorite of street punks and biker gangs."
+			},
+			"Ballistic vest, light": {
+				"tier": "Advanced",
+				"category": "Garment",
+				"value": 2,
+				"properties": [
+					"Ballistic",
+					"Concealable"
+				],
+				"price": 2,
+				"bulk": 0,
+				"description": "These vests are made entirely of flexible ballistic fabric and padding. They can be worn under a jacket without drawing attention. They effectively block light caliber pistol rounds and other conventional projectiles."
+			},
+			"Ballistic vest, medium": {
+				"tier": "Advanced",
+				"category": "Garment",
+				"value": 3,
+				"properties": [
+					"Ballistic"
+				],
+				"price": 2,
+				"bulk": 1,
+				"description": "Thicker than a light ballistic vest, these vests have more layers of thick ballistic fabric as well as light armored plates. They can block most pistol rounds as well as low caliber rifle rounds."
+			},
+			"Stab vest": {
+				"tier": "Advanced",
+				"category": "Garment",
+				"value": 1,
+				"properties": [
+					"Stab Proof"
+				],
+				"price": 2,
+				"bulk": 1,
+				"description": "These vests cover vital areas of the torso with a mesh that is nearly impossible to penetrate with a bladed or spiked weapon. They are not strong enough to stop ballistic weapons, but unlike a ballistic vest, they leave no vulnerable areas unprotected."
+			},
+			"Shield, riot": {
+				"tier": "Advanced",
+				"category": "Shield",
+				"value": 1,
+				"properties": [
+					"Awkward"
+				],
+				"price": 1,
+				"bulk": 3,
+				"description": "This heavy plastic shield can be held in one hand, though it's at least four feet tall and at least two-and-a-half feet wide. Police use it to push back crowds and to protect themselves from fists and thrown objects. It offers no protection against firearms but defends against sticks and rocks."
+			},
+			"Historical Armor": {
+				"tier": "Historical",
+				"category": "Garment",
+				"value": 1,
+				"properties": [
+					"Awkward"
+				],
+				"price": 3,
+				"bulk": 4,
+				"description": "In medieval times, knights and other warriors wore this complete set of full body armor. It offers protection against conventional melee and ranged weapons, but bullets go right through it and you look out of place wearing it outside of a Renaissance fair."
+			},
+			"Shield, kite": {
+				"tier": "Historical",
+				"category": "Shield",
+				"value": 1,
+				"properties": [
+					"Awkward"
+				],
+				"price": 1,
+				"bulk": 3,
+				"description": "Kite shields are large wooden shields used by infantry to protect against ranged missile fire from enemy archers and crossbowmen. While they can be used in melee combat, they are heavy and awkward to wield."
+			},
+			"Shield, round": {
+				"tier": "Historical",
+				"category": "Shield",
+				"value": 1,
+				"properties": [
+					"Small"
+				],
+				"price": 1,
+				"bulk": 2,
+				"description": "Ancient shields made sense on a battlefield dominated by longbows, but in the era of guns, they're cumbersome pieces of wood."
+			},
+			"Duct-taped Junk": {
+				"tier": "Improvised",
+				"category": "Garment",
+				"value": 2,
+				"properties": [
+					"Awkward"
+				],
+				"price": 1,
+				"bulk": 4,
+				"description": "Phonebooks and cookware taped to your body probably aren't going to save your life or make you look cool, but sometimes heroes have to improvise."
+			},
+			"Car door": {
+				"tier": "Improvised",
+				"category": "Shield",
+				"value": 2,
+				"properties": [
+					"Awkward"
+				],
+				"price": 0,
+				"bulk": 4,
+				"description": "A sturdy car door can make for a last-ditch bulletproof shield, provided you happen to have one lying around when bullets start flying."
+			},
+			"Garbage can lid": {
+				"tier": "Improvised",
+				"category": "Shield",
+				"value": 1,
+				"properties": [
+					"Small"
+				],
+				"price": 1,
+				"bulk": 2,
+				"description": "If you are really strapped for personal protection, a garbage can lid can give you a feeling of discount derring-do in a pinch."
+			},
+			"Ballistic vest, heavy": {
+				"tier": "Military",
+				"category": "Garment",
+				"value": 4,
+				"properties": [
+					"Ballistic"
+				],
+				"price": 3,
+				"bulk": 2,
+				"description": "This is similar to medium ballistic armor, with the addition of heavier armor plates. It can block all but the most powerful rounds from handheld firearms."
+			},
+			"Modern combat armor": {
+				"tier": "Military",
+				"category": "Garment",
+				"value": 3,
+				"properties": [
+					"Awkward"
+				],
+				"price": 3,
+				"bulk": 4,
+				"description": "This armor combines the benefits of a ballistic vest with knife-proof materials and covers almost the entire body. It is restrictive, hot, and uncomfortable, but it does provide impressive protection."
+			},
+			"Shield, tactical": {
+				"tier": "Improvised",
+				"category": "Shield",
+				"value": 3,
+				"properties": [
+					"Awkward"
+				],
+				"price": 3,
+				"bulk": 4,
+				"description": "Military and SWAT teams use this large and heavy shield to protect them from gunfire in situations where normal cover is not available. It has a narrow window so it can be held in front of the user's face."
+			}
+		},
+		"Items": {
+			"Burglars kit": {
+				"type": "Kit",
+				"price": 2,
+				"bulk": 3,
+				"description": "This set of tools proves useful for breaking into cars and homes with minimal security. A typical kit might include a tough canvas bag, set of lockpicks, crowbar or sturdy screwdriver, slim jim, window-breaking tool, bolt cutters or angle grinder, can of spray paint, mask, and gloves."
+			},
+			"Camping kit": {
+				"type": "Kit",
+				"price": 2,
+				"bulk": 4,
+				"description": "A camping kit is designed to make spending time outdoors comfortable and fun. Typically, everything fits into a frame backpack. Camping kits can contain a flashlight, compact shovel, tent, sleeping bag, camp stove with fuel, hand radio, batteries, GPS unit, camp stool, food, bottled water, binoculars, hand warmers, gloves, change of clothes, soap, and solar charger."
+			},
+			"Chemistry kit": {
+				"type": "Kit",
+				"price": 3,
+				"bulk": 3,
+				"description": "Most chemists work in a laboratory, but you can buy mobile chemistry sets designed for a particular kind of work. Typically, these include a set of stable compounds and implements to mix or heat the chemicals. These kits are relatively delicate since they contain glass vials and equipment."
+			},
+			"Climbers kit": {
+				"type": "Kit",
+				"price": 2,
+				"bulk": 2,
+				"description": "Different surfaces call for different tools, but serious climbing requires certain basics. A typical kit includes a harness, belaying device, pitons, carabiners, anchors, rope, small hammer/pick, chalk and chalk bag, climbing shoes, and helmet.<br>A climber's kit gives advantage on Strength (Athletic) checks when rappelling and to climb natural cliffs or masonry buildings."
+			},
+			"Demolition kit": {
+				"type": "Kit",
+				"price": 3,
+				"bulk": 3,
+				"description": "This kit contains tools and supplies to set off explosive charges in a safe and controlled manner. It includes detonators, tape, fuses, wire cutters, transmitters, and one or more control boxes.<br>A demolition kit is a required tool for rigging explosives"
+			},
+			"Disguise kit": {
+				"type": "Kit",
+				"price": 2,
+				"bulk": 4,
+				"description": "This extended collection of makeup goes beyond beauty products, allowing you to create a range of appearances. It is often accompanied by a wardrobe of common clothing styles and uniforms.<br>Having both makeup and costumes offers advantage on Charisma checks made to hide your identity. Both are required for Charisma checks to impersonate another person."
+			},
+			"Electricians kit": {
+				"type": "Kit",
+				"price": 2,
+				"bulk": 2,
+				"description": "This kit contains tools needed for household wiring as well as repairing electrical appliances and tools.<br>These tools are required for any electrical and electronics hardware work."
+			},
+			"Evidence kit": {
+				"type": "Kit",
+				"price": 2,
+				"bulk": 2,
+				"description": "Professional detectives carry a collection of supplies useful for preserving and collecting crime scene evidence. It includes luminol, UV light, fingerprint kit, evidence bags and boxes, small flags, tape rule, magnifying glass, utility knife, rubber gloves, Sharpie, crime scene tape, and swabs.<br>An evidence kit gives advantage on Intelligence (Investigation) checks made to find clues in a crime scene."
+			},
+			"First Aid kit": {
+				"type": "Kit",
+				"price": 1,
+				"bulk": 2,
+				"description": "A first aid kit helps treat injuries and the symptoms of illness at home or in the field. Sizes range from tiny survival kits to large EMT kits. The entry assumes a briefcase-sized kit.<br>A first aid kit is required for some uses of the First Aid action and specific actions from feats, class talents, and professions. Usage calls for an Intelligence (Medicine) or Wisdom (Survival) check."
+			},
+			"Forgery kit": {
+				"type": "Kit",
+				"price": 3,
+				"bulk": 3,
+				"description": "This collection of stationery supplies and tools alters or creates false documents. A computer and printer are used alongside such tools.<br>These tools are required to make convincing forgeries."
+			},
+			"Hacking kit": {
+				"type": "Kit",
+				"price": 2,
+				"bulk": 1,
+				"description": "Also known among ethical hackers as a pentest kit, this collection of common hacking tools is designed to penetrate computer security measures. It can contain a variety of devices including sniffers, cloners, ducks, deauthers, microcomputers, and useful cabling. Simple tools like a screwdriver, pliers, and components from an electrician's kit are also commonly included.<br>A hacking kit gives advantage on Intelligence (Computers) or Intelligence (Security) attempts to defeat network security or to steal data from a network."
+			},
+			"Mechanics kit": {
+				"type": "Kit",
+				"price": 2,
+				"bulk": 4,
+				"description": "Mechanical builds and repairs require a set of mechanic's tools. It contains a mix of hand tools and power tools.<br>Mechanic's tools are required for construction or making basic mechanical repairs."
+			},
+			"Police kit": {
+				"type": "Kit",
+				"price": 3,
+				"bulk": 2,
+				"description": "The police kit contains the items a typical U.S. law enforcement officer might carry with them when on duty outside the station. The centerpiece is a duty belt that holds most of the items. The kit includes uniform, body camera, watch, set of handcuffs, zip ties, two weapon magazines, pepper spray, flashlight, latex gloves, mini-first aid kit, utility knife, and radio."
+			},
+			"Police cruiser kit": {
+				"type": "Kit",
+				"price": 3,
+				"bulk": 20,
+				"description": "Police cruisers contain items police need for special situations or that are too big for officers to routinely carry. A cruiser usually contains two medium ballistic vests, a pump-action shotgun with extra ammunition, large first aid kit, portable defibrillator, bolt cutters, additional ammunition, laptop computer, dashboard camera, siren system, evidence kit, extra batteries, and car stuff."
+			},
+			"Soldiers kit": {
+				"type": "Kit",
+				"price": 3,
+				"bulk": 4,
+				"description": "Soldiers carry a lot of equipment when deployed for combat. Exactly what they carry depends on the mission, their role in their unit, and the environment in which they are fighting. This kit offers the essentials, including a frame backpack, combat fatigues, military ID, chemlight, ear and eye protection, multitool, notebook and pen, a woobie (a blanket/poncho), seven magazines of ammunition, night vision goggles, batteries, rations for three days, water, first aid kit, hygiene kit, snacks, and radio (unit leader only)."
+			},
+			"Surveillance kit": {
+				"type": "Kit",
+				"price": 3,
+				"bulk": 2,
+				"description": "As technology advances, surveillance grows more pervasive. Cameras and microphones can be hidden nearly anywhere, and computer hacking can access the ever-growing number of smart surveillance devices found in every business and home. A typical surveillance kit includes tiny remote cameras, hidden microphones, trackers, batteries, receivers, and transmitters."
+			},
+			"Survival kit": {
+				"type": "Kit",
+				"price": 1,
+				"bulk": 1,
+				"description": "A survival kit is a set of tools and supplies that help keep you alive when stranded away from civilization. The exact supplies vary based on the environment, but the basics can include a knife, hatchet, fire starter kit, fishing line, fishing hooks, plastic sheeting, water filter device, signaling device, emergency food, signal whistle, flashlight, solar blanket, fresh batteries, 50 feet of cord, minimal first aid kit, reusable water bottle, and compass.<br>Having a survival kit gives you advantage on Wisdom (Survival) checks where these supplies are useful."
+			},
+			"Welders kit": {
+				"type": "Kit",
+				"price": 3,
+				"bulk": 4,
+				"description": "A welder's kit is necessary to safely weld metal together but can be used to cut it as well. There are two standard types: gas torch and electrical. The electrical systems must be plugged in but are simpler to use. A typical kit includes a welding device, wire, safety gloves and glasses, and wire brush.<br>A welder's kit is required for any task involving welding."
+			},
+			"Combat Harness": {
+				"type": "Carrying_Case",
+				"price": 2,
+				"bulk": 4,
+				"description": "A combat harness is composed of belts and straps with pockets and attachment points to carry weapons, ammunition, and other useful combat gear. It can carry 4 bulk beyond your usual bulk limit while keeping your hands free. In addition, items in the harness can be accessed normally (one free pull per round)."
+			},
+			"Duffle Bag": {
+				"type": "Carrying_Case",
+				"price": 1,
+				"bulk": 8,
+				"description": "This large and sturdy canvas bag allows you to carry up to 8 bulk worth of stuff in one hand. This doesn't negate encumbrance, but it can let you carry lots of different things in one hand when you are Encumbered."
+			},
+			"Frame Backpack": {
+				"type": "Carrying_Case",
+				"price": 2,
+				"bulk": 5,
+				"description": "This large backpack can carry 5 bulk beyond your normal bulk limit while keeping your hands free. This does not help you avoid encumbrance, but it does make it possible to carry more stuff."
+			},
+			"Rolling Suitcase": {
+				"type": "Carrying_Case",
+				"price": 2,
+				"bulk": 5,
+				"description": "This nice hard-body suitcase has wheels and a long telescoping handle. It's great for trips abroad, and also useful for lugging equipment around. It can carry up to 5 bulk that does not count against your encumbrance as long as you're wheeling it around instead of carrying it. If you cross difficult terrain, you must pick it up. It always requires the use of one of your hands."
+			},
+			"Alarm System": {
+				"type": "Electronics",
+				"price": 2,
+				"bulk": 2,
+				"description": "This electronic alarm system consists of a series of sensors and a central alarm mechanism. The alarm can be a silent signal sent to a monitor or an audible or visual alarm. Many types of sensors can be used including motion sensors, light sensors, sound sensors, or contact sensors."
+			},
+			"Cloner": {
+				"type": "Electronics",
+				"price": 2,
+				"bulk": 0,
+				"description": "A cloner is paired with a sniffer to receive and then mimic a wireless signal, usually from a wireless key or similar device."
+			},
+			"Deauther": {
+				"type": "Electronics",
+				"price": 2,
+				"bulk": 0,
+				"description": "This device can identify a user on a computer network and deauthorize them. This forces the user to re-enter their network credentials so they can then be stolen."
+			},
+			"Desktop Computer": {
+				"type": "Electronics",
+				"price": 2,
+				"bulk": 3,
+				"description": "Desktop computer systems come in a wide range of sizes and performance capabilities. Every year, personal computers become more powerful and more versatile."
+			},
+			"Drone": {
+				"type": "Electronics",
+				"price": 2,
+				"bulk": 2,
+				"description": "Flying drones have become popular tools and toys. They are remote controlled but can be programmed for various tasks and fitted with a range of tools. A camera is a standard piece of equipment on most drones. A Use Device action is required to control a drone during combat. (Detailed stats for drones can be found in chapter 15.)"
+			},
+			"Duck": {
+				"type": "Electronics",
+				"price": 2,
+				"bulk": 0,
+				"description": "Ducks are USB devices that act as a virtual keyboard. When inserted into a target computer, they can be programmed to execute keyboard commands or allow a hacker to remotely control the computer."
+			},
+			"Earpiece": {
+				"type": "Electronics",
+				"price": 2,
+				"bulk": 0,
+				"description": "This piece of covert gear consists of a hidden earpiece and a hidden microphone, both of which connect wirelessly to a cell phone or other hidden transmitter-receiver. This allows the wearer to secretly communicate with others. Battery life tends to be about 1 hour of active use.<br>A DC 20 Wisdom (Perception) check can detect such a device in use by seeing it, overhearing it being used, or observing the behavior of the person using it."
+			},
+			"Faraday pouch": {
+				"type": "Electronics",
+				"price": 2,
+				"bulk": 0,
+				"description": "By placing an electronic device inside of a Faraday pouch, you can block it from sending or receiving wireless signals. It prevents unwanted snooping or hacking on the device."
+			},
+			"Laptop computer": {
+				"type": "Electronics",
+				"price": 2,
+				"bulk": 1,
+				"description": "Laptop computers can range in size from small tablets to large folding computers. While their power varies, most can perform the same functions as larger desktop machines and have a battery to allow for remote operation."
+			},
+			"Microcomputer": {
+				"type": "Electronics",
+				"price": 1,
+				"bulk": 0,
+				"description": "Microcomputers are small computer chips used by hobbyists and manufacturers to make small electronic “smart” devices. Though inexpensive, they require programming and electronics knowledge to use."
+			},
+			"Robot": {
+				"type": "Electronics",
+				"price": 5,
+				"bulk": 8,
+				"description": "Robots come in many shapes and sizes, but this entry represents the future of multi-function robotics. Such robots can be programmed for simple interactions but their capabilities are rapidly advancing. (Statistics for consumer robots can be found in chapter 15.)"
+			},
+			"Smartphone": {
+				"type": "Electronics",
+				"price": 2,
+				"bulk": 0,
+				"description": "The smartphone is a revolutionary tool that takes professional photos, allows for wireless global communication, has access to nearly all the world's accumulated knowledge through the internet, and even makes for a good flashlight. 'There's an app for that' is pretty much a truism."
+			},
+			"Smart watch": {
+				"type": "Electronics",
+				"price": 2,
+				"bulk": 0,
+				"description": "These devices are computerized watches that include a digital display and are capable of running software and wireless connectivity. Most use an IR sensor and accelerometer to measure exercise, heart rate, and other vital health statistics."
+			},
+			"Sniffer": {
+				"type": "Electronics",
+				"price": 2,
+				"bulk": 0,
+				"description": "A sniffer is a hacking tool designed to pick up and decode network traffic. Wireless sniffers decode wireless signals while wired sniffers plug physically into a network. What a sniffer can do depends on the security of the network it is sniffing."
+			},
+			"Toy robot": {
+				"type": "Electronics",
+				"price": 3,
+				"bulk": 1,
+				"description": "A toy robot is a simple robot designed for amusement and play. Their programming is limited to simple responses to simple commands, or to accomplish a well-defined task. Robot vacuum cleaners and other simple consumer robots also fall into this category."
+			},
+			"Crowbar": {
+				"type": "Hardware",
+				"price": 1,
+				"bulk": 2,
+				"description": "A crowbar is designed to give you leverage when pulling things apart. You can also use it as a weapon if you need to, equivalent to a large metal club. Using a crowbar grants advantage on Strength checks made to move a heavy object, break something, or to open doors, windows, or containers."
+			},
+			"Duct tape": {
+				"type": "Hardware",
+				"price": 1,
+				"bulk": 1,
+				"description": "Duct tape is a tough, single-sided fabric tape widely renowned for its toughness and versatility. It is especially popular for making quick repairs to broken objects. When used as a restraint, it requires a DC 20 ability check to escape from, typically Dexterity (Sleight of Hand) or Strength (Athletics)."
+			},
+			"Ear protection": {
+				"type": "Hardware",
+				"price": 1,
+				"bulk": 0,
+				"description": "This can take the form of earplugs or headphones designed to block loud noises from damaging your hearing. They offer advantage on Constitution saving throws against being Deafened."
+			},
+			"Fire suit": {
+				"type": "Hardware",
+				"price": 2,
+				"bulk": 2,
+				"description": "A fire suit covers the entire body, protecting the wearer from heat and flames. A fire suit grants the wearer damage reduction 10 against fire."
+			},
+			"Flashlight": {
+				"type": "Hardware",
+				"price": 1,
+				"bulk": 1,
+				"description": "Flashlights and headlamps project light in front of you up to 60 feet. This negates the penalties for low light and darkness within reach of the device but makes the user visible up to a mile away in clear terrain."
+			},
+			"Gas mask": {
+				"type": "Hardware",
+				"price": 2,
+				"bulk": 1,
+				"description": "A gas mask, when properly worn, protects the wearer from inhaled poisonous gases and airborne chemical irritants targeting the nose, eyes, or mouth."
+			},
+			"Hazmat suit": {
+				"type": "Hardware",
+				"price": 2,
+				"bulk": 1,
+				"description": "Hazmat suits offer full body protection against a range or chemical and biological hazards. They include full face protection, full body protection, and air filtration. Different suits protect against different types of hazards."
+			},
+			"Safety goggles": {
+				"type": "Hardware",
+				"price": 1,
+				"bulk": 0,
+				"description": "Safety goggles are designed to protect your eyes from irritants or small objects. They render you largely immune from pepper spray or similar blinding chemical attacks."
+			},
+			"Multitool": {
+				"type": "Hardware",
+				"price": 1,
+				"bulk": 0,
+				"description": "This pocket-sized, foldable knife includes a range of other handy tools incorporated into the design. They can deal with a number of simple jobs. They are not intended for fighting but could be used as a weapon in a pinch."
+			},
+			"Zip ties": {
+				"type": "Hardware",
+				"price": 1,
+				"bulk": 0,
+				"description": "In addition to organizing cables and the like, these ties can be used as improvised restraints. A DC 20 Strength check can break them. A DC 20 Dexterity (Sleight of Hand) check allows escape. They can also easily be cut with any bladed instrument."
+			},
+			"Caltrops": {
+				"type": "Specialty",
+				"price": 1,
+				"bulk": 1,
+				"description": "Caltrops are tiny metal objects which, when thrown on the ground, always have an upward facing spike. They can impede people, animals, and soft-tire vehicles when strewn on the ground in the path of travel. They are detailed under “Traps” in chapter 10."
+			},
+			"Handcuffs": {
+				"type": "Specialty",
+				"price": 1,
+				"bulk": 0,
+				"description": "Typical law enforcement handcuffs are difficult to break free from when properly applied. A DC 30 Strength check can break them. A DC 25 Dexterity (Sleight of hand) check allows escape. Finally, they can be picked with a DC 20 Intelligence (Security) check, though this check has disadvantage if they are behind your back. You can buy escape keys that open most handcuffs."
+			},
+			"Lockpicks": {
+				"type": "Specialty",
+				"price": 1,
+				"bulk": 0,
+				"description": "A set of lockpicks includes a number of tools useful for picking locks. The two essentials are a tension bar and a pick which, when used together, can open most locks. Lockpicks are necessary to pick locks, but you can improvise a pick using stiff wire."
+			},
+			"Slim Jim": {
+				"type": "Specialty",
+				"price": 1,
+				"bulk": 1,
+				"description": "A slim jim is a thin piece of metal about two to three feet long with a small hook on one end. It can slip into a car door to switch the lock open. It works only on older cars, or inexpensive cars without power locks and shielded locking mechanisms. With such cars, it offers advantage on Intelligence or Dexterity (Security) checks made to open them."
+			},
+			"Binoculars": {
+				"type": "Sporting_Goods",
+				"price": 1,
+				"bulk": 1,
+				"description": "Binoculars help you see farther than you otherwise could, though with a narrower field of view. They come in a wide range of magnifications and sizes. Typically, the GM will assign a higher DC to spot people or objects at a great distance. Binoculars reduce that DC."
+			},
+			"Camouflage clothing": {
+				"type": "Sporting_Goods",
+				"price": 2,
+				"bulk": 0,
+				"description": "Hunters and combatants often wear clothing and use equipment with a camouflage pattern. Each pattern is specific to a given environment. Anyone trying to spot someone or something that is camouflaged for the given environment has disadvantage on their Wisdom (Perception) check."
+			},
+			"Diver propulsion vehicle": {
+				"type": "Sporting_Goods",
+				"price": 3,
+				"bulk": 4,
+				"description": "Known as a DPV, this device consists of a waterproof housing for a battery and propeller that you hold on to while diving to provide you with propulsion. This both increases your speed and stamina while diving allowing for longer dives. Use of a DPV increases dive times by 50 percent and allows for normal movement underwater."
+			},
+			"Ghillie suit": {
+				"type": "Sporting_Goods",
+				"price": 2,
+				"bulk": 2,
+				"description": "A ghillie suit covers the entire body in a mesh designed with camouflage patterns and material simulating the texture of the targeted environment. In addition to the effect of regular camouflage, anyone wearing a ghillie suit has advantage on Dexterity (Stealth) checks to hide in the matching environment."
+			},
+			"Ice skates": {
+				"type": "Sporting_Goods",
+				"price": 2,
+				"bulk": 0,
+				"description": "Ice skates are essential for moving quickly on ice. A hero wearing ice skates and who is proficient in either Athletics or Acrobatics can treat ice as normal terrain. Anyone wearing ice skates treats all other terrain as difficult terrain."
+			},
+			"Metal detector": {
+				"type": "Sporting_Goods",
+				"price": 2,
+				"bulk": 3,
+				"description": "This tool finds metal objects using a magnetic field generator and sensor. It works only in places that don't otherwise contain metal objects. It offers advantage on Wisdom (Perception) checks to locate metal objects in a given location."
+			},
+			"Night vision device": {
+				"type": "Sporting_Goods",
+				"price": 3,
+				"bulk": 1,
+				"description": "These devices date back to WWII and allow the wearer to see reasonably well in low light conditions. Night vision scopes allow you to ignore the combat penalties from low light and darkness. Night vision goggles remove all penalties from low light and darkness."
+			},
+			"Parachute": {
+				"type": "Sporting_Goods",
+				"price": 3,
+				"bulk": 3,
+				"description": "If you plan to jump out of an airplane, you need one of these. They take some training to use correctly. Controlled descent requires a DC 13 Dexterity (Acrobatics) or Dexterity (Vehicles) check. A parachute, when used correctly, prevents all falling damage."
+			},
+			"Periscope": {
+				"type": "Sporting_Goods",
+				"price": 1,
+				"bulk": 1,
+				"description": "A periscope allows you to see around a corner, over a wall, and so forth using either optical mirrors or a digital camera. Using a periscope offers advantage on Dexterity (Stealth) checks made while spying."
+			},
+			"Roller skates": {
+				"type": "Sporting_Goods",
+				"price": 2,
+				"bulk": 0,
+				"description": "Whether four-wheeled skates or inline roller blades, these devices move fast on hard and flat terrain. A hero wearing roller skates and proficient in either Athletics or Acrobatics increases their movement speed by 10 feet when on hard, flat terrain. All other terrain is considered difficult terrain while wearing roller skates. They do not afford bonus movement."
+			},
+			"Rope, 50 feet": {
+				"type": "Sporting_Goods",
+				"price": 1,
+				"bulk": 1,
+				"description": ""
+			},
+			"Scuba gear": {
+				"type": "Sporting_Goods",
+				"price": 3,
+				"bulk": 4,
+				"description": "Scuba gear allows you to breathe underwater using an oxygen tank. Typical gear allows you about one hour of dive time. Scuba gear may include a dry or wetsuit for colder water and includes swim fins."
+			},
+			"Skateboard": {
+				"type": "Sporting_Goods",
+				"price": 1,
+				"bulk": 2,
+				"description": "Skateboards allow their riders to move quickly and perform fun tricks in an urban environment. Heroes using a skateboard who are proficient in either Athletics or Acrobatics can increase their movement speed by 10 feet on flat and hard surfaces. Unlike skates, heroes can quickly switch to foot in other terrain provided they have a hand free to carry the board."
+			},
+			"Swim fins": {
+				"type": "Sporting_Goods",
+				"price": 1,
+				"bulk": 2,
+				"description": "Swim fins attach to your feet, giving you greater traction in the water. Wearing fins grants advantage on Strength (Athletics) checks made to swim."
+			},
+			"Swim goggles": {
+				"type": "Sporting_Goods",
+				"price": 1,
+				"bulk": 0,
+				"description": "Swim goggles protect your eyes from irritants in water, allowing you unimpaired vision in clear water. Swim goggles negate disadvantage to Wisdom (Perception) checks made to see underwater."
+			},
+			"Trap camera": {
+				"type": "Sporting_Goods",
+				"price": 2,
+				"bulk": 0,
+				"description": "A trap camera combines a motion sensor and a digital camera. When the sensor is tripped, the camera takes a series of pictures. The pictures are stored in the camera and can be wirelessly transmitted to a nearby device."
+			},
+			"Trap, shell": {
+				"type": "Sporting_Goods",
+				"price": 1,
+				"bulk": 0,
+				"description": "A shell trap is a small metal frame designed to fire a shotshell using a simple spring action firing pin. The shell trap is attached to something, the shell placed inside, the spring set, and a string or wire is rigged to set off the trap, firing the shell. As there is no barrel, the range is short. It can be used as an alarm with blank shells."
+			},
+			"Trap, steel jaw": {
+				"type": "Sporting_Goods",
+				"price": 2,
+				"bulk": 1,
+				"description": "Steel jaw traps, often called bear traps, consist of spring-powered steel teeth that snap shut when the trigger in the center of the trap is pressed or pulled. The jaws are meant to hold an animal's arm or leg in the trap as well as to wound the animal."
+			},
+			"Winter clothing": {
+				"type": "Sporting_Goods",
+				"price": 2,
+				"bulk": 2,
+				"description": "When operating in extreme cold, it's critical to have cold winter clothing and bedding. Winter clothing provides the wearer damage reduction 10 against cold."
+			}
+		},
+		"Packs": {
+			"Badass Pack": {
+				"Clothes": "Jeans, tank top, steel-toe boots",
+				"Items": [
+					"Multitool"
+				],
+				"Armors": [
+					"Armored clothing"
+				],
+				"Vehicles": [
+					"Muscle car"
+				],
+				"price": 3
+			},
+			"Bodyguard Pack": {
+				"Clothes": "Dark 3-piece suit, dress shoes, concealed holster, earpiece",
+				"Armors": [
+					"Ballistic vest, light"
+				],
+				"Weapons": [
+					"Pistol, 9mm semi-auto",
+					"Stun gun"
+				],
+				"Vehicles": [
+					"Luxury car"
+				],
+				"price": 3
+			},
+			"Detective Pack": {
+				"Clothes": "Business casual shirt and pants, overcoat, rugged shoes",
+				"Items": [
+					"Evidence kit"
+				],
+				"Weapons": [
+					"Pistol, holdout",
+					"Stun gun"
+				],
+				"Vehicles": [
+					"Common car"
+				],
+				"price": 2
+			},
+			"Entertainer Pack": {
+				"Clothes": "Stylish clothing and footwear, a brimmed hat or cap",
+				"Items": [
+					"Disguise kit"
+				],
+				"Weapons": [
+					"Pepper spray"
+				],
+				"Vehicles": [
+					"Sports car"
+				],
+				"price": 4
+			},
+			"Everyday Pack": {
+				"Clothes": "Jeans, t-shirt, light jacket, sneakers",
+				"Vehicles": [
+					"Common car"
+				],
+				"price": 2
+			},
+			"Executive Pack": {
+				"Clothes": "Designer 3-piece suit or designer business dress, dress shoes or sensible heels",
+				"Vehicles": [
+					"Luxury car"
+				],
+				"price": 4
+			},
+			"Duelist Pack": {
+				"Clothes": "Fencing uniform, cage helmet, stylish urban clothing, athletic shoes",
+				"Armor": [
+					"Armored clothing"
+				],
+				"Weapons": [
+					"Rapier",
+					"Dagger"
+				],
+				"Vehicles": [
+					"Common car"
+				],
+				"price": 2
+			},
+			"Fitness Pack": {
+				"Clothes": "Sweatpants, t-shirt, hoodie, sneakers",
+				"Items": [
+					"Smart watch"
+				],
+				"Vehicles": [
+					"Common car"
+				],
+				"price": 2
+			},
+			"Hacker Pack": {
+				"Clothes": "Comfortable pants, geek shirt, sneakers, hoodie, small backpack",
+				"Items": [
+					"Hacker kit",
+					"Laptop computer"
+				],
+				"Vehicles": [
+					"Common car"
+				],
+				"price": 2
+			},
+			"Hunter Pack": {
+				"Clothes": "Camouflage pants, t-shirt, camouflage hunting jacket, hiking boots",
+				"Items": [
+					"Camping kit",
+					"Survival kit"
+				],
+				"Weapons": [
+					"Rifle, hunting",
+					"Knife, large"
+				],
+				"Vehicles": [
+					"Pickup truck",
+					"ATV"
+				],
+				"price": 2
+			},
+			"Martial Artist Pack": {
+				"Clothes": "Traditional martial arts uniform, tabi slippers",
+				"Vehicles": [
+					"Common car"
+				],
+				"price": 2
+			},
+			"Mechanic Pack": {
+				"Clothes": "A set of overalls with many pockets, stained t-shirt, work boots",
+				"Items": [
+					"Multitool",
+					"Mechanics kit",
+					"Welders kit"
+				],
+				"Vehicles": [
+					"Van"
+				],
+				"price": 2
+			},
+			"Parent Pack": {
+				"Clothes": "Everyday urban clothing",
+				"Vehicles": [
+					"Minivan"
+				],
+				"price": 2
+			},
+			"Police Pack": {
+				"Clothes": "Police uniform",
+				"Items": [
+					"Police kit",
+					"Police cruiser kit"
+				],
+				"Armors": [
+					"Ballistic vest, medium"
+				],
+				"Weapons": [
+					"Pistol, 9mm semi-auto",
+					"Taser",
+					"Club, small wooden"
+				],
+				"Vehicles": [
+					"Police cruiser"
+				],
+				"price": 0
+			},
+			"Riot Control Pack": {
+				"Clothes": "Police uniform, police shoes, riot helmet with face shield",
+				"Items": [
+					"Police kit",
+					"Police cruiser kit",
+					"Zip ties",
+					"Zip ties",
+					"Zip ties",
+					"Zip ties",
+					"Zip ties",
+					"Zip ties",
+					"Zip ties",
+					"Zip ties",
+					"Zip ties",
+					"Zip ties"
+				],
+				"Armors": [
+					"Modern combat armor"
+				],
+				"Weapons": [
+					"Club, large wooden",
+					"Grenade, tear gas",
+					"Grenade, tear gas"
+				],
+				"Vehicles": [
+					"Police van"
+				],
+				"price": 0
+			},
+			"Scientist Pack": {
+				"Clothes": "Straight leg pants, long sleeve shirt, lab coat, safety goggles",
+				"Items": [
+					"Laptop computer",
+					"Chemistry kit",
+					"First Aid kit"
+				],
+				"Vehicles": [
+					"Common car"
+				],
+				"price": 2
+			},
+			"Sniper Pack": {
+				"Clothes": "Inconspicuous clothing",
+				"Items": [
+					"Binoculars"
+				],
+				"Weapons": [
+					"Rifle, sniper"
+				],
+				"Vehicles": [
+					"Common car"
+				],
+				"price": 4
+			},
+			"Socialite Pack": {
+				"Clothes": "Fashionable designer clothing and shoes",
+				"Items": [
+					"Laptop computer",
+					"Chemistry kit",
+					"First Aid kit"
+				],
+				"Vehicles": [
+					"Luxury car"
+				],
+				"price": 4
+			},
+			"Soldier Pack": {
+				"Clothes": "Military fatigues, combat boots",
+				"Items": [
+					"Soldiers kit"
+				],
+				"Armors": [
+					"Ballistic vest, heavy"
+				],
+				"Weapons": [
+					"Rifle, assault carbine",
+					"Grenade, fragmentation",
+					"Grenade, fragmentation"
+				],
+				"Vehicles": [
+					"4WD vehicle"
+				],
+				"price": 0
+			},
+			"Spy Pack": {
+				"Clothes": "Professional attire appropriate to the local area, concealed holster, secret pocket",
+				"Items": [
+					"Disguise kit",
+					"Surveillance kit"
+				],
+				"Weapons": [
+					"Pistol, concealed carry"
+				],
+				"Vehicles": [
+					"Luxury car"
+				],
+				"price": 3
+			},
+			"Street Criminal Pack": {
+				"Clothes": "Jeans, t-shirt, hoodie, sneakers, small backpack",
+				"Items": [
+					"Burglars kit"
+				],
+				"Weapons": [
+					"Pistol, 9mm semi-auto"
+				],
+				"Vehicles": [
+					"Motorcycle"
+				],
+				"price": 2
+			},
+			"Thug Pack": {
+				"Clothes": "Jeans, an old t-shirt, combat boots",
+				"Armors": [
+					"Armored clothing"
+				],
+				"Weapons": [
+					"Pistol, holdout",
+					"Brass knuckles"
+				],
+				"Vehicles": [
+					"Junker"
+				],
+				"price": 2
+			},
+			"Underworld Pack": {
+				"Clothes": "Stylish club outfit, trendy jacket, fashionable shoes, concealed carry holsters",
+				"Armors": [
+					"Ballistic vest, light"
+				],
+				"Weapons": [
+					"Pistol, concealed carry",
+					"Pistol, concealed carry"
+				],
+				"Vehicles": [
+					"Common car"
+				],
+				"price": 2
+			},
+			"Weekend Warrior Pack": {
+				"Clothes": "Camouflage clothing, combat boots, baseball hat",
+				"Armors": [
+					"Ballistic vest, medium"
+				],
+				"Weapons": [
+					"Pistol, 9mm semi-auto",
+					"Rifle, tactical"
+				],
+				"Vehicles": [
+					"4WD vehicle"
+				],
+				"price": 3
+			}
+		},
+		"Vehicles": {
+			"4WD vehicle": {
+				"tier": "Civilian",
+				"domain": "Land",
+				"passengers": "4",
+				"strength": 2,
+				"dexterity": 2,
+				"constitution": 3,
+				"armorvalue": 2,
+				"price": 3,
+				"speed": "150 mph",
+				"properties": [
+					"All-Terrain",
+					"Huge"
+				],
+				"description": "Four-wheel drive vehicles come in various shapes and sizes but are similar in that they offer high torque, high clearance, and the ability to go off-road."
+			},
+			"Common car": {
+				"tier": "Civilian",
+				"domain": "Land",
+				"passengers": "5",
+				"strength": 2,
+				"dexterity": 2,
+				"constitution": 2,
+				"armorvalue": 2,
+				"price": 2,
+				"speed": "150 mph",
+				"properties": [
+					"Huge"
+				],
+				"description": "Representing most sedans, coupes, SUVs, and station wagons, a common car is a run-of-the-mill, average civilian vehicle. Most are standard four-door models, but the same statistics apply to two-door cars, and all seat five passengers. Trunk size also varies widely."
+			},
+			"Junker": {
+				"tier": "Civilian",
+				"domain": "Land",
+				"passengers": "5",
+				"strength": 1,
+				"dexterity": 1,
+				"constitution": 1,
+				"armorvalue": 2,
+				"price": 1,
+				"speed": "100 mph",
+				"properties": [
+					"Huge"
+				],
+				"description": "Like a common car, but old, beat up, or poorly maintained. And cheap! If you can't afford anything else, a junker gets you where you're going when you don't want to walk."
+			},
+			"Luxury car": {
+				"tier": "Civilian",
+				"domain": "Land",
+				"passengers": "5",
+				"strength": 3,
+				"dexterity": 2,
+				"constitution": 2,
+				"armorvalue": 2,
+				"price": 3,
+				"speed": "150 mph",
+				"properties": [
+					"Huge"
+				],
+				"description": "This car has all the bells and whistles—or at least some of them. Heated seats, souped-up engine, sweet paint job. It's not much better than a common car, but it is more expensive, allowing you to flaunt your wealth."
+			},
+			"Mini": {
+				"tier": "Civilian",
+				"domain": "Land",
+				"passengers": "4",
+				"strength": 1,
+				"dexterity": 4,
+				"constitution": 1,
+				"armorvalue": 2,
+				"price": 2,
+				"speed": "150 mph",
+				"properties": [
+					"Large"
+				],
+				"description": "These compact, two-door cars pack most of the power of a regular car in a smaller package, allowing for greater maneuverability and better gas mileage."
+			},
+			"Muscle car": {
+				"tier": "Civilian",
+				"domain": "Land",
+				"passengers": "5",
+				"strength": 5,
+				"dexterity": 2,
+				"constitution": 3,
+				"armorvalue": 2,
+				"price": 3,
+				"speed": "200 mph",
+				"properties": [
+					"Huge"
+				],
+				"description": "For when you want the strongest, loudest engine available. This baby can purr! While not the fastest cars around, muscle cars have incredible acceleration, making them a favorite for street racing."
+			},
+			"Race car": {
+				"tier": "Civilian",
+				"domain": "Land",
+				"passengers": "2",
+				"strength": 10,
+				"dexterity": 2,
+				"constitution": -3,
+				"armorvalue": 2,
+				"price": 4,
+				"speed": "300-400 mph",
+				"properties": [
+					"Huge"
+				],
+				"description": "Extremely fast, these cars are made for racing and not much else. Not usually seen on the road, a race car is hugely inefficient for everyday use, but when you have a need for speed, this is the vehicle for you."
+			},
+			"Sports car": {
+				"tier": "Civilian",
+				"domain": "Land",
+				"passengers": "2-4",
+				"strength": 4,
+				"dexterity": 4,
+				"constitution": 0,
+				"armorvalue": 2,
+				"price": 4,
+				"speed": "250 mph",
+				"properties": [
+					"Huge"
+				],
+				"description": "The luxury car is for people who can't afford this one. Faster, more maneuverable, and with way more trips to the mechanic, the sports car is the ultimate vehicle for the rich and powerful, as well as anyone experiencing a midlife crisis. "
+			},
+			"Minivan": {
+				"tier": "Civilian",
+				"domain": "Land",
+				"passengers": "7",
+				"strength": 1,
+				"dexterity": 0,
+				"constitution": 3,
+				"armorvalue": 2,
+				"price": 2,
+				"speed": "150 mph",
+				"properties": [
+					"Huge"
+				],
+				"description": "A favorite of soccer moms, the minivan doesn't get the best mileage, and it's not built for performance, but it's reliable and it seats seven. A sliding side door allows easy access for a minivan's many passengers."
+			},
+			"Pickup truck": {
+				"tier": "Civilian",
+				"domain": "Land",
+				"passengers": "3-5",
+				"strength": 2,
+				"dexterity": 0,
+				"constitution": 4,
+				"armorvalue": 2,
+				"price": 2,
+				"speed": "150 mph",
+				"properties": [
+					"Huge"
+				],
+				"description": "When you need to haul a lot of stuff and get around reliably, a pickup truck is ideal. This truck is defined by its large cargo bed, which can fit a few extra people if they don't mind being outside and without seatbelts. A typical pickup truck has a single bench in the front cabin, seating up to three, but some sacrifice some cargo space for a more traditional five-seat configuration with two in the front and three in back."
+			},
+			"RV": {
+				"tier": "Civilian",
+				"domain": "Land",
+				"passengers": "3+",
+				"strength": -2,
+				"dexterity": -4,
+				"constitution": 5,
+				"armorvalue": 2,
+				"price": 2,
+				"speed": "75 mph",
+				"properties": [
+					"Gargantuan"
+				],
+				"description": "This mobile home is equipped with all the amenities, and you can drive it! The cabin seats three, but you can pack seven or eight more in the living area. There are no seatbelts back there though, so it's not exactly safe."
+			},
+			"ATV": {
+				"tier": "Civilian",
+				"domain": "Land",
+				"passengers": "2",
+				"strength": 0,
+				"dexterity": 2,
+				"constitution": 2,
+				"armorvalue": 2,
+				"price": 2,
+				"speed": "75 mph",
+				"properties": [
+					"All-Terrain",
+					"Exposed",
+					"Large"
+				],
+				"description": "The All-Terrain Vehicle (ATV), also called a four-wheeler, is like a motorcycle with four wheels. As the name implies, the ATV functions well off-road."
+			},
+			"Bicycle": {
+				"tier": "Civilian",
+				"domain": "Land",
+				"passengers": "2",
+				"strength": -4,
+				"dexterity": 9,
+				"constitution": -2,
+				"armorvalue": 1,
+				"price": 1,
+				"speed": "30 mph",
+				"properties": [
+					"Accident Prone",
+					"Exposed",
+					"Medium",
+					"Muscle-Powered"
+				],
+				"description": "You'll have to pedal, but a bike can get you where you're going. Eventually."
+			},
+			"Go kart": {
+				"tier": "Civilian",
+				"domain": "Land",
+				"passengers": "1",
+				"strength": -2,
+				"dexterity": 5,
+				"constitution": 0,
+				"armorvalue": 2,
+				"price": 2,
+				"speed": "50 mph",
+				"properties": [
+					"Exposed",
+					"Large"
+				],
+				"description": "These miniature racing vehicles don't go as fast as their larger cousins, but they pack some real power in their tiny bodies."
+			},
+			"Golf cart": {
+				"tier": "Civilian",
+				"domain": "Land",
+				"passengers": "4",
+				"strength": -4,
+				"dexterity": 2,
+				"constitution": 1,
+				"armorvalue": 2,
+				"price": 2,
+				"speed": "15 mph",
+				"properties": [
+					"Exposed",
+					"Large"
+				],
+				"description": "These little carts are meant to drive at a leisurely pace around golf courses, but you can drive them anywhere! Check your local laws first, though."
+			},
+			"Motocross bike": {
+				"tier": "Civilian",
+				"domain": "Land",
+				"passengers": "2",
+				"strength": 1,
+				"dexterity": 8,
+				"constitution": -1,
+				"armorvalue": 1,
+				"price": 2,
+				"speed": "100 mph",
+				"properties": [
+					"Accident Prone",
+					"All-Terrain",
+					"Exposed",
+					"Large"
+				],
+				"description": "A motorized sports bike, this vehicle is great for off-roading, but it functions fine on the road as well."
+			},
+			"Motorcycle": {
+				"tier": "Civilian",
+				"domain": "Land",
+				"passengers": "2",
+				"strength": 5,
+				"dexterity": 6,
+				"constitution": 0,
+				"armorvalue": 2,
+				"price": 2,
+				"speed": "200 mph",
+				"properties": [
+					"Accident Prone",
+					"Exposed",
+					"Large"
+				],
+				"description": "Two-wheeled, fast, and dangerous! With this baby, you could weave in and out of traffic at break-neck speeds!"
+			},
+			"18-wheeler": {
+				"tier": "Commercial",
+				"domain": "Land",
+				"passengers": "2",
+				"strength": 0,
+				"dexterity": -3,
+				"constitution": 10,
+				"armorvalue": 2,
+				"price": 4,
+				"speed": "75 mph",
+				"properties": [
+					"Extra Wheels",
+					"Gargantuan"
+				],
+				"description": "The kings of the road, these trucks haul just about anything across the country. The cabin seats two, though a lot more people could fit in the trailer in a pinch (this is illegal in most countries)."
+			},
+			"Armored car": {
+				"tier": "Commercial",
+				"domain": "Land",
+				"passengers": "2",
+				"strength": 0,
+				"dexterity": -2,
+				"constitution": 8,
+				"armorvalue": 3,
+				"price": 4,
+				"speed": "100 mph",
+				"properties": [
+					"Bulletproof",
+					"Huge"
+				],
+				"description": "These armored transport vehicles carry valuables. Most commonly, banks use them to move cash or jewelry."
+			},
+			"Semi": {
+				"tier": "Commercial",
+				"domain": "Land",
+				"passengers": "2",
+				"strength": 1,
+				"dexterity": -2,
+				"constitution": 8,
+				"armorvalue": 2,
+				"price": 3,
+				"speed": "100 mph",
+				"properties": [
+					"Extra Wheels",
+					"Huge"
+				],
+				"description": "This is the front of an 18-wheeler without a trailer attached. With its powerful engine made to pull a heavy trailer, a semi-truck can accelerate fairly quickly despite its size."
+			},
+			"Truck": {
+				"tier": "Commercial",
+				"domain": "Land",
+				"passengers": "2",
+				"strength": 1,
+				"dexterity": -2,
+				"constitution": 6,
+				"armorvalue": 2,
+				"price": 3,
+				"speed": "150 mph",
+				"properties": [
+					"Huge"
+				],
+				"description": "This includes any large commercial truck such as a garbage truck, dump truck, fire engine, or ambulance. They aren't fast, but you don't want to be in their way."
+			},
+			"Van": {
+				"tier": "Commercial",
+				"domain": "Land",
+				"passengers": "3",
+				"strength": 0,
+				"dexterity": -1,
+				"constitution": 4,
+				"armorvalue": 2,
+				"price": 2,
+				"speed": "150 mph",
+				"properties": [
+					"Huge"
+				],
+				"description": "This represents a wide variety of commercial vans, such as postal vans, utility vans, and unmarked white vans."
+			},
+			"Bullet train": {
+				"tier": "Commercial",
+				"domain": "Land",
+				"passengers": "80-90 per car",
+				"strength": 5,
+				"dexterity": -5,
+				"constitution": 6,
+				"armorvalue": 2,
+				"price": 6,
+				"speed": "250 mph",
+				"properties": [
+					"Enclosed",
+					"Gargantuan",
+					"Rails",
+					"Stable"
+				],
+				"description": "So-called bullet trains are streamlined high-speed express trains that travel at speeds rivaling airplanes. They are common in Japan, but can be found in other select cities."
+			},
+			"Bus": {
+				"tier": "Commercial",
+				"domain": "Land",
+				"passengers": "40-80",
+				"strength": -2,
+				"dexterity": -3,
+				"constitution": 8,
+				"armorvalue": 2,
+				"price": 4,
+				"speed": "75 mph",
+				"properties": [
+					"Extra Wheels",
+					"Gargantuan"
+				],
+				"description": "A bus might be a school bus or a common passenger bus. Either way, it may lack seatbelts for anyone but the driver."
+			},
+			"Passenger train": {
+				"tier": "Commercial",
+				"domain": "Land",
+				"passengers": "80-90 per car",
+				"strength": 3,
+				"dexterity": -5,
+				"constitution": 8,
+				"armorvalue": 2,
+				"price": 5,
+				"speed": "150 mph",
+				"properties": [
+					"Enclosed",
+					"Gargantuan",
+					"Rails",
+					"Stable"
+				],
+				"description": "A standard train for commuting or long-distance travel. Any given car could also be used for cargo instead of passengers."
+			},
+			"Backhoe": {
+				"tier": "Commercial",
+				"domain": "Land",
+				"passengers": "1",
+				"strength": -4,
+				"dexterity": -3,
+				"constitution": 6,
+				"armorvalue": 2,
+				"price": 3,
+				"speed": "20 mph",
+				"properties": [
+					"All-Terrain",
+					"Huge"
+				],
+				"description": "A backhoe is a heavy, tracked, all-purpose construction vehicle. Typically, it has a hydraulic shovel on one end and a plow on the other."
+			},
+			"Bulldozer": {
+				"tier": "Commercial",
+				"domain": "Land",
+				"passengers": "2",
+				"strength": -2,
+				"dexterity": -4,
+				"constitution": 8,
+				"armorvalue": 3,
+				"price": 3,
+				"speed": "50 mph",
+				"properties": [
+					"All-Terrain",
+					"Huge"
+				],
+				"description": "Another common heavy construction vehicle, the bulldozer pushes earth, stone, or other heavy materials as well as to level ground."
+			},
+			"Crane": {
+				"tier": "Commercial",
+				"domain": "Land",
+				"passengers": "2",
+				"strength": -2,
+				"dexterity": -4,
+				"constitution": 5,
+				"armorvalue": 2,
+				"price": 3,
+				"speed": "50 mph",
+				"properties": [
+					"Huge"
+				],
+				"description": "Cranes are very heavy vehicles that operate only while stationary. They have a boom arm and winch to lift things up, and large counterweights to keep from tipping over."
+			},
+			"Forklift": {
+				"tier": "Commercial",
+				"domain": "Land",
+				"passengers": "1",
+				"strength": -4,
+				"dexterity": 0,
+				"constitution": 2,
+				"armorvalue": 2,
+				"price": 2,
+				"speed": "20 mph",
+				"properties": [
+					"Exposed",
+					"Large"
+				],
+				"description": "Most forklifts are electric vehicles. They feature a large fork for lifting crates and a significant counterweight to avoid tipping over."
+			},
+			"Tractor": {
+				"tier": "Commercial",
+				"domain": "Land",
+				"passengers": "2",
+				"strength": -4,
+				"dexterity": -2,
+				"constitution": 6,
+				"armorvalue": 2,
+				"price": 3,
+				"speed": "25 mph",
+				"properties": [
+					"All-Terrain",
+					"Huge"
+				],
+				"description": "Designed for agriculture, these vehicles aren't fast, but they are powerful and built to drive across rough terrain. They can be fitted with numerous useful farming implements."
+			},
+			"Police cruiser": {
+				"tier": "Law_Enforcement",
+				"domain": "Land",
+				"passengers": "5",
+				"strength": 4,
+				"dexterity": 3,
+				"constitution": 3,
+				"armorvalue": 2,
+				"price": 3,
+				"speed": "150 mph",
+				"properties": [
+					"Bulletproof",
+					"Huge"
+				],
+				"description": "A standard law enforcement vehicle, these cars come in regular police colors, but they can look just like any other car, too."
+			},
+			"Prison bus": {
+				"tier": "Law_Enforcement",
+				"domain": "Land",
+				"passengers": "50",
+				"strength": -2,
+				"dexterity": -3,
+				"constitution": 8,
+				"armorvalue": 2,
+				"price": 4,
+				"speed": "75 mph",
+				"properties": [
+					"Bulletproof",
+					"Gargantuan",
+					"Restricted"
+				],
+				"description": "This heavily armored bus moves a large number of prisoners at once. Prisoners are Restrained for their journey."
+			},
+			"Prison van": {
+				"tier": "Law_Enforcement",
+				"domain": "Land",
+				"passengers": "6",
+				"strength": 1,
+				"dexterity": 0,
+				"constitution": 4,
+				"armorvalue": 2,
+				"price": 3,
+				"speed": "150 mph",
+				"properties": [
+					"Bulletproof",
+					"Huge",
+					"Restricted"
+				],
+				"description": "These simple vans are designed to move a small number of prisoners around with light security. For particularly dangerous criminals, a prison might use an armored car instead."
+			},
+			"Surveillance van": {
+				"tier": "Law_Enforcement",
+				"domain": "Land",
+				"passengers": "3",
+				"strength": 1,
+				"dexterity": -1,
+				"constitution": 5,
+				"armorvalue": 2,
+				"price": 3,
+				"speed": "150 mph",
+				"properties": [
+					"Bulletproof",
+					"Huge",
+					"Restricted"
+				],
+				"description": "This van is equipped with the latest surveillance equipment, allowing agents to eavesdrop relatively unnoticed, so long as a van sitting around in one place for a long time doesn't tip someone off."
+			},
+			"SWAT van": {
+				"tier": "Law_Enforcement",
+				"domain": "Land",
+				"passengers": "10",
+				"strength": 0,
+				"dexterity": -1,
+				"constitution": 6,
+				"armorvalue": 3,
+				"price": 5,
+				"speed": "150 mph",
+				"properties": [
+					"Bulletproof",
+					"Enclosed",
+					"Huge",
+					"Restricted"
+				],
+				"description": "Heavily armored and made for transporting SWAT teams, these vans are deployed only in extreme circumstances. They carry riot equipment and tactical weapons."
+			},
+			"APC": {
+				"tier": "Military",
+				"domain": "Land",
+				"passengers": "9",
+				"strength": 0,
+				"dexterity": -4,
+				"constitution": 8,
+				"armorvalue": 4,
+				"price": 5,
+				"speed": "60 mph",
+				"properties": [
+					"All-Terrain",
+					"Bulletproof",
+					"Enclosed",
+					"Huge",
+					"Restricted"
+				],
+				"description": "An armored personnel carrier (or APC) is a heavily armored troop transport used by the military to safely move soldiers. An APC can have a weapon such as a machine gun or rocket launcher mounted to it."
+			},
+			"Humvee": {
+				"tier": "Military",
+				"domain": "Land",
+				"passengers": "4",
+				"strength": 2,
+				"dexterity": 2,
+				"constitution": 5,
+				"armorvalue": 5,
+				"price": 5,
+				"speed": "75 mph",
+				"properties": [
+					"All-Terrain",
+					"Bulletproof",
+					"Huge"
+				],
+				"description": "The Humvee, and similar light armored vehicles, are standard military trucks, able to drive off-road and withstand moderate gunfire. A Humvee can mount a weapon such as a machine gun or rocket launcher."
+			},
+			"Tank": {
+				"tier": "Military",
+				"domain": "Land",
+				"passengers": "4",
+				"strength": -3,
+				"dexterity": -1,
+				"constitution": 10,
+				"armorvalue": 5,
+				"price": 5,
+				"speed": "45 mph",
+				"properties": [
+					"All-Terrain",
+					"Bulletproof",
+					"Enclosed",
+					"Gargantuan",
+					"Restricted",
+					"Tracked"
+				],
+				"description": "Battle tanks are general purpose armored vehicles that combine massive firepower, heavy armor, and high mobility. A tank often has one or more stationary machine guns mounted on it, and one passenger can operate the main cannon, which has the following statistics."
+			},
+			"Fishing boat": {
+				"tier": "Civilian",
+				"domain": "Water",
+				"passengers": "6",
+				"strength": -3,
+				"dexterity": -2,
+				"constitution": 4,
+				"armorvalue": 2,
+				"price": 3,
+				"speed": "25 mph",
+				"properties": [
+					"Huge"
+				],
+				"description": "This common utility boat is mostly used by anglers, as the name implies. They come in many sizes but this one is a smaller four-person vessel."
+			},
+			"Inflatable boat": {
+				"tier": "Civilian",
+				"domain": "Water",
+				"passengers": "4",
+				"strength": -2,
+				"dexterity": 2,
+				"constitution": -4,
+				"armorvalue": 1,
+				"price": 1,
+				"speed": "50 mph",
+				"properties": [
+					"Exposed",
+					"Large"
+				],
+				"description": "This small lifeboat or other inflatable craft is quick and agile, at least for a boat."
+			},
+			"Jet ski": {
+				"tier": "Civilian",
+				"domain": "Water",
+				"passengers": "2",
+				"strength": -2,
+				"dexterity": 2,
+				"constitution": -2,
+				"armorvalue": 2,
+				"price": 2,
+				"speed": "35 mph",
+				"properties": [
+					"Exposed",
+					"Large"
+				],
+				"description": "The motorcycle of the sea, this thing is all about fun! It goes fast for a boat but doesn't stand up well to rough waters."
+			},
+			"Motorboat": {
+				"tier": "Civilian",
+				"domain": "Water",
+				"passengers": "4",
+				"strength": -2,
+				"dexterity": 0,
+				"constitution": -2,
+				"armorvalue": 1,
+				"price": 2,
+				"speed": "50 mph",
+				"properties": [
+					"Exposed",
+					"Large"
+				],
+				"description": "Motorized but still small, these boats are faster and easier to use than rowboats but are still mainly for personal use."
+			},
+			"Personal submarine": {
+				"tier": "Civilian",
+				"domain": "Water",
+				"passengers": "6",
+				"strength": -3,
+				"dexterity": -3,
+				"constitution": 4,
+				"armorvalue": 3,
+				"price": 5,
+				"speed": "25 mph",
+				"properties": [
+					"Enclosed",
+					"Huge"
+				],
+				"description": "This small submarine might be used by scientists or nautical enthusiasts who can afford their steep price tags."
+			},
+			"Rowboat": {
+				"tier": "Civilian",
+				"domain": "Water",
+				"passengers": "4",
+				"strength": -8,
+				"dexterity": -2,
+				"constitution": -2,
+				"armorvalue": 1,
+				"price": 1,
+				"speed": "5 mph",
+				"properties": [
+					"Exposed",
+					"Large",
+					"Muscle-Powered"
+				],
+				"description": "Small and usually powered by oars, this can also represent paddle boats, canoes, and other similar boats."
+			},
+			"Sailboat": {
+				"tier": "Civilian",
+				"domain": "Water",
+				"passengers": "12",
+				"strength": -5,
+				"dexterity": -5,
+				"constitution": 4,
+				"armorvalue": 2,
+				"price": 3,
+				"speed": "15 mph",
+				"properties": [
+					"Exposed",
+					"Huge"
+				],
+				"description": "Powered by the wind like ships of old, these boats are mostly for sport, but are worthy vessels for short- and long-distance voyages."
+			},
+			"Yacht": {
+				"tier": "Civilian",
+				"domain": "Water",
+				"passengers": "12",
+				"strength": -1,
+				"dexterity": -5,
+				"constitution": 2,
+				"armorvalue": 2,
+				"price": 4,
+				"speed": "80 mph",
+				"properties": [
+					"Huge",
+					"Stable"
+				],
+				"description": "This small pleasure craft is the rich person's money sink. The price level of 4 is only the beginning for yachts, which can be as expensive as you can imagine."
+			},
+			"Airliner": {
+				"tier": "Commercial",
+				"domain": "Sky",
+				"passengers": "100-850",
+				"strength": 0,
+				"dexterity": -4,
+				"constitution": 7,
+				"armorvalue": 3,
+				"price": 6,
+				"speed": "550 mph",
+				"properties": [
+					"Airspeed",
+					"Gargantuan"
+				],
+				"description": "Commercial airliners carry dozens or hundreds of passengers all across the world. They are nearly always owned by a company rather than individuals."
+			},
+			"Fighter jet": {
+				"tier": "Military",
+				"domain": "Sky",
+				"passengers": "2",
+				"strength": 10,
+				"dexterity": 6,
+				"constitution": 4,
+				"armorvalue": 2,
+				"price": 6,
+				"speed": "Mach 2-3",
+				"properties": [
+					"Airspeed",
+					"Huge"
+				],
+				"description": "These fast military aircraft are often equipped with stationary machine guns, as well as ballistic missiles. See the table on the next page for statistics."
+			},
+			"Helicopter": {
+				"tier": "Civilian",
+				"domain": "Sky",
+				"passengers": "7",
+				"strength": 8,
+				"dexterity": 2,
+				"constitution": 1,
+				"armorvalue": 2,
+				"price": 4,
+				"speed": "250 mph",
+				"properties": [
+					"Huge"
+				],
+				"description": "These flying vehicles are capable of taking off and landing vertically. Military helicopters are often equipped with one or more machine guns."
+			},
+			"Hot air balloon": {
+				"tier": "Civilian",
+				"domain": "Sky",
+				"passengers": "4",
+				"strength": -5,
+				"dexterity": -4,
+				"constitution": 0,
+				"armorvalue": 1,
+				"price": 3,
+				"speed": "10 mph",
+				"properties": [
+					"Huge"
+				],
+				"description": "These recreational aircraft allow for a delightful, scenic time in the sky. They move only as fast as the wind permits."
+			},
+			"Paraglider": {
+				"tier": "Civilian",
+				"domain": "Sky",
+				"passengers": "1",
+				"strength": -4,
+				"dexterity": 1,
+				"constitution": 2,
+				"armorvalue": 0,
+				"price": 2,
+				"speed": "25 mph",
+				"properties": [
+					"Exposed",
+					"Gliding",
+					"Large"
+				],
+				"description": "These simple gliders vary from large, steerable parachutes to more kite-like gliders."
+			},
+			"Personal aircraft": {
+				"tier": "Civilian",
+				"domain": "Sky",
+				"passengers": "2-9",
+				"strength": 6,
+				"dexterity": 0,
+				"constitution": 2,
+				"armorvalue": 1,
+				"price": 3,
+				"speed": "200 mph",
+				"properties": [
+					"Huge"
+				],
+				"description": "These small planes seat between one and nine passengers. They are nearly always propeller driven and typically have one set of wings."
+			},
+			"Regional aircraft": {
+				"tier": "Commercial",
+				"domain": "Sky",
+				"passengers": "10-100",
+				"strength": 0,
+				"dexterity": -2,
+				"constitution": 4,
+				"armorvalue": 2,
+				"price": 5,
+				"speed": "550 mph",
+				"properties": [
+					"Airspeed",
+					"Gargantuan"
+				],
+				"description": "These commercial aircraft carry ten or more passengers on regional trips from both major and smaller airfields. They tend to be propeller driven and have two to four engines."
+			},
+			"Wingsuit": {
+				"tier": "Civilian",
+				"domain": "Sky",
+				"passengers": "1",
+				"strength": 0,
+				"dexterity": 8,
+				"constitution": -5,
+				"armorvalue": 0,
+				"price": 2,
+				"speed": "100 mph",
+				"properties": [
+					"Gliding",
+					"Medium"
+				],
+				"description": "These simple gliders vary from large, steerable parachutes to more kite-like gliders."
+			}
+		}
+	}
+}

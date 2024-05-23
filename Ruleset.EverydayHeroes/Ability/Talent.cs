@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EverydayHeroes.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,10 +8,11 @@ using Utility;
 
 namespace EverydayHeroes
 {
-    public class Class
+    public class Talent
     {
         public string Description { get; set; }
-        public List<UserChoice<string>> Profeciencies { get; set; }
-        public List<List<Ability>> Talents { get; set; }
+        public string Archetype { get; set; }
+        public string Class { get; set; }
+        public int Level { get; set; }
     }
 }

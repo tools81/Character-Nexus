@@ -24,6 +24,7 @@ namespace EverydayHeroes
         public string HitDice { get => GetHitDice(); }
         public int HitPoints { get => GetHitPoints(); }
         public int Defense { get => GetDefense(); }
+        public int Initiative { get => GetInitiative(); }
         public bool HasDamageReduction { get; set; }
         public int DamageReduction { get => GetDamageReduction(); }
         public int ProficiencyBonus { get => GetProficiencyBonus(); }
@@ -33,6 +34,7 @@ namespace EverydayHeroes
         public int FocusPoints { get; set; }
         public int InfluencePoints { get; set; }
         public int LuckPoints { get; set; }
+        public bool Inspiration { get; set; }
 
         private int GetProficiencyBonus()
         {
@@ -52,6 +54,11 @@ namespace EverydayHeroes
         private int GetDefense()
         {
             return 10 + Attributes[Archetype.DefenseModifier].Modifier + Archetype.DefenseBonus[Level];
+        }
+
+        private int GetInitiative()
+        {
+            return Attributes["Dexterity"].Modifier;
         }
 
         private int GetDamageReduction()

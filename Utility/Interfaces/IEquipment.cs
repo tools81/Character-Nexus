@@ -7,6 +7,6 @@ namespace Utility
 {
     public interface IEquipment
     {
-        public string Description { get; set; }
+        
     }
 }

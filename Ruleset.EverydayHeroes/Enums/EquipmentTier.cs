@@ -1,9 +1,10 @@
 ﻿namespace EverydayHeroes.Enums
 {
-    public enum FeatType 
+    public enum EquipmentTier 
     { 
         Basic,
         Advanced,
-        Multiclass
+        Historial,
+        Military
     }
 }

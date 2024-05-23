@@ -1,0 +1,1507 @@
+{
+  "Classes": {
+    "Archetypes": {
+      "Strong": {
+        "description": "You have trained your body for strength and explosive power. You hit hard, excelling in close combat. As a hero, you fight because others can't.<br>Strong heroes are dubale fighters who make high damage attacks. They specialize in melee attacks, whether they favor unarmed strikes or close combat weapons.'",
+        "hitdice": "d10",
+        "hitpoints": 10,
+        "hitpointsperlevel": 6,
+        "hitpointmodifier": "Constitution",
+        "DefenseModifier": "Strength",
+        "ProficiencyBonus": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4
+        ],
+        "DefenseBonus": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        "Talents": [
+          [
+            "Reckless Attack"
+          ],
+          [
+            "Power Attack"
+          ]
+        ],
+        "Classes": {
+          "Brawler": {
+            "description": "You break stuff and hit people. Sometimes you mix it up by hitting stuff and breaking people.<br>You imprinted on comics as a kid, and it shows in your approach to a fight. With fists like hammers and the ability to turn nearly anything into a deadly weapon, you are dangerous and everyone knows it.<br>The brawler charges into melee combat, hitting hard and destroying everything in their path. They enjoy using improvised weapons but are also great unarmed combatants. The brawler doesn't need to carry weapons to fight at full strength.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Strength",
+                  "Constitution"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Acrobatics",
+                  "Athletics",
+                  "Endurance",
+                  "Intimidation",
+                  "Mechanics",
+                  "Streetwise"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Equipment",
+                "choices": [
+                  "Basic",
+                  "Improvised"
+                ],
+                "count": 2
+              }
+            ],
+            "Talents": [
+              [
+                "Crush",
+                "Hurt",
+                "Smash"
+              ],
+              [],
+              [
+                "Rampage"
+              ],
+              [],
+              [
+                "Bits and Pieces",
+                "Haymaker"
+              ],
+              [],
+              [
+                "Unstoppable"
+              ],
+              [],
+              [
+                "Ultimate Brutality"
+              ]
+            ]
+          },
+          "Heavy Gunner": {
+            "description": "You leverage your beefy biceps by using them to treat big guns as if they were made of plastic. The louder the gun, the bigger the explosion, the wider your smile.<br>The heavy gunner applies their Strength modifier to large firearms and deals extra damage with nearly any weapon. The heavy gunner is especially dangerous when they have access to restricted military weapons, but they are still effective with nonrestricted big guns from the advanced and military weapons lists.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Strength",
+                  "Constitution"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Acrobatics",
+                  "Endurance",
+                  "Intimidation",
+                  "Mechanics",
+                  "Natural Sciences",
+                  "Vehicles"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Equipment",
+                "choices": [
+                  "Basic",
+                  "Advanced",
+                  "Military"
+                ],
+                "count": 3
+              }
+            ],
+            "Talents": [
+              [
+                "Big Guns",
+                "Salvo"
+              ],
+              [],
+              [
+                "Big Boom"
+              ],
+              [],
+              [
+                "Advanced Combat Training",
+                "Got You Covered"
+              ],
+              [],
+              [
+                "Make a mess",
+                "Bigger Boom"
+              ],
+              [],
+              [
+                "Ultimate Carnage"
+              ]
+            ]
+          },
+          "MMA Fighter": {
+            "description": "You are highly trained in the modern discipline of mixed martial arts and the philosophy of eschewing martial arts tradition for pure pragmatism. You can use your skills both in the ring as a competitor, and on the streets as a hero. One on one, you have few equals.<br>The MMA fighter is an unarmed strike specialist who performs combinations of special punches and grappling attacks to ensure their opponent's ultimate defeat. The MMA fighter is not an especially strong damage dealer, but they are adept at neutralizing difficult and dangerous opponents one-on-one. Be sure to take advantage of the Off-Hand Attack bonus action when fighting unarmed.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Strength",
+                  "Dexterity"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Acrobatics",
+                  "Athletics",
+                  "Deception",
+                  "Endurance",
+                  "Intimidation",
+                  "Medicine",
+                  "Streetwise"
+                ],
+                "count": 3
+              },
+              {
+                "type": "Equipment",
+                "choices": [
+                  "Basic"
+                ],
+                "count": 1
+              },
+              {
+                "type": "Expertise",
+                "choices": [
+                  "Acrobatics",
+                  "Athletics",
+                  "Endurance"
+                ],
+                "count": 1
+              }
+            ],
+            "Talents": [
+              [
+                "Heavy Hands",
+                "Pin",
+                "Submission Move"
+              ],
+              [],
+              [
+                "Jab",
+                "Takedown"
+              ],
+              [],
+              [
+                "Advanced Combat Training"
+              ],
+              [],
+              [
+                "Improved Heavy Hands",
+                "Master Grappler"
+              ],
+              [],
+              [
+                "KO Punch",
+                "Sleeper Hold"
+              ]
+            ]
+          }
+        }
+      },
+      "Agile": {
+        "description": "you are a master of speed and precision. You have honed your reflexes to the point you can act faster than you can think. Your pinpoint accuracty makes you a deadly foe in any fight.<br>Agile heroes focus on ranged attacks and light weapons. Their high mobility and rapid attacks make them deadly heroes in combat.",
+        "hitdice": "d8",
+        "hitpoints": 8,
+        "hitpointsperlevel": 5,
+        "hitpointmodifier": "Constitution",
+        "DefenseModifier": "Dexterity",
+        "ProficiencyBonus": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4
+        ],
+        "DefenseBonus": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3
+        ],
+        "Talents": [
+          [
+            "Fast Reflexes"
+          ],
+          [
+            "Quickness"
+          ]
+        ],
+        "Classes": {
+          "Martial Artist": {
+            "description": "Through rigorous physical training and mental discipline, you have turned your body into a potentially deadly weapon. You prefer the weapons of an idealized past to those of the modern world<br>The martial artist specializes in rapid attacks and high mobility. They freely mix unarmed strikes and weapon attacks to precise effect. Their mobility helps them enter melee combat quickly.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Strength",
+                  "Dexterity"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Acrobatics",
+                  "Athletics",
+                  "Endurance",
+                  "Performance",
+                  "Sleight of Hand",
+                  "Stealth"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Equipment",
+                "choices": [
+                  "Basic",
+                  "Historical"
+                ],
+                "count": 2
+              }
+            ],
+            "Talents": [
+              [
+                "Martial Arts"
+              ],
+              [],
+              [
+                "Lightning Strikes",
+                "Parkour"
+              ],
+              [],
+              [
+                "Advanced Combat Training"
+              ],
+              [],
+              [
+                "Evasion",
+                "Advanced Martial Arts"
+              ],
+              [],
+              [
+                "Lightning Strikes Twice"
+              ]
+            ]
+          },
+          "Scoundrel": {
+            "description": "Honorable combat is a sucker bet. There isn't a low blow, dirty trick, or cheap shot you don't know. You have mastered skills that can be put to disreputable uses. These skills don't make you a bad person, but you do have the necessary credentials to play the part.<br>The scoundrel is a capable fighter who boasts a range of useful skill proficiencies. Getting advantage on attacks is key to their success in a fight. For this reason, shotguns are a great weapon choice for scoundrels in ranged combat, since the shot property always offers advantage within 30 feet.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Charisma",
+                  "Dexterity"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Acrobatics",
+                  "Deception",
+                  "Intimidation",
+                  "Security",
+                  "Sleight of Hand",
+                  "Stealth",
+                  "Streetwise",
+                  "Vehicles"
+                ],
+                "count": 3
+              },
+              {
+                "type": "Equipment",
+                "choices": [
+                  "Basic",
+                  "Advanced"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Expertise",
+                "choices": [
+                  "Deception",
+                  "Security",
+                  "Sleight of Hand",
+                  "Stealth",
+                  "Streetwise"
+                ],
+                "count": 1
+              }
+            ],
+            "Talents": [
+              [
+                "Vital Strike"
+              ],
+              [],
+              [
+                "Swift",
+                "Surprise Strike"
+              ],
+              [],
+              [
+                "Roll With It"
+              ],
+              [],
+              [
+                "Covert Expertise"
+              ],
+              [],
+              [
+                "Master of Subterfuge"
+              ]
+            ]
+          },
+          "Sharpshooter": {
+            "description": "You are a master of modern firearms, able to make impossible shots look effortless. Whether you're sniping targets from a mile away or dancing through a hail of bullets with a gun in either hand, you rarely miss your mark.<br>The sharpshooter focuses on ranged weapons, using either dual pistols or long guns. Both are highly effective at bringing down foes quickly. Sharpshooters are not especially durable and stick to cover in combat.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Intelligence",
+                  "Dexterity"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Acrobatics",
+                  "Intimidation",
+                  "Mechanics",
+                  "Perception",
+                  "Sleight of Hand",
+                  "Stealth",
+                  "Vehicles"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Equipment",
+                "choices": [
+                  "Basic",
+                  "Advanced"
+                ],
+                "count": 2
+              }
+            ],
+            "Talents": [
+              [
+                "Gunslinging",
+                "Sharpshooting"
+              ],
+              [],
+              [
+                "Improved Gunslinging",
+                "Improved Sharpshooting"
+              ],
+              [],
+              [
+                "Advanced Combat Training"
+              ],
+              [],
+              [
+                "Headshot"
+              ],
+              [],
+              [
+                "Supreme Ranged Combat Training"
+              ]
+            ]
+          }
+        }
+      },
+      "Tough": {
+        "description": "You don't know what it means to give up. No matter what knocks you down, you get up again. Where there is a fight to be found, you'll be in the thick of it, often risking your life to protect others.<br>Tough heroes are durable characters, sometimes at the expense of offensive options or out of combat abilities. Many excel at protecting their teammates.",
+        "hitdice": "d12",
+        "hitpoints": 12,
+        "hitpointsperlevel": 7,
+        "hitpointmodifier": "Constitution",
+        "DefenseModifier": "Constitution|Dexterity",
+        "ProficiencyBonus": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4
+        ],
+        "DefenseBonus": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4
+        ],
+        "Talents": [
+          [
+            "Payback"
+          ],
+          [
+            "Tough as Nails"
+          ]
+        ],
+        "Classes": {
+          "Bodyguard": {
+            "description": "You are dedicated to the protection of others. You do whatever it takes to keep your allies safe from harm, even if it risks your own life. Fortunately, it takes quite a lot to take you down.<br>Bodyguards have abilities to protect their allies from harm and have among the best defenses of any hero. Concealable weapons are a great thematic choice for bodyguards, but they can make good use of high damage weapons when discretion isn't needed.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Strength",
+                  "Constitution"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Athletics",
+                  "Endurance",
+                  "Medicine",
+                  "Perception",
+                  "Security",
+                  "Streetwise",
+                  "Survival"
+                ],
+                "count": 3
+              },
+              {
+                "type": "Equipment",
+                "choices": [
+                  "Basic",
+                  "Advanced"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Expertise",
+                "choices": [
+                  "Endurance",
+                  "Intimidation",
+                  "Security"
+                ],
+                "count": 1
+              }
+            ],
+            "Talents": [
+              [
+                "Get Down",
+                "Take a Bullet"
+              ],
+              [],
+              [
+                "Come Get Some",
+                "Friendly Fire"
+              ],
+              [],
+              [
+                "Advanced Combat Training",
+                "Pin Them Down"
+              ],
+              [],
+              [
+                "Vigilance"
+              ],
+              [],
+              [
+                "Human Shield"
+              ]
+            ]
+          },
+          "Commando": {
+            "description": "You are the consummate warrior, dangerous with any weapon and trained to survive every circumstance. You are ready for whatever the enemy has to throw at you. The only thing you might be unprepared for is peace.<br>The commando is an all-around combat class that offers a great blend of defense and offense. Unlike the other tough heroes, they can't directly protect their allies, but they are versatile and can use nearly any weapon. You might consider investing in Dexterity if you want to lean into offensive strategies.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Strength",
+                  "Constitution"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Athletics",
+                  "Endurance",
+                  "Mechanics",
+                  "Persuasion",
+                  "Streetwise",
+                  "Survival",
+                  "Vehicles"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Equipment",
+                "choices": [
+                  "Basic",
+                  "Advanced",
+                  "Military"
+                ],
+                "count": 3
+              }
+            ],
+            "Talents": [
+              [
+                "Fighting Spirit",
+                "Watch Your Six"
+              ],
+              [],
+              [
+                "Extra Effort",
+                "Grenadier"
+              ],
+              [],
+              [
+                "Advanced Combat Training"
+              ],
+              [],
+              [
+                "Maximum Effort",
+                "Situational Awareness"
+              ],
+              [],
+              [
+                "Master of Arms"
+              ]
+            ]
+          },
+          "Scrapper": {
+            "description": "You haven't been killed yet, but not for lack of anyone trying. You can take a beating and dish out a double helping in return. When the dust settles, you'll be the one left standing.<br>The scrapper excels at getting in the enemy's face and forcing them to engage. If the enemy tries to go around them, they can punish them for it. If the enemy attacks the scrapper, they can punish them for it. If you want to be unstoppable in combat, this is the class for you.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Intelligence",
+                  "Constitution"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Acrobatics",
+                  "Athletics",
+                  "Endurance",
+                  "Intimidation",
+                  "Persuasion",
+                  "Streetwise",
+                  "Vehicles"
+                ],
+                "count": 1
+              },
+              {
+                "type": "Equipment",
+                "choices": [
+                  "Basic",
+                  "Advanced",
+                  "Improvised"
+                ],
+                "count": 3
+              }
+            ],
+            "Talents": [
+              [
+                "Opportunist"
+              ],
+              [],
+              [
+                "Frenzy",
+                "With Interest"
+              ],
+              [],
+              [
+                "Roll With It"
+              ],
+              [],
+              [
+                "Anger Issues",
+                "Indomitable"
+              ],
+              [],
+              [
+                "Ultimate Brutality"
+              ]
+            ]
+          }
+        }
+      },
+      "Smart": {
+        "description": "While other are playing checkers, you're playing 4-dimensional chess. The human mind is the ultimate weapon, and yours is honed to a razor's edge.<br>Smart Heroes use their genius to enact plans. Plans are powerful but limited effects that can break the fourth wall, effectively changing the past to affect the present.",
+        "hitdice": "d6",
+        "hitpoints": 6,
+        "hitpointsperlevel": 4,
+        "hitpointmodifier": "Constitution",
+        "DefenseModifier": "Intelligence",
+        "ProficiencyBonus": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4
+        ],
+        "DefenseBonus": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "Talents": [
+          [
+            "Plans",
+            "Genius"
+          ],
+          [
+            "Mental Refresh"
+          ]
+        ],
+        "Classes": {
+          "Engineer": {
+            "description": "You love technology. You see the material world as a giant set of tools to build whatever you can imagine. Whether it's programming drones with artificial intelligence or inventing new and wondrous machines, where others see impossibility, you see inevitability.<br>Engineers are capable combatants thanks to their mechanical companion and plans that deal electrical damage. They also offer strong support to members of their team and bring a number of useful skills to the table.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Intelligence",
+                  "Dexterity"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Arts and Crafts",
+                  "Computers",
+                  "Investigation",
+                  "Mechanics",
+                  "Natural Sciences",
+                  "Security",
+                  "Vehicles"
+                ],
+                "count": 3
+              },
+              {
+                "type": "Equipment",
+                "choices": [
+                  "Basic"
+                ],
+                "count": 1
+              },
+              {
+                "type": "Expertise",
+                "choices": [
+                  "Computers",
+                  "Mechanics",
+                  "Vehicles"
+                ],
+                "count": 1
+              }
+            ],
+            "Talents": [
+              [
+                "Mechanical Companion",
+                "Field Repairs"
+              ],
+              [],
+              [
+                "Fine Tuning",
+                "Plans Improve"
+              ],
+              [],
+              [
+                "Plans Improve"
+              ],
+              [],
+              [
+                "Plans Improve"
+              ],
+              [],
+              [
+                "Plans Improve"
+              ]
+            ]
+          },
+          "Hacker": {
+            "description": "You feel more at home in the abstract digital realm than you do in analog reality. You are the new mind, the new flesh, and the new cybernetic entity born of an ever-advancing interface between human and machine. When knowledge is power, you are near infinite.<br>Hacker plans revolve around computers, information, and an understanding of human behavior in the digital sphere. The hacker can easily overcome technological challenges and exploit the increasingly digital world. They are vulnerable in a physical fight but excel at avoiding the need for such primitive conflict.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Intelligence",
+                  "Wisdom"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Computers",
+                  "Deception",
+                  "Investigation",
+                  "Insight",
+                  "Mechanics",
+                  "Natural Sciences",
+                  "Security",
+                  "Social Sciences",
+                  "Stealth",
+                  "Streetwise"
+                ],
+                "count": 4
+              },
+              {
+                "type": "Equipment",
+                "choices": [
+                  "Basic"
+                ],
+                "count": 1
+              },
+              {
+                "type": "Expertise",
+                "choices": [
+                  "Computers",
+                  "Security"
+                ],
+                "count": 1
+              }
+            ],
+            "Talents": [
+              [
+                "Digital Ghost",
+                "Its For You"
+              ],
+              [],
+              [
+                "Plans Improve"
+              ],
+              [],
+              [
+                "Plans Improve"
+              ],
+              [],
+              [
+                "Plans Improve"
+              ],
+              [],
+              [
+                "Plans Improve"
+              ]
+            ]
+          },
+          "Mastermind": {
+            "description": "You are always at least one step ahead of your enemies, plotting, scheming, and planning your next masterstroke. Your allies benefit from your genius as well. If only you could find someone to truly challenge you.<br>Mastermind plans involve strategies that were retroactively enacted in the past, to be revealed only in the present moment. This makes the mastermind very powerful outside combat, with the ability to shortcut difficult challenges. In combat, however, they are rather weak and vulnerable.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Intelligence",
+                  "Wisdom"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Computers",
+                  "Deception",
+                  "Insight",
+                  "Investigation",
+                  "Medicine",
+                  "Natural Sciences",
+                  "Perception",
+                  "Persuasion",
+                  "Security",
+                  "Social Sciences",
+                  "Streetwise"
+                ],
+                "count": 4
+              },
+              {
+                "type": "Equipment",
+                "choices": [
+                  "Basic"
+                ],
+                "count": 1
+              },
+              {
+                "type": "Expertise",
+                "choices": [
+                  "Computers",
+                  "Deception",
+                  "Insight",
+                  "Investigation",
+                  "Perception",
+                  "Persuasion",
+                  "Security",
+                  "Social Sciences",
+                  "Streetwise"
+                ],
+                "count": 2
+              }
+            ],
+            "Talents": [
+              [
+                "Know-It-All",
+                "Youre Doing It Wrong"
+              ],
+              [],
+              [
+                "Plans Improve"
+              ],
+              [],
+              [
+                "Plans Improve"
+              ],
+              [],
+              [
+                "Plans Improve"
+              ],
+              [],
+              [
+                "Plans Improve"
+              ]
+            ]
+          },
+          "Scientist": {
+            "description": "Your mastery of the sciences is normally applied in the lab, making new discoveries and advancing human knowledge. But when lives are on the line, you are ready to demonstrate that knowledge truly is power.<br>A scientist’s plans are themed around biology and chemistry to damage enemies and aid allies. They are a great choice if you want to play a support role in combat or to tend to the injuries of other heroes. They are one of the more highly skilled classes with a range of expertise available to them.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Intelligence",
+                  "Constitution"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Computers",
+                  "Investigation",
+                  "Mechanics",
+                  "Medicine",
+                  "Natural Sciences",
+                  "Security",
+                  "Social Sciences"
+                ],
+                "count": 3
+              },
+              {
+                "type": "Expertise",
+                "choices": [
+                  "Computers",
+                  "Mechanics",
+                  "Medicine",
+                  "Natural Sciences"
+                ],
+                "count": 2
+              }
+            ],
+            "Talents": [
+              [
+                "Dangerous Stuff"
+              ],
+              [],
+              [
+                "Plans Improve"
+              ],
+              [],
+              [
+                "Hazardous Stuff",
+                "Plans Improve"
+              ],
+              [],
+              [
+                "Plans Improve"
+              ],
+              [],
+              [
+                "Deadly Stuff",
+                "Plans Improve"
+              ]
+            ]
+          }
+        }
+      },
+      "Wise": {
+        "description": "You are known as a person who thinks before you act. You observe the world around you and move with its rhythms instead of struggling against the tide. By first knowing yourself, you can reach out and make the world a better place.<br>Wise Heroes are thematically diverse, but they all have a Focus mechanic that can be spent to activate special actions and abilities.",
+        "hitdice": "d10",
+        "hitpoints": 10,
+        "hitpointsperlevel": 6,
+        "hitpointmodifier": "Constitution",
+        "DefenseModifier": "Wisdom|Dexterity",
+        "ProficiencyBonus": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4
+        ],
+        "DefenseBonus": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4
+        ],
+        "Talents": [
+          [
+            "Focus",
+            "Concentration"
+          ],
+          [
+            "One Step Ahead"
+          ]
+        ],
+        "Classes": {
+          "Hunter": {
+            "description": "Whether it's big game or a fugitive from justice, your prey was doomed the moment you set your sights on them. You can hunt with a faithful companion or go it alone and focus only on your chosen target. Either way, there can be only one outcome.<br>The hunter is both a skilled hero and one that can hold their own in combat. Their animal companion can be both fun and effective but makes the hunter a complex class to play in combat.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Strength",
+                  "Wisdom"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Acrobatics",
+                  "Arts and Crafts",
+                  "Athletics",
+                  "Endurance",
+                  "Insight",
+                  "Medicine",
+                  "Perception",
+                  "Stealth",
+                  "Survival"
+                ],
+                "count": 3
+              },
+              {
+                "type": "Equipment",
+                "choices": [
+                  "Basic",
+                  "Advanced"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Expertise",
+                "choices": [
+                  "Endurance",
+                  "Perception",
+                  "Stealth",
+                  "Survival"
+                ],
+                "count": 1
+              }
+            ],
+            "Talents": [
+              [
+                "Hunting Companion",
+                "Hunters Mark",
+                "Animal Husbandry"
+              ],
+              [],
+              [
+                "Companion Training",
+                "Mark as Prey"
+              ],
+              [],
+              [
+                "Advanced Combat Training"
+              ],
+              [],
+              [
+                "Learn Their Moves",
+                "No Escape"
+              ],
+              [],
+              [
+                "Marked for Death"
+              ]
+            ]
+          },
+          "Master": {
+            "description": "Through long training and meditation you have achieved something rare: karmic harmony, inner balance, and the ability to kick prodigious amounts of ass. You need no weapons to make your presence felt by those who would disturb your tranquility.<br>The master is a melee combatant with a diverse range of both offensive and defensive moves. They don't hit especially hard, but they can strike quickly, and in unexpected ways. Like a true ascetic, they don't need material equipment to be at their best.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Wisdom",
+                  "Charisma"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Acrobatics",
+                  "Arts and Crafts",
+                  "Deception",
+                  "Endurance",
+                  "Medicine",
+                  "Perception",
+                  "Performance",
+                  "Sleight of Hand",
+                  "Survival"
+                ],
+                "count": 3
+              },
+              {
+                "type": "Equipment",
+                "choices": [
+                  "Basic",
+                  "Improvised"
+                ],
+                "count": 2
+              }
+            ],
+            "Talents": [
+              [
+                "Mystic Arts",
+                "Ki"
+              ],
+              [],
+              [
+                "Dance in the Storm",
+                "Flow Like the River"
+              ],
+              [],
+              [
+                "Advanced Combat Training",
+                "Ki Strike"
+              ],
+              [],
+              [
+                "Balance Within",
+                "Evasion"
+              ],
+              [],
+              [
+                "Deep Focus",
+                "Like the Willow"
+              ]
+            ]
+          },
+          "Sleuth": {
+            "description": "Evil never sleeps, so neither do you. Your keen perception pierces the veil of the devious. Your inner darkness gives you insight into the worst villains humanity has to offer. It's a dirty job, but someone's gotta do it.<br>The sleuth has the skills necessary to solve mysteries and avoid dangers. They are the most defensive of the Wise Heroes with abilities to help them stay alive. At higher levels they gain offense to make them dangerous to unwary enemies.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Intelligence",
+                  "Wisdom"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Arts and Crafts",
+                  "Computers",
+                  "Deception",
+                  "Insight",
+                  "Investigation",
+                  "Perception",
+                  "Security",
+                  "Stealth",
+                  "Streetwise",
+                  "Vehicles"
+                ],
+                "count": 3
+              },
+              {
+                "type": "Equipment",
+                "choices": [
+                  "Basic"
+                ],
+                "count": 1
+              },
+              {
+                "type": "Expertise",
+                "choices": [
+                  "Insight",
+                  "Investigation",
+                  "Perception"
+                ],
+                "count": 1
+              }
+            ],
+            "Talents": [
+              [
+                "Deduction",
+                "Sixth Sense",
+                "Weak Spot"
+              ],
+              [],
+              [
+                "Alert",
+                "Investigative Expertise"
+              ],
+              [],
+              [
+                "Roll With It"
+              ],
+              [],
+              [
+                "Evasion"
+              ],
+              [],
+              [
+                "Elementary"
+              ]
+            ]
+          }
+        }
+      },
+      "Charming": {
+        "description": "When you smile, the whole world smiles with you. It might be your beauty, your golden voice, or your way with words, but your ability to influence others is the key to your success.<br>Charming heroes use influence dice to boost their other die rolls. They focus on helping allies and hindering enemies in combat rather than relying on their own strengths.",
+        "hitdice": "d8",
+        "hitpoints": 8,
+        "hitpointsperlevel": 5,
+        "hitpointmodifier": "Constitution",
+        "DefenseModifier": "Charisma|Dexterity",
+        "ProficiencyBonus": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4
+        ],
+        "DefenseBonus": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3
+        ],
+        "Talents": [
+          [
+            "Influence",
+            "Tricks"
+          ],
+          [
+            "Charm"
+          ]
+        ],
+        "Classes": {
+          "Duelist": {
+            "description": "Duelists are fighters who prefer style over brutality. Any fool can swing a stick around like a caveman. True combat prowess unites the body, mind, and soul to a singular purpose.<br>The duelist is a melee specialist who masters a mixture of offensive and defensive combat tricks, allowing them to react to the situation at hand. A duelist who wants to focus on combat performance should have a strong Dexterity score.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Charisma",
+                  "Dexterity"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Acrobatics",
+                  "Athletics",
+                  "Deception",
+                  "Endurance",
+                  "Intimidation",
+                  "Performance"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Equipment",
+                "choices": [
+                  "Basic",
+                  "Historical"
+                ],
+                "count": 2
+              }
+            ],
+            "Talents": [
+              [
+                "Precision"
+              ],
+              [],
+              [
+                "En Garde"
+              ],
+              [],
+              [
+                "Advanced Combat Training"
+              ],
+              [],
+              [
+                "Fancy Footwork"
+              ],
+              [],
+              [
+                "Panache"
+              ]
+            ]
+          },
+          "Icon": {
+            "description": "You are too cool for school, a legend among those who know of you. You add something special to everything you do and you make sure everyone knows about it. You're sure you were born to be a hero.<br>The icon offers an even mix of offense, defense, and social skills. Their abilities are unique, fun, and versatile, but if you're looking for a powerhouse in combat, this is not the class for you. If you want to be wonderfully ridiculous, you have come to the right place.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Charisma",
+                  "Dexterity"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Acrobatics",
+                  "Athletics",
+                  "Arts and Crafts",
+                  "Deception",
+                  "Intimidation",
+                  "Performance",
+                  "Persuasion",
+                  "Streetwise"
+                ],
+                "count": 3
+              },
+              {
+                "type": "Equipment",
+                "choices": [
+                  "Basic",
+                  "Advanced"
+                ],
+                "count": 2
+              }
+            ],
+            "Talents": [
+              [
+                "Banter",
+                "Center of Attention"
+              ],
+              [],
+              [
+                "Flinch"
+              ],
+              [],
+              [
+                "Advanced Combat Training"
+              ],
+              [],
+              [
+                "Not My Style"
+              ],
+              [],
+              [
+                "Star of the Show"
+              ]
+            ]
+          },
+          "Leader": {
+            "description": "You are a natural leader. Even when you are not in a position of power, people listen to what you say and follow your example. You can turn a band of demoralized misfits into a world-class team of highly motivated winners.<br>The leader focuses on supporting their allies in combat. Their best attack is their strongest ally's attack. Their skill selection also allows them to be the face of a team.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Charisma",
+                  "Constitution"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Deception",
+                  "Insight",
+                  "Intimidation",
+                  "Medicine",
+                  "Perception",
+                  "Performance",
+                  "Persuasion",
+                  "Social Sciences"
+                ],
+                "count": 3
+              },
+              {
+                "type": "Equipment",
+                "choices": [
+                  "Basic",
+                  "Advanced"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Expertise",
+                "choices": [
+                  "Intimidation",
+                  "Persuasion"
+                ],
+                "count": 1
+              }
+            ],
+            "Talents": [
+              [
+                "Command"
+              ],
+              [],
+              [
+                "Encouraging Banter"
+              ],
+              [],
+              [
+                "Improved Command"
+              ],
+              [],
+              [
+                "Rousing Speech"
+              ],
+              [],
+              [
+                "Aura of Leadership"
+              ]
+            ]
+          },
+          "Manipulator": {
+            "description": "People think you are charming, useful, and mostly harmless. That's exactly what you want people to think. In reality, you have everyone dancing on your strings to whatever tune you want to play for them.<br>The manipulator focuses on weakening or controlling opponents in a fight and rarely makes attacks. With the right allies, these are powerful abilities. They also have the strongest set of social skills for any hero and shine in noncombat situations.",
+            "proficiencies": [
+              {
+                "type": "SavingThrow",
+                "choices": [
+                  "Charisma",
+                  "Wisdom"
+                ],
+                "count": 2
+              },
+              {
+                "type": "Skill",
+                "choices": [
+                  "Deception",
+                  "Insight",
+                  "Intimidation",
+                  "Performance",
+                  "Persuasion",
+                  "Sleight of Hand"
+                ],
+                "count": 3
+              },
+              {
+                "type": "Expertise",
+                "choices": [
+                  "Deception",
+                  "Intimidation",
+                  "Persuasion"
+                ],
+                "count": 1
+              }
+            ],
+            "Talents": [
+              [
+                "Demoralize"
+              ],
+              [],
+              [
+                "Copycat"
+              ],
+              [],
+              [
+                "Hypnotize",
+                "Improved Demoralize"
+              ],
+              [],
+              [
+                "False Identity",
+                "Social Expertise"
+              ],
+              [],
+              [
+                "Master of Manipulation"
+              ]
+            ]
+          }
+        }
+      }
+    }
+  }
+}

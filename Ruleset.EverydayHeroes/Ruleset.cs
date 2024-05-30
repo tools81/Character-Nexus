@@ -13,6 +13,12 @@ namespace EverydayHeroes
     {
         public string Name => "Everyday Heroes";
 
+        public string RulesetName => "Ruleset.EverydayHeroes";
+
+        public string ImageSource => "https://drive.google.com/thumbnail?id=1ebRVV5mfKLeXjQ1fFVEcNcqxSlLOn8Rp&sz=w1024";
+
+        public string LogoSource => "https://drive.google.com/thumbnail?id=1mYxnrebS9gUUWZJS_KP2Va6CoU4KeNZU&sz=w256";
+
         public ICharacter NewCharacter()
         {
             var character = new Character();

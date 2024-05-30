@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 
 namespace CharacterNexus.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class CharacterController : ControllerBase
     {
         private readonly ILogger<CharacterController> _logger;
@@ -22,7 +24,7 @@ namespace CharacterNexus.Controllers
             _storage = storage;
         }
 
-        [HttpPost("new-character")]
+        [HttpGet("new-character")]
         public IActionResult NewCharacter()
         {
             if (HttpContext.Items.TryGetValue("Ruleset", out var rulesetObj) && rulesetObj is IRuleset ruleset)
@@ -35,25 +37,9 @@ namespace CharacterNexus.Controllers
             {
                 return BadRequest("Invalid ruleset selection.");
             }
-        }
-
-        [HttpPost("save-character")]
-        public IActionResult SaveCharacter(ICharacter character)
-        {            
-            if (HttpContext.Items.TryGetValue("Ruleset", out var rulesetObj) && rulesetObj is IRuleset ruleset)
-            {
-                _logger.LogInformation($"Character save requested for {character.Name} in ruleset {ruleset.Name}");
-
-                _storage.UploadCharacterAsync(ruleset.Name, character);
-                return Ok();
-            }
-            else
-            {
-                return BadRequest("Invalid ruleset selection.");
-            }
-        }
+        }        
         
-        [HttpPost("load-character")]
+        [HttpGet("load-character")]
         public IActionResult LoadCharacter(string characterName)
         {
             if (HttpContext.Items.TryGetValue("Ruleset", out var rulesetObj) && rulesetObj is IRuleset ruleset)
@@ -69,7 +55,23 @@ namespace CharacterNexus.Controllers
             }
         }
 
-        [HttpPost("delete-character")]
+        [HttpPost("save-character")]
+        public IActionResult SaveCharacter(ICharacter character)
+        {
+            if (HttpContext.Items.TryGetValue("Ruleset", out var rulesetObj) && rulesetObj is IRuleset ruleset)
+            {
+                _logger.LogInformation($"Character save requested for {character.Name} in ruleset {ruleset.Name}");
+
+                _storage.UploadCharacterAsync(ruleset.Name, character);
+                return Ok();
+            }
+            else
+            {
+                return BadRequest("Invalid ruleset selection.");
+            }
+        }
+
+        [HttpDelete("delete-character")]
         public IActionResult DeleteCharacter(string characterName)
         {
             if (HttpContext.Items.TryGetValue("Ruleset", out var rulesetObj) && rulesetObj is IRuleset ruleset)

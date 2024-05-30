@@ -11,6 +11,12 @@ namespace WerewolfTheApocalypse
     {
         public string Name => "Werewolf: The Apocalypse";
 
+        public string RulesetName => "Ruleset.WerewolfTheApocalypse";
+
+        public string ImageSource => "";
+
+        public string LogoSource => "";
+
         public ICharacter NewCharacter()
         {
             throw new NotImplementedException();

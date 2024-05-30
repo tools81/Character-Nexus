@@ -11,8 +11,21 @@ namespace AmazingTales
 {
     public class Character : ICharacter
     {
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string ImageUrl { get; set; }
         public Dictionary<string, Attribute> Attributes { get; set; }
+
+        public CharacterSegment CharacterSegment {get => GetCharacterSegment();}
+
+        private CharacterSegment GetCharacterSegment()
+        {
+            return new CharacterSegment()
+            {
+                Id = Id,
+                Name = Name,
+                ImageUrl = ImageUrl
+            };
+        }
     }
 }

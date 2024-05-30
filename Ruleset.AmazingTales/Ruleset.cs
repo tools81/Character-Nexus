@@ -13,6 +13,12 @@ namespace AmazingTales
     {
         public string Name => "Amazing Tales";
 
+        public string RulesetName => "Ruleset.AmazingTales";
+
+        public string ImageSource => "https://drive.google.com/thumbnail?id=17mBZDgUuTiCbZgHcWmcWyiWS1bjZmor5&sz=w1024";
+
+        public string LogoSource => "https://drive.google.com/thumbnail?id=1TdxuN20fe-1Dswj0uJ662wW_s_0VXpyd&sz=w256";
+
         public ICharacter NewCharacter()
         {
             var character = new Character();

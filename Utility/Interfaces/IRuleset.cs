@@ -8,7 +8,9 @@ namespace Utility
     public interface IRuleset
     {
         public string Name { get; }
-
+        public string RulesetName { get; }
+        public string ImageSource { get; }
+        public string LogoSource { get; }
         public ICharacter NewCharacter();
     }
 }

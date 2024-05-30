@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace CharacterNexus.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class ImageGenerationController : Controller
     {
         private readonly ILogger<ImageGenerationController> _logger;
@@ -16,7 +18,7 @@ namespace CharacterNexus.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
+        [HttpGet()]
         public string Get(string prompt)
         {
             _logger.LogInformation($"Handling image generation on prompt {prompt}");

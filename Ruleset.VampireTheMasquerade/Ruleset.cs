@@ -11,6 +11,12 @@ namespace VampireTheMasquerade
     {
         public string Name => "Vampire: The Masquerade";
 
+        public string RulesetName => "Ruleset.VampireTheMasquerade";
+
+        public string ImageSource => "";
+
+        public string LogoSource => "";
+
         public ICharacter NewCharacter()
         {
             throw new NotImplementedException();

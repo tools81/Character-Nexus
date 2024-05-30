@@ -7,7 +7,9 @@ namespace Utility
 {
     public interface ICharacter
     {
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string ImageUrl { get; set; }       
+        public CharacterSegment CharacterSegment { get; }
     }
 }

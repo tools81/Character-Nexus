@@ -9,6 +9,7 @@ namespace EverydayHeroes
 {
     public class Character : ICharacter
     {
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string ImageUrl { get; set; }
         public int Level { get; set; }
@@ -35,6 +36,18 @@ namespace EverydayHeroes
         public int InfluencePoints { get; set; }
         public int LuckPoints { get; set; }
         public bool Inspiration { get; set; }
+        public CharacterSegment CharacterSegment { get => GetCharacterSegment(); }
+
+        private CharacterSegment GetCharacterSegment()
+        {
+            return new CharacterSegment() {
+                Id = Id,
+                Name = Name,
+                ImageUrl = ImageUrl,
+                Level = Level,
+                Details = $"{Archetype} | {Class}"
+            };
+        }
 
         private int GetProficiencyBonus()
         {

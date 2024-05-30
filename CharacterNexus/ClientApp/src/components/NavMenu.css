@@ -11,3 +11,14 @@ html { font-size: 14px; }
 }
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.logo {
+    width: 60px;
+    height: 60px;
+    transform: rotateY(0);
+    transition: transform 2s ease;
+}
+
+.logo:hover {
+    transform: rotateY(360deg);
+}

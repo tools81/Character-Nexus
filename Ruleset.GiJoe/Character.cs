@@ -11,5 +11,8 @@ namespace GiJoe
     {
         public string Name { get; set; }
         public string ImageUrl { get; set; }
+        public Guid Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public CharacterSegment CharacterSegment => throw new NotImplementedException();
     }
 }

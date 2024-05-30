@@ -62,7 +62,7 @@ namespace CharacterNexus
                 app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
-            }
+            }            
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
@@ -70,6 +70,8 @@ namespace CharacterNexus
 
             app.UseRouting();
 
+            // Capture and store the selected ruleset for subsequent resolves
+            app.UseRulesetMiddleware();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -85,10 +87,7 @@ namespace CharacterNexus
                 {
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
-            });
-
-            // Capture and store the selected ruleset for subsequent resolves
-            app.UseMiddleware<RulesetResolutionMiddleware>();
+            });            
         }
     }
 }

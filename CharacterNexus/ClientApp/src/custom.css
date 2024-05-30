@@ -12,3 +12,39 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+header
+{
+  background-color: #1a1a1a;
+  -webkit-text-stroke: 1px #1d1a1a;
+}
+
+html, body { height: 100%; }
+
+body {
+  background-image: linear-gradient(to top left, #2c3e50, #000000);
+  font-family: 'Roboto', sans-serif;
+  min-width: 480px;
+  color: #ecf0f1;
+}
+
+h1 {
+  padding-bottom: 30px;
+}
+
+.main-content {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.slide-in {
+  transform: translateY(100%);
+  animation: slideInY 1s ease forwards;
+}
+
+@keyframes slideInY {
+  to {
+    transform: translateY(0);
+  }
+}

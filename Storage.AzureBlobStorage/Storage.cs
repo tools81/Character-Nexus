@@ -10,14 +10,16 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace AzureBlobStorage
 {
+
     public class Storage : IStorage
     {
         public async Task UploadCharacterAsync(string rulesetName, ICharacter character)
         {
-            string blobName = SetBlobName($"{character.Name}.json");
+            string blobName = $"{character.Name}.json";
             BlobContainerClient blobContainerClient = await RetrieveBlobClient(rulesetName.FormatAzureCompliance());
             var blobClient = blobContainerClient.GetBlobClient(blobName);
 
@@ -26,7 +28,7 @@ namespace AzureBlobStorage
             var characters = await DownloadCharactersByRulesetAsync(rulesetName.FormatAzureCompliance());
             characters.Add(character.CharacterSegment);
 
-            blobName = SetBlobName($"characters.json");
+            blobName = $"characters.json";
             blobClient = blobContainerClient.GetBlobClient(blobName);
 
             await blobClient.UploadAsync(new MemoryStream(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(characters)), true));
@@ -34,7 +36,7 @@ namespace AzureBlobStorage
 
         public async Task<ICharacter> DownloadCharacterAsync(string rulesetName, string characterName)
         {
-            string blobName = SetBlobName($"{characterName}.json");
+            string blobName = $"{characterName}.json";
             BlobContainerClient blobContainerClient = await RetrieveBlobClient(rulesetName.FormatAzureCompliance());
             var blobClient = blobContainerClient.GetBlobClient(blobName);
 
@@ -46,12 +48,15 @@ namespace AzureBlobStorage
 
         public async Task<List<CharacterSegment>> DownloadCharactersByRulesetAsync(string rulesetName)
         {
-            string blobName = SetBlobName("characters.json");
+            Console.WriteLine($"Ruleset for blob: {rulesetName}");
+            string blobName = "characters.json";
 
             try 
             {
                 BlobContainerClient blobContainerClient = await RetrieveBlobClient(rulesetName.FormatAzureCompliance());
+                Console.WriteLine($"Blob container name: {blobContainerClient.Name}");
                 var blobClient = blobContainerClient.GetBlobClient(blobName);
+                Console.WriteLine($"Blob client name: {blobClient.Name}");
 
                 var response = await blobClient.DownloadAsync();
                 using var streamReader = new StreamReader(response.Value.Content);
@@ -67,7 +72,7 @@ namespace AzureBlobStorage
 
         public async Task DeleteCharacterAsync(string rulesetName, string characterName)
         {
-            string blobName = SetBlobName($"{characterName}.json");
+            string blobName = $"{characterName}.json";
             BlobContainerClient blobContainerClient = await RetrieveBlobClient(rulesetName.FormatAzureCompliance());
             var blobClient = blobContainerClient.GetBlobClient(blobName);
 
@@ -76,7 +81,7 @@ namespace AzureBlobStorage
             var characters = await DownloadCharactersByRulesetAsync(rulesetName.FormatAzureCompliance());
             characters.Remove(characters.Where(c => c.Name == characterName).FirstOrDefault());
 
-            blobName = SetBlobName("characters.json");
+            blobName = "characters.json";
             blobClient = blobContainerClient.GetBlobClient(blobName);
 
             await blobClient.UploadAsync(new MemoryStream(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(characters)), true));
@@ -84,22 +89,12 @@ namespace AzureBlobStorage
 
         private static async Task<BlobContainerClient> RetrieveBlobClient(string containerName)
         {
-            string _connectionString = "";
+            string _connectionString = "DefaultEndpointsProtocol=https;AccountName=characternexus;AccountKey=1aCn6z1ZnNiJeETi7Ga/JGTl69TISskVQpXfqeUV0YstRtl1/NmTWi8QK8vu1v+/HccOMcopGnqN+AStyjd+HA==;EndpointSuffix=core.windows.net";
             
             var blobServiceClient = new BlobServiceClient(_connectionString);
-            var blobContainerClient = blobServiceClient.GetBlobContainerClient(containerName);
+            var blobContainerClient = blobServiceClient.GetBlobContainerClient((Debugger.IsAttached ? "dev-" : string.Empty) + containerName);
             await blobContainerClient.CreateIfNotExistsAsync();
             return blobContainerClient;
-        }
-
-        private static string SetBlobName(string name)
-        {
-            var prefix = 
-                #if DEBUG
-                "dev.";
-                #endif
-            
-            return $"{prefix}{name}";
         }
     }
 }

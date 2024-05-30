@@ -62,7 +62,7 @@ namespace CharacterNexus.Controllers
         }
 
         [HttpGet("characters")]
-        public IActionResult GetCharacters([FromQuery] string rulesetName)
+        public IActionResult GetCharacters()
         {
             if (HttpContext.Items.TryGetValue("Ruleset", out var rulesetObj) && rulesetObj is IRuleset ruleset)
             {

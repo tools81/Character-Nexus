@@ -56,7 +56,7 @@ namespace AzureBlobStorage
                 BlobContainerClient blobContainerClient = await RetrieveBlobClient(rulesetName.FormatAzureCompliance());
                 Console.WriteLine($"Blob container name: {blobContainerClient.Name}");
                 var blobClient = blobContainerClient.GetBlobClient(blobName);
-                Console.WriteLine($"Blob client name: {blobClient.Name}");
+                Console.WriteLine($"Blob client name: {blobClient.Name}"); 
 
                 var response = await blobClient.DownloadAsync();
                 using var streamReader = new StreamReader(response.Value.Content);

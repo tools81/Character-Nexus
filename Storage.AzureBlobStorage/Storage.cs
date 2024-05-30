@@ -89,7 +89,7 @@ namespace AzureBlobStorage
 
         private static async Task<BlobContainerClient> RetrieveBlobClient(string containerName)
         {
-            string _connectionString = "DefaultEndpointsProtocol=https;AccountName=characternexus;AccountKey=1aCn6z1ZnNiJeETi7Ga/JGTl69TISskVQpXfqeUV0YstRtl1/NmTWi8QK8vu1v+/HccOMcopGnqN+AStyjd+HA==;EndpointSuffix=core.windows.net";
+            string _connectionString = "";
             
             var blobServiceClient = new BlobServiceClient(_connectionString);
             var blobContainerClient = blobServiceClient.GetBlobContainerClient((Debugger.IsAttached ? "dev-" : string.Empty) + containerName);

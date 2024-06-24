@@ -1,0 +1,243 @@
+[
+    {
+        "name": "Athletics",
+        "description": "",
+        "imageUrl": "",
+        "attribute": "Strength",
+        "tagged": false,
+        "value": 0,
+        "max": 6,
+        "clothings": [
+            "Casual Clothing"
+        ],
+        "items": [
+            "Buffout|1"
+        ]
+    },
+    {
+        "name": "Barter",
+        "description": "",
+        "imageUrl": "",
+        "attribute": "Charisma",
+        "tagged": false,
+        "value": 0,
+        "max": 6,
+        "caps": 20
+    },
+    {
+        "name": "Big Guns",
+        "description": "",
+        "imageUrl": "",
+        "attribute": "Endurance",
+        "tagged": false,
+        "value": 0,
+        "max": 6,
+        "ammos": [
+            "Flamer Fuel|6"
+        ]
+    },
+    {
+        "name": "Energy Weapons",
+        "description": "",
+        "imageUrl": "",
+        "attribute": "Perception",
+        "tagged": false,
+        "value": 0,
+        "max": 6,
+        "ammos": [
+            "Fusion Cell|9"
+        ]
+    },
+    {
+        "name": "Explosives",
+        "description": "",
+        "imageUrl": "",
+        "attribute": "Perception",
+        "tagged": false,
+        "value": 0,
+        "max": 6,
+        "choice": [
+            {
+                "type": "Weapon",
+                "choices": [
+                    "Molotov Cocktail",
+					"Molotov Cocktail",
+                    "Baseball Grenade",
+					"Baseball Grenade"
+                ],
+				"count": 2
+            }
+        ]
+    },
+    {
+        "name": "Lockpick",
+        "description": "",
+        "imageUrl": "",
+        "attribute": "Perception",
+        "tagged": false,
+        "value": 0,
+        "max": 6,
+        "items": [
+            "Bobby Pin|6"
+        ]
+    },
+    {
+        "name": "Medicine",
+        "description": "",
+        "imageUrl": "",
+        "attribute": "Intelligence",
+        "tagged": false,
+        "value": 0,
+        "max": 6,
+        "items": [
+            "First Aid Kit|1",
+            "Stimpack|1"
+        ]
+    },
+    {
+        "name": "Melee Weapons",
+        "description": "",
+        "imageUrl": "",
+        "attribute": "Strength",
+        "tagged": false,
+        "value": 0,
+        "max": 6,
+        "choice": [
+            {
+                "type": "Weapon",
+                "choices": [
+                    "Baseball Bat",
+                    "Machete"
+                ],
+				"count": 1
+            }
+        ]
+    },
+    {
+        "name": "Pilot",
+        "description": "",
+        "imageUrl": "",
+        "attribute": "Perception",
+        "tagged": false,
+        "value": 0,
+        "max": 6,
+        "items": [
+            "Common Scrap|5"
+        ]
+    },
+    {
+        "name": "Repair",
+        "description": "",
+        "imageUrl": "",
+        "attribute": "Intelligence",
+        "tagged": false,
+        "value": 0,
+        "max": 6,
+        "items": [
+            "Multi-tool|1"
+        ]
+    },
+    {
+        "name": "Science",
+        "description": "",
+        "imageUrl": "",
+        "attribute": "Intelligence",
+        "tagged": false,
+        "value": 0,
+        "max": 6,
+        "clothings": [
+            "Lab Coat"
+        ],
+        "items": [
+            "Mentats|1"
+        ]
+    },
+    {
+        "name": "Small Guns",
+        "description": "",
+        "imageUrl": "",
+        "attribute": "Agility",
+        "tagged": false,
+        "value": 0,
+        "max": 6,
+        "choice": [
+            {
+                "type": "Ammo",
+                "choices": [
+                    "10mm|9",
+                    ".308|9",
+                    ".38|9",
+                    "Shotgun Shell|9"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "name": "Sneak",
+        "description": "",
+        "imageUrl": "",
+        "attribute": "Agility",
+        "tagged": false,
+        "value": 0,
+        "max": 6,
+        "items": [
+            "Calmex|1"
+        ]
+    },
+    {
+        "name": "Speech",
+        "description": "",
+        "imageUrl": "",
+        "attribute": "Charisma",
+        "tagged": false,
+        "value": 0,
+        "max": 6,
+        "clothings": [
+            "Formal Hat",
+            "Formal Clothing"
+        ]
+    },
+    {
+        "name": "Survival",
+        "description": "",
+        "imageUrl": "",
+        "attribute": "Endurance",
+        "tagged": false,
+        "value": 0,
+        "max": 6,
+        "items": [
+            "Purified Water|2",
+            "Iguana on a Stick|1"
+        ]
+    },
+    {
+        "name": "Throwing",
+        "description": "",
+        "imageUrl": "",
+        "attribute": "Agility",
+        "tagged": false,
+        "value": 0,
+        "max": 6,
+		"weapons": [
+			"Throwing Knife",
+			"Throwing Knife",
+			"Throwing Knife",
+			"Throwing Knife",
+			"Tomahawk",
+			"Tomahawk"
+		]
+    },
+    {
+        "name": "Unarmed",
+        "description": "",
+        "imageUrl": "",
+        "attribute": "Strength",
+        "tagged": false,
+        "value": 0,
+        "max": 6,
+        "weapons": [
+            "Knuckles"
+        ]
+    }
+]

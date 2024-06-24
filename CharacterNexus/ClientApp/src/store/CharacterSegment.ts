@@ -11,7 +11,7 @@ export interface CharacterSegmentState {
 export interface CharacterSegment {
     id: any;
     name: string;
-    imageSource: string;
+    imageUrl: string;
     level: number;
     details: string;
 }

@@ -1,22 +1,14 @@
 import { connect } from "react-redux";
-import ImageCard from "./ImageCard";
-import { RouteComponentProps } from "react-router";
-import React, { Component, useEffect, useState } from "react";
-import { ApplicationState } from "../store";
-import { Ruleset, RulesetState } from "../store/Ruleset";
-import TextCard from "./TextCard";
+import React, { useEffect, useState } from "react";
 import { CharacterSegment } from "../store/CharacterSegment";
-import { useLocation } from "react-router-dom";
-
-function getCharacter() {}
- 
-function newCharacter() {}
+import { useNavigate } from "react-router-dom";
+import CharacterCard from "./CharacterCard";
+import { useRulesetContext } from "./RulesetContext";
 
 const BASE_URL = `${window.location.protocol}//${window.location.host}`;
 
 const RulesetDashboard: React.FC = () => {
-  let location = useLocation();
-  const { ruleset } = location.state;
+  const { ruleset, setRuleset } = useRulesetContext();
   const [error, setError] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [characterSegments, setCharacterSegments] = useState<CharacterSegment[]>([]);
@@ -41,6 +33,14 @@ const RulesetDashboard: React.FC = () => {
       }
   }, []);
 
+  const navigate = useNavigate();
+
+  function getCharacter() {}
+
+  function newCharacter() {
+    navigate("/charactereditor");
+  }
+
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -51,31 +51,31 @@ const RulesetDashboard: React.FC = () => {
 
   return (
     <>
-      <div className="main-content">
-        <h1>{ruleset.name}</h1>
-        <div className="row row-cols-1 row-cols-md-4 g-4">
-          <TextCard
-            ruleset={ruleset}
-            onClick={() => newCharacter()}
-          >
-            <h1>+</h1>
-            <h5>Create New</h5>
-          </TextCard>
-          {characterSegments.map((character) => (
-            <ImageCard
-              ruleset={character.name}
-              imgSrc={character.imageSource}
-              onClick={() => getCharacter()}
-            />
-          ))}
-        </div>
+      <div className="d-flex mb-3">
+        <img src={ruleset.logoSource} alt={ruleset.name} className="p-2" />
+        <button
+          type="button"
+          className="btn btn-outline-secondary ms-auto p-2 h-25"
+          onClick={() => navigate("/charactereditor")}
+        >
+          + Create New
+        </button>
+      </div>
+      <div className="row row-cols-1 row-cols-md-4 g-4">
+        {characterSegments.map((character) => (
+          <CharacterCard
+            key={character.id}
+            id={character.id}
+            name={character.name}
+            imageUrl={character.imageUrl}
+            level={character.level}
+            details={character.details}
+            onClick={newCharacter}
+          />
+        ))}
       </div>
     </>
   );
 };
 
 export default connect()(RulesetDashboard);
-
-function fetchData(rulesetName: any, string: any) {
-  throw new Error("Function not implemented.");
-}

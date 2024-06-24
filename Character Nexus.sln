@@ -23,6 +23,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ruleset.AmazingTales", "Rul
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storage.AzureBlobStorage", "Storage.AzureBlobStorage\Storage.AzureBlobStorage.csproj", "{4D50F444-40D3-4956-8B1A-16743D56C1A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchemaGenerator", "SchemaGenerator\SchemaGenerator.csproj", "{9AAC1311-471B-43AD-8F67-71DB9F144F17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ruleset.Marvel", "Ruleset.Marvel\Ruleset.Marvel.csproj", "{859D0B3B-E411-4D08-9A54-DE8888F0B9AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ruleset.Fallout", "Ruleset.Fallout\Ruleset.Fallout.csproj", "{1BA31497-B4C0-4AAC-A8A3-3A9D99772855}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +75,18 @@ Global
 		{4D50F444-40D3-4956-8B1A-16743D56C1A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D50F444-40D3-4956-8B1A-16743D56C1A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D50F444-40D3-4956-8B1A-16743D56C1A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AAC1311-471B-43AD-8F67-71DB9F144F17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AAC1311-471B-43AD-8F67-71DB9F144F17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AAC1311-471B-43AD-8F67-71DB9F144F17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AAC1311-471B-43AD-8F67-71DB9F144F17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{859D0B3B-E411-4D08-9A54-DE8888F0B9AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{859D0B3B-E411-4D08-9A54-DE8888F0B9AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{859D0B3B-E411-4D08-9A54-DE8888F0B9AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{859D0B3B-E411-4D08-9A54-DE8888F0B9AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BA31497-B4C0-4AAC-A8A3-3A9D99772855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BA31497-B4C0-4AAC-A8A3-3A9D99772855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BA31497-B4C0-4AAC-A8A3-3A9D99772855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BA31497-B4C0-4AAC-A8A3-3A9D99772855}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,609 @@
+{
+  "title": "Hero Editor",
+  "fields": [
+    {
+      "name": "name",
+      "id": "name",
+      "label": "Name",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown"
+    },
+    {
+      "name": "imageUrl",
+      "id": "imageUrl",
+      "label": "Image",
+      "type": "file",
+      "className": "form-control"
+    },
+    {
+      "name": "level",
+      "id": "level",
+      "label": "Level",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 1,
+        "max": 20
+      },
+      "default": 1
+    },
+    {
+      "name": "archetype",
+      "label": "Archetype",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Strong",
+          "label": "Strong"
+        },
+        {
+          "value": "Agile",
+          "label": "Agile"
+        },
+        {
+          "value": "Tough",
+          "label": "Tough"
+        },
+        {
+          "value": "Smart",
+          "label": "Smart"
+        },
+        {
+          "value": "Wise",
+          "label": "Wise"
+        },
+        {
+          "value": "Charming",
+          "label": "Charming"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "className": "form-section",
+      "children": [
+        {
+          "name": "info-archetype-Strong",
+          "label": "Information",
+          "type": "textBlock",
+          "className": "text-block",
+          "text": "You have trained your body for strength and explosive power. You hit hard, excelling in close combat. As a hero, you fight because others can't.<br>Strong heroes are dubale fighters who make high damage attacks. They specialize in melee attacks, whether they favor unarmed strikes or close combat weapons.'"
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Strong"
+      }
+    },
+    {
+      "type": "div",
+      "className": "form-section",
+      "children": [
+        {
+          "name": "info-archetype-Agile",
+          "label": "Information",
+          "type": "textBlock",
+          "className": "text-block",
+          "text": "you are a master of speed and precision. You have honed your reflexes to the point you can act faster than you can think. Your pinpoint accuracty makes you a deadly foe in any fight.<br>Agile heroes focus on ranged attacks and light weapons. Their high mobility and rapid attacks make them deadly heroes in combat."
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Agile"
+      }
+    },
+    {
+      "type": "div",
+      "className": "form-section",
+      "children": [
+        {
+          "name": "info-archetype-Tough",
+          "label": "Information",
+          "type": "textBlock",
+          "className": "text-block",
+          "text": "You don't know what it means to give up. No matter what knocks you down, you get up again. Where there is a fight to be found, you'll be in the thick of it, often risking your life to protect others.<br>Tough heroes are durable characters, sometimes at the expense of offensive options or out of combat abilities. Many excel at protecting their teammates."
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Tough"
+      }
+    },
+    {
+      "type": "div",
+      "className": "form-section",
+      "children": [
+        {
+          "name": "info-archetype-Smart",
+          "label": "Information",
+          "type": "textBlock",
+          "className": "text-block",
+          "text": "While other are playing checkers, you're playing 4-dimensional chess. The human mind is the ultimate weapon, and yours is honed to a razor's edge.<br>Smart Heroes use their genius to enact plans. Plans are powerful but limited effects that can break the fourth wall, effectively changing the past to affect the present."
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Smart"
+      }
+    },
+    {
+      "type": "div",
+      "className": "form-section",
+      "children": [
+        {
+          "name": "info-archetype-Wise",
+          "label": "Information",
+          "type": "textBlock",
+          "className": "text-block",
+          "text": "You are known as a person who thinks before you act. You observe the world around you and move with its rhythms instead of struggling against the tide. By first knowing yourself, you can reach out and make the world a better place.<br>Wise Heroes are thematically diverse, but they all have a Focus mechanic that can be spent to activate special actions and abilities."
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Wise"
+      }
+    },
+    {
+      "type": "div",
+      "className": "form-section",
+      "children": [
+        {
+          "name": "info-archetype-Charming",
+          "label": "Information",
+          "type": "textBlock",
+          "className": "text-block",
+          "text": "When you smile, the whole world smiles with you. It might be your beauty, your golden voice, or your way with words, but your ability to influence others is the key to your success.<br>Charming heroes use influence dice to boost their other die rolls. They focus on helping allies and hindering enemies in combat rather than relying on their own strengths."
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Charming"
+      }
+    },
+    {
+      "name": "class",
+      "label": "Class",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Brawler",
+          "label": "Brawler"
+        },
+        {
+          "value": "Heavy Gunner",
+          "label": "Heavy Gunner"
+        },
+        {
+          "value": "MMA Fighter",
+          "label": "MMA Fighter"
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Strong"
+      }
+    },
+    {
+      "name": "class",
+      "label": "Class",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Martial Artist",
+          "label": "Martial Artist"
+        },
+        {
+          "value": "Scoundrel",
+          "label": "Scoundrel"
+        },
+        {
+          "value": "Sharpshooter",
+          "label": "Sharpshooter"
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Agile"
+      }
+    },
+    {
+      "name": "class",
+      "label": "Class",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Bodyguard",
+          "label": "Bodyguard"
+        },
+        {
+          "value": "Commando",
+          "label": "Commando"
+        },
+        {
+          "value": "Scrapper",
+          "label": "Scrapper"
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Tough"
+      }
+    },
+    {
+      "name": "class",
+      "label": "Class",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Engineer",
+          "label": "Engineer"
+        },
+        {
+          "value": "Hacker",
+          "label": "Hacker"
+        },
+        {
+          "value": "Mastermind",
+          "label": "Mastermind"
+        },
+        {
+          "value": "Scientist",
+          "label": "Scientist"
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Smart"
+      }
+    },
+    {
+      "name": "class",
+      "label": "Class",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Hunter",
+          "label": "Hunter"
+        },
+        {
+          "value": "Master",
+          "label": "Master"
+        },
+        {
+          "value": "Sleuth",
+          "label": "Sleuth"
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Wise"
+      }
+    },
+    {
+      "name": "class",
+      "label": "Class",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Duelist",
+          "label": "Duelist"
+        },
+        {
+          "value": "Icon",
+          "label": "Icon"
+        },
+        {
+          "value": "Leader",
+          "label": "Leader"
+        },
+        {
+          "value": "Manipulator",
+          "label": "Manipulator"
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Charming"
+      }
+    },
+    {
+      "name": "background",
+      "label": "Background",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Activist",
+          "label": "Activist"
+        },
+        {
+          "value": "Art Lover",
+          "label": "Art Lover"
+        },
+        {
+          "value": "Bookworm",
+          "label": "Bookworm"
+        },
+        {
+          "value": "Caregiver",
+          "label": "Caregiver"
+        },
+        {
+          "value": "Cosmopolitan",
+          "label": "Cosmopolitan"
+        },
+        {
+          "value": "Gamer",
+          "label": "Gamer"
+        },
+        {
+          "value": "Immigrant",
+          "label": "Immigrant"
+        },
+        {
+          "value": "Juvenile Deliquent",
+          "label": "Juvenile Deliquent"
+        },
+        {
+          "value": "Larper",
+          "label": "Larper"
+        },
+        {
+          "value": "Military Tradition",
+          "label": "Military Tradition"
+        },
+        {
+          "value": "Misfit",
+          "label": "Misfit"
+        },
+        {
+          "value": "On The Run",
+          "label": "On The Run"
+        },
+        {
+          "value": "Ordinary",
+          "label": "Ordinary"
+        },
+        {
+          "value": "Orphan",
+          "label": "Orphan"
+        },
+        {
+          "value": "Person of Mystery",
+          "label": "Person of Mystery"
+        },
+        {
+          "value": "Poor Family",
+          "label": "Poor Family"
+        },
+        {
+          "value": "Raised By Assassins",
+          "label": "Raised By Assassins"
+        },
+        {
+          "value": "Religious Tradition",
+          "label": "Religious Tradition"
+        },
+        {
+          "value": "Rural Family",
+          "label": "Rural Family"
+        },
+        {
+          "value": "Social Butterfly",
+          "label": "Social Butterfly"
+        },
+        {
+          "value": "Student Athlete",
+          "label": "Student Athlete"
+        },
+        {
+          "value": "Subsistence",
+          "label": "Subsistence"
+        },
+        {
+          "value": "Survivor",
+          "label": "Survivor"
+        },
+        {
+          "value": "Technophile",
+          "label": "Technophile"
+        },
+        {
+          "value": "Wealthy Family",
+          "label": "Wealthy Family"
+        }
+      ]
+    },
+    {
+      "name": "profession",
+      "label": "Profession",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Academia",
+          "label": "Academia"
+        },
+        {
+          "value": "Agriculture",
+          "label": "Agriculture"
+        },
+        {
+          "value": "Athletics",
+          "label": "Athletics"
+        },
+        {
+          "value": "Counseling",
+          "label": "Counseling"
+        },
+        {
+          "value": "Creative",
+          "label": "Creative"
+        },
+        {
+          "value": "Crime",
+          "label": "Crime"
+        },
+        {
+          "value": "Customer Service",
+          "label": "Customer Service"
+        },
+        {
+          "value": "Daredevil",
+          "label": "Daredevil"
+        },
+        {
+          "value": "Emergency Services",
+          "label": "Emergency Services"
+        },
+        {
+          "value": "Espionage",
+          "label": "Espionage"
+        },
+        {
+          "value": "Faith",
+          "label": "Faith"
+        },
+        {
+          "value": "Finance",
+          "label": "Finance"
+        },
+        {
+          "value": "Independent",
+          "label": "Independent"
+        },
+        {
+          "value": "Information Technology",
+          "label": "Information Technology"
+        },
+        {
+          "value": "Intelligence",
+          "label": "Intelligence"
+        },
+        {
+          "value": "Investigative Services",
+          "label": "Investigative Services"
+        },
+        {
+          "value": "Journalism",
+          "label": "Journalism"
+        },
+        {
+          "value": "Law",
+          "label": "Law"
+        },
+        {
+          "value": "Law Encforcement",
+          "label": "Law Encforcement"
+        },
+        {
+          "value": "Medicine",
+          "label": "Medicine"
+        },
+        {
+          "value": "Military",
+          "label": "Military"
+        },
+        {
+          "value": "Outdoors",
+          "label": "Outdoors"
+        },
+        {
+          "value": "Politics",
+          "label": "Politics"
+        },
+        {
+          "value": "Private Security",
+          "label": "Private Security"
+        },
+        {
+          "value": "Science",
+          "label": "Science"
+        },
+        {
+          "value": "Student",
+          "label": "Student"
+        },
+        {
+          "value": "Trades",
+          "label": "Trades"
+        },
+        {
+          "value": "Transportation",
+          "label": "Transportation"
+        },
+        {
+          "value": "Unemployed",
+          "label": "Unemployed"
+        },
+        {
+          "value": "White Collar",
+          "label": "White Collar"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "className": "input-group mb-3",
+      "children": [
+        {
+          "name": "strength",
+          "label": "Strength",
+          "id": "Strength",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "dexterity",
+          "label": "Dexterity",
+          "id": "Dexterity",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "constitution",
+          "label": "Constitution",
+          "id": "Constitution",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "intelligence",
+          "label": "Intelligence",
+          "id": "Intelligence",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "wisdom",
+          "label": "Wisdom",
+          "id": "Wisdom",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "charisma",
+          "label": "Charisma",
+          "id": "Charisma",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        }
+      ]
+    }
+  ]
+}

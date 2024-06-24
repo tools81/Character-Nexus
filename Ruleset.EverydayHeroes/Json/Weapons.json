@@ -1,0 +1,1296 @@
+[
+    {
+        "name": "Unarmed Strike",
+        "tier": "Basic",
+        "category": "Melee",
+        "damage": "1d4 bludgeoning",
+        "range": "",
+        "penetration": 1,
+        "properties": [
+            "Finesse",
+            "Light",
+            "Special"
+        ],
+        "price": 0,
+        "bulk": 0,
+        "description": "Unarmed strikes are most commonly punches, but they include any move that has the potential to deliver a punishing blow whether via kicks, headbutts, knees to the groin, or elbows to the face. It's one of the few attacks you don't need a hand to perform and you are always armed with it."
+    },
+    {
+        "name": "Club, small metal",
+        "tier": "Basic",
+        "category": "Melee",
+        "damage": "1d6 bludgeoning",
+        "range": "",
+        "penetration": 1,
+        "properties": [],
+        "price": 1,
+        "bulk": 1,
+        "description": "When all else fails, there is always a trusty club at hand. From a carefully crafted police baton to an awkward but effective pipe wrench, clubs come in varying shapes and sizes."
+    },
+    {
+        "name": "Club, small wooden",
+        "tier": "Basic",
+        "category": "Melee",
+        "damage": "1d4 bludgeoning",
+        "range": "",
+        "penetration": 1,
+        "properties": [
+            "Light"
+        ],
+        "price": 1,
+        "bulk": 1,
+        "description": "When all else fails, there is always a trusty club at hand. From a carefully crafted police baton to an awkward but effective pipe wrench, clubs come in varying shapes and sizes."
+    },
+    {
+        "name": "Club, large metal",
+        "tier": "Basic",
+        "category": "Melee",
+        "damage": "1d10 bludgeoning",
+        "range": "",
+        "penetration": 1,
+        "properties": [
+            "Two-Handed"
+        ],
+        "price": 1,
+        "bulk": 2,
+        "description": "When all else fails, there is always a trusty club at hand. From a carefully crafted police baton to an awkward but effective pipe wrench, clubs come in varying shapes and sizes."
+    },
+    {
+        "name": "Club, large wooden",
+        "tier": "Basic",
+        "category": "Melee",
+        "damage": "1d6/1d8 bludgeoning",
+        "range": "",
+        "penetration": 1,
+        "properties": [
+            "Two-Handed",
+            "Versatile"
+        ],
+        "price": 1,
+        "bulk": 2,
+        "description": "When all else fails, there is always a trusty club at hand. From a carefully crafted police baton to an awkward but effective pipe wrench, clubs come in varying shapes and sizes."
+    },
+    {
+        "name": "Dagger",
+        "tier": "Basic",
+        "category": "Melee",
+        "damage": "1d4 piercing",
+        "range": "40/80",
+        "penetration": 2,
+        "properties": [
+            "Finesse",
+            "Light",
+            "Thrown"
+        ],
+        "price": 1,
+        "bulk": 1,
+        "description": "Daggers are designed for stabbing rather than cutting and feature thin blades that puncture through or slip around armor. They can also be thrown with excellent accuracy."
+    },
+    {
+        "name": "Knife, small",
+        "tier": "Basic",
+        "category": "Melee",
+        "damage": "1d4 slashing",
+        "range": "30/60",
+        "penetration": 1,
+        "properties": [
+            "Finesse",
+            "Light",
+            "Thrown"
+        ],
+        "price": 1,
+        "bulk": 1,
+        "description": "This entry represents knives suitable for fighting, with a good sturdy handle and a strong blade. Smaller utility knives and utensils are considered improvised weapons if used in a fight."
+    },
+    {
+        "name": "Knife, large",
+        "tier": "Basic",
+        "category": "Melee",
+        "damage": "1d6 slashing",
+        "range": "",
+        "penetration": 1,
+        "properties": [],
+        "price": 1,
+        "bulk": 2,
+        "description": "This entry represents knives suitable for fighting, with a good sturdy handle and a strong blade. Smaller utility knives and utensils are considered improvised weapons if used in a fight."
+    },
+    {
+        "name": "Stun Gun",
+        "tier": "Basic",
+        "category": "Melee",
+        "damage": "1d4 electrical",
+        "range": "",
+        "penetration": 0,
+        "properties": [
+            "Finesse",
+            "Stunning"
+        ],
+        "price": 1,
+        "bulk": 1,
+        "description": "Not a true gun, a stun gun is a handheld device that delivers a strong electric shock when it touches a person. Stun guns work only against exposed skin or through thin clothing."
+    },
+    {
+        "name": "Crossbow, modern",
+        "tier": "Basic",
+        "category": "Ranged",
+        "damage": "1d8 piercing",
+        "range": "200/400",
+        "rounds": "0",
+        "reload": "",
+        "penetration": 1,
+        "properties": [
+            "Slow-Firing",
+            "Two-Handed"
+        ],
+        "price": 2,
+        "bulk": 2,
+        "description": "These hunting weapons remain popular in the modern era. Modern crossbows are smaller and easier to load than their ancient counterparts, firing smaller projectiles with less force at higher speeds."
+    },
+    {
+        "name": "Pepper Spray",
+        "tier": "Basic",
+        "category": "Ranged",
+        "damage": "1d4 piercing",
+        "range": "10",
+        "rounds": "10",
+        "reload": "",
+        "penetration": 0,
+        "properties": [
+            "Blinding"
+        ],
+        "price": 1,
+        "bulk": 0,
+        "description": "This chemical poison spray in an aerosol canister must be sprayed into an opponent's face to have an effect, but a direct hit can take the fight out of someone. Opponents with eye protection won't enjoy it but are immune to its effects."
+    },
+    {
+        "name": "Pistol, heavy revolver",
+        "tier": "Basic",
+        "category": "Ranged",
+        "damage": "1d10 ballistic",
+        "range": "100/200",
+        "rounds": "6",
+        "reload": "Action",
+        "penetration": 3,
+        "properties": [
+            "Loud"
+        ],
+        "price": 2,
+        "bulk": 1,
+        "description": "This type of pistol 'won the West.' It was the standard army sidearm of the Civil War and post-Civil War period. Today, these revolvers are popular sporting pistols and collectibles."
+    },
+    {
+        "name": "Pistol, pocket .38",
+        "tier": "Basic",
+        "category": "Ranged",
+        "damage": "1d6/1d8 ballistic",
+        "range": "50/100",
+        "rounds": "5",
+        "reload": "Action",
+        "penetration": 2,
+        "properties": [
+            "Light",
+            "Loud",
+            "Versatile"
+        ],
+        "price": 2,
+        "bulk": 1,
+        "description": "These small .38 revolvers can be carried in a jacket pocket. They are designed with smooth lines so they can be pulled out quickly with no snags. Due to a snub nose barrel, they are not accurate, but they do pack a punch."
+    },
+    {
+        "name": "Rifle, hunting",
+        "tier": "Basic",
+        "category": "Ranged",
+        "damage": "1d10 ballistic",
+        "range": "750/2200",
+        "rounds": "6",
+        "reload": "Bonus",
+        "penetration": 4,
+        "properties": [
+            "Loud",
+            "Slow-Firing",
+            "Two-Handed"
+        ],
+        "price": 2,
+        "bulk": 2,
+        "description": "A huge variety of rifles have been designed for hunting. Range and accuracy are more important than ammunition capacity or reloading speed. For this reason, most are bolt-action weapons. They are dangerous firearms in the hands of a skilled sharpshooter."
+    },
+    {
+        "name": "Slingshot",
+        "tier": "Basic",
+        "category": "Ranged",
+        "damage": "1d4 bludgeoning",
+        "range": "50/100",
+        "rounds": "",
+        "reload": "",
+        "penetration": 1,
+        "properties": [],
+        "price": 1,
+        "bulk": 1,
+        "description": "Modern slingshots use a rubber strap on a metal frame strapped to the wrist. When used with a sling bullet, it's a deadly weapon against small pest animals."
+    },
+    {
+        "name": "Shotgun, double-barrel",
+        "tier": "Basic",
+        "category": "Ranged",
+        "damage": "2d6 ballistic",
+        "range": "200/400",
+        "rounds": "2",
+        "reload": "Action",
+        "penetration": 3,
+        "properties": [
+            "Burst 2",
+            "Loud",
+            "Shot",
+            "Two-Handed"
+        ],
+        "price": 2,
+        "bulk": 2,
+        "description": "Shotguns are produced as long-barrel hunting guns, but short-barreled versions are employed as self-defense weapons. The barrels can be fired separately or together. Like most shotguns, they are deadly at short ranges and one of the most versatile and reliable firearms ever devised."
+    },
+    {
+        "name": "Brass Knuckles",
+        "tier": "Advanced",
+        "category": "Melee",
+        "damage": "1d6 bludgeoning",
+        "range": "",
+        "penetration": 1,
+        "properties": [
+            "Finesse",
+            "Light"
+        ],
+        "price": 1,
+        "bulk": 0,
+        "description": "This entry covers a range of implements you can use to protect your fists while delivering heavier blows. Brass knuckles do more damage than an unarmed strike."
+    },
+    {
+        "name": "Fire Axe",
+        "tier": "Advanced",
+        "category": "Melee",
+        "damage": "1d8/1d10 slashing",
+        "range": "",
+        "penetration": 2,
+        "properties": [
+            "Versatile"
+        ],
+        "price": 1,
+        "bulk": 2,
+        "description": "The trusty fire axe is a versatile implement, meant to save lives rather than take them. Any woodcutting axe can be covered by this entry."
+    },
+    {
+        "name": "Hatchet",
+        "tier": "Advanced",
+        "category": "Melee",
+        "damage": "1d6 slashing",
+        "range": "20/40",
+        "penetration": 1,
+        "properties": [
+            "Light",
+            "Thrown"
+        ],
+        "price": 1,
+        "bulk": 2,
+        "description": "Hatchets are excellent tools to have in the wilderness, and as a weapon it is useful both up close and at short range."
+    },
+    {
+        "name": "Sledgehammer",
+        "tier": "Advanced",
+        "category": "Melee",
+        "damage": "1d12 bludgeoning",
+        "range": "",
+        "penetration": 2,
+        "properties": [
+            "Heavy",
+            "Two-Handed"
+        ],
+        "price": 1,
+        "bulk": 3,
+        "description": "In reality a sledgehammer makes for an unwieldy weapon, but if you have the strength, it can put the hurt on your opponents and bypasses conventional armor, brick walls, and other obstacles."
+    },
+    {
+        "name": "Bow, modern compound",
+        "tier": "Advanced",
+        "category": "Ranged",
+        "damage": "1d10 piercing",
+        "range": "200/600",
+        "rounds": "",
+        "reload": "",
+        "penetration": 1,
+        "properties": [
+            "Two-Handed"
+        ],
+        "price": 2,
+        "bulk": 2,
+        "description": "Modern bows for hunting or sport are more compact than their ancient counterparts, but they pack as much or greater power. Hunting arrows use bladed tips, while target arrows are pointed."
+    },
+    {
+        "name": "Harpoon Gun",
+        "tier": "Advanced",
+        "category": "Ranged",
+        "damage": "1d8 piercing",
+        "range": "30/60",
+        "rounds": "2",
+        "reload": "Action",
+        "penetration": 2,
+        "properties": [
+            "Aquatic"
+        ],
+        "price": 2,
+        "bulk": 2,
+        "description": "This weapon is designed to be fired underwater. The range is short, but the harpoons are designed to minimize resistance and deliver a fatal wound to sea creatures."
+    },
+    {
+        "name": "Pistol, 9mm semi-auto",
+        "tier": "Advanced",
+        "category": "Ranged",
+        "damage": "1d10 ballistic",
+        "range": "100/200",
+        "rounds": "21",
+        "reload": "Bonus",
+        "penetration": 2,
+        "properties": [
+            "Loud",
+            "Semi-Auto"
+        ],
+        "price": 2,
+        "bulk": 1,
+        "description": "These standard sidearms are used by the armed forces and police and exceedingly popular on the civilian market. They balance stopping power with ammunition capacity and use inexpensive cartridges."
+    },
+    {
+        "name": "Pistol, concealed carry",
+        "tier": "Advanced",
+        "category": "Ranged",
+        "damage": "1d8/1d10 ballistic",
+        "range": "100/200",
+        "rounds": "8",
+        "reload": "Bonus",
+        "penetration": 2,
+        "properties": [
+            "Light",
+            "Loud",
+            "Semi-Auto",
+            "Versatile"
+        ],
+        "price": 2,
+        "bulk": 1,
+        "description": "These compact versions of the standard 9mm pistol are used by undercover police and civilians who want to be armed but keep a low profile. They are typically carried in a concealed holster and chambered for 9mm rounds."
+    },
+    {
+        "name": "Pistol, hand cannon",
+        "tier": "Advanced",
+        "category": "Ranged",
+        "damage": "1d12 ballistic",
+        "range": "100/200",
+        "rounds": "7",
+        "reload": "Bonus",
+        "penetration": 3,
+        "properties": [
+            "Loud",
+            "Semi-Auto"
+        ],
+        "price": 3,
+        "bulk": 1,
+        "description": "Heavy pistols fire large caliber rounds such as .50s and .45 magnums. While they have considerable stopping power and penetration, they are difficult to handle and have limited ammunition capacity."
+    },
+    {
+        "name": "Pistol, holdout",
+        "tier": "Advanced",
+        "category": "Ranged",
+        "damage": "1d6 ballistic",
+        "range": "50/100",
+        "rounds": "1",
+        "reload": "Action",
+        "penetration": 2,
+        "properties": [
+            "Disguised",
+            "Light",
+            "Loud",
+            "Slow-Firing"
+        ],
+        "price": 2,
+        "bulk": 0,
+        "description": "These small firearms are designed to be concealed nearly anywhere. They have one or two shots and are breech loaded. Larger models can have two shots."
+    },
+    {
+        "name": "Rifle, sniper",
+        "tier": "Advanced",
+        "category": "Ranged",
+        "damage": "2d8 ballistic",
+        "range": "2000/6000",
+        "rounds": "10",
+        "reload": "Bonus",
+        "penetration": 4,
+        "properties": [
+            "Heavy",
+            "Loud",
+            "Slow-Firing",
+            "Two-Handed"
+        ],
+        "price": 4,
+        "bulk": 3,
+        "description": "Sniper rifles are designed for accuracy and penetrating power at long range. They fire high-caliber, armor-piercing rounds and use high-magnification scopes to assist in aiming. While it is possible to fire a sniper rifle while standing, most prefer to fire from a braced position for better accuracy."
+    },
+    {
+        "name": "Rifle, tactical",
+        "tier": "Advanced",
+        "category": "Ranged",
+        "damage": "1d12 ballistic",
+        "range": "600/1200",
+        "rounds": "30",
+        "reload": "Bonus",
+        "penetration": 3,
+        "properties": [
+            "Loud",
+            "Semi-Auto",
+            "Two-Handed"
+        ],
+        "price": 3,
+        "bulk": 2,
+        "description": "The tactical rifle is the civilian equivalent of the military assault rifle, but without fully automatic fire. In the civilian world, they are used as a self-defense weapon, though there is intense debate as to whether they are appropriate for civilian use."
+    },
+    {
+        "name": "Rifle, tranquilizer",
+        "tier": "Advanced",
+        "category": "Ranged",
+        "damage": "1 piercing",
+        "range": "50/100",
+        "rounds": "1",
+        "reload": "Action",
+        "penetration": 1,
+        "properties": [
+            "Restricted",
+            "Slow-Firing",
+            "Special",
+            "Two-Handed"
+        ],
+        "price": 3,
+        "bulk": 2,
+        "description": "This air rifle is specially designed to fire a hypodermic dart intended to tranquilize an animal. Each dart must be prepared with enough tranquilizer for the animal's weight and metabolism to bring them down, but not permanently harm them. They have a short range due to the large and delicate projectile they fire. (See “Poison” in chapter 12 for details.)"
+    },
+    {
+        "name": "Shotgun, pump-action",
+        "tier": "Advanced",
+        "category": "Ranged",
+        "damage": "2d6 ballistic",
+        "range": "200/400",
+        "rounds": "9",
+        "reload": "Action",
+        "penetration": 3,
+        "properties": [
+            "Loud",
+            "Shot",
+            "Two-Handed"
+        ],
+        "price": 2,
+        "bulk": 2,
+        "description": "Pump-action shotguns offer high reliability and a good number of shots from their internal magazines. Individual cartridges can be quickly loaded. Hunters use this feature to load different cartridges depending on the intended target and range. Police and military sometimes use shotguns for clearing buildings."
+    },
+    {
+        "name": "Taser",
+        "tier": "Advanced",
+        "category": "Ranged",
+        "damage": "1d4 electrical",
+        "range": "15",
+        "rounds": "2",
+        "reload": "",
+        "penetration": 0,
+        "properties": [
+            "Light",
+            "Stunning"
+        ],
+        "price": 2,
+        "bulk": 1,
+        "description": "These nonlethal guns fire small metal darts connected by thin wires to the device. Once embedded, these darts deliver a strong electric shock intended to stun the target for a short time. TASER is a trademark held by the company that makes these devices rather than a generic term."
+    },
+    {
+        "name": "Grenade, flare",
+        "tier": "Advanced",
+        "category": "Explosive",
+        "damage": "",
+        "range": "40/80",
+        "radius": "30 feet",
+        "penetration": 0,
+        "properties": [
+            "Grenade",
+            "Illuminating",
+            "Thrown"
+        ],
+        "price": 1,
+        "bulk": 1,
+        "description": "Flare grenades are used at night to provide illumination on targets or to light up a landing area for a helicopter or the like."
+    },
+    {
+        "name": "Grenade, smoke",
+        "tier": "Advanced",
+        "category": "Explosive",
+        "damage": "",
+        "range": "40/80",
+        "radius": "15 feet",
+        "penetration": 0,
+        "properties": [
+            "Grenade",
+            "Special",
+            "Thrown"
+        ],
+        "price": 1,
+        "bulk": 1,
+        "description": "These grenades create a cloud of smoke in a 15-foot radius, useful both as a signaling device for aircraft and to reduce enemy sight. The area covered by the smoke has no visibility. The smoke lasts for 1 minute. Strong winds can blow the smoke in the direction of the wind, reducing the duration by half."
+    },
+    {
+        "name": "Boomerang",
+        "tier": "Historical",
+        "category": "Melee",
+        "damage": "1d6 bludgeoning",
+        "range": "40/80",
+        "penetration": 1,
+        "properties": [
+            "Returning",
+            "Thrown"
+        ],
+        "price": 1,
+        "bulk": 1,
+        "description": "These unique wooden throwing weapons originated with Aboriginal Australians. They are used to hunt small game, but they can deliver a telling blow. Boomerangs that return when thrown are more useful for recreation than hunting."
+    },
+    {
+        "name": "Javelin",
+        "tier": "Historical",
+        "category": "Melee",
+        "damage": "1d6 piercing",
+        "range": "100/200",
+        "penetration": 1,
+        "properties": [
+            "Thrown"
+        ],
+        "price": 2,
+        "bulk": 1,
+        "description": "These thin shafts about two to four feet in length have a sharp metal tip designed for throwing at long distances."
+    },
+    {
+        "name": "Net",
+        "tier": "Historical",
+        "category": "Melee",
+        "damage": "",
+        "range": "10",
+        "penetration": 0,
+        "properties": [
+            "Special",
+            "Thrown"
+        ],
+        "price": 2,
+        "bulk": 2,
+        "description": "A net can be used against Small, Medium, or Large targets. A successful attack does not cause damage, but the target is Restrained. The target can free itself by making a successful DC 10 Strength check as an action or by dealing 15 points of slashing damage to the net."
+    },
+    {
+        "name": "Nunchucks",
+        "tier": "Historical",
+        "category": "Melee",
+        "damage": "1d6 bludgeoning",
+        "range": "",
+        "penetration": 1,
+        "properties": [
+            "Finesse",
+            "Light"
+        ],
+        "price": 1,
+        "bulk": 1,
+        "description": "These are made by linking two short wooden rods with a short chain or rope. They are associated with traditional Eastern martial arts."
+    },
+    {
+        "name": "Poignard",
+        "tier": "Historical",
+        "category": "Melee",
+        "damage": "1d6 piercing",
+        "range": "",
+        "penetration": 1,
+        "properties": [
+            "Finesse",
+            "Light"
+        ],
+        "price": 2,
+        "bulk": 1,
+        "description": "A poignard is a long steel dagger meant for stabbing and parrying, popular in the Renaissance period but first documented in the Middle Ages."
+    },
+    {
+        "name": "Quarterstaff",
+        "tier": "Historical",
+        "category": "Melee",
+        "damage": "1d8 bludgeoning",
+        "range": "",
+        "penetration": 1,
+        "properties": [
+            "Finesse",
+            "Two-Handed"
+        ],
+        "price": 1,
+        "bulk": 2,
+        "description": "A smooth wooden stick about 5 feet long, the quarterstaff is both an effective, easy-to-use weapon and a practical walking stick."
+    },
+    {
+        "name": "Rapier",
+        "tier": "Historical",
+        "category": "Melee",
+        "damage": "1d8 piercing",
+        "range": "",
+        "penetration": 1,
+        "properties": [
+            "Finesse"
+        ],
+        "price": 2,
+        "bulk": 2,
+        "description": "These thin-bladed swords are popular with fencers and Renaissance fair actors. Among the range of fencing swords, the rapier is one of the heavier options."
+    },
+    {
+        "name": "Shuriken",
+        "tier": "Historical",
+        "category": "Melee",
+        "damage": "1d4 piercing",
+        "range": "30/60",
+        "penetration": 1,
+        "properties": [
+            "Finesse",
+            "Light",
+            "Thrown"
+        ],
+        "price": 1,
+        "bulk": 0,
+        "description": "These small, sharpened bits of metal are easy to throw but rarely deliver a fatal wound. Traditionally they were used as a distraction or poisoned to facilitate an assassination."
+    },
+    {
+        "name": "Spear",
+        "tier": "Historical",
+        "category": "Melee",
+        "damage": "1d10 piercing",
+        "range": "30/60",
+        "penetration": 1,
+        "properties": [
+            "Reach 10",
+            "Thrown",
+            "Two-Handed"
+        ],
+        "price": 2,
+        "bulk": 2,
+        "description": "Among the most versatile weapons, spears are cheap, light, can be thrown, and have the advantage of reach in comparison to other melee weapons."
+    },
+    {
+        "name": "Sword",
+        "tier": "Historical",
+        "category": "Melee",
+        "damage": "1d8/1d10 slashing",
+        "range": "",
+        "penetration": 1,
+        "properties": [
+            "Versatile"
+        ],
+        "price": 3,
+        "bulk": 2,
+        "description": "This entry represents a typical fantasy longsword, cavalry saber, or katana. It's a one-handed blade, but it can be used two-handed for additional speed and power."
+    },
+    {
+        "name": "Sword cane",
+        "tier": "Historical",
+        "category": "Melee",
+        "damage": "1d8 piercing",
+        "range": "",
+        "penetration": 1,
+        "properties": [
+            "Disguised"
+        ],
+        "price": 3,
+        "bulk": 2,
+        "description": "This thin blade disguised as a walking stick isn't especially durable or well balanced, but it is dangerous in the right hands and difficult to detect."
+    },
+    {
+        "name": "Sword, two-handed",
+        "tier": "Historical",
+        "category": "Melee",
+        "damage": "2d6 slashing",
+        "range": "",
+        "penetration": 1,
+        "properties": [
+            "Heavy",
+            "Two-Handed"
+        ],
+        "price": 3,
+        "bulk": 3,
+        "description": "These large, two-handed blades are potentially devastating but rarely carried in modern times. Nothing attracts unwanted attention like wandering around with a greatsword strapped to your back."
+    },
+    {
+        "name": "Whip",
+        "tier": "Historical",
+        "category": "Melee",
+        "damage": "1d4 slashing",
+        "range": "",
+        "penetration": 0,
+        "properties": [
+            "Finesse",
+            "Reach 15"
+        ],
+        "price": 1,
+        "bulk": 1,
+        "description": "What robber of ancient tombs would be complete without a cracking bullwhip? It's employed more often as a tool for ranchers to intimidate livestock, but in a pinch it could be used as a weapon."
+    },
+    {
+        "name": "Blowgun",
+        "tier": "Historical",
+        "category": "Ranged",
+        "damage": "1 piercing",
+        "range": "30/60",
+        "rounds": "1",
+        "reload": "Bonus",
+        "penetration": 0,
+        "properties": [
+            "Slow-Firing"
+        ],
+        "price": 2,
+        "bulk": 1,
+        "description": "Blowguns consist of a hollow tube fitted with small, feathered darts. When the user blows into the tube, it propels the dart toward the target. With their short range they are mainly used to deliver poisoned darts, since otherwise they are little more than a painful nuisance."
+    },
+    {
+        "name": "Crossbow",
+        "tier": "Historical",
+        "category": "Ranged",
+        "damage": "1d10 piercing",
+        "range": "200/400",
+        "rounds": "1",
+        "reload": "Action",
+        "penetration": 2,
+        "properties": [
+            "Slow-Firing",
+            "Two-Handed"
+        ],
+        "price": 2,
+        "bulk": 3,
+        "description": "Archaic crossbows are easy weapons to use: you load, point, and shoot. They can range from massive siege weapons to tiny toys; the statistics represent an average-sized crossbow."
+    },
+    {
+        "name": "Crossbow, hand",
+        "tier": "Historical",
+        "category": "Ranged",
+        "damage": "1d4 piercing",
+        "range": "60/120",
+        "rounds": "1",
+        "reload": "Bonus",
+        "penetration": 1,
+        "properties": [
+            "Light",
+            "Slow-Firing"
+        ],
+        "price": 2,
+        "bulk": 2,
+        "description": "Scholars debate whether these items were toys or weapons. They don't have much power but can be loaded quickly and fired in one hand. If used with a poison bolt they might pose a danger, but they're otherwise too slow to be a significant threat."
+    },
+    {
+        "name": "Longbow",
+        "tier": "Historical",
+        "category": "Ranged",
+        "damage": "1d10 piercing",
+        "range": "250/750",
+        "rounds": "",
+        "reload": "",
+        "penetration": 1,
+        "properties": [
+            "Two-Handed"
+        ],
+        "price": 2,
+        "bulk": 3,
+        "description": "Before rifles, the longbow was the terror of the battlefield. These large ancient bows can fire arrows over huge distances and with startling accuracy in the hands of a skilled archer."
+    },
+    {
+        "name": "Chainsaw",
+        "tier": "Improvised",
+        "category": "Melee",
+        "damage": "1d12 slashing",
+        "range": "",
+        "penetration": 2,
+        "properties": [
+            "Heavy",
+            "Improvised",
+            "Loud",
+            "Two-Handed"
+        ],
+        "price": 2,
+        "bulk": 3,
+        "description": "Chainsaws are not intended for hand-to-hand combat, but few tools are more intimidating when used as melee weapons. A favorite of deranged killers and aggrieved foresters, they make short work of doors, tables, and other obstacles."
+    },
+    {
+        "name": "Object, breakable",
+        "tier": "Improvised",
+        "category": "Melee",
+        "damage": "1d6 bludgeoning",
+        "range": "",
+        "penetration": 1,
+        "properties": [
+            "Improvised",
+            "Special"
+        ],
+        "price": 0,
+        "bulk": 0,
+        "description": "This category of objects, when adjacent to you and your opponent, hurt to smash into but will break or give way under the assault. Examples include a bathroom stall, a mirror, a window, a bookshelf, or a big screen TV."
+    },
+    {
+        "name": "Object, unbreakable",
+        "tier": "Improvised",
+        "category": "Melee",
+        "damage": "1d8 bludgeoning",
+        "range": "",
+        "penetration": 1,
+        "properties": [
+            "Improvised",
+            "Special"
+        ],
+        "price": 0,
+        "bulk": 0,
+        "description": "This category of objects, when adjacent to you and your opponent, hurt to smash into and probably won't break. Examples include a marble countertop, a steel railing, a brick wall, or a flagpole."
+    },
+    {
+        "name": "Object, scary-dangerous",
+        "tier": "Improvised",
+        "category": "Melee",
+        "damage": "1d12 slashing or piercing",
+        "range": "",
+        "penetration": 1,
+        "properties": [
+            "Improvised",
+            "Special"
+        ],
+        "price": 0,
+        "bulk": 0,
+        "description": "This category of objects, when adjacent to you and your opponent, have brutal effects when you smash someone into them. Examples include a mass of sharp spikes, the whirling blades of a woodchipper, a boat propeller, and similar delights."
+    },
+    {
+        "name": "Salon Flamer",
+        "tier": "Improvised",
+        "category": "Melee",
+        "damage": "1d4 fire",
+        "range": "",
+        "penetration": 0,
+        "properties": [
+            "Improvised",
+            "Light",
+            "Two-Handed"
+        ],
+        "price": 1,
+        "bulk": 1,
+        "description": "The salon flamer consists of a lighter and a can of hairspray or other propellant. You hold the lighter in front of the spray and blast people with fire. It's not tremendously effective, but it can be intimidating. You can also apply this entry to a blowtorch or similar tool used as a weapon."
+    },
+    {
+        "name": "Thing, tiny ouchie",
+        "tier": "Improvised",
+        "category": "Melee",
+        "damage": "1d4 variable",
+        "range": "40/80",
+        "penetration": 1,
+        "properties": [
+            "Finesse",
+            "Improvised",
+            "Light",
+            "Thrown"
+        ],
+        "price": 0,
+        "bulk": 0,
+        "description": "Things are objects you pick up and turn into weapons. You and the GM decide on the size and if it deals bludgeoning, piercing, or slashing damage. None of these things are fun to get hit with!"
+    },
+    {
+        "name": "Thing, small painful",
+        "tier": "Improvised",
+        "category": "Melee",
+        "damage": "1d6 variable",
+        "range": "70/140",
+        "penetration": 1,
+        "properties": [
+            "Improvised",
+            "Thrown"
+        ],
+        "price": 0,
+        "bulk": 1,
+        "description": "Things are objects you pick up and turn into weapons. You and the GM decide on the size and if it deals bludgeoning, piercing, or slashing damage. None of these things are fun to get hit with!"
+    },
+    {
+        "name": "Thing, medium hurtful",
+        "tier": "Improvised",
+        "category": "Melee",
+        "damage": "1d8/1d10 variable",
+        "range": "50/100",
+        "penetration": 1,
+        "properties": [
+            "Improvised",
+            "Thrown",
+            "Versatile"
+        ],
+        "price": 0,
+        "bulk": 2,
+        "description": "Things are objects you pick up and turn into weapons. You and the GM decide on the size and if it deals bludgeoning, piercing, or slashing damage. None of these things are fun to get hit with!"
+    },
+    {
+        "name": "Thing, large agonizing",
+        "tier": "Improvised",
+        "category": "Melee",
+        "damage": "1d12 variable",
+        "range": "20/40",
+        "penetration": 2,
+        "properties": [
+            "Heavy",
+            "Improvised",
+            "Thrown",
+            "Two-Handed"
+        ],
+        "price": 0,
+        "bulk": 3,
+        "description": "Things are objects you pick up and turn into weapons. You and the GM decide on the size and if it deals bludgeoning, piercing, or slashing damage. None of these things are fun to get hit with!"
+    },
+    {
+        "name": "Molotov Cocktail",
+        "tier": "Improvised",
+        "category": "Explosive",
+        "damage": "1d4 fire",
+        "range": "40/80",
+        "radius": "10 feet",
+        "penetration": 0,
+        "properties": [
+            "Grenade",
+            "Improvised",
+            "Indirect",
+            "Special",
+            "Thrown"
+        ],
+        "price": 1,
+        "bulk": 1,
+        "description": "A Molotov cocktail is a bottle of highly flammable liquid with a cloth wick. When lit and thrown, it is designed to break on a hard surface and ignite surrounding material.<br>Like other grenades, it is thrown at a location rather than a combatant. Any flammable material in the area of effect gains the Burning condition, including combatants who fail their Dexterity saving throw against explosives and did not successfully dive for cover."
+    },
+    {
+        "name": "TNT Stick",
+        "tier": "Improvised",
+        "category": "Explosive",
+        "damage": "3d6 explosive",
+        "range": "40/80",
+        "radius": "10 feet",
+        "penetration": 4,
+        "properties": [
+            "Grenade",
+            "Improvised",
+            "Indirect",
+            "Restricted",
+            "Thrown"
+        ],
+        "price": 1,
+        "bulk": 1,
+        "description": "TNT is dangerous, but more to those trying to throw it than those having it thrown at them. It's not designed for anti-personnel use and the actual blast is dangerous only at close ranges."
+    },
+    {
+        "name": "Grenade Launcher",
+        "tier": "Military",
+        "category": "Ranged",
+        "damage": "Grenade",
+        "range": "300/600",
+        "rounds": "1",
+        "reload": "Bonus",
+        "penetration": 0,
+        "properties": [
+            "Indirect",
+            "Restricted",
+            "Two-Handed"
+        ],
+        "price": 3,
+        "bulk": 2,
+        "description": "Grenade launchers are often attached to an assault rifle, but standalone launchers exist. They fire a large grenade cartridge at greater ranges than they could be thrown. Launched grenades are designed to explode on impact rather than based on a timer."
+    },
+    {
+        "name": "Machine Gun, light",
+        "tier": "Military",
+        "category": "Ranged",
+        "damage": "2d6 Ballistic",
+        "range": "900/1800",
+        "rounds": "30 or Belt",
+        "reload": "Action",
+        "penetration": 3,
+        "properties": [
+            "Belt",
+            "Full-Auto",
+            "Heavy",
+            "Loud",
+            "Restricted",
+            "Two-Handed"
+        ],
+        "price": 3,
+        "bulk": 4,
+        "description": "Machine guns are strictly military weapons designed to create fire superiority and provide covering fire for troops. They are fed by an ammunition belt, though light machine guns may use magazines rather than belts and fire the same ammunition as assault rifles.<br>Machine guns can be used to make a normal attack."
+    },
+    {
+        "name": "Machine Gun, medium",
+        "tier": "Military",
+        "category": "Ranged",
+        "damage": "2d8 Ballistic",
+        "range": "900/1800",
+        "rounds": "30 or Belt",
+        "reload": "Action",
+        "penetration": 4,
+        "properties": [
+            "Belt",
+            "Full-Auto",
+            "Heavy",
+            "Loud",
+            "Stationary",
+            "Restricted",
+            "Two-Handed"
+        ],
+        "price": 4,
+        "bulk": 6,
+        "description": "Medium machine guns use larger caliber rounds than their light counterparts and are too heavy to be fired without being mount or braced on the ground. They are always belt-fed and their primary mission is to provide covering fire on enemy positions or to threaten light vehicles.<br>Machine guns can be used to make a normal attack."
+    },
+    {
+        "name": "Machine Gun, heavy",
+        "tier": "Military",
+        "category": "Ranged",
+        "damage": "2d10 Ballistic",
+        "range": "1200/2400",
+        "rounds": "Belt",
+        "reload": "Action",
+        "penetration": 5,
+        "properties": [
+            "Belt",
+            "Full-Auto",
+            "Heavy",
+            "Loud",
+            "Stationary",
+            "Restricted",
+            "Two-Handed"
+        ],
+        "price": 4,
+        "bulk": 8,
+        "description": "An individual soldier can barely carry this massive gun, so they're usually mounted onto a vehicle or defensive position. These weapons can shred light vehicles and fortifications as well as infantry.<br>Machine guns can be used to makea normal attack."
+    },
+    {
+        "name": "Rifle, anti-material",
+        "tier": "Military",
+        "category": "Ranged",
+        "damage": "2d10 Ballistic",
+        "range": "2000/6000",
+        "rounds": "10",
+        "reload": "Action",
+        "penetration": 5,
+        "properties": [
+            "Heavy",
+            "Loud",
+            "Semi-Auto",
+            "Stationary",
+            "Two-Handed"
+        ],
+        "price": 4,
+        "bulk": 4,
+        "description": "Similar to sniper rifles, these rifles are intended for taking out military equipment rather than people. Their powerful armor-piercing rounds can rip through concrete walls and crack an engine block from more than a mile away."
+    },
+    {
+        "name": "Rifle, assault",
+        "tier": "Military",
+        "category": "Ranged",
+        "damage": "1d12 Ballistic",
+        "range": "900/1800",
+        "rounds": "30",
+        "reload": "Bonus",
+        "penetration": 3,
+        "properties": [
+            "Burst 3",
+            "Full-Auto",
+            "Loud",
+            "Restricted",
+            "Two-Handed"
+        ],
+        "price": 2,
+        "bulk": 3,
+        "description": "The AK-47 is a Cold War era design from the USSR. It is the most common gun on Earth with more than 150 million in circulation. While not as accurate as the M-16, it is legendary for its simplicity and reliability. Most of those sold today are copycat guns using the same design."
+    },
+    {
+        "name": "Rifle, assault carbine",
+        "tier": "Military",
+        "category": "Ranged",
+        "damage": "1d12 Ballistic",
+        "range": "800/1600",
+        "rounds": "30",
+        "reload": "Bonus",
+        "penetration": 3,
+        "properties": [
+            "Burst 3",
+            "Full-Auto",
+            "Loud",
+            "Restricted",
+            "Two-Handed"
+        ],
+        "price": 3,
+        "bulk": 2,
+        "description": "Assault carbine rifles are a military classification for fully automatic combat rifles that strike a balance between accuracy at range, automatic fire, ammunition capacity, weight, and reliability. Most combat troops carry them into battle in the modern era. The M4 Carbine is the U.S. standard combat weapon, replacing the M-16. The two designs are similar but the M4 is a shorter and lighter configuration."
+    },
+    {
+        "name": "Rocket Launcher",
+        "tier": "Military",
+        "category": "Ranged",
+        "damage": "Rocket",
+        "range": "500/1500",
+        "rounds": "1",
+        "reload": "",
+        "penetration": 0,
+        "properties": [
+            "Restricted",
+            "Two-Handed"
+        ],
+        "price": 5,
+        "bulk": 4,
+        "description": "Rocket launchers are single-use anti-tank or anti-air weapons, primarily designed for use against vehicles or fortified positions. Among the multiple types of rockets, the most common are armor-piercing rockets for use against tanks."
+    },
+    {
+        "name": "SMG",
+        "tier": "Military",
+        "category": "Ranged",
+        "damage": "1d10 Ballistic",
+        "range": "100/200",
+        "rounds": "30",
+        "reload": "Bonus",
+        "penetration": 2,
+        "properties": [
+            "Burst 3",
+            "Full-Auto",
+            "Loud",
+            "Restricted"
+        ],
+        "price": 3,
+        "bulk": 1,
+        "description": "Submachine guns are fully automatic, short-barreled firearms designed for relatively short ranges. They offer considerable stopping power for a small weapon but are not effective against military body armor. The MAC 10 is a famous SMG that packs serious firepower but with questionable accuracy. It was designed for use with an attached suppressor that acted as a forward grip."
+    },
+    {
+        "name": "SMG, spec-ops",
+        "tier": "Military",
+        "category": "Ranged",
+        "damage": "1d8 Ballistic",
+        "range": "350/700",
+        "rounds": "50",
+        "reload": "Bonus",
+        "penetration": 2,
+        "properties": [
+            "Burst 3",
+            "Full-Auto",
+            "Restricted"
+        ],
+        "price": 3,
+        "bulk": 2,
+        "description": "This class of submachine guns was designed for use by support personnel to counter armored paratroopers from the Soviet Union. While they were never used for that purpose, they became popular for special forces units that want a small armor penetrating, fully automatic weapon."
+    },
+    {
+        "name": "C4 plastic explosive",
+        "tier": "Military",
+        "category": "Explosive",
+        "damage": "4d6 explosive",
+        "range": "",
+        "radius": "10 feet",
+        "penetration": 3,
+        "properties": [
+            "Loud",
+            "Restricted",
+            "DC 15"
+        ],
+        "price": 2,
+        "bulk": 1,
+        "description": "C4 is used as a demolition charge and delivers an incredibly fast and damaging explosion. For anti-personnel purposes, it needs to be combined with shrapnel to increase its lethal range."
+    },
+    {
+        "name": "Grenade, flashbang",
+        "tier": "Military",
+        "category": "Explosive",
+        "damage": "1d4 explosive",
+        "range": "75/150",
+        "radius": "30 feet",
+        "penetration": 1,
+        "properties": [
+            "Deafening",
+            "Grenade",
+            "Loud",
+            "Restricted",
+            "Stunning"
+        ],
+        "price": 1,
+        "bulk": 1,
+        "description": "Flashbangs are incredibly useful tactical weapons. They both stun and deafen enemies for a short time, creating the perfect opportunity for an assault or to force a surrender. Targets make one saving throw to resist both effects."
+    },
+    {
+        "name": "Grenade, fragmentation",
+        "tier": "Military",
+        "category": "Explosive",
+        "damage": "4d8 explosive",
+        "range": "75/150",
+        "radius": "20 feet",
+        "penetration": 3,
+        "properties": [
+            "Grenade",
+            "Loud",
+            "Restricted"
+        ],
+        "price": 1,
+        "bulk": 1,
+        "description": "Frag grenades are the standard anti-personnel grenade used by militaries the world over. They are lethal and cheap to make. The biggest limitation on grenades is their short range, which explains the creation of grenade launchers."
+    },
+    {
+        "name": "Grenade, incendiary",
+        "tier": "Military",
+        "category": "Explosive",
+        "damage": "",
+        "range": "75/150",
+        "radius": "",
+        "penetration": 5,
+        "properties": [
+            "Grenade",
+            "Restricted",
+            "Special"
+        ],
+        "price": 1,
+        "bulk": 1,
+        "description": "Incendiary grenades are intended to set equipment and structures on fire. They are not useful directly against personnel in combat since they are easily avoided and do not explode. They burn at incredibly high temperatures, enough to melt through thick steel and ignite nearly any combustible material. It takes 1 round per AV of the target material to burn through and ignite."
+    },
+    {
+        "name": "Mine, blast",
+        "tier": "Military",
+        "category": "Explosive",
+        "damage": "2d6 explosive",
+        "range": "",
+        "radius": "",
+        "penetration": 4,
+        "properties": [
+            "Loud",
+            "Restricted",
+            "DC 15"
+        ],
+        "price": 1,
+        "bulk": 1,
+        "description": "Blast mines are the scourge of the battlefield, designed more to maim than kill. They are especially horrifying weapons of war because they remain dangerous long after the battles have ended."
+    },
+    {
+        "name": "Mine, fragmentation",
+        "tier": "Military",
+        "category": "Explosive",
+        "damage": "4d8 explosive",
+        "range": "",
+        "radius": "20 feet",
+        "penetration": 3,
+        "properties": [
+            "Loud",
+            "Restricted",
+            "DC 15"
+        ],
+        "price": 1,
+        "bulk": 1,
+        "description": "These mines are designed to eject a small fragmentation grenade that sprays shrapnel in a wide swath. They are far more lethal than blasting mines, but more expensive and prone to misfires."
+    },
+    {
+        "name": "Rocket, anti-tank",
+        "tier": "Military",
+        "category": "Explosive",
+        "damage": "8d8 explosive",
+        "range": "",
+        "radius": "10 feet",
+        "penetration": 6,
+        "properties": [
+            "Heavy",
+            "Loud",
+            "Restricted"
+        ],
+        "price": 5,
+        "bulk": 4,
+        "description": "Anti-tank rockets employ a number of tricks to defeat armor and other defensive measures. One of the most effective is a Russian rocket that fires two rockets in tandem: the first defeats countermeasures while the second goes for the kill."
+    }
+]

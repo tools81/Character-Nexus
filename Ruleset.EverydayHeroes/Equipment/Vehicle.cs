@@ -10,6 +10,7 @@ namespace EverydayHeroes
 {
     public class Vehicle : IEquipment
     {
+        public string Name { get; set; }
         public string Description { get; set; }
         public VehicleTier Tier { get; set; }
         public VehicleDomain Domain { get; set; }

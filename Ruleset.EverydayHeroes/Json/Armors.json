@@ -1,0 +1,169 @@
+[
+    {
+        "name": "Armored Clothing",
+        "tier": "Basic",
+        "category": "Garment",
+        "value": 1,
+        "properties": [],
+        "price": 1,
+        "bulk": 1,
+        "description": "This category includes heavy leather jackets, padded vests, chain shirts, or other partial armor made of non-ballistic materials. It offers slim protection against melee weapons but does nothing against bullets and other projectiles. A favorite of street punks and biker gangs."
+    },
+    {
+        "name": "Ballistic vest, light",
+        "tier": "Advanced",
+        "category": "Garment",
+        "value": 2,
+        "properties": [
+            "Ballistic",
+            "Concealable"
+        ],
+        "price": 2,
+        "bulk": 0,
+        "description": "These vests are made entirely of flexible ballistic fabric and padding. They can be worn under a jacket without drawing attention. They effectively block light caliber pistol rounds and other conventional projectiles."
+    },
+    {
+        "name": "Ballistic vest, medium",
+        "tier": "Advanced",
+        "category": "Garment",
+        "value": 3,
+        "properties": [
+            "Ballistic"
+        ],
+        "price": 2,
+        "bulk": 1,
+        "description": "Thicker than a light ballistic vest, these vests have more layers of thick ballistic fabric as well as light armored plates. They can block most pistol rounds as well as low caliber rifle rounds."
+    },
+    {
+        "name": "Stab vest",
+        "tier": "Advanced",
+        "category": "Garment",
+        "value": 1,
+        "properties": [
+            "Stab Proof"
+        ],
+        "price": 2,
+        "bulk": 1,
+        "description": "These vests cover vital areas of the torso with a mesh that is nearly impossible to penetrate with a bladed or spiked weapon. They are not strong enough to stop ballistic weapons, but unlike a ballistic vest, they leave no vulnerable areas unprotected."
+    },
+    {
+        "name": "Shield, riot",
+        "tier": "Advanced",
+        "category": "Shield",
+        "value": 1,
+        "properties": [
+            "Awkward"
+        ],
+        "price": 1,
+        "bulk": 3,
+        "description": "This heavy plastic shield can be held in one hand, though it's at least four feet tall and at least two-and-a-half feet wide. Police use it to push back crowds and to protect themselves from fists and thrown objects. It offers no protection against firearms but defends against sticks and rocks."
+    },
+    {
+        "name": "Historical Armor",
+        "tier": "Historical",
+        "category": "Garment",
+        "value": 1,
+        "properties": [
+            "Awkward"
+        ],
+        "price": 3,
+        "bulk": 4,
+        "description": "In medieval times, knights and other warriors wore this complete set of full body armor. It offers protection against conventional melee and ranged weapons, but bullets go right through it and you look out of place wearing it outside of a Renaissance fair."
+    },
+    {
+        "name": "Shield, kite",
+        "tier": "Historical",
+        "category": "Shield",
+        "value": 1,
+        "properties": [
+            "Awkward"
+        ],
+        "price": 1,
+        "bulk": 3,
+        "description": "Kite shields are large wooden shields used by infantry to protect against ranged missile fire from enemy archers and crossbowmen. While they can be used in melee combat, they are heavy and awkward to wield."
+    },
+    {
+        "name": "Shield, round",
+        "tier": "Historical",
+        "category": "Shield",
+        "value": 1,
+        "properties": [
+            "Small"
+        ],
+        "price": 1,
+        "bulk": 2,
+        "description": "Ancient shields made sense on a battlefield dominated by longbows, but in the era of guns, they're cumbersome pieces of wood."
+    },
+    {
+        "name": "Duct-taped Junk",
+        "tier": "Improvised",
+        "category": "Garment",
+        "value": 2,
+        "properties": [
+            "Awkward"
+        ],
+        "price": 1,
+        "bulk": 4,
+        "description": "Phonebooks and cookware taped to your body probably aren't going to save your life or make you look cool, but sometimes heroes have to improvise."
+    },
+    {
+        "name": "Car door",
+        "tier": "Improvised",
+        "category": "Shield",
+        "value": 2,
+        "properties": [
+            "Awkward"
+        ],
+        "price": 0,
+        "bulk": 4,
+        "description": "A sturdy car door can make for a last-ditch bulletproof shield, provided you happen to have one lying around when bullets start flying."
+    },
+    {
+        "name": "Garbage can lid",
+        "tier": "Improvised",
+        "category": "Shield",
+        "value": 1,
+        "properties": [
+            "Small"
+        ],
+        "price": 1,
+        "bulk": 2,
+        "description": "If you are really strapped for personal protection, a garbage can lid can give you a feeling of discount derring-do in a pinch."
+    },
+    {
+        "name": "Ballistic vest, heavy",
+        "tier": "Military",
+        "category": "Garment",
+        "value": 4,
+        "properties": [
+            "Ballistic"
+        ],
+        "price": 3,
+        "bulk": 2,
+        "description": "This is similar to medium ballistic armor, with the addition of heavier armor plates. It can block all but the most powerful rounds from handheld firearms."
+    },
+    {
+        "name": "Modern combat armor",
+        "tier": "Military",
+        "category": "Garment",
+        "value": 3,
+        "properties": [
+            "Awkward"
+        ],
+        "price": 3,
+        "bulk": 4,
+        "description": "This armor combines the benefits of a ballistic vest with knife-proof materials and covers almost the entire body. It is restrictive, hot, and uncomfortable, but it does provide impressive protection."
+    },
+    {
+        "name": "Shield, tactical",
+        "tier": "Improvised",
+        "category": "Shield",
+        "value": 3,
+        "properties": [
+            "Awkward"
+        ],
+        "price": 3,
+        "bulk": 4,
+        "description": "Military and SWAT teams use this large and heavy shield to protect them from gunfire in situations where normal cover is not available. It has a narrow window so it can be held in front of the user's face."
+    }
+]

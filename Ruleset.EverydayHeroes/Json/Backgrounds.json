@@ -1,0 +1,688 @@
+[
+    {
+        "name": "Activist",
+        "description": "Growing up, you were motivated to act on behalf of a social or political cause. You know how to influence people by your deeds and actions.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Wisdom",
+                    "Charisma"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Intimidation",
+                    "Persuasion"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "An old campaign button from your youth, a bullhorn",
+        "specialfeature": "Political Speech. You have advantage on Charisma (Persuasion) checks made to promote a cause or convince people to support it."
+    },
+    {
+        "name": "Art Lover",
+        "description": "You have loved art since you were a child and developed a significant talent in one or more forms of artistic expression. The knowledge and practice gives you something to talk about at parties.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Wisdom",
+                    "Charisma"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Arts and Crafts",
+                    "Performance"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "A large collection of your unsold art or clips of your performances",
+        "specialfeature": "It's Beautiful. You gain advantage on Charisma (Persuasion) checks when the subject involves art, such as selling a painting, convincing someone to see a show, or sparing the life of an artist."
+    },
+    {
+        "name": "Bookworm",
+        "description": "As a child, you spent your free time reading anything you could get your hands on. You absorbed practical knowledge as you immersed yourself in wonderful stories.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Wisdom",
+                    "Intelligence"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Natural Sciences",
+                    "Social Sciences"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "A first edition or a rare book, a well-used bookmark",
+        "language": "Choose one additional language",
+        "specialfeature": "Have You Ever Read. You can use your proficiency bonus on any ability check to recall knowledge on the subject of authors and literature."
+    },
+    {
+        "name": "Caregiver",
+        "description": "You spent a significant portion of your childhood taking care of someone dear to you. It’s given you a strong sense of compassion, as well as experience in medical care.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Wisdom",
+                    "Charisma"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Medicine"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "A first aid kit, a small memento",
+        "specialfeature": "Soothing. You gain advantage on Charisma (Persuasion) checks when dealing with people who are angry, afraid, or in pain."
+    },
+    {
+        "name": "Cosmopolitan",
+        "description": "You traveled or read widely and picked up useful knowledge from various cultures. You have the gift of feeling at home wherever you roam.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Wisdom"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Social Sciences"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "A valuable piece of art from a foreign country",
+        "language": "Choose one additional language",
+        "specialfeature": "Common Tongue. You know basic informational phrases in a large number of languages and can understand simple replies. This allows rudimentary communication no matter where you go or what language the people speak there."
+    },
+    {
+        "name": "Gamer",
+        "description": "You grew up playing games: computer games, roleplaying games, and/or board games. Whatever happens in life, you have a strategy for it.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Dexterity",
+                    "Intelligence"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Computers",
+                    "Insight"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "A portable gaming console with a tremendous assortment of games",
+        "language": "Choose one additional language",
+        "specialfeature": "Exploit. When you roll a 1 on an ability check, you can reroll the die and must use the new roll. You cannot use this ability again until you finish a long rest."
+    },
+    {
+        "name": "Immigrant",
+        "description": "You straddle the line between two cultures—that of your native country and that of your new home. Despite challenges, you are stronger for your experiences.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Wisdom",
+                    "Constitution"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Endurance",
+                    "Insight",
+                    "Streetwise"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "A flag from your swearing-in ceremony",
+        "language": "Choose one additional language",
+        "specialfeature": "One of Us. You gain advantage on Charisma checks when attempting to influence members of the same immigrant culture."
+    },
+    {
+        "name": "Juvenile Deliquent",
+        "description": "As a kid, you went looking for trouble and found it in abundance: fighting, stealing, vandalism, or general mayhem. You either grew out of it or learned how to behave in a socially accepted manner",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Strength",
+                    "Dexterity",
+                    "Charisma"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Deception",
+                    "Sleight of Hand",
+                    "Stealth",
+                    "Streetwise"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "A switchblade knife with a skull on it",
+        "specialfeature": "Underworld Contacts. You gain advantage on Wisdom (Streetwise) checks to buy or sell illicit goods and services."
+    },
+    {
+        "name": "Larper",
+        "description": "You spent your weekends pretending to be a warrior of a past era, wizard, vampire, or the like. While the pastime didn't necessarily prepare you for modern life, it did give you some unusual skills.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Strength",
+                    "Dexterity"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "A flag from your swearing-in ceremony",
+        "language": "Choose one invented language",
+        "specialfeature": "Playing Possum. You gain advantage on Charisma (Deception) checks made to appear dead or wounded."
+    },
+    {
+        "name": "Military Tradition",
+        "description": "Your family has a strong tradition of service in the armed forces. No matter what you do later in life, this culture still influences you.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Strength",
+                    "Constitution"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Equipment",
+                "choices": [
+                    "Basic",
+                    "Advanced"
+                ],
+                "count": 2
+            }
+        ],
+        "iconicequipment": " A parent's antique 9mm service pistol",
+        "specialfeature": "Military Solidarity. You gain advantage on Charisma (Persuasion) and Charisma (Intimidation) checks when interacting with members of the armed forces."
+    },
+    {
+        "name": "Misfit",
+        "description": "For whatever reason, you never fit in with your peers. While growing up was sometimes lonely, your isolation made you a keen observer of your surroundings.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Intelligence",
+                    "Wisdom"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Insight",
+                    "Perception"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "A one-of-a-kind jean jacket from an iconic band",
+        "specialfeature": "Devil in the Details. You gain advantage on Wisdom checks made to discern personal details about someone by directly observing them."
+    },
+    {
+        "name": "On The Run",
+        "description": "You spent a portion of your life on the run. You might still be running from the law, a personal vendetta, or bill collectors. You're accustomed to looking over your shoulder for your persecutors.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Dexterity",
+                    "Constitution"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Perception"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "A fake ID, a loose-fitting hoodie, sunglasses",
+        "specialfeature": "On Edge. Whenever you roll initiative, you can reroll once and must use the new result."
+    },
+    {
+        "name": "Ordinary",
+        "description": "You don't have exciting stories in your background. You grew up solidly middle class and had an unremarkable childhood.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Strength",
+                    "Dexterity",
+                    "Constitution",
+                    "Intelligence",
+                    "Wisdom"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Acrobatics",
+                    "Arts and Crafts",
+                    "Athletics",
+                    "Computers",
+                    "Deception",
+                    "Endurance",
+                    "Insight",
+                    "Intimidation",
+                    "Investigation",
+                    "Mechanics",
+                    "Medicine",
+                    "Natural Sciences",
+                    "Perception",
+                    "Performance",
+                    "Persuasion",
+                    "Security",
+                    "Sleight of Hand",
+                    "Social Sciences",
+                    "Stealth",
+                    "Streetwise",
+                    "Survival",
+                    "Vehicles"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "Bag stuff and pocket stuff",
+        "specialfeature": "Blend In. You gain advantage on ability checks made to blend in with a crowd."
+    },
+    {
+        "name": "Orphan",
+        "description": "Your childhood contains a tragedy, since you lost both your parents. Raised in part by the state, you learned to make connections wherever you could.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Constitution",
+                    "Charisma"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Endurance",
+                    "Persuasion"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "Your father's watch or your mother's pendant",
+        "specialfeature": "Survivor. You can reroll one failed saving throw. You cannot use this feature again until you finish a long rest."
+    },
+    {
+        "name": "Person of Mystery",
+        "description": "Your background is a mystery, even to you. You have no official records and only dim recollections of your life. It's not a topic you feel comfortable discussing with others.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Strength",
+                    "Dexterity",
+                    "Constitution",
+                    "Intelligence",
+                    "Wisdom",
+                    "Charisma"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "A mysterious locket",
+        "specialfeature": "It's Coming Back to Me. A forgotten skill and language rise from your foggy memory.<br>At any point during play, you can decide what single additional skill proficiency you learned in your mysterious past. Once the choice is made, it is permanent.<br>At any point during play, you can decide what single additional language you learned in your mysterious past. Once the choice is made, it is permanent."
+    },
+    {
+        "name": "Poor Family",
+        "description": "Your family didn't have much money while you were growing up. Whether you felt deprived of childhood pleasures or celebrate your ability to make do without much, you know what it takes to make your way in the world.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Strength",
+                    "Dexterity",
+                    "Constitution",
+                    "Intelligence",
+                    "Wisdom",
+                    "Charisma"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Arts and Crafts",
+                    "Mechanics",
+                    "Streetwise",
+                    "Survival"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "An old photograph of where you grew up",
+        "specialfeature": "Making Do. You can ignore disadvantage from not having the correct professional tools on hand when performing an ability check."
+    },
+    {
+        "name": "Raised By Assassins",
+        "description": "Yours was not a usual childhood. A surrogate parent, government agency, or band of ninjas raised you from a young age to be a cold-hearted killer.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Dexterity",
+                    "Constitution"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Deception"
+                ],
+                "count": 1
+            },
+            {
+                "type": "Equipment",
+                "choices": [
+                    "Basic",
+                    "Advanced"
+                ],
+                "count": 2
+            }
+        ],
+        "iconicequipment": "A memento of your lost childhood innocence",
+        "language": "Choose one additional language and keep it secret from your team"
+    },
+    {
+        "name": "Religious Tradition",
+        "description": "You grew up in a family with strong faith. Whether you still believe today, the practice left you with insight into the human condition.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Wisdom"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Insight",
+                    "Performance",
+                    "Social Sciences"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "A religious symbol or pendant representing your faith",
+        "specialfeature": "Positive Reinforcement. Through words of encouragement or prayer, as a reaction, you can give advantage to an ally on a single saving throw. You cannot use this feature again until you finish a long rest."
+    },
+    {
+        "name": "Rural Family",
+        "description": "You grew up outside the cities and among straightforward, honest folk. You learned the value of hard work and gained practical skills.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Strength",
+                    "Constitution"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Mechanics",
+                    "Survival"
+                ],
+                "count": 2
+            },
+            {
+                "type": "Equipment",
+                "choices": [
+                    "Basic"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "Your family’s old pickup truck ('she still runs great')"
+    },
+    {
+        "name": "Social Butterfly",
+        "description": "You had a knack for making friends from an early age. Your popularity and congeniality opens doors for you.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Charisma"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Deception",
+                    "Persuasion"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "One-of-a-kind fashionable couture",
+        "specialfeature": "Life of the Party. You gain advantage on Charisma (Deception) and Charisma (Persuasion) checks made while at a party or other social event."
+    },
+    {
+        "name": "Student Athlete",
+        "description": "From an early age, you loved to compete and show off your athleticism. Even if you didn't continue on to pro sports, your love of fitness and your fighting spirit live on.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Strength",
+                    "Dexterity"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Acrobatics",
+                    "Athletics"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "Your letter jacket from school",
+        "specialfeature": "Give It Your All. You gain advantage on Strength (Athletics) and Dexterity (Acrobatics) checks made in the course of playing any sport."
+    },
+    {
+        "name": "Subsistence",
+        "description": "You grew up off the grid and learned to live off the land and your own resourcefulness. Whether due to religious, political, or shared social beliefs, you are proud of your self-sufficiency.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Strength",
+                    "Wisdom"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Survival",
+                    "Athletics"
+                ],
+                "count": 1
+            },
+            {
+                "type": "Equipment",
+                "choices": [
+                    "Basic"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "A hunting rifle, a camping kit, a small remote cabin",
+        "specialfeature": "Natural Medicine. You can use Wisdom (Survival) in place of Intelligence (Medicine) to treat minor wounds and illnesses."
+    },
+    {
+        "name": "Survivor",
+        "description": "Something horrible happened to you when you were young. The event left you emotionally scarred but determined to thrive despite your trauma.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Constitution",
+                    "Wisdom"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Endurance",
+                    "Insight"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "A memento from your tragic past that gives you hope",
+        "specialfeature": "True Survivor. You need two successful death saving throws to stabilize, rather than three."
+    },
+    {
+        "name": "Technophile",
+        "description": "You have loved technology since an early age. Your skills make you the person all your friends call when they have computer problems.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Intelligence"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Computers",
+                    "Mechanics",
+                    "Security"
+                ],
+                "count": 1
+            }
+        ],
+        "iconicequipment": "A not-yet-released smartphone",
+        "specialfeature": "There's an App for That. You always have the latest and greatest cell phone before the general public. Your phone can substitute as any plausible tool in the equipment list. The GM has final say on what is plausible for your phone to do."
+    },
+    {
+        "name": "Wealthy Family",
+        "description": "You were born into wealth and privilege. You understand money and how to make it, though that doesn't necessarily mean you know how to keep it.",
+        "attributebonuses": [
+            {
+                "type": "AbilityScore",
+                "choices": [
+                    "Intelligence",
+                    "Charisma"
+                ],
+                "count": 1
+            }
+        ],
+        "proficiencies": [
+            {
+                "type": "Skill",
+                "choices": [
+                    "Intimidation",
+                    "Vehicles"
+                ],
+                "count": 1
+            }
+        ],
+        "specialfeature": "Silver Spoon. Choose one of the following:<br><ul><li>Sweet Ride: Any nonmilitary personal vehicle</li><li>Trust Fund: +1 starting Wealth Level, to a maximum of 5</li><li>Your Pad: A great rent-free apartment and a cleaning service to keep it tidy</li><li>Family Lawyer: A lawyer who can get you out of non-felony legal trouble, at least temporarily</li><li>Powerful Friends: The ability to speak with people of power and influence after a few phone calls</li></ul>"
+    }
+]

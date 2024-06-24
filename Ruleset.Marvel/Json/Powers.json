@@ -1,0 +1,4915 @@
+[
+    {
+        "name": "Accuracy 1",
+        "powersets": [
+            "Basic"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Accuracy 2",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Accuracy 1"
+            }
+        ]
+    },
+    {
+        "name": "Accuracy 3",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Accuracy 2"
+            }
+        ]
+    },
+    {
+        "name": "Accuracy 4",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Accuracy 3"
+            }
+        ]
+    },
+    {
+        "names": "Additional Limbs",
+        "powersets": [
+            "Basic"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Anger",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Mighty 3"
+            }
+        ]
+    },
+    {
+        "name": "Brawling",
+        "powersets": [
+            "Basic"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Brilliance 1",
+        "powersets": [
+            "Basic"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Brilliance 2",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Brilliance 1"
+            }
+        ]
+    },
+    {
+        "name": "Brilliance 3",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Brilliance 2"
+            }
+        ]
+    },
+    {
+        "name": "Brilliance 4",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Brilliance 3"
+            }
+        ]
+    },
+    {
+        "name": "Camouflage",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "action": "Easy"
+    },
+    {
+        "name": "Combat Trickery",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "action": "Reaction"
+    },
+    {
+        "name": "Discipline 1",
+        "powersets": [
+            "Basic"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Discipline 2",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Discipline 1"
+            }
+        ]
+    },
+    {
+        "name": "Discipline 3",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Discipline 2"
+            }
+        ]
+    },
+    {
+        "name": "Discipline 4",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Discipline 3"
+            }
+        ]
+    },
+    {
+        "name": "Disguise",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Energy Absorption",
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            }
+        ]
+    },
+    {
+        "name": "Environmental Protection",
+        "powersets": [
+            "Basic"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Evasion",
+        "powersets": [
+            "Basic"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Fastball Special",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "action": "Reaction"
+    },
+    {
+        "name": "Flight 1",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Flight 2",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Flight 1"
+            }
+        ]
+    },
+    {
+        "name": "Group Flight ",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Flight 1"
+            }
+        ]
+    },
+    {
+        "name": "Healing Factor",
+        "powersets": [
+            "Basic"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Heightened Senses 1",
+        "powersets": [
+            "Basic"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Heightened Senses 2",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Heightened Senses 1"
+            }
+        ]
+    },
+    {
+        "name": "Iconic Weapon",
+        "powersets": [
+            "Basic"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Inspiration",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Integrity",
+        "powersets": [
+            "Basic"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Mighty 1",
+        "powersets": [
+            "Basic"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Mighty 2",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Mighty 1"
+            }
+        ]
+    },
+    {
+        "name": "Mighty 3",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Mighty 2"
+            }
+        ]
+    },
+    {
+        "name": "Mighty 4",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Mighty 3"
+            }
+        ]
+    },
+    {
+        "name": "Ram",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Reinforced Skeleton",
+        "powersets": [
+            "Basic"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Shape-Shift",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Disguise"
+            }
+        ]
+    },
+    {
+        "name": "Slow-Motion Dodge",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "action": "Reaction"
+    },
+    {
+        "name": "Sturdy 1",
+        "powersets": [
+            "Basic"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Sturdy 2",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Sturdy 1"
+            }
+        ]
+    },
+    {
+        "name": "Sturdy 3",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Sturdy 2"
+            }
+        ]
+    },
+    {
+        "name": "Sturdy 4",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 6
+            },
+            {
+                "type": "Power",
+                "value": "Sturdy 3"
+            }
+        ]
+    },
+    {
+        "name": "Thermal Vision",
+        "powersets": [
+            "Basic"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Tough",
+        "powersets": [
+            "Basic"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Uncanny 1",
+        "powersets": [
+            "Basic"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Uncanny 2",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Uncanny 1"
+            }
+        ]
+    },
+    {
+        "name": "Uncanny 3",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Uncanny 2"
+            }
+        ]
+    },
+    {
+        "name": "Uncanny 4",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 6
+            },
+            {
+                "type": "Power",
+                "value": "Uncanny 3"
+            }
+        ]
+    },
+    {
+        "name": "Wisdom",
+        "powersets": [
+            "Basic"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Wisecracker",
+        "powersets": [
+            "Basic"
+        ],
+        "description": "",
+        "action": "Reaction"
+    },
+    {
+        "name": "Elemental Barrage",
+        "powersets": [
+            "Elemental Control"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Elemental Blast"
+            }
+        ]
+    },
+    {
+        "name": "Elemental Barrier",
+        "powersets": [
+            "Elemental Control"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Elemental Blast"
+            }
+        ]
+    },
+    {
+        "name": "Elemental Blast",
+        "powersets": [
+            "Elemental Control"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Elemental Burst"
+            }
+        ]
+    },
+    {
+        "name": "Elemental Burst",
+        "powersets": [
+            "Elemental Control"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Elemental Form",
+        "powersets": [
+            "Elemental Control"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Elemental Reinforcement"
+            }
+        ]
+    },
+    {
+        "name": "Elemental Grab",
+        "powersets": [
+            "Elemental Control"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Elemental Burst"
+            }
+        ]
+    },
+    {
+        "name": "Elemental Infusion",
+        "powersets": [
+            "Elemental Control"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Elemental Burst"
+            }
+        ]
+    },
+    {
+        "name": "Elemental Prison",
+        "powersets": [
+            "Elemental Control"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Elemental Protection 1"
+            }
+        ]
+    },
+    {
+        "name": "Elemental Protection 1",
+        "powersets": [
+            "Elemental Control"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Elemental Barrier"
+            }
+        ]
+    },
+    {
+        "name": "Elemental Protection 2",
+        "powersets": [
+            "Elemental Control"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Elemental Protection 1"
+            }
+        ]
+    },
+    {
+        "name": "Elemental Protection 3",
+        "powersets": [
+            "Elemental Control"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Elemental Protection 2"
+            }
+        ]
+    },
+    {
+        "name": "Elemental Protection 4",
+        "powersets": [
+            "Elemental Control"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 5
+            },
+            {
+                "type": "Power",
+                "value": "Elemental Protection 3"
+            }
+        ]
+    },
+    {
+        "name": "Elemental Push",
+        "powersets": [
+            "Elemental Control"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Elemental Protection 1"
+            }
+        ]
+    },
+    {
+        "name": "Elemental Reinforcement",
+        "powersets": [
+            "Elemental Control"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Elemental Protection 1"
+            }
+        ]
+    },
+    {
+        "name": "Elemental Ricochet",
+        "powersets": [
+            "Elemental Control"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Elemental Burst"
+            }
+        ]
+    },
+    {
+        "name": "Elemental Sphere",
+        "powersets": [
+            "Elemental Control"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Elemental Protection 1"
+            }
+        ]
+    },
+    {
+        "name": "Elemental Suffocation",
+        "powersets": [
+            "Elemental Control"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Elemental Grab"
+            }
+        ]
+    },
+    {
+        "name": "Supernova",
+        "powersets": [
+            "Elemental Control"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Elemental Blast"
+            }
+        ]
+    },
+    {
+        "name": "Animated Illusion",
+        "powersets": [
+            "Illusion"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Static Illusion"
+            }
+        ]
+    },
+    {
+        "name": "Darkness",
+        "powersets": [
+            "Illusion"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Illumination"
+            }
+        ]
+    },
+    {
+        "name": "Dazzle",
+        "powersets": [
+            "Illusion"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Illumination"
+            }
+        ]
+    },
+    {
+        "name": "Deafen",
+        "powersets": [
+            "Illusion"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Illumination"
+            }
+        ]
+    },
+    {
+        "name": "Extend Invisibility",
+        "powersets": [
+            "Illusion"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Invisibility"
+            }
+        ]
+    },
+    {
+        "name": "Flare",
+        "powersets": [
+            "Illusion"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Illumination"
+            }
+        ]
+    },
+    {
+        "name": "Grand Illusion",
+        "powersets": [
+            "Illusion"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Animated Illusion"
+            }
+        ]
+    },
+    {
+        "name": "Group Invisibility",
+        "powersets": [
+            "Illusion"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Extend Invisibility"
+            }
+        ]
+    },
+    {
+        "name": "Illumination",
+        "powersets": [
+            "Illusion"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Invisibility",
+        "powersets": [
+            "Illusion"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Mirror Images",
+        "powersets": [
+            "Illusion"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Animated Illusion"
+            }
+        ]
+    },
+    {
+        "name": "Silence Area",
+        "powersets": [
+            "Illusion"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Illumination"
+            }
+        ]
+    },
+    {
+        "name": "Silence Self",
+        "powersets": [
+            "Illusion"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Illumination"
+            }
+        ]
+    },
+    {
+        "name": "Static Illusion",
+        "powersets": [
+            "Illusion"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Illumination"
+            }
+        ]
+    },
+    {
+        "name": "Astral Form",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Bolts of Balthakk",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Tag",
+                "value": "Sorcerous"
+            }
+        ]
+    },
+    {
+        "name": "Brain Drain",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Crimson Bands of Cyttorak",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Tag",
+                "value": "Sorcerous"
+            }
+        ]
+    },
+    {
+        "name": "Dispel Spell",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Tag",
+                "value": "Sorcerous"
+            }
+        ]
+    },
+    {
+        "name": "Exorcism",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            }
+        ]
+    },
+    {
+        "name": "Flames of the Faltine",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Tag",
+                "value": "Sorcerous"
+            }
+        ]
+    },
+    {
+        "name": "Hellfire Chains",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Tag",
+                "value": "Cursed"
+            }
+        ]
+    },
+    {
+        "name": "Hex Bolt",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Tag",
+                "value": "Chaotic"
+            }
+        ]
+    },
+    {
+        "name": "Icy Tendrils of Ikthalon",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Tag",
+                "value": "Sorcerous"
+            }
+        ]
+    },
+    {
+        "name": "Images of Ikonn",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Tag",
+                "value": "Sorcerous"
+            }
+        ]
+    },
+    {
+        "name": "Jinx",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Tag",
+                "value": "Chaotic"
+            }
+        ]
+    },
+    {
+        "name": "Leech Life",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Mists of Morpheus",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Tag",
+                "value": "Sorcerous"
+            }
+        ]
+    },
+    {
+        "name": "Mists of Munnopor",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Tag",
+                "value": "Sorcerous"
+            }
+        ]
+    },
+    {
+        "name": "Penance Stare",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Tag",
+                "value": "Cursed"
+            }
+        ]
+    },
+    {
+        "name": "Possess Vehicle",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Tag",
+                "value": "Cursed"
+            }
+        ]
+    },
+    {
+        "name": "Possession",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 5
+            },
+            {
+                "type": "Tag",
+                "value": "Cursed"
+            }
+        ]
+    },
+    {
+        "name": "Powerful Hex",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Tag",
+                "value": "Chaotic"
+            }
+        ]
+    },
+    {
+        "name": "Probability-Manipulation Hex",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Tag",
+                "value": "Chaotic"
+            }
+        ]
+    },
+    {
+        "name": "Protection Hex",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Tag",
+                "value": "Chaotic"
+            }
+        ]
+    },
+    {
+        "name": "Sense Sins",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Tag",
+                "value": "Chaotic"
+            }
+        ]
+    },
+    {
+        "name": "Sense Supernatural",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Shield of the Seraphim",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Tag",
+                "value": "Sorcerous"
+            }
+        ]
+    },
+    {
+        "name": "Summon Portal",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Tag",
+                "value": "Sorcerous"
+            }
+        ]
+    },
+    {
+        "name": "Vapors of Valtorr",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Tag",
+                "value": "Sorcerous"
+            }
+        ]
+    },
+    {
+        "name": "Winds of Watoomb",
+        "powersets": [
+            "Magic"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Tag",
+                "value": "Sorcerous"
+            }
+        ]
+    },
+    {
+        "name": "Always Ready",
+        "powersets": [
+            "Martial Arts"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Do This All Day"
+            }
+        ]
+    },
+    {
+        "name": "Attack Stance",
+        "powersets": [
+            "Martial Arts"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Banging Heads",
+        "powersets": [
+            "Martial Arts"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Brace For Impact",
+        "powersets": [
+            "Martial Arts",
+            "Shield Bearer"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Do This All Day"
+            }
+        ]
+    },
+    {
+        "name": "Chain Strikes",
+        "powersets": [
+            "Martial Arts"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Fast Strikes"
+            }
+        ]
+    },
+    {
+        "name": "Counterstrike Technique",
+        "powersets": [
+            "Martial Arts"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Attack Stance"
+            }
+        ]
+    },
+    {
+        "name": "Crushing Grip",
+        "powersets": [
+            "Martial Arts",
+            "Super Strength"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Defense Stance",
+        "powersets": [
+            "Martial Arts"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Do This All Day",
+        "powersets": [
+            "Martial Arts",
+            "Shield Bearer"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Fast Strikes",
+        "powersets": [
+            "Martial Arts"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Flying Double Kick",
+        "powersets": [
+            "Martial Arts"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Leg Sweep"
+            }
+        ]
+    },
+    {
+        "name": "Focused Strike",
+        "powersets": [
+            "Martial Arts"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Chain Strikes"
+            }
+        ]
+    },
+    {
+        "name": "Grappling Technique",
+        "powersets": [
+            "Martial Arts"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Leaping Leglock",
+        "powersets": [
+            "Martial Arts"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Flying Double Kick"
+            },
+            {
+                "type": "Power",
+                "value": "Crushing Grip"
+            }
+        ]
+    },
+    {
+        "name": "Leg Sweep",
+        "powersets": [
+            "Martial Arts"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Fast Strikes"
+            }
+        ]
+    },
+    {
+        "name": "Regain Focus",
+        "powersets": [
+            "Martial Arts"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Unflappable Poise"
+            },
+            {
+                "type": "Power",
+                "value": "Untouchable Position"
+            }
+        ]
+    },
+    {
+        "name": "Reverse-Momentum Throw",
+        "powersets": [
+            "Martial Arts"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Defense Stance"
+            }
+        ]
+    },
+    {
+        "name": "Spin and Throw",
+        "powersets": [
+            "Martial Arts"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Defense Stance"
+            }
+        ]
+    },
+    {
+        "name": "Unflappable Poise",
+        "powersets": [
+            "Martial Arts"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Defense Stance"
+            }
+        ]
+    },
+    {
+        "name": "Untouchable Position",
+        "powersets": [
+            "Martial Arts"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Counterstrike Technique"
+            }
+        ]
+    },
+    {
+        "name": "Exploit",
+        "powersets": [
+            "Melee Weapons"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Vicious Attack"
+            }
+        ]
+    },
+    {
+        "name": "Fast Attacks",
+        "powersets": [
+            "Melee Weapons"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Furious Attacks",
+        "powersets": [
+            "Melee Weapons"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Whirling Frenzy"
+            }
+        ]
+    },
+    {
+        "name": "Hit and Run",
+        "powersets": [
+            "Melee Weapons"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Riposte",
+        "powersets": [
+            "Melee Weapons"
+        ],
+        "description": "",
+        "action": "Reaction"
+    },
+    {
+        "name": "Unstoppable Assault",
+        "powersets": [
+            "Melee Weapons"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Furious Attacks"
+            },
+            {
+                "type": "Power",
+                "value": "Focused Fury"
+            }
+        ]
+    },
+    {
+        "name": "Vicious Attack",
+        "powersets": [
+            "Melee Weapons"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Whirling Frenzy",
+        "powersets": [
+            "Melee Weapons"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Fast Attacks"
+            }
+        ]
+    },
+    {
+        "name": "Dimensional Portal",
+        "powersets": [
+            "Omniversal Travel"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Dimensional Travel Together"
+            }
+        ]
+    },
+    {
+        "name": "Dimensional Travel",
+        "powersets": [
+            "Omniversal Travel"
+        ],
+        "description": "",
+        "action": "Standard, Movement",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            }
+        ]
+    },
+    {
+        "name": "Dimensional Travel Other",
+        "powersets": [
+            "Omniversal Travel"
+        ],
+        "description": "",
+        "action": "Standard, Reaction, Movement",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Dimensional Travel"
+            }
+        ]
+    },
+    {
+        "name": "Dimensional Travel Together",
+        "powersets": [
+            "Omniversal Travel"
+        ],
+        "description": "",
+        "action": "Standard, Reaction, Movement",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Dimensional Travel"
+            }
+        ]
+    },
+    {
+        "name": "Instant Replay",
+        "powersets": [
+            "Omniversal Travel"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            }
+        ]
+    },
+    {
+        "name": "Multiversal Portal",
+        "powersets": [
+            "Omniversal Travel"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Multiversal Travel Together"
+            }
+        ]
+    },
+    {
+        "name": "Multiversal Travel",
+        "powersets": [
+            "Omniversal Travel"
+        ],
+        "description": "",
+        "action": "Standard, Movement",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            }
+        ]
+    },
+    {
+        "name": "Multiversal Travel Other",
+        "powersets": [
+            "Omniversal Travel"
+        ],
+        "description": "",
+        "action": "Standard, Reaction, Movement",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Multiversal Travel"
+            }
+        ]
+    },
+    {
+        "name": "Multiversal Travel Together",
+        "powersets": [
+            "Omniversal Travel"
+        ],
+        "description": "",
+        "action": "Standard, Reaction, Movement",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Multiversal Travel"
+            }
+        ]
+    },
+    {
+        "name": "Time Portal",
+        "powersets": [
+            "Omniversal Travel"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Time Travel Together"
+            }
+        ]
+    },
+    {
+        "name": "Time Travel",
+        "powersets": [
+            "Omniversal Travel"
+        ],
+        "description": "",
+        "action": "Standard, Movement",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            }
+        ]
+    },
+    {
+        "name": "Time Travel Other",
+        "powersets": [
+            "Omniversal Travel"
+        ],
+        "description": "",
+        "action": "Standard, Reaction, Movement",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Time Travel"
+            }
+        ]
+    },
+    {
+        "name": "Time Travel Together",
+        "powersets": [
+            "Omniversal Travel"
+        ],
+        "description": "",
+        "action": "Standard, Reaction, Movement",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Time Travel"
+            }
+        ]
+    },
+    {
+        "name": "Time-Out",
+        "powersets": [
+            "Omniversal Travel"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Instant Replay"
+            }
+        ]
+    },
+    {
+        "name": "Time-Out Bubble",
+        "powersets": [
+            "Omniversal Travel"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Time-Out"
+            }
+        ]
+    },
+    {
+        "name": "Time-Out Tag",
+        "powersets": [
+            "Omniversal Travel"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Time-Out"
+            }
+        ]
+    },
+    {
+        "name": "Disrupt Electronics",
+        "powersets": [
+            "Phasing"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Phase Self"
+            }
+        ]
+    },
+    {
+        "name": "Disrupt Nerves",
+        "powersets": [
+            "Phasing"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Phase Self"
+            }
+        ]
+    },
+    {
+        "name": "Disrupt Person",
+        "powersets": [
+            "Phasing"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Phase Self"
+            }
+        ]
+    },
+    {
+        "name": "Partial Phase",
+        "powersets": [
+            "Phasing"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Phase Self"
+            }
+        ]
+    },
+    {
+        "name": "Phase Object",
+        "powersets": [
+            "Phasing"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Phase Self"
+            }
+        ]
+    },
+    {
+        "name": "Phase Other",
+        "powersets": [
+            "Phasing"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Phase Self"
+            }
+        ]
+    },
+    {
+        "name": "Phase Self",
+        "powersets": [
+            "Phasing"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Phase Walk",
+        "powersets": [
+            "Phasing"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Phase Self"
+            }
+        ]
+    },
+    {
+        "name": "Quick Phase",
+        "powersets": [
+            "Phasing"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Phase Self"
+            }
+        ]
+    },
+    {
+        "name": "Body Sheet",
+        "powersets": [
+            "Plasticity"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Flexible Bones 2"
+            },
+            {
+                "type": "Power",
+                "value": "Extended Reach 2"
+            }
+        ]
+    },
+    {
+        "name": "Body Sphere",
+        "powersets": [
+            "Plasticity"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Body Sheet"
+            }
+        ]
+    },
+    {
+        "name": "Bounce Back",
+        "powersets": [
+            "Plasticity"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Flexible Bones 1"
+            },
+            {
+                "type": "Power",
+                "value": "Slip Free"
+            }
+        ]
+    },
+    {
+        "name": "Coiling Crush",
+        "powersets": [
+            "Plasticity"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Extended Reach 1"
+            },
+            {
+                "type": "Power",
+                "value": "Reverse Punch"
+            }
+        ]
+    },
+    {
+        "name": "Extended Reach 1",
+        "powersets": [
+            "Plasticity"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Extended Reach 2",
+        "powersets": [
+            "Plasticity"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Extended Reach 1"
+            }
+        ]
+    },
+    {
+        "name": "Flexible Bones 1",
+        "powersets": [
+            "Plasticity"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Flexible Bones 2",
+        "powersets": [
+            "Plasticity"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Flexible Bones 1"
+            }
+        ]
+    },
+    {
+        "name": "Flexible Fingers",
+        "powersets": [
+            "Plasticity"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Reverse Punch",
+        "powersets": [
+            "Plasticity"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Flexible Bones 1"
+            }
+        ]
+    },
+    {
+        "name": "Rubberneck",
+        "powersets": [
+            "Plasticity"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Extended Reach 1"
+            },
+            {
+                "type": "Power",
+                "value": "Flexible Bones 1"
+            }
+        ]
+    },
+    {
+        "name": "Slip Free",
+        "powersets": [
+            "Plasticity"
+        ],
+        "description": "",
+        "action": "Reaction"
+    },
+    {
+        "name": "Stilt Steps",
+        "powersets": [
+            "Plasticity"
+        ],
+        "description": "",
+        "action": "Movement",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Extended Reach"
+            }
+        ]
+    },
+    {
+        "name": "Boost Powers",
+        "powersets": [
+            "Power Control"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Bump Power"
+            }
+        ]
+    },
+    {
+        "name": "Bump Power",
+        "powersets": [
+            "Power Control"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Clone Moves",
+        "powersets": [
+            "Power Control"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Clone Powers",
+        "powersets": [
+            "Power Control"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Copy Power"
+            }
+        ]
+    },
+    {
+        "name": "Copy Trait",
+        "powersets": [
+            "Power Control"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Dampen Power",
+        "powersets": [
+            "Power Control"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Shutdown Powers",
+        "powersets": [
+            "Power Control"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Dampen Power"
+            }
+        ]
+    },
+    {
+        "name": "Steal Powers",
+        "powersets": [
+            "Power Control"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Clone Powers"
+            },
+            {
+                "type": "Power",
+                "value": "Shutdown Powers"
+            }
+        ]
+    },
+    {
+        "name": "Swipe Power",
+        "powersets": [
+            "Power Control"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Copy Power"
+            },
+            {
+                "type": "Power",
+                "value": "Dampen Power"
+            }
+        ]
+    },
+    {
+        "name": "Covering Fire",
+        "powersets": [
+            "Ranged Weapons"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Return Fire"
+            }
+        ]
+    },
+    {
+        "name": "Dance of Death",
+        "powersets": [
+            "Ranged Weapons"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Slow-Motion Shoot Dodge"
+            }
+        ]
+    },
+    {
+        "name": "Double Tap",
+        "powersets": [
+            "Ranged Weapons"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Fast Hands",
+        "powersets": [
+            "Ranged Weapons"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Point-Blank Parry"
+            }
+        ]
+    },
+    {
+        "name": "Headshot",
+        "powersets": [
+            "Ranged Weapons"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Stopping Power"
+            }
+        ]
+    },
+    {
+        "name": "Kill Zone",
+        "powersets": [
+            "Ranged Weapons"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Covering Fire"
+            },
+            {
+                "type": "Power",
+                "value": "Headshot"
+            }
+        ]
+    },
+    {
+        "name": "Orchestra of Overkill",
+        "powersets": [
+            "Ranged Weapons"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Dance of Death"
+            },
+            {
+                "type": "Power",
+                "value": "Fast Hands"
+            }
+        ]
+    },
+    {
+        "name": "Point-Blank Parry",
+        "powersets": [
+            "Ranged Weapons"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Return Fire",
+        "powersets": [
+            "Ranged Weapons"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Suppressive Fire"
+            }
+        ]
+    },
+    {
+        "name": "Slow-Motion Shoot Dodge",
+        "powersets": [
+            "Ranged Weapons"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Slow-Motion Dodge"
+            },
+            {
+                "type": "Power",
+                "value": "Weapons Blazing"
+            }
+        ]
+    },
+    {
+        "name": "Snap Shooting",
+        "powersets": [
+            "Ranged Weapons"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Sniping",
+        "powersets": [
+            "Ranged Weapons"
+        ],
+        "description": "",
+        "action": "Standard, Movement",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Stopping Power",
+        "powersets": [
+            "Ranged Weapons"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Double Tap"
+            }
+        ]
+    },
+    {
+        "name": "Suppressive Fire",
+        "powersets": [
+            "Ranged Weapons"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Weapons Blazing",
+        "powersets": [
+            "Ranged Weapons"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Snap Shooting"
+            }
+        ]
+    },
+    {
+        "name": "Grow 1",
+        "powersets": [
+            "Resize"
+        ],
+        "description": "",
+        "action": "Standard, Reaction"
+    },
+    {
+        "name": "Grow 2",
+        "powersets": [
+            "Resize"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Grow 1"
+            }
+        ]
+    },
+    {
+        "name": "Grow 3",
+        "powersets": [
+            "Resize"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Grow 2"
+            }
+        ]
+    },
+    {
+        "name": "Grow 4",
+        "powersets": [
+            "Resize"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Grow 3"
+            }
+        ]
+    },
+    {
+        "name": "Growing Attack",
+        "powersets": [
+            "Resize"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Grow 1"
+            }
+        ]
+    },
+    {
+        "name": "Macrodimensional Travel",
+        "powersets": [
+            "Resize"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Grow 4"
+            }
+        ]
+    },
+    {
+        "name": "Microdimensional Travel",
+        "powersets": [
+            "Resize"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Shrink 4"
+            }
+        ]
+    },
+    {
+        "name": "Resize Object",
+        "powersets": [
+            "Resize"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Grow 2"
+            },
+            {
+                "type": "Power",
+                "value": "Shrink 2"
+            }
+        ]
+    },
+    {
+        "name": "Resize Other",
+        "powersets": [
+            "Resize"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Grow 2"
+            },
+            {
+                "type": "Power",
+                "value": "Shrink 2"
+            }
+        ]
+    },
+    {
+        "name": "Shrink 1",
+        "powersets": [
+            "Resize"
+        ],
+        "description": "",
+        "action": "Standard, Reaction"
+    },
+    {
+        "name": "Shrink 2",
+        "powersets": [
+            "Resize"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Shrink 1"
+            }
+        ]
+    },
+    {
+        "name": "Shrink 3",
+        "powersets": [
+            "Resize"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Shrink 2"
+            }
+        ]
+    },
+    {
+        "name": "Shrink 4",
+        "powersets": [
+            "Resize"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Shrink 3"
+            }
+        ]
+    },
+    {
+        "name": "Shrinking Dodge",
+        "powersets": [
+            "Resize"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Shrink 1"
+            }
+        ]
+    },
+    {
+        "name": "Hurled Shield Bash",
+        "powersets": [
+            "Shield Bearer"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Shield Bash"
+            }
+        ]
+    },
+    {
+        "name": "Hurled Shield Block",
+        "powersets": [
+            "Shield Bearer"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Shield 1"
+            }
+        ]
+    },
+    {
+        "name": "Hurled Shield Deflection",
+        "powersets": [
+            "Shield Bearer"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Shield Deflection"
+            }
+        ]
+    },
+    {
+        "name": "Immovable",
+        "powersets": [
+            "Shield Bearer",
+            "Super Strength"
+        ],
+        "description": "",
+        "action": "Reaction"
+    },
+    {
+        "name": "Rico-Shield",
+        "powersets": [
+            "Shield Bearer"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Hurled Shield Bash"
+            }
+        ]
+    },
+    {
+        "name": "Shield 1",
+        "powersets": [
+            "Shield Bearer"
+        ],
+        "description": "",
+        "action": "Standard, Reaction"
+    },
+    {
+        "name": "Shield 2",
+        "powersets": [
+            "Shield Bearer"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Shield 1"
+            }
+        ]
+    },
+    {
+        "name": "Shield 3",
+        "powersets": [
+            "Shield Bearer"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Shield 2"
+            }
+        ]
+    },
+    {
+        "name": "Shield 4",
+        "powersets": [
+            "Shield Bearer"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 6
+            },
+            {
+                "type": "Power",
+                "value": "Shield 3"
+            }
+        ]
+    },
+    {
+        "name": "Shield Bash",
+        "powersets": [
+            "Shield Bearer"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Shield Deflection",
+        "powersets": [
+            "Shield Bearer"
+        ],
+        "description": "",
+        "action": "Reaction"
+    },
+    {
+        "name": "Shield Wall",
+        "powersets": [
+            "Shield Bearer"
+        ],
+        "description": "",
+        "action": "Movement",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Brace For Impact"
+            }
+        ]
+    },
+    {
+        "name": "Jump 1",
+        "powersets": [
+            "Spider Powers",
+            "Super Strength"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Jump 2",
+        "powersets": [
+            "Spider Powers",
+            "Super Strength"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Jump 1"
+            }
+        ]
+    },
+    {
+        "name": "Jump 3",
+        "powersets": [
+            "Spider Powers",
+            "Super Strength"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            }
+        ]
+    },
+    {
+        "name": "Spider-Dodge",
+        "powersets": [
+            "Spider Powers"
+        ],
+        "description": "",
+        "action": "Reaction"
+    },
+    {
+        "name": "Spider-Pheromones",
+        "powersets": [
+            "Spider Powers"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Spider-Sense",
+        "powersets": [
+            "Spider Powers"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Spider-Strike",
+        "powersets": [
+            "Spider Powers"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Venom Blast",
+        "powersets": [
+            "Spider Powers"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Wallcrawling",
+        "powersets": [
+            "Spider Powers"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Webcasting",
+        "powersets": [
+            "Spider Powers"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Webgliding",
+        "powersets": [
+            "Spider Powers"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Webcasting"
+            }
+        ]
+    },
+    {
+        "name": "Webgrabbing",
+        "powersets": [
+            "Spider Powers"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Webcasting"
+            }
+        ]
+    },
+    {
+        "name": "Webslinging",
+        "powersets": [
+            "Spider Powers"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Webcasting"
+            }
+        ]
+    },
+    {
+        "name": "Webtrapping",
+        "powersets": [
+            "Spider Powers"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Webgrabbing"
+            }
+        ]
+    },
+    {
+        "name": "Blazing-Fast Fists",
+        "powersets": [
+            "Super Speed"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Blur",
+        "powersets": [
+            "Super Speed"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Speed Run 2"
+            }
+        ]
+    },
+    {
+        "name": "Catch Bullets",
+        "powersets": [
+            "Super Speed"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Speed Run 2"
+            }
+        ]
+    },
+    {
+        "name": "Lightning Actions",
+        "powersets": [
+            "Super Speed"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            }
+        ]
+    },
+    {
+        "name": "Molecular Destabilization",
+        "powersets": [
+            "Super Speed"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Speed Run 2"
+            }
+        ]
+    },
+    {
+        "name": "Run On Water",
+        "powersets": [
+            "Super Speed"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Speed Run 2"
+            }
+        ]
+    },
+    {
+        "name": "Speed Blast",
+        "powersets": [
+            "Super Speed"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Speed Run 2"
+            }
+        ]
+    },
+    {
+        "name": "Speed Run 1",
+        "powersets": [
+            "Super Speed"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Speed Run 2",
+        "powersets": [
+            "Super Speed"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Speed Run 1"
+            }
+        ]
+    },
+    {
+        "name": "Speed Swim",
+        "powersets": [
+            "Super Speed"
+        ],
+        "description": "",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Banging Heads",
+        "powersets": [
+            "Super Strength"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Clobber",
+        "powersets": [
+            "Super Strength"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Ground-Shaking Stomp",
+        "powersets": [
+            "Super Strength"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Smash"
+            }
+        ]
+    },
+    {
+        "name": "Quick Toss",
+        "powersets": [
+            "Super Strength"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Crushing Grip"
+            },
+            {
+                "type": "Power",
+                "value": "Mighty 1"
+            }
+        ]
+    },
+    {
+        "name": "Smash",
+        "powersets": [
+            "Super Strength"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Clobber"
+            }
+        ]
+    },
+    {
+        "name": "Unrelenting Smash",
+        "powersets": [
+            "Super Strength"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Ground-Shaking Stomp"
+            },
+            {
+                "type": "Power",
+                "value": "Mighty 2"
+            }
+        ]
+    },
+    {
+        "name": "Advance",
+        "powersets": [
+            "Tactics"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Rally on Me"
+            },
+            {
+                "type": "Power",
+                "value": "Scatter"
+            }
+        ]
+    },
+    {
+        "name": "Battle Plan",
+        "powersets": [
+            "Tactics"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Inspiration"
+            }
+        ]
+    },
+    {
+        "name": "Change of Plans",
+        "powersets": [
+            "Tactics"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Inspiration"
+            }
+        ]
+    },
+    {
+        "name": "Combat Support",
+        "powersets": [
+            "Tactics"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Change of Plans"
+            }
+        ]
+    },
+    {
+        "name": "Focus Fire",
+        "powersets": [
+            "Tactics"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Battle Plan"
+            }
+        ]
+    },
+    {
+        "name": "Hit the Dirt",
+        "powersets": [
+            "Tactics"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Keep Moving"
+            }
+        ]
+    },
+    {
+        "name": "Keep Moving",
+        "powersets": [
+            "Tactics"
+        ],
+        "description": "",
+        "action": "Reaction"
+    },
+    {
+        "name": "On Your Feet",
+        "powersets": [
+            "Tactics"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Keep Moving"
+            }
+        ]
+    },
+    {
+        "name": "Operations Center",
+        "powersets": [
+            "Tactics"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Combat Support"
+            },
+            {
+                "type": "Power",
+                "value": "Focus Fire"
+            }
+        ]
+    },
+    {
+        "name": "Rally On Me",
+        "powersets": [
+            "Tactics"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "On Your Feet"
+            }
+        ]
+    },
+    {
+        "name": "Scatter",
+        "powersets": [
+            "Tactics"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Hit the Dirt"
+            }
+        ]
+    },
+    {
+        "name": "Group Levitation",
+        "powersets": [
+            "Telekinesis"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Levitation"
+            }
+        ]
+    },
+    {
+        "name": "Levitation",
+        "powersets": [
+            "Telekinesis"
+        ],
+        "description": ""
+    },
+    {
+        "name": "Telekinetic Attack",
+        "powersets": [
+            "Telekinesis"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Telekinetic Manipulation"
+            }
+        ]
+    },
+    {
+        "name": "Telekinetic Barrier",
+        "powersets": [
+            "Telekinesis"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Telekinetic Grab"
+            }
+        ]
+    },
+    {
+        "name": "Telekinetic Crush",
+        "powersets": [
+            "Telekinesis"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Telekinetic Grab"
+            }
+        ]
+    },
+    {
+        "name": "Telekinetic Grab",
+        "powersets": [
+            "Telekinesis"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Telekinetic Manipulation"
+            }
+        ]
+    },
+    {
+        "name": "Telekinetic Manipulation",
+        "powersets": [
+            "Telekinesis"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Telekinetic Protection 1",
+        "powersets": [
+            "Telekinesis"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Telekinetic Barrier"
+            }
+        ]
+    },
+    {
+        "name": "Telekinetic Protection 2",
+        "powersets": [
+            "Telekinesis"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Telekinetic Protection 1"
+            }
+        ]
+    },
+    {
+        "name": "Telekinetic Protection 3",
+        "powersets": [
+            "Telekinesis"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Telekinetic Protection 2"
+            }
+        ]
+    },
+    {
+        "name": "Telekinetic Protection 4",
+        "powersets": [
+            "Telekinesis"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 5
+            },
+            {
+                "type": "Power",
+                "value": "Telekinetic Protection 3"
+            }
+        ]
+    },
+    {
+        "name": "Telekinetic Reinforcement",
+        "powersets": [
+            "Telekinesis"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Telekinetic Protection 1"
+            }
+        ]
+    },
+    {
+        "name": "Telekinetic Sphere",
+        "powersets": [
+            "Telekinesis"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Telekinetic Protection 1"
+            }
+        ]
+    },
+    {
+        "name": "Telekinetic Toss",
+        "powersets": [
+            "Telekinesis"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Telekinetic Grab"
+            }
+        ]
+    },
+    {
+        "name": "Animal Bond",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Animal Communication",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Astral Form",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Borrow Senses",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Telepathic Link"
+            }
+        ]
+    },
+    {
+        "name": "Cloak",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Telepathic Link"
+            }
+        ]
+    },
+    {
+        "name": "Cloak Group",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Cloak"
+            }
+        ]
+    },
+    {
+        "name": "Command",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Telepathic Link"
+            }
+        ]
+    },
+    {
+        "name": "Domination",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 5
+            },
+            {
+                "type": "Power",
+                "value": "Orders"
+            }
+        ]
+    },
+    {
+        "name": "Edit Memory",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Memory Blip"
+            }
+        ]
+    },
+    {
+        "name": "ESP",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Fool",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Telepathic Link"
+            }
+        ]
+    },
+    {
+        "name": "Grand Fool",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Fool"
+            }
+        ]
+    },
+    {
+        "name": "Grand Mirage",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Mirage"
+            }
+        ]
+    },
+    {
+        "name": "Information Upload",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Telepathic Link"
+            }
+        ]
+    },
+    {
+        "name": "Machine Telepathy",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Memory Blip",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Telepathic Link"
+            }
+        ]
+    },
+    {
+        "name": "Mental Punch",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Mental Shelter",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Uncanny"
+            }
+        ]
+    },
+    {
+        "name": "Mind Interrogation",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Mind Reading"
+            }
+        ]
+    },
+    {
+        "name": "Mind Reading",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Telepathic Link"
+            }
+        ]
+    },
+    {
+        "name": "Mirage",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Telepathic Link"
+            }
+        ]
+    },
+    {
+        "name": "Orders",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Command"
+            }
+        ]
+    },
+    {
+        "name": "Telepathic Blast",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Telepathic Link"
+            }
+        ]
+    },
+    {
+        "name": "Telepathic Link",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Telepathic Network",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Telepathic Link"
+            }
+        ]
+    },
+    {
+        "name": "Telepathic Possession",
+        "powersets": [
+            "Telepathy"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 5
+            },
+            {
+                "type": "Power",
+                "value": "Orders"
+            }
+        ]
+    },
+    {
+        "name": "Blink",
+        "powersets": [
+            "Teleportation"
+        ],
+        "description": "",
+        "action": "Standard, Movement, Reaction"
+    },
+    {
+        "name": "Blink Barrage",
+        "powersets": [
+            "Teleportation"
+        ],
+        "description": "",
+        "action": "Standard, Movement",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            },
+            {
+                "type": "Power",
+                "value": "Blink"
+            }
+        ]
+    },
+    {
+        "name": "Blink Defense",
+        "powersets": [
+            "Teleportation"
+        ],
+        "description": "",
+        "action": "Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Blink"
+            }
+        ]
+    },
+    {
+        "name": "Teleport 1",
+        "powersets": [
+            "Teleportation"
+        ],
+        "description": "",
+        "action": "Standard, Movement",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Blink"
+            }
+        ]
+    },
+    {
+        "name": "Teleport 2",
+        "powersets": [
+            "Teleportation"
+        ],
+        "description": "",
+        "action": "Standard, Movement",
+        "prerequisites": [
+            {
+                "type": "Power",
+                "value": "Teleport 1"
+            }
+        ]
+    },
+    {
+        "name": "Teleport Blind",
+        "powersets": [
+            "Teleportation"
+        ],
+        "description": "",
+        "action": "Standard, Movement",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Teleport 1"
+            }
+        ]
+    },
+    {
+        "name": "Teleport Object",
+        "powersets": [
+            "Teleportation"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Teleport 1"
+            }
+        ]
+    },
+    {
+        "name": "Teleport Other",
+        "powersets": [
+            "Teleportation"
+        ],
+        "description": "",
+        "action": "Standard, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Teleport 2"
+            }
+        ]
+    },
+    {
+        "name": "Teleport Together",
+        "powersets": [
+            "Teleportation"
+        ],
+        "description": "",
+        "action": "Standard, Movement, Reaction",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Teleport 1"
+            }
+        ]
+    },
+    {
+        "name": "Teleportal",
+        "powersets": [
+            "Teleportation"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Teleport 1"
+            }
+        ]
+    },
+    {
+        "name": "Control Fog",
+        "powersets": [
+            "Weather Control"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Control Weather 1",
+        "powersets": [
+            "Weather Control"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Control Weather 2",
+        "powersets": [
+            "Weather Control"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 3
+            },
+            {
+                "type": "Power",
+                "value": "Control Weather 1"
+            }
+        ]
+    },
+    {
+        "name": "Control Weather 3",
+        "powersets": [
+            "Weather Control"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 4
+            },
+            {
+                "type": "Power",
+                "value": "Control Weather 2"
+            }
+        ]
+    },
+    {
+        "name": "Control Weather 4",
+        "powersets": [
+            "Weather Control"
+        ],
+        "description": "",
+        "action": "Standard",
+        "prerequisites": [
+            {
+                "type": "Rank",
+                "value": 5
+            },
+            {
+                "type": "Power",
+                "value": "Control Weather 3"
+            }
+        ]
+    },
+    {
+        "name": "Thunder",
+        "powersets": [
+            "Weather Control"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Weather Chill",
+        "powersets": [
+            "Weather Control"
+        ],
+        "description": "",
+        "action": "Standard"
+    },
+    {
+        "name": "Weather Warm",
+        "powersets": [
+            "Weather Control"
+        ],
+        "description": "",
+        "action": "Standard"
+    }
+]

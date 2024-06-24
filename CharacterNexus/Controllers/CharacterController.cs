@@ -24,13 +24,16 @@ namespace CharacterNexus.Controllers
             _storage = storage;
         }
 
-        [HttpGet("new-character")]
+        [HttpGet("new")]
         public IActionResult NewCharacter()
         {
             if (HttpContext.Items.TryGetValue("Ruleset", out var rulesetObj) && rulesetObj is IRuleset ruleset)
             {
                 _logger.LogInformation($"New character started for ruleset {ruleset.Name}");
-      
+
+                var character = ruleset.NewCharacter();
+                Console.WriteLine(character);
+
                 return Ok(ruleset.NewCharacter());
             }
             else
@@ -39,7 +42,7 @@ namespace CharacterNexus.Controllers
             }
         }        
         
-        [HttpGet("load-character")]
+        [HttpGet("load")]
         public IActionResult LoadCharacter(string characterName)
         {
             if (HttpContext.Items.TryGetValue("Ruleset", out var rulesetObj) && rulesetObj is IRuleset ruleset)
@@ -55,7 +58,7 @@ namespace CharacterNexus.Controllers
             }
         }
 
-        [HttpPost("save-character")]
+        [HttpPost("save")]
         public IActionResult SaveCharacter(ICharacter character)
         {
             if (HttpContext.Items.TryGetValue("Ruleset", out var rulesetObj) && rulesetObj is IRuleset ruleset)
@@ -71,7 +74,7 @@ namespace CharacterNexus.Controllers
             }
         }
 
-        [HttpDelete("delete-character")]
+        [HttpDelete("delete")]
         public IActionResult DeleteCharacter(string characterName)
         {
             if (HttpContext.Items.TryGetValue("Ruleset", out var rulesetObj) && rulesetObj is IRuleset ruleset)

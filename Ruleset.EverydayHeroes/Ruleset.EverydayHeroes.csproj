@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>12</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,12 +11,22 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Utility\Utility.csproj" />
+    <EmbeddedResource Include="Json\Archetypes.json" />
+    <EmbeddedResource Include="Json\Armors.json" />
     <EmbeddedResource Include="Json\Attributes.json" />
-    <EmbeddedResource Include="Json\Skills.json" />
+    <EmbeddedResource Include="Json\Backgrounds.json" />
     <EmbeddedResource Include="Json\Classes.json" />
-    <EmbeddedResource Include="Json\Abilities.json" />
-    <EmbeddedResource Include="Json\Features.json" />
-    <EmbeddedResource Include="Json\Equipment.json" />
+    <EmbeddedResource Include="Json\Feats.json" />
+    <EmbeddedResource Include="Json\Items.json" />
+    <EmbeddedResource Include="Json\Packs.json" />
+    <EmbeddedResource Include="Json\Plans.json" />
+    <EmbeddedResource Include="Json\Professions.json" />
+    <EmbeddedResource Include="Json\Skills.json" />
+    <EmbeddedResource Include="Json\Talents.json" />
+    <EmbeddedResource Include="Json\Tricks.json" />
+    <EmbeddedResource Include="Json\Vehicles.json" />
+    <EmbeddedResource Include="Json\Weapons.json" />
+    <EmbeddedResource Include="Json\Schema\Form.json" />
   </ItemGroup>
 
 </Project>

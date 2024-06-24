@@ -4,7 +4,7 @@ interface Props {
   onClick: () => void;
 }
 
-const ImageCard = ({ ruleset, imgSrc, onClick }: Props) => {
+const RulesetCard = ({ ruleset, imgSrc, onClick }: Props) => {
   return (
     <>
       <div className="col">
@@ -22,4 +22,4 @@ const ImageCard = ({ ruleset, imgSrc, onClick }: Props) => {
   );
 };
 
-export default ImageCard;
+export default RulesetCard;

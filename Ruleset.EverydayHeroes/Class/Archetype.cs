@@ -19,6 +19,5 @@ namespace EverydayHeroes
         public List<int> ProficiencyBonus { get; set; }
         public List<int> DefenseBonus { get; set; }     
         public List<List<string>> Talents { get; set; }
-        public List<Class> Classes { get; set; }
     }
 }

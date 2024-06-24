@@ -10,6 +10,7 @@ namespace EverydayHeroes
 {
     public class Armor : IEquipment
     {
+        public string Name { get; set; }
         public string Description { get; set; }
         public EquipmentTier Tier { get; set; }
         public ArmorCategory Category { get; set; }

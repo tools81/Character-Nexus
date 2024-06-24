@@ -11,6 +11,6 @@ namespace Utility
         public string RulesetName { get; }
         public string ImageSource { get; }
         public string LogoSource { get; }
-        public ICharacter NewCharacter();
+        public string NewCharacter();
     }
 }

@@ -13,11 +13,11 @@ namespace Transformers
 
         public string RulesetName => "Ruleset.Transformers";
 
-        public string ImageSource => "https://drive.google.com/thumbnail?id=1bxmZ9cw8-FOVLsmU4TuJJKfHrAslyWCm&sz=w1024";
+        public string ImageSource => "https://characternexus.blob.core.windows.net/resources/card_transformers.jpg";
 
-        public string LogoSource => "https://drive.google.com/thumbnail?id=1dn3tVNJU5JCDomJSvPoSLjLIGYU2oIWb&sz=w256";
+        public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_transformers.png";
 
-        public ICharacter NewCharacter()
+        public string NewCharacter()
         {
             throw new NotImplementedException();
         }

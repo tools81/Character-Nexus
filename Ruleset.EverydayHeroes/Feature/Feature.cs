@@ -10,8 +10,8 @@ namespace EverydayHeroes
 {
     public class Feature : IFeature
     {
-        public Dictionary<string, Background> Backgrounds { get; set; }
-        public Dictionary<string, Profession> Professions { get; set; }
-        public Dictionary<string, Feat> Feats { get; set; }
+        public List<Background> Backgrounds { get; set; }
+        public List<Profession> Professions { get; set; }
+        public List<Feat> Feats { get; set; }
     }
 }

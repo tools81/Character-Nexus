@@ -1,0 +1,928 @@
+[
+    {
+        "name": "4WD vehicle",
+        "tier": "Civilian",
+        "domain": "Land",
+        "passengers": "4",
+        "strength": 2,
+        "dexterity": 2,
+        "constitution": 3,
+        "armorvalue": 2,
+        "price": 3,
+        "speed": "150 mph",
+        "properties": [
+            "All-Terrain",
+            "Huge"
+        ],
+        "description": "Four-wheel drive vehicles come in various shapes and sizes but are similar in that they offer high torque, high clearance, and the ability to go off-road."
+    },
+    {
+        "name": "Common car",
+        "tier": "Civilian",
+        "domain": "Land",
+        "passengers": "5",
+        "strength": 2,
+        "dexterity": 2,
+        "constitution": 2,
+        "armorvalue": 2,
+        "price": 2,
+        "speed": "150 mph",
+        "properties": [
+            "Huge"
+        ],
+        "description": "Representing most sedans, coupes, SUVs, and station wagons, a common car is a run-of-the-mill, average civilian vehicle. Most are standard four-door models, but the same statistics apply to two-door cars, and all seat five passengers. Trunk size also varies widely."
+    },
+    {
+        "name": "Junker",
+        "tier": "Civilian",
+        "domain": "Land",
+        "passengers": "5",
+        "strength": 1,
+        "dexterity": 1,
+        "constitution": 1,
+        "armorvalue": 2,
+        "price": 1,
+        "speed": "100 mph",
+        "properties": [
+            "Huge"
+        ],
+        "description": "Like a common car, but old, beat up, or poorly maintained. And cheap! If you can't afford anything else, a junker gets you where you're going when you don't want to walk."
+    },
+    {
+        "name": "Luxury car",
+        "tier": "Civilian",
+        "domain": "Land",
+        "passengers": "5",
+        "strength": 3,
+        "dexterity": 2,
+        "constitution": 2,
+        "armorvalue": 2,
+        "price": 3,
+        "speed": "150 mph",
+        "properties": [
+            "Huge"
+        ],
+        "description": "This car has all the bells and whistles—or at least some of them. Heated seats, souped-up engine, sweet paint job. It's not much better than a common car, but it is more expensive, allowing you to flaunt your wealth."
+    },
+    {
+        "name": "Mini",
+        "tier": "Civilian",
+        "domain": "Land",
+        "passengers": "4",
+        "strength": 1,
+        "dexterity": 4,
+        "constitution": 1,
+        "armorvalue": 2,
+        "price": 2,
+        "speed": "150 mph",
+        "properties": [
+            "Large"
+        ],
+        "description": "These compact, two-door cars pack most of the power of a regular car in a smaller package, allowing for greater maneuverability and better gas mileage."
+    },
+    {
+        "name": "Muscle car",
+        "tier": "Civilian",
+        "domain": "Land",
+        "passengers": "5",
+        "strength": 5,
+        "dexterity": 2,
+        "constitution": 3,
+        "armorvalue": 2,
+        "price": 3,
+        "speed": "200 mph",
+        "properties": [
+            "Huge"
+        ],
+        "description": "For when you want the strongest, loudest engine available. This baby can purr! While not the fastest cars around, muscle cars have incredible acceleration, making them a favorite for street racing."
+    },
+    {
+        "name": "Race car",
+        "tier": "Civilian",
+        "domain": "Land",
+        "passengers": "2",
+        "strength": 10,
+        "dexterity": 2,
+        "constitution": -3,
+        "armorvalue": 2,
+        "price": 4,
+        "speed": "300-400 mph",
+        "properties": [
+            "Huge"
+        ],
+        "description": "Extremely fast, these cars are made for racing and not much else. Not usually seen on the road, a race car is hugely inefficient for everyday use, but when you have a need for speed, this is the vehicle for you."
+    },
+    {
+        "name": "Sports car",
+        "tier": "Civilian",
+        "domain": "Land",
+        "passengers": "2-4",
+        "strength": 4,
+        "dexterity": 4,
+        "constitution": 0,
+        "armorvalue": 2,
+        "price": 4,
+        "speed": "250 mph",
+        "properties": [
+            "Huge"
+        ],
+        "description": "The luxury car is for people who can't afford this one. Faster, more maneuverable, and with way more trips to the mechanic, the sports car is the ultimate vehicle for the rich and powerful, as well as anyone experiencing a midlife crisis. "
+    },
+    {
+        "name": "Minivan",
+        "tier": "Civilian",
+        "domain": "Land",
+        "passengers": "7",
+        "strength": 1,
+        "dexterity": 0,
+        "constitution": 3,
+        "armorvalue": 2,
+        "price": 2,
+        "speed": "150 mph",
+        "properties": [
+            "Huge"
+        ],
+        "description": "A favorite of soccer moms, the minivan doesn't get the best mileage, and it's not built for performance, but it's reliable and it seats seven. A sliding side door allows easy access for a minivan's many passengers."
+    },
+    {
+        "name": "Pickup truck",
+        "tier": "Civilian",
+        "domain": "Land",
+        "passengers": "3-5",
+        "strength": 2,
+        "dexterity": 0,
+        "constitution": 4,
+        "armorvalue": 2,
+        "price": 2,
+        "speed": "150 mph",
+        "properties": [
+            "Huge"
+        ],
+        "description": "When you need to haul a lot of stuff and get around reliably, a pickup truck is ideal. This truck is defined by its large cargo bed, which can fit a few extra people if they don't mind being outside and without seatbelts. A typical pickup truck has a single bench in the front cabin, seating up to three, but some sacrifice some cargo space for a more traditional five-seat configuration with two in the front and three in back."
+    },
+    {
+        "name": "RV",
+        "tier": "Civilian",
+        "domain": "Land",
+        "passengers": "3+",
+        "strength": -2,
+        "dexterity": -4,
+        "constitution": 5,
+        "armorvalue": 2,
+        "price": 2,
+        "speed": "75 mph",
+        "properties": [
+            "Gargantuan"
+        ],
+        "description": "This mobile home is equipped with all the amenities, and you can drive it! The cabin seats three, but you can pack seven or eight more in the living area. There are no seatbelts back there though, so it's not exactly safe."
+    },
+    {
+        "name": "ATV",
+        "tier": "Civilian",
+        "domain": "Land",
+        "passengers": "2",
+        "strength": 0,
+        "dexterity": 2,
+        "constitution": 2,
+        "armorvalue": 2,
+        "price": 2,
+        "speed": "75 mph",
+        "properties": [
+            "All-Terrain",
+            "Exposed",
+            "Large"
+        ],
+        "description": "The All-Terrain Vehicle (ATV), also called a four-wheeler, is like a motorcycle with four wheels. As the name implies, the ATV functions well off-road."
+    },
+    {
+        "name": "Bicycle",
+        "tier": "Civilian",
+        "domain": "Land",
+        "passengers": "2",
+        "strength": -4,
+        "dexterity": 9,
+        "constitution": -2,
+        "armorvalue": 1,
+        "price": 1,
+        "speed": "30 mph",
+        "properties": [
+            "Accident Prone",
+            "Exposed",
+            "Medium",
+            "Muscle-Powered"
+        ],
+        "description": "You'll have to pedal, but a bike can get you where you're going. Eventually."
+    },
+    {
+        "name": "Go kart",
+        "tier": "Civilian",
+        "domain": "Land",
+        "passengers": "1",
+        "strength": -2,
+        "dexterity": 5,
+        "constitution": 0,
+        "armorvalue": 2,
+        "price": 2,
+        "speed": "50 mph",
+        "properties": [
+            "Exposed",
+            "Large"
+        ],
+        "description": "These miniature racing vehicles don't go as fast as their larger cousins, but they pack some real power in their tiny bodies."
+    },
+    {
+        "name": "Golf cart",
+        "tier": "Civilian",
+        "domain": "Land",
+        "passengers": "4",
+        "strength": -4,
+        "dexterity": 2,
+        "constitution": 1,
+        "armorvalue": 2,
+        "price": 2,
+        "speed": "15 mph",
+        "properties": [
+            "Exposed",
+            "Large"
+        ],
+        "description": "These little carts are meant to drive at a leisurely pace around golf courses, but you can drive them anywhere! Check your local laws first, though."
+    },
+    {
+        "name": "Motocross bike",
+        "tier": "Civilian",
+        "domain": "Land",
+        "passengers": "2",
+        "strength": 1,
+        "dexterity": 8,
+        "constitution": -1,
+        "armorvalue": 1,
+        "price": 2,
+        "speed": "100 mph",
+        "properties": [
+            "Accident Prone",
+            "All-Terrain",
+            "Exposed",
+            "Large"
+        ],
+        "description": "A motorized sports bike, this vehicle is great for off-roading, but it functions fine on the road as well."
+    },
+    {
+        "name": "Motorcycle",
+        "tier": "Civilian",
+        "domain": "Land",
+        "passengers": "2",
+        "strength": 5,
+        "dexterity": 6,
+        "constitution": 0,
+        "armorvalue": 2,
+        "price": 2,
+        "speed": "200 mph",
+        "properties": [
+            "Accident Prone",
+            "Exposed",
+            "Large"
+        ],
+        "description": "Two-wheeled, fast, and dangerous! With this baby, you could weave in and out of traffic at break-neck speeds!"
+    },
+    {
+        "name": "18-wheeler",
+        "tier": "Commercial",
+        "domain": "Land",
+        "passengers": "2",
+        "strength": 0,
+        "dexterity": -3,
+        "constitution": 10,
+        "armorvalue": 2,
+        "price": 4,
+        "speed": "75 mph",
+        "properties": [
+            "Extra Wheels",
+            "Gargantuan"
+        ],
+        "description": "The kings of the road, these trucks haul just about anything across the country. The cabin seats two, though a lot more people could fit in the trailer in a pinch (this is illegal in most countries)."
+    },
+    {
+        "name": "Armored car",
+        "tier": "Commercial",
+        "domain": "Land",
+        "passengers": "2",
+        "strength": 0,
+        "dexterity": -2,
+        "constitution": 8,
+        "armorvalue": 3,
+        "price": 4,
+        "speed": "100 mph",
+        "properties": [
+            "Bulletproof",
+            "Huge"
+        ],
+        "description": "These armored transport vehicles carry valuables. Most commonly, banks use them to move cash or jewelry."
+    },
+    {
+        "name": "Semi",
+        "tier": "Commercial",
+        "domain": "Land",
+        "passengers": "2",
+        "strength": 1,
+        "dexterity": -2,
+        "constitution": 8,
+        "armorvalue": 2,
+        "price": 3,
+        "speed": "100 mph",
+        "properties": [
+            "Extra Wheels",
+            "Huge"
+        ],
+        "description": "This is the front of an 18-wheeler without a trailer attached. With its powerful engine made to pull a heavy trailer, a semi-truck can accelerate fairly quickly despite its size."
+    },
+    {
+        "name": "Truck",
+        "tier": "Commercial",
+        "domain": "Land",
+        "passengers": "2",
+        "strength": 1,
+        "dexterity": -2,
+        "constitution": 6,
+        "armorvalue": 2,
+        "price": 3,
+        "speed": "150 mph",
+        "properties": [
+            "Huge"
+        ],
+        "description": "This includes any large commercial truck such as a garbage truck, dump truck, fire engine, or ambulance. They aren't fast, but you don't want to be in their way."
+    },
+    {
+        "name": "Van",
+        "tier": "Commercial",
+        "domain": "Land",
+        "passengers": "3",
+        "strength": 0,
+        "dexterity": -1,
+        "constitution": 4,
+        "armorvalue": 2,
+        "price": 2,
+        "speed": "150 mph",
+        "properties": [
+            "Huge"
+        ],
+        "description": "This represents a wide variety of commercial vans, such as postal vans, utility vans, and unmarked white vans."
+    },
+    {
+        "name": "Bullet train",
+        "tier": "Commercial",
+        "domain": "Land",
+        "passengers": "80-90 per car",
+        "strength": 5,
+        "dexterity": -5,
+        "constitution": 6,
+        "armorvalue": 2,
+        "price": 6,
+        "speed": "250 mph",
+        "properties": [
+            "Enclosed",
+            "Gargantuan",
+            "Rails",
+            "Stable"
+        ],
+        "description": "So-called bullet trains are streamlined high-speed express trains that travel at speeds rivaling airplanes. They are common in Japan, but can be found in other select cities."
+    },
+    {
+        "name": "Bus",
+        "tier": "Commercial",
+        "domain": "Land",
+        "passengers": "40-80",
+        "strength": -2,
+        "dexterity": -3,
+        "constitution": 8,
+        "armorvalue": 2,
+        "price": 4,
+        "speed": "75 mph",
+        "properties": [
+            "Extra Wheels",
+            "Gargantuan"
+        ],
+        "description": "A bus might be a school bus or a common passenger bus. Either way, it may lack seatbelts for anyone but the driver."
+    },
+    {
+        "name": "Passenger train",
+        "tier": "Commercial",
+        "domain": "Land",
+        "passengers": "80-90 per car",
+        "strength": 3,
+        "dexterity": -5,
+        "constitution": 8,
+        "armorvalue": 2,
+        "price": 5,
+        "speed": "150 mph",
+        "properties": [
+            "Enclosed",
+            "Gargantuan",
+            "Rails",
+            "Stable"
+        ],
+        "description": "A standard train for commuting or long-distance travel. Any given car could also be used for cargo instead of passengers."
+    },
+    {
+        "name": "Backhoe",
+        "tier": "Commercial",
+        "domain": "Land",
+        "passengers": "1",
+        "strength": -4,
+        "dexterity": -3,
+        "constitution": 6,
+        "armorvalue": 2,
+        "price": 3,
+        "speed": "20 mph",
+        "properties": [
+            "All-Terrain",
+            "Huge"
+        ],
+        "description": "A backhoe is a heavy, tracked, all-purpose construction vehicle. Typically, it has a hydraulic shovel on one end and a plow on the other."
+    },
+    {
+        "name": "Bulldozer",
+        "tier": "Commercial",
+        "domain": "Land",
+        "passengers": "2",
+        "strength": -2,
+        "dexterity": -4,
+        "constitution": 8,
+        "armorvalue": 3,
+        "price": 3,
+        "speed": "50 mph",
+        "properties": [
+            "All-Terrain",
+            "Huge"
+        ],
+        "description": "Another common heavy construction vehicle, the bulldozer pushes earth, stone, or other heavy materials as well as to level ground."
+    },
+    {
+        "name": "Crane",
+        "tier": "Commercial",
+        "domain": "Land",
+        "passengers": "2",
+        "strength": -2,
+        "dexterity": -4,
+        "constitution": 5,
+        "armorvalue": 2,
+        "price": 3,
+        "speed": "50 mph",
+        "properties": [
+            "Huge"
+        ],
+        "description": "Cranes are very heavy vehicles that operate only while stationary. They have a boom arm and winch to lift things up, and large counterweights to keep from tipping over."
+    },
+    {
+        "name": "Forklift",
+        "tier": "Commercial",
+        "domain": "Land",
+        "passengers": "1",
+        "strength": -4,
+        "dexterity": 0,
+        "constitution": 2,
+        "armorvalue": 2,
+        "price": 2,
+        "speed": "20 mph",
+        "properties": [
+            "Exposed",
+            "Large"
+        ],
+        "description": "Most forklifts are electric vehicles. They feature a large fork for lifting crates and a significant counterweight to avoid tipping over."
+    },
+    {
+        "name": "Tractor",
+        "tier": "Commercial",
+        "domain": "Land",
+        "passengers": "2",
+        "strength": -4,
+        "dexterity": -2,
+        "constitution": 6,
+        "armorvalue": 2,
+        "price": 3,
+        "speed": "25 mph",
+        "properties": [
+            "All-Terrain",
+            "Huge"
+        ],
+        "description": "Designed for agriculture, these vehicles aren't fast, but they are powerful and built to drive across rough terrain. They can be fitted with numerous useful farming implements."
+    },
+    {
+        "name": "Police cruiser",
+        "tier": "Law_Enforcement",
+        "domain": "Land",
+        "passengers": "5",
+        "strength": 4,
+        "dexterity": 3,
+        "constitution": 3,
+        "armorvalue": 2,
+        "price": 3,
+        "speed": "150 mph",
+        "properties": [
+            "Bulletproof",
+            "Huge"
+        ],
+        "description": "A standard law enforcement vehicle, these cars come in regular police colors, but they can look just like any other car, too."
+    },
+    {
+        "name": "Prison bus",
+        "tier": "Law_Enforcement",
+        "domain": "Land",
+        "passengers": "50",
+        "strength": -2,
+        "dexterity": -3,
+        "constitution": 8,
+        "armorvalue": 2,
+        "price": 4,
+        "speed": "75 mph",
+        "properties": [
+            "Bulletproof",
+            "Gargantuan",
+            "Restricted"
+        ],
+        "description": "This heavily armored bus moves a large number of prisoners at once. Prisoners are Restrained for their journey."
+    },
+    {
+        "name": "Prison van",
+        "tier": "Law_Enforcement",
+        "domain": "Land",
+        "passengers": "6",
+        "strength": 1,
+        "dexterity": 0,
+        "constitution": 4,
+        "armorvalue": 2,
+        "price": 3,
+        "speed": "150 mph",
+        "properties": [
+            "Bulletproof",
+            "Huge",
+            "Restricted"
+        ],
+        "description": "These simple vans are designed to move a small number of prisoners around with light security. For particularly dangerous criminals, a prison might use an armored car instead."
+    },
+    {
+        "name": "Surveillance van",
+        "tier": "Law_Enforcement",
+        "domain": "Land",
+        "passengers": "3",
+        "strength": 1,
+        "dexterity": -1,
+        "constitution": 5,
+        "armorvalue": 2,
+        "price": 3,
+        "speed": "150 mph",
+        "properties": [
+            "Bulletproof",
+            "Huge",
+            "Restricted"
+        ],
+        "description": "This van is equipped with the latest surveillance equipment, allowing agents to eavesdrop relatively unnoticed, so long as a van sitting around in one place for a long time doesn't tip someone off."
+    },
+    {
+        "name": "SWAT van",
+        "tier": "Law_Enforcement",
+        "domain": "Land",
+        "passengers": "10",
+        "strength": 0,
+        "dexterity": -1,
+        "constitution": 6,
+        "armorvalue": 3,
+        "price": 5,
+        "speed": "150 mph",
+        "properties": [
+            "Bulletproof",
+            "Enclosed",
+            "Huge",
+            "Restricted"
+        ],
+        "description": "Heavily armored and made for transporting SWAT teams, these vans are deployed only in extreme circumstances. They carry riot equipment and tactical weapons."
+    },
+    {
+        "name": "APC",
+        "tier": "Military",
+        "domain": "Land",
+        "passengers": "9",
+        "strength": 0,
+        "dexterity": -4,
+        "constitution": 8,
+        "armorvalue": 4,
+        "price": 5,
+        "speed": "60 mph",
+        "properties": [
+            "All-Terrain",
+            "Bulletproof",
+            "Enclosed",
+            "Huge",
+            "Restricted"
+        ],
+        "description": "An armored personnel carrier (or APC) is a heavily armored troop transport used by the military to safely move soldiers. An APC can have a weapon such as a machine gun or rocket launcher mounted to it."
+    },
+    {
+        "name": "Humvee",
+        "tier": "Military",
+        "domain": "Land",
+        "passengers": "4",
+        "strength": 2,
+        "dexterity": 2,
+        "constitution": 5,
+        "armorvalue": 5,
+        "price": 5,
+        "speed": "75 mph",
+        "properties": [
+            "All-Terrain",
+            "Bulletproof",
+            "Huge"
+        ],
+        "description": "The Humvee, and similar light armored vehicles, are standard military trucks, able to drive off-road and withstand moderate gunfire. A Humvee can mount a weapon such as a machine gun or rocket launcher."
+    },
+    {
+        "name": "Tank",
+        "tier": "Military",
+        "domain": "Land",
+        "passengers": "4",
+        "strength": -3,
+        "dexterity": -1,
+        "constitution": 10,
+        "armorvalue": 5,
+        "price": 5,
+        "speed": "45 mph",
+        "properties": [
+            "All-Terrain",
+            "Bulletproof",
+            "Enclosed",
+            "Gargantuan",
+            "Restricted",
+            "Tracked"
+        ],
+        "description": "Battle tanks are general purpose armored vehicles that combine massive firepower, heavy armor, and high mobility. A tank often has one or more stationary machine guns mounted on it, and one passenger can operate the main cannon, which has the following statistics."
+    },
+    {
+        "name": "Fishing boat",
+        "tier": "Civilian",
+        "domain": "Water",
+        "passengers": "6",
+        "strength": -3,
+        "dexterity": -2,
+        "constitution": 4,
+        "armorvalue": 2,
+        "price": 3,
+        "speed": "25 mph",
+        "properties": [
+            "Huge"
+        ],
+        "description": "This common utility boat is mostly used by anglers, as the name implies. They come in many sizes but this one is a smaller four-person vessel."
+    },
+    {
+        "name": "Inflatable boat",
+        "tier": "Civilian",
+        "domain": "Water",
+        "passengers": "4",
+        "strength": -2,
+        "dexterity": 2,
+        "constitution": -4,
+        "armorvalue": 1,
+        "price": 1,
+        "speed": "50 mph",
+        "properties": [
+            "Exposed",
+            "Large"
+        ],
+        "description": "This small lifeboat or other inflatable craft is quick and agile, at least for a boat."
+    },
+    {
+        "name": "Jet ski",
+        "tier": "Civilian",
+        "domain": "Water",
+        "passengers": "2",
+        "strength": -2,
+        "dexterity": 2,
+        "constitution": -2,
+        "armorvalue": 2,
+        "price": 2,
+        "speed": "35 mph",
+        "properties": [
+            "Exposed",
+            "Large"
+        ],
+        "description": "The motorcycle of the sea, this thing is all about fun! It goes fast for a boat but doesn't stand up well to rough waters."
+    },
+    {
+        "name": "Motorboat",
+        "tier": "Civilian",
+        "domain": "Water",
+        "passengers": "4",
+        "strength": -2,
+        "dexterity": 0,
+        "constitution": -2,
+        "armorvalue": 1,
+        "price": 2,
+        "speed": "50 mph",
+        "properties": [
+            "Exposed",
+            "Large"
+        ],
+        "description": "Motorized but still small, these boats are faster and easier to use than rowboats but are still mainly for personal use."
+    },
+    {
+        "name": "Personal submarine",
+        "tier": "Civilian",
+        "domain": "Water",
+        "passengers": "6",
+        "strength": -3,
+        "dexterity": -3,
+        "constitution": 4,
+        "armorvalue": 3,
+        "price": 5,
+        "speed": "25 mph",
+        "properties": [
+            "Enclosed",
+            "Huge"
+        ],
+        "description": "This small submarine might be used by scientists or nautical enthusiasts who can afford their steep price tags."
+    },
+    {
+        "name": "Rowboat",
+        "tier": "Civilian",
+        "domain": "Water",
+        "passengers": "4",
+        "strength": -8,
+        "dexterity": -2,
+        "constitution": -2,
+        "armorvalue": 1,
+        "price": 1,
+        "speed": "5 mph",
+        "properties": [
+            "Exposed",
+            "Large",
+            "Muscle-Powered"
+        ],
+        "description": "Small and usually powered by oars, this can also represent paddle boats, canoes, and other similar boats."
+    },
+    {
+        "name": "Sailboat",
+        "tier": "Civilian",
+        "domain": "Water",
+        "passengers": "12",
+        "strength": -5,
+        "dexterity": -5,
+        "constitution": 4,
+        "armorvalue": 2,
+        "price": 3,
+        "speed": "15 mph",
+        "properties": [
+            "Exposed",
+            "Huge"
+        ],
+        "description": "Powered by the wind like ships of old, these boats are mostly for sport, but are worthy vessels for short- and long-distance voyages."
+    },
+    {
+        "name": "Yacht",
+        "tier": "Civilian",
+        "domain": "Water",
+        "passengers": "12",
+        "strength": -1,
+        "dexterity": -5,
+        "constitution": 2,
+        "armorvalue": 2,
+        "price": 4,
+        "speed": "80 mph",
+        "properties": [
+            "Huge",
+            "Stable"
+        ],
+        "description": "This small pleasure craft is the rich person's money sink. The price level of 4 is only the beginning for yachts, which can be as expensive as you can imagine."
+    },
+    {
+        "name": "Airliner",
+        "tier": "Commercial",
+        "domain": "Sky",
+        "passengers": "100-850",
+        "strength": 0,
+        "dexterity": -4,
+        "constitution": 7,
+        "armorvalue": 3,
+        "price": 6,
+        "speed": "550 mph",
+        "properties": [
+            "Airspeed",
+            "Gargantuan"
+        ],
+        "description": "Commercial airliners carry dozens or hundreds of passengers all across the world. They are nearly always owned by a company rather than individuals."
+    },
+    {
+        "name": "Fighter jet",
+        "tier": "Military",
+        "domain": "Sky",
+        "passengers": "2",
+        "strength": 10,
+        "dexterity": 6,
+        "constitution": 4,
+        "armorvalue": 2,
+        "price": 6,
+        "speed": "Mach 2-3",
+        "properties": [
+            "Airspeed",
+            "Huge"
+        ],
+        "description": "These fast military aircraft are often equipped with stationary machine guns, as well as ballistic missiles. See the table on the next page for statistics."
+    },
+    {
+        "name": "Helicopter",
+        "tier": "Civilian",
+        "domain": "Sky",
+        "passengers": "7",
+        "strength": 8,
+        "dexterity": 2,
+        "constitution": 1,
+        "armorvalue": 2,
+        "price": 4,
+        "speed": "250 mph",
+        "properties": [
+            "Huge"
+        ],
+        "description": "These flying vehicles are capable of taking off and landing vertically. Military helicopters are often equipped with one or more machine guns."
+    },
+    {
+        "name": "Hot air balloon",
+        "tier": "Civilian",
+        "domain": "Sky",
+        "passengers": "4",
+        "strength": -5,
+        "dexterity": -4,
+        "constitution": 0,
+        "armorvalue": 1,
+        "price": 3,
+        "speed": "10 mph",
+        "properties": [
+            "Huge"
+        ],
+        "description": "These recreational aircraft allow for a delightful, scenic time in the sky. They move only as fast as the wind permits."
+    },
+    {
+        "name": "Paraglider",
+        "tier": "Civilian",
+        "domain": "Sky",
+        "passengers": "1",
+        "strength": -4,
+        "dexterity": 1,
+        "constitution": 2,
+        "armorvalue": 0,
+        "price": 2,
+        "speed": "25 mph",
+        "properties": [
+            "Exposed",
+            "Gliding",
+            "Large"
+        ],
+        "description": "These simple gliders vary from large, steerable parachutes to more kite-like gliders."
+    },
+    {
+        "name": "Personal aircraft",
+        "tier": "Civilian",
+        "domain": "Sky",
+        "passengers": "2-9",
+        "strength": 6,
+        "dexterity": 0,
+        "constitution": 2,
+        "armorvalue": 1,
+        "price": 3,
+        "speed": "200 mph",
+        "properties": [
+            "Huge"
+        ],
+        "description": "These small planes seat between one and nine passengers. They are nearly always propeller driven and typically have one set of wings."
+    },
+    {
+        "name": "Regional aircraft",
+        "tier": "Commercial",
+        "domain": "Sky",
+        "passengers": "10-100",
+        "strength": 0,
+        "dexterity": -2,
+        "constitution": 4,
+        "armorvalue": 2,
+        "price": 5,
+        "speed": "550 mph",
+        "properties": [
+            "Airspeed",
+            "Gargantuan"
+        ],
+        "description": "These commercial aircraft carry ten or more passengers on regional trips from both major and smaller airfields. They tend to be propeller driven and have two to four engines."
+    },
+    {
+        "name": "Wingsuit",
+        "tier": "Civilian",
+        "domain": "Sky",
+        "passengers": "1",
+        "strength": 0,
+        "dexterity": 8,
+        "constitution": -5,
+        "armorvalue": 0,
+        "price": 2,
+        "speed": "100 mph",
+        "properties": [
+            "Gliding",
+            "Medium"
+        ],
+        "description": "These simple gliders vary from large, steerable parachutes to more kite-like gliders."
+    }
+]

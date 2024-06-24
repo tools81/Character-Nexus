@@ -13,11 +13,11 @@ namespace GiJoe
 
         public string RulesetName => "Ruleset.GiJoe";
 
-        public string ImageSource => "https://drive.google.com/thumbnail?id=1hEU9DPJ8zfCx2CjmWkS2MtVtLlUBbs9g&sz=w1024";
+        public string ImageSource => "https://characternexus.blob.core.windows.net/resources/card_gi_joe.jpg";
 
-        public string LogoSource => "https://drive.google.com/thumbnail?id=1HlnlGG-jkcRF3F7pM9pVpdENTAc0BstT&sz=w256";
+        public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_gi_joe.png";
 
-        public ICharacter NewCharacter()
+        public string NewCharacter()
         {
             throw new NotImplementedException();
         }

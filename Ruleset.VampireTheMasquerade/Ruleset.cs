@@ -17,7 +17,7 @@ namespace VampireTheMasquerade
 
         public string LogoSource => "";
 
-        public ICharacter NewCharacter()
+        public string NewCharacter()
         {
             throw new NotImplementedException();
         }

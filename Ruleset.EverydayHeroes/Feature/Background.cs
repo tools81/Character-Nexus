@@ -10,6 +10,7 @@ namespace EverydayHeroes
 {
     public class Background
     {
+        public string Name { get; set; }
         public string Description { get; set; }
         public List<UserChoice<string>> AttributeBonuses { get; set; }
         public List<UserChoice<string>> Profeciencies { get; set; }

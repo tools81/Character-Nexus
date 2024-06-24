@@ -9,8 +9,10 @@ namespace EverydayHeroes
 {
     public class Class
     {
+        public string Name { get; set; }
+        public string Archetype { get; set; }
         public string Description { get; set; }
         public List<UserChoice<string>> Profeciencies { get; set; }
-        public List<List<Talent>> Talents { get; set; }
+        public List<List<string>> Talents { get; set; }
     }
 }

@@ -1,0 +1,251 @@
+[
+  {
+    "name": "Strong",
+    "description": "You have trained your body for strength and explosive power. You hit hard, excelling in close combat. As a hero, you fight because others can't.<br>Strong heroes are dubale fighters who make high damage attacks. They specialize in melee attacks, whether they favor unarmed strikes or close combat weapons.'",
+    "hitdice": "d10",
+    "hitpoints": 10,
+    "hitpointsperlevel": 6,
+    "hitpointmodifier": "Constitution",
+    "DefenseModifier": "Strength",
+    "ProficiencyBonus": [
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4
+    ],
+    "DefenseBonus": [
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3
+    ],
+    "Talents": [
+      [
+        "Reckless Attack"
+      ],
+      [
+        "Power Attack"
+      ]
+    ]
+  },
+  {
+    "name": "Agile",
+    "description": "you are a master of speed and precision. You have honed your reflexes to the point you can act faster than you can think. Your pinpoint accuracty makes you a deadly foe in any fight.<br>Agile heroes focus on ranged attacks and light weapons. Their high mobility and rapid attacks make them deadly heroes in combat.",
+    "hitdice": "d8",
+    "hitpoints": 8,
+    "hitpointsperlevel": 5,
+    "hitpointmodifier": "Constitution",
+    "DefenseModifier": "Dexterity",
+    "ProficiencyBonus": [
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4
+    ],
+    "DefenseBonus": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3
+    ],
+    "Talents": [
+      [
+        "Fast Reflexes"
+      ],
+      [
+        "Quickness"
+      ]
+    ]
+  },
+  {
+    "name": "Tough",
+    "description": "You don't know what it means to give up. No matter what knocks you down, you get up again. Where there is a fight to be found, you'll be in the thick of it, often risking your life to protect others.<br>Tough heroes are durable characters, sometimes at the expense of offensive options or out of combat abilities. Many excel at protecting their teammates.",
+    "hitdice": "d12",
+    "hitpoints": 12,
+    "hitpointsperlevel": 7,
+    "hitpointmodifier": "Constitution",
+    "DefenseModifier": "Constitution|Dexterity",
+    "ProficiencyBonus": [
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4
+    ],
+    "DefenseBonus": [
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4
+    ],
+    "Talents": [
+      [
+        "Payback"
+      ],
+      [
+        "Tough as Nails"
+      ]
+    ]
+  },
+  {
+    "name": "Smart",
+    "description": "While other are playing checkers, you're playing 4-dimensional chess. The human mind is the ultimate weapon, and yours is honed to a razor's edge.<br>Smart Heroes use their genius to enact plans. Plans are powerful but limited effects that can break the fourth wall, effectively changing the past to affect the present.",
+    "hitdice": "d6",
+    "hitpoints": 6,
+    "hitpointsperlevel": 4,
+    "hitpointmodifier": "Constitution",
+    "DefenseModifier": "Intelligence",
+    "ProficiencyBonus": [
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4
+    ],
+    "DefenseBonus": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2
+    ],
+    "Talents": [
+      [
+        "Plans",
+        "Genius"
+      ],
+      [
+        "Mental Refresh"
+      ]
+    ]
+  },
+  {
+    "name": "Wise",
+    "description": "You are known as a person who thinks before you act. You observe the world around you and move with its rhythms instead of struggling against the tide. By first knowing yourself, you can reach out and make the world a better place.<br>Wise Heroes are thematically diverse, but they all have a Focus mechanic that can be spent to activate special actions and abilities.",
+    "hitdice": "d10",
+    "hitpoints": 10,
+    "hitpointsperlevel": 6,
+    "hitpointmodifier": "Constitution",
+    "DefenseModifier": "Wisdom|Dexterity",
+    "ProficiencyBonus": [
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4
+    ],
+    "DefenseBonus": [
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4
+    ],
+    "Talents": [
+      [
+        "Focus",
+        "Concentration"
+      ],
+      [
+        "One Step Ahead"
+      ]
+    ]
+  },
+  {
+    "name": "Charming",
+    "description": "When you smile, the whole world smiles with you. It might be your beauty, your golden voice, or your way with words, but your ability to influence others is the key to your success.<br>Charming heroes use influence dice to boost their other die rolls. They focus on helping allies and hindering enemies in combat rather than relying on their own strengths.",
+    "hitdice": "d8",
+    "hitpoints": 8,
+    "hitpointsperlevel": 5,
+    "hitpointmodifier": "Constitution",
+    "DefenseModifier": "Charisma|Dexterity",
+    "ProficiencyBonus": [
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4
+    ],
+    "DefenseBonus": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3
+    ],
+    "Talents": [
+      [
+        "Influence",
+        "Tricks"
+      ],
+      [
+        "Charm"
+      ]
+    ]
+  }
+]

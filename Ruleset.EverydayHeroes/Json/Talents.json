@@ -1,0 +1,536 @@
+[
+    {
+        "name": "Two Minor Feats or One Major Feat",
+        "description": "You can choose two minor feats or one major feat (see chapter 7). Some feats have prerequisites you must meet to take the feat.",
+        "archetype": "",
+        "class": ""
+    },
+    {
+        "name": "Reckless Attack",
+        "description": "At the start of your turn, you can declare you are being reckless. You gain advantage on attack rolls with melee weapons until the end of your turn. Your opponents gain advantage on attack rolls against you until the start of your next turn."
+    },
+    {
+        "name": "Power Attack",
+        "description": "Before making an attack roll with a melee weapon (including weapons with the thrown property) during your turn, you can take a -5 penalty on the attack roll to gain a +10 bonus to damage if the attack hits. You cannot use Power Attack if the attack was made as part of a bonus action, with a thrown explosive, or when using Reckless Attack. You also cannot use Power Attack with any attack that does not require an attack roll."
+    },
+    {
+        "name": "Crush",
+        "description": "You have advantage on any Strength check you make to break an object.<br>In addition, your melee attacks have +1 Penetration Value."
+    },
+    {
+        "name": "Hurl",
+        "description": "You can double the throwing range when you attack with any weapon that has the thrown property."
+    },
+    {
+        "name": "Smash",
+        "description": "Once during your turn, when you hit an opponent with a melee weapon (including weapons with the thrown property), you can choose to deal an additional 1d6 damage, or an additional 1d12 damage if you used the Power Attack talent as part of the attack. If you did not attack with an unarmed strike, the weapon you used to make the attack is destroyed. You can't use this talent with thrown explosives, such as grenades.<br>The amount of extra damage increases as you gain levels in this class, as shown on the Smash Damage column of the Brawler table."
+    },
+    {
+        "name": "Rampage",
+        "description": "As a bonus action, you can move up to your speed if you move toward an opponent. If there are no opponents present, you may move toward an obviously dangerous situation instead.<br>In addition, during a foot chase, if you are a predator (you're doing the chasing), you have advantage on Strength (Athletics) and Constitution (Endurance) checks made as part of a Gain Ground action."
+    },
+    {
+        "name": "Bits and Pieces",
+        "description": "Immediately after you use your Smash talent with a melee attack that is not an unarmed strike and break the weapon, you can use a bonus action to make an additional attack using the destroyed pieces of the weapon. The pieces are an improvised weapon that deal 1d4 piercing damage and are destroyed after the attack."
+    },
+    {
+        "name": "Haymaker",
+        "description": "When making an unarmed strike and using Reckless Attack, you can also use Power Attack. (Normally, you cannot use Power Attack when using Reckless Attack.)"
+    },
+    {
+        "name": "Unstoppable",
+        "description": "You have advantage on ability checks and saving throws to avoid or escape being Grappled, Restrained, Paralyzed, Stunned, or knocked Unconscious."
+    },
+    {
+        "name": "Ultimate Brutality",
+        "description": "You add one damage die to your melee weapon damage rolls. (See “Dice Rules” in chapter 8 for details on extra dice.)"
+    },
+    {
+        "name": "Big Guns",
+        "description": "You can use Strength instead of Dexterity when you make a ranged attack with a ranged weapon that doesn't have the light property.<br>In addition, you can ignore the stationary property of weapons."
+    },
+    {
+        "name": "Salvo",
+        "description": "You can use your Reckless Attack talent, (and the Power Attack talent when you get it), when making attacks with ranged weapons that don't have the light property."
+    },
+    {
+        "name": "Big Boom",
+        "description": "When you damage any target with suppressive fire or an explosive, you can add your proficiency bonus to the damage."
+    },
+    {
+        "name": "Advanced Combat Training",
+        "description": "Once during your turn, when you take the Attack action, you can make two attacks as part of that action."
+    },
+    {
+        "name": "Got You Covered",
+        "description": "When you take the Suppressive Fire action, you can double the area covered."
+    },
+    {
+        "name": "Make a Mess",
+        "description": " Whenever you score a critical hit, you roll the attack's damage dice three times instead of twice."
+    },
+    {
+        "name": "Bigger Boom",
+        "description": "When you damage any target with suppressive fire or an explosive, you can add double your proficiency bonus to the damage, replacing the bonus from Big Boom."
+    },
+    {
+        "name": "Ultimate Carnage",
+        "description": "You add one damage die to your ranged weapon damage rolls. (See 'Dice Rules' in chapter 8 for details on extra dice.)"
+    },
+    {
+        "name": "Heavy Hands",
+        "description": "The damage from your unarmed strikes improves by one die step from 1d4 to 1d6.<br>In addition, when you get your Strong Hero Power Attack talent at 2nd level, you can use it when making off-hand unarmed strikes, but the damage bonus is +5 instead of +10."
+    },
+    {
+        "name": "Pin",
+        "description": "If you currently have an opponent Grappled, you can make a special attack to pin them (see chapter 9 for special attacks). No attack roll or ability check is required; success is automatic. You and the opponent are considered Restrained until the grapple is broken."
+    },
+    {
+        "name": "Submission Move",
+        "description": "If you have an opponent Grappled, you can perform a special attack called a submission move. This attack automatically hits and deals the same damage as your unarmed strike. You cannot use your Power Attack talent when making a submission move. (Special attacks can be used in place of any attack you could normally make.)"
+    },
+    {
+        "name": "Jab",
+        "description": "Once during your turn, before rolling to hit with an unarmed strike, you can declare it is a jab. You cannot declare an attack as both a jab and a takedown. If the jab hits, you gain advantage on your next melee attack roll against that opponent before the end of your next turn."
+    },
+    {
+        "name": "Takedown",
+        "description": "Once during your turn, before rolling to hit with an unarmed strike, you can declare it is a takedown. You cannot declare an attack as both a jab and a takedown. If the takedown hits, you deal damage normally and then perform one of the following special attacks:<br><ul><li>Grapple the target</li><li>Shove or trip the target</li><li>Disarm the target</li></ul>"
+    },
+    {
+        "name": "Improved Heavy Hands",
+        "description": "Your unarmed strike damage improves by one die step.<br>In addition, you now get your full Power Attack damage bonus (+10) with off-hand unarmed strikes."
+    },
+    {
+        "name": "Master Grappler",
+        "description": "You gain advantage on Strength (Athletics) checks made to initiate or escape a grapple."
+    },
+    {
+        "name": "KO Punch",
+        "description": "After you hit an opponent with a jab during your turn, you can declare your next unarmed strike before the end of your next turn a KO punch.<br>If a KO punch hits, it is treated as a critical hit and the target must make a Constitution saving throw (DC = 8 + your Strength modifier + your proficiency bonus). If the opponent fails, they are knocked Unconscious. They can make a Constitution saving throw with the same DC at the end of each of their turns, ending the effect on a success."
+    },
+    {
+        "name": "Sleeper Hold",
+        "description": "After you use a submission move on an opponent, you can apply a sleeper hold instead of a submission move on that opponent before the end of your next turn. When you apply a sleeper hold, in addition to the effects of a submission move, the opponent must make a Constitution saving throw (DC 8 + your Strength modifier + your proficiency bonus). If the opponent fails, they are knocked Unconscious. They may make a Constitution saving throw with the same DC at the end of each of their turns, ending the effect on a success."
+    },
+    {
+        "name": "Fast Reflexes",
+        "description": "You have advantage on initiative rolls."
+    },
+    {
+        "name": "Quickness",
+        "description": "You can take the Dash or Disengage action as a bonus action.<br>In addition, during a foot chase, you have advantage on Strength (Athletics) checks made as part of a Gain Ground action."
+    },
+    {
+        "name": "Martial Arts",
+        "description": "The damage from your unarmed strikes improves by one die step from 1d4 to 1d6.<br>In addition, you treat all melee weapons that don't have the heavy property as if they had the finesse property."
+    },
+    {
+        "name": "Lightning Strikes",
+        "description": "You can make an unarmed strike as a bonus action."
+    },
+    {
+        "name": "Parkour",
+        "description": "You ignore difficult terrain when you move. Climbing and swimming do not count as difficult movement for you.<br>In addition, during a foot chase, you have advantage on Dexterity (Acrobatics) checks made as part of a Gain Ground action."
+    },
+    {
+        "name": "Evasion",
+        "description": "When you make a Dexterity saving throw to take half damage from an effect, you take no damage on a successful save, and half damage on a failed one."
+    },
+    {
+        "name": "Advanced Martial Arts",
+        "description": "Your unarmed strike damage improves by another die step.<br>In addition, you now treat all melee weapons as if they had the finesse property."
+    },
+    {
+        "name": "Lightning Strikes Twice",
+        "description": "You can make two unarmed strikes as a bonus action."
+    },
+    {
+        "name": "Vital Strike",
+        "description": "Once during your turn when you hit a target with an attack, if you had advantage on that attack or an ally is within 5 feet of that target, you can deal an additional 1d6 damage.<br>The amount of extra damage increases as you gain levels in this class, as shown in the Vital Strike column of the Scoundrel table."
+    },
+    {
+        "name": "Swift",
+        "description": "As a bonus action, you can make a Dexterity (Security) check, a Dexterity (Sleight of Hand) check, use the Hide action, or use the Object Interaction action."
+    },
+    {
+        "name": "Surprise Attack",
+        "description": "You have advantage on attack rolls against any opponent that has not yet taken a turn during this combat."
+    },
+    {
+        "name": "Roll With It",
+        "description": "When you take damage from an attack, you can use your reaction to reduce that attack’s damage by half."
+    },
+    {
+        "name": "Covert Expertise",
+        "description": "You gain expertise in two of the following skills: Deception, Security, Sleight of Hand, Stealth, or Streetwise. You must be proficient in a skill to take expertise in that skill."
+    },
+    {
+        "name": "Master of Subterfuge",
+        "description": "You always treat a roll of 9 or lower as a 10 on Deception, Security, Sleight of Hand, Stealth, or Streetwise checks (even if you are not proficient in those skills)."
+    },
+    {
+        "name": "Gunslinging",
+        "description": "You can draw two one-handed light weapons as a free action.<br>In addition, you can reload two guns as part of the same action, without needing a free hand."
+    },
+    {
+        "name": "Sharpshooting",
+        "description": "When using a two-handed ranged weapon, if you don't move during your turn you gain +2 to attack rolls with that weapon.<br>In addition, you ignore the slow-firing property of ranged weapons."
+    },
+    {
+        "name": "Improved Gunslinging",
+        "description": "You can add your Dexterity modifier to damage rolls made with off-hand ranged attacks."
+    },
+    {
+        "name": "Improved Sharpshooting",
+        "description": "You gain the following benefits when using a two-handed ranged weapon and you don't move during your turn:<br><ul><li>You do not have disadvantage on attack rolls due to long range.</li><li>When attacking a target behind three-quarters or half cover, you treat their cover as if it were one category lower for purposes of their Defense. So three-quarters cover is treated as half cover, and half cover is treated as no cover.</li></ul>"
+    },
+    {
+        "name": "Headshot",
+        "description": "You score a critical hit on a roll of 19 or 20 when making ranged attacks."
+    },
+    {
+        "name": "Supreme Ranged Combat Training",
+        "description": "Once during your turn, when you take the Attack action, you can make three ranged attacks as part of that action. This talent supersedes Advanced Combat Training."
+    },
+    {
+        "name": "Payback",
+        "description": "You gain a +2 bonus on one attack roll against an opponent who has damaged you since the end of your last turn. You can use this talent once during your turn. You can decide to use Payback after making your attack roll, but before determining the result."
+    },
+    {
+        "name": "Tough as Nails",
+        "description": "You gain damage reduction (against all damage types) equal to your proficiency bonus."
+    },
+    {
+        "name": "Get Down",
+        "description": "If you are in cover and within 10 feet of a willing ally, you can take a bonus action on your turn to move that ally into cover. You can move up to 15 feet during this action to make room for your ally."
+    },
+    {
+        "name": "Take a Bullet",
+        "description": "When an ally within 5 feet is hit by an attack, you can use your reaction to cause the attack to hit you instead of your ally."
+    },
+    {
+        "name": "Come Get Some",
+        "description": "As a bonus action, choose one opponent that you can see. That opponent has disadvantage when it attacks anyone other than you before the start of your next turn, as long as it can see you and you are in range of its attack."
+    },
+    {
+        "name": "Friendly Fire",
+        "description": "You can ignore cover provided by your allies that are in your line of fire or in melee combat with your target. In addition, you do not damage allies if you roll a critical miss when firing into close combat."
+    },
+    {
+        "name": "Pin Them Down",
+        "description": "When an opponent uses Dive for Cover as a reaction to one of your attacks or actions, their movement speed becomes 0 during their next turn."
+    },
+    {
+        "name": "Vigilance",
+        "description": "You can take up to two reactions between each of your turns."
+    },
+    {
+        "name": "Human Shield",
+        "description": "You take half damage from the attack when you use your Take a Bullet ability, and whenever you are hit by an opponent under the effect of your Come Get Some ability. (This is applied before Tough as Nails.)"
+    },
+    {
+        "name": "Fighting Spirit",
+        "description": "You can take the Second Wind action as a bonus action."
+    },
+    {
+        "name": "Watch Your Six",
+        "description": "You gain a +1 bonus to your Defense."
+    },
+    {
+        "name": "Extra Effort",
+        "description": "By pushing yourself to the limit, you can take an additional action during your turn. You can do this only once before you finish a short or long rest."
+    },
+    {
+        "name": "Grenadier",
+        "description": "You can draw, arm, and throw a grenade as a bonus action. You must have a free hand or already be holding the grenade to do this."
+    },
+    {
+        "name": "Maximum Effort",
+        "description": "You can use your Extra Effort ability twice before finishing a short or long rest, instead of only once. You can use Extra Effort only once per turn."
+    },
+    {
+        "name": "Situational Awareness",
+        "description": "You gain a +2 bonus to your Defense, replacing the bonus from Watch Your Six."
+    },
+    {
+        "name": "Master of Arms",
+        "description": "You add one die to the damage of all weapons you wield. (See “Dice Rules” in chapter 8 for details on extra dice.)"
+    },
+    {
+        "name": "Opportunist",
+        "description": "You gain the following benefits:<br><ul><li>Enemies taking the Disengage action provoke opportunity attacks from you before leaving your reach.</li><li>Enemies within your reach that attack one of your allies provoke an opportunity attack from you.</li><li>When you damage an opponent with an opportunity attack, their speed becomes 0 until the end of the current turn, preventing further movement.</li></ul>"
+    },
+    {
+        "name": "Frenzy",
+        "description": "After you take damage in combat, you can use your reaction to enter a Frenzy. While in a Frenzy, you double the damage reduction from Tough as Nails, but you take damage equal to your proficiency bonus at the start of each of your turns. This damage cannot be reduced by any means. You can end the Frenzy as a free action during your turn (after taking the damage), and it ends automatically after 1 minute or if you become Unconscious. Once your Frenzy ends, you cannot use this talent again until you finish a short or long rest."
+    },
+    {
+        "name": "With Interest",
+        "description": "When you apply your Payback talent's bonus to an attack and hit, or you hit with an opportunity attack, you deal an additional 1d6 damage.<br>The amount of extra damage increases as you gain levels in this class, as shown in the With Interest column of the Scrapper table."
+    },
+    {
+        "name": "Anger Issues",
+        "description": "You can use your Frenzy talent twice before finishing a short or long rest."
+    },
+    {
+        "name": "Indomitable",
+        "description": "After failing any saving throw, you may reroll that saving throw. You can't do this again until you finish a short rest."
+    },
+    {
+        "name": "Plans",
+        "description": "You have a limited number of plans at your disposal. The total number is:<br>Intelligence modifier (minimum 1) +1/2 Hero Level (rounded down)<br>Select a set of plans equal to the total above from the shared plans list and your class's plan list. As your maximum number of plans grows due to your intelligence or level, you can select additional plans for your list. These selections are semi-permanent. When you gain a level, you can decide to exchange a single plan you know for a different plan.<br>The effect of each plan, as well as the action you must take to enact it, is included in the plan's individual description. If a plan calls for a saving throw, the save DC is 8 + your Intelligence modifier + your proficiency bonus. This is your plan DC.<br>Plans grow in power as you gain more levels. Each plan describes how it improves, and these enhancements are cumulative unless otherwise noted. Heroes multiclassing into Smart Hero have a cap on the level of effect they can access."
+    },
+    {
+        "name": "Genius",
+        "description": "Your incredible Genius allows you to devise and enact cunning plans that can accomplish what seems impossible until you explain how they came to fruition.<br>You can enact any plan you know by spending 1 Genius. The Smart Hero table shows how much Genius you have based on your level. Genius recharges when you finish a long rest. Provided you have Genius, you can use any of your plans without restriction."
+    },
+    {
+        "name": "Mental Refresh",
+        "description": "When you take a short rest, you can refresh your mind with a nice snack, a power nap, and/or some light reading. You regain 1 Genius point when you finish that short rest. You can do this only once before you finish a long rest."
+    },
+    {
+        "name": "Mechanical Companion",
+        "description": "You have a unique robot or drone that assists you in tasks, fights beside you, and obeys your commands. Your companion is perfectly loyal and obeys even suicidal commands. You can communicate with it at any range as long as you have a device it can remotely connect to. Its sensory input can be recorded.<br>You can enact plans from your mechanical companion's location instead of your own. If a plan affects you, it can affect your companion instead. If a plan calls for an attack, you make the attack roll, but the range is calculated from the companion's location.<br>Your mechanical companion can be a creation of your own genius, or a commercial product you have modified with enhanced abilities. Its engineering is such that you don't have to worry about battery life, and you can command it by voice or using a remote device. You can choose from the robots detailed below. (See the Companion rules in chapter 10 for the full details on how companions can be commanded in combat.)"
+    },
+    {
+        "name": "Field Repairs",
+        "description": "As an action, you can allow a friendly robot, such as your companion, within 5 feet of you to spend up to half of its maximum Hit Dice, rounded down. If it does, it regains additional hit points equal to your Intelligence modifier for each die spent. A robot can benefit from this talent only once before it finishes a short or long rest."
+    },
+    {
+        "name": "Fine Tuning",
+        "description": "You can use a bonus action to order your mechanical companion to make a single attack. You can take this action even if you have issued another command to your companion as an action this turn."
+    },
+    {
+        "name": "Digital Ghost",
+        "description": "You maintain an array of electronic aliases you use for digital transactions and official records. Your real name, address, and other vital data has been scrubbed clean, making it impossible for any person or organization to discover anything about you."
+    },
+    {
+        "name": "Its For You",
+        "description": "You can use your bonus action to make someone's cell phone ring at maximum volume. You must be able to see your target, and they must have a cell phone or similar device. The target must make a Wisdom saving throw against your plan DC. If they fail, they are Distracted until the end of their next turn."
+    },
+    {
+        "name": "Know-It-All",
+        "description": "You have advantage on all ability checks to recall information."
+    },
+    {
+        "name": "Youre Doing It Wrong",
+        "description": "When an ally that can see and hear you misses with an attack, you can use your reaction to instruct them on the proper technique, allowing them to reroll the attack."
+    },
+    {
+        "name": "Dangerous Stuff",
+        "description": "You can use leftover science materials to attack your enemies. As an action, you can make an attack with this dangerous stuff. The statistics of this weapon are shown below. Your attack bonus for this attack is your Intelligence modifier + your proficiency bonus. Your damage bonus is equal to your Intelligence modifier. You have an effectively unlimited supply of dangerous stuff. As a bonus action, you can change the damage type of this weapon until the end of combat to your choice of acid, cold, electricity, explosive, fire, or poison."
+    },
+    {
+        "name": "Hazardous Stuff",
+        "description": "The damage of your dangerous stuff improves to 2d6. Its PV becomes 2."
+    },
+    {
+        "name": "Deadly Stuff",
+        "description": "The damage of your dangerous stuff improves to 3d6. Its PV becomes 3."
+    },
+    {
+        "name": "Focus",
+        "description": "You have Focus points equal to the number shown on the Wise Hero table, which can be spent to use your Concentration talent as well as talents granted by your class. All your Focus recharges whenever you finish a short or long rest."
+    },
+    {
+        "name": "Concentration",
+        "description": "When you fail a Wisdom ability check, you can spend 1 Focus to reroll that check. This can be used only once per ability check."
+    },
+    {
+        "name": "One Step Ahead",
+        "description": "You can choose not to fall Prone when you take the Dive for Cover reaction."
+    },
+    {
+        "name": "Hunting Companion",
+        "description": "You have an animal companion that can hunt beside you and obeys your commands. You can choose among the companion types listed for the hunter. (See Companion rules for the full details on how companions can be commanded in combat.)"
+    },
+    {
+        "name": "Hunters Mark",
+        "description": "As a bonus action, you can spend 1 Focus to mark one opponent you can see. You and your hunting companion gain the following special advantages against a target you have marked. The mark represents your determination to bring down your target.<br><ul><li>You and your animal companion have advantage on Wisdom (Perception) checks against the marked target.</li><li>You and your animal companion have advantage on Wisdom (Streetwise) and Wisdom (Survival) checks made to track or chase the marked target.</li><li>You can take a bonus action to make a single attack against a marked target, or to command your hunting companion to make a single attack against a marked target. You cannot add your ability score modifier to the damage of this attack, but your companion's damage is calculated normally.</li></ul>"
+    },
+    {
+        "name": "Animal Husbandry",
+        "description": "As an action, you can command your animal companion to use the Second Wind action. You cannot do this again until you and your companion have completed a short or long rest."
+    },
+    {
+        "name": "Companion Training",
+        "description": "Your companion adds your proficiency bonus to its Defense, ability checks, saving throws, and damage rolls. In addition, your companion can make opportunity attacks using its reaction."
+    },
+    {
+        "name": "Marked as Prey",
+        "description": "You can spend 1 Focus to reroll a damage roll against a marked target made by you or your hunting companion. If multiple dice are rolled for damage, you reroll all damage dice. You may only do this once per attack."
+    },
+    {
+        "name": "Learn Their Moves",
+        "description": "After an opponent hits you or your companion with an attack, you and your companion gain a +4 bonus to Defense against any further attacks that same opponent makes against you or your companion until the start of your next turn."
+    },
+    {
+        "name": "No Escape",
+        "description": "You can spend 1 Focus to reroll a missed attack roll against a marked target made by you or your hunting companion. You may only do this once per attack."
+    },
+    {
+        "name": "Marked For Death",
+        "description": "You and your hunting companion deal an additional 1d8 damage on all successful attacks against marked targets."
+    },
+    {
+        "name": "Mystic Arts",
+        "description": "You gain the following benefits:<br><ul><li>You can use Wisdom instead of other ability modifiers when making attacks with melee weapons.</li><li>You can use Wisdom instead of other ability modifiers when making a special attack and when you try to escape a grapple. (A special attack can be used in place of any attack, such as a grapple attempt.)</li><li>You can add your ability modifier to the damage of melee off-hand attacks you make.</li><li>As long as you are not wearing armor and are not Encumbered, your Defense improves by 1.</li><li>You have damage reduction 15 against damage from falling.</li></ul>"
+    },
+    {
+        "name": "Ki",
+        "description": "You can spend 1 Focus to use any of the following abilities:<br><ul><li>After you take the Attack action during your turn, if you made only unarmed strikes or attacks with a melee weapon that doesn't have the heavy property, you can make two unarmed strikes as a bonus action.</li><li>You can take the Dash, Disengage, or Dodge action as a bonus action.</li><li>When you fail a Strength (Athletics) or Dexterity (Acrobatics) check, you can reroll that check. This can be done only once per ability check.</li></ul>"
+    },
+    {
+        "name": "Dance in the Storm",
+        "description": "When an opponent's attack misses you and you are within 5 feet of a different opponent, you may use your reaction to cause the missed attack to hit the second opponent."
+    },
+    {
+        "name": "Flow Like the River",
+        "description": "Whenever you hit an opponent with one of the attacks granted by your Ki talent or an opponent is hit by an attack you redirected, you can make a special attack against the target as a free action."
+    },
+    {
+        "name": "Ki Strike",
+        "description": "When you hit a target with an unarmed strike, you can spend 1 Focus to attempt to stun that target. The target must succeed on a Constitution saving throw (DC 8 + your Wisdom modifier + your proficiency bonus) or be Stunned until the end of your next turn."
+    },
+    {
+        "name": "Balance Within",
+        "description": "Your mind, spirit, and body are so in tune that you cannot be Frightened or Sickened, you cannot gain levels of Intoxication, and you are immune to poison damage."
+    },
+    {
+        "name": "Deep Focus",
+        "description": "YWhen you roll initiative, if you have fewer than 4 Focus points remaining, your remaining Focus becomes 4."
+    },
+    {
+        "name": "Like the Willow",
+        "description": "You become proficient in all saving throws. When you fail a saving throw, you can spend 1 Focus to reroll that save. You must use the new result."
+    },
+    {
+        "name": "Deduction",
+        "description": "When you fail an Intelligence ability check, you can reroll that check. This can be done only once per ability check."
+    },
+    {
+        "name": "Sixth Sense",
+        "description": "You gain the following benefits:<br><ul><li>You can use Wisdom instead of Dexterity for any attack or damage roll you make with weapons that don't have the heavy property.</li><li>You can use Wisdom instead of Dexterity when you roll for initiative.</li><li>You can take the Search action as a bonus action.</li></ul>"
+    },
+    {
+        "name": "Weak Spot",
+        "description": "As a bonus action, you can spend 1 Focus to gain advantage on your next attack roll against one opponent you can see. If that attack hits, you deal an additional 1d6 damage.<br>The amount of extra damage increases as you gain levels in this class, as shown in the Weak Spot column of the Sleuth table."
+    },
+    {
+        "name": "Alert",
+        "description": "You cannot be surprised."
+    },
+    {
+        "name": "Investigative Expertise",
+        "description": "Choose one from Insight, Investigation, or Perception. You must be proficient in a skill to take expertise in that skill."
+    },
+    {
+        "name": "Elementary",
+        "description": "You always treat a roll of 9 or lower as a 10 on any ability check you make that uses Perception, Insight, or Investigation, even if you are not proficient in those skills."
+    },
+    {
+        "name": "Influence",
+        "description": "You have two influence dice, which are d6s. An influence die is expended when it is rolled. You regain all your expended influence dice when you finish a short or long rest.<br>You gain additional influence dice as you gain levels, as shown in the Charming Hero table."
+    },
+    {
+        "name": "Tricks",
+        "description": "You learn two tricks, chosen from your class' list of tricks. You learn additional tricks as you gain levels, as shown on the Charming Hero table. Whenever you gain a level in Charming Hero, you can replace one trick you know with another from your class list.<br>You can use only one trick during a single attack, saving throw, or ability check.<br>The effect of each trick, as well as the action you must take to enact it, is included in the trick's individual description. If a trick calls for a saving throw, the save DC is 8 + your Charisma modifier + your proficiency bonus. This is your trick DC."
+    },
+    {
+        "name": "Charm",
+        "description": "When you make a Charisma check, after rolling but before determining the result, you can roll an influence die and add it to your result."
+    },
+    {
+        "name": "Improved Influence",
+        "description": "Your influence dice increase by one die step from d6s to d8s."
+    },
+    {
+        "name": "Mastered Influence",
+        "description": "Your influence dice increase by one die step from d8s to d10s."
+    },
+    {
+        "name": "Precision",
+        "description": "While wielding a finesse weapon, you can roll one additional weapon damage die when determining the damage for a melee attack. This does not apply to attacks you make as a bonus action.<br>In addition, while wielding a weapon with the finesse property, your Defense bonus is increased by 1."
+    },
+    {
+        "name": "En Garde",
+        "description": "You can add your Charisma modifier to your initiative rolls."
+    },
+    {
+        "name": "Fancy Footwork",
+        "description": "Opportunity attacks made against you have disadvantage."
+    },
+    {
+        "name": "Panache",
+        "description": "Whenever you add influence dice to an attack's damage or to reduce damage dealt to you, double the result of the influence dice rolled."
+    },
+    {
+        "name": "Banter",
+        "description": "As a bonus action, you can give your allies an opening by drawing the attention of an opponent you are aware of who can hear you within 60 feet. The next attack one of your allies makes against that target before the start of your next turn has advantage. "
+    },
+    {
+        "name": "Center of Attention",
+        "description": "Whenever you desire, you can make yourself the center of attention. As long as you continue to speak, perform, or otherwise attract attention, enemies and bystanders that can see or hear you have disadvantage on Wisdom (Perception) checks made against anyone and anything other than you."
+    },
+    {
+        "name": "Flinch",
+        "description": "As a reaction, when an opponent within 5 feet that can see you targets you with an attack, you can cause that attack to have disadvantage. They cannot change targets in response to you doing this."
+    },
+    {
+        "name": "Not My Style",
+        "description": "Whenever you roll a 1 on an influence die or a damage die, you can reroll that die once, taking the new result."
+    },
+    {
+        "name": "Star of the Show",
+        "description": "When you make an attack, you can choose to automatically hit, and that hit is a critical hit. You cannot do this again until you finish a short or long rest."
+    },
+    {
+        "name": "Command",
+        "description": "As an action, you can command one of your allies. That ally can use their reaction to make one attack or move up to their speed."
+    },
+    {
+        "name": "Encouraging Banter",
+        "description": "You encourage camaraderie among your allies. Whenever you and your allies finish a short rest, you and any ally that can hear you each regain 1 spent Hit Die, whether it was spent during this rest or earlier. You can use this talent only once before finishing a long rest."
+    },
+    {
+        "name": "Improved Command",
+        "description": "You can use your Command talent as a bonus action. You can still use it as an action as well, allowing you to use it twice during your turn if you like."
+    },
+    {
+        "name": "Rousing Speech",
+        "description": "As an action, you can grant yourself and up to six allies that can hear you temporary hit points equal to your hero level plus your Charisma modifier. You cannot take this action again until you finish a short or long rest."
+    },
+    {
+        "name": "Aura of Leadership",
+        "description": "While you are conscious, you and each ally within 10 feet of you can add your Charisma modifier to all saving throws."
+    },
+    {
+        "name": "Demoralize",
+        "description": "As an action, you can choose one opponent that can hear you within 60 feet. The target must make a Wisdom saving throw against your trick DC. On a failed save, the target has disadvantage on attack rolls and ability checks, and attack rolls against the target have advantage. This effect lasts until the end of your next turn."
+    },
+    {
+        "name": "Copycat",
+        "description": "You can perfectly mimic the voice of another person, as long as you have heard them speak for at least 1 minute. A successful Wisdom (Insight) check contested by your Charisma (Deception) check allows a listener to determine that the voice is fake."
+    },
+    {
+        "name": "Hypnotize",
+        "description": "You can convince people to do almost anything. As an action, you suggest a course of activity (limited to a sentence or two) and influence one person you can see that can hear and understand you. The suggestion must be worded in such a manner as to make the course of action sound reasonable. Asking the target to shoot itself, throw itself off a building, immolate itself, or do some other obviously harmful act ends the effect.<br>The target must make a Wisdom saving throw against your trick DC. On a failed save, the target pursues the course of action you described to the best of their ability. The suggested course of action can continue for up to 8 hours. If the suggested activity can be completed in a shorter time, the effect ends when the subject finishes what it was asked to do.<br>You can specify conditions that will trigger a special activity during the duration. For example, you might suggest that a soldier give their gun to the first civilian they meet. If the condition isn't met before the effect ends, the activity isn't performed.<br>If you or any of your companions damage the target, the effect ends.<br>You cannot use this talent again until you finish a short or long rest."
+    },
+    {
+        "name": "Improved Demoralize",
+        "description": "You can use your Demoralize ability as a bonus action. You can still use it as an action as well, allowing you to use it twice during your turn if you like."
+    },
+    {
+        "name": "False Identity",
+        "description": "You can create impeccable false identities for yourself and up to six allies. You must spend seven days to establish the history, profession, and affiliations for these identities. You can't establish an identity that belongs to someone else. Thereafter, if any one of these allies adopts their new identity as a disguise, other people believe them to be that person until given an obvious reason not to."
+    },
+    {
+        "name": "Social Expertise",
+        "description": "You gain expertise in Deception, Intimidation, or Persuasion. You must be proficient in a skill to gain expertise in that skill."
+    },
+    {
+        "name": "Master of Manipulation",
+        "description": "You always treat a roll of 9 or lower as a 10 on any Charisma check you make."
+    }
+]

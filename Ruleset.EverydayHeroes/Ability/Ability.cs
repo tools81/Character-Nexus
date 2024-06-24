@@ -10,8 +10,8 @@ namespace EverydayHeroes
 {
     public class Ability : IAbility
     {
-        public Dictionary<string, Talent> Talents { get; set; }
-        public Dictionary<string, Plan> Plans { get; set; }
-        public Dictionary<string, Trick> Tricks { get; set; }
+        public List<Talent> Talents { get; set; }
+        public List<Plan> Plans { get; set; }
+        public List<Trick> Tricks { get; set; }
     }
 }

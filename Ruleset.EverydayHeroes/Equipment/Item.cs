@@ -10,6 +10,7 @@ namespace EverydayHeroes
 {
     public class Item : IEquipment
     {
+        public string Name { get; set; }
         public string Description { get; set; }
         public ItemType Type { get; set; }
         public int price { get; set; }

@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EverydayHeroes
 {
@@ -13,14 +11,34 @@ namespace EverydayHeroes
         public string Name { get; set; }
         public string ImageUrl { get; set; }
         public int Level { get; set; }
+        public string Languages { get; set; }
+        public string Motivations { get; set; }
+        public string Attachments { get; set; }
+        public string Beliefs { get; set; }
+        public string Ancestry { get; set; }
+        public string Quirks { get; set; }
+        public string Virtues { get; set; }
+        public string Flaws { get; set; }
+        public string Role { get; set; }
+        public string Weight { get; set; }
+        public string Height { get; set; }
+        public string Hair { get; set; }
+        public string Skin { get; set; }
+        public string Eyes { get; set; }
+        public string Age { get; set; }
+        public string MaritalStatus { get; set; }
+        public string Pronouns { get; set; }
+        public string Biography { get; set; }
+        public string Notes { get; set; }
         public Archetype Archetype { get; set; }
         public Class Class { get; set; }
         public Background Background { get; set; }
         public Profession Profession { get; set; }
-        public Dictionary<string, Attribute> Attributes { get; set; }
-        public Dictionary<string, Skill> Skills { get; set; }
-        public Dictionary<string, Talent> Talents { get; set; }
-        public Dictionary<string, Feat> Feats { get; set; }
+        public List<Attribute> Attributes { get; set; }
+        public List<Skill> Skills { get; set; }
+        public List<Talent> Talents { get; set; }
+        public List<Feat> Feats { get; set; }
+        public List<string> EquipmentProficiency { get; set; }
         public int Speed { get => 30; }
         public string HitDice { get => GetHitDice(); }
         public int HitPoints { get => GetHitPoints(); }
@@ -61,17 +79,17 @@ namespace EverydayHeroes
 
         private int GetHitPoints()
         {
-            return Archetype.Hitpoints + ((Archetype.HitpointsPerLevel + Attributes["Constitution"].Modifier) * Level);
+            return Archetype.Hitpoints + ((Archetype.HitpointsPerLevel + Attributes.Where(a => a.Name == "Constitution").FirstOrDefault().Modifier) * Level);
         }
 
         private int GetDefense()
         {
-            return 10 + Attributes[Archetype.DefenseModifier].Modifier + Archetype.DefenseBonus[Level];
+            return 10 + Attributes.Where(a => a.Name == Archetype.DefenseModifier).FirstOrDefault().Modifier + Archetype.DefenseBonus[Level];
         }
 
         private int GetInitiative()
         {
-            return Attributes["Dexterity"].Modifier;
+            return Attributes.Where(a => a.Name == "Dexterity").FirstOrDefault().Modifier;
         }
 
         private int GetDamageReduction()
@@ -81,8 +99,8 @@ namespace EverydayHeroes
 
         private int GetPassivePerception()
         {
-            var perceptionSkill = Skills["Perception"];
-            var value = 10 + Attributes["Wisdom"].Modifier + Attributes[perceptionSkill.AbilityModifier].Modifier;
+            var perceptionSkill = Skills.Where(s => s.Name == "Perception").FirstOrDefault();
+            var value = 10 + Attributes.Where(a => a.Name == "Wisdom").FirstOrDefault().Modifier + Attributes.Where(a => a.Name == perceptionSkill.AbilityModifier).FirstOrDefault().Modifier;
 
             if (perceptionSkill.Procifient)
             {

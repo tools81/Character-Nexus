@@ -15,24 +15,13 @@ namespace AmazingTales
 
         public string RulesetName => "Ruleset.AmazingTales";
 
-        public string ImageSource => "https://drive.google.com/thumbnail?id=17mBZDgUuTiCbZgHcWmcWyiWS1bjZmor5&sz=w1024";
+        public string ImageSource => "https://characternexus.blob.core.windows.net/resources/card_amazing_tales.jpg";
 
-        public string LogoSource => "https://drive.google.com/thumbnail?id=1TdxuN20fe-1Dswj0uJ662wW_s_0VXpyd&sz=w256";
+        public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_amazing_tales.png";
 
-        public ICharacter NewCharacter()
+        public string NewCharacter()
         {
-            var character = new Character();
-
-            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("AmazingTales.Json.Attributes.json"))
-            {
-                using (var reader = new StreamReader(stream))
-                {
-                    var jsonContent = reader.ReadToEnd();
-                    character.Attributes = JsonTo.Dictionary<Attribute>(jsonContent);
-                }
-            }
-
-            return character;
+            throw new NotImplementedException();
         }
     }
 }

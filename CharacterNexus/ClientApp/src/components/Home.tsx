@@ -1,13 +1,50 @@
 import { connect } from 'react-redux';
-import ImageCard from './ImageCard';
+import ImageCard from './RulesetCard';
 import { Ruleset } from '../store/Ruleset';
+import { useEffect, useState } from 'react';
+import { useRulesetContext } from './RulesetContext';
 
-interface Props {
-  rulesets: Ruleset[];
-  onClick: (ruleset: Ruleset) => void;
-}
+const Home: React.FC = () => {
+  const BASE_URL = `${window.location.protocol}//${window.location.host}`;
 
-const Home: React.FC<Props> = ({ rulesets, onClick }) => {
+  const [error, setError] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+  const [rulesets, setRulesets] = useState<Ruleset[]>([]);
+
+  const { ruleset, setRuleset } = useRulesetContext();
+
+  const updateRuleset = (ruleset: Ruleset) => {
+    setRuleset(ruleset);
+  };
+
+  useEffect(() => {
+    const fetchRulesets = async () => {
+      setIsLoading(true);
+
+      try {
+        const response = await fetch(`${BASE_URL}/api/ruleset/rulesets`);
+        const rulesets = (await response.json()) as Ruleset[];
+        setRulesets(rulesets);
+      } catch (e: any) {
+        setError(e);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    if (rulesets.length < 1) {
+      fetchRulesets();
+    }
+  }, []);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Something went wrong fetching rulesets!</div>;
+  }
+
   return (
     <div className="main-content">
       <h1>Choose a Ruleset</h1>
@@ -18,7 +55,7 @@ const Home: React.FC<Props> = ({ rulesets, onClick }) => {
               key = {ruleset.rulesetName}
               ruleset={ruleset.name}
               imgSrc={ruleset.imageSource}
-              onClick={() => onClick(ruleset)}
+              onClick={() => updateRuleset(ruleset)}
             />
           );
         })}

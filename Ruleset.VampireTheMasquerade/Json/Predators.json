@@ -1,0 +1,359 @@
+[
+    {
+        "name": "Alleycat",
+        "description": "",
+        "choice": [
+            {
+                "type": "Specialty",
+                "choices": [
+                    "Intimidation|Stickups",
+                    "Brawl|Grappling"
+                ],
+                "count": 1
+            },
+            {
+                "type": "Disipline",
+                "choices": [
+                    "Celerity",
+                    "Potence"
+                ],
+                "count": 1
+            }
+        ],
+        "adjustments": [
+            {
+                "type": "Humanity",
+                "name": "Humanity",
+                "value": -1
+            },
+            {
+                "type": "Background",
+                "name": "Criminal Contacts",
+                "value": 3
+            }
+        ]
+    },
+    {
+        "name": "Bagger",
+        "description": "",
+        "choice": [
+            {
+                "type": "Specialty",
+                "choices": [
+                    "Larceny|Lockpicking",
+                    "Streetwise|Black Markets"
+                ],
+                "count": 1
+            },
+            {
+                "type": "Disipline",
+                "choices": [
+                    "Blood Sorcery",
+                    "Obfuscate"
+                ],
+                "count": 1
+            }
+        ],
+        "adjustments": [
+            {
+                "type": "Merit",
+                "name": "Iron Gullet",
+                "value": 3
+            },
+            {
+                "type": "Flaw",
+                "name": "Enemy",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Blood Leech",
+        "description": "",
+        "choice": [
+            {
+                "type": "Specialty",
+                "choices": [
+                    "Brawl|Kindred",
+                    "Stealth|Kindred"
+                ],
+                "count": 1
+            },
+            {
+                "type": "Disipline",
+                "choices": [
+                    "Celerity",
+                    "Protean"
+                ],
+                "count": 1
+            },
+            {
+                "type": "Flaw",
+                "choices": [
+                    "Diablerist",
+                    "Shunned"
+                ],
+                "count": 1
+            }
+        ],
+        "adjustments": [
+            {
+                "type": "Humanity",
+                "name": "Humanity",
+                "value": -1
+            },
+            {
+                "type": "Potency",
+                "name": "Potency",
+                "value": 1
+            },
+            {
+                "type": "Flaw",
+                "name": "Prey Exclusion",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Cleaver",
+        "description": "",
+        "choice": [
+            {
+                "type": "Specialty",
+                "choices": [
+                    "Persuasion|Gaslighting",
+                    "Subterfuge|Coverups"
+                ],
+                "count": 1
+            },
+            {
+                "type": "Disipline",
+                "choices": [
+                    "Animalism",
+                    "Dominate"
+                ],
+                "count": 1
+            }
+        ],
+        "adjustments": [
+            {
+                "type": "Background",
+                "name": "Herd",
+                "value": 2
+            },
+            {
+                "type": "Flaw",
+                "name": "Cleaver",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "name": "Consensualist",
+        "description": "",
+        "choice": [
+            {
+                "type": "Specialty",
+                "choices": [
+                    "Medicine|Phlebotomy",
+                    "Persuasion|Victims"
+                ],
+                "count": 1
+            },
+            {
+                "type": "Disipline",
+                "choices": [
+                    "Auspex",
+                    "Fortitude"
+                ],
+                "count": 1
+            }
+        ],
+        "adjustments": [
+            {
+                "type": "Humanity",
+                "name": "Humanity",
+                "value": 1
+            },
+            {
+                "type": "Flaw",
+                "name": "Dark Secret",
+                "value": 1
+            },
+            {
+                "type": "Flaw",
+                "name": "Prey Exclusion",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "name": "Farmer",
+        "description": "",
+        "choice": [
+            {
+                "type": "Specialty",
+                "choices": [
+                    "Animal Ken|(Specific)",
+                    "Survival|Hunting"
+                ],
+                "count": 1
+            },
+            {
+                "type": "Disipline",
+                "choices": [
+                    "Animalism",
+                    "Protean"
+                ],
+                "count": 1
+            }
+        ],
+        "adjustments": [
+            {
+                "type": "Humanity",
+                "name": "Humanity",
+                "value": 1
+            },
+            {
+                "type": "Flaw",
+                "name": "Vegan",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "Osiris",
+        "description": "",
+        "choice": [
+            {
+                "type": "Specialty",
+                "choices": [
+                    "Occult|(Specific)",
+                    "Performance|(Specific)"
+                ],
+                "count": 1
+            },
+            {
+                "type": "Disipline",
+                "choices": [
+                    "Blood Sorcery",
+                    "Presence"
+                ],
+                "count": 1
+            }
+        ],
+        "adjustments": [
+        ]
+    },
+    {
+        "name": "Sandman",
+        "description": "",
+        "choice": [
+            {
+                "type": "Specialty",
+                "choices": [
+                    "Medicine|Anesthetics",
+                    "Steath|Break-in"
+                ],
+                "count": 1
+            },
+            {
+                "type": "Disipline",
+                "choices": [
+                    "Auspex",
+                    "Obfuscate"
+                ],
+                "count": 1
+            }
+        ],
+        "adjustments": [
+            {
+                "type": "Background",
+                "name": "Resources",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "name": "Scene Queen",
+        "description": "",
+        "choice": [
+            {
+                "type": "Specialty",
+                "choices": [
+                    "Ettiquete|(Specific)",
+                    "Leadership|(Specific)",
+                    "Streetwise|(Specific)"
+                ],
+                "count": 1
+            },
+            {
+                "type": "Disipline",
+                "choices": [
+                    "Dominate",
+                    "Potence"
+                ],
+                "count": 1
+            },
+            {
+                "type": "Flaw",
+                "choices": [
+                    "Disliked",
+                    "Prey Exclusion"
+                ],
+                "count": 1
+            }
+        ],
+        "adjustments": [
+            {
+                "type": "Merit",
+                "name": "Fame",
+                "value": 1
+            },
+            {
+                "type": "Background",
+                "name": "Contacts",
+                "value": 1
+            },
+            {
+                "type": "Flaw",
+                "name": "Dark Secret",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "name": "Siren",
+        "description": "",
+        "choice": [
+            {
+                "type": "Specialty",
+                "choices": [
+                    "Persuasion|Seduction",
+                    "Subterfuge|Seduction"
+                ],
+                "count": 1
+            },
+            {
+                "type": "Disipline",
+                "choices": [
+                    "Fortitude",
+                    "Presence"
+                ],
+                "count": 1
+            }
+        ],
+        "adjustments": [
+            {
+                "type": "Merit",
+                "name": "Beautiful",
+                "value": 2
+            },
+            {
+                "type": "Flaw",
+                "name": "Enemy",
+                "value": 1
+            }
+        ]
+    }
+]

@@ -13,11 +13,11 @@ namespace Starfinder
 
         public string RulesetName => "Ruleset.Starfinder";
 
-        public string ImageSource => "https://drive.google.com/thumbnail?id=11NZo8Ij3XDbHjFh4n5YHtKFyQdRFIGJh&sz=w1024";
+        public string ImageSource => "https://characternexus.blob.core.windows.net/resources/card_starfinder.jpg";
 
-        public string LogoSource => "https://drive.google.com/thumbnail?id=1nEcGzQLVUcO7qJRKo6DXbzCDN7tGlZey&sz=256";
+        public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_starfinder.png";
 
-        public ICharacter NewCharacter()
+        public string NewCharacter()
         {
             throw new NotImplementedException();
         }

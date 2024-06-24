@@ -10,6 +10,7 @@ namespace EverydayHeroes
 {
     public class Pack : IEquipment
     {
+        public string Name { get; set; }
         public string Description { get; set; }
         public string Clothes { get; set; }
         public int Price { get; set; }

@@ -26,11 +26,9 @@ namespace CharacterNexus
         {
             // Retrieve the user's selected ruleset (from query parameter, header, etc.)
             var selectedRuleset = context.Request.Query["ruleset"].ToString();
-            Console.WriteLine($"Ruleset to query: {selectedRuleset}");
 
             TextInfo txtInfo = new CultureInfo("en-us", false).TextInfo;
             selectedRuleset = txtInfo.ToTitleCase(selectedRuleset);
-            Console.WriteLine($"Ruleset post camelCase: {selectedRuleset}");
 
             // Retrieve the ruleset mapping from configuration
             var rulesetMapping = _configuration.GetSection("MappingsRuleset").Get<Dictionary<string, string>>();

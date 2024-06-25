@@ -6,4 +6,16 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Utility\Utility.csproj" />
+    <EmbeddedResource Include="Json\Attributes.json" />
+    <EmbeddedResource Include="Json\Occupations.json" />
+    <EmbeddedResource Include="Json\Origins.json" />
+    <EmbeddedResource Include="Json\Powers.json" />
+    <EmbeddedResource Include="Json\Powersets.json" />
+    <EmbeddedResource Include="Json\Tags.json" />
+    <EmbeddedResource Include="Json\Traits.json" />
+    <EmbeddedResource Include="Json\Weapons.json" />
+  </ItemGroup>
+
 </Project>

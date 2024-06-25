@@ -298,7 +298,7 @@ namespace EverydayHeroes
             var div = new
             {
                 type = "div",
-                className = "input-group mb-3",
+                className = "input-group mb-3 text-center",
                 children
             };
 

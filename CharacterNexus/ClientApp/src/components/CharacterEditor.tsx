@@ -53,7 +53,8 @@ const DynamicForm = () => {
     handleSubmit,
     watch,
     control,
-    formState: { errors }
+    getValues,
+    formState: { errors },
   } = useForm();
 
   useEffect(() => {
@@ -66,7 +67,7 @@ const DynamicForm = () => {
         );
         setSchema(await response.json());
       } catch (e: any) {
-        console.error("Error fetching schema:", e)
+        console.error("Error fetching schema:", e);
       }
     };
 
@@ -75,24 +76,31 @@ const DynamicForm = () => {
     }
   }, []);
 
-  const onSubmit = (data : any) => {
+  const onSubmit = (data: any) => {
     console.log(data);
   };
 
-    // const onSubmit = (data) => {
-    //   fetch(`${BASE_URL}/api/character/save`, {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(data),
-    //   })
-    //     .then((response) => response.json())
-    //     .then((data) => console.log("Success:", data))
-    //     .catch((error) => console.error("Error:", error));
-    // };
+  //const onSubmit: SubmitHandler<FormValues> = (data) => console.log(data);
 
-  const FieldArrayComponent = ( field : any, control : any, register : any, errors : any ) => {
+  // const onSubmit = (data) => {
+  //   fetch(`${BASE_URL}/api/character/save`, {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(data),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => console.log("Success:", data))
+  //     .catch((error) => console.error("Error:", error));
+  // };
+
+  const FieldArrayComponent = (
+    field: any,
+    control: any,
+    register: any,
+    errors: any
+  ) => {
     const { fields, append, remove } = useFieldArray({
       control,
       name: field.name,
@@ -122,20 +130,29 @@ const DynamicForm = () => {
     );
   };
 
-  const renderField = (field : any) => {
+  const renderField = (field: any) => {
     switch (field.type) {
       case "text":
         return (
           <div key={field.name} className="mb-3">
             <label>{field.label}</label>
-            <input id={field.name} defaultValue={field.default}></input>
+            <input
+              id={field.name}
+              defaultValue={field.default}
+              {...register(field.name)}
+            ></input>
           </div>
         );
       case "number":
         return (
           <div key={field.name} className="mb-3">
             <label>{field.label}</label>
-            <input id={field.name} type="number" defaultValue={field.default}></input>
+            <input
+              id={field.name}
+              type="number"
+              defaultValue={field.default}
+              {...register(field.name)}
+            ></input>
           </div>
         );
       case "select":
@@ -144,9 +161,9 @@ const DynamicForm = () => {
             <label>{field.label}</label>
             <select
               id={field.name}
-              name={field.name}
               className={field.className}
               aria-label={field.label}
+              {...register(field.name)}
             >
               <option value="">Select...</option>
               {field.options.map((option: any) => (
@@ -181,7 +198,7 @@ const DynamicForm = () => {
         );
       case "file":
         return (
-          <div className="mb-3">
+          <div key={field.name} className="mb-3">
             <label htmlFor={field.name} className="form-label">
               {field.label}
             </label>
@@ -189,6 +206,7 @@ const DynamicForm = () => {
               className={field.className}
               type={field.type}
               id={field.name}
+              {...register(field.name)}
             />
           </div>
         );
@@ -204,17 +222,22 @@ const DynamicForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <h2>{schema.title}</h2>
-      {schema.fields.map((field : any) => {
-        const dependsOnField = field.dependsOn
-          ? watch(field.dependsOn.field)
-          : true;
+      {schema.fields.map((field: any) => {
+        //const dependsOnField = field.dependsOn
+        //  ? watch(field.dependsOn.field)
+        //  : true;
+        //const shouldRenderField = field.dependsOn
+        //  ? dependsOnField === field.dependsOn.value
+        //  : true;
+        if (field.dependsOn) {
+          watch(field.dependsOn.field);
+        }
+
         const shouldRenderField = field.dependsOn
-          ? dependsOnField === field.dependsOn.value
+          ? getValues(field.dependsOn.field) == field.dependsOn.value
           : true;
 
-        return shouldRenderField ? (
-          renderField(field)
-        ) : null;
+        return shouldRenderField ? renderField(field) : null;
       })}
       <button type="submit">Submit</button>
     </form>

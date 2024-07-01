@@ -6,10 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Utility\Utility.csproj" />
     <EmbeddedResource Include="Json\Archetypes.json" />
     <EmbeddedResource Include="Json\Armors.json" />
@@ -26,7 +22,7 @@
     <EmbeddedResource Include="Json\Tricks.json" />
     <EmbeddedResource Include="Json\Vehicles.json" />
     <EmbeddedResource Include="Json\Weapons.json" />
-    <EmbeddedResource Include="Json\Schema\Form.json" />
+    <EmbeddedResource Include="Json\Character\Form.json" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,6 @@
 import * as Ruleset from './Ruleset';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.js';
 
 // The top-level state object
 export interface ApplicationState {

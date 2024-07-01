@@ -119,7 +119,7 @@ namespace AzureBlobStorage
             
             var blobServiceClient = new BlobServiceClient(connectionString);
             var blobContainerClient = blobServiceClient.GetBlobContainerClient((Debugger.IsAttached ? "dev-" : string.Empty) + containerName);
-            await blobContainerClient.CreateIfNotExistsAsync();
+            await blobContainerClient.CreateIfNotExistsAsync(PublicAccessType.Blob);
             return blobContainerClient;
         }
     }

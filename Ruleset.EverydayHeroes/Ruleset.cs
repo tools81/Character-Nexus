@@ -26,36 +26,11 @@ namespace EverydayHeroes
             
         }
 
-        // public ICharacter NewCharacter()
-        // {
-        //     var character = new Character();
-
-        //     using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("EverydayHeroes.Json.Attributes.json"))
-        //     {
-        //         using (var reader = new StreamReader(stream))
-        //         {
-        //             var jsonContent = reader.ReadToEnd();
-        //             character.Attributes = JsonTo.List<Attribute>(jsonContent);
-        //         }
-        //     }
-
-        //     using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("EverydayHeroes.Json.Skills.json"))
-        //     {
-        //         using (var reader = new StreamReader(stream))
-        //         {
-        //             var jsonContent = reader.ReadToEnd();
-        //             character.Skills = JsonTo.List<Skill>(jsonContent);
-        //         }
-        //     }
-
-        //     return character;
-        // }
-
         public string NewCharacter()
         {
             string jsonObject;
 
-            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.EverydayHeroes.Json.Schema.Form.json"))
+            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.EverydayHeroes.Json.Character.Form.json"))
             {
                 using (var reader = new StreamReader(stream))
                 {

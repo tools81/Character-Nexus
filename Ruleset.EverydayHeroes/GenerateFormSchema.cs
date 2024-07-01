@@ -66,41 +66,7 @@ namespace EverydayHeroes
                     return;
                 }
 
-                _fields.Add(
-                    new
-                    {
-                        name = "name",
-                        id = "name",
-                        label = "Name",
-                        type = "text",
-                        className="form-control",
-                        @default = "Unknown"
-                    });
-                _fields.Add(
-                    new
-                    {
-                        name = "imageUrl",
-                        id = "imageUrl",
-                        label = "Image",
-                        type = "file",
-                        className = "form-control"
-                    });
-                _fields.Add(
-                    new
-                    {
-                        name = "level",
-                        id = "level",
-                        label = "Level",
-                        type = "number",
-                        className = "form-control",
-                        validation = new
-                        {
-                            required = true,
-                            min = 1,
-                            max = 20
-                        },
-                        @default = 1
-                    });
+                AddDescriptionFields();
 
                 GenerateSchema(archetypes, "select");
                 GenerateSchema(classes, archetypes, "select");
@@ -128,17 +94,54 @@ namespace EverydayHeroes
 
                 string schemaJson = JsonConvert.SerializeObject(schema, Formatting.Indented);
 
-                var schemaPath = _jsonFilesPath + "Schema/Form.json";
+                var schemaPath = _jsonFilesPath + "Character/Form.json";
                 File.WriteAllText(schemaPath, schemaJson);
 
-                Console.WriteLine("Schema generated and saved to " + schemaPath);
-                Console.Read();
+                Console.WriteLine("Character schema generated and saved to " + schemaPath);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
-                Console.Read();
             }
+        }
+
+        private static void AddDescriptionFields()
+        {
+            _fields.Add(
+                new
+                {
+                    name = "name",
+                    id = "name",
+                    label = "Name",
+                    type = "text",
+                    className = "form-control",
+                    @default = "Unknown"
+                });
+            _fields.Add(
+                new
+                {
+                    name = "imageUrl",
+                    id = "imageUrl",
+                    label = "Image",
+                    type = "file",
+                    className = "form-control"
+                });
+            _fields.Add(
+                new
+                {
+                    name = "level",
+                    id = "level",
+                    label = "Level",
+                    type = "number",
+                    className = "form-control",
+                    validation = new
+                    {
+                        required = true,
+                        min = 1,
+                        max = 20
+                    },
+                    @default = 1
+                });
         }
 
         public static void GenerateSchema(List<Archetype> archetypes, string fieldType)
@@ -172,7 +175,7 @@ namespace EverydayHeroes
                     {
                         name = $"info-archetype-{archetype.Name}",
                         label = "Information",
-                        type = "textBlock",
+                        type = "textblock",
                         className = "text-block",
                         text = archetype.Description
                     }
@@ -277,7 +280,7 @@ namespace EverydayHeroes
             _fields.Add(obj);
         }
 
-        public static void GenerateSchema(List<Attribute> attributes, string fieldType, bool hasDefault, object? validation = null)
+        public static void GenerateSchema(List<Attribute> attributes, string fieldType, bool hasDefault, object validation = null)
         {
             var children = new List<object>();
             foreach (var attribute in attributes)

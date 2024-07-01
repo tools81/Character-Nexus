@@ -4,49 +4,8 @@ import { useRulesetContext } from "./RulesetContext";
 
 const BASE_URL = `${window.location.protocol}//${window.location.host}`;
 
-// interface Validation {
-//   required: boolean;
-//   min: number;
-//   max: number;
-// }
-
-// interface Option {
-//   value: string;
-//   label: string;
-// }
-
-// interface Children {
-//   name: string;
-//   label: string;
-//   type: string;
-//   text: string;
-// }
-
-// interface DependsOn {
-//   field: string;
-//   value: string;
-// }
-
-// interface Field {
-//   name: string;
-//   label: string;
-//   type: string;
-//   default: string;
-//   validation: Validation;
-//   options: Option[];
-//   className: string;
-//   children: Children[];
-//   dependsOn: DependsOn;
-// }
-
-// interface Schema {
-//   title: string;
-//   fields: Field[];
-// }
-
 const DynamicForm = () => {
   const { ruleset } = useRulesetContext();
-  //const [schema, setSchema] = useState<Schema>({ title: "Empty", fields: []});
   const [schema, setSchema] = useState<any>(null);
   const {
     register,
@@ -99,7 +58,6 @@ const DynamicForm = () => {
     field: any,
     control: any,
     register: any,
-    errors: any
   ) => {
     const { fields, append, remove } = useFieldArray({
       control,
@@ -109,23 +67,38 @@ const DynamicForm = () => {
     return (
       <div>
         <label>{field.label}</label>
-        {fields.map((item, index) => (
-          <div key={item.id}>
-            <input
+        <ul>
+          {fields.map((item, index) => (
+            <li key={item.id}>
+              <Controller
+                control={control}
+                name={`weapon[${index}]`}
+                render={({ field }) => (
+                  <select {...field}>
+                    <option value="">Select...</option>
+                    <option value="option1">Option 1</option>
+                  </select>
+                )}
+              />
+              {/* {renderField(field.component)} */}
+              {/* <input
               type={field.items.type}
-              {...register(`${field.name}[${index}]`, {
+              {...register(`${field.name}[${index}]` as const, {
                 required: field.items.validation.required,
                 pattern: field.items.validation.pattern,
               })}
-            />
-            <button type="button" onClick={() => remove(index)}>
-              Remove
-            </button>
-            {errors[field.name] && errors[field.name][index] && (
-              <span>This field is required</span>
-            )}
-          </div>
-        ))}
+            /> */}
+              <button type="button" onClick={() => remove(index)}>
+                Remove
+              </button>
+            </li>
+          ))}
+        </ul>
+        <section>
+          <button type="button" onClick={() => append({ value: "Select..." })}>
+            Add
+          </button>
+        </section>
       </div>
     );
   };
@@ -143,6 +116,18 @@ const DynamicForm = () => {
             ></input>
           </div>
         );
+      case "textarea":
+        return (
+          <div key={field.name} className="mb-3">
+            <label>{field.label}</label>
+            <textarea
+              id={field.name}
+              defaultValue={field.default}
+              
+              {...register(field.name)}
+            ></textarea>
+          </div>
+        );
       case "number":
         return (
           <div key={field.name} className="mb-3">
@@ -153,6 +138,21 @@ const DynamicForm = () => {
               defaultValue={field.default}
               {...register(field.name)}
             ></input>
+          </div>
+        );
+      case "switch":
+        return (
+          <div className="form-check form-switch">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              role="switch"
+              id={field.id}
+              {...register(field.name)}
+            />
+            <label className="form-check-label" htmlFor={field.id}>
+              {field.label}
+            </label>
           </div>
         );
       case "select":
@@ -167,14 +167,25 @@ const DynamicForm = () => {
             >
               <option value="">Select...</option>
               {field.options.map((option: any) => (
-                <option key={option.value} value={option.value}>
+                <option key={option.value} id={option.value} value={option.value}>
                   {option.label}
                 </option>
               ))}
             </select>
           </div>
         );
-      case "textBlock":
+      case "listgroup":
+        return (
+          <ul className="list-group">
+            {field.items.map((childItem: any) => (
+              <li className="list-group-item" id={childItem.component.name} key={childItem.component.name}>
+                {renderField(childItem.component)}
+                {renderField(childItem.text)}
+              </li>
+            ))}
+          </ul>
+        );
+      case "textblock":
         return (
           <div key={field.name} className="mb-3">
             <p>{field.text}</p>
@@ -182,8 +193,20 @@ const DynamicForm = () => {
         );
       case "div":
         return (
-          <div key={field.name} className={field.className}>
-            {field.children.map((childField: any) => renderField(childField))}
+          <div
+            key={field.name}
+            className={field.className}
+            dangerouslySetInnerHTML={{ __html: field.children.map((childField: any) => childField.text) }}
+          >
+
+          </div>
+        );
+      case "card":
+        return (
+          <div className="card">
+            <div className="card-body">
+              {field.text}
+            </div>
           </div>
         );
       case "array":
@@ -193,7 +216,6 @@ const DynamicForm = () => {
             field={field}
             control={control}
             register={register}
-            errors={errors}
           />
         );
       case "file":
@@ -208,6 +230,41 @@ const DynamicForm = () => {
               id={field.name}
               {...register(field.name)}
             />
+          </div>
+        );
+      case "accordion":
+        return (
+          <div className="mb-3">
+            <label htmlFor={field.id} className="form-label">
+              {field.label}
+            </label>
+            <div className="accordion" id={field.id}>
+              {field.items.map((childItem: any) => (
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target={`#${childItem.name}`}
+                      aria-expanded="false"
+                      aria-controls={childItem.name}
+                    >
+                      {childItem.header}
+                    </button>
+                  </h2>
+                  <div
+                    id={childItem.name}
+                    className="accordion-collapse collapse"
+                    data-bs-parent={`#${field.id}`}
+                  >
+                    <div className="accordion-body">
+                      {renderField(childItem.component)}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         );
       default:

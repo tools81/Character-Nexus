@@ -1,4 +1,5 @@
 ﻿using EverydayHeroes;
+using Marvel;
 
 
 namespace SchemaGenerator
@@ -9,7 +10,10 @@ namespace SchemaGenerator
 
         static void Main(string[] args)
         {
-            GenerateFormSchema.InitializeSchema();
+            EverydayHeroes.GenerateFormSchema.InitializeSchema();
+            Marvel.GenerateFormSchema.InitializeSchema();
+
+            Console.Read();
         }        
     }
 }

@@ -13,7 +13,13 @@
     },
     {
         "name": "Battle Ready",
-        "description": "The character is always mentally prepared for any sort of trouble to start."
+        "description": "The character is always mentally prepared for any sort of trouble to start.",
+      "bonusadjustments": [
+        {
+          "type": "Focus",
+          "value":  30
+        }
+      ]
     },
     {
         "name": "Beguiling",
@@ -23,17 +29,33 @@
         "name": "Berserker",
         "description": "The character often loses control of their temper."
     },
-    {
-        "name": "Big",
-        "description": "The character's size is big, which applies -1 to their Melee and Agility defenses, adds +1 to their Run Speed, and increases their reach to 2."
-    },
+  {
+    "name": "Big",
+    "description": "The character's size is big, which applies -1 to their Melee and Agility defenses, adds +1 to their Run Speed, and increases their reach to 2.",
+    "bonusadjustments": [
+      {
+        "type": "AttributeDefense",
+        "name": "Melee",
+        "value": -1
+      },
+      {
+        "type": "AttributeDefense",
+        "name": "Agility",
+        "value": -1
+      },
+      {
+        "type": "Run",
+        "value": 1
+      }
+    ]
+  },
     {
         "name": "Bloodthirsty",
         "description": "The character likes hurting people—even killing them."
     },
     {
         "name": "Breathe Different",
-        "description": "The character cannot breathe Earth’s air for long."
+        "description": "The character cannot breathe Earth's air for long."
     },
     {
         "name": "Clinician",
@@ -73,7 +95,7 @@
     },
     {
         "name": "Determination",
-        "description": "The character never gives up, even when they feel like they’re at their worst."
+        "description": "The character never gives up, even when they feel like they're at their worst."
     },
     {
         "name": "Eidetic Memory",
@@ -157,7 +179,7 @@
     },
     {
         "name": "Iron Will",
-        "description": "Enemies have trouble on attacks to control the character’s mind or influence their behavior."
+        "description": "Enemies have trouble on attacks to control the character's mind or influence their behavior."
     },
     {
         "name": "Legal Eagle",
@@ -193,7 +215,7 @@
     },
     {
         "name": "Public Speaking",
-        "description": "The character knows how to get the attention of a crowd, whether that’s at a political rally or in front of a jury or a classroom."
+        "description": "The character knows how to get the attention of a crowd, whether that's at a political rally or in front of a jury or a classroom."
     },
     {
         "name": "Pundit",
@@ -223,17 +245,33 @@
         "name": "Skeptical",
         "description": "The character is hard to fool."
     },
-    {
-        "name": "Small",
-        "description": "The character's size is small, which adds +1 to their Melee and Agility defenses and takes -1 from their Run Speed."
-    },
+  {
+    "name": "Small",
+    "description": "The character's size is small, which adds +1 to their Melee and Agility defenses and takes -1 from their Run Speed.",
+    "bonusadjustments": [
+      {
+        "type": "AttributeDefense",
+        "name": "Melee",
+        "value": 1
+      },
+      {
+        "type": "AttributeDefense",
+        "name": "Agility",
+        "value": 1
+      },
+      {
+        "type": "Run",
+        "value": -1
+      }
+    ]
+  },
     {
         "name": "Sneaky",
         "description": "The character has an edge on Agility checks when sneaking around."
     },
     {
         "name": "Stranger",
-        "description": "The character doesn’t understand local customs."
+        "description": "The character doesn't understand local customs."
     },
     {
         "name": "Surprising Power",

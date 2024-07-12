@@ -2,7 +2,7 @@ using Utility;
 
 namespace Marvel
 {
-    public class Weapon : IBaseJson
+    public class Weapon : IEquipment, IBaseJson
     {
         public string Name { get; set; }
         public string Description { get; set; }

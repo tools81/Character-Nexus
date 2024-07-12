@@ -2,12 +2,6 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CharacterNexus.Controllers
 {
@@ -32,7 +26,6 @@ namespace CharacterNexus.Controllers
                 _logger.LogInformation($"New character started for ruleset {ruleset.Name}");
 
                 var character = ruleset.NewCharacter();
-                Console.WriteLine(character);
 
                 return Ok(ruleset.NewCharacter());
             }
@@ -59,14 +52,23 @@ namespace CharacterNexus.Controllers
         }
 
         [HttpPost("save")]
-        public IActionResult SaveCharacter(ICharacter character)
+        public IActionResult SaveCharacter([FromBody] string data)
         {
             if (HttpContext.Items.TryGetValue("Ruleset", out var rulesetObj) && rulesetObj is IRuleset ruleset)
             {
-                _logger.LogInformation($"Character save requested for {character.Name} in ruleset {ruleset.Name}");
+                _logger.LogInformation($"Character save requested in ruleset {ruleset.Name}");
 
-                _storage.UploadCharacterAsync(ruleset.Name, character);
-                return Ok();
+                var character = ruleset.SaveCharacter(data);
+
+                if (character != null)
+                {
+                    _storage.UploadCharacterAsync(ruleset.Name, character);
+                    return Ok();
+                }
+                else
+                {
+                    return BadRequest("Failed to create character.");
+                }
             }
             else
             {

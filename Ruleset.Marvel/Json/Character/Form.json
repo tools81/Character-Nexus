@@ -18,10 +18,10 @@
       "default": "Unknown"
     },
     {
-      "name": "imageUrl",
-      "id": "imageUrl",
+      "name": "image",
+      "id": "image",
       "label": "Image",
-      "type": "file",
+      "type": "image",
       "className": "form-control"
     },
     {
@@ -1252,1334 +1252,586 @@
       }
     },
     {
-      "name": "trait",
-      "label": "Trait",
-      "type": "select",
-      "className": "form-select",
-      "options": [
+      "type": "group",
+      "name": "attributes",
+      "label": "Ability Scores",
+      "children": [
         {
-          "value": "Abrasive",
-          "label": "Abrasive"
+          "name": "attributes.Melee",
+          "id": "attributes.melee",
+          "label": "Melee",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": -3,
+            "max": 9
+          },
+          "default": 0
         },
         {
-          "value": "Anathema",
-          "label": "Anathema"
+          "name": "attributes.Agility",
+          "id": "attributes.agility",
+          "label": "Agility",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": -3,
+            "max": 9
+          },
+          "default": 0
         },
         {
-          "value": "Audience",
-          "label": "Audience"
+          "name": "attributes.Resilience",
+          "id": "attributes.resilience",
+          "label": "Resilience",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": -3,
+            "max": 9
+          },
+          "default": 0
         },
         {
-          "value": "Battle Ready",
-          "label": "Battle Ready"
+          "name": "attributes.Vigilance",
+          "id": "attributes.vigilance",
+          "label": "Vigilance",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": -3,
+            "max": 9
+          },
+          "default": 0
         },
         {
-          "value": "Beguiling",
-          "label": "Beguiling"
+          "name": "attributes.Ego",
+          "id": "attributes.ego",
+          "label": "Ego",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": -3,
+            "max": 9
+          },
+          "default": 0
         },
         {
-          "value": "Berserker",
-          "label": "Berserker"
-        },
-        {
-          "value": "Big",
-          "label": "Big"
-        },
-        {
-          "value": "Bloodthirsty",
-          "label": "Bloodthirsty"
-        },
-        {
-          "value": "Breathe Different",
-          "label": "Breathe Different"
-        },
-        {
-          "value": "Clinician",
-          "label": "Clinician"
-        },
-        {
-          "value": "Clueless",
-          "label": "Clueless"
-        },
-        {
-          "value": "Combat Expert",
-          "label": "Combat Expert"
-        },
-        {
-          "value": "Combat Finesse",
-          "label": "Combat Finesse"
-        },
-        {
-          "value": "Combat Reflexes",
-          "label": "Combat Reflexes"
-        },
-        {
-          "value": "Combat Trickery",
-          "label": "Combat Trickery"
-        },
-        {
-          "value": "Connections",
-          "label": "Connections"
-        },
-        {
-          "value": "Dealmaker",
-          "label": "Dealmaker"
-        },
-        {
-          "value": "Debate Champ",
-          "label": "Debate Champ"
-        },
-        {
-          "value": "Determination",
-          "label": "Determination"
-        },
-        {
-          "value": "Eidetic Memory",
-          "label": "Eidetic Memory"
-        },
-        {
-          "value": "Enduring Constitution",
-          "label": "Enduring Constitution"
-        },
-        {
-          "value": "Enhanced Physique",
-          "label": "Enhanced Physique"
-        },
-        {
-          "value": "Extra Occupation",
-          "label": "Extra Occupation"
-        },
-        {
-          "value": "Extraordinary Origin",
-          "label": "Extraordinary Origin"
-        },
-        {
-          "value": "Famous",
-          "label": "Famous"
-        },
-        {
-          "value": "Fearless",
-          "label": "Fearless"
-        },
-        {
-          "value": "First Aid",
-          "label": "First Aid"
-        },
-        {
-          "value": "Font of Information",
-          "label": "Font of Information"
-        },
-        {
-          "value": "Free Running",
-          "label": "Free Running"
-        },
-        {
-          "value": "Fresh Eyes",
-          "label": "Fresh Eyes"
-        },
-        {
-          "value": "Gearhead",
-          "label": "Gearhead"
-        },
-        {
-          "value": "Glibness",
-          "label": "Glibness"
-        },
-        {
-          "value": "God Heritage",
-          "label": "God Heritage"
-        },
-        {
-          "value": "Gullible",
-          "label": "Gullible"
-        },
-        {
-          "value": "Honest",
-          "label": "Honest"
-        },
-        {
-          "value": "Infamous",
-          "label": "Infamous"
-        },
-        {
-          "value": "Interrogation",
-          "label": "Interrogation"
-        },
-        {
-          "value": "Inventor",
-          "label": "Inventor"
-        },
-        {
-          "value": "Investigation",
-          "label": "Investigation"
-        },
-        {
-          "value": "Iron Will",
-          "label": "Iron Will"
-        },
-        {
-          "value": "Legal Eagle",
-          "label": "Legal Eagle"
-        },
-        {
-          "value": "Leverage",
-          "label": "Leverage"
-        },
-        {
-          "value": "Loner",
-          "label": "Loner"
-        },
-        {
-          "value": "Massive",
-          "label": "Massive"
-        },
-        {
-          "value": "Monster",
-          "label": "Monster"
-        },
-        {
-          "value": "Out of Shape",
-          "label": "Out of Shape"
-        },
-        {
-          "value": "Piloting",
-          "label": "Piloting"
-        },
-        {
-          "value": "Presence",
-          "label": "Presence"
-        },
-        {
-          "value": "Public Speaking",
-          "label": "Public Speaking"
-        },
-        {
-          "value": "Pundit",
-          "label": "Pundit"
-        },
-        {
-          "value": "Quick Learner",
-          "label": "Quick Learner"
-        },
-        {
-          "value": "Regal",
-          "label": "Regal"
-        },
-        {
-          "value": "Scientific Expertise",
-          "label": "Scientific Expertise"
-        },
-        {
-          "value": "Signature Attack",
-          "label": "Signature Attack"
-        },
-        {
-          "value": "Situational Awareness",
-          "label": "Situational Awareness"
-        },
-        {
-          "value": "Skeptical",
-          "label": "Skeptical"
-        },
-        {
-          "value": "Small",
-          "label": "Small"
-        },
-        {
-          "value": "Sneaky",
-          "label": "Sneaky"
-        },
-        {
-          "value": "Stranger",
-          "label": "Stranger"
-        },
-        {
-          "value": "Surprising Power",
-          "label": "Surprising Power"
-        },
-        {
-          "value": "Tech Reliance",
-          "label": "Tech Reliance"
-        },
-        {
-          "value": "Weakness",
-          "label": "Weakness"
-        },
-        {
-          "value": "Weird",
-          "label": "Weird"
+          "name": "attributes.Logic",
+          "id": "attributes.logic",
+          "label": "Logic",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": -3,
+            "max": 9
+          },
+          "default": 0
         }
       ]
     },
     {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Abrasive",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character rubs people the wrong way."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Abrasive"
+      "name": "trait",
+      "label": "Traits",
+      "type": "array",
+      "component": {
+        "name": "trait",
+        "label": "Traits",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Abrasive",
+            "label": "Abrasive"
+          },
+          {
+            "value": "Anathema",
+            "label": "Anathema"
+          },
+          {
+            "value": "Audience",
+            "label": "Audience"
+          },
+          {
+            "value": "Battle Ready",
+            "label": "Battle Ready"
+          },
+          {
+            "value": "Beguiling",
+            "label": "Beguiling"
+          },
+          {
+            "value": "Berserker",
+            "label": "Berserker"
+          },
+          {
+            "value": "Big",
+            "label": "Big"
+          },
+          {
+            "value": "Bloodthirsty",
+            "label": "Bloodthirsty"
+          },
+          {
+            "value": "Breathe Different",
+            "label": "Breathe Different"
+          },
+          {
+            "value": "Clinician",
+            "label": "Clinician"
+          },
+          {
+            "value": "Clueless",
+            "label": "Clueless"
+          },
+          {
+            "value": "Combat Expert",
+            "label": "Combat Expert"
+          },
+          {
+            "value": "Combat Finesse",
+            "label": "Combat Finesse"
+          },
+          {
+            "value": "Combat Reflexes",
+            "label": "Combat Reflexes"
+          },
+          {
+            "value": "Combat Trickery",
+            "label": "Combat Trickery"
+          },
+          {
+            "value": "Connections",
+            "label": "Connections"
+          },
+          {
+            "value": "Dealmaker",
+            "label": "Dealmaker"
+          },
+          {
+            "value": "Debate Champ",
+            "label": "Debate Champ"
+          },
+          {
+            "value": "Determination",
+            "label": "Determination"
+          },
+          {
+            "value": "Eidetic Memory",
+            "label": "Eidetic Memory"
+          },
+          {
+            "value": "Enduring Constitution",
+            "label": "Enduring Constitution"
+          },
+          {
+            "value": "Enhanced Physique",
+            "label": "Enhanced Physique"
+          },
+          {
+            "value": "Extra Occupation",
+            "label": "Extra Occupation"
+          },
+          {
+            "value": "Extraordinary Origin",
+            "label": "Extraordinary Origin"
+          },
+          {
+            "value": "Famous",
+            "label": "Famous"
+          },
+          {
+            "value": "Fearless",
+            "label": "Fearless"
+          },
+          {
+            "value": "First Aid",
+            "label": "First Aid"
+          },
+          {
+            "value": "Font of Information",
+            "label": "Font of Information"
+          },
+          {
+            "value": "Free Running",
+            "label": "Free Running"
+          },
+          {
+            "value": "Fresh Eyes",
+            "label": "Fresh Eyes"
+          },
+          {
+            "value": "Gearhead",
+            "label": "Gearhead"
+          },
+          {
+            "value": "Glibness",
+            "label": "Glibness"
+          },
+          {
+            "value": "God Heritage",
+            "label": "God Heritage"
+          },
+          {
+            "value": "Gullible",
+            "label": "Gullible"
+          },
+          {
+            "value": "Honest",
+            "label": "Honest"
+          },
+          {
+            "value": "Infamous",
+            "label": "Infamous"
+          },
+          {
+            "value": "Interrogation",
+            "label": "Interrogation"
+          },
+          {
+            "value": "Inventor",
+            "label": "Inventor"
+          },
+          {
+            "value": "Investigation",
+            "label": "Investigation"
+          },
+          {
+            "value": "Iron Will",
+            "label": "Iron Will"
+          },
+          {
+            "value": "Legal Eagle",
+            "label": "Legal Eagle"
+          },
+          {
+            "value": "Leverage",
+            "label": "Leverage"
+          },
+          {
+            "value": "Loner",
+            "label": "Loner"
+          },
+          {
+            "value": "Massive",
+            "label": "Massive"
+          },
+          {
+            "value": "Monster",
+            "label": "Monster"
+          },
+          {
+            "value": "Out of Shape",
+            "label": "Out of Shape"
+          },
+          {
+            "value": "Piloting",
+            "label": "Piloting"
+          },
+          {
+            "value": "Presence",
+            "label": "Presence"
+          },
+          {
+            "value": "Public Speaking",
+            "label": "Public Speaking"
+          },
+          {
+            "value": "Pundit",
+            "label": "Pundit"
+          },
+          {
+            "value": "Quick Learner",
+            "label": "Quick Learner"
+          },
+          {
+            "value": "Regal",
+            "label": "Regal"
+          },
+          {
+            "value": "Scientific Expertise",
+            "label": "Scientific Expertise"
+          },
+          {
+            "value": "Signature Attack",
+            "label": "Signature Attack"
+          },
+          {
+            "value": "Situational Awareness",
+            "label": "Situational Awareness"
+          },
+          {
+            "value": "Skeptical",
+            "label": "Skeptical"
+          },
+          {
+            "value": "Small",
+            "label": "Small"
+          },
+          {
+            "value": "Sneaky",
+            "label": "Sneaky"
+          },
+          {
+            "value": "Stranger",
+            "label": "Stranger"
+          },
+          {
+            "value": "Surprising Power",
+            "label": "Surprising Power"
+          },
+          {
+            "value": "Tech Reliance",
+            "label": "Tech Reliance"
+          },
+          {
+            "value": "Weakness",
+            "label": "Weakness"
+          },
+          {
+            "value": "Weird",
+            "label": "Weird"
+          }
+        ]
       }
     },
     {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Anathema",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character suffers direct harm when exposed to a particular substance."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Anathema"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Audience",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "Many people follow the character's work and treat them with the respect they deserve."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Audience"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Battle Ready",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is always mentally prepared for any sort of trouble to start."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Battle Ready"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Beguiling",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character has an edge when making an Ego check to persuade someone who could be attracted to them."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Beguiling"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Berserker",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character often loses control of their temper."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Berserker"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Big",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character's size is big, which applies -1 to their Melee and Agility defenses, adds +1 to their Run Speed, and increases their reach to 2."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Big"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Bloodthirsty",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character likes hurting people—even killing them."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Bloodthirsty"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Breathe Different",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character cannot breathe Earth's air for long."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Breathe Different"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Clinician",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character has an edge on Logic (medicine) checks to determine what is medically wrong with someone they examine."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Clinician"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Clueless",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character tends to shut out things they're not entirely focused on."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Clueless"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Combat Expert",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character knows how to handle themselves better than most."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Combat Expert"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Combat Finesse",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character can add their Agility rather than their Melee to Fight attack checks."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Combat Finesse"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Combat Reflexes",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character can react quickly in combat."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Combat Reflexes"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Combat Trickery",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "Once per battle, when attacking, the character can turn the Marvel die into a 1."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Combat Trickery"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Connections",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character knows someone with access to and knowledge of a particular field."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Connections"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Dealmaker",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is skilled at the art of negotiation."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Dealmaker"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Debate Champ",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character can use their Logic instead of their Ego with Ego (persuasion) and Ego (intimidation) checks."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Debate Champ"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Determination",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character never gives up, even when they feel like they're at their worst."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Determination"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Eidetic Memory",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character rarely forgets anything."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Eidetic Memory"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Enduring Constitution",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character can function for up to 48 hours without sleep and has an edge on Resilience checks to overcome fatigue or weariness."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Enduring Constitution"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Enhanced Physique",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is stronger than regular humans."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Enhanced Physique"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Extra Occupation",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character has a busy life and has done all sorts of things."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Extra Occupation"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Extraordinary Origin",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character has an additional origin."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Extraordinary Origin"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Famous",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is widely known—at least among a certain group of people or a population."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Famous"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Fearless",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is extremely brave."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Fearless"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-First Aid",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character knows how to administer first aid."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "First Aid"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Font of Information",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character has an edge on Logic checks having to do with knowledge."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Font of Information"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Free Running",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character has an edge on Agility checks made to perform acrobatics during a movement action."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Free Running"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Fresh Eyes",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character has their own way of doing things."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Fresh Eyes"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Gearhead",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character knows their way around machines."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Gearhead"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Glibness",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character can strike up a conversation with anyone at any time and can often convince them to lend a hand."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Glibness"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-God Heritage",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character - or at least one of their ancestors - is a god."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "God Heritage"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Gullible",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is easy to fool."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Gullible"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Honest",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is a terrible liar."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Honest"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Infamous",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is widely known and generally disliked—at least among a certain group of people or a population."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Infamous"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Interrogation",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character knows how to ask the right questions in the right way."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Interrogation"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Inventor",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is good at coming up with solutions on the fly."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Inventor"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Investigation",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is an expert investigator, trained in the arts of forensic science."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Investigation"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Iron Will",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "Enemies have trouble on attacks to control the character's mind or influence their behavior."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Iron Will"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Legal Eagle",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character knows the laws of their homeland and can help others navigate them."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Legal Eagle"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Leverage",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is good at figuring out what people want and using it against them."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Leverage"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Loner",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character does not play well with others."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Loner"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Massive",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character's size is Big."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Massive"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Monster",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is some kind of monster, often of a type spoken of in legend."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Monster"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Out of Shape",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is in poor physical condition."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Out of Shape"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Piloting",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character knows how to operate vehicles of all kinds."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Piloting"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Presence",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character knows how to command attention on demand."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Presence"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Public Speaking",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character knows how to get the attention of a crowd, whether that's at a political rally or in front of a jury or a classroom."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Public Speaking"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Pundit",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character knows how to break news items and put them into context to craft a story around them."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Pundit"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Quick Learner",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "If the character fails an action check, they gain an edge on the check if they try the same action again on their next turn."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Quick Learner"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Regal",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character seems born to be in charge."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Regal"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Scientific Expertise",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character has extensive scientific training."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Scientific Expertise"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Signature Attack",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is known for favoring a particular kind of weapon or attack power."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Signature Attack"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Situational Awareness",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is trained to always keep an eye out for trouble."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Situational Awareness"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Skeptical",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is hard to fool."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Skeptical"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Small",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character's size is small, which adds +1 to their Melee and Agility defenses and takes -1 from their Run Speed."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Small"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Sneaky",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character has an edge on Agility checks when sneaking around."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Sneaky"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Stranger",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character doesn't understand local customs."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Stranger"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Surprising Power",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character can choose a power they normally wouldn't be able to use."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Surprising Power"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Tech Reliance",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character relies on technology for powers."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Tech Reliance"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Weakness",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character suffers an unusual amount of harm from certain substances."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Weakness"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-trait-Weird",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character has something weird (or even wonderful) about them."
-        }
-      ],
-      "dependsOn": {
-        "field": "trait",
-        "value": "Weird"
+      "name": "tag",
+      "label": "Tags",
+      "type": "array",
+      "component": {
+        "name": "tag",
+        "label": "Tags",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "A.I.",
+            "label": "A.I."
+          },
+          {
+            "value": "Alien Heritage",
+            "label": "Alien Heritage"
+          },
+          {
+            "value": "Alternate Form",
+            "label": "Alternate Form"
+          },
+          {
+            "value": "Amphibious",
+            "label": "Amphibious"
+          },
+          {
+            "value": "Auditory Issues",
+            "label": "Auditory Issues"
+          },
+          {
+            "value": "Authority",
+            "label": "Authority"
+          },
+          {
+            "value": "Backup",
+            "label": "Backup"
+          },
+          {
+            "value": "Black Market Access",
+            "label": "Black Market Access"
+          },
+          {
+            "value": "Blind",
+            "label": "Blind"
+          },
+          {
+            "value": "Chaotic",
+            "label": "Chaotic"
+          },
+          {
+            "value": "Convict",
+            "label": "Convict"
+          },
+          {
+            "value": "Cursed",
+            "label": "Cursed"
+          },
+          {
+            "value": "Deaf",
+            "label": "Deaf"
+          },
+          {
+            "value": "Deceased",
+            "label": "Deceased"
+          },
+          {
+            "value": "Dependents",
+            "label": "Dependents"
+          },
+          {
+            "value": "Enemy",
+            "label": "Enemy"
+          },
+          {
+            "value": "Eternally Immortal",
+            "label": "Eternally Immortal"
+          },
+          {
+            "value": "Extreme Appearance",
+            "label": "Extreme Appearance"
+          },
+          {
+            "value": "Gamma Mutate",
+            "label": "Gamma Mutate"
+          },
+          {
+            "value": "Green Door",
+            "label": "Green Door"
+          },
+          {
+            "value": "Hard of Hearing",
+            "label": "Hard of Hearing"
+          },
+          {
+            "value": "Headquarters",
+            "label": "Headquarters"
+          },
+          {
+            "value": "Heroic",
+            "label": "Heroic"
+          },
+          {
+            "value": "Hounded",
+            "label": "Hounded"
+          },
+          {
+            "value": "Hunted",
+            "label": "Hunted"
+          },
+          {
+            "value": "Imageless",
+            "label": "Imageless"
+          },
+          {
+            "value": "Immunity",
+            "label": "Immunity"
+          },
+          {
+            "value": "Inhuman Genes",
+            "label": "Inhuman Genes"
+          },
+          {
+            "value": "Krakoan",
+            "label": "Krakoan"
+          },
+          {
+            "value": "Lab Access",
+            "label": "Lab Access"
+          },
+          {
+            "value": "Leader",
+            "label": "Leader"
+          },
+          {
+            "value": "Linguist",
+            "label": "Linguist"
+          },
+          {
+            "value": "Lunar Transformation",
+            "label": "Lunar Transformation"
+          },
+          {
+            "value": "Mahd Wy'ry",
+            "label": "Mahd Wy'ry"
+          },
+          {
+            "value": "Mentor",
+            "label": "Mentor"
+          },
+          {
+            "value": "Mute",
+            "label": "Mute"
+          },
+          {
+            "value": "Mysterious",
+            "label": "Mysterious"
+          },
+          {
+            "value": "Obligation",
+            "label": "Obligation"
+          },
+          {
+            "value": "Poor",
+            "label": "Poor"
+          },
+          {
+            "value": "Powerful",
+            "label": "Powerful"
+          },
+          {
+            "value": "Prescription Pad",
+            "label": "Prescription Pad"
+          },
+          {
+            "value": "Public Identity",
+            "label": "Public Identity"
+          },
+          {
+            "value": "Radioactive",
+            "label": "Radioactive"
+          },
+          {
+            "value": "Rich",
+            "label": "Rich"
+          },
+          {
+            "value": "Secret Identity",
+            "label": "Secret Identity"
+          },
+          {
+            "value": "Signature Weapon",
+            "label": "Signature Weapon"
+          },
+          {
+            "value": "Sorcerous",
+            "label": "Sorcerous"
+          },
+          {
+            "value": "Streetwise",
+            "label": "Streetwise"
+          },
+          {
+            "value": "Supernatural",
+            "label": "Supernatural"
+          },
+          {
+            "value": "Villianous",
+            "label": "Villianous"
+          },
+          {
+            "value": "Vision Issues",
+            "label": "Vision Issues"
+          },
+          {
+            "value": "Weapon",
+            "label": "Weapon"
+          },
+          {
+            "value": "Worshipped",
+            "label": "Worshipped"
+          },
+          {
+            "value": "X-Gene",
+            "label": "X-Gene"
+          },
+          {
+            "value": "Young",
+            "label": "Young"
+          }
+        ]
       }
     },
     {
@@ -2595,7 +1847,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Accuracy 1",
+                  "name": "accuracy 1",
                   "id": "Basic-Accuracy 1",
                   "label": "Accuracy 1",
                   "type": "switch"
@@ -2610,7 +1862,7 @@
               },
               {
                 "component": {
-                  "name": "Accuracy 2",
+                  "name": "accuracy 2",
                   "id": "Basic-Accuracy 2",
                   "label": "Accuracy 2",
                   "type": "switch"
@@ -2625,7 +1877,7 @@
               },
               {
                 "component": {
-                  "name": "Accuracy 3",
+                  "name": "accuracy 3",
                   "id": "Basic-Accuracy 3",
                   "label": "Accuracy 3",
                   "type": "switch"
@@ -2640,7 +1892,7 @@
               },
               {
                 "component": {
-                  "name": "Accuracy 4",
+                  "name": "accuracy 4",
                   "id": "Basic-Accuracy 4",
                   "label": "Accuracy 4",
                   "type": "switch"
@@ -2655,7 +1907,7 @@
               },
               {
                 "component": {
-                  "name": "Additional Limbs",
+                  "name": "additional limbs",
                   "id": "Basic-Additional Limbs",
                   "label": "Additional Limbs",
                   "type": "switch"
@@ -2670,7 +1922,7 @@
               },
               {
                 "component": {
-                  "name": "Anger",
+                  "name": "anger",
                   "id": "Basic-Anger",
                   "label": "Anger",
                   "type": "switch"
@@ -2680,12 +1932,12 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": "You won''t like them when they're angry."
+                  "text": "You won't like them when they're angry."
                 }
               },
               {
                 "component": {
-                  "name": "Brawling",
+                  "name": "brawling",
                   "id": "Basic-Brawling",
                   "label": "Brawling",
                   "type": "switch"
@@ -2700,7 +1952,7 @@
               },
               {
                 "component": {
-                  "name": "Brilliance 1",
+                  "name": "brilliance 1",
                   "id": "Basic-Brilliance 1",
                   "label": "Brilliance 1",
                   "type": "switch"
@@ -2715,7 +1967,7 @@
               },
               {
                 "component": {
-                  "name": "Brilliance 2",
+                  "name": "brilliance 2",
                   "id": "Basic-Brilliance 2",
                   "label": "Brilliance 2",
                   "type": "switch"
@@ -2730,7 +1982,7 @@
               },
               {
                 "component": {
-                  "name": "Brilliance 3",
+                  "name": "brilliance 3",
                   "id": "Basic-Brilliance 3",
                   "label": "Brilliance 3",
                   "type": "switch"
@@ -2745,7 +1997,7 @@
               },
               {
                 "component": {
-                  "name": "Brilliance 4",
+                  "name": "brilliance 4",
                   "id": "Basic-Brilliance 4",
                   "label": "Brilliance 4",
                   "type": "switch"
@@ -2755,27 +2007,12 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": "The character''s intelligence is unparalleled."
+                  "text": "The character's intelligence is unparalleled."
                 }
               },
               {
                 "component": {
-                  "name": "Camouflage",
-                  "id": "Basic-Camouflage",
-                  "label": "Camouflage",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-power-Basic-Camouflage",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "The character can blend into the background to avoid detection."
-                }
-              },
-              {
-                "component": {
-                  "name": "Combat Trickery",
+                  "name": "combat trickery",
                   "id": "Basic-Combat Trickery",
                   "label": "Combat Trickery",
                   "type": "switch"
@@ -2790,7 +2027,7 @@
               },
               {
                 "component": {
-                  "name": "Discipline 1",
+                  "name": "discipline 1",
                   "id": "Basic-Discipline 1",
                   "label": "Discipline 1",
                   "type": "switch"
@@ -2805,7 +2042,7 @@
               },
               {
                 "component": {
-                  "name": "Discipline 2",
+                  "name": "discipline 2",
                   "id": "Basic-Discipline 2",
                   "label": "Discipline 2",
                   "type": "switch"
@@ -2820,7 +2057,7 @@
               },
               {
                 "component": {
-                  "name": "Discipline 3",
+                  "name": "discipline 3",
                   "id": "Basic-Discipline 3",
                   "label": "Discipline 3",
                   "type": "switch"
@@ -2835,7 +2072,7 @@
               },
               {
                 "component": {
-                  "name": "Discipline 4",
+                  "name": "discipline 4",
                   "id": "Basic-Discipline 4",
                   "label": "Discipline 4",
                   "type": "switch"
@@ -2850,7 +2087,7 @@
               },
               {
                 "component": {
-                  "name": "Disguise",
+                  "name": "disguise",
                   "id": "Basic-Disguise",
                   "label": "Disguise",
                   "type": "switch"
@@ -2865,7 +2102,7 @@
               },
               {
                 "component": {
-                  "name": "Energy Absorption",
+                  "name": "energy absorption",
                   "id": "Basic-Energy Absorption",
                   "label": "Energy Absorption",
                   "type": "switch"
@@ -2880,7 +2117,7 @@
               },
               {
                 "component": {
-                  "name": "Environmental Protection",
+                  "name": "environmental protection",
                   "id": "Basic-Environmental Protection",
                   "label": "Environmental Protection",
                   "type": "switch"
@@ -2890,12 +2127,12 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": "Environmental effects don''t bother the character."
+                  "text": "Environmental effects don't bother the character."
                 }
               },
               {
                 "component": {
-                  "name": "Evasion",
+                  "name": "evasion",
                   "id": "Basic-Evasion",
                   "label": "Evasion",
                   "type": "switch"
@@ -2910,22 +2147,7 @@
               },
               {
                 "component": {
-                  "name": "Fastball Special",
-                  "id": "Basic-Fastball Special",
-                  "label": "Fastball Special",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-power-Basic-Fastball Special",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "Your ally tosses you straight into the heart of the battle!"
-                }
-              },
-              {
-                "component": {
-                  "name": "Flight 1",
+                  "name": "flight 1",
                   "id": "Basic-Flight 1",
                   "label": "Flight 1",
                   "type": "switch"
@@ -2940,7 +2162,7 @@
               },
               {
                 "component": {
-                  "name": "Flight 2",
+                  "name": "flight 2",
                   "id": "Basic-Flight 2",
                   "label": "Flight 2",
                   "type": "switch"
@@ -2955,7 +2177,7 @@
               },
               {
                 "component": {
-                  "name": "Group Flight ",
+                  "name": "group flight ",
                   "id": "Basic-Group Flight ",
                   "label": "Group Flight ",
                   "type": "switch"
@@ -2970,7 +2192,7 @@
               },
               {
                 "component": {
-                  "name": "Healing Factor",
+                  "name": "healing factor",
                   "id": "Basic-Healing Factor",
                   "label": "Healing Factor",
                   "type": "switch"
@@ -2985,7 +2207,7 @@
               },
               {
                 "component": {
-                  "name": "Heightened Senses 1",
+                  "name": "heightened senses 1",
                   "id": "Basic-Heightened Senses 1",
                   "label": "Heightened Senses 1",
                   "type": "switch"
@@ -3000,7 +2222,7 @@
               },
               {
                 "component": {
-                  "name": "Heightened Senses 2",
+                  "name": "heightened senses 2",
                   "id": "Basic-Heightened Senses 2",
                   "label": "Heightened Senses 2",
                   "type": "switch"
@@ -3015,7 +2237,7 @@
               },
               {
                 "component": {
-                  "name": "Iconic Weapon",
+                  "name": "iconic weapon",
                   "id": "Basic-Iconic Weapon",
                   "label": "Iconic Weapon",
                   "type": "switch"
@@ -3030,7 +2252,7 @@
               },
               {
                 "component": {
-                  "name": "Inspiration",
+                  "name": "inspiration",
                   "id": "Basic-Inspiration",
                   "label": "Inspiration",
                   "type": "switch"
@@ -3045,7 +2267,7 @@
               },
               {
                 "component": {
-                  "name": "Integrity",
+                  "name": "integrity",
                   "id": "Basic-Integrity",
                   "label": "Integrity",
                   "type": "switch"
@@ -3060,7 +2282,7 @@
               },
               {
                 "component": {
-                  "name": "Mighty 1",
+                  "name": "mighty 1",
                   "id": "Basic-Mighty 1",
                   "label": "Mighty 1",
                   "type": "switch"
@@ -3075,7 +2297,7 @@
               },
               {
                 "component": {
-                  "name": "Mighty 2",
+                  "name": "mighty 2",
                   "id": "Basic-Mighty 2",
                   "label": "Mighty 2",
                   "type": "switch"
@@ -3090,7 +2312,7 @@
               },
               {
                 "component": {
-                  "name": "Mighty 3",
+                  "name": "mighty 3",
                   "id": "Basic-Mighty 3",
                   "label": "Mighty 3",
                   "type": "switch"
@@ -3105,7 +2327,7 @@
               },
               {
                 "component": {
-                  "name": "Mighty 4",
+                  "name": "mighty 4",
                   "id": "Basic-Mighty 4",
                   "label": "Mighty 4",
                   "type": "switch"
@@ -3120,22 +2342,7 @@
               },
               {
                 "component": {
-                  "name": "Ram",
-                  "id": "Basic-Ram",
-                  "label": "Ram",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-power-Basic-Ram",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "The character charges into an enemy, hard."
-                }
-              },
-              {
-                "component": {
-                  "name": "Reinforced Skeleton",
+                  "name": "reinforced skeleton",
                   "id": "Basic-Reinforced Skeleton",
                   "label": "Reinforced Skeleton",
                   "type": "switch"
@@ -3150,7 +2357,7 @@
               },
               {
                 "component": {
-                  "name": "Shape-Shift",
+                  "name": "shape-shift",
                   "id": "Basic-Shape-Shift",
                   "label": "Shape-Shift",
                   "type": "switch"
@@ -3165,7 +2372,7 @@
               },
               {
                 "component": {
-                  "name": "Slow-Motion Dodge",
+                  "name": "slow-motion dodge",
                   "id": "Basic-Slow-Motion Dodge",
                   "label": "Slow-Motion Dodge",
                   "type": "switch"
@@ -3180,7 +2387,7 @@
               },
               {
                 "component": {
-                  "name": "Sturdy 1",
+                  "name": "sturdy 1",
                   "id": "Basic-Sturdy 1",
                   "label": "Sturdy 1",
                   "type": "switch"
@@ -3195,7 +2402,7 @@
               },
               {
                 "component": {
-                  "name": "Sturdy 2",
+                  "name": "sturdy 2",
                   "id": "Basic-Sturdy 2",
                   "label": "Sturdy 2",
                   "type": "switch"
@@ -3210,7 +2417,7 @@
               },
               {
                 "component": {
-                  "name": "Sturdy 3",
+                  "name": "sturdy 3",
                   "id": "Basic-Sturdy 3",
                   "label": "Sturdy 3",
                   "type": "switch"
@@ -3225,7 +2432,7 @@
               },
               {
                 "component": {
-                  "name": "Sturdy 4",
+                  "name": "sturdy 4",
                   "id": "Basic-Sturdy 4",
                   "label": "Sturdy 4",
                   "type": "switch"
@@ -3240,37 +2447,7 @@
               },
               {
                 "component": {
-                  "name": "Thermal Vision",
-                  "id": "Basic-Thermal Vision",
-                  "label": "Thermal Vision",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-power-Basic-Thermal Vision",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "The character can see thermal radiation."
-                }
-              },
-              {
-                "component": {
-                  "name": "Tough",
-                  "id": "Basic-Tough",
-                  "label": "Tough",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-power-Basic-Tough",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "The character has grit."
-                }
-              },
-              {
-                "component": {
-                  "name": "Uncanny 1",
+                  "name": "uncanny 1",
                   "id": "Basic-Uncanny 1",
                   "label": "Uncanny 1",
                   "type": "switch"
@@ -3285,7 +2462,7 @@
               },
               {
                 "component": {
-                  "name": "Uncanny 2",
+                  "name": "uncanny 2",
                   "id": "Basic-Uncanny 2",
                   "label": "Uncanny 2",
                   "type": "switch"
@@ -3295,12 +2472,12 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": "The character''s mind is protected as if by steel."
+                  "text": "The character's mind is protected as if by steel."
                 }
               },
               {
                 "component": {
-                  "name": "Uncanny 3",
+                  "name": "uncanny 3",
                   "id": "Basic-Uncanny 3",
                   "label": "Uncanny 3",
                   "type": "switch"
@@ -3310,12 +2487,12 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": "The character''s mind is protected like a tank."
+                  "text": "The character's mind is protected like a tank."
                 }
               },
               {
                 "component": {
-                  "name": "Uncanny 4",
+                  "name": "uncanny 4",
                   "id": "Basic-Uncanny 4",
                   "label": "Uncanny 4",
                   "type": "switch"
@@ -3325,12 +2502,12 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": "The character''s mind is protected like a battleship."
+                  "text": "The character's mind is protected like a battleship."
                 }
               },
               {
                 "component": {
-                  "name": "Wisdom",
+                  "name": "wisdom",
                   "id": "Basic-Wisdom",
                   "label": "Wisdom",
                   "type": "switch"
@@ -3345,7 +2522,7 @@
               },
               {
                 "component": {
-                  "name": "Wisecracker",
+                  "name": "wisecracker",
                   "id": "Basic-Wisecracker",
                   "label": "Wisecracker",
                   "type": "switch"
@@ -3369,7 +2546,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Elemental Barrage",
+                  "name": "elemental barrage",
                   "id": "Elemental Control-Elemental Barrage",
                   "label": "Elemental Barrage",
                   "type": "switch"
@@ -3384,7 +2561,7 @@
               },
               {
                 "component": {
-                  "name": "Elemental Barrier",
+                  "name": "elemental barrier",
                   "id": "Elemental Control-Elemental Barrier",
                   "label": "Elemental Barrier",
                   "type": "switch"
@@ -3399,7 +2576,7 @@
               },
               {
                 "component": {
-                  "name": "Elemental Blast",
+                  "name": "elemental blast",
                   "id": "Elemental Control-Elemental Blast",
                   "label": "Elemental Blast",
                   "type": "switch"
@@ -3414,7 +2591,7 @@
               },
               {
                 "component": {
-                  "name": "Elemental Burst",
+                  "name": "elemental burst",
                   "id": "Elemental Control-Elemental Burst",
                   "label": "Elemental Burst",
                   "type": "switch"
@@ -3429,7 +2606,7 @@
               },
               {
                 "component": {
-                  "name": "Elemental Form",
+                  "name": "elemental form",
                   "id": "Elemental Control-Elemental Form",
                   "label": "Elemental Form",
                   "type": "switch"
@@ -3444,7 +2621,7 @@
               },
               {
                 "component": {
-                  "name": "Elemental Grab",
+                  "name": "elemental grab",
                   "id": "Elemental Control-Elemental Grab",
                   "label": "Elemental Grab",
                   "type": "switch"
@@ -3459,7 +2636,7 @@
               },
               {
                 "component": {
-                  "name": "Elemental Infusion",
+                  "name": "elemental infusion",
                   "id": "Elemental Control-Elemental Infusion",
                   "label": "Elemental Infusion",
                   "type": "switch"
@@ -3474,7 +2651,7 @@
               },
               {
                 "component": {
-                  "name": "Elemental Prison",
+                  "name": "elemental prison",
                   "id": "Elemental Control-Elemental Prison",
                   "label": "Elemental Prison",
                   "type": "switch"
@@ -3489,7 +2666,7 @@
               },
               {
                 "component": {
-                  "name": "Elemental Protection 1",
+                  "name": "elemental protection 1",
                   "id": "Elemental Control-Elemental Protection 1",
                   "label": "Elemental Protection 1",
                   "type": "switch"
@@ -3504,7 +2681,7 @@
               },
               {
                 "component": {
-                  "name": "Elemental Protection 2",
+                  "name": "elemental protection 2",
                   "id": "Elemental Control-Elemental Protection 2",
                   "label": "Elemental Protection 2",
                   "type": "switch"
@@ -3519,7 +2696,7 @@
               },
               {
                 "component": {
-                  "name": "Elemental Protection 3",
+                  "name": "elemental protection 3",
                   "id": "Elemental Control-Elemental Protection 3",
                   "label": "Elemental Protection 3",
                   "type": "switch"
@@ -3534,7 +2711,7 @@
               },
               {
                 "component": {
-                  "name": "Elemental Protection 4",
+                  "name": "elemental protection 4",
                   "id": "Elemental Control-Elemental Protection 4",
                   "label": "Elemental Protection 4",
                   "type": "switch"
@@ -3549,7 +2726,7 @@
               },
               {
                 "component": {
-                  "name": "Elemental Push",
+                  "name": "elemental push",
                   "id": "Elemental Control-Elemental Push",
                   "label": "Elemental Push",
                   "type": "switch"
@@ -3564,7 +2741,7 @@
               },
               {
                 "component": {
-                  "name": "Elemental Reinforcement",
+                  "name": "elemental reinforcement",
                   "id": "Elemental Control-Elemental Reinforcement",
                   "label": "Elemental Reinforcement",
                   "type": "switch"
@@ -3579,7 +2756,7 @@
               },
               {
                 "component": {
-                  "name": "Elemental Ricochet",
+                  "name": "elemental ricochet",
                   "id": "Elemental Control-Elemental Ricochet",
                   "label": "Elemental Ricochet",
                   "type": "switch"
@@ -3594,7 +2771,7 @@
               },
               {
                 "component": {
-                  "name": "Elemental Sphere",
+                  "name": "elemental sphere",
                   "id": "Elemental Control-Elemental Sphere",
                   "label": "Elemental Sphere",
                   "type": "switch"
@@ -3609,7 +2786,7 @@
               },
               {
                 "component": {
-                  "name": "Elemental Suffocation",
+                  "name": "elemental suffocation",
                   "id": "Elemental Control-Elemental Suffocation",
                   "label": "Elemental Suffocation",
                   "type": "switch"
@@ -3624,7 +2801,7 @@
               },
               {
                 "component": {
-                  "name": "Supernova",
+                  "name": "supernova",
                   "id": "Elemental Control-Supernova",
                   "label": "Supernova",
                   "type": "switch"
@@ -3648,7 +2825,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Animated Illusion",
+                  "name": "animated illusion",
                   "id": "Illusion-Animated Illusion",
                   "label": "Animated Illusion",
                   "type": "switch"
@@ -3663,7 +2840,7 @@
               },
               {
                 "component": {
-                  "name": "Darkness",
+                  "name": "darkness",
                   "id": "Illusion-Darkness",
                   "label": "Darkness",
                   "type": "switch"
@@ -3678,7 +2855,7 @@
               },
               {
                 "component": {
-                  "name": "Dazzle",
+                  "name": "dazzle",
                   "id": "Illusion-Dazzle",
                   "label": "Dazzle",
                   "type": "switch"
@@ -3693,7 +2870,7 @@
               },
               {
                 "component": {
-                  "name": "Deafen",
+                  "name": "deafen",
                   "id": "Illusion-Deafen",
                   "label": "Deafen",
                   "type": "switch"
@@ -3708,7 +2885,7 @@
               },
               {
                 "component": {
-                  "name": "Extend Invisibility",
+                  "name": "extend invisibility",
                   "id": "Illusion-Extend Invisibility",
                   "label": "Extend Invisibility",
                   "type": "switch"
@@ -3723,7 +2900,7 @@
               },
               {
                 "component": {
-                  "name": "Flare",
+                  "name": "flare",
                   "id": "Illusion-Flare",
                   "label": "Flare",
                   "type": "switch"
@@ -3738,7 +2915,7 @@
               },
               {
                 "component": {
-                  "name": "Grand Illusion",
+                  "name": "grand illusion",
                   "id": "Illusion-Grand Illusion",
                   "label": "Grand Illusion",
                   "type": "switch"
@@ -3753,7 +2930,7 @@
               },
               {
                 "component": {
-                  "name": "Group Invisibility",
+                  "name": "group invisibility",
                   "id": "Illusion-Group Invisibility",
                   "label": "Group Invisibility",
                   "type": "switch"
@@ -3768,7 +2945,7 @@
               },
               {
                 "component": {
-                  "name": "Illumination",
+                  "name": "illumination",
                   "id": "Illusion-Illumination",
                   "label": "Illumination",
                   "type": "switch"
@@ -3783,7 +2960,7 @@
               },
               {
                 "component": {
-                  "name": "Invisibility",
+                  "name": "invisibility",
                   "id": "Illusion-Invisibility",
                   "label": "Invisibility",
                   "type": "switch"
@@ -3798,7 +2975,7 @@
               },
               {
                 "component": {
-                  "name": "Mirror Images",
+                  "name": "mirror images",
                   "id": "Illusion-Mirror Images",
                   "label": "Mirror Images",
                   "type": "switch"
@@ -3813,7 +2990,7 @@
               },
               {
                 "component": {
-                  "name": "Silence Area",
+                  "name": "silence area",
                   "id": "Illusion-Silence Area",
                   "label": "Silence Area",
                   "type": "switch"
@@ -3828,7 +3005,7 @@
               },
               {
                 "component": {
-                  "name": "Silence Self",
+                  "name": "silence self",
                   "id": "Illusion-Silence Self",
                   "label": "Silence Self",
                   "type": "switch"
@@ -3843,7 +3020,7 @@
               },
               {
                 "component": {
-                  "name": "Static Illusion",
+                  "name": "static illusion",
                   "id": "Illusion-Static Illusion",
                   "label": "Static Illusion",
                   "type": "switch"
@@ -3867,7 +3044,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Astral Form",
+                  "name": "astral form",
                   "id": "Magic-Astral Form",
                   "label": "Astral Form",
                   "type": "switch"
@@ -3882,7 +3059,7 @@
               },
               {
                 "component": {
-                  "name": "Bolts of Balthakk",
+                  "name": "bolts of balthakk",
                   "id": "Magic-Bolts of Balthakk",
                   "label": "Bolts of Balthakk",
                   "type": "switch"
@@ -3897,7 +3074,7 @@
               },
               {
                 "component": {
-                  "name": "Brain Drain",
+                  "name": "brain drain",
                   "id": "Magic-Brain Drain",
                   "label": "Brain Drain",
                   "type": "switch"
@@ -3912,7 +3089,7 @@
               },
               {
                 "component": {
-                  "name": "Crimson Bands of Cyttorak",
+                  "name": "crimson bands of cyttorak",
                   "id": "Magic-Crimson Bands of Cyttorak",
                   "label": "Crimson Bands of Cyttorak",
                   "type": "switch"
@@ -3927,7 +3104,7 @@
               },
               {
                 "component": {
-                  "name": "Dispel Spell",
+                  "name": "dispel spell",
                   "id": "Magic-Dispel Spell",
                   "label": "Dispel Spell",
                   "type": "switch"
@@ -3942,7 +3119,7 @@
               },
               {
                 "component": {
-                  "name": "Exorcism",
+                  "name": "exorcism",
                   "id": "Magic-Exorcism",
                   "label": "Exorcism",
                   "type": "switch"
@@ -3957,7 +3134,7 @@
               },
               {
                 "component": {
-                  "name": "Flames of the Faltine",
+                  "name": "flames of the faltine",
                   "id": "Magic-Flames of the Faltine",
                   "label": "Flames of the Faltine",
                   "type": "switch"
@@ -3972,7 +3149,7 @@
               },
               {
                 "component": {
-                  "name": "Hellfire Chains",
+                  "name": "hellfire chains",
                   "id": "Magic-Hellfire Chains",
                   "label": "Hellfire Chains",
                   "type": "switch"
@@ -3987,7 +3164,7 @@
               },
               {
                 "component": {
-                  "name": "Hex Bolt",
+                  "name": "hex bolt",
                   "id": "Magic-Hex Bolt",
                   "label": "Hex Bolt",
                   "type": "switch"
@@ -4002,7 +3179,7 @@
               },
               {
                 "component": {
-                  "name": "Icy Tendrils of Ikthalon",
+                  "name": "icy tendrils of ikthalon",
                   "id": "Magic-Icy Tendrils of Ikthalon",
                   "label": "Icy Tendrils of Ikthalon",
                   "type": "switch"
@@ -4017,7 +3194,7 @@
               },
               {
                 "component": {
-                  "name": "Images of Ikonn",
+                  "name": "images of ikonn",
                   "id": "Magic-Images of Ikonn",
                   "label": "Images of Ikonn",
                   "type": "switch"
@@ -4032,7 +3209,7 @@
               },
               {
                 "component": {
-                  "name": "Jinx",
+                  "name": "jinx",
                   "id": "Magic-Jinx",
                   "label": "Jinx",
                   "type": "switch"
@@ -4047,7 +3224,7 @@
               },
               {
                 "component": {
-                  "name": "Leech Life",
+                  "name": "leech life",
                   "id": "Magic-Leech Life",
                   "label": "Leech Life",
                   "type": "switch"
@@ -4062,7 +3239,7 @@
               },
               {
                 "component": {
-                  "name": "Mists of Morpheus",
+                  "name": "mists of morpheus",
                   "id": "Magic-Mists of Morpheus",
                   "label": "Mists of Morpheus",
                   "type": "switch"
@@ -4077,7 +3254,7 @@
               },
               {
                 "component": {
-                  "name": "Mists of Munnopor",
+                  "name": "mists of munnopor",
                   "id": "Magic-Mists of Munnopor",
                   "label": "Mists of Munnopor",
                   "type": "switch"
@@ -4092,7 +3269,7 @@
               },
               {
                 "component": {
-                  "name": "Penance Stare",
+                  "name": "penance stare",
                   "id": "Magic-Penance Stare",
                   "label": "Penance Stare",
                   "type": "switch"
@@ -4107,7 +3284,7 @@
               },
               {
                 "component": {
-                  "name": "Possess Vehicle",
+                  "name": "possess vehicle",
                   "id": "Magic-Possess Vehicle",
                   "label": "Possess Vehicle",
                   "type": "switch"
@@ -4122,7 +3299,7 @@
               },
               {
                 "component": {
-                  "name": "Possession",
+                  "name": "possession",
                   "id": "Magic-Possession",
                   "label": "Possession",
                   "type": "switch"
@@ -4137,7 +3314,7 @@
               },
               {
                 "component": {
-                  "name": "Powerful Hex",
+                  "name": "powerful hex",
                   "id": "Magic-Powerful Hex",
                   "label": "Powerful Hex",
                   "type": "switch"
@@ -4152,7 +3329,7 @@
               },
               {
                 "component": {
-                  "name": "Probability-Manipulation Hex",
+                  "name": "probability-manipulation hex",
                   "id": "Magic-Probability-Manipulation Hex",
                   "label": "Probability-Manipulation Hex",
                   "type": "switch"
@@ -4167,7 +3344,7 @@
               },
               {
                 "component": {
-                  "name": "Protection Hex",
+                  "name": "protection hex",
                   "id": "Magic-Protection Hex",
                   "label": "Protection Hex",
                   "type": "switch"
@@ -4182,7 +3359,7 @@
               },
               {
                 "component": {
-                  "name": "Sense Sins",
+                  "name": "sense sins",
                   "id": "Magic-Sense Sins",
                   "label": "Sense Sins",
                   "type": "switch"
@@ -4197,7 +3374,7 @@
               },
               {
                 "component": {
-                  "name": "Sense Supernatural",
+                  "name": "sense supernatural",
                   "id": "Magic-Sense Supernatural",
                   "label": "Sense Supernatural",
                   "type": "switch"
@@ -4212,7 +3389,7 @@
               },
               {
                 "component": {
-                  "name": "Shield of the Seraphim",
+                  "name": "shield of the seraphim",
                   "id": "Magic-Shield of the Seraphim",
                   "label": "Shield of the Seraphim",
                   "type": "switch"
@@ -4227,7 +3404,7 @@
               },
               {
                 "component": {
-                  "name": "Summon Portal",
+                  "name": "summon portal",
                   "id": "Magic-Summon Portal",
                   "label": "Summon Portal",
                   "type": "switch"
@@ -4242,7 +3419,7 @@
               },
               {
                 "component": {
-                  "name": "Vapors of Valtorr",
+                  "name": "vapors of valtorr",
                   "id": "Magic-Vapors of Valtorr",
                   "label": "Vapors of Valtorr",
                   "type": "switch"
@@ -4257,7 +3434,7 @@
               },
               {
                 "component": {
-                  "name": "Winds of Watoomb",
+                  "name": "winds of watoomb",
                   "id": "Magic-Winds of Watoomb",
                   "label": "Winds of Watoomb",
                   "type": "switch"
@@ -4281,7 +3458,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Always Ready",
+                  "name": "always ready",
                   "id": "Martial Arts-Always Ready",
                   "label": "Always Ready",
                   "type": "switch"
@@ -4296,7 +3473,7 @@
               },
               {
                 "component": {
-                  "name": "Attack Stance",
+                  "name": "attack stance",
                   "id": "Martial Arts-Attack Stance",
                   "label": "Attack Stance",
                   "type": "switch"
@@ -4311,7 +3488,7 @@
               },
               {
                 "component": {
-                  "name": "Banging Heads",
+                  "name": "banging heads",
                   "id": "Martial Arts-Banging Heads",
                   "label": "Banging Heads",
                   "type": "switch"
@@ -4326,7 +3503,7 @@
               },
               {
                 "component": {
-                  "name": "Brace For Impact",
+                  "name": "brace for impact",
                   "id": "Martial Arts-Brace For Impact",
                   "label": "Brace For Impact",
                   "type": "switch"
@@ -4341,7 +3518,7 @@
               },
               {
                 "component": {
-                  "name": "Chain Strikes",
+                  "name": "chain strikes",
                   "id": "Martial Arts-Chain Strikes",
                   "label": "Chain Strikes",
                   "type": "switch"
@@ -4356,7 +3533,7 @@
               },
               {
                 "component": {
-                  "name": "Counterstrike Technique",
+                  "name": "counterstrike technique",
                   "id": "Martial Arts-Counterstrike Technique",
                   "label": "Counterstrike Technique",
                   "type": "switch"
@@ -4371,7 +3548,7 @@
               },
               {
                 "component": {
-                  "name": "Crushing Grip",
+                  "name": "crushing grip",
                   "id": "Martial Arts-Crushing Grip",
                   "label": "Crushing Grip",
                   "type": "switch"
@@ -4386,7 +3563,7 @@
               },
               {
                 "component": {
-                  "name": "Defense Stance",
+                  "name": "defense stance",
                   "id": "Martial Arts-Defense Stance",
                   "label": "Defense Stance",
                   "type": "switch"
@@ -4401,7 +3578,7 @@
               },
               {
                 "component": {
-                  "name": "Do This All Day",
+                  "name": "do this all day",
                   "id": "Martial Arts-Do This All Day",
                   "label": "Do This All Day",
                   "type": "switch"
@@ -4416,7 +3593,7 @@
               },
               {
                 "component": {
-                  "name": "Fast Strikes",
+                  "name": "fast strikes",
                   "id": "Martial Arts-Fast Strikes",
                   "label": "Fast Strikes",
                   "type": "switch"
@@ -4431,7 +3608,7 @@
               },
               {
                 "component": {
-                  "name": "Flying Double Kick",
+                  "name": "flying double kick",
                   "id": "Martial Arts-Flying Double Kick",
                   "label": "Flying Double Kick",
                   "type": "switch"
@@ -4446,7 +3623,7 @@
               },
               {
                 "component": {
-                  "name": "Focused Strike",
+                  "name": "focused strike",
                   "id": "Martial Arts-Focused Strike",
                   "label": "Focused Strike",
                   "type": "switch"
@@ -4461,7 +3638,7 @@
               },
               {
                 "component": {
-                  "name": "Grappling Technique",
+                  "name": "grappling technique",
                   "id": "Martial Arts-Grappling Technique",
                   "label": "Grappling Technique",
                   "type": "switch"
@@ -4476,7 +3653,7 @@
               },
               {
                 "component": {
-                  "name": "Leaping Leglock",
+                  "name": "leaping leglock",
                   "id": "Martial Arts-Leaping Leglock",
                   "label": "Leaping Leglock",
                   "type": "switch"
@@ -4491,7 +3668,7 @@
               },
               {
                 "component": {
-                  "name": "Leg Sweep",
+                  "name": "leg sweep",
                   "id": "Martial Arts-Leg Sweep",
                   "label": "Leg Sweep",
                   "type": "switch"
@@ -4506,7 +3683,7 @@
               },
               {
                 "component": {
-                  "name": "Regain Focus",
+                  "name": "regain focus",
                   "id": "Martial Arts-Regain Focus",
                   "label": "Regain Focus",
                   "type": "switch"
@@ -4521,7 +3698,7 @@
               },
               {
                 "component": {
-                  "name": "Reverse-Momentum Throw",
+                  "name": "reverse-momentum throw",
                   "id": "Martial Arts-Reverse-Momentum Throw",
                   "label": "Reverse-Momentum Throw",
                   "type": "switch"
@@ -4536,7 +3713,7 @@
               },
               {
                 "component": {
-                  "name": "Spin and Throw",
+                  "name": "spin and throw",
                   "id": "Martial Arts-Spin and Throw",
                   "label": "Spin and Throw",
                   "type": "switch"
@@ -4551,7 +3728,7 @@
               },
               {
                 "component": {
-                  "name": "Unflappable Poise",
+                  "name": "unflappable poise",
                   "id": "Martial Arts-Unflappable Poise",
                   "label": "Unflappable Poise",
                   "type": "switch"
@@ -4566,7 +3743,7 @@
               },
               {
                 "component": {
-                  "name": "Untouchable Position",
+                  "name": "untouchable position",
                   "id": "Martial Arts-Untouchable Position",
                   "label": "Untouchable Position",
                   "type": "switch"
@@ -4590,7 +3767,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Exploit",
+                  "name": "exploit",
                   "id": "Melee Weapons-Exploit",
                   "label": "Exploit",
                   "type": "switch"
@@ -4605,7 +3782,7 @@
               },
               {
                 "component": {
-                  "name": "Fast Attacks",
+                  "name": "fast attacks",
                   "id": "Melee Weapons-Fast Attacks",
                   "label": "Fast Attacks",
                   "type": "switch"
@@ -4620,7 +3797,7 @@
               },
               {
                 "component": {
-                  "name": "Focused Fire",
+                  "name": "focused fire",
                   "id": "Melee Weapons-Focused Fire",
                   "label": "Focused Fire",
                   "type": "switch"
@@ -4635,7 +3812,7 @@
               },
               {
                 "component": {
-                  "name": "Furious Attacks",
+                  "name": "furious attacks",
                   "id": "Melee Weapons-Furious Attacks",
                   "label": "Furious Attacks",
                   "type": "switch"
@@ -4650,7 +3827,7 @@
               },
               {
                 "component": {
-                  "name": "Hit and Run",
+                  "name": "hit and run",
                   "id": "Melee Weapons-Hit and Run",
                   "label": "Hit and Run",
                   "type": "switch"
@@ -4665,7 +3842,7 @@
               },
               {
                 "component": {
-                  "name": "Riposte",
+                  "name": "riposte",
                   "id": "Melee Weapons-Riposte",
                   "label": "Riposte",
                   "type": "switch"
@@ -4680,7 +3857,7 @@
               },
               {
                 "component": {
-                  "name": "Unstoppable Assault",
+                  "name": "unstoppable assault",
                   "id": "Melee Weapons-Unstoppable Assault",
                   "label": "Unstoppable Assault",
                   "type": "switch"
@@ -4695,7 +3872,7 @@
               },
               {
                 "component": {
-                  "name": "Vicious Attack",
+                  "name": "vicious attack",
                   "id": "Melee Weapons-Vicious Attack",
                   "label": "Vicious Attack",
                   "type": "switch"
@@ -4710,7 +3887,7 @@
               },
               {
                 "component": {
-                  "name": "Whirling Frenzy",
+                  "name": "whirling frenzy",
                   "id": "Melee Weapons-Whirling Frenzy",
                   "label": "Whirling Frenzy",
                   "type": "switch"
@@ -4734,7 +3911,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Dimensional Portal",
+                  "name": "dimensional portal",
                   "id": "Omniversal Travel-Dimensional Portal",
                   "label": "Dimensional Portal",
                   "type": "switch"
@@ -4749,7 +3926,7 @@
               },
               {
                 "component": {
-                  "name": "Dimensional Travel",
+                  "name": "dimensional travel",
                   "id": "Omniversal Travel-Dimensional Travel",
                   "label": "Dimensional Travel",
                   "type": "switch"
@@ -4764,7 +3941,7 @@
               },
               {
                 "component": {
-                  "name": "Dimensional Travel Other",
+                  "name": "dimensional travel other",
                   "id": "Omniversal Travel-Dimensional Travel Other",
                   "label": "Dimensional Travel Other",
                   "type": "switch"
@@ -4779,7 +3956,7 @@
               },
               {
                 "component": {
-                  "name": "Dimensional Travel Together",
+                  "name": "dimensional travel together",
                   "id": "Omniversal Travel-Dimensional Travel Together",
                   "label": "Dimensional Travel Together",
                   "type": "switch"
@@ -4794,7 +3971,7 @@
               },
               {
                 "component": {
-                  "name": "Instant Replay",
+                  "name": "instant replay",
                   "id": "Omniversal Travel-Instant Replay",
                   "label": "Instant Replay",
                   "type": "switch"
@@ -4809,7 +3986,7 @@
               },
               {
                 "component": {
-                  "name": "Multiversal Portal",
+                  "name": "multiversal portal",
                   "id": "Omniversal Travel-Multiversal Portal",
                   "label": "Multiversal Portal",
                   "type": "switch"
@@ -4824,7 +4001,7 @@
               },
               {
                 "component": {
-                  "name": "Multiversal Travel",
+                  "name": "multiversal travel",
                   "id": "Omniversal Travel-Multiversal Travel",
                   "label": "Multiversal Travel",
                   "type": "switch"
@@ -4839,7 +4016,7 @@
               },
               {
                 "component": {
-                  "name": "Multiversal Travel Other",
+                  "name": "multiversal travel other",
                   "id": "Omniversal Travel-Multiversal Travel Other",
                   "label": "Multiversal Travel Other",
                   "type": "switch"
@@ -4854,7 +4031,7 @@
               },
               {
                 "component": {
-                  "name": "Multiversal Travel Together",
+                  "name": "multiversal travel together",
                   "id": "Omniversal Travel-Multiversal Travel Together",
                   "label": "Multiversal Travel Together",
                   "type": "switch"
@@ -4869,7 +4046,7 @@
               },
               {
                 "component": {
-                  "name": "Time Portal",
+                  "name": "time portal",
                   "id": "Omniversal Travel-Time Portal",
                   "label": "Time Portal",
                   "type": "switch"
@@ -4884,7 +4061,7 @@
               },
               {
                 "component": {
-                  "name": "Time Travel",
+                  "name": "time travel",
                   "id": "Omniversal Travel-Time Travel",
                   "label": "Time Travel",
                   "type": "switch"
@@ -4899,7 +4076,7 @@
               },
               {
                 "component": {
-                  "name": "Time Travel Other",
+                  "name": "time travel other",
                   "id": "Omniversal Travel-Time Travel Other",
                   "label": "Time Travel Other",
                   "type": "switch"
@@ -4914,7 +4091,7 @@
               },
               {
                 "component": {
-                  "name": "Time Travel Together",
+                  "name": "time travel together",
                   "id": "Omniversal Travel-Time Travel Together",
                   "label": "Time Travel Together",
                   "type": "switch"
@@ -4929,7 +4106,7 @@
               },
               {
                 "component": {
-                  "name": "Time-Out",
+                  "name": "time-out",
                   "id": "Omniversal Travel-Time-Out",
                   "label": "Time-Out",
                   "type": "switch"
@@ -4944,7 +4121,7 @@
               },
               {
                 "component": {
-                  "name": "Time-Out Bubble",
+                  "name": "time-out bubble",
                   "id": "Omniversal Travel-Time-Out Bubble",
                   "label": "Time-Out Bubble",
                   "type": "switch"
@@ -4959,7 +4136,7 @@
               },
               {
                 "component": {
-                  "name": "Time-Out Tag",
+                  "name": "time-out tag",
                   "id": "Omniversal Travel-Time-Out Tag",
                   "label": "Time-Out Tag",
                   "type": "switch"
@@ -4983,7 +4160,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Disrupt Electronics",
+                  "name": "disrupt electronics",
                   "id": "Phasing-Disrupt Electronics",
                   "label": "Disrupt Electronics",
                   "type": "switch"
@@ -4998,7 +4175,7 @@
               },
               {
                 "component": {
-                  "name": "Disrupt Nerves",
+                  "name": "disrupt nerves",
                   "id": "Phasing-Disrupt Nerves",
                   "label": "Disrupt Nerves",
                   "type": "switch"
@@ -5013,7 +4190,7 @@
               },
               {
                 "component": {
-                  "name": "Disrupt Person",
+                  "name": "disrupt person",
                   "id": "Phasing-Disrupt Person",
                   "label": "Disrupt Person",
                   "type": "switch"
@@ -5028,7 +4205,7 @@
               },
               {
                 "component": {
-                  "name": "Partial Phase",
+                  "name": "partial phase",
                   "id": "Phasing-Partial Phase",
                   "label": "Partial Phase",
                   "type": "switch"
@@ -5043,7 +4220,7 @@
               },
               {
                 "component": {
-                  "name": "Phase Object",
+                  "name": "phase object",
                   "id": "Phasing-Phase Object",
                   "label": "Phase Object",
                   "type": "switch"
@@ -5058,7 +4235,7 @@
               },
               {
                 "component": {
-                  "name": "Phase Other",
+                  "name": "phase other",
                   "id": "Phasing-Phase Other",
                   "label": "Phase Other",
                   "type": "switch"
@@ -5073,7 +4250,7 @@
               },
               {
                 "component": {
-                  "name": "Phase Self",
+                  "name": "phase self",
                   "id": "Phasing-Phase Self",
                   "label": "Phase Self",
                   "type": "switch"
@@ -5088,7 +4265,7 @@
               },
               {
                 "component": {
-                  "name": "Phase Walk",
+                  "name": "phase walk",
                   "id": "Phasing-Phase Walk",
                   "label": "Phase Walk",
                   "type": "switch"
@@ -5103,7 +4280,7 @@
               },
               {
                 "component": {
-                  "name": "Quick Phase",
+                  "name": "quick phase",
                   "id": "Phasing-Quick Phase",
                   "label": "Quick Phase",
                   "type": "switch"
@@ -5127,7 +4304,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Body Sheet",
+                  "name": "body sheet",
                   "id": "Plasticity-Body Sheet",
                   "label": "Body Sheet",
                   "type": "switch"
@@ -5142,7 +4319,7 @@
               },
               {
                 "component": {
-                  "name": "Body Sphere",
+                  "name": "body sphere",
                   "id": "Plasticity-Body Sphere",
                   "label": "Body Sphere",
                   "type": "switch"
@@ -5157,7 +4334,7 @@
               },
               {
                 "component": {
-                  "name": "Bounce Back",
+                  "name": "bounce back",
                   "id": "Plasticity-Bounce Back",
                   "label": "Bounce Back",
                   "type": "switch"
@@ -5172,7 +4349,7 @@
               },
               {
                 "component": {
-                  "name": "Coiling Crush",
+                  "name": "coiling crush",
                   "id": "Plasticity-Coiling Crush",
                   "label": "Coiling Crush",
                   "type": "switch"
@@ -5187,7 +4364,7 @@
               },
               {
                 "component": {
-                  "name": "Extended Reach 1",
+                  "name": "extended reach 1",
                   "id": "Plasticity-Extended Reach 1",
                   "label": "Extended Reach 1",
                   "type": "switch"
@@ -5202,7 +4379,7 @@
               },
               {
                 "component": {
-                  "name": "Extended Reach 2",
+                  "name": "extended reach 2",
                   "id": "Plasticity-Extended Reach 2",
                   "label": "Extended Reach 2",
                   "type": "switch"
@@ -5217,7 +4394,7 @@
               },
               {
                 "component": {
-                  "name": "Flexible Bones 1",
+                  "name": "flexible bones 1",
                   "id": "Plasticity-Flexible Bones 1",
                   "label": "Flexible Bones 1",
                   "type": "switch"
@@ -5232,7 +4409,7 @@
               },
               {
                 "component": {
-                  "name": "Flexible Bones 2",
+                  "name": "flexible bones 2",
                   "id": "Plasticity-Flexible Bones 2",
                   "label": "Flexible Bones 2",
                   "type": "switch"
@@ -5247,7 +4424,7 @@
               },
               {
                 "component": {
-                  "name": "Flexible Fingers",
+                  "name": "flexible fingers",
                   "id": "Plasticity-Flexible Fingers",
                   "label": "Flexible Fingers",
                   "type": "switch"
@@ -5262,7 +4439,7 @@
               },
               {
                 "component": {
-                  "name": "Reverse Punch",
+                  "name": "reverse punch",
                   "id": "Plasticity-Reverse Punch",
                   "label": "Reverse Punch",
                   "type": "switch"
@@ -5277,7 +4454,7 @@
               },
               {
                 "component": {
-                  "name": "Rubberneck",
+                  "name": "rubberneck",
                   "id": "Plasticity-Rubberneck",
                   "label": "Rubberneck",
                   "type": "switch"
@@ -5292,7 +4469,7 @@
               },
               {
                 "component": {
-                  "name": "Slip Free",
+                  "name": "slip free",
                   "id": "Plasticity-Slip Free",
                   "label": "Slip Free",
                   "type": "switch"
@@ -5307,7 +4484,7 @@
               },
               {
                 "component": {
-                  "name": "Stilt Steps",
+                  "name": "stilt steps",
                   "id": "Plasticity-Stilt Steps",
                   "label": "Stilt Steps",
                   "type": "switch"
@@ -5331,7 +4508,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Boost Powers",
+                  "name": "boost powers",
                   "id": "Power Control-Boost Powers",
                   "label": "Boost Powers",
                   "type": "switch"
@@ -5346,7 +4523,7 @@
               },
               {
                 "component": {
-                  "name": "Bump Power",
+                  "name": "bump power",
                   "id": "Power Control-Bump Power",
                   "label": "Bump Power",
                   "type": "switch"
@@ -5361,7 +4538,7 @@
               },
               {
                 "component": {
-                  "name": "Clone Moves",
+                  "name": "clone moves",
                   "id": "Power Control-Clone Moves",
                   "label": "Clone Moves",
                   "type": "switch"
@@ -5376,7 +4553,7 @@
               },
               {
                 "component": {
-                  "name": "Clone Powers",
+                  "name": "clone powers",
                   "id": "Power Control-Clone Powers",
                   "label": "Clone Powers",
                   "type": "switch"
@@ -5391,7 +4568,7 @@
               },
               {
                 "component": {
-                  "name": "Copy Ability",
+                  "name": "copy ability",
                   "id": "Power Control-Copy Ability",
                   "label": "Copy Ability",
                   "type": "switch"
@@ -5406,7 +4583,7 @@
               },
               {
                 "component": {
-                  "name": "Copy Power",
+                  "name": "copy power",
                   "id": "Power Control-Copy Power",
                   "label": "Copy Power",
                   "type": "switch"
@@ -5421,7 +4598,7 @@
               },
               {
                 "component": {
-                  "name": "Copy Trait",
+                  "name": "copy trait",
                   "id": "Power Control-Copy Trait",
                   "label": "Copy Trait",
                   "type": "switch"
@@ -5436,7 +4613,7 @@
               },
               {
                 "component": {
-                  "name": "Dampen Power",
+                  "name": "dampen power",
                   "id": "Power Control-Dampen Power",
                   "label": "Dampen Power",
                   "type": "switch"
@@ -5451,7 +4628,7 @@
               },
               {
                 "component": {
-                  "name": "Shutdown Powers",
+                  "name": "shutdown powers",
                   "id": "Power Control-Shutdown Powers",
                   "label": "Shutdown Powers",
                   "type": "switch"
@@ -5466,7 +4643,7 @@
               },
               {
                 "component": {
-                  "name": "Steal Powers",
+                  "name": "steal powers",
                   "id": "Power Control-Steal Powers",
                   "label": "Steal Powers",
                   "type": "switch"
@@ -5481,7 +4658,7 @@
               },
               {
                 "component": {
-                  "name": "Swipe Power",
+                  "name": "swipe power",
                   "id": "Power Control-Swipe Power",
                   "label": "Swipe Power",
                   "type": "switch"
@@ -5505,7 +4682,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Covering Fire",
+                  "name": "covering fire",
                   "id": "Ranged Weapons-Covering Fire",
                   "label": "Covering Fire",
                   "type": "switch"
@@ -5520,7 +4697,7 @@
               },
               {
                 "component": {
-                  "name": "Dance of Death",
+                  "name": "dance of death",
                   "id": "Ranged Weapons-Dance of Death",
                   "label": "Dance of Death",
                   "type": "switch"
@@ -5535,7 +4712,7 @@
               },
               {
                 "component": {
-                  "name": "Double Tap",
+                  "name": "double tap",
                   "id": "Ranged Weapons-Double Tap",
                   "label": "Double Tap",
                   "type": "switch"
@@ -5550,7 +4727,7 @@
               },
               {
                 "component": {
-                  "name": "Fast Hands",
+                  "name": "fast hands",
                   "id": "Ranged Weapons-Fast Hands",
                   "label": "Fast Hands",
                   "type": "switch"
@@ -5565,7 +4742,7 @@
               },
               {
                 "component": {
-                  "name": "Headshot",
+                  "name": "headshot",
                   "id": "Ranged Weapons-Headshot",
                   "label": "Headshot",
                   "type": "switch"
@@ -5580,7 +4757,7 @@
               },
               {
                 "component": {
-                  "name": "Kill Zone",
+                  "name": "kill zone",
                   "id": "Ranged Weapons-Kill Zone",
                   "label": "Kill Zone",
                   "type": "switch"
@@ -5595,7 +4772,7 @@
               },
               {
                 "component": {
-                  "name": "Orchestra of Overkill",
+                  "name": "orchestra of overkill",
                   "id": "Ranged Weapons-Orchestra of Overkill",
                   "label": "Orchestra of Overkill",
                   "type": "switch"
@@ -5610,7 +4787,7 @@
               },
               {
                 "component": {
-                  "name": "Point-Blank Parry",
+                  "name": "point-blank parry",
                   "id": "Ranged Weapons-Point-Blank Parry",
                   "label": "Point-Blank Parry",
                   "type": "switch"
@@ -5625,7 +4802,7 @@
               },
               {
                 "component": {
-                  "name": "Return Fire",
+                  "name": "return fire",
                   "id": "Ranged Weapons-Return Fire",
                   "label": "Return Fire",
                   "type": "switch"
@@ -5640,7 +4817,7 @@
               },
               {
                 "component": {
-                  "name": "Slow-Motion Shoot Dodge",
+                  "name": "slow-motion shoot dodge",
                   "id": "Ranged Weapons-Slow-Motion Shoot Dodge",
                   "label": "Slow-Motion Shoot Dodge",
                   "type": "switch"
@@ -5655,7 +4832,7 @@
               },
               {
                 "component": {
-                  "name": "Snap Shooting",
+                  "name": "snap shooting",
                   "id": "Ranged Weapons-Snap Shooting",
                   "label": "Snap Shooting",
                   "type": "switch"
@@ -5670,7 +4847,7 @@
               },
               {
                 "component": {
-                  "name": "Sniping",
+                  "name": "sniping",
                   "id": "Ranged Weapons-Sniping",
                   "label": "Sniping",
                   "type": "switch"
@@ -5685,7 +4862,7 @@
               },
               {
                 "component": {
-                  "name": "Stopping Power",
+                  "name": "stopping power",
                   "id": "Ranged Weapons-Stopping Power",
                   "label": "Stopping Power",
                   "type": "switch"
@@ -5700,7 +4877,7 @@
               },
               {
                 "component": {
-                  "name": "Suppressive Fire",
+                  "name": "suppressive fire",
                   "id": "Ranged Weapons-Suppressive Fire",
                   "label": "Suppressive Fire",
                   "type": "switch"
@@ -5715,7 +4892,7 @@
               },
               {
                 "component": {
-                  "name": "Weapons Blazing",
+                  "name": "weapons blazing",
                   "id": "Ranged Weapons-Weapons Blazing",
                   "label": "Weapons Blazing",
                   "type": "switch"
@@ -5739,7 +4916,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Grow 1",
+                  "name": "grow 1",
                   "id": "Resize-Grow 1",
                   "label": "Grow 1",
                   "type": "switch"
@@ -5754,7 +4931,7 @@
               },
               {
                 "component": {
-                  "name": "Grow 2",
+                  "name": "grow 2",
                   "id": "Resize-Grow 2",
                   "label": "Grow 2",
                   "type": "switch"
@@ -5769,7 +4946,7 @@
               },
               {
                 "component": {
-                  "name": "Grow 3",
+                  "name": "grow 3",
                   "id": "Resize-Grow 3",
                   "label": "Grow 3",
                   "type": "switch"
@@ -5784,7 +4961,7 @@
               },
               {
                 "component": {
-                  "name": "Grow 4",
+                  "name": "grow 4",
                   "id": "Resize-Grow 4",
                   "label": "Grow 4",
                   "type": "switch"
@@ -5799,7 +4976,7 @@
               },
               {
                 "component": {
-                  "name": "Growing Attack",
+                  "name": "growing attack",
                   "id": "Resize-Growing Attack",
                   "label": "Growing Attack",
                   "type": "switch"
@@ -5814,7 +4991,7 @@
               },
               {
                 "component": {
-                  "name": "Macrodimensional Travel",
+                  "name": "macrodimensional travel",
                   "id": "Resize-Macrodimensional Travel",
                   "label": "Macrodimensional Travel",
                   "type": "switch"
@@ -5829,7 +5006,7 @@
               },
               {
                 "component": {
-                  "name": "Microdimensional Travel",
+                  "name": "microdimensional travel",
                   "id": "Resize-Microdimensional Travel",
                   "label": "Microdimensional Travel",
                   "type": "switch"
@@ -5844,7 +5021,7 @@
               },
               {
                 "component": {
-                  "name": "Resize Object",
+                  "name": "resize object",
                   "id": "Resize-Resize Object",
                   "label": "Resize Object",
                   "type": "switch"
@@ -5859,7 +5036,7 @@
               },
               {
                 "component": {
-                  "name": "Resize Other",
+                  "name": "resize other",
                   "id": "Resize-Resize Other",
                   "label": "Resize Other",
                   "type": "switch"
@@ -5874,7 +5051,7 @@
               },
               {
                 "component": {
-                  "name": "Shrink 1",
+                  "name": "shrink 1",
                   "id": "Resize-Shrink 1",
                   "label": "Shrink 1",
                   "type": "switch"
@@ -5889,7 +5066,7 @@
               },
               {
                 "component": {
-                  "name": "Shrink 2",
+                  "name": "shrink 2",
                   "id": "Resize-Shrink 2",
                   "label": "Shrink 2",
                   "type": "switch"
@@ -5904,7 +5081,7 @@
               },
               {
                 "component": {
-                  "name": "Shrink 3",
+                  "name": "shrink 3",
                   "id": "Resize-Shrink 3",
                   "label": "Shrink 3",
                   "type": "switch"
@@ -5919,7 +5096,7 @@
               },
               {
                 "component": {
-                  "name": "Shrink 4",
+                  "name": "shrink 4",
                   "id": "Resize-Shrink 4",
                   "label": "Shrink 4",
                   "type": "switch"
@@ -5934,7 +5111,7 @@
               },
               {
                 "component": {
-                  "name": "Shrinking Dodge",
+                  "name": "shrinking dodge",
                   "id": "Resize-Shrinking Dodge",
                   "label": "Shrinking Dodge",
                   "type": "switch"
@@ -5958,7 +5135,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Brace For Impact",
+                  "name": "brace for impact",
                   "id": "Shield Bearer-Brace For Impact",
                   "label": "Brace For Impact",
                   "type": "switch"
@@ -5973,7 +5150,7 @@
               },
               {
                 "component": {
-                  "name": "Do This All Day",
+                  "name": "do this all day",
                   "id": "Shield Bearer-Do This All Day",
                   "label": "Do This All Day",
                   "type": "switch"
@@ -5988,7 +5165,7 @@
               },
               {
                 "component": {
-                  "name": "Hurled Shield Bash",
+                  "name": "hurled shield bash",
                   "id": "Shield Bearer-Hurled Shield Bash",
                   "label": "Hurled Shield Bash",
                   "type": "switch"
@@ -6003,7 +5180,7 @@
               },
               {
                 "component": {
-                  "name": "Hurled Shield Block",
+                  "name": "hurled shield block",
                   "id": "Shield Bearer-Hurled Shield Block",
                   "label": "Hurled Shield Block",
                   "type": "switch"
@@ -6018,7 +5195,7 @@
               },
               {
                 "component": {
-                  "name": "Hurled Shield Deflection",
+                  "name": "hurled shield deflection",
                   "id": "Shield Bearer-Hurled Shield Deflection",
                   "label": "Hurled Shield Deflection",
                   "type": "switch"
@@ -6033,7 +5210,7 @@
               },
               {
                 "component": {
-                  "name": "Immovable",
+                  "name": "immovable",
                   "id": "Shield Bearer-Immovable",
                   "label": "Immovable",
                   "type": "switch"
@@ -6048,7 +5225,7 @@
               },
               {
                 "component": {
-                  "name": "Rico-Shield",
+                  "name": "rico-shield",
                   "id": "Shield Bearer-Rico-Shield",
                   "label": "Rico-Shield",
                   "type": "switch"
@@ -6063,7 +5240,7 @@
               },
               {
                 "component": {
-                  "name": "Shield 1",
+                  "name": "shield 1",
                   "id": "Shield Bearer-Shield 1",
                   "label": "Shield 1",
                   "type": "switch"
@@ -6078,7 +5255,7 @@
               },
               {
                 "component": {
-                  "name": "Shield 2",
+                  "name": "shield 2",
                   "id": "Shield Bearer-Shield 2",
                   "label": "Shield 2",
                   "type": "switch"
@@ -6093,7 +5270,7 @@
               },
               {
                 "component": {
-                  "name": "Shield 3",
+                  "name": "shield 3",
                   "id": "Shield Bearer-Shield 3",
                   "label": "Shield 3",
                   "type": "switch"
@@ -6108,7 +5285,7 @@
               },
               {
                 "component": {
-                  "name": "Shield 4",
+                  "name": "shield 4",
                   "id": "Shield Bearer-Shield 4",
                   "label": "Shield 4",
                   "type": "switch"
@@ -6123,7 +5300,7 @@
               },
               {
                 "component": {
-                  "name": "Shield Bash",
+                  "name": "shield bash",
                   "id": "Shield Bearer-Shield Bash",
                   "label": "Shield Bash",
                   "type": "switch"
@@ -6138,7 +5315,7 @@
               },
               {
                 "component": {
-                  "name": "Shield Deflection",
+                  "name": "shield deflection",
                   "id": "Shield Bearer-Shield Deflection",
                   "label": "Shield Deflection",
                   "type": "switch"
@@ -6153,7 +5330,7 @@
               },
               {
                 "component": {
-                  "name": "Shield Wall",
+                  "name": "shield wall",
                   "id": "Shield Bearer-Shield Wall",
                   "label": "Shield Wall",
                   "type": "switch"
@@ -6177,7 +5354,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Jump 1",
+                  "name": "jump 1",
                   "id": "Spider Powers-Jump 1",
                   "label": "Jump 1",
                   "type": "switch"
@@ -6192,7 +5369,7 @@
               },
               {
                 "component": {
-                  "name": "Jump 2",
+                  "name": "jump 2",
                   "id": "Spider Powers-Jump 2",
                   "label": "Jump 2",
                   "type": "switch"
@@ -6207,7 +5384,7 @@
               },
               {
                 "component": {
-                  "name": "Jump 3",
+                  "name": "jump 3",
                   "id": "Spider Powers-Jump 3",
                   "label": "Jump 3",
                   "type": "switch"
@@ -6222,7 +5399,7 @@
               },
               {
                 "component": {
-                  "name": "Spider-Dodge",
+                  "name": "spider-dodge",
                   "id": "Spider Powers-Spider-Dodge",
                   "label": "Spider-Dodge",
                   "type": "switch"
@@ -6237,7 +5414,7 @@
               },
               {
                 "component": {
-                  "name": "Spider-Pheromones",
+                  "name": "spider-pheromones",
                   "id": "Spider Powers-Spider-Pheromones",
                   "label": "Spider-Pheromones",
                   "type": "switch"
@@ -6252,7 +5429,7 @@
               },
               {
                 "component": {
-                  "name": "Spider-Sense",
+                  "name": "spider-sense",
                   "id": "Spider Powers-Spider-Sense",
                   "label": "Spider-Sense",
                   "type": "switch"
@@ -6267,7 +5444,7 @@
               },
               {
                 "component": {
-                  "name": "Spider-Strike",
+                  "name": "spider-strike",
                   "id": "Spider Powers-Spider-Strike",
                   "label": "Spider-Strike",
                   "type": "switch"
@@ -6282,7 +5459,7 @@
               },
               {
                 "component": {
-                  "name": "Venom Blast",
+                  "name": "venom blast",
                   "id": "Spider Powers-Venom Blast",
                   "label": "Venom Blast",
                   "type": "switch"
@@ -6297,7 +5474,7 @@
               },
               {
                 "component": {
-                  "name": "Wallcrawling",
+                  "name": "wallcrawling",
                   "id": "Spider Powers-Wallcrawling",
                   "label": "Wallcrawling",
                   "type": "switch"
@@ -6312,7 +5489,7 @@
               },
               {
                 "component": {
-                  "name": "Webcasting",
+                  "name": "webcasting",
                   "id": "Spider Powers-Webcasting",
                   "label": "Webcasting",
                   "type": "switch"
@@ -6327,7 +5504,7 @@
               },
               {
                 "component": {
-                  "name": "Webgliding",
+                  "name": "webgliding",
                   "id": "Spider Powers-Webgliding",
                   "label": "Webgliding",
                   "type": "switch"
@@ -6342,7 +5519,7 @@
               },
               {
                 "component": {
-                  "name": "Webgrabbing",
+                  "name": "webgrabbing",
                   "id": "Spider Powers-Webgrabbing",
                   "label": "Webgrabbing",
                   "type": "switch"
@@ -6357,7 +5534,7 @@
               },
               {
                 "component": {
-                  "name": "Webslinging",
+                  "name": "webslinging",
                   "id": "Spider Powers-Webslinging",
                   "label": "Webslinging",
                   "type": "switch"
@@ -6372,7 +5549,7 @@
               },
               {
                 "component": {
-                  "name": "Webtrapping",
+                  "name": "webtrapping",
                   "id": "Spider Powers-Webtrapping",
                   "label": "Webtrapping",
                   "type": "switch"
@@ -6396,7 +5573,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Blazing-Fast Fists",
+                  "name": "blazing-fast fists",
                   "id": "Super Speed-Blazing-Fast Fists",
                   "label": "Blazing-Fast Fists",
                   "type": "switch"
@@ -6411,7 +5588,7 @@
               },
               {
                 "component": {
-                  "name": "Blur",
+                  "name": "blur",
                   "id": "Super Speed-Blur",
                   "label": "Blur",
                   "type": "switch"
@@ -6426,7 +5603,7 @@
               },
               {
                 "component": {
-                  "name": "Catch Bullets",
+                  "name": "catch bullets",
                   "id": "Super Speed-Catch Bullets",
                   "label": "Catch Bullets",
                   "type": "switch"
@@ -6441,7 +5618,7 @@
               },
               {
                 "component": {
-                  "name": "Lightning Actions",
+                  "name": "lightning actions",
                   "id": "Super Speed-Lightning Actions",
                   "label": "Lightning Actions",
                   "type": "switch"
@@ -6456,7 +5633,7 @@
               },
               {
                 "component": {
-                  "name": "Molecular Destabilization",
+                  "name": "molecular destabilization",
                   "id": "Super Speed-Molecular Destabilization",
                   "label": "Molecular Destabilization",
                   "type": "switch"
@@ -6471,7 +5648,7 @@
               },
               {
                 "component": {
-                  "name": "Run On Water",
+                  "name": "run on water",
                   "id": "Super Speed-Run On Water",
                   "label": "Run On Water",
                   "type": "switch"
@@ -6486,7 +5663,7 @@
               },
               {
                 "component": {
-                  "name": "Speed Blast",
+                  "name": "speed blast",
                   "id": "Super Speed-Speed Blast",
                   "label": "Speed Blast",
                   "type": "switch"
@@ -6501,7 +5678,7 @@
               },
               {
                 "component": {
-                  "name": "Speed Run 1",
+                  "name": "speed run 1",
                   "id": "Super Speed-Speed Run 1",
                   "label": "Speed Run 1",
                   "type": "switch"
@@ -6516,7 +5693,7 @@
               },
               {
                 "component": {
-                  "name": "Speed Run 2",
+                  "name": "speed run 2",
                   "id": "Super Speed-Speed Run 2",
                   "label": "Speed Run 2",
                   "type": "switch"
@@ -6531,7 +5708,7 @@
               },
               {
                 "component": {
-                  "name": "Speed Swim",
+                  "name": "speed swim",
                   "id": "Super Speed-Speed Swim",
                   "label": "Speed Swim",
                   "type": "switch"
@@ -6555,7 +5732,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Crushing Grip",
+                  "name": "crushing grip",
                   "id": "Super Strength-Crushing Grip",
                   "label": "Crushing Grip",
                   "type": "switch"
@@ -6570,7 +5747,7 @@
               },
               {
                 "component": {
-                  "name": "Immovable",
+                  "name": "immovable",
                   "id": "Super Strength-Immovable",
                   "label": "Immovable",
                   "type": "switch"
@@ -6585,7 +5762,7 @@
               },
               {
                 "component": {
-                  "name": "Jump 1",
+                  "name": "jump 1",
                   "id": "Super Strength-Jump 1",
                   "label": "Jump 1",
                   "type": "switch"
@@ -6600,7 +5777,7 @@
               },
               {
                 "component": {
-                  "name": "Jump 2",
+                  "name": "jump 2",
                   "id": "Super Strength-Jump 2",
                   "label": "Jump 2",
                   "type": "switch"
@@ -6615,7 +5792,7 @@
               },
               {
                 "component": {
-                  "name": "Jump 3",
+                  "name": "jump 3",
                   "id": "Super Strength-Jump 3",
                   "label": "Jump 3",
                   "type": "switch"
@@ -6630,7 +5807,7 @@
               },
               {
                 "component": {
-                  "name": "Banging Heads",
+                  "name": "banging heads",
                   "id": "Super Strength-Banging Heads",
                   "label": "Banging Heads",
                   "type": "switch"
@@ -6645,7 +5822,7 @@
               },
               {
                 "component": {
-                  "name": "Clobber",
+                  "name": "clobber",
                   "id": "Super Strength-Clobber",
                   "label": "Clobber",
                   "type": "switch"
@@ -6660,7 +5837,7 @@
               },
               {
                 "component": {
-                  "name": "Ground-Shaking Stomp",
+                  "name": "ground-shaking stomp",
                   "id": "Super Strength-Ground-Shaking Stomp",
                   "label": "Ground-Shaking Stomp",
                   "type": "switch"
@@ -6675,7 +5852,7 @@
               },
               {
                 "component": {
-                  "name": "Quick Toss",
+                  "name": "quick toss",
                   "id": "Super Strength-Quick Toss",
                   "label": "Quick Toss",
                   "type": "switch"
@@ -6690,7 +5867,7 @@
               },
               {
                 "component": {
-                  "name": "Smash",
+                  "name": "smash",
                   "id": "Super Strength-Smash",
                   "label": "Smash",
                   "type": "switch"
@@ -6705,7 +5882,7 @@
               },
               {
                 "component": {
-                  "name": "Unrelenting Smash",
+                  "name": "unrelenting smash",
                   "id": "Super Strength-Unrelenting Smash",
                   "label": "Unrelenting Smash",
                   "type": "switch"
@@ -6729,7 +5906,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Advance",
+                  "name": "advance",
                   "id": "Tactics-Advance",
                   "label": "Advance",
                   "type": "switch"
@@ -6744,7 +5921,7 @@
               },
               {
                 "component": {
-                  "name": "Battle Plan",
+                  "name": "battle plan",
                   "id": "Tactics-Battle Plan",
                   "label": "Battle Plan",
                   "type": "switch"
@@ -6759,7 +5936,7 @@
               },
               {
                 "component": {
-                  "name": "Change of Plans",
+                  "name": "change of plans",
                   "id": "Tactics-Change of Plans",
                   "label": "Change of Plans",
                   "type": "switch"
@@ -6774,7 +5951,7 @@
               },
               {
                 "component": {
-                  "name": "Combat Support",
+                  "name": "combat support",
                   "id": "Tactics-Combat Support",
                   "label": "Combat Support",
                   "type": "switch"
@@ -6789,7 +5966,7 @@
               },
               {
                 "component": {
-                  "name": "Focus Fire",
+                  "name": "focus fire",
                   "id": "Tactics-Focus Fire",
                   "label": "Focus Fire",
                   "type": "switch"
@@ -6804,7 +5981,7 @@
               },
               {
                 "component": {
-                  "name": "Hit the Dirt",
+                  "name": "hit the dirt",
                   "id": "Tactics-Hit the Dirt",
                   "label": "Hit the Dirt",
                   "type": "switch"
@@ -6819,7 +5996,7 @@
               },
               {
                 "component": {
-                  "name": "Keep Moving",
+                  "name": "keep moving",
                   "id": "Tactics-Keep Moving",
                   "label": "Keep Moving",
                   "type": "switch"
@@ -6834,7 +6011,7 @@
               },
               {
                 "component": {
-                  "name": "On Your Feet",
+                  "name": "on your feet",
                   "id": "Tactics-On Your Feet",
                   "label": "On Your Feet",
                   "type": "switch"
@@ -6849,7 +6026,7 @@
               },
               {
                 "component": {
-                  "name": "Operations Center",
+                  "name": "operations center",
                   "id": "Tactics-Operations Center",
                   "label": "Operations Center",
                   "type": "switch"
@@ -6864,7 +6041,7 @@
               },
               {
                 "component": {
-                  "name": "Rally On Me",
+                  "name": "rally on me",
                   "id": "Tactics-Rally On Me",
                   "label": "Rally On Me",
                   "type": "switch"
@@ -6879,7 +6056,7 @@
               },
               {
                 "component": {
-                  "name": "Scatter",
+                  "name": "scatter",
                   "id": "Tactics-Scatter",
                   "label": "Scatter",
                   "type": "switch"
@@ -6903,7 +6080,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Group Levitation",
+                  "name": "group levitation",
                   "id": "Telekinesis-Group Levitation",
                   "label": "Group Levitation",
                   "type": "switch"
@@ -6918,7 +6095,7 @@
               },
               {
                 "component": {
-                  "name": "Levitation",
+                  "name": "levitation",
                   "id": "Telekinesis-Levitation",
                   "label": "Levitation",
                   "type": "switch"
@@ -6933,7 +6110,7 @@
               },
               {
                 "component": {
-                  "name": "Telekinetic Attack",
+                  "name": "telekinetic attack",
                   "id": "Telekinesis-Telekinetic Attack",
                   "label": "Telekinetic Attack",
                   "type": "switch"
@@ -6948,7 +6125,7 @@
               },
               {
                 "component": {
-                  "name": "Telekinetic Barrier",
+                  "name": "telekinetic barrier",
                   "id": "Telekinesis-Telekinetic Barrier",
                   "label": "Telekinetic Barrier",
                   "type": "switch"
@@ -6963,7 +6140,7 @@
               },
               {
                 "component": {
-                  "name": "Telekinetic Crush",
+                  "name": "telekinetic crush",
                   "id": "Telekinesis-Telekinetic Crush",
                   "label": "Telekinetic Crush",
                   "type": "switch"
@@ -6978,7 +6155,7 @@
               },
               {
                 "component": {
-                  "name": "Telekinetic Grab",
+                  "name": "telekinetic grab",
                   "id": "Telekinesis-Telekinetic Grab",
                   "label": "Telekinetic Grab",
                   "type": "switch"
@@ -6993,7 +6170,7 @@
               },
               {
                 "component": {
-                  "name": "Telekinetic Manipulation",
+                  "name": "telekinetic manipulation",
                   "id": "Telekinesis-Telekinetic Manipulation",
                   "label": "Telekinetic Manipulation",
                   "type": "switch"
@@ -7008,7 +6185,7 @@
               },
               {
                 "component": {
-                  "name": "Telekinetic Protection 1",
+                  "name": "telekinetic protection 1",
                   "id": "Telekinesis-Telekinetic Protection 1",
                   "label": "Telekinetic Protection 1",
                   "type": "switch"
@@ -7023,7 +6200,7 @@
               },
               {
                 "component": {
-                  "name": "Telekinetic Protection 2",
+                  "name": "telekinetic protection 2",
                   "id": "Telekinesis-Telekinetic Protection 2",
                   "label": "Telekinetic Protection 2",
                   "type": "switch"
@@ -7038,7 +6215,7 @@
               },
               {
                 "component": {
-                  "name": "Telekinetic Protection 3",
+                  "name": "telekinetic protection 3",
                   "id": "Telekinesis-Telekinetic Protection 3",
                   "label": "Telekinetic Protection 3",
                   "type": "switch"
@@ -7053,7 +6230,7 @@
               },
               {
                 "component": {
-                  "name": "Telekinetic Protection 4",
+                  "name": "telekinetic protection 4",
                   "id": "Telekinesis-Telekinetic Protection 4",
                   "label": "Telekinetic Protection 4",
                   "type": "switch"
@@ -7068,7 +6245,7 @@
               },
               {
                 "component": {
-                  "name": "Telekinetic Reinforcement",
+                  "name": "telekinetic reinforcement",
                   "id": "Telekinesis-Telekinetic Reinforcement",
                   "label": "Telekinetic Reinforcement",
                   "type": "switch"
@@ -7083,7 +6260,7 @@
               },
               {
                 "component": {
-                  "name": "Telekinetic Sphere",
+                  "name": "telekinetic sphere",
                   "id": "Telekinesis-Telekinetic Sphere",
                   "label": "Telekinetic Sphere",
                   "type": "switch"
@@ -7098,7 +6275,7 @@
               },
               {
                 "component": {
-                  "name": "Telekinetic Toss",
+                  "name": "telekinetic toss",
                   "id": "Telekinesis-Telekinetic Toss",
                   "label": "Telekinetic Toss",
                   "type": "switch"
@@ -7122,7 +6299,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Animal Bond",
+                  "name": "animal bond",
                   "id": "Telepathy-Animal Bond",
                   "label": "Animal Bond",
                   "type": "switch"
@@ -7137,7 +6314,7 @@
               },
               {
                 "component": {
-                  "name": "Animal Communication",
+                  "name": "animal communication",
                   "id": "Telepathy-Animal Communication",
                   "label": "Animal Communication",
                   "type": "switch"
@@ -7152,7 +6329,7 @@
               },
               {
                 "component": {
-                  "name": "Astral Form",
+                  "name": "astral form",
                   "id": "Telepathy-Astral Form",
                   "label": "Astral Form",
                   "type": "switch"
@@ -7167,7 +6344,7 @@
               },
               {
                 "component": {
-                  "name": "Borrow Senses",
+                  "name": "borrow senses",
                   "id": "Telepathy-Borrow Senses",
                   "label": "Borrow Senses",
                   "type": "switch"
@@ -7182,7 +6359,7 @@
               },
               {
                 "component": {
-                  "name": "Cloak",
+                  "name": "cloak",
                   "id": "Telepathy-Cloak",
                   "label": "Cloak",
                   "type": "switch"
@@ -7197,7 +6374,7 @@
               },
               {
                 "component": {
-                  "name": "Cloak Group",
+                  "name": "cloak group",
                   "id": "Telepathy-Cloak Group",
                   "label": "Cloak Group",
                   "type": "switch"
@@ -7212,7 +6389,7 @@
               },
               {
                 "component": {
-                  "name": "Command",
+                  "name": "command",
                   "id": "Telepathy-Command",
                   "label": "Command",
                   "type": "switch"
@@ -7227,7 +6404,7 @@
               },
               {
                 "component": {
-                  "name": "Domination",
+                  "name": "domination",
                   "id": "Telepathy-Domination",
                   "label": "Domination",
                   "type": "switch"
@@ -7242,7 +6419,7 @@
               },
               {
                 "component": {
-                  "name": "Edit Memory",
+                  "name": "edit memory",
                   "id": "Telepathy-Edit Memory",
                   "label": "Edit Memory",
                   "type": "switch"
@@ -7257,7 +6434,7 @@
               },
               {
                 "component": {
-                  "name": "ESP",
+                  "name": "esp",
                   "id": "Telepathy-ESP",
                   "label": "ESP",
                   "type": "switch"
@@ -7272,7 +6449,7 @@
               },
               {
                 "component": {
-                  "name": "Fool",
+                  "name": "fool",
                   "id": "Telepathy-Fool",
                   "label": "Fool",
                   "type": "switch"
@@ -7287,7 +6464,7 @@
               },
               {
                 "component": {
-                  "name": "Grand Fool",
+                  "name": "grand fool",
                   "id": "Telepathy-Grand Fool",
                   "label": "Grand Fool",
                   "type": "switch"
@@ -7302,7 +6479,7 @@
               },
               {
                 "component": {
-                  "name": "Grand Mirage",
+                  "name": "grand mirage",
                   "id": "Telepathy-Grand Mirage",
                   "label": "Grand Mirage",
                   "type": "switch"
@@ -7317,7 +6494,7 @@
               },
               {
                 "component": {
-                  "name": "Information Upload",
+                  "name": "information upload",
                   "id": "Telepathy-Information Upload",
                   "label": "Information Upload",
                   "type": "switch"
@@ -7332,7 +6509,7 @@
               },
               {
                 "component": {
-                  "name": "Machine Telepathy",
+                  "name": "machine telepathy",
                   "id": "Telepathy-Machine Telepathy",
                   "label": "Machine Telepathy",
                   "type": "switch"
@@ -7347,7 +6524,7 @@
               },
               {
                 "component": {
-                  "name": "Memory Blip",
+                  "name": "memory blip",
                   "id": "Telepathy-Memory Blip",
                   "label": "Memory Blip",
                   "type": "switch"
@@ -7362,7 +6539,7 @@
               },
               {
                 "component": {
-                  "name": "Mental Punch",
+                  "name": "mental punch",
                   "id": "Telepathy-Mental Punch",
                   "label": "Mental Punch",
                   "type": "switch"
@@ -7377,7 +6554,7 @@
               },
               {
                 "component": {
-                  "name": "Mental Shelter",
+                  "name": "mental shelter",
                   "id": "Telepathy-Mental Shelter",
                   "label": "Mental Shelter",
                   "type": "switch"
@@ -7392,7 +6569,7 @@
               },
               {
                 "component": {
-                  "name": "Mind Interrogation",
+                  "name": "mind interrogation",
                   "id": "Telepathy-Mind Interrogation",
                   "label": "Mind Interrogation",
                   "type": "switch"
@@ -7407,7 +6584,7 @@
               },
               {
                 "component": {
-                  "name": "Mind Reading",
+                  "name": "mind reading",
                   "id": "Telepathy-Mind Reading",
                   "label": "Mind Reading",
                   "type": "switch"
@@ -7422,7 +6599,7 @@
               },
               {
                 "component": {
-                  "name": "Mirage",
+                  "name": "mirage",
                   "id": "Telepathy-Mirage",
                   "label": "Mirage",
                   "type": "switch"
@@ -7437,7 +6614,7 @@
               },
               {
                 "component": {
-                  "name": "Orders",
+                  "name": "orders",
                   "id": "Telepathy-Orders",
                   "label": "Orders",
                   "type": "switch"
@@ -7452,7 +6629,7 @@
               },
               {
                 "component": {
-                  "name": "Telepathic Blast",
+                  "name": "telepathic blast",
                   "id": "Telepathy-Telepathic Blast",
                   "label": "Telepathic Blast",
                   "type": "switch"
@@ -7467,7 +6644,7 @@
               },
               {
                 "component": {
-                  "name": "Telepathic Link",
+                  "name": "telepathic link",
                   "id": "Telepathy-Telepathic Link",
                   "label": "Telepathic Link",
                   "type": "switch"
@@ -7482,7 +6659,7 @@
               },
               {
                 "component": {
-                  "name": "Telepathic Network",
+                  "name": "telepathic network",
                   "id": "Telepathy-Telepathic Network",
                   "label": "Telepathic Network",
                   "type": "switch"
@@ -7497,7 +6674,7 @@
               },
               {
                 "component": {
-                  "name": "Telepathic Possession",
+                  "name": "telepathic possession",
                   "id": "Telepathy-Telepathic Possession",
                   "label": "Telepathic Possession",
                   "type": "switch"
@@ -7521,7 +6698,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Blink",
+                  "name": "blink",
                   "id": "Teleportation-Blink",
                   "label": "Blink",
                   "type": "switch"
@@ -7536,7 +6713,7 @@
               },
               {
                 "component": {
-                  "name": "Blink Barrage",
+                  "name": "blink barrage",
                   "id": "Teleportation-Blink Barrage",
                   "label": "Blink Barrage",
                   "type": "switch"
@@ -7551,7 +6728,7 @@
               },
               {
                 "component": {
-                  "name": "Blink Defense",
+                  "name": "blink defense",
                   "id": "Teleportation-Blink Defense",
                   "label": "Blink Defense",
                   "type": "switch"
@@ -7566,7 +6743,7 @@
               },
               {
                 "component": {
-                  "name": "Teleport 1",
+                  "name": "teleport 1",
                   "id": "Teleportation-Teleport 1",
                   "label": "Teleport 1",
                   "type": "switch"
@@ -7581,7 +6758,7 @@
               },
               {
                 "component": {
-                  "name": "Teleport 2",
+                  "name": "teleport 2",
                   "id": "Teleportation-Teleport 2",
                   "label": "Teleport 2",
                   "type": "switch"
@@ -7596,7 +6773,7 @@
               },
               {
                 "component": {
-                  "name": "Teleport Blind",
+                  "name": "teleport blind",
                   "id": "Teleportation-Teleport Blind",
                   "label": "Teleport Blind",
                   "type": "switch"
@@ -7611,7 +6788,7 @@
               },
               {
                 "component": {
-                  "name": "Teleport Object",
+                  "name": "teleport object",
                   "id": "Teleportation-Teleport Object",
                   "label": "Teleport Object",
                   "type": "switch"
@@ -7626,7 +6803,7 @@
               },
               {
                 "component": {
-                  "name": "Teleport Other",
+                  "name": "teleport other",
                   "id": "Teleportation-Teleport Other",
                   "label": "Teleport Other",
                   "type": "switch"
@@ -7641,7 +6818,7 @@
               },
               {
                 "component": {
-                  "name": "Teleport Together",
+                  "name": "teleport together",
                   "id": "Teleportation-Teleport Together",
                   "label": "Teleport Together",
                   "type": "switch"
@@ -7656,7 +6833,7 @@
               },
               {
                 "component": {
-                  "name": "Teleportal",
+                  "name": "teleportal",
                   "id": "Teleportation-Teleportal",
                   "label": "Teleportal",
                   "type": "switch"
@@ -7680,7 +6857,7 @@
             "items": [
               {
                 "component": {
-                  "name": "Control Fog",
+                  "name": "control fog",
                   "id": "Weather Control-Control Fog",
                   "label": "Control Fog",
                   "type": "switch"
@@ -7695,7 +6872,7 @@
               },
               {
                 "component": {
-                  "name": "Control Weather 1",
+                  "name": "control weather 1",
                   "id": "Weather Control-Control Weather 1",
                   "label": "Control Weather 1",
                   "type": "switch"
@@ -7710,7 +6887,7 @@
               },
               {
                 "component": {
-                  "name": "Control Weather 2",
+                  "name": "control weather 2",
                   "id": "Weather Control-Control Weather 2",
                   "label": "Control Weather 2",
                   "type": "switch"
@@ -7725,7 +6902,7 @@
               },
               {
                 "component": {
-                  "name": "Control Weather 3",
+                  "name": "control weather 3",
                   "id": "Weather Control-Control Weather 3",
                   "label": "Control Weather 3",
                   "type": "switch"
@@ -7740,7 +6917,7 @@
               },
               {
                 "component": {
-                  "name": "Control Weather 4",
+                  "name": "control weather 4",
                   "id": "Weather Control-Control Weather 4",
                   "label": "Control Weather 4",
                   "type": "switch"
@@ -7755,7 +6932,7 @@
               },
               {
                 "component": {
-                  "name": "Thunder",
+                  "name": "thunder",
                   "id": "Weather Control-Thunder",
                   "label": "Thunder",
                   "type": "switch"
@@ -7770,7 +6947,7 @@
               },
               {
                 "component": {
-                  "name": "Weather Chill",
+                  "name": "weather chill",
                   "id": "Weather Control-Weather Chill",
                   "label": "Weather Chill",
                   "type": "switch"
@@ -7785,7 +6962,7 @@
               },
               {
                 "component": {
-                  "name": "Weather Warm",
+                  "name": "weather warm",
                   "id": "Weather Control-Weather Warm",
                   "label": "Weather Warm",
                   "type": "switch"

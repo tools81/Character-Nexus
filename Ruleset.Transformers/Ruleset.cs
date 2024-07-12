@@ -10,14 +10,21 @@ namespace Transformers
     public class Ruleset : IRuleset
     {
         public string Name => "Transformers";
-
         public string RulesetName => "Ruleset.Transformers";
-
         public string ImageSource => "https://characternexus.blob.core.windows.net/resources/card_transformers.jpg";
-
         public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_transformers.png";
 
+        public Ruleset()
+        {
+            
+        }
+
         public string NewCharacter()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICharacter? SaveCharacter(string data)
         {
             throw new NotImplementedException();
         }

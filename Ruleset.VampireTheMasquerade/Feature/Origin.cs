@@ -1,8 +1,8 @@
-using Utility;
+﻿using Utility;
 
-namespace Marvel
+namespace VampireTheMasquerade
 {
-    public class Tag : IFeature, IBaseJson
+    public class Origin : IFeature
     {
         public string Name { get; set; }
         public string Description { get; set; }

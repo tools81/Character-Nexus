@@ -16,7 +16,16 @@ namespace Marvel
             try
             {
                 string jsonOriginsData = File.ReadAllText(_jsonFilesPath + "Origins.json");
-                List<Origin> origins = JsonConvert.DeserializeObject<List<Origin>>(jsonOriginsData);
+                string jsonOccupationsData = File.ReadAllText(_jsonFilesPath + "Occupations.json");
+                string jsonTagsData = File.ReadAllText(_jsonFilesPath + "Tags.json");
+                string jsonTraitsData = File.ReadAllText(_jsonFilesPath + "Traits.json");
+                string jsonWeaponsData = File.ReadAllText(_jsonFilesPath + "Weapons.json");
+                string jsonAttributesData = File.ReadAllText(_jsonFilesPath + "Attributes.json");
+                string jsonPowersetsData = File.ReadAllText(_jsonFilesPath + "Powersets.json");
+                string jsonPowersData = File.ReadAllText(_jsonFilesPath + "Powers.json");
+
+
+                List<Origin>? origins = JsonConvert.DeserializeObject<List<Origin>?>(jsonOriginsData);
 
                 if (origins == null)
                 {
@@ -24,9 +33,8 @@ namespace Marvel
                     Console.Read();
                     return;
                 }
-
-                string jsonOccupationsData = File.ReadAllText(_jsonFilesPath + "Occupations.json");
-                List<Occupation> occupations = JsonConvert.DeserializeObject<List<Occupation>>(jsonOccupationsData);
+               
+                List<Occupation>? occupations = JsonConvert.DeserializeObject<List<Occupation>?>(jsonOccupationsData);
 
                 if (occupations == null)
                 {
@@ -35,8 +43,7 @@ namespace Marvel
                     return;
                 }                
 
-                string jsonTagsData = File.ReadAllText(_jsonFilesPath + "Tags.json");
-                List<Tag> tags = JsonConvert.DeserializeObject<List<Tag>>(jsonTagsData);
+                List<Tag>? tags = JsonConvert.DeserializeObject<List<Tag>?>(jsonTagsData);
 
                 if (tags == null)
                 {
@@ -45,8 +52,7 @@ namespace Marvel
                     return;
                 }
 
-                string jsonTraitsData = File.ReadAllText(_jsonFilesPath + "Traits.json");
-                List<Trait> traits = JsonConvert.DeserializeObject<List<Trait>>(jsonTraitsData);
+                List<Trait>? traits = JsonConvert.DeserializeObject<List<Trait>?>(jsonTraitsData);
 
                 if (traits == null)
                 {
@@ -54,9 +60,8 @@ namespace Marvel
                     Console.Read();
                     return;
                 }
-
-                string jsonWeaponsData = File.ReadAllText(_jsonFilesPath + "Weapons.json");
-                List<Weapon> weapons = JsonConvert.DeserializeObject<List<Weapon>>(jsonWeaponsData);
+               
+                List<Weapon>? weapons = JsonConvert.DeserializeObject<List<Weapon>?>(jsonWeaponsData);
 
                 if (weapons == null)
                 {
@@ -65,8 +70,7 @@ namespace Marvel
                     return;
                 }
 
-                string jsonAttributesData = File.ReadAllText(_jsonFilesPath + "Attributes.json");
-                List<Attribute> attributes = JsonConvert.DeserializeObject<List<Attribute>>(jsonAttributesData);
+                List<Attribute>? attributes = JsonConvert.DeserializeObject<List<Attribute>?>(jsonAttributesData);
 
                 if (attributes == null)
                 {
@@ -75,8 +79,7 @@ namespace Marvel
                     return;
                 }
 
-                string jsonPowersetsData = File.ReadAllText(_jsonFilesPath + "Powersets.json");
-                List<Powerset> powersets = JsonConvert.DeserializeObject<List<Powerset>>(jsonPowersetsData);
+                List<Powerset>? powersets = JsonConvert.DeserializeObject<List<Powerset>?>(jsonPowersetsData);
 
                 if (powersets == null)
                 {
@@ -85,8 +88,7 @@ namespace Marvel
                     return;
                 }
 
-                string jsonPowersData = File.ReadAllText(_jsonFilesPath + "Powers.json");
-                List<Power> powers = JsonConvert.DeserializeObject<List<Power>>(jsonPowersData);
+                List<Power>? powers = JsonConvert.DeserializeObject<List<Power>?>(jsonPowersData);
 
                 if (powers == null)
                 {
@@ -95,11 +97,13 @@ namespace Marvel
                     return;
                 }
 
-                AddDescriptionFields();
+                GenerateDescriptionSchema();
 
-                GenerateSelectSchema(origins, "origin", "Origin");
-                GenerateSelectSchema(occupations, "occupation", "Occupation");
-                GenerateSelectSchema(traits, "trait", "Trait");
+                GenerateOriginSchema(origins, "origin", "Origin");
+                GenerateOccupationSchema(occupations, "occupation", "Occupation");
+                GenerateAttributeSchema(attributes, "attributes", "Ability Scores");
+                GenerateTraitSchema(traits, "trait", "Traits");
+                GenerateTagSchema(tags, "tag", "Tags");
                 GeneratePowersSchema(powersets, powers, "power", "Powers");
                 GenerateWeaponSchema(weapons, "weapon", "Weapons");
 
@@ -122,7 +126,7 @@ namespace Marvel
             }
         }       
 
-        private static void AddDescriptionFields()
+        private static void GenerateDescriptionSchema()
         {
             _fields.Add(
                 new
@@ -147,10 +151,10 @@ namespace Marvel
             _fields.Add(
                 new
                 {
-                    name = "imageUrl",
-                    id = "imageUrl",
+                    name = "image",
+                    id = "image",
                     label = "Image",
-                    type = "file",
+                    type = "image",
                     className = "form-control"
                 });
             _fields.Add(
@@ -280,7 +284,7 @@ namespace Marvel
                 });
         }
 
-        public static void GenerateSelectSchema(List<Origin> elements, string name, string label)
+        public static void GenerateOriginSchema(List<Origin> elements, string name, string label)
         {
             dynamic obj = new ExpandoObject();
 
@@ -334,7 +338,7 @@ namespace Marvel
             }
         }
 
-        public static void GenerateSelectSchema(List<Occupation> elements, string name, string label)
+        public static void GenerateOccupationSchema(List<Occupation> elements, string name, string label)
         {
             dynamic obj = new ExpandoObject();
 
@@ -388,7 +392,41 @@ namespace Marvel
             }
         }
 
-        public static void GenerateSelectSchema(List<Trait> elements, string name, string label)
+        private static void GenerateAttributeSchema(List<Attribute> attributes, string name, string label)
+        {
+            var children = new List<object>();
+
+            foreach (var attribute in attributes)
+            {
+                children.Add( new
+                {
+                    name = $"attributes.{attribute.Name}",
+                    id = $"attributes.{attribute.Name.ToLower()}",
+                    label = attribute.Name,
+                    type = "number",
+                    className = "form-control",
+                    validation = new
+                    {
+                        required = true,
+                        min = -3,
+                        max = 9
+                    },
+                    @default = 0
+                });
+            }
+
+            var group = new
+            {
+                type = "group",
+                name,
+                label,
+                children
+            };
+
+            _fields.Add(group);
+        }
+
+        public static void GenerateTraitSchema(List<Trait> elements, string name, string label)
         {
             dynamic obj = new ExpandoObject();
 
@@ -409,37 +447,15 @@ namespace Marvel
                 );
             }
 
-            _fields.Add(obj);
-
-            foreach (var element in elements)
+            dynamic array = new
             {
-                var children = new List<object>
-                {
-                    new
-                    {
-                        name = $"info-{name}-{element.Name}",
-                        label = "Information",
-                        type = "textblock",
-                        className = "text-block",
-                        text = element.Description
-                    }
-                };
+                name,
+                label,
+                type = "array",
+                component = obj
+            };
 
-                var div = new
-                {
-                    type = "div",
-                    className = "alert alert-secondary",
-                    children,
-                    dependsOn =
-                        new
-                        {
-                            field = name,
-                            value = element.Name
-                        }
-                };
-
-                _fields.Add(div);
-            }
+            _fields.Add(array);
         }
 
         private static void GeneratePowersSchema(List<Powerset> powersets, List<Power> powers, string name, string label)
@@ -468,7 +484,7 @@ namespace Marvel
                 {
                     var component = new
                     {
-                        name = power.Name,
+                        name = power.Name.ToLower(),
                         id = $"{powerset.Name}-{power.Name}",
                         label = power.Name,
                         type = "switch"
@@ -495,6 +511,38 @@ namespace Marvel
             } 
 
             _fields.Add(accordion);
+        }
+
+        private static void GenerateTagSchema(List<Tag> tags, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var tag in tags)
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = tag.Name,
+                        label = tag.Name
+                    }
+                );
+            }
+
+            dynamic array = new
+            {
+                name,
+                label,
+                type = "array",
+                component = obj
+            };
+
+            _fields.Add(array);
         }
 
         private static void GenerateWeaponSchema(List<Weapon> weapons, string name, string label)

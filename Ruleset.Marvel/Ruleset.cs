@@ -1,4 +1,5 @@
 using System.Reflection;
+using Newtonsoft.Json;
 using Utility;
 
 namespace Marvel
@@ -6,12 +7,14 @@ namespace Marvel
     public class Ruleset : IRuleset
     {
         public string Name => "Marvel Multiverse";
-
         public string RulesetName => "Ruleset.Marvel";
-
         public string ImageSource => "https://characternexus.blob.core.windows.net/resources/card_marvel.jpg";
-
         public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_marvel.png";
+
+        public Ruleset()
+        {
+            
+        }
 
         public string NewCharacter()
         {
@@ -26,6 +29,24 @@ namespace Marvel
             }
 
             return jsonObject;
+        }
+
+        public ICharacter? SaveCharacter(string data)
+        {
+            try
+            {
+                return JsonConvert.DeserializeObject<Character>(data);
+            }
+            catch(JsonException ex)
+            {
+                Console.WriteLine($"Error parsing Json on save character: {ex.Message}");
+                return null;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine($"Error saving character: {ex.Message}");
+                return null;
+            }
         }
     }
 }

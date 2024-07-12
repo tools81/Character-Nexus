@@ -1,24 +1,16 @@
 ﻿using Utility;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Reflection;
 using System.IO;
-using Newtonsoft.Json;
-using System.Net.Http.Json;
 
 namespace EverydayHeroes
 {
     public class Ruleset : IRuleset
     {
         public string Name => "Everyday Heroes";
-
         public string RulesetName => "Ruleset.EverydayHeroes";
-
         public string ImageSource => "https://characternexus.blob.core.windows.net/resources/card_everyday_heroes.jpg";
-
         public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_everyday_heroes.png";
 
         public Ruleset()
@@ -87,6 +79,11 @@ namespace EverydayHeroes
                     return JsonTo.IEnumerable<Ability>(jsonContent);
                 }
             }
+        }
+
+        public ICharacter? SaveCharacter(string data)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -46,7 +46,7 @@ const RulesetDashboard: React.FC = () => {
   }
 
   if (error) {
-    return <div>Something went wrong fetching rulesets!</div>;
+    return <div>Something went wrong fetching characters!</div>;
   }
 
   return (

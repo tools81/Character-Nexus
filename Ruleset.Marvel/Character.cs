@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Utility;
 
 namespace Marvel
@@ -8,28 +5,29 @@ namespace Marvel
     public class Character : ICharacter
     {
         public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string RealName { get; set; }
-        public string ImageUrl { get; set; }
+        public required string Name { get; set; }
+        public string? RealName { get; set; }
+        public FileInfo? Image { get; set; }
+        public string? ImageUrl { get; set; }
         public int Rank { get; set; }
-        public string Height { get; set; }
-        public string Weight { get; set; }
-        public string Gender { get; set; }
-        public string Eyes { get; set; }
-        public string Hair { get; set; }
-        public string Size { get; set; }
-        public string DistinguishingFeatures { get; set; }
-        public string Teams { get; set; }
-        public string Base { get; set; }
-        public string Notes { get; set; }
-        public string History { get; set; }
-        public string Personality { get; set; }
-        public List<Attribute> Attributes { get; set; }
-        public Occupation Occupation { get; set; }
-        public Origin Origin { get; set; }
-        public List<Power> Powers { get; set; }
-        public List<Tag> Tags { get; set; }
-        public List<Trait> Traits { get; set; }
+        public string? Height { get; set; }
+        public string? Weight { get; set; }
+        public string? Gender { get; set; }
+        public string? Eyes { get; set; }
+        public string? Hair { get; set; }
+        public string? Size { get; set; }
+        public string? DistinguishingFeatures { get; set; }
+        public string? Teams { get; set; }
+        public string? Base { get; set; }
+        public string? Notes { get; set; }
+        public string? History { get; set; }
+        public string? Personality { get; set; }
+        public List<Attribute>? Attributes { get; set; }
+        public Occupation? Occupation { get; set; }
+        public Origin? Origin { get; set; }
+        public List<Power>? Powers { get; set; }
+        public List<Tag>? Tags { get; set; }
+        public List<Trait>? Traits { get; set; }
         public int Health { get; set; }       
         public int HealthDamageReduction { get; set; }
         public int Focus { get; set; }
@@ -39,9 +37,7 @@ namespace Marvel
         public int Swim { get; set; }
         public int Karma { get; set; }
         public int InitiativeModifier { get; set; }
-        public List<Weapon> Weapons { get; set; }
-        public List<BonusAdjustment> BonusAdjustments { get => GetBonusAdjustments(); }       
-
+        public List<Weapon>? Weapons { get; set; } 
         public CharacterSegment CharacterSegment { get => GetCharacterSegment(); }
 
         private CharacterSegment GetCharacterSegment()
@@ -56,16 +52,34 @@ namespace Marvel
             };
         }
 
-        public Character()
+        public void SetBonusAdjustments()
         {
+            var bonuses = new HashSet<BonusAdjustment>();
+
+            foreach (var trait in Traits)
+            {
+                foreach (var bonus in trait.BonusAdjustments)
+                {
+                    bonuses.Add(bonus);
+                }
+            }
+
+            foreach (var power in Powers)
+            {
+                foreach (var bonus in power.BonusAdjustments)
+                {
+                    bonuses.Add(bonus);
+                }
+            }
+
             foreach (var attribute in Attributes)
             {
                 attribute.Check = attribute.Value;
                 attribute.Defense = 10 + attribute.Value;
                 attribute.Damage = attribute.Value;
-            }           
+            }
 
-            foreach (var bonus in BonusAdjustments)
+            foreach (var bonus in bonuses.ToList())
             {
                 switch (bonus.Type)
                 {
@@ -120,30 +134,6 @@ namespace Marvel
             Climb += Run / 2;
             Swim += Run / 2;
             Karma += Rank;
-        }
-
-        private List<BonusAdjustment> GetBonusAdjustments()
-        {
-            //TODO: Need to check for highest value on matching bonus type/name rather than use HashSet for dups
-            var bonuses = new HashSet<BonusAdjustment>();
-
-            foreach (var trait in Traits)
-            {
-                foreach (var bonus in trait.BonusAdjustments)
-                {
-                    bonuses.Add(bonus);
-                }                
-            }
-
-            foreach (var power in Powers)
-            {
-                foreach (var bonus in power.BonusAdjustments)
-                {
-                    bonuses.Add(bonus);
-                }
-            }
-
-            return bonuses.ToList();
         }
     }
 }

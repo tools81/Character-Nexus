@@ -1,17 +1,13 @@
 ﻿using Utility;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
+using Microsoft.AspNetCore.Http;
 
 namespace VampireTheMasquerade
 {
     public class Character : ICharacter
     {
         public string Name { get; set; }
-        public FileInfo Image { get; set; }
+        public IFormFile Image { get; set; }
         public string ImageUrl { get; set; }
         public Guid Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 

@@ -15,7 +15,7 @@ namespace EverydayHeroes
         public string Prerequisite { get; set; }
         public FeatType Type { get; set; }
         public FeatScale Scale { get; set; }
-        public List<BonusAdjustment> BonusAdjustments { get; set; }
+        public List<BonusAdjustment<BonusType>> BonusAdjustments { get; set; }
         public List<UserChoice<string>> AttributeBonuses { get; set; }
         public List<UserChoice<string>> Abilities { get; set; }
         public List<UserChoice<string>> Profeciencies { get; set; }   

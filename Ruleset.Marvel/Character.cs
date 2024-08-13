@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Http;
 using Utility;
 
 namespace Marvel
@@ -7,7 +8,7 @@ namespace Marvel
         public Guid Id { get; set; }
         public required string Name { get; set; }
         public string? RealName { get; set; }
-        public FileInfo? Image { get; set; }
+        public IFormFile? Image { get; set; }
         public string? ImageUrl { get; set; }
         public int Rank { get; set; }
         public string? Height { get; set; }
@@ -54,7 +55,7 @@ namespace Marvel
 
         public void SetBonusAdjustments()
         {
-            var bonuses = new HashSet<BonusAdjustment>();
+            var bonuses = new HashSet<BonusAdjustment<BonusType>>();
 
             foreach (var trait in Traits)
             {

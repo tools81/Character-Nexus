@@ -40,9 +40,10 @@ const DynamicForm = () => {
   const handleImageUpload = (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files) {
+      setImageData(files[0]);
+
       const reader = new FileReader();    
       reader.onloadend = () => {
-        setImageData(files[0]);
         setImagePreview(reader.result as string);
       };
       reader.readAsDataURL(files[0]);
@@ -51,9 +52,32 @@ const DynamicForm = () => {
 
   // const onSubmit = (data: any) => {
   //   console.log(data);
+  //   if (imageData !== undefined){
+  //     const obj = {
+  //       lastModified: imageData.lastModified,
+  //       name: imageData.name,
+  //       size: imageData.size,
+  //       type: imageData.type,
+  //       webkitRelativePath: imageData.webkitRelativePath,
+  //     };
+  //     data.image = obj;
+  //   }
+  //   console.log(JSON.stringify(data));
+  //   console.log(JSON.stringify(JSON.stringify(data)));
   // };
 
   const onSubmit = (data: any) => {
+    if (imageData !== undefined) {
+      const obj = {
+        lastModified: imageData.lastModified,
+        name: imageData.name,
+        size: imageData.size,
+        type: imageData.type,
+        webkitRelativePath: imageData.webkitRelativePath,
+      };
+      data.image = obj;
+    }
+    
     fetch(
       `${BASE_URL}/api/character/save?ruleset=${encodeURIComponent(
         ruleset.name

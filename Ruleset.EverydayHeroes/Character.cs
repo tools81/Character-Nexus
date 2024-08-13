@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.IO;
+using Microsoft.AspNetCore.Http;
 
 namespace EverydayHeroes
 {
@@ -10,7 +10,7 @@ namespace EverydayHeroes
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public FileInfo Image { get; set; }
+        public IFormFile Image { get; set; }
         public string ImageUrl { get; set; }
         public int Level { get; set; }
         public string Languages { get; set; }

@@ -98,7 +98,7 @@ namespace AzureBlobStorage
             await blobCharactersClient.UploadAsync(new MemoryStream(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(characters)), true));
         }
 
-        public async Task<string> UploadImageAsync(string rulesetName, ICharacter character, string filePath)
+        public async Task<string> UploadCharacterImageAsync(string rulesetName, ICharacter character, string filePath)
         {
             string blobName = $"{character.Name}-img{Path.GetExtension(filePath)}";
             BlobContainerClient blobContainerClient = await RetrieveBlobClient(rulesetName.FormatAzureCompliance());

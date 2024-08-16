@@ -1,14 +1,16 @@
 import React, { useState, useEffect, ChangeEvent } from "react";
 import { useForm, useFieldArray, Controller } from "react-hook-form";
 import { useRulesetContext } from "./RulesetContext";
+import { useNavigate } from "react-router-dom";
 
 const BASE_URL = `${window.location.protocol}//${window.location.host}`;
 
 const DynamicForm = () => {
+  const navigate = useNavigate();
   const { ruleset } = useRulesetContext();
   const [schema, setSchema] = useState<any>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
-  const [imageData, setImageData] = useState<File>();
+  const [imageData, setImageData] = useState<File | null>(null);
   const {
     register,
     handleSubmit,
@@ -17,6 +19,10 @@ const DynamicForm = () => {
     getValues,
     formState: { errors },
   } = useForm();
+
+  function navigateToRulesetDashboard() {
+    navigate("/rulesetdashboard");
+  }
 
   useEffect(() => {
     const fetchSchema = async () => {
@@ -38,72 +44,82 @@ const DynamicForm = () => {
   }, []);
 
   const handleImageUpload = (event: ChangeEvent<HTMLInputElement>) => {
-    const files = event.target.files;
-    if (files) {
-      setImageData(files[0]);
+    if (event.target.files && event.target.files.length > 0) {
+      setImageData(event.target.files[0]);
 
-      const reader = new FileReader();    
+      const reader = new FileReader();
       reader.onloadend = () => {
         setImagePreview(reader.result as string);
       };
-      reader.readAsDataURL(files[0]);
+      reader.readAsDataURL(event.target.files[0]);
     }
   };
 
-  // const onSubmit = (data: any) => {
-  //   console.log(data);
-  //   if (imageData !== undefined){
-  //     const obj = {
-  //       lastModified: imageData.lastModified,
-  //       name: imageData.name,
-  //       size: imageData.size,
-  //       type: imageData.type,
-  //       webkitRelativePath: imageData.webkitRelativePath,
-  //     };
-  //     data.image = obj;
-  //   }
-  //   console.log(JSON.stringify(data));
-  //   console.log(JSON.stringify(JSON.stringify(data)));
-  // };
+  const onSubmit = async (data: any) => {
+    var imageApiResponse;
+    if (imageData != null) {
+      const formData = new FormData();
+      formData.append(
+        "image",
+        imageData,
+        data.name + "." + imageData.name.split(".").pop()
+      );
 
-  const onSubmit = (data: any) => {
-    if (imageData !== undefined) {
-      const obj = {
-        lastModified: imageData.lastModified,
-        name: imageData.name,
-        size: imageData.size,
-        type: imageData.type,
-        webkitRelativePath: imageData.webkitRelativePath,
-      };
-      data.image = obj;
+      try {
+        const response = await fetch(
+          `${BASE_URL}/api/image/upload?ruleset=${encodeURIComponent(
+            ruleset.name
+          )}`,
+          {
+            method: "POST",
+            body: formData
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        imageApiResponse = await response.json();
+      } catch (error) {
+        console.error("Error uploading image:", error);
+      }
     }
-    
-    fetch(
+
+    var dataWithImage = { ...data, image: imageApiResponse.url};
+
+    console.log(
+      `${BASE_URL}/api/character/save?ruleset=${encodeURIComponent(
+        ruleset.name
+      )}`
+    );
+
+    await fetch(
       `${BASE_URL}/api/character/save?ruleset=${encodeURIComponent(
         ruleset.name
       )}`,
       {
         method: "POST",
         headers: {
-          "Accept": "application/json, text/plain, */*",
-          "Content-Type": "application/json"
+          Accept: "application/json, text/plain, */*",
+          'Content-Type': "application/json"
         },
-        body: JSON.stringify(JSON.stringify(data)),
+        body: JSON.stringify(dataWithImage),
       }
     )
       .then((response) => response.json())
-      .then((data) => console.log("Success:", data))
+      .then(() => navigateToRulesetDashboard())
       .catch((error) => console.error("Error:", error));
   };
 
   interface Props {
-    field: any
+    field: any;
   }
 
-  const FieldArray = ({ field } : Props) => {
+  const FieldArray = ({ field }: Props) => {
     const { fields, append, remove } = useFieldArray({
       name: field.name,
-      control
+      control,
     });
     return (
       <div>
@@ -133,6 +149,15 @@ const DynamicForm = () => {
 
   const renderField = (field: any, includeLabel: boolean = true) => {
     switch (field.type) {
+      case "hidden":
+        return (
+          <input
+            id={field.name}
+            className={field.className}
+            style={{ visibility: "hidden" }}
+            {...register(field.name)}
+          ></input>
+        );
       case "text":
         return (
           <div key={field.name} className="mb-3">
@@ -181,7 +206,7 @@ const DynamicForm = () => {
               type="number"
               defaultValue={field.default}
               className={field.className}
-              style={{ maxWidth: '100px' }}
+              style={{ maxWidth: "100px" }}
               {...register(field.name)}
             ></input>
           </div>
@@ -234,7 +259,11 @@ const DynamicForm = () => {
         return (
           <ul className="list-group">
             {field.items.map((childItem: any) => (
-              <li className="list-group-item" id={childItem.component.name} key={childItem.component.name}>
+              <li
+                className="list-group-item"
+                id={childItem.component.name}
+                key={childItem.component.name}
+              >
                 {renderField(childItem.component)}
                 {renderField(childItem.text)}
               </li>
@@ -245,7 +274,9 @@ const DynamicForm = () => {
       case "group":
         return (
           <>
-            <label htmlFor={field.name} className="form-label">{field.label}</label>
+            <label htmlFor={field.name} className="form-label">
+              {field.label}
+            </label>
             <br />
             <div key={field.name} className="input-group">
               {field.children.map((childField: any) => (
@@ -265,22 +296,19 @@ const DynamicForm = () => {
           <div
             key={field.name}
             className={field.className}
-            dangerouslySetInnerHTML={{ __html: field.children.map((childField: any) => childField.text) }}
-          >
-          </div>
+            dangerouslySetInnerHTML={{
+              __html: field.children.map((childField: any) => childField.text),
+            }}
+          ></div>
         );
       case "card":
         return (
           <div className="card">
-            <div className="card-body">
-              {field.text}
-            </div>
+            <div className="card-body">{field.text}</div>
           </div>
         );
       case "array":
-        return (
-          <FieldArray field = {field} />
-        );
+        return <FieldArray field={field} />;
         break;
       case "image":
         return (

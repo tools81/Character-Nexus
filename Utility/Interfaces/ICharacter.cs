@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO;
-using Microsoft.AspNetCore.Http;
 
 namespace Utility
 {
@@ -8,8 +6,7 @@ namespace Utility
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public IFormFile Image { get; set; }
-        public string ImageUrl { get; set; }       
+        public string Image { get; set; }       
         public CharacterSegment CharacterSegment { get; }
     }
 }

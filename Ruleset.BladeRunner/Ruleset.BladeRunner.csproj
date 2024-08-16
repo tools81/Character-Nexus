@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFramework>net8.0</TargetFramework>
+	<LangVersion>12</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Json\Character\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Utility\Utility.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -41,5 +41,9 @@ namespace AmazingTales
             throw new NotImplementedException();
         }
 
+        public string LoadCharacter(ICharacter character)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

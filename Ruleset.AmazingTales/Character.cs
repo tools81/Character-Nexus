@@ -1,7 +1,6 @@
 ﻿using Utility;
 using System;
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Http;
 
 namespace AmazingTales
 {
@@ -9,8 +8,7 @@ namespace AmazingTales
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public IFormFile Image { get; set; }
-        public string ImageUrl { get; set; }
+        public string Image { get; set; }
         public List<Attribute> Attributes { get; set; }
 
         public CharacterSegment CharacterSegment {get => GetCharacterSegment();}
@@ -21,7 +19,7 @@ namespace AmazingTales
             {
                 Id = Id,
                 Name = Name,
-                ImageUrl = ImageUrl
+                ImageUrl = Image
             };
         }
     }

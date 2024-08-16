@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Http;
 using Utility;
 
 namespace Marvel
@@ -8,8 +7,7 @@ namespace Marvel
         public Guid Id { get; set; }
         public required string Name { get; set; }
         public string? RealName { get; set; }
-        public IFormFile? Image { get; set; }
-        public string? ImageUrl { get; set; }
+        public string? Image { get; set; }
         public int Rank { get; set; }
         public string? Height { get; set; }
         public string? Weight { get; set; }
@@ -47,9 +45,9 @@ namespace Marvel
             {
                 Id = Id,
                 Name = Name,
-                ImageUrl = ImageUrl,
+                ImageUrl = Image,
                 Level = Rank,
-                Details = $"{Origin} | {Occupation}"
+                Details = $"{Origin.Name} | {Occupation.Name}"
             };
         }
 
@@ -59,17 +57,23 @@ namespace Marvel
 
             foreach (var trait in Traits)
             {
-                foreach (var bonus in trait.BonusAdjustments)
+                if (trait.BonusAdjustments != null)
                 {
-                    bonuses.Add(bonus);
+                    foreach (var bonus in trait.BonusAdjustments)
+                    {
+                        bonuses.Add(bonus);
+                    }
                 }
             }
 
             foreach (var power in Powers)
             {
-                foreach (var bonus in power.BonusAdjustments)
+                if (power.BonusAdjustments != null)
                 {
-                    bonuses.Add(bonus);
+                    foreach (var bonus in power.BonusAdjustments)
+                    {
+                        bonuses.Add(bonus);
+                    }
                 }
             }
 

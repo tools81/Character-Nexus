@@ -11,11 +11,6 @@ namespace Marvel
         public string ImageSource => "https://characternexus.blob.core.windows.net/resources/card_marvel.jpg";
         public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_marvel.png";
 
-        public Ruleset()
-        {
-            
-        }
-
         public string NewCharacter()
         {
             string jsonObject;
@@ -35,8 +30,8 @@ namespace Marvel
         {
             try
             {
-                var character = JsonConvert.DeserializeObject<Character>(data);
-                character?.SetBonusAdjustments(); 
+                var character = JsonConvert.DeserializeObject<Character>(data, new CharacterJsonConverter());
+                //character?.SetBonusAdjustments();
                 return character;
             }
             catch(JsonException ex)
@@ -49,6 +44,16 @@ namespace Marvel
                 Console.WriteLine($"Error saving character: {ex.Message}");
                 return null;
             }
+        }
+
+        public string LoadCharacter(ICharacter character)
+        {
+            return JsonConvert.SerializeObject(character, new CharacterJsonConverter());
+        }
+
+        public bool DeleteCharacter(string id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

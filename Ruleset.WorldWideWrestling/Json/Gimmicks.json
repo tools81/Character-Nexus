@@ -1,0 +1,79 @@
+[
+  {
+    "name": "The Anti-Hero",
+    "description": "You don't play by the rules.",
+    "bonusadjustments": [
+      {
+        "type": "Stat",
+        "name": "Power",
+        "value": -2
+      },
+      {
+        "type": "Stat",
+        "name": "Real",
+        "value": 1
+      },
+      {
+        "type": "Stat",
+        "name": "Work",
+        "value": -1
+      }
+    ],
+    "choice": [
+      {
+        "type": "Stat",
+        "choices": [
+          "Look",
+          "Power",
+          "Real",
+          "Work"
+        ],
+        "count": 1
+      }
+    ],
+    "moves": [
+      "Finishing Move",
+      "Rules? What Rules?",
+      "Anything You Need To Do To Win",
+      "Mouth Of The People",
+      "Twitch The Curtain"
+    ],
+    "audience": 1
+  },
+  {
+    "name": "The Golden Boy",
+    "description": "You're the future of wrestling."
+  },
+  {
+    "name": "The Hardcore",
+    "description": "You sacrifice your body for your fans."
+  },
+  {
+    "name": "The High Flyer",
+    "description": "You take big risks for big rewards."
+  },
+  {
+    "name": "The Jobber",
+    "description": "You make everyone else look good."
+  },
+  {
+    "name": "The Manager",
+    "description": "You're the brains of the operation."
+  },
+  {
+    "name": "The Monster",
+    "description": "You scare people."
+  },
+  {
+    "name": "The Technician",
+    "description": "You're the master of the canvas."
+  },
+  {
+    "name": "The Veteran",
+    "description": "You show them how it's done."
+  },
+  {
+    "name": "The Wasted",
+    "description": "You have a problem."
+  }
+]

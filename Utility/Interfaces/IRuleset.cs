@@ -13,5 +13,6 @@ namespace Utility
         public string LogoSource { get; }
         public string NewCharacter();
         public ICharacter SaveCharacter(string data);
+        public string LoadCharacter(ICharacter character);
     }
 }

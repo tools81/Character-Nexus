@@ -2,6 +2,9 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace CharacterNexus.Controllers
 {
@@ -43,7 +46,8 @@ namespace CharacterNexus.Controllers
                 _logger.LogInformation($"Character load requested for {characterName} in ruleset {ruleset.Name}");
 
                 var character = _storage.DownloadCharacterAsync(ruleset.Name, characterName).Result;
-                return Ok(character);
+                var characterJson = ruleset.LoadCharacter(character);
+                return Ok(characterJson);
             }
             else
             {
@@ -52,17 +56,18 @@ namespace CharacterNexus.Controllers
         }
 
         [HttpPost("save")]
-        public IActionResult SaveCharacter([FromBody] string data)
+        public async Task<IActionResult> SaveCharacter([FromBody] JObject data)
         {
             if (HttpContext.Items.TryGetValue("Ruleset", out var rulesetObj) && rulesetObj is IRuleset ruleset)
             {
                 _logger.LogInformation($"Character save requested in ruleset {ruleset.Name}");
 
-                var character = ruleset.SaveCharacter(data);
+                var result = JsonConvert.SerializeObject(data);
+                var character = ruleset.SaveCharacter(result);
 
                 if (character != null)
                 {
-                    _storage.UploadCharacterAsync(ruleset.Name, character);
+                    await _storage.UploadCharacterAsync(ruleset.Name, character);
                     return Ok();
                 }
                 else

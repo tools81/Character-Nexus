@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Http;
 
 namespace AzureBlobStorage
 {
@@ -98,17 +99,16 @@ namespace AzureBlobStorage
             await blobCharactersClient.UploadAsync(new MemoryStream(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(characters)), true));
         }
 
-        public async Task<string> UploadCharacterImageAsync(string rulesetName, ICharacter character, string filePath)
+        public async Task<string> UploadImageAsync(string rulesetName, string name, IFormFile image)
         {
-            string blobName = $"{character.Name}-img{Path.GetExtension(filePath)}";
+            string blobName = $"img-{name}";
             BlobContainerClient blobContainerClient = await RetrieveBlobClient(rulesetName.FormatAzureCompliance());
             var blobClient = blobContainerClient.GetBlobClient(blobName);
 
-            await blobContainerClient.CreateIfNotExistsAsync();
-
-            using FileStream uploadFileStream = File.OpenRead(filePath);
-            await blobClient.UploadAsync(uploadFileStream, true);
-            uploadFileStream.Close();
+            using (var stream = image.OpenReadStream())
+            {
+                await blobClient.UploadAsync(stream, true);
+            }
 
             return blobClient.Uri.ToString();
         }

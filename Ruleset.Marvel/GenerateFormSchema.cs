@@ -131,6 +131,16 @@ namespace Marvel
             _fields.Add(
                 new
                 {
+                    name = "id",
+                    id = "id",
+                    label = "Id",
+                    type = "hidden",
+                    className = "form-control"
+                }
+            );
+            _fields.Add(
+                new
+                {
                     name = "name",
                     id = "name",
                     label = "Name",

@@ -14,5 +14,6 @@ namespace Utility
         public Task<List<CharacterSegment>> DownloadCharactersByRulesetAsync(string rulesetName);
         public Task DeleteCharacterAsync(string rulesetName, string characterName);
         public Task<string> UploadImageAsync(string rulesetName, string name, IFormFile image);
+        public Task<string> UploadPDFByteArray(string rulesetName, string name, byte[] bytes);
     }
 }

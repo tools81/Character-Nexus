@@ -16,11 +16,18 @@
     <EmbeddedResource Include="Json\Tags.json" />
     <EmbeddedResource Include="Json\Traits.json" />
     <EmbeddedResource Include="Json\Weapons.json" />
-    <EmbeddedResource Include="Json\Character\Form.json" />
+    <EmbeddedResource Include="Json\Character\Form.json" />  
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

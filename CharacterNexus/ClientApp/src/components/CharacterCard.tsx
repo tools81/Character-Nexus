@@ -1,13 +1,13 @@
 interface Props {
   id: string;
   name: string;
-  imageUrl: string;
+  image: string;
   level: number;
   details: string;
   onClick: () => void;
 }
 
-const CharacterCard = ({ id, name, imageUrl, level, details, onClick }: Props) => {
+const CharacterCard = ({ id, name, image, level, details, onClick }: Props) => {
   return (
     <>
       <div className="col">
@@ -16,7 +16,7 @@ const CharacterCard = ({ id, name, imageUrl, level, details, onClick }: Props) =
           onClick={() => onClick()}
         >
           <div className="card-header">{name}</div>
-          <img src={imageUrl} className="card-img-top" alt="..." />
+          <img src={image} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">{details}</h5>
           </div>

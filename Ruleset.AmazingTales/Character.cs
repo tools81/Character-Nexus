@@ -12,6 +12,13 @@ namespace AmazingTales
         public List<Attribute> Attributes { get; set; }
 
         public CharacterSegment CharacterSegment {get => GetCharacterSegment();}
+        public string CharacterSheet { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public byte[] GetCharacterSheet()
+        {
+            throw new NotImplementedException();
+        }
+
 
         private CharacterSegment GetCharacterSegment()
         {
@@ -19,7 +26,7 @@ namespace AmazingTales
             {
                 Id = Id,
                 Name = Name,
-                ImageUrl = Image
+                Image = Image
             };
         }
     }

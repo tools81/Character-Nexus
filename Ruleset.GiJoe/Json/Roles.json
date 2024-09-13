@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Commando",
+    "description": "",
+    "health": 1,
+    "userchoice": [
+      {
+        "type": "Skill",
+        "choices": [
+          "Acrobatics",
+          "Deception",
+          "Infiltration",
+          "Streetwise"
+        ],
+        "count": 2
+      },
+      {
+        "type": "Expertise",
+        "choices": [
+          "Acrobatics",
+          "Deception",
+          "Infiltration",
+          "Streetwise"
+        ],
+        "count": 2
+      },      
+      {
+        "type": "Training",
+        "choices": [
+          "Light Armor",
+          "Grenades",
+          "Finesse and Silent weapons"
+        ],
+        "count": 1
+      },
+      {
+        "type": "Qualification",
+        "choices": [
+          "Tactical Armor",
+          "Submachine Gun"
+        ],
+        "count": 1
+      }
+    ],
+    "bonusadjustment": [
+      {
+        "type": "Essence",
+        "name": "Speed",
+        "value": 1
+      },
+      {
+        "type": "Essence",
+        "name": "Social",
+        "value": 1
+      }
+    ],
+    "bonuscharacteristic": [
+      {
+        "type": "EquipmentProficiency",
+        "name": "Standard"
+      },
+      {
+        "type": "VehicleProficiency",
+        "name": "Standard"
+      }
+    ],
+    "perks": [
+      [
+        "All Warfare Is Deception",
+        "Sneak Attack",
+        "Friend of Darkness"
+      ],
+      [
+        "Think Fast",
+        "Mobility"
+      ],
+      [],
+      [],
+      [
+        "Takedown",
+        "Just a Graze"
+      ],
+      [],
+      [
+        "First Strike"
+      ],
+      [],
+      [
+        "Seconds Between Click and Boom",
+        "Ghost"
+      ],
+      [],
+      [],
+      [
+        "Everythings a Weapon",
+        "Every Tick in the Book"
+      ],
+      [
+        "Psychological Warfare"
+      ],
+      [
+        "Safecracker"
+      ],
+      [],
+      [
+        "Debilitating Strike"
+      ],
+      [],
+      [
+        "Paranoia"
+      ],
+      [],
+      []
+    ]    
+  }
+]

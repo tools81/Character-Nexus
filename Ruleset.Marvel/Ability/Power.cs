@@ -15,8 +15,8 @@ namespace Marvel
         public string? Range { get; set; }
         public string? Effect { get; set; }
         public string? Cost { get; set; }
-        public Prerequisite<int>? PrerequisitesInt { get; set; }
-        public Prerequisite<string>? PrerequisitesString { get; set; }
-        public List<BonusAdjustment<BonusType>>? BonusAdjustments { get; set; }
+        //public Prerequisite<int>? PrerequisitesInt { get; set; }
+        //public Prerequisite<string>? PrerequisitesString { get; set; }
+        public List<BonusAdjustment>? BonusAdjustments { get; set; }
     }
 }

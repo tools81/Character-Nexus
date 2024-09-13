@@ -1,7 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace Utility 
+namespace Utility
 {
     public static class StringExtensions
     {
@@ -20,7 +21,7 @@ namespace Utility
         {
             if (string.IsNullOrEmpty(input))
             {
-                throw new ArgumentException("Input cannot be null or empty.", nameof(input));
+                return string.Empty;
             }
 
             int periodIndex = input.IndexOf('.');
@@ -35,6 +36,30 @@ namespace Utility
 
             // Swap and concatenate
             return $"{afterPeriod}.{beforePeriod}";
+        }
+
+        public static List<string> DivideStringIntoWordArray(this string input, int maxSubstringLength)
+        {
+            List<string> result = new List<string>();
+            string[] words = input.Split(' ');
+            string currentString = "";
+
+            foreach (var word in words)
+            {
+                if ((currentString + word).Length > maxSubstringLength)
+                {
+                    result.Add(currentString.Trim());
+                    currentString = "";
+                }
+                currentString += word + " ";
+            }
+
+            if (!string.IsNullOrEmpty(currentString))
+            {
+                result.Add(currentString.Trim());
+            }
+
+            return result;
         }
     }
 }

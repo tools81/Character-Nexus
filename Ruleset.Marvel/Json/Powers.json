@@ -10,12 +10,12 @@
     "effect": "The character adds +1 to their Agility damage multiplier, and they gain a +1 bonus to Agility checks other than attacks.",
     "bonusadjustments": [
       {
-        "type": "AttributeDamage",
+        "type": "attributeDamage",
         "name": "Agility",
         "value": 1
       },
       {
-        "type": "AttributeCheck",
+        "type": "attributeCheck",
         "name": "Agility",
         "value": 1
       }
@@ -32,22 +32,22 @@
     "effect": "The character adds +2 to their Agility damage multiplier, and they gain a +2 bonus to Agility checks other than attacks.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Accuracy 1"
       }
     ],
     "bonusadjustments": [
       {
-        "type": "AttributeDamage",
+        "type": "attributeDamage",
         "name": "Agility",
         "value": 2
       },
       {
-        "type": "AttributeCheck",
+        "type": "attributeCheck",
         "name": "Agility",
         "value": 2
       }
@@ -64,22 +64,22 @@
     "effect": "The character adds +3 to their Agility damage multiplier, and they gain a +3 bonus to Agility checks other than attacks.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Accuracy 2"
       }
     ],
     "bonusadjustments": [
       {
-        "type": "AttributeDamage",
+        "type": "attributeDamage",
         "name": "Agility",
         "value": 3
       },
       {
-        "type": "AttributeCheck",
+        "type": "attributeCheck",
         "name": "Agility",
         "value": 3
       }
@@ -96,22 +96,22 @@
     "effect": "The character adds +4 to their Agility damage multiplier, and they gain a +4 bonus to Agility checks other than attacks.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Accuracy 3"
       }
     ],
     "bonusadjustments": [
       {
-        "type": "AttributeDamage",
+        "type": "attributeDamage",
         "name": "Agility",
         "value": 4
       },
       {
-        "type": "AttributeCheck",
+        "type": "attributeCheck",
         "name": "Agility",
         "value": 4
       }
@@ -141,11 +141,11 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Mighty 3"
       }
     ]
@@ -171,12 +171,12 @@
     "effect": "The character adds +1 to their Logic damage multiplier, and they gain a +1 bonus to Logic checks other than attacks.",
     "bonusadjustments": [
       {
-        "type": "AttributeDamage",
+        "type": "attributeDamage",
         "name": "Logic",
         "value": 1
       },
       {
-        "type": "AttributeCheck",
+        "type": "attributeCheck",
         "name": "Logic",
         "value": 1
       }
@@ -190,11 +190,11 @@
     "description": "The character puts their brain to work.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Brilliance 1"
       }
     ],
@@ -203,12 +203,12 @@
     "effect": "The character adds +2 to their Logic damage multiplier, and they gain a +2 bonus to Logic checks other than attacks.",
     "bonusadjustments": [
       {
-        "type": "AttributeDamage",
+        "type": "attributeDamage",
         "name": "Logic",
         "value": 2
       },
       {
-        "type": "AttributeCheck",
+        "type": "attributeCheck",
         "name": "Logic",
         "value": 2
       }
@@ -222,11 +222,11 @@
     "description": "Little can stop the character's mind.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Brilliance 2"
       }
     ],
@@ -235,12 +235,12 @@
     "effect": "The character adds +3 to their Logic damage multiplier, and they gain a +3 bonus to Logic checks other than attacks.",
     "bonusadjustments": [
       {
-        "type": "AttributeDamage",
+        "type": "attributeDamage",
         "name": "Logic",
         "value": 3
       },
       {
-        "type": "AttributeCheck",
+        "type": "attributeCheck",
         "name": "Logic",
         "value": 3
       }
@@ -254,11 +254,11 @@
     "description": "The character's intelligence is unparalleled.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Brilliance 3"
       }
     ],
@@ -267,12 +267,12 @@
     "effect": "The character adds +4 to their Logic damage multiplier, and they gain a +4 bonus to Logic checks other than attacks.",
     "bonusadjustments": [
       {
-        "type": "AttributeDamage",
+        "type": "attributeDamage",
         "name": "Logic",
         "value": 4
       },
       {
-        "type": "AttributeCheck",
+        "type": "attributeCheck",
         "name": "Logic",
         "value": 4
       }
@@ -291,7 +291,7 @@
     "effect": "Once per battle, when the character is attacking targets of equal or higher rank, the character automatically rolls a 1 on their Marvel die, and that die cannot be affected by trouble. If the character is attacking multiple targets, all the targets must be of equal or higher rank.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -307,12 +307,12 @@
     "effect": "The character adds +1 to their Logic damage multiplier, and they gain a +1 bonus to Logic checks other than attacks.",
     "bonusadjustments": [
       {
-        "type": "AttributeDamage",
+        "type": "attributeDamage",
         "name": "Ego",
         "value": 1
       },
       {
-        "type": "AttributeCheck",
+        "type": "attributeCheck",
         "name": "Ego",
         "value": 1
       }
@@ -329,23 +329,23 @@
     "effect": "The character adds +2 to their Logic damage multiplier, and they gain a +2 bonus to Logic checks other than attacks.",
     "bonusadjustments": [
       {
-        "type": "AttributeDamage",
+        "type": "attributeDamage",
         "name": "Ego",
         "value": 2
       },
       {
-        "type": "AttributeCheck",
+        "type": "attributeCheck",
         "name": "Ego",
         "value": 2
       }
     ],
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Discipline 1"
       }
     ]
@@ -361,23 +361,23 @@
     "effect": "The character adds +3 to their Logic damage multiplier, and they gain a +3 bonus to Logic checks other than attacks.",
     "bonusadjustments": [
       {
-        "type": "AttributeDamage",
+        "type": "attributeDamage",
         "name": "Ego",
         "value": 3
       },
       {
-        "type": "AttributeCheck",
+        "type": "attributeCheck",
         "name": "Ego",
         "value": 3
       }
     ],
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Discipline 2"
       }
     ]
@@ -393,23 +393,23 @@
     "effect": "The character adds +4 to their Logic damage multiplier, and they gain a +4 bonus to Logic checks other than attacks.",
     "bonusadjustments": [
       {
-        "type": "AttributeDamage",
+        "type": "attributeDamage",
         "name": "Ego",
         "value": 4
       },
       {
-        "type": "AttributeCheck",
+        "type": "attributeCheck",
         "name": "Ego",
         "value": 4
       }
     ],
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Discipline 3"
       }
     ]
@@ -440,7 +440,7 @@
     "effect": "The character can take any Health damage done to them (after applying any damage reduction), ignore it and add that number to their Focus instead. In this way, they can increase their Focus up to double their regular maximum Focus.<br />Once the combat is over, any extra Focus over the character's regular maximum Focus score fades away.'",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       }
     ]
@@ -476,7 +476,7 @@
     "effect": "The character can fly. Their combat Flight Speed is equal to their rank times their Rund Speed. Outside of combat, they can move three times their Flight Speed.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -492,11 +492,11 @@
     "effect": "Outside of combat, the character can fly up to 50 times their Flight Speed.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Flight 1"
       }
     ]
@@ -514,11 +514,11 @@
     "effect": "For every point of Ego the character has, they can hoist one ally into the air with them. The Flight Speed of the group is half the character's, and all affected allies must remain with 5 spaces times the character's rank.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Flight 1"
       }
     ]
@@ -554,7 +554,7 @@
     "effect": "The character can sense things roughly four times as far away as normal. Their senses are so sharp that they can use some of them to compensate for the loss of others (say, if blinded or deafened). They can even listen to the heartbeat of a person in the same room to see if they are laying - although this is as reliable as a traditional lie detector: far from 100% and not admissible in court.<br />They also have a double edge on Vigilance checks to perceive things, and evemies have double trouble on checks they make to sneak past the character.",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Heightened Senses 1"
       }
     ]
@@ -601,12 +601,12 @@
     "effect": "Treat the character as one size bigger for lifting, carrying, swinging and throwing things. The also add +1 to their Melee damage multiplier, and they gain a +1 bonus to Logic checks other than attacks.",
     "bonusadjustments": [
       {
-        "type": "AttributeDamage",
+        "type": "attributeDamage",
         "name": "Melee",
         "value": 1
       },
       {
-        "type": "AttributeCheck",
+        "type": "attributeCheck",
         "name": "Melee",
         "value": 1
       }
@@ -623,23 +623,23 @@
     "effect": "Treat the character as two sizes bigger for lifting, carrying, swinging and throwing things. The also add +1 to their Melee damage multiplier, and they gain a +1 bonus to Logic checks other than attacks.",
     "bonusadjustments": [
       {
-        "type": "AttributeDamage",
+        "type": "attributeDamage",
         "name": "Melee",
         "value": 2
       },
       {
-        "type": "AttributeCheck",
+        "type": "attributeCheck",
         "name": "Melee",
         "value": 2
       }
     ],
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Mighty 1"
       }
     ]
@@ -655,23 +655,23 @@
     "effect": "Treat the character as three sizes bigger for lifting, carrying, swinging and throwing things. The also add +1 to their Melee damage multiplier, and they gain a +1 bonus to Logic checks other than attacks.",
     "bonusadjustments": [
       {
-        "type": "AttributeDamage",
+        "type": "attributeDamage",
         "name": "Melee",
         "value": 3
       },
       {
-        "type": "AttributeCheck",
+        "type": "attributeCheck",
         "name": "Melee",
         "value": 3
       }
     ],
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Mighty 2"
       }
     ]
@@ -687,23 +687,23 @@
     "effect": "Treat the character as four sizes bigger for lifting, carrying, swinging and throwing things. The also add +1 to their Melee damage multiplier, and they gain a +1 bonus to Logic checks other than attacks.",
     "bonusadjustments": [
       {
-        "type": "AttributeDamage",
+        "type": "attributeDamage",
         "name": "Melee",
         "value": 4
       },
       {
-        "type": "AttributeCheck",
+        "type": "attributeCheck",
         "name": "Melee",
         "value": 4
       }
     ],
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Mighty 3"
       }
     ]
@@ -731,11 +731,11 @@
     "effect": "The character can change into another form no more than one size bigger or smaller than their regular form.<br />When in any form, the character has access to the natural abilities of the form. For instance, if they transformed into a bird, they could fly. When transormed into a fish, they can breathe water.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Disguise"
       }
     ]
@@ -785,11 +785,11 @@
     ],
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Sturdy 1"
       }
     ]
@@ -811,11 +811,11 @@
     ],
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Sturdy 2"
       }
     ]
@@ -837,11 +837,11 @@
     ],
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 6
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Sturdy 3"
       }
     ]
@@ -867,11 +867,11 @@
     "effect": "Any damage multiplier for attacks against the character's Focus is reduced by 2.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Uncanny 1"
       }
     ]
@@ -887,11 +887,11 @@
     "effect": "Any damage multiplier for attacks against the character's Focus is reduced by 3.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Uncanny 2"
       }
     ]
@@ -907,11 +907,11 @@
     "effect": "Any damage multiplier for attacks against the character's Focus is reduced by 4.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 6
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Uncanny 3"
       }
     ]
@@ -951,11 +951,11 @@
     "effect": "The character designates a space within their line of sight. The attack can affect every enemy with 10 spaces of that. The character makes a single Ego check and compares it to each target's Resilience defense. Affected enemies take half regular damage. On a Fantastic success, they take full regular damage and the elemental type's special effect.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Elemental Blast"
       }
     ]
@@ -973,11 +973,11 @@
     "effect": "The character forms a wall of their element within their line of sight and up to 10 spaces away per rank. This covers up to 2 spaces across (vertically/horizontally) per their rank. The character makes an Agility check and compares the results against the Agility defense of any target in the affected spaces. On a success, the character chooses which side of the barrier the target winds up on. On a failure, the target chooses. On a Fantastic success, the target suffers the element's special effect too.<br />Attacks against the barrier are against the character's Ego defense. Any attacks agaisnt it that do 10 points of damage or less are instantly absorbed, and the barrier continues. If an attack does more than 10 points of damage, it destroys the barrier. Either way, the attack leaves those behind the barrier unharmed.'",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Elemental Blast"
       }
     ]
@@ -996,11 +996,11 @@
     "effect": "The character makes a ranged attack with an edge at an enemy in line of sight. For this attack, add +1 to the character's Agility damage bonus for every 2 points of Focus they spend. On a success, an affected target takes that total damage. On a Fantastic success, an affected target takes double that total damage and suffers the elemental type's special effect.'",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Elemental Burst"
       }
     ]
@@ -1028,11 +1028,11 @@
     "effect": "The character's body is made entirely of their element, which gives them a steady supply of their element to use and makes them essentially unkillable. When they lose all their Health, their form loses its cohesion and falls apart. When they have at least 1 Health - which they can gain back over time, normally - they can re-form.<br />If the character whishes to use their elemental body in unusual ways, they should pick Plasticity powers. If they wish to be able to be fully human at times, they should take the Shape-Shift power.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Elemental Reinforcement"
       }
     ]
@@ -1051,11 +1051,11 @@
     "effect": "The character makes an Ego attack against a target's Melee defense within 5 spaces times the character's rank. If the attack is a success, the character grabs the target with their element. On a Fantastic success, the target can also be pinned and suffers the element's special effect. Breaking free requires a successful Melee check against a target number 20.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Elemental Burst"
       }
     ]
@@ -1073,11 +1073,11 @@
     "effect": "The character infuses their energy into a handheld weapon in their grasp. When the character gets a Fantastic success attacking with the weapon, add the energy's special effect.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Elemental Burst"
       }
     ]
@@ -1095,7 +1095,7 @@
     "effect": "The character picks a point within their line of sight and traps any chosen targets within up to 5 spaces times their rank - ina proson comprised of their element. When the Elemental Prison is formed, the character makes an Ego check and compares the results against the Agility defense of targets inside the enclosed spaces. On each success, the character traps the target within the prison's perimeter. On a Fantastic success, such imprisoned people suffer full dmage and the element's special effect too.<br />Attacks against the prison are against the character's Ego defense. Any attacks against the prison are absorbed as if made against the character's Elemental Protection power, and the prison continues. If an attack does more damage than the character's Elemental Protection power can sustain, it destroys the prison, but no one inside is harmed.",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Elemental Protection 1"
       }
     ]
@@ -1114,11 +1114,11 @@
     "effect": "The character protects themselves with their element. Any attacks against them that do 10 points of damage or less are instanly absorbed, and the protection continues. If an attack does more than 10 points of damage, it destroys the protection. Either way, the character remains unharmed.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Elemental Barrier"
       }
     ]
@@ -1137,11 +1137,11 @@
     "effect": "The character protects themselves with their element. Any attacks against them that do 20 points of damage or less are instanly absorbed, and the protection continues. If an attack does more than 20 points of damage, it destroys the protection. Either way, the character remains unharmed.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Elemental Protection 1"
       }
     ]
@@ -1160,11 +1160,11 @@
     "effect": "The character protects themselves with their element. Any attacks against them that do 30 points of damage or less are instanly absorbed, and the protection continues. If an attack does more than 30 points of damage, it destroys the protection. Either way, the character remains unharmed.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Elemental Protection 2"
       }
     ]
@@ -1183,11 +1183,11 @@
     "effect": "The character protects themselves with their element. Any attacks against them that do 40 points of damage or less are instanly absorbed, and the protection continues. If an attack does more than 40 points of damage, it destroys the protection. Either way, the character remains unharmed.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 5
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Elemental Protection 3"
       }
     ]
@@ -1205,11 +1205,11 @@
     "effect": "The character makes an Ego attack against the target's Agility defense. If the attack succeeds, the character can move the target in any direction, up to 1 space times the character's rank. On a Fantastic success, the target also takes regular damage, is knocked prone and suffers the element's special effect.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Elemental Protection 1"
       }
     ]
@@ -1228,7 +1228,7 @@
     "effect": "The character can transfer any Health damage that gets through an elemental power that grants damage protection to their Focus instead, leaving the protection intact.",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Elemental Protection 1"
       }
     ]
@@ -1247,11 +1247,11 @@
     "effect": "The character makes a ranged attack against a target in line of sight. If the attack is a success, it inflicts regular damage. On a Fantastic success, energy also bounes off the first target to another in line of sight, and the character can make a new attack against that target, adding the new range to the previous attack's range. This can be repeated until an attack is not fantastic.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Elemental Burst"
       }
     ]
@@ -1269,7 +1269,7 @@
     "effect": "The character envelops themselves - and any chosen people within up to 5 spaces times their rank - in a protective sphere comprised of their element.<br />When the sphere is formed, the character makes an Ego check and compares the results against the Agility defense of unwanted characters in the enclosed spaces. On a success, the character can move any unwanted people within the sphere's perimeter to spaces outside of the sphere. On a Fantastic success, such moved people suffer full damage and the element's special effect.<br />Attacks against the sphere are against the character's Ego defense. Any attacks against the sphere are absorbed as if made against the character's Elemental Protection power, and the sphere continues. If an attack does more damage than the character's Elemental Protection power can sustain, it destroys the sphere, but no one inside is harmed.",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Elemental Protection 1"
       }
     ]
@@ -1289,11 +1289,11 @@
     "effect": "The character makes an Ego attack agaisnt the grabbed target's Resilience defense. If the attack is a success, the target takes regular damage. On a Fantastic success, the target can also be pinned and suffers the element's special effect.<br />With elements that aren't suited to suffocation, this power chokes the target instead.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Elemental Grab"
       }
     ]
@@ -1311,11 +1311,11 @@
     "effect": "The character makes an Ego check and compares that against the Resilience defense of every enemy with 10 spaces. For these attacks, add +1 to the character's Melee damage bonus for every 2 points of Focus they spend. On a success, an affected target takes half that total damage. On a Fantastic success, an affected target takes full damage and suffers the elemental type's special effect.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Elemental Blast"
       }
     ]
@@ -1333,11 +1333,11 @@
     "effect": "The character creates a visual-only illusion anywhere in line of sight, within 50 spaces. The illusion can be anything up to four sizes larger than the character, and it can move freely within its limits. The character breaks concentration if they move beyond 50 spaces from the illusion or lose line of sight to it.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Static Illusion"
       }
     ]
@@ -1355,11 +1355,11 @@
     "effect": "An area up to 5 spaces wide per the character's rank - centered on anything the character wishes, within 50 spaces - is filled with inky darkness. Those inside it cannot see anything, and no lights work within it except those gerated by powers. The character must remain within 50 spaces of the affected area to avoid breaking concentration.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Illumination"
       }
     ]
@@ -1378,11 +1378,11 @@
     "effect": "The character makes an Ego check against an enemy in their line of sight and compares that against the target's Vigilance defense. If the attack is a success, the enemy is blinded for 1 turn. On a Fantastic success, it also inflicts regular damage.<br />Alternatively, the character can blind the victim with darkness.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Illumination"
       }
     ]
@@ -1401,11 +1401,11 @@
     "effect": "The character makes an Ego check against an enemy in their line of sight and compares that against the target's Vigilance defense. If the attack is a success, the enemy is deafened for on turn. On a Fantastic success, it also inflicts regular damage.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Illumination"
       }
     ]
@@ -1419,7 +1419,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Invisibility"
       }
     ]
@@ -1433,11 +1433,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Illumination"
       }
     ]
@@ -1451,11 +1451,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Animated Illusion"
       }
     ]
@@ -1469,11 +1469,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Extend Invisibility"
       }
     ]
@@ -1495,7 +1495,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -1509,11 +1509,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Animated Illusion"
       }
     ]
@@ -1527,11 +1527,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Illumination"
       }
     ]
@@ -1545,11 +1545,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Illumination"
       }
     ]
@@ -1563,7 +1563,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Illumination"
       }
     ]
@@ -1577,7 +1577,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -1591,7 +1591,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
@@ -1609,7 +1609,7 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -1623,7 +1623,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
@@ -1641,7 +1641,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
@@ -1659,7 +1659,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       }
     ]
@@ -1673,7 +1673,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
@@ -1691,7 +1691,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
@@ -1709,7 +1709,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
@@ -1727,7 +1727,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
@@ -1745,7 +1745,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
@@ -1763,7 +1763,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
@@ -1781,7 +1781,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -1795,7 +1795,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
@@ -1813,7 +1813,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
@@ -1845,7 +1845,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
@@ -1863,7 +1863,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 5
       },
       {
@@ -1881,7 +1881,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
@@ -1899,7 +1899,7 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
@@ -1917,7 +1917,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
@@ -1957,7 +1957,7 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
@@ -1975,7 +1975,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
@@ -1993,7 +1993,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
@@ -2011,7 +2011,7 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
@@ -2028,11 +2028,11 @@
     "description": "The character is prepared to fight.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Do This All Day"
       }
     ]
@@ -2063,11 +2063,11 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Do This All Day"
       }
     ]
@@ -2081,11 +2081,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Fast Strikes"
       }
     ]
@@ -2099,11 +2099,11 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Attack Stance"
       }
     ]
@@ -2118,7 +2118,7 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -2141,7 +2141,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -2163,11 +2163,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Leg Sweep"
       }
     ]
@@ -2181,11 +2181,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Chain Strikes"
       }
     ]
@@ -2199,7 +2199,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -2213,15 +2213,15 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Flying Double Kick"
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Crushing Grip"
       }
     ]
@@ -2235,11 +2235,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Fast Strikes"
       }
     ]
@@ -2253,15 +2253,15 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Unflappable Poise"
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Untouchable Position"
       }
     ]
@@ -2275,11 +2275,11 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Defense Stance"
       }
     ]
@@ -2293,11 +2293,11 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Defense Stance"
       }
     ]
@@ -2310,11 +2310,11 @@
     "description": "The character can dodge most close attacks.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Defense Stance"
       }
     ]
@@ -2327,11 +2327,11 @@
     "description": "The character's enemies struggle to gang up on them.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Counterstrike Technique"
       }
     ]
@@ -2345,11 +2345,11 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Vicious Attack"
       }
     ]
@@ -2379,11 +2379,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Whirling Frenzy"
       }
     ]
@@ -2413,15 +2413,15 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Furious Attacks"
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Focused Fury"
       }
     ]
@@ -2443,11 +2443,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Fast Attacks"
       }
     ]
@@ -2461,11 +2461,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Dimensional Travel Together"
       }
     ]
@@ -2479,7 +2479,7 @@
     "action": "Standard, Movement",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       }
     ]
@@ -2493,11 +2493,11 @@
     "action": "Standard, Reaction, Movement",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Dimensional Travel"
       }
     ]
@@ -2511,11 +2511,11 @@
     "action": "Standard, Reaction, Movement",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Dimensional Travel"
       }
     ]
@@ -2529,7 +2529,7 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       }
     ]
@@ -2543,11 +2543,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Multiversal Travel Together"
       }
     ]
@@ -2561,7 +2561,7 @@
     "action": "Standard, Movement",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       }
     ]
@@ -2575,11 +2575,11 @@
     "action": "Standard, Reaction, Movement",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Multiversal Travel"
       }
     ]
@@ -2593,11 +2593,11 @@
     "action": "Standard, Reaction, Movement",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Multiversal Travel"
       }
     ]
@@ -2611,11 +2611,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Time Travel Together"
       }
     ]
@@ -2629,7 +2629,7 @@
     "action": "Standard, Movement",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       }
     ]
@@ -2643,11 +2643,11 @@
     "action": "Standard, Reaction, Movement",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Time Travel"
       }
     ]
@@ -2661,11 +2661,11 @@
     "action": "Standard, Reaction, Movement",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Time Travel"
       }
     ]
@@ -2679,11 +2679,11 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Instant Replay"
       }
     ]
@@ -2697,11 +2697,11 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Time-Out"
       }
     ]
@@ -2715,11 +2715,11 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Time-Out"
       }
     ]
@@ -2733,11 +2733,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Phase Self"
       }
     ]
@@ -2751,11 +2751,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Phase Self"
       }
     ]
@@ -2769,11 +2769,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Phase Self"
       }
     ]
@@ -2787,11 +2787,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Phase Self"
       }
     ]
@@ -2805,11 +2805,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Phase Self"
       }
     ]
@@ -2823,11 +2823,11 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Phase Self"
       }
     ]
@@ -2848,11 +2848,11 @@
     "description": "The character can walk on air.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Phase Self"
       }
     ]
@@ -2866,11 +2866,11 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Phase Self"
       }
     ]
@@ -2884,15 +2884,15 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Flexible Bones 2"
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Extended Reach 2"
       }
     ]
@@ -2906,11 +2906,11 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Body Sheet"
       }
     ]
@@ -2924,15 +2924,15 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Flexible Bones 1"
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Slip Free"
       }
     ]
@@ -2946,15 +2946,15 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Extended Reach 1"
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Reverse Punch"
       }
     ]
@@ -2974,11 +2974,11 @@
     "description": "The character can reach a looong way.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Extended Reach 1"
       }
     ]
@@ -2998,11 +2998,11 @@
     "description": "The character's skeleton is flexible and pliable.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Flexible Bones 1"
       }
     ]
@@ -3023,11 +3023,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Flexible Bones 1"
       }
     ]
@@ -3040,11 +3040,11 @@
     "description": "The character can lengthen and twist their neck.",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Extended Reach 1"
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Flexible Bones 1"
       }
     ]
@@ -3066,11 +3066,11 @@
     "action": "Movement",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Extended Reach"
       }
     ]
@@ -3084,11 +3084,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Bump Power"
       }
     ]
@@ -3102,7 +3102,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -3116,7 +3116,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -3130,11 +3130,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Copy Power"
       }
     ]
@@ -3156,7 +3156,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -3186,11 +3186,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Dampen Power"
       }
     ]
@@ -3204,15 +3204,15 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Clone Powers"
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Shutdown Powers"
       }
     ]
@@ -3226,15 +3226,15 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Copy Power"
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Dampen Power"
       }
     ]
@@ -3248,11 +3248,11 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Return Fire"
       }
     ]
@@ -3266,11 +3266,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Slow-Motion Shoot Dodge"
       }
     ]
@@ -3291,11 +3291,11 @@
     "description": "The character can shoot faster than the eye can blink.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Point-Blank Parry"
       }
     ]
@@ -3309,11 +3309,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Stopping Power"
       }
     ]
@@ -3327,15 +3327,15 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Covering Fire"
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Headshot"
       }
     ]
@@ -3349,15 +3349,15 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Dance of Death"
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Fast Hands"
       }
     ]
@@ -3371,7 +3371,7 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -3385,11 +3385,11 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Suppressive Fire"
       }
     ]
@@ -3403,15 +3403,15 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Slow-Motion Dodge"
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Weapons Blazing"
       }
     ]
@@ -3433,7 +3433,7 @@
     "action": "Standard, Movement",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -3447,11 +3447,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Double Tap"
       }
     ]
@@ -3473,7 +3473,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Snap Shooting"
       }
     ]
@@ -3495,7 +3495,7 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Grow 1"
       }
     ]
@@ -3509,7 +3509,7 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Grow 2"
       }
     ]
@@ -3523,7 +3523,7 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Grow 3"
       }
     ]
@@ -3537,11 +3537,11 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Grow 1"
       }
     ]
@@ -3555,11 +3555,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Grow 4"
       }
     ]
@@ -3573,11 +3573,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Shrink 4"
       }
     ]
@@ -3591,15 +3591,15 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Grow 2"
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Shrink 2"
       }
     ]
@@ -3613,15 +3613,15 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Grow 2"
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Shrink 2"
       }
     ]
@@ -3643,7 +3643,7 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Shrink 1"
       }
     ]
@@ -3657,7 +3657,7 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Shrink 2"
       }
     ]
@@ -3671,7 +3671,7 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Shrink 3"
       }
     ]
@@ -3685,11 +3685,11 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Shrink 1"
       }
     ]
@@ -3703,11 +3703,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Shield Bash"
       }
     ]
@@ -3721,11 +3721,11 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Shield 1"
       }
     ]
@@ -3739,11 +3739,11 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Shield Deflection"
       }
     ]
@@ -3766,11 +3766,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Hurled Shield Bash"
       }
     ]
@@ -3792,11 +3792,11 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Shield 1"
       }
     ]
@@ -3810,11 +3810,11 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Shield 2"
       }
     ]
@@ -3828,11 +3828,11 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 6
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Shield 3"
       }
     ]
@@ -3862,11 +3862,11 @@
     "action": "Movement",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Brace For Impact"
       }
     ]
@@ -3880,7 +3880,7 @@
     "description": "The character can leap about like a frog.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -3894,11 +3894,11 @@
     "description": "The character can leap around with dazzling speed.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Jump 1"
       }
     ]
@@ -3912,7 +3912,7 @@
     "description": "The character can leap into the sky with a single bound.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       }
     ]
@@ -3979,11 +3979,11 @@
     "description": "The character can glide through the air on their webbing.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Webcasting"
       }
     ]
@@ -3997,11 +3997,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Webcasting"
       }
     ]
@@ -4014,11 +4014,11 @@
     "description": "The character can swing through the city on their webs.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Webcasting"
       }
     ]
@@ -4032,11 +4032,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Webgrabbing"
       }
     ]
@@ -4049,7 +4049,7 @@
     "description": "The character can attack superfast.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -4063,11 +4063,11 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Speed Run 2"
       }
     ]
@@ -4081,11 +4081,11 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Speed Run 2"
       }
     ]
@@ -4098,7 +4098,7 @@
     "description": "The character has lightning-fast moves.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       }
     ]
@@ -4112,11 +4112,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Speed Run 2"
       }
     ]
@@ -4129,11 +4129,11 @@
     "description": "The character can run across water.",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Speed Run 2"
       }
     ]
@@ -4147,11 +4147,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Speed Run 2"
       }
     ]
@@ -4164,7 +4164,7 @@
     "description": "The character runs as fast as a car!",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -4177,11 +4177,11 @@
     "description": "The character runs as fast as a jet!",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Speed Run 1"
       }
     ]
@@ -4194,7 +4194,7 @@
     "description": "The character can swim faster than a dolphin!",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -4224,11 +4224,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Smash"
       }
     ]
@@ -4242,15 +4242,15 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Crushing Grip"
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Mighty 1"
       }
     ]
@@ -4264,11 +4264,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Clobber"
       }
     ]
@@ -4282,15 +4282,15 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Ground-Shaking Stomp"
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Mighty 2"
       }
     ]
@@ -4304,15 +4304,15 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Rally on Me"
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Scatter"
       }
     ]
@@ -4326,11 +4326,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Inspiration"
       }
     ]
@@ -4344,11 +4344,11 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Inspiration"
       }
     ]
@@ -4362,11 +4362,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Change of Plans"
       }
     ]
@@ -4380,11 +4380,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Battle Plan"
       }
     ]
@@ -4398,11 +4398,11 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Keep Moving"
       }
     ]
@@ -4424,11 +4424,11 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Keep Moving"
       }
     ]
@@ -4442,15 +4442,15 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Combat Support"
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Focus Fire"
       }
     ]
@@ -4464,11 +4464,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "On Your Feet"
       }
     ]
@@ -4482,11 +4482,11 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Hit the Dirt"
       }
     ]
@@ -4500,11 +4500,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Levitation"
       }
     ]
@@ -4525,11 +4525,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telekinetic Manipulation"
       }
     ]
@@ -4543,11 +4543,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telekinetic Grab"
       }
     ]
@@ -4561,11 +4561,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telekinetic Grab"
       }
     ]
@@ -4579,11 +4579,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telekinetic Manipulation"
       }
     ]
@@ -4605,11 +4605,11 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telekinetic Barrier"
       }
     ]
@@ -4623,11 +4623,11 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telekinetic Protection 1"
       }
     ]
@@ -4641,11 +4641,11 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telekinetic Protection 2"
       }
     ]
@@ -4659,11 +4659,11 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 5
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telekinetic Protection 3"
       }
     ]
@@ -4677,7 +4677,7 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telekinetic Protection 1"
       }
     ]
@@ -4691,7 +4691,7 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telekinetic Protection 1"
       }
     ]
@@ -4705,11 +4705,11 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telekinetic Grab"
       }
     ]
@@ -4739,7 +4739,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -4753,11 +4753,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telepathic Link"
       }
     ]
@@ -4771,11 +4771,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telepathic Link"
       }
     ]
@@ -4789,11 +4789,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Cloak"
       }
     ]
@@ -4807,11 +4807,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telepathic Link"
       }
     ]
@@ -4825,11 +4825,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 5
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Orders"
       }
     ]
@@ -4843,11 +4843,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Memory Blip"
       }
     ]
@@ -4869,11 +4869,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telepathic Link"
       }
     ]
@@ -4887,11 +4887,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Fool"
       }
     ]
@@ -4905,11 +4905,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Mirage"
       }
     ]
@@ -4923,11 +4923,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telepathic Link"
       }
     ]
@@ -4949,11 +4949,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telepathic Link"
       }
     ]
@@ -4975,11 +4975,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Uncanny"
       }
     ]
@@ -4993,11 +4993,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Mind Reading"
       }
     ]
@@ -5011,7 +5011,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telepathic Link"
       }
     ]
@@ -5025,11 +5025,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telepathic Link"
       }
     ]
@@ -5043,11 +5043,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Command"
       }
     ]
@@ -5061,11 +5061,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telepathic Link"
       }
     ]
@@ -5087,11 +5087,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Telepathic Link"
       }
     ]
@@ -5105,11 +5105,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 5
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Orders"
       }
     ]
@@ -5131,11 +5131,11 @@
     "action": "Standard, Movement",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Blink"
       }
     ]
@@ -5149,11 +5149,11 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Blink"
       }
     ]
@@ -5167,7 +5167,7 @@
     "action": "Standard, Movement",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Blink"
       }
     ]
@@ -5181,7 +5181,7 @@
     "action": "Standard, Movement",
     "prerequisites": [
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Teleport 1"
       }
     ]
@@ -5195,11 +5195,11 @@
     "action": "Standard, Movement",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Teleport 1"
       }
     ]
@@ -5213,11 +5213,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Teleport 1"
       }
     ]
@@ -5231,11 +5231,11 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Teleport 2"
       }
     ]
@@ -5249,11 +5249,11 @@
     "action": "Standard, Movement, Reaction",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Teleport 1"
       }
     ]
@@ -5267,11 +5267,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Teleport 1"
       }
     ]
@@ -5293,7 +5293,7 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 2
       }
     ]
@@ -5307,11 +5307,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 3
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Control Weather 1"
       }
     ]
@@ -5325,11 +5325,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 4
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Control Weather 2"
       }
     ]
@@ -5343,11 +5343,11 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Rank",
+        "type": "rank",
         "value": 5
       },
       {
-        "type": "Power",
+        "type": "powers",
         "value": "Control Weather 3"
       }
     ]

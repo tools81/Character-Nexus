@@ -1,201 +1,358 @@
 [
-	{
-		"name": "Adventurer",
-		"description": "The character focuses on having adventures.",
-		"traits": [
-			"Fearless",
-			"Connections"
-		],
-		"tags": [
-			"Black Market Access"
-		]
-	},
-	{
-		"name": "Assassin",
-		"description": "The character is a hired killer.",
-		"traits": [
-			"Connections",
-			"Signature Attack"
-		],
-		"tags": [
-			"Streetwise",
-			"Villianous"
-		]
-	},
-	{
-		"name": "Criminal",
-		"description": "The character did something that put them on the wrong side of the law.",
-		"traits": [
-			"Connections"
-		],
-		"tags": [
-			"Black Market Access",
-			"Streetwise"
-		]
-	},
-	{
-		"name": "Educator",
-		"description": "The character educates others.",
-		"traits": [
-			"Connections",
-			"Font of Information",
-			"Presence"
-		]
-	},
-	{
-		"name": "Engineer",
-		"description": "The character designs and builds things to solve problems.",
-		"traits": [
-			"Gearhead",
-			"Inventor"
-		],
-		"tags": [
-			"Lab Access"
-		]
-	},
-	{
-		"name": "Entertainer",
-		"description": "The character entertains others for a living.",
-		"traits": [
-			"Famous",
-			"Presence",
-			"Public Speaking"
-		]
-	},
-	{
-		"name": "Health Care Worker",
-		"description": "The character is a doctor, nurse, therapist or other person dedicated to helping heal others.",
-		"traits": [
-			"Clinician",
-			"First Aid"
-		]
-	},
-	{
-		"name": "Investigator",
-		"description": "The character is trained to solve mysteries.",
-		"traits": [
-			"Connections",
-			"Interrogation",
-			"Investigation"
-		]
-	},
-	{
-		"name": "Journalist",
-		"description": "The character works as a reporter or editor for a news organization.",
-		"traits": [
-			"Audience",
-			"Connections",
-			"Pundit"
-		]
-	},
-	{
-		"name": "Law Enforcer",
-		"description": "The character works as a law enforcement officer.",
-		"traits": [
-			"Interrogation",
-			"Investigation"
-		],
-		"tags": [
-			"Authority",
-			"Backup"
-		]
-	},
-	{
-		"name": "Lawyer",
-		"description": "The character has a law degree and knows how to use it.",
-		"traits": [
-			"Dealmaker",
-			"Legal Eagle",
-			"Public Speaking"
-		]
-	},
-	{
-		"name": "Leader",
-		"description": "The character is the leader of a city, region, state or nation.",
-		"traits": [
-			"Presence"
-		],
-		"tags": [
-			"Authority",
-			"Powerful"
-		]
-	},
-	{
-		"name": "Military",
-		"description": "The character serves (or at least once served) in a military organization and relies on that training.",
-		"traits": [
-			"Battle Ready",
-			"Connections",
-			"Situational Awareness"
-		]
-	},
-	{
-		"name": "Outsider",
-		"description": "The character comes from another planet, dimension or time and is not familiar with how things work on this Earth.",
-		"traits": [
-			"Connections",
-			"Fresh Eyes",
-			"Stranger"
-		]
-	},
-	{
-		"name": "Ruler",
-		"description": "The character is the leader of a city, region, state, or nation.",
-		"traits": [
-			"Regal"
-		]
-	},
-	{
-		"name": "Scientist",
-		"description": "The character solves problems by means of scientific research.",
-		"traits": [
-			"Inventor",
-			"Scientific Expertise"
-		],
-		"tags": [
-			"Lab Access"
-		]
-	},
-	{
-		"name": "Soldier",
-		"description": "The character served in a military organization.",
-		"traits": [
-			"Battle Ready",
-			"Connections",
-			"Situational Awareness"
-		]
-	},
-	{
-		"name": "Spy",
-		"description": "The character is an expert in espionage.",
-		"traits": [
-			"Connections",
-			"Leverage"
-		],
-		"tags": [
-			"Black Market Access"
-		]
-	},
-	{
-		"name": "Student",
-		"description": "The character attends school or college on a full-time basis.",
-		"traits": [
-			"Quick Learner"
-		],
-		"tags": [
-			"Mentor",
-			"Obligation"
-		]
-	},
-	{
-		"name": "Tycoon",
-		"description": "The character is wildly wealthy and well-known.",
-		"traits": [
-			"Connections",
-			"Famous"
-		],
-		"tags": [
-			"Rich"
-		]
-	}
+  {
+    "name": "Adventurer",
+    "description": "The character focuses on having adventures.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Fealess"
+      },
+      {
+        "type": "trait",
+        "value": "Connections"
+      },
+      {
+        "type": "tag",
+        "value": "Black Market Access"
+      }
+    ]
+  },
+  {
+    "name": "Assassin",
+    "description": "The character is a hired killer.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Connections"
+      },
+      {
+        "type": "trait",
+        "value": "Signature Attack"
+      },
+      {
+        "type": "tag",
+        "value": "Streetwise"
+      },
+      {
+        "type": "trait",
+        "value": "Villianous"
+      }
+    ]
+  },
+  {
+    "name": "Criminal",
+    "description": "The character did something that put them on the wrong side of the law.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Connections"
+      },
+      {
+        "type": "tag",
+        "value": "Black Market Access"
+      },
+      {
+        "type": "trait",
+        "value": "Streetwise"
+      }
+    ]
+  },
+  {
+    "name": "Educator",
+    "description": "The character educates others.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Connections"
+      },
+      {
+        "type": "trait",
+        "value": "Font of Information"
+      },
+      {
+        "type": "trait",
+        "value": "Presence"
+      }
+    ]
+  },
+  {
+    "name": "Engineer",
+    "description": "The character designs and builds things to solve problems.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Gearhead"
+      },
+      {
+        "type": "trait",
+        "value": "Inventor"
+      },
+      {
+        "type": "tag",
+        "value": "Lab Access"
+      }
+    ]
+  },
+  {
+    "name": "Entertainer",
+    "description": "The character entertains others for a living.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Famous"
+      },
+      {
+        "type": "trait",
+        "value": "Presence"
+      },
+      {
+        "type": "trait",
+        "value": "Public Speaking"
+      }
+    ]
+  },
+  {
+    "name": "Health Care Worker",
+    "description": "The character is a doctor, nurse, therapist or other person dedicated to helping heal others.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Clinician"
+      },
+      {
+        "type": "trait",
+        "value": "First Aid"
+      }
+    ]
+  },
+  {
+    "name": "Investigator",
+    "description": "The character is trained to solve mysteries.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Connections"
+      },
+      {
+        "type": "trait",
+        "value": "Interrogation"
+      },
+      {
+        "type": "trait",
+        "value": "Investigation"
+      }
+    ]
+  },
+  {
+    "name": "Journalist",
+    "description": "The character works as a reporter or editor for a news organization.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Audience"
+      },
+      {
+        "type": "trait",
+        "value": "Connections"
+      },
+      {
+        "type": "trait",
+        "value": "Pundit"
+      }
+    ]
+  },
+  {
+    "name": "Law Enforcer",
+    "description": "The character works as a law enforcement officer.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Interrogation"
+      },
+      {
+        "type": "trait",
+        "value": "Investigation"
+      },
+      {
+        "type": "tag",
+        "value": "Authority"
+      },
+      {
+        "type": "tag",
+        "value": "Backup"
+      }
+    ]
+  },
+  {
+    "name": "Lawyer",
+    "description": "The character has a law degree and knows how to use it.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Dealmaker"
+      },
+      {
+        "type": "trait",
+        "value": "Legal Eagle"
+      },
+      {
+        "type": "trait",
+        "value": "Public Speaking"
+      }
+    ]
+  },
+  {
+    "name": "Leader",
+    "description": "The character is the leader of a city, region, state or nation.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Presence"
+      },
+      {
+        "type": "tag",
+        "value": "Authority"
+      },
+      {
+        "type": "tag",
+        "value": "Powerful"
+      }
+    ]
+  },
+  {
+    "name": "Military",
+    "description": "The character serves (or at least once served) in a military organization and relies on that training.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Battle Ready"
+      },
+      {
+        "type": "trait",
+        "value": "Connections"
+      },
+      {
+        "type": "trait",
+        "value": "Situational Awareness"
+      }
+    ]
+  },
+  {
+    "name": "Outsider",
+    "description": "The character comes from another planet, dimension or time and is not familiar with how things work on this Earth.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Connections"
+      },
+      {
+        "type": "trait",
+        "value": "Fresh Eyes"
+      },
+      {
+        "type": "trait",
+        "value": "Stranger"
+      }
+    ]
+  },
+  {
+    "name": "Ruler",
+    "description": "The character is the leader of a city, region, state, or nation.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Regal"
+      }
+    ]
+  },
+  {
+    "name": "Scientist",
+    "description": "The character solves problems by means of scientific research.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Inventor"
+      },
+      {
+        "type": "trait",
+        "value": "Scientific Expertise"
+      },
+      {
+        "type": "tag",
+        "value": "Lab Access"
+      }
+    ]
+  },
+  {
+    "name": "Soldier",
+    "description": "The character served in a military organization.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Battle Ready"
+      },
+      {
+        "type": "trait",
+        "value": "Connections"
+      },
+      {
+        "type": "trait",
+        "value": "Situational Awareness"
+      }
+    ]
+  },
+  {
+    "name": "Spy",
+    "description": "The character is an expert in espionage.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Connections"
+      },
+      {
+        "type": "trait",
+        "value": "Leverage"
+      },
+      {
+        "type": "tag",
+        "value": "Black Market Access"
+      }
+    ]
+  },
+  {
+    "name": "Student",
+    "description": "The character attends school or college on a full-time basis.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Quick Learner"
+      },
+      {
+        "type": "tag",
+        "value": "Mentor"
+      },
+      {
+        "type": "tag",
+        "value": "Obligation"
+      }
+    ]
+  },
+  {
+    "name": "Tycoon",
+    "description": "The character is wildly wealthy and well-known.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Connections"
+      },
+      {
+        "type": "trait",
+        "value": "Famous"
+      },
+      {
+        "type": "tag",
+        "value": "Rich"
+      }
+    ]
+  }
 ]

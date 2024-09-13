@@ -41,6 +41,10 @@ const RulesetDashboard: React.FC = () => {
     navigate("/charactereditor");
   }
 
+  function editCharacter(name : string) {
+    navigate(`/charactereditor/name/${name}`)
+  }
+
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -56,7 +60,7 @@ const RulesetDashboard: React.FC = () => {
         <button
           type="button"
           className="btn btn-outline-secondary ms-auto p-2 h-25"
-          onClick={() => navigate("/charactereditor")}
+          onClick={() => newCharacter()}
         >
           + Create New
         </button>
@@ -67,10 +71,10 @@ const RulesetDashboard: React.FC = () => {
             key={character.id}
             id={character.id}
             name={character.name}
-            imageUrl={character.imageUrl}
+            image={character.image}
             level={character.level}
             details={character.details}
-            onClick={newCharacter}
+            onClick={() => editCharacter(character.name)}
           />
         ))}
       </div>

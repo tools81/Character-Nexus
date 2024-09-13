@@ -23,6 +23,7 @@ function App() {
       </Route> */}
             <Route path="/ruleset" element={<RulesetDashboard />} />
             <Route path="/charactereditor" element={<CharacterEditor />} />
+            <Route path="/charactereditor/name/:name" element={<CharacterEditor />} />
           </Routes>
         </RulesetProvider>
       </Container>

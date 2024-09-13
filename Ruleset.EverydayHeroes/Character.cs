@@ -55,13 +55,14 @@ namespace EverydayHeroes
         public int LuckPoints { get; set; }
         public bool Inspiration { get; set; }
         public CharacterSegment CharacterSegment { get => GetCharacterSegment(); }
+        public string CharacterSheet { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         private CharacterSegment GetCharacterSegment()
         {
             return new CharacterSegment() {
                 Id = Id,
                 Name = Name,
-                ImageUrl = Image,
+                Image = Image,
                 Level = Level,
                 Details = $"{Archetype} | {Class}"
             };
@@ -120,6 +121,11 @@ namespace EverydayHeroes
         private int GetWealthLevel()
         {
             return Profession.WealthLevel;
+        }
+
+        public byte[] GetCharacterSheet()
+        {
+            throw new NotImplementedException();
         }
     }
 }

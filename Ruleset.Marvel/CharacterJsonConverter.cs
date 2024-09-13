@@ -39,7 +39,7 @@ namespace Marvel
                     {
                         case "id":
                             var id = (string)reader.Value;
-                            character.Id = id == null ? new Guid() : new Guid(id);
+                            character.Id = id == string.Empty ? new Guid() : new Guid(id);
                             break;
                         case "image":
                             character.Image = (string)reader.Value;

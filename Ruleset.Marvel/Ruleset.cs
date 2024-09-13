@@ -10,12 +10,13 @@ namespace Marvel
         public string RulesetName => "Ruleset.Marvel";
         public string ImageSource => "https://characternexus.blob.core.windows.net/resources/card_marvel.jpg";
         public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_marvel.png";
+        public string FormResource => "Ruleset.Marvel.Json.Character.Form.json";
 
         public string NewCharacter()
         {
             string jsonObject;
 
-            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.Marvel.Json.Character.Form.json"))
+            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(FormResource))
             {
                 using (var reader = new StreamReader(stream))
                 {
@@ -34,12 +35,12 @@ namespace Marvel
                 //character?.SetBonusAdjustments();
                 return character;
             }
-            catch(JsonException ex)
+            catch (JsonException ex)
             {
                 Console.WriteLine($"Error parsing Json on save character: {ex.Message}");
                 return null;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine($"Error saving character: {ex.Message}");
                 return null;

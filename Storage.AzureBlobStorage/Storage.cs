@@ -1,7 +1,5 @@
-﻿using Azure.Identity;
-using Azure.Storage.Blobs;
+﻿using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
-using Azure.Storage.Blobs.Specialized;
 using Utility;
 using Newtonsoft.Json;
 using System;
@@ -106,6 +104,20 @@ namespace AzureBlobStorage
             var blobClient = blobContainerClient.GetBlobClient(blobName);
 
             using (var stream = image.OpenReadStream())
+            {
+                await blobClient.UploadAsync(stream, true);
+            }
+
+            return blobClient.Uri.ToString();
+        }
+
+        public async Task<string> UploadPDFByteArray(string rulesetName, string name, byte[] bytes)
+        {
+            string blobName = $"pdf-{name}";
+            BlobContainerClient blobContainerClient = await RetrieveBlobClient(rulesetName.FormatAzureCompliance());
+            var blobClient = blobContainerClient.GetBlobClient(blobName);
+
+            using (var stream = new MemoryStream(bytes, writable: false))
             {
                 await blobClient.UploadAsync(stream, true);
             }

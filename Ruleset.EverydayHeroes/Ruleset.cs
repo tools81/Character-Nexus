@@ -13,23 +13,25 @@ namespace EverydayHeroes
         public string ImageSource => "https://characternexus.blob.core.windows.net/resources/card_everyday_heroes.jpg";
         public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_everyday_heroes.png";
 
+        public string FormResource => "Ruleset.EverydayHeroes.Json.Character.Form.json";
+
         public Ruleset()
         {
-            
+
         }
 
         public string NewCharacter()
         {
             string jsonObject;
 
-            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.EverydayHeroes.Json.Character.Form.json"))
+            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(FormResource))
             {
                 using (var reader = new StreamReader(stream))
                 {
                     jsonObject = reader.ReadToEnd();
                 }
             }
-            
+
             return jsonObject;
         }
 

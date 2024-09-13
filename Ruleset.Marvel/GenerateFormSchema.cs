@@ -1,4 +1,5 @@
 using System.Dynamic;
+using System.Reflection;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Utility;
@@ -33,7 +34,7 @@ namespace Marvel
                     Console.Read();
                     return;
                 }
-               
+
                 List<Occupation>? occupations = JsonConvert.DeserializeObject<List<Occupation>?>(jsonOccupationsData);
 
                 if (occupations == null)
@@ -41,7 +42,7 @@ namespace Marvel
                     Console.WriteLine($"Unable to read occupations json file. Aborting...");
                     Console.Read();
                     return;
-                }                
+                }
 
                 List<Tag>? tags = JsonConvert.DeserializeObject<List<Tag>?>(jsonTagsData);
 
@@ -60,7 +61,7 @@ namespace Marvel
                     Console.Read();
                     return;
                 }
-               
+
                 List<Weapon>? weapons = JsonConvert.DeserializeObject<List<Weapon>?>(jsonWeaponsData);
 
                 if (weapons == null)
@@ -118,13 +119,13 @@ namespace Marvel
                 var schemaPath = _jsonFilesPath + "Character/Form.json";
                 File.WriteAllText(schemaPath, schemaJson);
 
-                Console.WriteLine("Character schema generated and saved to " + schemaPath);                
+                Console.WriteLine("Character schema generated and saved to " + schemaPath);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
             }
-        }       
+        }
 
         private static void GenerateDescriptionSchema()
         {
@@ -134,6 +135,96 @@ namespace Marvel
                     name = "id",
                     id = "id",
                     label = "Id",
+                    type = "hidden",
+                    className = "form-control"
+                }
+            );
+            _fields.Add(
+                new
+                {
+                    name = "health",
+                    id = "health",
+                    label = "Health",
+                    type = "hidden",
+                    className = "form-control"
+                }
+            );
+            _fields.Add(
+                new
+                {
+                    name = "focus",
+                    id = "focus",
+                    label = "Focus",
+                    type = "hidden",
+                    className = "form-control"
+                }
+            );
+            _fields.Add(
+                new
+                {
+                    name = "healthDamageReduction",
+                    id = "healthDamageReduction",
+                    label = "Health Damage Reduction",
+                    type = "hidden",
+                    className = "form-control"
+                }
+            );
+            _fields.Add(
+                new
+                {
+                    name = "focusDamageReduction",
+                    id = "focusDamageReduction",
+                    label = "Focus Damage Reduction",
+                    type = "hidden",
+                    className = "form-control"
+                }
+            );
+            _fields.Add(
+                new
+                {
+                    name = "run",
+                    id = "run",
+                    label = "Run",
+                    type = "hidden",
+                    className = "form-control"
+                }
+            );
+            _fields.Add(
+                new
+                {
+                    name = "climb",
+                    id = "climb",
+                    label = "Climb",
+                    type = "hidden",
+                    className = "form-control"
+                }
+            );
+            _fields.Add(
+                new
+                {
+                    name = "swim",
+                    id = "swim",
+                    label = "Swim",
+                    type = "hidden",
+                    className = "form-control"
+                }
+            );
+            _fields.Add(
+                new
+                {
+                    name = "karma",
+                    id = "karma",
+                    label = "Karma",
+                    type = "hidden",
+                    className = "form-control"
+                }
+            );
+            _fields.Add(
+                new
+                {
+                    name = "initiativeModifier",
+                    id = "initiativeModifier",
+                    label = "Initiative Modifier",
                     type = "hidden",
                     className = "form-control"
                 }
@@ -310,13 +401,15 @@ namespace Marvel
                     new
                     {
                         value = element.Name,
-                        label = element.Name
+                        label = element.Name,
+                        bonusCharacteristics = JsonConvert.SerializeObject(element.BonusCharacteristics)
                     }
                 );
             }
 
             _fields.Add(obj);
 
+            //Add a div below dropdown after selecting a value, containing details of Origin
             foreach (var element in elements)
             {
                 var children = new List<object>
@@ -364,7 +457,8 @@ namespace Marvel
                     new
                     {
                         value = element.Name,
-                        label = element.Name
+                        label = element.Name,
+                        bonusCharacteristics = JsonConvert.SerializeObject(element.BonusCharacteristics)
                     }
                 );
             }
@@ -408,7 +502,7 @@ namespace Marvel
 
             foreach (var attribute in attributes)
             {
-                children.Add( new
+                children.Add(new
                 {
                     name = $"attributes.{attribute.Name}",
                     id = $"attributes.{attribute.Name.ToLower()}",
@@ -471,7 +565,7 @@ namespace Marvel
         private static void GeneratePowersSchema(List<Powerset> powersets, List<Power> powers, string name, string label)
         {
 
-            var accordion = new 
+            var accordion = new
             {
                 id = name,
                 label,
@@ -484,10 +578,10 @@ namespace Marvel
                 dynamic accordionItem = new ExpandoObject();
                 accordionItem.header = powerset.Name;
                 accordionItem.name = powerset.Name.ReplaceWhitespace("");
-                accordionItem.component = new 
+                accordionItem.component = new
                 {
                     type = "listgroup",
-                    items = new List<object>()                   
+                    items = new List<object>()
                 };
 
                 foreach (var power in powers.Where(p => p.Powersets.Contains(powerset.Name)))
@@ -497,7 +591,8 @@ namespace Marvel
                         name = power.Name.ToLower(),
                         id = $"{powerset.Name}-{power.Name}",
                         label = power.Name,
-                        type = "switch"
+                        type = "switch",
+                        bonusAdjustments = JsonConvert.SerializeObject(power.BonusAdjustments)
                     };
 
                     var text = new
@@ -510,7 +605,7 @@ namespace Marvel
                     };
 
                     accordionItem.component.items.Add(
-                        new 
+                        new
                         {
                             component,
                             text
@@ -518,7 +613,7 @@ namespace Marvel
                     );
                 }
                 accordion.items.Add(accordionItem);
-            } 
+            }
 
             _fields.Add(accordion);
         }

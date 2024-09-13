@@ -2,6 +2,9 @@ import React, { useState, useEffect, ChangeEvent } from "react";
 import { useForm, useFieldArray, Controller } from "react-hook-form";
 import { useRulesetContext } from "./RulesetContext";
 import { useNavigate } from "react-router-dom";
+import { BonusAdjustments } from "../store/BonusAdjustment";
+import { BonusCharacteristics } from "../store/BonusCharacteristic";
+import { Prerequisites } from "../store/Prerequisite";
 
 const BASE_URL = `${window.location.protocol}//${window.location.host}`;
 
@@ -9,6 +12,11 @@ const DynamicForm = () => {
   const navigate = useNavigate();
   const { ruleset } = useRulesetContext();
   const [schema, setSchema] = useState<any>(null);
+  const [bonusCharacteristics, setBonusCharacteristics] =
+    useState<BonusCharacteristics>([]);
+  const [bonusAdjustments, setBonusAdjustments] = useState<BonusAdjustments>(
+    []
+  );
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [imageData, setImageData] = useState<File | null>(null);
   const {
@@ -23,6 +31,15 @@ const DynamicForm = () => {
   function navigateToRulesetDashboard() {
     navigate("/rulesetdashboard");
   }
+
+  // useEffect(() => {
+  //   console.log("Bonus Characteristics changed.");
+
+  //   for(const adjustment in setBonusCharacteristics)
+  //   {
+  //     append({ value: "Select..." });
+  //   }
+  // }, [setBonusCharacteristics, append]);
 
   useEffect(() => {
     const fetchSchema = async () => {
@@ -55,61 +72,73 @@ const DynamicForm = () => {
     }
   };
 
-  const onSubmit = async (data: any) => {
-    var imageApiResponse;
+  const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    const selectElement = event.target;
+    console.log(selectElement);
+    const selectedOption = selectElement.options[selectElement.selectedIndex];
+    const selectBonusAdjustmentsString = selectedOption.getAttribute('data-bonusAdjustments');
+    const selectBonusAdjustments = selectBonusAdjustmentsString ? JSON.parse(selectBonusAdjustmentsString) : null;
+    const selectBonusCharacteristicsString = selectedOption.getAttribute('data-bonusCharacteristics');
+    const selectBonusCharacteristics = selectBonusCharacteristicsString ? JSON.parse(selectBonusCharacteristicsString) : null;
+    console.log(selectBonusCharacteristics);
+    if (event.target.value == null) {
+      return;
+    }
+
+    if (selectBonusAdjustments) {
+      // Removing an item from the array
+      // setBonusAdjustments(bonusAdjustments.filter(a => a.id !== id));
+      for (const adjustment of selectBonusAdjustments) {
+        setBonusAdjustments((prevBonusAdjustments) => [
+          ...prevBonusAdjustments,
+          {
+            type: adjustment.Type,
+            name: adjustment.Name,
+            value: adjustment.Value,
+          },
+        ]);
+      }
+      console.log(bonusAdjustments);
+    }
+
+    if (selectBonusCharacteristics) {
+      for (const characteristic of selectBonusCharacteristics) {
+        console.log(characteristic.Value);
+        setBonusCharacteristics((prevBonusCharacteristics) => [
+          ...prevBonusCharacteristics,
+          {
+            type: characteristic.Type,
+            value: characteristic.Value,
+          },
+        ]);
+      }
+      console.log(bonusCharacteristics);
+    }
+  }
+
+  const onSubmit = async (data: any) => {    
     if (imageData != null) {
       const formData = new FormData();
       formData.append(
-        "image",
+        "Image",
         imageData,
         data.name + "." + imageData.name.split(".").pop()
       );
+      formData.append("JsonData", JSON.stringify(data));  
 
-      try {
-        const response = await fetch(
-          `${BASE_URL}/api/image/upload?ruleset=${encodeURIComponent(
-            ruleset.name
-          )}`,
-          {
-            method: "POST",
-            body: formData
-          }
-        );
-
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
+      await fetch(
+        `${BASE_URL}/api/character/save?ruleset=${encodeURIComponent(
+          ruleset.name
+        )}`,
+        {
+          method: "POST",
+          body: formData
         }
-
-        imageApiResponse = await response.json();
-      } catch (error) {
-        console.error("Error uploading image:", error);
-      }
+      )
+        .then((response) => response.json())
+        //.then(() => navigateToRulesetDashboard())
+        .catch((error) => console.error("Error:", error));
     }
-
-    var dataWithImage = { ...data, image: imageApiResponse.url};
-
-    console.log(
-      `${BASE_URL}/api/character/save?ruleset=${encodeURIComponent(
-        ruleset.name
-      )}`
-    );
-
-    await fetch(
-      `${BASE_URL}/api/character/save?ruleset=${encodeURIComponent(
-        ruleset.name
-      )}`,
-      {
-        method: "POST",
-        headers: {
-          Accept: "application/json, text/plain, */*",
-          'Content-Type': "application/json"
-        },
-        body: JSON.stringify(dataWithImage),
-      }
-    )
-      .then((response) => response.json())
-      .then(() => navigateToRulesetDashboard())
-      .catch((error) => console.error("Error:", error));
   };
 
   interface Props {
@@ -121,9 +150,11 @@ const DynamicForm = () => {
       name: field.name,
       control,
     });
+
     return (
       <div>
         <label>{field.label}</label>
+
         {fields.map((item, index) => (
           <div key={item.id} className="input-group">
             {(field.component.name = `${field.name}.${index}`)}
@@ -154,7 +185,7 @@ const DynamicForm = () => {
           <input
             id={field.name}
             className={field.className}
-            style={{ visibility: "hidden" }}
+            style={{ visibility: "hidden" }}            
             {...register(field.name)}
           ></input>
         );
@@ -240,6 +271,7 @@ const DynamicForm = () => {
               className={field.className}
               aria-label={field.label}
               {...register(field.name)}
+              onChange={handleSelectChange}
             >
               <option value="">Select...</option>
               {field.options.map((option: any) => (
@@ -247,6 +279,8 @@ const DynamicForm = () => {
                   key={option.value}
                   id={option.value}
                   value={option.value}
+                  data-bonusAdjustments={option.bonusAdjustments}
+                  data-bonusCharacteristics={option.bonusCharacteristics}
                 >
                   {option.label}
                 </option>
@@ -270,7 +304,6 @@ const DynamicForm = () => {
             ))}
           </ul>
         );
-
       case "group":
         return (
           <>
@@ -309,7 +342,6 @@ const DynamicForm = () => {
         );
       case "array":
         return <FieldArray field={field} />;
-        break;
       case "image":
         return (
           <>

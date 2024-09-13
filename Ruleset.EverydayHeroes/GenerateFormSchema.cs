@@ -120,8 +120,8 @@ namespace EverydayHeroes
             _fields.Add(
                 new
                 {
-                    name = "imageUrl",
-                    id = "imageUrl",
+                    name = "image",
+                    id = "image",
                     label = "Image",
                     type = "file",
                     className = "form-control"

@@ -1,349 +1,636 @@
 [
-    {
-        "name": "Alien",
-        "description": "The character is not human and probaably not from Earth or at least Earth-616. The Marvel Multiverse features all sorts of different alien races. The most common of these - Kree, Skrulls, and so on - have their own entries. If the character doesn't fit on of those, the this origin applies.",
-        "tags": [
-			"Alien Heritage",
-			"Extreme Appearance"
-        ]
-    },
-    {
-        "name": "Alien-Kree",
-        "description": "The character is a member of the Kree, a humanoid race from the planet Hala who formed the interstellar Kree Empire in the region of space known as the Large Magellanic Cloud. They resemble humans but are stronger and tougher. Many of them have blue skin, but a good number of them have pink skin.<br />The air on Hala has much more nitrogen in it, and Kree who are raised in it (or something like it) have a hard time breathing the air on Earth.",
-        "traits": [
-			"Breathe Different",
-			"Enhanced Physique"
-        ],
-        "tags": [
-			"Alien Heritage",
-			"Extreme Appearance"
-        ]
-    },
-    {
-        "name": "Alien-Shi'ar",
-        "description": "The character is a member of the Shi'ar, an avian humanoid race from the planet Chandilar who formed the interstellar Shi'ar Empire in the Shi'ar Galaxy. They resemble humand but are much stronger and have feathers instead of hair on their heads.",
-        "traits": [
-			"Enhanced Physique"
-        ],
-        "tags": [
-			"Alien Heritage",
-			"Extreme Appearance"
-        ]
-    },
-    {
-        "name": "Alien-Skrull",
-        "description": "The character is a member of the Skrull, a reptilian humanoid race of shape-shifters who formed the interstellar Skrull Empire. In their natural form, they have green skin, red or green eyes, pointed ears and fullowed chins. They sprang from the planet Skrullos in the Andromeda Galaxy.<br />The original Skrulls could not shape-shift, but the Celestials experimented on them to form Eternal Skrulls and Deviant Skrulls, much like they did with humans on Earth. The Deviant Skrulls became the dominant form of the species, driving the originals to extinction.",
-        "tags": [
-			"Alien Heritage",
-			"Extreme Appearance"
-        ],
-		"powers": [
-			"Disguise",
-			"Extended Reach",
-			"Flexible Bones",
-			"Shape-shift",
-			"Slip Free"
-		]
-    },
-    {
-        "name": "Atlantean",
-        "description": "The character is a member Homo mermanus, a variant race of humanity. Atlanteans breathe water through gills on both sides of their neck, and they cannot breathe air for longer than ten minutes.<br />If they live in the Atlantic Ocean, they likely have blue skin and hail from Atlantis. If they come from the Pacific Ocean, they likely have green skin and live in Lemuria.",
-        "traits": [
-			"Breathe Different",
-			"Enhanced Physique"
-        ],
-        "tags": [
-			"Amphibious",
-			"Extreme Appearance"
-        ],
-		"powers": [
-			"Heightened Senses",
-			"Speed Swim"
-        ]
-    },
-    {
-        "name": "Deviant",
-        "description": "The character is a member of Homo descendus, a variant race of humanity created by the Celestials. They are scattered across Earth, but they mainly live in underground cities beneath the Pacific Ocean, close to Lemuria.<br />Only one hundred Deviants were originally created, but many more have been born over the millenia since then. They vary a great deal physically, coming in all sizes, shapes, colors and textures. Each is born with a unique physical mutation, and they have the latent genetic ability to develop powers, much like mutants.<br />Eternals are compelled to kill Deviant mutates as part of their principle 'Correct excess deviation.'",
-        "tags": [
-			"Extreme Appearance",
-			"Hunted"
-        ]
-    },
-    {
-        "name": "Eternal",
-        "description": "The character is a member of Homo immortalis, a variant race of humanity created by the Celestials. They are scattered across Earth, but their headquarters lies in the city of Olympia, high in the mountains in Greece and folded into an echo dimension. Some live on Titan (a moon of Saturn) instead.<br />The Eternals live by three principles: <ul><li>Protect Celestials.</li><li>Protect the Machine (a sentient AI deeply connected with the Earth).</li><li>Correct excess deviation.</li></ul><br />Only one hundred Eternals were originally created, and only two have been born since: Thanos and Eros. The character is either one of the lesser-known one hundred or a new Eternal brought to life through extraordinary means.<br />Through a ritual usually initiated by the Prime Eternal (their official leader), Eternals can be called to be part of a collective being known as the Uni-Mind.",
-        "tags": [
-			"Eternally Immortal",
-			"Mahd Wy'ry"
-        ]
-    },
-    {
-        "name": "God",
-        "description": "The character is a god (of a sort) and has access to powers that come with their heritage.",
-        "traits": [
-			"God Heritage",
-			"Enhanced Physique"
-        ],
-        "tags": [
-			"Worshipped"
-        ]
-    },
-    {
-        "name": "High Tech",
-        "description": "The character's powers arise from high-tech devices that are well beyond the limits of modern-day engineering. This can come in many forms.",
-        "traits": [
-			"Tech Reliance"
-        ]
-    },
-    {
-        "name": "High Tech-Android",
-        "description": "The character is an artificial person. Their body (when they have one) is made of plastic, metal and circuitry rather than flesh and blood. Their powers come from techology embedded in their artificial body.",
-        "traits": [
-			"Tech Reliance"
-        ],
-        "tags": [
-			"A.I.",
-			"Extreme Appearance"
-        ],
-		"powers": [
-        ]
-    },
-    {
-        "name": "High Tech-Battle Suit",
-        "description": "The character wears a high-tech suit that grants them powers. When the battle suit is removed, the character no longer has access to the powers it grants. They are entirely - or at least mostly - normal underneath.<br />Most characters with this origin have the Extreme Appearance tag when wearing their battle suit.",
-        "traits": [
-			"Tech Reliance"
-        ],
-        "tags": [
-			"Extreme Appearance"
-        ]
-    },
-    {
-        "name": "High Tech-Cybernetics",
-        "description": "The character has high-tech, surgically embedded implants that grant them powers. These cannot be removed without great care or pain.<br />If the implants are obious, the character gets the Extreme Appearance tage. Otherwise, the implants have been hidden inside their body (as with the lacing of Wolverine's skeleton with adamantium) and might be visible only when in use (like when Wolverine uses his claws), if then.",
-        "traits": [
-			"Tech Reliance"
-        ]
-    },
-    {
-        "name": "High Tech-Pym Particles",
-        "description": "The character uses Pym Particles (named after their inventor, Henry Pym) to dramatically grow or shrink in size.<br />After long-enough exposure to Pym Particles, many people are able to generate such particles on their own without the need of external aid. They may still need to use extra Pym Particles to reach extremely large or small sizes.",
-        "traits": [
-			"Tech Reliance"
-        ],
-		"powers": [
-			"Grow 1",
-			"Shrink 1"
-        ]
-    },
-    {
-        "name": "Inhuman",
-        "description": "The character is a member of Homo sapiens inhumanas, a variant race of humanity genetically engineered by the Kree. For millennia, they lived isolated from the world, but they emerged in recent years, led by Black Bolt.<br />All Inhumans carry a latent gene that can be activated by the Terrigen Mist. The explosion of a Terrigen Bomb spread the mist across the entrie planet, revealing that many humans (including Kamala Khan) had Inhuman genetics. Black Bolt was later forced to destroy the Inhumans, leaving few outside of the royal family alive.<br />The character is one of those rare Inhumans whow survived.",
-        "tags": [
-			"Inhuman Genes"
-        ]
-    },
-    {
-        "name": "Magic",
-        "description": "The character's powers arise from supernatural means. There are many different traditions within magic, each with their own teachings.",
-        "tags": [
-			"Supernatural"
-        ]
-    },
-    {
-        "name": "Magic-Chaos Magic",
-        "description": "The character is able to use chaos magic, which allows them to bend reality to their will. It stems from the ancient got Chthon.",
-        "tags": [
-			"Chaotic",
-			"Supernatural"
-        ]
-    },
-    {
-        "name": "Magic-Demonic",
-        "description": "The character taps into (or is cursed by) the powers of Hell. They may be a native of one of the Nine Circles of Hell, or their powers might simply come from a Hellish source.",
-        "tags": [
-			"Cursed",
-			"Supernatural"
-        ]
-    },
-    {
-        "name": "Magic-Sorcery",
-        "description": "The character's powers arise from the study and practice of sorcery.",
-        "tags": [
-			"Sorcerous",
-			"Supernatural"
-        ]
-    },
-    {
-        "name": "Monstrous",
-        "description": "The character is some kind of monster. They may have a human form - or may have once been human - but they get their powers from their unnatural monstrousness.",
-        "traits": [
-			"Monster"
-        ]
-    },
-    {
-        "name": "Monstrous-Dhampir",
-        "description": "The character was once alive but was embraced by a vampire and has risen from death as a vampire, but became a dhampir. Dhampir is a term used to refer to individuals born of a union between a human and a vampire or had their vampirism halted, basically human-vampire hybrids.",
-        "traits": [
-			"Monster"
-        ]
-    },
-    {
-        "name": "Monstrous-Vampire",
-        "description": "The character was once alive but was embraced by a vampire and has risen from death as a vampire too. They can transmit this magical disease to victims of their choosing.<br />When a character becomes a vampire, they go up one rank and gain the listed tags, traits, and powers. They do not gain any additional powers or traits from this bump in rank, but they do gain 5 ability points and add +1 to their damage multiplier. If they have the Heroic tag, they also add 1 to their Karma.",
-        "traits": [
-			"Anathema",
-			"Bloodthirsty",
-			"Monster",
-			"Weakness"
-        ],
-        "tags": [
-			"Alternate Form",
-			"Deceased",
-			"Imageless"
-        ],
-		"powers": [
-			"Animal Communication",
-			"Command",
-			"Healing Factor",
-			"Leech Life",
-			"Mighty 1",
-			"Sturdy 2",
-			"Telepathic Link"
-        ]
-    },
-    {
-        "name": "Monstrous-Werewolf",
-        "description": "The character is afflicted with lycanthropy, a magical disease that causes them to take on the shape of a werewolf during the three nights of the full moon. They can transmit this magical disease to victims of their choosing who survive their attacks.<br />When a character becomes a werewolf, they gain the Lunar Transformation and Alternate Form tags. Whe the character takes on their werewolf form, they go up one rank and gain the rest of the listed tags, traits, and powers. They do not gain any additional powers or traits from this bump in rank, but they do gain 5 ability points and add +1 to their damage multiplier. If they have the Heroic tag, they also add 1 to their Karma.<br />When they return to human form, they lose the benefits of their werewolf form.<br />They character can switch forms voluntarily at any point - except during the three nights the the moon is at its fullest. On those nights, while the moon is above the horizon, the character must transform into a werewolf and is ruled by their animal nature. They cannot help but hunt and attack any people or creatures they come across, no matter if they are friend or foe.",
-        "traits": [
-			"Berserker",
-			"Monster",
-			"Weakness"
-        ],
-        "tags": [
-			"Alternate Form",
-			"Extreme Appearance",
-			"Lunar Transformation"
-        ],
-		"powers": [
-			"Evasion",
-			"Healing Factor",
-			"Heightened Senses",
-			"Mighty 1",
-			"Sturdy 2"
-        ]
-    },
-    {
-        "name": "Mutant",
-        "description": "The character's powers spring from them being a member of the subspecies Homo superior. They have a latent X-Gene that grants them powers, often triggered at adolescence.",
-        "tags": [
-			"Hounded",
-			"Krakoan",
-			"X-Gene"
-        ]  
-    },
-    {
-        "name": "Mutant-X-men '97",
-        "description": "The character's powers spring from them being a member of the subspecies Homo superior.",
-        "tags": [
-			"Hounded",
-			"X-Gene"
-        ]
-    },
-    {
-        "name": "Mythic",
-        "description": "The character is a creature or person of myth and legend. While they may appear human, they are something else.",
-        "tags": [
-			"Supernatural"
-        ]
-    },
-    {
-        "name": "Mythic-Asgardian",
-        "description": "The character is a member of the Asgardian people, resembling the Norse gods. They call Asgard their home.<br />The character can be one of the many gods who have been named throughout history, or they can be one of the lesser-known gods of Asgard. They should choose something that they are the god of.",
-        "traits": [
-			"God Heritage",
-			"Enhanced Physique"
-        ],
-        "tags": [
-			"Supernatural",
-			"Worshipped"
-        ]
-    },
-    {
-        "name": "Mythic-Olympian",
-        "description": "The character is a member of the Olympian people, resembling the gods of Ancient Greece and Rome. They call Olympus their home.<br />They character can be one of the many gods who have been named throughout history, or they can be one of the lesser-known gods of Olympus. They should choose something that they are the god of.",
-        "traits": [
-			"God Heritage",
-			"Enhanced Physique"
-        ],
-        "tags": [
-			"Supernatural",
-			"Worshipped"
-        ]
-    },
-    {
-        "name": "Special Training",
-        "description": "The character's powers come from long hours of practice. Their intense focus grants them abilities that would astonish most people. Powers are limited to those that do not provide superhuman abilities.",
-        "traits": [
-			"Determination"
-        ]
-    },
-    {
-        "name": "Spirit of Vengeance",
-        "description": "The character has been possessed by a Spirit of Vengeance. Their purpose is to find sinners and impose penance.<br />When a character becomes possessed by a Spirit of Vengeance, they gain the Alternate Form tag, which they can use voluntarily at any point. When the character takes on their Ghost Rider form, they gain access to the listed tags, traits, and powers. When they return to human form, they lose the benefits of their Ghost Rider form.",
-        "traits": [
-        ],
-        "tags": [
-			"Alternate Form",
-			"Cursed",
-			"Supernatural"
-        ],
-		"powers": [
-			"Elemental Protection 2",
-			"Environmental Protection",
-			"Healing Factor",
-			"Hellfire Chains",
-			"Mighty 2",
-			"Penance Stare",
-			"Possess Vehicle",
-			"Sense Sins"
-        ]
-    },
-    {
-        "name": "Symbiote",
-        "description": "The character has bonded with one of the Klyntar, a race of alien symbiotes created by the alien god Knull. Most of these creatures on Earth display spiderlike powers.<br />When a character bonds with a symbiote, they go up one rank and gain the listed tags, traits, and powers. Any remaining powers they select are often from the Spider-Powers set but do not have to be. Many symbiotes have the Disguise power.<br />If the symbiote is Venom or one of its progeny, Spider-Man (Peter Parker) cannot gain any benefits from his Spider-Sense power against the bonded character.",
-        "traits": [
-			"Anathema"
-        ],
-		"powers": [
-			"Environmental Protection",
-			"Mighty 1"
-        ]
-    },
-    {
-        "name": "Unknown",
-        "description": "The character has developed powers but is not entirely sure how. It could be that the player or the Narrator knows, but the character does not, or maybe nobody else does either. Astonishing things happen all the time in the Marvel Multiverse, and there's no way to classify them all.<br />The source of the powers may be explained in time. It could turn out that the character actually has a standard type of origin, or it could be that they have an origin that's utterly unique.",
-        "tags": [
-			"Mysterious"
-        ]
-    },
-    {
-        "name": "Weird Science",
-        "description": "The character's powers arose from a scientific experiment of accident that's hard - if not impossible - to reproduce. Often, they had the latent genetic potential to develop powers and were somehow exposed to the right triggers - which would have likely killed most other people.<br />These kinds of character are sometimes call mutates. The difference between a mutate and a mutant is that a mutant's powers come to them naturally, but a mutate's powers require a triggering incident that might never happen. In this sense, Inhumans are all mutates who share a gene with a known rigger: the Terrigen Mist.",
-        "traits": [
-			"Weird"
-        ]
-    },
-    {
-        "name": "Weird Science-Gamma Mutate",
-        "description": "The character has a genetic mutation that gave them powers once they were exposed to enough gamma radiation, transforming them physically. This often gives them a monstrous appearance and changes their coloration drastically, usually to green, although some become red or even blue. They can often transorm back into their original form as well.",
-        "traits": [
-			"Weird"
-        ],
-        "tags": [
-			"Extreme Appearance",
-			"Green Door",
-			"Immunity"
-        ]
-    }
+  {
+    "name": "Alien",
+    "description": "The character is not human and probaably not from Earth or at least Earth-616. The Marvel Multiverse features all sorts of different alien races. The most common of these - Kree, Skrulls, and so on - have their own entries. If the character doesn't fit on of those, the this origin applies.",
+    "bonuscharacteristics": [
+      {
+        "type": "tag",
+        "value": "Alien Heritage"
+      },
+      {
+        "type": "tag",
+        "value": "Extreme Appearance"
+      }
+    ]
+  },
+  {
+    "name": "Alien-Kree",
+    "description": "The character is a member of the Kree, a humanoid race from the planet Hala who formed the interstellar Kree Empire in the region of space known as the Large Magellanic Cloud. They resemble humans but are stronger and tougher. Many of them have blue skin, but a good number of them have pink skin.<br />The air on Hala has much more nitrogen in it, and Kree who are raised in it (or something like it) have a hard time breathing the air on Earth.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Breathe Different"
+      },
+      {
+        "type": "trait",
+        "value": "Enhanced Physique"
+      },
+      {
+        "type": "tag",
+        "value": "Alien Heritage"
+      },
+      {
+        "type": "tag",
+        "value": "Extreme Appearance"
+      }
+    ]
+  },
+  {
+    "name": "Alien-Shi'ar",
+    "description": "The character is a member of the Shi'ar, an avian humanoid race from the planet Chandilar who formed the interstellar Shi'ar Empire in the Shi'ar Galaxy. They resemble humand but are much stronger and have feathers instead of hair on their heads.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Enhanced Physique"
+      },
+      {
+        "type": "tag",
+        "value": "Alien Heritage"
+      },
+      {
+        "type": "tag",
+        "value": "Extreme Appearance"
+      }
+    ]
+  },
+  {
+    "name": "Alien-Skrull",
+    "description": "The character is a member of the Skrull, a reptilian humanoid race of shape-shifters who formed the interstellar Skrull Empire. In their natural form, they have green skin, red or green eyes, pointed ears and fullowed chins. They sprang from the planet Skrullos in the Andromeda Galaxy.<br />The original Skrulls could not shape-shift, but the Celestials experimented on them to form Eternal Skrulls and Deviant Skrulls, much like they did with humans on Earth. The Deviant Skrulls became the dominant form of the species, driving the originals to extinction.",
+    "bonuscharacteristics": [
+      {
+        "type": "tag",
+        "value": "Alien Heritage"
+      },
+      {
+        "type": "tag",
+        "value": "Extreme Appearance"
+      },
+      {
+        "type": "powers",
+        "value": "Disguise"
+      },
+      {
+        "type": "powers",
+        "value": "Extended Reach"
+      },
+      {
+        "type": "powers",
+        "value": "Flexible Bones"
+      },
+      {
+        "type": "powers",
+        "value": "Shape-shift"
+      },
+      {
+        "type": "powers",
+        "value": "Slip Free"
+      }
+    ]
+  },
+  {
+    "name": "Atlantean",
+    "description": "The character is a member Homo mermanus, a variant race of humanity. Atlanteans breathe water through gills on both sides of their neck, and they cannot breathe air for longer than ten minutes.<br />If they live in the Atlantic Ocean, they likely have blue skin and hail from Atlantis. If they come from the Pacific Ocean, they likely have green skin and live in Lemuria.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Breathe Different"
+      },
+      {
+        "type": "trait",
+        "value": "Enhanced Physique"
+      },
+      {
+        "type": "tag",
+        "value": "Amphibious"
+      },
+      {
+        "type": "tag",
+        "value": "Extreme Appearance"
+      },
+      {
+        "type": "powers",
+        "value": "Heightened Senses"
+      },
+      {
+        "type": "powers",
+        "value": "Speed Swim"
+      }
+    ]
+  },
+  {
+    "name": "Deviant",
+    "description": "The character is a member of Homo descendus, a variant race of humanity created by the Celestials. They are scattered across Earth, but they mainly live in underground cities beneath the Pacific Ocean, close to Lemuria.<br />Only one hundred Deviants were originally created, but many more have been born over the millenia since then. They vary a great deal physically, coming in all sizes, shapes, colors and textures. Each is born with a unique physical mutation, and they have the latent genetic ability to develop powers, much like mutants.<br />Eternals are compelled to kill Deviant mutates as part of their principle 'Correct excess deviation.'",
+    "bonuscharacteristics": [
+      {
+        "type": "tag",
+        "value": "Extreme Appearance"
+      },
+      {
+        "type": "tag",
+        "value": "Hunted"
+      }
+    ]
+  },
+  {
+    "name": "Eternal",
+    "description": "The character is a member of Homo immortalis, a variant race of humanity created by the Celestials. They are scattered across Earth, but their headquarters lies in the city of Olympia, high in the mountains in Greece and folded into an echo dimension. Some live on Titan (a moon of Saturn) instead.<br />The Eternals live by three principles: <ul><li>Protect Celestials.</li><li>Protect the Machine (a sentient AI deeply connected with the Earth).</li><li>Correct excess deviation.</li></ul><br />Only one hundred Eternals were originally created, and only two have been born since: Thanos and Eros. The character is either one of the lesser-known one hundred or a new Eternal brought to life through extraordinary means.<br />Through a ritual usually initiated by the Prime Eternal (their official leader), Eternals can be called to be part of a collective being known as the Uni-Mind.",
+    "bonuscharacteristics": [
+      {
+        "type": "tag",
+        "value": "Eternally Immortal"
+      },
+      {
+        "type": "tag",
+        "value": "Mahd Wy'ry"
+      }
+    ]
+  },
+  {
+    "name": "God",
+    "description": "The character is a god (of a sort) and has access to powers that come with their heritage.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "God Heritage"
+      },
+      {
+        "type": "trait",
+        "value": "Enhanced Physique"
+      },
+      {
+        "type": "tag",
+        "value": "Worshipped"
+      }
+    ]
+  },
+  {
+    "name": "High Tech",
+    "description": "The character's powers arise from high-tech devices that are well beyond the limits of modern-day engineering. This can come in many forms.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Tech Reliance"
+      }
+    ]
+  },
+  {
+    "name": "High Tech-Android",
+    "description": "The character is an artificial person. Their body (when they have one) is made of plastic, metal and circuitry rather than flesh and blood. Their powers come from techology embedded in their artificial body.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Tech Reliance"
+      },
+      {
+        "type": "tag",
+        "value": "A.I."
+      },
+      {
+        "type": "tag",
+        "value": "Extreme Appearance"
+      }
+    ]
+  },
+  {
+    "name": "High Tech-Battle Suit",
+    "description": "The character wears a high-tech suit that grants them powers. When the battle suit is removed, the character no longer has access to the powers it grants. They are entirely - or at least mostly - normal underneath.<br />Most characters with this origin have the Extreme Appearance tag when wearing their battle suit.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Tech Reliance"
+      },
+      {
+        "type": "tag",
+        "value": "Extreme Appearance"
+      }
+    ]
+  },
+  {
+    "name": "High Tech-Cybernetics",
+    "description": "The character has high-tech, surgically embedded implants that grant them powers. These cannot be removed without great care or pain.<br />If the implants are obious, the character gets the Extreme Appearance tage. Otherwise, the implants have been hidden inside their body (as with the lacing of Wolverine's skeleton with adamantium) and might be visible only when in use (like when Wolverine uses his claws), if then.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Tech Reliance"
+      }
+    ]
+  },
+  {
+    "name": "High Tech-Pym Particles",
+    "description": "The character uses Pym Particles (named after their inventor, Henry Pym) to dramatically grow or shrink in size.<br />After long-enough exposure to Pym Particles, many people are able to generate such particles on their own without the need of external aid. They may still need to use extra Pym Particles to reach extremely large or small sizes.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Tech Reliance"
+      },
+      {
+        "type": "powers",
+        "value": "Grow 1"
+      },
+      {
+        "type": "powers",
+        "value": "Shrink 1"
+      }
+    ]
+  },
+  {
+    "name": "Inhuman",
+    "description": "The character is a member of Homo sapiens inhumanas, a variant race of humanity genetically engineered by the Kree. For millennia, they lived isolated from the world, but they emerged in recent years, led by Black Bolt.<br />All Inhumans carry a latent gene that can be activated by the Terrigen Mist. The explosion of a Terrigen Bomb spread the mist across the entrie planet, revealing that many humans (including Kamala Khan) had Inhuman genetics. Black Bolt was later forced to destroy the Inhumans, leaving few outside of the royal family alive.<br />The character is one of those rare Inhumans whow survived.",
+    "bonuscharacteristics": [
+      {
+        "type": "tag",
+        "value": "Inhuman Genes"
+      }
+    ]
+  },
+  {
+    "name": "Magic",
+    "description": "The character's powers arise from supernatural means. There are many different traditions within magic, each with their own teachings.",
+    "bonuscharacteristics": [
+      {
+        "type": "tag",
+        "value": "Supernatural"
+      }
+    ]
+  },
+  {
+    "name": "Magic-Chaos Magic",
+    "description": "The character is able to use chaos magic, which allows them to bend reality to their will. It stems from the ancient got Chthon.",
+    "bonuscharacteristics": [
+      {
+        "type": "tag",
+        "value": "Chaotic"
+      },
+      {
+        "type": "tag",
+        "value": "Supernatural"
+      }
+    ]
+  },
+  {
+    "name": "Magic-Demonic",
+    "description": "The character taps into (or is cursed by) the powers of Hell. They may be a native of one of the Nine Circles of Hell, or their powers might simply come from a Hellish source.",
+    "bonuscharacteristics": [
+      {
+        "type": "tag",
+        "value": "Cursed"
+      },
+      {
+        "type": "tag",
+        "value": "Supernatural"
+      }
+    ]
+  },
+  {
+    "name": "Magic-Sorcery",
+    "description": "The character's powers arise from the study and practice of sorcery.",
+    "bonuscharacteristics": [
+      {
+        "type": "tag",
+        "value": "Sorcerous"
+      },
+      {
+        "type": "tag",
+        "value": "Supernatural"
+      }
+    ]
+  },
+  {
+    "name": "Monstrous",
+    "description": "The character is some kind of monster. They may have a human form - or may have once been human - but they get their powers from their unnatural monstrousness.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Monster"
+      }
+    ]
+  },
+  {
+    "name": "Monstrous-Dhampir",
+    "description": "The character was once alive but was embraced by a vampire and has risen from death as a vampire, but became a dhampir. Dhampir is a term used to refer to individuals born of a union between a human and a vampire or had their vampirism halted, basically human-vampire hybrids.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Monster"
+      }
+    ]
+  },
+  {
+    "name": "Monstrous-Vampire",
+    "description": "The character was once alive but was embraced by a vampire and has risen from death as a vampire too. They can transmit this magical disease to victims of their choosing.<br />When a character becomes a vampire, they go up one rank and gain the listed tags, traits, and powers. They do not gain any additional powers or traits from this bump in rank, but they do gain 5 ability points and add +1 to their damage multiplier. If they have the Heroic tag, they also add 1 to their Karma.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Anathema"
+      },
+      {
+        "type": "trait",
+        "value": "Bloodthirsty"
+      },
+      {
+        "type": "trait",
+        "value": "Monster"
+      },
+      {
+        "type": "trait",
+        "value": "Weakness"
+      },
+      {
+        "type": "tag",
+        "value": "Alternate Form"
+      },
+      {
+        "type": "tag",
+        "value": "Deceased"
+      },
+      {
+        "type": "tag",
+        "value": "Imageless"
+      },
+      {
+        "type": "powers",
+        "value": "Animal Communication"
+      },
+      {
+        "type": "powers",
+        "value": "Command"
+      },
+      {
+        "type": "powers",
+        "value": "Healing Factor"
+      },
+      {
+        "type": "powers",
+        "value": "Leech Life"
+      },
+      {
+        "type": "powers",
+        "value": "Mighty 1"
+      },
+      {
+        "type": "powers",
+        "value": "Sturdy 2"
+      },
+      {
+        "type": "powers",
+        "value": "Telepathic Link"
+      }
+    ]
+  },
+  {
+    "name": "Monstrous-Werewolf",
+    "description": "The character is afflicted with lycanthropy, a magical disease that causes them to take on the shape of a werewolf during the three nights of the full moon. They can transmit this magical disease to victims of their choosing who survive their attacks.<br />When a character becomes a werewolf, they gain the Lunar Transformation and Alternate Form tags. Whe the character takes on their werewolf form, they go up one rank and gain the rest of the listed tags, traits, and powers. They do not gain any additional powers or traits from this bump in rank, but they do gain 5 ability points and add +1 to their damage multiplier. If they have the Heroic tag, they also add 1 to their Karma.<br />When they return to human form, they lose the benefits of their werewolf form.<br />They character can switch forms voluntarily at any point - except during the three nights the the moon is at its fullest. On those nights, while the moon is above the horizon, the character must transform into a werewolf and is ruled by their animal nature. They cannot help but hunt and attack any people or creatures they come across, no matter if they are friend or foe.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Berserker"
+      },
+      {
+        "type": "trait",
+        "value": "Monster"
+      },
+      {
+        "type": "trait",
+        "value": "Weakness"
+      },
+      {
+        "type": "tag",
+        "value": "Alternate Form"
+      },
+      {
+        "type": "tag",
+        "value": "Extreme Appearance"
+      },
+      {
+        "type": "tag",
+        "value": "Lunar Transformation"
+      },
+      {
+        "type": "powers",
+        "value": "Evasion"
+      },
+      {
+        "type": "powers",
+        "value": "Healing Factor"
+      },
+      {
+        "type": "powers",
+        "value": "Heightened Senses"
+      },
+      {
+        "type": "powers",
+        "value": "Mighty 1"
+      },
+      {
+        "type": "powers",
+        "value": "Sturdy 2"
+      }
+    ]
+  },
+  {
+    "name": "Mutant",
+    "description": "The character's powers spring from them being a member of the subspecies Homo superior. They have a latent X-Gene that grants them powers, often triggered at adolescence.",
+    "bonuscharacteristics": [
+      {
+        "type": "tag",
+        "value": "Hounded"
+      },
+      {
+        "type": "tag",
+        "value": "Krakoan"
+      },
+      {
+        "type": "tag",
+        "value": "X-Gene"
+      }
+    ]
+  },
+  {
+    "name": "Mutant-X-men '97",
+    "description": "The character's powers spring from them being a member of the subspecies Homo superior.",
+    "bonuscharacteristics": [
+      {
+        "type": "tag",
+        "value": "Hounded"
+      },
+      {
+        "type": "tag",
+        "value": "X-Gene"
+      }
+    ]
+  },
+  {
+    "name": "Mythic",
+    "description": "The character is a creature or person of myth and legend. While they may appear human, they are something else.",
+    "bonuscharacteristics": [
+      {
+        "type": "tag",
+        "value": "Supernatural"
+      }
+    ]
+  },
+  {
+    "name": "Mythic-Asgardian",
+    "description": "The character is a member of the Asgardian people, resembling the Norse gods. They call Asgard their home.<br />The character can be one of the many gods who have been named throughout history, or they can be one of the lesser-known gods of Asgard. They should choose something that they are the god of.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "God Heritage"
+      },
+      {
+        "type": "trait",
+        "value": "Enhanced Physique"
+      },
+      {
+        "type": "tag",
+        "value": "Supernatural"
+      },
+      {
+        "type": "tag",
+        "value": "Worshipped"
+      }
+    ]
+  },
+  {
+    "name": "Mythic-Olympian",
+    "description": "The character is a member of the Olympian people, resembling the gods of Ancient Greece and Rome. They call Olympus their home.<br />They character can be one of the many gods who have been named throughout history, or they can be one of the lesser-known gods of Olympus. They should choose something that they are the god of.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "God Heritage"
+      },
+      {
+        "type": "trait",
+        "value": "Enhanced Physique"
+      },
+      {
+        "type": "tag",
+        "value": "Supernatural"
+      },
+      {
+        "type": "tag",
+        "value": "Worshipped"
+      }
+    ]
+  },
+  {
+    "name": "Special Training",
+    "description": "The character's powers come from long hours of practice. Their intense focus grants them abilities that would astonish most people. Powers are limited to those that do not provide superhuman abilities.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Determination"
+      }
+    ]
+  },
+  {
+    "name": "Spirit of Vengeance",
+    "description": "The character has been possessed by a Spirit of Vengeance. Their purpose is to find sinners and impose penance.<br />When a character becomes possessed by a Spirit of Vengeance, they gain the Alternate Form tag, which they can use voluntarily at any point. When the character takes on their Ghost Rider form, they gain access to the listed tags, traits, and powers. When they return to human form, they lose the benefits of their Ghost Rider form.",
+    "bonuscharacteristics": [
+      {
+        "type": "tag",
+        "value": "Alternate Form"
+      },
+      {
+        "type": "tag",
+        "value": "Cursed"
+      },
+      {
+        "type": "tag",
+        "value": "Supernatural"
+      },
+      {
+        "type": "powers",
+        "value": "Elemental Protection 2"
+      },
+      {
+        "type": "powers",
+        "value": "Environmental Protection"
+      },
+      {
+        "type": "powers",
+        "value": "Healing Factor"
+      },
+      {
+        "type": "powers",
+        "value": "Hellfire Chains"
+      },
+      {
+        "type": "powers",
+        "value": "Mighty 2"
+      },
+      {
+        "type": "powers",
+        "value": "Penance Stare"
+      },
+      {
+        "type": "powers",
+        "value": "Possess Vehicle"
+      },
+      {
+        "type": "powers",
+        "value": "Sense Sins"
+      }
+    ]
+  },
+  {
+    "name": "Symbiote",
+    "description": "The character has bonded with one of the Klyntar, a race of alien symbiotes created by the alien god Knull. Most of these creatures on Earth display spiderlike powers.<br />When a character bonds with a symbiote, they go up one rank and gain the listed tags, traits, and powers. Any remaining powers they select are often from the Spider-Powers set but do not have to be. Many symbiotes have the Disguise power.<br />If the symbiote is Venom or one of its progeny, Spider-Man (Peter Parker) cannot gain any benefits from his Spider-Sense power against the bonded character.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Anathema"
+      },
+      {
+        "type": "powers",
+        "value": "Environmental Protection"
+      },
+      {
+        "type": "powers",
+        "value": "Mighty 1"
+      }
+    ]
+  },
+  {
+    "name": "Unknown",
+    "description": "The character has developed powers but is not entirely sure how. It could be that the player or the Narrator knows, but the character does not, or maybe nobody else does either. Astonishing things happen all the time in the Marvel Multiverse, and there's no way to classify them all.<br />The source of the powers may be explained in time. It could turn out that the character actually has a standard type of origin, or it could be that they have an origin that's utterly unique.",
+    "bonuscharacteristics": [
+      {
+        "type": "tag",
+        "value": "Mysterious"
+      }
+    ]
+  },
+  {
+    "name": "Weird Science",
+    "description": "The character's powers arose from a scientific experiment of accident that's hard - if not impossible - to reproduce. Often, they had the latent genetic potential to develop powers and were somehow exposed to the right triggers - which would have likely killed most other people.<br />These kinds of character are sometimes call mutates. The difference between a mutate and a mutant is that a mutant's powers come to them naturally, but a mutate's powers require a triggering incident that might never happen. In this sense, Inhumans are all mutates who share a gene with a known rigger: the Terrigen Mist.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Weird"
+      }
+    ]
+  },
+  {
+    "name": "Weird Science-Gamma Mutate",
+    "description": "The character has a genetic mutation that gave them powers once they were exposed to enough gamma radiation, transforming them physically. This often gives them a monstrous appearance and changes their coloration drastically, usually to green, although some become red or even blue. They can often transorm back into their original form as well.",
+    "bonuscharacteristics": [
+      {
+        "type": "trait",
+        "value": "Weird"
+      },
+      {
+        "type": "tag",
+        "value": "Extreme Appearance"
+      },
+      {
+        "type": "tag",
+        "value": "Green Door"
+      },
+      {
+        "type": "tag",
+        "value": "Immunity"
+      }
+    ]
+  }
 ]

@@ -1,0 +1,61 @@
+[
+  {
+    "name": "Soldier",
+    "description": "",
+    "health": 2,
+    "movement": 35,
+    "benefit": "If It Shoots...",
+    "benefitdescription": "You are trained in all weapons, other than unique weapons.",
+    "userchoice": [
+      {
+        "type": "Essence",
+        "choices": [
+          "Strength",
+          "Speed"
+        ],
+        "count": 1
+      },
+      {
+        "type": "Skill",
+        "choices": [
+          "Athletics",
+          "Conditioning",
+          "Targeting",
+          "Initiative"
+        ],
+        "count": 1
+      }
+    ],
+    "bonuscharacteristic": [
+      {
+        "type": "EquipmentProficiency",
+        "value": "Automatic"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Standard"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Limited"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Restricted"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Prototype"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Unique"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Theoretical"
+      }
+    ],
+    "languages": "You begin play with one language in addition to any native languages and gain one additional language for every 3 points of Smarts you possess."
+  }
+]

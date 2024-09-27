@@ -25,21 +25,13 @@ const DynamicForm = () => {
     watch,
     control,
     getValues,
+    setValue,
     formState: { errors },
   } = useForm();
 
   function navigateToRulesetDashboard() {
     navigate("/rulesetdashboard");
-  }
-
-  // useEffect(() => {
-  //   console.log("Bonus Characteristics changed.");
-
-  //   for(const adjustment in setBonusCharacteristics)
-  //   {
-  //     append({ value: "Select..." });
-  //   }
-  // }, [setBonusCharacteristics, append]);
+  }  
 
   useEffect(() => {
     const fetchSchema = async () => {
@@ -76,11 +68,10 @@ const DynamicForm = () => {
     const selectElement = event.target;
     console.log(selectElement);
     const selectedOption = selectElement.options[selectElement.selectedIndex];
-    const selectBonusAdjustmentsString = selectedOption.getAttribute('data-bonusAdjustments');
+    const selectBonusAdjustmentsString = selectedOption.getAttribute('data-bonusadjustments');
     const selectBonusAdjustments = selectBonusAdjustmentsString ? JSON.parse(selectBonusAdjustmentsString) : null;
-    const selectBonusCharacteristicsString = selectedOption.getAttribute('data-bonusCharacteristics');
+    const selectBonusCharacteristicsString = selectedOption.getAttribute('data-bonuscharacteristics');
     const selectBonusCharacteristics = selectBonusCharacteristicsString ? JSON.parse(selectBonusCharacteristicsString) : null;
-    console.log(selectBonusCharacteristics);
     if (event.target.value == null) {
       return;
     }
@@ -98,12 +89,10 @@ const DynamicForm = () => {
           },
         ]);
       }
-      console.log(bonusAdjustments);
     }
 
     if (selectBonusCharacteristics) {
       for (const characteristic of selectBonusCharacteristics) {
-        console.log(characteristic.Value);
         setBonusCharacteristics((prevBonusCharacteristics) => [
           ...prevBonusCharacteristics,
           {
@@ -112,7 +101,6 @@ const DynamicForm = () => {
           },
         ]);
       }
-      console.log(bonusCharacteristics);
     }
   }
 
@@ -150,6 +138,18 @@ const DynamicForm = () => {
       name: field.name,
       control,
     });
+
+    // const doesFieldArrayContain = (value: string) => {
+    //   return fields.some((field) => field.option === value);
+    // };
+
+    // useEffect(() => {
+    //   for (const adjustment in bonusCharacteristics) {
+    //     if (!doesFieldArrayContain(adjustment)) {
+    //        append({ option: adjustment });
+    //     }
+    //   }
+    // }, [setBonusCharacteristics, append]);
 
     return (
       <div>
@@ -250,6 +250,7 @@ const DynamicForm = () => {
               type="checkbox"
               role="switch"
               id={field.id}
+              //TODO: Replace 'powers' with a variable
               {...register(`powers.${field.name}`)}
             />
             <label className="form-check-label" htmlFor={field.id}>
@@ -279,8 +280,8 @@ const DynamicForm = () => {
                   key={option.value}
                   id={option.value}
                   value={option.value}
-                  data-bonusAdjustments={option.bonusAdjustments}
-                  data-bonusCharacteristics={option.bonusCharacteristics}
+                  data-bonusadjustments={option.bonusAdjustments}
+                  data-bonuscharacteristics={option.bonusCharacteristics}
                 >
                   {option.label}
                 </option>

@@ -1,0 +1,1385 @@
+{
+  "title": "Hero Editor",
+  "fields": [
+    {
+      "name": "id",
+      "id": "id",
+      "label": "Id",
+      "type": "hidden",
+      "className": "form-control"
+    },
+    {
+      "name": "health",
+      "id": "health",
+      "label": "Health",
+      "type": "hidden",
+      "className": "form-control"
+    },
+    {
+      "name": "resolve",
+      "id": "resolve",
+      "label": "Resolve",
+      "type": "hidden",
+      "className": "form-control"
+    },
+    {
+      "name": "chinyen",
+      "id": "chinyen",
+      "label": "Chinyen",
+      "type": "hidden",
+      "className": "form-control"
+    },
+    {
+      "name": "promotionpoints",
+      "id": "promotionpoints",
+      "label": "Promotion Points",
+      "type": "hidden",
+      "className": "form-control"
+    },
+    {
+      "name": "humanitypoints",
+      "id": "humanitypoints",
+      "label": "Humanity Points",
+      "type": "hidden",
+      "className": "form-control"
+    },
+    {
+      "name": "name",
+      "id": "name",
+      "label": "Name",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown"
+    },
+    {
+      "name": "image",
+      "id": "image",
+      "label": "Image",
+      "type": "image",
+      "className": "form-control"
+    },
+    {
+      "name": "appearance",
+      "id": "appearance",
+      "label": "Appearance",
+      "type": "textarea",
+      "className": "form-control"
+    },
+    {
+      "name": "notes",
+      "id": "notes",
+      "label": "Notes",
+      "type": "textarea",
+      "className": "form-control"
+    },
+    {
+      "name": "origin",
+      "label": "Origin",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Human",
+          "label": "Human",
+          "bonusAdjustments": "null",
+          "userChoices": "null"
+        },
+        {
+          "value": "Replicant",
+          "label": "Replicant",
+          "bonusAdjustments": "null",
+          "userChoices": "null"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "className": "alert alert-secondary",
+      "children": [
+        {
+          "name": "info-origin-Human",
+          "label": "Information",
+          "type": "textblock",
+          "className": "text-block",
+          "text": "Humans are the original biological beings, often characterized by their emotional depth and complex moral dilemmas. They navigate a world filled with technological advancements, grappling with issues of identity, survival, and the consequences of their creations."
+        }
+      ],
+      "dependsOn": {
+        "field": "origin",
+        "value": "Human"
+      }
+    },
+    {
+      "type": "div",
+      "className": "alert alert-secondary",
+      "children": [
+        {
+          "name": "info-origin-Replicant",
+          "label": "Information",
+          "type": "textblock",
+          "className": "text-block",
+          "text": "Replicants are bioengineered beings desigend to resemble humans closely, created for labor and entertainment in off-world colonies. They possess advanced physical abilities and emotions, but their limited lifespan and societal oppression raise questions about their humanity, autonomy, and rights."
+        }
+      ],
+      "dependsOn": {
+        "field": "origin",
+        "value": "Replicant"
+      }
+    },
+    {
+      "name": "archetype",
+      "label": "Archetype",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Analyst",
+          "label": "Analyst",
+          "bonusAdjustments": "null"
+        },
+        {
+          "value": "Cityspeaker",
+          "label": "Cityspeaker",
+          "bonusAdjustments": "null"
+        },
+        {
+          "value": "Doxie",
+          "label": "Doxie",
+          "bonusAdjustments": "null"
+        },
+        {
+          "value": "Enforcer",
+          "label": "Enforcer",
+          "bonusAdjustments": "null"
+        },
+        {
+          "value": "Fixer",
+          "label": "Fixer",
+          "bonusAdjustments": "null"
+        },
+        {
+          "value": "Inspector",
+          "label": "Inspector",
+          "bonusAdjustments": "null"
+        },
+        {
+          "value": "Skimmer",
+          "label": "Skimmer",
+          "bonusAdjustments": "null"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "className": "alert alert-secondary",
+      "children": [
+        {
+          "name": "info-archetype-Analyst",
+          "label": "Information",
+          "type": "textblock",
+          "className": "text-block",
+          "text": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Analyst"
+      }
+    },
+    {
+      "type": "div",
+      "className": "alert alert-secondary",
+      "children": [
+        {
+          "name": "info-archetype-Cityspeaker",
+          "label": "Information",
+          "type": "textblock",
+          "className": "text-block",
+          "text": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Cityspeaker"
+      }
+    },
+    {
+      "type": "div",
+      "className": "alert alert-secondary",
+      "children": [
+        {
+          "name": "info-archetype-Doxie",
+          "label": "Information",
+          "type": "textblock",
+          "className": "text-block",
+          "text": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Doxie"
+      }
+    },
+    {
+      "type": "div",
+      "className": "alert alert-secondary",
+      "children": [
+        {
+          "name": "info-archetype-Enforcer",
+          "label": "Information",
+          "type": "textblock",
+          "className": "text-block",
+          "text": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Enforcer"
+      }
+    },
+    {
+      "type": "div",
+      "className": "alert alert-secondary",
+      "children": [
+        {
+          "name": "info-archetype-Fixer",
+          "label": "Information",
+          "type": "textblock",
+          "className": "text-block",
+          "text": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Fixer"
+      }
+    },
+    {
+      "type": "div",
+      "className": "alert alert-secondary",
+      "children": [
+        {
+          "name": "info-archetype-Inspector",
+          "label": "Information",
+          "type": "textblock",
+          "className": "text-block",
+          "text": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Inspector"
+      }
+    },
+    {
+      "type": "div",
+      "className": "alert alert-secondary",
+      "children": [
+        {
+          "name": "info-archetype-Skimmer",
+          "label": "Information",
+          "type": "textblock",
+          "className": "text-block",
+          "text": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "archetype",
+        "value": "Skimmer"
+      }
+    },
+    {
+      "name": "tenure",
+      "label": "Tenure",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Rookie",
+          "label": "Rookie",
+          "bonusAdjustments": "null",
+          "userChoices": "null"
+        },
+        {
+          "value": "Seasoned",
+          "label": "Seasoned",
+          "bonusAdjustments": "null",
+          "userChoices": "null"
+        },
+        {
+          "value": "Veteran",
+          "label": "Veteran",
+          "bonusAdjustments": "null",
+          "userChoices": "null"
+        },
+        {
+          "value": "Old-Timer",
+          "label": "Old-Timer",
+          "bonusAdjustments": "null",
+          "userChoices": "null"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "attributes",
+      "label": "Attributes",
+      "children": [
+        {
+          "name": "attributes.Strength",
+          "id": "attributes.strength",
+          "label": "Strength",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": -3,
+            "max": 9
+          },
+          "default": 0
+        },
+        {
+          "name": "attributes.Agility",
+          "id": "attributes.agility",
+          "label": "Agility",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": -3,
+            "max": 9
+          },
+          "default": 0
+        },
+        {
+          "name": "attributes.Intelligence",
+          "id": "attributes.intelligence",
+          "label": "Intelligence",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": -3,
+            "max": 9
+          },
+          "default": 0
+        },
+        {
+          "name": "attributes.Empathy",
+          "id": "attributes.empathy",
+          "label": "Empathy",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": -3,
+            "max": 9
+          },
+          "default": 0
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "memory",
+      "label": "Key Memory",
+      "children": [
+        {
+          "name": "memory",
+          "label": "Key Memory",
+          "type": "select",
+          "className": "form-select",
+          "options": [
+            {
+              "value": "When you were a small child. The memory is now a fleeting vision",
+              "label": "When"
+            },
+            {
+              "value": "During childhood. You rmember it like it was yesterday",
+              "label": "When"
+            },
+            {
+              "value": "When you were a youn teen. The event defined your view of the adult world",
+              "label": "When"
+            },
+            {
+              "value": "When you wer an older teenager, turning into a young adult",
+              "label": "When"
+            },
+            {
+              "value": "Some years back",
+              "label": "When"
+            },
+            {
+              "value": "Just a few weeks ago",
+              "label": "When"
+            }
+          ]
+        },
+        {
+          "name": "memory",
+          "label": "Key Memory",
+          "type": "select",
+          "className": "form-select",
+          "options": [
+            {
+              "value": "Your parent(s)",
+              "label": "When"
+            },
+            {
+              "value": "Your sibling",
+              "label": "When"
+            },
+            {
+              "value": "A superior or authority figure",
+              "label": "When"
+            },
+            {
+              "value": "Your romantic partner",
+              "label": "When"
+            },
+            {
+              "value": "A trusted friend",
+              "label": "When"
+            },
+            {
+              "value": "An LAPD cop",
+              "label": "When"
+            },
+            {
+              "value": "A Blade Runner",
+              "label": "When"
+            },
+            {
+              "value": "A throng of faceless people",
+              "label": "When"
+            },
+            {
+              "value": "Masked killers",
+              "label": "When"
+            },
+            {
+              "value": "A perfect stranger",
+              "label": "When"
+            },
+            {
+              "value": "A hunted Replicant",
+              "label": "When"
+            },
+            {
+              "value": "No one but you",
+              "label": "When"
+            }
+          ]
+        },
+        {
+          "name": "memory",
+          "label": "Key Memory",
+          "type": "select",
+          "className": "form-select",
+          "options": [
+            {
+              "value": "Standing in the rain on a city street corner in downtown LA",
+              "label": "Where"
+            },
+            {
+              "value": "In a lavish penthouse suite overlooking the Fashion District",
+              "label": "Where"
+            },
+            {
+              "value": "While ogling the synthetic fish tanks on Animoid Row",
+              "label": "Where"
+            },
+            {
+              "value": "Lost in a seething crowd in a loud, dimly lit nightclub",
+              "label": "Where"
+            },
+            {
+              "value": "In a serene, exclusive corporate headquarters",
+              "label": "Where"
+            },
+            {
+              "value": "In the derelict housing projects of Los Angeles Hills",
+              "label": "Where"
+            },
+            {
+              "value": "Off the grid in the Kibble wastelands",
+              "label": "Where"
+            },
+            {
+              "value": "On a protein farm deep within the Energy Empire",
+              "label": "Where"
+            },
+            {
+              "value": "On a distant farmstead, in the stillness of the rural countryside",
+              "label": "Where"
+            },
+            {
+              "value": "In a wintry landscape, covered by snow",
+              "label": "Where"
+            },
+            {
+              "value": "In a foreign land, surrounded by crowds speaking a language you didn't understand",
+              "label": "Where"
+            },
+            {
+              "value": "Somewhere in the off-world colonies",
+              "label": "Where"
+            }
+          ]
+        },
+        {
+          "name": "memory",
+          "label": "Key Memory",
+          "type": "select",
+          "className": "form-select",
+          "options": [
+            {
+              "value": "You saw something extraordinary that you cannot explain",
+              "label": "What"
+            },
+            {
+              "value": "You took part in a violent crime, or witnessed one",
+              "label": "What"
+            },
+            {
+              "value": "You witnessed a natural phenomenon",
+              "label": "What"
+            },
+            {
+              "value": "You took part in a battle or a massacre",
+              "label": "What"
+            },
+            {
+              "value": "You were physically attacked or abused",
+              "label": "What"
+            },
+            {
+              "value": "You were physologically abused",
+              "label": "What"
+            },
+            {
+              "value": "You suffered a breach of trust or betrayal",
+              "label": "What"
+            },
+            {
+              "value": "You made an unforgivable compromise",
+              "label": "What"
+            },
+            {
+              "value": "You suffered or witnessed a horrible accident",
+              "label": "What"
+            },
+            {
+              "value": "You made or witnessed a selfless sacrifice",
+              "label": "What"
+            },
+            {
+              "value": "You suffered a moment of weakness",
+              "label": "What"
+            },
+            {
+              "value": "You witnessed a miracle",
+              "label": "What"
+            }
+          ]
+        },
+        {
+          "name": "memory",
+          "label": "Key Memory",
+          "type": "select",
+          "className": "form-select",
+          "options": [
+            {
+              "value": "Hopeful",
+              "label": "How"
+            },
+            {
+              "value": "Lost",
+              "label": "How"
+            },
+            {
+              "value": "Vulnerable",
+              "label": "How"
+            },
+            {
+              "value": "Jaded",
+              "label": "How"
+            },
+            {
+              "value": "Haunted",
+              "label": "How"
+            },
+            {
+              "value": "Blessed",
+              "label": "How"
+            },
+            {
+              "value": "Loved",
+              "label": "How"
+            },
+            {
+              "value": "Bold",
+              "label": "How"
+            },
+            {
+              "value": "Disgusted",
+              "label": "How"
+            },
+            {
+              "value": "Shameful",
+              "label": "How"
+            },
+            {
+              "value": "Terrified",
+              "label": "How"
+            },
+            {
+              "value": "Tempted",
+              "label": "How"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "relationship",
+      "label": "Key Relationship",
+      "children": [
+        {
+          "name": "relationship",
+          "label": "Key Relationship",
+          "type": "select",
+          "className": "form-select",
+          "options": [
+            {
+              "value": "Parent",
+              "label": "Who"
+            },
+            {
+              "value": "Sibling",
+              "label": "Who"
+            },
+            {
+              "value": "Child",
+              "label": "Who"
+            },
+            {
+              "value": "Spouse",
+              "label": "Who"
+            },
+            {
+              "value": "Romantic Partner",
+              "label": "Who"
+            },
+            {
+              "value": "Old friend",
+              "label": "Who"
+            },
+            {
+              "value": "Colleague",
+              "label": "Who"
+            },
+            {
+              "value": "Superior",
+              "label": "Who"
+            },
+            {
+              "value": "Suspect",
+              "label": "Who"
+            },
+            {
+              "value": "Neighbor",
+              "label": "Who"
+            },
+            {
+              "value": "Doxie",
+              "label": "Who"
+            },
+            {
+              "value": "Diji",
+              "label": "Who"
+            }
+          ]
+        },
+        {
+          "name": "relationship",
+          "label": "Key Relationship",
+          "type": "select",
+          "className": "form-select",
+          "options": [
+            {
+              "value": "Friendly",
+              "label": "What"
+            },
+            {
+              "value": "Loving",
+              "label": "What"
+            },
+            {
+              "value": "Passionate",
+              "label": "What"
+            },
+            {
+              "value": "Trusting",
+              "label": "What"
+            },
+            {
+              "value": "Protective",
+              "label": "What"
+            },
+            {
+              "value": "Estranged",
+              "label": "What"
+            },
+            {
+              "value": "Violent",
+              "label": "What"
+            },
+            {
+              "value": "Deceitful",
+              "label": "What"
+            },
+            {
+              "value": "One-sided",
+              "label": "What"
+            },
+            {
+              "value": "Hateful",
+              "label": "What"
+            },
+            {
+              "value": "Distant",
+              "label": "What"
+            },
+            {
+              "value": "Only in your head",
+              "label": "What"
+            },
+            {
+              "value": "You're in a fight about something",
+              "label": "Status"
+            },
+            {
+              "value": "They have gone missing",
+              "label": "Status"
+            },
+            {
+              "value": "The want something from you",
+              "label": "Status"
+            },
+            {
+              "value": "They want you to quit your job",
+              "label": "Status"
+            },
+            {
+              "value": "You think they are hiding something",
+              "label": "Status"
+            },
+            {
+              "value": "They constantly disappoint you",
+              "label": "Status"
+            },
+            {
+              "value": "You constantly disappoint them",
+              "label": "Status"
+            },
+            {
+              "value": "They need help with something",
+              "label": "Status"
+            },
+            {
+              "value": "Their life is in danger",
+              "label": "Status"
+            },
+            {
+              "value": "They are suspected of a crime",
+              "label": "Status"
+            },
+            {
+              "value": "They know your deepest secret",
+              "label": "Status"
+            },
+            {
+              "value": "They threaten you with something",
+              "label": "Status"
+            }
+          ]
+        },
+        {
+          "name": "relationship",
+          "label": "Key Relationship",
+          "type": "select",
+          "className": "form-select",
+          "options": []
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skill",
+      "label": "Skill",
+      "children": [
+        {
+          "name": "attributes.Close Combat",
+          "id": "attributes.close combat",
+          "label": "Close Combat",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 1,
+            "max": 4
+          },
+          "default": 1
+        },
+        {
+          "name": "attributes.Force",
+          "id": "attributes.force",
+          "label": "Force",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 1,
+            "max": 4
+          },
+          "default": 1
+        },
+        {
+          "name": "attributes.Stamina",
+          "id": "attributes.stamina",
+          "label": "Stamina",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 1,
+            "max": 4
+          },
+          "default": 1
+        },
+        {
+          "name": "attributes.Firearms",
+          "id": "attributes.firearms",
+          "label": "Firearms",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 1,
+            "max": 4
+          },
+          "default": 1
+        },
+        {
+          "name": "attributes.Mobility",
+          "id": "attributes.mobility",
+          "label": "Mobility",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 1,
+            "max": 4
+          },
+          "default": 1
+        },
+        {
+          "name": "attributes.Stealth",
+          "id": "attributes.stealth",
+          "label": "Stealth",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 1,
+            "max": 4
+          },
+          "default": 1
+        },
+        {
+          "name": "attributes.Medical Aid",
+          "id": "attributes.medical aid",
+          "label": "Medical Aid",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 1,
+            "max": 4
+          },
+          "default": 1
+        },
+        {
+          "name": "attributes.Observation",
+          "id": "attributes.observation",
+          "label": "Observation",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 1,
+            "max": 4
+          },
+          "default": 1
+        },
+        {
+          "name": "attributes.Tech",
+          "id": "attributes.tech",
+          "label": "Tech",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 1,
+            "max": 4
+          },
+          "default": 1
+        },
+        {
+          "name": "attributes.Connections",
+          "id": "attributes.connections",
+          "label": "Connections",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 1,
+            "max": 4
+          },
+          "default": 1
+        },
+        {
+          "name": "attributes.Manipulation",
+          "id": "attributes.manipulation",
+          "label": "Manipulation",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 1,
+            "max": 4
+          },
+          "default": 1
+        },
+        {
+          "name": "attributes.Insight",
+          "id": "attributes.insight",
+          "label": "Insight",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 1,
+            "max": 4
+          },
+          "default": 1
+        },
+        {
+          "name": "attributes.Driving",
+          "id": "attributes.driving",
+          "label": "Driving",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 1,
+            "max": 4
+          },
+          "default": 1
+        }
+      ]
+    },
+    {
+      "name": "specialty",
+      "label": "Specialties",
+      "type": "array",
+      "component": {
+        "name": "specialty",
+        "label": "Specialties",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Bodyguard",
+            "label": "Bodyguard"
+          },
+          {
+            "value": "Cashflow",
+            "label": "Cashflow"
+          },
+          {
+            "value": "Controlled",
+            "label": "Controlled"
+          },
+          {
+            "value": "Counselor",
+            "label": "Counselor"
+          },
+          {
+            "value": "Fast Reflexes",
+            "label": "Fast Reflexes"
+          },
+          {
+            "value": "Gearhead",
+            "label": "Gearhead"
+          },
+          {
+            "value": "Gutter Rat",
+            "label": "Gutter Rat"
+          },
+          {
+            "value": "Hardened",
+            "label": "Hardened"
+          },
+          {
+            "value": "Hip Flask",
+            "label": "Hip Flask"
+          },
+          {
+            "value": "Insider",
+            "label": "Insider"
+          },
+          {
+            "value": "Interrogator",
+            "label": "Interrogator"
+          },
+          {
+            "value": "Kickbacks",
+            "label": "Kickbacks"
+          },
+          {
+            "value": "Killer",
+            "label": "Killer"
+          },
+          {
+            "value": "Married to the Job",
+            "label": "Married to the Job"
+          },
+          {
+            "value": "Martial Arts",
+            "label": "Martial Arts"
+          },
+          {
+            "value": "Merciful",
+            "label": "Merciful"
+          },
+          {
+            "value": "Musician",
+            "label": "Musician"
+          },
+          {
+            "value": "Origami",
+            "label": "Origami"
+          },
+          {
+            "value": "People Person",
+            "label": "People Person"
+          },
+          {
+            "value": "Protected",
+            "label": "Protected"
+          },
+          {
+            "value": "Scientist",
+            "label": "Scientist"
+          },
+          {
+            "value": "Smokes",
+            "label": "Smokes"
+          },
+          {
+            "value": "Sniper",
+            "label": "Sniper"
+          },
+          {
+            "value": "Sycophant",
+            "label": "Sycophant"
+          },
+          {
+            "value": "Tough",
+            "label": "Tough"
+          }
+        ]
+      }
+    },
+    {
+      "name": "weapon",
+      "label": "Weapons",
+      "type": "array",
+      "component": {
+        "name": "weapon",
+        "label": "Weapons",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": ".357 Subcompact",
+            "label": ".357 Subcompact"
+          },
+          {
+            "value": ".357 Magnum",
+            "label": ".357 Magnum"
+          },
+          {
+            "value": "PK-D M1887 20 Gauge",
+            "label": "PK-D M1887 20 Gauge"
+          },
+          {
+            "value": "Ender Scope Rifle",
+            "label": "Ender Scope Rifle"
+          },
+          {
+            "value": "Ender Assault Rifle",
+            "label": "Ender Assault Rifle"
+          },
+          {
+            "value": "PK-D 5223 Blaster",
+            "label": "PK-D 5223 Blaster"
+          },
+          {
+            "value": "PK-D FKM890",
+            "label": "PK-D FKM890"
+          },
+          {
+            "value": "Police Truncheon",
+            "label": "Police Truncheon"
+          },
+          {
+            "value": "Folding Knife",
+            "label": "Folding Knife"
+          },
+          {
+            "value": "Survival Knife",
+            "label": "Survival Knife"
+          },
+          {
+            "value": "Brass Knuckles",
+            "label": "Brass Knuckles"
+          },
+          {
+            "value": "Pepper Spray",
+            "label": "Pepper Spray"
+          }
+        ]
+      }
+    },
+    {
+      "name": "armor",
+      "label": "Armor",
+      "type": "array",
+      "component": {
+        "name": "armor",
+        "label": "Armor",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Police Heavy Duty Street Gear",
+            "label": "Police Heavy Duty Street Gear"
+          },
+          {
+            "value": "Police Undershirt Armor",
+            "label": "Police Undershirt Armor"
+          },
+          {
+            "value": "Police Multi-Tool Bracer",
+            "label": "Police Multi-Tool Bracer"
+          },
+          {
+            "value": "Police Shield",
+            "label": "Police Shield"
+          }
+        ]
+      }
+    },
+    {
+      "name": "gear",
+      "label": "Gear",
+      "type": "array",
+      "component": {
+        "name": "gear",
+        "label": "Gear",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Badge",
+            "label": "Badge"
+          },
+          {
+            "value": "KIA",
+            "label": "KIA"
+          },
+          {
+            "value": "Voight-Kampff Machine",
+            "label": "Voight-Kampff Machine"
+          },
+          {
+            "value": "Baseline Test",
+            "label": "Baseline Test"
+          },
+          {
+            "value": "Esper Machine",
+            "label": "Esper Machine"
+          },
+          {
+            "value": "Esper Lens",
+            "label": "Esper Lens"
+          },
+          {
+            "value": "Zip Ties",
+            "label": "Zip Ties"
+          },
+          {
+            "value": "Standard Handcuffs",
+            "label": "Standard Handcuffs"
+          },
+          {
+            "value": "Glue Medical Adhesive",
+            "label": "Glue Medical Adhesive"
+          },
+          {
+            "value": "Surgeon's Field Kit",
+            "label": "Surgeon's Field Kit"
+          },
+          {
+            "value": "Instant Fix",
+            "label": "Instant Fix"
+          },
+          {
+            "value": "Soviet Happy",
+            "label": "Soviet Happy"
+          },
+          {
+            "value": "Ko-Kuma",
+            "label": "Ko-Kuma"
+          },
+          {
+            "value": "Beer",
+            "label": "Beer"
+          },
+          {
+            "value": "Hard Alcohol",
+            "label": "Hard Alcohol"
+          },
+          {
+            "value": "Experience",
+            "label": "Experience"
+          },
+          {
+            "value": "ZLLSH",
+            "label": "ZLLSH"
+          },
+          {
+            "value": "Biometric Reader",
+            "label": "Biometric Reader"
+          },
+          {
+            "value": "Ocular Implant",
+            "label": "Ocular Implant"
+          },
+          {
+            "value": "Cochlear Implants",
+            "label": "Cochlear Implants"
+          },
+          {
+            "value": "Prosthetic Arm",
+            "label": "Prosthetic Arm"
+          },
+          {
+            "value": "Prosthetic Leg",
+            "label": "Prosthetic Leg"
+          },
+          {
+            "value": "Synaptic Implants",
+            "label": "Synaptic Implants"
+          },
+          {
+            "value": "Animoid",
+            "label": "Animoid"
+          },
+          {
+            "value": "Digital Companion",
+            "label": "Digital Companion"
+          },
+          {
+            "value": "Grenade",
+            "label": "Grenade"
+          },
+          {
+            "value": "Explosive C",
+            "label": "Explosive C"
+          },
+          {
+            "value": "Explosive B",
+            "label": "Explosive B"
+          },
+          {
+            "value": "Explosive A",
+            "label": "Explosive A"
+          },
+          {
+            "value": "Tear Gas Grenade",
+            "label": "Tear Gas Grenade"
+          },
+          {
+            "value": "Flashbang Grenade",
+            "label": "Flashbang Grenade"
+          },
+          {
+            "value": "Sonic Grenade",
+            "label": "Sonic Grenade"
+          },
+          {
+            "value": "Sonic Charge",
+            "label": "Sonic Charge"
+          }
+        ]
+      }
+    },
+    {
+      "name": "vehicle",
+      "label": "Vehicle",
+      "type": "array",
+      "component": {
+        "name": "vehicle",
+        "label": "Vehicle",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "LAPD Spinner - Detective Special",
+            "label": "LAPD Spinner - Detective Special"
+          },
+          {
+            "value": "LAPD Spinner DMV 137",
+            "label": "LAPD Spinner DMV 137"
+          },
+          {
+            "value": "LAPD Carrier",
+            "label": "LAPD Carrier"
+          },
+          {
+            "value": "Spinner Squad Transport",
+            "label": "Spinner Squad Transport"
+          },
+          {
+            "value": "Civilian Ground Car",
+            "label": "Civilian Ground Car"
+          },
+          {
+            "value": "Civilian Ground Truck",
+            "label": "Civilian Ground Truck"
+          },
+          {
+            "value": "LAPD Spinner Cycle",
+            "label": "LAPD Spinner Cycle"
+          }
+        ]
+      }
+    }
+  ]
+}

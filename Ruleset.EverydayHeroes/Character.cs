@@ -55,7 +55,7 @@ namespace EverydayHeroes
         public int LuckPoints { get; set; }
         public bool Inspiration { get; set; }
         public CharacterSegment CharacterSegment { get => GetCharacterSegment(); }
-        public string CharacterSheet { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string CharacterSheet { get; set; }
 
         private CharacterSegment GetCharacterSegment()
         {
@@ -103,7 +103,7 @@ namespace EverydayHeroes
             var perceptionSkill = Skills.Where(s => s.Name == "Perception").FirstOrDefault();
             var value = 10 + Attributes.Where(a => a.Name == "Wisdom").FirstOrDefault().Modifier + Attributes.Where(a => a.Name == perceptionSkill.AbilityModifier).FirstOrDefault().Modifier;
 
-            if (perceptionSkill.Procifient)
+            if (perceptionSkill.Proficient)
             {
                 if (perceptionSkill.Expertise)
                 {
@@ -123,7 +123,7 @@ namespace EverydayHeroes
             return Profession.WealthLevel;
         }
 
-        public byte[] GetCharacterSheet()
+        public byte[] BuildCharacterSheet()
         {
             throw new NotImplementedException();
         }

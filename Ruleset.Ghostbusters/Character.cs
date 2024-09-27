@@ -1,4 +1,8 @@
-﻿namespace Ghostbusters
+﻿using System;
+using System.Collections.Generic;
+using Utility;
+
+namespace Ghostbusters
 {
     public class Character : ICharacter
     {
@@ -13,9 +17,14 @@
         public List<Trait> Traits { get; set; }
         public List<Talent> Talents { get; set; }
         public Goal Goal { get; set; }
-        public int Brownie_Points { get; set; }
+        public int BrowniePoints { get; set; }
         public List<Equipment> Equipments { get; set; }
         public CharacterSegment CharacterSegment => GetCharacterSegment();
+        public string CharacterSheet { get; set; }
+        public byte[] BuildCharacterSheet()
+        {
+            throw new NotImplementedException();
+        }
 
         private CharacterSegment GetCharacterSegment()
         {
@@ -24,7 +33,7 @@
                 Id = Id,
                 Name = Name,
                 Image = Image,
-                Level = Brownie_Points,
+                Level = BrowniePoints,
                 Details = $"{Residence} | {Telex} | {Phone}"
             };
         }

@@ -10,9 +10,11 @@ namespace Template
 
         public CharacterSegment CharacterSegment => throw new NotImplementedException();
 
-        public string CharacterSheet { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string? CharacterSheet { get; set; }
 
-        public byte[] GetCharacterSheet()
+        public CharacterSegment GetCharacterSegment() => throw new NotImplementedException();
+
+        public byte[] BuildCharacterSheet()
         {
             throw new NotImplementedException();
         }

@@ -9,6 +9,6 @@ namespace Utility
         public string Image { get; set; }
         public CharacterSegment CharacterSegment { get; }
         public string CharacterSheet { get; set; }
-        public byte[] GetCharacterSheet();
+        byte[] BuildCharacterSheet();
     }
 }

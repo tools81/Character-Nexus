@@ -1,10 +1,43 @@
 [
   {
     "name": "Human",
-    "description": ""
+    "description": "Humans are the original biological beings, often characterized by their emotional depth and complex moral dilemmas. They navigate a world filled with technological advancements, grappling with issues of identity, survival, and the consequences of their creations."
   },
   {
     "name": "Replicant",
-    "description": ""
+    "description": "Replicants are bioengineered beings desigend to resemble humans closely, created for labor and entertainment in off-world colonies. They possess advanced physical abilities and emotions, but their limited lifespan and societal oppression raise questions about their humanity, autonomy, and rights.",
+    "bonusadjustment": [
+      {
+        "type": "Chinyen",
+        "name": "Chinyen",
+        "value": -1
+      },
+      {
+        "type": "PromotionPoints",
+        "name": "PromotionPoints",
+        "value": -1
+      },
+      {
+        "type": "Health",
+        "name": "Health",
+        "value": 2
+      },
+      {
+        "type": "Resolve",
+        "name": "Resolve",
+        "value": -2
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "Attribute",
+        "choices": [
+          "Strength",
+          "Agility"
+        ],
+        "count": 1,
+        "value": 1
+      }
+    ]
   }
 ]

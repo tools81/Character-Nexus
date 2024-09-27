@@ -92,5 +92,10 @@ namespace EverydayHeroes
         {
             throw new NotImplementedException();
         }
+
+        public bool DeleteCharacter(string id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

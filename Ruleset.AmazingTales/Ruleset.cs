@@ -2,6 +2,7 @@
 using System;
 using System.Reflection;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace AmazingTales
 {
@@ -13,11 +14,6 @@ namespace AmazingTales
         public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_amazing_tales.png";
 
         public string FormResource => "Ruleset.AmazingTales.Json.Character.Form.json";
-
-        public Ruleset()
-        {
-
-        }
 
         public string NewCharacter()
         {
@@ -36,10 +32,29 @@ namespace AmazingTales
 
         public ICharacter? SaveCharacter(string data)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var character = JsonConvert.DeserializeObject<Character>(data, new CharacterJsonConverter());
+                return character;
+            }
+            catch (JsonException ex)
+            {
+                Console.WriteLine($"Error parsing Json on save character: {ex.Message}");
+                return null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving character: {ex.Message}");
+                return null;
+            }
         }
 
         public string LoadCharacter(ICharacter character)
+        {
+            return JsonConvert.SerializeObject(character, new CharacterJsonConverter());
+        }
+
+        public bool DeleteCharacter(string id)
         {
             throw new NotImplementedException();
         }

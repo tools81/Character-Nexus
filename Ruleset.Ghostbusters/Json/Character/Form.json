@@ -1,0 +1,652 @@
+{
+  "title": "Hero Editor",
+  "fields": [
+    {
+      "name": "id",
+      "id": "id",
+      "label": "Id",
+      "type": "hidden",
+      "className": "form-control"
+    },
+    {
+      "name": "name",
+      "id": "name",
+      "label": "Name",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown"
+    },
+    {
+      "name": "browniePoints",
+      "id": "browniePoints",
+      "label": "Brownie Points",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 100
+      },
+      "default": 20
+    },
+    {
+      "name": "image",
+      "id": "image",
+      "label": "Image",
+      "type": "image",
+      "className": "form-control"
+    },
+    {
+      "name": "personality",
+      "id": "personality",
+      "label": "Personality",
+      "type": "textarea",
+      "className": "form-control"
+    },
+    {
+      "name": "notes",
+      "id": "notes",
+      "label": "Notes",
+      "type": "textarea",
+      "className": "form-control"
+    },
+    {
+      "name": "residence",
+      "id": "residence",
+      "label": "Residence",
+      "type": "text",
+      "className": "form-control"
+    },
+    {
+      "name": "telex",
+      "id": "telex",
+      "label": "Telex",
+      "type": "text",
+      "className": "form-control"
+    },
+    {
+      "name": "phone",
+      "id": "phone",
+      "label": "Phone",
+      "type": "text",
+      "className": "form-control"
+    },
+    {
+      "type": "group",
+      "name": "traits",
+      "label": "Trait Scores",
+      "children": [
+        {
+          "name": "traits.Brains",
+          "id": "traits.brains",
+          "label": "Brains",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 0,
+            "max": 5
+          },
+          "default": 0
+        },
+        {
+          "name": "traits.Muscle",
+          "id": "traits.muscle",
+          "label": "Muscle",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 0,
+            "max": 5
+          },
+          "default": 0
+        },
+        {
+          "name": "traits.Moves",
+          "id": "traits.moves",
+          "label": "Moves",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 0,
+            "max": 5
+          },
+          "default": 0
+        },
+        {
+          "name": "traits.Cool",
+          "id": "traits.cool",
+          "label": "Cool",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 0,
+            "max": 5
+          },
+          "default": 0
+        }
+      ]
+    },
+    {
+      "name": "talents",
+      "label": "Talents",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Accounting",
+          "label": "Accounting"
+        },
+        {
+          "value": "Anthropology",
+          "label": "Anthropology"
+        },
+        {
+          "value": "Archaeology",
+          "label": "Archaeology"
+        },
+        {
+          "value": "Astronomy",
+          "label": "Astronomy"
+        },
+        {
+          "value": "Biology",
+          "label": "Biology"
+        },
+        {
+          "value": "Botany",
+          "label": "Botany"
+        },
+        {
+          "value": "Bureaucratics",
+          "label": "Bureaucratics"
+        },
+        {
+          "value": "Chemistry",
+          "label": "Chemistry"
+        },
+        {
+          "value": "Deduce Mathematics",
+          "label": "Deduce Mathematics"
+        },
+        {
+          "value": "Electrical Repair",
+          "label": "Electrical Repair"
+        },
+        {
+          "value": "Electronics",
+          "label": "Electronics"
+        },
+        {
+          "value": "Geology",
+          "label": "Geology"
+        },
+        {
+          "value": "Guess",
+          "label": "Guess"
+        },
+        {
+          "value": "Hair Styling",
+          "label": "Hair Styling"
+        },
+        {
+          "value": "History",
+          "label": "History"
+        },
+        {
+          "value": "Journalism",
+          "label": "Journalism"
+        },
+        {
+          "value": "Library Science",
+          "label": "Library Science"
+        },
+        {
+          "value": "Linguistics",
+          "label": "Linguistics"
+        },
+        {
+          "value": "Mechanical Repair",
+          "label": "Mechanical Repair"
+        },
+        {
+          "value": "Medicine",
+          "label": "Medicine"
+        },
+        {
+          "value": "Occult",
+          "label": "Occult"
+        },
+        {
+          "value": "Parapsychology",
+          "label": "Parapsychology"
+        },
+        {
+          "value": "Physics",
+          "label": "Physics"
+        },
+        {
+          "value": "Psychoanalysis",
+          "label": "Psychoanalysis"
+        },
+        {
+          "value": "Soap Opera Romances",
+          "label": "Soap Opera Romances"
+        },
+        {
+          "value": "Sports Facts",
+          "label": "Sports Facts"
+        },
+        {
+          "value": "Zoology",
+          "label": "Zoology"
+        }
+      ]
+    },
+    {
+      "name": "talents",
+      "label": "Talents",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Brawl",
+          "label": "Brawl"
+        },
+        {
+          "value": "Break Things",
+          "label": "Break Things"
+        },
+        {
+          "value": "Climb",
+          "label": "Climb"
+        },
+        {
+          "value": "Gobble Food",
+          "label": "Gobble Food"
+        },
+        {
+          "value": "Grapple",
+          "label": "Grapple"
+        },
+        {
+          "value": "Intimidate",
+          "label": "Intimidate"
+        },
+        {
+          "value": "Jump",
+          "label": "Jump"
+        },
+        {
+          "value": "Kick Things Over",
+          "label": "Kick Things Over"
+        },
+        {
+          "value": "Lift",
+          "label": "Lift"
+        },
+        {
+          "value": "Rip Things Open",
+          "label": "Rip Things Open"
+        },
+        {
+          "value": "Run",
+          "label": "Run"
+        },
+        {
+          "value": "Swim",
+          "label": "Swim"
+        },
+        {
+          "value": "Wrestle",
+          "label": "Wrestle"
+        }
+      ]
+    },
+    {
+      "name": "talents",
+      "label": "Talents",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Attract Attention",
+          "label": "Attract Attention"
+        },
+        {
+          "value": "Balance",
+          "label": "Balance"
+        },
+        {
+          "value": "Breakdance",
+          "label": "Breakdance"
+        },
+        {
+          "value": "Catch",
+          "label": "Catch"
+        },
+        {
+          "value": "Disguise",
+          "label": "Disguise"
+        },
+        {
+          "value": "Dodge",
+          "label": "Dodge"
+        },
+        {
+          "value": "Drive Vehicle",
+          "label": "Drive Vehicle"
+        },
+        {
+          "value": "Fire Weapon",
+          "label": "Fire Weapon"
+        },
+        {
+          "value": "Gossip",
+          "label": "Gossip"
+        },
+        {
+          "value": "Hide",
+          "label": "Hide"
+        },
+        {
+          "value": "Listen",
+          "label": "Listen"
+        },
+        {
+          "value": "Make Music",
+          "label": "Make Music"
+        },
+        {
+          "value": "Pick Pocket",
+          "label": "Pick Pocket"
+        },
+        {
+          "value": "Seduce",
+          "label": "Seduce"
+        },
+        {
+          "value": "See",
+          "label": "See"
+        },
+        {
+          "value": "Sleight of Hand",
+          "label": "Sleight of Hand"
+        },
+        {
+          "value": "Sneak",
+          "label": "Sneak"
+        },
+        {
+          "value": "Sniff",
+          "label": "Sniff"
+        },
+        {
+          "value": "Strut",
+          "label": "Strut"
+        },
+        {
+          "value": "Throw",
+          "label": "Throw"
+        }
+      ]
+    },
+    {
+      "name": "talents",
+      "label": "Talents",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Bargain",
+          "label": "Bargain"
+        },
+        {
+          "value": "Bluff",
+          "label": "Bluff"
+        },
+        {
+          "value": "Borrow",
+          "label": "Borrow"
+        },
+        {
+          "value": "Browbeat",
+          "label": "Browbeat"
+        },
+        {
+          "value": "Charm",
+          "label": "Charm"
+        },
+        {
+          "value": "Convince",
+          "label": "Convince"
+        },
+        {
+          "value": "Fast Talk",
+          "label": "Fast Talk"
+        },
+        {
+          "value": "Orate",
+          "label": "Orate"
+        },
+        {
+          "value": "Play Poker",
+          "label": "Play Poker"
+        },
+        {
+          "value": "Play Stock Market",
+          "label": "Play Stock Market"
+        },
+        {
+          "value": "Raise Children",
+          "label": "Raise Children"
+        },
+        {
+          "value": "Tell Fibs",
+          "label": "Tell Fibs"
+        }
+      ]
+    },
+    {
+      "name": "goal",
+      "label": "Goal",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Sex",
+          "label": "Sex"
+        },
+        {
+          "value": "Wealth",
+          "label": "Wealth"
+        },
+        {
+          "value": "Fame",
+          "label": "Fame"
+        },
+        {
+          "value": "Soulless Science",
+          "label": "Soulless Science"
+        },
+        {
+          "value": "Serving Humanity",
+          "label": "Serving Humanity"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "className": "alert alert-secondary",
+      "children": [
+        {
+          "name": "info-goal-Sex",
+          "label": "Information",
+          "type": "textblock",
+          "className": "text-block",
+          "text": "Like Venkman, your character wants to engage in brief, sordid, meaningless moments of bliss.<br />To get Brownie Points for this, you need to go on a satisfying date during the course of an adventure. You get one Ghost Die of Brownie Points per success. Fabulously-attractive dates are worth more Brownie Points, at the Ghostmaster�s discretion. If the ghost is rolled, you swallowed your tie while you were slurping up your spaghetti, spilled wine on her suede pants, agreed to get married, or performed some other shameful and despicable deed, and the date's a flop - you get no Brownie Points.<br />But perseverance is rewarded! Each time you roll a ghost before successfully dating a specific person, add an extra Brownie Point when you finally make it through the evening without embarrassing yourself.<br />Once you have successfully dated someone, you no longer receive Brownie Points for subsequent dates with him or her unless you stop dating that person for six months or longer."
+        }
+      ],
+      "dependsOn": {
+        "field": "goal",
+        "value": "Sex"
+      }
+    },
+    {
+      "type": "div",
+      "className": "alert alert-secondary",
+      "children": [
+        {
+          "name": "info-goal-Wealth",
+          "label": "Information",
+          "type": "textblock",
+          "className": "text-block",
+          "text": "Your character wants big bucks. Expensive cars. Tax shelters.<br />Depending on what kind of bookkeeping your Gamemaster is willing to put up with, you could earn Brownie Points for every thousand dollars you earn (or some other figure), for every fancy geegaw you scarf up, or for every inside tip you get on the Stock Market. Possibly, you could earn Brownie Points for every month your franchise stays in the black.<br />Of course, to be fair, for every valuable piece of Ghostbuster equipment you ruin, or every time your franchise is sued for property damage or fined for ignoring government regulations, the Ghostmaster may penalize you for a few Brownie Points."
+        }
+      ],
+      "dependsOn": {
+        "field": "goal",
+        "value": "Wealth"
+      }
+    },
+    {
+      "type": "div",
+      "className": "alert alert-secondary",
+      "children": [
+        {
+          "name": "info-goal-Fame",
+          "label": "Information",
+          "type": "textblock",
+          "className": "text-block",
+          "text": "Your character wants nothing more than to become a media darling � to appear on Johnny Carson, Mery, and Letterman � to be invited to the White House Easter Egg Hunt - to do an American Express commercial.<br />Every time your character's face appears in the local news media (newspaper: or television) your Ghostbuster gets a Ghost Die of Brownie Points. If the Ghostbuster appears in the national media (news magazines, or national interview shows) you get two dice of Brownie Points. For something really sensational, like a Time Magazine cover story, or being romantically linked with Joan Collin: in The Enquirer, you might get six or more dice of Brownie Points!<br />But if you roll a ghost while checking for Brownie Points � the photo wa: embarrassing or the stupid pet tricks ran too long and you got bumped off Letterman - you get zip Brownie Points."
+        }
+      ],
+      "dependsOn": {
+        "field": "goal",
+        "value": "Fame"
+      }
+    },
+    {
+      "type": "div",
+      "className": "alert alert-secondary",
+      "children": [
+        {
+          "name": "info-goal-Soulless Science",
+          "label": "Information",
+          "type": "textblock",
+          "className": "text-block",
+          "text": "The advancement of science is what's important. So what if a few folks are temporarily inconvenienced, or the water in the Hudson River dries up, or Iceland moves a couple of hundred miles north? If it advances Science, in the long run Mankind will thank you for it!<br />This is Egon's thing. If it�s your thing, too, every new discovery that advance the science of Ghostology gets you one Ghost Die of Brownie Points. An extremely important discovery is worth more if the Ghostmaster says so.<br />If you roll a ghost, your experiments haven't yet borne fruit, so you get zip. Keep track of the number of times you have rolled a Ghost: when you finally roll successfully, you can add one extra Brownie Point for each failed roll. After that, you start over again from scratch."
+        }
+      ],
+      "dependsOn": {
+        "field": "goal",
+        "value": "Soulless Science"
+      }
+    },
+    {
+      "type": "div",
+      "className": "alert alert-secondary",
+      "children": [
+        {
+          "name": "info-goal-Serving Humanity",
+          "label": "Information",
+          "type": "textblock",
+          "className": "text-block",
+          "text": "Boy Scout types: Andy Griffith, Mother Theresa, The Batman. You're interested in doing good deeds, in helping the oppressed, in Saving The World.<br />Every time you successfully finish a Ghostbusting adventure, you get Brownie Points. Each participant dedicated to the service of humanity gets one Ghost Die worth of Brownie Points for each Enemy of Mankind you vanquish. For real heavy dudes, the Ghostmaster may award two or more dice worth of points. Any victory over a government agency is a special case, and usually entails bonus award.<br />Each time (as decided by the Ghostmaster) that the team fails, you get nthing but add one Brownie Point to the ultimate total received when finally you rid the world of your redoubtable opponent."
+        }
+      ],
+      "dependsOn": {
+        "field": "goal",
+        "value": "Serving Humanity"
+      }
+    },
+    {
+      "name": "equipments",
+      "label": "Equipment",
+      "type": "array",
+      "component": {
+        "name": "equipments",
+        "label": "Equipment",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Alpine Gear",
+            "label": "Alpine Gear"
+          },
+          {
+            "value": "Aura Video-Analyzer",
+            "label": "Aura Video-Analyzer"
+          },
+          {
+            "value": "Beach Kit",
+            "label": "Beach Kit"
+          },
+          {
+            "value": "Bullhorn",
+            "label": "Bullhorn"
+          },
+          {
+            "value": "Cellular Phone",
+            "label": "Cellular Phone"
+          },
+          {
+            "value": "ECTO-1",
+            "label": "ECTO-1"
+          },
+          {
+            "value": "Ecto-Visors",
+            "label": "Ecto-Visors"
+          },
+          {
+            "value": "Geiger Counter",
+            "label": "Geiger Counter"
+          },
+          {
+            "value": "Ghost Trap",
+            "label": "Ghost Trap"
+          },
+          {
+            "value": "Infrared Camera",
+            "label": "Infrared Camera"
+          },
+          {
+            "value": "Parachute",
+            "label": "Parachute"
+          },
+          {
+            "value": "PKE Meter",
+            "label": "PKE Meter"
+          },
+          {
+            "value": "Protection Grid",
+            "label": "Protection Grid"
+          },
+          {
+            "value": "Proton Pack",
+            "label": "Proton Pack"
+          },
+          {
+            "value": "Scuba Gear",
+            "label": "Scuba Gear"
+          },
+          {
+            "value": "Secret Tomes of Occult Lore",
+            "label": "Secret Tomes of Occult Lore"
+          },
+          {
+            "value": "Video Camcorder",
+            "label": "Video Camcorder"
+          },
+          {
+            "value": "Walkie-Talkie",
+            "label": "Walkie-Talkie"
+          }
+        ]
+      }
+    }
+  ]
+}

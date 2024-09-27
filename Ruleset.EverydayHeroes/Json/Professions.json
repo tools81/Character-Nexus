@@ -1,1235 +1,1412 @@
 [
-    {
-        "name": "Academia",
-        "description": "You're dedicated to the pursuit of knowledge and to sharing it with the next generation. You work with a university, library, museum, or other institution of culture and learning.",
-        "samplecareers": "Librarian, museum docent, preschool teacher, private school teacher, public school teacher, university professor",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Intelligence"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Constitution",
-                    "Wisdom",
-                    "Charisma"
-                ],
-                "count": 2
-            }
-        ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Persuasion"
-                ],
-                "count": 1
-            },
-            {
-                "type": "Skill",
-                "choices": [
-                    "Natural Sciences",
-                    "Social Sciences"
-                ],
-                "count": 1
-            }
-        ],
-        "iconicequipment": "Laptop computer, laser pointer, school ID card",
-        "language": "Choose one additional language",
-        "wealthlevel": 3,
-        "specialfeature": "Debate. You can use Intelligence instead of Charisma on checks involving persuasion, as long as the check relates to topics of academia. You gain advantage on such checks."
-    },
-    {
-        "name": "Agriculture",
-        "description": "You work in an ancient profession of the civilized world: raising plants and animals for produce and trade. Your work involves established techniques and modern technology.",
-        "samplecareers": "Animal trainer, breeder, cowhand, crop scientist, farmer, rancher",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Dexterity",
-                    "Constitution",
-                    "Intelligence",
-                    "Wisdom",
-                    "Charisma"
-                ],
-                "count": 2
-            }
-        ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Mechanics",
-                    "Natural Sciences",
-                    "Survival",
-                    "Vehicles"
-                ],
-                "count": 4
-            },
-            {
-                "type": "Equipment",
-                "choices": [
-                    "Basic"
-                ],
-                "count": 1
-            }
-        ],
-        "iconicequipment": "A double-barrel shotgun, a dirty pickup truck, mechanics kit, a copy of the Farmer's Almanac",
-        "wealthlevel": 3,
-        "specialfeature": "Animal Husbandry. You gain advantage on Wisdom and Charisma checks made to influence animal behavior."
-    },
-    {
-        "name": "Athletics",
-        "description": "You make your living as an athlete. Choose your emphasis from among the many varieties of sport and fitness activities.",
-        "samplecareers": "Baseball, basketball, football, hockey, or soccer player, boxer, golfer, gymnast, martial artist, skater, Olympic athlete, professional athlete, swimmer, wrestler",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Constitution"
-                ],
-                "count": 3
-            }
-        ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Endurance"
-                ],
-                "count": 1
-            },
-            {
-                "type": "Skill",
-                "choices": [
-                    "Acrobatics",
-                    "Athletics"
-                ],
-                "count": 1
-            }
-        ],
-        "iconicequipment": "Sporting equipment, your team jersey, sponsored shoes, an autograph pen",
-        "wealthlevel": 3,
-        "specialfeature": "Sports. Choose one real-world sport. You gain advantage on Strength, Dexterity, and Constitution checks when performing an action performed as part of that sport."
-    },
-    {
-        "name": "Counseling",
-        "description": "You work as a therapist, helping people cope with the emotional stresses of life. Your deep understanding of the human psyche gives you insight into people's motives and emotions.",
-        "samplecareers": "Behavioral therapist, crisis counselor, marriage counselor, psychologist",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Wisdom"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Constitution",
-                    "Intelligence",
-                    "Charisma"
-                ],
-                "count": 1
-            }
-        ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Insight",
-                    "Persuasion",
-                    "Social Sciences"
-                ],
-                "count": 3
-            }
-        ],
-        "iconicequipment": "Professional attire, a pencil and notepad, a copy of the DSM",
-        "wealthlevel": 3,
-        "specialfeature": "Crisis Management. You have advantage on Charisma (Persuasion) checks made to calm someone down or to persuade someone against violent action."
-    },
-    {
-        "name": "Creative",
-        "description": "You're a professional artist or entertainer. Your creativity and dedication to your craft can carry you from busking for spare change to superstardom.",
-        "samplecareers": "Actor, artist, dancer, editor, game designer, graphic designer, musician, online personality, photographer, singer, songwriter, stage magician, writer",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Charisma"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Constitution",
-                    "Intelligence",
-                    "Wisdom"
-                ],
-                "count": 2
-            }
-        ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Insight"
-                ],
-                "count": 1
-            },
-            {
-                "type": "Skill",
-                "choices": [
-                    "Arts and Crafts",
-                    "Performance"
-                ],
-                "count": 1
-            }
-        ],
-        "iconicequipment": "Artisan's tools (for your artistic focus), fashionable clothing, examples of your work",
-        "language": "Choose one additional language",
-        "wealthlevel": 3,
-        "specialfeature": "Artistic Focus. Choose one type of performance or art as your specialty. You gain advantage on ability checks when practicing the chosen type of art or performance."
-    },
-    {
-        "name": "Crime",
-        "description": "You break the law to make your living. Regardless of your particular flavor of criminality, you must stay one step ahead of law enforcement and navigate a world where business disputes are settled by violence rather than lawyers.",
-        "samplecareers": "Bank robber, cat burglar, con artist, enforcer, forger, gang member, grifter, hitman, jewel thief",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Dexterity"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Constitution",
-                    "Intelligence",
-                    "Wisdom",
-                    "Charisma"
-                ],
-                "count": 2
-            }
-        ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Deception",
-                    "Intimidation",
-                    "Security",
-                    "Sleight of Hand",
-                    "Stealth",
-                    "Streetwise"
-                ],
-                "count": 3
-            },
-            {
-                "type": "Equipment",
-                "choices": [
-                    "Basic",
-                    "Advanced"
-                ],
-                "count": 2
-            }
-        ],
-        "iconicequipment": "Concealed carry pistol, cool jacket, a stolen luxury car with clean plates",
-        "wealthlevel": 2,
-        "specialfeature": "Criminal Record. You have advantage on Charisma checks when interacting with the criminal underworld. You have disadvantage on Charisma checks when interacting with anyone from a law enforcement or private security profession, if they know about your record."
-    },
-    {
-        "name": "Customer Service",
-        "description": "You work on the front lines of capitalism, greeting customers, taking their money, answering questions, and taking the heat for things you have no power over.",
-        "samplecareers": "Assistant manager, cashier, front desk, greeter, phone support, sales assistant, server, stocker, usher",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Charisma"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Constitution",
-                    "Intelligence",
-                    "Wisdom"
-                ],
-                "count": 3
-            }
-        ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Deception",
-                    "Persuasion"
-                ],
-                "count": 2
-            }
-        ],
-        "iconicequipment": "Uniform, bottle of aspirin, name tag, employee of the month certificate",
-        "wealthlevel": 1,
-        "specialfeature": "De-escalation. You gain advantage on Charisma checks to calm angry people or to persuade someone to show you mercy."
-    },
-    {
-        "name": "Daredevil",
-        "description": "You make your living doing dangerous things. Whatever the specifics, you put your life on the line every time you go to work. If that which does not kill you makes you stronger, you must be very strong indeed.",
-        "samplecareers": "Extreme sports enthusiast, search and rescue expert, skydiver, street racer, stunt performer, test pilot, test subject, treasure hunter",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Dexterity"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Constitution",
-                    "Intelligence",
-                    "Wisdom",
-                    "Charisma"
-                ],
-                "count": 3
-            }
-        ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Acrobatics",
-                    "Athletics",
-                    "Vehicles"
-                ],
-                "count": 3
-            },
-            {
-                "type": "Equipment",
-                "choices": [
-                    "Basic",
-                    "Improvised"
-                ],
-                "count": 2
-            }
-        ],
-        "iconicequipment": "First aid kit, rugged clothes, a cool muscle car",
-        "wealthlevel": 3,
-        "specialfeature": "Safety First. You take half damage as a passenger in a vehicle crash. (Drivers are also considered passengers in the vehicle rules.)"
-    },
-    {
-        "name": "Emergency Services",
-        "description": "You dedicate yourself to saving lives by standing among the ranks of the nation's first responders. The work may be stressful, but it is also personally rewarding.",
-        "samplecareers": "Ambulance driver, emergency medical technician, firefighter, paramedic, rescue worker",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Dexterity"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Constitution",
-                    "Intelligence",
-                    "Wisdom",
-                    "Charisma"
-                ],
-                "count": 2
-            }
-        ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Medicine",
-                    "Vehicles"
-                ],
-                "count": 2
-            }
-        ],
-        "iconicequipment": "A first aid kit and a firefighters axe",
-        "wealthlevel": 3,
-        "specialfeature": "Emergency Medicine. If you successfully use the First Aid action to stabilize an ally, the ally can spend one Hit Die to recover hit points equal to the appropriate die roll plus their Constitution modifier."
-    },
-    {
-        "name": "Espionage",
-        "description": "You work as a clandestine field agent. Though most of your work involves collecting intelligence through your contacts, you must occasionally put your life on the line for the sake of your country.",
-        "samplecareers": "Diplomatic attaché, field operative, secret agent, spy",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Dexterity",
-                    "Intelligence"
-                ],
-                "count": 1
-            }
-        ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Deception",
-                    "Security",
-                    "Stealth"
-                ],
-                "count": 3
-            },
-            {
-                "type": "Skill",
-                "choices": [
-                    "Acrobatics",
-                    "Athletics"
-                ],
-                "count": 1
-            },
-            {
-                "type": "Equipment",
-                "choices": [
-                    "Basic",
-                    "Advanced"
-                ],
-                "count": 2
-            }
-        ],
-        "iconicequipment": "A concealed carry pistol or a holdout pistol, fake passport and ID, surveillance kit, a memento from the spy who loved you",
-        "language": "Choose one additional language not commonly spoken in your country of origin",
-        "wealthlevel": 3,
-        "specialfeature": "Safe House. While employed by the agency, you have access to a level 3 safe house somewhere in the city. This safe house serves as a secure haven that no one else knows about and can be used for a long rest. (See chapter 6 for details on safe houses.)"
-    },
-    {
-        "name": "Faith",
-        "description": "You dedicate your life to your religious faith. This work involves both the rigors of scholarship and becoming a spiritual leader for your parishioners.",
-        "samplecareers": "Ordained clergy of any faith, religious studies expert, theological scholar",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Wisdom"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Constitution",
-                    "Intelligence",
-                    "Charisma"
-                ],
-                "count": 2
-            }
-        ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Insight",
-                    "Persuasion",
-                    "Social Sciences"
-                ],
-                "count": 3
-            }
-        ],
-        "iconicequipment": "Vestments of your faith, a symbol of your faith, a holy book or scroll",
-        "wealthlevel": 2,
-        "specialfeature": "Trusted. You gain advantage on Charisma checks when dealing with committed members of your faith."
-    },
-    {
-        "name": "Finance",
-        "description": "In a capitalist world, capital is king. Whether you own a sizable business, provide venture capital, or play the markets for a living, your job involves turning money into more money.",
-        "samplecareers": "Accountant, day trader, finance advisor, investment banker, venture capitalist",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Intelligence"
-                ],
-                "count": 1
-            }
-        ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Insight",
-                    "Persuasion"
-                ],
-                "count": 2
-            }
-        ],
-        "iconicequipment": "A large office, professional clothes, a luxury car",
-        "wealthlevel": 5,
-        "specialfeature": "Personal Assistant. You employ a personal assistant who runs routine errands for you whenever you need them."
-    },
-    {
-        "name": "Independent",
-        "description": "You're independently wealthy, deriving your income from your considerable standing assets such as family holdings and trust funds. You spend your time in leisure, pursuing volunteer work, or whatever interests you.",
-        "samplecareers": "Dilettante, trust fund kid, well-off pensioner or retiree",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Charisma"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Constitution",
-                    "Intelligence",
-                    "Wisdom"
-                ],
-                "count": 1
-            }
-        ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Acrobatics",
-                    "Arts and Crafts",
-                    "Athletics",
-                    "Computers",
-                    "Deception",
-                    "Endurance",
-                    "Insight",
-                    "Intimidation",
-                    "Investigation",
-                    "Mechanics",
-                    "Medicine",
-                    "Natural Sciences",
-                    "Perception",
-                    "Performance",
-                    "Persuasion",
-                    "Security",
-                    "Sleight of Hand",
-                    "Social Sciences",
-                    "Stealth",
-                    "Streetwise",
-                    "Survival",
-                    "Vehicles"
-                ],
-                "count": 2
-            }
-        ],
-        "iconicequipment": "Tasteful clothing, platinum engraved debit card, a monogrammed scarf",
-        "wealthlevel": 4,
-        "specialfeature": "Pulling Strings. You know how to wheedle favors from others and gain advantage on Charisma checks to receive special privileges, such as backstage access, tickets to a sold-out show, or a meeting with a public official."
-    },
-    {
-        "name": "Information Technology",
-        "description": "As an IT professional, you are one of the most sought-after professionals in the modern world. Whatever your specialty, you’re a person of the information era, plugged in and churning through the dataverse.",
-        "samplecareers": "Hacker, IT support, software developer, software engineer",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Intelligence"
-                ],
-                "count": 1
-            }
-        ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Computers",
-                    "Security"
-                ],
-                "count": 2
-            }
-        ],
-        "iconicequipment": "Laptop computer, mobile hotspot, an energy drink, and a protein bar",
-        "wealthlevel": 4,
-        "specialfeature": "Tech Support. You gain advantage on Intelligence (Computer) checks to fix a broken computer system or to understand how to operate a computer system correctly."
-    },
-    {
+  {
+    "name": "Academia",
+    "description": "You're dedicated to the pursuit of knowledge and to sharing it with the next generation. You work with a university, library, museum, or other institution of culture and learning.",
+    "samplecareers": "Librarian, museum docent, preschool teacher, private school teacher, public school teacher, university professor",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
         "name": "Intelligence",
-        "description": "You work for a government intelligence agency or private security firm, collecting and analyzing actionable information for your employer.",
-        "samplecareers": "Analyst, counterterrorism expert, cryptographer, handler, operations officer, profiler",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Intelligence"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Constitution",
-                    "Wisdom",
-                    "Charisma"
-                ],
-                "count": 1
-            }
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 3
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Dexterity",
+          "Constitution",
+          "Wisdom",
+          "Charisma"
         ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Computers",
-                    "Investigation"
-                ],
-                "count": 2
-            }
+        "count": 2,
+        "value": 1
+      },
+      {
+        "type": "Skill",
+        "choices": [
+          "Natural Sciences",
+          "Social Sciences"
         ],
-        "iconicequipment": "Laptop computer, security clearance card, a secure briefcase",
-        "language": "Choose one additional language",
-        "wealthlevel": 4,
-        "specialfeature": "That's Need to Know. Your extensive access to classified government data gives you advantage on Intelligence (Investigation) checks made to gather information about people and organizations."
-    },
-    {
-        "name": "Investigative Services",
-        "description": "You work for the private sector, dealing with civil investigations and protecting your clients’ assets from thieves and saboteurs.",
-        "samplecareers": "Bounty hunter, corporate security, military contractor, private investigator, repo specialist",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Intelligence"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Constitution",
-                    "Wisdom",
-                    "Charisma"
-                ],
-                "count": 1
-            }
+        "count": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Persuasion"
+      }
+    ],
+    "iconicequipment": "Laptop computer, laser pointer, school ID card",
+    "language": "Choose one additional language",
+    "specialfeature": "Debate. You can use Intelligence instead of Charisma on checks involving persuasion, as long as the check relates to topics of academia. You gain advantage on such checks."
+  },
+  {
+    "name": "Agriculture",
+    "description": "You work in an ancient profession of the civilized world: raising plants and animals for produce and trade. Your work involves established techniques and modern technology.",
+    "samplecareers": "Animal trainer, breeder, cowhand, crop scientist, farmer, rancher",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Strength",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 3
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Dexterity",
+          "Constitution",
+          "Intelligence",
+          "Wisdom",
+          "Charisma"
         ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Insight",
-                    "Investigation",
-                    "Security"
-                ],
-                "count": 3
-            },
-            {
-                "type": "Equipment",
-                "choices": [
-                    "Basic",
-                    "Advanced"
-                ],
-                "count": 2
-            }
+        "count": 2,
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Mechanics"
+      },
+      {
+        "type": "Skill",
+        "value": "Natural Sciences"
+      },
+      {
+        "type": "Skill",
+        "value": "Survival"
+      },
+      {
+        "type": "Skill",
+        "value": "Vehicles"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Basic"
+      }
+    ],
+    "iconicequipment": "A double-barrel shotgun, a dirty pickup truck, mechanics kit, a copy of the Farmer's Almanac",
+    "specialfeature": "Animal Husbandry. You gain advantage on Wisdom and Charisma checks made to influence animal behavior."
+  },
+  {
+    "name": "Athletics",
+    "description": "You make your living as an athlete. Choose your emphasis from among the many varieties of sport and fitness activities.",
+    "samplecareers": "Baseball, basketball, football, hockey, or soccer player, boxer, golfer, gymnast, martial artist, skater, Olympic athlete, professional athlete, swimmer, wrestler",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Strength",
+        "value": 1
+      },
+      {
+        "type": "AbilityScore",
+        "name": "Dexterity",
+        "value": 1
+      },
+      {
+        "type": "AbilityScore",
+        "name": "Constitution",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 3
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Endurance"
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "Skill",
+        "choices": [
+          "Acrobatics",
+          "Athletics"
         ],
-        "iconicequipment": "Inconspicuous clothing, laptop computer, concealed carry pistol, SLR camera, security license",
-        "wealthlevel": 3,
-        "specialfeature": "Investigative Expertise. You gain expertise in either Investigation or Security. You must be proficient in a skill to gain expertise in that skill."
-    },
-    {
-        "name": "Journalism",
-        "description": "You're passionate about uncovering things people want to keep hidden and then presenting an engaging report to inform the public about it. Along the way, you discover nefarious deeds, injustices, and buried truths.",
-        "samplecareers": "Blogger, investigative reporter, journalist, news anchor, paparazzi, photojournalist",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Wisdom"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Constitution",
-                    "Intelligence",
-                    "Charisma"
-                ],
-                "count": 2
-            }
+        "count": 1
+      }
+    ],
+    "iconicequipment": "Sporting equipment, your team jersey, sponsored shoes, an autograph pen",
+    "specialfeature": "Sports. Choose one real-world sport. You gain advantage on Strength, Dexterity, and Constitution checks when performing an action performed as part of that sport."
+  },
+  {
+    "name": "Counseling",
+    "description": "You work as a therapist, helping people cope with the emotional stresses of life. Your deep understanding of the human psyche gives you insight into people's motives and emotions.",
+    "samplecareers": "Behavioral therapist, crisis counselor, marriage counselor, psychologist",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Wisdom",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 3
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Dexterity",
+          "Constitution",
+          "Intelligence",
+          "Charisma"
         ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Insight",
-                    "Investigation",
-                    "Streetwise"
-                ],
-                "count": 3
-            }
+        "count": 1,
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Insight"
+      },
+      {
+        "type": "Skill",
+        "value": "Persuasion"
+      },
+      {
+        "type": "Skill",
+        "value": "Social Sciences"
+      }
+    ],
+    "iconicequipment": "Professional attire, a pencil and notepad, a copy of the DSM",
+    "specialfeature": "Crisis Management. You have advantage on Charisma (Persuasion) checks made to calm someone down or to persuade someone against violent action."
+  },
+  {
+    "name": "Creative",
+    "description": "You're a professional artist or entertainer. Your creativity and dedication to your craft can carry you from busking for spare change to superstardom.",
+    "samplecareers": "Actor, artist, dancer, editor, game designer, graphic designer, musician, online personality, photographer, singer, songwriter, stage magician, writer",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Charisma",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 3
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Dexterity",
+          "Constitution",
+          "Intelligence",
+          "Wisdom"
         ],
-        "iconicequipment": "Digital recorder, notepad and pencil, press credentials, laptop computer",
-        "language": "Choose one additional language",
-        "wealthlevel": 2,
-        "specialfeature": "I'm with the Press. You gain advantage on Charisma (Persuasion) checks made to convince people to talk with you and answer basic questions. At the GM's discretion, your credentials may allow you to access off-limit areas."
-    },
-    {
-        "name": "Law",
-        "description": "You apply the written law to real world situations, working for the government, a company, a law firm, or in private practice. Your expertise in legal matters is invaluable to your clients.",
-        "samplecareers": "Corporate lawyer, judge, patent lawyer, prosecutor, public defender",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Intelligence"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Constitution",
-                    "Wisdom",
-                    "Charisma"
-                ],
-                "count": 1
-            }
+        "count": 2,
+        "value": 1
+      },
+      {
+        "type": "Skill",
+        "choices": [
+          "Arts and Crafts",
+          "Performance"
         ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Investigation",
-                    "Social Sciences"
-                ],
-                "count": 2
-            }
+        "count": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Insight"
+      }
+    ],
+    "iconicequipment": "Artisan's tools (for your artistic focus), fashionable clothing, examples of your work",
+    "language": "Choose one additional language",
+    "specialfeature": "Artistic Focus. Choose one type of performance or art as your specialty. You gain advantage on ability checks when practicing the chosen type of art or performance."
+  },
+  {
+    "name": "Crime",
+    "description": "You break the law to make your living. Regardless of your particular flavor of criminality, you must stay one step ahead of law enforcement and navigate a world where business disputes are settled by violence rather than lawyers.",
+    "samplecareers": "Bank robber, cat burglar, con artist, enforcer, forger, gang member, grifter, hitman, jewel thief",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Dexterity",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 2
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Constitution",
+          "Intelligence",
+          "Wisdom",
+          "Charisma"
         ],
-        "iconicequipment": "Professional clothing, briefcase, bar license, supreme court autographed photo",
-        "wealthlevel": 4,
-        "specialfeature": "Dangerous Mind. You can use Intelligence instead of Charisma on checks involving intimidation or persuasion as long as you cite the law when doing so."
-    },
-    {
-        "name": "Law Encforcement",
-        "description": "Enforcing the law isn't an easy job. You take pride in your work and strive to serve and protect the public.",
-        "samplecareers": "Border agent, detective, narcotics agent, FBI agent, parole officer, police officer, state trooper, S.W.A.T., undercover cop, U.S. marshal",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Constitution"
-                ],
-                "count": 2
-            }
+        "count": 2,
+        "value": 1
+      },
+      {
+        "type": "Skill",
+        "choices": [
+          "Deception",
+          "Intimidation",
+          "Security",
+          "Sleight of Hand",
+          "Stealth",
+          "Streetwise"
         ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Investigation",
-                    "Perception",
-                    "Vehicles"
-                ],
-                "count": 3
-            },
-            {
-                "type": "Equipment",
-                "choices": [
-                    "Basic",
-                    "Advanced"
-                ],
-                "count": 2
-            }
+        "count": 3
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "EquipmentProficiency",
+        "value": "Basic"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Advanced"
+      }
+    ],
+    "iconicequipment": "Concealed carry pistol, cool jacket, a stolen luxury car with clean plates",
+    "specialfeature": "Criminal Record. You have advantage on Charisma checks when interacting with the criminal underworld. You have disadvantage on Charisma checks when interacting with anyone from a law enforcement or private security profession, if they know about your record."
+  },
+  {
+    "name": "Customer Service",
+    "description": "You work on the front lines of capitalism, greeting customers, taking their money, answering questions, and taking the heat for things you have no power over.",
+    "samplecareers": "Assistant manager, cashier, front desk, greeter, phone support, sales assistant, server, stocker, usher",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Charisma",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 1
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Dexterity",
+          "Constitution",
+          "Intelligence",
+          "Wisdom"
         ],
-        "iconicequipment": "Police uniform, 9mm semi-auto service pistol, TASER, badge, handcuffs, police radio, use of an official vehicle",
-        "wealthlevel": 3,
-        "specialfeature": "Police Powers. You can make arrests, investigate suspected crimes, and call for backup using your police radio."
-    },
-    {
-        "name": "Medicine",
-        "description": "Your dedication to the practice of medicine has given you the opportunity to save many lives and make a difference for everyday people. The practice is both an intellectual challenge and a weighty responsibility.",
-        "samplecareers": "Dentist, ER doctor, general practice physician, nurse, psychiatrist, specialist physician, surgeon, veterinarian",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Intelligence"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Constitution",
-                    "Wisdom",
-                    "Charisma"
-                ],
-                "count": 2
-            }
+        "count": 3,
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Deception"
+      },
+      {
+        "type": "Skill",
+        "value": "Persuasion"
+      }
+    ],
+    "iconicequipment": "Uniform, bottle of aspirin, name tag, employee of the month certificate",
+    "specialfeature": "De-escalation. You gain advantage on Charisma checks to calm angry people or to persuade someone to show you mercy."
+  },
+  {
+    "name": "Daredevil",
+    "description": "You make your living doing dangerous things. Whatever the specifics, you put your life on the line every time you go to work. If that which does not kill you makes you stronger, you must be very strong indeed.",
+    "samplecareers": "Extreme sports enthusiast, search and rescue expert, skydiver, street racer, stunt performer, test pilot, test subject, treasure hunter",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Dexterity",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 3
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Constitution",
+          "Intelligence",
+          "Wisdom",
+          "Charisma"
         ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Insight",
-                    "Medicine"
-                ],
-                "count": 2
-            }
+        "count": 3,
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Acrobatics"
+      },
+      {
+        "type": "Skill",
+        "value": "Athletics"
+      },
+      {
+        "type": "Skill",
+        "value": "Vehicles"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Basic"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Improvised"
+      }
+    ],
+    "iconicequipment": "First aid kit, rugged clothes, a cool muscle car",
+    "specialfeature": "Safety First. You take half damage as a passenger in a vehicle crash. (Drivers are also considered passengers in the vehicle rules.)"
+  },
+  {
+    "name": "Emergency Services",
+    "description": "You dedicate yourself to saving lives by standing among the ranks of the nation's first responders. The work may be stressful, but it is also personally rewarding.",
+    "samplecareers": "Ambulance driver, emergency medical technician, firefighter, paramedic, rescue worker",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Dexterity",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 3
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Constitution",
+          "Intelligence",
+          "Wisdom",
+          "Charisma"
         ],
-        "iconicequipment": "Medical license, a prescription pad, a first aid kit",
-        "wealthlevel": 3,
-        "specialfeature": "Prescriptions. You have access to a range of prescription pharmaceuticals and otherwise-restricted drugs pertaining to your medical discipline. Abuse of this power can put you in serious legal jeopardy."
-    },
-    {
-        "name": "Military",
-        "description": "You are a proud member of the national armed forces. As career military, you're trained for fighting and learned a range of useful skills.",
-        "samplecareers": "Air Force special tactics, Army ranger, enlisted soldier, Green Beret, Marine, Military police, Navy SEAL, officer, pilot, seaman",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Constitution"
-                ],
-                "count": 2
-            }
+        "count": 2,
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Medicine"
+      },
+      {
+        "type": "Skill",
+        "value": "Vehicles"
+      }
+    ],
+    "iconicequipment": "A first aid kit and a firefighters axe",
+    "specialfeature": "Emergency Medicine. If you successfully use the First Aid action to stabilize an ally, the ally can spend one Hit Die to recover hit points equal to the appropriate die roll plus their Constitution modifier."
+  },
+  {
+    "name": "Espionage",
+    "description": "You work as a clandestine field agent. Though most of your work involves collecting intelligence through your contacts, you must occasionally put your life on the line for the sake of your country.",
+    "samplecareers": "Diplomatic attaché, field operative, secret agent, spy",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Dexterity",
+        "value": 1
+      },
+      {
+        "type": "AbilityScore",
+        "name": "Intelligence",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 3
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "Skill",
+        "value": "Acrobatics"
+      },
+      {
+        "type": "Skill",
+        "value": "Athletics"
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Deception"
+      },
+      {
+        "type": "Skill",
+        "value": "Security"
+      },
+      {
+        "type": "Skill",
+        "value": "Stealth"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Basic"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Advanced"
+      }
+    ],
+    "iconicequipment": "A concealed carry pistol or a holdout pistol, fake passport and ID, surveillance kit, a memento from the spy who loved you",
+    "language": "Choose one additional language not commonly spoken in your country of origin",
+    "specialfeature": "Safe House. While employed by the agency, you have access to a level 3 safe house somewhere in the city. This safe house serves as a secure haven that no one else knows about and can be used for a long rest. (See chapter 6 for details on safe houses.)"
+  },
+  {
+    "name": "Faith",
+    "description": "You dedicate your life to your religious faith. This work involves both the rigors of scholarship and becoming a spiritual leader for your parishioners.",
+    "samplecareers": "Ordained clergy of any faith, religious studies expert, theological scholar",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Wisdom",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 2
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Dexterity",
+          "Constitution",
+          "Intelligence",
+          "Charisma"
         ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Athletics",
-                    "Perception",
-                    "Stealth"
-                ],
-                "count": 3
-            },
-            {
-                "type": "Equipment",
-                "choices": [
-                    "Basic",
-                    "Advanced",
-                    "Military"
-                ],
-                "count": 3
-            }
+        "count": 2,
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Insight"
+      },
+      {
+        "type": "Skill",
+        "value": "Persuasion"
+      },
+      {
+        "type": "Skill",
+        "value": "Social Sciences"
+      }
+    ],
+    "iconicequipment": "Vestments of your faith, a symbol of your faith, a holy book or scroll",
+    "specialfeature": "Trusted. You gain advantage on Charisma checks when dealing with committed members of your faith."
+  },
+  {
+    "name": "Finance",
+    "description": "In a capitalist world, capital is king. Whether you own a sizable business, provide venture capital, or play the markets for a living, your job involves turning money into more money.",
+    "samplecareers": "Accountant, day trader, finance advisor, investment banker, venture capitalist",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Intelligence",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 5
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Insight"
+      },
+      {
+        "type": "Skill",
+        "value": "Persuasion"
+      }
+    ],
+    "iconicequipment": "A large office, professional clothes, a luxury car",
+    "specialfeature": "Personal Assistant. You employ a personal assistant who runs routine errands for you whenever you need them."
+  },
+  {
+    "name": "Independent",
+    "description": "You're independently wealthy, deriving your income from your considerable standing assets such as family holdings and trust funds. You spend your time in leisure, pursuing volunteer work, or whatever interests you.",
+    "samplecareers": "Dilettante, trust fund kid, well-off pensioner or retiree",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Charisma",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 4
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Dexterity",
+          "Constitution",
+          "Intelligence",
+          "Wisdom"
         ],
-        "iconicequipment": "Military uniform, assault rifle (enlisted) or 9mm semi-auto service pistol (officer), medium ballistic vest, ballistic helmet, military ID, a letter from your sweetheart",
-        "wealthlevel": 2,
-        "specialfeature": "Servicemember. You gain the following benefits:<br /><ul><li>When on mission or on base, you have access to military weapons, vehicles, and equipment. This includes the weapons and armor in your iconic equipment.</li><li>You can travel for free to many destinations if you're traveling alone.</li><li>You are provided with room and board while living on base.</li></ul>"
-    },
-    {
-        "name": "Outdoors",
-        "description": "You prefer to work in the great outdoors rather than participate in the indoor rat race. The pay is not great, but you much prefer the company you keep.",
-        "samplecareers": "Conservationist, explorer, fish and game warden, hunter, mountain climber, park ranger, survivalist, wildlife photographer",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Constitution"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Intelligence",
-                    "Wisdom",
-                    "Charisma"
-                ],
-                "count": 1
-            }
+        "count": 1,
+        "value": 1
+      },
+      {
+        "type": "Skill",
+        "choices": [
+          "Acrobatics",
+          "Arts and Crafts",
+          "Athletics",
+          "Computers",
+          "Deception",
+          "Endurance",
+          "Insight",
+          "Intimidation",
+          "Investigation",
+          "Mechanics",
+          "Medicine",
+          "Natural Sciences",
+          "Perception",
+          "Performance",
+          "Persuasion",
+          "Security",
+          "Sleight of Hand",
+          "Social Sciences",
+          "Stealth",
+          "Streetwise",
+          "Survival",
+          "Vehicles"
         ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Athletics",
-                    "Perception",
-                    "Stealth",
-                    "Survival"
-                ],
-                "count": 4
-            },
-            {
-                "type": "Equipment",
-                "choices": [
-                    "Basic",
-                    "Advanced"
-                ],
-                "count": 2
-            }
+        "count": 2
+      }
+    ],
+    "iconicequipment": "Tasteful clothing, platinum engraved debit card, a monogrammed scarf",
+    "specialfeature": "Pulling Strings. You know how to wheedle favors from others and gain advantage on Charisma checks to receive special privileges, such as backstage access, tickets to a sold-out show, or a meeting with a public official."
+  },
+  {
+    "name": "Information Technology",
+    "description": "As an IT professional, you are one of the most sought-after professionals in the modern world. Whatever your specialty, you’re a person of the information era, plugged in and churning through the dataverse.",
+    "samplecareers": "Hacker, IT support, software developer, software engineer",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Intelligence",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 4
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Computers"
+      },
+      {
+        "type": "Skill",
+        "value": "Security"
+      }
+    ],
+    "iconicequipment": "Laptop computer, mobile hotspot, an energy drink, and a protein bar",
+    "specialfeature": "Tech Support. You gain advantage on Intelligence (Computer) checks to fix a broken computer system or to understand how to operate a computer system correctly."
+  },
+  {
+    "name": "Intelligence",
+    "description": "You work for a government intelligence agency or private security firm, collecting and analyzing actionable information for your employer.",
+    "samplecareers": "Analyst, counterterrorism expert, cryptographer, handler, operations officer, profiler",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Intelligence",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 4
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Dexterity",
+          "Constitution",
+          "Wisdom",
+          "Charisma"
         ],
-        "iconicequipment": "A hunting rifle, a 4-wheel drive vehicle, frame backpack, camping kit",
-        "wealthlevel": 2,
-        "specialfeature": "Tracker. You gain advantage on Wisdom (Survival) checks to track in a wilderness setting."
-    },
-    {
-        "name": "Politics",
-        "description": "A passion for helping others or a desire for power drew you into public service. The job does grant both power and privilege. Just don’t let it go to your head.",
-        "samplecareers": "Councilmember, governor, legislator, mayor, political consultant",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Charisma"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Constitution",
-                    "Intelligence",
-                    "Wisdom"
-                ],
-                "count": 2
-            }
+        "count": 1,
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Computers"
+      },
+      {
+        "type": "Skill",
+        "value": "Investigation"
+      }
+    ],
+    "iconicequipment": "Laptop computer, security clearance card, a secure briefcase",
+    "language": "Choose one additional language",
+    "specialfeature": "That's Need to Know. Your extensive access to classified government data gives you advantage on Intelligence (Investigation) checks made to gather information about people and organizations."
+  },
+  {
+    "name": "Investigative Services",
+    "description": "You work for the private sector, dealing with civil investigations and protecting your clients’ assets from thieves and saboteurs.",
+    "samplecareers": "Bounty hunter, corporate security, military contractor, private investigator, repo specialist",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Intelligence",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 3
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Dexterity",
+          "Constitution",
+          "Wisdom",
+          "Charisma"
         ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Deception",
-                    "Persuasion"
-                ],
-                "count": 2
-            }
+        "count": 1,
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "choices": "Insight"
+      },
+      {
+        "type": "Skill",
+        "value": "Investigation"
+      },
+      {
+        "type": "Skill",
+        "value": "Security"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Basic"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Advanced"
+      }
+    ],
+    "iconicequipment": "Inconspicuous clothing, laptop computer, concealed carry pistol, SLR camera, security license",
+    "specialfeature": "Investigative Expertise. You gain expertise in either Investigation or Security. You must be proficient in a skill to gain expertise in that skill."
+  },
+  {
+    "name": "Journalism",
+    "description": "You're passionate about uncovering things people want to keep hidden and then presenting an engaging report to inform the public about it. Along the way, you discover nefarious deeds, injustices, and buried truths.",
+    "samplecareers": "Blogger, investigative reporter, journalist, news anchor, paparazzi, photojournalist",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Wisdom",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 2
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Dexterity",
+          "Constitution",
+          "Intelligence",
+          "Charisma"
         ],
-        "iconicequipment": "A trunk full of campaign posters and buttons, nonthreatening attire, a stump speech",
-        "wealthlevel": 3,
-        "specialfeature": "Grassroots Organizing. You have a cadre of dedicated constituents you can call on for tasks, such as picketing a corporation or marching for a cause. Their willingness to act is at the GM's discretion."
-    },
-    {
-        "name": "Private Security",
-        "description": "You ensure that people, places, or things under your protection come to no harm while you remain on guard. It's rarely exciting, but the job gives you plenty of time to reflect.",
-        "samplecareers": "Bodyguard, bouncer, mall cop, night guard, security guard",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Wisdom"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Constitution",
-                    "Intelligence",
-                    "Charisma"
-                ],
-                "count": 2
-            }
+        "count": 2,
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Insight"
+      },
+      {
+        "type": "Skill",
+        "value": "Investigation"
+      },
+      {
+        "type": "Skill",
+        "value": "Streetwise"
+      }
+    ],
+    "iconicequipment": "Digital recorder, notepad and pencil, press credentials, laptop computer",
+    "language": "Choose one additional language",
+    "specialfeature": "I'm with the Press. You gain advantage on Charisma (Persuasion) checks made to convince people to talk with you and answer basic questions. At the GM's discretion, your credentials may allow you to access off-limit areas."
+  },
+  {
+    "name": "Law",
+    "description": "You apply the written law to real world situations, working for the government, a company, a law firm, or in private practice. Your expertise in legal matters is invaluable to your clients.",
+    "samplecareers": "Corporate lawyer, judge, patent lawyer, prosecutor, public defender",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Intelligence",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 4
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Dexterity",
+          "Constitution",
+          "Wisdom",
+          "Charisma"
         ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Intimidation",
-                    "Perception",
-                    "Security"
-                ],
-                "count": 3
-            },
-            {
-                "type": "Equipment",
-                "choices": [
-                    "Basic"
-                ],
-                "count": 1
-            }
+        "count": 1,
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Investigation"
+      },
+      {
+        "type": "Skill",
+        "value": "Social Sciences"
+      }
+    ],
+    "iconicequipment": "Professional clothing, briefcase, bar license, supreme court autographed photo",
+    "specialfeature": "Dangerous Mind. You can use Intelligence instead of Charisma on checks involving intimidation or persuasion as long as you cite the law when doing so."
+  },
+  {
+    "name": "Law Encforcement",
+    "description": "Enforcing the law isn't an easy job. You take pride in your work and strive to serve and protect the public.",
+    "samplecareers": "Border agent, detective, narcotics agent, FBI agent, parole officer, police officer, state trooper, S.W.A.T., undercover cop, U.S. marshal",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Strength",
+        "value": 1
+      },
+      {
+        "type": "AbilityScore",
+        "name": "Constitution",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 3
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Investigation"
+      },
+      {
+        "type": "Skill",
+        "value": "Perception"
+      },
+      {
+        "type": "Skill",
+        "value": "Vehicles"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Basic"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Advanced"
+      }
+    ],
+    "iconicequipment": "Police uniform, 9mm semi-auto service pistol, TASER, badge, handcuffs, police radio, use of an official vehicle",
+    "specialfeature": "Police Powers. You can make arrests, investigate suspected crimes, and call for backup using your police radio."
+  },
+  {
+    "name": "Medicine",
+    "description": "Your dedication to the practice of medicine has given you the opportunity to save many lives and make a difference for everyday people. The practice is both an intellectual challenge and a weighty responsibility.",
+    "samplecareers": "Dentist, ER doctor, general practice physician, nurse, psychiatrist, specialist physician, surgeon, veterinarian",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Intelligence",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 3
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Dexterity",
+          "Constitution",
+          "Wisdom",
+          "Charisma"
         ],
-        "iconicequipment": "Your trusty flashlight, an official-looking badge, orthopedic shoe inserts",
-        "wealthlevel": 2,
-        "specialfeature": "I'm Calling the Police. You have a good relationship with law enforcement. You gain advantage on Charisma checks when dealing with law enforcement. Furthermore, the police respond if you call to report a security problem related to your official duties."
-    },
-    {
-        "name": "Science",
-        "description": "You are dedicated to advancing the systems of knowledge, whether for public good or personal gain. You might be a resident scientist at a research institute, working for a large corporation, or a mad genius tinkering in your basement.",
-        "samplecareers": "Data analyst, engineer, inventor, lab researcher, mathematician, product developer, research scientist",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Intelligence"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Constitution",
-                    "Wisdom",
-                    "Charisma"
-                ],
-                "count": 2
-            }
+        "count": 2,
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Insight"
+      },
+      {
+        "type": "Skill",
+        "value": "Medicine"
+      }
+    ],
+    "iconicequipment": "Medical license, a prescription pad, a first aid kit",
+    "specialfeature": "Prescriptions. You have access to a range of prescription pharmaceuticals and otherwise-restricted drugs pertaining to your medical discipline. Abuse of this power can put you in serious legal jeopardy."
+  },
+  {
+    "name": "Military",
+    "description": "You are a proud member of the national armed forces. As career military, you're trained for fighting and learned a range of useful skills.",
+    "samplecareers": "Air Force special tactics, Army ranger, enlisted soldier, Green Beret, Marine, Military police, Navy SEAL, officer, pilot, seaman",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Strength",
+        "value": 1
+      },
+      {
+        "type": "AbilityScore",
+        "name": "Constitution",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 2
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Athletics"
+      },
+      {
+        "type": "Skill",
+        "value": "Perception"
+      },
+      {
+        "type": "Skill",
+        "value": "Stealth"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Basic"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Advanced"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Military"
+      }
+    ],
+    "iconicequipment": "Military uniform, assault rifle (enlisted) or 9mm semi-auto service pistol (officer), medium ballistic vest, ballistic helmet, military ID, a letter from your sweetheart",
+    "specialfeature": "Servicemember. You gain the following benefits:<br /><ul><li>When on mission or on base, you have access to military weapons, vehicles, and equipment. This includes the weapons and armor in your iconic equipment.</li><li>You can travel for free to many destinations if you're traveling alone.</li><li>You are provided with room and board while living on base.</li></ul>"
+  },
+  {
+    "name": "Outdoors",
+    "description": "You prefer to work in the great outdoors rather than participate in the indoor rat race. The pay is not great, but you much prefer the company you keep.",
+    "samplecareers": "Conservationist, explorer, fish and game warden, hunter, mountain climber, park ranger, survivalist, wildlife photographer",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Constitution",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 2
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Dexterity",
+          "Intelligence",
+          "Wisdom",
+          "Charisma"
         ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Computers",
-                    "Natural Sciences"
-                ],
-                "count": 2
-            }
+        "count": 1,
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Athletics"
+      },
+      {
+        "type": "Skill",
+        "value": "Perception"
+      },
+      {
+        "type": "Skill",
+        "value": "Stealth"
+      },
+      {
+        "type": "Skill",
+        "value": "Survival"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Basic"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Advanced"
+      }
+    ],
+    "iconicequipment": "A hunting rifle, a 4-wheel drive vehicle, frame backpack, camping kit",
+    "specialfeature": "Tracker. You gain advantage on Wisdom (Survival) checks to track in a wilderness setting."
+  },
+  {
+    "name": "Politics",
+    "description": "A passion for helping others or a desire for power drew you into public service. The job does grant both power and privilege. Just don’t let it go to your head.",
+    "samplecareers": "Councilmember, governor, legislator, mayor, political consultant",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Charisma",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 3
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Dexterity",
+          "Constitution",
+          "Intelligence",
+          "Wisdom"
         ],
-        "iconicequipment": "Lab coat, laptop computer, a patent application",
-        "wealthlevel": 3,
-        "specialfeature": "Science Lessons. When you use the Help action, you do not need to be within reach of the person you're helping and can do so from anywhere they can hear your voice, including over the phone."
-    },
-    {
-        "name": "Student",
-        "description": "You're currently a student in high school, college, or graduate school. You might have a job, but you put your focus and energy into your studies.",
-        "samplecareers": "Blood donor, intern, part-time work, teacher's aide, volunteer",
-        "attributebonuses": [
-            {
-                "choices": [
-                    "Intelligence"
-                ],
-                "count": 1
-            },
-            {
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Constitution",
-                    "Wisdom",
-                    "Charisma"
-                ],
-                "count": 3
-            }
+        "count": 2,
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Deception"
+      },
+      {
+        "type": "Skill",
+        "value": "Persuasion"
+      }
+    ],
+    "iconicequipment": "A trunk full of campaign posters and buttons, nonthreatening attire, a stump speech",
+    "specialfeature": "Grassroots Organizing. You have a cadre of dedicated constituents you can call on for tasks, such as picketing a corporation or marching for a cause. Their willingness to act is at the GM's discretion."
+  },
+  {
+    "name": "Private Security",
+    "description": "You ensure that people, places, or things under your protection come to no harm while you remain on guard. It's rarely exciting, but the job gives you plenty of time to reflect.",
+    "samplecareers": "Bodyguard, bouncer, mall cop, night guard, security guard",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Wisdom",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 2
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Dexterity",
+          "Constitution",
+          "Intelligence",
+          "Charisma"
         ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Computers"
-                ],
-                "count": 1
-            },
-            {
-                "type": "Skill",
-                "choices": [
-                    "Natural Sciences",
-                    "Social Sciences"
-                ],
-                "count": 1
-            }
+        "count": 2,
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Intimidation"
+      },
+      {
+        "type": "Skill",
+        "value": "Perception"
+      },
+      {
+        "type": "Skill",
+        "value": "Security"
+      },
+      {
+        "type": "EquipmentProficiency",
+        "value": "Basic"
+      }
+    ],
+    "iconicequipment": "Your trusty flashlight, an official-looking badge, orthopedic shoe inserts",
+    "specialfeature": "I'm Calling the Police. You have a good relationship with law enforcement. You gain advantage on Charisma checks when dealing with law enforcement. Furthermore, the police respond if you call to report a security problem related to your official duties."
+  },
+  {
+    "name": "Science",
+    "description": "You are dedicated to advancing the systems of knowledge, whether for public good or personal gain. You might be a resident scientist at a research institute, working for a large corporation, or a mad genius tinkering in your basement.",
+    "samplecareers": "Data analyst, engineer, inventor, lab researcher, mathematician, product developer, research scientist",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": [
+          "Intelligence"
         ],
-        "iconicequipment": "A small backpack full of books and school supplies, a library card",
-        "wealthlevel": 1,
-        "specialfeature": "All-Nighter. You can remove one level of Exhaustion from yourself. You must finish a long rest before you can do this again."
-    },
-    {
-        "name": "Trades",
-        "description": "You enjoy working with your hands and your mind, building and fixing useful things. If they don't find you handsome, they will at least find you handy.",
-        "samplecareers": "Carpenter, construction worker, electrician, flooring specialist, plumber, shoemaker, tailor",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Dexterity"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Constitution",
-                    "Intelligence",
-                    "Wisdom",
-                    "Charisma"
-                ],
-                "count": 2
-            }
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 3
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Dexterity",
+          "Constitution",
+          "Wisdom",
+          "Charisma"
         ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Arts and Crafts",
-                    "Mechanics"
-                ],
-                "count": 2
-            }
+        "count": 2
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Computers"
+      },
+      {
+        "type": "Skill",
+        "value": "Natural Sciences"
+      }
+    ],
+    "iconicequipment": "Lab coat, laptop computer, a patent application",
+    "specialfeature": "Science Lessons. When you use the Help action, you do not need to be within reach of the person you're helping and can do so from anywhere they can hear your voice, including over the phone."
+  },
+  {
+    "name": "Student",
+    "description": "You're currently a student in high school, college, or graduate school. You might have a job, but you put your focus and energy into your studies.",
+    "samplecareers": "Blood donor, intern, part-time work, teacher's aide, volunteer",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Intelligence",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 1
+      }
+    ],
+    "userchoices": [
+      {
+        "choices": [
+          "Strength",
+          "Dexterity",
+          "Constitution",
+          "Wisdom",
+          "Charisma"
         ],
-        "iconicequipment": "Toolbelt, mechanic's kit, laptop computer, small workshop",
-        "wealthlevel": 3,
-        "specialfeature": "Handy. Choose a specific trade you focus on. You gain advantage on Intelligence checks for activities performed in the practice of that trade."
-    },
-    {
-        "name": "Transportation",
-        "description": "You're an expert in operating some kind of vehicle. Whether you work in the civilian sector or military, you are on a path of mastery in your chosen form of transportation.",
-        "samplecareers": "Boat captain, bus driver, commercial pilot, rideshare driver, taxi driver, race car driver",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Dexterity"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Constitution",
-                    "Intelligence",
-                    "Wisdom",
-                    "Charisma"
-                ],
-                "count": 3
-            }
+        "count": 3,
+        "value": 1
+      },
+      {
+        "type": "Skill",
+        "choices": [
+          "Natural Sciences",
+          "Social Sciences"
         ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Mechanics",
-                    "Vehicles"
-                ],
-                "count": 2
-            }
+        "count": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Computers"
+      }
+    ],
+    "iconicequipment": "A small backpack full of books and school supplies, a library card",
+    "specialfeature": "All-Nighter. You can remove one level of Exhaustion from yourself. You must finish a long rest before you can do this again."
+  },
+  {
+    "name": "Trades",
+    "description": "You enjoy working with your hands and your mind, building and fixing useful things. If they don't find you handsome, they will at least find you handy.",
+    "samplecareers": "Carpenter, construction worker, electrician, flooring specialist, plumber, shoemaker, tailor",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Dexterity",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 3
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Constitution",
+          "Intelligence",
+          "Wisdom",
+          "Charisma"
         ],
-        "iconicequipment": "A vehicle appropriate to your type of work, a dashboard buddy, a pair of leather gloves",
-        "wealthlevel": 2,
-        "specialfeature": "Experienced Driver. You can ignore the effects from the first level of the Body Damage, Loss of Control, and Loss of Power conditions when driving a vehicle."
-    },
-    {
-        "name": "Unemployed",
-        "description": "For whatever reason, you don't have regular work and haven't had a paying job in a long time. You make your way by resourcefulness, charity, or some mix of the two.",
-        "samplecareers": "Beggar, hermit, hobo, institutionalized person, prisoner, recluse",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Constitution"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Intelligence",
-                    "Wisdom",
-                    "Charisma"
-                ],
-                "count": 3
-            }
+        "count": 2,
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Arts and Crafts"
+      },
+      {
+        "type": "Skill",
+        "value": "Mechanics"
+      }
+    ],
+    "iconicequipment": "Toolbelt, mechanic's kit, laptop computer, small workshop",
+    "specialfeature": "Handy. Choose a specific trade you focus on. You gain advantage on Intelligence checks for activities performed in the practice of that trade."
+  },
+  {
+    "name": "Transportation",
+    "description": "You're an expert in operating some kind of vehicle. Whether you work in the civilian sector or military, you are on a path of mastery in your chosen form of transportation.",
+    "samplecareers": "Boat captain, bus driver, commercial pilot, rideshare driver, taxi driver, race car driver",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Dexterity",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 2
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Constitution",
+          "Intelligence",
+          "Wisdom",
+          "Charisma"
         ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Endurance"
-                ],
-                "count": 1
-            },
-            {
-                "type": "Skill",
-                "choices": [
-                    "Streetwise",
-                    "Survival"
-                ],
-                "count": 1
-            }
+        "count": 3,
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Mechanics"
+      },
+      {
+        "type": "Skill",
+        "value": "Vehicles"
+      }
+    ],
+    "iconicequipment": "A vehicle appropriate to your type of work, a dashboard buddy, a pair of leather gloves",
+    "specialfeature": "Experienced Driver. You can ignore the effects from the first level of the Body Damage, Loss of Control, and Loss of Power conditions when driving a vehicle."
+  },
+  {
+    "name": "Unemployed",
+    "description": "For whatever reason, you don't have regular work and haven't had a paying job in a long time. You make your way by resourcefulness, charity, or some mix of the two.",
+    "samplecareers": "Beggar, hermit, hobo, institutionalized person, prisoner, recluse",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Constitution",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 1
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Dexterity",
+          "Intelligence",
+          "Wisdom",
+          "Charisma"
         ],
-        "iconicequipment": "A small backpack, a sleeping bag, a knife, various handmade items",
-        "wealthlevel": 1,
-        "specialfeature": "Colorful Character. The story of the trials you have overcome in life gives you advantage on Charisma (Persuasion) checks made to ask for help or acts of mercy."
-    },
-    {
-        "name": "White Collar",
-        "description": "You work in an office, tending to the minutia of everyday life. Your true potential is yet to be revealed, you're certain of it.",
-        "samplecareers": "Accountant, human resources, mail clerk, management consultant, marketer, office manager, salesperson, tax preparer",
-        "attributebonuses": [
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Intelligence"
-                ],
-                "count": 1
-            },
-            {
-                "type": "AbilityScore",
-                "choices": [
-                    "Strength",
-                    "Dexterity",
-                    "Constitution",
-                    "Wisdom",
-                    "Charisma"
-                ],
-                "count": 1
-            }
+        "count": 3,
+        "value": 1
+      },
+      {
+        "type": "Skill",
+        "choices": [
+          "Streetwise",
+          "Survival"
         ],
-        "proficiencies": [
-            {
-                "type": "Skill",
-                "choices": [
-                    "Computers",
-                    "Persuasion"
-                ],
-                "count": 2
-            }
+        "count": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Endurance"
+      }
+    ],
+    "iconicequipment": "A small backpack, a sleeping bag, a knife, various handmade items",
+    "specialfeature": "Colorful Character. The story of the trials you have overcome in life gives you advantage on Charisma (Persuasion) checks made to ask for help or acts of mercy."
+  },
+  {
+    "name": "White Collar",
+    "description": "You work in an office, tending to the minutia of everyday life. Your true potential is yet to be revealed, you're certain of it.",
+    "samplecareers": "Accountant, human resources, mail clerk, management consultant, marketer, office manager, salesperson, tax preparer",
+    "bonusadjustments": [
+      {
+        "type": "AbilityScore",
+        "name": "Intelligence",
+        "value": 1
+      },
+      {
+        "type": "WealthLevel",
+        "name": "WealthLevel",
+        "value": 3
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "AbilityScore",
+        "choices": [
+          "Strength",
+          "Dexterity",
+          "Constitution",
+          "Wisdom",
+          "Charisma"
         ],
-        "iconicequipment": "Laptop computer, briefcase, favorite coffee mug",
-        "wealthlevel": 3,
-        "specialfeature": "Management Material. You can use the Help action as a bonus action. You must finish a short rest (coffee break) before you can do this again."
-    }
+        "count": 1,
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "Skill",
+        "value": "Computers"
+      },
+      {
+        "type": "Skill",
+        "value": "Persuasion"
+      }
+    ],
+    "iconicequipment": "Laptop computer, briefcase, favorite coffee mug",
+    "specialfeature": "Management Material. You can use the Help action as a bonus action. You must finish a short rest (coffee break) before you can do this again."
+  }
 ]

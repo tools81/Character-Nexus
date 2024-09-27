@@ -7,6 +7,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Utility\Utility.csproj" />
+    <EmbeddedResource Include="Json\Equipment.json" />
+    <EmbeddedResource Include="Json\Goals.json" />
+    <EmbeddedResource Include="Json\Talents.json" />
+    <EmbeddedResource Include="Json\Traits.json" />
+    <EmbeddedResource Include="Json\Character\Form.json" />  
   </ItemGroup>
 
   <ItemGroup>

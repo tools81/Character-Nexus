@@ -77,7 +77,7 @@ namespace CharacterNexus.Controllers
 
                 if (character != null)
                 {
-                    var characterSheetUrl = await _storage.UploadPDFByteArray(ruleset.Name, character.Name, character.GetCharacterSheet());
+                    var characterSheetUrl = await _storage.UploadPDFByteArray(ruleset.Name, character.Name, character.BuildCharacterSheet());
                     character.CharacterSheet = characterSheetUrl;
 
                     await _storage.UploadCharacterAsync(ruleset.Name, character);

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using EverydayHeroes.Enums;
+﻿using System.Collections.Generic;
 using Utility;
 
 namespace EverydayHeroes
@@ -12,10 +7,10 @@ namespace EverydayHeroes
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        //public List<UserChoice<string>> AttributeBonuses { get; set; }
-        //public List<UserChoice<string>> Profeciencies { get; set; }
         public string IconicEquipment { get; set; }
         public string Language { get; set; }
         public string SpecialFeature { get; set; }
+        public List<BonusAdjustment>? BonusAdjustments { get; set; }
+        public List<BonusCharacteristic>? BonusCharacteristics { get; set; }
     }
 }

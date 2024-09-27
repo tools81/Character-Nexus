@@ -1,1 +1,140 @@
-[]
+[
+  {
+    "name": "Rookie",
+    "description": "1-2",
+    "userchoice": [
+      {
+        "type": "Attribute",
+        "choices": [],
+        "count": 4,
+        "value": 4
+      },
+      {
+        "type": "Skill",
+        "choices": [],
+        "count": 8,
+        "value": 8
+      }
+    ],
+    "bonusadjustment": [
+      {
+        "type": "Chinyen",
+        "name": "Chinyen",
+        "value": -1
+      },
+      {
+        "type": "PromotionPoints",
+        "name": "PromotionPoints",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "name": "Seasoned",
+    "description": "3-6",
+    "userchoice": [
+      {
+        "type": "Attribute",
+        "choices": [],
+        "count": 3,
+        "value": 3
+      },
+      {
+        "type": "Skill",
+        "choices": [],
+        "count": 10,
+        "value": 10
+      },
+      {
+        "type": "Specialty",
+        "choices": [],
+        "count": 1,
+        "value": 1
+      }
+    ],
+    "bonusadjustment": [
+      {
+        "type": "Chinyen",
+        "name": "Chinyen",
+        "value": 1
+      },
+      {
+        "type": "PromotionPoints",
+        "name": "PromotionPoints",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "name": "Veteran",
+    "description": "7-10",
+    "userchoice": [
+      {
+        "type": "Attribute",
+        "choices": [],
+        "count": 2,
+        "value": 2
+      },
+      {
+        "type": "Skill",
+        "choices": [],
+        "count": 12,
+        "value": 12
+      },
+      {
+        "type": "Specialty",
+        "choices": [],
+        "count": 2,
+        "value": 2
+      }
+    ],
+    "bonusadjustment": [
+      {
+        "type": "Chinyen",
+        "name": "Chinyen",
+        "value": 1
+      },
+      {
+        "type": "PromotionPoints",
+        "name": "PromotionPoints",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "name": "Old-Timer",
+    "description": "11-12",
+    "userchoice": [
+      {
+        "type": "Attribute",
+        "choices": [],
+        "count": 1,
+        "value": 1
+      },
+      {
+        "type": "Skill",
+        "choices": [],
+        "count": 14,
+        "value": 14
+      },
+      {
+        "type": "Specialty",
+        "choices": [],
+        "count": 3,
+        "value": 3
+      }
+    ],
+    "bonusadjustment": [
+      {
+        "type": "Chinyen",
+        "name": "Chinyen",
+        "value": 2
+      },
+      {
+        "type": "PromotionPoints",
+        "name": "PromotionPoints",
+        "value": 5
+      }
+    ]
+  }
+]

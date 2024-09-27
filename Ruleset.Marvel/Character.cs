@@ -131,7 +131,7 @@ namespace Marvel
             Karma += Rank;
         }
 
-        public byte[] GetCharacterSheet()
+        public byte[] BuildCharacterSheet()
         {
             var dict = new Dictionary<string, string>();
 

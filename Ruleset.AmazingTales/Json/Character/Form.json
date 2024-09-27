@@ -1,0 +1,62 @@
+{
+  "title": "Hero Editor",
+  "fields": [
+    {
+      "name": "id",
+      "id": "id",
+      "label": "Id",
+      "type": "hidden",
+      "className": "form-control"
+    },
+    {
+      "name": "name",
+      "id": "name",
+      "label": "Name",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown"
+    },
+    {
+      "name": "image",
+      "id": "image",
+      "label": "Image",
+      "type": "image",
+      "className": "form-control"
+    },
+    {
+      "name": "d12Attribute",
+      "id": "d12Attribute",
+      "label": "D12 Attribute",
+      "type": "text",
+      "className": "form-control"
+    },
+    {
+      "name": "d10Attribute",
+      "id": "d10Attribute",
+      "label": "D10 Attribute",
+      "type": "text",
+      "className": "form-control"
+    },
+    {
+      "name": "d8Attribute",
+      "id": "d8Attribute",
+      "label": "D8 Attribute",
+      "type": "text",
+      "className": "form-control"
+    },
+    {
+      "name": "d6Attribute",
+      "id": "d6Attribute",
+      "label": "D6 Attribute",
+      "type": "text",
+      "className": "form-control"
+    },
+    {
+      "name": "notes",
+      "id": "notes",
+      "label": "Notes",
+      "type": "textarea",
+      "className": "form-control"
+    }
+  ]
+}

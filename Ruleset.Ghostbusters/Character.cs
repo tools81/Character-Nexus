@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 using Utility;
 
 namespace Ghostbusters
@@ -20,10 +22,38 @@ namespace Ghostbusters
         public int BrowniePoints { get; set; }
         public List<Equipment> Equipments { get; set; }
         public CharacterSegment CharacterSegment => GetCharacterSegment();
-        public string CharacterSheet { get; set; }
-        public byte[] BuildCharacterSheet()
+
+        public byte[] CharacterSheet => GetCharacterSheet();
+
+        public byte[] GetCharacterSheet()
         {
-            throw new NotImplementedException();
+            var dict = new Dictionary<string, string>();
+            dict.Add("Name", Name);
+            dict.Add("Personality", Personality);
+            dict.Add("Notes", Notes);
+            dict.Add("Residence", Residence);
+            dict.Add("Telex", Telex);
+            dict.Add("Phone", Phone);
+
+            for (int i = 0; i < Traits.Count; i++)
+            {
+                dict.Add($"Trait [{i}]", Traits[i].Name);
+            }
+
+            for (int i = 0; i < Talents.Count; i++)
+            {
+                dict.Add($"Talent [{i}]", Talents[i].Name);
+            }
+
+            dict.Add("Goal", Goal.Description);
+            dict.Add("BrowniePoints", BrowniePoints.ToString());
+
+            for (int i = 0; i < Equipments.Count; i++)
+            {
+                dict.Add($"Equipment [{i}]", Equipments[i].Name);
+            }
+
+            return PDFSchema.Generate(dict, Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Character_Sheet.pdf");
         }
 
         private CharacterSegment GetCharacterSegment()

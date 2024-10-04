@@ -10,5 +10,6 @@ namespace VampireTheMasquerade
         public string Cost { get; set; }
         public string System { get; set; }
         public string Duration { get; set; }
+        public string Discipline { get; set; }
     }
 }

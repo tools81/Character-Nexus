@@ -1,5 +1,5 @@
 import React, { useState, useEffect, ChangeEvent } from "react";
-import { useForm, useFieldArray, Controller } from "react-hook-form";
+import { useForm, useFieldArray, Controller, UseFieldArrayAppend, FieldValues } from "react-hook-form";
 import { useRulesetContext } from "./RulesetContext";
 import { useNavigate } from "react-router-dom";
 import { BonusAdjustments } from "../store/BonusAdjustment";
@@ -31,7 +31,7 @@ const DynamicForm = () => {
 
   function navigateToRulesetDashboard() {
     navigate("/rulesetdashboard");
-  }  
+  }
 
   useEffect(() => {
     const fetchSchema = async () => {
@@ -68,10 +68,18 @@ const DynamicForm = () => {
     const selectElement = event.target;
     console.log(selectElement);
     const selectedOption = selectElement.options[selectElement.selectedIndex];
-    const selectBonusAdjustmentsString = selectedOption.getAttribute('data-bonusadjustments');
-    const selectBonusAdjustments = selectBonusAdjustmentsString ? JSON.parse(selectBonusAdjustmentsString) : null;
-    const selectBonusCharacteristicsString = selectedOption.getAttribute('data-bonuscharacteristics');
-    const selectBonusCharacteristics = selectBonusCharacteristicsString ? JSON.parse(selectBonusCharacteristicsString) : null;
+    const selectBonusAdjustmentsString = selectedOption.getAttribute(
+      "data-bonusadjustments"
+    );
+    const selectBonusAdjustments = selectBonusAdjustmentsString
+      ? JSON.parse(selectBonusAdjustmentsString)
+      : null;
+    const selectBonusCharacteristicsString = selectedOption.getAttribute(
+      "data-bonuscharacteristics"
+    );
+    const selectBonusCharacteristics = selectBonusCharacteristicsString
+      ? JSON.parse(selectBonusCharacteristicsString)
+      : null;
     if (event.target.value == null) {
       return;
     }
@@ -102,9 +110,9 @@ const DynamicForm = () => {
         ]);
       }
     }
-  }
+  };
 
-  const onSubmit = async (data: any) => {    
+  const onSubmit = async (data: any) => {
     if (imageData != null) {
       const formData = new FormData();
       formData.append(
@@ -112,7 +120,7 @@ const DynamicForm = () => {
         imageData,
         data.name + "." + imageData.name.split(".").pop()
       );
-      formData.append("JsonData", JSON.stringify(data));  
+      formData.append("JsonData", JSON.stringify(data));
 
       await fetch(
         `${BASE_URL}/api/character/save?ruleset=${encodeURIComponent(
@@ -120,7 +128,7 @@ const DynamicForm = () => {
         )}`,
         {
           method: "POST",
-          body: formData
+          body: formData,
         }
       )
         .then((response) => response.json())
@@ -133,23 +141,33 @@ const DynamicForm = () => {
     field: any;
   }
 
+  // const doesFieldArrayContain = (value: string) => {
+  //   return fields.some((field) => field.value === value);
+  // };
+
+  // useEffect(() => {
+  //   for (const adjustment in bonusCharacteristics) {
+  //     if (!doesFieldArrayContain(adjustment)) {
+  //        append({ value: adjustment });
+  //     }
+  //   }
+  // }, [setBonusCharacteristics, append]);
+
   const FieldArray = ({ field }: Props) => {
     const { fields, append, remove } = useFieldArray({
       name: field.name,
       control,
     });
 
-    // const doesFieldArrayContain = (value: string) => {
-    //   return fields.some((field) => field.option === value);
-    // };
+    const handleAddSelect = () => {
+      // Append a new item select input
+      append({ value: "Select..." });
+    };
 
-    // useEffect(() => {
-    //   for (const adjustment in bonusCharacteristics) {
-    //     if (!doesFieldArrayContain(adjustment)) {
-    //        append({ option: adjustment });
-    //     }
-    //   }
-    // }, [setBonusCharacteristics, append]);
+    const handleSetSelectOption = (field: any, index: number) => {
+      // Programmatically set the value of a select input in the 'items' array
+      setValue(`${field.name}.${index}.value`, "option2");
+    };
 
     return (
       <div>
@@ -185,7 +203,7 @@ const DynamicForm = () => {
           <input
             id={field.name}
             className={field.className}
-            style={{ visibility: "hidden" }}            
+            style={{ visibility: "hidden" }}
             {...register(field.name)}
           ></input>
         );

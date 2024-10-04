@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
 	<TargetFramework>net8.0</TargetFramework>
@@ -8,24 +8,24 @@
   <ItemGroup>
     <Folder Include="Json\Character\" />
     <Folder Include="Resources\" />
-    <EmbeddedResource Include="Json\Archetypes.json" />
-    <EmbeddedResource Include="Json\Armors.json" />
-    <EmbeddedResource Include="Json\Attributes.json" />
-    <EmbeddedResource Include="Json\Gears.json" />
-    <EmbeddedResource Include="Json\Origins.json" />
-    <EmbeddedResource Include="Json\Skills.json" />
-    <EmbeddedResource Include="Json\Specialties.json" />
-    <EmbeddedResource Include="Json\Tenures.json" />
-    <EmbeddedResource Include="Json\Vehicles.json" />
-    <EmbeddedResource Include="Json\Weapons.json" />
-    <EmbeddedResource Include="Json\Table\Memory\How.json" />
-    <EmbeddedResource Include="Json\Table\Memory\What.json" />
-    <EmbeddedResource Include="Json\Table\Memory\When.json" />
-    <EmbeddedResource Include="Json\Table\Memory\Where.json" />
-    <EmbeddedResource Include="Json\Table\Memory\Who.json" />
-    <EmbeddedResource Include="Json\Table\Relationship\Status.json" />
-    <EmbeddedResource Include="Json\Table\Relationship\What.json" />
-    <EmbeddedResource Include="Json\Table\Relationship\Who.json" />
+	<EmbeddedResource Include="Json\Archetypes.json" />
+	<EmbeddedResource Include="Json\Armors.json" />
+	<EmbeddedResource Include="Json\Attributes.json" />
+	<EmbeddedResource Include="Json\Gears.json" />
+	<EmbeddedResource Include="Json\Origins.json" />
+	<EmbeddedResource Include="Json\Skills.json" />
+	<EmbeddedResource Include="Json\Specialties.json" />
+	<EmbeddedResource Include="Json\Tenures.json" />
+	<EmbeddedResource Include="Json\Vehicles.json" />
+	<EmbeddedResource Include="Json\Weapons.json" />
+	<EmbeddedResource Include="Json\Table\Memory\How.json" />
+	<EmbeddedResource Include="Json\Table\Memory\What.json" />
+	<EmbeddedResource Include="Json\Table\Memory\When.json" />
+	<EmbeddedResource Include="Json\Table\Memory\Where.json" />
+	<EmbeddedResource Include="Json\Table\Memory\Who.json" />
+	<EmbeddedResource Include="Json\Table\Relationship\Status.json" />
+	<EmbeddedResource Include="Json\Table\Relationship\What.json" />
+	<EmbeddedResource Include="Json\Table\Relationship\Who.json" />
   </ItemGroup>
 
   <ItemGroup>

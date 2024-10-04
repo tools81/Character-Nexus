@@ -10,6 +10,5 @@ namespace VampireTheMasquerade
         public AspectType Aspect { get; set; }
         public string Threat { get; set; }
         public string Resonance { get; set; }
-        public List<Power> Powers { get; set; }
     }
 }

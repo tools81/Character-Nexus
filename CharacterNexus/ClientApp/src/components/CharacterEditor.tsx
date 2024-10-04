@@ -34,6 +34,17 @@ const DynamicForm = () => {
   }
 
   useEffect(() => {
+    for (const characteristic of bonusCharacteristics) {
+      handleSetArrayValue(characteristic.type, characteristic.value);
+    }
+  }, [bonusCharacteristics]);
+
+  const handleSetArrayValue = (array: string, choice: string) => {
+    // Programmatically set the value of a select input in the 'items' array
+    setValue(array, [...getValues(array), { value: choice }]);
+  };
+
+  useEffect(() => {
     const fetchSchema = async () => {
       try {
         const response = await fetch(
@@ -66,7 +77,6 @@ const DynamicForm = () => {
 
   const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const selectElement = event.target;
-    console.log(selectElement);
     const selectedOption = selectElement.options[selectElement.selectedIndex];
     const selectBonusAdjustmentsString = selectedOption.getAttribute(
       "data-bonusadjustments"
@@ -108,7 +118,7 @@ const DynamicForm = () => {
             value: characteristic.Value,
           },
         ]);
-      }
+      }      
     }
   };
 
@@ -159,15 +169,10 @@ const DynamicForm = () => {
       control,
     });
 
-    const handleAddSelect = () => {
+    const handleAddSelect = (component: any) => {
       // Append a new item select input
-      append({ value: "Select..." });
-    };
-
-    const handleSetSelectOption = (field: any, index: number) => {
-      // Programmatically set the value of a select input in the 'items' array
-      setValue(`${field.name}.${index}.value`, "option2");
-    };
+      append({ value: "" });
+    };    
 
     return (
       <div>
@@ -187,7 +192,7 @@ const DynamicForm = () => {
           </div>
         ))}
         <section>
-          <button type="button" onClick={() => append({ value: "Select..." })}>
+          <button type="button" onClick={() => handleAddSelect(field.component)}>
             Add
           </button>
         </section>
@@ -203,7 +208,7 @@ const DynamicForm = () => {
           <input
             id={field.name}
             className={field.className}
-            style={{ visibility: "hidden" }}
+            style={{ display: "none" }}
             {...register(field.name)}
           ></input>
         );
@@ -289,7 +294,7 @@ const DynamicForm = () => {
               id={field.name}
               className={field.className}
               aria-label={field.label}
-              {...register(field.name)}
+              {...register(`${field.name}.value`)}
               onChange={handleSelectChange}
             >
               <option value="">Select...</option>

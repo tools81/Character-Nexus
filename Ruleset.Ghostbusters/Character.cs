@@ -23,9 +23,9 @@ namespace Ghostbusters
         public List<Equipment> Equipments { get; set; }
         public CharacterSegment CharacterSegment => GetCharacterSegment();
 
-        public byte[] CharacterSheet => GetCharacterSheet();
+        public string CharacterSheet { get; set; }
 
-        public byte[] GetCharacterSheet()
+        public byte[] BuildCharacterSheet()
         {
             var dict = new Dictionary<string, string>();
             dict.Add("Name", Name);

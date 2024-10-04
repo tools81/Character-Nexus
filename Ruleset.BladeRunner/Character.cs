@@ -37,9 +37,9 @@ namespace BladeRunner
         public List<Vehicle>? Vehicles { get; set; }
 
         public CharacterSegment CharacterSegment { get => GetCharacterSegment(); }
-        public byte[] CharacterSheet { get => GetCharacterSheet(); }
+        public string CharacterSheet { get; set; }
 
-        public byte[] GetCharacterSheet()
+        public byte[] BuildCharacterSheet()
         {
             var dict = new Dictionary<string, string>();
             dict.Add("Name", Name);

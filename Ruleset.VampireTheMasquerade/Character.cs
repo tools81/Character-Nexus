@@ -49,6 +49,13 @@ namespace VampireTheMasquerade
 
         public CharacterSegment CharacterSegment => throw new NotImplementedException();
 
-        public byte[] CharacterSheet => throw new NotImplementedException();
+        public string CharacterSheet => throw new NotImplementedException();
+
+        string ICharacter.CharacterSheet { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public byte[] BuildCharacterSheet()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

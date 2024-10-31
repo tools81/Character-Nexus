@@ -1,4 +1,5 @@
 export interface BonusCharacteristic {
+    origin: string;
     type: string;
     value: string;
 }

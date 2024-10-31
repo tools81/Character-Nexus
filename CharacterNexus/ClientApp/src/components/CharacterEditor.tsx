@@ -2,9 +2,10 @@ import React, { useState, useEffect, ChangeEvent } from "react";
 import { useForm, useFieldArray, Controller, UseFieldArrayAppend, FieldValues } from "react-hook-form";
 import { useRulesetContext } from "./RulesetContext";
 import { useNavigate } from "react-router-dom";
-import { BonusAdjustments } from "../store/BonusAdjustment";
-import { BonusCharacteristics } from "../store/BonusCharacteristic";
+import { BonusAdjustments, BonusAdjustment } from "../store/BonusAdjustment";
+import { BonusCharacteristics, BonusCharacteristic } from "../store/BonusCharacteristic";
 import { Prerequisites } from "../store/Prerequisite";
+import { unregister } from "../registerServiceWorker";
 
 const BASE_URL = `${window.location.protocol}//${window.location.host}`;
 
@@ -21,6 +22,7 @@ const DynamicForm = () => {
   const [imageData, setImageData] = useState<File | null>(null);
   const {
     register,
+    unregister,
     handleSubmit,
     watch,
     control,
@@ -32,17 +34,6 @@ const DynamicForm = () => {
   function navigateToRulesetDashboard() {
     navigate("/rulesetdashboard");
   }
-
-  useEffect(() => {
-    for (const characteristic of bonusCharacteristics) {
-      handleSetArrayValue(characteristic.type, characteristic.value);
-    }
-  }, [bonusCharacteristics]);
-
-  const handleSetArrayValue = (array: string, choice: string) => {
-    // Programmatically set the value of a select input in the 'items' array
-    setValue(array, [...getValues(array), { value: choice }]);
-  };
 
   useEffect(() => {
     const fetchSchema = async () => {
@@ -75,7 +66,7 @@ const DynamicForm = () => {
     }
   };
 
-  const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
+  const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {    
     const selectElement = event.target;
     const selectedOption = selectElement.options[selectElement.selectedIndex];
     const selectBonusAdjustmentsString = selectedOption.getAttribute(
@@ -95,12 +86,16 @@ const DynamicForm = () => {
     }
 
     if (selectBonusAdjustments) {
-      // Removing an item from the array
-      // setBonusAdjustments(bonusAdjustments.filter(a => a.id !== id));
+      //Remove items previously added by the same input
+      setBonusAdjustments(
+        bonusAdjustments.filter((a) => a.origin !== event.target.name)
+      );
+
       for (const adjustment of selectBonusAdjustments) {
         setBonusAdjustments((prevBonusAdjustments) => [
           ...prevBonusAdjustments,
           {
+            origin: event.target.name,
             type: adjustment.Type,
             name: adjustment.Name,
             value: adjustment.Value,
@@ -110,16 +105,59 @@ const DynamicForm = () => {
     }
 
     if (selectBonusCharacteristics) {
-      for (const characteristic of selectBonusCharacteristics) {
-        setBonusCharacteristics((prevBonusCharacteristics) => [
-          ...prevBonusCharacteristics,
+      //Remove components from field array where the origin is this input. So bonus is removed when changing value again.
+      for (const characteristic of bonusCharacteristics.reverse()) {
+        handleRemoveArrayValue(characteristic.type, characteristic.value);
+      }
+
+      //Remove items previously added by the same input 
+      setBonusCharacteristics(bonusCharacteristics.filter((c) => c.origin !== event.target.name));       
+
+      //Add to the existing state of characteristics
+      for (const characteristic of selectBonusCharacteristics) {             
+        setBonusCharacteristics((existingCharacteristics) => [
+          ...existingCharacteristics,
           {
+            origin: event.target.name,
             type: characteristic.Type,
             value: characteristic.Value,
           },
         ]);
-      }      
+      }     
     }
+  };
+
+  useEffect(() => {
+    for (const adjustment of bonusAdjustments) {
+      setValue(
+        adjustment.name,
+        Number(getValues(adjustment.name)) + adjustment.value
+      );      
+      console.log(adjustment.name, getValues(adjustment.name));
+    }
+  }, [bonusAdjustments])
+
+  useEffect(() => {
+    for (const characteristic of bonusCharacteristics) {      
+      handleSetArrayValue(characteristic.type, characteristic.value);
+    }
+  }, [bonusCharacteristics]);
+
+  const handleSetArrayValue = (array: string, choice: string) => {
+    // Programmatically set the value of a select input in the 'items' array
+    setValue(array, [...getValues(array), { value: choice }]);
+  };
+
+  const handleRemoveArrayValue = (arrayField: string, choice: string) => {
+    const currentValues = getValues(arrayField);
+
+    const indexToRemove = currentValues.findIndex(
+      (field: HTMLSelectElement) => field.value === choice
+    ); 
+    
+    if (indexToRemove !== -1) {
+      unregister(`${arrayField}.${indexToRemove}`);
+    }   
   };
 
   const onSubmit = async (data: any) => {

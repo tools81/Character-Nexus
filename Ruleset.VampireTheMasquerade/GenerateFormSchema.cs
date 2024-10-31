@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Dynamic;
 using System.IO;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Reflection.Emit;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Utility;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace VampireTheMasquerade
 {
@@ -58,7 +60,7 @@ namespace VampireTheMasquerade
                 GenerateSkillSchema(skills, specialties, "skill", "Skill");
                 GeneratePredatorSchema(predators, "predator", "Predator");
                 GenerateDisciplineSchema(disciplines, powers, "disciplines", "Disciplines");
-                GenerateAdvantageSchema(advantages, "advantages", "Advantages");
+                GenerateAdvantageSchema(advantages, backgrounds, merits, flaws, "advantages", "Advantages");
 
                 GenerateTemporaryValuesSchema();
 
@@ -664,67 +666,245 @@ namespace VampireTheMasquerade
 
         private static void GenerateDisciplineSchema(List<Discipline> disciplines, List<Power> powers, string name, string label)
         {
-            var children = new List<object>();
-            dynamic obj = new ExpandoObject();
-
-            obj.name = name;
-            obj.label = label;
-            obj.type = "select";
-            obj.className = "form-select";
-            obj.options = new List<object>();
+            var accordion = new
+            {
+                id = name,
+                label,
+                type = "accordion",
+                items = new List<object>()
+            };
 
             foreach (var discipline in disciplines)
             {
-                obj.options.Add(
+                dynamic accordionItem = new ExpandoObject();
+                accordionItem.header = discipline.Name;
+                accordionItem.name = discipline.Name.ReplaceWhitespace("");
+                accordionItem.component = new
+                {
+                    type = "listgroup",
+                    items = new List<object>()
+                };
+
+                var children = new List<object>();
+
+                for (int i = 1; i < 5; i++)
+                {
+                    children.Add( 
+                        new
+                        {
+                            name = discipline.Name.ToLower(),
+                            id = $"{discipline.Name}{i}",
+                            label = "",
+                            type = "radio",
+                            value = i
+                        }
+                    );                    
+                }
+
+                var group = new
+                {
+                    type = "group",
+                    name = discipline.Name,
+                    label = discipline.Name,
+                    children
+                };
+
+                var text = new
+                {
+                    name = $"info-discipline-{discipline.Name}",
+                    label = "Information",
+                    type = "textblock",
+                    className = "text-block",
+                    text = discipline.Description
+                };
+
+                accordionItem.component.items.Add(
                     new
                     {
-                        value = discipline.Name,
-                        label = discipline.Name
+                        group,
+                        text
                     }
                 );
+
+                accordion.items.Add(accordionItem);
             }
 
-            children.Add(obj);
-
-            //TODO: Not sure this will work with naming. Also, add powers details in a div after discipline selection
-            children.Add(new
-            {
-                name = $"disciplines.{name}",
-                id = $"disciplines.{name.ToLower()}",
-                label = "",
-                type = "number",
-                className = "form-control",
-                validation = new
-                {
-                    required = true,
-                    min = 1,
-                    max = 5
-                },
-                @default = 1
-            });
-
-            var group = new
-            {
-                type = "group",
-                name,
-                label,
-                children
-            };
-
-            dynamic array = new
-            {
-                name,
-                label,
-                type = "array",
-                component = group
-            };                        
-
-            _fields.Add(array);
+            _fields.Add(accordion);
         }
 
-        private static void GenerateAdvantageSchema(List<Advantage> advantages, string v1, string v2)
+        private static void GenerateAdvantageSchema(List<Advantage> advantages, List<Background> backgrounds, List<Merit> merits, 
+            List<Flaw> flaws, string name, string label)
         {
-            throw new NotImplementedException();
+            var accordion = new
+            {
+                id = name,
+                label,
+                type = "accordion",
+                items = new List<object>()
+            };
+
+            foreach (var advantage in advantages)
+            {
+                dynamic accordionItem = new ExpandoObject();
+                accordionItem.header = advantage.Name;
+                accordionItem.name = advantage.Name.ReplaceWhitespace("");
+                accordionItem.component = new
+                {
+                    type = "listgroup",
+                    items = new List<object>()
+                };
+
+                var filteredBackgrounds = backgrounds.Where(b => b.Advantage == advantage.Name);
+
+                if (filteredBackgrounds.Any())
+                {
+                    var header = new
+                    {
+                        name = $"header-background-{advantage.Name}",
+                        label = "Information",
+                        type = "textblock",
+                        className = "text-block",
+                        text = "Background"
+                    };
+
+                    accordionItem.component.items.Add(
+                        new
+                        {
+                            header
+                        }
+                    );
+
+                    foreach (var background in filteredBackgrounds)
+                    {
+                        var component = new
+                        {
+                            name = background.Name.ToLower(),
+                            id = $"{advantage.Name}-{background.Name}",
+                            label = background.Name,
+                            type = "switch"
+                        };
+
+                        var text = new
+                        {
+                            name = $"info-background-{advantage.Name}-{background.Name}",
+                            label = "Information",
+                            type = "textblock",
+                            className = "text-block",
+                            text = background.Description
+                        };
+
+                        accordionItem.component.items.Add(
+                            new
+                            {
+                                component,
+                                text
+                            }
+                        );
+                    }
+                }
+
+                var filteredMerits = merits.Where(m => m.Advantage == advantage.Name);
+
+                if (filteredMerits.Any())
+                {
+                    var header = new
+                    {
+                        name = $"header-merit-{advantage.Name}",
+                        label = "Information",
+                        type = "textblock",
+                        className = "text-block",
+                        text = "Merits"
+                    };
+
+                    accordionItem.component.items.Add(
+                        new
+                        {
+                            header
+                        }
+                    );
+
+                    foreach (var merit in filteredMerits)
+                    {
+                        var component = new
+                        {
+                            name = merit.Name.ToLower(),
+                            id = $"{advantage.Name}-{merit.Name}",
+                            label = merit.Name,
+                            type = "switch"
+                        };
+
+                        var text = new
+                        {
+                            name = $"info-merit-{advantage.Name}-{merit.Name}",
+                            label = "Information",
+                            type = "textblock",
+                            className = "text-block",
+                            text = merit.Description
+                        };
+
+                        accordionItem.component.items.Add(
+                            new
+                            {
+                                component,
+                                text
+                            }
+                        );
+                    }
+                }
+
+                var filteredFlaws = flaws.Where(f => f.Advantage == advantage.Name);
+
+                if (filteredFlaws.Any())
+                {
+                    var header = new
+                    {
+                        name = $"header-flaw-{advantage.Name}",
+                        label = "Information",
+                        type = "textblock",
+                        className = "text-block",
+                        text = "Flaws"
+                    };
+
+                    accordionItem.component.items.Add(
+                        new
+                        {
+                            header
+                        }
+                    );
+
+                    foreach (var flaw in filteredFlaws)
+                    {
+                        var component = new
+                        {
+                            name = flaw.Name.ToLower(),
+                            id = $"{advantage.Name}-{flaw.Name}",
+                            label = flaw.Name,
+                            type = "switch"
+                        };
+
+                        var text = new
+                        {
+                            name = $"info-flaw-{advantage.Name}-{flaw.Name}",
+                            label = "Information",
+                            type = "textblock",
+                            className = "text-block",
+                            text = flaw.Description
+                        };
+
+                        accordionItem.component.items.Add(
+                            new
+                            {
+                                component,
+                                text
+                            }
+                        );
+                    }
+                }                
+
+                accordion.items.Add(accordionItem);
+            }
+
+            _fields.Add(accordion);
         }
     }
 }

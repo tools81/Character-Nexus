@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { BonusAdjustments, BonusAdjustment } from "../store/BonusAdjustment";
 import { BonusCharacteristics, BonusCharacteristic } from "../store/BonusCharacteristic";
 import { Prerequisites } from "../store/Prerequisite";
+import { toCamelCase } from "./ToCamelCase";
 import { unregister } from "../registerServiceWorker";
 
 const BASE_URL = `${window.location.protocol}//${window.location.host}`;
@@ -66,6 +67,58 @@ const DynamicForm = () => {
     }
   };
 
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    if (event.target.value == null) {
+      return;
+    }
+
+    if (event.target.type === "checkbox") {
+      const fieldElement = event.target;
+      const fieldBonusAdjustmentsString = fieldElement.getAttribute(
+        "data-bonusadjustments"
+      );
+      const fieldBonusAdjustments = fieldBonusAdjustmentsString
+        ? JSON.parse(fieldBonusAdjustmentsString)
+        : null;
+      const fieldBonusCharacteristicsString = fieldElement.getAttribute(
+        "data-bonuscharacteristics"
+      );
+      const fieldBonusCharacteristics = fieldBonusCharacteristicsString
+        ? JSON.parse(fieldBonusCharacteristicsString)
+        : null;      
+
+      if (fieldBonusAdjustments) {
+        //Remove bonuses provided by the component if user changes selection
+        for (const adjustment of bonusAdjustments.reverse()) {
+          handleRemoveBonusAdjustment(
+            toCamelCase(adjustment.type),
+            toCamelCase(adjustment.name),
+            adjustment.value
+          );
+        }
+
+        //Remove items previously added by the same input
+        setBonusAdjustments(
+          bonusAdjustments.filter((a) => a.origin !== event.target.name)
+        );
+
+        if (event.target.checked) {
+          for (const adjustment of fieldBonusAdjustments) {
+            setBonusAdjustments((prevBonusAdjustments) => [
+              ...prevBonusAdjustments,
+              {
+                origin: event.target.name,
+                type: adjustment.Type,
+                name: adjustment.Name,
+                value: adjustment.Value,
+              },
+            ]);
+          }
+        }
+      }
+    }
+  };
+
   const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {    
     const selectElement = event.target;
     const selectedOption = selectElement.options[selectElement.selectedIndex];
@@ -86,6 +139,11 @@ const DynamicForm = () => {
     }
 
     if (selectBonusAdjustments) {
+      //Remove bonuses provided by the component if user changes selection
+      for (const adjustment of bonusAdjustments.reverse()) {
+        handleRemoveBonusAdjustment(toCamelCase(adjustment.type), toCamelCase(adjustment.name), adjustment.value);
+      }
+
       //Remove items previously added by the same input
       setBonusAdjustments(
         bonusAdjustments.filter((a) => a.origin !== event.target.name)
@@ -129,13 +187,15 @@ const DynamicForm = () => {
 
   useEffect(() => {
     for (const adjustment of bonusAdjustments) {
-      setValue(
-        adjustment.name,
-        Number(getValues(adjustment.name)) + adjustment.value
-      );      
-      console.log(adjustment.name, getValues(adjustment.name));
-    }
+      var type = toCamelCase(adjustment.type);
+      setValue(type, Number(getValues(type)) + adjustment.value);     
+    }  
+    console.log(bonusAdjustments);  
   }, [bonusAdjustments])
+
+  const handleRemoveBonusAdjustment = (type: string, field: string, increment: number) => {
+    setValue(type, Number(getValues(type)) - increment);     
+  };
 
   useEffect(() => {
     for (const characteristic of bonusCharacteristics) {      
@@ -243,12 +303,20 @@ const DynamicForm = () => {
     switch (field.type) {
       case "hidden":
         return (
+          <div key={field.name} className="mb-3">
+            {includeLabel && (
+              <>
+                <label>{field.label}</label>
+                <br />
+              </>
+            )}
           <input
             id={field.name}
             className={field.className}
-            style={{ display: "none" }}
+            //style={{ display: "none" }}
             {...register(field.name)}
           ></input>
+          </div>
         );
       case "text":
         return (
@@ -311,8 +379,11 @@ const DynamicForm = () => {
               type="checkbox"
               role="switch"
               id={field.id}
+              data-bonusadjustments={field.bonusAdjustments}
+              data-bonuscharacteristics={field.bonusCharacteristics}
               //TODO: Replace 'powers' with a variable
               {...register(`powers.${field.name}`)}
+              onChange={handleInputChange}
             />
             <label className="form-check-label" htmlFor={field.id}>
               {field.label}

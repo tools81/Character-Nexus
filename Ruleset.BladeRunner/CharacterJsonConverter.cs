@@ -41,7 +41,7 @@ namespace BladeRunner
                     {
                         case "id":
                             var id = reader.Value.ToString();
-                            character.Id = id == string.Empty ? new Guid() : new Guid(id);
+                            character.Id = id == string.Empty ? Guid.NewGuid() : new Guid(id);
                             break;
                         case "image":
                             character.Image = reader.Value.ToString();
@@ -309,7 +309,6 @@ namespace BladeRunner
                 }
             }
 
-            reader.Close();
             return character;
         }
 

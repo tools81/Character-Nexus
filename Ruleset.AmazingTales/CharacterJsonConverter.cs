@@ -33,7 +33,7 @@ namespace AmazingTales
                     {
                         case "id":
                             var id = (string)reader.Value;
-                            character.Id = id == string.Empty ? new Guid() : new Guid(id);
+                            character.Id = id == string.Empty ? Guid.NewGuid() : new Guid(id);
                             break;
                         case "image":
                             character.Image = (string)reader.Value;
@@ -60,7 +60,6 @@ namespace AmazingTales
                 }
             }
 
-            reader.Close();
             return character;
         }
 

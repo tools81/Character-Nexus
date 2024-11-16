@@ -2,12 +2,11 @@
 
   <PropertyGroup>
 	<TargetFramework>net8.0</TargetFramework>
-	<LangVersion>12</LangVersion>
+	<ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Json\Character\" />
-    <Folder Include="Resources\" />
 	<EmbeddedResource Include="Json\Archetypes.json" />
 	<EmbeddedResource Include="Json\Armors.json" />
 	<EmbeddedResource Include="Json\Attributes.json" />
@@ -26,10 +25,17 @@
 	<EmbeddedResource Include="Json\Table\Relationship\Status.json" />
 	<EmbeddedResource Include="Json\Table\Relationship\What.json" />
 	<EmbeddedResource Include="Json\Table\Relationship\Who.json" />
+	<EmbeddedResource Include="Json\Character\Form.json" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Utility\Utility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

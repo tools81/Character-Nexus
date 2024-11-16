@@ -116,7 +116,7 @@ namespace AzureBlobStorage
 
         public async Task<string> UploadPDFByteArray(string rulesetName, string name, byte[] bytes)
         {
-            string blobName = $"pdf-{name}";
+            string blobName = $"pdf-{name}.pdf";
             BlobContainerClient blobContainerClient = await RetrieveBlobClient(rulesetName.FormatAzureCompliance());
             var blobClient = blobContainerClient.GetBlobClient(blobName);
 

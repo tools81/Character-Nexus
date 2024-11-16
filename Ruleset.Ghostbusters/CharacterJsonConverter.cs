@@ -30,38 +30,38 @@ namespace Ghostbusters
 
                 if (reader.TokenType == JsonToken.PropertyName)
                 {
-                    string propertyName = (string)reader.Value;
+                    string propertyName = reader.Value.ToString();
                     reader.Read();
 
                     switch (propertyName)
                     {
                         case "id":
-                            var id = (string)reader.Value;
+                            var id = reader.Value.ToString();
                             character.Id = id == string.Empty ? new Guid() : new Guid(id);
                             break;
                         case "image":
-                            character.Image = (string)reader.Value;
+                            character.Image = reader.Value.ToString();
                             break;
                         case "name":
-                            character.Name = (string)reader.Value;
+                            character.Name = reader.Value.ToString();
                             break;
                         case "browniePoints":
-                            character.BrowniePoints = int.Parse((string)reader.Value);
+                            character.BrowniePoints = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
                             break;
                         case "personality":
-                            character.Personality = (string)reader.Value;
+                            character.Personality = reader.Value.ToString();
                             break;
                         case "notes":
-                            character.Notes = (string)reader.Value;
+                            character.Notes = reader.Value.ToString();
                             break;
                         case "residence":
-                            character.Residence = (string)reader.Value;
+                            character.Residence = reader.Value.ToString();
                             break;
                         case "telex":
-                            character.Telex = (string)reader.Value;
+                            character.Telex = reader.Value.ToString();
                             break;
                         case "phone":
-                            character.Phone = (string)reader.Value;
+                            character.Phone = reader.Value.ToString();
                             break;
                         case "traits":
                             if (reader.TokenType != JsonToken.StartObject)
@@ -80,11 +80,11 @@ namespace Ghostbusters
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndObject)
                                     {
-                                        var propName = (string)reader.Value;
+                                        var propName = reader.Value.ToString();
                                         reader.Read();
-                                        var value = int.Parse((string)reader.Value);
+                                        var value = int.Parse(reader.Value.ToString());
 
-                                        var found = traits.Find(p => p.Name == _textInfo.ToTitleCase(propName));
+                                        var found = traits.Find(p => p.Name.ToLower() == propName.ToLower());
                                         found.Value = value;
                                         character.Traits.Add(found);
                                     }
@@ -108,13 +108,13 @@ namespace Ghostbusters
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndObject)
                                     {
-                                        var propName = (string)reader.Value;
+                                        var propName = reader.Value.ToString();
                                         reader.Read();
                                         var value = (bool)reader.Value;
 
                                         if (value)
                                         {
-                                            var found = talents.Find(p => p.Name == _textInfo.ToTitleCase(propName));
+                                            var found = talents.Find(p => p.Name.ToLower() == propName.ToLower());
                                             character.Talents.Add(found);
                                         }
                                     }
@@ -129,7 +129,7 @@ namespace Ghostbusters
                                     var jsonContent = goalsReader.ReadToEnd();
                                     var goals = JsonTo.List<Goal>(jsonContent);
 
-                                    var goal = goals.Find(o => o.Name == _textInfo.ToTitleCase((string)reader.Value));
+                                    var goal = goals.Find(o => o.Name.ToLower() == reader.Value.ToString().ToLower());
 
                                     character.Goal = goal;
                                 }
@@ -152,7 +152,7 @@ namespace Ghostbusters
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        var found = equipment.Find(t => t.Name == _textInfo.ToTitleCase((string)reader.Value));
+                                        var found = equipment.Find(t => t.Name.ToLower() == reader.Value.ToString().ToLower());
                                         character.Equipments.Add(found);
                                     }
                                 }

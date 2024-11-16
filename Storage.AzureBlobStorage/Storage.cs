@@ -28,6 +28,7 @@ namespace AzureBlobStorage
             string blobName = $"{character.Name}.json";
             BlobContainerClient blobContainerClient = await RetrieveBlobClient(rulesetName.FormatAzureCompliance());
             var blobClient = blobContainerClient.GetBlobClient(blobName);
+            await blobClient.DeleteIfExistsAsync();
 
             await blobClient.UploadAsync(new MemoryStream(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(character)), true));
 
@@ -36,8 +37,9 @@ namespace AzureBlobStorage
 
             blobName = $"characters.json";
             blobClient = blobContainerClient.GetBlobClient(blobName);
+            await blobClient.DeleteIfExistsAsync();
 
-            await blobClient.UploadAsync(new MemoryStream(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(characters)), true));
+            await blobClient.UploadAsync(new MemoryStream(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(characters)), true), true);
         }
 
         public async Task<ICharacter> DownloadCharacterAsync(string rulesetName, string characterName)
@@ -88,11 +90,12 @@ namespace AzureBlobStorage
                 Console.WriteLine($"Deleted blob: {blobItem.Name}");
             }
 
-                var characters = await DownloadCharactersByRulesetAsync(rulesetName.FormatAzureCompliance());
+            var characters = await DownloadCharactersByRulesetAsync(rulesetName.FormatAzureCompliance());
             characters.Remove(characters.Where(c => c.Name == characterName).FirstOrDefault());
 
             var blobName = "characters.json";
             var blobCharactersClient = blobContainerClient.GetBlobClient(blobName);
+            await blobCharactersClient.DeleteIfExistsAsync();
 
             await blobCharactersClient.UploadAsync(new MemoryStream(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(characters)), true));
         }

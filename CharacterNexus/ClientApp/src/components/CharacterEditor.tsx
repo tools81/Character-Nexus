@@ -189,8 +189,7 @@ const DynamicForm = () => {
     for (const adjustment of bonusAdjustments) {
       var type = toCamelCase(adjustment.type);
       setValue(type, Number(getValues(type)) + adjustment.value);     
-    }  
-    console.log(bonusAdjustments);  
+    }    
   }, [bonusAdjustments])
 
   const handleRemoveBonusAdjustment = (type: string, field: string, increment: number) => {
@@ -303,20 +302,12 @@ const DynamicForm = () => {
     switch (field.type) {
       case "hidden":
         return (
-          <div key={field.name} className="mb-3">
-            {includeLabel && (
-              <>
-                <label>{field.label}</label>
-                <br />
-              </>
-            )}
           <input
             id={field.name}
             className={field.className}
-            //style={{ display: "none" }}
+            style={{ display: "none" }}
             {...register(field.name)}
           ></input>
-          </div>
         );
       case "text":
         return (

@@ -33,47 +33,47 @@ namespace BladeRunner
 
                 if (reader.TokenType == JsonToken.PropertyName)
                 {
-                    string propertyName = (string)reader.Value;
+                    string propertyName = reader.Value.ToString();
                     reader.Read();
 
                     switch (propertyName)
                     {
                         case "id":
-                            var id = (string)reader.Value;
+                            var id = reader.Value.ToString();
                             character.Id = id == string.Empty ? new Guid() : new Guid(id);
                             break;
                         case "image":
-                            character.Image = (string)reader.Value;
+                            character.Image = reader.Value.ToString();
                             break;
                         case "name":
-                            character.Name = (string)reader.Value;
+                            character.Name = reader.Value.ToString();
                             break;
                         case "health":
-                            character.Health = int.Parse((string)reader.Value);
+                            character.Health = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
                             break;
                         case "resolve":
-                            character.Resolve = int.Parse((string)reader.Value);
+                            character.Resolve = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
                             break;
                         case "chinyen":
-                            character.Chinyen = int.Parse((string)reader.Value);
+                            character.Chinyen = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
                             break;
                         case "promotionPoints":
-                            character.PromotionPoints = int.Parse((string)reader.Value);
+                            character.PromotionPoints = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
                             break;
                         case "humanityPoints":
-                            character.HumanityPoints = int.Parse((string)reader.Value);
+                            character.HumanityPoints = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
                             break;
                         case "notes":
-                            character.Notes = (string)reader.Value;
+                            character.Notes = reader.Value.ToString();
                             break;
                         case "favoredGear":
-                            character.FavoredGear = (string)reader.Value;
+                            character.FavoredGear = reader.Value.ToString();
                             break;
                         case "signatureItem":
-                            character.SignatureItem = (string)reader.Value;
+                            character.SignatureItem = reader.Value.ToString();
                             break;
                         case "home":
-                            character.Home = (string)reader.Value;
+                            character.Home = reader.Value.ToString();
                             break;
                         case "origin":
                             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.BladeRunner.Json.Origins.json"))
@@ -83,7 +83,7 @@ namespace BladeRunner
                                     var jsonContent = originsReader.ReadToEnd();
                                     var origins = JsonTo.List<Origin>(jsonContent);
 
-                                    var origin = origins.Find(o => o.Name == _textInfo.ToTitleCase((string)reader.Value));
+                                    var origin = origins.Find(o => o.Name.ToLower == reader.Value.ToString().ToLower());
 
                                     character.Origin = origin;
                                 }
@@ -97,7 +97,7 @@ namespace BladeRunner
                                     var jsonContent = archetypesReader.ReadToEnd();
                                     var archetypes = JsonTo.List<Archetype>(jsonContent);
 
-                                    var archetype = archetypes.Find(o => o.Name == _textInfo.ToTitleCase((string)reader.Value));
+                                    var archetype = archetypes.Find(o => o.Name.ToLower() == reader.Value.ToString().ToLower());
 
                                     character.Archetype = archetype;
                                 }
@@ -120,11 +120,11 @@ namespace BladeRunner
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndObject)
                                     {
-                                        var propName = (string)reader.Value;
+                                        var propName = reader.Value.ToString();
                                         reader.Read();
-                                        var value = int.Parse((string)reader.Value);
+                                        var value = int.Parse(reader.Value.ToString());
 
-                                        var found = attributes.Find(p => p.Name == _textInfo.ToTitleCase(propName));
+                                        var found = attributes.Find(p => p.Name.ToLower() == propName.ToLower());
                                         found.Value = value;
                                         character.Attributes.Add(found);
                                     }
@@ -139,7 +139,7 @@ namespace BladeRunner
                                     var jsonContent = tenuresReader.ReadToEnd();
                                     var tenures = JsonTo.List<Tenure>(jsonContent);
 
-                                    var tenure = tenures.Find(o => o.Name == _textInfo.ToTitleCase((string)reader.Value));
+                                    var tenure = tenures.Find(o => o.Name.ToLower() == reader.Value.ToString().ToLower());
 
                                     character.Tenure = tenure;
                                 }
@@ -162,11 +162,11 @@ namespace BladeRunner
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndObject)
                                     {
-                                        var propName = (string)reader.Value;
+                                        var propName = reader.Value.ToString();
                                         reader.Read();
-                                        var value = int.Parse((string)reader.Value);
+                                        var value = int.Parse(reader.Value.ToString());
 
-                                        var found = skills.Find(p => p.Name == _textInfo.ToTitleCase(propName));
+                                        var found = skills.Find(p => p.Name.ToLower() == propName.ToLower());
                                         found.Value = value;
                                         character.Skills.Add(found);
                                     }
@@ -190,7 +190,7 @@ namespace BladeRunner
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        var found = specialties.Find(t => t.Name == _textInfo.ToTitleCase((string)reader.Value));
+                                        var found = specialties.Find(t => t.Name.ToLower() == reader.Value.ToString().ToLower());
                                         character.Specialties.Add(found);
                                     }
                                 }
@@ -229,7 +229,7 @@ namespace BladeRunner
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        var found = gears.Find(t => t.Name == _textInfo.ToTitleCase((string)reader.Value));
+                                        var found = gears.Find(t => t.Name.ToLower() == reader.Value.ToString().ToLower());
                                         character.Gears.Add(found);
                                     }
                                 }
@@ -252,7 +252,7 @@ namespace BladeRunner
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        var found = armors.Find(t => t.Name == _textInfo.ToTitleCase((string)reader.Value));
+                                        var found = armors.Find(t => t.Name.ToLower() == reader.Value.ToString().ToLower());
                                         character.Armors.Add(found);
                                     }
                                 }
@@ -275,7 +275,7 @@ namespace BladeRunner
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        var found = weapons.Find(t => t.Name == _textInfo.ToTitleCase((string)reader.Value));
+                                        var found = weapons.Find(t => t.Name.ToLower() == reader.Value.ToString().ToLower());
                                         character.Weapons.Add(found);
                                     }
                                 }
@@ -298,7 +298,7 @@ namespace BladeRunner
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        var found = vehicles.Find(t => t.Name == _textInfo.ToTitleCase((string)reader.Value));
+                                        var found = vehicles.Find(t => t.Name.ToLower() == reader.Value.ToString().ToLower());
                                         character.Vehicles.Add(found);
                                     }
                                 }

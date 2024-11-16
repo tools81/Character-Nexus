@@ -17,6 +17,7 @@ namespace Marvel
         public override Character ReadJson(JsonReader reader, Type typeToConvert, Character? existing, bool hasExistingValue, JsonSerializer serializer)
         {
             var character = new Character() { Name = "" };
+            int n = 0;
 
             if (reader.TokenType == JsonToken.Null)
             {
@@ -32,62 +33,89 @@ namespace Marvel
 
                 if (reader.TokenType == JsonToken.PropertyName)
                 {
-                    string propertyName = (string)reader.Value;
+                    string propertyName = reader.Value.ToString();
                     reader.Read();
 
                     switch (propertyName)
                     {
                         case "id":
-                            var id = (string)reader.Value;
-                            character.Id = id == string.Empty ? new Guid() : new Guid(id);
+                            var id = reader.Value.ToString();
+                            character.Id = id == string.Empty ? Guid.NewGuid() : new Guid(id);
                             break;
                         case "image":
-                            character.Image = (string)reader.Value;
+                            character.Image = reader.Value.ToString();
                             break;
                         case "name":
-                            character.Name = (string)reader.Value;
+                            character.Name = reader.Value.ToString();
                             break;
                         case "realName":
-                            character.RealName = (string)reader.Value;
+                            character.RealName = reader.Value.ToString();
                             break;
                         case "rank":
-                            character.Rank = int.Parse((string)reader.Value);
+                            character.Rank = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
                             break;
                         case "height":
-                            character.Height = (string)reader.Value;
+                            character.Height = reader.Value.ToString();
                             break;
                         case "weight":
-                            character.Weight = (string)reader.Value;
+                            character.Weight = reader.Value.ToString();
                             break;
                         case "gender":
-                            character.Gender = (string)reader.Value;
+                            character.Gender = reader.Value.ToString();
                             break;
                         case "eyes":
-                            character.Eyes = (string)reader.Value;
+                            character.Eyes = reader.Value.ToString();
                             break;
                         case "hair":
-                            character.Hair = (string)reader.Value;
+                            character.Hair = reader.Value.ToString();
                             break;
                         case "size":
-                            character.Size = (string)reader.Value;
+                            character.Size = reader.Value.ToString();
                             break;
                         case "distinguishingFeatures":
-                            character.DistinguishingFeatures = (string)reader.Value;
+                            character.DistinguishingFeatures = reader.Value.ToString();
                             break;
                         case "teams":
-                            character.Teams = (string)reader.Value;
+                            character.Teams = reader.Value.ToString();
                             break;
                         case "base":
-                            character.Base = (string)reader.Value;
+                            character.Base = reader.Value.ToString();
                             break;
                         case "notes":
-                            character.Notes = (string)reader.Value;
+                            character.Notes = reader.Value.ToString();
                             break;
                         case "history":
-                            character.History = (string)reader.Value;
+                            character.History = reader.Value.ToString();
                             break;
                         case "personality":
-                            character.Personality = (string)reader.Value;
+                            character.Personality = reader.Value.ToString();
+                            break;
+                        case "health":
+                            character.Health = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
+                            break;
+                        case "focus":
+                            character.Focus = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
+                            break;
+                        case "healthDamageReduction":
+                            character.HealthDamageReduction = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
+                            break;
+                        case "focusDamageReduction":
+                            character.FocusDamageReduction = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
+                            break;
+                        case "run":
+                            character.Run = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
+                            break;
+                        case "climb":
+                            character.Climb = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
+                            break;
+                        case "swim":
+                            character.Swim = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
+                            break;
+                        case "karma":
+                            character.Karma = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
+                            break;
+                        case "initiativeModifier":
+                            character.InitiativeModifier = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
                             break;
                         case "attributes":
                             if (reader.TokenType != JsonToken.StartObject)
@@ -106,11 +134,11 @@ namespace Marvel
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndObject)
                                     {
-                                        var propName = (string)reader.Value;
+                                        var propName = reader.Value.ToString();
                                         reader.Read();
-                                        var value = int.Parse((string)reader.Value);
+                                        var value = int.Parse(reader.Value.ToString());
 
-                                        var found = attributes.Find(p => p.Name == _textInfo.ToTitleCase(propName));
+                                        var found = attributes.Find(p => p.Name.ToLower() == propName.ToLower());
                                         found.Value = value;
                                         character.Attributes.Add(found);
                                     }
@@ -125,7 +153,14 @@ namespace Marvel
                                     var jsonContent = occupationsReader.ReadToEnd();
                                     var occupations = JsonTo.List<Occupation>(jsonContent);
 
-                                    var occupation = occupations.Find(o => o.Name == _textInfo.ToTitleCase((string)reader.Value));
+                                    //Select input items return an object, so must read to get beyond StartObject property and into Value property
+                                    reader.Read();
+                                    reader.Read();
+
+                                    var occupation = occupations.Find(o => o.Name.ToLower() == reader.Value.ToString().ToLower());
+
+                                    //Read the end object
+                                    reader.Read();
 
                                     character.Occupation = occupation;
                                 }
@@ -139,7 +174,12 @@ namespace Marvel
                                     var jsonContent = originsReader.ReadToEnd();
                                     var origins = JsonTo.List<Origin>(jsonContent);
 
-                                    var origin = origins.Find(o => o.Name == _textInfo.ToTitleCase((string)reader.Value));
+                                    reader.Read();
+                                    reader.Read();
+
+                                    var origin = origins.Find(o => o.Name.ToLower() == reader.Value.ToString().ToLower());
+
+                                    reader.Read();
 
                                     character.Origin = origin;
                                 }
@@ -162,7 +202,13 @@ namespace Marvel
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        var found = tags.Find(t => t.Name == _textInfo.ToTitleCase((string)reader.Value));
+                                        reader.Read();
+                                        reader.Read();
+                                        
+                                        var found = tags.Find(t => t.Name.ToLower() == (reader.Value.ToString()).ToLower());
+
+                                        reader.Read();
+
                                         character.Tags.Add(found);
                                     }
                                 }
@@ -185,7 +231,13 @@ namespace Marvel
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        var found = traits.Find(t => t.Name == _textInfo.ToTitleCase((string)reader.Value));
+                                        reader.Read();
+                                        reader.Read();
+
+                                        var found = traits.Find(t => t.Name.ToLower() == (reader.Value.ToString()).ToLower());
+
+                                        reader.Read();
+
                                         character.Traits.Add(found);
                                     }
                                 }
@@ -208,20 +260,20 @@ namespace Marvel
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndObject)
                                     {
-                                        var propName = (string)reader.Value;
+                                        var propName = reader.Value.ToString();
                                         reader.Read();
                                         var value = (bool)reader.Value;
 
                                         if (value)
                                         {
-                                            var found = powers.Find(p => p.Name == _textInfo.ToTitleCase(propName));
+                                            var found = powers.Find(p => p.Name.ToLower() == propName.ToLower());
                                             character.Powers.Add(found);
                                         }
                                     }
                                 }
                             }
                             break;
-                        case "weapons":
+                        case "weapon":
                             if (reader.TokenType != JsonToken.StartArray)
                             {
                                 throw new JsonException("Expected StartArray token for weapons");
@@ -238,7 +290,13 @@ namespace Marvel
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        var found = weapons.Find(w => w.Name == _textInfo.ToTitleCase((string)reader.Value));
+                                        reader.Read();
+                                        reader.Read();
+
+                                        var found = weapons.Find(w => w.Name.ToLower() == (reader.Value.ToString()).ToLower());
+
+                                        reader.Read();
+
                                         character.Weapons.Add(found);
                                     }
                                 }

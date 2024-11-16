@@ -41,6 +41,7 @@ namespace CharacterNexus
             services.AddSingleton(configuration);
 
             services.AddSingleton<IRuleset, AmazingTales.Ruleset>();
+            services.AddSingleton<IRuleset, BladeRunner.Ruleset>();
             services.AddSingleton<IRuleset, EverydayHeroes.Ruleset>();
             //services.AddSingleton<IRuleset, GiJoe.Ruleset>();
             services.AddSingleton<IRuleset, Marvel.Ruleset>();

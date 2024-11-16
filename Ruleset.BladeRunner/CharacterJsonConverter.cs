@@ -18,6 +18,7 @@ namespace BladeRunner
         public override Character ReadJson(JsonReader reader, Type objectType, Character existingValue, bool hasExistingValue, JsonSerializer serializer)
         {
             var character = new Character() { Name = "" };
+            int n = 0;
 
             if (reader.TokenType == JsonToken.Null)
             {
@@ -83,7 +84,7 @@ namespace BladeRunner
                                     var jsonContent = originsReader.ReadToEnd();
                                     var origins = JsonTo.List<Origin>(jsonContent);
 
-                                    var origin = origins.Find(o => o.Name.ToLower == reader.Value.ToString().ToLower());
+                                    var origin = origins.Find(o => o.Name.ToLower() == reader.Value.ToString().ToLower());
 
                                     character.Origin = origin;
                                 }

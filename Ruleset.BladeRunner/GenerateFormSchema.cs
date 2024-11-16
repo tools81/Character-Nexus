@@ -78,6 +78,19 @@ namespace BladeRunner
                 GenerateArmorSchema(armors, "armor", "Armor");
                 GenerateGearSchema(gears, "gear", "Gear");
                 GenerateVehicleSchema(vehicles, "vehicle", "Vehicle");
+
+                var schema = new
+                {
+                    title = "Hero Editor",
+                    fields = _fields
+                };
+
+                string schemaJson = JsonConvert.SerializeObject(schema, Formatting.Indented);
+
+                var schemaPath = _jsonFilesPath + "Character/Form.json";
+                File.WriteAllText(schemaPath, schemaJson);
+
+                Console.WriteLine("Character schema generated and saved to " + schemaPath);
             }
             catch (Exception ex)
             {

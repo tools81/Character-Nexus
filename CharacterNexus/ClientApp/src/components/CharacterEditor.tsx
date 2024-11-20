@@ -29,6 +29,7 @@ const DynamicForm = () => {
     control,
     getValues,
     setValue,
+    reset,
     formState: { errors },
   } = useForm();
 

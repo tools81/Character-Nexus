@@ -6,7 +6,7 @@ namespace Marvel
     public class Power : IAbility, IBaseJson
     {
         public required string Name { get; set; }
-        public List<string>? Powersets { get; set; }
+        public List<string> Powersets { get; set; } = new List<string>();
         public string? Description { get; set; }
         public int Page { get; set; }
         public List<ActionType>? Actions { get; set; }

@@ -5,8 +5,8 @@ namespace Marvel
 {
     public class Occupation : IFeature, IBaseJson
     {
-        public required string Name { get; set; }
-        public string? Description { get; set; }
-        public List<BonusCharacteristic>? BonusCharacteristics { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public List<BonusCharacteristic> BonusCharacteristics { get; set; } = new List<BonusCharacteristic>();
     }
 }

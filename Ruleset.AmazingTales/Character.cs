@@ -31,7 +31,7 @@ namespace AmazingTales
             dict.Add("D6Attribute", D6Attribute);
             dict.Add("Notes", Notes);
 
-            return PDFSchema.Generate(dict, Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Character_Sheet.pdf");
+            return PDFSchema.Generate(dict, Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Amazing_Tales_Character_Sheet.pdf");
         }
 
 

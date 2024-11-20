@@ -64,7 +64,9 @@ namespace EverydayHeroes
                 Name = Name,
                 Image = Image,
                 Level = Level,
-                Details = $"{Archetype} | {Class}"
+                LevelName = "Level",
+                Details = $"{Archetype} | {Class}",
+                CharacterSheet = CharacterSheet
             };
         }
 

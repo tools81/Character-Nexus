@@ -133,21 +133,22 @@ namespace Marvel
 
         public byte[] BuildCharacterSheet()
         {
-            var dict = new Dictionary<string, string>();
-
-            dict.Add("Codename", Name);
-            dict.Add("Real Name", RealName);
-            dict.Add("Rank", Rank.ToString());
-            dict.Add("Height", Height);
-            dict.Add("Weight", Weight);
-            dict.Add("Gender", Gender);
-            dict.Add("Eyes", Eyes);
-            dict.Add("Hair", Hair);
-            dict.Add("Size", Size);
-            dict.Add("Distinguishing Features", DistinguishingFeatures);
-            dict.Add("Teams", Teams);
-            dict.Add("Base", Base);
-            dict.Add("Notes", Notes);
+            var dict = new Dictionary<string, string>
+            {
+                { "Codename", Name },
+                { "Real Name", RealName },
+                { "Rank", Rank.ToString() },
+                { "Height", Height },
+                { "Weight", Weight },
+                { "Gender", Gender },
+                { "Eyes", Eyes },
+                { "Hair", Hair },
+                { "Size", Size },
+                { "Distinguishing Features", DistinguishingFeatures },
+                { "Teams", Teams },
+                { "Base", Base },
+                { "Notes", Notes }
+            };
 
             List<string> historyArray = History.DivideStringIntoWordArray(20);
             for (int i = 0; i < historyArray.Count; i++)
@@ -291,7 +292,7 @@ namespace Marvel
 
             //TODO: Figure out where to put Weapons
 
-            return PDFSchema.Generate(dict, Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Character_Sheet.pdf");
+            return PDFSchema.Generate(dict, Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Marvel_Character_Sheet.pdf");
         }
 
         private CharacterSegment GetCharacterSegment()
@@ -302,7 +303,9 @@ namespace Marvel
                 Name = Name,
                 Image = Image,
                 Level = Rank,
-                Details = $"{Origin.Name} | {Occupation.Name}"
+                LevelName = "Rank",
+                Details = $"{Origin?.Name} | {Occupation?.Name}",
+                CharacterSheet = CharacterSheet
             };
         }
     }

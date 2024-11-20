@@ -8,30 +8,36 @@ import { useRulesetContext } from "./RulesetContext";
 const BASE_URL = `${window.location.protocol}//${window.location.host}`;
 
 const RulesetDashboard: React.FC = () => {
-  const { ruleset, setRuleset } = useRulesetContext();
+  const { ruleset } = useRulesetContext();
   const [error, setError] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [characterSegments, setCharacterSegments] = useState<CharacterSegment[]>([]);
 
   useEffect(() => {
-      const fetchCharacters = async () => {
-          setIsLoading(true);
-
-          try {
-            const response = await fetch(`${BASE_URL}/api/ruleset/characters?ruleset=${encodeURIComponent(ruleset.name)}`);
-            const characters = await response.json() as CharacterSegment[];
-            setCharacterSegments(characters);
-          } catch (e: any) {
-              setError(e);
-          } finally {
-              setIsLoading(false);
-          }
-      };
-
       if (characterSegments.length < 1) {
         fetchCharacters();
       }
   }, []);
+
+  const fetchCharacters = async () => {
+    setIsLoading(true);
+
+    setCharacterSegments([]);
+
+    try {
+      const response = await fetch(
+        `${BASE_URL}/api/ruleset/characters?ruleset=${encodeURIComponent(
+          ruleset.name
+        )}`
+      );
+      const characters = (await response.json()) as CharacterSegment[];
+      setCharacterSegments(characters);
+    } catch (e: any) {
+      setError(e);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const navigate = useNavigate();
 
@@ -44,6 +50,24 @@ const RulesetDashboard: React.FC = () => {
   function editCharacter(name : string) {
     navigate(`/charactereditor/name/${name}`)
   }
+
+  const deleteCharacter = async (name: string) => {
+    setIsLoading(true);
+
+    try {
+      const response = await fetch(
+        `${BASE_URL}/api/character/delete?ruleset=${encodeURIComponent(ruleset.name)}&characterName=${encodeURIComponent(name)}`,
+        {
+          method: "DELETE"
+        }
+      );
+    } catch (e: any) {
+      setError(e);
+    } finally {
+      fetchCharacters();
+      setIsLoading(false);
+    }
+  };
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -73,8 +97,11 @@ const RulesetDashboard: React.FC = () => {
             name={character.name}
             image={character.image}
             level={character.level}
+            levelName={character.levelName}
             details={character.details}
+            characterSheet={character.characterSheet}
             onClick={() => editCharacter(character.name)}
+            onDelete={() => deleteCharacter(character.name)}
           />
         ))}
       </div>

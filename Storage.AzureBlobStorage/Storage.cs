@@ -102,7 +102,7 @@ namespace AzureBlobStorage
 
         public async Task<string> UploadImageAsync(string rulesetName, string name, IFormFile image)
         {
-            string blobName = $"img-{name}";
+            string blobName = $"{name}-img";
             BlobContainerClient blobContainerClient = await RetrieveBlobClient(rulesetName.FormatAzureCompliance());
             var blobClient = blobContainerClient.GetBlobClient(blobName);
 
@@ -116,11 +116,11 @@ namespace AzureBlobStorage
 
         public async Task<string> UploadPDFByteArray(string rulesetName, string name, byte[] bytes)
         {
-            string blobName = $"pdf-{name}.pdf";
+            string blobName = $"{name}-pdf.pdf";
             BlobContainerClient blobContainerClient = await RetrieveBlobClient(rulesetName.FormatAzureCompliance());
             var blobClient = blobContainerClient.GetBlobClient(blobName);
 
-            using (var stream = new MemoryStream(bytes, writable: false))
+            using (var stream = new MemoryStream(bytes, true))
             {
                 await blobClient.UploadAsync(stream, true);
             }

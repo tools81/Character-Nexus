@@ -10,7 +10,9 @@ export interface CharacterSegment {
     name: string;
     image: string;
     level: number;
+    levelName: string;
     details: string;
+    characterSheet: string;
 }
 
 // -----------------

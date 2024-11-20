@@ -77,7 +77,8 @@ namespace CharacterNexus.Controllers
 
                 if (character != null)
                 {
-                    var characterSheetUrl = await _storage.UploadPDFByteArray(ruleset.Name, character.Name, character.BuildCharacterSheet());
+                    var sheet = character.BuildCharacterSheet();
+                    var characterSheetUrl = await _storage.UploadPDFByteArray(ruleset.Name, character.Name, sheet);
                     character.CharacterSheet = characterSheetUrl;
 
                     await _storage.UploadCharacterAsync(ruleset.Name, character);
@@ -95,13 +96,13 @@ namespace CharacterNexus.Controllers
         }
 
         [HttpDelete("delete")]
-        public IActionResult DeleteCharacter(string characterName)
+        public async Task<IActionResult> DeleteCharacter(string characterName)
         {
             if (HttpContext.Items.TryGetValue("Ruleset", out var rulesetObj) && rulesetObj is IRuleset ruleset)
             {
                 _logger.LogInformation($"Character delete requested for {characterName} in ruleset {ruleset.Name}");
 
-                _storage.DeleteCharacterAsync(ruleset.Name, characterName);
+                await _storage.DeleteCharacterAsync(ruleset.Name, characterName);
                 return Ok();
             }
             else

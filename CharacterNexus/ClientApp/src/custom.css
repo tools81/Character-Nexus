@@ -21,6 +21,10 @@ header
 
 body {
   background-image: linear-gradient(to top left, #2c3e50, #000000);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center top;
+  background-attachment: fixed;
   font-family: 'Roboto', sans-serif;
   min-width: 480px;
   color: #ecf0f1;

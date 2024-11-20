@@ -153,7 +153,7 @@ namespace BladeRunner
                 }
             }
 
-            return PDFSchema.Generate(dict, Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Character_Sheet.pdf");
+            return PDFSchema.Generate(dict, Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Blade_Runner_Character_Sheet.pdf");
         }
 
 

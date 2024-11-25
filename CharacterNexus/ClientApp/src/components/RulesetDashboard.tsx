@@ -41,14 +41,12 @@ const RulesetDashboard: React.FC = () => {
 
   const navigate = useNavigate();
 
-  function getCharacter() {}
-
   function newCharacter() {
     navigate("/charactereditor");
   }
 
   function editCharacter(name : string) {
-    navigate(`/charactereditor/name/${name}`)
+    navigate(`/charactereditor?character=${name}`)
   }
 
   const deleteCharacter = async (name: string) => {
@@ -102,6 +100,7 @@ const RulesetDashboard: React.FC = () => {
             characterSheet={character.characterSheet}
             onClick={() => editCharacter(character.name)}
             onDelete={() => deleteCharacter(character.name)}
+            onEdit={() => editCharacter(character.name)}
           />
         ))}
       </div>

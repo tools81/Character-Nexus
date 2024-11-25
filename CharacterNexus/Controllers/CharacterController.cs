@@ -45,10 +45,7 @@ namespace CharacterNexus.Controllers
             if (HttpContext.Items.TryGetValue("Ruleset", out var rulesetObj) && rulesetObj is IRuleset ruleset)
             {
                 _logger.LogInformation($"Character load requested for {characterName} in ruleset {ruleset.Name}");
-
-                var character = _storage.DownloadCharacterAsync(ruleset.Name, characterName).Result;
-                var characterJson = ruleset.LoadCharacter(character);
-                return Ok(characterJson);
+                return Ok(_storage.DownloadCharacterJsonAsync(ruleset.Name, characterName).Result);
             }
             else
             {
@@ -81,7 +78,8 @@ namespace CharacterNexus.Controllers
                     var characterSheetUrl = await _storage.UploadPDFByteArray(ruleset.Name, character.Name, sheet);
                     character.CharacterSheet = characterSheetUrl;
 
-                    await _storage.UploadCharacterAsync(ruleset.Name, character);
+                    jObject.Property("id").Value = character.Id;
+                    await _storage.UploadCharacterAsync(ruleset.Name, character, jObject);
                     return Ok();
                 }
                 else

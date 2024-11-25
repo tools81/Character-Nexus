@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ChangeEvent } from "react";
+import React, { useState, useEffect, ChangeEvent, useCallback } from "react";
 import { useForm, useFieldArray, Controller, UseFieldArrayAppend, FieldValues } from "react-hook-form";
 import { useRulesetContext } from "./RulesetContext";
 import { useNavigate } from "react-router-dom";
@@ -6,7 +6,6 @@ import { BonusAdjustments, BonusAdjustment } from "../store/BonusAdjustment";
 import { BonusCharacteristics, BonusCharacteristic } from "../store/BonusCharacteristic";
 import { Prerequisites } from "../store/Prerequisite";
 import { toCamelCase } from "./ToCamelCase";
-import { unregister } from "../registerServiceWorker";
 
 const BASE_URL = `${window.location.protocol}//${window.location.host}`;
 
@@ -34,8 +33,65 @@ const DynamicForm = () => {
   } = useForm();
 
   function navigateToRulesetDashboard() {
-    navigate("/rulesetdashboard");
+    navigate("/ruleset");
   }
+
+  function getURLParameter(name: string): string | null {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+
+  const fetchDataAndReset = useCallback(async (name: string) => {
+    try {
+      const response = await fetch(
+        `${BASE_URL}/api/character/load?ruleset=${encodeURIComponent(
+          ruleset.name
+        )}&characterName=${encodeURIComponent(name)}`,
+        {
+          method: "GET",
+        }
+      );
+      const data = await response.json();
+      reset(data);
+
+      const imageUrl = data.image;
+      const fileResponse = await fetch(imageUrl, { method: "GET" });
+      const blob = await fileResponse.blob();
+      const file = new File([blob], getFileNameFromUrl(data.image), {
+        type: blob.type,
+      });
+
+      // Set the value programmatically
+      setValue("image", file, { shouldDirty: true });
+
+      // Dispatch a native change event manually
+      const inputElement = document.getElementById("image") as HTMLInputElement;
+
+      if (inputElement) {
+        // Create a DataTransfer object to simulate file selection
+        const dataTransfer = new DataTransfer();
+        dataTransfer.items.add(file);
+
+        // Assign the DataTransfer object to the input element's files
+        inputElement.files = dataTransfer.files;
+
+        // Dispatch the change event manually
+        const event = new Event("change", { bubbles: true });
+        inputElement.dispatchEvent(event);
+      }
+
+      //setValue("image", file);
+    } catch (error) {
+      console.error("Error fetching character:", error);
+    }
+  }, [reset]);
+
+  const getFileNameFromUrl = (url: string): string => {
+    // Use URL class to parse the URL
+    const parsedUrl = new URL(url);
+    // Extract the pathname and get the last segment as the file name
+    return parsedUrl.pathname.split("/").pop() || "";
+  };
 
   useEffect(() => {
     const fetchSchema = async () => {
@@ -53,10 +109,16 @@ const DynamicForm = () => {
 
     if (schema == null) {
       fetchSchema();
+
+      var character = getURLParameter("character");
+      if (character !== "" && character !== null) {
+        fetchDataAndReset(character);
+      }
     }
   }, []);
 
   const handleImageUpload = (event: ChangeEvent<HTMLInputElement>) => {
+    console.log(event.target.files);
     if (event.target.files && event.target.files.length > 0) {
       setImageData(event.target.files[0]);
 
@@ -239,8 +301,8 @@ const DynamicForm = () => {
           body: formData,
         }
       )
-        .then((response) => response.json())
-        //.then(() => navigateToRulesetDashboard())
+        //.then((response) => response.json())
+        .then(() => navigateToRulesetDashboard())
         .catch((error) => console.error("Error:", error));
     }
   };

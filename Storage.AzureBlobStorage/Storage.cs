@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json.Linq;
 
 namespace AzureBlobStorage
 {
@@ -30,16 +31,61 @@ namespace AzureBlobStorage
             var blobClient = blobContainerClient.GetBlobClient(blobName);
             await blobClient.DeleteIfExistsAsync();
 
-            await blobClient.UploadAsync(new MemoryStream(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(character)), true));
+            await blobClient.UploadAsync(new MemoryStream(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(character)), true), true);
 
             var characters = await DownloadCharactersByRulesetAsync(rulesetName.FormatAzureCompliance());
-            characters.Add(character.CharacterSegment);
+
+            var existingCharacterRecord = characters.FirstOrDefault(c => c.Id == character.Id);
+
+            if (existingCharacterRecord == null)
+            {
+                characters.Add(character.CharacterSegment);
+            }
+            else
+            {
+                existingCharacterRecord = character.CharacterSegment;
+            }
+
+            blobName = $"characters.json";
+            blobClient = blobContainerClient.GetBlobClient(blobName);
+            await blobClient.DeleteIfExistsAsync();
+
+            await blobClient.UploadAsync(new MemoryStream(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(characters)), true), true);            
+        }
+
+        public async Task UploadCharacterAsync(string rulesetName, ICharacter character, JObject characterFormData)
+        {
+            string blobName = $"{character.Name}.json";
+            BlobContainerClient blobContainerClient = await RetrieveBlobClient(rulesetName.FormatAzureCompliance());
+            var blobClient = blobContainerClient.GetBlobClient(blobName);
+            await blobClient.DeleteIfExistsAsync();
+
+            await blobClient.UploadAsync(new MemoryStream(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(character)), true), true);
+
+            var characters = await DownloadCharactersByRulesetAsync(rulesetName.FormatAzureCompliance());
+
+            var existingCharacterRecord = characters.FirstOrDefault(c => c.Id == character.Id);
+
+            if (existingCharacterRecord == null)
+            {
+                characters.Add(character.CharacterSegment);
+            }
+            else
+            {
+                existingCharacterRecord = character.CharacterSegment;
+            }
 
             blobName = $"characters.json";
             blobClient = blobContainerClient.GetBlobClient(blobName);
             await blobClient.DeleteIfExistsAsync();
 
             await blobClient.UploadAsync(new MemoryStream(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(characters)), true), true);
+
+            blobName = $"{character.Name}-data.json";
+            blobContainerClient = await RetrieveBlobClient(rulesetName.FormatAzureCompliance());
+            blobClient = blobContainerClient.GetBlobClient(blobName);
+
+            await blobClient.UploadAsync(new MemoryStream(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(characterFormData)), true), true);
         }
 
         public async Task<ICharacter> DownloadCharacterAsync(string rulesetName, string characterName)
@@ -52,6 +98,17 @@ namespace AzureBlobStorage
             using var streamReader = new StreamReader(response.Value.Content);
             var jsonContent = await streamReader.ReadToEndAsync();
             return JsonConvert.DeserializeObject<ICharacter>(jsonContent);
+        }
+
+        public async Task<string> DownloadCharacterJsonAsync(string rulesetName, string characterName)
+        {
+            string blobName = $"{characterName}-data.json";
+            BlobContainerClient blobContainerClient = await RetrieveBlobClient(rulesetName.FormatAzureCompliance());
+            var blobClient = blobContainerClient.GetBlobClient(blobName);
+
+            var response = await blobClient.DownloadAsync();
+            using var streamReader = new StreamReader(response.Value.Content);
+            return await streamReader.ReadToEndAsync();
         }
 
         public async Task<List<CharacterSegment>> DownloadCharactersByRulesetAsync(string rulesetName)
@@ -102,7 +159,7 @@ namespace AzureBlobStorage
 
         public async Task<string> UploadImageAsync(string rulesetName, string name, IFormFile image)
         {
-            string blobName = $"{name}-img";
+            string blobName = $"{name}";
             BlobContainerClient blobContainerClient = await RetrieveBlobClient(rulesetName.FormatAzureCompliance());
             var blobClient = blobContainerClient.GetBlobClient(blobName);
 
@@ -116,7 +173,7 @@ namespace AzureBlobStorage
 
         public async Task<string> UploadPDFByteArray(string rulesetName, string name, byte[] bytes)
         {
-            string blobName = $"{name}-pdf.pdf";
+            string blobName = $"{name}.pdf";
             BlobContainerClient blobContainerClient = await RetrieveBlobClient(rulesetName.FormatAzureCompliance());
             var blobClient = blobContainerClient.GetBlobClient(blobName);
 
@@ -136,6 +193,6 @@ namespace AzureBlobStorage
             var blobContainerClient = blobServiceClient.GetBlobContainerClient((Debugger.IsAttached ? "dev-" : string.Empty) + containerName);
             await blobContainerClient.CreateIfNotExistsAsync(PublicAccessType.Blob);
             return blobContainerClient;
-        }
+        }        
     }
 }

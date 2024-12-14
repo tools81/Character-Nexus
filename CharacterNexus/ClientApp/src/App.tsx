@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
-import Home from './components/Home';
-import RulesetDashboard from './components/RulesetDashboard';
-import CharacterEditor from './components/CharacterEditor';
+import Home from './pages/Home';
+import RulesetDashboard from './pages/RulesetDashboard';
+import CharacterEditor from './pages/CharacterEditor';
 import { RulesetProvider } from "./components/RulesetContext";
 import { Container } from "reactstrap";
 import NavMenu from "./components/NavMenu";

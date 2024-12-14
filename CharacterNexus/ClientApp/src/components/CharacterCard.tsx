@@ -2,7 +2,7 @@ import { FaRegEdit } from "react-icons/fa";
 import { FaRegFilePdf, FaRegTrashCan } from "react-icons/fa6";
 import { SiFoundryvirtualtabletop } from "react-icons/si";
 import { GiCharacter } from "react-icons/gi";
-import { openInNewTab } from "./OpenInNewTab";
+import { openInNewTab } from "../utils/openInNewTab";
 
 const BASE_URL = `${window.location.protocol}//${window.location.host}`;
 

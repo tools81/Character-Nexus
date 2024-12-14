@@ -1,4 +1,4 @@
-import * as Ruleset from './Ruleset';
+import * as Ruleset from '../types/Ruleset';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 

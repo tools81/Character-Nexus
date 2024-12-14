@@ -1,9 +1,9 @@
 import { connect } from "react-redux";
 import React, { useEffect, useState } from "react";
-import { CharacterSegment } from "../store/CharacterSegment";
+import { CharacterSegment } from "../types/CharacterSegment";
 import { useNavigate } from "react-router-dom";
-import CharacterCard from "./CharacterCard";
-import { useRulesetContext } from "./RulesetContext";
+import CharacterCard from "../components/CharacterCard";
+import { useRulesetContext } from "../components/RulesetContext";
 
 const BASE_URL = `${window.location.protocol}//${window.location.host}`;
 

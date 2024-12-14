@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
-import ImageCard from './RulesetCard';
-import { Ruleset } from '../store/Ruleset';
+import ImageCard from '../components/RulesetCard';
+import { Ruleset } from '../types/Ruleset';
 import { useEffect, useState } from 'react';
-import { useRulesetContext } from './RulesetContext';
+import { useRulesetContext } from '../components/RulesetContext';
 
 const Home: React.FC = () => {
   const BASE_URL = `${window.location.protocol}//${window.location.host}`;

@@ -274,8 +274,8 @@
           "bonusCharacteristics": "[{\"Type\":\"tag\",\"Value\":\"Supernatural\"}]"
         },
         {
-          "value": "Magic-Chaos Magic",
-          "label": "Magic-Chaos Magic",
+          "value": "Magic-Chaos",
+          "label": "Magic-Chaos",
           "bonusCharacteristics": "[{\"Type\":\"tag\",\"Value\":\"Chaotic\"},{\"Type\":\"tag\",\"Value\":\"Supernatural\"}]"
         },
         {
@@ -625,7 +625,7 @@
       "className": "alert alert-secondary",
       "children": [
         {
-          "name": "info-origin-Magic-Chaos Magic",
+          "name": "info-origin-Magic-Chaos",
           "label": "Information",
           "type": "textblock",
           "className": "text-block",
@@ -634,7 +634,7 @@
       ],
       "dependsOn": {
         "field": "origin",
-        "value": "Magic-Chaos Magic"
+        "value": "Magic-Chaos"
       }
     },
     {
@@ -1965,6 +1965,7 @@
         {
           "header": "Basic",
           "name": "Basic",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Basic.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -2710,6 +2711,7 @@
         {
           "header": "Elemental Control",
           "name": "ElementalControl",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Elemental_Control.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -3007,6 +3009,7 @@
         {
           "header": "Illusion",
           "name": "Illusion",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Illusion.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -3240,6 +3243,7 @@
         {
           "header": "Magic",
           "name": "Magic",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Magic.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -3681,6 +3685,7 @@
         {
           "header": "Martial Arts",
           "name": "MartialArts",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Martial_Arts.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -4010,6 +4015,7 @@
         {
           "header": "Melee Weapons",
           "name": "MeleeWeapons",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Melee_Weapons.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -4163,6 +4169,7 @@
         {
           "header": "Omniversal Travel",
           "name": "OmniversalTravel",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Omniversal_Travel.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -4428,6 +4435,7 @@
         {
           "header": "Phasing",
           "name": "Phasing",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Phasing.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -4581,6 +4589,7 @@
         {
           "header": "Plasticity",
           "name": "Plasticity",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Plasticity.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -4798,6 +4807,7 @@
         {
           "header": "Power Control",
           "name": "PowerControl",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Power_Control.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -4983,6 +4993,7 @@
         {
           "header": "Ranged Weapons",
           "name": "RangedWeapons",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Ranged_Weapons.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -5232,6 +5243,7 @@
         {
           "header": "Resize",
           "name": "Resize",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Resize.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -5465,6 +5477,7 @@
         {
           "header": "Shield Bearer",
           "name": "ShieldBearer",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Shield_Bearer.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -5698,6 +5711,7 @@
         {
           "header": "Spider Powers",
           "name": "SpiderPowers",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Spider_Powers.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -5931,6 +5945,7 @@
         {
           "header": "Super Speed",
           "name": "SuperSpeed",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Super_Speed.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -6100,6 +6115,7 @@
         {
           "header": "Super Strength",
           "name": "SuperStrength",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Super_Strength.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -6285,6 +6301,7 @@
         {
           "header": "Tactics",
           "name": "Tactics",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Tactics.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -6470,6 +6487,7 @@
         {
           "header": "Telekinesis",
           "name": "Telekinesis",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Telekinesis.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -6703,6 +6721,7 @@
         {
           "header": "Telepathy",
           "name": "Telepathy",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Telepathy.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -7128,6 +7147,7 @@
         {
           "header": "Teleportation",
           "name": "Teleportation",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Teleportation.webp",
           "component": {
             "type": "listgroup",
             "items": [
@@ -7297,6 +7317,7 @@
         {
           "header": "Weather Control",
           "name": "WeatherControl",
+          "image": "https://characternexus.blob.core.windows.net/resources/Marvel/Powers_Weather_Control.webp",
           "component": {
             "type": "listgroup",
             "items": [

@@ -14,8 +14,10 @@ import InputNumber from "../components/InputNumber";
 import InputHidden from "../components/InputHidden";
 import InputSelect from "../components/InputSelect";
 import InputSwitch from "../components/InputSwitch";
+import InputImage from "../components/InputImage";
 import FormGroup from "../components/FormGroup";
 import FormListGroup from "../components/FormListGroup";
+import FormAccordion from "../components/FormAccordion";
 
 const BASE_URL = `${window.location.protocol}//${window.location.host}`;
 
@@ -124,19 +126,6 @@ const DynamicForm = () => {
     }
   }, []);
 
-  const handleImageUpload = (event: ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.files);
-    if (event.target.files && event.target.files.length > 0) {
-      setImageData(event.target.files[0]);
-
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImagePreview(reader.result as string);
-      };
-      reader.readAsDataURL(event.target.files[0]);
-    }
-  };
-
   useEffect(() => {
     for (const adjustment of bonusAdjustments) {
       var type = toCamelCase(adjustment.type);
@@ -178,18 +167,6 @@ const DynamicForm = () => {
         .catch((error) => console.error("Error:", error));
     }
   };  
-
-  // const doesFieldArrayContain = (value: string) => {
-  //   return fields.some((field) => field.value === value);
-  // };
-
-  // useEffect(() => {
-  //   for (const adjustment in bonusCharacteristics) {
-  //     if (!doesFieldArrayContain(adjustment)) {
-  //        append({ value: adjustment });
-  //     }
-  //   }
-  // }, [setBonusCharacteristics, append]);
 
   const FieldArray = ({ field }: Props) => {
     const { fields, append, remove } = useFieldArray({
@@ -354,70 +331,23 @@ const DynamicForm = () => {
         return <FieldArray field={field} />;
       case "image":
         return (
-          <>
-            <div key={field.name} className="mb-3">
-              <label htmlFor={field.name} className="form-label">
-                {field.label}
-              </label>
-              <input
-                className={field.className}
-                type="file"
-                id={field.name}
-                accept="image/*"
-                {...register(field.name)}
-                onChange={handleImageUpload}
-              />
-            </div>
-            <div className="mt-3">
-              {imagePreview ? (
-                <img
-                  src={imagePreview}
-                  alt="Your Image"
-                  className="img-fluid pb-3"
-                />
-              ) : (
-                <p>No image selected</p>
-              )}
-            </div>
-          </>
+          <InputImage
+            register={register}
+            name={field.name}
+            label={field.label}
+            className={field.className}
+            imagePreview={imagePreview}
+            setImagePreview={setImagePreview}
+            setImageData={setImageData} 
+          />
         );
       case "accordion":
         return (
-          <div className="mb-3">
-            {includeLabel && (
-              <>
-                <label>{field.label}</label>
-                <br />
-              </>
-            )}
-            <div className="accordion" id={field.id}>
-              {field.items.map((childItem: any) => (
-                <div className="accordion-item">
-                  <h2 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target={`#${childItem.name}`}
-                      aria-expanded="false"
-                      aria-controls={childItem.name}
-                    >
-                      {childItem.header}
-                    </button>
-                  </h2>
-                  <div
-                    id={childItem.name}
-                    className="accordion-collapse collapse"
-                    data-bs-parent={`#${field.id}`}
-                  >
-                    <div className="accordion-body">
-                      {renderField(childItem.component)}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <FormAccordion
+            includeLabel={includeLabel}
+            field={field}
+            renderField={renderField}
+          />
         );
       default:
         return null;

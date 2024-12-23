@@ -578,6 +578,7 @@ namespace Marvel
                 dynamic accordionItem = new ExpandoObject();
                 accordionItem.header = powerset.Name;
                 accordionItem.name = powerset.Name.ReplaceWhitespace("");
+                accordionItem.image = powerset.imageUrl;
                 accordionItem.component = new
                 {
                     type = "listgroup",

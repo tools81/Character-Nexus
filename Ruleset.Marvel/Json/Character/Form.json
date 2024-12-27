@@ -13,14 +13,18 @@
       "id": "health",
       "label": "Health",
       "type": "hidden",
-      "className": "form-control"
+      "className": "form-control",
+      "calculation": "[attributes.Resilience] * 30 === 0 ? 15 : [attributes.Resilience] * 30",
+      "default": 15
     },
     {
       "name": "focus",
       "id": "focus",
       "label": "Focus",
       "type": "hidden",
-      "className": "form-control"
+      "className": "form-control",
+      "calculation": "[attributes.Vigilance] * 30 === 0 ? 15 : [attributes.Vigilance] * 30",
+      "default": 15
     },
     {
       "name": "healthDamageReduction",
@@ -41,35 +45,40 @@
       "id": "run",
       "label": "Run",
       "type": "hidden",
-      "className": "form-control"
+      "className": "form-control",
+      "calculation": "5 + ([attributes.Agility] % 5 == 0 ? [attributes.Agility] / 5 : 0)"
     },
     {
       "name": "climb",
       "id": "climb",
       "label": "Climb",
       "type": "hidden",
-      "className": "form-control"
+      "className": "form-control",
+      "calculation": "Math.ceil([run] / 2)"
     },
     {
       "name": "swim",
       "id": "swim",
       "label": "Swim",
       "type": "hidden",
-      "className": "form-control"
+      "className": "form-control",
+      "calculation": "Math.ceil([run] / 2)"
     },
     {
       "name": "karma",
       "id": "karma",
       "label": "Karma",
       "type": "hidden",
-      "className": "form-control"
+      "className": "form-control",
+      "calculation": "[rank]"
     },
     {
       "name": "initiativeModifier",
       "id": "initiativeModifier",
       "label": "Initiative Modifier",
       "type": "hidden",
-      "className": "form-control"
+      "className": "form-control",
+      "calculation": "[attributes.Vigilance]"
     },
     {
       "name": "name",

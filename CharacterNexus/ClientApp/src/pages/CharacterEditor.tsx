@@ -32,6 +32,7 @@ const DynamicForm = () => {
   );
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [imageData, setImageData] = useState<File | null>(null);
+  const watchedFields = new Set();
   const {
     register,
     unregister,
@@ -139,6 +140,41 @@ const DynamicForm = () => {
     }
   }, [bonusCharacteristics]);
 
+  useEffect(() => {
+    if (!schema) return;
+
+    const subscription = watch((value, { name }) => {
+      schema.fields.forEach((field: any) => {
+        if (field.calculation) {
+          let calcFields = field.calculation.match(/\[([^\]]+)\]/g);
+
+          if (calcFields) {
+            let calculation = field.calculation;
+
+            calcFields.forEach((calcField: string) => {
+              let fieldName = calcField.slice(1, -1); // Remove the square brackets
+
+              if (!watchedFields.has(fieldName)) {
+                watch(fieldName);
+                watchedFields.add(fieldName);
+              }
+
+              let calcValue = getValues(fieldName) || 0;
+              calculation = calculation.replace(calcField, calcValue);
+            });
+
+            // Only set the value if it has changed to avoid infinite loop
+            const newValue = Function("return " + calculation)();
+            if (getValues(field.name) !== newValue) {
+              setValue(field.name, newValue);
+            }
+          }
+        }
+      });
+    });
+    return () => subscription.unsubscribe();
+  }, [watch, setValue, schema]);
+
   const handleSetArrayValue = (array: string, choice: string) => {
     // Programmatically set the value of a select input in the 'items' array
     setValue(array, [...getValues(array), { value: choice }]);
@@ -217,6 +253,7 @@ const DynamicForm = () => {
             register={register}
             name={field.name}
             className={field.className}
+            defaultValue={field.default}
           />
         );
       case "text":
@@ -362,11 +399,12 @@ const DynamicForm = () => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <h2>{schema.title}</h2>
       {schema.fields.map((field: any) => {
-        if (field.dependsOn) {
+        if (field.dependsOn && !watchedFields.has(field.dependsOn.field)) {
           watch(field.dependsOn.field);
+          watchedFields.add(field.dependsOn.field);
         }
 
-        const shouldRenderField = field.dependsOn
+       const shouldRenderField = field.dependsOn
           ? getValues(field.dependsOn.field) == field.dependsOn.value
           : true;
 

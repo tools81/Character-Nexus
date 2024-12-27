@@ -43,8 +43,6 @@ namespace Marvel
 
         public byte[] BuildCharacterSheet()
         {
-            SetCalculatedStats();
-
             var dict = new Dictionary<string, string>
             {
                 { "Codename", Name },
@@ -241,24 +239,6 @@ namespace Marvel
             //TODO: Figure out where to put Weapons
 
             return PDFSchema.Generate(dict, Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Marvel_Character_Sheet.pdf");
-        }
-
-        public void SetCalculatedStats()
-        {
-            foreach (var attribute in Attributes)
-            {
-                attribute.Check = attribute.Value;
-                attribute.Defense = 10 + attribute.Value;
-                attribute.Damage = attribute.Value;
-            }
-
-            Health += GetAttributeValue("Resilience") * 30;
-            Focus += GetAttributeValue("Vigilance") * 30;
-            InitiativeModifier += GetAttributeValue("Vigilance");
-            Run += 5 + (GetAttributeValue("Agility") % 5 == 0 ? GetAttributeValue("Agility") / 5 : 0);
-            Climb += Run / 2;
-            Swim += Run / 2;
-            Karma += Rank;
         }
 
         private int GetAttributeValue(string attribute)

@@ -146,7 +146,9 @@ namespace Marvel
                     id = "health",
                     label = "Health",
                     type = "hidden",
-                    className = "form-control"
+                    className = "form-control",
+                    calculation = "[attributes.Resilience] * 30 === 0 ? 15 : [attributes.Resilience] * 30",
+                    @default = 15
                 }
             );
             _fields.Add(
@@ -156,7 +158,9 @@ namespace Marvel
                     id = "focus",
                     label = "Focus",
                     type = "hidden",
-                    className = "form-control"
+                    className = "form-control",
+                    calculation = "[attributes.Vigilance] * 30 === 0 ? 15 : [attributes.Vigilance] * 30",
+                    @default = 15
                 }
             );
             _fields.Add(
@@ -186,7 +190,8 @@ namespace Marvel
                     id = "run",
                     label = "Run",
                     type = "hidden",
-                    className = "form-control"
+                    className = "form-control",
+                    calculation = "5 + ([attributes.Agility] % 5 == 0 ? [attributes.Agility] / 5 : 0)"
                 }
             );
             _fields.Add(
@@ -196,7 +201,8 @@ namespace Marvel
                     id = "climb",
                     label = "Climb",
                     type = "hidden",
-                    className = "form-control"
+                    className = "form-control",
+                    calculation = "Math.ceil([run] / 2)"
                 }
             );
             _fields.Add(
@@ -206,7 +212,8 @@ namespace Marvel
                     id = "swim",
                     label = "Swim",
                     type = "hidden",
-                    className = "form-control"
+                    className = "form-control",
+                    calculation = "Math.ceil([run] / 2)"
                 }
             );
             _fields.Add(
@@ -216,7 +223,8 @@ namespace Marvel
                     id = "karma",
                     label = "Karma",
                     type = "hidden",
-                    className = "form-control"
+                    className = "form-control",
+                    calculation = "[rank]"
                 }
             );
             _fields.Add(
@@ -226,7 +234,8 @@ namespace Marvel
                     id = "initiativeModifier",
                     label = "Initiative Modifier",
                     type = "hidden",
-                    className = "form-control"
+                    className = "form-control",
+                    calculation = "[attributes.Vigilance]"
                 }
             );
             _fields.Add(

@@ -32,7 +32,6 @@ namespace Marvel
             try
             {
                 var character = JsonConvert.DeserializeObject<Character>(data, new CharacterJsonConverter());
-                //character?.SetBonusAdjustments();
                 return character;
             }
             catch (JsonException ex)

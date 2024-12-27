@@ -4,17 +4,20 @@ interface Props {
   register: UseFormRegister<FieldValues>,
   name: string;
   className: string;
+  defaultValue: string;
 }
 
 const InputHidden = ({
   register,
   name,
-  className
+  className,
+  defaultValue
 }: Props) => {
   return (
     <input
       id={name}
       className={className}
+      defaultValue={defaultValue}
       style={{ display: "none" }}
       {...register(name)}
     ></input>

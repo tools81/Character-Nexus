@@ -8,7 +8,8 @@ import {
 import { BonusAdjustments } from "../types/BonusAdjustment";
 import { BonusCharacteristics } from "../types/BonusCharacteristic";
 import { toCamelCase } from "../utils/toCamelCase";
-import { handleRemoveBonusAdjustment } from "../hooks/Bonus";
+import { handleRemoveBonusAdjustment } from "../hooks/useBonus";
+//import { HandlePrerequisite } from "../hooks/usePrerequisites";
 
 interface Props {
   register: UseFormRegister<FieldValues>;

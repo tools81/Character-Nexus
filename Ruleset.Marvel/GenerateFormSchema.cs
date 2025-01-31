@@ -602,7 +602,8 @@ namespace Marvel
                         id = $"{powerset.Name}-{power.Name}",
                         label = power.Name,
                         type = "switch",
-                        bonusAdjustments = JsonConvert.SerializeObject(power.BonusAdjustments)
+                        bonusAdjustments = JsonConvert.SerializeObject(power.BonusAdjustments),
+                        prerequisites = JsonConvert.SerializeObject(power.Prerequisites)
                     };
 
                     var text = new

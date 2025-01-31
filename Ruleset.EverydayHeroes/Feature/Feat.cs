@@ -14,7 +14,7 @@ namespace EverydayHeroes
         public FeatScale Scale { get; set; }
         public List<BonusAdjustment>? BonusAdjustments { get; set; }
         public List<BonusCharacteristic>? BonusCharacteristics { get; set; }
-        public List<Prerequisite<object>>? Prerequisites { get; set; }
+        public List<Prerequisite>? Prerequisites { get; set; }
         public List<UserChoice>? UserChoices { get; set; }
     }
 }

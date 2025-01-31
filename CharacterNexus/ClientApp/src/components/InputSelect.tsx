@@ -9,7 +9,8 @@ import {
 import { BonusAdjustments } from "../types/BonusAdjustment";
 import { BonusCharacteristics } from "../types/BonusCharacteristic";
 import { toCamelCase } from "../utils/toCamelCase";
-import { handleRemoveBonusAdjustment, handleRemoveArrayValue } from "../hooks/Bonus";
+import { handleRemoveBonusAdjustment, handleRemoveArrayValue } from "../hooks/useBonus";
+// import RandomSelectButton from "./RandomSelectButton";
 
 interface Props {
   register: UseFormRegister<FieldValues>;
@@ -74,6 +75,7 @@ const InputSelect = ({
           </option>
         ))}
       </select>
+      {/* <RandomSelectButton selectName={`${name}.value`} options={options} setValue={setValue} /> */}
       <div className="pb-3" />
     </>
   );

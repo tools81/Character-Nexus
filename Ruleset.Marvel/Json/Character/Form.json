@@ -1984,7 +1984,8 @@
                   "id": "Basic-Accuracy 1",
                   "label": "Accuracy 1",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Agility\",\"Value\":1},{\"Type\":\"attributeCheck\",\"Name\":\"Agility\",\"Value\":1}]"
+                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Agility\",\"Value\":1},{\"Type\":\"attributeCheck\",\"Name\":\"Agility\",\"Value\":1}]",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Accuracy 1",
@@ -2000,7 +2001,8 @@
                   "id": "Basic-Accuracy 2",
                   "label": "Accuracy 2",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Agility\",\"Value\":2},{\"Type\":\"attributeCheck\",\"Name\":\"Agility\",\"Value\":2}]"
+                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Agility\",\"Value\":2},{\"Type\":\"attributeCheck\",\"Name\":\"Agility\",\"Value\":2}]",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"Accuracy 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Accuracy 2",
@@ -2016,7 +2018,8 @@
                   "id": "Basic-Accuracy 3",
                   "label": "Accuracy 3",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Agility\",\"Value\":3},{\"Type\":\"attributeCheck\",\"Name\":\"Agility\",\"Value\":3}]"
+                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Agility\",\"Value\":3},{\"Type\":\"attributeCheck\",\"Name\":\"Agility\",\"Value\":3}]",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"accuracy 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Accuracy 3",
@@ -2032,7 +2035,8 @@
                   "id": "Basic-Accuracy 4",
                   "label": "Accuracy 4",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Agility\",\"Value\":4},{\"Type\":\"attributeCheck\",\"Name\":\"Agility\",\"Value\":4}]"
+                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Agility\",\"Value\":4},{\"Type\":\"attributeCheck\",\"Name\":\"Agility\",\"Value\":4}]",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"accuracy 3\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Accuracy 4",
@@ -2048,7 +2052,8 @@
                   "id": "Basic-Additional Limbs",
                   "label": "Additional Limbs",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Additional Limbs",
@@ -2064,7 +2069,8 @@
                   "id": "Basic-Anger",
                   "label": "Anger",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"mighty 3\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Anger",
@@ -2080,7 +2086,8 @@
                   "id": "Basic-Brawling",
                   "label": "Brawling",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Brawling",
@@ -2096,7 +2103,8 @@
                   "id": "Basic-Brilliance 1",
                   "label": "Brilliance 1",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Logic\",\"Value\":1},{\"Type\":\"attributeCheck\",\"Name\":\"Logic\",\"Value\":1}]"
+                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Logic\",\"Value\":1},{\"Type\":\"attributeCheck\",\"Name\":\"Logic\",\"Value\":1}]",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Brilliance 1",
@@ -2112,7 +2120,8 @@
                   "id": "Basic-Brilliance 2",
                   "label": "Brilliance 2",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Logic\",\"Value\":2},{\"Type\":\"attributeCheck\",\"Name\":\"Logic\",\"Value\":2}]"
+                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Logic\",\"Value\":2},{\"Type\":\"attributeCheck\",\"Name\":\"Logic\",\"Value\":2}]",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"brilliance 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Brilliance 2",
@@ -2128,7 +2137,8 @@
                   "id": "Basic-Brilliance 3",
                   "label": "Brilliance 3",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Logic\",\"Value\":3},{\"Type\":\"attributeCheck\",\"Name\":\"Logic\",\"Value\":3}]"
+                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Logic\",\"Value\":3},{\"Type\":\"attributeCheck\",\"Name\":\"Logic\",\"Value\":3}]",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"brilliance 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Brilliance 3",
@@ -2144,7 +2154,8 @@
                   "id": "Basic-Brilliance 4",
                   "label": "Brilliance 4",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Logic\",\"Value\":4},{\"Type\":\"attributeCheck\",\"Name\":\"Logic\",\"Value\":4}]"
+                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Logic\",\"Value\":4},{\"Type\":\"attributeCheck\",\"Name\":\"Logic\",\"Value\":4}]",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"brilliance 3\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Brilliance 4",
@@ -2160,7 +2171,8 @@
                   "id": "Basic-Combat Trickery",
                   "label": "Combat Trickery",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Combat Trickery",
@@ -2176,7 +2188,8 @@
                   "id": "Basic-Discipline 1",
                   "label": "Discipline 1",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Ego\",\"Value\":1},{\"Type\":\"attributeCheck\",\"Name\":\"Ego\",\"Value\":1}]"
+                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Ego\",\"Value\":1},{\"Type\":\"attributeCheck\",\"Name\":\"Ego\",\"Value\":1}]",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Discipline 1",
@@ -2192,7 +2205,8 @@
                   "id": "Basic-Discipline 2",
                   "label": "Discipline 2",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Ego\",\"Value\":2},{\"Type\":\"attributeCheck\",\"Name\":\"Ego\",\"Value\":2}]"
+                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Ego\",\"Value\":2},{\"Type\":\"attributeCheck\",\"Name\":\"Ego\",\"Value\":2}]",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"discipline 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Discipline 2",
@@ -2208,7 +2222,8 @@
                   "id": "Basic-Discipline 3",
                   "label": "Discipline 3",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Ego\",\"Value\":3},{\"Type\":\"attributeCheck\",\"Name\":\"Ego\",\"Value\":3}]"
+                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Ego\",\"Value\":3},{\"Type\":\"attributeCheck\",\"Name\":\"Ego\",\"Value\":3}]",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"discipline 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Discipline 3",
@@ -2224,7 +2239,8 @@
                   "id": "Basic-Discipline 4",
                   "label": "Discipline 4",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Ego\",\"Value\":4},{\"Type\":\"attributeCheck\",\"Name\":\"Ego\",\"Value\":4}]"
+                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Ego\",\"Value\":4},{\"Type\":\"attributeCheck\",\"Name\":\"Ego\",\"Value\":4}]",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"discipline 3\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Discipline 4",
@@ -2240,7 +2256,8 @@
                   "id": "Basic-Disguise",
                   "label": "Disguise",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Disguise",
@@ -2256,7 +2273,8 @@
                   "id": "Basic-Energy Absorption",
                   "label": "Energy Absorption",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Energy Absorption",
@@ -2272,7 +2290,8 @@
                   "id": "Basic-Environmental Protection",
                   "label": "Environmental Protection",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Environmental Protection",
@@ -2288,7 +2307,8 @@
                   "id": "Basic-Evasion",
                   "label": "Evasion",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Evasion",
@@ -2304,7 +2324,8 @@
                   "id": "Basic-Flight 1",
                   "label": "Flight 1",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Flight 1",
@@ -2320,7 +2341,8 @@
                   "id": "Basic-Flight 2",
                   "label": "Flight 2",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"flight 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Flight 2",
@@ -2336,7 +2358,8 @@
                   "id": "Basic-Group Flight ",
                   "label": "Group Flight ",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"flight 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Group Flight ",
@@ -2352,7 +2375,8 @@
                   "id": "Basic-Healing Factor",
                   "label": "Healing Factor",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Healing Factor",
@@ -2368,7 +2392,8 @@
                   "id": "Basic-Heightened Senses 1",
                   "label": "Heightened Senses 1",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Heightened Senses 1",
@@ -2384,7 +2409,8 @@
                   "id": "Basic-Heightened Senses 2",
                   "label": "Heightened Senses 2",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"heightened senses 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Heightened Senses 2",
@@ -2400,7 +2426,8 @@
                   "id": "Basic-Iconic Weapon",
                   "label": "Iconic Weapon",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Iconic Weapon",
@@ -2416,7 +2443,8 @@
                   "id": "Basic-Inspiration",
                   "label": "Inspiration",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Inspiration",
@@ -2432,7 +2460,8 @@
                   "id": "Basic-Integrity",
                   "label": "Integrity",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Integrity",
@@ -2448,7 +2477,8 @@
                   "id": "Basic-Mighty 1",
                   "label": "Mighty 1",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Melee\",\"Value\":1},{\"Type\":\"attributeCheck\",\"Name\":\"Melee\",\"Value\":1}]"
+                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Melee\",\"Value\":1},{\"Type\":\"attributeCheck\",\"Name\":\"Melee\",\"Value\":1}]",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Mighty 1",
@@ -2464,7 +2494,8 @@
                   "id": "Basic-Mighty 2",
                   "label": "Mighty 2",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Melee\",\"Value\":2},{\"Type\":\"attributeCheck\",\"Name\":\"Melee\",\"Value\":2}]"
+                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Melee\",\"Value\":2},{\"Type\":\"attributeCheck\",\"Name\":\"Melee\",\"Value\":2}]",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"mighty 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Mighty 2",
@@ -2480,7 +2511,8 @@
                   "id": "Basic-Mighty 3",
                   "label": "Mighty 3",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Melee\",\"Value\":3},{\"Type\":\"attributeCheck\",\"Name\":\"Melee\",\"Value\":3}]"
+                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Melee\",\"Value\":3},{\"Type\":\"attributeCheck\",\"Name\":\"Melee\",\"Value\":3}]",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"mighty 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Mighty 3",
@@ -2496,7 +2528,8 @@
                   "id": "Basic-Mighty 4",
                   "label": "Mighty 4",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Melee\",\"Value\":4},{\"Type\":\"attributeCheck\",\"Name\":\"Melee\",\"Value\":4}]"
+                  "bonusAdjustments": "[{\"Type\":\"attributeDamage\",\"Name\":\"Melee\",\"Value\":4},{\"Type\":\"attributeCheck\",\"Name\":\"Melee\",\"Value\":4}]",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"mighty 3\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Mighty 4",
@@ -2512,7 +2545,8 @@
                   "id": "Basic-Reinforced Skeleton",
                   "label": "Reinforced Skeleton",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Reinforced Skeleton",
@@ -2528,7 +2562,8 @@
                   "id": "Basic-Shape-Shift",
                   "label": "Shape-Shift",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"disguise\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Shape-Shift",
@@ -2544,7 +2579,8 @@
                   "id": "Basic-Slow-Motion Dodge",
                   "label": "Slow-Motion Dodge",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Slow-Motion Dodge",
@@ -2560,7 +2596,8 @@
                   "id": "Basic-Sturdy 1",
                   "label": "Sturdy 1",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"HealthDamageReduction\",\"Name\":\"\",\"Value\":1}]"
+                  "bonusAdjustments": "[{\"Type\":\"HealthDamageReduction\",\"Name\":\"\",\"Value\":1}]",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Sturdy 1",
@@ -2576,7 +2613,8 @@
                   "id": "Basic-Sturdy 2",
                   "label": "Sturdy 2",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"HealthDamageReduction\",\"Name\":\"\",\"Value\":2}]"
+                  "bonusAdjustments": "[{\"Type\":\"HealthDamageReduction\",\"Name\":\"\",\"Value\":2}]",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"sturdy 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Sturdy 2",
@@ -2592,7 +2630,8 @@
                   "id": "Basic-Sturdy 3",
                   "label": "Sturdy 3",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"HealthDamageReduction\",\"Name\":\"\",\"Value\":3}]"
+                  "bonusAdjustments": "[{\"Type\":\"HealthDamageReduction\",\"Name\":\"\",\"Value\":3}]",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"sturdy 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Sturdy 3",
@@ -2608,7 +2647,8 @@
                   "id": "Basic-Sturdy 4",
                   "label": "Sturdy 4",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"Type\":\"HealthDamageReduction\",\"Name\":\"\",\"Value\":4}]"
+                  "bonusAdjustments": "[{\"Type\":\"HealthDamageReduction\",\"Name\":\"\",\"Value\":4}]",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=6\"},{\"Type\":\"powers\",\"Name\":\"sturdy 3\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Sturdy 4",
@@ -2624,7 +2664,8 @@
                   "id": "Basic-Uncanny 1",
                   "label": "Uncanny 1",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Uncanny 1",
@@ -2640,7 +2681,8 @@
                   "id": "Basic-Uncanny 2",
                   "label": "Uncanny 2",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"uncanny 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Uncanny 2",
@@ -2656,7 +2698,8 @@
                   "id": "Basic-Uncanny 3",
                   "label": "Uncanny 3",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"uncanny 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Uncanny 3",
@@ -2672,7 +2715,8 @@
                   "id": "Basic-Uncanny 4",
                   "label": "Uncanny 4",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=6\"},{\"Type\":\"powers\",\"Name\":\"uncanny 3\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Uncanny 4",
@@ -2688,7 +2732,8 @@
                   "id": "Basic-Wisdom",
                   "label": "Wisdom",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Wisdom",
@@ -2704,7 +2749,8 @@
                   "id": "Basic-Wisecracker",
                   "label": "Wisecracker",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Basic-Wisecracker",
@@ -2730,7 +2776,8 @@
                   "id": "Elemental Control-Elemental Barrage",
                   "label": "Elemental Barrage",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"elemental blast\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Barrage",
@@ -2746,7 +2793,8 @@
                   "id": "Elemental Control-Elemental Barrier",
                   "label": "Elemental Barrier",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"elemental blast\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Barrier",
@@ -2762,7 +2810,8 @@
                   "id": "Elemental Control-Elemental Blast",
                   "label": "Elemental Blast",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"elemental burst\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Blast",
@@ -2778,7 +2827,8 @@
                   "id": "Elemental Control-Elemental Burst",
                   "label": "Elemental Burst",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Burst",
@@ -2794,7 +2844,8 @@
                   "id": "Elemental Control-Elemental Form",
                   "label": "Elemental Form",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"elemental reinforcement\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Form",
@@ -2810,7 +2861,8 @@
                   "id": "Elemental Control-Elemental Grab",
                   "label": "Elemental Grab",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"elemental burst\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Grab",
@@ -2826,7 +2878,8 @@
                   "id": "Elemental Control-Elemental Infusion",
                   "label": "Elemental Infusion",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"elemental burst\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Infusion",
@@ -2842,7 +2895,8 @@
                   "id": "Elemental Control-Elemental Prison",
                   "label": "Elemental Prison",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"elemental protection 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Prison",
@@ -2858,7 +2912,8 @@
                   "id": "Elemental Control-Elemental Protection 1",
                   "label": "Elemental Protection 1",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"elemental barrier\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Protection 1",
@@ -2874,7 +2929,8 @@
                   "id": "Elemental Control-Elemental Protection 2",
                   "label": "Elemental Protection 2",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"elemental protection 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Protection 2",
@@ -2890,7 +2946,8 @@
                   "id": "Elemental Control-Elemental Protection 3",
                   "label": "Elemental Protection 3",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"elemental protection 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Protection 3",
@@ -2906,7 +2963,8 @@
                   "id": "Elemental Control-Elemental Protection 4",
                   "label": "Elemental Protection 4",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=5\"},{\"Type\":\"powers\",\"Name\":\"elemental protection 3\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Protection 4",
@@ -2922,7 +2980,8 @@
                   "id": "Elemental Control-Elemental Push",
                   "label": "Elemental Push",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"elemental protection 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Push",
@@ -2938,7 +2997,8 @@
                   "id": "Elemental Control-Elemental Reinforcement",
                   "label": "Elemental Reinforcement",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"elemental protection 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Reinforcement",
@@ -2954,7 +3014,8 @@
                   "id": "Elemental Control-Elemental Ricochet",
                   "label": "Elemental Ricochet",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"elemental burst\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Ricochet",
@@ -2970,7 +3031,8 @@
                   "id": "Elemental Control-Elemental Sphere",
                   "label": "Elemental Sphere",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"elemental protection 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Sphere",
@@ -2986,7 +3048,8 @@
                   "id": "Elemental Control-Elemental Suffocation",
                   "label": "Elemental Suffocation",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"elemental grab\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Suffocation",
@@ -3002,7 +3065,8 @@
                   "id": "Elemental Control-Supernova",
                   "label": "Supernova",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"elemental blast\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Supernova",
@@ -3028,7 +3092,8 @@
                   "id": "Illusion-Animated Illusion",
                   "label": "Animated Illusion",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"static illusion\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Animated Illusion",
@@ -3044,7 +3109,8 @@
                   "id": "Illusion-Darkness",
                   "label": "Darkness",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"illumination\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Darkness",
@@ -3060,7 +3126,8 @@
                   "id": "Illusion-Dazzle",
                   "label": "Dazzle",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"illumination\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Dazzle",
@@ -3076,7 +3143,8 @@
                   "id": "Illusion-Deafen",
                   "label": "Deafen",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"illumination\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Deafen",
@@ -3092,7 +3160,8 @@
                   "id": "Illusion-Extend Invisibility",
                   "label": "Extend Invisibility",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"invisibility\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Extend Invisibility",
@@ -3108,7 +3177,8 @@
                   "id": "Illusion-Flare",
                   "label": "Flare",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"illumination\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Flare",
@@ -3124,7 +3194,8 @@
                   "id": "Illusion-Grand Illusion",
                   "label": "Grand Illusion",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"animated illusion\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Grand Illusion",
@@ -3140,7 +3211,8 @@
                   "id": "Illusion-Group Invisibility",
                   "label": "Group Invisibility",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"extend invisibility\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Group Invisibility",
@@ -3156,7 +3228,8 @@
                   "id": "Illusion-Illumination",
                   "label": "Illumination",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Illusion-Illumination",
@@ -3172,7 +3245,8 @@
                   "id": "Illusion-Invisibility",
                   "label": "Invisibility",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Invisibility",
@@ -3188,7 +3262,8 @@
                   "id": "Illusion-Mirror Images",
                   "label": "Mirror Images",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"animated illusion\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Mirror Images",
@@ -3204,7 +3279,8 @@
                   "id": "Illusion-Silence Area",
                   "label": "Silence Area",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"illumination\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Silence Area",
@@ -3220,7 +3296,8 @@
                   "id": "Illusion-Silence Self",
                   "label": "Silence Self",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"illumination\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Silence Self",
@@ -3236,7 +3313,8 @@
                   "id": "Illusion-Static Illusion",
                   "label": "Static Illusion",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"illumination\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Static Illusion",
@@ -3262,7 +3340,8 @@
                   "id": "Magic-Astral Form",
                   "label": "Astral Form",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Astral Form",
@@ -3278,7 +3357,8 @@
                   "id": "Magic-Bolts of Balthakk",
                   "label": "Bolts of Balthakk",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"sorcerous\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Bolts of Balthakk",
@@ -3294,7 +3374,8 @@
                   "id": "Magic-Brain Drain",
                   "label": "Brain Drain",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Brain Drain",
@@ -3310,7 +3391,8 @@
                   "id": "Magic-Crimson Bands of Cyttorak",
                   "label": "Crimson Bands of Cyttorak",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"sorcerous\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Crimson Bands of Cyttorak",
@@ -3326,7 +3408,8 @@
                   "id": "Magic-Dispel Spell",
                   "label": "Dispel Spell",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"sorcerous\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Dispel Spell",
@@ -3342,7 +3425,8 @@
                   "id": "Magic-Exorcism",
                   "label": "Exorcism",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Exorcism",
@@ -3358,7 +3442,8 @@
                   "id": "Magic-Flames of the Faltine",
                   "label": "Flames of the Faltine",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"sorcerous\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Flames of the Faltine",
@@ -3374,7 +3459,8 @@
                   "id": "Magic-Hellfire Chains",
                   "label": "Hellfire Chains",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"cursed\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Hellfire Chains",
@@ -3390,7 +3476,8 @@
                   "id": "Magic-Hex Bolt",
                   "label": "Hex Bolt",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"chaotic\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Hex Bolt",
@@ -3406,7 +3493,8 @@
                   "id": "Magic-Icy Tendrils of Ikthalon",
                   "label": "Icy Tendrils of Ikthalon",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"sorcerous\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Icy Tendrils of Ikthalon",
@@ -3422,7 +3510,8 @@
                   "id": "Magic-Images of Ikonn",
                   "label": "Images of Ikonn",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"sorcerous\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Images of Ikonn",
@@ -3438,7 +3527,8 @@
                   "id": "Magic-Jinx",
                   "label": "Jinx",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"chaotic\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Jinx",
@@ -3454,7 +3544,8 @@
                   "id": "Magic-Leech Life",
                   "label": "Leech Life",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Leech Life",
@@ -3470,7 +3561,8 @@
                   "id": "Magic-Mists of Morpheus",
                   "label": "Mists of Morpheus",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"sorcerous\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Mists of Morpheus",
@@ -3486,7 +3578,8 @@
                   "id": "Magic-Mists of Munnopor",
                   "label": "Mists of Munnopor",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"sorcerous\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Mists of Munnopor",
@@ -3502,7 +3595,8 @@
                   "id": "Magic-Penance Stare",
                   "label": "Penance Stare",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"cursed\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Penance Stare",
@@ -3518,7 +3612,8 @@
                   "id": "Magic-Possess Vehicle",
                   "label": "Possess Vehicle",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"cursed\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Possess Vehicle",
@@ -3534,7 +3629,8 @@
                   "id": "Magic-Possession",
                   "label": "Possession",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=5\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"cursed\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Possession",
@@ -3550,7 +3646,8 @@
                   "id": "Magic-Powerful Hex",
                   "label": "Powerful Hex",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"chaotic\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Powerful Hex",
@@ -3566,7 +3663,8 @@
                   "id": "Magic-Probability-Manipulation Hex",
                   "label": "Probability-Manipulation Hex",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"chaotic\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Probability-Manipulation Hex",
@@ -3582,7 +3680,8 @@
                   "id": "Magic-Protection Hex",
                   "label": "Protection Hex",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"chaotic\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Protection Hex",
@@ -3598,7 +3697,8 @@
                   "id": "Magic-Sense Sins",
                   "label": "Sense Sins",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"chaotic\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Sense Sins",
@@ -3614,7 +3714,8 @@
                   "id": "Magic-Sense Supernatural",
                   "label": "Sense Supernatural",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Magic-Sense Supernatural",
@@ -3630,7 +3731,8 @@
                   "id": "Magic-Shield of the Seraphim",
                   "label": "Shield of the Seraphim",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"sorcerous\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Shield of the Seraphim",
@@ -3646,7 +3748,8 @@
                   "id": "Magic-Summon Portal",
                   "label": "Summon Portal",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"sorcerous\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Summon Portal",
@@ -3662,7 +3765,8 @@
                   "id": "Magic-Vapors of Valtorr",
                   "label": "Vapors of Valtorr",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"sorcerous\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Vapors of Valtorr",
@@ -3678,7 +3782,8 @@
                   "id": "Magic-Winds of Watoomb",
                   "label": "Winds of Watoomb",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"\",\"Name\":\"tag\",\"Formula\":\".some(x => x === \\\"sorcerous\\\"))\"}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Winds of Watoomb",
@@ -3704,7 +3809,8 @@
                   "id": "Martial Arts-Always Ready",
                   "label": "Always Ready",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"do this all day\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Always Ready",
@@ -3720,7 +3826,8 @@
                   "id": "Martial Arts-Attack Stance",
                   "label": "Attack Stance",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Attack Stance",
@@ -3736,7 +3843,8 @@
                   "id": "Martial Arts-Banging Heads",
                   "label": "Banging Heads",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Banging Heads",
@@ -3752,7 +3860,8 @@
                   "id": "Martial Arts-Brace For Impact",
                   "label": "Brace For Impact",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"do this all day\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Brace For Impact",
@@ -3768,7 +3877,8 @@
                   "id": "Martial Arts-Chain Strikes",
                   "label": "Chain Strikes",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"fast strikes\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Chain Strikes",
@@ -3784,7 +3894,8 @@
                   "id": "Martial Arts-Counterstrike Technique",
                   "label": "Counterstrike Technique",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"attack stance\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Counterstrike Technique",
@@ -3800,7 +3911,8 @@
                   "id": "Martial Arts-Crushing Grip",
                   "label": "Crushing Grip",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Crushing Grip",
@@ -3816,7 +3928,8 @@
                   "id": "Martial Arts-Defense Stance",
                   "label": "Defense Stance",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Defense Stance",
@@ -3832,7 +3945,8 @@
                   "id": "Martial Arts-Do This All Day",
                   "label": "Do This All Day",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Do This All Day",
@@ -3848,7 +3962,8 @@
                   "id": "Martial Arts-Fast Strikes",
                   "label": "Fast Strikes",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Fast Strikes",
@@ -3864,7 +3979,8 @@
                   "id": "Martial Arts-Flying Double Kick",
                   "label": "Flying Double Kick",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"leg sweep\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Flying Double Kick",
@@ -3880,7 +3996,8 @@
                   "id": "Martial Arts-Focused Strike",
                   "label": "Focused Strike",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"chain strikes\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Focused Strike",
@@ -3896,7 +4013,8 @@
                   "id": "Martial Arts-Grappling Technique",
                   "label": "Grappling Technique",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Grappling Technique",
@@ -3912,7 +4030,8 @@
                   "id": "Martial Arts-Leaping Leglock",
                   "label": "Leaping Leglock",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"flying double kick\",\"Formula\":\"=== true\"},{\"Type\":\"powers\",\"Name\":\"crushing grip\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Leaping Leglock",
@@ -3928,7 +4047,8 @@
                   "id": "Martial Arts-Leg Sweep",
                   "label": "Leg Sweep",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"fast strikes\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Leg Sweep",
@@ -3944,7 +4064,8 @@
                   "id": "Martial Arts-Regain Focus",
                   "label": "Regain Focus",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"unflappable poise\",\"Formula\":\"=== true\"},{\"Type\":\"powers\",\"Name\":\"untouchable position\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Regain Focus",
@@ -3960,7 +4081,8 @@
                   "id": "Martial Arts-Reverse-Momentum Throw",
                   "label": "Reverse-Momentum Throw",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"defense stance\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Reverse-Momentum Throw",
@@ -3976,7 +4098,8 @@
                   "id": "Martial Arts-Spin and Throw",
                   "label": "Spin and Throw",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"defense stance\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Spin and Throw",
@@ -3992,7 +4115,8 @@
                   "id": "Martial Arts-Unflappable Poise",
                   "label": "Unflappable Poise",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"defense stance\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Unflappable Poise",
@@ -4008,7 +4132,8 @@
                   "id": "Martial Arts-Untouchable Position",
                   "label": "Untouchable Position",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"counterstrike technique\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Untouchable Position",
@@ -4034,7 +4159,8 @@
                   "id": "Melee Weapons-Exploit",
                   "label": "Exploit",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"vicious attack\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Melee Weapons-Exploit",
@@ -4050,7 +4176,8 @@
                   "id": "Melee Weapons-Fast Attacks",
                   "label": "Fast Attacks",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Melee Weapons-Fast Attacks",
@@ -4066,7 +4193,8 @@
                   "id": "Melee Weapons-Focused Fire",
                   "label": "Focused Fire",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Melee Weapons-Focused Fire",
@@ -4082,7 +4210,8 @@
                   "id": "Melee Weapons-Furious Attacks",
                   "label": "Furious Attacks",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"whirling frenzy\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Melee Weapons-Furious Attacks",
@@ -4098,7 +4227,8 @@
                   "id": "Melee Weapons-Hit and Run",
                   "label": "Hit and Run",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Melee Weapons-Hit and Run",
@@ -4114,7 +4244,8 @@
                   "id": "Melee Weapons-Riposte",
                   "label": "Riposte",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Melee Weapons-Riposte",
@@ -4130,7 +4261,8 @@
                   "id": "Melee Weapons-Unstoppable Assault",
                   "label": "Unstoppable Assault",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"furious attacks\",\"Formula\":\"=== true\"},{\"Type\":\"powers\",\"Name\":\"focused fury\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Melee Weapons-Unstoppable Assault",
@@ -4146,7 +4278,8 @@
                   "id": "Melee Weapons-Vicious Attack",
                   "label": "Vicious Attack",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Melee Weapons-Vicious Attack",
@@ -4162,7 +4295,8 @@
                   "id": "Melee Weapons-Whirling Frenzy",
                   "label": "Whirling Frenzy",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"fast attacks\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Melee Weapons-Whirling Frenzy",
@@ -4188,7 +4322,8 @@
                   "id": "Omniversal Travel-Dimensional Portal",
                   "label": "Dimensional Portal",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"dimensional travel together\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Dimensional Portal",
@@ -4204,7 +4339,8 @@
                   "id": "Omniversal Travel-Dimensional Travel",
                   "label": "Dimensional Travel",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Dimensional Travel",
@@ -4220,7 +4356,8 @@
                   "id": "Omniversal Travel-Dimensional Travel Other",
                   "label": "Dimensional Travel Other",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"dimensional travel\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Dimensional Travel Other",
@@ -4236,7 +4373,8 @@
                   "id": "Omniversal Travel-Dimensional Travel Together",
                   "label": "Dimensional Travel Together",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"dimensional travel\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Dimensional Travel Together",
@@ -4252,7 +4390,8 @@
                   "id": "Omniversal Travel-Instant Replay",
                   "label": "Instant Replay",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Instant Replay",
@@ -4268,7 +4407,8 @@
                   "id": "Omniversal Travel-Multiversal Portal",
                   "label": "Multiversal Portal",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"multiversal travel together\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Multiversal Portal",
@@ -4284,7 +4424,8 @@
                   "id": "Omniversal Travel-Multiversal Travel",
                   "label": "Multiversal Travel",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Multiversal Travel",
@@ -4300,7 +4441,8 @@
                   "id": "Omniversal Travel-Multiversal Travel Other",
                   "label": "Multiversal Travel Other",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"multiversal travel\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Multiversal Travel Other",
@@ -4316,7 +4458,8 @@
                   "id": "Omniversal Travel-Multiversal Travel Together",
                   "label": "Multiversal Travel Together",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"multiversal travel\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Multiversal Travel Together",
@@ -4332,7 +4475,8 @@
                   "id": "Omniversal Travel-Time Portal",
                   "label": "Time Portal",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"time travel together\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Time Portal",
@@ -4348,7 +4492,8 @@
                   "id": "Omniversal Travel-Time Travel",
                   "label": "Time Travel",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Time Travel",
@@ -4364,7 +4509,8 @@
                   "id": "Omniversal Travel-Time Travel Other",
                   "label": "Time Travel Other",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"time travel\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Time Travel Other",
@@ -4380,7 +4526,8 @@
                   "id": "Omniversal Travel-Time Travel Together",
                   "label": "Time Travel Together",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"time travel\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Time Travel Together",
@@ -4396,7 +4543,8 @@
                   "id": "Omniversal Travel-Time-Out",
                   "label": "Time-Out",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"instant replay\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Time-Out",
@@ -4412,7 +4560,8 @@
                   "id": "Omniversal Travel-Time-Out Bubble",
                   "label": "Time-Out Bubble",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"time-out\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Time-Out Bubble",
@@ -4428,7 +4577,8 @@
                   "id": "Omniversal Travel-Time-Out Tag",
                   "label": "Time-Out Tag",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"time-out\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Time-Out Tag",
@@ -4454,7 +4604,8 @@
                   "id": "Phasing-Disrupt Electronics",
                   "label": "Disrupt Electronics",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"phase self\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Phasing-Disrupt Electronics",
@@ -4470,7 +4621,8 @@
                   "id": "Phasing-Disrupt Nerves",
                   "label": "Disrupt Nerves",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"phase self\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Phasing-Disrupt Nerves",
@@ -4486,7 +4638,8 @@
                   "id": "Phasing-Disrupt Person",
                   "label": "Disrupt Person",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"phase self\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Phasing-Disrupt Person",
@@ -4502,7 +4655,8 @@
                   "id": "Phasing-Partial Phase",
                   "label": "Partial Phase",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"phase self\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Phasing-Partial Phase",
@@ -4518,7 +4672,8 @@
                   "id": "Phasing-Phase Object",
                   "label": "Phase Object",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"phase self\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Phasing-Phase Object",
@@ -4534,7 +4689,8 @@
                   "id": "Phasing-Phase Other",
                   "label": "Phase Other",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"phase self\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Phasing-Phase Other",
@@ -4550,7 +4706,8 @@
                   "id": "Phasing-Phase Self",
                   "label": "Phase Self",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Phasing-Phase Self",
@@ -4566,7 +4723,8 @@
                   "id": "Phasing-Phase Walk",
                   "label": "Phase Walk",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"phase self\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Phasing-Phase Walk",
@@ -4582,7 +4740,8 @@
                   "id": "Phasing-Quick Phase",
                   "label": "Quick Phase",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"phase self\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Phasing-Quick Phase",
@@ -4608,7 +4767,8 @@
                   "id": "Plasticity-Body Sheet",
                   "label": "Body Sheet",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"flexible bones 2\",\"Formula\":\"=== true\"},{\"Type\":\"powers\",\"Name\":\"extended reach 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Body Sheet",
@@ -4624,7 +4784,8 @@
                   "id": "Plasticity-Body Sphere",
                   "label": "Body Sphere",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"body sheet\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Body Sphere",
@@ -4640,7 +4801,8 @@
                   "id": "Plasticity-Bounce Back",
                   "label": "Bounce Back",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"flexible bones 1\",\"Formula\":\"=== true\"},{\"Type\":\"powers\",\"Name\":\"slip free\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Bounce Back",
@@ -4656,7 +4818,8 @@
                   "id": "Plasticity-Coiling Crush",
                   "label": "Coiling Crush",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"extended reach 1\",\"Formula\":\"=== true\"},{\"Type\":\"powers\",\"Name\":\"reverse punch\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Coiling Crush",
@@ -4672,7 +4835,8 @@
                   "id": "Plasticity-Extended Reach 1",
                   "label": "Extended Reach 1",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Extended Reach 1",
@@ -4688,7 +4852,8 @@
                   "id": "Plasticity-Extended Reach 2",
                   "label": "Extended Reach 2",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"extended reach 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Extended Reach 2",
@@ -4704,7 +4869,8 @@
                   "id": "Plasticity-Flexible Bones 1",
                   "label": "Flexible Bones 1",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Flexible Bones 1",
@@ -4720,7 +4886,8 @@
                   "id": "Plasticity-Flexible Bones 2",
                   "label": "Flexible Bones 2",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"flexible bones 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Flexible Bones 2",
@@ -4736,7 +4903,8 @@
                   "id": "Plasticity-Flexible Fingers",
                   "label": "Flexible Fingers",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Flexible Fingers",
@@ -4752,7 +4920,8 @@
                   "id": "Plasticity-Reverse Punch",
                   "label": "Reverse Punch",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"flexible bones 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Reverse Punch",
@@ -4768,7 +4937,8 @@
                   "id": "Plasticity-Rubberneck",
                   "label": "Rubberneck",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"extended reach 1\",\"Formula\":\"=== true\"},{\"Type\":\"powers\",\"Name\":\"flexible bones 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Rubberneck",
@@ -4784,7 +4954,8 @@
                   "id": "Plasticity-Slip Free",
                   "label": "Slip Free",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Slip Free",
@@ -4800,7 +4971,8 @@
                   "id": "Plasticity-Stilt Steps",
                   "label": "Stilt Steps",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"extended reach 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Stilt Steps",
@@ -4826,7 +4998,8 @@
                   "id": "Power Control-Boost Powers",
                   "label": "Boost Powers",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"bump power\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Power Control-Boost Powers",
@@ -4842,7 +5015,8 @@
                   "id": "Power Control-Bump Power",
                   "label": "Bump Power",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Power Control-Bump Power",
@@ -4858,7 +5032,8 @@
                   "id": "Power Control-Clone Moves",
                   "label": "Clone Moves",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Power Control-Clone Moves",
@@ -4874,7 +5049,8 @@
                   "id": "Power Control-Clone Powers",
                   "label": "Clone Powers",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"copy power\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Power Control-Clone Powers",
@@ -4890,7 +5066,8 @@
                   "id": "Power Control-Copy Ability",
                   "label": "Copy Ability",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Power Control-Copy Ability",
@@ -4906,7 +5083,8 @@
                   "id": "Power Control-Copy Power",
                   "label": "Copy Power",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Power Control-Copy Power",
@@ -4922,7 +5100,8 @@
                   "id": "Power Control-Copy Trait",
                   "label": "Copy Trait",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Power Control-Copy Trait",
@@ -4938,7 +5117,8 @@
                   "id": "Power Control-Dampen Power",
                   "label": "Dampen Power",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Power Control-Dampen Power",
@@ -4954,7 +5134,8 @@
                   "id": "Power Control-Shutdown Powers",
                   "label": "Shutdown Powers",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"dampen power\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Power Control-Shutdown Powers",
@@ -4970,7 +5151,8 @@
                   "id": "Power Control-Steal Powers",
                   "label": "Steal Powers",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"clone powers\",\"Formula\":\"=== true\"},{\"Type\":\"powers\",\"Name\":\"shutdown powers\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Power Control-Steal Powers",
@@ -4986,7 +5168,8 @@
                   "id": "Power Control-Swipe Power",
                   "label": "Swipe Power",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"copy power\",\"Formula\":\"=== true\"},{\"Type\":\"powers\",\"Name\":\"dampen power\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Power Control-Swipe Power",
@@ -5012,7 +5195,8 @@
                   "id": "Ranged Weapons-Covering Fire",
                   "label": "Covering Fire",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"return fire\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Covering Fire",
@@ -5028,7 +5212,8 @@
                   "id": "Ranged Weapons-Dance of Death",
                   "label": "Dance of Death",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"slow-motion shoot dodge\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Dance of Death",
@@ -5044,7 +5229,8 @@
                   "id": "Ranged Weapons-Double Tap",
                   "label": "Double Tap",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Double Tap",
@@ -5060,7 +5246,8 @@
                   "id": "Ranged Weapons-Fast Hands",
                   "label": "Fast Hands",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"point-blank parry\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Fast Hands",
@@ -5076,7 +5263,8 @@
                   "id": "Ranged Weapons-Headshot",
                   "label": "Headshot",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"stopping power\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Headshot",
@@ -5092,7 +5280,8 @@
                   "id": "Ranged Weapons-Kill Zone",
                   "label": "Kill Zone",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"covering fire\",\"Formula\":\"=== true\"},{\"Type\":\"powers\",\"Name\":\"headshot\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Kill Zone",
@@ -5108,7 +5297,8 @@
                   "id": "Ranged Weapons-Orchestra of Overkill",
                   "label": "Orchestra of Overkill",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"dance of death\",\"Formula\":\"=== true\"},{\"Type\":\"powers\",\"Name\":\"fast hands\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Orchestra of Overkill",
@@ -5124,7 +5314,8 @@
                   "id": "Ranged Weapons-Point-Blank Parry",
                   "label": "Point-Blank Parry",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Point-Blank Parry",
@@ -5140,7 +5331,8 @@
                   "id": "Ranged Weapons-Return Fire",
                   "label": "Return Fire",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"suppressive fire\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Return Fire",
@@ -5156,7 +5348,8 @@
                   "id": "Ranged Weapons-Slow-Motion Shoot Dodge",
                   "label": "Slow-Motion Shoot Dodge",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"slow-motion dodge\",\"Formula\":\"=== true\"},{\"Type\":\"powers\",\"Name\":\"weapons blazing\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Slow-Motion Shoot Dodge",
@@ -5172,7 +5365,8 @@
                   "id": "Ranged Weapons-Snap Shooting",
                   "label": "Snap Shooting",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Snap Shooting",
@@ -5188,7 +5382,8 @@
                   "id": "Ranged Weapons-Sniping",
                   "label": "Sniping",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Sniping",
@@ -5204,7 +5399,8 @@
                   "id": "Ranged Weapons-Stopping Power",
                   "label": "Stopping Power",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"double tap\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Stopping Power",
@@ -5220,7 +5416,8 @@
                   "id": "Ranged Weapons-Suppressive Fire",
                   "label": "Suppressive Fire",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Suppressive Fire",
@@ -5236,7 +5433,8 @@
                   "id": "Ranged Weapons-Weapons Blazing",
                   "label": "Weapons Blazing",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"snap shooting\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Weapons Blazing",
@@ -5262,7 +5460,8 @@
                   "id": "Resize-Grow 1",
                   "label": "Grow 1",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Resize-Grow 1",
@@ -5278,7 +5477,8 @@
                   "id": "Resize-Grow 2",
                   "label": "Grow 2",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"grow 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Grow 2",
@@ -5294,7 +5494,8 @@
                   "id": "Resize-Grow 3",
                   "label": "Grow 3",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"grow 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Grow 3",
@@ -5310,7 +5511,8 @@
                   "id": "Resize-Grow 4",
                   "label": "Grow 4",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"grow 3\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Grow 4",
@@ -5326,7 +5528,8 @@
                   "id": "Resize-Growing Attack",
                   "label": "Growing Attack",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"grow 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Growing Attack",
@@ -5342,7 +5545,8 @@
                   "id": "Resize-Macrodimensional Travel",
                   "label": "Macrodimensional Travel",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"grow 4\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Macrodimensional Travel",
@@ -5358,7 +5562,8 @@
                   "id": "Resize-Microdimensional Travel",
                   "label": "Microdimensional Travel",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"shrink 4\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Microdimensional Travel",
@@ -5374,7 +5579,8 @@
                   "id": "Resize-Resize Object",
                   "label": "Resize Object",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"grow 2\",\"Formula\":\"=== true\"},{\"Type\":\"powers\",\"Name\":\"shrink 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Resize Object",
@@ -5390,7 +5596,8 @@
                   "id": "Resize-Resize Other",
                   "label": "Resize Other",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"grow 2\",\"Formula\":\"=== true\"},{\"Type\":\"powers\",\"Name\":\"shrink 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Resize Other",
@@ -5406,7 +5613,8 @@
                   "id": "Resize-Shrink 1",
                   "label": "Shrink 1",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Resize-Shrink 1",
@@ -5422,7 +5630,8 @@
                   "id": "Resize-Shrink 2",
                   "label": "Shrink 2",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"shrink 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Shrink 2",
@@ -5438,7 +5647,8 @@
                   "id": "Resize-Shrink 3",
                   "label": "Shrink 3",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"shrink 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Shrink 3",
@@ -5454,7 +5664,8 @@
                   "id": "Resize-Shrink 4",
                   "label": "Shrink 4",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"shrink 3\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Shrink 4",
@@ -5470,7 +5681,8 @@
                   "id": "Resize-Shrinking Dodge",
                   "label": "Shrinking Dodge",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"shrink 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Shrinking Dodge",
@@ -5496,7 +5708,8 @@
                   "id": "Shield Bearer-Brace For Impact",
                   "label": "Brace For Impact",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"do this all day\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Brace For Impact",
@@ -5512,7 +5725,8 @@
                   "id": "Shield Bearer-Do This All Day",
                   "label": "Do This All Day",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Do This All Day",
@@ -5528,7 +5742,8 @@
                   "id": "Shield Bearer-Hurled Shield Bash",
                   "label": "Hurled Shield Bash",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"shield bash\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Hurled Shield Bash",
@@ -5544,7 +5759,8 @@
                   "id": "Shield Bearer-Hurled Shield Block",
                   "label": "Hurled Shield Block",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"shield 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Hurled Shield Block",
@@ -5560,7 +5776,8 @@
                   "id": "Shield Bearer-Hurled Shield Deflection",
                   "label": "Hurled Shield Deflection",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"shield deflection\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Hurled Shield Deflection",
@@ -5576,7 +5793,8 @@
                   "id": "Shield Bearer-Immovable",
                   "label": "Immovable",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Immovable",
@@ -5592,7 +5810,8 @@
                   "id": "Shield Bearer-Rico-Shield",
                   "label": "Rico-Shield",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"hurled shield bash\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Rico-Shield",
@@ -5608,7 +5827,8 @@
                   "id": "Shield Bearer-Shield 1",
                   "label": "Shield 1",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Shield 1",
@@ -5624,7 +5844,8 @@
                   "id": "Shield Bearer-Shield 2",
                   "label": "Shield 2",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"shield 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Shield 2",
@@ -5640,7 +5861,8 @@
                   "id": "Shield Bearer-Shield 3",
                   "label": "Shield 3",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"shield 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Shield 3",
@@ -5656,7 +5878,8 @@
                   "id": "Shield Bearer-Shield 4",
                   "label": "Shield 4",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=6\"},{\"Type\":\"powers\",\"Name\":\"shield 3\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Shield 4",
@@ -5672,7 +5895,8 @@
                   "id": "Shield Bearer-Shield Bash",
                   "label": "Shield Bash",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Shield Bash",
@@ -5688,7 +5912,8 @@
                   "id": "Shield Bearer-Shield Deflection",
                   "label": "Shield Deflection",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Shield Deflection",
@@ -5704,7 +5929,8 @@
                   "id": "Shield Bearer-Shield Wall",
                   "label": "Shield Wall",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"brace for impact\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Shield Wall",
@@ -5730,7 +5956,8 @@
                   "id": "Spider Powers-Jump 1",
                   "label": "Jump 1",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Jump 1",
@@ -5746,7 +5973,8 @@
                   "id": "Spider Powers-Jump 2",
                   "label": "Jump 2",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"jump 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Jump 2",
@@ -5762,7 +5990,8 @@
                   "id": "Spider Powers-Jump 3",
                   "label": "Jump 3",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"jump 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Jump 3",
@@ -5778,7 +6007,8 @@
                   "id": "Spider Powers-Spider-Dodge",
                   "label": "Spider-Dodge",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Spider-Dodge",
@@ -5794,7 +6024,8 @@
                   "id": "Spider Powers-Spider-Pheromones",
                   "label": "Spider-Pheromones",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Spider-Pheromones",
@@ -5810,7 +6041,8 @@
                   "id": "Spider Powers-Spider-Sense",
                   "label": "Spider-Sense",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Spider-Sense",
@@ -5826,7 +6058,8 @@
                   "id": "Spider Powers-Spider-Strike",
                   "label": "Spider-Strike",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Spider-Strike",
@@ -5842,7 +6075,8 @@
                   "id": "Spider Powers-Venom Blast",
                   "label": "Venom Blast",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Venom Blast",
@@ -5858,7 +6092,8 @@
                   "id": "Spider Powers-Wallcrawling",
                   "label": "Wallcrawling",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Wallcrawling",
@@ -5874,7 +6109,8 @@
                   "id": "Spider Powers-Webcasting",
                   "label": "Webcasting",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Webcasting",
@@ -5890,7 +6126,8 @@
                   "id": "Spider Powers-Webgliding",
                   "label": "Webgliding",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"webcasting\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Webgliding",
@@ -5906,7 +6143,8 @@
                   "id": "Spider Powers-Webgrabbing",
                   "label": "Webgrabbing",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"webcasting\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Webgrabbing",
@@ -5922,7 +6160,8 @@
                   "id": "Spider Powers-Webslinging",
                   "label": "Webslinging",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"webcasting\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Webslinging",
@@ -5938,7 +6177,8 @@
                   "id": "Spider Powers-Webtrapping",
                   "label": "Webtrapping",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"webgrabbing\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Webtrapping",
@@ -5964,7 +6204,8 @@
                   "id": "Super Speed-Blazing-Fast Fists",
                   "label": "Blazing-Fast Fists",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Blazing-Fast Fists",
@@ -5980,7 +6221,8 @@
                   "id": "Super Speed-Blur",
                   "label": "Blur",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"speed run 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Blur",
@@ -5996,7 +6238,8 @@
                   "id": "Super Speed-Catch Bullets",
                   "label": "Catch Bullets",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"speed run 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Catch Bullets",
@@ -6012,7 +6255,8 @@
                   "id": "Super Speed-Lightning Actions",
                   "label": "Lightning Actions",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Lightning Actions",
@@ -6028,7 +6272,8 @@
                   "id": "Super Speed-Molecular Destabilization",
                   "label": "Molecular Destabilization",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"speed run 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Molecular Destabilization",
@@ -6044,7 +6289,8 @@
                   "id": "Super Speed-Run On Water",
                   "label": "Run On Water",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"speed run 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Run On Water",
@@ -6060,7 +6306,8 @@
                   "id": "Super Speed-Speed Blast",
                   "label": "Speed Blast",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"speed run 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Speed Blast",
@@ -6076,7 +6323,8 @@
                   "id": "Super Speed-Speed Run 1",
                   "label": "Speed Run 1",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Speed Run 1",
@@ -6092,7 +6340,8 @@
                   "id": "Super Speed-Speed Run 2",
                   "label": "Speed Run 2",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"speed run 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Speed Run 2",
@@ -6108,7 +6357,8 @@
                   "id": "Super Speed-Speed Swim",
                   "label": "Speed Swim",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Speed Swim",
@@ -6134,7 +6384,8 @@
                   "id": "Super Strength-Crushing Grip",
                   "label": "Crushing Grip",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Crushing Grip",
@@ -6150,7 +6401,8 @@
                   "id": "Super Strength-Immovable",
                   "label": "Immovable",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Immovable",
@@ -6166,7 +6418,8 @@
                   "id": "Super Strength-Jump 1",
                   "label": "Jump 1",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Jump 1",
@@ -6182,7 +6435,8 @@
                   "id": "Super Strength-Jump 2",
                   "label": "Jump 2",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"jump 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Jump 2",
@@ -6198,7 +6452,8 @@
                   "id": "Super Strength-Jump 3",
                   "label": "Jump 3",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"jump 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Jump 3",
@@ -6214,7 +6469,8 @@
                   "id": "Super Strength-Banging Heads",
                   "label": "Banging Heads",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Banging Heads",
@@ -6230,7 +6486,8 @@
                   "id": "Super Strength-Clobber",
                   "label": "Clobber",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Clobber",
@@ -6246,7 +6503,8 @@
                   "id": "Super Strength-Ground-Shaking Stomp",
                   "label": "Ground-Shaking Stomp",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"smash\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Ground-Shaking Stomp",
@@ -6262,7 +6520,8 @@
                   "id": "Super Strength-Quick Toss",
                   "label": "Quick Toss",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"crushing grip\",\"Formula\":\"=== true\"},{\"Type\":\"powers\",\"Name\":\"mighty 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Quick Toss",
@@ -6278,7 +6537,8 @@
                   "id": "Super Strength-Smash",
                   "label": "Smash",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"clobber\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Smash",
@@ -6294,7 +6554,8 @@
                   "id": "Super Strength-Unrelenting Smash",
                   "label": "Unrelenting Smash",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"ground-shaking stomp\",\"Formula\":\"=== true\"},{\"Type\":\"powers\",\"Name\":\"mighty 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Unrelenting Smash",
@@ -6320,7 +6581,8 @@
                   "id": "Tactics-Advance",
                   "label": "Advance",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"rally on me\",\"Formula\":\"=== true\"},{\"Type\":\"powers\",\"Name\":\"scatter\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-Advance",
@@ -6336,7 +6598,8 @@
                   "id": "Tactics-Battle Plan",
                   "label": "Battle Plan",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"inspiration\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-Battle Plan",
@@ -6352,7 +6615,8 @@
                   "id": "Tactics-Change of Plans",
                   "label": "Change of Plans",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"inspiration\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-Change of Plans",
@@ -6368,7 +6632,8 @@
                   "id": "Tactics-Combat Support",
                   "label": "Combat Support",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"change of plans\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-Combat Support",
@@ -6384,7 +6649,8 @@
                   "id": "Tactics-Focus Fire",
                   "label": "Focus Fire",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"battle plan\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-Focus Fire",
@@ -6400,7 +6666,8 @@
                   "id": "Tactics-Hit the Dirt",
                   "label": "Hit the Dirt",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"keep moving\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-Hit the Dirt",
@@ -6416,7 +6683,8 @@
                   "id": "Tactics-Keep Moving",
                   "label": "Keep Moving",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Tactics-Keep Moving",
@@ -6432,7 +6700,8 @@
                   "id": "Tactics-On Your Feet",
                   "label": "On Your Feet",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"keep moving\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-On Your Feet",
@@ -6448,7 +6717,8 @@
                   "id": "Tactics-Operations Center",
                   "label": "Operations Center",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"combat support\",\"Formula\":\"=== true\"},{\"Type\":\"powers\",\"Name\":\"focus fire\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-Operations Center",
@@ -6464,7 +6734,8 @@
                   "id": "Tactics-Rally On Me",
                   "label": "Rally On Me",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"on your feet\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-Rally On Me",
@@ -6480,7 +6751,8 @@
                   "id": "Tactics-Scatter",
                   "label": "Scatter",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"hit the dirt\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-Scatter",
@@ -6506,7 +6778,8 @@
                   "id": "Telekinesis-Group Levitation",
                   "label": "Group Levitation",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"levitation\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Group Levitation",
@@ -6522,7 +6795,8 @@
                   "id": "Telekinesis-Levitation",
                   "label": "Levitation",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Levitation",
@@ -6538,7 +6812,8 @@
                   "id": "Telekinesis-Telekinetic Attack",
                   "label": "Telekinetic Attack",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"telekinetic manipulation\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Attack",
@@ -6554,7 +6829,8 @@
                   "id": "Telekinesis-Telekinetic Barrier",
                   "label": "Telekinetic Barrier",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"telekinetic grab\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Barrier",
@@ -6570,7 +6846,8 @@
                   "id": "Telekinesis-Telekinetic Crush",
                   "label": "Telekinetic Crush",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"telekinetic grab\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Crush",
@@ -6586,7 +6863,8 @@
                   "id": "Telekinesis-Telekinetic Grab",
                   "label": "Telekinetic Grab",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"telekinetic manipulation\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Grab",
@@ -6602,7 +6880,8 @@
                   "id": "Telekinesis-Telekinetic Manipulation",
                   "label": "Telekinetic Manipulation",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Manipulation",
@@ -6618,7 +6897,8 @@
                   "id": "Telekinesis-Telekinetic Protection 1",
                   "label": "Telekinetic Protection 1",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"telekinetic barrier\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Protection 1",
@@ -6634,7 +6914,8 @@
                   "id": "Telekinesis-Telekinetic Protection 2",
                   "label": "Telekinetic Protection 2",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"telekinetic protection 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Protection 2",
@@ -6650,7 +6931,8 @@
                   "id": "Telekinesis-Telekinetic Protection 3",
                   "label": "Telekinetic Protection 3",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"telekinetic protection 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Protection 3",
@@ -6666,7 +6948,8 @@
                   "id": "Telekinesis-Telekinetic Protection 4",
                   "label": "Telekinetic Protection 4",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=5\"},{\"Type\":\"powers\",\"Name\":\"telekinetic protection 3\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Protection 4",
@@ -6682,7 +6965,8 @@
                   "id": "Telekinesis-Telekinetic Reinforcement",
                   "label": "Telekinetic Reinforcement",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"telekinetic protection 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Reinforcement",
@@ -6698,7 +6982,8 @@
                   "id": "Telekinesis-Telekinetic Sphere",
                   "label": "Telekinetic Sphere",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"telekinetic protection 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Sphere",
@@ -6714,7 +6999,8 @@
                   "id": "Telekinesis-Telekinetic Toss",
                   "label": "Telekinetic Toss",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"telekinetic grab\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Toss",
@@ -6740,7 +7026,8 @@
                   "id": "Telepathy-Animal Bond",
                   "label": "Animal Bond",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Animal Bond",
@@ -6756,7 +7043,8 @@
                   "id": "Telepathy-Animal Communication",
                   "label": "Animal Communication",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Animal Communication",
@@ -6772,7 +7060,8 @@
                   "id": "Telepathy-Astral Form",
                   "label": "Astral Form",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Astral Form",
@@ -6788,7 +7077,8 @@
                   "id": "Telepathy-Borrow Senses",
                   "label": "Borrow Senses",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"telepathic link\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Borrow Senses",
@@ -6804,7 +7094,8 @@
                   "id": "Telepathy-Cloak",
                   "label": "Cloak",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"telepathic link\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Cloak",
@@ -6820,7 +7111,8 @@
                   "id": "Telepathy-Cloak Group",
                   "label": "Cloak Group",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"cloak\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Cloak Group",
@@ -6836,7 +7128,8 @@
                   "id": "Telepathy-Command",
                   "label": "Command",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"telepathic link\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Command",
@@ -6852,7 +7145,8 @@
                   "id": "Telepathy-Domination",
                   "label": "Domination",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=5\"},{\"Type\":\"powers\",\"Name\":\"orders\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Domination",
@@ -6868,7 +7162,8 @@
                   "id": "Telepathy-Edit Memory",
                   "label": "Edit Memory",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"memory blip\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Edit Memory",
@@ -6884,7 +7179,8 @@
                   "id": "Telepathy-ESP",
                   "label": "ESP",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Telepathy-ESP",
@@ -6900,7 +7196,8 @@
                   "id": "Telepathy-Fool",
                   "label": "Fool",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"telepathic link\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Fool",
@@ -6916,7 +7213,8 @@
                   "id": "Telepathy-Grand Fool",
                   "label": "Grand Fool",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"fool\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Grand Fool",
@@ -6932,14 +7230,15 @@
                   "id": "Telepathy-Grand Mirage",
                   "label": "Grand Mirage",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"mirage\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Grand Mirage",
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": "The character can make a mirage appear in a group’s mind."
+                  "text": "The character can make a mirage appear in a group's mind."
                 }
               },
               {
@@ -6948,14 +7247,15 @@
                   "id": "Telepathy-Information Upload",
                   "label": "Information Upload",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"telepathic link\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Information Upload",
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": "The character can transmit loads of information straight into another’s mind."
+                  "text": "The character can transmit loads of information straight into another's mind."
                 }
               },
               {
@@ -6964,7 +7264,8 @@
                   "id": "Telepathy-Machine Telepathy",
                   "label": "Machine Telepathy",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Machine Telepathy",
@@ -6980,7 +7281,8 @@
                   "id": "Telepathy-Memory Blip",
                   "label": "Memory Blip",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"telepathic link\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Memory Blip",
@@ -6996,7 +7298,8 @@
                   "id": "Telepathy-Mental Punch",
                   "label": "Mental Punch",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Mental Punch",
@@ -7012,7 +7315,8 @@
                   "id": "Telepathy-Mental Shelter",
                   "label": "Mental Shelter",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"uncanny 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Mental Shelter",
@@ -7028,7 +7332,8 @@
                   "id": "Telepathy-Mind Interrogation",
                   "label": "Mind Interrogation",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"mind reading\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Mind Interrogation",
@@ -7044,7 +7349,8 @@
                   "id": "Telepathy-Mind Reading",
                   "label": "Mind Reading",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"telepathic link\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Mind Reading",
@@ -7060,7 +7366,8 @@
                   "id": "Telepathy-Mirage",
                   "label": "Mirage",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"telepathic link\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Mirage",
@@ -7076,7 +7383,8 @@
                   "id": "Telepathy-Orders",
                   "label": "Orders",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"command\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Orders",
@@ -7092,7 +7400,8 @@
                   "id": "Telepathy-Telepathic Blast",
                   "label": "Telepathic Blast",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"telepathic link\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Telepathic Blast",
@@ -7108,7 +7417,8 @@
                   "id": "Telepathy-Telepathic Link",
                   "label": "Telepathic Link",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Telepathic Link",
@@ -7124,7 +7434,8 @@
                   "id": "Telepathy-Telepathic Network",
                   "label": "Telepathic Network",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"telepathic link\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Telepathic Network",
@@ -7140,7 +7451,8 @@
                   "id": "Telepathy-Telepathic Possession",
                   "label": "Telepathic Possession",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=5\"},{\"Type\":\"powers\",\"Name\":\"orders\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Telepathic Possession",
@@ -7166,7 +7478,8 @@
                   "id": "Teleportation-Blink",
                   "label": "Blink",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Blink",
@@ -7182,7 +7495,8 @@
                   "id": "Teleportation-Blink Barrage",
                   "label": "Blink Barrage",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"},{\"Type\":\"powers\",\"Name\":\"blink\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Blink Barrage",
@@ -7198,7 +7512,8 @@
                   "id": "Teleportation-Blink Defense",
                   "label": "Blink Defense",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"blink\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Blink Defense",
@@ -7214,7 +7529,8 @@
                   "id": "Teleportation-Teleport 1",
                   "label": "Teleport 1",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"blink\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Teleport 1",
@@ -7230,7 +7546,8 @@
                   "id": "Teleportation-Teleport 2",
                   "label": "Teleport 2",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"powers\",\"Name\":\"teleport 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Teleport 2",
@@ -7246,7 +7563,8 @@
                   "id": "Teleportation-Teleport Blind",
                   "label": "Teleport Blind",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"teleport 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Teleport Blind",
@@ -7262,7 +7580,8 @@
                   "id": "Teleportation-Teleport Object",
                   "label": "Teleport Object",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"teleport 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Teleport Object",
@@ -7278,7 +7597,8 @@
                   "id": "Teleportation-Teleport Other",
                   "label": "Teleport Other",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"teleport 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Teleport Other",
@@ -7294,7 +7614,8 @@
                   "id": "Teleportation-Teleport Together",
                   "label": "Teleport Together",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"teleport 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Teleport Together",
@@ -7310,7 +7631,8 @@
                   "id": "Teleportation-Teleportal",
                   "label": "Teleportal",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"teleport 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Teleportal",
@@ -7336,7 +7658,8 @@
                   "id": "Weather Control-Control Fog",
                   "label": "Control Fog",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Weather Control-Control Fog",
@@ -7352,7 +7675,8 @@
                   "id": "Weather Control-Control Weather 1",
                   "label": "Control Weather 1",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=2\"}]"
                 },
                 "text": {
                   "name": "info-power-Weather Control-Control Weather 1",
@@ -7368,7 +7692,8 @@
                   "id": "Weather Control-Control Weather 2",
                   "label": "Control Weather 2",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=3\"},{\"Type\":\"powers\",\"Name\":\"control weather 1\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Weather Control-Control Weather 2",
@@ -7384,7 +7709,8 @@
                   "id": "Weather Control-Control Weather 3",
                   "label": "Control Weather 3",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=4\"},{\"Type\":\"powers\",\"Name\":\"control weather 2\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Weather Control-Control Weather 3",
@@ -7400,7 +7726,8 @@
                   "id": "Weather Control-Control Weather 4",
                   "label": "Control Weather 4",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "[{\"Type\":\"\",\"Name\":\"rank\",\"Formula\":\">=5\"},{\"Type\":\"powers\",\"Name\":\"control weather 3\",\"Formula\":\"=== true\"}]"
                 },
                 "text": {
                   "name": "info-power-Weather Control-Control Weather 4",
@@ -7416,7 +7743,8 @@
                   "id": "Weather Control-Thunder",
                   "label": "Thunder",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Weather Control-Thunder",
@@ -7432,7 +7760,8 @@
                   "id": "Weather Control-Weather Chill",
                   "label": "Weather Chill",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Weather Control-Weather Chill",
@@ -7448,7 +7777,8 @@
                   "id": "Weather Control-Weather Warm",
                   "label": "Weather Warm",
                   "type": "switch",
-                  "bonusAdjustments": "null"
+                  "bonusAdjustments": "null",
+                  "prerequisites": "null"
                 },
                 "text": {
                   "name": "info-power-Weather Control-Weather Warm",

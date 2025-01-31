@@ -32,12 +32,13 @@
     "effect": "The character adds +2 to their Agility damage multiplier, and they gain a +2 bonus to Agility checks other than attacks.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Accuracy 1"
+        "name": "Accuracy 1",
+        "formula": "=== true"
       }
     ],
     "bonusadjustments": [
@@ -64,12 +65,13 @@
     "effect": "The character adds +3 to their Agility damage multiplier, and they gain a +3 bonus to Agility checks other than attacks.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Accuracy 2"
+        "name": "accuracy 2",
+        "formula": "=== true"
       }
     ],
     "bonusadjustments": [
@@ -96,12 +98,13 @@
     "effect": "The character adds +4 to their Agility damage multiplier, and they gain a +4 bonus to Agility checks other than attacks.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Accuracy 3"
+        "name": "accuracy 3",
+        "formula": "=== true"
       }
     ],
     "bonusadjustments": [
@@ -141,12 +144,13 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Mighty 3"
+        "name": "mighty 3",
+        "formula": "=== true"
       }
     ]
   },
@@ -190,12 +194,13 @@
     "description": "The character puts their brain to work.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Brilliance 1"
+        "name": "brilliance 1",
+        "formula": "=== true"
       }
     ],
     "page": 86,
@@ -222,12 +227,13 @@
     "description": "Little can stop the character's mind.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Brilliance 2"
+        "name": "brilliance 2",
+        "formula": "=== true"
       }
     ],
     "page": 86,
@@ -254,12 +260,13 @@
     "description": "The character's intelligence is unparalleled.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Brilliance 3"
+        "name": "brilliance 3",
+        "formula": "=== true"
       }
     ],
     "page": 86,
@@ -291,8 +298,8 @@
     "effect": "Once per battle, when the character is attacking targets of equal or higher rank, the character automatically rolls a 1 on their Marvel die, and that die cannot be affected by trouble. If the character is attacking multiple targets, all the targets must be of equal or higher rank.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -341,12 +348,13 @@
     ],
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Discipline 1"
+        "name": "discipline 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -373,12 +381,13 @@
     ],
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Discipline 2"
+        "name": "discipline 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -405,12 +414,13 @@
     ],
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Discipline 3"
+        "name": "discipline 3",
+        "formula": "=== true"
       }
     ]
   },
@@ -440,8 +450,8 @@
     "effect": "The character can take any Health damage done to them (after applying any damage reduction), ignore it and add that number to their Focus instead. In this way, they can increase their Focus up to double their regular maximum Focus.<br />Once the combat is over, any extra Focus over the character's regular maximum Focus score fades away.'",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       }
     ]
   },
@@ -476,8 +486,8 @@
     "effect": "The character can fly. Their combat Flight Speed is equal to their rank times their Rund Speed. Outside of combat, they can move three times their Flight Speed.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -492,12 +502,13 @@
     "effect": "Outside of combat, the character can fly up to 50 times their Flight Speed.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Flight 1"
+        "name": "flight 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -514,12 +525,13 @@
     "effect": "For every point of Ego the character has, they can hoist one ally into the air with them. The Flight Speed of the group is half the character's, and all affected allies must remain with 5 spaces times the character's rank.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Flight 1"
+        "name": "flight 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -555,7 +567,8 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Heightened Senses 1"
+        "name": "heightened senses 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -635,12 +648,13 @@
     ],
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Mighty 1"
+        "name": "mighty 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -667,12 +681,13 @@
     ],
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Mighty 2"
+        "name": "mighty 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -699,12 +714,13 @@
     ],
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Mighty 3"
+        "name": "mighty 3",
+        "formula": "=== true"
       }
     ]
   },
@@ -731,12 +747,13 @@
     "effect": "The character can change into another form no more than one size bigger or smaller than their regular form.<br />When in any form, the character has access to the natural abilities of the form. For instance, if they transformed into a bird, they could fly. When transormed into a fish, they can breathe water.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Disguise"
+        "name": "disguise",
+        "formula": "=== true"
       }
     ]
   },
@@ -785,12 +802,13 @@
     ],
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Sturdy 1"
+        "name": "sturdy 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -811,12 +829,13 @@
     ],
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Sturdy 2"
+        "name": "sturdy 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -837,12 +856,13 @@
     ],
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 6
+        "name": "rank",
+        "formula": ">=6"
       },
       {
         "type": "powers",
-        "value": "Sturdy 3"
+        "name": "sturdy 3",
+        "formula": "=== true"
       }
     ]
   },
@@ -867,12 +887,13 @@
     "effect": "Any damage multiplier for attacks against the character's Focus is reduced by 2.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Uncanny 1"
+        "name": "uncanny 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -887,12 +908,13 @@
     "effect": "Any damage multiplier for attacks against the character's Focus is reduced by 3.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Uncanny 2"
+        "name": "uncanny 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -907,12 +929,13 @@
     "effect": "Any damage multiplier for attacks against the character's Focus is reduced by 4.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 6
+        "name": "rank",
+        "formula": ">=6"
       },
       {
         "type": "powers",
-        "value": "Uncanny 3"
+        "name": "uncanny 3",
+        "formula": "=== true"
       }
     ]
   },
@@ -951,12 +974,13 @@
     "effect": "The character designates a space within their line of sight. The attack can affect every enemy with 10 spaces of that. The character makes a single Ego check and compares it to each target's Resilience defense. Affected enemies take half regular damage. On a Fantastic success, they take full regular damage and the elemental type's special effect.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Elemental Blast"
+        "name": "elemental blast",
+        "formula": "=== true"
       }
     ]
   },
@@ -973,12 +997,13 @@
     "effect": "The character forms a wall of their element within their line of sight and up to 10 spaces away per rank. This covers up to 2 spaces across (vertically/horizontally) per their rank. The character makes an Agility check and compares the results against the Agility defense of any target in the affected spaces. On a success, the character chooses which side of the barrier the target winds up on. On a failure, the target chooses. On a Fantastic success, the target suffers the element's special effect too.<br />Attacks against the barrier are against the character's Ego defense. Any attacks agaisnt it that do 10 points of damage or less are instantly absorbed, and the barrier continues. If an attack does more than 10 points of damage, it destroys the barrier. Either way, the attack leaves those behind the barrier unharmed.'",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Elemental Blast"
+        "name": "elemental blast",
+        "formula": "=== true"
       }
     ]
   },
@@ -996,12 +1021,13 @@
     "effect": "The character makes a ranged attack with an edge at an enemy in line of sight. For this attack, add +1 to the character's Agility damage bonus for every 2 points of Focus they spend. On a success, an affected target takes that total damage. On a Fantastic success, an affected target takes double that total damage and suffers the elemental type's special effect.'",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Elemental Burst"
+        "name": "elemental burst",
+        "formula": "=== true"
       }
     ]
   },
@@ -1028,12 +1054,13 @@
     "effect": "The character's body is made entirely of their element, which gives them a steady supply of their element to use and makes them essentially unkillable. When they lose all their Health, their form loses its cohesion and falls apart. When they have at least 1 Health - which they can gain back over time, normally - they can re-form.<br />If the character whishes to use their elemental body in unusual ways, they should pick Plasticity powers. If they wish to be able to be fully human at times, they should take the Shape-Shift power.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Elemental Reinforcement"
+        "name": "elemental reinforcement",
+        "formula": "=== true"
       }
     ]
   },
@@ -1051,12 +1078,13 @@
     "effect": "The character makes an Ego attack against a target's Melee defense within 5 spaces times the character's rank. If the attack is a success, the character grabs the target with their element. On a Fantastic success, the target can also be pinned and suffers the element's special effect. Breaking free requires a successful Melee check against a target number 20.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Elemental Burst"
+        "name": "elemental burst",
+        "formula": "=== true"
       }
     ]
   },
@@ -1073,12 +1101,13 @@
     "effect": "The character infuses their energy into a handheld weapon in their grasp. When the character gets a Fantastic success attacking with the weapon, add the energy's special effect.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Elemental Burst"
+        "name": "elemental burst",
+        "formula": "=== true"
       }
     ]
   },
@@ -1096,7 +1125,8 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Elemental Protection 1"
+        "name": "elemental protection 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -1114,12 +1144,13 @@
     "effect": "The character protects themselves with their element. Any attacks against them that do 10 points of damage or less are instanly absorbed, and the protection continues. If an attack does more than 10 points of damage, it destroys the protection. Either way, the character remains unharmed.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Elemental Barrier"
+        "name": "elemental barrier",
+        "formula": "=== true"
       }
     ]
   },
@@ -1137,12 +1168,13 @@
     "effect": "The character protects themselves with their element. Any attacks against them that do 20 points of damage or less are instanly absorbed, and the protection continues. If an attack does more than 20 points of damage, it destroys the protection. Either way, the character remains unharmed.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Elemental Protection 1"
+        "name": "elemental protection 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -1160,12 +1192,13 @@
     "effect": "The character protects themselves with their element. Any attacks against them that do 30 points of damage or less are instanly absorbed, and the protection continues. If an attack does more than 30 points of damage, it destroys the protection. Either way, the character remains unharmed.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Elemental Protection 2"
+        "name": "elemental protection 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -1183,12 +1216,13 @@
     "effect": "The character protects themselves with their element. Any attacks against them that do 40 points of damage or less are instanly absorbed, and the protection continues. If an attack does more than 40 points of damage, it destroys the protection. Either way, the character remains unharmed.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 5
+        "name": "rank",
+        "formula": ">=5"
       },
       {
         "type": "powers",
-        "value": "Elemental Protection 3"
+        "name": "elemental protection 3",
+        "formula": "=== true"
       }
     ]
   },
@@ -1205,12 +1239,13 @@
     "effect": "The character makes an Ego attack against the target's Agility defense. If the attack succeeds, the character can move the target in any direction, up to 1 space times the character's rank. On a Fantastic success, the target also takes regular damage, is knocked prone and suffers the element's special effect.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Elemental Protection 1"
+        "name": "elemental protection 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -1229,7 +1264,8 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Elemental Protection 1"
+        "name": "elemental protection 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -1247,12 +1283,13 @@
     "effect": "The character makes a ranged attack against a target in line of sight. If the attack is a success, it inflicts regular damage. On a Fantastic success, energy also bounes off the first target to another in line of sight, and the character can make a new attack against that target, adding the new range to the previous attack's range. This can be repeated until an attack is not fantastic.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Elemental Burst"
+        "name": "elemental burst",
+        "formula": "=== true"
       }
     ]
   },
@@ -1270,7 +1307,8 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Elemental Protection 1"
+        "name": "elemental protection 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -1289,12 +1327,13 @@
     "effect": "The character makes an Ego attack agaisnt the grabbed target's Resilience defense. If the attack is a success, the target takes regular damage. On a Fantastic success, the target can also be pinned and suffers the element's special effect.<br />With elements that aren't suited to suffocation, this power chokes the target instead.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Elemental Grab"
+        "name": "elemental grab",
+        "formula": "=== true"
       }
     ]
   },
@@ -1311,12 +1350,13 @@
     "effect": "The character makes an Ego check and compares that against the Resilience defense of every enemy with 10 spaces. For these attacks, add +1 to the character's Melee damage bonus for every 2 points of Focus they spend. On a success, an affected target takes half that total damage. On a Fantastic success, an affected target takes full damage and suffers the elemental type's special effect.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Elemental Blast"
+        "name": "elemental blast",
+        "formula": "=== true"
       }
     ]
   },
@@ -1333,12 +1373,13 @@
     "effect": "The character creates a visual-only illusion anywhere in line of sight, within 50 spaces. The illusion can be anything up to four sizes larger than the character, and it can move freely within its limits. The character breaks concentration if they move beyond 50 spaces from the illusion or lose line of sight to it.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Static Illusion"
+        "name": "static illusion",
+        "formula": "=== true"
       }
     ]
   },
@@ -1355,12 +1396,13 @@
     "effect": "An area up to 5 spaces wide per the character's rank - centered on anything the character wishes, within 50 spaces - is filled with inky darkness. Those inside it cannot see anything, and no lights work within it except those gerated by powers. The character must remain within 50 spaces of the affected area to avoid breaking concentration.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Illumination"
+        "name": "illumination",
+        "formula": "=== true"
       }
     ]
   },
@@ -1378,12 +1420,13 @@
     "effect": "The character makes an Ego check against an enemy in their line of sight and compares that against the target's Vigilance defense. If the attack is a success, the enemy is blinded for 1 turn. On a Fantastic success, it also inflicts regular damage.<br />Alternatively, the character can blind the victim with darkness.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Illumination"
+        "name": "illumination",
+        "formula": "=== true"
       }
     ]
   },
@@ -1401,12 +1444,13 @@
     "effect": "The character makes an Ego check against an enemy in their line of sight and compares that against the target's Vigilance defense. If the attack is a success, the enemy is deafened for on turn. On a Fantastic success, it also inflicts regular damage.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Illumination"
+        "name": "illumination",
+        "formula": "=== true"
       }
     ]
   },
@@ -1420,7 +1464,8 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Invisibility"
+        "name": "invisibility",
+        "formula": "=== true"
       }
     ]
   },
@@ -1433,12 +1478,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Illumination"
+        "name": "illumination",
+        "formula": "=== true"
       }
     ]
   },
@@ -1451,12 +1497,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Animated Illusion"
+        "name": "animated illusion",
+        "formula": "=== true"
       }
     ]
   },
@@ -1469,12 +1516,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Extend Invisibility"
+        "name": "extend invisibility",
+        "formula": "=== true"
       }
     ]
   },
@@ -1495,8 +1543,8 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -1509,12 +1557,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Animated Illusion"
+        "name": "animated illusion",
+        "formula": "=== true"
       }
     ]
   },
@@ -1527,12 +1576,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Illumination"
+        "name": "illumination",
+        "formula": "=== true"
       }
     ]
   },
@@ -1545,12 +1595,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Illumination"
+        "name": "illumination",
+        "formula": "=== true"
       }
     ]
   },
@@ -1564,7 +1615,8 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Illumination"
+        "name": "illumination",
+        "formula": "=== true"
       }
     ]
   },
@@ -1577,8 +1629,8 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -1591,12 +1643,12 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
-        "type": "Tag",
-        "value": "Sorcerous"
+        "name": "tag",
+        "formula": ".some(x => x === \"sorcerous\"))"
       }
     ]
   },
@@ -1609,8 +1661,8 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -1623,12 +1675,12 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
-        "type": "Tag",
-        "value": "Sorcerous"
+        "name": "tag",
+        "formula": ".some(x => x === \"sorcerous\"))"
       }
     ]
   },
@@ -1641,12 +1693,12 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
-        "type": "Tag",
-        "value": "Sorcerous"
+        "name": "tag",
+        "formula": ".some(x => x === \"sorcerous\"))"
       }
     ]
   },
@@ -1659,8 +1711,8 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       }
     ]
   },
@@ -1673,12 +1725,12 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
-        "type": "Tag",
-        "value": "Sorcerous"
+        "name": "tag",
+        "formula": ".some(x => x === \"sorcerous\"))"
       }
     ]
   },
@@ -1691,12 +1743,12 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
-        "type": "Tag",
-        "value": "Cursed"
+        "name": "tag",
+        "formula": ".some(x => x === \"cursed\"))"
       }
     ]
   },
@@ -1709,12 +1761,12 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
-        "type": "Tag",
-        "value": "Chaotic"
+        "name": "tag",
+        "formula": ".some(x => x === \"chaotic\"))"
       }
     ]
   },
@@ -1727,12 +1779,12 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
-        "type": "Tag",
-        "value": "Sorcerous"
+        "name": "tag",
+        "formula": ".some(x => x === \"sorcerous\"))"
       }
     ]
   },
@@ -1745,12 +1797,12 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
-        "type": "Tag",
-        "value": "Sorcerous"
+        "name": "tag",
+        "formula": ".some(x => x === \"sorcerous\"))"
       }
     ]
   },
@@ -1763,12 +1815,12 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
-        "type": "Tag",
-        "value": "Chaotic"
+        "name": "tag",
+        "formula": ".some(x => x === \"chaotic\"))"
       }
     ]
   },
@@ -1781,8 +1833,8 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -1795,12 +1847,12 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
-        "type": "Tag",
-        "value": "Sorcerous"
+        "name": "tag",
+        "formula": ".some(x => x === \"sorcerous\"))"
       }
     ]
   },
@@ -1813,12 +1865,12 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
-        "type": "Tag",
-        "value": "Sorcerous"
+        "name": "tag",
+        "formula": ".some(x => x === \"sorcerous\"))"
       }
     ]
   },
@@ -1831,8 +1883,8 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Tag",
-        "value": "Cursed"
+        "name": "tag",
+        "formula": ".some(x => x === \"cursed\"))"
       }
     ]
   },
@@ -1845,12 +1897,12 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
-        "type": "Tag",
-        "value": "Cursed"
+        "name": "tag",
+        "formula": ".some(x => x === \"cursed\"))"
       }
     ]
   },
@@ -1863,12 +1915,12 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 5
+        "name": "rank",
+        "formula": ">=5"
       },
       {
-        "type": "Tag",
-        "value": "Cursed"
+        "name": "tag",
+        "formula": ".some(x => x === \"cursed\"))"
       }
     ]
   },
@@ -1881,12 +1933,12 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
-        "type": "Tag",
-        "value": "Chaotic"
+        "name": "tag",
+        "formula": ".some(x => x === \"chaotic\"))"
       }
     ]
   },
@@ -1899,12 +1951,12 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
-        "type": "Tag",
-        "value": "Chaotic"
+        "name": "tag",
+        "formula": ".some(x => x === \"chaotic\"))"
       }
     ]
   },
@@ -1917,12 +1969,12 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
-        "type": "Tag",
-        "value": "Chaotic"
+        "name": "tag",
+        "formula": ".some(x => x === \"chaotic\"))"
       }
     ]
   },
@@ -1935,8 +1987,8 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "Tag",
-        "value": "Chaotic"
+        "name": "tag",
+        "formula": ".some(x => x === \"chaotic\"))"
       }
     ]
   },
@@ -1957,12 +2009,12 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
-        "type": "Tag",
-        "value": "Sorcerous"
+        "name": "tag",
+        "formula": ".some(x => x === \"sorcerous\"))"
       }
     ]
   },
@@ -1975,12 +2027,12 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
-        "type": "Tag",
-        "value": "Sorcerous"
+        "name": "tag",
+        "formula": ".some(x => x === \"sorcerous\"))"
       }
     ]
   },
@@ -1993,12 +2045,12 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
-        "type": "Tag",
-        "value": "Sorcerous"
+        "name": "tag",
+        "formula": ".some(x => x === \"sorcerous\"))"
       }
     ]
   },
@@ -2011,12 +2063,12 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
-        "type": "Tag",
-        "value": "Sorcerous"
+        "name": "tag",
+        "formula": ".some(x => x === \"sorcerous\"))"
       }
     ]
   },
@@ -2028,12 +2080,13 @@
     "description": "The character is prepared to fight.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Do This All Day"
+        "name": "do this all day",
+        "formula": "=== true"
       }
     ]
   },
@@ -2063,12 +2116,13 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Do This All Day"
+        "name": "do this all day",
+        "formula": "=== true"
       }
     ]
   },
@@ -2081,12 +2135,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Fast Strikes"
+        "name": "fast strikes",
+        "formula": "=== true"
       }
     ]
   },
@@ -2099,12 +2154,13 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Attack Stance"
+        "name": "attack stance",
+        "formula": "=== true"
       }
     ]
   },
@@ -2118,8 +2174,8 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -2141,8 +2197,8 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -2163,12 +2219,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Leg Sweep"
+        "name": "leg sweep",
+        "formula": "=== true"
       }
     ]
   },
@@ -2181,12 +2238,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Chain Strikes"
+        "name": "chain strikes",
+        "formula": "=== true"
       }
     ]
   },
@@ -2199,8 +2257,8 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -2213,16 +2271,18 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Flying Double Kick"
+        "name": "flying double kick",
+        "formula": "=== true"
       },
       {
         "type": "powers",
-        "value": "Crushing Grip"
+        "name": "crushing grip",
+        "formula": "=== true"
       }
     ]
   },
@@ -2235,12 +2295,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Fast Strikes"
+        "name": "fast strikes",
+        "formula": "=== true"
       }
     ]
   },
@@ -2253,16 +2314,18 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Unflappable Poise"
+        "name": "unflappable poise",
+        "formula": "=== true"
       },
       {
         "type": "powers",
-        "value": "Untouchable Position"
+        "name": "untouchable position",
+        "formula": "=== true"
       }
     ]
   },
@@ -2275,12 +2338,13 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Defense Stance"
+        "name": "defense stance",
+        "formula": "=== true"
       }
     ]
   },
@@ -2293,12 +2357,13 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Defense Stance"
+        "name": "defense stance",
+        "formula": "=== true"
       }
     ]
   },
@@ -2310,12 +2375,13 @@
     "description": "The character can dodge most close attacks.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Defense Stance"
+        "name": "defense stance",
+        "formula": "=== true"
       }
     ]
   },
@@ -2327,12 +2393,13 @@
     "description": "The character's enemies struggle to gang up on them.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Counterstrike Technique"
+        "name": "counterstrike technique",
+        "formula": "=== true"
       }
     ]
   },
@@ -2345,12 +2412,13 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Vicious Attack"
+        "name": "vicious attack",
+        "formula": "=== true"
       }
     ]
   },
@@ -2379,12 +2447,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Whirling Frenzy"
+        "name": "whirling frenzy",
+        "formula": "=== true"
       }
     ]
   },
@@ -2413,16 +2482,18 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Furious Attacks"
+        "name": "furious attacks",
+        "formula": "=== true"
       },
       {
         "type": "powers",
-        "value": "Focused Fury"
+        "name": "focused fury",
+        "formula": "=== true"
       }
     ]
   },
@@ -2443,12 +2514,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Fast Attacks"
+        "name": "fast attacks",
+        "formula": "=== true"
       }
     ]
   },
@@ -2461,12 +2533,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Dimensional Travel Together"
+        "name": "dimensional travel together",
+        "formula": "=== true"
       }
     ]
   },
@@ -2479,8 +2552,8 @@
     "action": "Standard, Movement",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       }
     ]
   },
@@ -2493,12 +2566,13 @@
     "action": "Standard, Reaction, Movement",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Dimensional Travel"
+        "name": "dimensional travel",
+        "formula": "=== true"
       }
     ]
   },
@@ -2511,12 +2585,13 @@
     "action": "Standard, Reaction, Movement",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Dimensional Travel"
+        "name": "dimensional travel",
+        "formula": "=== true"
       }
     ]
   },
@@ -2529,8 +2604,8 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       }
     ]
   },
@@ -2543,12 +2618,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Multiversal Travel Together"
+        "name": "multiversal travel together",
+        "formula": "=== true"
       }
     ]
   },
@@ -2561,8 +2637,8 @@
     "action": "Standard, Movement",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       }
     ]
   },
@@ -2575,12 +2651,13 @@
     "action": "Standard, Reaction, Movement",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Multiversal Travel"
+        "name": "multiversal travel",
+        "formula": "=== true"
       }
     ]
   },
@@ -2593,12 +2670,13 @@
     "action": "Standard, Reaction, Movement",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Multiversal Travel"
+        "name": "multiversal travel",
+        "formula": "=== true"
       }
     ]
   },
@@ -2611,12 +2689,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Time Travel Together"
+        "name": "time travel together",
+        "formula": "=== true"
       }
     ]
   },
@@ -2629,8 +2708,8 @@
     "action": "Standard, Movement",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       }
     ]
   },
@@ -2643,12 +2722,13 @@
     "action": "Standard, Reaction, Movement",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Time Travel"
+        "name": "time travel",
+        "formula": "=== true"
       }
     ]
   },
@@ -2661,12 +2741,13 @@
     "action": "Standard, Reaction, Movement",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Time Travel"
+        "name": "time travel",
+        "formula": "=== true"
       }
     ]
   },
@@ -2679,12 +2760,13 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Instant Replay"
+        "name": "instant replay",
+        "formula": "=== true"
       }
     ]
   },
@@ -2697,12 +2779,13 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Time-Out"
+        "name": "time-out",
+        "formula": "=== true"
       }
     ]
   },
@@ -2715,12 +2798,13 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Time-Out"
+        "name": "time-out",
+        "formula": "=== true"
       }
     ]
   },
@@ -2733,12 +2817,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Phase Self"
+        "name": "phase self",
+        "formula": "=== true"
       }
     ]
   },
@@ -2751,12 +2836,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Phase Self"
+        "name": "phase self",
+        "formula": "=== true"
       }
     ]
   },
@@ -2769,12 +2855,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Phase Self"
+        "name": "phase self",
+        "formula": "=== true"
       }
     ]
   },
@@ -2787,12 +2874,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Phase Self"
+        "name": "phase self",
+        "formula": "=== true"
       }
     ]
   },
@@ -2805,12 +2893,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Phase Self"
+        "name": "phase self",
+        "formula": "=== true"
       }
     ]
   },
@@ -2823,12 +2912,13 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Phase Self"
+        "name": "phase self",
+        "formula": "=== true"
       }
     ]
   },
@@ -2848,12 +2938,13 @@
     "description": "The character can walk on air.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Phase Self"
+        "name": "phase self",
+        "formula": "=== true"
       }
     ]
   },
@@ -2866,12 +2957,13 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Phase Self"
+        "name": "phase self",
+        "formula": "=== true"
       }
     ]
   },
@@ -2884,16 +2976,18 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Flexible Bones 2"
+        "name": "flexible bones 2",
+        "formula": "=== true"
       },
       {
         "type": "powers",
-        "value": "Extended Reach 2"
+        "name": "extended reach 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -2906,12 +3000,13 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Body Sheet"
+        "name": "body sheet",
+        "formula": "=== true"
       }
     ]
   },
@@ -2924,16 +3019,18 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Flexible Bones 1"
+        "name": "flexible bones 1",
+        "formula": "=== true"
       },
       {
         "type": "powers",
-        "value": "Slip Free"
+        "name": "slip free",
+        "formula": "=== true"
       }
     ]
   },
@@ -2946,16 +3043,18 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Extended Reach 1"
+        "name": "extended reach 1",
+        "formula": "=== true"
       },
       {
         "type": "powers",
-        "value": "Reverse Punch"
+        "name": "reverse punch",
+        "formula": "=== true"
       }
     ]
   },
@@ -2974,12 +3073,13 @@
     "description": "The character can reach a looong way.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Extended Reach 1"
+        "name": "extended reach 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -2998,12 +3098,13 @@
     "description": "The character's skeleton is flexible and pliable.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Flexible Bones 1"
+        "name": "flexible bones 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -3023,12 +3124,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Flexible Bones 1"
+        "name": "flexible bones 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -3041,11 +3143,13 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Extended Reach 1"
+        "name": "extended reach 1",
+        "formula": "=== true"
       },
       {
         "type": "powers",
-        "value": "Flexible Bones 1"
+        "name": "flexible bones 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -3066,12 +3170,13 @@
     "action": "Movement",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Extended Reach"
+        "name": "extended reach 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -3084,12 +3189,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Bump Power"
+        "name": "bump power",
+        "formula": "=== true"
       }
     ]
   },
@@ -3102,8 +3208,8 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -3116,8 +3222,8 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -3130,12 +3236,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Copy Power"
+        "name": "copy power",
+        "formula": "=== true"
       }
     ]
   },
@@ -3156,8 +3263,8 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -3186,12 +3293,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Dampen Power"
+        "name": "dampen power",
+        "formula": "=== true"
       }
     ]
   },
@@ -3204,16 +3312,18 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Clone Powers"
+        "name": "clone powers",
+        "formula": "=== true"
       },
       {
         "type": "powers",
-        "value": "Shutdown Powers"
+        "name": "shutdown powers",
+        "formula": "=== true"
       }
     ]
   },
@@ -3226,16 +3336,18 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Copy Power"
+        "name": "copy power",
+        "formula": "=== true"
       },
       {
         "type": "powers",
-        "value": "Dampen Power"
+        "name": "dampen power",
+        "formula": "=== true"
       }
     ]
   },
@@ -3248,12 +3360,13 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Return Fire"
+        "name": "return fire",
+        "formula": "=== true"
       }
     ]
   },
@@ -3266,12 +3379,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Slow-Motion Shoot Dodge"
+        "name": "slow-motion shoot dodge",
+        "formula": "=== true"
       }
     ]
   },
@@ -3291,12 +3405,13 @@
     "description": "The character can shoot faster than the eye can blink.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Point-Blank Parry"
+        "name": "point-blank parry",
+        "formula": "=== true"
       }
     ]
   },
@@ -3309,12 +3424,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Stopping Power"
+        "name": "stopping power",
+        "formula": "=== true"
       }
     ]
   },
@@ -3327,16 +3443,18 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Covering Fire"
+        "name": "covering fire",
+        "formula": "=== true"
       },
       {
         "type": "powers",
-        "value": "Headshot"
+        "name": "headshot",
+        "formula": "=== true"
       }
     ]
   },
@@ -3349,16 +3467,18 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Dance of Death"
+        "name": "dance of death",
+        "formula": "=== true"
       },
       {
         "type": "powers",
-        "value": "Fast Hands"
+        "name": "fast hands",
+        "formula": "=== true"
       }
     ]
   },
@@ -3371,8 +3491,8 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -3385,12 +3505,13 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Suppressive Fire"
+        "name": "suppressive fire",
+        "formula": "=== true"
       }
     ]
   },
@@ -3403,16 +3524,18 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Slow-Motion Dodge"
+        "name": "slow-motion dodge",
+        "formula": "=== true"
       },
       {
         "type": "powers",
-        "value": "Weapons Blazing"
+        "name": "weapons blazing",
+        "formula": "=== true"
       }
     ]
   },
@@ -3433,8 +3556,8 @@
     "action": "Standard, Movement",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -3447,12 +3570,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Double Tap"
+        "name": "double tap",
+        "formula": "=== true"
       }
     ]
   },
@@ -3474,7 +3598,8 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Snap Shooting"
+        "name": "snap shooting",
+        "formula": "=== true"
       }
     ]
   },
@@ -3496,7 +3621,8 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Grow 1"
+        "name": "grow 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -3510,7 +3636,8 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Grow 2"
+        "name": "grow 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -3524,7 +3651,8 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Grow 3"
+        "name": "grow 3",
+        "formula": "=== true"
       }
     ]
   },
@@ -3537,12 +3665,13 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Grow 1"
+        "name": "grow 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -3555,12 +3684,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Grow 4"
+        "name": "grow 4",
+        "formula": "=== true"
       }
     ]
   },
@@ -3573,12 +3703,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Shrink 4"
+        "name": "shrink 4",
+        "formula": "=== true"
       }
     ]
   },
@@ -3591,16 +3722,18 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Grow 2"
+        "name": "grow 2",
+        "formula": "=== true"
       },
       {
         "type": "powers",
-        "value": "Shrink 2"
+        "name": "shrink 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -3613,16 +3746,18 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Grow 2"
+        "name": "grow 2",
+        "formula": "=== true"
       },
       {
         "type": "powers",
-        "value": "Shrink 2"
+        "name": "shrink 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -3644,7 +3779,8 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Shrink 1"
+        "name": "shrink 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -3658,7 +3794,8 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Shrink 2"
+        "name": "shrink 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -3672,7 +3809,8 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Shrink 3"
+        "name": "shrink 3",
+        "formula": "=== true"
       }
     ]
   },
@@ -3685,12 +3823,13 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Shrink 1"
+        "name": "shrink 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -3703,12 +3842,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Shield Bash"
+        "name": "shield bash",
+        "formula": "=== true"
       }
     ]
   },
@@ -3721,12 +3861,13 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Shield 1"
+        "name": "shield 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -3739,12 +3880,13 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Shield Deflection"
+        "name": "shield deflection",
+        "formula": "=== true"
       }
     ]
   },
@@ -3766,12 +3908,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Hurled Shield Bash"
+        "name": "hurled shield bash",
+        "formula": "=== true"
       }
     ]
   },
@@ -3792,12 +3935,13 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Shield 1"
+        "name": "shield 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -3810,12 +3954,13 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Shield 2"
+        "name": "shield 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -3828,12 +3973,13 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 6
+        "name": "rank",
+        "formula": ">=6"
       },
       {
         "type": "powers",
-        "value": "Shield 3"
+        "name": "shield 3",
+        "formula": "=== true"
       }
     ]
   },
@@ -3862,12 +4008,13 @@
     "action": "Movement",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Brace For Impact"
+        "name": "brace for impact",
+        "formula": "=== true"
       }
     ]
   },
@@ -3880,8 +4027,8 @@
     "description": "The character can leap about like a frog.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -3894,12 +4041,13 @@
     "description": "The character can leap around with dazzling speed.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Jump 1"
+        "name": "jump 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -3912,8 +4060,13 @@
     "description": "The character can leap into the sky with a single bound.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
+      },
+      {
+        "type": "powers",
+        "name": "jump 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -3979,12 +4132,13 @@
     "description": "The character can glide through the air on their webbing.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Webcasting"
+        "name": "webcasting",
+        "formula": "=== true"
       }
     ]
   },
@@ -3997,12 +4151,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Webcasting"
+        "name": "webcasting",
+        "formula": "=== true"
       }
     ]
   },
@@ -4014,12 +4169,13 @@
     "description": "The character can swing through the city on their webs.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Webcasting"
+        "name": "webcasting",
+        "formula": "=== true"
       }
     ]
   },
@@ -4032,12 +4188,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Webgrabbing"
+        "name": "webgrabbing",
+        "formula": "=== true"
       }
     ]
   },
@@ -4049,8 +4206,8 @@
     "description": "The character can attack superfast.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -4063,12 +4220,13 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Speed Run 2"
+        "name": "speed run 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -4081,12 +4239,13 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Speed Run 2"
+        "name": "speed run 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -4098,8 +4257,8 @@
     "description": "The character has lightning-fast moves.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       }
     ]
   },
@@ -4112,12 +4271,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Speed Run 2"
+        "name": "speed run 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -4129,12 +4289,13 @@
     "description": "The character can run across water.",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Speed Run 2"
+        "name": "speed run 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -4147,12 +4308,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Speed Run 2"
+        "name": "speed run 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -4164,8 +4326,8 @@
     "description": "The character runs as fast as a car!",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -4177,12 +4339,13 @@
     "description": "The character runs as fast as a jet!",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Speed Run 1"
+        "name": "speed run 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -4194,8 +4357,8 @@
     "description": "The character can swim faster than a dolphin!",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -4224,12 +4387,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Smash"
+        "name": "smash",
+        "formula": "=== true"
       }
     ]
   },
@@ -4242,16 +4406,18 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Crushing Grip"
+        "name": "crushing grip",
+        "formula": "=== true"
       },
       {
         "type": "powers",
-        "value": "Mighty 1"
+        "name": "mighty 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -4264,12 +4430,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Clobber"
+        "name": "clobber",
+        "formula": "=== true"
       }
     ]
   },
@@ -4282,16 +4449,18 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Ground-Shaking Stomp"
+        "name": "ground-shaking stomp",
+        "formula": "=== true"
       },
       {
         "type": "powers",
-        "value": "Mighty 2"
+        "name": "mighty 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -4304,16 +4473,18 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Rally on Me"
+        "name": "rally on me",
+        "formula": "=== true"
       },
       {
         "type": "powers",
-        "value": "Scatter"
+        "name": "scatter",
+        "formula": "=== true"
       }
     ]
   },
@@ -4326,12 +4497,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Inspiration"
+        "name": "inspiration",
+        "formula": "=== true"
       }
     ]
   },
@@ -4344,12 +4516,13 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Inspiration"
+        "name": "inspiration",
+        "formula": "=== true"
       }
     ]
   },
@@ -4362,12 +4535,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Change of Plans"
+        "name": "change of plans",
+        "formula": "=== true"
       }
     ]
   },
@@ -4380,12 +4554,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Battle Plan"
+        "name": "battle plan",
+        "formula": "=== true"
       }
     ]
   },
@@ -4398,12 +4573,13 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Keep Moving"
+        "name": "keep moving",
+        "formula": "=== true"
       }
     ]
   },
@@ -4424,12 +4600,13 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Keep Moving"
+        "name": "keep moving",
+        "formula": "=== true"
       }
     ]
   },
@@ -4442,16 +4619,18 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Combat Support"
+        "name": "combat support",
+        "formula": "=== true"
       },
       {
         "type": "powers",
-        "value": "Focus Fire"
+        "name": "focus fire",
+        "formula": "=== true"
       }
     ]
   },
@@ -4464,12 +4643,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "On Your Feet"
+        "name": "on your feet",
+        "formula": "=== true"
       }
     ]
   },
@@ -4482,12 +4662,13 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Hit the Dirt"
+        "name": "hit the dirt",
+        "formula": "=== true"
       }
     ]
   },
@@ -4500,12 +4681,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Levitation"
+        "name": "levitation",
+        "formula": "=== true"
       }
     ]
   },
@@ -4525,12 +4707,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Telekinetic Manipulation"
+        "name": "telekinetic manipulation",
+        "formula": "=== true"
       }
     ]
   },
@@ -4543,12 +4726,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Telekinetic Grab"
+        "name": "telekinetic grab",
+        "formula": "=== true"
       }
     ]
   },
@@ -4561,12 +4745,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Telekinetic Grab"
+        "name": "telekinetic grab",
+        "formula": "=== true"
       }
     ]
   },
@@ -4579,12 +4764,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Telekinetic Manipulation"
+        "name": "telekinetic manipulation",
+        "formula": "=== true"
       }
     ]
   },
@@ -4605,12 +4791,13 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Telekinetic Barrier"
+        "name": "telekinetic barrier",
+        "formula": "=== true"
       }
     ]
   },
@@ -4623,12 +4810,13 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Telekinetic Protection 1"
+        "name": "telekinetic protection 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -4641,12 +4829,13 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Telekinetic Protection 2"
+        "name": "telekinetic protection 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -4659,12 +4848,13 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 5
+        "name": "rank",
+        "formula": ">=5"
       },
       {
         "type": "powers",
-        "value": "Telekinetic Protection 3"
+        "name": "telekinetic protection 3",
+        "formula": "=== true"
       }
     ]
   },
@@ -4678,7 +4868,8 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Telekinetic Protection 1"
+        "name": "telekinetic protection 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -4692,7 +4883,8 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Telekinetic Protection 1"
+        "name": "telekinetic protection 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -4705,12 +4897,13 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Telekinetic Grab"
+        "name": "telekinetic grab",
+        "formula": "=== true"
       }
     ]
   },
@@ -4739,8 +4932,8 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -4753,12 +4946,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Telepathic Link"
+        "name": "telepathic link",
+        "formula": "=== true"
       }
     ]
   },
@@ -4771,12 +4965,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Telepathic Link"
+        "name": "telepathic link",
+        "formula": "=== true"
       }
     ]
   },
@@ -4789,12 +4984,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Cloak"
+        "name": "cloak",
+        "formula": "=== true"
       }
     ]
   },
@@ -4807,12 +5003,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Telepathic Link"
+        "name": "telepathic link",
+        "formula": "=== true"
       }
     ]
   },
@@ -4825,12 +5022,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 5
+        "name": "rank",
+        "formula": ">=5"
       },
       {
         "type": "powers",
-        "value": "Orders"
+        "name": "orders",
+        "formula": "=== true"
       }
     ]
   },
@@ -4843,12 +5041,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Memory Blip"
+        "name": "memory blip",
+        "formula": "=== true"
       }
     ]
   },
@@ -4869,12 +5068,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Telepathic Link"
+        "name": "telepathic link",
+        "formula": "=== true"
       }
     ]
   },
@@ -4887,12 +5087,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Fool"
+        "name": "fool",
+        "formula": "=== true"
       }
     ]
   },
@@ -4901,16 +5102,17 @@
     "powersets": [
       "Telepathy"
     ],
-    "description": "The character can make a mirage appear in a group’s mind.",
+    "description": "The character can make a mirage appear in a group's mind.",
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Mirage"
+        "name": "mirage",
+        "formula": "=== true"
       }
     ]
   },
@@ -4919,16 +5121,17 @@
     "powersets": [
       "Telepathy"
     ],
-    "description": "The character can transmit loads of information straight into another’s mind.",
+    "description": "The character can transmit loads of information straight into another's mind.",
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Telepathic Link"
+        "name": "telepathic link",
+        "formula": "=== true"
       }
     ]
   },
@@ -4949,12 +5152,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Telepathic Link"
+        "name": "telepathic link",
+        "formula": "=== true"
       }
     ]
   },
@@ -4975,12 +5179,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Uncanny"
+        "name": "uncanny 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -4993,12 +5198,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Mind Reading"
+        "name": "mind reading",
+        "formula": "=== true"
       }
     ]
   },
@@ -5012,7 +5218,8 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Telepathic Link"
+        "name": "telepathic link",
+        "formula": "=== true"
       }
     ]
   },
@@ -5025,12 +5232,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Telepathic Link"
+        "name": "telepathic link",
+        "formula": "=== true"
       }
     ]
   },
@@ -5043,12 +5251,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Command"
+        "name": "command",
+        "formula": "=== true"
       }
     ]
   },
@@ -5061,12 +5270,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Telepathic Link"
+        "name": "telepathic link",
+        "formula": "=== true"
       }
     ]
   },
@@ -5087,12 +5297,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Telepathic Link"
+        "name": "telepathic link",
+        "formula": "=== true"
       }
     ]
   },
@@ -5105,12 +5316,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 5
+        "name": "rank",
+        "formula": ">=5"
       },
       {
         "type": "powers",
-        "value": "Orders"
+        "name": "orders",
+        "formula": "=== true"
       }
     ]
   },
@@ -5131,12 +5343,13 @@
     "action": "Standard, Movement",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       },
       {
         "type": "powers",
-        "value": "Blink"
+        "name": "blink",
+        "formula": "=== true"
       }
     ]
   },
@@ -5149,12 +5362,13 @@
     "action": "Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Blink"
+        "name": "blink",
+        "formula": "=== true"
       }
     ]
   },
@@ -5168,7 +5382,8 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Blink"
+        "name": "blink",
+        "formula": "=== true"
       }
     ]
   },
@@ -5182,7 +5397,8 @@
     "prerequisites": [
       {
         "type": "powers",
-        "value": "Teleport 1"
+        "name": "teleport 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -5195,12 +5411,13 @@
     "action": "Standard, Movement",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Teleport 1"
+        "name": "teleport 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -5213,12 +5430,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Teleport 1"
+        "name": "teleport 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -5231,12 +5449,13 @@
     "action": "Standard, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Teleport 2"
+        "name": "teleport 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -5249,12 +5468,13 @@
     "action": "Standard, Movement, Reaction",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Teleport 1"
+        "name": "teleport 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -5267,12 +5487,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Teleport 1"
+        "name": "teleport 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -5293,8 +5514,8 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 2
+        "name": "rank",
+        "formula": ">=2"
       }
     ]
   },
@@ -5307,12 +5528,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 3
+        "name": "rank",
+        "formula": ">=3"
       },
       {
         "type": "powers",
-        "value": "Control Weather 1"
+        "name": "control weather 1",
+        "formula": "=== true"
       }
     ]
   },
@@ -5325,12 +5547,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 4
+        "name": "rank",
+        "formula": ">=4"
       },
       {
         "type": "powers",
-        "value": "Control Weather 2"
+        "name": "control weather 2",
+        "formula": "=== true"
       }
     ]
   },
@@ -5343,12 +5566,13 @@
     "action": "Standard",
     "prerequisites": [
       {
-        "type": "rank",
-        "value": 5
+        "name": "rank",
+        "formula": ">=5"
       },
       {
         "type": "powers",
-        "value": "Control Weather 3"
+        "name": "control weather 3",
+        "formula": "=== true"
       }
     ]
   },

@@ -1,0 +1,168 @@
+[
+  {
+    "name": "Manipulator",
+    "description": "Blurring the line between perception and reality.",
+    "bonusadjustments": [
+      {
+        "type": "essence",
+        "name": "Social",
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "perk",
+        "value": "Diversion"
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "skillSpecialization",
+        "choices": [
+          "Deception",
+          "Persuasion",
+          "Streetwise"
+        ],
+        "count": 1
+      }
+    ],
+    "levels": [
+      {
+        "value": 3,
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "Holo-Projector"
+          }
+        ]
+      },
+      {
+        "value": 6,
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "In My Sights"
+          }
+        ]
+      },
+      {
+        "value": 10,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Social",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "Holographic Doubles"
+          }
+        ]
+      },
+      {
+        "value": 17,
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "Electro-Disruptor"
+          }
+        ]
+      },
+
+      {
+        "value": 20,
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "Vanish"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Spec Ops",
+    "description": "A special operative who takes on deep cover missions.",
+    "bonusadjustments": [
+      {
+        "type": "essence",
+        "name": "Social",
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "perk",
+        "value": "Unassuming"
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "skillSpecialization",
+        "choices": [
+          "Deception",
+          "Persuasion",
+          "Streetwise"
+        ],
+        "count": 1
+      }
+    ],
+    "levels": [
+      {
+        "value": 3,
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "Target Vulnerability"
+          }
+        ]
+      },
+      {
+        "value": 6,
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "Whisper Campaign"
+          }
+        ]
+      },
+      {
+        "value": 10,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Social",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "Exploit Trust"
+          }
+        ]
+      },
+      {
+        "value": 17,
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "Opportunist"
+          }
+        ]
+      },
+
+      {
+        "value": 20,
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "Precision"
+          }
+        ]
+      }
+    ]
+  }
+]

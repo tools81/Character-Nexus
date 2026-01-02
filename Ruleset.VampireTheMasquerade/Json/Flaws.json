@@ -1,219 +1,317 @@
 [
-    {
-        "name": "Illiterate",
-        "advantage": "Linguistics",
-        "description": "",
-        "range": 0,
-        "value": 2
-    },
-    {
-        "name": "Repulsive",
-        "advantage": "Looks",
-        "description": "",
-        "range": 0,
-        "value": 2
-    },
-    {
-        "name": "Ugly",
-        "advantage": "Looks",
-        "description": "",
-        "range": 0,
-        "value": 2
-    },
-    {
-        "name": "Hopeless Addiction",
-        "advantage": "Substance Use",
-        "description": "",
-        "range": 0,
-        "value": 2
-    },
-    {
-        "name": "Addiction",
-        "advantage": "Substance Use",
-        "description": "",
-        "range": 0,
-        "value": 1
-    },
-    {
-        "name": "Archaic",
-        "advantage": "Archaic",
-        "description": "",
-        "range": 0,
-        "value": 2
-    },
-    {
-        "name": "Living in the Past",
-        "advantage": "Archaic",
-        "description": "",
-        "range": 0,
-        "value": 1
-    },
-    {
-        "name": "Bondslave",
-        "advantage": "Bonding",
-        "description": "",
-        "range": 0,
-        "value": 2
-    },
-    {
-        "name": "Bond Junkie",
-        "advantage": "Bonding",
-        "description": "",
-        "range": 0,
-        "value": 1
-    },
-    {
-        "name": "Long Bond",
-        "advantage": "Bonding",
-        "description": "",
-        "range": 0,
-        "value": 1
-    },
-    {
-        "name": "Vegan",
-        "advantage": "Feeding",
-        "description": "",
-        "range": 0,
-        "value": 2
-    },
-    {
-        "name": "Organovore",
-        "advantage": "Feeding",
-        "description": "",
-        "range": 0,
-        "value": 2
-    },
-    {
-        "name": "Methuselah's Thirst",
-        "advantage": "Feeding",
-        "description": "",
-        "range": 0,
-        "value": 1
-    },
-    {
-        "name": "Prey Exclusion",
-        "advantage": "Feeding",
-        "description": "",
-        "range": 0,
-        "value": 1
-    },
-    {
-        "name": "Stake Bait",
-        "advantage": "Mythic",
-        "description": "",
-        "range": 0,
-        "value": 2
-    },
-    {
-        "name": "Folkloric Bane",
-        "advantage": "Mythic",
-        "description": "",
-        "range": 0,
-        "value": 1
-    },
-    {
-        "name": "Stigmata",
-        "advantage": "Mythic",
-        "description": "",
-        "range": 0,
-        "value": 1
-    },
-    {
-        "name": "Cleaver",
-        "advantage": "Fame",
-        "description": "",
-        "range": 0,
-        "value": 2
-    },
-    {
-        "name": "Debt",
-        "advantage": "Fame",
-        "description": "",
-        "range": 0,
-        "value": 1
-    },
-    {
-        "name": "Infamy",
-        "advantage": "Fame",
-        "description": "",
-        "range": 5,
-        "value": 0
-    },
-    {
-        "name": "Dark Secret",
-        "advantage": "Fame",
-        "description": "",
-        "range": 0,
-        "value": 4
-    },
-    {
-        "name": "Despised",
-        "advantage": "Influence",
-        "description": "",
-        "range": 0,
-        "value": 2
-    },
-    {
-        "name": "Disliked",
-        "advantage": "Influence",
-        "description": "",
-        "range": 0,
-        "value": 1
-    },
-    {
-        "name": "No Haven",
-        "advantage": "Haven",
-        "description": "",
-        "range": 0,
-        "value": 1
-    },
-    {
-        "name": "Obvious Predator",
-        "advantage": "Herd",
-        "description": "",
-        "range": 0,
-        "value": 2
-    },
-    {
-        "name": "Known Blankbody",
-        "advantage": "Mask",
-        "description": "",
-        "range": 0,
-        "value": 2
-    },
-    {
-        "name": "Known Corpse",
-        "advantage": "Mask",
-        "description": "",
-        "range": 0,
-        "value": 1
-    },
-    {
-        "name": "Destitute",
-        "advantage": "Resources",
-        "description": "",
-        "range": 0,
-        "value": 1
-    },
-    {
-        "name": "Stalkers",
-        "advantage": "Retainers",
-        "description": "",
-        "range": 0,
-        "value": 1
-    },
-    {
-        "name": "Shunned",
-        "advantage": "Status",
-        "description": "",
-        "range": 0,
-        "value": 2
-    },
-    {
-        "name": "Suspect",
-        "advantage": "Status",
-        "description": "",
-        "range": 0,
-        "value": 1
-    }
+  {
+    "name": "Illiterate",
+    "advantage": "Linguistics",
+    "description": "You cannot read or write. Your Academics and Science Skills are capped at 1, and you can have no specialty in them incorporating modern knowledge.",
+    "range": 0,
+    "value": 2
+  },
+  {
+    "name": "Repulsive",
+    "advantage": "Looks",
+    "description": "You lose two dice from all relevant Social dice pools.",
+    "range": 0,
+    "value": 2
+  },
+  {
+    "name": "Ugly",
+    "advantage": "Looks",
+    "description": "You lose one die from all relevant Social dice pools.",
+    "range": 0,
+    "value": 2
+  },
+  {
+    "name": "Hopeless Addiction",
+    "advantage": "Substance Use",
+    "description": "Lose two dice from all pools when the last person you fed from was not on your drug, except pools for actions that will immediately obtain your drug. ",
+    "range": 0,
+    "value": 2
+  },
+  {
+    "name": "Addiction",
+    "advantage": "Substance Use",
+    "description": "Lose one dice from all pools when the last person you fed from was not on your drug, except pools for actions that will immediately obtain your drug.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Archaic",
+    "advantage": "Archaic",
+    "description": "You haven't been able to adapt to the present, or you have been long in torpor. You cannot use computers or cell phones, and your Technology rating is permanently 0. The Storyteller may penalize other dice pools involving very modern technology by one die.",
+    "range": 0,
+    "value": 2
+  },
+  {
+    "name": "Living in the Past",
+    "advantage": "Archaic",
+    "description": "You haven't grasped the modern mindset, or you just don’t want to. You have one or more seriously outdated Convictions, e.g. 'The Pope's word is law,' 'Women are delicate flowers,' 'Lower classes exist only to serve,' or 'Burn your enemies' baggage.' These archaic moralities maintain your Humanity but are odious to many; you lose one die from Social test dice pools involving such archaic beliefs except with vampires your age and older, who may admire your steadfast virtue.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Bondslave",
+    "advantage": "Bonding",
+    "description": "You bond instantly with the taste of another’s vitae; only one drink of blood binds you, not three. Either you begin as your sire's thrall, or consult with the Storyteller to come up with a reason that first bond has broken. Possibly your sire has been staked or in another city for more than six months?",
+    "range": 0,
+    "value": 2
+  },
+  {
+    "name": "Bond Junkie",
+    "advantage": "Bonding",
+    "description": " The Bond feels sweeter to you once it happens. Subtract one die from your dice pools to act against a Blood Bond.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Long Bond",
+    "advantage": "Bonding",
+    "description": "Blood Bonds on you lose their Bond strength more slowly than normal, decreasing by one for each three months without being reinforced.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Vegan",
+    "advantage": "Feeding",
+    "description": "You feed only on animal blood. You must spend two points of Willpower to drink human blood. Ventrue may not take this Flaw.",
+    "range": 0,
+    "value": 2
+  },
+  {
+    "name": "Organovore",
+    "advantage": "Feeding",
+    "description": "You can slake Hunger only by eating human flesh and organs, especially those rich in blood such as the heart, liver, lungs, placenta, and spleen. (Most organovore Kindred these nights make smoothies from the organs first.) Only the heart provides Resonance, if any.",
+    "range": 0,
+    "value": 2
+  },
+  {
+    "name": "Methuselah's Thirst",
+    "advantage": "Feeding",
+    "description": "Your Hunger can only be fully slaked by the blood of supernatural creatures. (Alchemists may be able to thicken the Blood of thin-bloods enough to sate you.) Otherwise, it constantly remains at a minimum of 1. (Or higher, depending on Blood Potency (see p. 215).",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Prey Exclusion",
+    "advantage": "Feeding",
+    "description": "You refuse to hunt a certain class of prey: drug users, women, children, policemen, innocents, a given minority or ethnic group, etc. If you feed on such prey, you gain Stains as though you had violated a chronicle Tenet. Witnessing other Kindred feeding on the object of your exclusion without interfering might also give Stains, at the Storyteller's discretion. Ventrue with this Flaw gain an additional restriction, making their choice of vessels extremely narrow.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Stake Bait",
+    "advantage": "Mythic",
+    "description": "You meet Final Death when staked through the heart, rather than entering torpor.",
+    "range": 0,
+    "value": 2
+  },
+  {
+    "name": "Folkloric Bane",
+    "advantage": "Mythic",
+    "description": "You take Aggravated damage from a folkloric bane. Folkloric banes include:<br /><ul><li>Ultraviolet light (damage as direct sunlight)</li><li>Silver or silver-plated weapons (damage as weapon damage: simply touching a silver coin or silverware does one point of Aggravated damage)</li><li>Holy water (damage as fire)</li></ul>",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Folkloric Block",
+    "advantage": "Mythic",
+    "description": "When faced with a folkloric block, you must shrink away from it or spend a Willpower point to push through it.<br />Each folkloric block you take counts as a separate one-point Flaw. Folkloric blocks include:<br /><ul><li>Holy symbols presented by any believer (even without True Faith)</li><li>Crossing visible running water (not recommended in certain cities, such as Amsterdam, Stockholm, or Venice)</li><li>Crossing a threshold to a home uninvited by the owner</li><li>White animal</li><li>Garlic</li><li>Wild roses</li><li>Spilled seeds you haven't counted</li></ul>",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Stigmata",
+    "advantage": "Mythic",
+    "description": "You begin to bleed from open wounds on your hands, feet, and forehead when you reach Hunger 4. This attracts attention, leaves traces, and may penalize some dice pools at the Storyteller’s discretion.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Cleaver",
+    "advantage": "Fame",
+    "description": "You are a Cleaver or serial breacher of the Masquerade, have been Blood Hunted out of another city, or have grievously offended this domain's ruler.",
+    "range": 0,
+    "value": 2
+  },
+  {
+    "name": "Debt",
+    "advantage": "Fame",
+    "description": "You owe a big debt to bad people or have made yourself generally odious. Alternately, your spouse, lover, or close family member has Infamy ••.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Infamy",
+    "advantage": "Fame",
+    "description": "You are famous for something horrible. At the very least, the Difficulty of most reaction tests increases by the amount of the Flaw; at worst, the authorities attempt to kill or capture you whenever you appear.",
+    "range": 5,
+    "value": 0
+  },
+  {
+    "name": "Dark Secret",
+    "advantage": "Fame",
+    "description": "You can also take Dark Secret, a milder version of Infamy. The Dark Secret Flaw provides one fewer point than the equivalent Infamy, as your black deeds remain unknown to all but you and perhaps one or two very motivated enemies. The one-dot version of Infamy also provides one point as a Dark Secret, because it's easier to uncover than a truly life-threatening secret.",
+    "range": 0,
+    "value": 4
+  },
+  {
+    "name": "Despised",
+    "advantage": "Influence",
+    "description": "One group or region of the city lives only to thwart you and your faction. Subtract two dice from dice pools attempting to convince a neutral actor to support you politically or do you a favor. The Storyteller should take any opportunity to involve your haters in the story.",
+    "range": 0,
+    "value": 2
+  },
+  {
+    "name": "Disliked",
+    "advantage": "Influence",
+    "description": "Subtract one die from Social test dice pools involving any group in the city except your Contacts and Allies or other explicitly loyal supporters.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "No Haven",
+    "advantage": "Haven",
+    "description": "You must go to some effort (at least a basic test) to find a new resting place every morning.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Obvious Predator",
+    "advantage": "Herd",
+    "description": "You exude a predatory demeanor, and humans instinctively fear and mistrust you. Lose two dice from any dice pool for hunting except purely Physical expressions of stalking, chasing, and killing. Lose one die from any dice pool for any Social test intended to put humans at ease. You cannot maintain a Herd.",
+    "range": 0,
+    "value": 2
+  },
+  {
+    "name": "Known Blankbody",
+    "advantage": "Mask",
+    "description": "Your biometrics, name, history, known associates, and aliases appear in several intelligence agency databases, flagged as a potential terrorist. Any inquisitor can read between the lines and recognize you as a vampire.",
+    "range": 0,
+    "value": 2
+  },
+  {
+    "name": "Known Corpse",
+    "advantage": "Mask",
+    "description": "People know you died recently and react with shock and horror if you appear among them. This Flaw also applies to any database lookups on your identity.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Adversary",
+    "advantage": "Resources",
+    "description": "A fellow Cainite who generally wishes you (or more likely your sire, lineage, or mentor) ill, an Adversary is the reverse Flaw of the Mawla Background. Adversaries range from one-dot elders to three-dot Princes or powerful cabals. The Storyteller uses either the Adversary's Status or some specific other Trait when building dice pools with which to oppose the player characters, not the dots in Adversary.",
+    "range": 5,
+    "value": 0
+  },
+  {
+    "name": "Destitute",
+    "advantage": "Resources",
+    "description": "You have no money and no home.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Stalkers",
+    "advantage": "Retainers",
+    "description": "You have a tendency to attract people who become a tad too smitten with you for your own good. A former retainer retains their memory of you and a desire to reconnect. They may be hungry, love-maddened, desperate, opportunistic, or any combination or variation. Should you get rid of them, another soon appears.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Shunned",
+    "advantage": "Status",
+    "description": "You're completely loathed by this sect. You betrayed them, crossed a local leader, or fought them in the past. Members of this group will actively work against you if they can.",
+    "range": 0,
+    "value": 2
+  },
+  {
+    "name": "Suspect",
+    "advantage": "Status",
+    "description": "You're not good with this sect at all. You weaseled out of a boon, broke an oath, or did something similar. You can try to stay out of sight and out of mind, but unless you somehow make amends, you suffer a two-dice penalty to all Social tests involving the offended faction.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Baby Teeth",
+    "advantage": "Thin-Blood",
+    "description": "You never developed fangs, or the ones you've got are useless for feeding. You either need to cut your victims open, or you extract their blood with a syringe.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Beastial Temper",
+    "advantage": "Thin-Blood",
+    "description": "You are afflicted with the Beast equal to a full vampire. You need to test for frenzy as per the normal vampire rules.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Branded By The Camarilla",
+    "advantage": "Thin-Blood",
+    "description": "In some cities, the rulers simply hunt down and destroy thin-bloods. In other cities, the merciful Sheriff merely brands them, forcibly and painfully, to remind them of their place. (Many are then hunted down and destroyed, often on perceived slights or simple whims.) You have such an unhealing brand, and the Camarilla makes sure to keep its eyes peeled for the moment you step out of line. You can take Camarilla Contact with this Flaw; the Camarilla thrives on double-dealing of this sort.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Clan Curse",
+    "advantage": "Thin-Blood",
+    "description": "Remnants of your sire's Blood still flows through your veins, carrying traces of their ancient curse. You must pick a Clan Bane to suffer from, counting your Bane Severity as 1 for this purpose. You can only pick the Brujah or Gangrel Bane if you possess the Bestial Temper Flaw, and the Tremere Bane only if you have the Catenating Blood Merit.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Dead Flesh",
+    "advantage": "Thin-Blood",
+    "description": "Your Blood is not strong enough to completely sustain you, and as an effect, your flesh is in a constant state of putrefaction, with a greenish tint and faint stench of rot. Any medical inspection will immediately identify you as deceased, and you receive a one-die penalty to any face-to-face Social test with a mortal. You cannot take Lifelike if you take this Flaw.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Mortal Frailty",
+    "advantage": "Thin-Blood",
+    "description": "You cannot Rouse the Blood to mend, instead healing as a mortal (p. 126). You cannot take Vampiric Resilience if you take this Flaw.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Shunned By The Anarchs",
+    "advantage": "Thin-Blood",
+    "description": "You broke an unwritten rule or thought yourself equal among equals, where some turned out more equal than others. In whichever case, the Anarchs of the regnum know of you and shun you. They'd rather throw you to the Camarilla than listen to your pleas. You cannot take Anarch Comrades if you take this Flaw.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Vitae Dependency",
+    "advantage": "Thin-Blood",
+    "description": "Your Blood is unable to sustain vampiric powers by itself. Unless you drink enough vampire Blood to slake one Hunger each week you lose your ability to gain and use any Disciplines (including Thin-Blood Alchemy). You regain your powers as soon as you slake at least one Hunger with vampire Blood.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "No Haven",
+    "advantage": "Haven",
+    "description": "You must go to some effort (at least a basic test) to find a new resting place every morning.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Compromised",
+    "advantage": "Haven",
+    "description": "Your haven has been raided once before, perhaps before it was yours. It probably appears on someone's watchlist. Invaders or spies can add two dice to their pool to penetrate or surveil your haven. If you ever do get on the Inquisition's radar, you should think about moving out.",
+    "range": 0,
+    "value": 2
+  },
+  {
+    "name": "Creepy",
+    "advantage": "Haven",
+    "description": "Your haven looks like the den of a serial killer, which in fairness is probably exactly what it is. Unknowing neighbors might phone in a tip to the cops or just talk about the creepy place they saw. Your dice pools on Social tests to seduce or otherwise put human guests at ease are at a two-dice penalty.",
+    "range": 0,
+    "value": 1
+  },
+  {
+    "name": "Haunted",
+    "advantage": "Haven",
+    "description": "Your haven has a supernatural manifestation in it that you do not control or really even understand. It might just have a ghost, but a Haunted haven could hold a dimensional portal, a cursed meteorite, or anything else you can't get rid of. Obviously, someone who does understand the manifestation could use it to breach your haven's security. The Storyteller defines any other effect of the haunting, imposing at least a one-die penalty to affected pools used in the haven per dot of Haunted taken as a Flaw.",
+    "range": 0,
+    "value": 1
+  }
 ]

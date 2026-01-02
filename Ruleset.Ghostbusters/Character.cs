@@ -53,7 +53,7 @@ namespace Ghostbusters
                 dict.Add($"Equipment [{i}]", Equipments[i].Name);
             }
 
-            return PDFSchema.Generate(dict, Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Character_Sheet.pdf");
+            return PDFSchema.Generate(dict, Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Ghostbusters_Character_Sheet.pdf");
         }
 
         private CharacterSegment GetCharacterSegment()

@@ -1,0 +1,142 @@
+[
+  {
+    "name": "For the Allspark!",
+    "description": "Cybertronians are living robots that change their bodies into the likeness of weapons, vehicles, robotic beasts, and machinery. Though durable, even they can be defeated, so they've learned how to protect themselves when they can, and blend in when they can't. They hide amongst the technology of this world as robots in disguise. As an Autobot, you live a life of secrecy as much for your own protection as to not disturb humanity.<br />Every Autobot character gains the following benefits:<br /><ul><li>↑1 to Infiltration Skill Tests when in Alt Mode, or ↑2 if the Alt Mode is appropriate to the environment.</li><li>Immunity to carbon-based diseases, but affected by electromagnetic damage and viruses that affect machines.</li><li>Standard Issue Autobot Equipment.</li><li>Roll Out: When you roll for Initiative, if you are not surprised, you can choose to convert to your Alt Mode before combat begins without needing to spend an action.</li></ul>",
+    "type": "Role"
+  },
+  {
+    "name": "Work the Numbers",
+    "description": "At the beginning of every round of combat after the first, you can spend an Energon Point to move a creature in the combat up or down one place in the Initiative order. For example, Astrotrain rolled a 16 for Initiative, going first in a combat that also includes Hubcap, an Analyst who rolled 14 Initiative and therefore goes second, and Hoist, who rolled a 3 and is going third. At the beginning of Round 2, before anyone has gone, Hubcap could spend an Energon Point to move himself up in initiative order, going first regardless of how much higher Astrotrain's Initiative result was. Hubcap could instead move Hoist to second in Initiative order, even though Hubcap's Initiative result was 11 higher than Hoist's.",
+    "type": "Cybertronian"
+  },
+  {
+    "name": "Analyze Target",
+    "description": "You see the enemy as walking datafiles of valuable information. As a Standard action, make an Alertness Skill Test against the Willpower or Cleverness of a Target you can see. On a success, you can learn a valuable piece of information of your choice about them, such as their Rank in a specific Skill, or a Defense score.",
+    "type": "Role"
+  },
+  {
+    "name": "Informed Accuracy",
+    "description": "To know your enemy is to know their weakness. When you attack a creature that you've used Analyze Target on in this combat, you gain ↑ on the attack equal to the number of times you used Analyze Target on them.",
+    "type": "Role"
+  },
+  {
+    "name": "Unsurprising",
+    "description": "Odds are low that you get caught off guard. If you would be Surprised, you instead can act, but treat your Speed score as though it were equal to your level (up to your actual Speed score). For example, at 1st level, when Surprised, you act as though you have Speed 1, meaning you can only take a Move or Standard action. If at 10th level you have 9 Speed, you act normally when Surprised, and are able to take a Move action, Standard action, and 7 Free actions (not 8, like a Speed 10 character).",
+    "type": "Role"
+  },
+  {
+    "name": "Data Analyst",
+    "description": "You're so comfortable working a computer, you wish you weren't this good so it would last longer. At 2nd level, you gain an Edge on Science and Technology Skill Tests related to extracting or processing data, such as hacking into an enemy computer. If extracting or processing the data normally takes 2 Rounds or longer, it takes you half as much time.",
+    "type": "Role"
+  },
+  {
+    "name": "Determine Probability",
+    "description": "Given all of the information available, you process your likelihood of success. At 5th level, once per turn, instead of using a Standard action that requires a Skill Test, you can use a Free action to run a simulation in your head of you using that Standard action. Roll the Skill Test as though you were actually attempting that Skill Test. If this simulated Skill Test succeeds, you can use your Standard action to use the results of the simulated Skill Test instead of making another Skill Test. On a failure, you can ignore the results and use your Standard action differently. For example, on an investigation, Nightbeat gets into a fight with Scorponok. He suspects he's outmatched by the towering beast, but he decides to take a moment to work out his odds. As a Free action, he rolls a Targeting Skill Test as though he were attacking Scorponok with his blaster. He gets a result of 26, almost the highest result he could roll. It doesn't beat Scorponok's Toughness. Nightbeat decides not to use a Standard action to accept those results and instead uses it to convert into a sports car, and uses his Move action to get as far away as fast as he can.",
+    "type": "Role"
+  },
+  {
+    "name": "Quick Study",
+    "description": "You've been at this long enough to know what to look for. At 7th level, using Analyze Target is a Move action or a Standard action.",
+    "type": "Role"
+  },
+  {
+    "name": "Pinpoint",
+    "description": "Even Cybertronians have soft and vulnerable spots. At 9th level, when you use the Aim action, instead of ↑1 on your shot, you can choose to ignore one of the target's Armor Upgrades for each Free action you spend Aiming.",
+    "type": "Role"
+  },
+  {
+    "name": "Postmortem Interrogation",
+    "description": "Downed bots have tales to tell. At 12th level, once per scene, you can extract information from a Defeated Cybertronian. Roll a Science or Technology Skill Test against a DIF equal to the target’s Level or Threat Level. On a success, you can ask the GM a question. The GM must answer the question truthfully, but from the Defeated Cybertronian's perspective. You can ask another question for every 5 by which your results exceed the DIF.",
+    "type": "Role"
+  },
+  {
+    "name": "Target Breakdown",
+    "description": "You share intel as quickly as you gather it. At 13th level, you can spend a number of Free actions equal to the number of times you used Analyze Target on a target to give an ally ↑ on an attack against that target equal to that number.",
+    "type": "Role"
+  },
+  {
+    "name": "Psychoanalyst",
+    "description": "Brains, whether Cybertronian or organic, are just sophisticated processors. And you know processors. At 14th level, as a Standard action, you can roll a Science or Technology Skill Test against the Willpower or Cleverness of a target who can hear you. On a success, the target suffers a Stun 2 effect.",
+    "type": "Role"
+  },
+  {
+    "name": "Just the Facts",
+    "description": "You can smell a liar from a light-year away. At 16th level, you become Immune to Deception Skill Tests from creatures your level or lower and Resistant to Deception Skill Tests from creatures higher level than you.",
+    "type": "Role"
+  },
+  {
+    "name": "Swift Study",
+    "description": "You can barely glance at a target yet know everything you need to about them. At 18th level, using Analyze Target is a Free action. You can use any number of Free actions on Analyze Target in a single turn, but you can only target one creature per turn.",
+    "type": "Role"
+  },
+  {
+    "name": "Diversion",
+    "description": "You put enemies in a lose-lose situation. Roll a Deception, Intimidation, or Persuasion Skill Test against a target's Willpower or Cleverness as a Standard action. On a success, if they attack you on their next turn, they suffer a Snag. If they don’t attack you, your allies gain an Edge on attacks that target them. This lasts until the end of the next round.",
+    "type": "Focus"
+  },
+  {
+    "name": "Holo-Projector",
+    "description": "Well-aimed light can trick the eye into believing in images that aren't there. At 3rd level, as a Move action, you can create a holographic image within 20ft of you until the end of your next turn. You gain an Edge on a Deception Skill Test, as long as the target of your Skill Test can see your holographic image and you use it to create a believable but confusing situation, per the GM's discretion.",
+    "type": "Focus"
+  },
+  {
+    "name": "In My Sights",
+    "description": "At 6th level, when you use the Aim action, instead of gaining ↑ on your attack, you can announce to the target that you're aiming at them. You suffer ↓ on your attack equal to the number of Free actions you spent aiming (maximum ↓3) but your allies gain that amount of ↑ on their attacks or the benefits of Pinpoint.",
+    "type": "Focus"
+  },
+  {
+    "name": "Holographic Doubles",
+    "description": "At 10th level, as a Standard action, you can create a Holographic copy of yourself adjacent to you. Once activated, you can spend a Free action to create an additional Holographic double, until you run out of unoccupied adjacent spaces. Attacks that target you suffer ↓1 for each Holographic double. One Holographic double disappears whenever you're unsuccessfully attacked, and whenever you roll a Skill Test. Otherwise, they last until the end of the scene.",
+    "type": "Focus"
+  },
+  {
+    "name": "Electro-Disruptor",
+    "description": "You scramble the senses of a fellow Cybertronian. At 17th level, you can use a communication device or Limited Communication Kit to hack a bot's brain. As a Standard action outside of Combat, roll a Technology Skill Test against the Willpower or Cleverness of a creature within range of the communication device (which is usually at least a mile) that you can see (either through surveillance equipment or with your own sensors). On a success, the target becomes Mesmerized by you or an ally of your choice that they can see for the remainder of the scene.",
+    "type": "Focus"
+  },
+  {
+    "name": "Vanish",
+    "description": "Turning your holo-projector around, you make yourself disappear. At 20th level, you can turn Invisible as a Move action. This lasts until the end of the scene, you successfully attack a target, an enemy successfully attacks you, or you end the effect as a Free action.",
+    "type": "Focus"
+  },
+  {
+    "name": "Unassuming",
+    "description": "What's not to trust? You gain ↑1 on Deception and Infiltration Skill Tests. Additionally, you're Qualified with all one-handed Limited Weapons.",
+    "type": "Focus"
+  },
+  {
+    "name": "Target Vulnerability",
+    "description": "You quickly assess the best way to overcome an enemy. At 3rd level, when you Attack with a one-handed weapon, you can also attempt an Alertness Skill Test against a target's Willpower or Cleverness. On a success, your attack deals 1 additional damage.",
+    "type": "Focus"
+  },
+  {
+    "name": "Whisper Campaign",
+    "description": "The more controversial the statement, the harder you make it seem like you said it. At 6th level, when you attempt a Social-based Skill Test, designate an adjacent creature. If you fail the Skill Test and there are negative consequences for failure, such as a loss of trust, you can try to have the consequences affect the designated creature instead. If the creature resists, roll a Contested Skill Test between your Deception and their Persuasion. You gain an Edge on this roll.",
+    "type": "Focus"
+  },
+  {
+    "name": "Exploit Trust",
+    "description": "It's always the one you least suspect. At 10th level, when you attack a Surprised character, or if you attack a target outside of Combat, you gain an Edge on the attack and deal 1 additional damage. If you've used Target Vulnerability on your target, this additional damage stacks.",
+    "type": "Focus"
+  },
+  {
+    "name": "Opportunist",
+    "description": "You take advantage of vulnerable enemies. At 17th level, when you successfully attack a Stunned target, you extend the Stun effect by 1 round.",
+    "type": "Focus"
+  },
+  {
+    "name": "Precision",
+    "description": "Excellence comes naturally to you. At 20th level, you succeed with a high degree of success on attacks if your result exceeds your target's Defense by 10 or more, instead of when your result doubles the target's Defense.",
+    "type": "Focus"
+  },
+  {
+    "name": "Issue Command",
+    "description": "Excellence comes naturally to you. At 20th level, you succeed with a high degree of success on attacks if your result exceeds your target's Defense by 10 or more, instead of when your result doubles the target's Defense.Many of your allies trust your commands more than their own instincts. As a Move action, you can issue a command, granting allies who follow your command ↑1 to a Skill Test or +1 bonus to a Defense based on certain circumstances. You set the terms and the bonus allies receive. This bonus lasts until the beginning of your next turn.",
+    "type": "Focus"
+  },
+  {
+    "name": "Prepare for War",
+    "description": "If you want peace, you need to be ready to fight for it. When you roll for Initiative and you are not Surprised, you gain an Edge on your Initiative Skill Test.",
+    "type": "Focus"
+  }
+]

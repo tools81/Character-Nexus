@@ -1,1 +1,167 @@
-[]
+[
+	{
+		"name": "Light Melee",
+		"description": "Combat Knife, Tomahawk",
+		"skill": "Melee",
+		"damage": "1d6",
+		"hands": "Varies",
+		"magazine": 0,
+		"rof": 2,
+		"concealed": true,
+		"cost": 50
+	},
+	{
+		"name": "Medium Melee",
+		"description": "Baseball Bat, Crowbar, Machete",
+		"skill": "Melee",
+		"damage": "2d6",
+		"hands": "Varies",
+		"magazine": 0,
+		"rof": 2,
+		"concealed": false,
+		"cost": 50
+	},
+	{
+		"name": "Heavy Melee",
+		"description": "Lead Pipe, Sword, Spiked Bat",
+		"skill": "Melee",
+		"damage": "3d6",
+		"hands": "Varies",
+		"magazine": 0,
+		"rof": 2,
+		"concealed": false,
+		"cost": 100
+	},
+	{
+		"name": "Heavy Melee",
+		"description": "Chainsaw, Sledgehammer, Helicopter Blades, Naginata",
+		"skill": "Melee",
+		"damage": "4d6",
+		"hands": "Varies",
+		"magazine": 0,
+		"rof": 1,
+		"concealed": false,
+		"cost": 500
+	},
+	{
+		"name": "Medium Pistol",
+		"description": "",
+		"skill": "Handgun",
+		"damage": "2d6",
+		"hands": "One",
+		"magazine": 12,
+		"rof": 2,
+		"concealed": true,
+		"cost": 50
+	},
+	{
+		"name": "Heavy Pistol",
+		"description": "",
+		"skill": "Handgun",
+		"damage": "3d6",
+		"hands": "One",
+		"magazine": 8,
+		"rof": 2,
+		"concealed": true,
+		"cost": 100
+	},
+	{
+		"name": "Very Heavy Pistol",
+		"description": "",
+		"skill": "Handgun",
+		"damage": "4d6",
+		"hands": "One",
+		"magazine": 8,
+		"rof": 1,
+		"concealed": false,
+		"cost": 100
+	},
+	{
+		"name": "SMG",
+		"description": "",
+		"skill": "Handgun",
+		"damage": "2d6",
+		"hands": "One",
+		"magazine": 30,
+		"rof": 1,
+		"concealed": true,
+		"cost": 100
+	},
+	{
+		"name": "Heavy SMG",
+		"description": "",
+		"skill": "Handgun",
+		"damage": "3d6",
+		"hands": "One",
+		"magazine": 40,
+		"rof": 1,
+		"concealed": false,
+		"cost": 100
+	},
+	{
+		"name": "Shotgun",
+		"description": "",
+		"skill": "Shoulder Arms",
+		"damage": "5d6",
+		"hands": "Two",
+		"magazine": 4,
+		"rof": 1,
+		"concealed": false,
+		"cost": 500
+	},
+	{
+		"name": "Assault Rifle",
+		"description": "",
+		"skill": "Shoulder Arms",
+		"damage": "5d6",
+		"hands": "Two",
+		"magazine": 25,
+		"rof": 1,
+		"concealed": false,
+		"cost": 500
+	},
+	{
+		"name": "Sniper Rifle",
+		"description": "",
+		"skill": "Shoulder Arms",
+		"damage": "5d6",
+		"hands": "Two",
+		"magazine": 4,
+		"rof": 1,
+		"concealed": false,
+		"cost": 500
+	},
+	{
+		"name": "Bow or Crossbow",
+		"description": "",
+		"skill": "Archery",
+		"damage": "4d6",
+		"hands": "Two",
+		"magazine": 0,
+		"rof": 1,
+		"concealed": false,
+		"cost": 100
+	},
+	{
+		"name": "Grenade Launcher",
+		"description": "",
+		"skill": "Heavy Weapon",
+		"damage": "6d6",
+		"hands": "Two",
+		"magazine": 2,
+		"rof": 1,
+		"concealed": false,
+		"cost": 500
+	},
+	{
+		"name": "Rocket Launcher",
+		"description": "",
+		"skill": "Heavy Weapon",
+		"damage": "8d6",
+		"hands": "Two",
+		"magazine": 1,
+		"rof": 1,
+		"concealed": false,
+		"cost": 500
+	}
+]

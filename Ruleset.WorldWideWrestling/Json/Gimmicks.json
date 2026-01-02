@@ -1,11 +1,125 @@
 [
   {
-    "name": "The Anti-Hero",
-    "description": "You don't play by the rules.",
+    "name": "The Ace",
+    "description": "You are the top star of your division, the face of the company. Consistently either holding the title or in contention for it, you're under constant pressure to represent your promotion and take it to new heights. You also have the biggest target on your back for those who envy your spot.",
     "bonusadjustments": [
       {
         "type": "Stat",
-        "name": "Power",
+        "name": "Body",
+        "value": -1
+      },
+      {
+        "type": "Stat",
+        "name": "Look",
+        "value": 1
+      },
+      {
+        "type": "Stat",
+        "name": "Real",
+        "value": 1
+      },
+	  {
+        "type": "Stat",
+        "name": "Work",
+        "value": -1
+      },
+	  {
+		"type": "injury",
+		"value": 2
+	  }
+    ],
+    "userchoice": [
+      {
+        "type": "Stat",
+        "choices": [
+          "Look",
+          "Body",
+          "Real",
+          "Work"
+        ],
+        "count": 1
+      },
+	  {
+        "type": "Stat",
+        "choices": [
+          "Look",
+          "Body",
+          "Real",
+          "Work"
+        ],
+        "count": -1
+      },
+	  {
+		"type": "Move",
+		"choices": [
+		  "Fighting Spirit",
+		  "Amazing Entrance",
+		  "Strong Style"
+		],
+		"count": 1
+	  }
+    ],
+    "moves": [
+		"Finishing Move",
+		"Carry the Company",
+		
+    ],
+    "injury": 2
+  },
+  {
+    "name": "The Anointed",
+    "description": "You're the next big thing, whether the audience, and the other wrestlers, admit it or not. Someone backstage is putting all of their weight behind you. You just have to hold up your end in the ring.",
+    "bonusadjustments": [
+      {
+        "type": "Stat",
+        "name": "Look",
+        "value": 1
+      },
+      {
+        "type": "Stat",
+        "name": "Real",
+        "value": -2
+      },
+      {
+        "type": "Stat",
+        "name": "Work",
+        "value": -1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "Stat",
+        "choices": [
+          "Look",
+          "Body",
+          "Real",
+          "Work"
+        ],
+        "count": 1
+      },
+	  {
+		"type": "Move",
+		"choices": [
+		  "Picture Perfect",
+		  "Special Snowflake",
+		  "Always Learning",
+		  "I Am the Future"
+		],
+		"count": 2
+	  }
+    ],
+    "moves": [
+	  "Finishing Move"	  
+    ],
+    "injury": 3
+  },
+  {
+    "name": "The Anti-Hero",
+    "description": "You are the badass that everyone loves. Whether you're sticking it to the Man or telling it like it is, the injury identifies with your non-conformity. How do you keep your rebellion from going too far? A babyface Anti-Hero is the people's champion, representing the everyman's rejection of the stultifying bullshit they have to put up with every day. A heel Anti-Hero is a nasty, conniving jerk, a selfish mercenary always looking for the maximum profit in any situation.",
+    "bonusadjustments": [
+      {
+        "type": "Stat",
+        "name": "Body",
         "value": -2
       },
       {
@@ -19,61 +133,612 @@
         "value": -1
       }
     ],
-    "choice": [
+    "userchoice": [
       {
         "type": "Stat",
         "choices": [
           "Look",
-          "Power",
+          "Body",
           "Real",
           "Work"
         ],
         "count": 1
-      }
+      },
+	  {
+		"type": "Move",
+		"choices": [
+		  "Rules? What Rules?",
+		  "Anything You Need To Do To Win",
+		  "Mouth Of The People",
+		  "Twitch The Curtain"
+		],
+		"count": 2
+	  }
     ],
     "moves": [
-      "Finishing Move",
-      "Rules? What Rules?",
-      "Anything You Need To Do To Win",
-      "Mouth Of The People",
-      "Twitch The Curtain"
+      "Finishing Move"     
     ],
-    "audience": 1
+    "injury": 3
   },
   {
-    "name": "The Golden Boy",
-    "description": "You're the future of wrestling."
+    "name": "The Call-Up",
+    "description": "You've made a living on the road or in the minor leagues, honing your skills in relative obscurity. You've got a cult following and a lot of experience. Finally, you have an opportunity to make your name on the big stage. Will you take it?",
+    "bonusadjustments": [
+      {
+        "type": "Stat",
+        "name": "Body",
+        "value": -1
+      },
+      {
+        "type": "Stat",
+        "name": "Real",
+        "value": -1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "Stat",
+        "choices": [
+          "Look",
+          "Body",
+          "Real",
+          "Work"
+        ],
+        "count": 2
+      },
+	  {
+        "type": "Stat",
+        "choices": [
+          "Look",
+          "Body",
+          "Real",
+          "Work"
+        ],
+        "count": -1
+      },
+	  {
+		"type": "Move",
+		"choices": [
+		  "10-Year Veteran",
+		  "Seen It All",
+		  "Hungry",
+		  "Reputation"
+		],
+		"count": 2
+	  }
+    ],
+    "moves": [
+	  "Finishing Move"
+    ],
+    "injury": 3
+  },
+  {
+    "name": "The Clown",
+    "description": "You are the quintessential entertainer. You bring comedy to the ring and grease the wheels backstage. You may not have many Championships, but you move a lot of merch and you always get a pop from the crowd. Is that enough for you?",
+    "bonusadjustments": [
+      {
+        "type": "Stat",
+        "name": "Body",
+        "value": -2
+      },
+	  {
+        "type": "Stat",
+        "name": "Look",
+        "value": 1
+      },
+      {
+        "type": "Stat",
+        "name": "Real",
+        "value": 1
+      },
+      {
+        "type": "Stat",
+        "name": "Work",
+        "value": -1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "Stat",
+        "choices": [
+          "Look",
+          "Body",
+          "Real",
+          "Work"
+        ],
+        "count": 1
+      },
+	  {
+		"type": "Move",
+		"choices": [
+		  "Funny is Money",
+		  "Surprisingly Talented",
+		  "Comic Relief", 
+		  "Celebrity Promo"
+		],
+		"count": 2
+	  }
+    ],
+    "moves": [
+	   "Finishing Move",	   
+    ],
+    "injury": 3
+  },
+  {
+    "name": "The Fighter",
+    "description": "You have a legitimate fighting background or you're a natural-born hardass who's found somewhere to get paid to scrap. You know how to hurt people for real, when you want to. This company is getting what it wants from you, but how long will you get what you want from them?",
+    "bonusadjustments": [
+      {
+        "type": "Stat",
+        "name": "Body",
+        "value": 1
+      },
+	  {
+        "type": "Stat",
+        "name": "Look",
+        "value": -2
+      },
+      {
+        "type": "Stat",
+        "name": "Real",
+        "value": -1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "Stat",
+        "choices": [
+          "Look",
+          "Body",
+          "Real",
+          "Work"
+        ],
+        "count": 1
+      },
+	  {
+		"type": "Move",
+		"choices": [
+		  "Martial Arts Training",
+		  "You know it's fake right?",
+		  "Stare Down",
+		  "Stretcher"
+		],
+		"count": 1
+	  }
+    ],
+    "moves": [
+	   "Finishing Move",
+	   "Shoot Fighter"
+    ],
+    "injury": 4
   },
   {
     "name": "The Hardcore",
-    "description": "You sacrifice your body for your fans."
-  },
-  {
-    "name": "The High Flyer",
-    "description": "You take big risks for big rewards."
+    "description": "You're not the best in the ring or the best looking, but you know how to get a pop through naked aggression and rampant bloodshed. Some in the business look down on you, but you're a legend in the making for your diehard fans. How long can that fact be ignored?",
+    "bonusadjustments": [
+      {
+        "type": "Stat",
+        "name": "Real",
+        "value": -1
+      },
+      {
+        "type": "Stat",
+        "name": "Work",
+        "value": -1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "Stat",
+        "choices": [
+          "Look",
+          "Body",
+          "Real",
+          "Work"
+        ],
+        "count": 1
+      },
+	  {
+		"type": "Move",
+		"choices": [
+		  "High Pain Tolerance",
+		  "What a Weirdo",
+		  "Master of Hardcore",
+		  "Red Means Green",
+		  "Are You Not Entertained"
+		],
+		"count": 1
+	  }
+    ],
+    "moves": [
+	   "Finishing Move",
+	   "Tables and Ladders and Chairs, Oh My"
+    ],
+    "injury": 4
   },
   {
     "name": "The Jobber",
-    "description": "You make everyone else look good."
+    "description": "You're a nobody to the fans, but critical to the franchise: you're here to lose so that your opponents look great. You aren't famous, but you're key to making others popular. It's taken for granted that you'll always be there to do the job. Is that enough for you?",
+    "bonusadjustments": [
+      {
+        "type": "Stat",
+        "name": "Look",
+        "value": -2
+      },
+      {
+        "type": "Stat",
+        "name": "Work",
+        "value": 1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "Stat",
+        "choices": [
+          "Look",
+          "Body",
+          "Real",
+          "Work"
+        ],
+        "count": 1
+      },
+	  {
+        "type": "Stat",
+        "choices": [
+          "Look",
+          "Body",
+          "Real",
+          "Work"
+        ],
+        "count": 1
+      },
+	  {
+		"type": "Move",
+		"choices": [
+		  "Ham-n-Egger",
+		  "Sympathetic",
+		  "Jobber to the Stars",
+		  "Experienced Hand"
+		],
+		"count": 1
+	  }
+    ],
+    "moves": [
+	   "Do the Job",
+	   "Career Wrestler"
+    ],
+    "injury": 4
+  },
+  {
+    "name": "The Luchador",
+    "description": "You are an iconic Lucha Libre competitor. Whether born into the business or donning the mask out of love for the sport, you represent the unique culture of Mexican wrestling. What does it mean to carry that responsibility with you?",
+    "bonusadjustments": [
+      {
+        "type": "Stat",
+        "name": "Look",
+        "value": -1
+      },
+      {
+        "type": "Stat",
+        "name": "Real",
+        "value": -1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "Stat",
+        "choices": [
+          "Look",
+          "Body",
+          "Real",
+          "Work"
+        ],
+        "count": 1
+      },
+	  {
+		"type": "Move",
+		"choices": [
+		  "Amazing Athleticism",
+		  "El Hifo De...",
+		  "Human Highlight Reel",
+		  "Tradicional",
+		  "Capitan del Parejas"
+		],
+		"count": 2
+	  }
+    ],
+    "moves": [
+	   "Finishing Move"
+    ],
+    "injury": 4
+  },
+  {
+    "name": "The Luminary",
+    "description": "You started in the ring, but are now legitimately more famous for your appearances in other media than your wrestling career. Now older and slower, you have real emotional and financial investment behind you. Is it possible to keep your broad appeal or have you peaked?",
+    "bonusadjustments": [
+      {
+        "type": "Stat",
+        "name": "Body",
+        "value": -1
+      },
+	  {
+        "type": "Stat",
+        "name": "Look",
+        "value": 1
+      },
+      {
+        "type": "Stat",
+        "name": "Real",
+        "value": 1
+      },
+      {
+        "type": "Stat",
+        "name": "Work",
+        "value": -2
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "Stat",
+        "choices": [
+          "Look",
+          "Real"
+        ],
+        "count": 1
+      },
+	  {
+		"type": "Move",
+		"choices": [
+		  "Merchandising",
+		  "Nemesis",
+		  "High Expectations"
+		],
+		"count": 1
+	  }
+    ],
+    "moves": [
+	   "Finishing Move",
+	   "I'm the Draw"
+    ],
+    "injury": 4
   },
   {
     "name": "The Manager",
-    "description": "You're the brains of the operation."
+    "description": "You're the sizzle on the steak. You don't compete, but you have the charisma, the talk, the walk and the ideas to keep your client in the spotlight - in and out of the ring. Are you satisfied to be in charge of making others popular?",
+    "bonusadjustments": [
+      {
+        "type": "Stat",
+        "name": "Body",
+        "value": -1
+      },
+      {
+        "type": "Stat",
+        "name": "Look",
+        "value": 2
+      },
+      {
+        "type": "Stat",
+        "name": "Work",
+        "value": -2
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "Stat",
+        "choices": [
+          "Look",
+          "Body",
+          "Real",
+          "Work"
+        ],
+        "count": 1
+      },
+	  {
+		"type": "Move",
+		"choices": [
+		  "Never Unprepared",
+		  "Brain for the Business",
+		  "Backstage Politics",
+		  "Loyal"
+		],
+		"count": 1
+	  }
+    ],
+    "moves": [
+	   "Meal Ticket",
+	   "Mouth Piece"
+    ],
+    "injury": 2
   },
   {
     "name": "The Monster",
-    "description": "You scare people."
+    "description": "You're physically enormous and intimidating. You may have a supernatural edge, or simply be mean - either way, you make people nervous, in and out of the ring. You carry a proud wrestling tradition on your freakishly broad shoulders. Is that all you are?",
+    "bonusadjustments": [
+      {
+        "type": "Stat",
+        "name": "Body",
+        "value": 1
+      },
+      {
+        "type": "Stat",
+        "name": "Real",
+        "value": -2
+      },
+      {
+        "type": "Stat",
+        "name": "Work",
+        "value": -1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "Stat",
+        "choices": [
+          "Look",
+          "Body",
+          "Real",
+          "Work"
+        ],
+        "count": 1
+      },
+	  {
+		"type": "Move",
+		"choices": [
+		  "Prodigious Size",
+		  "Surprising Agility",
+		  "Intimidating",
+		  "Not of this World",
+		  "Shoot Kill"
+		],
+		"count": 2
+	  }
+    ],
+    "moves": [
+	   "Finishing Move"
+    ],
+    "injury": 3
+  },
+  {
+    "name": "The Provocateur",
+    "description": "You're the sui generis, the strange one, the weirdo. Whether you've been saddled with this role or you’ve sought it out, you’re great at pushing boundaries. But will you go too far?",
+    "bonusadjustments": [
+      {
+        "type": "Stat",
+        "name": "Body",
+        "value": -2
+      },
+      {
+        "type": "Stat",
+        "name": "Look",
+        "value": 1
+      },
+      {
+        "type": "Stat",
+        "name": "Work",
+        "value": -1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "Stat",
+        "choices": [
+          "Look",
+          "Body",
+          "Real",
+          "Work"
+        ],
+        "count": 1
+      },
+	  {
+		"type": "Move",
+		"choices": [
+		  "Strangely Captivating",
+		  "Showstopper",
+		  "Mind Games",
+		  "Play to the Crowd"
+		],
+		"count": 2
+	  }
+    ],
+    "moves": [
+	   "Finishing Move"
+    ],
+    "injury": 3
   },
   {
     "name": "The Technician",
-    "description": "You're the master of the canvas."
+    "description": "Whether you were an amateur sensation or a workhorse in the minor leagues, you have all the skills. Your wrestling ability stands out, but you’re continually fighting the assumption your only have one dimension to you. Do you?",
+    "bonusadjustments": [
+      {
+        "type": "Stat",
+        "name": "Look",
+        "value": -2
+      },
+      {
+        "type": "Stat",
+        "name": "Real",
+        "value": -1
+      },
+      {
+        "type": "Stat",
+        "name": "Work",
+        "value": 1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "Stat",
+        "choices": [
+          "Look",
+          "Body",
+          "Real",
+          "Work"
+        ],
+        "count": 1
+      },
+	  {
+		"type": "Move",
+		"choices": [
+		  "Former Amateur Champion",
+		  "Technical Expert",
+		  "Excellence of Execution",
+		  "Tweener",
+		  "Sportsmanship"
+		],
+		"count": 2
+	  }
+    ],
+    "moves": [
+	   "Finishing Move"
+    ],
+    "injury": 3
   },
   {
     "name": "The Veteran",
-    "description": "You show them how it's done."
-  },
-  {
-    "name": "The Wasted",
-    "description": "You have a problem."
+    "description": "You are an established name. You work every night, whether to help out the new blood or to keep a lock on your position on the card. You have a dedicated fan base, and you're ready to create an enduring legacy.",
+    "bonusadjustments": [
+      {
+        "type": "Stat",
+        "name": "Body",
+        "value": -1
+      },
+      {
+        "type": "Stat",
+        "name": "Real",
+        "value": -1
+      },
+      {
+        "type": "Stat",
+        "name": "Work",
+        "value": 1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "Stat",
+        "choices": [
+          "Look",
+          "Body",
+          "Real",
+          "Work"
+        ],
+        "count": 1
+      },
+	  {
+		"type": "Move",
+		"choices": [
+		  "Top of the Card",
+		  "Respect the Business",
+		  "Bury 'em",
+		  "Put 'em Over"
+		],
+		"count": 1
+	  }
+    ],
+    "moves": [
+	   "Finishing Move",
+	   "Ring General"
+    ],
+    "injury": 3
   }
 ]

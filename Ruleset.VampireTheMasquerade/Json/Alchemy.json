@@ -1,3 +1,72 @@
 [
-
+  {
+    "name": "Far Reach",
+    "description": "This formula allows the alchemist to use their mind to grab, hold, and push objects or people without touching them. While few can employ enough mental force to actually cause direct harm, a clever applicant can find many ways to get an opponent into, or themselves out of, harm's way.",
+    "ingredients": "The alchemist's Blood, choleric human blood, melted nylon fibers or a grated refrigerator magnet or weird nootropics ordered off the internet",
+    "cost": "One Rouse Check",
+    "dicepool": "Resolve + Alchemy vs Strength + Athletics",
+    "system": "The alchemist can lift, push, or pull a physical object or person under 100 kg, within their sight and closer than 10 meters. The object moves swiftly, but not rapidly enough to injure a person with the blow; the object may break if it is fragile. The exception: knives or other small metal tools, which the alchemist can wield with a Resolve + Alchemy test, at a two-dice penalty because of the need for precision. A knife used this way does only one point of extra damage.<br />Trying to move someone actively resisting requires a contest of Resolve + Alchemy vs Strength + Athletics. On a win, the alchemist can pull the victim within grabbing or clawing range, or throw them one meter for each point of margin on the contest, doing an equal amount of Superficial damage. They land prone. Keeping someone or something floating in mid-air requires a Resolve + Thin-Blood Alchemy (Difficulty 3) roll every turn. Fine manipulation (such as pulling the pin of a grenade) requires a Wits + Alchemy roll at a suitable Difficulty, as determined by the Storyteller.",
+    "duration": "One turn unless held (see above).",
+    "level": 1
+  },
+  {
+    "name": "Haze",
+    "description": "This formula creates a field of mist that follows the user, rendering them more difficult to target with ranged weapons and concealing their identity.",
+    "ingredients": "In addition to the alchemist's Blood and phlegmatic human blood, dry ice or cigar smoke or auto exhaust",
+    "cost": "One Rouse Check",
+    "dicepool": "",
+    "system": " Upon activation a cloud of mist-like vapor surrounds the alchemist, masking their features and obscuring their silhouette. Anyone attempting to identify the user or hit them with ranged weapons suffers a two-dice penalty to their pool. The user can extend the cloud to encompass a group of up to five people by making another Rouse check.",
+    "duration": "One scene or until, voluntarily ended.",
+    "level": 1
+  },
+  {
+    "name": "Profane Hieros Gamos",
+    "description": "Alchemical texts speak of the Great Hermaphrodite, the union of contrasts. Day and night, male and female, life and death. Alchemists who master the worldly aspect of the Hieros Gamos use the fluid nature of their condition to change their gender. It is a messy process and requires great dedication and conviction, but it is a power that many Kindred secretly envy in their unchanging form. It is also a great way to change identity or adopt a new mask.",
+    "ingredients": "The alchemist's Blood, blood from five different vessels identifying fully as the desired gender",
+    "cost": "",
+    "dicepool": "",
+    "system": "After brewing the formula, the Alchemist performs self-castration and / or mastectomy before falling into daysleep. Upon awakening they find themselves a perfectly formed specimen of the desired gender. In essence it is as if they had been born that way. There are even stories of self-made Duskborn women giving birth to children. If desired, a modified procedure can create any configuration of gender or agender imaginable. ",
+    "duration": "Permanent until performed again.",
+    "level": 1
+  },
+  {
+    "name": "Envelop",
+    "description": "This formula creates a mist that clings to a victim, blinding it and (in the case of mortals) causing suffocation.",
+    "ingredients": "The alchemist's Blood, melancholic and phlegmatic human blood, potassium chlorate, smog or halon gas.",
+    "cost": "One Rouse Check",
+    "dicepool": "Wits + Alchemy vs Stamina + Survival",
+    "system": "The alchemist activates the power and chooses a target within sight. A swirling mist envelops the target, obscuring their sight and penalizing them three dice from all sight-based detection and ranged attack dice pools. In addition, the alchemist can make the mist suffocate a mortal with a contest of Wits + Alchemy vs. Stamina + Survival. On a win, the target can take no action except coughing and choking; on a critical win, the target loses consciousness. The alchemist can only employ Envelop on single targets, and only on one at a time.",
+    "duration": "Until scene ends or the alchemist ends the effect voluntarily.",
+    "level": 2
+  },
+  {
+    "name": "Defractionate",
+    "description": "This formula results in a homeopathic elixir. When added to fractionated medical-supply blood, the elixir returns it to freshness, allowing vampires without the Iron Gullet merit to obtain nutrition from it.",
+    "ingredients": "The alchemist's Blood, sanguine and melancholic human blood, O-negative human blood (only a few ml), moldy spinach, hot black coffee, sodium octanoate",
+    "cost": "",
+    "dicepool": "",
+    "system": "The alchemist taps their vessel (Calcinatio), or their own vein (Athanor Corporis) to get the Defractionate elixir if they do not use Fixatio. For each success on the distillation roll, they get enough elixir to turn one blood bag (slakes 1 Hunger) from fractionated to unfractionated blood. Any vampire can consume this blood and slake Hunger with it.<br />Athanor Corporis: The alchemist can tap their own vein once per night for this elixir until their next feeding, or until they reach Hunger 5. They need not pay the distillation cost again.<br />Calcinatio: If the vessel survives the tap, the alchemist can tap them again in a week for more elixir. They need not pay the distillation cost again, but the vessel pays the Health cost (3 Aggravated damage) each time they are tapped.",
+    "duration": "",
+    "level": 3
+  },
+  {
+    "name": "Airborne Momentum",
+    "description": "This formula enables the alchemist to lift themselves from the ground, achieving a state of swift flight or floating. They can fly in any direction, including up or down, though their carrying capacity is limited.",
+    "ingredients": "The alchemist's Blood, choleric and sanguine human blood, champagne, bird blood, helium, scopolamine or belladonna extract",
+    "cost": "One Rouse Check",
+    "dicepool": "Strength + Alchemy vs Strength + Athletics (if resisted)",
+    "system": "The potion enables the alchemist (and only them) to fly or hover at approximately running speed. The flier can carry a human-sized mass, though their speed drops to walking speed. Grabbing and carrying aloft an unwilling subject or pulling the flier to the ground both require a contest between the alchemist’s Strength + Alchemy and the other's Strength + Athletics.",
+    "duration": "One scene",
+    "level": 4
+  },
+  {
+    "name": "Awaken the Sleeper",
+    "description": "This formula results in an elixir which, when added to human blood, can awaken a vampire from Torpor.",
+    "ingredients": "The alchemist's Blood, choleric or sanguine human blood, adrenaline, ammonium carbonate, hartshorn, caffeine or benzedrine, melatonin.",
+    "cost": "",
+    "dicepool": "",
+    "system": "The alchemist taps their vessel (Calcinatio), or their own vein (Athanor Corporis) to get the Awaken the Sleeper elixir if they do not use Fixatio. They then mix the elixir into human blood. For each success above 2 on the distillation roll, the elixir can awaken a vampire of that Blood Potency.<br />Athanor Corporis: The alchemist can tap their own vein once per night for this elixir until their next feeding, or until they reach Hunger 5. They need not pay the distillation cost again.<br />Calcinatio: If the vessel survives the tap, the alchemist can tap them again in a week for more elixir. They need not pay the distillation cost again, but the vessel pays the Health cost (5 Aggravated damage) each time they are tapped. The Alchemist can also simply feed the vessel's blood to the sleeper directly.",
+    "duration": "",
+    "level": 5
+  }
 ]

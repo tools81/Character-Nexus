@@ -1,1 +1,397 @@
-[]
+[
+	{
+		"name": "Concentration",
+		"stat": "Will",
+		"category": "Awareness",
+		"description": "Skill of focus and mental control, encompassing feats of memory, recall, ignoring distractions, and physiological mastery."
+	},
+	{
+		"name": "Conceal/Reveal Object",
+		"stat": "Intelligence",
+		"description": "Skill for hiding objects and finding objects that have been hidden. This is the Skill used for concealing weapons under clothing and detecting concealed weapons."
+	},
+	{
+		"name": "Lip Reading",
+		"stat": "Intelligence",
+		"category": "Awareness",
+		"description": "Skill of reading someone's lips to tell what they are saying."
+	},
+	{
+		"name": "Perception",
+		"stat": "Intelligence",
+		"category": "Awareness",
+		"description": "Skill of spotting hidden things like clues, traps, and people using the Stealth Skill, but not objects hidden with the Conceal/Reveal Object Skill."
+	},
+	{
+		"name": "Tracking",
+		"stat": "Intelligence",
+		"category": "Awareness",
+		"description": "Skill of following a trail by observing tracks and other clues left behind."
+	},
+	{
+		"name": "Athletic",
+		"stat": "Dexterity",
+		"category": "Body",
+		"description": "Skill of jumping, climbing, throwing, swimming, lifting weights, etc."
+	},
+	{
+		"name": "Contortionist",
+		"stat": "Dexterity",
+		"category": "Body",
+		"description": "Skill of manipulating your body to get out of handcuffs or other bindings and to fit yourself into otherwise inaccessible places or spaces."
+	},
+	{
+		"name": "Dance",
+		"stat": "Dexterity",
+		"category": "Body",
+		"description": "Skill of dancing at a professional level."
+	},
+	{
+		"name": "Endurance",
+		"stat": "Willpower",
+		"category": "Body",
+		"description": "Skill of withstanding harsh environmental conditions and hardship."
+	},
+	{
+		"name": "Resist Torture/Drugs",
+		"stat": "Willpower",
+		"category": "Body",
+		"description": "Skill of resisting painful effects including interrogation, torture, and drugs."
+	},
+	{
+		"name": "Stealth",
+		"stat": "Dexterity",
+		"category": "Body",
+		"description": "Skill of moving quietly, hiding, doing an Action discreetly, or otherwise evading detection. Other Characters can try to find you with their Perception Skill."
+	},
+	{
+		"name": "Drive Land Vehicle",
+		"stat": "Reflex",
+		"category": "Control",
+		"description": "Skill of driving and maneuvering land vehicles."
+	},
+	{
+		"name": "Pilot Air Vehicle (x2)",
+		"stat": "Reflex",
+		"category": "Control",
+		"description": "Skill of piloting and maneuvering air vehicles."
+	},
+	{
+		"name": "Pilot Sea Vehicle",
+		"stat": "Reflex",
+		"category": "Control",
+		"description": "Skill of piloting and maneuvering sea vehicles."
+	},
+	{
+		"name": "Riding",
+		"stat": "Reflex",
+		"category": "Control",
+		"description": "Skill of riding a living creature trained for the purpose."
+	},
+	{
+		"name": "Accounting",
+		"stat": "Intelligence",
+		"category": "Education",
+		"description": "Skill of balancing books, creating false books and identifying them, juggling numbers, creating budgets, and handling day to day business operations."
+	},
+	{
+		"name": "Animal Handling",
+		"stat": "Intelligence",
+		"category": "Education",
+		"description": "Skill of handling, training, and caring for animals."
+	},
+	{
+		"name": "Bureaucracy",
+		"stat": "Intelligence",
+		"category": "Education",
+		"description": "Skill for dealing with bureaucrats, knowing who to talk to in a bureaucracy, how to reach them, and how to extract information from bureaucracies."
+	},
+	{
+		"name": "Business",
+		"stat": "Intelligence",
+		"category": "Education",
+		"description": "Skill regarding knowledge of basic business practices, laws of supply and demand, employee management, procurement, sales, marketing."
+	},
+	{
+		"name": "Composition",
+		"stat": "Intelligence",
+		"category": "Education",
+		"description": "Skill of professionally writing songs, articles, or stories."
+	},
+	{
+		"name": "Criminology",
+		"stat": "Intelligence",
+		"category": "Education",
+		"description": "Skill for looking for clues by dusting for fingerprints, doing ballistic tests, examining evidence, and searching through police records and files."
+	},
+	{
+		"name": "Cryptograpy",
+		"stat": "Intelligence",
+		"category": "Education",
+		"description": "Skill of encrypting and decoding messages."
+	},
+	{
+		"name": "Deduction",
+		"stat": "Intelligence",
+		"category": "Education",
+		"description": "Skill of taking several clues and leaping to a non-obvious conclusion or medical diagnosis."
+	},
+	{
+		"name": "Education",
+		"stat": "Intelligence",
+		"category": "Education",
+		"description": "Skill of general knowledge, equivalent to a basic school education, allowing you to know how to read, write, use basic math, and know enough history to get by."
+	},
+	{
+		"name": "Gamble",
+		"stat": "Intelligence",
+		"category": "Education",
+		"description": "Skill of knowing how to figure odds and play games of chance successfully."
+	},
+	{
+		"name": "Language",
+		"stat": "Intelligence",
+		"category": "Education",
+		"description": "Skill of speaking a particular language. You must choose a specific language whenever you increase this Skill."
+	},
+	{
+		"name": "Library Search",
+		"stat": "Intelligence",
+		"category": "Education",
+		"description": "Skill of using databases, Data Pools, libraries, and other compiled information sources to find facts."
+	},
+	{
+		"name": "Local Expert",
+		"stat": "Intelligence",
+		"category": "Education",
+		"description": "Skill of knowing a specific area well and knowing the agendas of its various factions, both political and criminal. You must choose a specific location whenever you increase this Skill, which cannot be any larger than a single neighborhood or community."
+	},
+	{
+		"name": "Science",
+		"stat": "Intelligence",
+		"category": "Education",
+		"description": "Skill for knowing how to design experiments, write scientific papers, test hypotheses, and discuss with other academics in a particular field of science. An area of study must be specified whenever this Skill is increased. Possible options include: Geology, Mathematics, Physics, Zoology, Anthropology, Biology, Chemistry, History, etc."
+	},
+	{
+		"name": "Tactics",
+		"stat": "Intelligence",
+		"category": "Education",
+		"description": "Skill of managing a large-scale battle effectively and efficiently. A Character with this Skill usually knows what must be done to direct a battle, and how an enemy force may react."
+	},
+	{
+		"name": "Wilderness Survival",
+		"stat": "Intelligence",
+		"category": "Education",
+		"description": "Skill for knowing how to survive comfortably in the wilderness."
+	},
+	{
+		"name": "Brawling",
+		"stat": "Dexterity",
+		"category": "Fighting",
+		"description": "Skill at fighting and grappling with brute strength."
+	},
+	{
+		"name": "Evasion",
+		"stat": "Dexterity",
+		"category": "Fighting",
+		"description": "Skill for getting out of the way of someone attacking you in melee. A Character with REF 8 or higher can also use this Skill to dodge Ranged Attacks."
+	},
+	{
+		"name": "Martial Arts (x2)",
+		"stat": "Dexterity",
+		"category": "Fighting",
+		"description": "Skill for fighting with a Martial Arts Form. Each time you increase this Skill you must choose in which form you are training. You can learn multiple forms, but you must do so separately. Possible options (Karate, Taekwondo, Judo, Aikido) can be found on pg. 178."
+	},
+	{
+		"name": "Melee Weapon",
+		"stat": "Dexterity",
+		"category": "Fighting",
+		"description": "Skill for fighting with melee weapons."
+	},
+	{
+		"name": "Acting",
+		"stat": "Cool",
+		"category": "Performance",
+		"description": "Skill of assuming a role, disguising yourself as someone else, whether real or fictitious, and faking emotions and moods."
+	},
+	{
+		"name": "Play Instrument",
+		"stat": "Technique",
+		"category": "Performance",
+		"description": "Skill of professionally playing a musical instrument. You can choose which instrument when you increase this Skill. Possible options include: singing, guitar, drums, violin, piano, etc."
+	},
+	{
+		"name": "Archery",
+		"stat": "Reflex",
+		"category": "Ranged Weapon",
+		"description": "Skill for accurately firing bolt- or arrow-launching projectile weapons."
+	},
+	{
+		"name": "Autofire (x2)",
+		"stat": "Reflex",
+		"category": "Ranged Weapon",
+		"description": "Skill for keeping a weapon's Autofire firing mode on target through recoil."
+	},
+	{
+		"name": "Handgun",
+		"stat": "Reflex",
+		"category": "Ranged Weapon",
+		"description": "Skill for accurately firing handheld projectile weapons such as pistols."
+	},
+	{
+		"name": "Heavy Weapons (x2)",
+		"stat": "Reflex",
+		"category": "Ranged Weapon",
+		"description": "Skill for accurately firing extremely large projectile weapons, including grenade and rocket launchers."
+	},
+	{
+		"name": "Shoulder Arms",
+		"stat": "Reflex",
+		"category": "Ranged Weapon",
+		"description": "Skill for accurately firing shoulder-braced projectile weapons, including rifles and shotguns."
+	},
+	{
+		"name": "Bribery",
+		"stat": "Cool",
+		"category": "Social",
+		"description": "Skill of knowing when to bribe someone, how to approach them, and how much to offer."
+	},
+	{
+		"name": "Conversation",
+		"stat": "Empathy",
+		"category": "Social",
+		"description": "Skill of extracting information from people without alerting them with careful conversation."
+	},
+	{
+		"name": "Human Perception",
+		"stat": "Empathy",
+		"category": "Social",
+		"description": "Skill of reading a person's facial expressions and body language to discern their emotional state and detect lies or deception."
+	},
+	{
+		"name": "Interrogation",
+		"stat": "Cool",
+		"category": "Social",
+		"description": "Skill of forcibly extracting information from people."
+	},
+	{
+		"name": "Persuasion",
+		"stat": "Cool",
+		"category": "Social",
+		"description": "Skill of convincing, persuading, or influencing individuals."
+	},
+	{
+		"name": "Personal Grooming",
+		"stat": "Cool",
+		"category": "Social",
+		"description": "Skill of knowing proper grooming to maximize attractiveness."
+	},
+	{
+		"name": "Streetwise",
+		"stat": "Cool",
+		"category": "Social",
+		"description": "Skill of making and using contacts to get illegal goods and contraband, talking to the criminal element, and avoiding bad situations in bad neighborhoods."
+	},
+	{
+		"name": "Trading",
+		"stat": "Cool",
+		"category": "Social",
+		"description": "Skill of striking a good bargain with a merchant or customer."
+	},
+	{
+		"name": "Wardrobe and Style",
+		"stat": "Cool",
+		"category": "Social",
+		"description": "Skill of knowing the clothes to wear and when to wear them."
+	},
+	{
+		"name": "Air Vehicle Tech",
+		"stat": "Technique",
+		"category": "Technique",
+		"description": "Skill of repairing and maintaining air vehicles."
+	},
+	{
+		"name": "Basic Tech",
+		"stat": "Technique",
+		"category": "Technique",
+		"description": "Skill of identifying, understanding, and repairing simple electronic and mechanical devices and all other items not covered by another Technique Skill."
+	},
+	{
+		"name": "Cybertech",
+		"stat": "Technique",
+		"category": "Technique",
+		"description": "Skill of identifying, understanding, and repairing cybernetics."
+	},
+	{
+		"name": "Demolitions (x2)",
+		"stat": "Technique",
+		"category": "Technique",
+		"description": "Skill of setting and defusing explosives, and knowing how much explosive will accomplish a desired result."
+	},
+	{
+		"name": "Electronics/Security Tech (x2)",
+		"stat": "Technique",
+		"category": "Technique",
+		"description": "Skill of identifying, understanding, repairing, countering, and installing complex electronic devices, including: computers, cyberdecks, personal electronics, electronic security systems, bugs and tracers, pressure plates, laser tripwires, etc."
+	},
+	{
+		"name": "First Aid",
+		"stat": "Technique",
+		"category": "Technique",
+		"description": "Skill of applying medical treatments to a wounded person to treat the most common Critical Injuries and keep them from dying."
+	},
+	{
+		"name": "Forgery",
+		"stat": "Technique",
+		"category": "Technique",
+		"description": "Skill of creating and detecting false documents and identification."
+	},
+	{
+		"name": "Land Vehicle Tech",
+		"stat": "Technique",
+		"category": "Technique",
+		"description": "Skill of repairing and maintaining land vehicles."
+	},
+	{
+		"name": "Paint/Draw/Sculpt",
+		"stat": "Technique",
+		"category": "Technique",
+		"description": "Skill of producing professional paintings, drawings, or sculpture."
+	},
+	{
+		"name": "Paramedic (x2)",
+		"stat": "Technique",
+		"category": "Technique",
+		"description": "Skill of applying medical treatments to a wounded person to treat all Critical Injuries not requiring Surgery and keep them from dying (Surgery is only available to Medtechs through their Role Ability, Medicine)."
+	},
+	{
+		"name": "Photography/Film",
+		"stat": "Technique",
+		"category": "Technique",
+		"description": "Skill for producing photographs, videos, or braindances."
+	},
+	{
+		"name": "Pick Lock",
+		"stat": "Technique",
+		"category": "Technique",
+		"description": "Skill for bypassing non-electronic locks."
+	},
+	{
+		"name": "Pick Pocket",
+		"stat": "Technique",
+		"category": "Technique",
+		"description": "Skill for stealthily retrieving items secured on another person and shoplifting small items without being noticed."
+	},
+	{
+		"name": "Sea Vehicle Tech",
+		"stat": "Technique",
+		"category": "Technique",
+		"description": "Skill of repairing and maintaining sea vehicles."
+	},
+	{
+		"name": "Weaponstech",
+		"stat": "Technique",
+		"category": "Technique",
+		"description": "Skill for repairing and maintaining weapons of all types."
+	}
+]

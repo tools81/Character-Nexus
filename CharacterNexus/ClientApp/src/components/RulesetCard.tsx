@@ -9,7 +9,7 @@ const RulesetCard = ({ ruleset, imgSrc, onClick }: Props) => {
     <>
       <div className="col">
         <div
-          className="card text-bg-dark border-secondary mb-3 slide-in"
+          className="card text-bg-dark border-secondary mb-3 slide-in pointer"
           onClick={() => onClick()}
         >
           <img src={imgSrc} className="card-img-top" alt="..." />

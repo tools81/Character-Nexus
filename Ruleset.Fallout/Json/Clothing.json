@@ -1,22 +1,143 @@
 [
-    {
-        "name": "Brotherhood of Steel Uniform",
-        "description": "",
-        "supportarmor": true,
-		"supportmods": false,
-        "resistancephysical": 1,
-        "resistanceenergy": 1,
-        "resistanceradiation": 1,
-        "locations": [
-            "Arms",
-            "Legs",
-            "Torso"
-        ],
-        "weight": 2,
-        "cost": 20,
-        "rarity": 2,
-		"mods": [
-		
-		]
-    }
+  {
+    "name": "Brotherhood of Steel Uniform",
+    "description": "Originally designed as the underarmor bodysuit for the T-45 Power Armor system. The bodysuit's surface is covered with an assortment of interface ports and connections to connect the wearer with the Power Armor frame, over it. The Brotherhood of Steel employ these as the base of their standard uniforms, ensuring that as many of their personnel as possible are ready to wear full armor. In battle, the uniform is normally worn under other armor if Power Armor is unavailable, while senior Brotherhood officers often wear a bomber jacket or armored battlecoat over their undersuit.",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 1,
+    "locations": [
+      "Arms",
+      "Legs",
+      "Torso"
+    ],
+    "weight": 2,
+    "cost": 20,
+    "rarity": 2
+  },
+  {
+    "name": "Casual Clothing",
+    "description": "Simple, lightweight, and easy to move around in, pre-War casual clothing was intended for leisure and light activity.<br />Special: Wearing casual clothing allows you to re-roll a single d20 on one STR or AGI based skill test you make each scene, as the clothing is easy to move in.",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "locations": [
+      "Arms",
+      "Legs",
+      "Torso"
+    ],
+    "weight": 2,
+    "cost": 20,
+    "rarity": 1,
+    "possiblemods": [
+      {
+        "slot": "Ballistic Weave",
+        "options": [
+          "Ballistic Weave",
+          "Ballistic Weave Mk II",
+          "Ballistic Weave Mk III",
+          "Ballistic Weave Mk IV",
+          "Ballistic Weave Mk V"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Harness",
+    "description": "A worker's safety harness repurposed to serve as a mount for pieces of armor. Common amongst raiders, who tend to wear the harness without a shirt underneath.",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "locations": [
+      "Arms",
+      "Legs",
+      "Torso"
+    ],
+    "weight": 1,
+    "cost": 5,
+    "rarity": 0
+  },
+  {
+    "name": "Military Fatigues",
+    "description": "A simple, hard-wearing shirt, jacket, pants, and set of combat boots designed to be worn by military personnel before the Great War. These garments are designed to be worn in unpleasant conditions, and have numerous pockets for carrying useful items, so an intact set is a decent find.",
+    "resistancephysical": 0,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "locations": [
+      "Arms",
+      "Legs",
+      "Torso"
+    ],
+    "weight": 3,
+    "cost": 12,
+    "rarity": 1,
+    "possiblemods": [
+      {
+        "slot": "Ballistic Weave",
+        "options": [
+          "Ballistic Weave",
+          "Ballistic Weave Mk II",
+          "Ballistic Weave Mk III",
+          "Ballistic Weave Mk IV",
+          "Ballistic Weave Mk V"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Road Leathers",
+    "description": "A leather jacket, leather pants, and a set of motorcycle boots. Often decorated with metallic studs, these soft leather items provide modest protection against physical hazards such as an involuntary dismount from a motorbike, while still being reasonably comfortable in any temperate or cold climate.",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "locations": [
+      "Arms",
+      "Legs",
+      "Torso"
+    ],
+    "weight": 1,
+    "cost": 5,
+    "rarity": 1
+  },
+  {
+    "name": "Tough Clothing",
+    "description": "Hard-wearing clothing cobbled together from sufficiently sturdy garments to create an outfit that can withstand a hard life in the wasteland. Normally made from a jacket, a shirt and undershirt, a pair of jeans, and some walking boots, reinforced (or patched) with duct tape, to provide both a little protection against the bumps and scrapes of life and a bit of warmth on those cold nuclear winter nights.",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "locations": [
+      "Arms",
+      "Legs",
+      "Torso"
+    ],
+    "weight": 3,
+    "cost": 20,
+    "rarity": 1
+  },
+  {
+    "name": "Vault Jumpsuit",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 1,
+    "resistanceradiation": 2,
+    "locations": [
+      "Arms",
+      "Legs",
+      "Torso"
+    ],
+    "weight": 1,
+    "cost": 20,
+    "rarity": 2,
+    "possiblemods": [
+      {
+        "slot": "Vault Jumpsuit",
+        "options": [
+          "Insulated Lining",
+          "Treated Lining",
+          "Resistant Lining",
+          "Protective Lining",
+          "Shielded Lining"
+        ]
+      }
+    ]
+  }
 ]

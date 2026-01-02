@@ -3,16 +3,3926 @@
 		"name": "Hardened",
 		"prefix": "Hardened",
 		"weapontype": "Small Guns",
-		"slot": "Receiver"
-		"effects": [
+		"slot": "Receiver",
+		"bonusadjustments": [
 			{
-				"type": "Damage",
-				"value": "+1"
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
 		],
-		"weight": 0,
 		"cost": 20,
-		"perks": [
-			
+		"prerequisites": [
+		]
+	},
+	{
+		"name": "Powerful",
+		"prefix": "Powerful",
+		"weapontype": "Small Guns",
+		"slot": "Receiver",
+		"bonusadjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"cost": 25,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 1"
+			}
+		]
+	},
+	{
+		"name": "Advanaced",
+		"prefix": "Advanced",
+		"weapontype": "Small Guns",
+		"slot": "Receiver",
+		"bonusadjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 3
+			},
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"cost": 35,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 2"
+			}
+		]
+	},
+	{
+		"name": "Calibrated",
+		"prefix": "Calibrated",
+		"weapontype": "Small Guns",
+		"slot": "Receiver",
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Vicious"
+			}
+		],
+		"cost": 25,
+		"prerequisites": [
+		]
+	},
+	{
+		"name": "Automatic",
+		"prefix": "Auto",
+		"weapontype": "Small Guns",
+		"slot": "Receiver",
+		"bonusadjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Burst"
+			},
+			{
+				"type": "weapon_quality",
+				"name": "Inaccurate"
+			}
+		],
+		"cost": 30,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 1"
+			}
+		]
+	},
+	{
+		"name": "Hair Trigger",
+		"prefix": "Hair Trigger",
+		"weapontype": "Small Guns",
+		"slot": "Receiver",
+		"bonusadjustments": [
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 1
+			}
+		],
+		"cost": 20,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 2"
+			}
+		]
+	},
+	{
+		"name": ".38 Receiver",
+		"prefix": ".38",
+		"weapontype": "Small Guns",
+		"slot": "Receiver",
+		"overrides": [
+			{
+				"type": "damage",
+				"action": "Set",
+				"value": 4
+			},
+			{
+				"type": "ammo",
+				"action": "Set",
+				"value": ".38"
+			}
+		],
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 3
+			}
+		],
+		"cost": 20,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 4"
+			}
+		]
+	},
+	{
+		"name": ".308 Receiver",
+		"prefix": ".308",
+		"weapontype": "Small Guns",
+		"slot": "Receiver",
+		"overrides": [
+			{
+				"type": "damage",
+				"action": "Set",
+				"value": 7
+			},
+			{
+				"type": "ammo",
+				"action": "Set",
+				"value": ".308"
+			}
+		],
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 4
+			}
+		],
+		"cost": 40,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 4"
+			}
+		]
+	},
+	{
+		"name": ".45 Receiver",
+		"prefix": ".45",
+		"weapontype": "Small Guns",
+		"slot": "Receiver",
+		"overrides": [
+			{
+				"type": "damage",
+				"action": "Set",
+				"value": 4
+			},
+			{
+				"type": "ammo",
+				"action": "Set",
+				"value": ".45"
+			}
+		],
+		"bonusAdjustments": [
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"cost": 19,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 2"
+			}
+		]
+	},
+	{
+		"name": ".50 Receiver",
+		"prefix": ".350",
+		"weapontype": "Small Guns",
+		"slot": "Receiver",
+		"overrides": [
+			{
+				"type": "damage",
+				"action": "Set",
+				"value": 8
+			},
+			{
+				"type": "ammo",
+				"action": "Set",
+				"value": ".50"
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Vicious"
+			}
+		],
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 4
+			}
+		],
+		"cost": 30,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 4"
+			}
+		]
+	},
+	{
+		"name": "Automatic Piston",
+		"prefix": "Auto",
+		"weapontype": "Small Guns",
+		"slot": "Receiver",
+		"bonusadjustments": [
+			{
+				"type": "range",
+				"name": "Range",
+				"value": -1
+			},
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"cost": 75,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 2"
+			}
+		]
+	},
+	{
+		"name": "Snubnose",
+		"prefix": "Snub Nose",
+		"weapontype": "Small Guns",
+		"slot": "Barrel",
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Inaccurate"
+			}
+		],
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": -1
+			}
+		],
+		"cost": 0,
+		"prerequisites": [
+		]
+	},
+	{
+		"name": "Bull Barrel",
+		"prefix": "Bull Barrel",
+		"weapontype": "Small Guns",
+		"slot": "Barrel",
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Reliable"
+			}
+		],
+		"cost": 10,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 3"
+			}
+		]
+	},
+	{
+		"name": "Long",
+		"prefix": "Long",
+		"weapontype": "Small Guns",
+		"slot": "Barrel",
+		"bonusAdjustments": [
+			{
+				"type": "range",
+				"name": "Range",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"cost": 20,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 1"
+			}
+		]
+	},
+	{
+		"name": "Ported",
+		"prefix": "Ported",
+		"weapontype": "Small Guns",
+		"slot": "Barrel",
+		"bonusAdjustments": [
+			{
+				"type": "range",
+				"name": "Range",
+				"value": 1
+			},
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"cost": 35,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 4"
+			}
+		]
+	},
+	{
+		"name": "Vented",
+		"prefix": "Vented",
+		"weapontype": "Small Guns",
+		"slot": "Barrel",
+		"bonusAdjustments": [
+			{
+				"type": "range",
+				"name": "Range",
+				"value": 1
+			},
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Reliable"
+			}
+		],
+		"cost": 36,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 4"
+			}
+		]
+	},
+	{
+		"name": "Sawed-Off",
+		"prefix": "Sawed Off",
+		"weapontype": "Small Guns",
+		"slot": "Barrel",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": -2
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Two-Handed"
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Close Quarters"
+			}
+		],
+		"cost": 3,
+		"prerequisites": [
+		]
+	},
+	{
+		"name": "Shielded",
+		"prefix": "Shielded",
+		"weapontype": "Small Guns",
+		"slot": "Barrel",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"cost": 37,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 3"
+			},
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Repair"
+			}
+		]
+	},
+	{
+		"name": "Finned",
+		"prefix": "Finned",
+		"weapontype": "Small Guns",
+		"slot": "Barrel",
+		"bonusAdjustments": [
+			{
+				"type": "range",
+				"name": "Range",
+				"value": 1
+			},
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Reliable"
+			}
+		],
+		"cost": 15,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 2"
+			}
+		]
+	},
+	{
+		"name": "Large",
+		"prefix": "High Capacity",
+		"weapontype": "Small Guns",
+		"slot": "Magazine",
+		"bonusAdjustments": [
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Unreliable"
+			}
+		],
+		"cost": -3,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 2"
+			}
+		]
+	},
+	{
+		"name": "Quick-Eject",
+		"prefix": "Quick",
+		"weapontype": "Small Guns",
+		"slot": "Magazine",
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Reliable"
+			}
+		],
+		"cost": 8,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 1"
+			}
+		]
+	},
+	{
+		"name": "Large Quick-Eject",
+		"prefix": "Quick High Capacity",
+		"weapontype": "Small Guns",
+		"slot": "Magazine",
+		"bonusAdjustments": [
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"cost": 23,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 2"
+			}
+		]
+	},
+	{
+		"name": "Comfort Grip",
+		"prefix": "Comfort",
+		"weapontype": "Small Guns",
+		"slot": "Grip",
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Inaccurate"
+			}
+		],
+		"cost": 6
+	},
+	{
+		"name": "Sharpshooter's Grip",
+		"prefix": "Sharpshooter's",
+		"weapontype": "Small Guns",
+		"slot": "Grip",
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Inaccurate"
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 10,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 1"
+			}
+		]
+	},
+	{
+		"name": "Full Stock",
+		"prefix": "",
+		"weapontype": "Small Guns",
+		"slot": "Stock",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Inaccurate"
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Two-Handed"
+			}
+		],
+		"cost": 10,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 1"
+			}
+		]
+	},
+	{
+		"name": "Marksman's Stock",
+		"prefix": "Marksman's",
+		"weapontype": "Small Guns",
+		"slot": "Stock",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Inaccurate"
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Accurate"
+			},
+			{
+				"type": "weapon_quality",
+				"name": "Two-Handed"
+			}
+		],
+		"cost": 20,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 2"
+			}
+		]
+	},
+	{
+		"name": "Recoil Compensating Stock",
+		"prefix": "Recoil Compensated",
+		"weapontype": "Small Guns",
+		"slot": "Stock",
+		"bonusAdjustments": [
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Inaccurate"
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Two-Handed"
+			}
+		],
+		"cost": 3,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 3"
+			}
+		]
+	},
+	{
+		"name": "Reflex Sight",
+		"prefix": "Tactical",
+		"weapontype": "Small Guns",
+		"slot": "Sight",
+		"cost": 14
+	},
+	{
+		"name": "Short Scope",
+		"prefix": "Scoped",
+		"weapontype": "Small Guns",
+		"slot": "Sight",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Accurate"
+			}
+		],
+		"cost": 11
+	},
+	{
+		"name": "Long Scope",
+		"prefix": "Scoped",
+		"weapontype": "Small Guns",
+		"slot": "Sight",
+		"bonusAdjustments": [
+			{
+				"type": "range",
+				"name": "Range",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Accurate"
+			}
+		],
+		"cost": 29,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 2"
+			}
+		]
+	},
+	{
+		"name": "Short Night Vision Scope",
+		"prefix": "Night Vision",
+		"weapontype": "Small Guns",
+		"slot": "Sight",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Accurate"
+			},
+			{
+				"type": "weapon_quality",
+				"name": "Night Vision"
+			}
+		],
+		"cost": 38,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 2"
+			}
+		]
+	},
+	{
+		"name": "Long Night Vision Scope",
+		"prefix": "Night Vision",
+		"weapontype": "Small Guns",
+		"slot": "Sight",
+		"bonusAdjustments": [
+			{
+				"type": "range",
+				"name": "Range",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Accurate"
+			},
+			{
+				"type": "weapon_quality",
+				"name": "Night Vision"
+			}
+		],
+		"cost": 50,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 3"
+			}
+		]
+	},
+	{
+		"name": "Recon Scope",
+		"prefix": "Recon",
+		"weapontype": "Small Guns",
+		"slot": "Sight",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Accurate"
+			},
+			{
+				"type": "weapon_quality",
+				"name": "Recon"
+			}
+		],
+		"cost": 59,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 3"
+			}
+		]
+	},
+	{
+		"name": "Bayonet",
+		"prefix": "Bayoneted",
+		"weapontype": "Small Guns",
+		"slot": "Muzzle",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"cost": 10
+	},
+	{
+		"name": "Compensator",
+		"prefix": "Compensated",
+		"weapontype": "Small Guns",
+		"slot": "Muzzle",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Inaccurate"
+			}
+		],
+		"cost": 15,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 1"
+			}
+		]
+	},
+	{
+		"name": "Muzzle Break",
+		"prefix": "Muzzled",
+		"weapontype": "Small Guns",
+		"slot": "Muzzle",
+		"bonusAdjustments": [
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Inaccurate"
+			}
+		],
+		"cost": 30,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 1"
+			}
+		]
+	},
+	{
+		"name": "Suppressor",
+		"prefix": "Suppressed",
+		"weapontype": "Small Guns",
+		"slot": "Muzzle",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Suppressed"
+			}
+		],
+		"cost": 45,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 2"
+			}
+		]
+	},
+	{
+		"name": "Three-Crank Capacitor",
+		"prefix": "Three-Crank",
+		"weapontype": "Laser Musket",
+		"slot": "Capacitor",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"cost": 4
+	},
+	{
+		"name": "Four-Crank Capacitor",
+		"prefix": "Four-Crank",
+		"weapontype": "Laser Musket",
+		"slot": "Capacitor",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"cost": 8,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 1"
+			}
+		]
+	},
+	{
+		"name": "Five-Crank Capacitor",
+		"prefix": "Five-Crank",
+		"weapontype": "Laser Musket",
+		"slot": "Capacitor",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 3
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"cost": 12,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 2"
+			}
+		]
+	},
+	{
+		"name": "Six-Crank Capacitor",
+		"prefix": "Six-Crank",
+		"weapontype": "Laser Musket",
+		"slot": "Capacitor",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 4
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"cost": 16,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 3"
+			}
+		]
+	},
+	{
+		"name": "Deep Dish",
+		"prefix": "Long",
+		"weapontype": "Gamma Gun",
+		"slot": "Dish",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"cost": 72,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 4"
+			}
+		]
+	},
+	{
+		"name": "Electric Signal Carrier Antennae",
+		"prefix": "Electrified",
+		"weapontype": "Gamma Gun",
+		"slot": "Muzzle",
+		"overrides": [
+			{
+				"type": "damage",
+				"action": "Set",
+				"value": 7
+			},
+			{
+				"type": "damageType",
+				"action": "Set",
+				"value": "Energy"
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Radioactive"
+			}
+		],
+		"cost": 30,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 3"
+			}
+		]
+	},
+	{
+		"name": "Signal Repeater",
+		"prefix": "Automatic",
+		"weapontype": "Gamma Gun",
+		"slot": "Muzzle",
+		"bonusAdjustments": [
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 2
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Blast"
+			}
+		],
+		"cost": 60,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 4"
+			}
+		]
+	},
+	{
+		"name": "Beta Wave Tuner",
+		"prefix": "Incendiary",
+		"weapontype": "Energy",
+		"slot": "Capacitor",
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 30
+	},
+	{
+		"name": "Boosted Capacitor",
+		"prefix": "Boosted",
+		"weapontype": "Energy",
+		"slot": "Capacitor",
+		"bonusAdjustments": [
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": -1
+			},
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"cost": 35
+	},
+	{
+		"name": "Photon Exiter",
+		"prefix": "Excited",
+		"weapontype": "Energy",
+		"slot": "Capacitor",
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Vicious"
+			}
+		],
+		"cost": 30,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 1"
+			}
+		]
+	},
+	{
+		"name": "Bracketed Short",
+		"prefix": "",
+		"weapontype": "Energy",
+		"slot": "Barrel",
+		"cost": 6
+	},
+	{
+		"name": "Long",
+		"prefix": "Long",
+		"weapontype": "Energy",
+		"slot": "Barrell",
+		"bonusAdjustments": [
+			{
+				"type": "range",
+				"name": "Range",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Close Quarters"
+			}
+		],
+		"cost": 20
+	},
+	{
+		"name": "Splitter",
+		"prefix": "Scattergun",
+		"weapontype": "Energy",
+		"slot": "Barrel",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": -1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Inaccurate"
+			},
+			{
+				"type": "weapon_effect",
+				"name": "Spread"
+			}
+		],
+		"cost": 31
+	},
+	{
+		"name": "Automatic",
+		"prefix": "Automatic",
+		"weapontype": "Energy",
+		"slot": "Barrel",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": -1
+			},
+			{
+				"type": "range",
+				"name": "Range",
+				"value": 1
+			},
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Close Quarters"
+			}
+		],
+		"cost": 24,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 1"
+			}
+		]
+	},
+	{
+		"name": "Bracketed Long Barrel",
+		"prefix": "",
+		"weapontype": "Energy",
+		"slot": "Barrel",
+		"bonusAdjustments": [
+			{
+				"type": "range",
+				"name": "Range",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Close Quarters"
+			}
+		],
+		"cost": 25,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 1"
+			}
+		]
+	},
+	{
+		"name": "Improved",
+		"prefix": "Improved",
+		"weapontype": "Energy",
+		"slot": "Barrel",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"cost": 26,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 1"
+			}
+		]
+	},
+	{
+		"name": "Sniper",
+		"prefix": "Sniper",
+		"weapontype": "Energy",
+		"slot": "Barrel",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			},
+			{
+				"type": "range",
+				"name": "Range",
+				"value": 1
+			},
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": -1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Close Quarters"
+			}
+		],
+		"cost": 30,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 1"
+			}
+		]
+	},
+	{
+		"name": "Flamer",
+		"prefix": "Thrower",
+		"weapontype": "Energy",
+		"slot": "Barrel",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			},
+			{
+				"type": "range",
+				"name": "Range",
+				"value": -1
+			},
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Burst"
+			},
+			{
+				"type": "weapon_effect",
+				"name": "Spread"
+			},
+			{
+				"type": "weapon_quality",
+				"name": "Inaccurate"
+			}
+		],
+		"cost": 35,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 2"
+			}
+		]
+	},
+	{
+		"name": "Sharpshooter's Grip",
+		"prefix": "Sharpshooter's",
+		"weapontype": "Energy",
+		"slot": "Grip",
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Inaccurate"
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 10,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 1"
+			}
+		]
+	},
+	{
+		"name": "Standard",
+		"prefix": "",
+		"weapontype": "Energy",
+		"slot": "Stock",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Inaccurate"
+			},
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Close Quarters"
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Two-Handed"
+			}
+		],
+		"cost": 10
+	},
+	{
+		"name": "Full",
+		"prefix": "",
+		"weapontype": "Energy",
+		"slot": "Stock",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Close Quarters"
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 15
+	},
+	{
+		"name": "Marksman's",
+		"prefix": "Marksman's",
+		"weapontype": "Energy",
+		"slot": "Stock",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Inaccurate"
+			},
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Close Quarters"
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Two-Handed"
+			},
+			{
+				"type": "weapon_quality",
+				"name": "Accurate"
+			}
+		],
+		"cost": 20,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 2"
+			}
+		]
+	},
+	{
+		"name": "Recoil Compensating",
+		"prefix": "Recoil Compensated",
+		"weapontype": "Energy",
+		"slot": "Stock",
+		"bonusAdjustments": [
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Inaccurate"
+			},
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Close Quarters"
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Two-Handed"
+			}
+		],
+		"cost": 3,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 3"
+			}
+		]
+	},
+	{
+		"name": "Reflex Sight",
+		"prefix": "Tactical",
+		"weapontype": "Energy",
+		"slot": "Sight",
+		"cost": 14
+	},
+	{
+		"name": "Short Scope",
+		"prefix": "Scoped",
+		"weapontype": "Energy",
+		"slot": "Sight",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Accurate"
+			}
+		],
+		"cost": 11
+	},
+	{
+		"name": "Long Scope",
+		"prefix": "Scoped",
+		"weapontype": "Energy",
+		"slot": "Sight",
+		"bonusAdjustments": [
+			{
+				"type": "range",
+				"name": "Range",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Inaccurate"
+			},
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Close Quarters"
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Accurate"
+			}
+		],
+		"cost": 29,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 2"
+			}
+		]
+	},
+	{
+		"name": "Short Night Vison Scope",
+		"prefix": "Night Vision",
+		"weapontype": "Energy",
+		"slot": "Sight",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Accurate"
+			},
+			{
+				"type": "weapon_quality",
+				"name": "Night Vision"
+			}
+		],
+		"cost": 38,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 2"
+			}
+		]
+	},
+	{
+		"name": "Long Night Vision Scope",
+		"prefix": "Scoped",
+		"weapontype": "Energy",
+		"slot": "Sight",
+		"bonusAdjustments": [
+			{
+				"type": "range",
+				"name": "Range",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Accurate"
+			},
+			{
+				"type": "weapon_quality",
+				"name": "Night Vision"
+			}
+		],
+		"cost": 50,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 3"
+			}
+		]
+	},
+	{
+		"name": "Recon Scope",
+		"prefix": "Recon",
+		"weapontype": "Energy",
+		"slot": "Sight",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Accurate"
+			},
+			{
+				"type": "weapon_quality",
+				"name": "Recon"
+			}
+		],
+		"cost": 59,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 3"
+			}
+		]
+	},
+	{
+		"name": "Beam Splitter",
+		"prefix": "Scattered",
+		"weapontype": "Energy",
+		"slot": "Muzzle",
+		"bonusAdjustments": [
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": -1
+			},
+			{
+				"type": "range",
+				"name": "Range",
+				"value": -1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Spread"
+			},
+			{
+				"type": "weapon_quality",
+				"name": "Inaccurate"
+			}
+		],
+		"cost": 15,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 1"
+			}
+		]
+	},
+	{
+		"name": "Beam Focuser",
+		"prefix": "Focused",
+		"weapontype": "Energy",
+		"slot": "Muzzle",
+		"bonusAdjustments": [
+			{
+				"type": "range",
+				"name": "Range",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"cost": 20,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 1"
+			}
+		]
+	},
+	{
+		"name": "Gyro Compensating Lens",
+		"prefix": "Targeting",
+		"weapontype": "Energy",
+		"slot": "Muzzle",
+		"bonusAdjustments": [
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Inaccurate"
+			}
+		],
+		"cost": 25,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 1"
+			}
+		]
+	},
+	{
+		"name": "Napalm",
+		"prefix": "Napalmer",
+		"weapontype": "Flamer",
+		"slot": "Fuel",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 7
+			}
+		],
+		"cost": 59
+	},
+	{
+		"name": "Long",
+		"prefix": "Long",
+		"weapontype": "Flamer",
+		"slot": "Barrel",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Inaccurate"
+			}
+		],
+		"cost": 28
+	},
+	{
+		"name": "Large Tank",
+		"prefix": "High Capacity",
+		"weapontype": "Flamer",
+		"slot": "Propellant Tank",
+		"bonusAdjustments": [
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 3
+			}
+		],
+		"cost": 28
+	},
+	{
+		"name": "Huge Tank",
+		"prefix": "Max Capacity",
+		"weapontype": "Flamer",
+		"slot": "Propellant Tank",
+		"bonusAdjustments": [
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 6
+			}
+		],
+		"cost": 34
+	},
+	{
+		"name": "Compression Nozzle",
+		"prefix": "Compressed",
+		"weapontype": "Flamer",
+		"slot": "Nozzle",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"cost": 22
+	},
+	{
+		"name": "Vaporization Nozzle",
+		"prefix": "Vaporizing",
+		"weapontype": "Flamer",
+		"slot": "Nozzle",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Vicious"
+			}
+		],
+		"cost": 47
+	},
+	{
+		"name": "Photon Exciter",
+		"prefix": "Excited",
+		"weapontype": "Gatling Laser",
+		"slot": "Capacitor",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Vicious"
+			}
+		],
+		"cost": 19,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 3"
+			}
+		]
+	},
+	{
+		"name": "Beta Wave Tuner",
+		"prefix": "Incendiary",
+		"weapontype": "Gatling Laser",
+		"slot": "Capacitor",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 57
+	},
+	{
+		"name": "Boosted Capacitor",
+		"prefix": "Boosted",
+		"weapontype": "Gatling Laser",
+		"slot": "Capacitor",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"cost": 94
+	},
+	{
+		"name": "Photon Agitator",
+		"prefix": "Agitated",
+		"weapontype": "Gatling Laser",
+		"slot": "Capacitor",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 3
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Vicious"
+			}
+		],
+		"cost": 132,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 3"
+			}
+		]
+	},
+	{
+		"name": "Charging",
+		"prefix": "Charging",
+		"weapontype": "Gatling Laser",
+		"slot": "Barrel",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 4
+			},
+			{
+				"type": "fireRate",
+				"name": "FireRate",
+				"value": -3
+			},
+			{
+				"type": "range",
+				"name": "Range",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 10
+			}
+		],
+		"cost": 357,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 4"
+			}
+		]
+	},
+	{
+		"name": "Reflex Sight",
+		"prefix": "Tactical",
+		"weapontype": "Gatling Laser",
+		"slot": "Sight",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Inaccurate"
+			}
+		],
+		"cost": 169,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 4"
+			}
+		]
+	},
+	{
+		"name": "Beam Focuser",
+		"prefix": "Focused",
+		"weapontype": "Gatling Laser",
+		"slot": "Nozzle",
+		"bonusAdjustments": [
+			{
+				"type": "range",
+				"name": "Range",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 22
+	},
+	{
+		"name": "Accelerated Barrel",
+		"prefix": "High-Speed",
+		"weapontype": "Minigun",
+		"slot": "Barrel",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"name": "Range",
+				"value": -1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 5
+			}
+		],
+		"cost": 45,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 3"
+			}
+		]
+	},
+	{
+		"name": "Tri-Barrel",
+		"prefix": "High-Powered",
+		"weapontype": "Minigun",
+		"slot": "Barrel",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			},
+			{
+				"type": "fireRate",
+				"name": "Fire Rate",
+				"value": -2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 3
+			}
+		],
+		"cost": 75,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 4"
+			}
+		]
+	},
+	{
+		"name": "Gunner Sight",
+		"prefix": "Tactical",
+		"weapontype": "Minigun",
+		"slot": "Sight",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 5
+			}
+		],
+		"overrides": [
+			{
+				"type": "weapon_quality",
+				"action": "Remove",
+				"value": "Inaccurate"
+			}
+		],
+		"cost": 68
+	},
+	{
+		"name": "Shredder",
+		"prefix": "Bayoneted Shredding",
+		"weapontype": "Minigun",
+		"slot": "Muzzle",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 5
+			}
+		],
+		"cost": 5,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 2"
+			}
+		]
+	},
+	{
+		"name": "Triple Barrel",
+		"prefix": "Triple Barrel",
+		"weapontype": "Missile Launcher",
+		"slot": "Barrel",
+		"bonusAdjustments": [
+			{
+				"type": "fireRate",
+				"name": "FireRate",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 16
+			}
+		],
+		"cost": 143,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 2"
+			}
+		]
+	},
+	{
+		"name": "Quad Barrel",
+		"prefix": "Quad Barrel",
+		"weapontype": "Missile Launcher",
+		"slot": "Barrel",
+		"bonusAdjustments": [
+			{
+				"type": "fireRate",
+				"name": "FireRate",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 20
+			}
+		],
+		"cost": 218,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 3"
+			}
+		]
+	},
+	{
+		"name": "Scope",
+		"prefix": "Scoped",
+		"weapontype": "Missile Launcher",
+		"slot": "Sight",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 6
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Accurate"
+			}
+		],
+		"cost": 143,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 2"
+			}
+		]
+	},
+	{
+		"name": "Night Vision Scope",
+		"prefix": "Night Vision",
+		"weapontype": "Missile Launcher",
+		"slot": "Sight",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 6
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_quality",
+				"name": "Accurate"
+			},
+			{
+				"type": "weapon_quality",
+				"name": "Night Vision"
+			}
+		],
+		"cost": 248,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 4"
+			},
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 1"
+			}
+		]
+	},
+	{
+		"name": "Targeting Computer",
+		"prefix": "Targeting",
+		"weapontype": "Missile Launcher",
+		"slot": "Sight",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 7
+			}
+		],
+		"cost": 293,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 2"
+			},
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 2"
+			}
+		]
+	},
+	{
+		"name": "Bayonet",
+		"prefix": "Bayoneted Shredding",
+		"weapontype": "Missile Launcher",
+		"slot": "Muzzle",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"cost": 30
+	},
+	{
+		"name": "Stabilizer",
+		"prefix": "Muzzled",
+		"weapontype": "Missile Launcher",
+		"slot": "Muzzle",
+		"bonusAdjustments": [
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 60,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Gun Nut 2"
+			}
+		]
+	},
+	{
+		"name": "Serrated Blade",
+		"prefix": "Serrated",
+		"weapontype": "Sword",
+		"slot": "Melee",
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 25,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 2"
+			}
+		]
+	},
+	{
+		"name": "Electrified Blade",
+		"prefix": "Electrified",
+		"weapontype": "Sword",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"overrides": [
+			{
+				"type": "damageType",
+				"action": "Set",
+				"value": "Energy"
+			}
+		],
+		"cost": 50,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 2"
+			},
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 1"
+			}
+		]
+	},
+	{
+		"name": "Electrified Serrated Blade",
+		"prefix": "Electrified Serrated",
+		"weapontype": "Sword",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"overrides": [
+			{
+				"type": "damageType",
+				"action": "Set",
+				"value": "Energy"
+			}
+		],
+		"cost": 75,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 3"
+			},
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 1"
+			}
+		]
+	},
+	{
+		"name": "Stun Pack",
+		"prefix": "Stunning",
+		"weapontype": "Sword",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Stun"
+			}
+		],
+		"overrides": [
+			{
+				"type": "damageType",
+				"action": "Set",
+				"value": "Energy"
+			}
+		],
+		"cost": 100,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 3"
+			},
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 1"
+			}
+		]
+	},
+	{
+		"name": "Serrated Blade",
+		"prefix": "Serrated",
+		"weapontype": "Combat Knife",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 12,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 1"
+			}
+		]
+	},
+	{
+		"name": "Stealth Blade",
+		"prefix": "Stealth",
+		"weapontype": "Combat Knife",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 18,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 2"
+			}
+		]
+	},
+	{
+		"name": "Serrated Blade",
+		"prefix": "Serrated",
+		"weapontype": "Machete",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 12,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 2"
+			}
+		]
+	},
+	{
+		"name": "Curved Blade",
+		"prefix": "Curved",
+		"weapontype": "Ripper",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"cost": 15
+	},
+	{
+		"name": "Extended Blade",
+		"prefix": "Extended",
+		"weapontype": "Ripper",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 3
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 25,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 3"
+			}
+		]
+	},
+	{
+		"name": "Extra Flame Jets",
+		"prefix": "Searing",
+		"weapontype": "Shishkebab",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 100,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 3"
+			}
+		]
+	},
+	{
+		"name": "Serrated Blade",
+		"prefix": "Serrated",
+		"weapontype": "Switchblade",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 10,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 1"
+			}
+		]
+	},
+	{
+		"name": "Barbed",
+		"prefix": "Barbed",
+		"weapontype": "Baseball Bat",
+		"slot": "Melee",
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 5
+	},
+	{
+		"name": "Spiked",
+		"prefix": "Spiked",
+		"weapontype": "Baseball Bat",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 7
+	},
+	{
+		"name": "Sharp",
+		"prefix": "Sharp",
+		"weapontype": "Baseball Bat",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 7
+	},
+	{
+		"name": "Chain-Wrapped",
+		"prefix": "Chain-Wrapped",
+		"weapontype": "Baseball Bat",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"cost": 10,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 1"
+			}
+		]
+	},
+	{
+		"name": "Bladed",
+		"prefix": "Bladed",
+		"weapontype": "Baseball Bat",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 12,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 2"
+			}
+		]
+	},
+	{
+		"name": "Barbed",
+		"prefix": "Barbed",
+		"weapontype": "Aluminum Baseball Bat",
+		"slot": "Melee",
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 5
+	},
+	{
+		"name": "Spiked",
+		"prefix": "Spiked",
+		"weapontype": "Aluminum Baseball Bat",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 7
+	},
+	{
+		"name": "Sharp",
+		"prefix": "Sharp",
+		"weapontype": "Aluminum Baseball Bat",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 7
+	},
+	{
+		"name": "Chain-Wrapped",
+		"prefix": "Chain-Wrapped",
+		"weapontype": "Aluminum Baseball Bat",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"cost": 10,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 1"
+			}
+		]
+	},
+	{
+		"name": "Bladed",
+		"prefix": "Bladed",
+		"weapontype": "Aluminum Baseball Bat",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 12,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 2"
+			}
+		]
+	},
+	{
+		"name": "Spiked",
+		"prefix": "Spiked",
+		"weapontype": "Board",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 6
+	},
+	{
+		"name": "Puncturing",
+		"prefix": "Puncturing",
+		"weapontype": "Board",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"cost": 9,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 1"
+			}
+		]
+	},
+	{
+		"name": "Bladed",
+		"prefix": "Bladed",
+		"weapontype": "Aluminum Baseball Bat",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 10,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 1"
+			}
+		]
+	},
+	{
+		"name": "Spiked",
+		"prefix": "Spiked",
+		"weapontype": "Lead Pipe",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 4
+	},
+	{
+		"name": "Heavy",
+		"prefix": "Heavy",
+		"weapontype": "Lead Pipe",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"cost": 11,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 2"
+			}
+		]
+	},
+	{
+		"name": "Hooked",
+		"prefix": "Hooked",
+		"weapontype": "Pipe Wrench",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"cost": 9
+	},
+	{
+		"name": "Heavy",
+		"prefix": "Weighted",
+		"weapontype": "Pipe Wrench",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 7
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 12,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 1"
+			}
+		]
+	},
+	{
+		"name": "Puncturing",
+		"prefix": "Puncturing",
+		"weapontype": "Pipe Wrench",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 13,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 1"
+			}
+		]
+	},
+	{
+		"name": "Extra Heavy",
+		"prefix": "Heavy",
+		"weapontype": "Pipe Wrench",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 3
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"cost": 22,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 2"
+			}
+		]
+	},
+	{
+		"name": "Barbed",
+		"prefix": "Barbed",
+		"weapontype": "Pool Cue",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 2
+	},
+	{
+		"name": "Sharp",
+		"prefix": "Sharp",
+		"weapontype": "Pool Cue",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 3
+	},
+	{
+		"name": "Spiked",
+		"prefix": "Spiked",
+		"weapontype": "Rolling Pin",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 3
+	},
+	{
+		"name": "Sharp",
+		"prefix": "Sharp",
+		"weapontype": "Rolling Pin",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 3
+	},
+	{
+		"name": "Electrified",
+		"prefix": "Shock",
+		"weapontype": "Baton",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			}
+		],
+		"overrides": [
+			{
+				"type": "damageType",
+				"action": "Set",
+				"value": "Energy"
+			}
+		],
+		"cost": 15,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 2"
+			},
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 1"
+			}
+		]
+	},
+	{
+		"name": "Stun Pack",
+		"prefix": "Stun",
+		"weapontype": "Baton",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 3
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Stun"
+			}
+		],
+		"overrides": [
+			{
+				"type": "damageType",
+				"action": "Set",
+				"value": "Energy"
+			}
+		],
+		"cost": 30,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 2"
+			},
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 1"
+			}
+		]
+	},
+	{
+		"name": "Puncturing",
+		"prefix": "Puncturing",
+		"weapontype": "Sledgehammer",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 5
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 18,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 2"
+			}
+		]
+	},
+	{
+		"name": "Heavy",
+		"prefix": "Heavy",
+		"weapontype": "Sledgehammer",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 9
+			}
+		],
+		"cost": 30,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 2"
+			}
+		]
+	},
+	{
+		"name": "Heating Coil",
+		"prefix": "Heated",
+		"weapontype": "Super Sledge",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"overrides": [
+			{
+				"type": "damageType",
+				"action": "Set",
+				"value": "Energy"
+			}
+		],
+		"cost": 180,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 2"
+			}
+		]
+	},
+	{
+		"name": "Stun Pack",
+		"prefix": "Stun",
+		"weapontype": "Super Sledge",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Stun"
+			}
+		],
+		"overrides": [
+			{
+				"type": "damageType",
+				"action": "Set",
+				"value": "Energy"
+			}
+		],
+		"cost": 360,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 3"
+			},
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Science! 1"
+			}
+		]
+	},
+	{
+		"name": "Bladed",
+		"prefix": "Bladed",
+		"weapontype": "Tire Iron",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 12,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 2"
+			}
+		]
+	},
+	{
+		"name": "Barbed",
+		"prefix": "Barbed",
+		"weapontype": "Walking Cane",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 3
+	},
+	{
+		"name": "Spiked",
+		"prefix": "Spiked",
+		"weapontype": "Walking Cane",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 3
+	},
+	{
+		"name": "Spiked",
+		"prefix": "Spiked",
+		"weapontype": "Boxing Glove",
+		"slot": "Melee",
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 3
+	},
+	{
+		"name": "Puncturing",
+		"prefix": "Puncturing",
+		"weapontype": "Boxing Glove",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 4,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 1"
+			}
+		]
+	},
+	{
+		"name": "Lead Lining",
+		"prefix": "Lead-lined",
+		"weapontype": "Boxing Glove",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"cost": 7,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 1"
+			}
+		]
+	},
+	{
+		"name": "Extra Claw",
+		"prefix": "Large",
+		"weapontype": "Deathclaw Gauntlet",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 2
+			}
+		],
+		"cost": 22
+	},
+	{
+		"name": "Sharp",
+		"prefix": "Sharp",
+		"weapontype": "Knuckles",
+		"slot": "Melee",
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 3
+	},
+	{
+		"name": "Spiked",
+		"prefix": "Spiked",
+		"weapontype": "Knuckles",
+		"slot": "Melee",
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 3
+	},
+	{
+		"name": "Puncturing",
+		"prefix": "Puncturing",
+		"weapontype": "Knuckles",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 4,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 1"
+			}
+		]
+	},
+	{
+		"name": "Bladed",
+		"prefix": "Bladed",
+		"weapontype": "Knuckles",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Persistent"
+			}
+		],
+		"cost": 5,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 1"
+			}
+		]
+	},
+	{
+		"name": "Puncturing",
+		"prefix": "Puncturing",
+		"weapontype": "Power Fist",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			},
+			{
+				"type": "weight",
+				"name": "Weight",
+				"value": 1
+			}
+		],
+		"bonusCharacteristics": [
+			{
+				"type": "weapon_effect",
+				"name": "Piercing 1"
+			}
+		],
+		"cost": 45,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 2"
+			}
+		]
+	},
+	{
+		"name": "Heating Coil",
+		"prefix": "Heated",
+		"weapontype": "Power Fist",
+		"slot": "Melee",
+		"bonusAdjustments": [
+			{
+				"type": "damage",
+				"name": "Damage",
+				"value": 2
+			}
+		],
+		"overrides": [
+			{
+				"type": "damageType",
+				"action": "Set",
+				"value": "Energy"
+			}
+		],
+		"cost": 100,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Perk",
+				"value": "Blacksmith 3"
+			}
 		]
 	}
 ]

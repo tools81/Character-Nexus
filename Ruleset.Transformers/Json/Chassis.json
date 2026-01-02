@@ -1,0 +1,269 @@
+[
+  {
+    "name": "Champion",
+    "description": "Sports cars, luxury sedans, even limousines, you chose an Alt Mode that is sleek, fancy, and cool. Although you have a reputation for being egotistical, others can’t help but gravitate toward your beauty. As a Champion, you may be ideal for leadership, well-spoken and witty, or so full of yourself that others don’t take you seriously.",
+    "health": 3,
+    "benefit": "I Know a Bot",
+    "benefitdescription": "You have friends in high places. You have friends in low places, too. Whether they are Cybertronians, Earthlings, or some other alien peoples, you make friends wherever you go. You can spend an Energon Point to declare that you have a previously positive relationship with an NPC. This can be an enemy. Although this is not likely to change their objectives, they may still go easy on you or secretly help you with one of your goals.",
+    "bonusadjustments": [
+      {
+        "type": "essence",
+        "name": "Social",
+        "value": 1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "skill",
+        "choices": [
+          "Persuasion",
+          "Streetwise"
+        ],
+        "count": 1,
+        "value": 1
+      }
+    ],
+    "botmovement": "40 Ground",
+    "botsize": "Large",
+    "botfinemotor": "The additional joints and opposable digits gained in Bot Mode allow you to use tools and manipulate objects in ways that are impossible in your Alt Mode.",
+    "altmovement": "60 Ground",
+    "altsize": "Long",
+    "altcrew": 2,
+    "altfirepoints": 2,
+    "altattack": "Ram",
+    "languages": "Cybertronian, Adopted Earth language, plus one additional language for every 3 points of Social you possess."
+  },
+  {
+    "name": "Cutter",
+    "description": "Aquatic, amphibious, and submersible, when a situation calls for a Cutter, no other Chassis will do. From battling Decepticons at sea to searching the depths of underground rivers for Energon, you have a reputation of being quirky and only comfortable at sea.",
+    "health": 3,
+    "benefit": "Surface Invasion",
+    "benefitdescription": "Once per scene, after Moving in your Alt Mode, you can Move an additional 10ft Ground Movement. If you do, you can also make a single attack as a Free action with the benefits of Surprise, even if this isn't the first turn of Combat.",
+    "bonusadjustments": [
+      {
+        "type": "essence",
+        "name": "Strength",
+        "value": 1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "skill",
+        "choices": [
+          "Athletics",
+          "Might"
+        ],
+        "count": 1,
+        "value": 1
+      }
+    ],
+    "botmovement": "30 Ground and 30 Water",
+    "botsize": "Common or Large",
+    "altmovement": "45 Aquatic",
+    "altsize": "Common or Long",
+    "altcrew": 2,
+    "altfirepoints": 2,
+    "altattack": "Ram",
+    "languages": "Cybertronian, Adopted Earth language, plus one additional language for every 3 points of Smarts you possess."
+  },
+  {
+    "name": "Lookout",
+    "description": "You take infiltration to another level. Focused on spycraft, theft, and reconnaissance, you put yourself at great risk to gain invaluable information on enemy plans. These duties often put you in similar battlefield roles as the Outrider. Like the Outriders, you make an excellent scout, but many consider you to be less trustworthy due to your more duplicitous nature. The truth is that you're often friendly and fun, with a strong sense of humor. Despite their shady practices, they get a lot of mileage out of their charm and can win over the steeliest of hearts. Your Alt Mode can appear as nearly any vehicle or piece of equipment, though rarely a large one, usually nondescript and functional. If your Alt Mode isn't a vehicle, you deploy emergency jets to fly off. Your flight may not be as fast as when you're on the ground, but it's more maneuverable.",
+    "health": 2,
+    "benefit": "Look Out!",
+    "benefitdescription": "You gain a +2 bonus to Evasion and can defend with Evasion even if you're unaware of an attack.",
+    "bonusadjustments": [
+      {
+        "type": "essence",
+        "name": "Speed",
+        "value": 1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "skill",
+        "choices": [
+          "Finesse",
+          "Infiltration",
+          "Deception",
+          "Streetwise"
+        ],
+        "count": 1,
+        "value": 1
+      }
+    ],
+    "botmovement": "30 Ground",
+    "botsize": "Common",
+    "altmovement": "45 Ground or 20 Aerial",
+    "altsize": "Common",
+    "altcrew": 1,
+    "altfirepoints": 1,
+    "altattack": "Ram",
+    "languages": "Cybertronian, Adopted Earth language, plus one additional language for every 3 points of Social you possess."
+  },
+  {
+    "name": "Monolith",
+    "description": "You disguise yourself as the biggest, toughest, and most impressive vehicle you can find, from vans and sports utility vehicles to big rigs and military trucks. Built for battle, you use your power to lay into the enemy, and your bulk to protect your friends. Many of your kind are gentle giants, and others become soldiers, bodyguards, or selfless leaders. While you have a reputation for being slow and meandering, no one ever doubts the impact you'll make when you arrive.",
+    "health": 4,
+    "benefit": "Large and In Charge",
+    "benefitdescription": "Cybertronians, like humans, often conflate size with authority. Choose a Social Skill. You gain ↑1 on Skill Tests with that Skill if the target is smaller than you.",
+    "bonusadjustments": [
+      {
+        "type": "essence",
+        "name": "Strength",
+        "value": 1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "skill",
+        "choices": [
+          "Brawn",
+          "Might"
+        ],
+        "count": 1,
+        "value": 1
+      }
+    ],
+    "botmovement": "20 Ground",
+    "botsize": "Huge",
+    "altmovement": "45 Ground",
+    "altsize": "Extended",
+    "altcrew": 6,
+    "altfirepoints": 4,
+    "altattack": "Ram",
+    "languages": "Cybertronian, Adopted Earth language, plus one additional language for every 3 points of Smarts you possess."
+  },
+  {
+    "name": "Outrider",
+    "description": "Adventurous by nature, you are a natural explorer capable of navigating the most challenging terrain and tracking down enemies, traps, and rare materials. You prefer all-terrain vehicles, including four-wheel drive, SUVs, and even the occasional amphibious vehicle. Despite not being the most durable of warriors, you have a reputation for being quick on your feet and impossible to pin down.",
+    "health": 3,
+    "benefit": "Take Point",
+    "benefitdescription": "You never suffer the negative effects of Rough Terrain, and on any turn in which you end your move in Rough Terrain, you are considered to be in Cover until the beginning of your next turn.",
+    "bonusadjustments": [
+      {
+        "type": "essence",
+        "name": "Smarts",
+        "value": 1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "skill",
+        "choices": [
+          "Alertness",
+          "Survival"
+        ],
+        "count": 1,
+        "value": 1
+      }
+    ],
+    "botmovement": "30 Ground",
+    "botsize": "Common or Large",
+    "altmovement": "45 Ground",
+    "altsize": "Common or Long",
+    "altcrew": 2,
+    "altfirepoints": 2,
+    "altattack": "Ram",
+    "languages": "Cybertronian, Adopted Earth language, plus one additional language for every 3 points of Smarts you possess."
+  },
+  {
+    "name": "Rainmaker",
+    "description": "You are built for one thing: war. Your Alt Mode is most likely a military vehicle packing massive firepower. However, it is not unheard of for those of your kind to choose a less obtrusive Alt Mode that is still bristling with shoulder-mounted cannons and torso-mounted missile launchers in Bot Mode. Whether aggressive or simply defensive, no one wants to get on the wrong side of you.",
+    "health": 4,
+    "benefit": "The Fiercest Among You",
+    "benefitdescription": "You have an additional Reinforced Integrated Weapon Hardpoint. Additionally, at 1st level you are trained to use Machine Guns, at 7th level you are trained to use Heavy Machine Guns and Rocket Launchers, and at 14th level you are trained to use Artillery Cannons and Missiles.<br />You suffer a Snag on Skill Tests to blend in.",
+    "bonusadjustments": [
+      {
+        "type": "essence",
+        "name": "Speed",
+        "value": 1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "skill",
+        "choices": [
+          "Initiative",
+          "Targeting"
+        ],
+        "count": 1,
+        "value": 1
+      }
+    ],
+    "botmovement": "30 Ground",
+    "botsize": "Large",
+    "altmovement": "45 Ground",
+    "altsize": "Long",
+    "altcrew": 2,
+    "altfirepoints": 2,
+    "altattack": "Ram",
+    "languages": "Cybertronian, Adopted Earth language, plus one additional language for every 3 points of Smarts you possess."
+  },
+  {
+    "name": "Seeker",
+    "description": "More common among Decepticons, your chosen Chassis is the rarest seen among Autobots. Aerial superiority provides you an incredible tactical advantage, but at the expense of subtly. Every nation on Earth carefully monitors its air space, dealing with unidentified flying objects immediately and efficiently. However, despite this risk, the allure of taking to the sky makes many landbound Cybertronians jealous of your freedoms.",
+    "health": 3,
+    "benefit": "Hover",
+    "benefitdescription": "When flying in Bot Mode, you don't have to move on your turn.",
+    "bonusadjustments": [
+      {
+        "type": "essence",
+        "name": "Speed",
+        "value": 1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "skill",
+        "choices": [
+          "Acrobatics",
+          "Driving"
+        ],
+        "count": 1,
+        "value": 1
+      }
+    ],
+    "botmovement": "30 Ground and 30 Aerial",
+    "botsize": "Large",
+    "altmovement": "60 Aerial",
+    "altsize": "Long",
+    "altcrew": 2,
+    "altfirepoints": 0,
+    "altattack": "Flyby",
+    "languages": "Cybertronian, Adopted Earth language, plus one additional language for every 3 points of Smarts you possess."
+  },
+  {
+    "name": "Support",
+    "description": "Like the structures you're named after, Supports prop others up. Though you don't tend to participate in the fighting actively, you brave the thick of battle in the name of helping your allies. That said, like any Cybertronian since the war broke out, you typically carry a weapon at all times and know how to use it. You're likely to choose Alt Modes that let you assist humans in emergencies between missions, like ambulances, rescue helicopters, fire trucks, and bulldozers.",
+    "health": 4,
+    "benefit": "In Case of Emergency",
+    "benefitdescription": "You have two additional Internal Hardpoints (Non-Weapon) and may choose to begin play with two attached options from the Support Equipment list. See Chapter 8: Equipment for the list of Support Equipment.",
+    "bonusadjustments": [
+      {
+        "type": "essence",
+        "name": "Smarts",
+        "value": 1
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "skill",
+        "choices": [
+          "Science",
+          "Technology"
+        ],
+        "count": 1,
+        "value": 1
+      }
+    ],
+    "botmovement": "30 Ground",
+    "botsize": "Large",
+    "altmovement": "45 Ground or 30 Aerial",
+    "altsize": "Long",
+    "altcrew": 2,
+    "altfirepoints": 2,
+    "altattack": "Ram",
+    "languages": "Cybertronian, Adopted Earth language, plus one additional language for every 2 points of Smarts you possess."
+  }
+]

@@ -3,6 +3,7 @@ import { FaRegFilePdf, FaRegTrashCan } from "react-icons/fa6";
 import { SiFoundryvirtualtabletop } from "react-icons/si";
 import { GiCharacter } from "react-icons/gi";
 import { openInNewTab } from "../utils/openInNewTab";
+import { IconContext } from "react-icons";
 
 const BASE_URL = `${window.location.protocol}//${window.location.host}`;
 
@@ -24,10 +25,10 @@ const CharacterCard = ({ id, name, image, level, levelName, details, characterSh
     <>
       <div className="col">
         <div
-          className="card text-bg-dark border-secondary mb-3 slide-in"
+          className="card text-bg-dark border-secondary mb-3 slide-in pointer"
           //onClick={() => onClick()}
         >
-          <div className="card-header text-nowrap">{name}</div>
+          <div className="card-header text-nowrap"><h5 className="card-title">{name}</h5></div>
           <img src={image} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title text-nowrap">{details}</h5>
@@ -36,28 +37,43 @@ const CharacterCard = ({ id, name, image, level, levelName, details, characterSh
             <div className="container">
               <div className="row">
                 <div className="col-1 pointer">
-                  <GiCharacter />
+                  <IconContext.Provider value={{ className: "contactIcon" }}>
+                    <GiCharacter />
+                  </IconContext.Provider>                  
                 </div>
                 <div className="col-1 pointer">
                   <td onClick={() => onEdit(name)}>
-                    <FaRegEdit />
+                    <IconContext.Provider value={{ className: "contactIcon" }}>
+                      <FaRegEdit />
+                    </IconContext.Provider>                    
                   </td>
                 </div>
                 <div className="col-1 pointer">
                   <td onClick={() => openInNewTab(characterSheet)}>
-                    <FaRegFilePdf />
+                    <IconContext.Provider value={{ className: "contactIcon" }}>
+                      <FaRegFilePdf />
+                    </IconContext.Provider>                     
                   </td>
                 </div>
                 <div className="col-1 pointer">
-                  <SiFoundryvirtualtabletop />
+                  <IconContext.Provider value={{ className: "contactIcon" }}>
+                    <SiFoundryvirtualtabletop />
+                  </IconContext.Provider>                  
                 </div>
                 <div className="col-1 pointer">
                   <td onClick={() => onDelete(name)}>
-                    <FaRegTrashCan />
+                    <IconContext.Provider value={{ className: "contactIcon" }}>
+                      <FaRegTrashCan />
+                    </IconContext.Provider>                     
                   </td>
                 </div>
                 <div className="col-sm text-end">
-                  {levelName}: {level}
+                  {level !== 0 && (
+                    <>
+                      <label>{levelName}: {level}</label>
+                      <br />
+                    </>
+                  )}                  
                 </div>
               </div>
             </div>

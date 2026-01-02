@@ -1,3 +1,236 @@
 [
-
+  {
+    "name": "Blood Walk",
+    "description": "This Ritual expands upon the power A Taste for Blood allowing the user to learn more details about the subject studied, assuming the subject is a vampire.",
+    "type": "Ward",
+    "ingredients": "A silver cup filled with Blood from the subject. (One Rouse Check's worth)",
+    "process": "The user mixes their Blood with the subject's and repeats an incantation over the cup, spending an roughly an hour.",
+    "system": "A win on the Ritual roll (see General Systems) allows the user to learn the generation and name of the subject as well as the subject's sire. A Critical Win also informs the user of any Blood Bonds active on the subject, as regnant or thrall.",
+    "level": 1
+  },
+  {
+    "name": "Clinging of the Insect",
+    "description": "The vampire gains the ability to cling to walls like a grotesque insect or spider.",
+    "type": "Ward",
+    "ingredients": ": A living spider",
+    "process": "The caster fills a vial with their own Blood and crushes the spider into it, mixing the ground bits with the Blood before ingesting it. (This does not refund any Hunger gained.) The caster can only perform this ritual on themselves; others gain no benefit from drinking the mixture.",
+    "system": "A successful Ritual yields the ability to cling to walls and ceiling for a scene, while a critical win extends the duration to a whole night. The caster must cling to the surface with both hands and feet; they move at approximately half their usual rate.",
+    "level": 1
+  },
+  {
+    "name": "Craft Bloodstone",
+    "description": "This Ritual results in a Bloodstone, a magical tracker to which the caster always knows the direction as well as general distance. As the Camarilla retreats from modern technology, this previously neglected Ritual has seen a resurgence in use.",
+    "type": "Ward",
+    "ingredients": "A pebble of iron ore or a small magnet and a liter of blood from any source in a silver bowl",
+    "process": " The user spills their Blood into the blood in the bowl and then recites a chant over it for an hour, repeating the chant over the next two nights. The pebble (or magnet) absorbs the blood over the three nights; upon successful completion, the liquid appears translucent.",
+    "system": "Make the Ritual roll at the end of the third night. On a win the caster attunes their mind to the Bloodstone. The caster can unerringly sense the direction and distance to the stone. This effect lasts until the Bloodstone is destroyed or a week has passed. A caster can have and keep track to a number of stones up to their Resolve.",
+    "level": 1
+  },
+  {
+    "name": "Wake With Evening's Freshness",
+    "description": "Performed before dawn, this ritual allows the caster to awake at any sign of danger, fully alert as if awake during the night.",
+    "type": "Ward",
+    "ingredients": " The burnt bones and feathers of a rooster",
+    "process": "The caster mixes the ashes with their own Blood, drawing a circle with the mixture around their place of sleep.",
+    "system": "Do not make a Ritual roll unless true danger appears. If the caster is threatened during the day, make the Ritual roll then, with the caster rousing on a win. For the duration of the scene the vampire ignores the daytime penalties for staying awake. On a critical win, the effects last until the following dawn.",
+    "level": 1
+  },
+  {
+    "name": "Ward Against Ghouls",
+    "description": "Wary Tremere created this ritual to protect themselves from the minions of vengeful rivals.<br />This ward uses the standard rules for Wards (p. 275).",
+    "type": "Ward",
+    "ingredients": "Nothing apart from the usual requirement of the caster's Blood.",
+    "process": "",
+    "system": "",
+    "level": 1
+  },
+  {
+    "name": "Communicate With Kindred Sire",
+    "description": "The caster uses the bond between sire and childe to open a bridge between minds, allowing the childe to create a telepathic link for the purpose of long-distance communication. As with some other Rituals, this one sees a resurgence in these nights of wiretaps and electronic surveillance.",
+    "type": "Ward",
+    "ingredients": "An object previously possessed by the sire and a silver bowl filled with clear water.",
+    "process": "The caster submerges the object in water and lets their Blood drip into the bowl, concentrating upon the last memory of their sire for up to 30 minutes.",
+    "system": "Make the ritual roll after 15 minutes have passed. A win allows for ten minutes of twoway silent mental communication once 15 more minutes have passed. A critical win allows immediate communication. Any major disturbance on either end breaks the connection.",
+    "level": 2
+  },
+  {
+    "name": "Eyes of Babel",
+    "description": "By ingesting the tongue and an eye of a person the caster gains the ability to read and speak any language known by the victim.",
+    "type": "Ward",
+    "ingredients": "A fresh eye and tongue of a person",
+    "process": "Plucking the ingredients fresh from the victim, the vampire chews and swallows them. (This most likely incurs a Stain.)",
+    "system": "The Rouse Check required for this ritual allows for the supernatural dissolution of the ingredients once swallowed. Once this is done, make the Ritual roll. A win gives the caster the ability to read and speak any language known by the victim, at the same skill level for a week. A critical win extends the duration to a month.",
+    "level": 2
+  },
+  {
+    "name": "Illuminate the Trail of Prey",
+    "description": "The ritual allows the caster to perceive the previous whereabouts of a designated person as a subtly glowing trail, visible only to them.",
+    "type": "Ward",
+    "ingredients": "A white satin ribbon",
+    "process": "The performer of the ritual soaks the ribbon in their own Blood, setting it alight.",
+    "system": "If the Ritual roll is a win the ribbon catches fire despite being wet, burning fiercely like a fuse. Once consumed, the ritual takes effect. While the ritual remains active, the caster can follow faint traces of the target even in areas where they left no tracks, such as crowded cities.<br />To follow the tracks, the caster makes an Intelligence + Survival roll against a Difficulty equal to 6 minus the margin on the ritual test. The target must be known by face by the caster, who sees the path travelled by the victim over the previous 24 hours. The path remains visible for the entire night; a critical win extends this to two nights.",
+    "level": 2
+  },
+  {
+    "name": "Truth of Blood",
+    "description": "Until recently known only to Banu Haqim viziers, this Ritual creates a mystic potion capable of sifting lies from truth. This Ritual has power enough even to sometimes uncover facts unknown to the speaker.",
+    "type": "Ward",
+    "ingredients": "One pint of blood from the subject",
+    "process": "The performer of the Ritual mixes their own Blood with that of the subject in a vessel large enough to allow for the dipping of the finger.",
+    "system": "Instead of the regular Ritual roll, the caster immerses their finger in the mixture and makes a Resolve + Blood Sorcery vs Composure + Occult roll for every statement made by the subject. The first failed contest ends the Ritual. A Win tells them whether that statement is true, as far as the subject knows. On a critical win by the caster, the subject involuntarily expands upon their answer, providing more information, including details they glancingly saw or subconsciously forgot. (The Storyteller should inform the caster if there is no more information about that topic.) The mixture bubbles and seethes during the process, turning completely to ash at the end of the scene.<br />This Ritual cannot pierce Cloud Memory, the Forgetful Mind, or other memory-wiping powers. The caster may well guess the cause of a blank or foggy recollection, but cannot recover the actual memory. ",
+    "level": 2
+  },
+  {
+    "name": "Ward Against Spirits",
+    "description": "This Ritual wards an item against incorporeal beings suchs as wraiths, ghosts, and elemental spirits. Any attempt by them to manipulate or pass through the item triggers the effect.<br />This ward uses the standard rules for Wards (p. 275).",
+    "type": "Ward",
+    "ingredients": "A handful of salt (in some versions, a handful of brick dust) mixed with the Blood.",
+    "process": "",
+    "system": "",
+    "level": 2
+  },
+  {
+    "name": "Warding Circle Against Ghouls",
+    "description": "This Ritual creates a circular Ward on the floor or ground, intended to prevent the passage of ghouls.<br />This ward uses the standard rules for Warding circles (p. 275).",
+    "type": "Ward",
+    "ingredients": "The caster draws the Warding circle with a human bone dipped in the Blood.",
+    "process": "",
+    "system": "",
+    "level": 2
+  },
+  {
+    "name": "Dagon's Call",
+    "description": "A terrifying technique employed by the assassins of the Banu Haqim, this Ritual lets the user rupture the very blood vessels of the victim from afar, having only touched them but briefly previously. Mortals expire rather messily, and even vampires must fear this silent killer.",
+    "type": "Ward",
+    "ingredients": "A gold inlaid ceremonial dagger",
+    "process": "Before proceeding with the ritual the victim must be exposed the caster's Blood, either by drinking it or having it touch an open wound or even their bare skin: a single drop smeared across the arm is enough. After an hour but before a week has passed the caster can perform the ritual by piercing their own skin with the ceremonial dagger, shedding blood. As their Blood hits the ground the ritual takes effect.",
+    "system": "Make a Resolve + Blood Sorcery vs Stamina + Resolve roll. Every point of margin on a win does a point of damage to the victim, as their blood vessels burst and their lungs fill with blood. This damage is Aggravated for mortals, but only Superficial on vampires. The caster can repeat this process up to two more times, each time requiring them to make an additional Rouse Check.",
+    "level": 3
+  },
+  {
+    "name": "Deflection of Wooden Doom",
+    "description": "By performing this ritual the vampire protects themselves from being staked. The first stake that would pierce their heart shatters before penetrating the skin.",
+    "type": "Ward",
+    "ingredients": "Wood splinters or shavings",
+    "process": "The vampire mixes the shavings with their Blood and draws a circle around themselves. They must then meditate in this circle for an hour, concluding by placing one splinter of wood under their tongue.",
+    "system": "Make no Ritual roll until the vampire is staked. If the Ritual roll is a win, the stake shatters as it touches the skin of the vampire. (A critical win blinds the attacker for two turns, showering their face with splinters.) This only works on genuine attempts at staking - merely holding the stake against the vampire does not trigger the effect. The protection lasts until the end of the night or until the splinter is removed from under the tongue of the vampire, whichever comes first.",
+    "level": 3
+  },
+  {
+    "name": "Essence of Air",
+    "description": "The caster creates a potion that when imbibed allows for limited flight. The Camarilla frowns upon the use of this Ritual, due to the extreme risk of Masquerade breaches; for this reason, its popularity has lessened considerably in the modern nights.",
+    "type": "Ward",
+    "ingredients": "Leaves and berries of belladonna",
+    "process": "The caster steeps the belladonna in their Blood, reducing the brew over a brazier while incanting words of power.",
+    "system": "Make the Ritual roll when reducing the mixture. (A critical win prepares two doses worth of potion.) The caster can tell whether the ritual succeeded, so they won't end up with a dud. The resulting black potion retains its potency for a night and activates when imbibed. The potion enables the caster (and only them) to fly or hover at approximately running speed for a scene. The caster can carry a human-sized mass, though their speed drops to walking speed. Grabbing and carrying aloft an unwilling subject, or pulling the flier to the ground, both require a contest between the caster's Strength + Blood Sorcery and the other’s Strength + Athletics.",
+    "level": 3
+  },
+  {
+    "name": "Firewalker",
+    "description": "A painful ritual to perform, this allows the caster to make themselves and even their comrades resistant to fire.",
+    "type": "Ward",
+    "ingredients": "A fingertip of the caster",
+    "process": "The vampire cuts one of their fingertips off and burns it together with their Blood in a golden chalice or bowl.",
+    "system": "Make a Stamina + Resolve test (Difficulty 3) to cut off a fingertip. On a winning Ritual roll, a bluish flame consumes the Blood and fingertip, signaling the completion of the ritual. For the rest of the night fire damage to the caster is halved. This ritual can be performed on others, but the fingertips sacrificed must all belong to the caster. The mutilation is not enough to count as damage to the caster; the fingertip regrows during day-sleep.",
+    "level": 3
+  },
+  {
+    "name": "Ward Against Lupines",
+    "description": "This Ritual wards an item against werewolves, in any form. Any attempt by them to touch the item triggers the effect.<br />This ward uses the standard rules for Wards (p. 275).",
+    "type": "Ward",
+    "ingredients": "A handful of silver dust mixed with the Blood.",
+    "process": "",
+    "system": "",
+    "level": 3
+  },
+  {
+    "name": "Warding Circle Against Spirits",
+    "description": "This Ritual creates a circular Ward on the floor or ground, intended to prevent the passage of spirits. Although more difficult than some Warding circles, it is one of the most commonly found in grimoires and other sources. A human occultist could potentially reconstruct a functioning version of this Ritual with an Intelligence + Occult test (Difficulty 6), although they could not cast it without vitae or some other supernatural aid or element.<br />This ward uses the standard rules for Warding circles (p. 275).",
+    "type": "Ward",
+    "ingredients": "The caster draws the Warding circle with an iron knife dipped in salt and Blood.",
+    "process": "",
+    "system": "",
+    "level": 3
+  },
+  {
+    "name": "Defense of the Sacred Haven",
+    "description": "The performer of this powerful ritual can ward their haven against the sun itself, protecting their resting place from penetration by its destructive rays as a mystical darkness blankets the area.",
+    "type": "Ward",
+    "ingredients": "Nothing but the Blood of the caster",
+    "process": "The caster inscribes a number of sigils and glyphs on and around the area to be protected. They must take special care on windows and doorways, but may even ward an open doorway if the area is indoors. (The ritual wards gray or liminal areas, such as ruins, at the Storyteller’s discretion.)",
+    "system": "The process takes an hour or more, depending on the state or the area to be warded. The area can be no larger than a circle with a six-meter radius. The ritual automatically fails if the caster steps out of the area at any time after the warding is complete. The caster makes the Ritual roll once the sun rises. On a Win, shadow blankets the area, closing off any view of the outside but also preventing any sun damage to the vampires within. On a critical win, those inside can spy the outside world dimly. The Ritual lasts through an entire day unless ended by the caster stepping outside the area.",
+    "level": 4
+  },
+  {
+    "name": "Eyes of the Nighthawk",
+    "description": "Related to the primitive powers of Animalism, this Ritual allows the caster to possess a carnivorous fowl, usually a raven or a bird of prey, directing its flight and seeing through its eyes. Parrots and mynahs, not being carnivores, cannot be used in this Ritual. Some Tremere spent years training crows or ravens to speak before using them as nighthawks; with the Pyramid disrupted, fewer Warlocks have the spare time now.",
+    "type": "Ward",
+    "ingredients": "The eyes of the bird used, taken at the conclusion of the Ritual",
+    "process": "The caster feeds their Blood to the bird and enters a trance.",
+    "system": "On a winning Ritual roll the caster can control the bird and see through its eyes. On a critical win, the bird can perform simple actions under control, such as picking up objects or manipulating keys or dials. The caster can use most non-physical Disciplines through the bird, even Dominate assuming the caster has Telepathy (p. 252) or some other way to communicate with targets non-verbally. There is no limit to the range the bird can fly, though unless the caster plucks the eyes out of the bird at the end of the night they themselves suffer blindness for three nights to come.",
+    "level": 4
+  },
+  {
+    "name": "Incorporeal Package",
+    "description": "The caster assumes an incorporeal state, not unlike a ghost, able to freely pass through objects and rendered totally immune to physical damage. They cannot interact physically with the material world except by sight and speech.",
+    "type": "Ward",
+    "ingredients": " A mirror",
+    "process": "The caster spills their Blood on the mirror, chanting, and then breaks it.",
+    "system": "Make a Ritual roll. If the roll is a win, the caster assumes an incorporeal form as long as they hold a shard of the broken mirror. While incorporeal, the caster remains immune to everything except fire, sunlight, and arcane weapons and rituals capable of damaging spirits. The caster can still be seen and heard but cannot interact physically with anything or anyone. They cannot Rouse the Blood while incorporeal. Incorporeal casters have no access to any spirit realm; the ritual does not make them wraiths or spirits. The caster can walk through walls and other objects but must do so in a straight line; they cannot change direction while inside solid matter. This Ritual lasts for one scene or until the caster drops the shard. Returning to the material while inside solid matter can result in anything from destruction to entombment to minor inconvenience (the ashtray is stuck halfway through the caster's arm); the Storyteller decides the precise outcome.",
+    "level": 4
+  },
+  {
+    "name": "Ward Against Cainites",
+    "description": "This Ritual wards an item against all vampires except the caster. Any attempt by them to touch the item triggers the effect. However, a vampire examining the Ward with Auspex can read the name of the caster in it with a successful contest of Intelligence + Auspex vs. the caster's Intelligence + Blood Sorcery.<br />This ward uses the standard rules for Wards (p. 275).",
+    "type": "Ward",
+    "ingredients": "Ash warm from a still-burning fire; casters risk terror frenzy, and cannot inscribe this Ward that night if they succumb to it.",
+    "process": "",
+    "system": "",
+    "level": 4
+  },
+  {
+    "name": "Warding Circle Against Lupines",
+    "description": "This ward uses the standard rules for Warding circles (p. 275).",
+    "type": "Ward",
+    "ingredients": "The caster draws the Warding circle with a silver knife dipped in wolfsbane and Blood.",
+    "process": "",
+    "system": "",
+    "level": 4
+  },
+  {
+    "name": "Escape to True Sanctuary",
+    "description": "By preparing two mystic circles in an arduous ritual the caster can instantly travel from one to the other. The journey is one-way, and the caster must designate one circle for departure while the 'arrival' circle serves as an exit.",
+    "type": "Ward",
+    "ingredients": "Two charred circles of approximately a meter in diameter",
+    "process": "The caster burns the circles into the ground or floor with an open flame, then consecrates each circle. Consecration requires two hours of chanting per night and two Rouse Checks, for three consecutive nights. In total, this ritual takes twelve Rouse Checks worth of Blood from the caster.",
+    "system": "Once the circles are complete the caster need but step into the one designated for departure and concentrate for a turn, making a Ritual roll. (The caster makes the Ritual roll each time they attempt to travel, but can only make one attempt per scene.) On a win the caster vanishes, reappearing in an instant in the middle of the exit circle. There is no limit to the distance between the two circles, but they must be inscribed on the ground or on the floor of a building, not on the floor of a vehicle. The caster can transport one person or an object or objects totaling roughly human mass with them. Damaging either circle ruins the ritual completely and renders both circles inert. A vampire can only have one pair of these circles functional at any given time.",
+    "level": 5
+  },
+  {
+    "name": "Heart of Stone",
+    "description": "Performing this ritual turns the caster's unliving heart to stone. This makes them immune to stakes but also, through some fluke of sympathetic magic, completely remorseless and cold-hearted automatons totally unreceptive to emotional and social cues. Even more so than normal.",
+    "type": "Ward",
+    "ingredients": "A stone slab and a wax candle drenched with the Blood of the caster",
+    "process": "The caster lies on the stone slab with the candle on their chest letting it burn down to nothing over the course of a night. As the fire reaches their chest, it causes one point of Aggravated damage and forces a terror frenzy roll (Difficulty 3). If the caster fails the frenzy roll, the ritual ends. If the caster does not enter frenzy, they make the Ritual roll. On a win the ritual completes; a critical win heals the candle-fire damage. The effect persists indefinitely, and should the caster wish to reverse the process they must repeat the ritual.",
+    "system": "While under the effect of the ritual, the caster's heart is literally made of stone. Stakes fail to penetrate it, breaking if forced. The caster also exhibits a complete emotional detachment, subtracting three dice from any Remorse rolls as well as active (not resisting) Social-related rolls, except for Intimidation and Dominate. The caster cannot employ Presence but gains three bonus dice to pools used to resist the effects of that Discipline.",
+    "level": 5
+  },
+  {
+    "name": "Shaft of Belated Dissolution",
+    "description": "The Kindred fear few weapons as they fear the dreaded stake created by this ritual. Thought to be the origin of the myth regarding stakes as the ultimate tool for slaying vampires, the Shaft of Belated Dissolution not only seeks out the heart of the vampire it's aimed at but actually causes Final Death when reaching its target. If need be, the Shaft works toward this goal as a splinter, inching its way through the target vampire’s body to reach its goal.",
+    "type": "Ward",
+    "ingredients": "A stake carved of rowan wood, inscribed with baneful runes",
+    "process": "The caster drenches the stake with two Rouse Checks worth of their Blood, while blackening it in an oak-wood fire while reading incantations over it. The ritual takes five hours to complete.",
+    "system": "This stake confers a three-dice bonus to any pool on any attempt to stake a vampire, whether hammered in while the victim sleeps, wielded in melee, or fired from a crossbow. The caster need not wield the stake themselves. If the attack roll wins with a margin of five or better, the vampire withers to dust in a single turn as if consumed by an invisible fire. If the stake hits, but the roll has insufficient margin (under five) to pierce the heart, the stake breaks off in the wound, the tip burying itself as it slowly begins to inch its way toward the heart of the victim. Depending on where it struck this can take hours or nights, but unless extracted by medical or mystical means, Final Death is assured. To remove it surgically someone other than the victim needs to win a roll of Dexterity + Medicine (Difficulty 6) in a process that takes up to four hours. If no medical expertise can be found, someone can remove the splinter by severing the afflicted limb – unless the splinter has already reached the torso.",
+    "level": 5
+  },
+  {
+    "name": "Warding Circle Against Cainites",
+    "description": "This ward uses the standard rules for Warding Circles (p. 275).",
+    "type": "Ward",
+    "ingredients": "The caster draws the Warding Circle with a rowan wand dipped in the mixture of ash from a still-burning fire and Blood.",
+    "process": "",
+    "system": "",
+    "level": 5
+  }
 ]

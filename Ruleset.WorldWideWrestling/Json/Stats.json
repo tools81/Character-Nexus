@@ -1,18 +1,30 @@
 [
   {
-    "name": "Look",
-    "description": "Your charisma, 'it' factor and ability to inhabit your character and 'live the Gimmick.' Look is most important for you if you want to cut exciting promos and create a memorable character for the fans to follow."
+    "name": "Body",
+    "description": "Your physical strength, conditioning, and athletic ability. Body is most important for you if you want to enjoy physical dominance over other wrestlers and shine in the ring due to your physical prowess.",
+	"min": -2,
+	"max": 3,
+	"value": 0
   },
   {
-    "name": "Power",
-    "description": "Your raw strength, aggression, and impressiveness. Power is most important for you if you want to enjoy physical dominance over other wrestlers and stand out for your extraordinary physical presence and abilities."
+    "name": "Look",
+    "description": "Your charisma, 'it' factor and ability to inhabit your character and get the fans interested in your story. Look is most important for you if you want to cut exciting promos and create a memorable character for the fans to follow.",
+	"min": -2,
+	"max": 3,
+	"value": 0
   },
   {
     "name": "Real",
-    "description": "Your ability to 'break the fourth wall,' bring in real-world concerns, and deal with legit issues. Real is most important for you if you want to blend the line between character and performer and captivate the audience with your actual personality."
+    "description": "Your ability to 'break the fourth wall,' bring in real-world concerns, and blend legit issues with your storyline conflicts. Real is most important for you if you want to blur the line between character and performer and captivate the audience with your actual personality.",
+	"min": -2,
+	"max": 3,
+	"value": 0
   },
   {
     "name": "Work",
-    "description": "Your ability to tell a story in the ring, execute moves correctly, and make others look good. Work is most important for you if you want to use your ring work to create your legacy."
+    "description": "Your ability to tell a story in the ring, execute moves correctly, and make others look good as you show off your own skill. Work is most important for you if you want to build your reputation on five-star matches and mastery of the artform.",
+	"min": -2,
+	"max": 3,
+	"value": 0
   }
 ]

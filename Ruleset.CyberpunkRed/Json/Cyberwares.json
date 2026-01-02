@@ -1,1 +1,778 @@
-[]
+[
+	{
+		"name": "Biomonitor",
+		"description": "Subdermal implant which generates a readout of vitals. Can link to Agent.",
+		"type": "Fashionware",
+		"install": "Mall",
+		"prerequisites": [],
+		"options": [],
+		"cost": 100,
+		"humanity": 0
+	},
+	{
+		"name": "Chemskin",
+		"description": "Dyes and pigments infused into the skin to permanently change its hue. +2 to Personal Grooming if user also has Techhair.",
+		"type": "Fashionware",
+		"install": "Mall",
+		"prerequisites": [],
+		"options": [],
+		"cost": 100,
+		"humanity": 0
+	},
+	{
+		"name": "EMP Threading",
+		"description": "Thin silver lines that run in circuit-like patterns across the body.",
+		"type": "Fashionware",
+		"install": "Mall",
+		"prerequisites": [],
+		"options": [],
+		"cost": 10,
+		"humanity": 0
+	},
+	{
+		"name": "Light Tatoo",
+		"description": "Subdermal patches store light and project colored tattoos under the skin. +2 to Wardrobe and Style if user has three or more tattoos.",
+		"type": "Fashionware",
+		"install": "Mall",
+		"prerequisites": [],
+		"options": [],
+		"cost": 100,
+		"humanity": 0
+	},
+	{
+		"name": "Shift Tacts",
+		"description": "Color-changing lenses implanted into the eye. ",
+		"type": "Fashionware",
+		"install": "Mall",
+		"prerequisites": [],
+		"options": [],
+		"cost": 100,
+		"humanity": 0
+	},
+	{
+		"name": "Skinwatch",
+		"description": "Subdermally implanted LED watch.",
+		"type": "Fashionware",
+		"install": "Mall",
+		"prerequisites": [],
+		"options": [],
+		"cost": 100,
+		"humanity": 0
+	},
+	{
+		"name": "Techhair",
+		"description": "Color-light-emitting artificial hair. +2 to Personal Grooming if user also has Chemskin.",
+		"type": "Fashionware",
+		"install": "Mall",
+		"prerequisites": [],
+		"options": [],
+		"cost": 100,
+		"humanity": 0
+	},
+	{
+		"name": "Neural Link",
+		"description": "Wired artificial nervous system. Required to use Neuralware and Subdermal Grip. Has 5 Option Slots.",
+		"type": "Neuralware",
+		"install": "Clinic",
+		"prerequisites": [],
+		"options": [],
+		"cost": 500,
+		"humanity": 7
+	},
+	{
+		"name": "Braindance Recorder",
+		"description": "Records user's experiences to memory chip or external device. Requires Neural Link.",
+		"type": "Neuralware",
+		"install": "Clinic",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Neural Link"
+			}],
+		"options": [],
+		"cost": 500,
+		"humanity": 7
+	},
+	{
+		"name": "Chipware Socket",
+		"description": "A single socket installed in back of the neck. Required to use Chipware. Requires Neural Link.",
+		"type": "Neuralware",
+		"install": "Clinic",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Neural Link"
+			}],
+		"options": [],
+		"cost": 500,
+		"humanity": 7
+	},
+	{
+		"name": "Interface Plugs",
+		"description": "Plugs in wrist or head that allow connection to machines. Requires Neural Link.",
+		"type": "Neuralware",
+		"install": "Clinic",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Neural Link"
+			}],
+		"options": [],
+		"cost": 500,
+		"humanity": 7
+	},
+	{
+		"name": "Kerenzikov",
+		"description": "Speedware. User adds +2 to Initiative. Only 1 piece of Speedware can be installed at a time. Requires Neural Link.",
+		"type": "Neuralware",
+		"install": "Clinic",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Neural Link"
+			}],
+		"options": [],
+		"cost": 500,
+		"humanity": 14
+	},
+	{
+		"name": "Sandevistan",
+		"description": "Speedware. When activated as an Action adds +3 to Initiative for one minute. Has 1 hour cool down period. Only 1 piece of Speedware can be installed at a time. Requires Neural Link.",
+		"type": "Neuralware",
+		"install": "Clinic",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Neural Link"
+			}],
+		"options": [],
+		"cost": 500,
+		"humanity": 7
+	},
+	{
+		"name": "Chemical Analyzer",
+		"description": "Chipware. Tests substance for precise chemical composition and compares to a database. Requires Chipware Socket.",
+		"type": "Neuralware",
+		"install": "N//A",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Chipware Socket"
+			}],
+		"options": [],
+		"cost": 500,
+		"humanity": 3
+	},
+	{
+		"name": "Memory Chip",
+		"description": "Data storage. User's cyberware can store or access data on it.",
+		"type": "Neuralware",
+		"install": "N//A",
+		"prerequisites": [],
+		"options": [],
+		"cost": 10,
+		"humanity": 0
+	},
+	{
+		"name": "",
+		"description": "",
+		"type": "Neuralware",
+		"install": "Clinic",
+		"prerequisites": [],
+		"options": [],
+		"cost": 500,
+		"humanity": 7
+	},
+	{
+		"name": "Olfactory Boost",
+		"description": "Chipware. User can use Tracking Skill to track via scent. Requires Chipware Socket.",
+		"type": "Neuralware",
+		"install": "N//A",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Chipware Socket"
+			}],
+		"options": [],
+		"cost": 100,
+		"humanity": 7
+	},
+	{
+		"name": "Pain Editor",
+		"description": "Chipware. User ignores penalties due to being Seriously Wounded. Requires Chipware Socket.",
+		"type": "Neuralware",
+		"install": "N//A",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Chipware Socket"
+			}],
+		"options": [],
+		"cost": 1000,
+		"humanity": 14
+	},
+	{
+		"name": "Skill Chip",
+		"description": "Chipware. User has specific Skill at Level 3 unless Skill is already 3+. Skill Chips for (x2) cost Skills cost more. Requires Chipware Socket.",
+		"type": "Neuralware",
+		"install": "N//A",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Chipware Socket"
+			}],
+		"options": [],
+		"cost": 1000,
+		"humanity": 7
+	},
+	{
+		"name": "Tactical Boost",
+		"description": "Chipware. User can detect motion within 20m/yd by placing hand on surface. Requires Chipware Socket.",
+		"type": "Neuralware",
+		"install": "N//A",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Chipware Socket"
+			}],
+		"options": [],
+		"cost": 100,
+		"humanity": 7
+	},
+	{
+		"name": "Cybereye",
+		"description": "Artificial Eye. Each Cybereye has 3 Option Slots. Some options must be paired (purchased twice and installed in two different Cybereyes on a user. HL must be paid for each).",
+		"type": "Cyberoptics",
+		"install": "Clinic",
+		"prerequisites": [],
+		"options": [],
+		"cost": 100,
+		"humanity": 7
+	},
+	{
+		"name": "Anti-Dazzle",
+		"description": "User immune to effects caused by flashes of light. Requires two Cybereyes and must be paired.",
+		"type": "Cyberoptics",
+		"install": "Mall",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cybereye"
+			}],
+		"options": [],
+		"cost": 100,
+		"humanity": 2
+	},
+	{
+		"name": "Chyron",
+		"description": "Projects subscreen into user's field of vision. Requires a Cybereye.",
+		"type": "Cyberoptics",
+		"install": "Mall",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cybereye"
+			}],
+		"options": [],
+		"cost": 100,
+		"humanity": 2
+	},
+	{
+		"name": "Color Shift",
+		"description": "Unlimited color and pattern changes for the eye. Requires a Cybereye.",
+		"type": "Cyberoptics",
+		"install": "Mall",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cybereye"
+			}],
+		"options": [],
+		"cost": 100,
+		"humanity": 2
+	},
+	{
+		"name": "Dartgun",
+		"description": "Single shot Dartgun Exotic Weapon concealed in eye. Requires a Cybereye and takes 3 Option Slots.",
+		"type": "Cyberoptics",
+		"install": "Clinic",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cybereye"
+			}],
+		"options": [],
+		"cost": 500,
+		"humanity": 2
+	},
+	{
+		"name": "Image Enhance",
+		"description": "Adds +2 to Perception, Lip Reading, and Conceal/Reveal Object. Requires two Cybereyes and must be paired.",
+		"type": "Cyberoptics",
+		"install": "Mall",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cybereye"
+			}],
+		"options": [],
+		"cost": 500,
+		"humanity": 3
+	},
+	{
+		"name": "Low Light-Infrared-UV",
+		"description": "User can ignore penalties due to darkness, smoke, fog, etc. Requires two Cybereyes, must be paired, and takes 2 Option Slots per Cybereye.",
+		"type": "Cyberoptics",
+		"install": "Mall",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cybereye"
+			}],
+		"options": [],
+		"cost": 500,
+		"humanity": 3
+	},
+	{
+		"name": "MicroOptics",
+		"description": "Provides user with 400x magnification. Requires a Cybereye.",
+		"type": "Cyberoptics",
+		"install": "Clinic",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cybereye"
+			}],
+		"options": [],
+		"cost": 100,
+		"humanity": 2
+	},
+	{
+		"name": "MicroVideo",
+		"description": "Camera in eye. Records audio and video to Memory Chip or linked Agent. Requires a Cybereye and takes 2 Option Slots.",
+		"type": "Cyberoptics",
+		"install": "Clinic",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cybereye"
+			}],
+		"options": [],
+		"cost": 500,
+		"humanity": 2
+	},
+	{
+		"name": "Radiation Detector",
+		"description": "Radiation readings within 100m/yds displayed in form of blue glow. Requires a Cybereye.",
+		"type": "Cyberoptics",
+		"install": "Clinic",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cybereye"
+			}],
+		"options": [],
+		"cost": 1000,
+		"humanity": 3
+	},
+	{
+		"name": "Targeting Scope",
+		"description": "Adds +1 to Check when making Aimed Shot. Requires a Cybereye.",
+		"type": "Cyberoptics",
+		"install": "Clinic",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cybereye"
+			}],
+		"options": [],
+		"cost": 500,
+		"humanity": 3
+	},
+	{
+		"name": "TeleOptics",
+		"description": "Can see detail up to 800m//yd away. +1 to Aimed Shots against target 51m//yds or farther away. Requires a Cybereye.",
+		"type": "Cyberoptics",
+		"install": "Clinic",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cybereye"
+			}],
+		"options": [],
+		"cost": 500,
+		"humanity": 3
+	},
+	{
+		"name": "Virtuality",
+		"description": "Projects cyberspace imagery over user's view of the world. Requires two Cybereyes and must be paired.",
+		"type": "Cyberoptics",
+		"install": "Mall",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cybereye"
+			}],
+		"options": [],
+		"cost": 100,
+		"humanity": 2
+	},
+	{
+		"name": "Cyberaudio Suite",
+		"description": "Has 3 Option Slots. Cannot install more than 1.",
+		"type": "Cyberaudio",
+		"install": "Clinic",
+		"prerequisites": [],
+		"options": [],
+		"cost": 500,
+		"humanity": 7
+	},
+	{
+		"name": "Amplified Hearing",
+		"description": "+2 to Perception for Checks involving hearing. Requires a Cyberaudio Suite.",
+		"type": "Cyberaudio",
+		"install": "Mall",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cyberaudio Suite"
+			}],
+		"options": [],
+		"cost": 100,
+		"humanity": 3
+	},
+	{
+		"name": "Audio Recorder",
+		"description": "Records audio to Memory Chip or linked Agent. Requires a Cyberaudio Suite.",
+		"type": "Cyberaudio",
+		"install": "Clinic",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cyberaudio Suite"
+			}],
+		"options": [],
+		"cost": 100,
+		"humanity": 2
+	},
+	{
+		"name": "Bug Detector",
+		"description": "Beeps when within 2m/yds of a listening device. Requires a Cyberaudio Suite.",
+		"type": "Cyberaudio",
+		"install": "Mall",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cyberaudio Suite"
+			}],
+		"options": [],
+		"cost": 100,
+		"humanity": 2
+	},
+	{
+		"name": "Homing Tracer",
+		"description": "Can follow a linked tracer up to 1 mile away. Requires a Cyberaudio Suite.",
+		"type": "Cyberaudio",
+		"install": "Clinic",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cyberaudio Suite"
+			}],
+		"options": [],
+		"cost": 100,
+		"humanity": 2
+	},
+	{
+		"name": "Internal Agent",
+		"description": "Fully functional Agent installed internally. Can be linked to a Cybereye with Chyron display. Otherwise, audio only. Requires a Cyberaudio Suite.",
+		"type": "Cyberaudio",
+		"install": "Mall",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cyberaudio Suite"
+			}],
+		"options": [],
+		"cost": 100,
+		"humanity": 3
+	},
+	{
+		"name": "Level Damper",
+		"description": "User immune to effects caused by loud noises. Requires a Cyberaudio Suite.",
+		"type": "Cyberaudio",
+		"install": "Mall",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cyberaudio Suite"
+			}],
+		"options": [],
+		"cost": 100,
+		"humanity": 2
+	},
+	{
+		"name": "Radio Communicator",
+		"description": "User can communicate via radio. 1 mile range. Requires a Cyberaudio Suite.",
+		"type": "Cyberaudio",
+		"install": "Mall",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cyberaudio Suite"
+			}],
+		"options": [],
+		"cost": 100,
+		"humanity": 2
+	},
+	{
+		"name": "Radio Scanner",
+		"description": "Can play music from Data Pool or Memory Chip or tune into radio broadcasts within 1 mile. Requires a Cyberaudio Suite.",
+		"type": "Cyberaudio",
+		"install": "Clinic",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cyberaudio Suite"
+			}],
+		"options": [],
+		"cost": 50,
+		"humanity": 2
+	},
+	{
+		"name": "",
+		"description": "",
+		"type": "Cyberaudio",
+		"install": "Mall",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cyberaudio Suite"
+			}],
+		"options": [],
+		"cost": 100,
+		"humanity": 2
+	},
+	{
+		"name": "Radar Detector",
+		"description": "Beeps if active radar beam is within 100m//yd. Requires a Cyberaudio Suite.",
+		"type": "Cyberaudio",
+		"install": "Clinic",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cyberaudio Suite"
+			}],
+		"options": [],
+		"cost": 500,
+		"humanity": 2
+	},
+	{
+		"name": "Scrambler",
+		"description": "Allows user to scramble outgoing communications and descramble incoming communications. Requires a Cyberaudio Suite.",
+		"type": "Cyberaudio",
+		"install": "Mall",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cyberaudio Suite"
+			}],
+		"options": [],
+		"cost": 100,
+		"humanity": 2
+	},
+	{
+		"name": "Voice Stress Analyzer",
+		"description": "+2 to Human Perception and Interrogation Checks. Requires a Cyberaudio Suite.",
+		"type": "Cyberaudio",
+		"install": "Mall",
+		"prerequisites": [
+			{
+				"type": "Cyberware",
+				"value": "Cyberaudio Suite"
+			}],
+		"options": [],
+		"cost": 100,
+		"humanity": 2
+	},
+	{
+		"name": "AudioVox",
+		"description": "Voice synthesizer. Adds +2 to Acting and Play Instrument when singing.",
+		"type": "Internal",
+		"install": "Clinic",
+		"prerequisites": [],
+		"options": [],
+		"cost": 500,
+		"humanity": 3
+	},
+	{
+		"name": "Contraceptive Implant",
+		"description": "Prevents undesired pregnancy",
+		"type": "Internal",
+		"install": "Mall",
+		"prerequisites": [],
+		"options": [],
+		"cost": 10,
+		"humanity": 0
+	},
+	{
+		"name": "Enhanced Antibodies",
+		"description": "After stabilization, user heals BODY x 2 for each day spent resting.",
+		"type": "Internal",
+		"install": "Mall",
+		"prerequisites": [],
+		"options": [],
+		"cost": 500,
+		"humanity": 2
+	},
+	{
+		"name": "Cybersnake",
+		"description": "Esophagus mounted Very Heavy Melee Weapon. Can be concealed.",
+		"type": "Internal",
+		"install": "Hospital",
+		"prerequisites": [],
+		"options": [],
+		"cost": 1000,
+		"humanity": 14
+	},
+	{
+		"name": "Gills",
+		"description": "User can breathe underwater.",
+		"type": "Internal",
+		"install": "Hospital",
+		"prerequisites": [],
+		"options": [],
+		"cost": 1000,
+		"humanity": 7
+	},
+	{
+		"name": "Grafted Muscle and Bone Lance",
+		"description": "ncreases BODY by 2. The increase changes HP, Wound Threshold, and Death Save. Cannot raise BODY above 10.",
+		"type": "Internal",
+		"install": "Hospital",
+		"prerequisites": [],
+		"options": [],
+		"cost": 1000,
+		"humanity": 14
+	},
+	{
+		"name": "Independent Air Supply",
+		"description": "Provides 30 minutes of oxygen. Takes 1 hour to refill from ambient atmosphere.",
+		"type": "Internal",
+		"install": "Hospital",
+		"prerequisites": [],
+		"options": [],
+		"cost": 1000,
+		"humanity": 2
+	},
+	{
+		"name": "Midnight Lady Sexual Implant",
+		"description": "Be a Venus, be the fire, be desire.",
+		"type": "Internal",
+		"install": "Clinic",
+		"prerequisites": [],
+		"options": [],
+		"cost": 100,
+		"humanity": 7
+	},
+	{
+		"name": "Mr. Studd Sexual Implant",
+		"description": "All night, every night, and they'll never know.",
+		"type": "Internal",
+		"install": "Clinic",
+		"prerequisites": [],
+		"options": [],
+		"cost": 100,
+		"humanity": 7
+	},
+	{
+		"name": "Nasal Filters",
+		"description": "User immune to effects of toxic gases, fumes, and similar dangers.",
+		"type": "Internal",
+		"install": "Clinic",
+		"prerequisites": [],
+		"options": [],
+		"cost": 100,
+		"humanity": 2
+	},
+	{
+		"name": "Radar-Sonar Implant",
+		"description": "Scans terrain within 50m/yds. Cannot scan through cover.",
+		"type": "Internal",
+		"install": "Clinic",
+		"prerequisites": [],
+		"options": [],
+		"cost": 1000,
+		"humanity": 7
+	},
+	{
+		"name": "Toxin Binders",
+		"description": "Adds +2 to Resist Torture/Drugs.",
+		"type": "Internal",
+		"install": "Clinic",
+		"prerequisites": [],
+		"options": [],
+		"cost": 100,
+		"humanity": 2
+	},
+	{
+		"name": "Vampyres",
+		"description": "Excellent Quality Light Melee Weapon implanted in mouth. Can be concealed. User can add Poison or Biotoxin.",
+		"type": "Internal",
+		"install": "Clinic",
+		"prerequisites": [],
+		"options": [],
+		"cost": 500,
+		"humanity": 14
+	},
+	{
+		"name": "Hidden Holster",
+		"description": "Can store weapon capable of concealment inside body.",
+		"type": "External",
+		"install": "Clinic",
+		"prerequisites": [],
+		"options": [],
+		"cost": 500,
+		"humanity": 7
+	},
+	{
+		"name": "Skin Weave",
+		"description": "User's body and head armored at SP7. Does not stack with worn Armor. Ablates. Recovers 1 SP per day of rest.",
+		"type": "External",
+		"install": "Hospital",
+		"prerequisites": [],
+		"options": [],
+		"cost": 500,
+		"humanity": 7
+	},
+	{
+		"name": "Subdermal Armor",
+		"description": "User's body and head armored at SP11. Does not stack with worn Armor. Ablates. Recovers 1 SP per day of rest.",
+		"type": "External",
+		"install": "Hospital",
+		"prerequisites": [],
+		"options": [],
+		"cost": 1000,
+		"humanity": 14
+	},
+	{
+		"name": "Subdermal Pocket",
+		"description": "2in x 4in (5cm x 10cm) storage space just under the skin with RealSkinn zipper.",
+		"type": "External",
+		"install": "Clinic",
+		"prerequisites": [],
+		"options": [],
+		"cost": 100,
+		"humanity": 3
+	},
+	{
+		"name": "",
+		"description": "",
+		"type": "Cyberlimb",
+		"install": "Clinic",
+		"prerequisites": [],
+		"options": [],
+		"cost": 500,
+		"humanity": 7
+	}
+]

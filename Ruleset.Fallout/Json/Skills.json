@@ -1,243 +1,243 @@
 [
-    {
-        "name": "Athletics",
-        "description": "",
-        "imageUrl": "",
-        "attribute": "Strength",
-        "tagged": false,
-        "value": 0,
-        "max": 6,
-        "clothings": [
-            "Casual Clothing"
+  {
+    "name": "Athletics",
+    "description": "Athletics describes your ability to apply your physical strength and agility, know your limits, but also how to focus during physical exertion.<br />Its default S.P.E.C.I.A.L. attribute is Strength but it can also be used with Agility or Endurance when facing physical adversity. You might use Athletics when trying to push, pull, or lift objects, jump, climb, swim, or run.",
+    "imageUrl": "",
+    "attribute": "Strength",
+    "tagged": false,
+    "value": 0,
+    "max": 6,
+    "clothings": [
+      "Casual Clothing"
+    ],
+    "items": [
+      "Buffout|1"
+    ]
+  },
+  {
+    "name": "Barter",
+    "description": "Barter describes your skill with money: how savvy you are with your wealth, how easily you can make deals, or how easily you can negotiate someone down on price.<br />Its default S.P.E.C.I.A.L. attribute is Charisma but could also be used with Perception to see how willing someone might be to change their demands, or Intelligence to know the true caps value of something. You might use Barter trying to buy or sell items, or negotiate the cost of a service.",
+    "imageUrl": "",
+    "attribute": "Charisma",
+    "tagged": false,
+    "value": 0,
+    "max": 6,
+    "caps": 20
+  },
+  {
+    "name": "Big Guns",
+    "description": "Big Guns is the skill that describes the training to use large weapons, from Fat Mans to gatling lasers, and everything in between.<br />Its default S.P.E.C.I.A.L. attribute is Endurance but could also be used with Strength when you need to brace a weapon, or Agility when precision matters. You use Big Guns with weapons like miniguns, rocket launchers, Fat Mans, and gatling lasers.",
+    "imageUrl": "",
+    "attribute": "Endurance",
+    "tagged": false,
+    "value": 0,
+    "max": 6,
+    "ammos": [
+      "Flamer Fuel|6"
+    ]
+  },
+  {
+    "name": "Energy Weapons",
+    "description": "Energy Weapons is the skill to use any time you fire energy-based firearms like laser guns, plasma guns, gauss weaponry, and any other small arm that fires a bolt of energy.<br />Its default S.P.E.C.I.A.L. attribute is Perception but could be used with Intelligence if you were trying to modify and repair an energy weapon, or Agility when you are trying to disarm a trap that uses an energy weapon. You use Energy Weapons with weapons like laser pistols, plasma rifles, the gauss rifle, the microwave emitter, or a laser musket.",
+    "imageUrl": "",
+    "attribute": "Perception",
+    "tagged": false,
+    "value": 0,
+    "max": 6,
+    "ammos": [
+      "Fusion Cell|9"
+    ]
+  },
+  {
+    "name": "Explosives",
+    "description": "Whether you throw them, place them as a trap, or remotely detonate them, you use the Explosives skill with any kind of explosive device.<br />Its default S.P.E.C.I.A.L. attribute is Perception but you can also use Strength to throw a grenade as far as you can, or Agility to try to get close to a mine without setting it off. You use Explosives with frag grenades and mines, Molotov cocktails, Nuka grenades, plasma grenades, pulse grenades, mines, and dynamite.",
+    "imageUrl": "",
+    "attribute": "Perception",
+    "tagged": false,
+    "value": 0,
+    "max": 6,
+    "choice": [
+      {
+        "type": "Weapon",
+        "choices": [
+          "Molotov Cocktail",
+          "Molotov Cocktail",
+          "Baseball Grenade",
+          "Baseball Grenade"
         ],
-        "items": [
-            "Buffout|1"
-        ]
-    },
-    {
-        "name": "Barter",
-        "description": "",
-        "imageUrl": "",
-        "attribute": "Charisma",
-        "tagged": false,
-        "value": 0,
-        "max": 6,
-        "caps": 20
-    },
-    {
-        "name": "Big Guns",
-        "description": "",
-        "imageUrl": "",
-        "attribute": "Endurance",
-        "tagged": false,
-        "value": 0,
-        "max": 6,
-        "ammos": [
-            "Flamer Fuel|6"
-        ]
-    },
-    {
-        "name": "Energy Weapons",
-        "description": "",
-        "imageUrl": "",
-        "attribute": "Perception",
-        "tagged": false,
-        "value": 0,
-        "max": 6,
-        "ammos": [
-            "Fusion Cell|9"
-        ]
-    },
-    {
-        "name": "Explosives",
-        "description": "",
-        "imageUrl": "",
-        "attribute": "Perception",
-        "tagged": false,
-        "value": 0,
-        "max": 6,
-        "choice": [
-            {
-                "type": "Weapon",
-                "choices": [
-                    "Molotov Cocktail",
-					"Molotov Cocktail",
-                    "Baseball Grenade",
-					"Baseball Grenade"
-                ],
-				"count": 2
-            }
-        ]
-    },
-    {
-        "name": "Lockpick",
-        "description": "",
-        "imageUrl": "",
-        "attribute": "Perception",
-        "tagged": false,
-        "value": 0,
-        "max": 6,
-        "items": [
-            "Bobby Pin|6"
-        ]
-    },
-    {
-        "name": "Medicine",
-        "description": "",
-        "imageUrl": "",
-        "attribute": "Intelligence",
-        "tagged": false,
-        "value": 0,
-        "max": 6,
-        "items": [
-            "First Aid Kit|1",
-            "Stimpack|1"
-        ]
-    },
-    {
-        "name": "Melee Weapons",
-        "description": "",
-        "imageUrl": "",
-        "attribute": "Strength",
-        "tagged": false,
-        "value": 0,
-        "max": 6,
-        "choice": [
-            {
-                "type": "Weapon",
-                "choices": [
-                    "Baseball Bat",
-                    "Machete"
-                ],
-				"count": 1
-            }
-        ]
-    },
-    {
-        "name": "Pilot",
-        "description": "",
-        "imageUrl": "",
-        "attribute": "Perception",
-        "tagged": false,
-        "value": 0,
-        "max": 6,
-        "items": [
-            "Common Scrap|5"
-        ]
-    },
-    {
-        "name": "Repair",
-        "description": "",
-        "imageUrl": "",
-        "attribute": "Intelligence",
-        "tagged": false,
-        "value": 0,
-        "max": 6,
-        "items": [
-            "Multi-tool|1"
-        ]
-    },
-    {
-        "name": "Science",
-        "description": "",
-        "imageUrl": "",
-        "attribute": "Intelligence",
-        "tagged": false,
-        "value": 0,
-        "max": 6,
-        "clothings": [
-            "Lab Coat"
+        "count": 2
+      }
+    ]
+  },
+  {
+    "name": "Lockpick",
+    "description": "The Lockpick skill reflects your knowledge of manipulating physical locks and opening them without a key.<br />Its default S.P.E.C.I.A.L. attribute is Perception but could be used with Agility, or Strength if you're trying to force a door open without breaking the lock. You might use Lockpick to break into a safe, or open a locked door.",
+    "imageUrl": "",
+    "attribute": "Perception",
+    "tagged": false,
+    "value": 0,
+    "max": 6,
+    "items": [
+      "Bobby Pin|6"
+    ]
+  },
+  {
+    "name": "Medicine",
+    "description": "Medicine is the skill that covers all medical application and knowledge, from first aid to pharmacology, surgery, and healing radiation poisoning.<br />Its default S.P.E.C.I.A.L. attribute is Intelligence, but you might use Agility to perform surgery, or Charisma to counsel a companion. You use Medicine to stabilize your companions in combat, and help heal their injuries.",
+    "imageUrl": "",
+    "attribute": "Intelligence",
+    "tagged": false,
+    "value": 0,
+    "max": 6,
+    "items": [
+      "First Aid Kit|1",
+      "Stimpack|1"
+    ]
+  },
+  {
+    "name": "Melee Weapons",
+    "description": "The Melee Weapons skill describes how able you are to inflict damage and deflect blows with one-handed and two-handed melee weapons.<br />Its default S.P.E.C.I.A.L. attribute is Strength but you might use Agility to parry a melee attack, or Charisma to threaten someone. You use Melee Weapons to make melee attacks in combat.",
+    "imageUrl": "",
+    "attribute": "Strength",
+    "tagged": false,
+    "value": 0,
+    "max": 6,
+    "choice": [
+      {
+        "type": "Weapon",
+        "choices": [
+          "Baseball Bat",
+          "Machete"
         ],
-        "items": [
-            "Mentats|1"
-        ]
-    },
-    {
-        "name": "Small Guns",
-        "description": "",
-        "imageUrl": "",
-        "attribute": "Agility",
-        "tagged": false,
-        "value": 0,
-        "max": 6,
-        "choice": [
-            {
-                "type": "Ammo",
-                "choices": [
-                    "10mm|9",
-                    ".308|9",
-                    ".38|9",
-                    "Shotgun Shell|9"
-                ],
-                "count": 1
-            }
-        ]
-    },
-    {
-        "name": "Sneak",
-        "description": "",
-        "imageUrl": "",
-        "attribute": "Agility",
-        "tagged": false,
-        "value": 0,
-        "max": 6,
-        "items": [
-            "Calmex|1"
-        ]
-    },
-    {
-        "name": "Speech",
-        "description": "",
-        "imageUrl": "",
-        "attribute": "Charisma",
-        "tagged": false,
-        "value": 0,
-        "max": 6,
-        "clothings": [
-            "Formal Hat",
-            "Formal Clothing"
-        ]
-    },
-    {
-        "name": "Survival",
-        "description": "",
-        "imageUrl": "",
-        "attribute": "Endurance",
-        "tagged": false,
-        "value": 0,
-        "max": 6,
-        "items": [
-            "Purified Water|2",
-            "Iguana on a Stick|1"
-        ]
-    },
-    {
-        "name": "Throwing",
-        "description": "",
-        "imageUrl": "",
-        "attribute": "Agility",
-        "tagged": false,
-        "value": 0,
-        "max": 6,
-		"weapons": [
-			"Throwing Knife",
-			"Throwing Knife",
-			"Throwing Knife",
-			"Throwing Knife",
-			"Tomahawk",
-			"Tomahawk"
-		]
-    },
-    {
-        "name": "Unarmed",
-        "description": "",
-        "imageUrl": "",
-        "attribute": "Strength",
-        "tagged": false,
-        "value": 0,
-        "max": 6,
-        "weapons": [
-            "Knuckles"
-        ]
-    }
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Pilot",
+    "description": "The Pilot skill covers your ability to operate vehicles, from buggies and motorcycles, to Vertibirds and tanks.<br />Its default S.P.E.C.I.A.L. attribute is Perception but you might use Strength to pull a buggy out of a skid, or Agility to land a Vertibird within a tight landing zone. You use Pilot to drive any ground vehicles, or pilot any flying vehicles.",
+    "imageUrl": "",
+    "attribute": "Perception",
+    "tagged": false,
+    "value": 0,
+    "max": 6,
+    "items": [
+      "Common Scrap|5"
+    ]
+  },
+  {
+    "name": "Repair",
+    "description": "Building and repairing items, from guns to buildings, simple traps to complex mechanisms, fall under the Repair skill.<br />Its default S.P.E.C.I.A.L. attribute is Intelligence but you might use Strength to get some heavy machinery operating again, or Perception to investigate a problem with an engine. You use Repair to fix and modify weapons, repair robots, craft items from scratch, or build defenses.",
+    "imageUrl": "",
+    "attribute": "Intelligence",
+    "tagged": false,
+    "value": 0,
+    "max": 6,
+    "items": [
+      "Multi-tool|1"
+    ]
+  },
+  {
+    "name": "Science",
+    "description": "The Science skill covers academic and practical knowledge, but is practically applied in the wasteland through computer coding, robotic programming, and brewing chems.<br />Its default S.P.E.C.I.A.L. attribute is Intelligence but you might use it with Perception to observe a test subject, or Charisma to convince people of something using your scientific knowledge. You use Science to hack computers, brew chems, and solve problems with science!",
+    "imageUrl": "",
+    "attribute": "Intelligence",
+    "tagged": false,
+    "value": 0,
+    "max": 6,
+    "clothings": [
+      "Lab Coat"
+    ],
+    "items": [
+      "Mentats|1"
+    ]
+  },
+  {
+    "name": "Small Guns",
+    "description": "The Small Guns skill describes your accuracy and working knowledge of single-shot and automatic pistols, rifles, and shotguns.<br />Its default S.P.E.C.I.A.L. attribute is Agility but you might use it with Charisma to hold someone at gunpoint or Endurance to remain trained on a target. You use Small Guns to make ranged attacks in combat with pistols, rifles, and shotguns.",
+    "imageUrl": "",
+    "attribute": "Agility",
+    "tagged": false,
+    "value": 0,
+    "max": 6,
+    "choice": [
+      {
+        "type": "Ammo",
+        "choices": [
+          "10mm|9",
+          ".308|9",
+          ".38|9",
+          "Shotgun Shell|9"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Sneak",
+    "description": "The Sneak skill covers stealthy movement and any physical actions you take not to be noticed.<br />Its default S.P.E.C.I.A.L. attribute is Agility but you might use it with Perception to find enemies hiding in ambush, or Intelligence to case a building. You use Sneak to move silently or stay hidden.",
+    "imageUrl": "",
+    "attribute": "Agility",
+    "tagged": false,
+    "value": 0,
+    "max": 6,
+    "items": [
+      "Calmex|1"
+    ]
+  },
+  {
+    "name": "Speech",
+    "description": "The Speech skill covers the techniques you've learned to communicate with other people, convincing them with strong arguments, or lying to them and not getting caught.<br />Its default S.P.E.C.I.A.L. attribute is Charisma but you might use it with Intelligence to write a speech, or Perception to figure out how susceptible your mark might be to your lie. You use Speech to convince people of your arguments, inspire others, or convincingly deceive them.",
+    "imageUrl": "",
+    "attribute": "Charisma",
+    "tagged": false,
+    "value": 0,
+    "max": 6,
+    "clothings": [
+      "Formal Hat",
+      "Formal Clothing"
+    ]
+  },
+  {
+    "name": "Survival",
+    "description": "The Survival skill covers all manner of practical bush craft, like hunting, foraging, fishing, building makeshift shelters, and lighting fires.<br />Its default S.P.E.C.I.A.L. attribute is Endurance but you might also use it with Perception to figure out how long you have until nightfall, or Charisma to charm animals. You might use Survival to build a base camp, or test your resilience against malnourishment or dehydration.",
+    "imageUrl": "",
+    "attribute": "Endurance",
+    "tagged": false,
+    "value": 0,
+    "max": 6,
+    "items": [
+      "Purified Water|2",
+      "Iguana on a Stick|1"
+    ]
+  },
+  {
+    "name": "Throwing",
+    "description": "The Throwing skill describes your ability to effectively make attacks with thrown weapons like javelins, knives, and improvised weapons.<br />Its default S.P.E.C.I.A.L. attribute is Agility but you might also use Strength with heavy objects or Perception to judge distance. You use Throwing to make thrown attacks with specific weapons.",
+    "imageUrl": "",
+    "attribute": "Agility",
+    "tagged": false,
+    "value": 0,
+    "max": 6,
+    "weapons": [
+      "Throwing Knife",
+      "Throwing Knife",
+      "Throwing Knife",
+      "Throwing Knife",
+      "Tomahawk",
+      "Tomahawk"
+    ]
+  },
+  {
+    "name": "Unarmed",
+    "description": "The Unarmed skill covers your ability to fight with your fists.<br />Its default S.P.E.C.I.A.L. attribute is Strength but you might also use Agility, or Charisma when threatening or intimidating someone. You use the Unarmed skill to make unarmed attacks in combat.",
+    "imageUrl": "",
+    "attribute": "Strength",
+    "tagged": false,
+    "value": 0,
+    "max": 6,
+    "weapons": [
+      "Knuckles"
+    ]
+  }
 ]

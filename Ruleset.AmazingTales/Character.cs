@@ -41,7 +41,8 @@ namespace AmazingTales
             {
                 Id = Id,
                 Name = Name,
-                Image = Image
+                Image = Image,
+                CharacterSheet = CharacterSheet
             };
         }
     }

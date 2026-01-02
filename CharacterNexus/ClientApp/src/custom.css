@@ -49,6 +49,14 @@ h1 {
   animation: slideInY 1s ease forwards;
 }
 
+.contactIcon {
+  color: "#ffffffff";
+}
+
+.contactIcon:hover {
+  fill: #4cf735;
+}
+
 @keyframes slideInY {
   to {
     transform: translateY(0);

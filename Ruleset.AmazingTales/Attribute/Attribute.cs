@@ -1,13 +1,8 @@
 ﻿using Utility;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AmazingTales
 {
-    public class Attribute : IAttribute
+    public class Attribute : IAttribute, IBaseJson
     {
         public string Name { get; set; }
         public string Description { get; set; }

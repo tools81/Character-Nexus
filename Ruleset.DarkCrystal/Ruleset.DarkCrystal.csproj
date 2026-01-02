@@ -13,4 +13,10 @@
     <ProjectReference Include="..\Utility\Utility.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="Resources\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

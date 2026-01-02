@@ -1,0 +1,693 @@
+[
+  {
+    "name": "Analyst",
+    "description": "Sensors and processors: the two things that Analysts say win wars. A comprehensive understanding of a situation can be the difference between success and failure. Verifiable knowledge before, during, and after a battle increases its odds of success.<br />Often employed as communications specialists or negotiators and fixers, Analysts are masters of acquiring and manipulating information and intelligence. This road may be less focused on combat, but that doesn't make it less dangerous.",
+    "bonusadjustments": [
+      {
+        "type": "essence",
+        "name": "Speed",
+        "value": 1
+      },
+      {
+        "type": "essence",
+        "name": "Smarts",
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "perk",
+        "value": "For the Allspark!"
+      },
+      {
+        "type": "perk",
+        "value": "Analyze Target"
+      },
+      {
+        "type": "perk",
+        "value": "Informed Accuracy"
+      },
+      {
+        "type": "perk",
+        "value": "Unsurprising"
+      },
+      {
+        "type": "perk",
+        "value": "Work the Numbers"
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "skill",
+        "choices": [
+          "Alertness",
+          "Finesse",
+          "Infiltration",
+          "Initiative",
+          "Science",
+          "Technology"
+        ],
+        "count": 2,
+        "value": 1
+      },
+      {
+        "type": "focus",
+        "choices": [
+          "Manipulator",
+          "Spec Ops"
+        ]
+      }
+    ],
+    "armorupgrades": [
+      "Standard"
+    ],
+    "weapons": [
+      "One-Handed"
+    ],
+    "levels": [
+      {
+        "value": 2,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Smarts",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "Data Analyst"
+          }
+        ]
+      },
+      {
+        "value": 3,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Social",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "value": 4,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Speed",
+            "value": 1
+          }
+        ],
+        "userchoice": [
+          {
+            "type": "perk",
+            "choices": [
+              ".General"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      {
+        "value": 5,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Smarts",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "Determine Probablility"
+          }
+        ]
+      },
+      {
+        "value": 6,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Strength",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "value": 7,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Social",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "Quick Study"
+          }
+        ]
+      },
+      {
+        "value": 8,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Speed",
+            "value": 1
+          }
+        ],
+        "userchoice": [
+          {
+            "type": "perk",
+            "choices": [
+              ".General"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      {
+        "value": 9,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Smarts",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "Pinpoint"
+          }
+        ]
+      },
+      {
+        "value": 11,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Social",
+            "value": 1
+          }
+        ],
+        "userchoice": [
+          {
+            "type": "perk",
+            "choices": [
+              ".General"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      {
+        "value": 12,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Strength",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "Postmortem Interrogation"
+          }
+        ]
+      },
+      {
+        "value": 13,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Speed",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "Target Breakdown"
+          }
+        ]
+      },
+      {
+        "value": 14,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Smarts",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "Psychoanalyst"
+          }
+        ]
+      },
+      {
+        "value": 15,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Social",
+            "value": 1
+          }
+        ],
+        "userchoice": [
+          {
+            "type": "perk",
+            "choices": [
+              ".General"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      {
+        "value": 16,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Speed",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "Just the Facts"
+          }
+        ]
+      },
+      {
+        "value": 17,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Strength",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "value": 18,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Smarts",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": "Swift Study"
+          }
+        ]
+      },
+      {
+        "value": 19,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Social",
+            "value": 1
+          }
+        ],
+        "userchoice": [
+          {
+            "type": "perk",
+            "choices": [
+              ".General"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      {
+        "value": 20,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "Smarts",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Field Commander",
+    "description": "Navigating battlefields is no easy task, and it can be even more difficult when bumping into allies. War calls for confident leaders with tactical minds who can manage a dangerous situation while keeping others safe. Field Commanders learn to move tactically, with a drive to achieve their goals without sacrificing their forces. A quintessential leader, the Field Commander excels equally in combat and diplomacy.",
+    "bonusadjustments": [
+      {
+        "type": "essence",
+        "name": "strength",
+        "value": 1
+      },
+      {
+        "type": "essence",
+        "name": "social",
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "perk",
+        "value": "For the Allspark!"
+      },
+      {
+        "type": "perk",
+        "value": "Issue Command"
+      },
+      {
+        "type": "perk",
+        "value": "Prepare for War"
+      },
+      {
+        "type": "perk",
+        "value": "Never Forsaken"
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "skill",
+        "choices": [
+          "Brawn",
+          "Deception",
+          "Intimidation",
+          "Might",
+          "Performance",
+          "Persuasion"
+        ],
+        "count": 2,
+        "value": 1
+      },
+      {
+        "type": "focus",
+        "choices": [
+          "Ambassador",
+          "Strategist"
+        ]
+      }
+    ],
+    "armorupgrades": [
+      "Limited"
+    ],
+    "weapons": [
+      "Ballistic",
+      "Melee"
+    ],
+    "levels": [
+      {
+        "value": 2,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "value": 3,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "value": 4,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "",
+            "value": 1
+          }
+        ],
+        "userchoice": [
+          {
+            "type": "perk",
+            "choices": [
+              ".General"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      {
+        "value": 5,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "value": 6,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "value": 7,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "value": 8,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "",
+            "value": 1
+          }
+        ],
+        "userchoice": [
+          {
+            "type": "perk",
+            "choices": [
+              ".General"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      {
+        "value": 9,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "value": 11,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "",
+            "value": 1
+          }
+        ],
+        "userchoice": [
+          {
+            "type": "perk",
+            "choices": [
+              ".General"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      {
+        "value": 12,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "value": 13,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "value": 14,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "value": 15,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "",
+            "value": 1
+          }
+        ],
+        "userchoice": [
+          {
+            "type": "perk",
+            "choices": [
+              ".General"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      {
+        "value": 16,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "value": 17,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "value": 18,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perk",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "value": 19,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "",
+            "value": 1
+          }
+        ],
+        "userchoice": [
+          {
+            "type": "perk",
+            "choices": [
+              ".General"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      {
+        "value": 20,
+        "bonusadjustments": [
+          {
+            "type": "essence",
+            "name": "",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  }
+]

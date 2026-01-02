@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Dynamic;
 using System.IO;
 using System.Linq;
-using System.Reflection.Emit;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Utility;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace VampireTheMasquerade
 {
@@ -30,6 +27,8 @@ namespace VampireTheMasquerade
                 List<Background>? backgrounds = JsonTo.List<Background>(jsonBackgroundsData);
                 string jsonClansData = File.ReadAllText(_jsonFilesPath + "Clans.json");
                 List<Clan>? clans = JsonTo.List<Clan>(jsonClansData);
+                string jsonGenerationsData = File.ReadAllText(_jsonFilesPath + "Generations.json");
+                List<Generation>? generations = JsonTo.List<Generation>(jsonGenerationsData);
                 string jsonCoteriesData = File.ReadAllText(_jsonFilesPath + "Coteries.json");
                 List<Coterie>? coteries = JsonTo.List<Coterie>(jsonCoteriesData);
                 string jsonDisciplinesData = File.ReadAllText(_jsonFilesPath + "Disciplines.json");
@@ -50,17 +49,24 @@ namespace VampireTheMasquerade
                 List<Skill>? skills = JsonTo.List<Skill>(jsonSkillsData);
                 string jsonSpecialtiesData = File.ReadAllText(_jsonFilesPath + "Specialties.json");
                 List<Specialty>? specialties = JsonTo.List<Specialty>(jsonSpecialtiesData);
+                string jsonWeaponsData = File.ReadAllText(_jsonFilesPath + "Weapons.json");
+                List<Weapon>? weapons = JsonTo.List<Weapon>(jsonWeaponsData);
+                string jsonArmorsData = File.ReadAllText(_jsonFilesPath + "Armors.json");
+                List<Armor>? armors = JsonTo.List<Armor>(jsonArmorsData);
 
                 GenerateDescriptionSchema();
 
                 GenerateOriginSchema(origins, "origin", "Origin");
                 GenerateClanSchema(clans, "clan", "Clan");
+                GenerateGenerationSchema(generations, "generation", "Generation");
                 GenerateCoterieSchema(coteries, "coterie", "Coterie");
                 GenerateAttributeSchema(attributes, "attributes", "Attributes");
                 GenerateSkillSchema(skills, specialties, "skill", "Skill");
                 GeneratePredatorSchema(predators, "predator", "Predator");
                 GenerateDisciplineSchema(disciplines, powers, "disciplines", "Disciplines");
                 GenerateAdvantageSchema(advantages, backgrounds, merits, flaws, "advantages", "Advantages");
+                GenerateWeaponSchema(weapons, "weapons", "Weapons");
+                GenerateArmorSchema(armors, "armors", "Armors");
 
                 GenerateTemporaryValuesSchema();
 
@@ -452,6 +458,60 @@ namespace VampireTheMasquerade
             }
         }
 
+        private static void GenerateGenerationSchema(List<Generation> generations, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var generation in generations)
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = generation.Name,
+                        label = generation.Name
+                    }
+                );
+            }
+
+            _fields.Add(obj);
+
+            foreach (var generation in generations)
+            {
+                var children = new List<object>
+                {
+                    new
+                    {
+                        name = $"info-{name}-{generation.Name}",
+                        label = "Information",
+                        type = "textblock",
+                        className = "text-block",
+                        text = generation.Description
+                    }
+                };
+
+                var div = new
+                {
+                    type = "div",
+                    className = "alert alert-secondary",
+                    children,
+                    dependsOn =
+                        new
+                        {
+                            field = name,
+                            value = generation.Name
+                        }
+                };
+
+                _fields.Add(div);
+            }
+        }
+
         private static void GenerateCoterieSchema(List<Coterie> coteries, string name, string label)
         {
             dynamic obj = new ExpandoObject();
@@ -666,6 +726,7 @@ namespace VampireTheMasquerade
 
         private static void GenerateDisciplineSchema(List<Discipline> disciplines, List<Power> powers, string name, string label)
         {
+            //TODO: Include Powers
             var accordion = new
             {
                 id = name,
@@ -905,6 +966,62 @@ namespace VampireTheMasquerade
             }
 
             _fields.Add(accordion);
+        }
+
+        private static void GenerateWeaponSchema(List<Weapon> weapons, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var weapon in weapons)
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = weapon.Name,
+                        label = weapon.Name
+                    }
+                );
+            }
+
+            dynamic array = new
+            {
+                name,
+                label,
+                type = "array",
+                component = obj
+            };
+
+            _fields.Add(array);
+        }
+
+        private static void GenerateArmorSchema(List<Armor> armors, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var armor in armors)
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = armor.Name,
+                        label = armor.Name
+                    }
+                );
+            }
+
+            _fields.Add(obj);            
         }
     }
 }

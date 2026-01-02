@@ -1,11 +1,10 @@
-import { useState, useEffect, ChangeEvent, useCallback } from "react";
-import { useForm, useFieldArray } from "react-hook-form";
+import { useState, useEffect, ChangeEvent, useCallback, useRef } from "react";
+import { useForm, useFieldArray, FormProvider } from "react-hook-form";
 import { useRulesetContext } from "../components/RulesetContext";
 import { useNavigate } from "react-router-dom";
+
 import { BonusAdjustments } from "../types/BonusAdjustment";
-import { BonusCharacteristics, } from "../types/BonusCharacteristic";
-//import { Prerequisites } from "../types/Prerequisite";
-import { toCamelCase } from "../utils/toCamelCase";
+import { BonusCharacteristics } from "../types/BonusCharacteristic";
 import { getURLParameter } from "../utils/getUrlParameter";
 import { getFileNameFromUrl } from "../utils/getFileNameFromUrl";
 import InputText from "../components/InputText";
@@ -18,6 +17,11 @@ import InputImage from "../components/InputImage";
 import FormGroup from "../components/FormGroup";
 import FormListGroup from "../components/FormListGroup";
 import FormAccordion from "../components/FormAccordion";
+import DisabledPrereqWrapper from "../components/DisabledPrereqWrapper";
+import { useFieldCalculations } from "../hooks/useFieldCalculations";
+import { usePrerequisites } from "../hooks/usePrerequisites";
+import { useBonusCharacteristics } from "../hooks/useBonusCharacteristics";
+import { useBonusAdjustments } from "../hooks/useBonusAdjustments";
 
 const BASE_URL = `${window.location.protocol}//${window.location.host}`;
 
@@ -25,14 +29,14 @@ const DynamicForm = () => {
   const navigate = useNavigate();
   const { ruleset } = useRulesetContext();
   const [schema, setSchema] = useState<any>(null);
-  const [bonusCharacteristics, setBonusCharacteristics] =
-    useState<BonusCharacteristics>([]);
-  const [bonusAdjustments, setBonusAdjustments] = useState<BonusAdjustments>(
-    []
-  );
+  const [bonusCharacteristics, setBonusCharacteristics] = useState<BonusCharacteristics>([]);
+  const [bonusAdjustments, setBonusAdjustments] = useState<BonusAdjustments>([]);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [imageData, setImageData] = useState<File | null>(null);
-  const watchedFields = new Set();
+  const watchedRef = useRef<Set<string>>(new Set());
+  const prereqSetRef = useRef<Set<string>>(new Set());
+  
+  const methods = useForm();
   const {
     register,
     unregister,
@@ -43,7 +47,7 @@ const DynamicForm = () => {
     setValue,
     reset,
     formState: { errors },
-  } = useForm();
+  } = methods;
 
   interface Props {
     field: any;
@@ -51,7 +55,7 @@ const DynamicForm = () => {
 
   function navigateToRulesetDashboard() {
     navigate("/ruleset");
-  }
+  } 
 
   const fetchDataAndReset = useCallback(
     async (name: string) => {
@@ -127,58 +131,10 @@ const DynamicForm = () => {
     }
   }, []);
 
-  useEffect(() => {
-    for (const adjustment of bonusAdjustments) {
-      var type = toCamelCase(adjustment.type);
-      setValue(type, Number(getValues(type)) + adjustment.value);
-    }
-  }, [bonusAdjustments]);
-
-  useEffect(() => {
-    for (const characteristic of bonusCharacteristics) {
-      handleSetArrayValue(characteristic.type, characteristic.value);
-    }
-  }, [bonusCharacteristics]);
-
-  useEffect(() => {
-    if (!schema) return;
-
-    const subscription = watch((value, { name }) => {
-      schema.fields.forEach((field: any) => {
-        if (field.calculation) {
-          let calcFields = field.calculation.match(/\[([^\]]+)\]/g);
-
-          if (calcFields) {
-            let calculation = field.calculation;
-
-            calcFields.forEach((calcField: string) => {
-              let fieldName = calcField.slice(1, -1); // Remove the square brackets
-
-              if (!watchedFields.has(fieldName)) {
-                watch(fieldName);
-                watchedFields.add(fieldName);
-              }
-
-              let calcValue = getValues(fieldName) || 0;
-              calculation = calculation.replace(calcField, calcValue);
-            });
-
-            // Only set the value if it has changed to avoid infinite loop
-            const newValue = Function("return " + calculation)();
-            if (getValues(field.name) !== newValue) {
-              setValue(field.name, newValue);
-            }
-          }
-        }
-      });
-    });
-    return () => subscription.unsubscribe();
-  }, [watch, setValue, schema]);
-
-  const handleSetArrayValue = (array: string, choice: string) => {
-    // Programmatically set the value of a select input in the 'items' array
-    setValue(array, [...getValues(array), { value: choice }]);
-  };
+  useBonusAdjustments(bonusAdjustments, getValues, setValue);
+  useBonusCharacteristics(bonusCharacteristics, getValues, setValue);
+  usePrerequisites(schema, prereqSetRef.current, methods);
+  useFieldCalculations(schema, getValues, setValue, watch);
 
   const onSubmit = async (data: any) => {
     if (imageData != null) {
@@ -219,19 +175,22 @@ const DynamicForm = () => {
       <div>
         <label>{field.label}</label>
 
-        {fields.map((item, index) => (
-          <div key={item.id} className="input-group">
-            {(field.component.name = `${field.name}.${index}`)}
-            {renderField(field.component, false)}
-            <button
-              type="button"
-              className="btn btn-outline-secondary"
-              onClick={() => remove(index)}
-            >
-              Remove
-            </button>
-          </div>
-        ))}
+        {fields.map((item, index) => {
+          const childComponent = { ...field.component, name: `${field.name}.${index}` };
+
+          return (
+            <div key={item.id} className="input-group">
+              {renderField(childComponent, false, !!childComponent.disabled)}
+              <button
+                type="button"
+                className="btn btn-outline-secondary"
+                onClick={() => remove(index)}
+              >
+                Remove
+              </button>
+            </div>
+          );
+        })}
         <section>
           <button
             type="button"
@@ -245,7 +204,9 @@ const DynamicForm = () => {
     );
   };
 
-  const renderField = (field: any, includeLabel: boolean = true) => {
+  const renderField = (field: any, includeLabel: boolean = true, disabled: boolean = false) => {
+    const justTrue = true;
+
     switch (field.type) {
       case "hidden":
         return (
@@ -258,78 +219,94 @@ const DynamicForm = () => {
         );
       case "text":
         return (
-          <InputText
-            register={register}
-            name={field.name}
-            includeLabel={includeLabel}
-            label={field.label}
-            defaultValue={field.default}
-            className={field.className}
-          />
+          <DisabledPrereqWrapper component={field} disabled={disabled}>
+            <InputText
+              register={register}
+              name={field.name}
+              includeLabel={includeLabel}
+              label={field.label}
+              defaultValue={field.default}
+              className={field.className}
+              disabled={disabled}
+            />
+          </DisabledPrereqWrapper>
         );
       case "textarea":
         return (
-          <InputTextArea
-            register={register}
-            name={field.name}
-            includeLabel={includeLabel}
-            label={field.label}
-            defaultValue={field.default}
-            className={field.className}
-          />
+          <DisabledPrereqWrapper component={field} disabled={disabled}>
+            <InputTextArea
+              register={register}
+              name={field.name}
+              includeLabel={includeLabel}
+              label={field.label}
+              defaultValue={field.default}
+              className={field.className}
+              disabled={disabled}
+            />
+          </DisabledPrereqWrapper>
         );
       case "number":
         return (
-          <InputNumber
-            register={register}
-            name={field.name}
-            includeLabel={includeLabel}
-            label={field.label}
-            defaultValue={field.default}
-            className={field.className}
-          />
+          <DisabledPrereqWrapper component={field} disabled={disabled}>
+            <InputNumber
+              register={register}
+              name={field.name}
+              includeLabel={includeLabel}
+              label={field.label}
+              defaultValue={field.default}
+              className={field.className}
+              disabled={disabled}
+            />
+          </DisabledPrereqWrapper>
         );
       case "switch":
         return (
-          <InputSwitch
-            register={register}
-            getValues={getValues}
-            setValue={setValue}
-            id={field.id}
-            name={field.name}
-            includeLabel={includeLabel}
-            label={field.label}
-            inputBonusCharacteristics={field.bonusCharacteristics}
-            bonusCharacteristics={bonusCharacteristics}
-            setBonusCharacteristics={setBonusCharacteristics}
-            inputBonusAdjustments={field.bonusAdjustments}
-            bonusAdjustments={bonusAdjustments}
-            setBonusAdjustments={setBonusAdjustments}
-          />
+          <DisabledPrereqWrapper component={field} disabled={disabled}>
+            <InputSwitch
+              register={register}
+              getValues={getValues}
+              setValue={setValue}
+              id={field.id}
+              name={field.name}
+              includeLabel={includeLabel}
+              label={field.label}
+              inputBonusCharacteristics={field.bonusCharacteristics}
+              bonusCharacteristics={bonusCharacteristics}
+              setBonusCharacteristics={setBonusCharacteristics}
+              inputBonusAdjustments={field.bonusAdjustments}
+              bonusAdjustments={bonusAdjustments}
+              setBonusAdjustments={setBonusAdjustments}
+              disabled={disabled}
+            />
+          </DisabledPrereqWrapper>
         );
       case "select":
         return (
-          <InputSelect
-            register={register}
-            unregister={unregister}
-            getValues={getValues}
-            setValue={setValue}
-            name={field.name}
-            includeLabel={includeLabel}
-            label={field.label}
-            options={field.options}
-            className={field.className}
-            bonusCharacteristics={bonusCharacteristics}
-            setBonusCharacteristics={setBonusCharacteristics}
-            bonusAdjustments={bonusAdjustments}
-            setBonusAdjustments={setBonusAdjustments}
-          />
+          <DisabledPrereqWrapper component={field} disabled={disabled}>
+            <InputSelect
+              register={register}
+              unregister={unregister}
+              getValues={getValues}
+              setValue={setValue}
+              name={field.name}
+              includeLabel={includeLabel}
+              label={field.label}
+              options={field.options}
+              className={field.className}
+              bonusCharacteristics={bonusCharacteristics}
+              setBonusCharacteristics={setBonusCharacteristics}
+              bonusAdjustments={bonusAdjustments}
+              setBonusAdjustments={setBonusAdjustments}
+              disabled={disabled}
+            />
+          </DisabledPrereqWrapper>
         );
       case "listgroup":
         return (
           <FormListGroup
             renderField={renderField}
             items={field.items}
+            disabled={disabled}
           />
         );
       case "group":
@@ -340,6 +317,7 @@ const DynamicForm = () => {
             includeLabel={includeLabel}
             label={field.label}
             children={field.children}
+            disabled={disabled}
           />
         );
       case "textblock":
@@ -368,15 +346,18 @@ const DynamicForm = () => {
         return <FieldArray field={field} />;
       case "image":
         return (
-          <InputImage
-            register={register}
-            name={field.name}
-            label={field.label}
-            className={field.className}
-            imagePreview={imagePreview}
-            setImagePreview={setImagePreview}
-            setImageData={setImageData} 
-          />
+          <DisabledPrereqWrapper component={field} disabled={disabled}>
+            <InputImage
+              register={register}
+              name={field.name}
+              label={field.label}
+              className={field.className}
+              imagePreview={imagePreview}
+              setImagePreview={setImagePreview}
+              setImageData={setImageData}
+              disabled={disabled}
+            />
+          </DisabledPrereqWrapper>
         );
       case "accordion":
         return (
@@ -384,6 +365,7 @@ const DynamicForm = () => {
             includeLabel={includeLabel}
             field={field}
             renderField={renderField}
+            disabled={disabled}
           />
         );
       default:
@@ -391,27 +373,39 @@ const DynamicForm = () => {
     }
   };
 
-  if (!schema) {
-    return <div>Loading...</div>;
-  }
+  // register dependsOn watches once (avoid calling watch during render)
+  useEffect(() => {
+    if (!schema) return;
+
+    for (const field of schema.fields) {
+      if (field.dependsOn) {
+        const name = field.dependsOn.field;
+        if (!watchedRef.current.has(name)) {
+          watch(name);
+          watchedRef.current.add(name);
+        }
+      }      
+    }    
+  }, [schema, watch]);
+
+  if (!schema) return <div>Loading...</div>;
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <h2>{schema.title}</h2>
-      {schema.fields.map((field: any) => {
-        if (field.dependsOn && !watchedFields.has(field.dependsOn.field)) {
-          watch(field.dependsOn.field);
-          watchedFields.add(field.dependsOn.field);
-        }
+    <FormProvider {...methods}>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <h2>{schema.title}</h2>
+        {schema.fields.map((field: any) => {
+          const shouldRenderField = field.dependsOn
+            ? getValues(field.dependsOn.field) == field.dependsOn.value
+            : true;
 
-       const shouldRenderField = field.dependsOn
-          ? getValues(field.dependsOn.field) == field.dependsOn.value
-          : true;
+          const disabled = !!field.disabled;
 
-        return shouldRenderField ? renderField(field) : null;
-      })}
-      <button type="submit">Submit</button>
-    </form>
+          return shouldRenderField ? renderField(field, true, disabled) : null;
+        })}
+        <button type="submit">Submit</button>
+      </form>
+    </FormProvider>
   );
 };
 

@@ -7,6 +7,7 @@ interface Props {
   label: string;
   defaultValue: string;
   className: string;
+  disabled?: boolean;
 }
 
 const InputTextArea = ({
@@ -16,6 +17,7 @@ const InputTextArea = ({
   label,
   defaultValue,
   className,
+  disabled
 }: Props) => {
   return (
     <div key={name} className="mb-3">
@@ -29,6 +31,7 @@ const InputTextArea = ({
         id={name}
         defaultValue={defaultValue}
         className={className}
+        disabled={disabled}
         {...register(name)}
       ></textarea>
     </div>

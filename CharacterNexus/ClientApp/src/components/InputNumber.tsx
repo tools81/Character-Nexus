@@ -7,6 +7,7 @@ interface Props {
   label: string;
   defaultValue: string;
   className: string;
+  disabled?: boolean;
 }
 
 const InputText = ({
@@ -16,6 +17,7 @@ const InputText = ({
   label,
   defaultValue,
   className,
+  disabled
 }: Props) => {
   return (
     <div key={name} className="mb-3">
@@ -31,6 +33,7 @@ const InputText = ({
         defaultValue={defaultValue}
         className={className}
         style={{ maxWidth: "100px" }}
+        disabled={disabled}
         {...register(name)}
       ></input>
     </div>

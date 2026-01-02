@@ -13,6 +13,7 @@ interface Props {
   setImageData: React.Dispatch<
       React.SetStateAction<File | null>
     >;
+  disabled?: boolean;
 }
 
 const InputImage = ({
@@ -23,6 +24,7 @@ const InputImage = ({
   imagePreview,
   setImagePreview,
   setImageData
+  , disabled
 }: Props) => {
     return (
         <>
@@ -36,6 +38,7 @@ const InputImage = ({
               id={name}
               accept="image/*"
               {...register(name)}
+              disabled={disabled}
               onChange={(event) => handleImageUpload(event, setImagePreview, setImageData)}
             />
           </div>

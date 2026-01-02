@@ -11,6 +11,11 @@ namespace Marvel
         private static List<object> _fields = new List<object>();
         private static string _jsonFilesPath = "C:/Users/toole/OneDrive/Source/Character Nexus/Ruleset.Marvel/Json/";
         private static readonly Regex sWhitespace = new Regex(@"\s+");
+        private static readonly JsonSerializerSettings _jsonSettings = new JsonSerializerSettings
+        {
+            ContractResolver = JsonContractResolver.Get(),
+            Formatting = Formatting.None
+        };
 
         public static void InitializeSchema()
         {
@@ -411,7 +416,7 @@ namespace Marvel
                     {
                         value = element.Name,
                         label = element.Name,
-                        bonusCharacteristics = JsonConvert.SerializeObject(element.BonusCharacteristics)
+                        bonusCharacteristics = JsonConvert.SerializeObject(element.BonusCharacteristics, _jsonSettings)
                     }
                 );
             }
@@ -467,7 +472,7 @@ namespace Marvel
                     {
                         value = element.Name,
                         label = element.Name,
-                        bonusCharacteristics = JsonConvert.SerializeObject(element.BonusCharacteristics)
+                        bonusCharacteristics = JsonConvert.SerializeObject(element.BonusCharacteristics, _jsonSettings)
                     }
                 );
             }
@@ -602,8 +607,8 @@ namespace Marvel
                         id = $"{powerset.Name}-{power.Name}",
                         label = power.Name,
                         type = "switch",
-                        bonusAdjustments = JsonConvert.SerializeObject(power.BonusAdjustments),
-                        prerequisites = JsonConvert.SerializeObject(power.Prerequisites)
+                        bonusAdjustments = JsonConvert.SerializeObject(power.BonusAdjustments, _jsonSettings),
+                        prerequisites = JsonConvert.SerializeObject(power.Prerequisites, _jsonSettings)
                     };
 
                     var text = new

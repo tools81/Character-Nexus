@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { usePrerequisites } from '../hooks/usePrerequisites';
 
 interface FormAccordionProps {
   includeLabel: boolean;
@@ -8,13 +9,33 @@ interface FormAccordionProps {
     items: {
       name: string;
       header: string;
-      component: React.ReactNode;
+      component: any;
     }[];
   };
-  renderField: (component: React.ReactNode) => React.ReactNode;
+  // renderField accepts (component, includeLabel?, disabled?)
+  renderField: (component: any, includeLabel?: boolean, disabled?: boolean) => React.ReactNode;
+  disabled?: boolean;
 }
 
-const FormAccordion: React.FC<FormAccordionProps> = ({ includeLabel, field, renderField }) => {
+const FormAccordion: React.FC<FormAccordionProps> = ({ includeLabel, field, renderField, disabled }) => {
+  const prereqSetRef = useRef<Set<string>>(new Set());
+
+  // Build a schema where each accordion item's component is wrapped with an items array
+  // so usePrerequisites can descend into group.items[].component and find prerequisites
+  const childSchema = {
+    fields: field.items.map((item: any) => ({
+      name: item.name,
+      items: [
+        {
+          name: item.name,
+          component: item.component
+        }
+      ]
+    }))
+  };
+
+  usePrerequisites(childSchema, prereqSetRef.current);
+
   return (
     <div className="mb-3">
       {includeLabel && (
@@ -46,7 +67,7 @@ const FormAccordion: React.FC<FormAccordionProps> = ({ includeLabel, field, rend
               data-bs-parent={`#${field.id}`}
             >
               <div className="accordion-body">
-                {renderField(childItem.component)}
+                {renderField(childItem.component, true, !!disabled || !!childItem.component.disabled)}
               </div>
             </div>
           </div>

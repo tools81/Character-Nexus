@@ -4,6 +4,7 @@ interface Props {
   includeLabel: boolean;
   label: string;
   children: any;
+  disabled?: boolean;
 }
 
 const FormGroup = ({
@@ -11,7 +12,8 @@ const FormGroup = ({
   name,
   includeLabel,
   label,
-  children
+  children,
+  disabled
 }: Props) => {
   return (
     <>
@@ -20,8 +22,16 @@ const FormGroup = ({
       </label>
       <br />
       <div key={name} className="input-group">
-        {children.map((childField: any) => (
-          <div className="form-group p-2">{renderField(childField)}</div>
+        {children.map((childField: any) => (            
+            <div className="form-group p-2">
+              {includeLabel && (
+                <>
+                  <label>{childField.label}</label>
+                  <br />
+                </>
+              )}
+              {renderField(childField, false, !!disabled)}
+            </div>
         ))}
       </div>
     </>

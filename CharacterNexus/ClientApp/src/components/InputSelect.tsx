@@ -28,6 +28,7 @@ interface Props {
   >;
   bonusAdjustments: BonusAdjustments;
   setBonusAdjustments: React.Dispatch<React.SetStateAction<BonusAdjustments>>;
+  disabled?: boolean;
 }
 
 const InputSelect = ({
@@ -43,7 +44,8 @@ const InputSelect = ({
   bonusCharacteristics,
   setBonusCharacteristics,
   bonusAdjustments,
-  setBonusAdjustments
+  setBonusAdjustments,
+  disabled
 }: Props) => {
   return (
     <>
@@ -57,6 +59,7 @@ const InputSelect = ({
         id={name}
         className={className}
         aria-label={label}
+        disabled={disabled}
         {...register(`${name}.value`)}
         onChange={(event) =>
           handleSelectChange(event, bonusCharacteristics, setBonusCharacteristics, bonusAdjustments, setBonusAdjustments, getValues, setValue, unregister)
@@ -133,9 +136,9 @@ const handleSelectChange = (
         ...prevBonusAdjustments,
         {
           origin: event.target.name,
-          type: adjustment.Type,
-          name: adjustment.Name,
-          value: adjustment.Value,
+          type: adjustment.type,
+          name: adjustment.name,
+          value: adjustment.value,
         },
       ]);
     }
@@ -163,8 +166,8 @@ const handleSelectChange = (
         ...existingCharacteristics,
         {
           origin: event.target.name,
-          type: characteristic.Type,
-          value: characteristic.Value,
+          type: characteristic.type,
+          value: characteristic.value,
         },
       ]);
     }

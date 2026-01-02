@@ -1,11 +1,13 @@
 interface Props {
   renderField: any;
   items: any
+  disabled?: boolean;
 }
 
 const FormListGroup = ({
   renderField,
-  items
+  items,
+  disabled
 }: Props) => {
   return (
     <ul className="list-group">
@@ -15,8 +17,8 @@ const FormListGroup = ({
           id={childItem.component.name}
           key={childItem.component.name}
         >
-          {renderField(childItem.component)}
-          {renderField(childItem.text)}
+          {renderField(childItem.component, false, !!disabled || !!childItem.component.disabled)}
+          {renderField(childItem.text, false, !!disabled)}
         </li>
       ))}
     </ul>

@@ -1,6 +1,7 @@
 export interface Prerequisite {
     type: string;
-    value: any;
+    name: string;
+    formula: string;
 }
 
 export interface Prerequisites extends Array<Prerequisite> {}

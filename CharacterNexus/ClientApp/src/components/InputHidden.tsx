@@ -11,7 +11,7 @@ const InputHidden = ({
   register,
   name,
   className,
-  defaultValue
+  defaultValue,
 }: Props) => {
   return (
     <input

@@ -9,7 +9,6 @@ import { BonusAdjustments } from "../types/BonusAdjustment";
 import { BonusCharacteristics } from "../types/BonusCharacteristic";
 import { toCamelCase } from "../utils/toCamelCase";
 import { handleRemoveBonusAdjustment } from "../hooks/useBonus";
-//import { HandlePrerequisite } from "../hooks/usePrerequisites";
 
 interface Props {
   register: UseFormRegister<FieldValues>;
@@ -27,6 +26,7 @@ interface Props {
   inputBonusAdjustments: any;
   bonusAdjustments: BonusAdjustments;
   setBonusAdjustments: React.Dispatch<React.SetStateAction<BonusAdjustments>>;
+  disabled?: boolean;
 }
 
 const InputSwitch = ({
@@ -41,7 +41,8 @@ const InputSwitch = ({
   setBonusCharacteristics,
   inputBonusAdjustments,
   bonusAdjustments,
-  setBonusAdjustments
+  setBonusAdjustments,
+  disabled
 }: Props) => {
   return (
     <div className="form-check form-switch">
@@ -52,6 +53,7 @@ const InputSwitch = ({
         id={id}
         data-bonusadjustments={inputBonusAdjustments}
         data-bonuscharacteristics={inputBonusCharacteristics}
+        disabled={disabled}
         //TODO: Replace 'powers' with a variable
         {...register(`powers.${name}`)}
         onChange={(event) =>

@@ -57,6 +57,12 @@ h1 {
   fill: #4cf735;
 }
 
+.center-container {
+  width: 100%; 
+  display: flex; 
+  justify-content: center;      
+}
+
 @keyframes slideInY {
   to {
     transform: translateY(0);

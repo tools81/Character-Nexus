@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import { BonusAdjustments } from "../types/BonusAdjustment";
 import { BonusCharacteristics } from "../types/BonusCharacteristic";
+import { UserChoices } from "../types/UserChoice";
 import { getURLParameter } from "../utils/getUrlParameter";
 import { getFileNameFromUrl } from "../utils/getFileNameFromUrl";
 import InputText from "../components/InputText";
@@ -31,6 +32,7 @@ const DynamicForm = () => {
   const [schema, setSchema] = useState<any>(null);
   const [bonusCharacteristics, setBonusCharacteristics] = useState<BonusCharacteristics>([]);
   const [bonusAdjustments, setBonusAdjustments] = useState<BonusAdjustments>([]);
+  const [userChoices, setUserChoices] = useState<UserChoices>([]);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [imageData, setImageData] = useState<File | null>(null);
   const watchedRef = useRef<Set<string>>(new Set());
@@ -217,6 +219,8 @@ const DynamicForm = () => {
             defaultValue={field.default}
           />
         );
+      case "divider":
+        return <hr />;
       case "text":
         return (
           <DisabledPrereqWrapper component={field} disabled={disabled}>
@@ -264,6 +268,7 @@ const DynamicForm = () => {
           <DisabledPrereqWrapper component={field} disabled={disabled}>
             <InputSwitch
               register={register}
+              unregister={unregister}
               getValues={getValues}
               setValue={setValue}
               id={field.id}
@@ -288,6 +293,7 @@ const DynamicForm = () => {
               unregister={unregister}
               getValues={getValues}
               setValue={setValue}
+              renderField={renderField}
               name={field.name}
               includeLabel={includeLabel}
               label={field.label}
@@ -297,6 +303,8 @@ const DynamicForm = () => {
               setBonusCharacteristics={setBonusCharacteristics}
               bonusAdjustments={bonusAdjustments}
               setBonusAdjustments={setBonusAdjustments}
+              userChoices={userChoices}
+              setUserChoices={setUserChoices}
               disabled={disabled}
             />
           </DisabledPrereqWrapper>
@@ -403,7 +411,10 @@ const DynamicForm = () => {
 
           return shouldRenderField ? renderField(field, true, disabled) : null;
         })}
-        <button type="submit">Submit</button>
+        <div className="center-container">
+          <button type="submit">Submit</button>
+        </div>
+        <br />
       </form>
     </FormProvider>
   );

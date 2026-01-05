@@ -1,3 +1,5 @@
+using Utility;
+
 namespace DarkCrystal
 {
     public class Gear : IEquipment, IBaseJson

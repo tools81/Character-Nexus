@@ -24,18 +24,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Ruleset.AmazingTales\Ruleset.AmazingTales.csproj" />
-    <ProjectReference Include="..\Ruleset.BladeRunner\Ruleset.BladeRunner.csproj" />
     <ProjectReference Include="..\Storage.AzureBlobStorage\Storage.AzureBlobStorage.csproj" />
+    <ProjectReference Include="..\Ruleset.AmazingTales\Ruleset.AmazingTales.csproj" />
+    <ProjectReference Include="..\Ruleset.BladeRunner\Ruleset.BladeRunner.csproj" />  
+    <ProjectReference Include="..\Ruleset.DarkCrystal\Ruleset.DarkCrystal.csproj" />
     <ProjectReference Include="..\Ruleset.EverydayHeroes\Ruleset.EverydayHeroes.csproj" />
     <ProjectReference Include="..\Ruleset.Ghostbusters\Ruleset.Ghostbusters.csproj" />
     <ProjectReference Include="..\Ruleset.GiJoe\Ruleset.GiJoe.csproj" />
-    <ProjectReference Include="..\Ruleset.Marvel\Ruleset.Marvel.csproj" />
-    <ProjectReference Include="..\Utility\Utility.csproj" />
+    <ProjectReference Include="..\Ruleset.Marvel\Ruleset.Marvel.csproj" />   
     <ProjectReference Include="..\Ruleset.Starfinder\Ruleset.Starfinder.csproj" />
     <ProjectReference Include="..\Ruleset.Transformers\Ruleset.Transformers.csproj" />
     <ProjectReference Include="..\Ruleset.VampireTheMasquerade\Ruleset.VampireTheMasquerade.csproj" />
     <ProjectReference Include="..\Ruleset.WerewolfTheApocalypse\Ruleset.WerewolfTheApocalypse.csproj" />
+    <ProjectReference Include="..\Utility\Utility.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

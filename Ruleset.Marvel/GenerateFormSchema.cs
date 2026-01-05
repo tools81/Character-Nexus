@@ -104,13 +104,18 @@ namespace Marvel
 
                 GenerateDescriptionSchema();
 
+                _fields.Add(new
+                {
+                    type = "divider"
+                });
+
                 GenerateOriginSchema(origins, "origin", "Origin");
                 GenerateOccupationSchema(occupations, "occupation", "Occupation");
                 GenerateAttributeSchema(attributes, "attributes", "Ability Scores");
                 GenerateTraitSchema(traits, "trait", "Traits");
                 GenerateTagSchema(tags, "tag", "Tags");
-                GeneratePowersSchema(powersets, powers, "power", "Powers");
                 GenerateWeaponSchema(weapons, "weapon", "Weapons");
+                GeneratePowersSchema(powersets, powers, "power", "Powers");                
 
                 var schema = new
                 {
@@ -602,7 +607,7 @@ namespace Marvel
                 {
                     var component = new
                     {
-                        name = power.Name.ToLower(),
+                        name = $"powers.{power.Name.ToLower()}",
                         id = $"{powerset.Name}-{power.Name}",
                         label = power.Name,
                         type = "switch",

@@ -1,3 +1,5 @@
+using Utility;
+
 namespace DarkCrystal
 {
     public class Specialization : ISkill, IBaseJson

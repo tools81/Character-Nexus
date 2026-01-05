@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Utility;
 
 namespace DarkCrystal
@@ -10,9 +12,9 @@ namespace DarkCrystal
         public List<Skill> Skills { get; set; } = new List<Skill>();
         public Clan Clan { get; set; } = new Clan();
         public Gender Gender { get; set; } = new Gender();
-        public List<Flaw> Flaws { get; set; } = new List<Flaw>();
+        public List<Flaw> Flaw { get; set; } = new List<Flaw>();
         public List<Trait> Traits { get; set; } = new List<Trait>();
-        public List<Specilization> Specializations { get; set; } = new List<Specialization>();
+        public List<Specialization> Specializations { get; set; } = new List<Specialization>();
         public List<Gear> Gear { get; set; } = new List<Gear>();
         public string Notes { get; set; } = string.Empty;
         public CharacterSegment CharacterSegment { get => GetCharacterSegment(); }
@@ -20,7 +22,7 @@ namespace DarkCrystal
 
         public byte[] BuildCharacterSheet()
         {
-            
+            throw new NotImplementedException();
         }
 
         private CharacterSegment GetCharacterSegment()

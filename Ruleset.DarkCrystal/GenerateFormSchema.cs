@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Utility;
 
-namespace AmazingTales
+namespace DarkCrystal
 {
     public static class GenerateFormSchema
     {
@@ -22,12 +24,15 @@ namespace AmazingTales
         {
             try
             {
-                string jsonGendersData = File.ReadAllText(_jsonFilesPath + "Genders.json");
+                string jsonGendersData = File.ReadAllText(_jsonFilesPath + "Gender.json");
                 string jsonClansData = File.ReadAllText(_jsonFilesPath + "Clans.json");
+                string jsonTraitsData = File.ReadAllText(_jsonFilesPath + "Traits.json");
                 string jsonSkillsData = File.ReadAllText(_jsonFilesPath + "Skills.json");
+                string jsonSpecializationsData = File.ReadAllText(_jsonFilesPath + "Specializations.json");
+                string jsonFlawsData = File.ReadAllText(_jsonFilesPath + "Flaws.json");
+                string jsonGearsData = File.ReadAllText(_jsonFilesPath + "Gear.json");
 
                 List<Gender>? genders = JsonConvert.DeserializeObject<List<Gender>?>(jsonGendersData);
-
                 if (genders == null)
                 {
                     Console.WriteLine($"Unable to read genders json file. Aborting...");
@@ -36,7 +41,6 @@ namespace AmazingTales
                 }
 
                 List<Clan>? clans = JsonConvert.DeserializeObject<List<Clan>?>(jsonClansData);
-
                 if (clans == null)
                 {
                     Console.WriteLine($"Unable to read clans json file. Aborting...");
@@ -44,11 +48,42 @@ namespace AmazingTales
                     return;
                 }
 
-                List<Skill>? skills = JsonConvert.DeserializeObject<List<Skill>?>(jsonSkillsData);
+                List<Trait>? traits = JsonConvert.DeserializeObject<List<Trait>?>(jsonTraitsData);
+                if (traits == null)
+                {
+                    Console.WriteLine($"Unable to read traits json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
 
+                List<Skill>? skills = JsonConvert.DeserializeObject<List<Skill>?>(jsonSkillsData);
                 if (skills == null)
                 {
                     Console.WriteLine($"Unable to read skills json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                List<Specialization>? specializations = JsonConvert.DeserializeObject<List<Specialization>?>(jsonSpecializationsData);
+                if (specializations == null)
+                {
+                    Console.WriteLine($"Unable to read specializations json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                List<Flaw>? flaws = JsonConvert.DeserializeObject<List<Flaw>?>(jsonFlawsData);
+                if (flaws == null)
+                {
+                    Console.WriteLine($"Unable to read flaws json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                List<Gear>? gears = JsonConvert.DeserializeObject<List<Gear>?>(jsonGearsData);
+                if (gears == null)
+                {
+                    Console.WriteLine($"Unable to read gear json file. Aborting...");
                     Console.Read();
                     return;
                 }
@@ -57,7 +92,16 @@ namespace AmazingTales
 
                 GenerateGenderSchema(genders, "gender", "Gender");
                 GenerateClanSchema(clans, "clan", "Clan");
-                GenerateSkillsSchema(skills, "skills", "Skills");
+                GenerateTraitsSchema(traits, "trait", "Traits");
+                GenerateFlawsSchema(flaws, "flaw", "Flaws");
+                GenerateGearSchema(gears, "gear", "Gear");
+
+                _fields.Add(new
+                {
+                    type = "divider"
+                });
+
+                GenerateSkillsSchema(skills, "skill", "Skills", specializations, "specialization", "Specializations"); //Specializations are grouped under skills
 
                 var schema = new
                 {
@@ -108,6 +152,15 @@ namespace AmazingTales
                     type = "image",
                     className = "form-control"
                 });
+            _fields.Add(
+                new
+                {
+                    name = "notes",
+                    id = "notes",
+                    label = "Notes",
+                    type = "textarea",
+                    className = "form-control"
+                });
         }
 
         public static void GenerateGenderSchema(List<Gender> elements, string name, string label)
@@ -151,7 +204,8 @@ namespace AmazingTales
                     {
                         value = element.Name,
                         label = element.Name,
-                        bonusCharacteristics = JsonConvert.SerializeObject(element.BonusCharacteristics, _jsonSettings)
+                        bonusCharacteristics = JsonConvert.SerializeObject(element.BonusCharacteristics, _jsonSettings),
+                        userChoices = JsonConvert.SerializeObject(element.UserChoices, _jsonSettings)
                     }
                 );
             }
@@ -190,38 +244,151 @@ namespace AmazingTales
             }
         }
 
-        public static void GenerateSkillsSchema(List<Skill> elements, string name, string label)
+        public static void GenerateTraitsSchema(List<Trait> elements, string name, string label)
         {
-            var children = new List<object>();
+            dynamic obj = new ExpandoObject();
 
-            foreach (var attribute in attributes)
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var element in elements)
             {
-                children.Add(new
-                {
-                    name = $"attributes.{attribute.Name}",
-                    id = $"attributes.{attribute.Name.ToLower()}",
-                    label = attribute.Name,
-                    type = "number",
-                    className = "form-control",
-                    validation = new
+                obj.options.Add(
+                    new
                     {
-                        required = true,
-                        min = -3,
-                        max = 9
-                    },
-                    @default = 0
-                });
+                        value = element.Name,
+                        label = $"{element.Clan} - {element.Name}",
+                        clan = element.Clan
+                    }
+                );
             }
 
-            var group = new
+            dynamic array = new
             {
-                type = "group",
                 name,
                 label,
-                children
+                type = "array",
+                component = obj
             };
 
-            _fields.Add(group);
+            _fields.Add(array);
+        }
+
+        public static void GenerateSkillsSchema(List<Skill> elements, string name, string label, List<Specialization> specializations, string specName, string specLabel)
+        {            
+            foreach (var element in elements)
+            {
+               
+                var field = new
+                {
+                    name = element.Name.ToLower(),
+                    id = element.Name,
+                    label = element.Name,
+                    type = "switch"
+                };
+
+                _fields.Add(field);
+
+                dynamic obj = new ExpandoObject();
+
+                obj.name = $"{element.Name}.{specName}";
+                obj.id = $"{element.Name}.{specName}";
+                obj.label = specLabel;
+                obj.type = "select";
+                obj.className = "form-select";
+                obj.options = new List<object>();
+
+                foreach (var specialization in specializations.Where(s => s.Skill.Contains(element.Name)))
+                {
+                    obj.options.Add(
+                        new
+                        {
+                            value = specialization.Name,
+                            label = specialization.Name,
+                            description = specialization.Description
+                        }
+                    );
+                }
+
+                var arrayName = $"{element.Name}.{name}";
+
+                dynamic array = new
+                {
+                    name = obj.name,
+                    label = obj.label,
+                    type = "array",
+                    component = obj
+                };
+
+                _fields.Add(array);
+            }
+        }
+
+        public static void GenerateFlawsSchema(List<Flaw> flaws, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var flaw in flaws)
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = flaw.Name,
+                        label = flaw.Name
+                    }
+                );
+            }
+
+            dynamic array = new
+            {
+                name,
+                label,
+                type = "array",
+                component = obj
+            };
+
+            _fields.Add(array);
+        }
+
+        private static void GenerateGearSchema(List<Gear> gears, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var gear in gears)
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = gear.Name,
+                        label = gear.Name
+                    }
+                );
+            }
+
+            dynamic array = new
+            {
+                name,
+                label,
+                type = "array",
+                component = obj
+            };
+
+            _fields.Add(array);
         }
     }
 }

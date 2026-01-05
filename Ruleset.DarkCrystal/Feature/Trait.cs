@@ -1,9 +1,11 @@
-﻿namespace DarkCrystal
+﻿using Utility;
+
+namespace DarkCrystal
 {
-    public class Trait : IAttribute, IBaseJson
+    public class Trait : IFeature, IBaseJson
     {
         public required string Name { get; set; }
         public string Description { get; set; } = string.Empty;
-        public bool Clan { get; set; }
+        public string Clan { get; set; }
     }
 }

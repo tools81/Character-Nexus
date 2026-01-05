@@ -100,7 +100,6 @@ export function useFieldCalculations(
         // eslint-disable-next-line no-new-func
         const newValue = Function("return " + formula)();
         const currentValue = getValues(fieldName);
-        console.log(`Calculating field: ${fieldName}, formula: ${formula}, newValue: ${newValue}, currentValue: ${currentValue}`);
         if (currentValue !== newValue) {
           setValue(fieldName, newValue);
         }

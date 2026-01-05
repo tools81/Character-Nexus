@@ -8,7 +8,7 @@ Character Nexus is an ASP.NET API capable of generating and storing characters c
 
 ## Adding Rulesets
 
-Each TTRPG is identified as a "Ruleset". Each Ruleset will, at minimum, have a model for Character, a means of generating a schema for a React form, a means of converting the json returned by React to the Character model, and a means of populating a pdf template for a character sheet.
+Each TTRPG is identified as a "Ruleset". Each Ruleset will, at minimum, have a model for Character, a means of generating a schema for a React form, a means of mapping the json returned by React to the Character model, and a means of populating a pdf template for a character sheet. Additional features will include an export to Foundry VTT.
 
 Each Ruleset has its rules defined in Json files. Interfaces for the general identification of rules can be found in the Utility project (Ability, Attribute, Class, Equipment, Feature, Race, and Skill).
 

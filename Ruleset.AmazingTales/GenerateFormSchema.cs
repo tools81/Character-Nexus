@@ -70,6 +70,11 @@ namespace AmazingTales
             _fields.Add(
                 new
                 {
+                    type = "divider"
+                });
+            _fields.Add(
+                new
+                {
                     name = "d12Attribute",
                     id = "d12Attribute",
                     label = "D12 Attribute",

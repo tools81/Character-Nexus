@@ -4,14 +4,16 @@ import {
   FieldValues,
   UseFormGetValues,
   UseFormSetValue,
+  UseFormUnregister
 } from "react-hook-form";
 import { BonusAdjustments } from "../types/BonusAdjustment";
 import { BonusCharacteristics } from "../types/BonusCharacteristic";
 import { toCamelCase } from "../utils/toCamelCase";
-import { handleRemoveBonusAdjustment } from "../hooks/useBonus";
+import { handleRemoveBonusAdjustment, handleRemoveArrayValue } from "../hooks/useBonus";
 
 interface Props {
   register: UseFormRegister<FieldValues>;
+  unregister: UseFormUnregister<FieldValues>;
   getValues: UseFormGetValues<FieldValues>;
   setValue: UseFormSetValue<FieldValues>;
   id: string;
@@ -31,6 +33,7 @@ interface Props {
 
 const InputSwitch = ({
   register,
+  unregister,
   getValues,
   setValue,
   id,
@@ -54,8 +57,7 @@ const InputSwitch = ({
         data-bonusadjustments={inputBonusAdjustments}
         data-bonuscharacteristics={inputBonusCharacteristics}
         disabled={disabled}
-        //TODO: Replace 'powers' with a variable
-        {...register(`powers.${name}`)}
+        {...register(name)}
         onChange={(event) =>
           handleInputChange(
             event,
@@ -64,7 +66,8 @@ const InputSwitch = ({
             bonusAdjustments,
             setBonusAdjustments,
             getValues,
-            setValue
+            setValue,
+            unregister
           )
         }
       />
@@ -84,7 +87,8 @@ const handleInputChange = (
   bonusAdjustments: any,
   setBonusAdjustments: React.Dispatch<React.SetStateAction<BonusAdjustments>>,
   getValues: UseFormGetValues<FieldValues>,
-  setValue: UseFormSetValue<FieldValues>
+  setValue: UseFormSetValue<FieldValues>,
+  unregister: UseFormUnregister<FieldValues>
 ) => {
   if (event.target.value == null) {
     return;
@@ -110,8 +114,8 @@ const handleInputChange = (
       handleRemoveBonusAdjustment(
         getValues,
         setValue,
-        toCamelCase(adjustment.type),
-        toCamelCase(adjustment.name),
+        adjustment.type,
+        adjustment.name,
         adjustment.value
       );
     }
@@ -135,6 +139,35 @@ const handleInputChange = (
       }
     }
   }
+
+  if (fieldBonusCharacteristics) {
+      //Remove components from field array where the origin is this input. So bonus is removed when changing value again.
+      for (const characteristic of bonusCharacteristics.reverse()) {
+        handleRemoveArrayValue(
+          getValues,
+          unregister,
+          characteristic.type,
+          characteristic.value
+        );
+      }
+  
+      //Remove items previously added by the same input
+      setBonusCharacteristics(
+        bonusCharacteristics.filter((c: any) => c.origin !== event.target.name)
+      );
+  
+      //Add to the existing state of characteristics
+      for (const characteristic of fieldBonusCharacteristics) {
+        setBonusCharacteristics((existingCharacteristics) => [
+          ...existingCharacteristics,
+          {
+            origin: event.target.name,
+            type: characteristic.type,
+            value: characteristic.value,
+          },
+        ]);
+      }
+    }
 };
 
 export default InputSwitch;

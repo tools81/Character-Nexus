@@ -6,7 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Json\Character\" />
+    <EmbeddedResource Include="Json\Character\Form.json" />
+    <EmbeddedResource Include="Json\Clans.json" />
+    <EmbeddedResource Include="Json\Flaws.json" />
+    <EmbeddedResource Include="Json\Gear.json" />
+    <EmbeddedResource Include="Json\Gender.json" />
+    <EmbeddedResource Include="Json\Skills.json" />
+    <EmbeddedResource Include="Json\Specializations.json" />
+    <EmbeddedResource Include="Json\Traits.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Json\Character\" />   
   </ItemGroup>
 
   <ItemGroup>

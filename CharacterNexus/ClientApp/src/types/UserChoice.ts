@@ -1,4 +1,5 @@
 export interface UserChoice {
+    origin?: string;
     type: string;
     choices: string[];
     count: number;

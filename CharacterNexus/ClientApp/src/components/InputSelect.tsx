@@ -11,7 +11,6 @@ import { BonusCharacteristics } from "../types/BonusCharacteristic";
 import { UserChoices } from "../types/UserChoice";
 import { toCamelCase } from "../utils/toCamelCase";
 import { handleRemoveBonusAdjustment, handleRemoveArrayValue } from "../hooks/useBonus";
-import { useModal } from "../hooks/useModal";
 // import RandomSelectButton from "./RandomSelectButton";
 
 interface Props {
@@ -32,7 +31,7 @@ interface Props {
   setBonusAdjustments: React.Dispatch<React.SetStateAction<BonusAdjustments>>;
   userChoices: UserChoices;
   setUserChoices: React.Dispatch<React.SetStateAction<UserChoices>>;
-  userChoiceModal: ReturnType<typeof useModal>;
+  openUserChoiceModal: (choices: UserChoices) => void;
   disabled?: boolean;
 }
 
@@ -52,7 +51,7 @@ const InputSelect = ({
   setBonusAdjustments,
   userChoices,
   setUserChoices,
-  userChoiceModal,
+  openUserChoiceModal,
   disabled
 }: Props) => {
   return (
@@ -70,7 +69,7 @@ const InputSelect = ({
         disabled={disabled}
         {...register(`${name}.value`)}
         onChange={(event) =>
-          handleSelectChange(event, bonusCharacteristics, setBonusCharacteristics, bonusAdjustments, setBonusAdjustments, userChoices, setUserChoices, userChoiceModal, getValues, setValue, unregister)
+          handleSelectChange(event, bonusCharacteristics, setBonusCharacteristics, bonusAdjustments, setBonusAdjustments, userChoices, setUserChoices, openUserChoiceModal, getValues, setValue, unregister)
         }
       >
         <option value="">Select...</option>
@@ -103,7 +102,7 @@ const handleSelectChange = (
   setBonusAdjustments: React.Dispatch<React.SetStateAction<BonusAdjustments>>,
   userChoices: any,
   setUserChoices: React.Dispatch<React.SetStateAction<UserChoices>>,
-  userChoiceModal: ReturnType<typeof useModal>,
+  openUserChoiceModal: (choices: UserChoices) => void,
   getValues: UseFormGetValues<FieldValues>,
   setValue: UseFormSetValue<FieldValues>,
   unregister: UseFormUnregister<FieldValues>
@@ -198,33 +197,14 @@ const handleSelectChange = (
   if (selectUserChoices) {
     const value = selectUserChoices as UserChoices | null;
 
-    if (value) {
-      userChoiceModal.open(value);
-    }
-
     //Add to the existing state of user choices
     for (const choice of selectUserChoices as UserChoices) {
-      setUserChoices((existingUserChoices) => [
-        ...existingUserChoices,
-        {
-          origin: event.target.name,
-          category: choice.category,
-          type: choice.type,
-          choices: choice.choices,
-          count: choice.count,
-          value: choice.value,
-        },
-      ]);
+      choice.origin = event.target.name;
     }
 
-    // for (const choice of userChoices) {
-    //   setUserChoices((prevChoices: UserChoices) => [
-    //     ...prevChoices,
-    //     {
-    //       ...selectUserChoices
-    //     } 
-    //   ]);
-    // }
+    if (value && openUserChoiceModal) {
+      openUserChoiceModal(value);
+    }    
   }
 };
 

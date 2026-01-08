@@ -205,7 +205,7 @@ namespace DarkCrystal
                                     var jsonContent = flawsReader.ReadToEnd();
                                     var flaws = JsonTo.List<Flaw>(jsonContent);
 
-                                    character.Flaw = new List<Flaw>();
+                                    character.Flaws = new List<Flaw>();
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
@@ -216,7 +216,7 @@ namespace DarkCrystal
 
                                         reader.Read();
 
-                                        character.Flaw.Add(found);
+                                        character.Flaws.Add(found);
                                     }
                                 }
                             }

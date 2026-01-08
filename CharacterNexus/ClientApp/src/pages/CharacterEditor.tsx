@@ -35,6 +35,7 @@ const DynamicForm = () => {
   const [bonusAdjustments, setBonusAdjustments] = useState<BonusAdjustments>([]);
   const [userChoices, setUserChoices] = useState<UserChoices>([]);
   const [choiceFields, setChoiceFields] = useState<any[]>([]);
+  const modalFieldNamesRef = useRef<string[]>([]);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [imageData, setImageData] = useState<File | null>(null);
   const watchedRef = useRef<Set<string>>(new Set());
@@ -53,6 +54,25 @@ const DynamicForm = () => {
   } = methods;
 
   const userChoiceModal = useModal();
+
+  const openUserChoiceModal = (choices: UserChoices) => {
+    // 1. Unregister old modal fields
+    modalFieldNamesRef.current.forEach(name => {
+      unregister(name);
+      setValue(name, undefined);
+    });
+
+    modalFieldNamesRef.current = [];
+
+    // 2. Clear local field definitions
+    setChoiceFields([]);
+
+    // 3. Set new choices (triggers rebuild)
+    setUserChoices(choices);
+
+    // 4. Open modal
+    userChoiceModal.open(choices);
+  };
 
   interface Props {
     field: any;
@@ -140,41 +160,49 @@ const DynamicForm = () => {
     if (!userChoices) return;
 
     const newFields: any[] = [];
+    const newNames: string[] = [];
 
     userChoices.forEach((item: UserChoice) => {
       if (item.category === "Characteristic") {
         item.choices.forEach((choice, index) => {
           const bonusCharacteristic = { type: item.type, value: choice };
+          const name = "choice." + item.type + "." + index;
 
           newFields.push({
-            id: `choice.${item.type}.${index}`.trim(),
-            key: `choice.${item.type}.${index}`.trim(),
-            name: `choice.${item.type}.${index}`.trim(),
+            id: name,
+            key: name,
+            name: name,
             label: choice,
             type: "switch",
             defaultValue: false,
             bonusCharacteristics: JSON.stringify([bonusCharacteristic])
           });
+
+          newNames.push(name);
         });
       }
 
       if (item.category === "Adjustment") {
         item.choices.forEach((choice, index) => {
           const bonusAdjustment = { type: item.type, name: choice, value: 0 };
+          const name = "choice." + item.type + "." + index;
 
           newFields.push({
-            id: `${item.type}.${index}`.trim(),
-            key: `${item.type}.${index}`.trim(),
-            name: `${item.type}.${index}`.trim(),
+            id: name,
+            key: name,
+            name: name,
             label: choice,
             type: "number",
             bonusAdjustments: JSON.stringify([bonusAdjustment]),
             defaultValue: 0
           });
+
+          newNames.push(name);
         });
       }
     });
 
+    modalFieldNamesRef.current = newNames;
     setChoiceFields(newFields);       
   }, [userChoices]);
 
@@ -182,21 +210,16 @@ const DynamicForm = () => {
     if (choiceFields.length === 0) return;
 
     choiceFields.forEach(field => {
-      const existing = getValues(field.name);
-      // Only add if it does not already exist
-      if (existing === undefined) {
-        setValue(
-          field.name,
-          field.defaultValue !== undefined
-            ? field.defaultValue
-            : null,
-          {
-            shouldDirty: false,
-            shouldTouch: false,
-            shouldValidate: false,
-          }
-        );
-      }
+      setValue(
+        field.name,
+        field.defaultValue !== undefined
+          ? field.defaultValue
+          : null,
+        {
+          shouldDirty: false,
+          shouldTouch: false,
+          shouldValidate: false,
+        });
     });
   }, [choiceFields]);
 
@@ -208,7 +231,7 @@ const DynamicForm = () => {
       if (!watchedRef.current.has(field.name)) {
         watch(field.name);
         watchedRef.current.add(field.name);
-      }
+      };
     });
   }, [choiceFields, watch]);
 
@@ -381,7 +404,7 @@ const DynamicForm = () => {
               setBonusAdjustments={setBonusAdjustments}
               userChoices={userChoices}
               setUserChoices={setUserChoices}
-              userChoiceModal={userChoiceModal}
+              openUserChoiceModal={openUserChoiceModal}
               disabled={disabled}
             />
           </DisabledPrereqWrapper>

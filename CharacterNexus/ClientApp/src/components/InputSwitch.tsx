@@ -1,4 +1,5 @@
 import { ChangeEvent } from "react";
+import { useWatch } from "react-hook-form";
 import {
   UseFormRegister,
   FieldValues,
@@ -47,6 +48,9 @@ const InputSwitch = ({
   setBonusAdjustments,
   disabled
 }: Props) => {
+  var watchedValue = useWatch({ name });
+  var checked = watchedValue === true;
+  
   return (
     <div className="form-check form-switch">
       <input
@@ -58,6 +62,7 @@ const InputSwitch = ({
         data-bonuscharacteristics={inputBonusCharacteristics}
         disabled={disabled}
         {...register(name)}
+        checked={checked}
         onChange={(event) =>
           handleInputChange(
             event,
@@ -93,6 +98,11 @@ const handleInputChange = (
   if (event.target.value == null) {
     return;
   }
+
+  setValue(event.target.name, event.target.checked, {
+    shouldDirty: true,
+    shouldTouch: true,
+  });
 
   const fieldElement = event.target;
   const fieldBonusAdjustmentsString = fieldElement.getAttribute(
@@ -155,17 +165,19 @@ const handleInputChange = (
       setBonusCharacteristics(
         bonusCharacteristics.filter((c: any) => c.origin !== event.target.name)
       );
-  
-      //Add to the existing state of characteristics
-      for (const characteristic of fieldBonusCharacteristics) {
-        setBonusCharacteristics((existingCharacteristics) => [
-          ...existingCharacteristics,
-          {
-            origin: event.target.name,
-            type: characteristic.type,
-            value: characteristic.value,
-          },
-        ]);
+      
+      if (event.target.checked) {
+        //Add to the existing state of characteristics
+        for (const characteristic of fieldBonusCharacteristics) {
+          setBonusCharacteristics((existingCharacteristics) => [
+            ...existingCharacteristics,
+            {
+              origin: event.target.name,
+              type: characteristic.type,
+              value: characteristic.value,
+            },
+          ]);
+        }
       }
     }
 };

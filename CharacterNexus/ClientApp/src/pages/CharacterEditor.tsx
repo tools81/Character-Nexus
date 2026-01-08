@@ -3,9 +3,9 @@ import { useForm, useFieldArray, FormProvider } from "react-hook-form";
 import { useRulesetContext } from "../components/RulesetContext";
 import { useNavigate } from "react-router-dom";
 
-import { BonusAdjustments } from "../types/BonusAdjustment";
-import { BonusCharacteristics } from "../types/BonusCharacteristic";
-import { UserChoices } from "../types/UserChoice";
+import { BonusAdjustment, BonusAdjustments } from "../types/BonusAdjustment";
+import { BonusCharacteristic, BonusCharacteristics } from "../types/BonusCharacteristic";
+import { UserChoice, UserChoices } from "../types/UserChoice";
 import { getURLParameter } from "../utils/getUrlParameter";
 import { getFileNameFromUrl } from "../utils/getFileNameFromUrl";
 import InputText from "../components/InputText";
@@ -23,6 +23,7 @@ import { useFieldCalculations } from "../hooks/useFieldCalculations";
 import { usePrerequisites } from "../hooks/usePrerequisites";
 import { useBonusCharacteristics } from "../hooks/useBonusCharacteristics";
 import { useBonusAdjustments } from "../hooks/useBonusAdjustments";
+import { useModal } from "../hooks/useModal";
 
 const BASE_URL = `${window.location.protocol}//${window.location.host}`;
 
@@ -33,12 +34,13 @@ const DynamicForm = () => {
   const [bonusCharacteristics, setBonusCharacteristics] = useState<BonusCharacteristics>([]);
   const [bonusAdjustments, setBonusAdjustments] = useState<BonusAdjustments>([]);
   const [userChoices, setUserChoices] = useState<UserChoices>([]);
+  const [choiceFields, setChoiceFields] = useState<any[]>([]);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [imageData, setImageData] = useState<File | null>(null);
   const watchedRef = useRef<Set<string>>(new Set());
   const prereqSetRef = useRef<Set<string>>(new Set());
   
-  const methods = useForm();
+  const methods = useForm({shouldUnregister: false});
   const {
     register,
     unregister,
@@ -47,9 +49,10 @@ const DynamicForm = () => {
     control,
     getValues,
     setValue,
-    reset,
-    formState: { errors },
+    reset
   } = methods;
+
+  const userChoiceModal = useModal();
 
   interface Props {
     field: any;
@@ -133,6 +136,82 @@ const DynamicForm = () => {
     }
   }, []);
 
+  useEffect(() => {
+    if (!userChoices) return;
+
+    const newFields: any[] = [];
+
+    userChoices.forEach((item: UserChoice) => {
+      if (item.category === "Characteristic") {
+        item.choices.forEach((choice, index) => {
+          const bonusCharacteristic = { type: item.type, value: choice };
+
+          newFields.push({
+            id: `choice.${item.type}.${index}`.trim(),
+            key: `choice.${item.type}.${index}`.trim(),
+            name: `choice.${item.type}.${index}`.trim(),
+            label: choice,
+            type: "switch",
+            defaultValue: false,
+            bonusCharacteristics: JSON.stringify([bonusCharacteristic])
+          });
+        });
+      }
+
+      if (item.category === "Adjustment") {
+        item.choices.forEach((choice, index) => {
+          const bonusAdjustment = { type: item.type, name: choice, value: 0 };
+
+          newFields.push({
+            id: `${item.type}.${index}`.trim(),
+            key: `${item.type}.${index}`.trim(),
+            name: `${item.type}.${index}`.trim(),
+            label: choice,
+            type: "number",
+            bonusAdjustments: JSON.stringify([bonusAdjustment]),
+            defaultValue: 0
+          });
+        });
+      }
+    });
+
+    setChoiceFields(newFields);       
+  }, [userChoices]);
+
+  useEffect(() => {
+    if (choiceFields.length === 0) return;
+
+    choiceFields.forEach(field => {
+      const existing = getValues(field.name);
+      // Only add if it does not already exist
+      if (existing === undefined) {
+        setValue(
+          field.name,
+          field.defaultValue !== undefined
+            ? field.defaultValue
+            : null,
+          {
+            shouldDirty: false,
+            shouldTouch: false,
+            shouldValidate: false,
+          }
+        );
+      }
+    });
+  }, [choiceFields]);
+
+  // watch modal-generated fields so they retain state
+  useEffect(() => {
+    if (!choiceFields.length) return;
+
+    choiceFields.forEach(field => {
+      if (!watchedRef.current.has(field.name)) {
+        watch(field.name);
+        watchedRef.current.add(field.name);
+      }
+    });
+  }, [choiceFields, watch]);
+
   useBonusAdjustments(bonusAdjustments, getValues, setValue);
   useBonusCharacteristics(bonusCharacteristics, getValues, setValue);
   usePrerequisites(schema, prereqSetRef.current, methods);
@@ -207,8 +286,6 @@ const DynamicForm = () => {
   };
 
   const renderField = (field: any, includeLabel: boolean = true, disabled: boolean = false) => {
-    const justTrue = true;
-
     switch (field.type) {
       case "hidden":
         return (
@@ -293,7 +370,6 @@ const DynamicForm = () => {
               unregister={unregister}
               getValues={getValues}
               setValue={setValue}
-              renderField={renderField}
               name={field.name}
               includeLabel={includeLabel}
               label={field.label}
@@ -305,6 +381,7 @@ const DynamicForm = () => {
               setBonusAdjustments={setBonusAdjustments}
               userChoices={userChoices}
               setUserChoices={setUserChoices}
+              userChoiceModal={userChoiceModal}
               disabled={disabled}
             />
           </DisabledPrereqWrapper>
@@ -411,6 +488,25 @@ const DynamicForm = () => {
 
           return shouldRenderField ? renderField(field, true, disabled) : null;
         })}
+        <userChoiceModal.Modal>
+          {({ userChoices: userChoices, close }) => (
+            <>
+              <h2>Choice: </h2>
+  
+              {userChoices.map((item: UserChoice) => (
+                <p>Choose {item.count}</p>
+              ))}
+
+              {choiceFields.map((field: any) => (
+                <div key={field.id} className="input-group">
+                  {renderField(field)}
+                </div>
+              ))}
+  
+              <button onClick={close}>Close</button>
+            </>
+          )}
+        </userChoiceModal.Modal>
         <div className="center-container">
           <button type="submit">Submit</button>
         </div>

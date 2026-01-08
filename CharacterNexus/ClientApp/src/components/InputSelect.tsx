@@ -6,10 +6,8 @@ import {
   UseFormSetValue,
   UseFormUnregister
 } from "react-hook-form";
-import { BonusAdjustment, BonusAdjustments } from "../types/BonusAdjustment";
-import { BonusCharacteristic } from "../types/BonusCharacteristic";
+import { BonusAdjustments } from "../types/BonusAdjustment";
 import { BonusCharacteristics } from "../types/BonusCharacteristic";
-import { UserChoice } from "../types/UserChoice";
 import { UserChoices } from "../types/UserChoice";
 import { toCamelCase } from "../utils/toCamelCase";
 import { handleRemoveBonusAdjustment, handleRemoveArrayValue } from "../hooks/useBonus";
@@ -21,7 +19,6 @@ interface Props {
   unregister: UseFormUnregister<FieldValues>;
   getValues: UseFormGetValues<FieldValues>;
   setValue: UseFormSetValue<FieldValues>;
-  renderField: (component: any, includeLabel?: boolean, disabled?: boolean) => React.ReactNode;
   name: string;
   includeLabel: boolean;
   label: string;
@@ -35,6 +32,7 @@ interface Props {
   setBonusAdjustments: React.Dispatch<React.SetStateAction<BonusAdjustments>>;
   userChoices: UserChoices;
   setUserChoices: React.Dispatch<React.SetStateAction<UserChoices>>;
+  userChoiceModal: ReturnType<typeof useModal>;
   disabled?: boolean;
 }
 
@@ -43,7 +41,6 @@ const InputSelect = ({
   unregister,
   getValues,
   setValue,
-  renderField,
   name,
   includeLabel,
   label,
@@ -55,9 +52,9 @@ const InputSelect = ({
   setBonusAdjustments,
   userChoices,
   setUserChoices,
+  userChoiceModal,
   disabled
 }: Props) => {
-  const userChoiceModal = useModal();
   return (
     <>
       {includeLabel && (
@@ -90,54 +87,7 @@ const InputSelect = ({
           </option>
         ))}
       </select>
-      {/* <RandomSelectButton selectName={`${name}.value`} options={options} setValue={setValue} /> */}
-      <userChoiceModal.Modal>
-        {({ userChoices: userChoices, close }) => (
-          <>
-            <h2>Choice: </h2>
-
-            {userChoices.map((item: UserChoice) => (
-              <p>Choose {item.count}</p>
-            ))}
-
-            {userChoices.map((item: UserChoice) => item.category === "Characteristic" && item.choices.map((choice, index) => {
-              const bonusCharacteristic: BonusCharacteristic = { 
-                      type: item.type,
-                      value: choice
-                    };
-
-              const field = { 
-                id: `choice.${item.type}.${index}`.trim(), 
-                key: `choice.${item.type}.${index}`.trim(),
-                name: `choice.${item.type}.${index}`.trim(), 
-                label: choice, 
-                type: "switch", 
-                bonusCharacteristics: JSON.stringify([bonusCharacteristic])};
-              
-              return (renderField(field));
-            }))} 
-
-            {userChoices.map((item: UserChoice) => item.category === "Adjustment" && item.choices.map((choice, index) => {
-              const bonusAdjustment: BonusAdjustment = { 
-                      type: item.type,
-                      name: choice,
-                      value: 0
-                    };
-
-              const field = { 
-                id: `${item.type}.${index}`.trim(), 
-                name: `${item.type}.${index}`.trim(), 
-                label: choice, 
-                type: "number", 
-                bonusAdjustments: [bonusAdjustment]};
-              
-              return (renderField(field));
-            }))} 
-
-            <button onClick={close}>Close</button>
-          </>
-        )}
-      </userChoiceModal.Modal>
+      {/* <RandomSelectButton selectName={`${name}.value`} options={options} setValue={setValue} /> */}      
       <div className="pb-3" />
     </>
   );
@@ -151,8 +101,8 @@ const handleSelectChange = (
   >,
   bonusAdjustments: any,
   setBonusAdjustments: React.Dispatch<React.SetStateAction<BonusAdjustments>>,
-  userChoice: any,
-  setUserChoice: React.Dispatch<React.SetStateAction<UserChoices>>,
+  userChoices: any,
+  setUserChoices: React.Dispatch<React.SetStateAction<UserChoices>>,
   userChoiceModal: ReturnType<typeof useModal>,
   getValues: UseFormGetValues<FieldValues>,
   setValue: UseFormSetValue<FieldValues>,
@@ -251,11 +201,30 @@ const handleSelectChange = (
     if (value) {
       userChoiceModal.open(value);
     }
-    // Update user choices state
-    // setUserChoice((prevChoices) => ({
-    //   ...prevChoices,
-    //   ...selectUserChoices
-    // }));
+
+    //Add to the existing state of user choices
+    for (const choice of selectUserChoices as UserChoices) {
+      setUserChoices((existingUserChoices) => [
+        ...existingUserChoices,
+        {
+          origin: event.target.name,
+          category: choice.category,
+          type: choice.type,
+          choices: choice.choices,
+          count: choice.count,
+          value: choice.value,
+        },
+      ]);
+    }
+
+    // for (const choice of userChoices) {
+    //   setUserChoices((prevChoices: UserChoices) => [
+    //     ...prevChoices,
+    //     {
+    //       ...selectUserChoices
+    //     } 
+    //   ]);
+    // }
   }
 };
 

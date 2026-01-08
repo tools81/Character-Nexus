@@ -1,4 +1,4 @@
-import { UseFormRegister, FieldValues } from "react-hook-form";
+import { UseFormRegister, FieldValues, useWatch } from "react-hook-form";
 
 interface Props {
   register: UseFormRegister<FieldValues>,
@@ -10,7 +10,7 @@ interface Props {
   disabled?: boolean;
 }
 
-const InputText = ({
+const InputNumber = ({
   register,
   name,
   includeLabel,
@@ -19,6 +19,9 @@ const InputText = ({
   className,
   disabled
 }: Props) => {
+  var watchedValue = useWatch({ name });
+  var value = watchedValue !== undefined ? watchedValue : "";
+  
   return (
     <div key={name} className="mb-3">
       {includeLabel && (
@@ -35,9 +38,10 @@ const InputText = ({
         style={{ maxWidth: "100px" }}
         disabled={disabled}
         {...register(name)}
+        value={value ? value : 0}
       ></input>
     </div>
   );
 };
 
-export default InputText;
+export default InputNumber;

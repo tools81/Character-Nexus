@@ -96,11 +96,6 @@ namespace DarkCrystal
                 GenerateFlawsSchema(flaws, "flaw", "Flaws");
                 GenerateGearSchema(gears, "gear", "Gear");
 
-                _fields.Add(new
-                {
-                    type = "divider"
-                });
-
                 GenerateSkillsSchema(skills, "skill", "Skills", specializations, "specialization", "Specializations"); //Specializations are grouped under skills
 
                 var schema = new
@@ -281,11 +276,15 @@ namespace DarkCrystal
         {            
             foreach (var element in elements)
             {
-               
+                _fields.Add(new
+                {
+                    type = "divider"
+                });
+
                 var field = new
                 {
-                    name = element.Name.ToLower(),
-                    id = element.Name,
+                    name = $"skills.{element.Name.ToLower()}",
+                    id = $"skills.{element.Name}",
                     label = element.Name,
                     type = "switch"
                 };
@@ -294,9 +293,9 @@ namespace DarkCrystal
 
                 dynamic obj = new ExpandoObject();
 
-                obj.name = $"{element.Name}.{specName}";
-                obj.id = $"{element.Name}.{specName}";
-                obj.label = specLabel;
+                obj.name = $"{specName}.{element.Name}";
+                obj.id = $"{specName}.{element.Name}";
+                obj.label = $"{element.Name} {specLabel}";
                 obj.type = "select";
                 obj.className = "form-select";
                 obj.options = new List<object>();

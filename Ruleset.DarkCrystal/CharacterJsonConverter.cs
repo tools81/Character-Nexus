@@ -74,31 +74,27 @@ namespace DarkCrystal
                                 throw new JsonException("Expected StartObject token for clans");
                             }
 
-                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.Marvel.Json.Clans.json"))
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.DarkCrystal.Json.Clans.json"))
                             {
                                 using (var clansReader = new StreamReader(stream))
                                 {
                                     var jsonContent = clansReader.ReadToEnd();
                                     var clans = JsonTo.List<Clan>(jsonContent);
 
-                                    character.Clan = new Clan();
+                                    //Select input items return an object, so must read to get beyond StartObject property and into Value property
+                                    reader.Read();
+                                    reader.Read();
 
-                                    while (reader.Read() && reader.TokenType != JsonToken.EndObject)
-                                    {
-                                        var propName = reader.Value.ToString();
-                                        reader.Read();
-                                        var value = (bool)reader.Value;
+                                    var clan = clans.Find(o => o.Name.ToLower() == reader.Value.ToString().ToLower());
 
-                                        if (value)
-                                        {
-                                            var found = clans.Find(p => p.Name.ToLower() == propName.ToLower());
-                                            character.Clan = found;
-                                        }
-                                    }
+                                    //Read the end object
+                                    reader.Read();
+
+                                    character.Clan = clan;
                                 }
                             }
                             break;
-                        case "traits":
+                        case "trait":
                             if (reader.TokenType != JsonToken.StartArray)
                             {
                                 throw new JsonException("Expected StartArray token for traits");
@@ -164,7 +160,7 @@ namespace DarkCrystal
                                 }
                             }
                             break;
-                        case "specializations":
+                        case "specialization":
                             if (reader.TokenType != JsonToken.StartObject)
                             {
                                 throw new JsonException("Expected StartObject token for specializations");
@@ -180,22 +176,26 @@ namespace DarkCrystal
                                     character.Specializations = new List<Specialization>();
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndObject)
-                                    {
-                                        var propName = reader.Value.ToString();
-                                        reader.Read();
-                                        var value = int.Parse(reader.Value.ToString());
+                                    {                                       
+                                        if (reader.TokenType == JsonToken.StartObject)
+                                        {
+                                            reader.Read();
+                                            reader.Read();
 
-                                        var found = specializations.Find(p => p.Name.ToLower() == propName.ToLower());
-                                        found.Master = true;
-                                        character.Specializations.Add(found);
+                                            var found = specializations.Find(w => w.Name.ToLower() == reader.Value.ToString().ToLower());                                        
+                                            character.Specializations.Add(found);
+                                            
+                                            reader.Read();
+                                            reader.Read();
+                                        }                                    
                                     }
                                 }
                             }
                             break;
-                        case "flaws":
+                        case "flaw":
                             if (reader.TokenType != JsonToken.StartArray)
                             {
-                                throw new JsonException("Expected StartArray token for flaw");
+                                throw new JsonException("Expected StartArray token for flaws");
                             }
 
                             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.DarkCrystal.Json.Flaws.json"))
@@ -250,6 +250,9 @@ namespace DarkCrystal
                                 }
                             }
                             break;
+                        case "choice":
+                            while (reader.Read() && reader.TokenType != JsonToken.EndObject) {};
+                        break;
                     }
                 }
             }

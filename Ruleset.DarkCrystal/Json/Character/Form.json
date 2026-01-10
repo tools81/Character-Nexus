@@ -678,19 +678,19 @@
       "type": "divider"
     },
     {
-      "name": "agility",
-      "id": "Agility",
+      "name": "skills.agility",
+      "id": "skills.Agility",
       "label": "Agility",
       "type": "switch"
     },
     {
-      "name": "Agility.specialization",
-      "label": "Specializations",
+      "name": "specialization.Agility",
+      "label": "Agility Specializations",
       "type": "array",
       "component": {
-        "name": "Agility.specialization",
-        "id": "Agility.specialization",
-        "label": "Specializations",
+        "name": "specialization.Agility",
+        "id": "specialization.Agility",
+        "label": "Agility Specializations",
         "type": "select",
         "className": "form-select",
         "options": [
@@ -713,19 +713,22 @@
       }
     },
     {
-      "name": "animals",
-      "id": "Animals",
+      "type": "divider"
+    },
+    {
+      "name": "skills.animals",
+      "id": "skills.Animals",
       "label": "Animals",
       "type": "switch"
     },
     {
-      "name": "Animals.specialization",
-      "label": "Specializations",
+      "name": "specialization.Animals",
+      "label": "Animals Specializations",
       "type": "array",
       "component": {
-        "name": "Animals.specialization",
-        "id": "Animals.specialization",
-        "label": "Specializations",
+        "name": "specialization.Animals",
+        "id": "specialization.Animals",
+        "label": "Animals Specializations",
         "type": "select",
         "className": "form-select",
         "options": [
@@ -748,19 +751,22 @@
       }
     },
     {
-      "name": "fighting",
-      "id": "Fighting",
+      "type": "divider"
+    },
+    {
+      "name": "skills.fighting",
+      "id": "skills.Fighting",
       "label": "Fighting",
       "type": "switch"
     },
     {
-      "name": "Fighting.specialization",
-      "label": "Specializations",
+      "name": "specialization.Fighting",
+      "label": "Fighting Specializations",
       "type": "array",
       "component": {
-        "name": "Fighting.specialization",
-        "id": "Fighting.specialization",
-        "label": "Specializations",
+        "name": "specialization.Fighting",
+        "id": "specialization.Fighting",
+        "label": "Fighting Specializations",
         "type": "select",
         "className": "form-select",
         "options": [
@@ -783,19 +789,22 @@
       }
     },
     {
-      "name": "lore",
-      "id": "Lore",
+      "type": "divider"
+    },
+    {
+      "name": "skills.lore",
+      "id": "skills.Lore",
       "label": "Lore",
       "type": "switch"
     },
     {
-      "name": "Lore.specialization",
-      "label": "Specializations",
+      "name": "specialization.Lore",
+      "label": "Lore Specializations",
       "type": "array",
       "component": {
-        "name": "Lore.specialization",
-        "id": "Lore.specialization",
-        "label": "Specializations",
+        "name": "specialization.Lore",
+        "id": "specialization.Lore",
+        "label": "Lore Specializations",
         "type": "select",
         "className": "form-select",
         "options": [
@@ -818,19 +827,22 @@
       }
     },
     {
-      "name": "brawn",
-      "id": "Brawn",
+      "type": "divider"
+    },
+    {
+      "name": "skills.brawn",
+      "id": "skills.Brawn",
       "label": "Brawn",
       "type": "switch"
     },
     {
-      "name": "Brawn.specialization",
-      "label": "Specializations",
+      "name": "specialization.Brawn",
+      "label": "Brawn Specializations",
       "type": "array",
       "component": {
-        "name": "Brawn.specialization",
-        "id": "Brawn.specialization",
-        "label": "Specializations",
+        "name": "specialization.Brawn",
+        "id": "specialization.Brawn",
+        "label": "Brawn Specializations",
         "type": "select",
         "className": "form-select",
         "options": [
@@ -853,19 +865,22 @@
       }
     },
     {
-      "name": "scouting",
-      "id": "Scouting",
+      "type": "divider"
+    },
+    {
+      "name": "skills.scouting",
+      "id": "skills.Scouting",
       "label": "Scouting",
       "type": "switch"
     },
     {
-      "name": "Scouting.specialization",
-      "label": "Specializations",
+      "name": "specialization.Scouting",
+      "label": "Scouting Specializations",
       "type": "array",
       "component": {
-        "name": "Scouting.specialization",
-        "id": "Scouting.specialization",
-        "label": "Specializations",
+        "name": "specialization.Scouting",
+        "id": "specialization.Scouting",
+        "label": "Scouting Specializations",
         "type": "select",
         "className": "form-select",
         "options": [
@@ -888,19 +903,22 @@
       }
     },
     {
-      "name": "social",
-      "id": "Social",
+      "type": "divider"
+    },
+    {
+      "name": "skills.social",
+      "id": "skills.Social",
       "label": "Social",
       "type": "switch"
     },
     {
-      "name": "Social.specialization",
-      "label": "Specializations",
+      "name": "specialization.Social",
+      "label": "Social Specializations",
       "type": "array",
       "component": {
-        "name": "Social.specialization",
-        "id": "Social.specialization",
-        "label": "Specializations",
+        "name": "specialization.Social",
+        "id": "specialization.Social",
+        "label": "Social Specializations",
         "type": "select",
         "className": "form-select",
         "options": [

@@ -14,6 +14,7 @@ namespace AmazingTales
         public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_amazing_tales.png";
 
         public string FormResource => "Ruleset.AmazingTales.Json.Character.Form.json";
+        public string  Instructions => File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Instructions.html");
 
         public string NewCharacter()
         {

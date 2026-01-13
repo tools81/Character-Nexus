@@ -10,6 +10,7 @@ export interface Ruleset {
     rulesetName: string;
     imageSource: string;
     logoSource: string;
+    instructions: string;
 }
 
 // -----------------

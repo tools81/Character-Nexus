@@ -81,7 +81,7 @@ const InputSelect = ({
             data-bonusadjustments={option.bonusAdjustments}
             data-bonuscharacteristics={option.bonusCharacteristics}
             data-userchoices={option.userChoices}
-          >
+          >          
             {option.label}
           </option>
         ))}

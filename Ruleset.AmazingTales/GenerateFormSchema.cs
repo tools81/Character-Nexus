@@ -77,7 +77,7 @@ namespace AmazingTales
                 {
                     name = "d12Attribute",
                     id = "d12Attribute",
-                    label = "D12 Attribute",
+                    label = "D12 Skill",
                     type = "text",
                     className = "form-control"
                 });
@@ -86,7 +86,7 @@ namespace AmazingTales
                 {
                     name = "d10Attribute",
                     id = "d10Attribute",
-                    label = "D10 Attribute",
+                    label = "D10 Skill",
                     type = "text",
                     className = "form-control"
                 });
@@ -95,7 +95,7 @@ namespace AmazingTales
                 {
                     name = "d8Attribute",
                     id = "d8Attribute",
-                    label = "D8 Attribute",
+                    label = "D8 Skill",
                     type = "text",
                     className = "form-control"
                 });
@@ -104,7 +104,7 @@ namespace AmazingTales
                 {
                     name = "d6Attribute",
                     id = "d6Attribute",
-                    label = "D6 Attribute",
+                    label = "D6 Skill",
                     type = "text",
                     className = "form-control"
                 });

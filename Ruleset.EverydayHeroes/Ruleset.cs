@@ -14,6 +14,7 @@ namespace EverydayHeroes
         public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_everyday_heroes.png";
 
         public string FormResource => "Ruleset.EverydayHeroes.Json.Character.Form.json";
+        public string  Instructions => string.Empty;
 
         public Ruleset()
         {

@@ -19,6 +19,7 @@ import FormGroup from "../components/FormGroup";
 import FormListGroup from "../components/FormListGroup";
 import FormAccordion from "../components/FormAccordion";
 import DisabledPrereqWrapper from "../components/DisabledPrereqWrapper";
+import RightCollapsiblePane from "../components/RightCollapsiblePane";
 import { useFieldCalculations } from "../hooks/useFieldCalculations";
 import { usePrerequisites } from "../hooks/usePrerequisites";
 import { useBonusCharacteristics } from "../hooks/useBonusCharacteristics";
@@ -431,7 +432,9 @@ const DynamicForm = () => {
       case "textblock":
         return (
           <div key={field.name} className="mb-3">
-            <p>{field.text}</p>
+            {field.image && <img src={field.image} alt="" />}
+            &nbsp;
+            {field.text}
           </div>
         );
       case "div":
@@ -535,6 +538,10 @@ const DynamicForm = () => {
         </div>
         <br />
       </form>
+      <RightCollapsiblePane
+        title={ruleset.name}
+        htmlContent={ruleset.instructions}
+      />
     </FormProvider>
   );
 };

@@ -199,6 +199,7 @@ namespace DarkCrystal
                     {
                         value = element.Name,
                         label = element.Name,
+                        description = element.Description,
                         bonusCharacteristics = JsonConvert.SerializeObject(element.BonusCharacteristics, _jsonSettings),
                         userChoices = JsonConvert.SerializeObject(element.UserChoices, _jsonSettings)
                     }
@@ -208,35 +209,36 @@ namespace DarkCrystal
             _fields.Add(obj);
 
             //Add a div below dropdown after selecting a value, containing details of Origin
-            foreach (var element in elements)
-            {
-                var children = new List<object>
-                {
-                    new
-                    {
-                        name = $"info-{name}-{element.Name}",
-                        label = "Information",
-                        type = "textblock",
-                        className = "text-block",
-                        text = element.Description
-                    }
-                };
+            // foreach (var element in elements)
+            // {
+            //     var children = new List<object>
+            //     {
+            //         new
+            //         {
+            //             name = $"info-{name}-{element.Name}",
+            //             label = "Information",
+            //             image = element.image,
+            //             type = "textblock",
+            //             className = "text-block",
+            //             text = element.Description
+            //         }
+            //     };
 
-                var div = new
-                {
-                    type = "div",
-                    className = "alert alert-secondary",
-                    children,
-                    dependsOn =
-                        new
-                        {
-                            field = name,
-                            value = element.Name
-                        }
-                };
+            //     var div = new
+            //     {
+            //         type = "div",
+            //         className = "alert alert-secondary",
+            //         children,
+            //         dependsOn =
+            //             new
+            //             {
+            //                 field = name,
+            //                 value = element.Name
+            //             }
+            //     };
 
-                _fields.Add(div);
-            }
+            //     _fields.Add(div);
+            // }
         }
 
         public static void GenerateTraitsSchema(List<Trait> elements, string name, string label)

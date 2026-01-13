@@ -11,6 +11,7 @@ namespace Marvel
         public string ImageSource => "https://characternexus.blob.core.windows.net/resources/card_marvel.jpg";
         public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_marvel.png";
         public string FormResource => "Ruleset.Marvel.Json.Character.Form.json";
+        public string  Instructions => string.Empty;
 
         public string NewCharacter()
         {

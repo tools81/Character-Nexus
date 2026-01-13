@@ -36,10 +36,8 @@ namespace CharacterNexus
 
             if (rulesetMapping.TryGetValue(selectedRuleset, out var rulesetName))
             {
-                Console.WriteLine($"Ruleset mapping: {rulesetName}");
                 // Resolve the ruleset implementation dynamically
                 var path = $"{assemblyPath}{rulesetName}.dll";
-                Console.WriteLine($"Assembly path: {path}");
                 var assembly = Assembly.LoadFrom(path);
 
                 var rulesetType = assembly.GetType(rulesetName.SwapTextAroundPeriod());
@@ -47,7 +45,6 @@ namespace CharacterNexus
                 if (rulesetType != null)
                 {
                     var ruleset = Activator.CreateInstance(rulesetType) as IRuleset;
-                    Console.WriteLine($"Ruleset name: {ruleset.Name}");
 
                     if (ruleset != null)
                     {

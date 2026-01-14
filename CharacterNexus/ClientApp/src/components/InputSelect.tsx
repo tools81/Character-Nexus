@@ -1,17 +1,17 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent, forwardRef, useEffect, useRef, useState } from "react";
 import {
   UseFormRegister,
   FieldValues,
   UseFormGetValues,
   UseFormSetValue,
-  UseFormUnregister
+  UseFormUnregister,
+  useWatch
 } from "react-hook-form";
 import { BonusAdjustments } from "../types/BonusAdjustment";
 import { BonusCharacteristics } from "../types/BonusCharacteristic";
 import { UserChoices } from "../types/UserChoice";
 import { toCamelCase } from "../utils/toCamelCase";
 import { handleRemoveBonusAdjustment, handleRemoveArrayValue } from "../hooks/useBonus";
-// import RandomSelectButton from "./RandomSelectButton";
 
 interface Props {
   register: UseFormRegister<FieldValues>;
@@ -21,12 +21,10 @@ interface Props {
   name: string;
   includeLabel: boolean;
   label: string;
-  options: any;
+  options: any[];
   className: string;
   bonusCharacteristics: BonusCharacteristics;
-  setBonusCharacteristics: React.Dispatch<
-    React.SetStateAction<BonusCharacteristics>
-  >;
+  setBonusCharacteristics: React.Dispatch<React.SetStateAction<BonusCharacteristics>>;
   bonusAdjustments: BonusAdjustments;
   setBonusAdjustments: React.Dispatch<React.SetStateAction<BonusAdjustments>>;
   userChoices: UserChoices;
@@ -35,69 +33,199 @@ interface Props {
   disabled?: boolean;
 }
 
-const InputSelect = ({
-  register,
-  unregister,
-  getValues,
-  setValue,
-  name,
-  includeLabel,
-  label,
-  options,
-  className,
-  bonusCharacteristics,
-  setBonusCharacteristics,
-  bonusAdjustments,
-  setBonusAdjustments,
-  userChoices,
-  setUserChoices,
-  openUserChoiceModal,
-  disabled
-}: Props) => {
+/* =======================================================
+   Main InputSelect Component with Custom UI Wrapper
+======================================================= */
+const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
+  const {
+    register,
+    unregister,
+    getValues,
+    setValue,
+    name,
+    includeLabel,
+    label,
+    options,
+    className,
+    bonusCharacteristics,
+    setBonusCharacteristics,
+    bonusAdjustments,
+    setBonusAdjustments,
+    userChoices,
+    setUserChoices,
+    openUserChoiceModal,
+    disabled
+  } = props;
+
+  const selectRef = useRef<HTMLSelectElement | null>(null);
+  const [selectedValue, setSelectedValue] = useState<any>(null);
+  const [open, setOpen] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  // Sync FROM hidden select (automation, RHF)
+  useEffect(() => {
+    const current = getValues(`${name}.value`);
+    setSelectedValue(current ? current : "");
+  }, [getValues, name]);
+
+  const watchedValue = useWatch({
+    name: `${name}.value`,
+  });
+
+  useEffect(() => {
+    const option = options.find(o => o.value === watchedValue);
+    setSelectedValue(option);
+  }, [watchedValue, options]);
+
+  useEffect(() => {
+    const close = (e: MouseEvent) => {
+      if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", close);
+    return () => document.removeEventListener("mousedown", close);
+  }, []);  
+
+  // Handle clicks on the custom UI
+  const handleCustomChange = (option: any) => {
+    setValue(`${name}.value`, option.value, {
+      shouldDirty: true,
+      shouldTouch: true,
+      shouldValidate: true,
+    });
+
+    // Update hidden select and trigger change event so existing handlers run
+    if (selectRef.current) {
+      selectRef.current.value = option.value;
+      selectRef.current.dispatchEvent(
+        new Event("change", { bubbles: true })
+      );
+    }
+
+    setSelectedValue(option);
+    setOpen(false);
+  };
+
   return (
     <>
+    <div>
       {includeLabel && (
         <>
           <label>{label}</label>
           <br />
         </>
       )}
-      <select
-        id={name}
-        className={className}
-        aria-label={label}
-        disabled={disabled}
-        {...register(`${name}.value`)}
-        onChange={(event) =>
-          handleSelectChange(event, bonusCharacteristics, setBonusCharacteristics, bonusAdjustments, setBonusAdjustments, userChoices, setUserChoices, openUserChoiceModal, getValues, setValue, unregister)
-        }
+    </div>
+
+      {/* ================= Custom Select UI ================= */}
+      <div
+        ref={wrapperRef}
+        className={`custom-select ${className}`}
+        aria-disabled={disabled}
       >
-        <option value="">Select...</option>
-        {options.map((option: any) => (
-          <option
-            key={option.value}
-            id={option.value}
-            value={option.value}
-            data-bonusadjustments={option.bonusAdjustments}
-            data-bonuscharacteristics={option.bonusCharacteristics}
-            data-userchoices={option.userChoices}
-          >          
-            {option.label}
-          </option>
-        ))}
-      </select>
-      {/* <RandomSelectButton selectName={`${name}.value`} options={options} setValue={setValue} /> */}      
+        {/* Selected value */}
+        <div
+          className="custom-select__control"
+          onClick={() => !disabled && setOpen((v) => !v)}
+        >
+          {selectedValue ? (
+            <div className="custom-select__value">
+              {selectedValue.image && (
+                <img src={selectedValue.image} alt="" />
+              )}
+              <span>{selectedValue.label}</span>
+            </div>
+          ) : (
+            <span>Select…</span>
+          )}
+        </div>
+
+        {/* Dropdown */}
+        {open && (
+          <div className="custom-select__menu">
+            {options.map((option) => (
+              <div
+                key={option.value}
+                className="custom-select__option"
+                onClick={() => handleCustomChange(option)}
+              >
+                {option.image && (
+                  <img src={option.image} alt="" />
+                )}
+                <div>
+                  <strong>{option.label}</strong>
+                  {option.description && (
+                    <div
+                      className="description"
+                      dangerouslySetInnerHTML={{
+                        __html: option.description,
+                      }}
+                    />
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+      
+      {/* ================= Hidden Select ================= */}
+      <div className="sr-only">
+        <select
+          id={name}
+          className={className}
+          aria-label={label}
+          disabled={disabled}
+          style={{ display: "none" }}
+          {...register(`${name}.value`)}
+          ref={(el) => {
+            selectRef.current = el;
+            if (typeof ref === "function") ref(el);
+            else if (ref) (ref as React.MutableRefObject<HTMLSelectElement | null>).current = el;
+          }}
+          onChange={(event) =>
+            handleSelectChange(
+              event,
+              bonusCharacteristics,
+              setBonusCharacteristics,
+              bonusAdjustments,
+              setBonusAdjustments,
+              userChoices,
+              setUserChoices,
+              openUserChoiceModal,
+              getValues,
+              setValue,
+              unregister
+            )
+          }
+        >
+          <option value="">Select...</option>
+          {options.map(option => (
+            <option
+              key={option.value}
+              id={option.value}
+              value={option.value}
+              data-bonusadjustments={option.bonusAdjustments}
+              data-bonuscharacteristics={option.bonusCharacteristics}
+              data-userchoices={option.userChoices}
+            >
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
       <div className="pb-3" />
     </>
   );
-};
+});
+
+export default InputSelect;
 
 const handleSelectChange = (
   event: ChangeEvent<HTMLSelectElement>,
   bonusCharacteristics: any,
-  setBonusCharacteristics: React.Dispatch<
-    React.SetStateAction<BonusCharacteristics>
-  >,
+  setBonusCharacteristics: React.Dispatch<React.SetStateAction<BonusCharacteristics>>,
   bonusAdjustments: any,
   setBonusAdjustments: React.Dispatch<React.SetStateAction<BonusAdjustments>>,
   userChoices: any,
@@ -110,33 +238,24 @@ const handleSelectChange = (
   const selectElement = event.target;
   const selectedOption = selectElement.options[selectElement.selectedIndex];
 
-  const selectBonusAdjustmentsString = selectedOption.getAttribute(
-    "data-bonusadjustments"
-  );
+  const selectBonusAdjustmentsString = selectedOption.getAttribute("data-bonusadjustments");
   const selectBonusAdjustments = selectBonusAdjustmentsString
     ? JSON.parse(selectBonusAdjustmentsString)
     : null;
 
-  const selectBonusCharacteristicsString = selectedOption.getAttribute(
-    "data-bonuscharacteristics"
-  );
+  const selectBonusCharacteristicsString = selectedOption.getAttribute("data-bonuscharacteristics");
   const selectBonusCharacteristics = selectBonusCharacteristicsString
     ? JSON.parse(selectBonusCharacteristicsString)
     : null;
 
-  const selectUserChoiceString = selectedOption.getAttribute(
-    "data-userchoices"
-  );
+  const selectUserChoiceString = selectedOption.getAttribute("data-userchoices");
   const selectUserChoices = selectUserChoiceString
     ? JSON.parse(selectUserChoiceString)
     : null;
 
-  if (event.target.value == null) {
-    return;
-  }
+  if (event.target.value == null) return;
 
   if (selectBonusAdjustments) {
-    //Remove bonuses provided by the component if user changes selection
     for (const adjustment of bonusAdjustments.reverse()) {
       handleRemoveBonusAdjustment(
         getValues,
@@ -147,65 +266,39 @@ const handleSelectChange = (
       );
     }
 
-    //Remove items previously added by the same input
-    setBonusAdjustments(
-      bonusAdjustments.filter((a: any) => a.origin !== event.target.name)
-    );
+    setBonusAdjustments(bonusAdjustments.filter((a: any) => a.origin !== event.target.name));
 
     for (const adjustment of selectBonusAdjustments) {
-      setBonusAdjustments((prevBonusAdjustments) => [
-        ...prevBonusAdjustments,
-        {
-          origin: event.target.name,
-          type: adjustment.type,
-          name: adjustment.name,
-          value: adjustment.value,
-        },
+      setBonusAdjustments(prev => [
+        ...prev,
+        { origin: event.target.name, type: adjustment.type, name: adjustment.name, value: adjustment.value },
       ]);
     }
   }
 
   if (selectBonusCharacteristics) {
-    //Remove components from field array where the origin is this input. So bonus is removed when changing value again.
     for (const characteristic of bonusCharacteristics.reverse()) {
-      handleRemoveArrayValue(
-        getValues,
-        unregister,
-        characteristic.type,
-        characteristic.value
-      );
+      handleRemoveArrayValue(getValues, unregister, characteristic.type, characteristic.value);
     }
 
-    //Remove items previously added by the same input
-    setBonusCharacteristics(
-      bonusCharacteristics.filter((c: any) => c.origin !== event.target.name)
-    );
+    setBonusCharacteristics(bonusCharacteristics.filter((c: any) => c.origin !== event.target.name));
 
-    //Add to the existing state of characteristics
     for (const characteristic of selectBonusCharacteristics) {
-      setBonusCharacteristics((existingCharacteristics) => [
-        ...existingCharacteristics,
-        {
-          origin: event.target.name,
-          type: characteristic.type,
-          value: characteristic.value,
-        },
+      setBonusCharacteristics(prev => [
+        ...prev,
+        { origin: event.target.name, type: characteristic.type, value: characteristic.value },
       ]);
     }
   }
 
   if (selectUserChoices) {
     const value = selectUserChoices as UserChoices | null;
-
-    //Add to the existing state of user choices
     for (const choice of selectUserChoices as UserChoices) {
       choice.origin = event.target.name;
     }
 
     if (value && openUserChoiceModal) {
       openUserChoiceModal(value);
-    }    
+    }
   }
 };
-
-export default InputSelect;

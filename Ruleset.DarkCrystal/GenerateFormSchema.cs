@@ -199,6 +199,7 @@ namespace DarkCrystal
                     {
                         value = element.Name,
                         label = element.Name,
+                        image = element.Image,
                         description = element.Description,
                         bonusCharacteristics = JsonConvert.SerializeObject(element.BonusCharacteristics, _jsonSettings),
                         userChoices = JsonConvert.SerializeObject(element.UserChoices, _jsonSettings)
@@ -217,7 +218,7 @@ namespace DarkCrystal
             //         {
             //             name = $"info-{name}-{element.Name}",
             //             label = "Information",
-            //             image = element.image,
+            //             image = element.Image,
             //             type = "textblock",
             //             className = "text-block",
             //             text = element.Description
@@ -258,6 +259,7 @@ namespace DarkCrystal
                     {
                         value = element.Name,
                         label = $"{element.Clan} - {element.Name}",
+                        description = element.Description,
                         clan = element.Clan
                     }
                 );

@@ -4,6 +4,7 @@ import { CharacterSegment } from "../types/CharacterSegment";
 import { useNavigate } from "react-router-dom";
 import CharacterCard from "../components/CharacterCard";
 import { useRulesetContext } from "../components/RulesetContext";
+import AddCharacterCard from "../components/AddCharacterCard";
 
 const BASE_URL = `${window.location.protocol}//${window.location.host}`;
 
@@ -79,15 +80,9 @@ const RulesetDashboard: React.FC = () => {
     <>
       <div className="d-flex mb-3">
         <img src={ruleset.logoSource} alt={ruleset.name} className="p-2" />
-        <button
-          type="button"
-          className="btn btn-outline-secondary ms-auto p-2 h-25"
-          onClick={() => newCharacter()}
-        >
-          + Create New
-        </button>
       </div>
       <div className="row row-cols-1 row-cols-md-4 g-4">
+        <AddCharacterCard onClick={newCharacter} />
         {characterSegments.map((character) => (
           <CharacterCard
             key={character.id}

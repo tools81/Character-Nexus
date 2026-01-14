@@ -9,6 +9,6 @@ namespace DarkCrystal
         public string Description { get; set; } = string.Empty;
         public List<BonusCharacteristic> BonusCharacteristics { get; set; } = new List<BonusCharacteristic>();
         public List<UserChoice> UserChoices { get; set; } = new List<UserChoice>();
-        public string? image { get; set; }
+        public string? Image { get; set; }
     }
 }

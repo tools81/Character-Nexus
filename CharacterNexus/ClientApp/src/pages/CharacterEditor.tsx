@@ -298,7 +298,7 @@ const DynamicForm = () => {
         })}
         <section>
           <button
-            type="button"
+            type="button" className="add-button"
             onClick={() => handleAddSelect(field.component)}
           >
             Add
@@ -534,7 +534,7 @@ const DynamicForm = () => {
           )}
         </userChoiceModal.Modal>
         <div className="center-container">
-          <button type="submit">Submit</button>
+          <button className="submit-button" type="submit">Submit</button>
         </div>
         <br />
       </form>

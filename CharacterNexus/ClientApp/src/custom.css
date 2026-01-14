@@ -34,6 +34,16 @@ h1 {
   padding-bottom: 30px;
 }
 
+.plus-icon {
+  height: 100%;
+  width: 100%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  font-size: 256px;
+  font-weight: bold;
+}
+
 .pointer {
   cursor: pointer;
 }
@@ -62,6 +72,75 @@ h1 {
   display: flex; 
   justify-content: center;      
 }
+
+.add-button {
+  width: 100%;
+  background-color: #2c3e50;
+  color:#ccc
+}
+
+.submit-button {
+  width: 30%;
+  background-color: #496886;
+  color:#ccc
+}
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select__control {
+  border: none;                 /* hide border */
+  background: transparent;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.custom-select__control:focus-visible,
+.custom-select__control:focus-within {
+  outline: 2px solid #4f46e5;   /* accessible focus ring */
+  outline-offset: 2px;
+}
+
+
+.custom-select__value {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.custom-select__value img,
+.custom-select__option img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.custom-select__menu {
+  position: absolute;
+  z-index: 1000;
+  background: #e7e7e7;
+
+  width: 97%;
+  max-height: 480px;   /* <-- controls when scrollbar appears */
+  overflow-y: auto;    /* <-- enables vertical scrolling */
+  overflow-x: hidden;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.custom-select__option {
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.custom-select__option:hover {
+  background: #95abe7;
+}
+
 
 @keyframes slideInY {
   to {

@@ -504,7 +504,9 @@ const DynamicForm = () => {
   return (
     <FormProvider {...methods}>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <h2>{schema.title}</h2>
+        <div className="d-flex mb-3">
+          <img src={ruleset.logoSource} alt={ruleset.name} className="p-2" />
+        </div>
         {schema.fields.map((field: any) => {
           const shouldRenderField = field.dependsOn
             ? getValues(field.dependsOn.field) == field.dependsOn.value

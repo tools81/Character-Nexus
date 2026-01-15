@@ -1,8 +1,12 @@
 import * as React from 'react';
-import { Container } from 'reactstrap';
+import Container from 'react-bootstrap/Container';
 import NavMenu from './NavMenu';
 
-export default class Layout extends React.PureComponent<{}, { children?: React.ReactNode }> {
+interface LayoutProps {
+  children?: React.ReactNode;
+}
+
+export default class Layout extends React.PureComponent<LayoutProps> {
     public render() {
         return (
             <React.Fragment>

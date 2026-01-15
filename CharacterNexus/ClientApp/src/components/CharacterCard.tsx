@@ -37,34 +37,24 @@ const CharacterCard = ({ id, name, image, level, levelName, details, characterSh
             <div className="container">
               <div className="row">
                 <div className="col-1 pointer">
-                  <IconContext.Provider value={{ className: "contactIcon" }}>
-                    <GiCharacter />
-                  </IconContext.Provider>                  
+                  <GiCharacter />                 
                 </div>
                 <div className="col-1 pointer">
                   <td onClick={() => onEdit(name)}>
-                    <IconContext.Provider value={{ className: "contactIcon" }}>
-                      <FaRegEdit />
-                    </IconContext.Provider>                    
+                    <FaRegEdit />                   
                   </td>
                 </div>
                 <div className="col-1 pointer">
                   <td onClick={() => openInNewTab(characterSheet)}>
-                    <IconContext.Provider value={{ className: "contactIcon" }}>
-                      <FaRegFilePdf />
-                    </IconContext.Provider>                     
+                    <FaRegFilePdf />                    
                   </td>
                 </div>
                 <div className="col-1 pointer">
-                  <IconContext.Provider value={{ className: "contactIcon" }}>
-                    <SiFoundryvirtualtabletop />
-                  </IconContext.Provider>                  
+                  <SiFoundryvirtualtabletop />                 
                 </div>
                 <div className="col-1 pointer">
                   <td onClick={() => onDelete(name)}>
-                    <IconContext.Provider value={{ className: "contactIcon" }}>
-                      <FaRegTrashCan />
-                    </IconContext.Provider>                     
+                    <FaRegTrashCan />                    
                   </td>
                 </div>
                 <div className="col-sm text-end">

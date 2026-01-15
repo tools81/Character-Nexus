@@ -1,13 +1,13 @@
-import { useState, useEffect, ChangeEvent, useCallback, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useForm, useFieldArray, FormProvider } from "react-hook-form";
-import { useRulesetContext } from "../components/RulesetContext";
 import { useNavigate } from "react-router-dom";
-
-import { BonusAdjustment, BonusAdjustments } from "../types/BonusAdjustment";
-import { BonusCharacteristic, BonusCharacteristics } from "../types/BonusCharacteristic";
-import { UserChoice, UserChoices } from "../types/UserChoice";
-import { getURLParameter } from "../utils/getUrlParameter";
+import { useAppDispatch, useAppSelector } from "../store/configureStore";
+import { fetchCharacterSchema, fetchCharacterByName, saveCharacter } from "../store/slices/characterSlice";
+import { BonusAdjustments } from "../types/BonusAdjustment";
+import { BonusCharacteristics } from "../types/BonusCharacteristic";
+import { UserChoices, UserChoice } from "../types/UserChoice";
 import { getFileNameFromUrl } from "../utils/getFileNameFromUrl";
+import { getURLParameter } from "../utils/getUrlParameter";
 import InputText from "../components/InputText";
 import InputTextArea from "../components/InputTextArea";
 import InputNumber from "../components/InputNumber";
@@ -26,12 +26,13 @@ import { useBonusCharacteristics } from "../hooks/useBonusCharacteristics";
 import { useBonusAdjustments } from "../hooks/useBonusAdjustments";
 import { useModal } from "../hooks/useModal";
 
-const BASE_URL = `${window.location.protocol}//${window.location.host}`;
-
-const DynamicForm = () => {
+const DynamicForm: React.FC = () => {
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const { ruleset } = useRulesetContext();
-  const [schema, setSchema] = useState<any>(null);
+
+  const { currentRuleset } = useAppSelector((state: { ruleset: any; }) => state.ruleset);
+  const { schema, currentCharacter, isLoading: charLoading, error: charError } = useAppSelector((state: { character: any; }) => state.character);
+
   const [bonusCharacteristics, setBonusCharacteristics] = useState<BonusCharacteristics>([]);
   const [bonusAdjustments, setBonusAdjustments] = useState<BonusAdjustments>([]);
   const [userChoices, setUserChoices] = useState<UserChoices>([]);
@@ -41,198 +42,117 @@ const DynamicForm = () => {
   const [imageData, setImageData] = useState<File | null>(null);
   const watchedRef = useRef<Set<string>>(new Set());
   const prereqSetRef = useRef<Set<string>>(new Set());
-  
-  const methods = useForm({shouldUnregister: false});
-  const {
-    register,
-    unregister,
-    handleSubmit,
-    watch,
-    control,
-    getValues,
-    setValue,
-    reset
-  } = methods;
+
+  const methods = useForm({ shouldUnregister: false });
+  const { register, unregister, handleSubmit, watch, control, getValues, setValue, reset } = methods;
 
   const userChoiceModal = useModal();
 
+  // Open modal with choices
   const openUserChoiceModal = (choices: UserChoices) => {
-    // 1. Unregister old modal fields
-    modalFieldNamesRef.current.forEach(name => {
+    modalFieldNamesRef.current.forEach((name) => {
       unregister(name);
       setValue(name, undefined);
     });
-
     modalFieldNamesRef.current = [];
-
-    // 2. Clear local field definitions
     setChoiceFields([]);
-
-    // 3. Set new choices (triggers rebuild)
     setUserChoices(choices);
-
-    // 4. Open modal
     userChoiceModal.open(choices);
   };
 
-  interface Props {
-    field: any;
-  }
-
-  function navigateToRulesetDashboard() {
-    navigate("/ruleset");
-  } 
-
-  const fetchDataAndReset = useCallback(
-    async (name: string) => {
-      try {
-        const response = await fetch(
-          `${BASE_URL}/api/character/load?ruleset=${encodeURIComponent(
-            ruleset.name
-          )}&characterName=${encodeURIComponent(name)}`,
-          {
-            method: "GET",
-          }
-        );
-        const data = await response.json();
-        reset(data);
-
-        const imageUrl = data.image;
-        const fileResponse = await fetch(imageUrl, { method: "GET" });
-        const blob = await fileResponse.blob();
-        const file = new File([blob], getFileNameFromUrl(data.image), {
-          type: blob.type,
-        });
-
-        // Set the value programmatically
-        setValue("image", file, { shouldDirty: true });
-
-        // Dispatch a native change event manually
-        const inputElement = document.getElementById(
-          "image"
-        ) as HTMLInputElement;
-
-        if (inputElement) {
-          // Create a DataTransfer object to simulate file selection
-          const dataTransfer = new DataTransfer();
-          dataTransfer.items.add(file);
-
-          // Assign the DataTransfer object to the input element's files
-          inputElement.files = dataTransfer.files;
-
-          // Dispatch the change event manually
-          const event = new Event("change", { bubbles: true });
-          inputElement.dispatchEvent(event);
-        }
-
-        //setValue("image", file);
-      } catch (error) {
-        console.error("Error fetching character:", error);
-      }
-    },
-    [reset]
-  );
-
+  // Load schema on ruleset change
   useEffect(() => {
-    const fetchSchema = async () => {
-      try {
-        const response = await fetch(
-          `${BASE_URL}/api/character/new?ruleset=${encodeURIComponent(
-            ruleset.name
-          )}`
-        );
-        setSchema(await response.json());
-      } catch (e: any) {
-        console.error("Error fetching schema:", e);
-      }
-    };
+    if (!currentRuleset) return;
+    dispatch(fetchCharacterSchema(currentRuleset.name));
+  }, [currentRuleset, dispatch]);
 
-    if (schema == null) {
-      fetchSchema();
+  // Load character if query param exists
+  useEffect(() => {
+    if (!currentRuleset || !schema) return;
 
-      var character = getURLParameter("character");
-      if (character !== "" && character !== null) {
-        fetchDataAndReset(character);
-      }
+    const characterName = getURLParameter("character");
+    if (characterName) {
+      dispatch(fetchCharacterByName({ rulesetName: currentRuleset.name, characterName }));
     }
-  }, []);
+  }, [currentRuleset, schema, dispatch]);
 
+  // When currentCharacter loads, reset form
   useEffect(() => {
-    if (!userChoices) return;
+    if (!currentCharacter) return;
+
+    reset(currentCharacter);
+
+    // Load image from URL if exists
+    if (currentCharacter.image) {
+      fetch(currentCharacter.image)
+        .then((res) => res.blob())
+        .then((blob) => {
+          const file = new File([blob], getFileNameFromUrl(currentCharacter.image), { type: blob.type });
+          setValue("image", file, { shouldDirty: true });
+          setImageData(file);
+          setImagePreview(URL.createObjectURL(file));
+        });
+    }
+  }, [currentCharacter, reset, setValue]);
+
+  // Build choice fields dynamically
+  useEffect(() => {
+    if (!userChoices || userChoices.length === 0) return;
 
     const newFields: any[] = [];
     const newNames: string[] = [];
 
     userChoices.forEach((item: UserChoice) => {
-      if (item.category === "Characteristic") {
-        item.choices.forEach((choice, index) => {
-          const bonusCharacteristic = { type: item.type, value: choice };
-          const name = "choice." + item.type + "." + index;
-
+      item.choices.forEach((choice: any, index: any) => {
+        const name = `choice.${item.type}.${index}`;
+        if (item.category === "Characteristic") {
+          const bonusChar = { type: item.type, value: choice };
           newFields.push({
             id: name,
             key: name,
-            name: name,
+            name,
             label: choice,
             type: "switch",
             defaultValue: false,
-            bonusCharacteristics: JSON.stringify([bonusCharacteristic])
+            bonusCharacteristics: JSON.stringify([bonusChar])
           });
-
-          newNames.push(name);
-        });
-      }
-
-      if (item.category === "Adjustment") {
-        item.choices.forEach((choice, index) => {
-          const bonusAdjustment = { type: item.type, name: choice, value: 0 };
-          const name = "choice." + item.type + "." + index;
-
+        }
+        if (item.category === "Adjustment") {
+          const bonusAdj = { type: item.type, name: choice, value: 0 };
           newFields.push({
             id: name,
             key: name,
-            name: name,
+            name,
             label: choice,
             type: "number",
-            bonusAdjustments: JSON.stringify([bonusAdjustment]),
+            bonusAdjustments: JSON.stringify([bonusAdj]),
             defaultValue: 0
           });
-
-          newNames.push(name);
-        });
-      }
+        }
+        newNames.push(name);
+      });
     });
 
     modalFieldNamesRef.current = newNames;
-    setChoiceFields(newFields);       
+    setChoiceFields(newFields);
   }, [userChoices]);
 
-  useEffect(() => {
-    if (choiceFields.length === 0) return;
-
-    choiceFields.forEach(field => {
-      setValue(
-        field.name,
-        field.defaultValue !== undefined
-          ? field.defaultValue
-          : null,
-        {
-          shouldDirty: false,
-          shouldTouch: false,
-          shouldValidate: false,
-        });
-    });
-  }, [choiceFields]);
-
-  // watch modal-generated fields so they retain state
+  // Initialize form values for choice fields
   useEffect(() => {
     if (!choiceFields.length) return;
+    choiceFields.forEach((field) => {
+      setValue(field.name, field.defaultValue ?? null, { shouldDirty: false, shouldTouch: false, shouldValidate: false });
+    });
+  }, [choiceFields, setValue]);
 
-    choiceFields.forEach(field => {
+  // Watch dynamic fields
+  useEffect(() => {
+    if (!choiceFields.length) return;
+    choiceFields.forEach((field) => {
       if (!watchedRef.current.has(field.name)) {
         watch(field.name);
         watchedRef.current.add(field.name);
-      };
+      }
     });
   }, [choiceFields, watch]);
 
@@ -241,66 +161,37 @@ const DynamicForm = () => {
   usePrerequisites(schema, prereqSetRef.current, methods);
   useFieldCalculations(schema, getValues, setValue, watch);
 
+  // Submit handler
   const onSubmit = async (data: any) => {
-    if (imageData != null) {
-      const formData = new FormData();
-      formData.append(
-        "Image",
-        imageData,
-        data.name + "." + imageData.name.split(".").pop()
-      );
-      formData.append("JsonData", JSON.stringify(data));
+    if (!currentRuleset) return;
 
-      await fetch(
-        `${BASE_URL}/api/character/save?ruleset=${encodeURIComponent(
-          ruleset.name
-        )}`,
-        {
-          method: "POST",
-          body: formData,
-        }
-      )
-        .then(() => navigateToRulesetDashboard())
-        .catch((error) => console.error("Error:", error));
-    }
-  };  
+    await dispatch(saveCharacter({ rulesetName: currentRuleset.name, characterData: data, imageFile: imageData ?? undefined }));
 
-  const FieldArray = ({ field }: Props) => {
-    const { fields, append, remove } = useFieldArray({
-      name: field.name,
-      control,
-    });
+    navigate("/ruleset");
+  };
 
-    const handleAddSelect = (component: any) => {
-      // Append a new item select input
-      append({ value: "" });
-    };
+  // Field rendering helper
+  const FieldArray = ({ field }: { field: any }) => {
+    const { fields, append, remove } = useFieldArray({ name: field.name, control });
+
+    const handleAddSelect = (component: any) => append({ value: "" });
 
     return (
       <div>
         <label>{field.label}</label>
-
         {fields.map((item, index) => {
           const childComponent = { ...field.component, name: `${field.name}.${index}` };
-
           return (
             <div key={item.id} className="input-group">
               {renderField(childComponent, false, !!childComponent.disabled)}
-              <button
-                type="button"
-                className="btn btn-outline-secondary"
-                onClick={() => remove(index)}
-              >
+              <button type="button" className="btn btn-outline-secondary" onClick={() => remove(index)}>
                 Remove
               </button>
             </div>
           );
         })}
         <section>
-          <button
-            type="button" className="add-button"
-            onClick={() => handleAddSelect(field.component)}
-          >
+          <button type="button" className="add-button" onClick={() => handleAddSelect(field.component)}>
             Add
           </button>
         </section>
@@ -484,53 +375,22 @@ const DynamicForm = () => {
     }
   };
 
-  // register dependsOn watches once (avoid calling watch during render)
-  useEffect(() => {
-    if (!schema) return;
-
-    for (const field of schema.fields) {
-      if (field.dependsOn) {
-        const name = field.dependsOn.field;
-        if (!watchedRef.current.has(name)) {
-          watch(name);
-          watchedRef.current.add(name);
-        }
-      }      
-    }    
-  }, [schema, watch]);
-
-  if (!schema) return <div>Loading...</div>;
+  if (charLoading || !schema) return <div>Loading...</div>;
+  if (charError) return <div>Error: {charError}</div>;
 
   return (
     <FormProvider {...methods}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="d-flex mb-3">
-          <img src={ruleset.logoSource} alt={ruleset.name} className="p-2" />
+          {currentRuleset && <img src={currentRuleset.logoSource} alt={currentRuleset.name} className="p-2" />}
         </div>
-        {schema.fields.map((field: any) => {
-          const shouldRenderField = field.dependsOn
-            ? getValues(field.dependsOn.field) == field.dependsOn.value
-            : true;
-
-          const disabled = !!field.disabled;
-
-          return shouldRenderField ? renderField(field, true, disabled) : null;
-        })}
+        {schema.fields.map((field: any) => renderField(field, true, !!field.disabled))}
         <userChoiceModal.Modal>
           {({ userChoices: userChoices, close }) => (
             <>
-              <h2>Choice: </h2>
-  
-              {userChoices.map((item: UserChoice) => (
-                <p>Choose {item.count}</p>
-              ))}
-
-              {choiceFields.map((field: any) => (
-                <div key={field.id} className="input-group">
-                  {renderField(field)}
-                </div>
-              ))}
-  
+              <h2>Choice:</h2>
+              {userChoices.map((item: UserChoice) => <p key={item.type}>Choose {item.count}</p>)}
+              {choiceFields.map((field) => <div key={field.id}>{renderField(field)}</div>)}
               <button onClick={close}>Close</button>
             </>
           )}
@@ -540,10 +400,7 @@ const DynamicForm = () => {
         </div>
         <br />
       </form>
-      <RightCollapsiblePane
-        title={ruleset.name}
-        htmlContent={ruleset.instructions}
-      />
+      {currentRuleset && <RightCollapsiblePane title={currentRuleset.name} htmlContent={currentRuleset.instructions} />}
     </FormProvider>
   );
 };

@@ -5,7 +5,49 @@
     "version": "0.2.0",
     "configurations": [
         {
-
+            "name": ".NET API Launch",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build", // Assumes a build task is defined in tasks.json
+            "program": "${workspaceFolder}/CharacterNexus/bin/Debug/net8.0/CharacterNexus.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/CharacterNexus",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "${workspaceFolder}/CharacterNexus": "${workspaceFolder}/CharacterNexus"
+            }
+        },
+        {
+            "name": "Launch via NPM",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/CharacterNexus/ClientApp",
+            "runtimeArgs": [
+                "run-script",
+                "start"
+            ],
+            "runtimeExecutable": "npm",
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Run All",
+            "configurations": [
+                ".NET API Launch",
+                "Launch via NPM"
+            ],
+            "stopAll": true
         }
     ]
 }

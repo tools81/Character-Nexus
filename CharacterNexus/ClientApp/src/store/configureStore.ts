@@ -1,29 +1,16 @@
-import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
-import thunk from 'redux-thunk';
-import { connectRouter, routerMiddleware } from 'connected-react-router';
-import { History } from 'history';
-import { ApplicationState, reducers } from './';
+import { configureStore } from '@reduxjs/toolkit';
+import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+import { reducers } from './index';
 
-export default function configureStore(history: History, initialState?: ApplicationState) {
-    const middleware = [
-        thunk,
-        routerMiddleware(history)
-    ];
+export const store = configureStore({
+  reducer: reducers,
+  devTools: process.env.NODE_ENV !== 'production',
+});
 
-    const rootReducer = combineReducers({
-        ...reducers,
-        router: connectRouter(history)
-    });
+// Type-safe hooks
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+export const useAppDispatch: () => AppDispatch = useDispatch;
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 
-    const enhancers = [];
-    const windowIfDefined = typeof window === 'undefined' ? null : window as any; // eslint-disable-line @typescript-eslint/no-explicit-any
-    if (windowIfDefined && windowIfDefined.__REDUX_DEVTOOLS_EXTENSION__) {
-        enhancers.push(windowIfDefined.__REDUX_DEVTOOLS_EXTENSION__());
-    }
-
-    return createStore(
-        rootReducer,
-        initialState,
-        compose(applyMiddleware(...middleware), ...enhancers)
-    );
-}
+export default store;

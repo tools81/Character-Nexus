@@ -1,89 +1,42 @@
-import { connect } from "react-redux";
-import React, { useEffect, useState } from "react";
-import { CharacterSegment } from "../types/CharacterSegment";
-import { useNavigate } from "react-router-dom";
-import CharacterCard from "../components/CharacterCard";
-import { useRulesetContext } from "../components/RulesetContext";
-import AddCharacterCard from "../components/AddCharacterCard";
-
-const BASE_URL = `${window.location.protocol}//${window.location.host}`;
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import CharacterCard from '../components/CharacterCard';
+import AddCharacterCard from '../components/AddCharacterCard';
+import { useAppSelector, useAppDispatch } from '../store/configureStore';
+import { fetchCharacters, deleteCharacter, CharacterSegment } from '../store/slices/characterSegmentSlice';
 
 const RulesetDashboard: React.FC = () => {
-  const { ruleset } = useRulesetContext();
-  const [error, setError] = useState();
-  const [isLoading, setIsLoading] = useState(false);
-  const [characterSegments, setCharacterSegments] = useState<CharacterSegment[]>([]);
-
-  useEffect(() => {
-      if (characterSegments.length < 1) {
-        fetchCharacters();
-      }
-  }, []);
-
-  const fetchCharacters = async () => {
-    setIsLoading(true);
-
-    setCharacterSegments([]);
-
-    try {
-      const response = await fetch(
-        `${BASE_URL}/api/ruleset/characters?ruleset=${encodeURIComponent(
-          ruleset.name
-        )}`
-      );
-      const characters = (await response.json()) as CharacterSegment[];
-      setCharacterSegments(characters);
-    } catch (e: any) {
-      setError(e);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
-  function newCharacter() {
-    navigate("/charactereditor");
-  }
+  // Read current ruleset from Redux
+  const { currentRuleset } = useAppSelector((state) => state.ruleset);
+  const { characterSegments, isLoading, error } = useAppSelector((state) => state.characterSegment);
 
-  function editCharacter(name : string) {
-    navigate(`/charactereditor?character=${name}`)
-  }
-
-  const deleteCharacter = async (name: string) => {
-    setIsLoading(true);
-
-    try {
-      const response = await fetch(
-        `${BASE_URL}/api/character/delete?ruleset=${encodeURIComponent(ruleset.name)}&characterName=${encodeURIComponent(name)}`,
-        {
-          method: "DELETE"
-        }
-      );
-    } catch (e: any) {
-      setError(e);
-    } finally {
-      fetchCharacters();
-      setIsLoading(false);
+  // Fetch characters for the current ruleset on mount or when ruleset changes
+  useEffect(() => {
+    if (currentRuleset && characterSegments.length === 0) {
+      dispatch(fetchCharacters(currentRuleset.name));
     }
-  };
+  }, [dispatch, currentRuleset, characterSegments.length]);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  const newCharacter = () => navigate('/charactereditor');
+  const editCharacter = (name: string) => navigate(`/charactereditor?character=${name}`);
+  const deleteCharacterHandler = (id: string) =>
+    currentRuleset && dispatch(deleteCharacter({ id, rulesetName: currentRuleset.name }));
 
-  if (error) {
-    return <div>Something went wrong fetching characters!</div>;
-  }
+  if (!currentRuleset) return <div>No ruleset selected.</div>;
+  if (isLoading) return <div>Loading characters...</div>;
+  if (error) return <div>{error}</div>;
 
   return (
     <>
       <div className="d-flex mb-3">
-        <img src={ruleset.logoSource} alt={ruleset.name} className="p-2" />
+        <img src={currentRuleset.logoSource} alt={currentRuleset.rulesetName} className="p-2" />
       </div>
       <div className="row row-cols-1 row-cols-md-4 g-4">
         <AddCharacterCard onClick={newCharacter} />
-        {characterSegments.map((character) => (
+        {characterSegments.map((character: CharacterSegment) => (
           <CharacterCard
             key={character.id}
             id={character.id}
@@ -94,8 +47,8 @@ const RulesetDashboard: React.FC = () => {
             details={character.details}
             characterSheet={character.characterSheet}
             onClick={() => editCharacter(character.name)}
-            onDelete={() => deleteCharacter(character.name)}
             onEdit={() => editCharacter(character.name)}
+            onDelete={() => deleteCharacterHandler(character.id)}
           />
         ))}
       </div>
@@ -103,4 +56,4 @@ const RulesetDashboard: React.FC = () => {
   );
 };
 
-export default connect()(RulesetDashboard);
+export default RulesetDashboard;

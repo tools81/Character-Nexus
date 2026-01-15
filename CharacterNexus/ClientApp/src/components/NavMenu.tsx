@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
+import { Container, Navbar, NavbarBrand, NavItem, NavLink } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../NavMenu.css';
 
@@ -11,7 +11,21 @@ export default class NavMenu extends React.PureComponent<{}, { isOpen: boolean }
     public render() {
         return (
           <header>
-            <Navbar
+            <Navbar bg="dark" data-bs-theme="dark">
+              <Container>
+                <Navbar.Brand href={"#home"}>
+                  <img
+                    alt=""
+                    src="/Heavy Tool logo transparent.png"
+                    width="30"
+                    height="30"
+                    className="logo"
+                  />{' '}
+                  Character Nexus
+                </Navbar.Brand>
+              </Container>
+            </Navbar>
+            {/* <Navbar
               className="custom-navbar navbar-expand-sm navbar-toggleable-sm border-bottom mb-3"
               dark
             >
@@ -41,7 +55,7 @@ export default class NavMenu extends React.PureComponent<{}, { isOpen: boolean }
                   </ul>
                 </Collapse>
               </Container>
-            </Navbar>
+            </Navbar> */}
           </header>
         );
     }

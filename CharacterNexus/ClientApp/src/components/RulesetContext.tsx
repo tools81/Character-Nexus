@@ -1,6 +1,6 @@
 import React, { createContext, useState, ReactNode, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Ruleset } from "../store/Ruleset";
+import { Ruleset } from "../types/Ruleset";
 
 interface RulesetState {
   ruleset: Ruleset;
@@ -11,7 +11,8 @@ const defaultRuleset: Ruleset = {
   name: "",
   rulesetName: "",
   imageSource: "",
-  logoSource: ""
+  logoSource: "",
+  instructions: ""
 };
 
 const defaultState = {

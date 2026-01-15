@@ -1,27 +1,30 @@
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
-import configureStore from './store/configureStore';
+import { Provider } from 'react-redux';
+import { store } from './store/configureStore';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-// Create browser history to use in the Redux store
-const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href') as string;
-const history = createBrowserHistory({ basename: baseUrl });
+// Get the root DOM element
+const rootElement = document.getElementById('root');
 
-// Get the application-wide store instance, prepopulating with state from the server where available.
-const store = configureStore(history);
-
-ReactDOM.render(
-    <Provider store={store}>
+if (rootElement) {
+  ReactDOM.render(
+    <React.StrictMode>
+      <Provider store={store}>
         <BrowserRouter>
-            <App />
+          <App />
         </BrowserRouter>
-    </Provider>,
-    document.getElementById('root'));
+      </Provider>
+    </React.StrictMode>,
+    rootElement
+  );
+} else {
+  console.error("Could not find root element to mount React app");
+}
 
+// Optional: service worker
 registerServiceWorker();

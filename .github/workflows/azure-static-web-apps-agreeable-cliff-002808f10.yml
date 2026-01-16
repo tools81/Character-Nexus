@@ -68,11 +68,14 @@ jobs:
           skip_api_build: true
           github_id_token: ${{ steps.idtoken.outputs.result }}
 
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
       # 8️⃣ Deploy .NET API to Azure App Service
-      - name: Deploy .NET API to App Service
+      - name: Deploy .NET API
         uses: azure/webapps-deploy@v2
         with:
-          app-name: "Character-Nexus-API"       # Name of your App Service
-          slot-name: "production"             # Default slot
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }} # XML publish profile
+          app-name: "CharacterNexus-API"
           package: ./CharacterNexus/publish

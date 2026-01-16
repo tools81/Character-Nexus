@@ -28,5 +28,4 @@ jobs:
           action: upload
           app_location: "CharacterNexus/ClientApp"
           output_location: "build"
-          api_location: "CharacterNexus"
           app_build_command: "npm install && npm run build"

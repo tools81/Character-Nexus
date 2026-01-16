@@ -44,11 +44,9 @@ jobs:
 
       # 7️⃣ Azure Login (OIDC – Windows compatible)
       - name: Azure Login
-        uses: azure/login@v2
+        uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       # 8️⃣ Deploy to Windows App Service
       - name: Deploy to Azure App Service (Windows)

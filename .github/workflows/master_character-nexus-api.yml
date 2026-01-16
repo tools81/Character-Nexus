@@ -52,5 +52,5 @@ jobs:
       - name: Deploy to Azure App Service (Windows)
         uses: azure/webapps-deploy@v3
         with:
-          app-name: CharacterNexus
+          app-name: Character-Nexus-API
           package: publish

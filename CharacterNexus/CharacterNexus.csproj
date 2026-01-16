@@ -13,11 +13,10 @@
     <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.3.1" />
     <PackageReference Include="Azure.Identity" Version="1.11.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.8" />
-    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.17" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="8.0.8" />
   </ItemGroup>
 
   <ItemGroup>
-    <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Content Remove="$(SpaRoot)**" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
@@ -25,39 +24,28 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Storage.AzureBlobStorage\Storage.AzureBlobStorage.csproj" />
-    <ProjectReference Include="..\Ruleset.AmazingTales\Ruleset.AmazingTales.csproj" />
-    <ProjectReference Include="..\Ruleset.BladeRunner\Ruleset.BladeRunner.csproj" />  
-    <ProjectReference Include="..\Ruleset.DarkCrystal\Ruleset.DarkCrystal.csproj" />
-    <ProjectReference Include="..\Ruleset.EverydayHeroes\Ruleset.EverydayHeroes.csproj" />
-    <ProjectReference Include="..\Ruleset.Ghostbusters\Ruleset.Ghostbusters.csproj" />
-    <ProjectReference Include="..\Ruleset.GiJoe\Ruleset.GiJoe.csproj" />
-    <ProjectReference Include="..\Ruleset.Marvel\Ruleset.Marvel.csproj" />   
-    <ProjectReference Include="..\Ruleset.Starfinder\Ruleset.Starfinder.csproj" />
-    <ProjectReference Include="..\Ruleset.Transformers\Ruleset.Transformers.csproj" />
-    <ProjectReference Include="..\Ruleset.VampireTheMasquerade\Ruleset.VampireTheMasquerade.csproj" />
-    <ProjectReference Include="..\Ruleset.WerewolfTheApocalypse\Ruleset.WerewolfTheApocalypse.csproj" />
+    <ProjectReference Include="..\Ruleset.*\Ruleset.*.csproj" />
     <ProjectReference Include="..\Utility\Utility.csproj" />
   </ItemGroup>
 
-  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
-    <!-- Ensure Node.js is installed -->
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build"
+          Condition="'$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules')">
     <Exec Command="node --version" ContinueOnError="true">
       <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
     </Exec>
-    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
-    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Error Condition="'$(ErrorCode)' != '0'"
+           Text="Node.js is required. Install from https://nodejs.org/" />
     <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
   </Target>
 
   <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
-    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
-    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm ci" />
     <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />
 
-    <!-- Include the newly-built files in the publish output -->
     <ItemGroup>
-      <DistFiles Include="$(SpaRoot)build\**; $(SpaRoot)build-ssr\**" />
-      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+      <DistFiles Include="$(SpaRoot)build\**" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')"
+                             Exclude="@(ResolvedFileToPublish)">
         <RelativePath>%(DistFiles.Identity)</RelativePath>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
         <ExcludeFromSingleFile>true</ExcludeFromSingleFile>

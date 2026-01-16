@@ -1,65 +1,55 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
-name: Build and deploy ASP.Net Core app to Azure Web App - Character-Nexus-API
+name: CharacterNexus – Build & Deploy (Windows)
 
 on:
   push:
-    branches:
-      - master
-  workflow_dispatch:
+    branches: [ master ]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: windows-latest
     permissions:
       contents: read #This is required for actions/checkout
 
     steps:
-      - uses: actions/checkout@v4
+      # 1️⃣ Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Set up .NET Core
+      # 2️⃣ .NET 8
+      - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.x'
+          dotnet-version: 8.0.x
 
-      - name: Build with dotnet
-        run: dotnet build --configuration Release
-
-      - name: dotnet publish
-        run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/myapp"
-
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v4
+      # 3️⃣ Node (used by csproj)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          name: .net-app
-          path: ${{env.DOTNET_ROOT}}/myapp
+          node-version: 20
 
-  deploy:
-    runs-on: windows-latest
-    needs: build
-    permissions:
-      id-token: write #This is required for requesting the JWT
-      contents: read #This is required for actions/checkout
+      # 4️⃣ Restore
+      - name: Restore
+        run: dotnet restore CharacterNexus/CharacterNexus.csproj
 
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v4
-        with:
-          name: .net-app
-      
-      - name: Login to Azure
+      # 5️⃣ Build
+      - name: Build
+        run: dotnet build CharacterNexus/CharacterNexus.csproj -c Release --no-restore
+
+      # 6️⃣ Publish (runs npm build internally)
+      - name: Publish
+        run: dotnet publish CharacterNexus/CharacterNexus.csproj -c Release -o publish
+
+      # 7️⃣ Azure Login (OIDC – Windows compatible)
+      - name: Azure Login
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_5681A794C2DF423BA8CC501DC1470D1A }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_4B36DD4F9B984CD988B2B40054A73EDE }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_3D3EBED7F839458C802F41AF8B25B81B }}
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
+      # 8️⃣ Deploy to Windows App Service
+      - name: Deploy to Azure App Service (Windows)
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'Character-Nexus-API'
-          slot-name: 'Production'
-          package: .
-          
+          app-name: CharacterNexus
+          package: publish

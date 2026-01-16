@@ -53,6 +53,17 @@ namespace CharacterNexus
             //services.AddSingleton<IRuleset, WerewolfTheApocalypse.Ruleset>();
 
             services.AddSingleton<IStorage, AzureBlobStorage.Storage>();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSWA", policy =>
+                {
+                    policy
+                        .WithOrigins("https://character-nexus-api-gnh8dcg5akh5aqeb.centralus-01.azurewebsites.net")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -74,6 +85,8 @@ namespace CharacterNexus
             app.UseSpaStaticFiles();
 
             app.UseRouting();
+
+            app.UseCors("AllowSWA");
 
             // Capture and store the selected ruleset for subsequent resolves
             app.UseRulesetMiddleware();

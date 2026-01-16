@@ -18,6 +18,10 @@ const initialState: CharacterState = {
   error: null
 };
 
+const BASE_URL =
+  process.env.REACT_APP_API_BASE ||
+  `${window.location.protocol}//${window.location.host}`;
+
 // Fetch schema for a ruleset (new character)
 export const fetchCharacterSchema = createAsyncThunk<
   CharacterSchema,
@@ -26,7 +30,7 @@ export const fetchCharacterSchema = createAsyncThunk<
 >('character/fetchSchema', async (rulesetName, { rejectWithValue }) => {
   try {
     const response = await fetch(
-      `${window.location.protocol}//${window.location.host}/api/character/new?ruleset=${encodeURIComponent(
+      `${BASE_URL}/api/character/new?ruleset=${encodeURIComponent(
         rulesetName
       )}`
     );
@@ -45,7 +49,7 @@ export const fetchCharacterByName = createAsyncThunk<
 >('character/fetchByName', async ({ rulesetName, characterName }, { rejectWithValue }) => {
   try {
     const response = await fetch(
-      `${window.location.protocol}//${window.location.host}/api/character/load?ruleset=${encodeURIComponent(
+      `${BASE_URL}/api/character/load?ruleset=${encodeURIComponent(
         rulesetName
       )}&characterName=${encodeURIComponent(characterName)}`
     );
@@ -70,7 +74,7 @@ export const saveCharacter = createAsyncThunk<
     formData.append('JsonData', JSON.stringify(characterData));
 
     const response = await fetch(
-      `${window.location.protocol}//${window.location.host}/api/character/save?ruleset=${encodeURIComponent(
+      `${BASE_URL}/api/character/save?ruleset=${encodeURIComponent(
         rulesetName
       )}`,
       { method: 'POST', body: formData }

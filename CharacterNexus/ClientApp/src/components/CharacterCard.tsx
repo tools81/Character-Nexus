@@ -5,8 +5,6 @@ import { GiCharacter } from "react-icons/gi";
 import { openInNewTab } from "../utils/openInNewTab";
 import { IconContext } from "react-icons";
 
-const BASE_URL = `${window.location.protocol}//${window.location.host}`;
-
 interface Props {
   id: string;
   name: string;

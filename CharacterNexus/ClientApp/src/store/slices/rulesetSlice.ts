@@ -30,7 +30,9 @@ const initialState: RulesetState = {
   error: null,
 };
 
-const BASE_URL = `${window.location.protocol}//${window.location.host}`;
+const BASE_URL =
+  process.env.REACT_APP_API_BASE ||
+  `${window.location.protocol}//${window.location.host}`;
 
 // Async thunk to fetch all rulesets
 export const fetchRulesets = createAsyncThunk<

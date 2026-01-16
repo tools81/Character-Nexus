@@ -13,72 +13,49 @@ jobs:
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
-    name: Build and Deploy Job
+    name: Build and Deploy React App
     permissions:
-      id-token: write
       contents: read
+      id-token: write
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
         with:
           submodules: true
+          lfs: false
 
-      # -------------------------
-      # Setup Node (React build)
-      # -------------------------
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Install ClientApp dependencies
+      - name: Install dependencies
         working-directory: CharacterNexus/ClientApp
         run: npm ci
 
-      - name: Build ClientApp
+      - name: Build React app
         working-directory: CharacterNexus/ClientApp
         run: npm run build
 
-      # -------------------------
-      # Setup .NET
-      # -------------------------
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'
-
-      # Restore ALL dotnet projects
-      - name: Restore .NET solutions
-        run: dotnet restore
-
-      # Build CharacterNexus (brings in Ruleset.* via references)
-      - name: Build API
-        run: dotnet build CharacterNexus/CharacterNexus.csproj -c Release --no-restore
-
-      # Publish API for Static Web Apps
-      - name: Publish API
-        run: dotnet publish CharacterNexus/CharacterNexus.csproj -c Release -o api-build
-
-      # -------------------------
-      # Deploy to Static Web Apps
-      # -------------------------
-      - name: Deploy
+      - name: Deploy to Azure Static Web Apps
+        id: deploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_RED_MEADOW_082999F10 }}
           action: upload
           app_location: CharacterNexus/ClientApp
           output_location: build
-          api_location: api-build
-          github_id_token: ${{ steps.idtoken.outputs.result }}
+          github_id_token: ${{ secrets.GITHUB_TOKEN }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
     name: Close Pull Request Job
+
     steps:
       - name: Close Pull Request
         uses: Azure/static-web-apps-deploy@v1
         with:
           action: close
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_RED_MEADOW_082999F10 }}

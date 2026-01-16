@@ -77,5 +77,5 @@ jobs:
       - name: Deploy .NET API
         uses: azure/webapps-deploy@v2
         with:
-          app-name: "CharacterNexus-API"
+          app-name: "Character-Nexus-API"
           package: ./CharacterNexus/publish

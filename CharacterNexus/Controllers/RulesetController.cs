@@ -1,10 +1,7 @@
 ﻿using Utility;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Configuration;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace CharacterNexus.Controllers
 {
@@ -13,20 +10,17 @@ namespace CharacterNexus.Controllers
     public class RulesetController : ControllerBase
     {
         private readonly ILogger<RulesetController> _logger;
-        private readonly IConfiguration _configuration;
-        private readonly IStorage _storage;
         private readonly IEnumerable<IRuleset> _rulesets;
+        private readonly IStorage _storage;
 
         public RulesetController(
             ILogger<RulesetController> logger,
-            IConfiguration configuration,
-            IStorage storage,
-            IEnumerable<IRuleset> rulesets)
+            IEnumerable<IRuleset> rulesets,
+            IStorage storage)
         {
             _logger = logger;
-            _configuration = configuration;
-            _storage = storage;
             _rulesets = rulesets;
+            _storage = storage;
         }
 
         [HttpGet("rulesets")]

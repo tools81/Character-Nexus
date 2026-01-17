@@ -85,21 +85,21 @@ export const usePrerequisites = (schema: any, set: any, methods?: any) => {
               break;
             }
           }
-        }
 
-        const disabled = !meetsPrerequisites;
-        const componentKey = (component && component.name) ? component.name : JSON.stringify(component);
-        if (component) {
-          component.disabled = disabled;
-          disabledUpdates[componentKey] = disabled;
-        }
-
-        // If the component itself has items (e.g., listgroup), recurse into them
-        if (component && Array.isArray(component.items)) {
-          for (const childField of component.items) {
-            evaluateField(childField);
+          const disabled = !meetsPrerequisites;
+          const componentKey = (component && component.name) ? component.name : JSON.stringify(component);
+          if (component) {
+            component.disabled = disabled;
+            disabledUpdates[componentKey] = disabled;
           }
-        }
+
+          // If the component itself has items (e.g., listgroup), recurse into them
+          if (component && Array.isArray(component.items)) {
+            for (const childField of component.items) {
+              evaluateField(childField);
+            }
+          }
+        }        
       };
 
       schema.fields.forEach((group: any) => {

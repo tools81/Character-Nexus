@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import 'bootstrap/dist/js/bootstrap.bundle';
 import { usePrerequisites } from '../hooks/usePrerequisites';
 
 interface FormAccordionProps {

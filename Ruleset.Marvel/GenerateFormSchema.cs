@@ -20,7 +20,6 @@ namespace Marvel
         {
             try
             {
-                Console.WriteLine($"Path: {_jsonFilesPath}");
                 string jsonOriginsData = File.ReadAllText(_jsonFilesPath + "Origins.json");
                 string jsonOccupationsData = File.ReadAllText(_jsonFilesPath + "Occupations.json");
                 string jsonTagsData = File.ReadAllText(_jsonFilesPath + "Tags.json");

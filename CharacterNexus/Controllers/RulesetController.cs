@@ -1,15 +1,10 @@
 ﻿using Utility;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
-using System.Reflection;
 
 namespace CharacterNexus.Controllers
 {
@@ -20,61 +15,64 @@ namespace CharacterNexus.Controllers
         private readonly ILogger<RulesetController> _logger;
         private readonly IConfiguration _configuration;
         private readonly IStorage _storage;
+        private readonly IEnumerable<IRuleset> _rulesets;
 
-        public RulesetController(ILogger<RulesetController> logger, IConfiguration configuration, IStorage storage)
+        public RulesetController(
+            ILogger<RulesetController> logger,
+            IConfiguration configuration,
+            IStorage storage,
+            IEnumerable<IRuleset> rulesets)
         {
             _logger = logger;
             _configuration = configuration;
             _storage = storage;
+            _rulesets = rulesets;
         }
 
         [HttpGet("rulesets")]
         public IActionResult GetRulesets()
         {
-            _logger.LogInformation($"Requested rulesets");
+            _logger.LogInformation("Requested rulesets");
 
-            var rulesetList = new List<IRuleset>();
-            var rulesetMapping = _configuration.GetSection("MappingsRuleset").Get<Dictionary<string, string>>();
-            var assemblyPath = _configuration.GetSection("Settings").GetValue("AssemblyPath", "");
-            
-            foreach(string rulesetName in rulesetMapping.Values)
+            // Optional: keep your mapping logic if you want filtering/ordering
+            var rulesetMapping =
+                _configuration
+                    .GetSection("MappingsRuleset")
+                    .Get<Dictionary<string, string>>();
+
+            if (rulesetMapping == null || rulesetMapping.Count == 0)
             {
-                try
-                {
-                    var path = $"{assemblyPath}{rulesetName}.dll";
-                    var assembly = Assembly.LoadFrom(path);
-
-                    var rulesetType = assembly.GetType(rulesetName.SwapTextAroundPeriod());
-
-                    if (rulesetType != null)
-                    {
-                        var instance = Activator.CreateInstance(rulesetType) as IRuleset;
-                        rulesetList.Add(instance);
-                    }
-                }
-                catch(Exception ex)
-                {
-                    return BadRequest(ex);
-                }
+                // If no mapping exists, return all registered rulesets
+                return Ok(_rulesets);
             }
 
-            return Ok(rulesetList);
+            // Filter DI-provided rulesets by config mapping
+            var mappedRulesets = _rulesets
+                .Where(r => rulesetMapping.Values.Contains(r.GetType().FullName))
+                .ToList();
+
+            return Ok(mappedRulesets);
         }
 
         [HttpGet("characters")]
         public IActionResult GetCharacters()
         {
-            if (HttpContext.Items.TryGetValue("Ruleset", out var rulesetObj) && rulesetObj is IRuleset ruleset)
+            if (HttpContext.Items.TryGetValue("Ruleset", out var rulesetObj) &&
+                rulesetObj is IRuleset ruleset)
             {
-                _logger.LogInformation($"Requested characters retrieval for ruleset: {ruleset.Name}");
+                _logger.LogInformation(
+                    "Requested characters retrieval for ruleset: {Ruleset}",
+                    ruleset.Name);
 
-                var characters = _storage.DownloadCharactersByRulesetAsync(ruleset.Name).Result;
+                var characters =
+                    _storage
+                        .DownloadCharactersByRulesetAsync(ruleset.Name)
+                        .Result;
+
                 return Ok(characters);
             }
-            else
-            {
-                return BadRequest("Invalid ruleset selection.");
-            }
-        }       
+
+            return BadRequest("Invalid ruleset selection.");
+        }
     }
 }

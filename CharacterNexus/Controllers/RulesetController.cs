@@ -48,7 +48,7 @@ namespace CharacterNexus.Controllers
 
             // Filter DI-provided rulesets by config mapping
             var mappedRulesets = _rulesets
-                .Where(r => rulesetMapping.Values.Contains(r.GetType().FullName))
+                .Where(r => rulesetMapping.Values.Contains(r.Name))
                 .ToList();
 
             return Ok(mappedRulesets);

@@ -8,7 +8,7 @@ namespace Marvel
     public static class GenerateFormSchema
     {
         private static List<object> _fields = new List<object>();
-        private static string _jsonFilesPath = "C:/Users/toole/OneDrive/Source/Character Nexus/Ruleset.Marvel/Json/";
+        private static string _jsonFilesPath = $"{new DirectoryInfo(AppContext.BaseDirectory).Parent.Parent.Parent.Parent}/Ruleset.Marvel/Json/";
         private static readonly Regex sWhitespace = new Regex(@"\s+");
         private static readonly JsonSerializerSettings _jsonSettings = new JsonSerializerSettings
         {
@@ -20,6 +20,7 @@ namespace Marvel
         {
             try
             {
+                Console.WriteLine($"Path: {_jsonFilesPath}");
                 string jsonOriginsData = File.ReadAllText(_jsonFilesPath + "Origins.json");
                 string jsonOccupationsData = File.ReadAllText(_jsonFilesPath + "Occupations.json");
                 string jsonTagsData = File.ReadAllText(_jsonFilesPath + "Tags.json");
@@ -420,43 +421,13 @@ namespace Marvel
                     {
                         value = element.Name,
                         label = element.Name,
+                        description = element.Description,
                         bonusCharacteristics = JsonConvert.SerializeObject(element.BonusCharacteristics, _jsonSettings)
                     }
                 );
             }
 
             _fields.Add(obj);
-
-            //Add a div below dropdown after selecting a value, containing details of Origin
-            foreach (var element in elements)
-            {
-                var children = new List<object>
-                {
-                    new
-                    {
-                        name = $"info-{name}-{element.Name}",
-                        label = "Information",
-                        type = "textblock",
-                        className = "text-block",
-                        text = element.Description
-                    }
-                };
-
-                var div = new
-                {
-                    type = "div",
-                    className = "alert alert-secondary",
-                    children,
-                    dependsOn =
-                        new
-                        {
-                            field = name,
-                            value = element.Name
-                        }
-                };
-
-                _fields.Add(div);
-            }
         }
 
         public static void GenerateOccupationSchema(List<Occupation> elements, string name, string label)
@@ -476,42 +447,13 @@ namespace Marvel
                     {
                         value = element.Name,
                         label = element.Name,
+                        description = element.Description,
                         bonusCharacteristics = JsonConvert.SerializeObject(element.BonusCharacteristics, _jsonSettings)
                     }
                 );
             }
 
             _fields.Add(obj);
-
-            foreach (var element in elements)
-            {
-                var children = new List<object>
-                {
-                    new
-                    {
-                        name = $"info-{name}-{element.Name}",
-                        label = "Information",
-                        type = "textblock",
-                        className = "text-block",
-                        text = element.Description
-                    }
-                };
-
-                var div = new
-                {
-                    type = "div",
-                    className = "alert alert-secondary",
-                    children,
-                    dependsOn =
-                        new
-                        {
-                            field = name,
-                            value = element.Name
-                        }
-                };
-
-                _fields.Add(div);
-            }
         }
 
         private static void GenerateAttributeSchema(List<Attribute> attributes, string name, string label)
@@ -564,7 +506,9 @@ namespace Marvel
                     new
                     {
                         value = element.Name,
-                        label = element.Name
+                        label = element.Name,
+                        description = element.Description,
+                        bonusAdjustments = JsonConvert.SerializeObject(element.BonusAdjustments, _jsonSettings)
                     }
                 );
             }
@@ -654,7 +598,8 @@ namespace Marvel
                     new
                     {
                         value = tag.Name,
-                        label = tag.Name
+                        label = tag.Name,
+                        description = tag.Description
                     }
                 );
             }
@@ -686,7 +631,9 @@ namespace Marvel
                     new
                     {
                         value = weapon.Name,
-                        label = weapon.Name
+                        label = weapon.Name,
+                        image = weapon.Image,
+                        description = weapon.Description
                     }
                 );
             }

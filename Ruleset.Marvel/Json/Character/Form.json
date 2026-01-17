@@ -213,730 +213,202 @@
         {
           "value": "Alien",
           "label": "Alien",
+          "description": "The character is not human and probaably not from Earth or at least Earth-616. The Marvel Multiverse features all sorts of different alien races. The most common of these - Kree, Skrulls, and so on - have their own entries. If the character doesn't fit on of those, the this origin applies.",
           "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Alien Heritage\"},{\"type\":\"tag\",\"value\":\"Extreme Appearance\"}]"
         },
         {
           "value": "Alien-Kree",
           "label": "Alien-Kree",
+          "description": "The character is a member of the Kree, a humanoid race from the planet Hala who formed the interstellar Kree Empire in the region of space known as the Large Magellanic Cloud. They resemble humans but are stronger and tougher. Many of them have blue skin, but a good number of them have pink skin.<br />The air on Hala has much more nitrogen in it, and Kree who are raised in it (or something like it) have a hard time breathing the air on Earth.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Breathe Different\"},{\"type\":\"trait\",\"value\":\"Enhanced Physique\"},{\"type\":\"tag\",\"value\":\"Alien Heritage\"},{\"type\":\"tag\",\"value\":\"Extreme Appearance\"}]"
         },
         {
           "value": "Alien-Shi'ar",
           "label": "Alien-Shi'ar",
+          "description": "The character is a member of the Shi'ar, an avian humanoid race from the planet Chandilar who formed the interstellar Shi'ar Empire in the Shi'ar Galaxy. They resemble humand but are much stronger and have feathers instead of hair on their heads.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Enhanced Physique\"},{\"type\":\"tag\",\"value\":\"Alien Heritage\"},{\"type\":\"tag\",\"value\":\"Extreme Appearance\"}]"
         },
         {
           "value": "Alien-Skrull",
           "label": "Alien-Skrull",
+          "description": "The character is a member of the Skrull, a reptilian humanoid race of shape-shifters who formed the interstellar Skrull Empire. In their natural form, they have green skin, red or green eyes, pointed ears and fullowed chins. They sprang from the planet Skrullos in the Andromeda Galaxy.<br />The original Skrulls could not shape-shift, but the Celestials experimented on them to form Eternal Skrulls and Deviant Skrulls, much like they did with humans on Earth. The Deviant Skrulls became the dominant form of the species, driving the originals to extinction.",
           "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Alien Heritage\"},{\"type\":\"tag\",\"value\":\"Extreme Appearance\"},{\"type\":\"powers\",\"value\":\"Disguise\"},{\"type\":\"powers\",\"value\":\"Extended Reach\"},{\"type\":\"powers\",\"value\":\"Flexible Bones\"},{\"type\":\"powers\",\"value\":\"Shape-shift\"},{\"type\":\"powers\",\"value\":\"Slip Free\"}]"
         },
         {
           "value": "Atlantean",
           "label": "Atlantean",
+          "description": "The character is a member Homo mermanus, a variant race of humanity. Atlanteans breathe water through gills on both sides of their neck, and they cannot breathe air for longer than ten minutes.<br />If they live in the Atlantic Ocean, they likely have blue skin and hail from Atlantis. If they come from the Pacific Ocean, they likely have green skin and live in Lemuria.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Breathe Different\"},{\"type\":\"trait\",\"value\":\"Enhanced Physique\"},{\"type\":\"tag\",\"value\":\"Amphibious\"},{\"type\":\"tag\",\"value\":\"Extreme Appearance\"},{\"type\":\"powers\",\"value\":\"Heightened Senses\"},{\"type\":\"powers\",\"value\":\"Speed Swim\"}]"
         },
         {
           "value": "Deviant",
           "label": "Deviant",
+          "description": "The character is a member of Homo descendus, a variant race of humanity created by the Celestials. They are scattered across Earth, but they mainly live in underground cities beneath the Pacific Ocean, close to Lemuria.<br />Only one hundred Deviants were originally created, but many more have been born over the millenia since then. They vary a great deal physically, coming in all sizes, shapes, colors and textures. Each is born with a unique physical mutation, and they have the latent genetic ability to develop powers, much like mutants.<br />Eternals are compelled to kill Deviant mutates as part of their principle 'Correct excess deviation.'",
           "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Extreme Appearance\"},{\"type\":\"tag\",\"value\":\"Hunted\"}]"
         },
         {
           "value": "Eternal",
           "label": "Eternal",
+          "description": "The character is a member of Homo immortalis, a variant race of humanity created by the Celestials. They are scattered across Earth, but their headquarters lies in the city of Olympia, high in the mountains in Greece and folded into an echo dimension. Some live on Titan (a moon of Saturn) instead.<br />The Eternals live by three principles: <ul><li>Protect Celestials.</li><li>Protect the Machine (a sentient AI deeply connected with the Earth).</li><li>Correct excess deviation.</li></ul><br />Only one hundred Eternals were originally created, and only two have been born since: Thanos and Eros. The character is either one of the lesser-known one hundred or a new Eternal brought to life through extraordinary means.<br />Through a ritual usually initiated by the Prime Eternal (their official leader), Eternals can be called to be part of a collective being known as the Uni-Mind.",
           "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Eternally Immortal\"},{\"type\":\"tag\",\"value\":\"Mahd Wy'ry\"}]"
         },
         {
           "value": "God",
           "label": "God",
+          "description": "The character is a god (of a sort) and has access to powers that come with their heritage.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"God Heritage\"},{\"type\":\"trait\",\"value\":\"Enhanced Physique\"},{\"type\":\"tag\",\"value\":\"Worshipped\"}]"
         },
         {
           "value": "High Tech",
           "label": "High Tech",
+          "description": "The character's powers arise from high-tech devices that are well beyond the limits of modern-day engineering. This can come in many forms.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Tech Reliance\"}]"
         },
         {
           "value": "High Tech-Android",
           "label": "High Tech-Android",
+          "description": "The character is an artificial person. Their body (when they have one) is made of plastic, metal and circuitry rather than flesh and blood. Their powers come from techology embedded in their artificial body.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Tech Reliance\"},{\"type\":\"tag\",\"value\":\"A.I.\"},{\"type\":\"tag\",\"value\":\"Extreme Appearance\"}]"
         },
         {
           "value": "High Tech-Battle Suit",
           "label": "High Tech-Battle Suit",
+          "description": "The character wears a high-tech suit that grants them powers. When the battle suit is removed, the character no longer has access to the powers it grants. They are entirely - or at least mostly - normal underneath.<br />Most characters with this origin have the Extreme Appearance tag when wearing their battle suit.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Tech Reliance\"},{\"type\":\"tag\",\"value\":\"Extreme Appearance\"}]"
         },
         {
           "value": "High Tech-Cybernetics",
           "label": "High Tech-Cybernetics",
+          "description": "The character has high-tech, surgically embedded implants that grant them powers. These cannot be removed without great care or pain.<br />If the implants are obious, the character gets the Extreme Appearance tage. Otherwise, the implants have been hidden inside their body (as with the lacing of Wolverine's skeleton with adamantium) and might be visible only when in use (like when Wolverine uses his claws), if then.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Tech Reliance\"}]"
         },
         {
           "value": "High Tech-Pym Particles",
           "label": "High Tech-Pym Particles",
+          "description": "The character uses Pym Particles (named after their inventor, Henry Pym) to dramatically grow or shrink in size.<br />After long-enough exposure to Pym Particles, many people are able to generate such particles on their own without the need of external aid. They may still need to use extra Pym Particles to reach extremely large or small sizes.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Tech Reliance\"},{\"type\":\"powers\",\"value\":\"Grow 1\"},{\"type\":\"powers\",\"value\":\"Shrink 1\"}]"
         },
         {
           "value": "Inhuman",
           "label": "Inhuman",
+          "description": "The character is a member of Homo sapiens inhumanas, a variant race of humanity genetically engineered by the Kree. For millennia, they lived isolated from the world, but they emerged in recent years, led by Black Bolt.<br />All Inhumans carry a latent gene that can be activated by the Terrigen Mist. The explosion of a Terrigen Bomb spread the mist across the entrie planet, revealing that many humans (including Kamala Khan) had Inhuman genetics. Black Bolt was later forced to destroy the Inhumans, leaving few outside of the royal family alive.<br />The character is one of those rare Inhumans whow survived.",
           "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Inhuman Genes\"}]"
         },
         {
           "value": "Magic",
           "label": "Magic",
+          "description": "The character's powers arise from supernatural means. There are many different traditions within magic, each with their own teachings.",
           "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Supernatural\"}]"
         },
         {
           "value": "Magic-Chaos",
           "label": "Magic-Chaos",
+          "description": "The character is able to use chaos magic, which allows them to bend reality to their will. It stems from the ancient got Chthon.",
           "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Chaotic\"},{\"type\":\"tag\",\"value\":\"Supernatural\"}]"
         },
         {
           "value": "Magic-Demonic",
           "label": "Magic-Demonic",
+          "description": "The character taps into (or is cursed by) the powers of Hell. They may be a native of one of the Nine Circles of Hell, or their powers might simply come from a Hellish source.",
           "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Cursed\"},{\"type\":\"tag\",\"value\":\"Supernatural\"}]"
         },
         {
           "value": "Magic-Sorcery",
           "label": "Magic-Sorcery",
+          "description": "The character's powers arise from the study and practice of sorcery.",
           "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Sorcerous\"},{\"type\":\"tag\",\"value\":\"Supernatural\"}]"
         },
         {
           "value": "Monstrous",
           "label": "Monstrous",
+          "description": "The character is some kind of monster. They may have a human form - or may have once been human - but they get their powers from their unnatural monstrousness.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Monster\"}]"
         },
         {
           "value": "Monstrous-Dhampir",
           "label": "Monstrous-Dhampir",
+          "description": "The character was once alive but was embraced by a vampire and has risen from death as a vampire, but became a dhampir. Dhampir is a term used to refer to individuals born of a union between a human and a vampire or had their vampirism halted, basically human-vampire hybrids.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Monster\"}]"
         },
         {
           "value": "Monstrous-Vampire",
           "label": "Monstrous-Vampire",
+          "description": "The character was once alive but was embraced by a vampire and has risen from death as a vampire too. They can transmit this magical disease to victims of their choosing.<br />When a character becomes a vampire, they go up one rank and gain the listed tags, traits, and powers. They do not gain any additional powers or traits from this bump in rank, but they do gain 5 ability points and add +1 to their damage multiplier. If they have the Heroic tag, they also add 1 to their Karma.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Anathema\"},{\"type\":\"trait\",\"value\":\"Bloodthirsty\"},{\"type\":\"trait\",\"value\":\"Monster\"},{\"type\":\"trait\",\"value\":\"Weakness\"},{\"type\":\"tag\",\"value\":\"Alternate Form\"},{\"type\":\"tag\",\"value\":\"Deceased\"},{\"type\":\"tag\",\"value\":\"Imageless\"},{\"type\":\"powers\",\"value\":\"Animal Communication\"},{\"type\":\"powers\",\"value\":\"Command\"},{\"type\":\"powers\",\"value\":\"Healing Factor\"},{\"type\":\"powers\",\"value\":\"Leech Life\"},{\"type\":\"powers\",\"value\":\"Mighty 1\"},{\"type\":\"powers\",\"value\":\"Sturdy 2\"},{\"type\":\"powers\",\"value\":\"Telepathic Link\"}]"
         },
         {
           "value": "Monstrous-Werewolf",
           "label": "Monstrous-Werewolf",
+          "description": "The character is afflicted with lycanthropy, a magical disease that causes them to take on the shape of a werewolf during the three nights of the full moon. They can transmit this magical disease to victims of their choosing who survive their attacks.<br />When a character becomes a werewolf, they gain the Lunar Transformation and Alternate Form tags. Whe the character takes on their werewolf form, they go up one rank and gain the rest of the listed tags, traits, and powers. They do not gain any additional powers or traits from this bump in rank, but they do gain 5 ability points and add +1 to their damage multiplier. If they have the Heroic tag, they also add 1 to their Karma.<br />When they return to human form, they lose the benefits of their werewolf form.<br />They character can switch forms voluntarily at any point - except during the three nights the the moon is at its fullest. On those nights, while the moon is above the horizon, the character must transform into a werewolf and is ruled by their animal nature. They cannot help but hunt and attack any people or creatures they come across, no matter if they are friend or foe.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Berserker\"},{\"type\":\"trait\",\"value\":\"Monster\"},{\"type\":\"trait\",\"value\":\"Weakness\"},{\"type\":\"tag\",\"value\":\"Alternate Form\"},{\"type\":\"tag\",\"value\":\"Extreme Appearance\"},{\"type\":\"tag\",\"value\":\"Lunar Transformation\"},{\"type\":\"powers\",\"value\":\"Evasion\"},{\"type\":\"powers\",\"value\":\"Healing Factor\"},{\"type\":\"powers\",\"value\":\"Heightened Senses\"},{\"type\":\"powers\",\"value\":\"Mighty 1\"},{\"type\":\"powers\",\"value\":\"Sturdy 2\"}]"
         },
         {
           "value": "Mutant",
           "label": "Mutant",
+          "description": "The character's powers spring from them being a member of the subspecies Homo superior. They have a latent X-Gene that grants them powers, often triggered at adolescence.",
           "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Hounded\"},{\"type\":\"tag\",\"value\":\"Krakoan\"},{\"type\":\"tag\",\"value\":\"X-Gene\"}]"
         },
         {
           "value": "Mutant-X-men '97",
           "label": "Mutant-X-men '97",
+          "description": "The character's powers spring from them being a member of the subspecies Homo superior.",
           "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Hounded\"},{\"type\":\"tag\",\"value\":\"X-Gene\"}]"
         },
         {
           "value": "Mythic",
           "label": "Mythic",
+          "description": "The character is a creature or person of myth and legend. While they may appear human, they are something else.",
           "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Supernatural\"}]"
         },
         {
           "value": "Mythic-Asgardian",
           "label": "Mythic-Asgardian",
+          "description": "The character is a member of the Asgardian people, resembling the Norse gods. They call Asgard their home.<br />The character can be one of the many gods who have been named throughout history, or they can be one of the lesser-known gods of Asgard. They should choose something that they are the god of.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"God Heritage\"},{\"type\":\"trait\",\"value\":\"Enhanced Physique\"},{\"type\":\"tag\",\"value\":\"Supernatural\"},{\"type\":\"tag\",\"value\":\"Worshipped\"}]"
         },
         {
           "value": "Mythic-Olympian",
           "label": "Mythic-Olympian",
+          "description": "The character is a member of the Olympian people, resembling the gods of Ancient Greece and Rome. They call Olympus their home.<br />They character can be one of the many gods who have been named throughout history, or they can be one of the lesser-known gods of Olympus. They should choose something that they are the god of.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"God Heritage\"},{\"type\":\"trait\",\"value\":\"Enhanced Physique\"},{\"type\":\"tag\",\"value\":\"Supernatural\"},{\"type\":\"tag\",\"value\":\"Worshipped\"}]"
         },
         {
           "value": "Special Training",
           "label": "Special Training",
+          "description": "The character's powers come from long hours of practice. Their intense focus grants them abilities that would astonish most people. Powers are limited to those that do not provide superhuman abilities.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Determination\"}]"
         },
         {
           "value": "Spirit of Vengeance",
           "label": "Spirit of Vengeance",
+          "description": "The character has been possessed by a Spirit of Vengeance. Their purpose is to find sinners and impose penance.<br />When a character becomes possessed by a Spirit of Vengeance, they gain the Alternate Form tag, which they can use voluntarily at any point. When the character takes on their Ghost Rider form, they gain access to the listed tags, traits, and powers. When they return to human form, they lose the benefits of their Ghost Rider form.",
           "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Alternate Form\"},{\"type\":\"tag\",\"value\":\"Cursed\"},{\"type\":\"tag\",\"value\":\"Supernatural\"},{\"type\":\"powers\",\"value\":\"Elemental Protection 2\"},{\"type\":\"powers\",\"value\":\"Environmental Protection\"},{\"type\":\"powers\",\"value\":\"Healing Factor\"},{\"type\":\"powers\",\"value\":\"Hellfire Chains\"},{\"type\":\"powers\",\"value\":\"Mighty 2\"},{\"type\":\"powers\",\"value\":\"Penance Stare\"},{\"type\":\"powers\",\"value\":\"Possess Vehicle\"},{\"type\":\"powers\",\"value\":\"Sense Sins\"}]"
         },
         {
           "value": "Symbiote",
           "label": "Symbiote",
+          "description": "The character has bonded with one of the Klyntar, a race of alien symbiotes created by the alien god Knull. Most of these creatures on Earth display spiderlike powers.<br />When a character bonds with a symbiote, they go up one rank and gain the listed tags, traits, and powers. Any remaining powers they select are often from the Spider-Powers set but do not have to be. Many symbiotes have the Disguise power.<br />If the symbiote is Venom or one of its progeny, Spider-Man (Peter Parker) cannot gain any benefits from his Spider-Sense power against the bonded character.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Anathema\"},{\"type\":\"powers\",\"value\":\"Environmental Protection\"},{\"type\":\"powers\",\"value\":\"Mighty 1\"}]"
         },
         {
           "value": "Unknown",
           "label": "Unknown",
+          "description": "The character has developed powers but is not entirely sure how. It could be that the player or the Narrator knows, but the character does not, or maybe nobody else does either. Astonishing things happen all the time in the Marvel Multiverse, and there's no way to classify them all.<br />The source of the powers may be explained in time. It could turn out that the character actually has a standard type of origin, or it could be that they have an origin that's utterly unique.",
           "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Mysterious\"}]"
         },
         {
           "value": "Weird Science",
           "label": "Weird Science",
+          "description": "The character's powers arose from a scientific experiment of accident that's hard - if not impossible - to reproduce. Often, they had the latent genetic potential to develop powers and were somehow exposed to the right triggers - which would have likely killed most other people.<br />These kinds of character are sometimes call mutates. The difference between a mutate and a mutant is that a mutant's powers come to them naturally, but a mutate's powers require a triggering incident that might never happen. In this sense, Inhumans are all mutates who share a gene with a known rigger: the Terrigen Mist.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Weird\"}]"
         },
         {
           "value": "Weird Science-Gamma Mutate",
           "label": "Weird Science-Gamma Mutate",
+          "description": "The character has a genetic mutation that gave them powers once they were exposed to enough gamma radiation, transforming them physically. This often gives them a monstrous appearance and changes their coloration drastically, usually to green, although some become red or even blue. They can often transorm back into their original form as well.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Weird\"},{\"type\":\"tag\",\"value\":\"Extreme Appearance\"},{\"type\":\"tag\",\"value\":\"Green Door\"},{\"type\":\"tag\",\"value\":\"Immunity\"}]"
         }
       ]
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Alien",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is not human and probaably not from Earth or at least Earth-616. The Marvel Multiverse features all sorts of different alien races. The most common of these - Kree, Skrulls, and so on - have their own entries. If the character doesn't fit on of those, the this origin applies."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Alien"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Alien-Kree",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is a member of the Kree, a humanoid race from the planet Hala who formed the interstellar Kree Empire in the region of space known as the Large Magellanic Cloud. They resemble humans but are stronger and tougher. Many of them have blue skin, but a good number of them have pink skin.<br />The air on Hala has much more nitrogen in it, and Kree who are raised in it (or something like it) have a hard time breathing the air on Earth."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Alien-Kree"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Alien-Shi'ar",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is a member of the Shi'ar, an avian humanoid race from the planet Chandilar who formed the interstellar Shi'ar Empire in the Shi'ar Galaxy. They resemble humand but are much stronger and have feathers instead of hair on their heads."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Alien-Shi'ar"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Alien-Skrull",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is a member of the Skrull, a reptilian humanoid race of shape-shifters who formed the interstellar Skrull Empire. In their natural form, they have green skin, red or green eyes, pointed ears and fullowed chins. They sprang from the planet Skrullos in the Andromeda Galaxy.<br />The original Skrulls could not shape-shift, but the Celestials experimented on them to form Eternal Skrulls and Deviant Skrulls, much like they did with humans on Earth. The Deviant Skrulls became the dominant form of the species, driving the originals to extinction."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Alien-Skrull"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Atlantean",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is a member Homo mermanus, a variant race of humanity. Atlanteans breathe water through gills on both sides of their neck, and they cannot breathe air for longer than ten minutes.<br />If they live in the Atlantic Ocean, they likely have blue skin and hail from Atlantis. If they come from the Pacific Ocean, they likely have green skin and live in Lemuria."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Atlantean"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Deviant",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is a member of Homo descendus, a variant race of humanity created by the Celestials. They are scattered across Earth, but they mainly live in underground cities beneath the Pacific Ocean, close to Lemuria.<br />Only one hundred Deviants were originally created, but many more have been born over the millenia since then. They vary a great deal physically, coming in all sizes, shapes, colors and textures. Each is born with a unique physical mutation, and they have the latent genetic ability to develop powers, much like mutants.<br />Eternals are compelled to kill Deviant mutates as part of their principle 'Correct excess deviation.'"
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Deviant"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Eternal",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is a member of Homo immortalis, a variant race of humanity created by the Celestials. They are scattered across Earth, but their headquarters lies in the city of Olympia, high in the mountains in Greece and folded into an echo dimension. Some live on Titan (a moon of Saturn) instead.<br />The Eternals live by three principles: <ul><li>Protect Celestials.</li><li>Protect the Machine (a sentient AI deeply connected with the Earth).</li><li>Correct excess deviation.</li></ul><br />Only one hundred Eternals were originally created, and only two have been born since: Thanos and Eros. The character is either one of the lesser-known one hundred or a new Eternal brought to life through extraordinary means.<br />Through a ritual usually initiated by the Prime Eternal (their official leader), Eternals can be called to be part of a collective being known as the Uni-Mind."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Eternal"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-God",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is a god (of a sort) and has access to powers that come with their heritage."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "God"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-High Tech",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character's powers arise from high-tech devices that are well beyond the limits of modern-day engineering. This can come in many forms."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "High Tech"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-High Tech-Android",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is an artificial person. Their body (when they have one) is made of plastic, metal and circuitry rather than flesh and blood. Their powers come from techology embedded in their artificial body."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "High Tech-Android"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-High Tech-Battle Suit",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character wears a high-tech suit that grants them powers. When the battle suit is removed, the character no longer has access to the powers it grants. They are entirely - or at least mostly - normal underneath.<br />Most characters with this origin have the Extreme Appearance tag when wearing their battle suit."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "High Tech-Battle Suit"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-High Tech-Cybernetics",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character has high-tech, surgically embedded implants that grant them powers. These cannot be removed without great care or pain.<br />If the implants are obious, the character gets the Extreme Appearance tage. Otherwise, the implants have been hidden inside their body (as with the lacing of Wolverine's skeleton with adamantium) and might be visible only when in use (like when Wolverine uses his claws), if then."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "High Tech-Cybernetics"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-High Tech-Pym Particles",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character uses Pym Particles (named after their inventor, Henry Pym) to dramatically grow or shrink in size.<br />After long-enough exposure to Pym Particles, many people are able to generate such particles on their own without the need of external aid. They may still need to use extra Pym Particles to reach extremely large or small sizes."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "High Tech-Pym Particles"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Inhuman",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is a member of Homo sapiens inhumanas, a variant race of humanity genetically engineered by the Kree. For millennia, they lived isolated from the world, but they emerged in recent years, led by Black Bolt.<br />All Inhumans carry a latent gene that can be activated by the Terrigen Mist. The explosion of a Terrigen Bomb spread the mist across the entrie planet, revealing that many humans (including Kamala Khan) had Inhuman genetics. Black Bolt was later forced to destroy the Inhumans, leaving few outside of the royal family alive.<br />The character is one of those rare Inhumans whow survived."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Inhuman"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Magic",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character's powers arise from supernatural means. There are many different traditions within magic, each with their own teachings."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Magic"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Magic-Chaos",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is able to use chaos magic, which allows them to bend reality to their will. It stems from the ancient got Chthon."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Magic-Chaos"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Magic-Demonic",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character taps into (or is cursed by) the powers of Hell. They may be a native of one of the Nine Circles of Hell, or their powers might simply come from a Hellish source."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Magic-Demonic"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Magic-Sorcery",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character's powers arise from the study and practice of sorcery."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Magic-Sorcery"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Monstrous",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is some kind of monster. They may have a human form - or may have once been human - but they get their powers from their unnatural monstrousness."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Monstrous"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Monstrous-Dhampir",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character was once alive but was embraced by a vampire and has risen from death as a vampire, but became a dhampir. Dhampir is a term used to refer to individuals born of a union between a human and a vampire or had their vampirism halted, basically human-vampire hybrids."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Monstrous-Dhampir"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Monstrous-Vampire",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character was once alive but was embraced by a vampire and has risen from death as a vampire too. They can transmit this magical disease to victims of their choosing.<br />When a character becomes a vampire, they go up one rank and gain the listed tags, traits, and powers. They do not gain any additional powers or traits from this bump in rank, but they do gain 5 ability points and add +1 to their damage multiplier. If they have the Heroic tag, they also add 1 to their Karma."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Monstrous-Vampire"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Monstrous-Werewolf",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is afflicted with lycanthropy, a magical disease that causes them to take on the shape of a werewolf during the three nights of the full moon. They can transmit this magical disease to victims of their choosing who survive their attacks.<br />When a character becomes a werewolf, they gain the Lunar Transformation and Alternate Form tags. Whe the character takes on their werewolf form, they go up one rank and gain the rest of the listed tags, traits, and powers. They do not gain any additional powers or traits from this bump in rank, but they do gain 5 ability points and add +1 to their damage multiplier. If they have the Heroic tag, they also add 1 to their Karma.<br />When they return to human form, they lose the benefits of their werewolf form.<br />They character can switch forms voluntarily at any point - except during the three nights the the moon is at its fullest. On those nights, while the moon is above the horizon, the character must transform into a werewolf and is ruled by their animal nature. They cannot help but hunt and attack any people or creatures they come across, no matter if they are friend or foe."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Monstrous-Werewolf"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Mutant",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character's powers spring from them being a member of the subspecies Homo superior. They have a latent X-Gene that grants them powers, often triggered at adolescence."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Mutant"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Mutant-X-men '97",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character's powers spring from them being a member of the subspecies Homo superior."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Mutant-X-men '97"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Mythic",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is a creature or person of myth and legend. While they may appear human, they are something else."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Mythic"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Mythic-Asgardian",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is a member of the Asgardian people, resembling the Norse gods. They call Asgard their home.<br />The character can be one of the many gods who have been named throughout history, or they can be one of the lesser-known gods of Asgard. They should choose something that they are the god of."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Mythic-Asgardian"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Mythic-Olympian",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is a member of the Olympian people, resembling the gods of Ancient Greece and Rome. They call Olympus their home.<br />They character can be one of the many gods who have been named throughout history, or they can be one of the lesser-known gods of Olympus. They should choose something that they are the god of."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Mythic-Olympian"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Special Training",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character's powers come from long hours of practice. Their intense focus grants them abilities that would astonish most people. Powers are limited to those that do not provide superhuman abilities."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Special Training"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Spirit of Vengeance",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character has been possessed by a Spirit of Vengeance. Their purpose is to find sinners and impose penance.<br />When a character becomes possessed by a Spirit of Vengeance, they gain the Alternate Form tag, which they can use voluntarily at any point. When the character takes on their Ghost Rider form, they gain access to the listed tags, traits, and powers. When they return to human form, they lose the benefits of their Ghost Rider form."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Spirit of Vengeance"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Symbiote",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character has bonded with one of the Klyntar, a race of alien symbiotes created by the alien god Knull. Most of these creatures on Earth display spiderlike powers.<br />When a character bonds with a symbiote, they go up one rank and gain the listed tags, traits, and powers. Any remaining powers they select are often from the Spider-Powers set but do not have to be. Many symbiotes have the Disguise power.<br />If the symbiote is Venom or one of its progeny, Spider-Man (Peter Parker) cannot gain any benefits from his Spider-Sense power against the bonded character."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Symbiote"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Unknown",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character has developed powers but is not entirely sure how. It could be that the player or the Narrator knows, but the character does not, or maybe nobody else does either. Astonishing things happen all the time in the Marvel Multiverse, and there's no way to classify them all.<br />The source of the powers may be explained in time. It could turn out that the character actually has a standard type of origin, or it could be that they have an origin that's utterly unique."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Unknown"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Weird Science",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character's powers arose from a scientific experiment of accident that's hard - if not impossible - to reproduce. Often, they had the latent genetic potential to develop powers and were somehow exposed to the right triggers - which would have likely killed most other people.<br />These kinds of character are sometimes call mutates. The difference between a mutate and a mutant is that a mutant's powers come to them naturally, but a mutate's powers require a triggering incident that might never happen. In this sense, Inhumans are all mutates who share a gene with a known rigger: the Terrigen Mist."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Weird Science"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-origin-Weird Science-Gamma Mutate",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character has a genetic mutation that gave them powers once they were exposed to enough gamma radiation, transforming them physically. This often gives them a monstrous appearance and changes their coloration drastically, usually to green, although some become red or even blue. They can often transorm back into their original form as well."
-        }
-      ],
-      "dependsOn": {
-        "field": "origin",
-        "value": "Weird Science-Gamma Mutate"
-      }
     },
     {
       "name": "occupation",
@@ -947,444 +419,124 @@
         {
           "value": "Adventurer",
           "label": "Adventurer",
+          "description": "The character focuses on having adventures.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Fearless\"},{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"tag\",\"value\":\"Black Market Access\"}]"
         },
         {
           "value": "Assassin",
           "label": "Assassin",
+          "description": "The character is a hired killer.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"trait\",\"value\":\"Signature Attack\"},{\"type\":\"tag\",\"value\":\"Streetwise\"},{\"type\":\"tag\",\"value\":\"Villianous\"}]"
         },
         {
           "value": "Criminal",
           "label": "Criminal",
+          "description": "The character did something that put them on the wrong side of the law.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"tag\",\"value\":\"Black Market Access\"},{\"type\":\"tag\",\"value\":\"Streetwise\"}]"
         },
         {
           "value": "Educator",
           "label": "Educator",
+          "description": "The character educates others.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"trait\",\"value\":\"Font of Information\"},{\"type\":\"trait\",\"value\":\"Presence\"}]"
         },
         {
           "value": "Engineer",
           "label": "Engineer",
+          "description": "The character designs and builds things to solve problems.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Gearhead\"},{\"type\":\"trait\",\"value\":\"Inventor\"},{\"type\":\"tag\",\"value\":\"Lab Access\"}]"
         },
         {
           "value": "Entertainer",
           "label": "Entertainer",
+          "description": "The character entertains others for a living.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Famous\"},{\"type\":\"trait\",\"value\":\"Presence\"},{\"type\":\"trait\",\"value\":\"Public Speaking\"}]"
         },
         {
           "value": "Health Care Worker",
           "label": "Health Care Worker",
+          "description": "The character is a doctor, nurse, therapist or other person dedicated to helping heal others.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Clinician\"},{\"type\":\"trait\",\"value\":\"First Aid\"}]"
         },
         {
           "value": "Investigator",
           "label": "Investigator",
+          "description": "The character is trained to solve mysteries.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"trait\",\"value\":\"Interrogation\"},{\"type\":\"trait\",\"value\":\"Investigation\"}]"
         },
         {
           "value": "Journalist",
           "label": "Journalist",
+          "description": "The character works as a reporter or editor for a news organization.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Audience\"},{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"trait\",\"value\":\"Pundit\"}]"
         },
         {
           "value": "Law Enforcer",
           "label": "Law Enforcer",
+          "description": "The character works as a law enforcement officer.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Interrogation\"},{\"type\":\"trait\",\"value\":\"Investigation\"},{\"type\":\"tag\",\"value\":\"Authority\"},{\"type\":\"tag\",\"value\":\"Backup\"}]"
         },
         {
           "value": "Lawyer",
           "label": "Lawyer",
+          "description": "The character has a law degree and knows how to use it.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Dealmaker\"},{\"type\":\"trait\",\"value\":\"Legal Eagle\"},{\"type\":\"trait\",\"value\":\"Public Speaking\"}]"
         },
         {
           "value": "Leader",
           "label": "Leader",
+          "description": "The character is the leader of a city, region, state or nation.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Presence\"},{\"type\":\"tag\",\"value\":\"Authority\"},{\"type\":\"tag\",\"value\":\"Powerful\"}]"
         },
         {
           "value": "Military",
           "label": "Military",
+          "description": "The character serves (or at least once served) in a military organization and relies on that training.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Battle Ready\"},{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"trait\",\"value\":\"Situational Awareness\"}]"
         },
         {
           "value": "Outsider",
           "label": "Outsider",
+          "description": "The character comes from another planet, dimension or time and is not familiar with how things work on this Earth.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"trait\",\"value\":\"Fresh Eyes\"},{\"type\":\"trait\",\"value\":\"Stranger\"}]"
         },
         {
           "value": "Ruler",
           "label": "Ruler",
+          "description": "The character is the leader of a city, region, state, or nation.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Regal\"}]"
         },
         {
           "value": "Scientist",
           "label": "Scientist",
+          "description": "The character solves problems by means of scientific research.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Inventor\"},{\"type\":\"trait\",\"value\":\"Scientific Expertise\"},{\"type\":\"tag\",\"value\":\"Lab Access\"}]"
         },
         {
           "value": "Soldier",
           "label": "Soldier",
+          "description": "The character served in a military organization.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Battle Ready\"},{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"trait\",\"value\":\"Situational Awareness\"}]"
         },
         {
           "value": "Spy",
           "label": "Spy",
+          "description": "The character is an expert in espionage.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"trait\",\"value\":\"Leverage\"},{\"type\":\"tag\",\"value\":\"Black Market Access\"}]"
         },
         {
           "value": "Student",
           "label": "Student",
+          "description": "The character attends school or college on a full-time basis.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Quick Learner\"},{\"type\":\"tag\",\"value\":\"Mentor\"},{\"type\":\"tag\",\"value\":\"Obligation\"}]"
         },
         {
           "value": "Tycoon",
           "label": "Tycoon",
+          "description": "The character is wildly wealthy and well-known.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"trait\",\"value\":\"Famous\"},{\"type\":\"tag\",\"value\":\"Rich\"}]"
         }
       ]
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Adventurer",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character focuses on having adventures."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Adventurer"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Assassin",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is a hired killer."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Assassin"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Criminal",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character did something that put them on the wrong side of the law."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Criminal"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Educator",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character educates others."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Educator"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Engineer",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character designs and builds things to solve problems."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Engineer"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Entertainer",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character entertains others for a living."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Entertainer"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Health Care Worker",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is a doctor, nurse, therapist or other person dedicated to helping heal others."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Health Care Worker"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Investigator",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is trained to solve mysteries."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Investigator"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Journalist",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character works as a reporter or editor for a news organization."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Journalist"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Law Enforcer",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character works as a law enforcement officer."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Law Enforcer"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Lawyer",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character has a law degree and knows how to use it."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Lawyer"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Leader",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is the leader of a city, region, state or nation."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Leader"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Military",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character serves (or at least once served) in a military organization and relies on that training."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Military"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Outsider",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character comes from another planet, dimension or time and is not familiar with how things work on this Earth."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Outsider"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Ruler",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is the leader of a city, region, state, or nation."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Ruler"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Scientist",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character solves problems by means of scientific research."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Scientist"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Soldier",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character served in a military organization."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Soldier"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Spy",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is an expert in espionage."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Spy"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Student",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character attends school or college on a full-time basis."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Student"
-      }
-    },
-    {
-      "type": "div",
-      "className": "alert alert-secondary",
-      "children": [
-        {
-          "name": "info-occupation-Tycoon",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "The character is wildly wealthy and well-known."
-        }
-      ],
-      "dependsOn": {
-        "field": "occupation",
-        "value": "Tycoon"
-      }
     },
     {
       "type": "group",
@@ -1483,255 +635,381 @@
         "options": [
           {
             "value": "Abrasive",
-            "label": "Abrasive"
+            "label": "Abrasive",
+            "description": "The character rubs people the wrong way.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Anathema",
-            "label": "Anathema"
+            "label": "Anathema",
+            "description": "The character suffers direct harm when exposed to a particular substance.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Audience",
-            "label": "Audience"
+            "label": "Audience",
+            "description": "Many people follow the character's work and treat them with the respect they deserve.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Battle Ready",
-            "label": "Battle Ready"
+            "label": "Battle Ready",
+            "description": "The character is always mentally prepared for any sort of trouble to start.",
+            "bonusAdjustments": "[{\"type\":\"Focus\",\"name\":\"\",\"value\":30}]"
           },
           {
             "value": "Beguiling",
-            "label": "Beguiling"
+            "label": "Beguiling",
+            "description": "The character has an edge when making an Ego check to persuade someone who could be attracted to them.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Berserker",
-            "label": "Berserker"
+            "label": "Berserker",
+            "description": "The character often loses control of their temper.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Big",
-            "label": "Big"
+            "label": "Big",
+            "description": "The character's size is big, which applies -1 to their Melee and Agility defenses, adds +1 to their Run Speed, and increases their reach to 2.",
+            "bonusAdjustments": "[{\"type\":\"AttributeDefense\",\"name\":\"Melee\",\"value\":-1},{\"type\":\"AttributeDefense\",\"name\":\"Agility\",\"value\":-1},{\"type\":\"Run\",\"name\":\"\",\"value\":1}]"
           },
           {
             "value": "Bloodthirsty",
-            "label": "Bloodthirsty"
+            "label": "Bloodthirsty",
+            "description": "The character likes hurting people—even killing them.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Breathe Different",
-            "label": "Breathe Different"
+            "label": "Breathe Different",
+            "description": "The character cannot breathe Earth's air for long.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Clinician",
-            "label": "Clinician"
+            "label": "Clinician",
+            "description": "The character has an edge on Logic (medicine) checks to determine what is medically wrong with someone they examine.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Clueless",
-            "label": "Clueless"
+            "label": "Clueless",
+            "description": "The character tends to shut out things they're not entirely focused on.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Combat Expert",
-            "label": "Combat Expert"
+            "label": "Combat Expert",
+            "description": "The character knows how to handle themselves better than most.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Combat Finesse",
-            "label": "Combat Finesse"
+            "label": "Combat Finesse",
+            "description": "The character can add their Agility rather than their Melee to Fight attack checks.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Combat Reflexes",
-            "label": "Combat Reflexes"
+            "label": "Combat Reflexes",
+            "description": "The character can react quickly in combat.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Combat Trickery",
-            "label": "Combat Trickery"
+            "label": "Combat Trickery",
+            "description": "Once per battle, when attacking, the character can turn the Marvel die into a 1.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Connections",
-            "label": "Connections"
+            "label": "Connections",
+            "description": "The character knows someone with access to and knowledge of a particular field.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Dealmaker",
-            "label": "Dealmaker"
+            "label": "Dealmaker",
+            "description": "The character is skilled at the art of negotiation.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Debate Champ",
-            "label": "Debate Champ"
+            "label": "Debate Champ",
+            "description": "The character can use their Logic instead of their Ego with Ego (persuasion) and Ego (intimidation) checks.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Determination",
-            "label": "Determination"
+            "label": "Determination",
+            "description": "The character never gives up, even when they feel like they're at their worst.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Eidetic Memory",
-            "label": "Eidetic Memory"
+            "label": "Eidetic Memory",
+            "description": "The character rarely forgets anything.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Enduring Constitution",
-            "label": "Enduring Constitution"
+            "label": "Enduring Constitution",
+            "description": "The character can function for up to 48 hours without sleep and has an edge on Resilience checks to overcome fatigue or weariness.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Enhanced Physique",
-            "label": "Enhanced Physique"
+            "label": "Enhanced Physique",
+            "description": "The character is stronger than regular humans.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Extra Occupation",
-            "label": "Extra Occupation"
+            "label": "Extra Occupation",
+            "description": "The character has a busy life and has done all sorts of things.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Extraordinary Origin",
-            "label": "Extraordinary Origin"
+            "label": "Extraordinary Origin",
+            "description": "The character has an additional origin.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Famous",
-            "label": "Famous"
+            "label": "Famous",
+            "description": "The character is widely known—at least among a certain group of people or a population.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Fearless",
-            "label": "Fearless"
+            "label": "Fearless",
+            "description": "The character is extremely brave.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "First Aid",
-            "label": "First Aid"
+            "label": "First Aid",
+            "description": "The character knows how to administer first aid.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Font of Information",
-            "label": "Font of Information"
+            "label": "Font of Information",
+            "description": "The character has an edge on Logic checks having to do with knowledge.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Free Running",
-            "label": "Free Running"
+            "label": "Free Running",
+            "description": "The character has an edge on Agility checks made to perform acrobatics during a movement action.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Fresh Eyes",
-            "label": "Fresh Eyes"
+            "label": "Fresh Eyes",
+            "description": "The character has their own way of doing things.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Gearhead",
-            "label": "Gearhead"
+            "label": "Gearhead",
+            "description": "The character knows their way around machines.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Glibness",
-            "label": "Glibness"
+            "label": "Glibness",
+            "description": "The character can strike up a conversation with anyone at any time and can often convince them to lend a hand.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "God Heritage",
-            "label": "God Heritage"
+            "label": "God Heritage",
+            "description": "The character - or at least one of their ancestors - is a god.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Gullible",
-            "label": "Gullible"
+            "label": "Gullible",
+            "description": "The character is easy to fool.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Honest",
-            "label": "Honest"
+            "label": "Honest",
+            "description": "The character is a terrible liar.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Infamous",
-            "label": "Infamous"
+            "label": "Infamous",
+            "description": "The character is widely known and generally disliked—at least among a certain group of people or a population.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Interrogation",
-            "label": "Interrogation"
+            "label": "Interrogation",
+            "description": "The character knows how to ask the right questions in the right way.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Inventor",
-            "label": "Inventor"
+            "label": "Inventor",
+            "description": "The character is good at coming up with solutions on the fly.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Investigation",
-            "label": "Investigation"
+            "label": "Investigation",
+            "description": "The character is an expert investigator, trained in the arts of forensic science.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Iron Will",
-            "label": "Iron Will"
+            "label": "Iron Will",
+            "description": "Enemies have trouble on attacks to control the character's mind or influence their behavior.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Legal Eagle",
-            "label": "Legal Eagle"
+            "label": "Legal Eagle",
+            "description": "The character knows the laws of their homeland and can help others navigate them.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Leverage",
-            "label": "Leverage"
+            "label": "Leverage",
+            "description": "The character is good at figuring out what people want and using it against them.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Loner",
-            "label": "Loner"
+            "label": "Loner",
+            "description": "The character does not play well with others.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Massive",
-            "label": "Massive"
+            "label": "Massive",
+            "description": "The character's size is Big.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Monster",
-            "label": "Monster"
+            "label": "Monster",
+            "description": "The character is some kind of monster, often of a type spoken of in legend.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Out of Shape",
-            "label": "Out of Shape"
+            "label": "Out of Shape",
+            "description": "The character is in poor physical condition.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Piloting",
-            "label": "Piloting"
+            "label": "Piloting",
+            "description": "The character knows how to operate vehicles of all kinds.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Presence",
-            "label": "Presence"
+            "label": "Presence",
+            "description": "The character knows how to command attention on demand.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Public Speaking",
-            "label": "Public Speaking"
+            "label": "Public Speaking",
+            "description": "The character knows how to get the attention of a crowd, whether that's at a political rally or in front of a jury or a classroom.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Pundit",
-            "label": "Pundit"
+            "label": "Pundit",
+            "description": "The character knows how to break news items and put them into context to craft a story around them.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Quick Learner",
-            "label": "Quick Learner"
+            "label": "Quick Learner",
+            "description": "If the character fails an action check, they gain an edge on the check if they try the same action again on their next turn.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Regal",
-            "label": "Regal"
+            "label": "Regal",
+            "description": "The character seems born to be in charge.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Scientific Expertise",
-            "label": "Scientific Expertise"
+            "label": "Scientific Expertise",
+            "description": "The character has extensive scientific training.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Signature Attack",
-            "label": "Signature Attack"
+            "label": "Signature Attack",
+            "description": "The character is known for favoring a particular kind of weapon or attack power.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Situational Awareness",
-            "label": "Situational Awareness"
+            "label": "Situational Awareness",
+            "description": "The character is trained to always keep an eye out for trouble.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Skeptical",
-            "label": "Skeptical"
+            "label": "Skeptical",
+            "description": "The character is hard to fool.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Small",
-            "label": "Small"
+            "label": "Small",
+            "description": "The character's size is small, which adds +1 to their Melee and Agility defenses and takes -1 from their Run Speed.",
+            "bonusAdjustments": "[{\"type\":\"AttributeDefense\",\"name\":\"Melee\",\"value\":1},{\"type\":\"AttributeDefense\",\"name\":\"Agility\",\"value\":1},{\"type\":\"Run\",\"name\":\"\",\"value\":-1}]"
           },
           {
             "value": "Sneaky",
-            "label": "Sneaky"
+            "label": "Sneaky",
+            "description": "The character has an edge on Agility checks when sneaking around.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Stranger",
-            "label": "Stranger"
+            "label": "Stranger",
+            "description": "The character doesn't understand local customs.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Surprising Power",
-            "label": "Surprising Power"
+            "label": "Surprising Power",
+            "description": "The character can choose a power they normally wouldn't be able to use.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Tech Reliance",
-            "label": "Tech Reliance"
+            "label": "Tech Reliance",
+            "description": "The character relies on technology for powers.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Weakness",
-            "label": "Weakness"
+            "label": "Weakness",
+            "description": "The character suffers an unusual amount of harm from certain substances.",
+            "bonusAdjustments": "null"
           },
           {
             "value": "Weird",
-            "label": "Weird"
+            "label": "Weird",
+            "description": "The character has something weird (or even wonderful) about them.",
+            "bonusAdjustments": "null"
           }
         ]
       }
@@ -1748,223 +1026,278 @@
         "options": [
           {
             "value": "A.I.",
-            "label": "A.I."
+            "label": "A.I.",
+            "description": "The character possesses an artificial intelligence in a computerized mind."
           },
           {
             "value": "Alien Heritage",
-            "label": "Alien Heritage"
+            "label": "Alien Heritage",
+            "description": "The character—or at least one of their ancestors—is not from Earth."
           },
           {
             "value": "Alternate Form",
-            "label": "Alternate Form"
+            "label": "Alternate Form",
+            "description": "The character can change from their regular human form into another form and back."
           },
           {
             "value": "Amphibious",
-            "label": "Amphibious"
+            "label": "Amphibious",
+            "description": "The character can breathe just fine underwater and can see and hear well in it too."
           },
           {
             "value": "Auditory Issues",
-            "label": "Auditory Issues"
+            "label": "Auditory Issues",
+            "description": "The character has trouble hearing that can range from partial to full deafness."
           },
           {
             "value": "Authority",
-            "label": "Authority"
+            "label": "Authority",
+            "description": "The character has a legal authority of some kind."
           },
           {
             "value": "Backup",
-            "label": "Backup"
+            "label": "Backup",
+            "description": "The character is part of an organization—like a police force—that they can call for immediate backup at any time."
           },
           {
             "value": "Black Market Access",
-            "label": "Black Market Access"
+            "label": "Black Market Access",
+            "description": "The character knows how and where they can buy and sell hard-to-find and potentially illegal things."
           },
           {
             "value": "Blind",
-            "label": "Blind"
+            "label": "Blind",
+            "description": "The character is permanently blinded."
           },
           {
             "value": "Chaotic",
-            "label": "Chaotic"
+            "label": "Chaotic",
+            "description": "The character has been affected by the chaos lord Chthon."
           },
           {
             "value": "Convict",
-            "label": "Convict"
+            "label": "Convict",
+            "description": "The character has been convicted of a crime, which is reflected on their record."
           },
           {
             "value": "Cursed",
-            "label": "Cursed"
+            "label": "Cursed",
+            "description": "Willingly or not, the character is affiliated with Hell."
           },
           {
             "value": "Deaf",
-            "label": "Deaf"
+            "label": "Deaf",
+            "description": "The character is permanently deafened."
           },
           {
             "value": "Deceased",
-            "label": "Deceased"
+            "label": "Deceased",
+            "description": "The character is technically dead-although presumably still able to interact with the rest of the world in some way."
           },
           {
             "value": "Dependents",
-            "label": "Dependents"
+            "label": "Dependents",
+            "description": "The character has young children, elderly relatives or others who rely on them."
           },
           {
             "value": "Enemy",
-            "label": "Enemy"
+            "label": "Enemy",
+            "description": "There's someone out there who has sworn to defeat the character."
           },
           {
             "value": "Eternally Immortal",
-            "label": "Eternally Immortal"
+            "label": "Eternally Immortal",
+            "description": "The character does not age and could theoretically live forever."
           },
           {
             "value": "Extreme Appearance",
-            "label": "Extreme Appearance"
+            "label": "Extreme Appearance",
+            "description": "The character looks very different than the average person (wherever they happen to be) and cannot easily hide their identity."
           },
           {
             "value": "Gamma Mutate",
-            "label": "Gamma Mutate"
+            "label": "Gamma Mutate",
+            "description": "Gamma radiation does not harm the character. Instead, it's the source of their powers."
           },
           {
             "value": "Green Door",
-            "label": "Green Door"
+            "label": "Green Door",
+            "description": "After being killed, the character can come back to life by passing through the Green Door, a portal that connects a part of the afterlife to Earth."
           },
           {
             "value": "Hard of Hearing",
-            "label": "Hard of Hearing"
+            "label": "Hard of Hearing",
+            "description": "The character has difficulty hearing, although this can often be corrected with hearing aids."
           },
           {
             "value": "Headquarters",
-            "label": "Headquarters"
+            "label": "Headquarters",
+            "description": "The character has a base, cave or lair they can use to recover from wounds, repair or store equipment, work on inventions and so on."
           },
           {
             "value": "Heroic",
-            "label": "Heroic"
+            "label": "Heroic",
+            "description": "The character acts heroically."
           },
           {
             "value": "Hounded",
-            "label": "Hounded"
+            "label": "Hounded",
+            "description": "The character is a member of a group of people who are persecuted for simply being themselves."
           },
           {
             "value": "Hunted",
-            "label": "Hunted"
+            "label": "Hunted",
+            "description": "The character is hunted by the law for crimes they have supposedly (or actually) committed."
           },
           {
             "value": "Imageless",
-            "label": "Imageless"
+            "label": "Imageless",
+            "description": "The character casts no reflection, and their image cannot be captured by cameras."
           },
           {
             "value": "Immunity",
-            "label": "Immunity"
+            "label": "Immunity",
+            "description": "The character is immune to the usual effects of something."
           },
           {
             "value": "Inhuman Genes",
-            "label": "Inhuman Genes"
+            "label": "Inhuman Genes",
+            "description": "The character has latent Inhuman genes that cause them to develop super-powers when exposed to the Terrigen Mist."
           },
           {
             "value": "Krakoan",
-            "label": "Krakoan"
+            "label": "Krakoan",
+            "description": "As a mutant, the character is automatically a citizen of the island-nation of Krakoa and can travel to and from there freely."
           },
           {
             "value": "Lab Access",
-            "label": "Lab Access"
+            "label": "Lab Access",
+            "description": "The character either owns or has access to a laboratory filled with the technical equipment, supplies and tools they need for their work."
           },
           {
             "value": "Leader",
-            "label": "Leader"
+            "label": "Leader",
+            "description": "The character is an acknowledged leader of a large and important organization, all the way up to and including an entire nation."
           },
           {
             "value": "Linguist",
-            "label": "Linguist"
+            "label": "Linguist",
+            "description": "The character is fluent in a language other than their native tongue."
           },
           {
             "value": "Lunar Transformation",
-            "label": "Lunar Transformation"
+            "label": "Lunar Transformation",
+            "description": "On the three nights that the moon is at its fullest and while the moon is above the horizon, the character must transform into a werewolf and is ruled by their animal nature."
           },
           {
             "value": "Mahd Wy'ry",
-            "label": "Mahd Wy'ry"
+            "label": "Mahd Wy'ry",
+            "description": "The character lives for so long that their accumulated memories have the potential to drive them insane."
           },
           {
             "value": "Mentor",
-            "label": "Mentor"
+            "label": "Mentor",
+            "description": "The character knows an older person they can ask for advice, even when it comes to having super-powers."
           },
           {
             "value": "Mute",
-            "label": "Mute"
+            "label": "Mute",
+            "description": "The character cannot speak."
           },
           {
             "value": "Mysterious",
-            "label": "Mysterious"
+            "label": "Mysterious",
+            "description": "The character does not entirely understand how or why they have powers."
           },
           {
             "value": "Obligation",
-            "label": "Obligation"
+            "label": "Obligation",
+            "description": "The character is responsible to certain people, places or organizations who rely on them."
           },
           {
             "value": "Poor",
-            "label": "Poor"
+            "label": "Poor",
+            "description": "The character has little access to money and struggles to make ends meet."
           },
           {
             "value": "Powerful",
-            "label": "Powerful"
+            "label": "Powerful",
+            "description": "The character has access to the resources of their entire community."
           },
           {
             "value": "Prescription Pad",
-            "label": "Prescription Pad"
+            "label": "Prescription Pad",
+            "description": "The character can write prescriptions for various kinds of medication."
           },
           {
             "value": "Public Identity",
-            "label": "Public Identity"
+            "label": "Public Identity",
+            "description": "The character's real identity is known to the public."
           },
           {
             "value": "Radioactive",
-            "label": "Radioactive"
+            "label": "Radioactive",
+            "description": "The character constantly emits low levels of some sort of radiation."
           },
           {
             "value": "Rich",
-            "label": "Rich"
+            "label": "Rich",
+            "description": "The character has access to plenty of money."
           },
           {
             "value": "Secret Identity",
-            "label": "Secret Identity"
+            "label": "Secret Identity",
+            "description": "The character's real identity is a secret to the public, and they must take precautions to maintain this status."
           },
           {
             "value": "Signature Weapon",
-            "label": "Signature Weapon"
+            "label": "Signature Weapon",
+            "description": "The character is known for owning and using a specific type of weapon, like Hawkeye's bow or Elektra's sai."
           },
           {
             "value": "Sorcerous",
-            "label": "Sorcerous"
+            "label": "Sorcerous",
+            "description": "The character has dedicated themself to the study of traditional magic, also known as sorcery."
           },
           {
             "value": "Streetwise",
-            "label": "Streetwise"
+            "label": "Streetwise",
+            "description": "The character knows how things are handled on the street, who's in charge of various criminal enterprises and how to avoid issues with them."
           },
           {
             "value": "Supernatural",
-            "label": "Supernatural"
+            "label": "Supernatural",
+            "description": "The character has powers that are magical or based on something magical."
           },
           {
             "value": "Villianous",
-            "label": "Villianous"
+            "label": "Villianous",
+            "description": "The character is a villain, someone who cares little for the rights of others, up to and including their right to live."
           },
           {
             "value": "Vision Issues",
-            "label": "Vision Issues"
+            "label": "Vision Issues",
+            "description": "The character has trouble seeing that can range from partial to full blindness."
           },
           {
             "value": "Weapon",
-            "label": "Weapon"
+            "label": "Weapon",
+            "description": "The character has a weapon or type of weapon they prefer."
           },
           {
             "value": "Worshipped",
-            "label": "Worshipped"
+            "label": "Worshipped",
+            "description": "The character is worshipped by others as a god."
           },
           {
             "value": "X-Gene",
-            "label": "X-Gene"
+            "label": "X-Gene",
+            "description": "The character has mutant genes that cause them to develop super-powers."
           },
           {
             "value": "Young",
-            "label": "Young"
+            "label": "Young",
+            "description": "The character is a minor, under 18 years old."
           }
         ]
       }
@@ -1981,55 +1314,81 @@
         "options": [
           {
             "value": "Pistol",
-            "label": "Pistol"
+            "label": "Pistol",
+            "image": "",
+            "description": null
           },
           {
             "value": "Bow",
-            "label": "Bow"
+            "label": "Bow",
+            "image": "",
+            "description": null
           },
           {
             "value": "Rifle",
-            "label": "Rifle"
+            "label": "Rifle",
+            "image": "",
+            "description": null
           },
           {
             "value": "Sniper Rifle",
-            "label": "Sniper Rifle"
+            "label": "Sniper Rifle",
+            "image": "",
+            "description": null
           },
           {
             "value": "Pistol",
-            "label": "Pistol"
+            "label": "Pistol",
+            "image": "",
+            "description": null
           },
           {
             "value": "Shotgun",
-            "label": "Shotgun"
+            "label": "Shotgun",
+            "image": "",
+            "description": null
           },
           {
             "value": "Submachine Gun",
-            "label": "Submachine Gun"
+            "label": "Submachine Gun",
+            "image": "",
+            "description": null
           },
           {
             "value": "Frag Grenade",
-            "label": "Frag Grenade"
+            "label": "Frag Grenade",
+            "image": "",
+            "description": null
           },
           {
             "value": "Flash-bang Grenade",
-            "label": "Flash-bang Grenade"
+            "label": "Flash-bang Grenade",
+            "image": "",
+            "description": null
           },
           {
             "value": "Club",
-            "label": "Club"
+            "label": "Club",
+            "image": "",
+            "description": null
           },
           {
             "value": "Pistol",
-            "label": "Pistol"
+            "label": "Pistol",
+            "image": "",
+            "description": null
           },
           {
             "value": "Knife",
-            "label": "Knife"
+            "label": "Knife",
+            "image": "",
+            "description": null
           },
           {
             "value": "Sword",
-            "label": "Sword"
+            "label": "Sword",
+            "image": "",
+            "description": null
           }
         ]
       }

@@ -10,7 +10,7 @@ namespace EverydayHeroes
     public static class GenerateFormSchema
     {
         private static List<object> _fields = new List<object>();
-        private static string _jsonFilesPath = "C:/Users/toole/OneDrive/Source/Character Nexus/Ruleset.EverydayHeroes/Json/";
+        private static string _jsonFilesPath = $"{new DirectoryInfo(AppContext.BaseDirectory).Parent.Parent.Parent.Parent}/Ruleset.EverydayHeroes/Json/";
 
         public static void InitializeSchema()
         {

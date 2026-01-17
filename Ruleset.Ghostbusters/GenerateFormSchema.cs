@@ -11,7 +11,7 @@ namespace Ghostbusters
     public static class GenerateFormSchema
     {
         private static List<object> _fields = new List<object>();
-        private static string _jsonFilesPath = "C:/Users/toole/OneDrive/Source/Character Nexus/Ruleset.Ghostbusters/Json/";
+        private static string _jsonFilesPath = $"{new DirectoryInfo(AppContext.BaseDirectory).Parent.Parent.Parent.Parent}/Ruleset.Ghostbusters/Json/";
         private static readonly Regex sWhitespace = new Regex(@"\s+");
 
         public static void InitializeSchema()

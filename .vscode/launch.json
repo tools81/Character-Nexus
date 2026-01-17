@@ -1,53 +1,45 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": ".NET API Launch",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "build", // Assumes a build task is defined in tasks.json
-            "program": "${workspaceFolder}/CharacterNexus/bin/Debug/net8.0/CharacterNexus.dll",
-            "args": [],
-            "cwd": "${workspaceFolder}/CharacterNexus",
-            "stopAtEntry": false,
-            "serverReadyAction": {
-                "action": "openExternally",
-                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
-            },
-            "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
-            },
-            "sourceFileMap": {
-                "${workspaceFolder}/CharacterNexus": "${workspaceFolder}/CharacterNexus"
-            }
-        },
-        {
-            "name": "Launch via NPM",
-            "request": "launch",
-            "cwd": "${workspaceFolder}/CharacterNexus/ClientApp",
-            "runtimeArgs": [
-                "run-script",
-                "start"
-            ],
-            "runtimeExecutable": "npm",
-            "console": "integratedTerminal",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "type": "node"
-        }
-    ],
-    "compounds": [
-        {
-            "name": "Run All",
-            "configurations": [
-                ".NET API Launch",
-                "Launch via NPM"
-            ],
-            "stopAll": true
-        }
-    ]
+  "version": "0.2.0",
+
+  "configurations": [
+    {
+      "name": "CharacterNexus API",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/CharacterNexus/bin/Debug/net8.0/CharacterNexus.dll",
+      "cwd": "${workspaceFolder}/CharacterNexus",
+      "stopAtEntry": false,
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    {
+      "name": "Start React Dev Server",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["start"],
+      "cwd": "${workspaceFolder}/CharacterNexus/ClientApp",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "React App",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/CharacterNexus/ClientApp"
+    }
+  ],
+
+  "compounds": [
+    {
+      "name": "Full Stack Debug",
+      "configurations": [
+        "CharacterNexus API",
+        "Start React Dev Server",
+        "React App"
+      ]
+    }
+  ]
 }

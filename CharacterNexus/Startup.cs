@@ -37,15 +37,22 @@ namespace CharacterNexus
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 });
+                options.AddPolicy("DevCors", policy =>
+                {
+                    policy
+                        .WithOrigins("http://localhost:3000")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
             });
 
             services.AddSingleton(configuration);
 
             services.AddSingleton<IRuleset, AmazingTales.Ruleset>();
-            services.AddSingleton<IRuleset, BladeRunner.Ruleset>();
+            // services.AddSingleton<IRuleset, BladeRunner.Ruleset>();
             services.AddSingleton<IRuleset, DarkCrystal.Ruleset>();
-            services.AddSingleton<IRuleset, EverydayHeroes.Ruleset>();
-            services.AddSingleton<IRuleset, Ghostbusters.Ruleset>();
+            // services.AddSingleton<IRuleset, EverydayHeroes.Ruleset>();
+            // services.AddSingleton<IRuleset, Ghostbusters.Ruleset>();
             //services.AddSingleton<IRuleset, GiJoe.Ruleset>();
             services.AddSingleton<IRuleset, Marvel.Ruleset>();
             //services.AddSingleton<IRuleset, Starfinder.Ruleset>();
@@ -72,6 +79,7 @@ namespace CharacterNexus
             app.UseStaticFiles();
             app.UseRouting();
             app.UseCors("AllowSWA");
+            app.UseCors("DevCors");
 
             app.UseRulesetMiddleware();
 

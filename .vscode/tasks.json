@@ -3,10 +3,13 @@
   "tasks": [
     {
       "label": "build",
-      "type": "shell",
-      "command": "dotnet build",
-      "group": "build",
-      "problemMatcher": ["$msCompile"]
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/CharacterNexus/CharacterNexus.csproj"
+      ],
+      "problemMatcher": "$msCompile"
     }
   ]
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Utility;
@@ -12,7 +13,7 @@ namespace DarkCrystal
     public static class GenerateFormSchema
     {
         private static List<object> _fields = new List<object>();
-        private static string _jsonFilesPath = "C:/Users/toole/OneDrive/Source/Character Nexus/Ruleset.DarkCrystal/Json/";
+        private static string _jsonFilesPath = $"{new DirectoryInfo(AppContext.BaseDirectory).Parent.Parent.Parent.Parent}/Ruleset.DarkCrystal/Json/";
         private static readonly Regex sWhitespace = new Regex(@"\s+");
         private static readonly JsonSerializerSettings _jsonSettings = new JsonSerializerSettings
         {

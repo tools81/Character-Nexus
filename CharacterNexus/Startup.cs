@@ -33,7 +33,7 @@ namespace CharacterNexus
                 options.AddPolicy("AllowSWA", policy =>
                 {
                     policy
-                        .WithOrigins("https://character-nexus-api-gnh8dcg5akh5aqeb.centralus-01.azurewebsites.net")
+                        .WithOrigins("https://agreeable-cliff-002808f10.4.azurestaticapps.net") // SWA domain
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 });

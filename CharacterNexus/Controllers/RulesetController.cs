@@ -34,24 +34,7 @@ namespace CharacterNexus.Controllers
         {
             _logger.LogInformation("Requested rulesets");
 
-            // Optional: keep your mapping logic if you want filtering/ordering
-            var rulesetMapping =
-                _configuration
-                    .GetSection("MappingsRuleset")
-                    .Get<Dictionary<string, string>>();
-
-            if (rulesetMapping == null || rulesetMapping.Count == 0)
-            {
-                // If no mapping exists, return all registered rulesets
-                return Ok(_rulesets);
-            }
-
-            // Filter DI-provided rulesets by config mapping
-            var mappedRulesets = _rulesets
-                .Where(r => rulesetMapping.Values.Contains(r.Name))
-                .ToList();
-
-            return Ok(mappedRulesets);
+            return Ok(_rulesets);
         }
 
         [HttpGet("characters")]

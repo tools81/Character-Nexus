@@ -176,9 +176,9 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
           id={name}
           className={className}
           aria-label={label}
+          {...register(name, { disabled })}
           disabled={disabled}
           style={{ display: "none" }}
-          {...register(`${name}.value`)}
           ref={(el) => {
             selectRef.current = el;
             if (typeof ref === "function") ref(el);

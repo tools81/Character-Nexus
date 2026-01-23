@@ -21,12 +21,12 @@ import FormAccordion from "../components/FormAccordion";
 import DisabledPrereqWrapper from "../components/DisabledPrereqWrapper";
 import RightCollapsiblePane from "../components/RightCollapsiblePane";
 import { useFieldCalculations } from "../hooks/useFieldCalculations";
-import { usePrerequisites } from "../hooks/usePrerequisites";
 import { useBonusCharacteristics } from "../hooks/useBonusCharacteristics";
 import { useBonusAdjustments } from "../hooks/useBonusAdjustments";
 import { useModal } from "../hooks/useModal";
+import { useDisableEngine } from "../hooks/useDisableEngine";
 
-const DynamicForm: React.FC = () => {
+const CharacterEditor: React.FC = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
@@ -41,7 +41,6 @@ const DynamicForm: React.FC = () => {
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [imageData, setImageData] = useState<File | null>(null);
   const watchedRef = useRef<Set<string>>(new Set());
-  const prereqSetRef = useRef<Set<string>>(new Set());
 
   const methods = useForm({ shouldUnregister: false });
   const { register, unregister, handleSubmit, watch, control, getValues, setValue, reset } = methods;
@@ -157,9 +156,8 @@ const DynamicForm: React.FC = () => {
   }, [choiceFields, watch]);
 
   useBonusAdjustments(bonusAdjustments, getValues, setValue);
-  useBonusCharacteristics(bonusCharacteristics, getValues, setValue);
-  usePrerequisites(schema, prereqSetRef.current, methods);
-  useFieldCalculations(schema, getValues, setValue, watch);
+  useBonusCharacteristics(bonusCharacteristics, getValues, setValue); 
+  useFieldCalculations(schema, getValues, setValue, watch);  
 
   // Submit handler
   const onSubmit = async (data: any) => {
@@ -171,7 +169,7 @@ const DynamicForm: React.FC = () => {
   };
 
   // Field rendering helper
-  const FieldArray = ({ field }: { field: any }) => {
+  const FieldArray = ({ field, disabledMap }: { field: any, disabledMap: Record<string, boolean> }) => {
     const { fields, append, remove } = useFieldArray({ name: field.name, control });
 
     const handleAddSelect = (component: any) => append({ value: "" });
@@ -183,7 +181,7 @@ const DynamicForm: React.FC = () => {
           const childComponent = { ...field.component, name: `${field.name}.${index}` };
           return (
             <div key={item.id} className="input-group">
-              {renderField(childComponent, false, !!childComponent.disabled)}
+              {renderField(childComponent, disabledMap, false )}
               <button type="button" className="btn btn-outline-secondary" onClick={() => remove(index)}>
                 Remove
               </button>
@@ -200,7 +198,11 @@ const DynamicForm: React.FC = () => {
     );
   };
 
-  const renderField = (field: any, includeLabel: boolean = true, disabled: boolean = false) => {
+  const renderField = (
+    field: any,
+    disabledMap: Record<string, boolean>,
+    includeLabel: boolean = true
+  ) => {    
     switch (field.type) {
       case "hidden":
         return (
@@ -215,7 +217,7 @@ const DynamicForm: React.FC = () => {
         return <hr />;
       case "text":
         return (
-          <DisabledPrereqWrapper component={field} disabled={disabled}>
+          <DisabledPrereqWrapper component={field} disabled={disabledMap?.[field.name] === true}>
             <InputText
               register={register}
               name={field.name}
@@ -223,13 +225,13 @@ const DynamicForm: React.FC = () => {
               label={field.label}
               defaultValue={field.default}
               className={field.className}
-              disabled={disabled}
+              disabled={disabledMap?.[field.name] === true}
             />
           </DisabledPrereqWrapper>
         );
       case "textarea":
         return (
-          <DisabledPrereqWrapper component={field} disabled={disabled}>
+          <DisabledPrereqWrapper component={field} disabled={disabledMap?.[field.name] === true}>
             <InputTextArea
               register={register}
               name={field.name}
@@ -237,13 +239,13 @@ const DynamicForm: React.FC = () => {
               label={field.label}
               defaultValue={field.default}
               className={field.className}
-              disabled={disabled}
+              disabled={disabledMap?.[field.name] === true}
             />
           </DisabledPrereqWrapper>
         );
       case "number":
         return (
-          <DisabledPrereqWrapper component={field} disabled={disabled}>
+          <DisabledPrereqWrapper component={field} disabled={disabledMap?.[field.name] === true}>
             <InputNumber
               register={register}
               name={field.name}
@@ -251,13 +253,19 @@ const DynamicForm: React.FC = () => {
               label={field.label}
               defaultValue={field.default}
               className={field.className}
-              disabled={disabled}
+              disabled={disabledMap?.[field.name] === true}
             />
           </DisabledPrereqWrapper>
         );
       case "switch":
+        // console.log({
+        //   fieldName: field.name,
+        //   disabledMap: disabledMap,
+        //   disabledMapKeys: Object.keys(disabledMap ?? {}),
+        //   directLookup: disabledMap?.[field.name]
+        // });
         return (
-          <DisabledPrereqWrapper component={field} disabled={disabled}>
+          <DisabledPrereqWrapper component={field} disabled={disabledMap?.[field.name] === true}>
             <InputSwitch
               register={register}
               unregister={unregister}
@@ -273,13 +281,14 @@ const DynamicForm: React.FC = () => {
               inputBonusAdjustments={field.bonusAdjustments}
               bonusAdjustments={bonusAdjustments}
               setBonusAdjustments={setBonusAdjustments}
-              disabled={disabled}
+              prerequisites={field.prerequisites}
+              disabled={disabledMap?.[field.name] === true}
             />
           </DisabledPrereqWrapper>
         );
       case "select":
         return (
-          <DisabledPrereqWrapper component={field} disabled={disabled}>
+          <DisabledPrereqWrapper component={field} disabled={disabledMap?.[field.name] === true}>
             <InputSelect
               register={register}
               unregister={unregister}
@@ -297,7 +306,7 @@ const DynamicForm: React.FC = () => {
               userChoices={userChoices}
               setUserChoices={setUserChoices}
               openUserChoiceModal={openUserChoiceModal}
-              disabled={disabled}
+              disabled={disabledMap?.[field.name] === true}
             />
           </DisabledPrereqWrapper>
         );
@@ -306,7 +315,7 @@ const DynamicForm: React.FC = () => {
           <FormListGroup
             renderField={renderField}
             items={field.items}
-            disabled={disabled}
+            disabledMap={disabledMap}
           />
         );
       case "group":
@@ -317,7 +326,7 @@ const DynamicForm: React.FC = () => {
             includeLabel={includeLabel}
             label={field.label}
             children={field.children}
-            disabled={disabled}
+            disabledMap={disabledMap}
           />
         );
       case "textblock":
@@ -345,10 +354,11 @@ const DynamicForm: React.FC = () => {
           </div>
         );
       case "array":
-        return <FieldArray field={field} />;
+        return <FieldArray field={field} disabledMap={disabledMap} />;
       case "image":
         return (
-          <DisabledPrereqWrapper component={field} disabled={disabled}>
+          <DisabledPrereqWrapper component={field} disabled={disabledMap?.[field.name] === true}
+>
             <InputImage
               register={register}
               name={field.name}
@@ -357,7 +367,7 @@ const DynamicForm: React.FC = () => {
               imagePreview={imagePreview}
               setImagePreview={setImagePreview}
               setImageData={setImageData}
-              disabled={disabled}
+              disabled={disabledMap?.[field.name] === true}
             />
           </DisabledPrereqWrapper>
         );
@@ -367,7 +377,7 @@ const DynamicForm: React.FC = () => {
             includeLabel={includeLabel}
             field={field}
             renderField={renderField}
-            disabled={disabled}
+            disabledMap={disabledMap}
           />
         );
       default:
@@ -384,8 +394,15 @@ const DynamicForm: React.FC = () => {
         <div className="d-flex mb-3">
           {currentRuleset && <img src={currentRuleset.logoSource} alt={currentRuleset.name} className="p-2" />}
         </div>
-        {schema.fields.map((field: any) => renderField(field, true, !!field.disabled))}
-        <userChoiceModal.Modal>
+
+        <FormContents
+          schema={schema}
+          renderField={renderField}
+          choiceFields={choiceFields}
+          userChoiceModal={userChoiceModal}
+        />
+
+        {/* <userChoiceModal.Modal>
           {({ userChoices: userChoices, close }) => (
             <>
               <h2>Choice:</h2>
@@ -394,7 +411,7 @@ const DynamicForm: React.FC = () => {
               <button onClick={close}>Close</button>
             </>
           )}
-        </userChoiceModal.Modal>
+        </userChoiceModal.Modal> */}
         <div className="center-container">
           <button className="submit-button" type="submit">Submit</button>
         </div>
@@ -405,4 +422,39 @@ const DynamicForm: React.FC = () => {
   );
 };
 
-export default DynamicForm;
+const FormContents = ({
+  schema,
+  renderField,
+  choiceFields,
+  userChoiceModal,
+}: any) => {
+  const disabledMap = useDisableEngine(schema);
+  // console.log("Disabled Map:", disabledMap);
+  return (
+    <>
+      {schema.fields.map((field: any) =>
+        renderField(field, disabledMap, true)
+      )}
+
+      <userChoiceModal.Modal>
+        {({ userChoices, close }: any) => (
+          <>
+            <h2>Choice:</h2>
+            {userChoices.map((item: any) => (
+              <p key={item.type}>Choose {item.count}</p>
+            ))}
+            {choiceFields.map((field: any) => (
+              <div key={field.id}>
+                {renderField(field)}
+              </div>
+            ))}
+            <button onClick={close}>Close</button>
+          </>
+        )}
+      </userChoiceModal.Modal>
+    </>
+  );
+};
+
+
+export default CharacterEditor;

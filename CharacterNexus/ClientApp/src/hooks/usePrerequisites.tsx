@@ -1,130 +1,119 @@
-import { useEffect, useState, useRef } from 'react';
-import { useFormContext, useWatch } from 'react-hook-form';
+import { useEffect, useRef, useState } from 'react';
+import { useFormContext } from 'react-hook-form';
 import { Prerequisite } from '../types/Prerequisite';
 
-// Accept optional form methods so the hook can be used either with FormProvider or directly
-export const usePrerequisites = (schema: any, set: any, methods?: any) => {
-  const formMethods = methods ? methods : useFormContext();
-  const { watch, setValue, getValues } = formMethods;
-  const [, setDisabledState] = useState<Record<string, boolean>>({}); // trigger re-renders
-  const prevDisabledRef = useRef<string>('');
+type DisabledMap = Record<string, boolean>;
 
+export const usePrerequisites = (
+  schema: any,
+  prereqSet?: Set<string>,
+  methods?: any
+) => {
+  const formMethods = methods ?? useFormContext();
+  const { watch, getValues } = formMethods;
+
+  const [disabledMap, setDisabledMap] = useState<DisabledMap>({});
+  const prevJsonRef = useRef<string>('');
+
+  /* --------------------------------------------
+   * Collect prerequisite field names (once)
+   * ------------------------------------------ */
   useEffect(() => {
-    if (!schema) return;
-    // Pre-collect prerequisite field names and subscribe to them once so
-    // we don't call `watch` repeatedly inside the subscription callback
-    const prereqNames = new Set<string>();
-    const collectNames = (field: any) => {
-      const component = field && field.component ? field.component : field;
-      if (!component || !component.prerequisites) return;
+    if (!schema?.fields) return;
+
+    const names = new Set<string>();
+
+    const collect = (field: any) => {
+      const component = field?.component ?? field;
+      if (!component?.prerequisites) return;
+
       try {
-        const arr = JSON.parse(component.prerequisites) as Prerequisite[];
-        for (const prerequisite of arr) {
-          const fieldName = prerequisite.type != ''
-            ? prerequisite.type + '.' + prerequisite.name
-            : prerequisite.name;
-          prereqNames.add(fieldName);
-        }
-      } catch (e) {
-        // ignore parse errors
+        const prereqs = JSON.parse(component.prerequisites) as Prerequisite[];
+        prereqs.forEach(p => {
+          const name = p.type ? `${p.type}.${p.name}` : p.name;
+          names.add(name);
+        });
+      } catch {
+        /* ignore */
       }
-      if (component && Array.isArray(component.items)) {
-        for (const child of component.items) collectNames(child);
-      }
+
+      component?.items?.forEach(collect);
     };
 
-    if (Array.isArray(schema.fields)) {
-      schema.fields.forEach((group: any) => {
-        if (Array.isArray(group.items)) {
-          group.items.forEach((field: any) => collectNames(field));
-        }
-      });
-    }
+    schema.fields.forEach((group: any) =>
+      group.items?.forEach(collect)
+    );
 
-    // register those names with watch and the provided set
-    prereqNames.forEach((name) => {
-      try {
-        watch(name);
-      } catch (e) {
-        // watch may throw if the name is invalid; ignore
-      }
-      if (set && !set.has(name)) set.add(name);
+    names.forEach(n => {
+      watch(n);
+      prereqSet?.add(n);
     });
+  }, [schema, watch, prereqSet]);
 
-    // Subscribe to form changes and evaluate prerequisites
-    const subscription = watch(() => {
-      const disabledUpdates: Record<string, boolean> = {};
+  /* --------------------------------------------
+   * Evaluate ALL prerequisites
+   * ------------------------------------------ */
+  useEffect(() => {
+    if (!schema?.fields) return;
 
-      // Recursive function to process nested fields/items
+    const evaluateAll = () => {
+      const nextMap: DisabledMap = {};
+
       const evaluateField = (field: any) => {
-        let meetsPrerequisites = true;
+        const component = field?.component ?? field;
+        if (!component) return;
 
-        // component may be field.component or the field itself
-        const component = field && field.component ? field.component : field;
+        let enabled = true;
 
-        // If the component has prerequisites, evaluate them
-        if (component && component.prerequisites != null && component.prerequisites !== 'null' && component.prerequisites !== '') {
-          for (const prerequisite of JSON.parse(component.prerequisites) as Prerequisite[]) {
-            const fieldName = prerequisite.type != ''
-              ? prerequisite.type + "." + prerequisite.name
-              : prerequisite.name;
+        if (component.prerequisites) {
+          try {
+            const prereqs = JSON.parse(component.prerequisites) as Prerequisite[];
 
-            const value = getValues(fieldName);
-            const expr = `${JSON.stringify(value)}${prerequisite.formula}`;
-            let meetsPrerequisite = true;
-            try {
-              // eslint-disable-next-line no-new-func
-              meetsPrerequisite = Function('return ' + expr)();
-            } catch (e) {
-              meetsPrerequisite = true;
-              console.warn('Error evaluating prerequisite', expr, e);
+            for (const p of prereqs) {
+              const name = p.type ? `${p.type}.${p.name}` : p.name;
+              const value = getValues(name);
+              const expr = `${JSON.stringify(value)}${p.formula}`;
+
+              const result = Function(`return ${expr}`)();
+              if (!result) {
+                enabled = false;
+                break;
+              }
             }
-
-            if (!meetsPrerequisite) {
-              meetsPrerequisites = false;
-              break;
-            }
+          } catch {
+            enabled = true;
           }
+        }
 
-          const disabled = !meetsPrerequisites;
-          const componentKey = (component && component.name) ? component.name : JSON.stringify(component);
-          if (component) {
-            component.disabled = disabled;
-            disabledUpdates[componentKey] = disabled;
-          }
+        const isInput =
+          component.type !== 'accordion' &&
+          component.type !== 'group' &&
+          component.type !== 'section';
 
-          // If the component itself has items (e.g., listgroup), recurse into them
-          if (component && Array.isArray(component.items)) {
-            for (const childField of component.items) {
-              evaluateField(childField);
-            }
-          }
-        }        
+        if (isInput && component.name) {
+          nextMap[component.name] = !enabled;
+        }
+
+
+        component.items?.forEach(evaluateField);
       };
 
-      schema.fields.forEach((group: any) => {
-        if (Array.isArray(group.items)) {
-          group.items.forEach((field: any) => {
-            evaluateField(field);
-          });
-        }
-      });
+      schema.fields.forEach((group: any) =>
+        group.items?.forEach(evaluateField)
+      );
 
-      // Only trigger a re-render if disabled state actually changed
-      try {
-        const json = JSON.stringify(disabledUpdates);
-        if (json !== prevDisabledRef.current) {
-          prevDisabledRef.current = json;
-          setDisabledState(disabledUpdates);
-        }
-      } catch (err) {
-        // Fallback: if stringify fails for some reason, still set state
-        setDisabledState(disabledUpdates);
+      const json = JSON.stringify(nextMap);
+      if (json !== prevJsonRef.current) {
+        prevJsonRef.current = json;
+        setDisabledMap(nextMap);
       }
-    });
-
-    return () => {
-      if (subscription) subscription.unsubscribe();
     };
-  }, [watch, setValue, schema, methods]);
+
+    evaluateAll();
+    const sub = watch(evaluateAll);
+
+    return () => sub.unsubscribe();
+  }, [schema, watch, getValues]);
+
+  return disabledMap;
 };

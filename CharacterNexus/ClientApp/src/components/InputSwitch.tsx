@@ -11,6 +11,7 @@ import { BonusAdjustments } from "../types/BonusAdjustment";
 import { BonusCharacteristics } from "../types/BonusCharacteristic";
 import { toCamelCase } from "../utils/toCamelCase";
 import { handleRemoveBonusAdjustment, handleRemoveArrayValue } from "../hooks/useBonus";
+import { Prerequisites } from "../types/Prerequisite";
 
 interface Props {
   register: UseFormRegister<FieldValues>;
@@ -29,6 +30,7 @@ interface Props {
   inputBonusAdjustments: any;
   bonusAdjustments: BonusAdjustments;
   setBonusAdjustments: React.Dispatch<React.SetStateAction<BonusAdjustments>>;
+  prerequisites: Prerequisites;
   disabled?: boolean;
 }
 
@@ -46,11 +48,12 @@ const InputSwitch = ({
   inputBonusAdjustments,
   bonusAdjustments,
   setBonusAdjustments,
+  prerequisites,
   disabled
 }: Props) => {
   var watchedValue = useWatch({ name });
   var checked = watchedValue === true;
-  
+
   return (
     <div className="form-check form-switch">
       <input
@@ -60,8 +63,9 @@ const InputSwitch = ({
         id={id}
         data-bonusadjustments={inputBonusAdjustments}
         data-bonuscharacteristics={inputBonusCharacteristics}
+        data-prerequisites={prerequisites}        
+        {...register(name, { disabled })}
         disabled={disabled}
-        {...register(name)}
         checked={checked}
         onChange={(event) =>
           handleInputChange(

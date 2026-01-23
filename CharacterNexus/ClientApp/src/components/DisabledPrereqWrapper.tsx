@@ -23,6 +23,11 @@ const boxStyle: React.CSSProperties = {
   maxWidth: 320,
 };
 
+const disabledOverlayStyle: React.CSSProperties = {
+  pointerEvents: 'none',
+  opacity: 0.6,
+};
+
 const wrapperStyle: React.CSSProperties = {
   position: 'relative',
   display: 'inline-block',
@@ -44,7 +49,14 @@ const DisabledPrereqWrapper: React.FC<Props> = ({ component, disabled, children 
 
   if (!prereqs || prereqs.length === 0) {
     return (
-      <span style={wrapperStyle} onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
+      <span
+        style={{
+          ...wrapperStyle,
+          ...(disabled ? disabledOverlayStyle : {}),
+        }}
+        onMouseEnter={() => setShow(true)}
+        onMouseLeave={() => setShow(false)}
+      >
         {children}
       </span>
     );

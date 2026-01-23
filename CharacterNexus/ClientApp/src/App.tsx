@@ -1,5 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import RulesetDashboard from './pages/RulesetDashboard';
 import CharacterEditor from './pages/CharacterEditor';
 import Container from 'react-bootstrap/Container';

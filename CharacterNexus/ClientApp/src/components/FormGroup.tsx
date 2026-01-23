@@ -1,10 +1,14 @@
 interface Props {
-  renderField: any;
+  renderField: (
+      component: any,  
+      disabledMap: Record<string, boolean>,
+      includeLabel?: boolean,
+    ) => React.ReactNode;
   name: string;
   includeLabel: boolean;
   label: string;
-  children: any;
-  disabled?: boolean;
+  children: any;  
+  disabledMap: Record<string, boolean>;
 }
 
 const FormGroup = ({
@@ -13,7 +17,7 @@ const FormGroup = ({
   includeLabel,
   label,
   children,
-  disabled
+  disabledMap
 }: Props) => {
   return (
     <>
@@ -30,7 +34,7 @@ const FormGroup = ({
                   <br />
                 </>
               )}
-              {renderField(childField, false, !!disabled)}
+              {renderField(childField, disabledMap, false)}
             </div>
         ))}
       </div>

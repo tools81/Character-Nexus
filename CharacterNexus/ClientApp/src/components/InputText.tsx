@@ -31,8 +31,8 @@ const InputText = ({
         id={name}
         defaultValue={defaultValue}
         className={className}
+        {...register(name, { disabled })}
         disabled={disabled}
-        {...register(name)}
       ></input>
     </div>
   );

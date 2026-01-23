@@ -36,8 +36,8 @@ const InputNumber = ({
         defaultValue={defaultValue}
         className={className}
         style={{ maxWidth: "100px" }}
+        {...register(name, { disabled })}
         disabled={disabled}
-        {...register(name)}
         value={value ? value : 0}
       ></input>
     </div>

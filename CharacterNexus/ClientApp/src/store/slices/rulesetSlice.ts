@@ -42,7 +42,6 @@ export const fetchRulesets = createAsyncThunk<
 >('ruleset/fetchRulesets', async (_, thunkAPI) => {
   try {
     const response = await fetch(`${BASE_URL}/api/ruleset/rulesets`);
-    console.log(response);
     if (!response.ok) throw new Error('Failed to fetch rulesets');
     const data = (await response.json()) as Ruleset[];
     return data;

@@ -37,7 +37,7 @@ const InputImage = ({
               type="file"
               id={name}
               accept="image/*"
-              {...register(name)}
+              {...register(name, { disabled })}
               disabled={disabled}
               onChange={(event) => handleImageUpload(event, setImagePreview, setImageData)}
             />

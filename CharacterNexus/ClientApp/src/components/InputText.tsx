@@ -8,6 +8,7 @@ interface Props {
   defaultValue: string;
   className: string;
   disabled?: boolean;
+  visible?: boolean;
 }
 
 const InputText = ({
@@ -17,10 +18,11 @@ const InputText = ({
   label,
   defaultValue,
   className,
-  disabled
-}: Props) => {
+  disabled,
+  visible = true
+}: Props) => {  
   return (
-    <div key={name} className="mb-3">
+    <div key={name} className="mb-3" {...(!visible ? { style: { display: 'none' } } : {})}>
       {includeLabel && (
         <>
           <label>{label}</label>

@@ -14,5 +14,6 @@ namespace EverydayHeroes
         public List<string> Weapons { get; set; }
         public List<string> Vehicles { get; set; }
         public string Image { get; set; }
+        public List<BonusCharacteristic>? BonusCharacteristics { get; set; }
     }
 }

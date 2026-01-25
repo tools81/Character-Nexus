@@ -124,6 +124,16 @@ namespace EverydayHeroes
                     return;
                 }
 
+                string jsonArmorsData = File.ReadAllText(_jsonFilesPath + "Armors.json");
+                List<Armor> armors = JsonConvert.DeserializeObject<List<Armor>>(jsonArmorsData);
+
+                if (armors == null)
+                {
+                    Console.WriteLine($"Unable to read armors json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
                 string jsonVehiclesData = File.ReadAllText(_jsonFilesPath + "Vehicles.json");
                 List<Vehicle> vehicles = JsonConvert.DeserializeObject<List<Vehicle>>(jsonVehiclesData);
 
@@ -146,6 +156,7 @@ namespace EverydayHeroes
                 GeneratePackSchema(packs, "pack", "Packs");
                 GenerateItemSchema(items, "item", "Items");
                 GenerateWeaponSchema(weapons, "weapon", "Weapons");
+                GenerateArmorSchema(armors, "armor", "Armors");
                 GenerateVehicleSchema(vehicles, "vehicle", "Vehicles");
 
                 var schema = new
@@ -307,6 +318,11 @@ namespace EverydayHeroes
 
         private static void GenerateAttributeSchema(List<Attribute> attributes, string name, string label)
         {
+            _fields.Add(new
+            {
+                type = "divider"
+            });
+            
             var children = new List<object>();
 
             foreach (var attribute in attributes)
@@ -385,7 +401,9 @@ namespace EverydayHeroes
                             value = cl.Name,
                             label = cl.Name,
                             image = cl.Image,
-                            description = cl.Description
+                            description = cl.Description,
+                            bonusCharacteristics = JsonConvert.SerializeObject(cl.BonusCharacteristics, _jsonSettings),
+                            userChoices = JsonConvert.SerializeObject(cl.UserChoices, _jsonSettings)
                         }
                     );
 
@@ -418,7 +436,10 @@ namespace EverydayHeroes
                     {
                         value = background.Name,
                         label = background.Name,
-                        description = background.Description
+                        description = background.Description,
+                        bonusCharacteristics = JsonConvert.SerializeObject(background.BonusCharacteristics, _jsonSettings),
+                        bonusAdjustments = JsonConvert.SerializeObject(background.BonusAdjustments, _jsonSettings),
+                        userChoices = JsonConvert.SerializeObject(background.UserChoices, _jsonSettings)
                     }
                 );
             }
@@ -443,7 +464,10 @@ namespace EverydayHeroes
                     {
                         value = profession.Name,
                         label = profession.Name,
-                        description = profession.Description
+                        description = profession.Description,
+                        bonusCharacteristics = JsonConvert.SerializeObject(profession.BonusCharacteristics, _jsonSettings),
+                        bonusAdjustments = JsonConvert.SerializeObject(profession.BonusAdjustments, _jsonSettings),
+                        userChoices = JsonConvert.SerializeObject(profession.UserChoices, _jsonSettings)
                     }
                 );
             }
@@ -521,7 +545,11 @@ namespace EverydayHeroes
                     {
                         value = feat.Name,
                         label = feat.Name,
-                        description = feat.Description
+                        description = feat.Description,
+                        bonusCharacteristics = JsonConvert.SerializeObject(feat.BonusCharacteristics, _jsonSettings),
+                        bonusAdjustments = JsonConvert.SerializeObject(feat.BonusAdjustments, _jsonSettings),
+                        userChoices = JsonConvert.SerializeObject(feat.UserChoices, _jsonSettings),
+                        prerequisites = JsonConvert.SerializeObject(feat.Prerequisites, _jsonSettings)
                     }
                 );
             }
@@ -554,7 +582,8 @@ namespace EverydayHeroes
                     {
                         value = pack.Name,
                         label = pack.Name,
-                        description = pack.Description
+                        description = pack.Description,
+                        bonusCharacteristics = JsonConvert.SerializeObject(pack.BonusCharacteristics, _jsonSettings)
                     }
                 );
             }
@@ -621,6 +650,39 @@ namespace EverydayHeroes
                         value = weapon.Name,
                         label = weapon.Name,
                         description = weapon.Description
+                    }
+                );
+            }
+
+            dynamic array = new
+            {
+                name,
+                label,
+                type = "array",
+                component = obj
+            };
+
+            _fields.Add(array);
+        }
+
+        private static void GenerateArmorSchema(List<Armor> armors, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var armor in armors)
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = armor.Name,
+                        label = armor.Name,
+                        description = armor.Description
                     }
                 );
             }

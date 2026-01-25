@@ -229,7 +229,7 @@ const CharacterEditor: React.FC = () => {
               defaultValue={field.default}
               className={field.className}
               disabled={disabledMap?.[field.name] === true}
-              {...(!isVisible(field.name) ? { style: { display: 'none' } } : {})}
+              visible={isVisible(field.name)}
             />
           </DisabledPrereqWrapper>
         );
@@ -244,7 +244,7 @@ const CharacterEditor: React.FC = () => {
               defaultValue={field.default}
               className={field.className}
               disabled={disabledMap?.[field.name] === true}
-              {...(!isVisible(field.name) ? { style: { display: 'none' } } : {})}
+              visible={isVisible(field.name)}
             />
           </DisabledPrereqWrapper>
         );
@@ -258,8 +258,9 @@ const CharacterEditor: React.FC = () => {
               label={field.label}
               defaultValue={field.default}
               className={field.className}
+              validation={field.validation}
               disabled={disabledMap?.[field.name] === true}
-              {...(!isVisible(field.name) ? { style: { display: 'none' } } : {})}
+              visible={isVisible(field.name)}
             />
           </DisabledPrereqWrapper>
         );
@@ -283,7 +284,7 @@ const CharacterEditor: React.FC = () => {
               setBonusAdjustments={setBonusAdjustments}
               prerequisites={field.prerequisites}
               disabled={disabledMap?.[field.name] === true} 
-              {...(!isVisible(field.name) ? { style: { display: 'none' } } : {})}
+              visible={isVisible(field.name)}
             />
           </DisabledPrereqWrapper>
         );
@@ -374,7 +375,7 @@ const CharacterEditor: React.FC = () => {
               setImagePreview={setImagePreview}
               setImageData={setImageData}
               disabled={disabledMap?.[field.name] === true}
-              {...(!isVisible(field.name) ? { style: { display: 'none' } } : {})}
+              visible={isVisible(field.name)}
             />
           </DisabledPrereqWrapper>
         );
@@ -434,7 +435,6 @@ const FormContents = ({
     schema.fields,
     control
   );
-  console.log("Visibility Map:", visibilityMap);
   return (
     <>
       {schema.fields.map((field: any) =>
@@ -450,7 +450,7 @@ const FormContents = ({
             ))}
             {choiceFields.map((field: any) => (
               <div key={field.id}>
-                {renderField(field)}
+                {renderField(field, disabledMap, visibilityMap, isVisible, field.includeLabel ?? true)}
               </div>
             ))}
             <button onClick={close}>Close</button>

@@ -7,7 +7,13 @@ interface Props {
   label: string;
   defaultValue: string;
   className: string;
+  validation?: {
+    required?: boolean;
+    min?: number;
+    max?: number;
+  };
   disabled?: boolean;
+  visible?: boolean;
 }
 
 const InputNumber = ({
@@ -17,13 +23,15 @@ const InputNumber = ({
   label,
   defaultValue,
   className,
-  disabled
+  validation,
+  disabled,
+  visible = true
 }: Props) => {
   var watchedValue = useWatch({ name });
   var value = watchedValue !== undefined ? watchedValue : "";
   
   return (
-    <div key={name} className="mb-3">
+    <div key={name} className="mb-3" {...(!visible ? { style: { display: 'none' } } : {})}>
       {includeLabel && (
         <>
           <label>{label}</label>
@@ -33,12 +41,13 @@ const InputNumber = ({
       <input
         id={name}
         type="number"
-        defaultValue={defaultValue}
         className={className}
         style={{ maxWidth: "100px" }}
         {...register(name, { disabled })}
         disabled={disabled}
-        value={value ? value : 0}
+        min = {validation?.min}
+        max = {validation?.max}
+        value={value ? value : defaultValue}
       ></input>
     </div>
   );

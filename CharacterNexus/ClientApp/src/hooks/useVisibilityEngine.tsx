@@ -52,6 +52,6 @@ export const useVisibilityEngine = (
 
   return {
     visibilityMap,
-    isVisible: (fieldName: string) => visibilityMap[fieldName?.toLowerCase()] !== false,
+    isVisible: (fieldName: string) => visibilityMap[fieldName.toLowerCase()] !== false,
   };
 };

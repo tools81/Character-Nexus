@@ -14,6 +14,7 @@ interface Props {
       React.SetStateAction<File | null>
     >;
   disabled?: boolean;
+  visible?: boolean;
 }
 
 const InputImage = ({
@@ -23,12 +24,13 @@ const InputImage = ({
   className,
   imagePreview,
   setImagePreview,
-  setImageData
-  , disabled
+  setImageData, 
+  disabled,
+  visible = true
 }: Props) => {
     return (
         <>
-          <div key={name} className="mb-3">
+          <div key={name} className="mb-3" {...(!visible ? { style: { display: 'none' } } : {})}>
             <label htmlFor={name} className="form-label">
               {label}
             </label>
@@ -42,7 +44,7 @@ const InputImage = ({
               onChange={(event) => handleImageUpload(event, setImagePreview, setImageData)}
             />
           </div>
-          <div className="mt-3">
+          <div className="mt-3" {...(!visible ? { style: { display: 'none' } } : {})}>
             {imagePreview ? (
               <img
                 src={imagePreview}

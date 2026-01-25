@@ -32,6 +32,7 @@ interface Props {
   setBonusAdjustments: React.Dispatch<React.SetStateAction<BonusAdjustments>>;
   prerequisites: Prerequisites;
   disabled?: boolean;
+  visible?: boolean;
 }
 
 const InputSwitch = ({
@@ -49,13 +50,14 @@ const InputSwitch = ({
   bonusAdjustments,
   setBonusAdjustments,
   prerequisites,
-  disabled
+  disabled,
+  visible = true
 }: Props) => {
   var watchedValue = useWatch({ name });
   var checked = watchedValue === true;
 
   return (
-    <div className="form-check form-switch">
+    <div className="form-check form-switch" {...(!visible ? { style: { display: 'none' } } : {})}>
       <input
         className="form-check-input"
         type="checkbox"

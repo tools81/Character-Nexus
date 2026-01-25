@@ -56,7 +56,7 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
     setUserChoices,
     openUserChoiceModal,
     disabled,
-    visible
+    visible = true
   } = props;
 
   const selectRef = useRef<HTMLSelectElement | null>(null);

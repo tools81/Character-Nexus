@@ -39,6 +39,7 @@ namespace EverydayHeroes
         public List<Talent> Talents { get; set; }
         public List<Feat> Feats { get; set; }
         public List<string> EquipmentProficiency { get; set; }
+        public List<string> SavingThrowProficiency { get; set; }
         public int Speed { get => 30; }
         public string HitDice { get => GetHitDice(); }
         public int HitPoints { get => GetHitPoints(); }
@@ -72,7 +73,10 @@ namespace EverydayHeroes
 
         private int GetProficiencyBonus()
         {
-            return Archetype.ProficiencyBonus[Level];
+            if (Level >= 9) return 4;
+            if (Level >= 5) return 3;
+
+            return 2;
         }
 
         private string GetHitDice()
@@ -82,17 +86,17 @@ namespace EverydayHeroes
 
         private int GetHitPoints()
         {
-            return Archetype.Hitpoints + ((Archetype.HitpointsPerLevel + Attributes.Where(a => a.Name == "Constitution").FirstOrDefault().Modifier) * Level);
+            return Archetype.Hitpoints + ((Archetype.HitpointsPerLevel + Attributes.FirstOrDefault(a => a.Name == "Constitution").Modifier) * Level);
         }
 
         private int GetDefense()
         {
-            return 10 + Attributes.Where(a => a.Name == Archetype.DefenseModifier).FirstOrDefault().Modifier + Archetype.DefenseBonus[Level];
+            return 10 + Attributes.FirstOrDefault(a => a.Name == Archetype.DefenseModifier).Modifier + Archetype.DefenseBonusPerLevel[Level];
         }
 
         private int GetInitiative()
         {
-            return Attributes.Where(a => a.Name == "Dexterity").FirstOrDefault().Modifier;
+            return Attributes.FirstOrDefault(a => a.Name == "Dexterity").Modifier;
         }
 
         private int GetDamageReduction()
@@ -102,8 +106,8 @@ namespace EverydayHeroes
 
         private int GetPassivePerception()
         {
-            var perceptionSkill = Skills.Where(s => s.Name == "Perception").FirstOrDefault();
-            var value = 10 + Attributes.Where(a => a.Name == "Wisdom").FirstOrDefault().Modifier + Attributes.Where(a => a.Name == perceptionSkill.AbilityModifier).FirstOrDefault().Modifier;
+            var perceptionSkill = Skills.FirstOrDefault(s => s.Name == "Perception");
+            var value = 10 + Attributes.FirstOrDefault(a => a.Name == "Wisdom").Modifier + Attributes.FirstOrDefault(a => a.Name == perceptionSkill.AbilityModifier).Modifier;
 
             if (perceptionSkill.Proficient)
             {

@@ -31,6 +31,7 @@ interface Props {
   setUserChoices: React.Dispatch<React.SetStateAction<UserChoices>>;
   openUserChoiceModal: (choices: UserChoices) => void;
   disabled?: boolean;
+  visible?: boolean;
 }
 
 /* =======================================================
@@ -54,7 +55,8 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
     userChoices,
     setUserChoices,
     openUserChoiceModal,
-    disabled
+    disabled,
+    visible
   } = props;
 
   const selectRef = useRef<HTMLSelectElement | null>(null);
@@ -64,12 +66,12 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
 
   // Sync FROM hidden select (automation, RHF)
   useEffect(() => {
-    const current = getValues(`${name}.value`);
+    const current = getValues(name);
     setSelectedValue(current ? current : "");
   }, [getValues, name]);
 
   const watchedValue = useWatch({
-    name: `${name}.value`,
+    name,
   });
 
   useEffect(() => {
@@ -89,11 +91,12 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
 
   // Handle clicks on the custom UI
   const handleCustomChange = (option: any) => {
-    setValue(`${name}.value`, option.value, {
+    setValue(name, option.value, {
       shouldDirty: true,
       shouldTouch: true,
-      shouldValidate: true,
+      shouldValidate: true
     });
+
 
     // Update hidden select and trigger change event so existing handlers run
     if (selectRef.current) {
@@ -109,7 +112,7 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
 
   return (
     <>
-    <div>
+    <div {...(!visible ? { style: { display: 'none' } } : {})}>
       {includeLabel && (
         <>
           <label>{label}</label>
@@ -123,6 +126,7 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
         ref={wrapperRef}
         className={`custom-select ${className}`}
         aria-disabled={disabled}
+        {...(!visible ? { style: { display: 'none' } } : {})}
       >
         {/* Selected value */}
         <div

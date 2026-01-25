@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Utility;
 
 namespace EverydayHeroes
@@ -14,10 +10,8 @@ namespace EverydayHeroes
         public string HitDice { get; set; }
         public int Hitpoints { get; set; }
         public int HitpointsPerLevel { get; set; }
-        public string HitpointModifier { get; set; }
         public string DefenseModifier { get; set; }
-        public List<int> ProficiencyBonus { get; set; }
-        public List<int> DefenseBonus { get; set; }     
-        public List<List<string>> Talents { get; set; }
+        public List<int> DefenseBonusPerLevel { get; set; }     
+        public List<List<string>> TalentsPerLevel { get; set; }
     }
 }

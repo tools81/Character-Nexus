@@ -6,7 +6,7 @@
     "scale": "Minor",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -63,13 +63,13 @@
     "scale": "Minor",
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       }
     ],
     "userchoices": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "choices": [
           "Advanced",
           "Historical",
@@ -100,7 +100,7 @@
     "scale": "Minor",
     "userchoices": [
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Acrobatics",
           "Arts and Crafts",
@@ -471,13 +471,13 @@
     "prerequisite": "Not a Strong Hero archetype, Strength 13+, Level 2+",
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       }
     ],
     "userchoices": [
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Athletics",
           "Acrobatics",
@@ -494,27 +494,27 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Brawler"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Brawler Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Strong"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "choices": "Improvised"
       }
     ]
@@ -526,15 +526,15 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Brawler"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Brawler Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ]
@@ -546,27 +546,27 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Heavy Gunner"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Strong Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Strong"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ]
@@ -578,21 +578,21 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Heavy Gunner"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Heavy Gunner Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Military"
       }
     ]
@@ -604,21 +604,21 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!MMA Fighter"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Strong Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Strong"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ]
@@ -630,15 +630,15 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!MMA Fighter"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "MMA Fighter Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ]
@@ -650,28 +650,28 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Archetype",
+        "type": "archetype",
         "value": "!Agile"
       },
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Dexterity",
         "value": 13
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 2
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "choices": "Basic"
       }
-    ]
+    ],
     "userchoices": [
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Acrobatics",
           "Sleight of Hand",
@@ -689,21 +689,21 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Martial Artist"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Martial Artist Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Historical"
       }
     ]
@@ -715,27 +715,27 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Martial Artist"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Agile Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Agile"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Historical"
       }
     ]
@@ -747,33 +747,33 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Scoundrel"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Agile Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Agile"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ],
     "userchoices": [
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Acrobatics",
           "Deception",
@@ -794,15 +794,15 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Scoundrel"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Scoundrel Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ],
@@ -829,27 +829,27 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Sharpshooter"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Agile Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Agile"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ]
@@ -861,15 +861,15 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Sharpshooter"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Sharpshooter Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ]
@@ -881,22 +881,22 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Archetype",
+        "type": "archetype",
         "value": "!Tough"
       },
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Constitution",
         "value": "13"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 2
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       },
       {
@@ -912,27 +912,27 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Bodyguard"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Tough Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Tough"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ]
@@ -944,15 +944,15 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Bodyguard"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Bodyguard Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ]
@@ -964,27 +964,27 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Commando"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Tough Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Tough"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ]
@@ -996,28 +996,28 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Commando"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Commando Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Military"
       }
     ],
     "bonusadjustments": [
       {
         "name": "Defense",
-        "type": "Defense",
+        "type": "defense",
         "value": 2
       }
     ]
@@ -1029,27 +1029,27 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Scrapper"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Tough Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Tough"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ]
@@ -1061,15 +1061,15 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Scrapper"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Scrapper Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ]
@@ -1081,28 +1081,28 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Archetype",
+        "type": "archetype",
         "value": "!Smart"
       },
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Intelligence",
         "value": 13
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 2
       }
     ],
     "bonusadjustments": [
       {
-        "type": "GeniusPoints",
+        "type": "geniuspoints",
         "value": 2
       }
     ],
     "userchoices": [
       {
-        "type": "Plans",
+        "type": "plans",
         "choices": [
           "Shared"
         ],
@@ -1117,33 +1117,33 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Engineer"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Smart Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Smart"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Mechanics"
       }
     ],
     "userchoices": [
       {
-        "type": "Plans",
+        "type": "plans",
         "choices": [
           "Engineer"
         ],
@@ -1158,15 +1158,15 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Engineer"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Engineer Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ],
@@ -1178,7 +1178,7 @@
     ],
     "userchoices": [
       {
-        "type": "Plans",
+        "type": "plans",
         "choices": [
           "Shared",
           "Engineer"
@@ -1189,7 +1189,7 @@
     "bonusadjustments": [
       {
         "name": "GeniusPoints",
-        "type": "GeniusPoints",
+        "type": "geniuspoints",
         "value": 1
       }
     ]
@@ -1201,33 +1201,33 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Hacker"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Smart Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Smart"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Computers"
       }
     ],
     "userchoices": [
       {
-        "type": "Plans",
+        "type": "plans",
         "choices": [
           "Hacker"
         ],
@@ -1237,7 +1237,7 @@
     "bonusadjustments": [
       {
         "name": "GeniusPoints",
-        "type": "GeniusPoints",
+        "type": "geniuspoints",
         "value": 1
       }
     ]
@@ -1249,15 +1249,15 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Hacker"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Hacker Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ],
@@ -1269,7 +1269,7 @@
     ],
     "userchoices": [
       {
-        "type": "Plans",
+        "type": "plans",
         "choices": [
           "Shared",
           "Hacker"
@@ -1280,7 +1280,7 @@
     "bonusadjustments": [
       {
         "name": "GeniusPoints",
-        "type": "GeniusPoints",
+        "type": "geniuspoints",
         "value": 1
       }
     ]
@@ -1292,27 +1292,27 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Mastermind"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Smart Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Smart"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "userchoices": [
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Investigation",
           "Social Sciences"
@@ -1320,7 +1320,7 @@
         "count": 1
       },
       {
-        "type": "Plans",
+        "type": "plans",
         "choices": [
           "Mastermind"
         ],
@@ -1330,7 +1330,7 @@
     "bonusadjustments": [
       {
         "name": "GeniusPoints",
-        "type": "GeniusPoints",
+        "type": "geniuspoints",
         "value": 1
       }
     ]
@@ -1342,15 +1342,15 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Mastermind"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Mastermind Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ],
@@ -1364,7 +1364,7 @@
         "count": 1
       },
       {
-        "type": "Plans",
+        "type": "plans",
         "choices": [
           "Shared",
           "Mastermind"
@@ -1375,7 +1375,7 @@
     "bonusadjustments": [
       {
         "name": "GeniusPoints",
-        "type": "GeniusPoints",
+        "type": "geniuspoints",
         "value": 1
       }
     ]
@@ -1387,27 +1387,27 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Scientist"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Smart Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Smart"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "userchoices": [
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Medicine",
           "Natural Sciences"
@@ -1415,7 +1415,7 @@
         "count": 1
       },
       {
-        "type": "Plans",
+        "type": "plans",
         "choices": [
           "Scientist"
         ],
@@ -1425,7 +1425,7 @@
     "bonusadjustments": [
       {
         "name": "GeniusPoints",
-        "type": "GeniusPoints",
+        "type": "geniuspoints",
         "value": 1
       }
     ]
@@ -1437,15 +1437,15 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Scientist"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Scientist Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ],
@@ -1459,7 +1459,7 @@
         "count": 1
       },
       {
-        "type": "Plans",
+        "type": "plans",
         "choices": [
           "Shared",
           "Scientist"
@@ -1470,7 +1470,7 @@
     "bonusadjustments": [
       {
         "name": "GeniusPoints",
-        "type": "GeniusPoints",
+        "type": "geniuspoints",
         "value": 1
       }
     ]
@@ -1482,35 +1482,35 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Archetype",
+        "type": "archetype",
         "value": "!Wise"
       },
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Wisdom",
         "value": 13
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 2
       }
     ],
     "bonusadjustments": [
       {
-        "name": "FocusPoints"
-        "type": "FocusPoints",
+        "name": "FocusPoints",
+        "type": "focuspoints",
         "value": 2
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       }
     ],
     "userchoices": [
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Insight",
           "Perception",
@@ -1528,40 +1528,40 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Hunter"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Wise Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Wise"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "bonusadjustments": [
       {
         "name": "FocusPoints",
-        "type": "FocusPoints",
+        "type": "focuspoints",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ],
     "userchoice": [
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Perception",
           "Stealth",
@@ -1578,15 +1578,15 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Hunter"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Hunter Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ],
@@ -1594,7 +1594,7 @@
     "bonusadjustments": [
       {
         "name": "FocusPoints",
-        "type": "FocusPoints",
+        "type": "focuspoints",
         "value": 1
       }
     ],
@@ -1617,34 +1617,34 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Master"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Wise Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Wise"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "bonusadjustments": [
       {
         "name": "FocusPoints",
-        "type": "FocusPoints",
+        "type": "focuspoints",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Improvised"
       }
     ]
@@ -1656,22 +1656,22 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Master"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Master Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ],
     "bonusadjustments": [
       {
         "name": "FocusPoints",
-        "type": "FocusPoints",
+        "type": "focuspoints",
         "value": 1
       }
     ]
@@ -1683,40 +1683,40 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Sleuth"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Wise Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Wise"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "bonusadjustments": [
       {
         "name": "FocusPoints",
-        "type": "FocusPoints",
+        "type": "focuspoints",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ],
     "userchoices": [
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Insight",
           "Investigation",
@@ -1735,22 +1735,22 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Sleuth"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Sleuth Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ],
     "bonusadjustments": [
       {
         "name": "FocusPoints",
-        "type": "FocusPoints",
+        "type": "focuspoints",
         "value": 1
       }
     ],
@@ -1775,29 +1775,29 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Archetype",
+        "type": "archetype",
         "value": "!Charming"
       },
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Charisma",
         "value": 13
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 2
       }
     ],
     "bonusadjustments": [
       {
         "name": "InfluencePoints",
-        "type": "InfluencePoints",
+        "type": "influencepoints",
         "value": 2
       }
     ],
     "userchoices": [
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Deception",
           "Intimidation",
@@ -1825,44 +1825,44 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Duelist"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Charming Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Charming"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "bonusadjustments": [
       {
         "name": "InfluencePoints",
-        "type": "InfluencePoints",
+        "type": "influencepoints",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Historical"
       }
     ],
     "userchoices": [
       {
-        "type": "Tricks",
+        "type": "tricks",
         "choices": [
           "Duelist"
         ],
@@ -1877,28 +1877,28 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Duelist"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Duelist Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ],
     "bonusadjustments": [
       {
         "name": "InfluencePoints",
-        "type": "InfluencePoints",
+        "type": "influencepoints",
         "value": 1
       }
     ],
     "userchoices": [
       {
-        "type": "Tricks",
+        "type": "tricks",
         "choices": [
           "Duelist"
         ],
@@ -1913,44 +1913,44 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Icon"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Charming Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Charming"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "bonusadjustments": [
       {
         "name": "InfluencePoints",
-        "type": "InfluencePoints",
+        "type": "influencepoints",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ],
     "userchoices": [
       {
-        "type": "Tricks",
+        "type": "tricks",
         "choices": [
           "Icon"
         ],
@@ -1965,28 +1965,28 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Icon"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Icon Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ],
     "bonusadjustments": [
       {
         "name": "InfluencePoints",
-        "type": "InfluencePoints",
+        "type": "influencepoints",
         "value": 1
       }
     ],
     "userchoices": [
       {
-        "type": "Tricks",
+        "type": "tricks",
         "choices": [
           "Icon"
         ],
@@ -2001,44 +2001,44 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Leader"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Charming Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Charming"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "bonusadjustments": [
       {
         "name": "InfluencePoints",
-        "type": "InfluencePoints",
+        "type": "influencepoints",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ],
     "userchoices": [
       {
-        "type": "Tricks",
+        "type": "tricks",
         "choices": [
           "Leader"
         ],
@@ -2053,28 +2053,28 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Leader"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Leader Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ],
     "bonusadjustments": [
       {
         "name": "InfluencePoints",
-        "type": "InfluencePoints",
+        "type": "influencepoints",
         "value": 1
       }
     ],
     "userchoices": [
       {
-        "type": "Tricks",
+        "type": "tricks",
         "choices": [
           "Leader"
         ],
@@ -2089,34 +2089,34 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Manipulator"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Charming Hero Training",
         "logicalor": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "value": "Charming"
           }
         ]
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 4
       }
     ],
     "bonusadjustments": [
       {
         "name": "InfluencePoints",
-        "type": "InfluencePoints",
+        "type": "influencepoints",
         "value": 1
       }
     ],
     "userchoices": [
       {
-        "type": "Tricks",
+        "type": "tricks",
         "choices": [
           "Manipulator"
         ],
@@ -2131,28 +2131,28 @@
     "scale": "Major",
     "prerequisites": [
       {
-        "type": "Class",
+        "type": "class",
         "value": "!Manipulator"
       },
       {
-        "type": "Feat",
+        "type": "feat",
         "value": "Manipulator Training"
       },
       {
-        "type": "Level",
+        "type": "level",
         "value": 8
       }
     ],
     "bonusadjustments": [
       {
         "name": "InfluencePoints",
-        "type": "InfluencePoints",
+        "type": "influencepoints",
         "value": 1
       }
     ],
     "userchoices": [
       {
-        "type": "Tricks",
+        "type": "tricks",
         "choices": [
           "Manipulator"
         ],

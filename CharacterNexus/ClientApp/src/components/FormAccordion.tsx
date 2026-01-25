@@ -6,16 +6,22 @@ interface FormAccordionProps {
   renderField: (
     component: any,  
     disabledMap: Record<string, boolean>,
+    visibilityMap: Record<string, boolean>,
+    isVisible: (fieldName: string) => boolean,
     includeLabel?: boolean,
   ) => React.ReactNode;
   disabledMap: Record<string, boolean>;
+  visibilityMap: Record<string, boolean>;
+  isVisible: (fieldName: string) => boolean;
 }
 
 const FormAccordion: React.FC<FormAccordionProps> = ({
   includeLabel,
   field,
   renderField,
-  disabledMap
+  disabledMap,
+  visibilityMap,
+  isVisible
 }) => {
 
   return (
@@ -50,6 +56,8 @@ const FormAccordion: React.FC<FormAccordionProps> = ({
                   renderField(
                     item.component, 
                     disabledMap,
+                    visibilityMap,
+                    isVisible,
                     true
                   )}
                 </div>

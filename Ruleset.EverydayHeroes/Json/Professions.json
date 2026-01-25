@@ -5,19 +5,19 @@
     "samplecareers": "Librarian, museum docent, preschool teacher, private school teacher, public school teacher, university professor",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Intelligence",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 3
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -26,20 +26,22 @@
           "Charisma"
         ],
         "count": 2,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Natural Sciences",
           "Social Sciences"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Persuasion"
       }
     ],
@@ -53,19 +55,19 @@
     "samplecareers": "Animal trainer, breeder, cowhand, crop scientist, farmer, rancher",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Strength",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 3
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Dexterity",
           "Constitution",
@@ -74,28 +76,29 @@
           "Charisma"
         ],
         "count": 2,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Mechanics"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Natural Sciences"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Survival"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Vehicles"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       }
     ],
@@ -108,40 +111,41 @@
     "samplecareers": "Baseball, basketball, football, hockey, or soccer player, boxer, golfer, gymnast, martial artist, skater, Olympic athlete, professional athlete, swimmer, wrestler",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Strength",
         "value": 1
       },
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Dexterity",
         "value": 1
       },
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Constitution",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 3
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Endurance"
       }
     ],
     "userchoices": [
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Acrobatics",
           "Athletics"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "iconicequipment": "Sporting equipment, your team jersey, sponsored shoes, an autograph pen",
@@ -153,19 +157,19 @@
     "samplecareers": "Behavioral therapist, crisis counselor, marriage counselor, psychologist",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Wisdom",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 3
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -174,20 +178,21 @@
           "Charisma"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Insight"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Persuasion"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Social Sciences"
       }
     ],
@@ -200,19 +205,19 @@
     "samplecareers": "Actor, artist, dancer, editor, game designer, graphic designer, musician, online personality, photographer, singer, songwriter, stage magician, writer",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Charisma",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 3
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -221,20 +226,22 @@
           "Wisdom"
         ],
         "count": 2,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Arts and Crafts",
           "Performance"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Insight"
       }
     ],
@@ -248,19 +255,19 @@
     "samplecareers": "Bank robber, cat burglar, con artist, enforcer, forger, gang member, grifter, hitman, jewel thief",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Dexterity",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 2
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Constitution",
@@ -269,10 +276,11 @@
           "Charisma"
         ],
         "count": 2,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Deception",
           "Intimidation",
@@ -281,16 +289,17 @@
           "Stealth",
           "Streetwise"
         ],
-        "count": 3
+        "count": 3,
+        "category": "Characteristic"
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ],
@@ -303,19 +312,19 @@
     "samplecareers": "Assistant manager, cashier, front desk, greeter, phone support, sales assistant, server, stocker, usher",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Charisma",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 1
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -324,16 +333,17 @@
           "Wisdom"
         ],
         "count": 3,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Deception"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Persuasion"
       }
     ],
@@ -346,19 +356,19 @@
     "samplecareers": "Extreme sports enthusiast, search and rescue expert, skydiver, street racer, stunt performer, test pilot, test subject, treasure hunter",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Dexterity",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 3
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Constitution",
@@ -367,28 +377,29 @@
           "Charisma"
         ],
         "count": 3,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Acrobatics"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Athletics"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Vehicles"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Improvised"
       }
     ],
@@ -401,19 +412,19 @@
     "samplecareers": "Ambulance driver, emergency medical technician, firefighter, paramedic, rescue worker",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Dexterity",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 3
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Constitution",
@@ -422,16 +433,17 @@
           "Charisma"
         ],
         "count": 2,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Medicine"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Vehicles"
       }
     ],
@@ -444,50 +456,50 @@
     "samplecareers": "Diplomatic attaché, field operative, secret agent, spy",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Dexterity",
         "value": 1
       },
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Intelligence",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 3
       }
     ],
     "userchoices": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Acrobatics"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Athletics"
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Deception"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Security"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Stealth"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ],
@@ -501,19 +513,19 @@
     "samplecareers": "Ordained clergy of any faith, religious studies expert, theological scholar",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Wisdom",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 2
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -522,20 +534,21 @@
           "Charisma"
         ],
         "count": 2,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Insight"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Persuasion"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Social Sciences"
       }
     ],
@@ -548,23 +561,23 @@
     "samplecareers": "Accountant, day trader, finance advisor, investment banker, venture capitalist",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Intelligence",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 5
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Insight"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Persuasion"
       }
     ],
@@ -577,19 +590,19 @@
     "samplecareers": "Dilettante, trust fund kid, well-off pensioner or retiree",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Charisma",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 4
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -598,10 +611,11 @@
           "Wisdom"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Acrobatics",
           "Arts and Crafts",
@@ -626,7 +640,8 @@
           "Survival",
           "Vehicles"
         ],
-        "count": 2
+        "count": 2,
+        "category": "Characteristic"
       }
     ],
     "iconicequipment": "Tasteful clothing, platinum engraved debit card, a monogrammed scarf",
@@ -638,23 +653,23 @@
     "samplecareers": "Hacker, IT support, software developer, software engineer",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Intelligence",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 4
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Computers"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Security"
       }
     ],
@@ -667,19 +682,19 @@
     "samplecareers": "Analyst, counterterrorism expert, cryptographer, handler, operations officer, profiler",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Intelligence",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 4
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -688,16 +703,17 @@
           "Charisma"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Computers"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Investigation"
       }
     ],
@@ -711,19 +727,19 @@
     "samplecareers": "Bounty hunter, corporate security, military contractor, private investigator, repo specialist",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Intelligence",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 3
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -732,28 +748,29 @@
           "Charisma"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": "Insight"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Investigation"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Security"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ],
@@ -766,19 +783,19 @@
     "samplecareers": "Blogger, investigative reporter, journalist, news anchor, paparazzi, photojournalist",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Wisdom",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 2
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -787,20 +804,21 @@
           "Charisma"
         ],
         "count": 2,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Insight"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Investigation"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Streetwise"
       }
     ],
@@ -814,19 +832,19 @@
     "samplecareers": "Corporate lawyer, judge, patent lawyer, prosecutor, public defender",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Intelligence",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 4
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -835,16 +853,17 @@
           "Charisma"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Investigation"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Social Sciences"
       }
     ],
@@ -857,40 +876,40 @@
     "samplecareers": "Border agent, detective, narcotics agent, FBI agent, parole officer, police officer, state trooper, S.W.A.T., undercover cop, U.S. marshal",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Strength",
         "value": 1
       },
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Constitution",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 3
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Investigation"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Perception"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Vehicles"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ],
@@ -903,19 +922,19 @@
     "samplecareers": "Dentist, ER doctor, general practice physician, nurse, psychiatrist, specialist physician, surgeon, veterinarian",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Intelligence",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 3
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -924,16 +943,17 @@
           "Charisma"
         ],
         "count": 2,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Insight"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Medicine"
       }
     ],
@@ -946,44 +966,44 @@
     "samplecareers": "Air Force special tactics, Army ranger, enlisted soldier, Green Beret, Marine, Military police, Navy SEAL, officer, pilot, seaman",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Strength",
         "value": 1
       },
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Constitution",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 2
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Athletics"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Perception"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Stealth"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Military"
       }
     ],
@@ -996,19 +1016,19 @@
     "samplecareers": "Conservationist, explorer, fish and game warden, hunter, mountain climber, park ranger, survivalist, wildlife photographer",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Constitution",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 2
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -1017,32 +1037,33 @@
           "Charisma"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Athletics"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Perception"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Stealth"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Survival"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ],
@@ -1055,19 +1076,19 @@
     "samplecareers": "Councilmember, governor, legislator, mayor, political consultant",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Charisma",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 3
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -1076,16 +1097,17 @@
           "Wisdom"
         ],
         "count": 2,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Deception"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Persuasion"
       }
     ],
@@ -1098,19 +1120,19 @@
     "samplecareers": "Bodyguard, bouncer, mall cop, night guard, security guard",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Wisdom",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 2
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -1119,24 +1141,25 @@
           "Charisma"
         ],
         "count": 2,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Intimidation"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Perception"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Security"
       },
       {
-        "type": "EquipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       }
     ],
@@ -1149,21 +1172,19 @@
     "samplecareers": "Data analyst, engineer, inventor, lab researcher, mathematician, product developer, research scientist",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
-        "name": [
-          "Intelligence"
-        ],
+        "type": "attribute",
+        "name": "Intelligence",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 3
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -1171,16 +1192,17 @@
           "Wisdom",
           "Charisma"
         ],
-        "count": 2
+        "count": 2,
+        "category": "Characteristic"
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Computers"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Natural Sciences"
       }
     ],
@@ -1193,12 +1215,12 @@
     "samplecareers": "Blood donor, intern, part-time work, teacher's aide, volunteer",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Intelligence",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 1
       }
@@ -1213,20 +1235,22 @@
           "Charisma"
         ],
         "count": 3,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Natural Sciences",
           "Social Sciences"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Computers"
       }
     ],
@@ -1239,19 +1263,19 @@
     "samplecareers": "Carpenter, construction worker, electrician, flooring specialist, plumber, shoemaker, tailor",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Dexterity",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 3
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Constitution",
@@ -1260,16 +1284,17 @@
           "Charisma"
         ],
         "count": 2,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Arts and Crafts"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Mechanics"
       }
     ],
@@ -1282,19 +1307,19 @@
     "samplecareers": "Boat captain, bus driver, commercial pilot, rideshare driver, taxi driver, race car driver",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Dexterity",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 2
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Constitution",
@@ -1303,16 +1328,17 @@
           "Charisma"
         ],
         "count": 3,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Mechanics"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Vehicles"
       }
     ],
@@ -1325,19 +1351,19 @@
     "samplecareers": "Beggar, hermit, hobo, institutionalized person, prisoner, recluse",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Constitution",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 1
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -1346,20 +1372,22 @@
           "Charisma"
         ],
         "count": 3,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Streetwise",
           "Survival"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Endurance"
       }
     ],
@@ -1372,19 +1400,19 @@
     "samplecareers": "Accountant, human resources, mail clerk, management consultant, marketer, office manager, salesperson, tax preparer",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Intelligence",
         "value": 1
       },
       {
-        "type": "WealthLevel",
+        "type": "wealthlevel",
         "name": "WealthLevel",
         "value": 3
       }
     ],
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -1393,16 +1421,17 @@
           "Charisma"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Computers"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Persuasion"
       }
     ],

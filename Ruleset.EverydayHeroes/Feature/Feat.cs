@@ -1,6 +1,4 @@
-﻿using EverydayHeroes.Enums;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Utility;
 
 namespace EverydayHeroes
@@ -10,8 +8,8 @@ namespace EverydayHeroes
         public string Name { get; set; }
         public string Description { get; set; }
         public string Prerequisite { get; set; }
-        public FeatType Type { get; set; }
-        public FeatScale Scale { get; set; }
+        public string Type { get; set; }
+        public string Scale { get; set; }
         public List<BonusAdjustment>? BonusAdjustments { get; set; }
         public List<BonusCharacteristic>? BonusCharacteristics { get; set; }
         public List<Prerequisite>? Prerequisites { get; set; }

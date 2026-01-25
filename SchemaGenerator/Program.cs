@@ -9,7 +9,7 @@
             AmazingTales.GenerateFormSchema.InitializeSchema();
             BladeRunner.GenerateFormSchema.InitializeSchema();
             DarkCrystal.GenerateFormSchema.InitializeSchema();
-            //EverydayHeroes.GenerateFormSchema.InitializeSchema();
+            EverydayHeroes.GenerateFormSchema.InitializeSchema();
             Ghostbusters.GenerateFormSchema.InitializeSchema();
             Marvel.GenerateFormSchema.InitializeSchema();
 

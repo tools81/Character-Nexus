@@ -29,7 +29,7 @@ const InputText = ({
       )}
       <input
         id={name}
-        defaultValue={defaultValue}
+        placeholder={defaultValue}
         className={className}
         {...register(name, { disabled })}
         disabled={disabled}

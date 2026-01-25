@@ -1,19 +1,14 @@
-﻿using EverydayHeroes.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Utility;
 
 namespace EverydayHeroes
 {
-    public class Vehicle : IEquipment
+    public class Vehicle : IEquipment, IBaseJson
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public VehicleTier Tier { get; set; }
-        public VehicleDomain Domain { get; set; }
+        public string Tier { get; set; }
+        public string Domain { get; set; }
         public string Passengers { get; set; }
         public int Strength { get; set; }
         public int Dexterity { get; set; }
@@ -22,5 +17,6 @@ namespace EverydayHeroes
         public string Speed { get; set; }
         public List<string> Properties { get; set; }
         public int Price { get; set; }
+        public string Image { get; set; }
     }
 }

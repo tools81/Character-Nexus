@@ -4,21 +4,23 @@
     "description": "Growing up, you were motivated to act on behalf of a social or political cause. You know how to influence people by your deeds and actions.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Wisdom",
           "Charisma"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Intimidation",
           "Persuasion"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "iconicequipment": "An old campaign button from your youth, a bullhorn",
@@ -29,21 +31,23 @@
     "description": "You have loved art since you were a child and developed a significant talent in one or more forms of artistic expression. The knowledge and practice gives you something to talk about at parties.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Wisdom",
           "Charisma"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Arts and Crafts",
           "Performance"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "iconicequipment": "A large collection of your unsold art or clips of your performances",
@@ -54,21 +58,23 @@
     "description": "As a child, you spent your free time reading anything you could get your hands on. You absorbed practical knowledge as you immersed yourself in wonderful stories.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Wisdom",
           "Intelligence"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Natural Sciences",
           "Social Sciences"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "iconicequipment": "A first edition or a rare book, a well-used bookmark",
@@ -77,21 +83,22 @@
   },
   {
     "name": "Caregiver",
-    "description": "You spent a significant portion of your childhood taking care of someone dear to you. It’s given you a strong sense of compassion, as well as experience in medical care.",
+    "description": "You spent a significant portion of your childhood taking care of someone dear to you. It's given you a strong sense of compassion, as well as experience in medical care.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Wisdom",
           "Charisma"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Medicine"
       }
     ],
@@ -103,11 +110,11 @@
     "description": "You traveled or read widely and picked up useful knowledge from various cultures. You have the gift of feeling at home wherever you roam.",
     "bonuscharacteristics": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "value": "Wisdom"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Social Sciences"
       }
     ],
@@ -120,21 +127,23 @@
     "description": "You grew up playing games: computer games, roleplaying games, and/or board games. Whatever happens in life, you have a strategy for it.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Dexterity",
           "Intelligence"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Computers",
           "Insight"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "iconicequipment": "A portable gaming console with a tremendous assortment of games",
@@ -146,22 +155,24 @@
     "description": "You straddle the line between two cultures—that of your native country and that of your new home. Despite challenges, you are stronger for your experiences.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Wisdom",
           "Constitution"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Endurance",
           "Insight",
           "Streetwise"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "iconicequipment": "A flag from your swearing-in ceremony",
@@ -173,24 +184,26 @@
     "description": "As a kid, you went looking for trouble and found it in abundance: fighting, stealing, vandalism, or general mayhem. You either grew out of it or learned how to behave in a socially accepted manner",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
           "Charisma"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Deception",
           "Sleight of Hand",
           "Stealth",
           "Streetwise"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "iconicequipment": "A switchblade knife with a skull on it",
@@ -201,12 +214,13 @@
     "description": "You spent your weekends pretending to be a warrior of a past era, wizard, vampire, or the like. While the pastime didn't necessarily prepare you for modern life, it did give you some unusual skills.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       }
     ],
@@ -219,12 +233,13 @@
     "description": "Your family has a strong tradition of service in the armed forces. No matter what you do later in life, this culture still influences you.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Constitution"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       },
       {
         "type": "EquipmentProficiency",
@@ -243,21 +258,23 @@
     "description": "For whatever reason, you never fit in with your peers. While growing up was sometimes lonely, your isolation made you a keen observer of your surroundings.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Intelligence",
           "Wisdom"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Insight",
           "Perception"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "iconicequipment": "A one-of-a-kind jean jacket from an iconic band",
@@ -268,18 +285,19 @@
     "description": "You spent a portion of your life on the run. You might still be running from the law, a personal vendetta, or bill collectors. You're accustomed to looking over your shoulder for your persecutors.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Dexterity",
           "Constitution"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Perception"
       }
     ],
@@ -291,7 +309,7 @@
     "description": "You don't have exciting stories in your background. You grew up solidly middle class and had an unremarkable childhood.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -300,10 +318,11 @@
           "Wisdom"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Acrobatics",
           "Arts and Crafts",
@@ -328,7 +347,8 @@
           "Survival",
           "Vehicles"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "iconicequipment": "Bag stuff and pocket stuff",
@@ -339,21 +359,23 @@
     "description": "Your childhood contains a tragedy, since you lost both your parents. Raised in part by the state, you learned to make connections wherever you could.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Constitution",
           "Charisma"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Endurance",
           "Persuasion"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "iconicequipment": "Your father's watch or your mother's pendant",
@@ -364,7 +386,7 @@
     "description": "Your background is a mystery, even to you. You have no official records and only dim recollections of your life. It's not a topic you feel comfortable discussing with others.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -374,6 +396,7 @@
           "Charisma"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       }
     ],
@@ -385,7 +408,7 @@
     "description": "Your family didn't have much money while you were growing up. Whether you felt deprived of childhood pleasures or celebrate your ability to make do without much, you know what it takes to make your way in the world.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity",
@@ -395,17 +418,19 @@
           "Charisma"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Arts and Crafts",
           "Mechanics",
           "Streetwise",
           "Survival"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "iconicequipment": "An old photograph of where you grew up",
@@ -416,18 +441,19 @@
     "description": "Yours was not a usual childhood. A surrogate parent, government agency, or band of ninjas raised you from a young age to be a cold-hearted killer.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Dexterity",
           "Constitution"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Deception"
       },
       {
@@ -447,20 +473,21 @@
     "description": "You grew up in a family with strong faith. Whether you still believe today, the practice left you with insight into the human condition.",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Wisdom",
         "value": 1
       }
     ],
     "userchoices": [
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Insight",
           "Performance",
           "Social Sciences"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "iconicequipment": "A religious symbol or pendant representing your faith",
@@ -471,22 +498,23 @@
     "description": "You grew up outside the cities and among straightforward, honest folk. You learned the value of hard work and gained practical skills.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Constitution"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Mechanics"
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "value": "Survival"
       },
       {
@@ -501,19 +529,20 @@
     "description": "You had a knack for making friends from an early age. Your popularity and congeniality opens doors for you.",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Charisma",
         "value": 1
       }
     ],
     "userchoices": [
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Deception",
           "Persuasion"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "iconicequipment": "One-of-a-kind fashionable couture",
@@ -524,21 +553,23 @@
     "description": "From an early age, you loved to compete and show off your athleticism. Even if you didn't continue on to pro sports, your love of fitness and your fighting spirit live on.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Dexterity"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Acrobatics",
           "Athletics"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "iconicequipment": "Your letter jacket from school",
@@ -549,21 +580,23 @@
     "description": "You grew up off the grid and learned to live off the land and your own resourcefulness. Whether due to religious, political, or shared social beliefs, you are proud of your self-sufficiency.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Strength",
           "Wisdom"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Survival",
           "Athletics"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "bonuscharacteristics": [
@@ -580,21 +613,23 @@
     "description": "Something horrible happened to you when you were young. The event left you emotionally scarred but determined to thrive despite your trauma.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Constitution",
           "Wisdom"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Endurance",
           "Insight"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "iconicequipment": "A memento from your tragic past that gives you hope",
@@ -605,20 +640,21 @@
     "description": "You have loved technology since an early age. Your skills make you the person all your friends call when they have computer problems.",
     "bonusadjustments": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "name": "Intelligence",
         "value": 1
       }
     ],
     "userchoices": [
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Computers",
           "Mechanics",
           "Security"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "iconicequipment": "A not-yet-released smartphone",
@@ -629,21 +665,23 @@
     "description": "You were born into wealth and privilege. You understand money and how to make it, though that doesn't necessarily mean you know how to keep it.",
     "userchoices": [
       {
-        "type": "AbilityScore",
+        "type": "attribute",
         "choices": [
           "Intelligence",
           "Charisma"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       },
       {
-        "type": "Skill",
+        "type": "skill",
         "choices": [
           "Intimidation",
           "Vehicles"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "specialfeature": "Silver Spoon. Choose one of the following:<br /><ul><li>Sweet Ride: Any nonmilitary personal vehicle</li><li>Trust Fund: +1 starting Wealth Level, to a maximum of 5</li><li>Your Pad: A great rent-free apartment and a cleaning service to keep it tidy</li><li>Family Lawyer: A lawyer who can get you out of non-felony legal trouble, at least temporarily</li><li>Powerful Friends: The ability to speak with people of power and influence after a few phone calls</li></ul>"

@@ -2,6 +2,13 @@
   "title": "Hero Editor",
   "fields": [
     {
+      "name": "id",
+      "id": "id",
+      "label": "Id",
+      "type": "hidden",
+      "className": "form-control"
+    },
+    {
       "name": "name",
       "id": "name",
       "label": "Name",
@@ -13,7 +20,77 @@
       "name": "image",
       "id": "image",
       "label": "Image",
-      "type": "file",
+      "type": "image",
+      "className": "form-control"
+    },
+    {
+      "name": "height",
+      "id": "height",
+      "label": "Height",
+      "type": "text",
+      "className": "form-control"
+    },
+    {
+      "name": "weight",
+      "id": "weight",
+      "label": "Weight",
+      "type": "text",
+      "className": "form-control"
+    },
+    {
+      "name": "skin",
+      "id": "skin",
+      "label": "Skin",
+      "type": "text",
+      "className": "form-control"
+    },
+    {
+      "name": "eyes",
+      "id": "eyes",
+      "label": "Eyes",
+      "type": "text",
+      "className": "form-control"
+    },
+    {
+      "name": "hair",
+      "id": "hair",
+      "label": "Hair",
+      "type": "text",
+      "className": "form-control"
+    },
+    {
+      "name": "age",
+      "id": "age",
+      "label": "Age",
+      "type": "text",
+      "className": "form-control"
+    },
+    {
+      "name": "maritalstatus",
+      "id": "maritalstatus",
+      "label": "Marital Status",
+      "type": "text",
+      "className": "form-control"
+    },
+    {
+      "name": "pronouns",
+      "id": "pronouns",
+      "label": "Pronouns",
+      "type": "text",
+      "className": "form-control"
+    },
+    {
+      "name": "biography",
+      "id": "biography",
+      "label": "Biography",
+      "type": "textarea",
+      "className": "form-control"
+    },
+    {
+      "name": "notes",
+      "id": "notes",
+      "label": "Notes",
+      "type": "textarea",
       "className": "form-control"
     },
     {
@@ -30,6 +107,97 @@
       "default": 1
     },
     {
+      "type": "group",
+      "name": "attributes",
+      "label": "Ability Scores",
+      "children": [
+        {
+          "name": "attributes.Strength",
+          "id": "attributes.strength",
+          "label": "Strength",
+          "type": "number",
+          "className": "form-control",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Attr_Strength.jpg",
+          "validation": {
+            "required": true,
+            "min": 3,
+            "max": 20
+          },
+          "default": 8
+        },
+        {
+          "name": "attributes.Dexterity",
+          "id": "attributes.dexterity",
+          "label": "Dexterity",
+          "type": "number",
+          "className": "form-control",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Attr_Dexterity.jpg",
+          "validation": {
+            "required": true,
+            "min": 3,
+            "max": 20
+          },
+          "default": 8
+        },
+        {
+          "name": "attributes.Constitution",
+          "id": "attributes.constitution",
+          "label": "Constitution",
+          "type": "number",
+          "className": "form-control",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Attr_Constitution.jpg",
+          "validation": {
+            "required": true,
+            "min": 3,
+            "max": 20
+          },
+          "default": 8
+        },
+        {
+          "name": "attributes.Intelligence",
+          "id": "attributes.intelligence",
+          "label": "Intelligence",
+          "type": "number",
+          "className": "form-control",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Attr_Intelligence.jpg",
+          "validation": {
+            "required": true,
+            "min": 3,
+            "max": 20
+          },
+          "default": 8
+        },
+        {
+          "name": "attributes.Wisdom",
+          "id": "attributes.wisdom",
+          "label": "Wisdom",
+          "type": "number",
+          "className": "form-control",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Attr_Wisdom.jpg",
+          "validation": {
+            "required": true,
+            "min": 3,
+            "max": 20
+          },
+          "default": 8
+        },
+        {
+          "name": "attributes.Charisma",
+          "id": "attributes.charisma",
+          "label": "Charisma",
+          "type": "number",
+          "className": "form-control",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Attr_Charisma.jpg",
+          "validation": {
+            "required": true,
+            "min": 3,
+            "max": 20
+          },
+          "default": 8
+        }
+      ]
+    },
+    {
       "name": "archetype",
       "label": "Archetype",
       "type": "select",
@@ -37,149 +205,59 @@
       "options": [
         {
           "value": "Strong",
-          "label": "Strong"
+          "label": "Strong",
+          "description": "You have trained your body for strength and explosive power. You hit hard, excelling in close combat. As a hero, you fight because others can't.<br />Strong heroes are dubale fighters who make high damage attacks. They specialize in melee attacks, whether they favor unarmed strikes or close combat weapons.'"
         },
         {
           "value": "Agile",
-          "label": "Agile"
+          "label": "Agile",
+          "description": "You are a master of speed and precision. You have honed your reflexes to the point you can act faster than you can think. Your pinpoint accuracty makes you a deadly foe in any fight.<br />Agile heroes focus on ranged attacks and light weapons. Their high mobility and rapid attacks make them deadly heroes in combat."
         },
         {
           "value": "Tough",
-          "label": "Tough"
+          "label": "Tough",
+          "description": "You don't know what it means to give up. No matter what knocks you down, you get up again. Where there is a fight to be found, you'll be in the thick of it, often risking your life to protect others.<br />Tough heroes are durable characters, sometimes at the expense of offensive options or out of combat abilities. Many excel at protecting their teammates."
         },
         {
           "value": "Smart",
-          "label": "Smart"
+          "label": "Smart",
+          "description": "While other are playing checkers, you're playing 4-dimensional chess. The human mind is the ultimate weapon, and yours is honed to a razor's edge.<br />Smart Heroes use their genius to enact plans. Plans are powerful but limited effects that can break the fourth wall, effectively changing the past to affect the present."
         },
         {
           "value": "Wise",
-          "label": "Wise"
+          "label": "Wise",
+          "description": "You are known as a person who thinks before you act. You observe the world around you and move with its rhythms instead of struggling against the tide. By first knowing yourself, you can reach out and make the world a better place.<br />Wise Heroes are thematically diverse, but they all have a Focus mechanic that can be spent to activate special actions and abilities."
         },
         {
           "value": "Charming",
-          "label": "Charming"
+          "label": "Charming",
+          "description": "When you smile, the whole world smiles with you. It might be your beauty, your golden voice, or your way with words, but your ability to influence others is the key to your success.<br />Charming heroes use influence dice to boost their other die rolls. They focus on helping allies and hindering enemies in combat rather than relying on their own strengths."
         }
       ]
     },
     {
-      "type": "div",
-      "className": "form-section",
-      "children": [
-        {
-          "name": "info-archetype-Strong",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "You have trained your body for strength and explosive power. You hit hard, excelling in close combat. As a hero, you fight because others can't.<br />Strong heroes are dubale fighters who make high damage attacks. They specialize in melee attacks, whether they favor unarmed strikes or close combat weapons.'"
-        }
-      ],
-      "dependsOn": {
-        "field": "archetype",
-        "value": "Strong"
-      }
-    },
-    {
-      "type": "div",
-      "className": "form-section",
-      "children": [
-        {
-          "name": "info-archetype-Agile",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "You are a master of speed and precision. You have honed your reflexes to the point you can act faster than you can think. Your pinpoint accuracty makes you a deadly foe in any fight.<br />Agile heroes focus on ranged attacks and light weapons. Their high mobility and rapid attacks make them deadly heroes in combat."
-        }
-      ],
-      "dependsOn": {
-        "field": "archetype",
-        "value": "Agile"
-      }
-    },
-    {
-      "type": "div",
-      "className": "form-section",
-      "children": [
-        {
-          "name": "info-archetype-Tough",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "You don't know what it means to give up. No matter what knocks you down, you get up again. Where there is a fight to be found, you'll be in the thick of it, often risking your life to protect others.<br />Tough heroes are durable characters, sometimes at the expense of offensive options or out of combat abilities. Many excel at protecting their teammates."
-        }
-      ],
-      "dependsOn": {
-        "field": "archetype",
-        "value": "Tough"
-      }
-    },
-    {
-      "type": "div",
-      "className": "form-section",
-      "children": [
-        {
-          "name": "info-archetype-Smart",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "While other are playing checkers, you're playing 4-dimensional chess. The human mind is the ultimate weapon, and yours is honed to a razor's edge.<br />Smart Heroes use their genius to enact plans. Plans are powerful but limited effects that can break the fourth wall, effectively changing the past to affect the present."
-        }
-      ],
-      "dependsOn": {
-        "field": "archetype",
-        "value": "Smart"
-      }
-    },
-    {
-      "type": "div",
-      "className": "form-section",
-      "children": [
-        {
-          "name": "info-archetype-Wise",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "You are known as a person who thinks before you act. You observe the world around you and move with its rhythms instead of struggling against the tide. By first knowing yourself, you can reach out and make the world a better place.<br />Wise Heroes are thematically diverse, but they all have a Focus mechanic that can be spent to activate special actions and abilities."
-        }
-      ],
-      "dependsOn": {
-        "field": "archetype",
-        "value": "Wise"
-      }
-    },
-    {
-      "type": "div",
-      "className": "form-section",
-      "children": [
-        {
-          "name": "info-archetype-Charming",
-          "label": "Information",
-          "type": "textblock",
-          "className": "text-block",
-          "text": "When you smile, the whole world smiles with you. It might be your beauty, your golden voice, or your way with words, but your ability to influence others is the key to your success.<br />Charming heroes use influence dice to boost their other die rolls. They focus on helping allies and hindering enemies in combat rather than relying on their own strengths."
-        }
-      ],
-      "dependsOn": {
-        "field": "archetype",
-        "value": "Charming"
-      }
-    },
-    {
-      "name": "class",
+      "name": "class.strong",
       "label": "Class",
       "type": "select",
       "className": "form-select",
       "options": [
         {
           "value": "Brawler",
-          "label": "Brawler"
+          "label": "Brawler",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Brawler.png",
+          "description": "You break stuff and hit people. Sometimes you mix it up by hitting stuff and breaking people.<br />You imprinted on comics as a kid, and it shows in your approach to a fight. With fists like hammers and the ability to turn nearly anything into a deadly weapon, you are dangerous and everyone knows it.<br />The brawler charges into melee combat, hitting hard and destroying everything in their path. They enjoy using improvised weapons but are also great unarmed combatants. The brawler doesn't need to carry weapons to fight at full strength."
         },
         {
           "value": "Heavy Gunner",
-          "label": "Heavy Gunner"
+          "label": "Heavy Gunner",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Heavy_Gunner.png",
+          "description": "You leverage your beefy biceps by using them to treat big guns as if they were made of plastic. The louder the gun, the bigger the explosion, the wider your smile.<br />The heavy gunner applies their Strength modifier to large firearms and deals extra damage with nearly any weapon. The heavy gunner is especially dangerous when they have access to restricted military weapons, but they are still effective with nonrestricted big guns from the advanced and military weapons lists."
         },
         {
           "value": "MMA Fighter",
-          "label": "MMA Fighter"
+          "label": "MMA Fighter",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_MMA_Fighter.png",
+          "description": "You are highly trained in the modern discipline of mixed martial arts and the philosophy of eschewing martial arts tradition for pure pragmatism. You can use your skills both in the ring as a competitor, and on the streets as a hero. One on one, you have few equals.<br />The MMA fighter is an unarmed strike specialist who performs combinations of special punches and grappling attacks to ensure their opponent's ultimate defeat. The MMA fighter is not an especially strong damage dealer, but they are adept at neutralizing difficult and dangerous opponents one-on-one. Be sure to take advantage of the Off-Hand Attack bonus action when fighting unarmed."
         }
       ],
       "dependsOn": {
@@ -188,22 +266,28 @@
       }
     },
     {
-      "name": "class",
+      "name": "class.agile",
       "label": "Class",
       "type": "select",
       "className": "form-select",
       "options": [
         {
           "value": "Martial Artist",
-          "label": "Martial Artist"
+          "label": "Martial Artist",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Martial_Artist.png",
+          "description": "Through rigorous physical training and mental discipline, you have turned your body into a potentially deadly weapon. You prefer the weapons of an idealized past to those of the modern world<br />The martial artist specializes in rapid attacks and high mobility. They freely mix unarmed strikes and weapon attacks to precise effect. Their mobility helps them enter melee combat quickly."
         },
         {
           "value": "Scoundrel",
-          "label": "Scoundrel"
+          "label": "Scoundrel",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Scoundrel.png",
+          "description": "Honorable combat is a sucker bet. There isn't a low blow, dirty trick, or cheap shot you don't know. You have mastered skills that can be put to disreputable uses. These skills don't make you a bad person, but you do have the necessary credentials to play the part.<br />The scoundrel is a capable fighter who boasts a range of useful skill proficiencies. Getting advantage on attacks is key to their success in a fight. For this reason, shotguns are a great weapon choice for scoundrels in ranged combat, since the shot property always offers advantage within 30 feet."
         },
         {
           "value": "Sharpshooter",
-          "label": "Sharpshooter"
+          "label": "Sharpshooter",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Sharpshooter.png",
+          "description": "You are a master of modern firearms, able to make impossible shots look effortless. Whether you're sniping targets from a mile away or dancing through a hail of bullets with a gun in either hand, you rarely miss your mark.<br />The sharpshooter focuses on ranged weapons, using either dual pistols or long guns. Both are highly effective at bringing down foes quickly. Sharpshooters are not especially durable and stick to cover in combat."
         }
       ],
       "dependsOn": {
@@ -212,22 +296,28 @@
       }
     },
     {
-      "name": "class",
+      "name": "class.tough",
       "label": "Class",
       "type": "select",
       "className": "form-select",
       "options": [
         {
           "value": "Bodyguard",
-          "label": "Bodyguard"
+          "label": "Bodyguard",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Bodyguard.png",
+          "description": "You are dedicated to the protection of others. You do whatever it takes to keep your allies safe from harm, even if it risks your own life. Fortunately, it takes quite a lot to take you down.<br />Bodyguards have abilities to protect their allies from harm and have among the best defenses of any hero. Concealable weapons are a great thematic choice for bodyguards, but they can make good use of high damage weapons when discretion isn't needed."
         },
         {
           "value": "Commando",
-          "label": "Commando"
+          "label": "Commando",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Commando.png",
+          "description": "You are the consummate warrior, dangerous with any weapon and trained to survive every circumstance. You are ready for whatever the enemy has to throw at you. The only thing you might be unprepared for is peace.<br />The commando is an all-around combat class that offers a great blend of defense and offense. Unlike the other tough heroes, they can't directly protect their allies, but they are versatile and can use nearly any weapon. You might consider investing in Dexterity if you want to lean into offensive strategies."
         },
         {
           "value": "Scrapper",
-          "label": "Scrapper"
+          "label": "Scrapper",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Scrapper.png",
+          "description": "You haven't been killed yet, but not for lack of anyone trying. You can take a beating and dish out a double helping in return. When the dust settles, you'll be the one left standing.<br />The scrapper excels at getting in the enemy's face and forcing them to engage. If the enemy tries to go around them, they can punish them for it. If the enemy attacks the scrapper, they can punish them for it. If you want to be unstoppable in combat, this is the class for you."
         }
       ],
       "dependsOn": {
@@ -236,26 +326,34 @@
       }
     },
     {
-      "name": "class",
+      "name": "class.smart",
       "label": "Class",
       "type": "select",
       "className": "form-select",
       "options": [
         {
           "value": "Engineer",
-          "label": "Engineer"
+          "label": "Engineer",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Engineer.png",
+          "description": "You love technology. You see the material world as a giant set of tools to build whatever you can imagine. Whether it's programming drones with artificial intelligence or inventing new and wondrous machines, where others see impossibility, you see inevitability.<br />Engineers are capable combatants thanks to their mechanical companion and plans that deal electrical damage. They also offer strong support to members of their team and bring a number of useful skills to the table."
         },
         {
           "value": "Hacker",
-          "label": "Hacker"
+          "label": "Hacker",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Hacker.png",
+          "description": "You feel more at home in the abstract digital realm than you do in analog reality. You are the new mind, the new flesh, and the new cybernetic entity born of an ever-advancing interface between human and machine. When knowledge is power, you are near infinite.<br />Hacker plans revolve around computers, information, and an understanding of human behavior in the digital sphere. The hacker can easily overcome technological challenges and exploit the increasingly digital world. They are vulnerable in a physical fight but excel at avoiding the need for such primitive conflict."
         },
         {
           "value": "Mastermind",
-          "label": "Mastermind"
+          "label": "Mastermind",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Mastermind.png",
+          "description": "You are always at least one step ahead of your enemies, plotting, scheming, and planning your next masterstroke. Your allies benefit from your genius as well. If only you could find someone to truly challenge you.<br />Mastermind plans involve strategies that were retroactively enacted in the past, to be revealed only in the present moment. This makes the mastermind very powerful outside combat, with the ability to shortcut difficult challenges. In combat, however, they are rather weak and vulnerable."
         },
         {
           "value": "Scientist",
-          "label": "Scientist"
+          "label": "Scientist",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Scientist.png",
+          "description": "Your mastery of the sciences is normally applied in the lab, making new discoveries and advancing human knowledge. But when lives are on the line, you are ready to demonstrate that knowledge truly is power.<br />A scientist’s plans are themed around biology and chemistry to damage enemies and aid allies. They are a great choice if you want to play a support role in combat or to tend to the injuries of other heroes. They are one of the more highly skilled classes with a range of expertise available to them."
         }
       ],
       "dependsOn": {
@@ -264,22 +362,28 @@
       }
     },
     {
-      "name": "class",
+      "name": "class.wise",
       "label": "Class",
       "type": "select",
       "className": "form-select",
       "options": [
         {
           "value": "Hunter",
-          "label": "Hunter"
+          "label": "Hunter",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Hunter.png",
+          "description": "Whether it's big game or a fugitive from justice, your prey was doomed the moment you set your sights on them. You can hunt with a faithful companion or go it alone and focus only on your chosen target. Either way, there can be only one outcome.<br />The hunter is both a skilled hero and one that can hold their own in combat. Their animal companion can be both fun and effective but makes the hunter a complex class to play in combat."
         },
         {
           "value": "Master",
-          "label": "Master"
+          "label": "Master",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Master.png",
+          "description": "Through long training and meditation you have achieved something rare: karmic harmony, inner balance, and the ability to kick prodigious amounts of ass. You need no weapons to make your presence felt by those who would disturb your tranquility.<br />The master is a melee combatant with a diverse range of both offensive and defensive moves. They don't hit especially hard, but they can strike quickly, and in unexpected ways. Like a true ascetic, they don't need material equipment to be at their best."
         },
         {
           "value": "Sleuth",
-          "label": "Sleuth"
+          "label": "Sleuth",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Sleuth.png",
+          "description": "Evil never sleeps, so neither do you. Your keen perception pierces the veil of the devious. Your inner darkness gives you insight into the worst villains humanity has to offer. It's a dirty job, but someone's gotta do it.<br />The sleuth has the skills necessary to solve mysteries and avoid dangers. They are the most defensive of the Wise Heroes with abilities to help them stay alive. At higher levels they gain offense to make them dangerous to unwary enemies."
         }
       ],
       "dependsOn": {
@@ -288,26 +392,34 @@
       }
     },
     {
-      "name": "class",
+      "name": "class.charming",
       "label": "Class",
       "type": "select",
       "className": "form-select",
       "options": [
         {
           "value": "Duelist",
-          "label": "Duelist"
+          "label": "Duelist",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Duelist.png",
+          "description": "Duelists are fighters who prefer style over brutality. Any fool can swing a stick around like a caveman. True combat prowess unites the body, mind, and soul to a singular purpose.<br />The duelist is a melee specialist who masters a mixture of offensive and defensive combat tricks, allowing them to react to the situation at hand. A duelist who wants to focus on combat performance should have a strong Dexterity score."
         },
         {
           "value": "Icon",
-          "label": "Icon"
+          "label": "Icon",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Icon.png",
+          "description": "You are too cool for school, a legend among those who know of you. You add something special to everything you do and you make sure everyone knows about it. You're sure you were born to be a hero.<br />The icon offers an even mix of offense, defense, and social skills. Their abilities are unique, fun, and versatile, but if you're looking for a powerhouse in combat, this is not the class for you. If you want to be wonderfully ridiculous, you have come to the right place."
         },
         {
           "value": "Leader",
-          "label": "Leader"
+          "label": "Leader",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Leader.png",
+          "description": "You are a natural leader. Even when you are not in a position of power, people listen to what you say and follow your example. You can turn a band of demoralized misfits into a world-class team of highly motivated winners.<br />The leader focuses on supporting their allies in combat. Their best attack is their strongest ally's attack. Their skill selection also allows them to be the face of a team."
         },
         {
           "value": "Manipulator",
-          "label": "Manipulator"
+          "label": "Manipulator",
+          "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Manipulator.png",
+          "description": "People think you are charming, useful, and mostly harmless. That's exactly what you want people to think. In reality, you have everyone dancing on your strings to whatever tune you want to play for them.<br />The manipulator focuses on weakening or controlling opponents in a fight and rarely makes attacks. With the right allies, these are powerful abilities. They also have the strongest set of social skills for any hero and shine in noncombat situations."
         }
       ],
       "dependsOn": {
@@ -323,103 +435,128 @@
       "options": [
         {
           "value": "Activist",
-          "label": "Activist"
+          "label": "Activist",
+          "description": "Growing up, you were motivated to act on behalf of a social or political cause. You know how to influence people by your deeds and actions."
         },
         {
           "value": "Art Lover",
-          "label": "Art Lover"
+          "label": "Art Lover",
+          "description": "You have loved art since you were a child and developed a significant talent in one or more forms of artistic expression. The knowledge and practice gives you something to talk about at parties."
         },
         {
           "value": "Bookworm",
-          "label": "Bookworm"
+          "label": "Bookworm",
+          "description": "As a child, you spent your free time reading anything you could get your hands on. You absorbed practical knowledge as you immersed yourself in wonderful stories."
         },
         {
           "value": "Caregiver",
-          "label": "Caregiver"
+          "label": "Caregiver",
+          "description": "You spent a significant portion of your childhood taking care of someone dear to you. It's given you a strong sense of compassion, as well as experience in medical care."
         },
         {
           "value": "Cosmopolitan",
-          "label": "Cosmopolitan"
+          "label": "Cosmopolitan",
+          "description": "You traveled or read widely and picked up useful knowledge from various cultures. You have the gift of feeling at home wherever you roam."
         },
         {
           "value": "Gamer",
-          "label": "Gamer"
+          "label": "Gamer",
+          "description": "You grew up playing games: computer games, roleplaying games, and/or board games. Whatever happens in life, you have a strategy for it."
         },
         {
           "value": "Immigrant",
-          "label": "Immigrant"
+          "label": "Immigrant",
+          "description": "You straddle the line between two cultures—that of your native country and that of your new home. Despite challenges, you are stronger for your experiences."
         },
         {
           "value": "Juvenile Deliquent",
-          "label": "Juvenile Deliquent"
+          "label": "Juvenile Deliquent",
+          "description": "As a kid, you went looking for trouble and found it in abundance: fighting, stealing, vandalism, or general mayhem. You either grew out of it or learned how to behave in a socially accepted manner"
         },
         {
           "value": "Larper",
-          "label": "Larper"
+          "label": "Larper",
+          "description": "You spent your weekends pretending to be a warrior of a past era, wizard, vampire, or the like. While the pastime didn't necessarily prepare you for modern life, it did give you some unusual skills."
         },
         {
           "value": "Military Tradition",
-          "label": "Military Tradition"
+          "label": "Military Tradition",
+          "description": "Your family has a strong tradition of service in the armed forces. No matter what you do later in life, this culture still influences you."
         },
         {
           "value": "Misfit",
-          "label": "Misfit"
+          "label": "Misfit",
+          "description": "For whatever reason, you never fit in with your peers. While growing up was sometimes lonely, your isolation made you a keen observer of your surroundings."
         },
         {
           "value": "On The Run",
-          "label": "On The Run"
+          "label": "On The Run",
+          "description": "You spent a portion of your life on the run. You might still be running from the law, a personal vendetta, or bill collectors. You're accustomed to looking over your shoulder for your persecutors."
         },
         {
           "value": "Ordinary",
-          "label": "Ordinary"
+          "label": "Ordinary",
+          "description": "You don't have exciting stories in your background. You grew up solidly middle class and had an unremarkable childhood."
         },
         {
           "value": "Orphan",
-          "label": "Orphan"
+          "label": "Orphan",
+          "description": "Your childhood contains a tragedy, since you lost both your parents. Raised in part by the state, you learned to make connections wherever you could."
         },
         {
           "value": "Person of Mystery",
-          "label": "Person of Mystery"
+          "label": "Person of Mystery",
+          "description": "Your background is a mystery, even to you. You have no official records and only dim recollections of your life. It's not a topic you feel comfortable discussing with others."
         },
         {
           "value": "Poor Family",
-          "label": "Poor Family"
+          "label": "Poor Family",
+          "description": "Your family didn't have much money while you were growing up. Whether you felt deprived of childhood pleasures or celebrate your ability to make do without much, you know what it takes to make your way in the world."
         },
         {
           "value": "Raised By Assassins",
-          "label": "Raised By Assassins"
+          "label": "Raised By Assassins",
+          "description": "Yours was not a usual childhood. A surrogate parent, government agency, or band of ninjas raised you from a young age to be a cold-hearted killer."
         },
         {
           "value": "Religious Tradition",
-          "label": "Religious Tradition"
+          "label": "Religious Tradition",
+          "description": "You grew up in a family with strong faith. Whether you still believe today, the practice left you with insight into the human condition."
         },
         {
           "value": "Rural Family",
-          "label": "Rural Family"
+          "label": "Rural Family",
+          "description": "You grew up outside the cities and among straightforward, honest folk. You learned the value of hard work and gained practical skills."
         },
         {
           "value": "Social Butterfly",
-          "label": "Social Butterfly"
+          "label": "Social Butterfly",
+          "description": "You had a knack for making friends from an early age. Your popularity and congeniality opens doors for you."
         },
         {
           "value": "Student Athlete",
-          "label": "Student Athlete"
+          "label": "Student Athlete",
+          "description": "From an early age, you loved to compete and show off your athleticism. Even if you didn't continue on to pro sports, your love of fitness and your fighting spirit live on."
         },
         {
           "value": "Subsistence",
-          "label": "Subsistence"
+          "label": "Subsistence",
+          "description": "You grew up off the grid and learned to live off the land and your own resourcefulness. Whether due to religious, political, or shared social beliefs, you are proud of your self-sufficiency."
         },
         {
           "value": "Survivor",
-          "label": "Survivor"
+          "label": "Survivor",
+          "description": "Something horrible happened to you when you were young. The event left you emotionally scarred but determined to thrive despite your trauma."
         },
         {
           "value": "Technophile",
-          "label": "Technophile"
+          "label": "Technophile",
+          "description": "You have loved technology since an early age. Your skills make you the person all your friends call when they have computer problems."
         },
         {
           "value": "Wealthy Family",
-          "label": "Wealthy Family"
+          "label": "Wealthy Family",
+          "description": "You were born into wealth and privilege. You understand money and how to make it, though that doesn't necessarily mean you know how to keep it."
         }
       ]
     },
@@ -431,179 +568,2312 @@
       "options": [
         {
           "value": "Academia",
-          "label": "Academia"
+          "label": "Academia",
+          "description": "You're dedicated to the pursuit of knowledge and to sharing it with the next generation. You work with a university, library, museum, or other institution of culture and learning."
         },
         {
           "value": "Agriculture",
-          "label": "Agriculture"
+          "label": "Agriculture",
+          "description": "You work in an ancient profession of the civilized world: raising plants and animals for produce and trade. Your work involves established techniques and modern technology."
         },
         {
           "value": "Athletics",
-          "label": "Athletics"
+          "label": "Athletics",
+          "description": "You make your living as an athlete. Choose your emphasis from among the many varieties of sport and fitness activities."
         },
         {
           "value": "Counseling",
-          "label": "Counseling"
+          "label": "Counseling",
+          "description": "You work as a therapist, helping people cope with the emotional stresses of life. Your deep understanding of the human psyche gives you insight into people's motives and emotions."
         },
         {
           "value": "Creative",
-          "label": "Creative"
+          "label": "Creative",
+          "description": "You're a professional artist or entertainer. Your creativity and dedication to your craft can carry you from busking for spare change to superstardom."
         },
         {
           "value": "Crime",
-          "label": "Crime"
+          "label": "Crime",
+          "description": "You break the law to make your living. Regardless of your particular flavor of criminality, you must stay one step ahead of law enforcement and navigate a world where business disputes are settled by violence rather than lawyers."
         },
         {
           "value": "Customer Service",
-          "label": "Customer Service"
+          "label": "Customer Service",
+          "description": "You work on the front lines of capitalism, greeting customers, taking their money, answering questions, and taking the heat for things you have no power over."
         },
         {
           "value": "Daredevil",
-          "label": "Daredevil"
+          "label": "Daredevil",
+          "description": "You make your living doing dangerous things. Whatever the specifics, you put your life on the line every time you go to work. If that which does not kill you makes you stronger, you must be very strong indeed."
         },
         {
           "value": "Emergency Services",
-          "label": "Emergency Services"
+          "label": "Emergency Services",
+          "description": "You dedicate yourself to saving lives by standing among the ranks of the nation's first responders. The work may be stressful, but it is also personally rewarding."
         },
         {
           "value": "Espionage",
-          "label": "Espionage"
+          "label": "Espionage",
+          "description": "You work as a clandestine field agent. Though most of your work involves collecting intelligence through your contacts, you must occasionally put your life on the line for the sake of your country."
         },
         {
           "value": "Faith",
-          "label": "Faith"
+          "label": "Faith",
+          "description": "You dedicate your life to your religious faith. This work involves both the rigors of scholarship and becoming a spiritual leader for your parishioners."
         },
         {
           "value": "Finance",
-          "label": "Finance"
+          "label": "Finance",
+          "description": "In a capitalist world, capital is king. Whether you own a sizable business, provide venture capital, or play the markets for a living, your job involves turning money into more money."
         },
         {
           "value": "Independent",
-          "label": "Independent"
+          "label": "Independent",
+          "description": "You're independently wealthy, deriving your income from your considerable standing assets such as family holdings and trust funds. You spend your time in leisure, pursuing volunteer work, or whatever interests you."
         },
         {
           "value": "Information Technology",
-          "label": "Information Technology"
+          "label": "Information Technology",
+          "description": "As an IT professional, you are one of the most sought-after professionals in the modern world. Whatever your specialty, you’re a person of the information era, plugged in and churning through the dataverse."
         },
         {
           "value": "Intelligence",
-          "label": "Intelligence"
+          "label": "Intelligence",
+          "description": "You work for a government intelligence agency or private security firm, collecting and analyzing actionable information for your employer."
         },
         {
           "value": "Investigative Services",
-          "label": "Investigative Services"
+          "label": "Investigative Services",
+          "description": "You work for the private sector, dealing with civil investigations and protecting your clients’ assets from thieves and saboteurs."
         },
         {
           "value": "Journalism",
-          "label": "Journalism"
+          "label": "Journalism",
+          "description": "You're passionate about uncovering things people want to keep hidden and then presenting an engaging report to inform the public about it. Along the way, you discover nefarious deeds, injustices, and buried truths."
         },
         {
           "value": "Law",
-          "label": "Law"
+          "label": "Law",
+          "description": "You apply the written law to real world situations, working for the government, a company, a law firm, or in private practice. Your expertise in legal matters is invaluable to your clients."
         },
         {
           "value": "Law Encforcement",
-          "label": "Law Encforcement"
+          "label": "Law Encforcement",
+          "description": "Enforcing the law isn't an easy job. You take pride in your work and strive to serve and protect the public."
         },
         {
           "value": "Medicine",
-          "label": "Medicine"
+          "label": "Medicine",
+          "description": "Your dedication to the practice of medicine has given you the opportunity to save many lives and make a difference for everyday people. The practice is both an intellectual challenge and a weighty responsibility."
         },
         {
           "value": "Military",
-          "label": "Military"
+          "label": "Military",
+          "description": "You are a proud member of the national armed forces. As career military, you're trained for fighting and learned a range of useful skills."
         },
         {
           "value": "Outdoors",
-          "label": "Outdoors"
+          "label": "Outdoors",
+          "description": "You prefer to work in the great outdoors rather than participate in the indoor rat race. The pay is not great, but you much prefer the company you keep."
         },
         {
           "value": "Politics",
-          "label": "Politics"
+          "label": "Politics",
+          "description": "A passion for helping others or a desire for power drew you into public service. The job does grant both power and privilege. Just don’t let it go to your head."
         },
         {
           "value": "Private Security",
-          "label": "Private Security"
+          "label": "Private Security",
+          "description": "You ensure that people, places, or things under your protection come to no harm while you remain on guard. It's rarely exciting, but the job gives you plenty of time to reflect."
         },
         {
           "value": "Science",
-          "label": "Science"
+          "label": "Science",
+          "description": "You are dedicated to advancing the systems of knowledge, whether for public good or personal gain. You might be a resident scientist at a research institute, working for a large corporation, or a mad genius tinkering in your basement."
         },
         {
           "value": "Student",
-          "label": "Student"
+          "label": "Student",
+          "description": "You're currently a student in high school, college, or graduate school. You might have a job, but you put your focus and energy into your studies."
         },
         {
           "value": "Trades",
-          "label": "Trades"
+          "label": "Trades",
+          "description": "You enjoy working with your hands and your mind, building and fixing useful things. If they don't find you handsome, they will at least find you handy."
         },
         {
           "value": "Transportation",
-          "label": "Transportation"
+          "label": "Transportation",
+          "description": "You're an expert in operating some kind of vehicle. Whether you work in the civilian sector or military, you are on a path of mastery in your chosen form of transportation."
         },
         {
           "value": "Unemployed",
-          "label": "Unemployed"
+          "label": "Unemployed",
+          "description": "For whatever reason, you don't have regular work and haven't had a paying job in a long time. You make your way by resourcefulness, charity, or some mix of the two."
         },
         {
           "value": "White Collar",
-          "label": "White Collar"
+          "label": "White Collar",
+          "description": "You work in an office, tending to the minutia of everyday life. Your true potential is yet to be revealed, you're certain of it."
         }
       ]
     },
     {
-      "type": "div",
-      "className": "input-group mb-3 text-center",
+      "type": "divider"
+    },
+    {
+      "type": "textblock",
+      "label": "Skills",
+      "text": "Skills",
+      "name": "skill"
+    },
+    {
+      "type": "group",
+      "name": "skills.Acrobatics",
+      "includeLabel": false,
+      "label": "",
       "children": [
         {
-          "name": "strength",
-          "label": "Strength",
-          "id": "Strength",
-          "type": "number",
-          "className": "form-control",
-          "default": 0
+          "name": "skills.proficient.Acrobatics",
+          "id": "skills.proficient.acrobatics",
+          "label": "",
+          "type": "switch"
         },
         {
-          "name": "dexterity",
-          "label": "Dexterity",
-          "id": "Dexterity",
-          "type": "number",
-          "className": "form-control",
-          "default": 0
-        },
-        {
-          "name": "constitution",
-          "label": "Constitution",
-          "id": "Constitution",
-          "type": "number",
-          "className": "form-control",
-          "default": 0
-        },
-        {
-          "name": "intelligence",
-          "label": "Intelligence",
-          "id": "Intelligence",
-          "type": "number",
-          "className": "form-control",
-          "default": 0
-        },
-        {
-          "name": "wisdom",
-          "label": "Wisdom",
-          "id": "Wisdom",
-          "type": "number",
-          "className": "form-control",
-          "default": 0
-        },
-        {
-          "name": "charisma",
-          "label": "Charisma",
-          "id": "Charisma",
-          "type": "number",
-          "className": "form-control",
-          "default": 0
+          "name": "skills.expertise.Acrobatics",
+          "id": "skills.expertise.acrobatics",
+          "label": "Acrobatics",
+          "type": "switch"
         }
       ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Arts and Crafts",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Arts and Crafts",
+          "id": "skills.proficient.arts and crafts",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Arts and Crafts",
+          "id": "skills.expertise.arts and crafts",
+          "label": "Arts and Crafts",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Athletics",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Athletics",
+          "id": "skills.proficient.athletics",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Athletics",
+          "id": "skills.expertise.athletics",
+          "label": "Athletics",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Computers",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Computers",
+          "id": "skills.proficient.computers",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Computers",
+          "id": "skills.expertise.computers",
+          "label": "Computers",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Deception",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Deception",
+          "id": "skills.proficient.deception",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Deception",
+          "id": "skills.expertise.deception",
+          "label": "Deception",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Endurance",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Endurance",
+          "id": "skills.proficient.endurance",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Endurance",
+          "id": "skills.expertise.endurance",
+          "label": "Endurance",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Insight",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Insight",
+          "id": "skills.proficient.insight",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Insight",
+          "id": "skills.expertise.insight",
+          "label": "Insight",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Intimidation",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Intimidation",
+          "id": "skills.proficient.intimidation",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Intimidation",
+          "id": "skills.expertise.intimidation",
+          "label": "Intimidation",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Investigation",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Investigation",
+          "id": "skills.proficient.investigation",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Investigation",
+          "id": "skills.expertise.investigation",
+          "label": "Investigation",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Mechanics",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Mechanics",
+          "id": "skills.proficient.mechanics",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Mechanics",
+          "id": "skills.expertise.mechanics",
+          "label": "Mechanics",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Medicine",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Medicine",
+          "id": "skills.proficient.medicine",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Medicine",
+          "id": "skills.expertise.medicine",
+          "label": "Medicine",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Natural Sciences",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Natural Sciences",
+          "id": "skills.proficient.natural sciences",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Natural Sciences",
+          "id": "skills.expertise.natural sciences",
+          "label": "Natural Sciences",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Perception",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Perception",
+          "id": "skills.proficient.perception",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Perception",
+          "id": "skills.expertise.perception",
+          "label": "Perception",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Performance",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Performance",
+          "id": "skills.proficient.performance",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Performance",
+          "id": "skills.expertise.performance",
+          "label": "Performance",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Persuasion",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Persuasion",
+          "id": "skills.proficient.persuasion",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Persuasion",
+          "id": "skills.expertise.persuasion",
+          "label": "Persuasion",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Security",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Security",
+          "id": "skills.proficient.security",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Security",
+          "id": "skills.expertise.security",
+          "label": "Security",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Sleight of Hand",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Sleight of Hand",
+          "id": "skills.proficient.sleight of hand",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Sleight of Hand",
+          "id": "skills.expertise.sleight of hand",
+          "label": "Sleight of Hand",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Social Sciences",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Social Sciences",
+          "id": "skills.proficient.social sciences",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Social Sciences",
+          "id": "skills.expertise.social sciences",
+          "label": "Social Sciences",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Stealth",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Stealth",
+          "id": "skills.proficient.stealth",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Stealth",
+          "id": "skills.expertise.stealth",
+          "label": "Stealth",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Streetwise",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Streetwise",
+          "id": "skills.proficient.streetwise",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Streetwise",
+          "id": "skills.expertise.streetwise",
+          "label": "Streetwise",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Survival",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Survival",
+          "id": "skills.proficient.survival",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Survival",
+          "id": "skills.expertise.survival",
+          "label": "Survival",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skills.Vehicles",
+      "includeLabel": false,
+      "label": "",
+      "children": [
+        {
+          "name": "skills.proficient.Vehicles",
+          "id": "skills.proficient.vehicles",
+          "label": "",
+          "type": "switch"
+        },
+        {
+          "name": "skills.expertise.Vehicles",
+          "id": "skills.expertise.vehicles",
+          "label": "Vehicles",
+          "type": "switch"
+        }
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "feat",
+      "label": "Feats",
+      "type": "array",
+      "component": {
+        "name": "feat",
+        "label": "Feats",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Ability Score Training",
+            "label": "Ability Score Training",
+            "description": "You have trained your mind and/or body to increase your overall human potential. Each time you take this feat, you can increase any ability score by 1 to a maximum of 20."
+          },
+          {
+            "value": "Advanced Skill Training",
+            "label": "Advanced Skill Training",
+            "description": "You love to acquire new skills and abilities through constant study and practice. Each time you take this feat, you gain expertise in a skill of your choice that you are already proficient in."
+          },
+          {
+            "value": "Equipment Training",
+            "label": "Equipment Training",
+            "description": "You have trained to use various kinds of combat equipment."
+          },
+          {
+            "value": "Investments",
+            "label": "Investments",
+            "description": "You have either made wise investments or come into an inheritance of some kind. Each time you take this feat, you gain +1 Wealth Level (maximum 5)."
+          },
+          {
+            "value": "Skill Training",
+            "label": "Skill Training",
+            "description": "You love to acquire new skills and abilities through constant study and practice. Each time you take this feat, you gain proficiency in two skills of your choice."
+          },
+          {
+            "value": "Survival Training",
+            "label": "Survival Training",
+            "description": "You have hardened yourself against various hazards. Each time you take this feat, you gain proficiency with one type of saving throw of your choice."
+          },
+          {
+            "value": "Animal Whisperer",
+            "label": "Animal Whisperer",
+            "description": "You form a special bond with your pets and are good with animals.<br />You gain advantage on ability checks made to influence animals.<br />You can train a tiny- to large-sized animal to perform a variety of behaviors at your command:<br /><ul><li>Fetch objects, whether thrown, within sight, or in a location known to the animal (at the GM's discretion.)</li><li>Search for specific objects, scents, sounds, or other stimuli the animal can naturally detect.</li><li>Deliver an object to a location known to the animal</li><li>Raise alarm when an unknown person or animal enters a location the animal is in</li><li>Perform physical stunts or tricks within its range of capabilities</li></ul><br />This animal's stat block is that of an average member of its species.<br />If the pet dies, you can train a new pet in 30 days.<br />The actions of the animal, outside of the specified behaviors, are always at the GM's discretion. This feat does not allow a pet to make attacks in combat.<br />If you have a class talent that grants a special animal companion, this feat can both apply to that animal and any others you may choose to train."
+          },
+          {
+            "value": "Artful Dodger",
+            "label": "Artful Dodger",
+            "description": "While you prefer to stay on the defensive, you have learned how to mix in an attack when it counts. You can make an off-hand attack after taking a Dodge action, waiving the requirement to have taken the Attack action this turn."
+          },
+          {
+            "value": "Awesome Reflexes",
+            "label": "Awesome Reflexes",
+            "description": "You have trained yourself to reflexively catch objects that come speeding at you and can even throw them back.<br />When someone throws a weapon at you, you can spend a reaction to try to catch it, then throw it back at the attacker. Before the attacker rolls to hit, make a Dexterity saving throw with a DC equal to the attacker's Defense. If you succeed, the attacker is hit and takes damage from the attack. If you fail, their attack resolves normally."
+          },
+          {
+            "value": "Battlefield Medic",
+            "label": "Battlefield Medic",
+            "description": "You've trained in first aid and emergency medicine.<br /><ul><li>When using a first aid kit to stabilize someone, that person also recovers 1 hit point.</li><li>As an action, you can use a first aid kit to treat a conscious person adjacent to you. Make a DC 10 Intelligence (Medicine) check. If successful, the target may spend one Hit Die to regain hit points. This action cannot be used again on the same person until after they have taken a short or long rest.</li><li>If you don’t have a first aid kit at hand, you can try to improvise. Make a DC 15 Wisdom (Survival) check. If successful, you don't need a first aid kit. If the check fails, you cannot find the materials needed.</li></ul>"
+          },
+          {
+            "value": "Blade Master",
+            "label": "Blade Master",
+            "description": "You are an expert in using bladed weapons to deal crippling cuts to your opponents.<br /><ul><li>Once per turn when you hit a opponent with an attack that deals slashing damage, you can reduce the speed of the target by 10 feet until the start of your next turn.</li><li>After you score a critical hit that deals slashing damage to an opponent, until the start of your next turn, the target has disadvantage on all attack rolls.</li></ul>"
+          },
+          {
+            "value": "Blind Fighting",
+            "label": "Blind Fighting",
+            "description": "Through rigorous training, you have learned to use your hearing and other senses to keep track of enemies on the battlefield.<br /><ul><li>Opponents don't have advantage on attack rolls targeting you because you cannot see them.</li><li>You do not have disadvantage on attack rolls due to visibility limitations.</li><li>You may make ability checks normally requiring sight while you cannot see, provided the GM feels another sense could be substituted with sufficient practice.</li></ul>"
+          },
+          {
+            "value": "Brute",
+            "label": "Brute",
+            "description": "You know how to knock heads and put your opponents off balance.<br /><ul><li>Once per turn, when you hit an opponent with an attack that deals bludgeoning damage, you can move them 5 feet to an unoccupied space, provided the target is large size or smaller.</li><li>When you score a critical hit that deals bludgeoning damage to a opponent, attack rolls against that combatant have advantage until the start of your next turn.</li></ul>"
+          },
+          {
+            "value": "Cross Training",
+            "label": "Cross Training",
+            "description": "You're an all-around athlete, able to leverage your strengths to overcome your weaknesses. Choose one ability score from Strength, Dexterity, or Constitution. You can always use that ability score when making Athletics, Acrobatics, or Endurance ability checks."
+          },
+          {
+            "value": "Defensive Driving",
+            "label": "Defensive Driving",
+            "description": "You've trained to operate vehicles under hostile and dangerous conditions.<br /><ul><li>You have advantage on Dexterity (Vehicles) checks made to avoid a crash.</li><li>You give your vehicle advantage on saving throws made against complications.</li><li>While you operate a vehicle, increase its Constitution modifier by 2.</li></ul>"
+          },
+          {
+            "value": "Diehard",
+            "label": "Diehard",
+            "description": "You're tough as nails and don't go down easily. When you are reduced to 0 hit points but not killed, you automatically and immediately stabilize."
+          },
+          {
+            "value": "Fast Feet",
+            "label": "Fast Feet",
+            "description": "You're especially quick on your feet.<br /><ul><li>Your base speed increases by 10.</li><li>When using the Dash action, you ignore difficult terrain.</li><li>You gain advantage on Strength (Athletics) checks made during a foot chase.</li></ul>"
+          },
+          {
+            "value": "Fast Hands",
+            "label": "Fast Hands",
+            "description": "You've trained extensively with firearms.<br /><ul><li>You can reload a weapon with a bonus action reload speed as a free action.</li><li>You can reload a weapon with an action reload speed as a bonus action.</li><li>You can clear a jam as a bonus action.</li><li>As an action, you can disassemble a gun you are holding.</li></ul>"
+          },
+          {
+            "value": "Free Running",
+            "label": "Free Running",
+            "description": "You've practiced the art of running through environments filled with obstacles and hazards without slowing down.<br /><ul><li>Climbing is not considered difficult movement for you.</li><li>You can ignore movement requirements for jumps.</li><li>You can jump down up to 15 feet without taking damage and land on your feet. This does not prevent falling damage.</li><li>You gain advantage on Dexterity (Acrobatics) checks made during a foot chase.</li></ul>"
+          },
+          {
+            "value": "Global Contacts",
+            "label": "Global Contacts",
+            "description": "You have built up a network of friends and contacts all over the world.<br /><ul><li>Wherever you travel, you can call on a friend for favors such as a ride, translation, food and lodging, local information, bail (where available), or discreet rescue (when feasible).</li><li>You can gain advantage on Wisdom (Streetwise) checks by calling a friend and asking for tips.</li><li>You can borrow up to three items with a price level of 3 or less per month from your local friend. Be the type of hero who returns what you borrow!</li></ul>"
+          },
+          {
+            "value": "Grappler",
+            "label": "Grappler",
+            "description": "You've developed the skills necessary to hold your own in close-quarters combat.<br /><ul><li>You have advantage on attack rolls against a opponent you are grappling.</li><li>If you currently have an opponent Grappled, you can make a special attack to pin them. No attack roll or ability check is made, success is automatic. You and the opponent are considered Restrained until the grapple is broken.</li></ul>"
+          },
+          {
+            "value": "Great Cook",
+            "label": "Great Cook",
+            "description": "You can prepare food so that it tastes great and provides optimal nourishment.<br /><ul><li>You have advantage on Charisma (Persuasion) checks made with anyone eating a meal you have prepared for them.</li><li>When you or one of your companions eats food that you have prepared, they can regain up to two spent Hit Dice. They cannot do so again until they finish a long rest.</li></ul>"
+          },
+          {
+            "value": "Gunfighter",
+            "label": "Gunfighter",
+            "description": "You have a quick trigger finger and can shoot accurately in close quarters.<br /><ul><li>You don't suffer disadvantage for attacking with a firearm against an adjacent opponent.</li><li>You can take a bonus action to treat any firearm you wield that does not have the slow-firing property as if it had the Burst 3 property until the end of your turn.</li></ul>"
+          },
+          {
+            "value": "Gunner",
+            "label": "Gunner",
+            "description": "You're trained at using ranged weapons from a moving vehicle or while mounted. You do not have disadvantage when making ranged attacks due to being mounted or in a moving vehicle."
+          },
+          {
+            "value": "Hardy",
+            "label": "Hardy",
+            "description": "You keep in good health and know how to take care of yourself. When rolling a Hit Die to regain hit points, you gain at least twice your Constitution modifier or 2 hit points, whichever is higher."
+          },
+          {
+            "value": "Impaler",
+            "label": "Impaler",
+            "description": "You have a talent for stabbing opponents where it hurts.<br /><ul><li>Once per turn, when you hit an opponent with an attack that deals piercing damage, you can reroll one of the attack's damage dice.</li><li>When you score a critical hit that deals piercing damage to an opponent, you can roll damage twice and take the better of the two results rather than only one die.</li></ul>"
+          },
+          {
+            "value": "Impersonator",
+            "label": "Impersonator",
+            "description": "You have mastered the art of copying the voice and mannerisms of others.<br /><ul><li>You have advantage on Charisma (Performance) checks when impersonating other people, animal sounds, or object sounds.</li><li>You have advantage on Charisma (Performance) checks to disguise your own identity, or to appear as someone else.</li></ul>"
+          },
+          {
+            "value": "Jack of All Trades",
+            "label": "Jack of All Trades",
+            "description": "You're well read and good at anything you set your mind to. You can add half your proficiency bonus (rounded down) to any ability check calling for a skill you are not proficient in. You may not use this bonus if no skill is applicable."
+          },
+          {
+            "value": "Language Expert",
+            "label": "Language Expert",
+            "description": "You have learned multiple languages and studied the nature of language, giving you insights into symbology and communication.<br /><ul><li>Choose two additional languages.</li><li>You can learn new languages becoming proficient in 6 weeks as long as you have a manual in a language you know or access to a willing teacher proficient in it.</li><li>You are adept at deciphering linguistic or symbolic codes, gaining advantage on Intelligence (Social Sciences) checks to decipher or understand them.<li>You can also create ciphers and coded messages. Unless provided with the means to decode them, they can only be deciphered with an Intelligence check with a DC of your Intelligence score + your proficiency bonus.</li></ul>"
+          },
+          {
+            "value": "Lead By Example",
+            "label": "Lead By Example",
+            "description": "You're good at showing others how to do something and leading them to success. When in a team making a group ability check, you may make your check first. If you succeed, other members of the team have advantage on their checks."
+          },
+          {
+            "value": "Pack Rat",
+            "label": "Pack Rat",
+            "description": "You have a strong back and are adept at packing efficiently.<br /><ul><li>You can carry an additional 5 bulk without penalty.</li><li>You can take items from a carrying case as a bonus action in combat.</li></ul>"
+          },
+          {
+            "value": "Perfect Throw",
+            "label": "Perfect Throw",
+            "description": "You're an expert at throwing objects at stationary targets. When throwing or launching a grenade or other object at a space or an immobile object, you do not need to make an attack roll, you automatically hit."
+          },
+          {
+            "value": "Pinning Fire",
+            "label": "Pinning Fire",
+            "description": "You ensure that an opponent can't easily escape your suppressive fire.<br /><ul><li>When using the Suppressive Fire action, you can choose a single visible opponent target. Until the suppressive fire ends, or until your next turn begins, you can change the area targeted by your suppressive fire to wherever the target is visible, as long as you have a clear line of fire to that location. Changing the area targeted does not take any action.</li></ul><br />This makes the Dive for Cover reaction impossible for the target unless there is total cover within reach of their movement, as the hero can follow their movement. The target should use their Dive for Cover reaction before any other combatants in the area of fire do so. After the target has had that opportunity, then check for any other combatants in the new area of fire."
+          },
+          {
+            "value": "Poison Specialist",
+            "label": "Poison Specialist",
+            "description": "You’re practiced in making and applying poisons safely.<br /><ul><li>You have advantage on Intelligence (Medicine) and Wisdom (Survival) checks to identify and treat poisons.</li><li>You can handle poison without needing to make an ability check to avoid injury.</li><li>You can apply poison to a piece of ammunition or weapon as a bonus action.</li><li>The use of poison by heroes is at the GM's discretion, so consult with your GM before taking this feat.</li></ul>"
+          },
+          {
+            "value": "Punisher",
+            "label": "Punisher",
+            "description": "You're talented at kicking people while they are down and otherwise taking advantage of opportunities.<br /><ul><li>You can make an opportunity attack when an adjacent opponent stands up from Prone.</li><li>You can make an opportunity attack when an adjacent opponent picks an object up from the ground or uses a device.</li><li>You can make an opportunity attack when an adjacent opponent makes a special attack against you.</li></ul>"
+          },
+          {
+            "value": "Racer",
+            "label": "Racer",
+            "description": "You know how to push a vehicle to its limits, going faster and maneuvering better than others.<br /><ul><li>While you operate a vehicle, increase its Strength modifier by 2.</li><li>While you operate a vehicle, increase its Dexterity modifier by 2.</li><li>You gain advantage on Dexterity (Vehicles) checks called for by complications.</li></ul>"
+          },
+          {
+            "value": "Renaissance Thinking",
+            "label": "Renaissance Thinking",
+            "description": "You're able to look at challenges from both a philosophical and intellectual approach. You can substitute your Intelligence modifier for your Wisdom modifier and vice versa when making ability checks with skills you are proficient in."
+          },
+          {
+            "value": "Resilient",
+            "label": "Resilient",
+            "description": "Through repeated exposures to bodily punishment, you have gained significant resilience. You have advantage on saving throws to avoid, resist, and recover from the following conditions: Exhaustion, Intoxication, Paralyzed, Sickened, and Stunned."
+          },
+          {
+            "value": "Resistant",
+            "label": "Resistant",
+            "description": "You have built up resistances to numerous ailments and toxins through healthy living and past exposures.<br /><ul><li>You have advantage on saving throws to resist the effects of poisons and diseases.</li><li>You have damage reduction 5 against poison.</li></ul>"
+          },
+          {
+            "value": "Resourceful",
+            "label": "Resourceful",
+            "description": "You have the uncanny ability to make just about anything you need out of whatever happens to be lying around. Given 10 minutes, you can create a makeshift invention that allows you to attempt any ability check you are proficient in without needing the tools, materials, or equipment you might normally need, and you negate any situational disadvantage applied to the check.<br />This process of improvisational invention involves dismantling and breaking other perfectly good tools or objects you have on hand."
+          },
+          {
+            "value": "Scout",
+            "label": "Scout",
+            "description": "You have honed your awareness to pick up on small details in your environment allowing you to spot danger and opportunity.<br /><ul><li>You gain advantage on passive Perception checks. (Remember that advantage on a passive check is simply a +5 bonus.)</li><li>You have advantage on ability checks made to defeat traps.</li></ul>"
+          },
+          {
+            "value": "Seducer",
+            "label": "Seducer",
+            "description": "You have developed undeniable sex appeal through a combination of looks and attitude. You gain advantage on Charisma (Persuasion) and Charisma (Deception) checks with people who are attracted to your gender."
+          },
+          {
+            "value": "Skirmisher",
+            "label": "Skirmisher",
+            "description": "You're quick on your feet in combat and always wary of your opponents.<br /><ul><li>As a reaction, you can cause one opportunity attack made against you to automatically miss.</li><li>If you hit an opponent with a melee attack, they cannot make an opportunity attack against you until the start of your next turn.</li></ul>"
+          },
+          {
+            "value": "Snatch Victory",
+            "label": "Snatch Victory",
+            "description": "You have a strange knack for turning a potential disaster into stunning success. When you roll a 1 on a d20, you can treat it as if you rolled 20. You cannot do this again until you finish a long rest."
+          },
+          {
+            "value": "Sticky Fingers",
+            "label": "Sticky Fingers",
+            "description": "You're very fast at pick pocketing and adept at using combat as a cover for your larceny.<br /><ul><li>You can make Dexterity (Sleight of Hand) checks to pickpocket as a bonus action in combat provided you have a free hand.</li><li>If you have hit an opponent with a melee attack this round, you have advantage on Dexterity (Sleight of Hand) checks against that opponent this round.</li></ul><br />Pickpocketing is usually handled as a contest between the thief's Dexterity (Sleight of Hand) check against the defender's passive Perception. You can steal any reasonable item on the person that they are not holding or wearing. Grenade pins and weapons are popular choices in combat."
+          },
+          {
+            "value": "Touch of Grace",
+            "label": "Touch of Grace",
+            "description": "You have an unusual knack for rolling with life's punches and coming out from under difficulty. You can add half your proficiency bonus (rounded down) to saving throws you are not proficient in. This does not apply to death saving throws, but can apply to armor saving throws."
+          },
+          {
+            "value": "Tumbling",
+            "label": "Tumbling",
+            "description": "You have mastered moving in unusual ways and circumstances.<br /><ul><li>You don't need to spend any movement to stand from Prone.</li><li>Crawling is not considered difficult movement for you.</li><li>You can move through spaces occupied by opponents.</li><li>Moving through a space occupied by someone is not difficult terrain for you.</li></ul>"
+          },
+          {
+            "value": "Walking Dead",
+            "label": "Walking Dead",
+            "description": "With grim determination you fight on, not stopping until your last breath. When reduced to 0 hit points but not killed, instead of falling Unconscious, you gain two levels of Exhaustion and fall Prone. You remain at 0 hit points and must make death saving throws normally. If you recover hit points while at 0 hit points you may remove these two levels of Exhaustion."
+          },
+          {
+            "value": "Fortunes Fool",
+            "label": "Fortunes Fool",
+            "description": "You have learned to trust in providence, and somehow it has come to treat you kindly in return for your faith.<br /><ul><li>You gain 3 luck points, which are replenished each time you take a long rest.</li><li>You may spend a luck point to reroll an attack roll, saving throw, or ability check after the roll but before you know the result.</li></ul><br />If multiple d20s are rolled due to advantage or disadvantage, you choose only one to be re-rolled."
+          },
+          {
+            "value": "Guerilla",
+            "label": "Guerilla",
+            "description": "You're among the very best at hiding in shadows and striking from the darkness.<br /><ul><li>You can ignore the effects of poor visibility.</li><li>You can attempt to hide from an opponent from whom you have poor visibility.</li><li>While hiding, if you miss with a ranged attack, the attack does not automatically reveal your position.</li></ul>"
+          },
+          {
+            "value": "Harrier",
+            "label": "Harrier",
+            "description": "You're adept at melee combat and can protect yourself from close quarters combatants.<br /><ul><li>If you are hit with a melee attack while wielding a melee weapon you are proficient in, you may use your reaction to add your proficiency bonus to your defense against that attack, potentially turning the hit into a miss.</li><li>After taking the Disengage action, you can make a single ranged attack as a bonus action.</li></ul>"
+          },
+          {
+            "value": "Healthy",
+            "label": "Healthy",
+            "description": "Through rigorous activity and good living, you have become more resilient to injury and fatigue in battle.<br /><ul><li>On taking this feat, increase your hit point maximum by 2 per character level.</li><li>Each time you gain a level, increase your hit point maximum by 2.</li></ul>"
+          },
+          {
+            "value": "Perfect Shot",
+            "label": "Perfect Shot",
+            "description": "You have perfected the technique of hitting multiple opponents with a single shot.<br /><ul><li>When you make a ranged attack with a ballistic weapon using armor-piercing rounds, you can attack multiple targets by shooting through one and into the next. All targets you attack this way must be in your line of fire. Attack the closest target first. If you hit, roll for damage normally and you may then roll an attack on the next target in your line of fire. If subsequent targets are hit they take the same damage. If you miss any attack, or any damage is stopped by armor, you can make no further attacks. You can attack a number of targets up to the Penetration Value of your weapon.</li><li>Rifles and machine guns are loaded with armor penetrating rounds by default, while pistols and shotguns are not. Ballistic weapons with a PV of 3 or greater are armor piercing.</li><li>If you are not playing with a map or miniatures, ask the GM how many targets you can line up in a given situation. Two would be the most common, and you would need to reposition yourself to line them up for the perfect shot.</li></ul>"
+          },
+          {
+            "value": "Power Slam",
+            "label": "Power Slam",
+            "description": "You have a knack for slamming people violently into the ground and tackling them with great force.<br /><ul><li>You have advantage on shoving/tripping attempts.</li><li>If you successfully shove or trip an opponent, you can deal your unarmed strike damage to them including your melee ability score modifier.</li></ul>"
+          },
+          {
+            "value": "Signature Weapon",
+            "label": "Signature Weapon",
+            "description": "You're dedicated to the use of a specific weapon and feel more confident when wielding it.<br />Choose a specific weapon as your signature weapon, describe it, and give it a name. All further benefits of this feat require you to be wielding this weapon.<br /><ul><li>You can ignore one source of disadvantage when making an attack roll.</li><li>You have advantage on ability checks to avoid being disarmed.</li><li>You have advantage on Charisma (Intimidation) checks.</li><li>Your signature weapon will not break as a result of your own actions, abilities, or class talents.</li><li>If some horrible foe or other calamity destroys your precious signature weapon, you can designate and name a new one after an appropriate mourning period of 1 week.</li></ul>"
+          },
+          {
+            "value": "Sweeping Attack",
+            "label": "Sweeping Attack",
+            "description": "Using larger weapons, you are able to deal with crowds of opponents by making a wide sweeping attack.<br /><ul><li>Once during your turn, if you are attacking with a two-handed melee weapon or a versatile melee weapon in two hands, you may treat your attack as a sweeping attack. During a sweeping attack, you make one melee attack against each opponent within your melee reach.</li></ul><br />Any attack modifiers that are limited in the number of uses for any reason, are applied individually to individual attacks you make, not universally to all the attacks you make during a sweeping attack."
+          },
+          {
+            "value": "Strong Hero Training",
+            "label": "Strong Hero Training",
+            "description": "You have learned how to use your strength to focus an aggressive offense.<br /><ul><li>You gain Basic Equipment proficiency.</li><li>You gain proficiency in one of the following skills: Athletics, Acrobatics, or Endurance.</li><li>Before making an attack, you can declare you are being reckless. You gain advantage on all melee weapon attack rolls but all opponents attacking you have advantage on their attack rolls. This lasts until the start of your next turn.</li></ul>"
+          },
+          {
+            "value": "Brawler Training",
+            "label": "Brawler Training",
+            "description": "You have trained yourself to be an engine of destruction, letting nothing stand between you and your target.<br /><ul><li>You gain Improvised Equipment proficiency.</li><li>You have advantage on any Strength check you make to break an object. In addition, your melee attacks have +1 Penetration Value.</li><li>As a bonus action, you can move up to your speed, but you must move toward an opponent. If there are no enemies present, you may move toward an obviously dangerous situation instead.</li></ul>"
+          },
+          {
+            "value": "Advanced Brawler Training",
+            "label": "Advanced Brawler Training",
+            "description": "Few opponents or weapons can survive the powerful blows you deliver.<br /><ul><li>Once during your turn, when you hit an opponent with an attack with a melee weapon, you can choose to deal an additional 2d6 damage. If you do, and you did not attack with an unarmed strike, the weapon is destroyed. You can't use this talent with explosives attacks.</li><li>You have advantage on ability checks and saving throws to avoid or escape being Grappled, Restrained, Stunned, or Paralyzed.</li></ul>"
+          },
+          {
+            "value": "Heavy Gunner Training",
+            "label": "Heavy Gunner Training",
+            "description": "You like big guns and you cannot lie, someone does you wrong and they are gonna die.<br /><ul><li>You gain Advanced Equipment proficiency.</li><li>You may use Strength instead of Dexterity when you make a ranged attack with a non-light ranged weapon.</li><li>You can ignore the stationary property of weapons.</li><li>Before making an attack with a non-light ranged weapon you can declare you are being reckless. You gain advantage on your attack rolls with that weapon but all opponents attacking you have advantage on their attack rolls. This lasts until the start of your next turn.</li></ul>"
+          },
+          {
+            "value": "Advanced Heavy Gunner Training",
+            "label": "Advanced Heavy Gunner Training",
+            "description": "The sound of explosives and heavy machine gun fire are music to your ears.<br /><ul><li>You gain Military Equipment proficiency.</li><li>When you damage any target with Suppressive Fire or an explosive, the damage is increased by double your proficiency bonus.</li><li>When you take the Suppressive Fire action, you can double the area covered.</li></ul>"
+          },
+          {
+            "value": "MMA Fighter Training",
+            "label": "MMA Fighter Training",
+            "description": "Through hard training you have become skilled in a range of martial arts disciplines.<br /><ul><li>If you have an opponent Grappled, you can apply a submission move as a special attack. You automatically deal your unarmed strike damage to the opponent. You cannot use Power Attack or Improved Power attack when making a Submission Move.</li><li>Your unarmed strike damage is improved by one die step.</li></ul>"
+          },
+          {
+            "value": "Advanced MMA Fighter Training",
+            "label": "Advanced MMA Fighter Training",
+            "description": "You have hardened your fists and honed your technique making you a very dangerous unarmed combatant.<br /><ul><li>You gain advantage on Strength (Athletic) checks made to initiate or escape a grapple.</li><li>Once during your turn, before rolling to hit with an unarmed strike, you can declare it is a takedown. If the takedown hits, you deal damage, and may make a free unarmed special attack against the target.</li></ul>"
+          },
+          {
+            "value": "Agile Hero Training",
+            "label": "Agile Hero Training",
+            "description": "You have trained your reflexes to a razor's edge. Your movements are both swift and elegant.<br /><ul><li>You gain Basic Equipment proficiency.</li><li>Choose one from Acrobatics, Sleight of Hand, Stealth, and Vehicles. You gain proficiency in the chosen skill.<li>You can take the Dash or Disengage action as a bonus action.</li><li>During a foot chase, you have advantage on Strength (Athletics) checks made as part of a Gain Ground action.</li></ul>"
+          },
+          {
+            "value": "Martial Arts Training",
+            "label": "Martial Arts Training",
+            "description": "Your heightened awareness and reflexes have made you a difficult target and adept at off-hand strikes.<br /><ul><li>Your unarmed strike damage is improved by one die step.</li><li>You ignore difficult terrain when you move.</li><li>You treat all melee weapons that don't have the heavy property as if they had the finesse property.</li><li>When you make a Dexterity saving throw to take half damage from an effect, you take no damage on a successful save, and half damage on a failed one.</li></ul>"
+          },
+          {
+            "value": "Advanced Martial Arts Training",
+            "label": "Advanced Martial Arts Training",
+            "description": "You have trained to strike efficiently with your hands and feet and are skilled in weapons used for sport and training.<br /><ul><li>You gain Historical Equipment proficiency.</li><li>Your unarmed strike damage is improved by one die step.</li><li>You can make an unarmed strike as a bonus action.</li><li>Climbing and swimming are not difficult movement for you.</li></ul>"
+          },
+          {
+            "value": "Scoudrel Training",
+            "label": "Scoudrel Training",
+            "description": "You have gotten pretty good at getting the upper hand through under-handed tactics.<br /><ul><li>You gain Advanced Equipment proficiency.</li><li>Choose one from Acrobatics, Deception, Intimidation, Security, Sleight of Hand, Stealth, and Streetwise. You gain proficiency in the chosen skill.</li><li>You can Hide, Object Interaction, or make a Security or Sleight of Hand check as a bonus action.</li><li>You have advantage on attack rolls against any opponent that has not acted this combat.</li></ul>"
+          },
+          {
+            "value": "Advanced Scoudrel Training",
+            "label": "Advanced Scoudrel Training",
+            "description": "You have learned all the best ways to hurt a person when they don't see it coming.<br /><ul><li>Choose one from Acrobatics, Deception, Intimidation, Security, Sleight of Hand, Stealth, and Streetwise. You gain expertise in the chosen skill.</li><li>Once during your turn, when you hit a target with an attack, if you had advantage on that attack or an ally is within 5 feet of that target, you can choose to deal an additional 2d6 damage. You cannot deal this additional damage if the attack had disadvantage.</li></ul>"
+          },
+          {
+            "value": "Sharpshooter Training",
+            "label": "Sharpshooter Training",
+            "description": "Handling ranged weapons has become second nature to you and using them requires about as much thought as breathing.<br /><ul><li>You gain Advanced Equipment proficiency.</li><li>You can draw two one-handed light weapons as a free action.</li><li>You can reload two ranged weapons with the same action, without needing a free hand.</li><li>You can ignore the slow-firing property on ranged weapons.</li><li>When using a two-handed ranged weapon, you do not have disadvantage with attack rolls at long range.</li></ul>"
+          },
+          {
+            "value": "Advanced Sharpshooter Training",
+            "label": "Advanced Sharpshooter Training",
+            "description": "Your mastery of ranged weapons has made you an opponent to be feared by all.<br /><ul><li>You can add your Dexterity modifier to damage rolls made with off-hand ranged attacks.</li><li>When using a two-handed ranged weapon, you can ignore half cover when making ranged attacks at targets in cover.</li><li>When using a two-handed ranged weapon, you treat targets in three-fourths cover as being in half cover. (This changes the cover defense from 20 to 16.)</li><li>You score a critical hit on a roll of 19 or 20 when making ranged attacks.</li></ul>"
+          },
+          {
+            "value": "Tough Hero Training",
+            "label": "Tough Hero Training",
+            "description": "You have toughened yourself up to where you find a little pain and exertion rather exhilarating.<br /><ul><li>You gain Basic Equipment proficiency.</li><li>You gain damage reduction (against all damage types) equal to your proficiency bonus.</li><li>Once during your turn, when you attack an opponent that has damaged you since the end of your last turn, you gain a +2 bonus on the attack roll.</li></ul>"
+          },
+          {
+            "value": "Bodyguard Training",
+            "label": "Bodyguard Training",
+            "description": "You gladly put yourself in danger to protect others, and have trained to do exactly that.<br /><ul><li>You gain Advanced Equipment proficiency.</li><li>When an ally within 5 feet is hit by an attack, you can use your reaction to cause the attack to hit you instead.</li><li>If you are in cover and adjacent to a willing ally, you can take a bonus action on your turn to move that ally into cover. You can move up to 5 feet during this action to make room for your ally</li><li>You do not damage allies if you roll a critical miss when firing into melee combat.</li></ul>"
+          },
+          {
+            "value": "Advanced Bodyguard Training",
+            "label": "Advanced Bodyguard Training",
+            "description": "Ever vigilant, you have further honed your ability to keep those you protect from harm.<br /><ul><li>You can ignore cover provided by your allies in your line of fire or in melee combat with your target.</li><li>When an opponent uses Dive for Cover as a reaction to one of your attacks or actions, their movement speed becomes 0 on their next turn.</li><li>You can take up to two reactions between each of your turns.</li></ul>"
+          },
+          {
+            "value": "Commando Training",
+            "label": "Commando Training",
+            "description": "You give your all in combat, making you a very difficult target to take down.<br /><ul><li>You gain Advanced Equipment proficiency.</li><li>You can take the Second Wind action as a bonus action.</li><li>You can draw, arm, and throw a grenade as a bonus action. You must have a free hand or already be holding the grenade to do this.</li></ul>"
+          },
+          {
+            "value": "Advanced Commando Training",
+            "label": "Advanced Commando Training",
+            "description": "You're an especially dangerous person, capable of feats in combat few others can match.<br /><ul><li>You gain Military Equipment proficiency.</li><li>By pushing yourself to the limit, you can take an additional action during your turn. You can do this only once before you finish a long rest.</li><li>You gain a +2 bonus to your Defense.</li></ul>"
+          },
+          {
+            "value": "Scrapper Training",
+            "label": "Scrapper Training",
+            "description": "You love one-on-one combat and seek to force a confrontation with your chosen opponent.<br /><ul><li>You gain Advanced Equipment proficiency.</li><li>Enemies taking the Disengage action provoke opportunity attacks from you before leaving your reach.</li><li>Enemies within your reach that attack one of your allies other than you provoke an opportunity attack from you.</li><li>When you damage an opponent with an opportunity attack, their speed becomes 0 until the end of their current turn, preventing further movement.</li></ul>"
+          },
+          {
+            "value": "Advanced Scrapper Training",
+            "label": "Advanced Scrapper Training",
+            "description": "You have an uncanny knack for surviving all kinds of pain and punishment.<br /><ul><li>When you take damage from an attack, you can use your reaction to halve that attack's damage against you.</li><li>After rolling any saving throw, you may reroll that saving throw. You can't do this again until you finish a short rest.</li></ul>"
+          },
+          {
+            "value": "Smart Hero Training",
+            "label": "Smart Hero Training",
+            "description": "You have sharpened your wits to a razor's edge and turned your mind into the greatest weapon of all.<br /><ul><li>You gain 2 Genius points. You can enact any plan you know by spending 1 Genius point. Genius points recharge when you finish a long rest. Your Plan DC formula is 8 + your Intelligence modifier + your proficiency bonus.</li><li>You learn two plans from the Shared Plans list for Smart Heroes.</li><li>You can only use shared plan enhancements up to Level 1.</li></ul>"
+          },
+          {
+            "value": "Engineer Training",
+            "label": "Engineer Training",
+            "description": "You have studied the worlds of technology and machinery and have gained startling insights.<br /><ul><li>You gain proficiency in Mechanics.</li><li>You gain a Mechanical Companion from the engineer's list of mechanical companions. (This does not include talents related to the Mechanical Companion. The companion follows standard companion rules.)</li><li>You learn 1 additional plan from the engineer plan list.</li><li>You can only use engineer plan enhancements up to Level 3.</li><li>If you are not a Smart Hero archetype, you can use shared plan enhancements only up to Level 3.</li></ul>"
+          },
+          {
+            "value": "Advanced Engineer Training",
+            "label": "Advanced Engineer Training",
+            "description": "Your mastering of the technical world is impressive enough to put most people in awe of your skills.<br /><ul><li>You gain expertise in Mechanics.</li><li>You gain an additional 1 Genius point.</li><li>You learn 2 additional plans, either from the Engineer or shared plan list.</li><li>You can only use Engineer plan enhancements up to Level 5.</li><li>If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 5.</li></ul>"
+          },
+          {
+            "value": "Hacker Training",
+            "label": "Hacker Training",
+            "description": "You have dived deeply into the digital ocean and become one of the elites of that realm.<br /><ul><li>You gain proficiency in Computers.</li><li>You gain an additional 1 Genius point.</li><li>You learn 1 additional plan from the hacker plan list.</li><li>You can only use hacker plan enhancements up to Level 3.</li><li>If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 3.</li></ul>"
+          },
+          {
+            "value": "Advanced Hacker Training",
+            "label": "Advanced Hacker Training",
+            "description": "When sysops hear your name they either tremble in fear, or stand in awe of your elite skills.<br /><ul><li>You gain expertise in Computers.</li><li>You gain an additional 1 Genius point.</li><li>You learn two additional plans, either from the Hacker or shared plan list.</li><li>You can only use hacker plan enhancements up to Level 5.</li><li>If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 5.</li></ul>"
+          },
+          {
+            "value": "Mastermind Training",
+            "label": "Mastermind Training",
+            "description": "You have spent an awful lot of time trying to outsmart everyone, and it's working.<br /><li>Choose either Investigation or Social Sciences. You gain proficiency in the chosen skill.</li><li>You gain an additional 1 Genius point.</li><li>You learn 1 additional plan from the mastermind plan list.</li><li>You can only use mastermind plan enhancements up to Level 3.</li><li>If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 3.</li></ul>"
+          },
+          {
+            "value": "Advanced Mastermind Training",
+            "label": "Advanced Mastermind Training",
+            "description": "You have devised plans within plans within plans. How about two more plans?<br /><ul><li>Choose either Investigation or Social Sciences. You gain expertise in the chosen skill.</li><li>You gain an additional 1 Genius point.</li><li>You learn 2 additional plans from the mastermind or shared plan list.</li><li>You can only use mastermind plan enhancements up to Level 5.</li><li>If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 5.</li></ul>"
+          },
+          {
+            "value": "Scientist Training",
+            "label": "Scientist Training",
+            "description": "For those willing to master knowledge, the universe can be your sandbox.<br /><ul><li>Choose either Medicine or Natural Sciences. You gain proficiency in the chosen skill.</li><li>You gain an additional 1 Genius point.</li><li>You learn 1 additional plan from the scientist plan list.</li><li>You can only use scientist plan enhancements up to Level 3.</li><li>If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 3.</li></ul>"
+          },
+          {
+            "value": "Advanced Scientist Training",
+            "label": "Advanced Scientist Training",
+            "description": "Your mastery of the elements of nature knows few equals.<br /><ul><li>Choose either Medicine or Natural Sciences. You gain expertise in the chosen skill.</li><li>You gain an additional 1 Genius point.</li><li>You learn 2 additional plans from the scientist or shared plan list.</li><li>You can only use scientist plan enhancements up to Level 5. If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 5.</ul>"
+          },
+          {
+            "value": "Wise Hero Training",
+            "label": "Wise Hero Training",
+            "description": "You have learned to act with efficiency rather than speed, carefully choosing the correct course of action.<br /><ul><li>You gain Basic Equipment proficiency.</li><li>Choose one from Insight, Perception, Streetwise, and Survival. You gain proficiency in the chosen skill.</li><li>You gain 2 focus points. Your Focus recharges whenever you finish a short or long rest.</li><li>You can spend one focus point to reroll a failed Wisdom ability check. This may only be done once per ability check.</li><li>You can choose not to fall Prone when you Dive for Cover.</li></ul>"
+          },
+          {
+            "value": "Hunter Training",
+            "label": "Hunter Training",
+            "description": "You have learned the art of tracking prey and bringing them to ground.<br /><li>You gain the Advanced Equipment proficiency.</li><li>Choose one from Perception, Stealth, and Survival. You gain proficiency in the chosen skill.<li>You gain 1 additional Focus point.<li>As a bonus action, you can spend 1 Focus to mark one target opponent you can see.<li>You gain advantage on Wisdom (Perception) checks against a marked target.<li>You gain advantage on Wisdom (Streetwise) and Wisdom (Survival) checks made to track or find a marked target.<li>You can spend 1 Focus to reroll a damage roll you make against a marked target. If multiple dice are rolled for damage, you reroll all damage dice. You may only do this once per attack.</li></ul>"
+          },
+          {
+            "value": "Advanced Hunter Training",
+            "label": "Advanced Hunter Training",
+            "description": "You have further honed your hunting skills, focusing on what it takes to survive encounters with dangerous prey.<br /><li>Choose one from Perception, Stealth, or Survival. You must be proficient in the chosen skill. You gain Expertise in the chosen skill.</li><li>You gain 1 additional Focus point.</li><li>You can spend 1 Focus to reroll a missed attack roll against a marked target made by you or your hunting companion. You may only do this once per attack.</li><li>After an opponent hits you with an attack, you gain a +4 bonus to Defense against any further attacks that same opponent makes against you until the start of your next turn.</li></ul>"
+          },
+          {
+            "value": "Master Training",
+            "label": "Master Training",
+            "description": "Your contemplative meditation has brought you to a state of inner harmony and butt-kicking.<br /><li>You gain Improvised Equipment proficiency.</li><li>You gain 1 additional focus point.</li><li>You have damage reduction 15 against falling.</li><li>You can spend 1 focus point to take the Dash, Disengage, or Dodge action as a bonus action.</li><li>You can spend 1 focus to make an unarmed strike as a bonus action.</li></ul>"
+          },
+          {
+            "value": "Advanced Master Training",
+            "label": "Advanced Master Training",
+            "description": "Your great wisdom and inner peace have given you the ability to elegantly avoid danger and knock people's lights out.<br /><ul><li>You gain 1 additional focus point.</li><li>When an opponent's attack misses you, and you are adjacent to a different opponent, you may take a reaction to cause the missed attack to hit the adjacent opponent.</li><li>When you hit a target with an unarmed strike, simple melee weapon, or improvised weapon, you can spend 1 focus point to attempt to stun that target. It must make a Constitution saving throw or be Stunned until the end of your next turn. The save DC is 8 + your Wisdom modifier + your proficiency bonus.</li></ul>"
+          },
+          {
+            "value": "Sleuth Training",
+            "label": "Sleuth Training",
+            "description": "You have honed your awareness of your environment and are adept at spotting an opponent's weaknesses.<br /><ul><li>You gain Advanced Equipment proficiency.</li><li>Choose one from Insight, Investigation, Perception, Security, and Streetwise. You gain proficiency in the chosen skill.</li><li>You cannot be surprised.</li><li>You can take the Search action as a bonus action.</li><li>You gain 1 additional Focus point.</li><li>You can spend 1 Focus point to reroll a failed Intelligence ability check. This may only be done once per ability check.</li></ul>"
+          },
+          {
+            "value": "Advanced Sleuth Training",
+            "label": "Advanced Sleuth Training",
+            "description": "Your intuition has given you the ability to get the drop on your enemies and hit them where it hurts.<br /><ul><li>Choose one from Insight, Investigation, Perception, Security, and Streetwise. You gain expertise in the chosen skill.</li><li>You gain 1 additional Focus point.</li><li>As a bonus action, you can spend 1 Focus point to gain advantage on your next attack roll. If the attack hits, you deal an additional 2d6 damage to the target.</li><li>When you make a Dexterity saving throw to take half damage from an effect, you take no damage on a successful save, and half damage on a failed one.</li></ul>"
+          },
+          {
+            "value": "Charming Hero Training",
+            "label": "Charming Hero Training",
+            "description": "You have a way with words and/or looks that could kill.<br /><ul><li>Choose two from Deception, Intimidation, Performance, and Persuasion. You gain proficiency in the chosen skills.</li><li>Choose one from Deception, Intimidation, Performance, and Persuasion). You must be proficient in the chosen skill. You gain expertise in the chosen skill.</li><li>You have two influence dice, which are d6s. An influence die is expended when it is rolled. You regain all of your expended influence dice when you finish a short or long rest.</li><li>When you make a Charisma check, after rolling but before determining the result, you can roll an influence die and add it to your result.</li></ul>"
+          },
+          {
+            "value": "Duelist Training",
+            "label": "Duelist Training",
+            "description": "You have learned the ancient art of grace in combat, keeping you one step ahead of your opponent.<br /><ul><li>Basic Equipment and Historical Equipment proficiency.</li><li>You gain 1 additional influence die.</li><li>While wielding a finesse weapon, your Defense bonus is increased by +1.</li><li>You learn two tricks, chosen from the list of duelist tricks.</li></ul>"
+          },
+          {
+            "value": "Advanced Duelist Training",
+            "label": "Advanced Duelist Training",
+            "description": "You have become an expert in the lunge and parry maneuvers, dancing around opponents and striking when they are most vulnerable.<br /><ul><li>You gain 1 additional influence die.</li><li>Your influence dice are now d8 instead of d6. (Ignore this if your archetype is Charming Hero.)</li><li>You can add your Charisma modifier to initiative.</li><li>Opportunity attacks made against you have disadvantage.</li><li>You learn one additional trick chosen from the list of duelist tricks.</li></ul>"
+          },
+          {
+            "value": "Icon Training",
+            "label": "Icon Training",
+            "description": "You are the bee's knees, the cat's pajamas, and perhaps the GOAT!<br /><ul><li>You gain Basic Equipment and Advanced Equipment proficiencies.</li><li>You gain 1 additional influence die.</li><li>You learn two tricks, chosen from the list of icon tricks.</li><li>As a bonus action, you can give your allies an opening by drawing the attention of an opponent you are aware of who can hear you within 60 feet. The next attack one of your allies makes against that target before the start of your next turn has advantage.</li></ul>"
+          },
+          {
+            "value": "Advanced Icon Training",
+            "label": "Advanced Icon Training",
+            "description": "You are definitely the GOAT, don't let anyone tell you differently!<br /><ul><li>You gain 1 additional influence die.</li><li>Your influence dice are now d8 instead of d6. (Ignore this if your archetype is Charming Hero.)</li><li>You learn one additional trick chosen from the list of Icon tricks.</li><li>Whenever you roll a 1 on an influence die or a damage die, you can reroll that die once, taking the new result.</li><li>As a reaction, when an opponent within 5 feet that can see you targets you with an attack, you can cause that attack to have disadvantage. They cannot change targets in reaction to you doing this.</li></ul>"
+          },
+          {
+            "value": "Leader Training",
+            "label": "Leader Training",
+            "description": "Your allies respect your wisdom and advice allowing you to direct them in combat and lift their spirits in rest.<br /><ul><li>You gain Basic and Advanced Equipment proficiency.</li><li>You gain 1 additional influence die.</li><li>You learn two tricks, chosen from the list of leader tricks.</li><li>As an action, you can command one of your allies. That ally can use a reaction to make one attack or move up to its speed.</li></ul>"
+          },
+          {
+            "value": "Advanced Leader Training",
+            "label": "Advanced Leader Training",
+            "description": "You have further developed your leadership skills allowing you to better direct and motivate your allies.<br /><ul><li>You gain 1 additional influence die.</li><li>Your influence dice are now d8 instead of d6. (Ignore this if your archetype is Charming Hero.)</li><li>You learn one additional trick chosen from the list of Leader tricks.</li><li>You encourage camaraderie among your allies. Whenever you and your allies finish a short rest, you and any ally that can hear you each regain 1 spent Hit Die, whether it was spent during this rest or earlier. You can do this only once before finishing a long rest.</li><li>As an action you can grant yourself and up to 6 allies that can hear you temporary hit points equal to your Hero level plus your Charisma modifier. You cannot take this action again until you finish a short or long rest.</li></ul>"
+          },
+          {
+            "value": "Maniputator Training",
+            "label": "Maniputator Training",
+            "description": "You have learned the art of not only influencing others, but bending them to your will.<br /><ul><li>You gain 1 additional influence die.</li><li>You learn two tricks, chosen from the list of Manipulator tricks.</li><li>You can demoralize an opponent within 60 feet as an action. The target must make a Wisdom saving throw against a DC of 8 + your Charisma modifier + your proficiency bonus. On a failed save, the target has disadvantage on attack rolls, disadvantage on ability checks, and attack rolls against the target have advantage. This effect lasts until the end of your next turn.</li></ul>"
+          },
+          {
+            "value": "Advanced Maniputator Training",
+            "label": "Advanced Maniputator Training",
+            "description": "You not only get into the heads of your enemies, you live there rent-free.<br /><ul><li>You gain 1 additional influence die.</li><li>Your influence dice are now d8 instead of d6. (Ignore this if your archetype is Charming Hero.)</li><li>You learn one additional trick, chosen from the list of Manipulator tricks.</li><li>You can perfectly mimic the voice of another person, as long as you have heard them speak for at least 1 minute. A successful Wisdom (Insight) check contested by your Charisma (Deception) check allows a listener to determine that the voice is fake.</li><li>You can use your Demoralize ability as a bonus action. You can still use it as an action as well, allowing you to use it twice during your turn if you like.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "name": "pack",
+      "label": "Packs",
+      "type": "array",
+      "component": {
+        "name": "pack",
+        "label": "Packs",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Badass Pack",
+            "label": "Badass Pack",
+            "description": null
+          },
+          {
+            "value": "Bodyguard Pack",
+            "label": "Bodyguard Pack",
+            "description": null
+          },
+          {
+            "value": "Detective Pack",
+            "label": "Detective Pack",
+            "description": null
+          },
+          {
+            "value": "Entertainer Pack",
+            "label": "Entertainer Pack",
+            "description": null
+          },
+          {
+            "value": "Everyday Pack",
+            "label": "Everyday Pack",
+            "description": null
+          },
+          {
+            "value": "Executive Pack",
+            "label": "Executive Pack",
+            "description": null
+          },
+          {
+            "value": "Duelist Pack",
+            "label": "Duelist Pack",
+            "description": null
+          },
+          {
+            "value": "Fitness Pack",
+            "label": "Fitness Pack",
+            "description": null
+          },
+          {
+            "value": "Hacker Pack",
+            "label": "Hacker Pack",
+            "description": null
+          },
+          {
+            "value": "Hunter Pack",
+            "label": "Hunter Pack",
+            "description": null
+          },
+          {
+            "value": "Martial Artist Pack",
+            "label": "Martial Artist Pack",
+            "description": null
+          },
+          {
+            "value": "Mechanic Pack",
+            "label": "Mechanic Pack",
+            "description": null
+          },
+          {
+            "value": "Parent Pack",
+            "label": "Parent Pack",
+            "description": null
+          },
+          {
+            "value": "Police Pack",
+            "label": "Police Pack",
+            "description": null
+          },
+          {
+            "value": "Riot Control Pack",
+            "label": "Riot Control Pack",
+            "description": null
+          },
+          {
+            "value": "Scientist Pack",
+            "label": "Scientist Pack",
+            "description": null
+          },
+          {
+            "value": "Sniper Pack",
+            "label": "Sniper Pack",
+            "description": null
+          },
+          {
+            "value": "Socialite Pack",
+            "label": "Socialite Pack",
+            "description": null
+          },
+          {
+            "value": "Soldier Pack",
+            "label": "Soldier Pack",
+            "description": null
+          },
+          {
+            "value": "Spy Pack",
+            "label": "Spy Pack",
+            "description": null
+          },
+          {
+            "value": "Street Criminal Pack",
+            "label": "Street Criminal Pack",
+            "description": null
+          },
+          {
+            "value": "Thug Pack",
+            "label": "Thug Pack",
+            "description": null
+          },
+          {
+            "value": "Underworld Pack",
+            "label": "Underworld Pack",
+            "description": null
+          },
+          {
+            "value": "Weekend Warrior Pack",
+            "label": "Weekend Warrior Pack",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "item",
+      "label": "Items",
+      "type": "array",
+      "component": {
+        "name": "item",
+        "label": "Items",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Burglars kit",
+            "label": "Burglars kit",
+            "description": "This set of tools proves useful for breaking into cars and homes with minimal security. A typical kit might include a tough canvas bag, set of lockpicks, crowbar or sturdy screwdriver, slim jim, window-breaking tool, bolt cutters or angle grinder, can of spray paint, mask, and gloves."
+          },
+          {
+            "value": "Camping kit",
+            "label": "Camping kit",
+            "description": "A camping kit is designed to make spending time outdoors comfortable and fun. Typically, everything fits into a frame backpack. Camping kits can contain a flashlight, compact shovel, tent, sleeping bag, camp stove with fuel, hand radio, batteries, GPS unit, camp stool, food, bottled water, binoculars, hand warmers, gloves, change of clothes, soap, and solar charger."
+          },
+          {
+            "value": "Chemistry kit",
+            "label": "Chemistry kit",
+            "description": "Most chemists work in a laboratory, but you can buy mobile chemistry sets designed for a particular kind of work. Typically, these include a set of stable compounds and implements to mix or heat the chemicals. These kits are relatively delicate since they contain glass vials and equipment."
+          },
+          {
+            "value": "Climbers kit",
+            "label": "Climbers kit",
+            "description": "Different surfaces call for different tools, but serious climbing requires certain basics. A typical kit includes a harness, belaying device, pitons, carabiners, anchors, rope, small hammer/pick, chalk and chalk bag, climbing shoes, and helmet.<br />A climber's kit gives advantage on Strength (Athletic) checks when rappelling and to climb natural cliffs or masonry buildings."
+          },
+          {
+            "value": "Demolition kit",
+            "label": "Demolition kit",
+            "description": "This kit contains tools and supplies to set off explosive charges in a safe and controlled manner. It includes detonators, tape, fuses, wire cutters, transmitters, and one or more control boxes.<br />A demolition kit is a required tool for rigging explosives"
+          },
+          {
+            "value": "Disguise kit",
+            "label": "Disguise kit",
+            "description": "This extended collection of makeup goes beyond beauty products, allowing you to create a range of appearances. It is often accompanied by a wardrobe of common clothing styles and uniforms.<br />Having both makeup and costumes offers advantage on Charisma checks made to hide your identity. Both are required for Charisma checks to impersonate another person."
+          },
+          {
+            "value": "Electricians kit",
+            "label": "Electricians kit",
+            "description": "This kit contains tools needed for household wiring as well as repairing electrical appliances and tools.<br />These tools are required for any electrical and electronics hardware work."
+          },
+          {
+            "value": "Evidence kit",
+            "label": "Evidence kit",
+            "description": "Professional detectives carry a collection of supplies useful for preserving and collecting crime scene evidence. It includes luminol, UV light, fingerprint kit, evidence bags and boxes, small flags, tape rule, magnifying glass, utility knife, rubber gloves, Sharpie, crime scene tape, and swabs.<br />An evidence kit gives advantage on Intelligence (Investigation) checks made to find clues in a crime scene."
+          },
+          {
+            "value": "First Aid kit",
+            "label": "First Aid kit",
+            "description": "A first aid kit helps treat injuries and the symptoms of illness at home or in the field. Sizes range from tiny survival kits to large EMT kits. The entry assumes a briefcase-sized kit.<br />A first aid kit is required for some uses of the First Aid action and specific actions from feats, class talents, and professions. Usage calls for an Intelligence (Medicine) or Wisdom (Survival) check."
+          },
+          {
+            "value": "Forgery kit",
+            "label": "Forgery kit",
+            "description": "This collection of stationery supplies and tools alters or creates false documents. A computer and printer are used alongside such tools.<br />These tools are required to make convincing forgeries."
+          },
+          {
+            "value": "Hacking kit",
+            "label": "Hacking kit",
+            "description": "Also known among ethical hackers as a pentest kit, this collection of common hacking tools is designed to penetrate computer security measures. It can contain a variety of devices including sniffers, cloners, ducks, deauthers, microcomputers, and useful cabling. Simple tools like a screwdriver, pliers, and components from an electrician's kit are also commonly included.<br />A hacking kit gives advantage on Intelligence (Computers) or Intelligence (Security) attempts to defeat network security or to steal data from a network."
+          },
+          {
+            "value": "Mechanics kit",
+            "label": "Mechanics kit",
+            "description": "Mechanical builds and repairs require a set of mechanic's tools. It contains a mix of hand tools and power tools.<br />Mechanic's tools are required for construction or making basic mechanical repairs."
+          },
+          {
+            "value": "Police kit",
+            "label": "Police kit",
+            "description": "The police kit contains the items a typical U.S. law enforcement officer might carry with them when on duty outside the station. The centerpiece is a duty belt that holds most of the items. The kit includes uniform, body camera, watch, set of handcuffs, zip ties, two weapon magazines, pepper spray, flashlight, latex gloves, mini-first aid kit, utility knife, and radio."
+          },
+          {
+            "value": "Police cruiser kit",
+            "label": "Police cruiser kit",
+            "description": "Police cruisers contain items police need for special situations or that are too big for officers to routinely carry. A cruiser usually contains two medium ballistic vests, a pump-action shotgun with extra ammunition, large first aid kit, portable defibrillator, bolt cutters, additional ammunition, laptop computer, dashboard camera, siren system, evidence kit, extra batteries, and car stuff."
+          },
+          {
+            "value": "Soldiers kit",
+            "label": "Soldiers kit",
+            "description": "Soldiers carry a lot of equipment when deployed for combat. Exactly what they carry depends on the mission, their role in their unit, and the environment in which they are fighting. This kit offers the essentials, including a frame backpack, combat fatigues, military ID, chemlight, ear and eye protection, multitool, notebook and pen, a woobie (a blanket/poncho), seven magazines of ammunition, night vision goggles, batteries, rations for three days, water, first aid kit, hygiene kit, snacks, and radio (unit leader only)."
+          },
+          {
+            "value": "Surveillance kit",
+            "label": "Surveillance kit",
+            "description": "As technology advances, surveillance grows more pervasive. Cameras and microphones can be hidden nearly anywhere, and computer hacking can access the ever-growing number of smart surveillance devices found in every business and home. A typical surveillance kit includes tiny remote cameras, hidden microphones, trackers, batteries, receivers, and transmitters."
+          },
+          {
+            "value": "Survival kit",
+            "label": "Survival kit",
+            "description": "A survival kit is a set of tools and supplies that help keep you alive when stranded away from civilization. The exact supplies vary based on the environment, but the basics can include a knife, hatchet, fire starter kit, fishing line, fishing hooks, plastic sheeting, water filter device, signaling device, emergency food, signal whistle, flashlight, solar blanket, fresh batteries, 50 feet of cord, minimal first aid kit, reusable water bottle, and compass.<br />Having a survival kit gives you advantage on Wisdom (Survival) checks where these supplies are useful."
+          },
+          {
+            "value": "Welders kit",
+            "label": "Welders kit",
+            "description": "A welder's kit is necessary to safely weld metal together but can be used to cut it as well. There are two standard types: gas torch and electrical. The electrical systems must be plugged in but are simpler to use. A typical kit includes a welding device, wire, safety gloves and glasses, and wire brush.<br />A welder's kit is required for any task involving welding."
+          },
+          {
+            "value": "Combat Harness",
+            "label": "Combat Harness",
+            "description": "A combat harness is composed of belts and straps with pockets and attachment points to carry weapons, ammunition, and other useful combat gear. It can carry 4 bulk beyond your usual bulk limit while keeping your hands free. In addition, items in the harness can be accessed normally (one free pull per round)."
+          },
+          {
+            "value": "Duffle Bag",
+            "label": "Duffle Bag",
+            "description": "This large and sturdy canvas bag allows you to carry up to 8 bulk worth of stuff in one hand. This doesn't negate encumbrance, but it can let you carry lots of different things in one hand when you are Encumbered."
+          },
+          {
+            "value": "Frame Backpack",
+            "label": "Frame Backpack",
+            "description": "This large backpack can carry 5 bulk beyond your normal bulk limit while keeping your hands free. This does not help you avoid encumbrance, but it does make it possible to carry more stuff."
+          },
+          {
+            "value": "Rolling Suitcase",
+            "label": "Rolling Suitcase",
+            "description": "This nice hard-body suitcase has wheels and a long telescoping handle. It's great for trips abroad, and also useful for lugging equipment around. It can carry up to 5 bulk that does not count against your encumbrance as long as you're wheeling it around instead of carrying it. If you cross difficult terrain, you must pick it up. It always requires the use of one of your hands."
+          },
+          {
+            "value": "Alarm System",
+            "label": "Alarm System",
+            "description": "This electronic alarm system consists of a series of sensors and a central alarm mechanism. The alarm can be a silent signal sent to a monitor or an audible or visual alarm. Many types of sensors can be used including motion sensors, light sensors, sound sensors, or contact sensors."
+          },
+          {
+            "value": "Cloner",
+            "label": "Cloner",
+            "description": "A cloner is paired with a sniffer to receive and then mimic a wireless signal, usually from a wireless key or similar device."
+          },
+          {
+            "value": "Deauther",
+            "label": "Deauther",
+            "description": "This device can identify a user on a computer network and deauthorize them. This forces the user to re-enter their network credentials so they can then be stolen."
+          },
+          {
+            "value": "Desktop Computer",
+            "label": "Desktop Computer",
+            "description": "Desktop computer systems come in a wide range of sizes and performance capabilities. Every year, personal computers become more powerful and more versatile."
+          },
+          {
+            "value": "Drone",
+            "label": "Drone",
+            "description": "Flying drones have become popular tools and toys. They are remote controlled but can be programmed for various tasks and fitted with a range of tools. A camera is a standard piece of equipment on most drones. A Use Device action is required to control a drone during combat. (Detailed stats for drones can be found in chapter 15.)"
+          },
+          {
+            "value": "Duck",
+            "label": "Duck",
+            "description": "Ducks are USB devices that act as a virtual keyboard. When inserted into a target computer, they can be programmed to execute keyboard commands or allow a hacker to remotely control the computer."
+          },
+          {
+            "value": "Earpiece",
+            "label": "Earpiece",
+            "description": "This piece of covert gear consists of a hidden earpiece and a hidden microphone, both of which connect wirelessly to a cell phone or other hidden transmitter-receiver. This allows the wearer to secretly communicate with others. Battery life tends to be about 1 hour of active use.<br />A DC 20 Wisdom (Perception) check can detect such a device in use by seeing it, overhearing it being used, or observing the behavior of the person using it."
+          },
+          {
+            "value": "Faraday pouch",
+            "label": "Faraday pouch",
+            "description": "By placing an electronic device inside of a Faraday pouch, you can block it from sending or receiving wireless signals. It prevents unwanted snooping or hacking on the device."
+          },
+          {
+            "value": "Laptop computer",
+            "label": "Laptop computer",
+            "description": "Laptop computers can range in size from small tablets to large folding computers. While their power varies, most can perform the same functions as larger desktop machines and have a battery to allow for remote operation."
+          },
+          {
+            "value": "Microcomputer",
+            "label": "Microcomputer",
+            "description": "Microcomputers are small computer chips used by hobbyists and manufacturers to make small electronic “smart” devices. Though inexpensive, they require programming and electronics knowledge to use."
+          },
+          {
+            "value": "Robot",
+            "label": "Robot",
+            "description": "Robots come in many shapes and sizes, but this entry represents the future of multi-function robotics. Such robots can be programmed for simple interactions but their capabilities are rapidly advancing. (Statistics for consumer robots can be found in chapter 15.)"
+          },
+          {
+            "value": "Smartphone",
+            "label": "Smartphone",
+            "description": "The smartphone is a revolutionary tool that takes professional photos, allows for wireless global communication, has access to nearly all the world's accumulated knowledge through the internet, and even makes for a good flashlight. 'There's an app for that' is pretty much a truism."
+          },
+          {
+            "value": "Smart watch",
+            "label": "Smart watch",
+            "description": "These devices are computerized watches that include a digital display and are capable of running software and wireless connectivity. Most use an IR sensor and accelerometer to measure exercise, heart rate, and other vital health statistics."
+          },
+          {
+            "value": "Sniffer",
+            "label": "Sniffer",
+            "description": "A sniffer is a hacking tool designed to pick up and decode network traffic. Wireless sniffers decode wireless signals while wired sniffers plug physically into a network. What a sniffer can do depends on the security of the network it is sniffing."
+          },
+          {
+            "value": "Toy robot",
+            "label": "Toy robot",
+            "description": "A toy robot is a simple robot designed for amusement and play. Their programming is limited to simple responses to simple commands, or to accomplish a well-defined task. Robot vacuum cleaners and other simple consumer robots also fall into this category."
+          },
+          {
+            "value": "Crowbar",
+            "label": "Crowbar",
+            "description": "A crowbar is designed to give you leverage when pulling things apart. You can also use it as a weapon if you need to, equivalent to a large metal club. Using a crowbar grants advantage on Strength checks made to move a heavy object, break something, or to open doors, windows, or containers."
+          },
+          {
+            "value": "Duct tape",
+            "label": "Duct tape",
+            "description": "Duct tape is a tough, single-sided fabric tape widely renowned for its toughness and versatility. It is especially popular for making quick repairs to broken objects. When used as a restraint, it requires a DC 20 ability check to escape from, typically Dexterity (Sleight of Hand) or Strength (Athletics)."
+          },
+          {
+            "value": "Ear protection",
+            "label": "Ear protection",
+            "description": "This can take the form of earplugs or headphones designed to block loud noises from damaging your hearing. They offer advantage on Constitution saving throws against being Deafened."
+          },
+          {
+            "value": "Fire suit",
+            "label": "Fire suit",
+            "description": "A fire suit covers the entire body, protecting the wearer from heat and flames. A fire suit grants the wearer damage reduction 10 against fire."
+          },
+          {
+            "value": "Flashlight",
+            "label": "Flashlight",
+            "description": "Flashlights and headlamps project light in front of you up to 60 feet. This negates the penalties for low light and darkness within reach of the device but makes the user visible up to a mile away in clear terrain."
+          },
+          {
+            "value": "Gas mask",
+            "label": "Gas mask",
+            "description": "A gas mask, when properly worn, protects the wearer from inhaled poisonous gases and airborne chemical irritants targeting the nose, eyes, or mouth."
+          },
+          {
+            "value": "Hazmat suit",
+            "label": "Hazmat suit",
+            "description": "Hazmat suits offer full body protection against a range or chemical and biological hazards. They include full face protection, full body protection, and air filtration. Different suits protect against different types of hazards."
+          },
+          {
+            "value": "Safety goggles",
+            "label": "Safety goggles",
+            "description": "Safety goggles are designed to protect your eyes from irritants or small objects. They render you largely immune from pepper spray or similar blinding chemical attacks."
+          },
+          {
+            "value": "Multitool",
+            "label": "Multitool",
+            "description": "This pocket-sized, foldable knife includes a range of other handy tools incorporated into the design. They can deal with a number of simple jobs. They are not intended for fighting but could be used as a weapon in a pinch."
+          },
+          {
+            "value": "Zip ties",
+            "label": "Zip ties",
+            "description": "In addition to organizing cables and the like, these ties can be used as improvised restraints. A DC 20 Strength check can break them. A DC 20 Dexterity (Sleight of Hand) check allows escape. They can also easily be cut with any bladed instrument."
+          },
+          {
+            "value": "Caltrops",
+            "label": "Caltrops",
+            "description": "Caltrops are tiny metal objects which, when thrown on the ground, always have an upward facing spike. They can impede people, animals, and soft-tire vehicles when strewn on the ground in the path of travel. They are detailed under “Traps” in chapter 10."
+          },
+          {
+            "value": "Handcuffs",
+            "label": "Handcuffs",
+            "description": "Typical law enforcement handcuffs are difficult to break free from when properly applied. A DC 30 Strength check can break them. A DC 25 Dexterity (Sleight of hand) check allows escape. Finally, they can be picked with a DC 20 Intelligence (Security) check, though this check has disadvantage if they are behind your back. You can buy escape keys that open most handcuffs."
+          },
+          {
+            "value": "Lockpicks",
+            "label": "Lockpicks",
+            "description": "A set of lockpicks includes a number of tools useful for picking locks. The two essentials are a tension bar and a pick which, when used together, can open most locks. Lockpicks are necessary to pick locks, but you can improvise a pick using stiff wire."
+          },
+          {
+            "value": "Slim Jim",
+            "label": "Slim Jim",
+            "description": "A slim jim is a thin piece of metal about two to three feet long with a small hook on one end. It can slip into a car door to switch the lock open. It works only on older cars, or inexpensive cars without power locks and shielded locking mechanisms. With such cars, it offers advantage on Intelligence or Dexterity (Security) checks made to open them."
+          },
+          {
+            "value": "Binoculars",
+            "label": "Binoculars",
+            "description": "Binoculars help you see farther than you otherwise could, though with a narrower field of view. They come in a wide range of magnifications and sizes. Typically, the GM will assign a higher DC to spot people or objects at a great distance. Binoculars reduce that DC."
+          },
+          {
+            "value": "Camouflage clothing",
+            "label": "Camouflage clothing",
+            "description": "Hunters and combatants often wear clothing and use equipment with a camouflage pattern. Each pattern is specific to a given environment. Anyone trying to spot someone or something that is camouflaged for the given environment has disadvantage on their Wisdom (Perception) check."
+          },
+          {
+            "value": "Diver propulsion vehicle",
+            "label": "Diver propulsion vehicle",
+            "description": "Known as a DPV, this device consists of a waterproof housing for a battery and propeller that you hold on to while diving to provide you with propulsion. This both increases your speed and stamina while diving allowing for longer dives. Use of a DPV increases dive times by 50 percent and allows for normal movement underwater."
+          },
+          {
+            "value": "Ghillie suit",
+            "label": "Ghillie suit",
+            "description": "A ghillie suit covers the entire body in a mesh designed with camouflage patterns and material simulating the texture of the targeted environment. In addition to the effect of regular camouflage, anyone wearing a ghillie suit has advantage on Dexterity (Stealth) checks to hide in the matching environment."
+          },
+          {
+            "value": "Ice skates",
+            "label": "Ice skates",
+            "description": "Ice skates are essential for moving quickly on ice. A hero wearing ice skates and who is proficient in either Athletics or Acrobatics can treat ice as normal terrain. Anyone wearing ice skates treats all other terrain as difficult terrain."
+          },
+          {
+            "value": "Metal detector",
+            "label": "Metal detector",
+            "description": "This tool finds metal objects using a magnetic field generator and sensor. It works only in places that don't otherwise contain metal objects. It offers advantage on Wisdom (Perception) checks to locate metal objects in a given location."
+          },
+          {
+            "value": "Night vision device",
+            "label": "Night vision device",
+            "description": "These devices date back to WWII and allow the wearer to see reasonably well in low light conditions. Night vision scopes allow you to ignore the combat penalties from low light and darkness. Night vision goggles remove all penalties from low light and darkness."
+          },
+          {
+            "value": "Parachute",
+            "label": "Parachute",
+            "description": "If you plan to jump out of an airplane, you need one of these. They take some training to use correctly. Controlled descent requires a DC 13 Dexterity (Acrobatics) or Dexterity (Vehicles) check. A parachute, when used correctly, prevents all falling damage."
+          },
+          {
+            "value": "Periscope",
+            "label": "Periscope",
+            "description": "A periscope allows you to see around a corner, over a wall, and so forth using either optical mirrors or a digital camera. Using a periscope offers advantage on Dexterity (Stealth) checks made while spying."
+          },
+          {
+            "value": "Roller skates",
+            "label": "Roller skates",
+            "description": "Whether four-wheeled skates or inline roller blades, these devices move fast on hard and flat terrain. A hero wearing roller skates and proficient in either Athletics or Acrobatics increases their movement speed by 10 feet when on hard, flat terrain. All other terrain is considered difficult terrain while wearing roller skates. They do not afford bonus movement."
+          },
+          {
+            "value": "Rope, 50 feet",
+            "label": "Rope, 50 feet",
+            "description": ""
+          },
+          {
+            "value": "Scuba gear",
+            "label": "Scuba gear",
+            "description": "Scuba gear allows you to breathe underwater using an oxygen tank. Typical gear allows you about one hour of dive time. Scuba gear may include a dry or wetsuit for colder water and includes swim fins."
+          },
+          {
+            "value": "Skateboard",
+            "label": "Skateboard",
+            "description": "Skateboards allow their riders to move quickly and perform fun tricks in an urban environment. Heroes using a skateboard who are proficient in either Athletics or Acrobatics can increase their movement speed by 10 feet on flat and hard surfaces. Unlike skates, heroes can quickly switch to foot in other terrain provided they have a hand free to carry the board."
+          },
+          {
+            "value": "Swim fins",
+            "label": "Swim fins",
+            "description": "Swim fins attach to your feet, giving you greater traction in the water. Wearing fins grants advantage on Strength (Athletics) checks made to swim."
+          },
+          {
+            "value": "Swim goggles",
+            "label": "Swim goggles",
+            "description": "Swim goggles protect your eyes from irritants in water, allowing you unimpaired vision in clear water. Swim goggles negate disadvantage to Wisdom (Perception) checks made to see underwater."
+          },
+          {
+            "value": "Trap camera",
+            "label": "Trap camera",
+            "description": "A trap camera combines a motion sensor and a digital camera. When the sensor is tripped, the camera takes a series of pictures. The pictures are stored in the camera and can be wirelessly transmitted to a nearby device."
+          },
+          {
+            "value": "Trap, shell",
+            "label": "Trap, shell",
+            "description": "A shell trap is a small metal frame designed to fire a shotshell using a simple spring action firing pin. The shell trap is attached to something, the shell placed inside, the spring set, and a string or wire is rigged to set off the trap, firing the shell. As there is no barrel, the range is short. It can be used as an alarm with blank shells."
+          },
+          {
+            "value": "Trap, steel jaw",
+            "label": "Trap, steel jaw",
+            "description": "Steel jaw traps, often called bear traps, consist of spring-powered steel teeth that snap shut when the trigger in the center of the trap is pressed or pulled. The jaws are meant to hold an animal's arm or leg in the trap as well as to wound the animal."
+          },
+          {
+            "value": "Winter clothing",
+            "label": "Winter clothing",
+            "description": "When operating in extreme cold, it's critical to have cold winter clothing and bedding. Winter clothing provides the wearer damage reduction 10 against cold."
+          }
+        ]
+      }
+    },
+    {
+      "name": "weapon",
+      "label": "Weapons",
+      "type": "array",
+      "component": {
+        "name": "weapon",
+        "label": "Weapons",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Unarmed Strike",
+            "label": "Unarmed Strike",
+            "description": "Unarmed strikes are most commonly punches, but they include any move that has the potential to deliver a punishing blow whether via kicks, headbutts, knees to the groin, or elbows to the face. It's one of the few attacks you don't need a hand to perform and you are always armed with it."
+          },
+          {
+            "value": "Club, small metal",
+            "label": "Club, small metal",
+            "description": "When all else fails, there is always a trusty club at hand. From a carefully crafted police baton to an awkward but effective pipe wrench, clubs come in varying shapes and sizes."
+          },
+          {
+            "value": "Club, small wooden",
+            "label": "Club, small wooden",
+            "description": "When all else fails, there is always a trusty club at hand. From a carefully crafted police baton to an awkward but effective pipe wrench, clubs come in varying shapes and sizes."
+          },
+          {
+            "value": "Club, large metal",
+            "label": "Club, large metal",
+            "description": "When all else fails, there is always a trusty club at hand. From a carefully crafted police baton to an awkward but effective pipe wrench, clubs come in varying shapes and sizes."
+          },
+          {
+            "value": "Club, large wooden",
+            "label": "Club, large wooden",
+            "description": "When all else fails, there is always a trusty club at hand. From a carefully crafted police baton to an awkward but effective pipe wrench, clubs come in varying shapes and sizes."
+          },
+          {
+            "value": "Dagger",
+            "label": "Dagger",
+            "description": "Daggers are designed for stabbing rather than cutting and feature thin blades that puncture through or slip around armor. They can also be thrown with excellent accuracy."
+          },
+          {
+            "value": "Knife, small",
+            "label": "Knife, small",
+            "description": "This entry represents knives suitable for fighting, with a good sturdy handle and a strong blade. Smaller utility knives and utensils are considered improvised weapons if used in a fight."
+          },
+          {
+            "value": "Knife, large",
+            "label": "Knife, large",
+            "description": "This entry represents knives suitable for fighting, with a good sturdy handle and a strong blade. Smaller utility knives and utensils are considered improvised weapons if used in a fight."
+          },
+          {
+            "value": "Stun Gun",
+            "label": "Stun Gun",
+            "description": "Not a true gun, a stun gun is a handheld device that delivers a strong electric shock when it touches a person. Stun guns work only against exposed skin or through thin clothing."
+          },
+          {
+            "value": "Crossbow, modern",
+            "label": "Crossbow, modern",
+            "description": "These hunting weapons remain popular in the modern era. Modern crossbows are smaller and easier to load than their ancient counterparts, firing smaller projectiles with less force at higher speeds."
+          },
+          {
+            "value": "Pepper Spray",
+            "label": "Pepper Spray",
+            "description": "This chemical poison spray in an aerosol canister must be sprayed into an opponent's face to have an effect, but a direct hit can take the fight out of someone. Opponents with eye protection won't enjoy it but are immune to its effects."
+          },
+          {
+            "value": "Pistol, heavy revolver",
+            "label": "Pistol, heavy revolver",
+            "description": "This type of pistol 'won the West.' It was the standard army sidearm of the Civil War and post-Civil War period. Today, these revolvers are popular sporting pistols and collectibles."
+          },
+          {
+            "value": "Pistol, pocket .38",
+            "label": "Pistol, pocket .38",
+            "description": "These small .38 revolvers can be carried in a jacket pocket. They are designed with smooth lines so they can be pulled out quickly with no snags. Due to a snub nose barrel, they are not accurate, but they do pack a punch."
+          },
+          {
+            "value": "Rifle, hunting",
+            "label": "Rifle, hunting",
+            "description": "A huge variety of rifles have been designed for hunting. Range and accuracy are more important than ammunition capacity or reloading speed. For this reason, most are bolt-action weapons. They are dangerous firearms in the hands of a skilled sharpshooter."
+          },
+          {
+            "value": "Slingshot",
+            "label": "Slingshot",
+            "description": "Modern slingshots use a rubber strap on a metal frame strapped to the wrist. When used with a sling bullet, it's a deadly weapon against small pest animals."
+          },
+          {
+            "value": "Shotgun, double-barrel",
+            "label": "Shotgun, double-barrel",
+            "description": "Shotguns are produced as long-barrel hunting guns, but short-barreled versions are employed as self-defense weapons. The barrels can be fired separately or together. Like most shotguns, they are deadly at short ranges and one of the most versatile and reliable firearms ever devised."
+          },
+          {
+            "value": "Brass Knuckles",
+            "label": "Brass Knuckles",
+            "description": "This entry covers a range of implements you can use to protect your fists while delivering heavier blows. Brass knuckles do more damage than an unarmed strike."
+          },
+          {
+            "value": "Fire Axe",
+            "label": "Fire Axe",
+            "description": "The trusty fire axe is a versatile implement, meant to save lives rather than take them. Any woodcutting axe can be covered by this entry."
+          },
+          {
+            "value": "Hatchet",
+            "label": "Hatchet",
+            "description": "Hatchets are excellent tools to have in the wilderness, and as a weapon it is useful both up close and at short range."
+          },
+          {
+            "value": "Sledgehammer",
+            "label": "Sledgehammer",
+            "description": "In reality a sledgehammer makes for an unwieldy weapon, but if you have the strength, it can put the hurt on your opponents and bypasses conventional armor, brick walls, and other obstacles."
+          },
+          {
+            "value": "Bow, modern compound",
+            "label": "Bow, modern compound",
+            "description": "Modern bows for hunting or sport are more compact than their ancient counterparts, but they pack as much or greater power. Hunting arrows use bladed tips, while target arrows are pointed."
+          },
+          {
+            "value": "Harpoon Gun",
+            "label": "Harpoon Gun",
+            "description": "This weapon is designed to be fired underwater. The range is short, but the harpoons are designed to minimize resistance and deliver a fatal wound to sea creatures."
+          },
+          {
+            "value": "Pistol, 9mm semi-auto",
+            "label": "Pistol, 9mm semi-auto",
+            "description": "These standard sidearms are used by the armed forces and police and exceedingly popular on the civilian market. They balance stopping power with ammunition capacity and use inexpensive cartridges."
+          },
+          {
+            "value": "Pistol, concealed carry",
+            "label": "Pistol, concealed carry",
+            "description": "These compact versions of the standard 9mm pistol are used by undercover police and civilians who want to be armed but keep a low profile. They are typically carried in a concealed holster and chambered for 9mm rounds."
+          },
+          {
+            "value": "Pistol, hand cannon",
+            "label": "Pistol, hand cannon",
+            "description": "Heavy pistols fire large caliber rounds such as .50s and .45 magnums. While they have considerable stopping power and penetration, they are difficult to handle and have limited ammunition capacity."
+          },
+          {
+            "value": "Pistol, holdout",
+            "label": "Pistol, holdout",
+            "description": "These small firearms are designed to be concealed nearly anywhere. They have one or two shots and are breech loaded. Larger models can have two shots."
+          },
+          {
+            "value": "Rifle, sniper",
+            "label": "Rifle, sniper",
+            "description": "Sniper rifles are designed for accuracy and penetrating power at long range. They fire high-caliber, armor-piercing rounds and use high-magnification scopes to assist in aiming. While it is possible to fire a sniper rifle while standing, most prefer to fire from a braced position for better accuracy."
+          },
+          {
+            "value": "Rifle, tactical",
+            "label": "Rifle, tactical",
+            "description": "The tactical rifle is the civilian equivalent of the military assault rifle, but without fully automatic fire. In the civilian world, they are used as a self-defense weapon, though there is intense debate as to whether they are appropriate for civilian use."
+          },
+          {
+            "value": "Rifle, tranquilizer",
+            "label": "Rifle, tranquilizer",
+            "description": "This air rifle is specially designed to fire a hypodermic dart intended to tranquilize an animal. Each dart must be prepared with enough tranquilizer for the animal's weight and metabolism to bring them down, but not permanently harm them. They have a short range due to the large and delicate projectile they fire. (See “Poison” in chapter 12 for details.)"
+          },
+          {
+            "value": "Shotgun, pump-action",
+            "label": "Shotgun, pump-action",
+            "description": "Pump-action shotguns offer high reliability and a good number of shots from their internal magazines. Individual cartridges can be quickly loaded. Hunters use this feature to load different cartridges depending on the intended target and range. Police and military sometimes use shotguns for clearing buildings."
+          },
+          {
+            "value": "Taser",
+            "label": "Taser",
+            "description": "These nonlethal guns fire small metal darts connected by thin wires to the device. Once embedded, these darts deliver a strong electric shock intended to stun the target for a short time. TASER is a trademark held by the company that makes these devices rather than a generic term."
+          },
+          {
+            "value": "Grenade, flare",
+            "label": "Grenade, flare",
+            "description": "Flare grenades are used at night to provide illumination on targets or to light up a landing area for a helicopter or the like."
+          },
+          {
+            "value": "Grenade, smoke",
+            "label": "Grenade, smoke",
+            "description": "These grenades create a cloud of smoke in a 15-foot radius, useful both as a signaling device for aircraft and to reduce enemy sight. The area covered by the smoke has no visibility. The smoke lasts for 1 minute. Strong winds can blow the smoke in the direction of the wind, reducing the duration by half."
+          },
+          {
+            "value": "Boomerang",
+            "label": "Boomerang",
+            "description": "These unique wooden throwing weapons originated with Aboriginal Australians. They are used to hunt small game, but they can deliver a telling blow. Boomerangs that return when thrown are more useful for recreation than hunting."
+          },
+          {
+            "value": "Javelin",
+            "label": "Javelin",
+            "description": "These thin shafts about two to four feet in length have a sharp metal tip designed for throwing at long distances."
+          },
+          {
+            "value": "Net",
+            "label": "Net",
+            "description": "A net can be used against Small, Medium, or Large targets. A successful attack does not cause damage, but the target is Restrained. The target can free itself by making a successful DC 10 Strength check as an action or by dealing 15 points of slashing damage to the net."
+          },
+          {
+            "value": "Nunchucks",
+            "label": "Nunchucks",
+            "description": "These are made by linking two short wooden rods with a short chain or rope. They are associated with traditional Eastern martial arts."
+          },
+          {
+            "value": "Poignard",
+            "label": "Poignard",
+            "description": "A poignard is a long steel dagger meant for stabbing and parrying, popular in the Renaissance period but first documented in the Middle Ages."
+          },
+          {
+            "value": "Quarterstaff",
+            "label": "Quarterstaff",
+            "description": "A smooth wooden stick about 5 feet long, the quarterstaff is both an effective, easy-to-use weapon and a practical walking stick."
+          },
+          {
+            "value": "Rapier",
+            "label": "Rapier",
+            "description": "These thin-bladed swords are popular with fencers and Renaissance fair actors. Among the range of fencing swords, the rapier is one of the heavier options."
+          },
+          {
+            "value": "Shuriken",
+            "label": "Shuriken",
+            "description": "These small, sharpened bits of metal are easy to throw but rarely deliver a fatal wound. Traditionally they were used as a distraction or poisoned to facilitate an assassination."
+          },
+          {
+            "value": "Spear",
+            "label": "Spear",
+            "description": "Among the most versatile weapons, spears are cheap, light, can be thrown, and have the advantage of reach in comparison to other melee weapons."
+          },
+          {
+            "value": "Sword",
+            "label": "Sword",
+            "description": "This entry represents a typical fantasy longsword, cavalry saber, or katana. It's a one-handed blade, but it can be used two-handed for additional speed and power."
+          },
+          {
+            "value": "Sword cane",
+            "label": "Sword cane",
+            "description": "This thin blade disguised as a walking stick isn't especially durable or well balanced, but it is dangerous in the right hands and difficult to detect."
+          },
+          {
+            "value": "Sword, two-handed",
+            "label": "Sword, two-handed",
+            "description": "These large, two-handed blades are potentially devastating but rarely carried in modern times. Nothing attracts unwanted attention like wandering around with a greatsword strapped to your back."
+          },
+          {
+            "value": "Whip",
+            "label": "Whip",
+            "description": "What robber of ancient tombs would be complete without a cracking bullwhip? It's employed more often as a tool for ranchers to intimidate livestock, but in a pinch it could be used as a weapon."
+          },
+          {
+            "value": "Blowgun",
+            "label": "Blowgun",
+            "description": "Blowguns consist of a hollow tube fitted with small, feathered darts. When the user blows into the tube, it propels the dart toward the target. With their short range they are mainly used to deliver poisoned darts, since otherwise they are little more than a painful nuisance."
+          },
+          {
+            "value": "Crossbow",
+            "label": "Crossbow",
+            "description": "Archaic crossbows are easy weapons to use: you load, point, and shoot. They can range from massive siege weapons to tiny toys; the statistics represent an average-sized crossbow."
+          },
+          {
+            "value": "Crossbow, hand",
+            "label": "Crossbow, hand",
+            "description": "Scholars debate whether these items were toys or weapons. They don't have much power but can be loaded quickly and fired in one hand. If used with a poison bolt they might pose a danger, but they're otherwise too slow to be a significant threat."
+          },
+          {
+            "value": "Longbow",
+            "label": "Longbow",
+            "description": "Before rifles, the longbow was the terror of the battlefield. These large ancient bows can fire arrows over huge distances and with startling accuracy in the hands of a skilled archer."
+          },
+          {
+            "value": "Chainsaw",
+            "label": "Chainsaw",
+            "description": "Chainsaws are not intended for hand-to-hand combat, but few tools are more intimidating when used as melee weapons. A favorite of deranged killers and aggrieved foresters, they make short work of doors, tables, and other obstacles."
+          },
+          {
+            "value": "Object, breakable",
+            "label": "Object, breakable",
+            "description": "This category of objects, when adjacent to you and your opponent, hurt to smash into but will break or give way under the assault. Examples include a bathroom stall, a mirror, a window, a bookshelf, or a big screen TV."
+          },
+          {
+            "value": "Object, unbreakable",
+            "label": "Object, unbreakable",
+            "description": "This category of objects, when adjacent to you and your opponent, hurt to smash into and probably won't break. Examples include a marble countertop, a steel railing, a brick wall, or a flagpole."
+          },
+          {
+            "value": "Object, scary-dangerous",
+            "label": "Object, scary-dangerous",
+            "description": "This category of objects, when adjacent to you and your opponent, have brutal effects when you smash someone into them. Examples include a mass of sharp spikes, the whirling blades of a woodchipper, a boat propeller, and similar delights."
+          },
+          {
+            "value": "Salon Flamer",
+            "label": "Salon Flamer",
+            "description": "The salon flamer consists of a lighter and a can of hairspray or other propellant. You hold the lighter in front of the spray and blast people with fire. It's not tremendously effective, but it can be intimidating. You can also apply this entry to a blowtorch or similar tool used as a weapon."
+          },
+          {
+            "value": "Thing, tiny ouchie",
+            "label": "Thing, tiny ouchie",
+            "description": "Things are objects you pick up and turn into weapons. You and the GM decide on the size and if it deals bludgeoning, piercing, or slashing damage. None of these things are fun to get hit with!"
+          },
+          {
+            "value": "Thing, small painful",
+            "label": "Thing, small painful",
+            "description": "Things are objects you pick up and turn into weapons. You and the GM decide on the size and if it deals bludgeoning, piercing, or slashing damage. None of these things are fun to get hit with!"
+          },
+          {
+            "value": "Thing, medium hurtful",
+            "label": "Thing, medium hurtful",
+            "description": "Things are objects you pick up and turn into weapons. You and the GM decide on the size and if it deals bludgeoning, piercing, or slashing damage. None of these things are fun to get hit with!"
+          },
+          {
+            "value": "Thing, large agonizing",
+            "label": "Thing, large agonizing",
+            "description": "Things are objects you pick up and turn into weapons. You and the GM decide on the size and if it deals bludgeoning, piercing, or slashing damage. None of these things are fun to get hit with!"
+          },
+          {
+            "value": "Molotov Cocktail",
+            "label": "Molotov Cocktail",
+            "description": "A Molotov cocktail is a bottle of highly flammable liquid with a cloth wick. When lit and thrown, it is designed to break on a hard surface and ignite surrounding material.<br />Like other grenades, it is thrown at a location rather than a combatant. Any flammable material in the area of effect gains the Burning condition, including combatants who fail their Dexterity saving throw against explosives and did not successfully dive for cover."
+          },
+          {
+            "value": "TNT Stick",
+            "label": "TNT Stick",
+            "description": "TNT is dangerous, but more to those trying to throw it than those having it thrown at them. It's not designed for anti-personnel use and the actual blast is dangerous only at close ranges."
+          },
+          {
+            "value": "Grenade Launcher",
+            "label": "Grenade Launcher",
+            "description": "Grenade launchers are often attached to an assault rifle, but standalone launchers exist. They fire a large grenade cartridge at greater ranges than they could be thrown. Launched grenades are designed to explode on impact rather than based on a timer."
+          },
+          {
+            "value": "Machine Gun, light",
+            "label": "Machine Gun, light",
+            "description": "Machine guns are strictly military weapons designed to create fire superiority and provide covering fire for troops. They are fed by an ammunition belt, though light machine guns may use magazines rather than belts and fire the same ammunition as assault rifles.<br />Machine guns can be used to make a normal attack."
+          },
+          {
+            "value": "Machine Gun, medium",
+            "label": "Machine Gun, medium",
+            "description": "Medium machine guns use larger caliber rounds than their light counterparts and are too heavy to be fired without being mount or braced on the ground. They are always belt-fed and their primary mission is to provide covering fire on enemy positions or to threaten light vehicles.<br />Machine guns can be used to make a normal attack."
+          },
+          {
+            "value": "Machine Gun, heavy",
+            "label": "Machine Gun, heavy",
+            "description": "An individual soldier can barely carry this massive gun, so they're usually mounted onto a vehicle or defensive position. These weapons can shred light vehicles and fortifications as well as infantry.<br />Machine guns can be used to makea normal attack."
+          },
+          {
+            "value": "Rifle, anti-material",
+            "label": "Rifle, anti-material",
+            "description": "Similar to sniper rifles, these rifles are intended for taking out military equipment rather than people. Their powerful armor-piercing rounds can rip through concrete walls and crack an engine block from more than a mile away."
+          },
+          {
+            "value": "Rifle, assault",
+            "label": "Rifle, assault",
+            "description": "The AK-47 is a Cold War era design from the USSR. It is the most common gun on Earth with more than 150 million in circulation. While not as accurate as the M-16, it is legendary for its simplicity and reliability. Most of those sold today are copycat guns using the same design."
+          },
+          {
+            "value": "Rifle, assault carbine",
+            "label": "Rifle, assault carbine",
+            "description": "Assault carbine rifles are a military classification for fully automatic combat rifles that strike a balance between accuracy at range, automatic fire, ammunition capacity, weight, and reliability. Most combat troops carry them into battle in the modern era. The M4 Carbine is the U.S. standard combat weapon, replacing the M-16. The two designs are similar but the M4 is a shorter and lighter configuration."
+          },
+          {
+            "value": "Rocket Launcher",
+            "label": "Rocket Launcher",
+            "description": "Rocket launchers are single-use anti-tank or anti-air weapons, primarily designed for use against vehicles or fortified positions. Among the multiple types of rockets, the most common are armor-piercing rockets for use against tanks."
+          },
+          {
+            "value": "SMG",
+            "label": "SMG",
+            "description": "Submachine guns are fully automatic, short-barreled firearms designed for relatively short ranges. They offer considerable stopping power for a small weapon but are not effective against military body armor. The MAC 10 is a famous SMG that packs serious firepower but with questionable accuracy. It was designed for use with an attached suppressor that acted as a forward grip."
+          },
+          {
+            "value": "SMG, spec-ops",
+            "label": "SMG, spec-ops",
+            "description": "This class of submachine guns was designed for use by support personnel to counter armored paratroopers from the Soviet Union. While they were never used for that purpose, they became popular for special forces units that want a small armor penetrating, fully automatic weapon."
+          },
+          {
+            "value": "C4 plastic explosive",
+            "label": "C4 plastic explosive",
+            "description": "C4 is used as a demolition charge and delivers an incredibly fast and damaging explosion. For anti-personnel purposes, it needs to be combined with shrapnel to increase its lethal range."
+          },
+          {
+            "value": "Grenade, flashbang",
+            "label": "Grenade, flashbang",
+            "description": "Flashbangs are incredibly useful tactical weapons. They both stun and deafen enemies for a short time, creating the perfect opportunity for an assault or to force a surrender. Targets make one saving throw to resist both effects."
+          },
+          {
+            "value": "Grenade, fragmentation",
+            "label": "Grenade, fragmentation",
+            "description": "Frag grenades are the standard anti-personnel grenade used by militaries the world over. They are lethal and cheap to make. The biggest limitation on grenades is their short range, which explains the creation of grenade launchers."
+          },
+          {
+            "value": "Grenade, incendiary",
+            "label": "Grenade, incendiary",
+            "description": "Incendiary grenades are intended to set equipment and structures on fire. They are not useful directly against personnel in combat since they are easily avoided and do not explode. They burn at incredibly high temperatures, enough to melt through thick steel and ignite nearly any combustible material. It takes 1 round per AV of the target material to burn through and ignite."
+          },
+          {
+            "value": "Mine, blast",
+            "label": "Mine, blast",
+            "description": "Blast mines are the scourge of the battlefield, designed more to maim than kill. They are especially horrifying weapons of war because they remain dangerous long after the battles have ended."
+          },
+          {
+            "value": "Mine, fragmentation",
+            "label": "Mine, fragmentation",
+            "description": "These mines are designed to eject a small fragmentation grenade that sprays shrapnel in a wide swath. They are far more lethal than blasting mines, but more expensive and prone to misfires."
+          },
+          {
+            "value": "Rocket, anti-tank",
+            "label": "Rocket, anti-tank",
+            "description": "Anti-tank rockets employ a number of tricks to defeat armor and other defensive measures. One of the most effective is a Russian rocket that fires two rockets in tandem: the first defeats countermeasures while the second goes for the kill."
+          }
+        ]
+      }
+    },
+    {
+      "name": "vehicle",
+      "label": "Vehicles",
+      "type": "array",
+      "component": {
+        "name": "vehicle",
+        "label": "Vehicles",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "4WD vehicle",
+            "label": "4WD vehicle",
+            "description": "Four-wheel drive vehicles come in various shapes and sizes but are similar in that they offer high torque, high clearance, and the ability to go off-road."
+          },
+          {
+            "value": "Common car",
+            "label": "Common car",
+            "description": "Representing most sedans, coupes, SUVs, and station wagons, a common car is a run-of-the-mill, average civilian vehicle. Most are standard four-door models, but the same statistics apply to two-door cars, and all seat five passengers. Trunk size also varies widely."
+          },
+          {
+            "value": "Junker",
+            "label": "Junker",
+            "description": "Like a common car, but old, beat up, or poorly maintained. And cheap! If you can't afford anything else, a junker gets you where you're going when you don't want to walk."
+          },
+          {
+            "value": "Luxury car",
+            "label": "Luxury car",
+            "description": "This car has all the bells and whistles—or at least some of them. Heated seats, souped-up engine, sweet paint job. It's not much better than a common car, but it is more expensive, allowing you to flaunt your wealth."
+          },
+          {
+            "value": "Mini",
+            "label": "Mini",
+            "description": "These compact, two-door cars pack most of the power of a regular car in a smaller package, allowing for greater maneuverability and better gas mileage."
+          },
+          {
+            "value": "Muscle car",
+            "label": "Muscle car",
+            "description": "For when you want the strongest, loudest engine available. This baby can purr! While not the fastest cars around, muscle cars have incredible acceleration, making them a favorite for street racing."
+          },
+          {
+            "value": "Race car",
+            "label": "Race car",
+            "description": "Extremely fast, these cars are made for racing and not much else. Not usually seen on the road, a race car is hugely inefficient for everyday use, but when you have a need for speed, this is the vehicle for you."
+          },
+          {
+            "value": "Sports car",
+            "label": "Sports car",
+            "description": "The luxury car is for people who can't afford this one. Faster, more maneuverable, and with way more trips to the mechanic, the sports car is the ultimate vehicle for the rich and powerful, as well as anyone experiencing a midlife crisis. "
+          },
+          {
+            "value": "Minivan",
+            "label": "Minivan",
+            "description": "A favorite of soccer moms, the minivan doesn't get the best mileage, and it's not built for performance, but it's reliable and it seats seven. A sliding side door allows easy access for a minivan's many passengers."
+          },
+          {
+            "value": "Pickup truck",
+            "label": "Pickup truck",
+            "description": "When you need to haul a lot of stuff and get around reliably, a pickup truck is ideal. This truck is defined by its large cargo bed, which can fit a few extra people if they don't mind being outside and without seatbelts. A typical pickup truck has a single bench in the front cabin, seating up to three, but some sacrifice some cargo space for a more traditional five-seat configuration with two in the front and three in back."
+          },
+          {
+            "value": "RV",
+            "label": "RV",
+            "description": "This mobile home is equipped with all the amenities, and you can drive it! The cabin seats three, but you can pack seven or eight more in the living area. There are no seatbelts back there though, so it's not exactly safe."
+          },
+          {
+            "value": "ATV",
+            "label": "ATV",
+            "description": "The All-Terrain Vehicle (ATV), also called a four-wheeler, is like a motorcycle with four wheels. As the name implies, the ATV functions well off-road."
+          },
+          {
+            "value": "Bicycle",
+            "label": "Bicycle",
+            "description": "You'll have to pedal, but a bike can get you where you're going. Eventually."
+          },
+          {
+            "value": "Go kart",
+            "label": "Go kart",
+            "description": "These miniature racing vehicles don't go as fast as their larger cousins, but they pack some real power in their tiny bodies."
+          },
+          {
+            "value": "Golf cart",
+            "label": "Golf cart",
+            "description": "These little carts are meant to drive at a leisurely pace around golf courses, but you can drive them anywhere! Check your local laws first, though."
+          },
+          {
+            "value": "Motocross bike",
+            "label": "Motocross bike",
+            "description": "A motorized sports bike, this vehicle is great for off-roading, but it functions fine on the road as well."
+          },
+          {
+            "value": "Motorcycle",
+            "label": "Motorcycle",
+            "description": "Two-wheeled, fast, and dangerous! With this baby, you could weave in and out of traffic at break-neck speeds!"
+          },
+          {
+            "value": "18-wheeler",
+            "label": "18-wheeler",
+            "description": "The kings of the road, these trucks haul just about anything across the country. The cabin seats two, though a lot more people could fit in the trailer in a pinch (this is illegal in most countries)."
+          },
+          {
+            "value": "Armored car",
+            "label": "Armored car",
+            "description": "These armored transport vehicles carry valuables. Most commonly, banks use them to move cash or jewelry."
+          },
+          {
+            "value": "Semi",
+            "label": "Semi",
+            "description": "This is the front of an 18-wheeler without a trailer attached. With its powerful engine made to pull a heavy trailer, a semi-truck can accelerate fairly quickly despite its size."
+          },
+          {
+            "value": "Truck",
+            "label": "Truck",
+            "description": "This includes any large commercial truck such as a garbage truck, dump truck, fire engine, or ambulance. They aren't fast, but you don't want to be in their way."
+          },
+          {
+            "value": "Van",
+            "label": "Van",
+            "description": "This represents a wide variety of commercial vans, such as postal vans, utility vans, and unmarked white vans."
+          },
+          {
+            "value": "Bullet train",
+            "label": "Bullet train",
+            "description": "So-called bullet trains are streamlined high-speed express trains that travel at speeds rivaling airplanes. They are common in Japan, but can be found in other select cities."
+          },
+          {
+            "value": "Bus",
+            "label": "Bus",
+            "description": "A bus might be a school bus or a common passenger bus. Either way, it may lack seatbelts for anyone but the driver."
+          },
+          {
+            "value": "Passenger train",
+            "label": "Passenger train",
+            "description": "A standard train for commuting or long-distance travel. Any given car could also be used for cargo instead of passengers."
+          },
+          {
+            "value": "Backhoe",
+            "label": "Backhoe",
+            "description": "A backhoe is a heavy, tracked, all-purpose construction vehicle. Typically, it has a hydraulic shovel on one end and a plow on the other."
+          },
+          {
+            "value": "Bulldozer",
+            "label": "Bulldozer",
+            "description": "Another common heavy construction vehicle, the bulldozer pushes earth, stone, or other heavy materials as well as to level ground."
+          },
+          {
+            "value": "Crane",
+            "label": "Crane",
+            "description": "Cranes are very heavy vehicles that operate only while stationary. They have a boom arm and winch to lift things up, and large counterweights to keep from tipping over."
+          },
+          {
+            "value": "Forklift",
+            "label": "Forklift",
+            "description": "Most forklifts are electric vehicles. They feature a large fork for lifting crates and a significant counterweight to avoid tipping over."
+          },
+          {
+            "value": "Tractor",
+            "label": "Tractor",
+            "description": "Designed for agriculture, these vehicles aren't fast, but they are powerful and built to drive across rough terrain. They can be fitted with numerous useful farming implements."
+          },
+          {
+            "value": "Police cruiser",
+            "label": "Police cruiser",
+            "description": "A standard law enforcement vehicle, these cars come in regular police colors, but they can look just like any other car, too."
+          },
+          {
+            "value": "Prison bus",
+            "label": "Prison bus",
+            "description": "This heavily armored bus moves a large number of prisoners at once. Prisoners are Restrained for their journey."
+          },
+          {
+            "value": "Prison van",
+            "label": "Prison van",
+            "description": "These simple vans are designed to move a small number of prisoners around with light security. For particularly dangerous criminals, a prison might use an armored car instead."
+          },
+          {
+            "value": "Surveillance van",
+            "label": "Surveillance van",
+            "description": "This van is equipped with the latest surveillance equipment, allowing agents to eavesdrop relatively unnoticed, so long as a van sitting around in one place for a long time doesn't tip someone off."
+          },
+          {
+            "value": "SWAT van",
+            "label": "SWAT van",
+            "description": "Heavily armored and made for transporting SWAT teams, these vans are deployed only in extreme circumstances. They carry riot equipment and tactical weapons."
+          },
+          {
+            "value": "APC",
+            "label": "APC",
+            "description": "An armored personnel carrier (or APC) is a heavily armored troop transport used by the military to safely move soldiers. An APC can have a weapon such as a machine gun or rocket launcher mounted to it."
+          },
+          {
+            "value": "Humvee",
+            "label": "Humvee",
+            "description": "The Humvee, and similar light armored vehicles, are standard military trucks, able to drive off-road and withstand moderate gunfire. A Humvee can mount a weapon such as a machine gun or rocket launcher."
+          },
+          {
+            "value": "Tank",
+            "label": "Tank",
+            "description": "Battle tanks are general purpose armored vehicles that combine massive firepower, heavy armor, and high mobility. A tank often has one or more stationary machine guns mounted on it, and one passenger can operate the main cannon, which has the following statistics."
+          },
+          {
+            "value": "Fishing boat",
+            "label": "Fishing boat",
+            "description": "This common utility boat is mostly used by anglers, as the name implies. They come in many sizes but this one is a smaller four-person vessel."
+          },
+          {
+            "value": "Inflatable boat",
+            "label": "Inflatable boat",
+            "description": "This small lifeboat or other inflatable craft is quick and agile, at least for a boat."
+          },
+          {
+            "value": "Jet ski",
+            "label": "Jet ski",
+            "description": "The motorcycle of the sea, this thing is all about fun! It goes fast for a boat but doesn't stand up well to rough waters."
+          },
+          {
+            "value": "Motorboat",
+            "label": "Motorboat",
+            "description": "Motorized but still small, these boats are faster and easier to use than rowboats but are still mainly for personal use."
+          },
+          {
+            "value": "Personal submarine",
+            "label": "Personal submarine",
+            "description": "This small submarine might be used by scientists or nautical enthusiasts who can afford their steep price tags."
+          },
+          {
+            "value": "Rowboat",
+            "label": "Rowboat",
+            "description": "Small and usually powered by oars, this can also represent paddle boats, canoes, and other similar boats."
+          },
+          {
+            "value": "Sailboat",
+            "label": "Sailboat",
+            "description": "Powered by the wind like ships of old, these boats are mostly for sport, but are worthy vessels for short- and long-distance voyages."
+          },
+          {
+            "value": "Yacht",
+            "label": "Yacht",
+            "description": "This small pleasure craft is the rich person's money sink. The price level of 4 is only the beginning for yachts, which can be as expensive as you can imagine."
+          },
+          {
+            "value": "Airliner",
+            "label": "Airliner",
+            "description": "Commercial airliners carry dozens or hundreds of passengers all across the world. They are nearly always owned by a company rather than individuals."
+          },
+          {
+            "value": "Fighter jet",
+            "label": "Fighter jet",
+            "description": "These fast military aircraft are often equipped with stationary machine guns, as well as ballistic missiles. See the table on the next page for statistics."
+          },
+          {
+            "value": "Helicopter",
+            "label": "Helicopter",
+            "description": "These flying vehicles are capable of taking off and landing vertically. Military helicopters are often equipped with one or more machine guns."
+          },
+          {
+            "value": "Hot air balloon",
+            "label": "Hot air balloon",
+            "description": "These recreational aircraft allow for a delightful, scenic time in the sky. They move only as fast as the wind permits."
+          },
+          {
+            "value": "Paraglider",
+            "label": "Paraglider",
+            "description": "These simple gliders vary from large, steerable parachutes to more kite-like gliders."
+          },
+          {
+            "value": "Personal aircraft",
+            "label": "Personal aircraft",
+            "description": "These small planes seat between one and nine passengers. They are nearly always propeller driven and typically have one set of wings."
+          },
+          {
+            "value": "Regional aircraft",
+            "label": "Regional aircraft",
+            "description": "These commercial aircraft carry ten or more passengers on regional trips from both major and smaller airfields. They tend to be propeller driven and have two to four engines."
+          },
+          {
+            "value": "Wingsuit",
+            "label": "Wingsuit",
+            "description": "These simple gliders vary from large, steerable parachutes to more kite-like gliders."
+          }
+        ]
+      }
     }
   ]
 }

@@ -5,21 +5,8 @@
     "hitdice": "d10",
     "hitpoints": 10,
     "hitpointsperlevel": 6,
-    "hitpointmodifier": "Constitution",
-    "DefenseModifier": "Strength",
-    "ProficiencyBonus": [
-      2,
-      2,
-      2,
-      2,
-      3,
-      3,
-      3,
-      3,
-      4,
-      4
-    ],
-    "DefenseBonus": [
+    "defensemodifier": "Strength",
+    "defensebonusperlevel": [
       1,
       1,
       2,
@@ -31,7 +18,7 @@
       3,
       3
     ],
-    "Talents": [
+    "talentsperlevel": [
       [
         "Reckless Attack"
       ],
@@ -46,21 +33,8 @@
     "hitdice": "d8",
     "hitpoints": 8,
     "hitpointsperlevel": 5,
-    "hitpointmodifier": "Constitution",
-    "DefenseModifier": "Dexterity",
-    "ProficiencyBonus": [
-      2,
-      2,
-      2,
-      2,
-      3,
-      3,
-      3,
-      3,
-      4,
-      4
-    ],
-    "DefenseBonus": [
+    "defensemodifier": "Dexterity",
+    "defensebonusperlevel": [
       1,
       1,
       1,
@@ -72,7 +46,7 @@
       3,
       3
     ],
-    "Talents": [
+    "talentsperlevel": [
       [
         "Fast Reflexes"
       ],
@@ -87,9 +61,8 @@
     "hitdice": "d12",
     "hitpoints": 12,
     "hitpointsperlevel": 7,
-    "hitpointmodifier": "Constitution",
-    "DefenseModifier": "Constitution|Dexterity",
-    "ProficiencyBonus": [
+    "defensemodifier": "Constitution|Dexterity",
+    "defensebonusperlevel": [
       2,
       2,
       2,
@@ -101,19 +74,7 @@
       4,
       4
     ],
-    "DefenseBonus": [
-      2,
-      2,
-      2,
-      2,
-      3,
-      3,
-      3,
-      3,
-      4,
-      4
-    ],
-    "Talents": [
+    "talentsperlevel": [
       [
         "Payback"
       ],
@@ -128,21 +89,8 @@
     "hitdice": "d6",
     "hitpoints": 6,
     "hitpointsperlevel": 4,
-    "hitpointmodifier": "Constitution",
-    "DefenseModifier": "Intelligence",
-    "ProficiencyBonus": [
-      2,
-      2,
-      2,
-      2,
-      3,
-      3,
-      3,
-      3,
-      4,
-      4
-    ],
-    "DefenseBonus": [
+    "defensemodifier": "Intelligence",
+    "defensebonusperlevel": [
       0,
       0,
       0,
@@ -154,7 +102,7 @@
       2,
       2
     ],
-    "Talents": [
+    "talentsperlevel": [
       [
         "Plans",
         "Genius"
@@ -170,9 +118,8 @@
     "hitdice": "d10",
     "hitpoints": 10,
     "hitpointsperlevel": 6,
-    "hitpointmodifier": "Constitution",
-    "DefenseModifier": "Wisdom|Dexterity",
-    "ProficiencyBonus": [
+    "defensemodifier": "Wisdom|Dexterity",
+    "defensebonusperlevel": [
       2,
       2,
       2,
@@ -184,19 +131,7 @@
       4,
       4
     ],
-    "DefenseBonus": [
-      2,
-      2,
-      2,
-      2,
-      3,
-      3,
-      3,
-      3,
-      4,
-      4
-    ],
-    "Talents": [
+    "talentsperlevel": [
       [
         "Focus",
         "Concentration"
@@ -212,21 +147,8 @@
     "hitdice": "d8",
     "hitpoints": 8,
     "hitpointsperlevel": 5,
-    "hitpointmodifier": "Constitution",
-    "DefenseModifier": "Charisma|Dexterity",
-    "ProficiencyBonus": [
-      2,
-      2,
-      2,
-      2,
-      3,
-      3,
-      3,
-      3,
-      4,
-      4
-    ],
-    "DefenseBonus": [
+    "defensemodifier": "Charisma|Dexterity",
+    "defensebonusperlevel": [
       1,
       1,
       1,
@@ -238,7 +160,7 @@
       3,
       3
     ],
-    "Talents": [
+    "talentsperlevel": [
       [
         "Influence",
         "Tricks"

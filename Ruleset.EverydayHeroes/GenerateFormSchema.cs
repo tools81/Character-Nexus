@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
+using Utility;
 
 namespace EverydayHeroes
 {
@@ -11,6 +13,12 @@ namespace EverydayHeroes
     {
         private static List<object> _fields = new List<object>();
         private static string _jsonFilesPath = $"{new DirectoryInfo(AppContext.BaseDirectory).Parent.Parent.Parent.Parent}/Ruleset.EverydayHeroes/Json/";
+        private static readonly Regex sWhitespace = new Regex(@"\s+");
+        private static readonly JsonSerializerSettings _jsonSettings = new JsonSerializerSettings
+        {
+            ContractResolver = JsonContractResolver.Get(),
+            Formatting = Formatting.None
+        };
 
         public static void InitializeSchema()
         {
@@ -66,25 +74,79 @@ namespace EverydayHeroes
                     return;
                 }
 
+                string jsonSkillsData = File.ReadAllText(_jsonFilesPath + "Skills.json");
+                List<Skill> skills = JsonConvert.DeserializeObject<List<Skill>>(jsonSkillsData);
+
+                if (skills == null)
+                {
+                    Console.WriteLine($"Unable to read skills json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonFeatsData = File.ReadAllText(_jsonFilesPath + "Feats.json");
+                List<Feat> feats = JsonConvert.DeserializeObject<List<Feat>>(jsonFeatsData);
+
+                if (feats == null)
+                {
+                    Console.WriteLine($"Unable to read feats json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonPacksData = File.ReadAllText(_jsonFilesPath + "Packs.json");
+                List<Pack> packs = JsonConvert.DeserializeObject<List<Pack>>(jsonPacksData);
+
+                if (packs == null)
+                {
+                    Console.WriteLine($"Unable to read packs json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonItemsData = File.ReadAllText(_jsonFilesPath + "Items.json");
+                List<Item> items = JsonConvert.DeserializeObject<List<Item>>(jsonItemsData);
+
+                if (items == null)
+                {
+                    Console.WriteLine($"Unable to read items json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonWeaponsData = File.ReadAllText(_jsonFilesPath + "Weapons.json");
+                List<Weapon> weapons = JsonConvert.DeserializeObject<List<Weapon>>(jsonWeaponsData);
+
+                if (weapons == null)
+                {
+                    Console.WriteLine($"Unable to read weapons json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonVehiclesData = File.ReadAllText(_jsonFilesPath + "Vehicles.json");
+                List<Vehicle> vehicles = JsonConvert.DeserializeObject<List<Vehicle>>(jsonVehiclesData);
+
+                if (vehicles == null)
+                {
+                    Console.WriteLine($"Unable to read vehicles json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
                 AddDescriptionFields();
 
-                GenerateSchema(archetypes, "select");
-                GenerateSchema(classes, archetypes, "select");
-                GenerateSchema(backgrounds, "select");
-                GenerateSchema(professions, "select");
-
-                GenerateSchema
-                (
-                    attributes,
-                    "number",
-                    true,
-                    new
-                    {
-                        required = true,
-                        min = 0,
-                        max = 30
-                    }
-                );
+                GenerateAttributeSchema(attributes, "attributes", "Ability Scores");
+                GenerateArchetypeSchema(archetypes, "archetype", "Archetype");
+                GenerateClassSchema(classes, archetypes, "class", "Class");
+                GenerateBackgroundSchema(backgrounds, "background", "Background");
+                GenerateProfessionSchema(professions, "profession", "Profession");
+                GenerateSkillSchema(skills, "skill", "Skills");
+                GenerateFeatSchema(feats, "feat", "Feats");
+                GeneratePackSchema(packs, "pack", "Packs");
+                GenerateItemSchema(items, "item", "Items");
+                GenerateWeaponSchema(weapons, "weapon", "Weapons");
+                GenerateVehicleSchema(vehicles, "vehicle", "Vehicles");
 
                 var schema = new
                 {
@@ -103,10 +165,19 @@ namespace EverydayHeroes
             {
                 Console.WriteLine(ex);
             }
-        }
+        }        
 
         private static void AddDescriptionFields()
         {
+            _fields.Add(
+                new
+                {
+                    name = "id",
+                    id = "id",
+                    label = "Id",
+                    type = "hidden",
+                    className = "form-control"
+                });
             _fields.Add(
                 new
                 {
@@ -123,7 +194,97 @@ namespace EverydayHeroes
                     name = "image",
                     id = "image",
                     label = "Image",
-                    type = "file",
+                    type = "image",
+                    className = "form-control"
+                });
+            _fields.Add(
+                new
+                {
+                    name = "height",
+                    id = "height",
+                    label = "Height",
+                    type = "text",
+                    className = "form-control"
+                });
+            _fields.Add(
+                new
+                {
+                    name = "weight",
+                    id = "weight",
+                    label = "Weight",
+                    type = "text",
+                    className = "form-control"
+                });
+            _fields.Add(
+                new
+                {
+                    name = "skin",
+                    id = "skin",
+                    label = "Skin",
+                    type = "text",
+                    className = "form-control"
+                });
+            _fields.Add(
+                new
+                {
+                    name = "eyes",
+                    id = "eyes",
+                    label = "Eyes",
+                    type = "text",
+                    className = "form-control"
+                });
+            _fields.Add(
+                new
+                {
+                    name = "hair",
+                    id = "hair",
+                    label = "Hair",
+                    type = "text",
+                    className = "form-control"
+                });
+            _fields.Add(
+                new
+                {
+                    name = "age",
+                    id = "age",
+                    label = "Age",
+                    type = "text",
+                    className = "form-control"
+                });
+            _fields.Add(
+                new
+                {
+                    name = "maritalstatus",
+                    id = "maritalstatus",
+                    label = "Marital Status",
+                    type = "text",
+                    className = "form-control"
+                });
+            _fields.Add(
+                new
+                {
+                    name = "pronouns",
+                    id = "pronouns",
+                    label = "Pronouns",
+                    type = "text",
+                    className = "form-control"
+                });
+            _fields.Add(
+                new
+                {
+                    name = "biography",
+                    id = "biography",
+                    label = "Biography",
+                    type = "textarea",
+                    className = "form-control"
+                });
+            _fields.Add(
+                new
+                {
+                    name = "notes",
+                    id = "notes",
+                    label = "Notes",
+                    type = "textarea",
                     className = "form-control"
                 });
             _fields.Add(
@@ -141,16 +302,51 @@ namespace EverydayHeroes
                         max = 20
                     },
                     @default = 1
-                });
+                });            
         }
 
-        public static void GenerateSchema(List<Archetype> archetypes, string fieldType)
+        private static void GenerateAttributeSchema(List<Attribute> attributes, string name, string label)
+        {
+            var children = new List<object>();
+
+            foreach (var attribute in attributes)
+            {
+                children.Add(new
+                {
+                    name = $"attributes.{attribute.Name}",
+                    id = $"attributes.{attribute.Name.ToLower()}",
+                    label = attribute.Name,
+                    type = "number",
+                    className = "form-control",
+                    image = attribute.Image,
+                    validation = new
+                    {
+                        required = true,
+                        min = 3,
+                        max = 20
+                    },
+                    @default = 8
+                });
+            }
+
+            var group = new
+            {
+                type = "group",
+                name,
+                label,
+                children
+            };
+
+            _fields.Add(group);
+        }
+
+        private static void GenerateArchetypeSchema(List<Archetype> archetypes, string name, string label)
         {
             dynamic obj = new ExpandoObject();
 
             obj.name = "archetype";
             obj.label = "Archetype";
-            obj.type = fieldType;
+            obj.type = "select";
             obj.className = "form-select";
             obj.options = new List<object>();
 
@@ -160,53 +356,24 @@ namespace EverydayHeroes
                     new
                     {
                         value = archetype.Name,
-                        label = archetype.Name
+                        label = archetype.Name,
+                        description = archetype.Description
                     }
                 );
             }
 
-            _fields.Add(obj);
-
-            foreach (var archetype in archetypes)
-            {
-                var children = new List<object>
-                {
-                    new
-                    {
-                        name = $"info-archetype-{archetype.Name}",
-                        label = "Information",
-                        type = "textblock",
-                        className = "text-block",
-                        text = archetype.Description
-                    }
-                };
-
-                var div = new
-                {
-                    type = "div",
-                    className = "form-section",
-                    children,
-                    dependsOn =
-                        new
-                        {
-                            field = "archetype",
-                            value = archetype.Name
-                        }
-                };
-
-                _fields.Add(div);
-            }           
+            _fields.Add(obj);         
         }
 
-        public static void GenerateSchema(List<Class> classes, List<Archetype> archetypes, string fieldType)
+        private static void GenerateClassSchema(List<Class> classes, List<Archetype> archetypes, string name, string label)
         {
             foreach (var archetype in archetypes)
             {
                 dynamic obj = new ExpandoObject();
 
-                obj.name = "class";
+                obj.name = $"class.{archetype.Name.ToLower()}";
                 obj.label = "Class";
-                obj.type = fieldType;
+                obj.type = "select";
                 obj.className = "form-select";
                 obj.options = new List<object>();
 
@@ -216,7 +383,9 @@ namespace EverydayHeroes
                         new
                         {
                             value = cl.Name,
-                            label = cl.Name
+                            label = cl.Name,
+                            image = cl.Image,
+                            description = cl.Description
                         }
                     );
 
@@ -232,13 +401,13 @@ namespace EverydayHeroes
             }
         }
 
-        public static void GenerateSchema(List<Background> backgrounds, string fieldType)
+        private static void GenerateBackgroundSchema(List<Background> backgrounds, string name, string label)
         {
             dynamic obj = new ExpandoObject();
 
             obj.name = "background";
             obj.label = "Background";
-            obj.type = fieldType;
+            obj.type = "select";
             obj.className = "form-select";
             obj.options = new List<object>();
 
@@ -248,7 +417,8 @@ namespace EverydayHeroes
                     new
                     {
                         value = background.Name,
-                        label = background.Name
+                        label = background.Name,
+                        description = background.Description
                     }
                 );
             }
@@ -256,13 +426,13 @@ namespace EverydayHeroes
             _fields.Add(obj);
         }
 
-        public static void GenerateSchema(List<Profession> professions, string fieldType)
+        private static void GenerateProfessionSchema(List<Profession> professions, string name, string label)
         {
             dynamic obj = new ExpandoObject();
 
             obj.name = "profession";
             obj.label = "Profession";
-            obj.type = fieldType;
+            obj.type = "select";
             obj.className = "form-select";
             obj.options = new List<object>();
 
@@ -272,7 +442,8 @@ namespace EverydayHeroes
                     new
                     {
                         value = profession.Name,
-                        label = profession.Name
+                        label = profession.Name,
+                        description = profession.Description
                     }
                 );
             }
@@ -280,32 +451,222 @@ namespace EverydayHeroes
             _fields.Add(obj);
         }
 
-        public static void GenerateSchema(List<Attribute> attributes, string fieldType, bool hasDefault, object validation = null)
-        {
-            var children = new List<object>();
-            foreach (var attribute in attributes)
+        private static void GenerateSkillSchema(List<Skill> skills, string name, string label)
+        {        
+            _fields.Add(new
             {
-                children.Add(
+                type = "divider"
+            });
+
+            _fields.Add(new
+            {
+                type = "textblock",
+                label,
+                text = label,
+                name
+            });
+
+            foreach (var skill in skills)
+            {
+                var children = new List<object>
+                {
                     new
                     {
-                        name = attribute.Name.ToLower(),
-                        label = attribute.Name,
-                        id = attribute.Name,
-                        type = fieldType,
-                        className = "form-control",
-                        @default = 0
+                        name = $"skills.proficient.{skill.Name}",
+                        id = $"skills.proficient.{skill.Name.ToLower()}",
+                        label = "",
+                        type = "switch"
+                    },
+                    new
+                    {
+                        name = $"skills.expertise.{skill.Name}",
+                        id = $"skills.expertise.{skill.Name.ToLower()}",
+                        label = $"{skill.Name}",
+                        type = "switch"
                     }
-                );            
+                };
+
+                var group = new
+                {
+                    type = "group",
+                    name = $"skills.{skill.Name}",
+                    includeLabel = false,
+                    label = "",
+                    children
+                };
+
+                _fields.Add(group);
+            } 
+
+            _fields.Add(new
+            {
+                type = "divider"
+            });           
+        }
+
+        private static void GenerateFeatSchema(List<Feat> feats, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var feat in feats)
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = feat.Name,
+                        label = feat.Name,
+                        description = feat.Description
+                    }
+                );
             }
 
-            var div = new
+            dynamic array = new
             {
-                type = "div",
-                className = "input-group mb-3 text-center",
-                children
+                name,
+                label,
+                type = "array",
+                component = obj
             };
 
-            _fields.Add(div);
+            _fields.Add(array);
+        }
+
+        private static void GeneratePackSchema(List<Pack> packs, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var pack in packs)
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = pack.Name,
+                        label = pack.Name,
+                        description = pack.Description
+                    }
+                );
+            }
+
+            dynamic array = new
+            {
+                name,
+                label,
+                type = "array",
+                component = obj
+            };
+
+            _fields.Add(array);
+        }
+
+        private static void GenerateItemSchema(List<Item> items, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var item in items)
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = item.Name,
+                        label = item.Name,
+                        description = item.Description
+                    }
+                );
+            }
+
+            dynamic array = new
+            {
+                name,
+                label,
+                type = "array",
+                component = obj
+            };
+
+            _fields.Add(array);
+        }
+
+        private static void GenerateWeaponSchema(List<Weapon> weapons, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var weapon in weapons)
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = weapon.Name,
+                        label = weapon.Name,
+                        description = weapon.Description
+                    }
+                );
+            }
+
+            dynamic array = new
+            {
+                name,
+                label,
+                type = "array",
+                component = obj
+            };
+
+            _fields.Add(array);
+        }
+
+        private static void GenerateVehicleSchema(List<Vehicle> vehicles, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var vehicle in vehicles)
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = vehicle.Name,
+                        label = vehicle.Name,
+                        description = vehicle.Description
+                    }
+                );
+            }
+
+            dynamic array = new
+            {
+                name,
+                label,
+                type = "array",
+                component = obj
+            };
+
+            _fields.Add(array);
         }
     }
 }

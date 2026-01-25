@@ -1,9 +1,4 @@
 ﻿using Utility;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EverydayHeroes
 {
@@ -13,6 +8,7 @@ namespace EverydayHeroes
         public string Description { get; set; }
         public int Value { get; set; }
         public int Modifier { get => GetModifierValue(); }
+        public string Image { get; set; }
 
         private int GetModifierValue()
         {

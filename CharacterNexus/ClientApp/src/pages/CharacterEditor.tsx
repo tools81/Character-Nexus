@@ -25,6 +25,7 @@ import { useBonusCharacteristics } from "../hooks/useBonusCharacteristics";
 import { useBonusAdjustments } from "../hooks/useBonusAdjustments";
 import { useModal } from "../hooks/useModal";
 import { useDisableEngine } from "../hooks/useDisableEngine";
+import { useVisibilityEngine } from "../hooks/useVisibilityEngine";
 
 const CharacterEditor: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -169,7 +170,7 @@ const CharacterEditor: React.FC = () => {
   };
 
   // Field rendering helper
-  const FieldArray = ({ field, disabledMap }: { field: any, disabledMap: Record<string, boolean> }) => {
+  const FieldArray = ({ field, disabledMap, visibilityMap, isVisible }: { field: any, disabledMap: Record<string, boolean>, visibilityMap: Record<string, boolean>, isVisible: (fieldName: string) => boolean }) => {
     const { fields, append, remove } = useFieldArray({ name: field.name, control });
 
     const handleAddSelect = (component: any) => append({ value: "" });
@@ -181,7 +182,7 @@ const CharacterEditor: React.FC = () => {
           const childComponent = { ...field.component, name: `${field.name}.${index}` };
           return (
             <div key={item.id} className="input-group">
-              {renderField(childComponent, disabledMap, false )}
+              {renderField(childComponent, disabledMap, visibilityMap, isVisible, false )}
               <button type="button" className="btn btn-outline-secondary" onClick={() => remove(index)}>
                 Remove
               </button>
@@ -201,8 +202,10 @@ const CharacterEditor: React.FC = () => {
   const renderField = (
     field: any,
     disabledMap: Record<string, boolean>,
+    visibilityMap: Record<string, boolean>,
+    isVisible: (name: string) => boolean,
     includeLabel: boolean = true
-  ) => {    
+  ) => {
     switch (field.type) {
       case "hidden":
         return (
@@ -226,6 +229,7 @@ const CharacterEditor: React.FC = () => {
               defaultValue={field.default}
               className={field.className}
               disabled={disabledMap?.[field.name] === true}
+              {...(!isVisible(field.name) ? { style: { display: 'none' } } : {})}
             />
           </DisabledPrereqWrapper>
         );
@@ -240,6 +244,7 @@ const CharacterEditor: React.FC = () => {
               defaultValue={field.default}
               className={field.className}
               disabled={disabledMap?.[field.name] === true}
+              {...(!isVisible(field.name) ? { style: { display: 'none' } } : {})}
             />
           </DisabledPrereqWrapper>
         );
@@ -254,16 +259,11 @@ const CharacterEditor: React.FC = () => {
               defaultValue={field.default}
               className={field.className}
               disabled={disabledMap?.[field.name] === true}
+              {...(!isVisible(field.name) ? { style: { display: 'none' } } : {})}
             />
           </DisabledPrereqWrapper>
         );
       case "switch":
-        // console.log({
-        //   fieldName: field.name,
-        //   disabledMap: disabledMap,
-        //   disabledMapKeys: Object.keys(disabledMap ?? {}),
-        //   directLookup: disabledMap?.[field.name]
-        // });
         return (
           <DisabledPrereqWrapper component={field} disabled={disabledMap?.[field.name] === true}>
             <InputSwitch
@@ -282,11 +282,12 @@ const CharacterEditor: React.FC = () => {
               bonusAdjustments={bonusAdjustments}
               setBonusAdjustments={setBonusAdjustments}
               prerequisites={field.prerequisites}
-              disabled={disabledMap?.[field.name] === true}
+              disabled={disabledMap?.[field.name] === true} 
+              {...(!isVisible(field.name) ? { style: { display: 'none' } } : {})}
             />
           </DisabledPrereqWrapper>
         );
-      case "select":
+      case "select": 
         return (
           <DisabledPrereqWrapper component={field} disabled={disabledMap?.[field.name] === true}>
             <InputSelect
@@ -307,6 +308,7 @@ const CharacterEditor: React.FC = () => {
               setUserChoices={setUserChoices}
               openUserChoiceModal={openUserChoiceModal}
               disabled={disabledMap?.[field.name] === true}
+              visible={isVisible(field.name)}
             />
           </DisabledPrereqWrapper>
         );
@@ -316,6 +318,8 @@ const CharacterEditor: React.FC = () => {
             renderField={renderField}
             items={field.items}
             disabledMap={disabledMap}
+            visibilityMap={visibilityMap}
+            isVisible={isVisible}
           />
         );
       case "group":
@@ -327,6 +331,8 @@ const CharacterEditor: React.FC = () => {
             label={field.label}
             children={field.children}
             disabledMap={disabledMap}
+            visibilityMap={visibilityMap}
+            isVisible={isVisible}
           />
         );
       case "textblock":
@@ -354,7 +360,7 @@ const CharacterEditor: React.FC = () => {
           </div>
         );
       case "array":
-        return <FieldArray field={field} disabledMap={disabledMap} />;
+        return <FieldArray field={field} disabledMap={disabledMap} visibilityMap={visibilityMap} isVisible={isVisible} />;
       case "image":
         return (
           <DisabledPrereqWrapper component={field} disabled={disabledMap?.[field.name] === true}
@@ -368,6 +374,7 @@ const CharacterEditor: React.FC = () => {
               setImagePreview={setImagePreview}
               setImageData={setImageData}
               disabled={disabledMap?.[field.name] === true}
+              {...(!isVisible(field.name) ? { style: { display: 'none' } } : {})}
             />
           </DisabledPrereqWrapper>
         );
@@ -378,6 +385,8 @@ const CharacterEditor: React.FC = () => {
             field={field}
             renderField={renderField}
             disabledMap={disabledMap}
+            visibilityMap={visibilityMap}
+            isVisible={isVisible}
           />
         );
       default:
@@ -397,21 +406,12 @@ const CharacterEditor: React.FC = () => {
 
         <FormContents
           schema={schema}
+          control={control}
           renderField={renderField}
           choiceFields={choiceFields}
           userChoiceModal={userChoiceModal}
         />
 
-        {/* <userChoiceModal.Modal>
-          {({ userChoices: userChoices, close }) => (
-            <>
-              <h2>Choice:</h2>
-              {userChoices.map((item: UserChoice) => <p key={item.type}>Choose {item.count}</p>)}
-              {choiceFields.map((field) => <div key={field.id}>{renderField(field)}</div>)}
-              <button onClick={close}>Close</button>
-            </>
-          )}
-        </userChoiceModal.Modal> */}
         <div className="center-container">
           <button className="submit-button" type="submit">Submit</button>
         </div>
@@ -424,16 +424,21 @@ const CharacterEditor: React.FC = () => {
 
 const FormContents = ({
   schema,
+  control,
   renderField,
   choiceFields,
   userChoiceModal,
 }: any) => {
   const disabledMap = useDisableEngine(schema);
-  // console.log("Disabled Map:", disabledMap);
+  const { visibilityMap, isVisible } = useVisibilityEngine(
+    schema.fields,
+    control
+  );
+  console.log("Visibility Map:", visibilityMap);
   return (
     <>
       {schema.fields.map((field: any) =>
-        renderField(field, disabledMap, true)
+        renderField(field, disabledMap, visibilityMap, isVisible, field.includeLabel ?? true)
       )}
 
       <userChoiceModal.Modal>

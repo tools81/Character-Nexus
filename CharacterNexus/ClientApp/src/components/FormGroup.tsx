@@ -2,6 +2,8 @@ interface Props {
   renderField: (
       component: any,  
       disabledMap: Record<string, boolean>,
+      visibilityMap: Record<string, boolean>,
+      isVisible: (fieldName: string) => boolean,
       includeLabel?: boolean,
     ) => React.ReactNode;
   name: string;
@@ -9,6 +11,8 @@ interface Props {
   label: string;
   children: any;  
   disabledMap: Record<string, boolean>;
+  visibilityMap: Record<string, boolean>;
+  isVisible: (fieldName: string) => boolean;
 }
 
 const FormGroup = ({
@@ -17,7 +21,9 @@ const FormGroup = ({
   includeLabel,
   label,
   children,
-  disabledMap
+  disabledMap,
+  visibilityMap,
+  isVisible
 }: Props) => {
   return (
     <>
@@ -34,7 +40,7 @@ const FormGroup = ({
                   <br />
                 </>
               )}
-              {renderField(childField, disabledMap, false)}
+              {renderField(childField, disabledMap, visibilityMap, isVisible, false)}
             </div>
         ))}
       </div>

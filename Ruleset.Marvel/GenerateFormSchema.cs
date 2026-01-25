@@ -542,6 +542,7 @@ namespace Marvel
                 accordionItem.image = powerset.imageUrl;
                 accordionItem.component = new
                 {
+                    name = $"powerset.list.group",
                     type = "listgroup",
                     items = new List<object>()
                 };

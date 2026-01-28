@@ -16,6 +16,7 @@
           "Charisma"
         ],
         "count": 1,
+        "category": "Adjustment",
         "value": 1
       }
     ]
@@ -27,7 +28,7 @@
     "scale": "Minor",
     "userchoices": [
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "choices": [
           "Acrobatics",
           "Arts and Crafts",
@@ -52,7 +53,8 @@
           "Survival",
           "Vehicles"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ]
   },
@@ -76,7 +78,8 @@
           "Improvised",
           "Military"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ]
   },
@@ -100,7 +103,7 @@
     "scale": "Minor",
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Acrobatics",
           "Arts and Crafts",
@@ -125,7 +128,8 @@
           "Survival",
           "Vehicles"
         ],
-        "count": 2
+        "count": 2,
+        "category": "Characteristic"
       }
     ]
   },
@@ -136,7 +140,7 @@
     "scale": "Minor",
     "userchoices": [
       {
-        "type": "SavingThrow",
+        "type": "savingthrow",
         "choices": [
           "Strength",
           "Dexterity",
@@ -145,7 +149,8 @@
           "Wisdom",
           "Charisma"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ]
   },
@@ -313,7 +318,7 @@
   },
   {
     "name": "Poison Specialist",
-    "description": "You’re practiced in making and applying poisons safely.<br /><ul><li>You have advantage on Intelligence (Medicine) and Wisdom (Survival) checks to identify and treat poisons.</li><li>You can handle poison without needing to make an ability check to avoid injury.</li><li>You can apply poison to a piece of ammunition or weapon as a bonus action.</li><li>The use of poison by heroes is at the GM's discretion, so consult with your GM before taking this feat.</li></ul>",
+    "description": "You're practiced in making and applying poisons safely.<br /><ul><li>You have advantage on Intelligence (Medicine) and Wisdom (Survival) checks to identify and treat poisons.</li><li>You can handle poison without needing to make an ability check to avoid injury.</li><li>You can apply poison to a piece of ammunition or weapon as a bonus action.</li><li>The use of poison by heroes is at the GM's discretion, so consult with your GM before taking this feat.</li></ul>",
     "type": "Advanced",
     "scale": "Minor"
   },
@@ -408,8 +413,8 @@
     "scale": "Major",
     "bonusadjustments": [
       {
-        "name": "LuckPoints",
-        "type": "LuckPoints",
+        "name": "luckpoints",
+        "type": "luckpoints",
         "Value": 3
       }
     ]
@@ -433,8 +438,8 @@
     "scale": "Major",
     "bonusadjustments": [
       {
-        "name": "Hitpoints",
-        "type": "Hitpoints",
+        "name": "hitpoints",
+        "type": "hitpoints",
         "value": 2
       }
     ]
@@ -477,13 +482,14 @@
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Athletics",
           "Acrobatics",
           "Endurance"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ]
   },
@@ -671,14 +677,15 @@
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Acrobatics",
           "Sleight of Hand",
           "Stealth",
           "Vehicles"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ]
   },
@@ -773,7 +780,7 @@
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Acrobatics",
           "Deception",
@@ -783,7 +790,8 @@
           "Stealth",
           "Streetwise"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ]
   },
@@ -808,7 +816,7 @@
     ],
     "userchoices": [
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "choices": [
           "Acrobatics",
           "Deception",
@@ -818,7 +826,8 @@
           "Stealth",
           "Streetwise"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ]
   },
@@ -1106,7 +1115,8 @@
         "choices": [
           "Shared"
         ],
-        "count": 2
+        "count": 2,
+        "category": "Characteristic"
       }
     ]
   },
@@ -1137,7 +1147,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "value": "Mechanics"
       }
     ],
@@ -1147,7 +1157,8 @@
         "choices": [
           "Engineer"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ]
   },
@@ -1172,7 +1183,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "value": "Mechanics"
       }
     ],
@@ -1183,7 +1194,8 @@
           "Shared",
           "Engineer"
         ],
-        "count": 2
+        "count": 2,
+        "category": "Characteristic"
       }
     ],
     "bonusadjustments": [
@@ -1221,7 +1233,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "value": "Computers"
       }
     ],
@@ -1231,7 +1243,8 @@
         "choices": [
           "Hacker"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "bonusadjustments": [
@@ -1263,7 +1276,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "value": "Computers"
       }
     ],
@@ -1274,7 +1287,8 @@
           "Shared",
           "Hacker"
         ],
-        "count": 2
+        "count": 2,
+        "category": "Characteristic"
       }
     ],
     "bonusadjustments": [
@@ -1312,19 +1326,21 @@
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Investigation",
           "Social Sciences"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       },
       {
         "type": "plans",
         "choices": [
           "Mastermind"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "bonusadjustments": [
@@ -1356,12 +1372,13 @@
     ],
     "userchoices": [
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "choices": [
           "Investigation",
           "Social Sciences"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       },
       {
         "type": "plans",
@@ -1369,7 +1386,8 @@
           "Shared",
           "Mastermind"
         ],
-        "count": 2
+        "count": 2,
+        "category": "Characteristic"
       }
     ],
     "bonusadjustments": [
@@ -1407,19 +1425,21 @@
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Medicine",
           "Natural Sciences"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       },
       {
         "type": "plans",
         "choices": [
           "Scientist"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ],
     "bonusadjustments": [
@@ -1451,12 +1471,13 @@
     ],
     "userchoices": [
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "choices": [
           "Medicine",
           "Natural Sciences"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       },
       {
         "type": "plans",
@@ -1464,7 +1485,8 @@
           "Shared",
           "Scientist"
         ],
-        "count": 2
+        "count": 2,
+        "category": "Characteristic"
       }
     ],
     "bonusadjustments": [
@@ -1510,14 +1532,15 @@
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Insight",
           "Perception",
           "Streetwise",
           "Survival"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ]
   },
@@ -1561,13 +1584,14 @@
     ],
     "userchoice": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Perception",
           "Stealth",
           "Survival"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ]
   },
@@ -1600,13 +1624,14 @@
     ],
     "userchoices": [
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "choices": [
           "Perception",
           "Stealth",
           "Survival"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ]
   },
@@ -1716,7 +1741,7 @@
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Insight",
           "Investigation",
@@ -1724,7 +1749,8 @@
           "Security",
           "Streetwise"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ]
   },
@@ -1756,7 +1782,7 @@
     ],
     "userchoices": [
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "choices": [
           "Insight",
           "Investigation",
@@ -1764,7 +1790,8 @@
           "Security",
           "Streetwise"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ]
   },
@@ -1797,24 +1824,26 @@
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Deception",
           "Intimidation",
           "Performance",
           "Persuasion"
         ],
-        "count": 2
+        "count": 2,
+        "category": "Characteristic"
       },
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "choices": [
           "Deception",
           "Intimidation",
           "Performance",
           "Persuasion"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ]
   },
@@ -1866,7 +1895,8 @@
         "choices": [
           "Duelist"
         ],
-        "count": 2
+        "count": 2,
+        "category": "Characteristic"
       }
     ]
   },
@@ -1902,7 +1932,8 @@
         "choices": [
           "Duelist"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ]
   },
@@ -1954,7 +1985,8 @@
         "choices": [
           "Icon"
         ],
-        "count": 2
+        "count": 2,
+        "category": "Characteristic"
       }
     ]
   },
@@ -1990,7 +2022,8 @@
         "choices": [
           "Icon"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ]
   },
@@ -2042,7 +2075,8 @@
         "choices": [
           "Leader"
         ],
-        "count": 2
+        "count": 2,
+        "category": "Characteristic"
       }
     ]
   },
@@ -2078,7 +2112,8 @@
         "choices": [
           "Leader"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ]
   },
@@ -2120,7 +2155,8 @@
         "choices": [
           "Manipulator"
         ],
-        "count": 2
+        "count": 2,
+        "category": "Characteristic"
       }
     ]
   },
@@ -2156,7 +2192,8 @@
         "choices": [
           "Manipulator"
         ],
-        "count": 1
+        "count": 1,
+        "category": "Characteristic"
       }
     ]
   }

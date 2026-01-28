@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Dynamic;
 using System.IO;
 using System.Linq;
@@ -94,6 +95,36 @@ namespace EverydayHeroes
                     return;
                 }
 
+                string jsonTalentsData = File.ReadAllText(_jsonFilesPath + "Talents.json");
+                List<Talent> talents = JsonConvert.DeserializeObject<List<Talent>>(jsonTalentsData);
+
+                if (talents == null)
+                {
+                    Console.WriteLine($"Unable to read talents json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonPlansData = File.ReadAllText(_jsonFilesPath + "Plans.json");
+                List<Plan> plans = JsonConvert.DeserializeObject<List<Plan>>(jsonPlansData);
+
+                if (plans == null)
+                {
+                    Console.WriteLine($"Unable to read plans json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonTricksData = File.ReadAllText(_jsonFilesPath + "Tricks.json");
+                List<Trick> tricks = JsonConvert.DeserializeObject<List<Trick>>(jsonTricksData);
+
+                if (tricks == null)
+                {
+                    Console.WriteLine($"Unable to read tricks json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
                 string jsonPacksData = File.ReadAllText(_jsonFilesPath + "Packs.json");
                 List<Pack> packs = JsonConvert.DeserializeObject<List<Pack>>(jsonPacksData);
 
@@ -153,6 +184,9 @@ namespace EverydayHeroes
                 GenerateProfessionSchema(professions, "profession", "Profession");
                 GenerateSkillSchema(skills, "skill", "Skills");
                 GenerateFeatSchema(feats, "feat", "Feats");
+                GenerateTalentSchema(talents, "talent", "Talents");
+                GeneratePlanSchema(plans, "plan", "Plans");
+                GenerateTrickSchema(tricks, "trick", "Tricks");
                 GeneratePackSchema(packs, "pack", "Packs");
                 GenerateItemSchema(items, "item", "Items");
                 GenerateWeaponSchema(weapons, "weapon", "Weapons");
@@ -395,6 +429,8 @@ namespace EverydayHeroes
 
                 foreach (var cl in classes.Where(c => c.Archetype == archetype.Name))
                 {
+                    if (cl.BonusCharacteristics != null) UpdateBonusCharacteristicValues(cl.BonusCharacteristics);
+
                     obj.options.Add(
                         new
                         {
@@ -429,8 +465,10 @@ namespace EverydayHeroes
             obj.className = "form-select";
             obj.options = new List<object>();
 
-            foreach (var background in backgrounds)
+            foreach (var background in backgrounds.OrderBy(t => t.Name))
             {
+                if (background.BonusCharacteristics != null) UpdateBonusCharacteristicValues(background.BonusCharacteristics);
+
                 obj.options.Add(
                     new
                     {
@@ -445,7 +483,7 @@ namespace EverydayHeroes
             }
 
             _fields.Add(obj);
-        }
+        }        
 
         private static void GenerateProfessionSchema(List<Profession> professions, string name, string label)
         {
@@ -457,8 +495,10 @@ namespace EverydayHeroes
             obj.className = "form-select";
             obj.options = new List<object>();
 
-            foreach (var profession in professions)
+            foreach (var profession in professions.OrderBy(t => t.Name))
             {
+                if (profession.BonusCharacteristics != null) UpdateBonusCharacteristicValues(profession.BonusCharacteristics);
+
                 obj.options.Add(
                     new
                     {
@@ -496,17 +536,24 @@ namespace EverydayHeroes
                 {
                     new
                     {
-                        name = $"skills.proficient.{skill.Name}",
-                        id = $"skills.proficient.{skill.Name.ToLower()}",
+                        name = $"skill.proficient.{skill.Name}",
+                        id = $"skill.proficient.{skill.Name.ToLower()}",
                         label = "",
                         type = "switch"
                     },
                     new
                     {
-                        name = $"skills.expertise.{skill.Name}",
-                        id = $"skills.expertise.{skill.Name.ToLower()}",
-                        label = $"{skill.Name}",
+                        name = $"skill.expertise.{skill.Name}",
+                        id = $"skill.expertise.{skill.Name.ToLower()}",
+                        label = "",
                         type = "switch"
+                    },
+                    new
+                    {
+                        name,
+                        label,
+                        text = skill.Name,
+                        type = "textblock"
                     }
                 };
 
@@ -538,8 +585,10 @@ namespace EverydayHeroes
             obj.className = "form-select";
             obj.options = new List<object>();
 
-            foreach (var feat in feats)
+            foreach (var feat in feats.OrderBy(t => t.Name))
             {
+                if (feat.BonusCharacteristics != null) UpdateBonusCharacteristicValues(feat.BonusCharacteristics);
+
                 obj.options.Add(
                     new
                     {
@@ -565,6 +614,121 @@ namespace EverydayHeroes
             _fields.Add(array);
         }
 
+        private static void GenerateTalentSchema(List<Talent> talents, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var talent in talents.OrderBy(t => t.Name))
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = talent.Name,
+                        label = talent.Name,
+                        description = talent.Description
+                    }
+                );
+            }
+
+            dynamic array = new
+            {
+                name,
+                label,
+                type = "array",
+                component = obj
+            };
+
+            _fields.Add(array);
+        }
+
+        private static void GeneratePlanSchema(List<Plan> plans, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var plan in plans.OrderBy(t => t.Name))
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = plan.Name,
+                        label = plan.Name,
+                        description = plan.Description
+                    }
+                );
+            }
+
+            obj.dependsOn =
+            new
+            {
+                field = "archetype",
+                value = "Smart"
+            };
+
+            dynamic array = new
+            {
+                name,
+                label,
+                type = "array",
+                dependsOn = obj.dependsOn,
+                component = obj
+            };
+
+            _fields.Add(array);
+        }
+
+        private static void GenerateTrickSchema(List<Trick> tricks, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var trick in tricks.OrderBy(t => t.Class))
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = trick.Name,
+                        label = trick.Name,
+                        description = trick.Description
+                    }
+                );
+            }
+
+            obj.dependsOn =
+            new
+            {
+                field = "archetype",
+                value = "Charming"
+            };
+
+            dynamic array = new
+            {
+                name,
+                label,
+                type = "array",
+                dependsOn = obj.dependsOn,
+                component = obj
+            };
+
+            _fields.Add(array);
+        }
+
         private static void GeneratePackSchema(List<Pack> packs, string name, string label)
         {
             dynamic obj = new ExpandoObject();
@@ -575,7 +739,7 @@ namespace EverydayHeroes
             obj.className = "form-select";
             obj.options = new List<object>();
 
-            foreach (var pack in packs)
+            foreach (var pack in packs.OrderBy(t => t.Name))
             {
                 obj.options.Add(
                     new
@@ -609,7 +773,7 @@ namespace EverydayHeroes
             obj.className = "form-select";
             obj.options = new List<object>();
 
-            foreach (var item in items)
+            foreach (var item in items.OrderBy(t => t.Name))
             {
                 obj.options.Add(
                     new
@@ -642,7 +806,7 @@ namespace EverydayHeroes
             obj.className = "form-select";
             obj.options = new List<object>();
 
-            foreach (var weapon in weapons)
+            foreach (var weapon in weapons.OrderBy(t => t.Name))
             {
                 obj.options.Add(
                     new
@@ -675,7 +839,7 @@ namespace EverydayHeroes
             obj.className = "form-select";
             obj.options = new List<object>();
 
-            foreach (var armor in armors)
+            foreach (var armor in armors.OrderBy(t => t.Name))
             {
                 obj.options.Add(
                     new
@@ -708,7 +872,7 @@ namespace EverydayHeroes
             obj.className = "form-select";
             obj.options = new List<object>();
 
-            foreach (var vehicle in vehicles)
+            foreach (var vehicle in vehicles.OrderBy(t => t.Name))
             {
                 obj.options.Add(
                     new
@@ -729,6 +893,17 @@ namespace EverydayHeroes
             };
 
             _fields.Add(array);
+        }
+
+        private static void UpdateBonusCharacteristicValues(List<BonusCharacteristic>? characteristics)
+        {
+            foreach (var bonus in characteristics)
+            {
+                if (bonus.Type.StartsWith("skill.", StringComparison.OrdinalIgnoreCase))
+                {
+                    bonus.Value = $"{bonus.Type}.{bonus.Value}";
+                }
+            };
         }
     }
 }

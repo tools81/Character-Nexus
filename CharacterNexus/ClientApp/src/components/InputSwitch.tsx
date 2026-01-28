@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-import { useWatch } from "react-hook-form";
+import { set, useWatch } from "react-hook-form";
 import {
   UseFormRegister,
   FieldValues,
@@ -10,7 +10,7 @@ import {
 import { BonusAdjustments } from "../types/BonusAdjustment";
 import { BonusCharacteristics } from "../types/BonusCharacteristic";
 import { toCamelCase } from "../utils/toCamelCase";
-import { handleRemoveBonusAdjustment, handleRemoveArrayValue } from "../hooks/useBonus";
+import { handleRemoveBonusAdjustment, handleRemoveFieldValue } from "../hooks/useBonus";
 import { Prerequisites } from "../types/Prerequisite";
 
 interface Props {
@@ -157,10 +157,10 @@ const handleInputChange = (
   }
 
   if (fieldBonusCharacteristics) {
-      //Remove components from field array where the origin is this input. So bonus is removed when changing value again.
       for (const characteristic of bonusCharacteristics.reverse()) {
-        handleRemoveArrayValue(
+        handleRemoveFieldValue(
           getValues,
+          setValue,
           unregister,
           characteristic.type,
           characteristic.value

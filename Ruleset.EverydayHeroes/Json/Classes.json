@@ -15,16 +15,28 @@
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Strength"
+        "value": "Strength"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Constitution"
+        "value": "Constitution"
+      },
+      {
+        "type": "talent",
+        "value": "Crush"
+      },
+      {
+        "type": "talent",
+        "value": "Hurt"
+      },
+      {
+        "type": "talent",
+        "value": "Smash"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Acrobatics",
           "Athletics",
@@ -82,16 +94,24 @@
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Strength"
+        "value": "Strength"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Constitution"
+        "value": "Constitution"
+      },
+      {
+        "type": "talent",
+        "value": "Big Guns"
+      },
+      {
+        "type": "talent",
+        "value": "Salvo"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Acrobatics",
           "Endurance",
@@ -141,16 +161,28 @@
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Strength"
+        "value": "Strength"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Dexterity"
+        "value": "Dexterity"
+      },
+      {
+        "type": "talent",
+        "value": "Heavy Hands"
+      },
+      {
+        "type": "talent",
+        "value": "Pin"
+      },
+      {
+        "type": "talent",
+        "value": "Submission Move"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Acrobatics",
           "Athletics",
@@ -164,7 +196,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "choices": [
           "Acrobatics",
           "Athletics",
@@ -217,16 +249,20 @@
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Strength"
+        "value": "Strength"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Dexterity"
+        "value": "Dexterity"
+      },
+      {
+        "type": "talent",
+        "value": "Martial Arts"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Acrobatics",
           "Athletics",
@@ -279,16 +315,20 @@
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Charisma"
+        "value": "Charisma"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Dexterity"
+        "value": "Dexterity"
+      },
+      {
+        "type": "talent",
+        "value": "Vital Strike"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Acrobatics",
           "Deception",
@@ -303,7 +343,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "choices": [
           "Deception",
           "Security",
@@ -354,16 +394,24 @@
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Intelligence"
+        "value": "Intelligence"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Dexterity"
+        "value": "Dexterity"
+      },
+      {
+        "type": "talent",
+        "value": "Gunslinging"
+      },
+      {
+        "type": "talent",
+        "value": "Sharpshooting"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Acrobatics",
           "Intimidation",
@@ -417,16 +465,24 @@
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Strength"
+        "value": "Strength"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Constitution"
+        "value": "Constitution"
+      },
+      {
+        "type": "talent",
+        "value": "Get Down"
+      },
+      {
+        "type": "talent",
+        "value": "Take a Bullet"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Athletics",
           "Endurance",
@@ -440,7 +496,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "choices": [
           "Endurance",
           "Intimidation",
@@ -495,16 +551,24 @@
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Strength"
+        "value": "Strength"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Constitution"
+        "value": "Constitution"
+      },
+      {
+        "type": "talent",
+        "value": "Fighting Spirit"
+      },
+      {
+        "type": "talent",
+        "value": "Watch Your Six"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Athletics",
           "Endurance",
@@ -551,28 +615,32 @@
     "bonuscharacteristics": [
       {
         "type": "equipmentproficiency",
-        "choices": "Basic"
+        "value": "Basic"
       },
       {
         "type": "equipmentproficiency",
-        "choices": "Advanced"
+        "value": "Advanced"
       },
       {
         "type": "equipmentproficiency",
-        "choices": "Improvised"
+        "value": "Improvised"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Intelligence"
+        "value": "Intelligence"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Constitution"
+        "value": "Constitution"
+      },
+      {
+        "type": "talent",
+        "value": "Opportunist"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Acrobatics",
           "Athletics",
@@ -622,16 +690,24 @@
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Intelligence"
+        "value": "Intelligence"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Dexterity"
+        "value": "Dexterity"
+      },
+      {
+        "type": "talent",
+        "value": "Mechanical Companion"
+      },
+      {
+        "type": "talent",
+        "value": "Field Repairs"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Arts and Crafts",
           "Computers",
@@ -645,7 +721,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "choices": [
           "Computers",
           "Mechanics",
@@ -691,16 +767,24 @@
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Intelligence"
+        "value": "Intelligence"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Wisdom"
+        "value": "Wisdom"
+      },
+      {
+        "type": "talent",
+        "value": "Digital Ghost"
+      },
+      {
+        "type": "talent",
+        "value": "Its For You"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Computers",
           "Deception",
@@ -717,7 +801,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "choices": [
           "Computers",
           "Security"
@@ -761,16 +845,24 @@
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Intelligence"
+        "value": "Intelligence"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Wisdom"
+        "value": "Wisdom"
+      },
+      {
+        "type": "talent",
+        "value": "Know-It-All"
+      },
+      {
+        "type": "talent",
+        "value": "Youre Doing It Wrong"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Computers",
           "Deception",
@@ -789,7 +881,7 @@
       },
 
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "choices": [
           "Computers",
           "Deception",
@@ -836,16 +928,20 @@
     "bonuscharacteristics": [
       {
         "type": "savingthrowproficiency",
-        "name": "Intelligence"
+        "value": "Intelligence"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Constitution"
+        "value": "Constitution"
+      },
+      {
+        "type": "talent",
+        "value": "Dangerous Stuff"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Computers",
           "Investigation",
@@ -859,7 +955,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "choices": [
           "Computers",
           "Mechanics",
@@ -910,16 +1006,28 @@
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Strength"
+        "value": "Strength"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Wisdom"
+        "value": "Wisdom"
+      },
+      {
+        "type": "talent",
+        "value": "Hunting Companion"
+      },
+      {
+        "type": "talent",
+        "value": "Hunters Mark"
+      },
+      {
+        "type": "talent",
+        "value": "Animal Husbandry"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Acrobatics",
           "Arts and Crafts",
@@ -935,7 +1043,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "choices": [
           "Endurance",
           "Perception",
@@ -988,16 +1096,24 @@
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Charisma"
+        "value": "Charisma"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Wisdom"
+        "value": "Wisdom"
+      },
+      {
+        "type": "talent",
+        "value": "Mystic Arts"
+      },
+      {
+        "type": "talent",
+        "value": "Ki"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Acrobatics",
           "Arts and Crafts",
@@ -1052,16 +1168,28 @@
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Intelligence"
+        "value": "Intelligence"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Wisdom"
+        "value": "Wisdom"
+      },
+      {
+        "type": "talent",
+        "value": "Deduction"
+      },
+      {
+        "type": "talent",
+        "value": "Sixth Sense"
+      },
+      {
+        "type": "talent",
+        "value": "Weak Spot"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Arts and Crafts",
           "Computers",
@@ -1078,7 +1206,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "choices": [
           "Insight",
           "Investigation",
@@ -1129,16 +1257,20 @@
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Charisma"
+        "value": "Charisma"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Dexterity"
+        "value": "Dexterity"
+      },
+      {
+        "type": "talent",
+        "value": "Precision"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Acrobatics",
           "Athletics",
@@ -1189,16 +1321,24 @@
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Charisma"
+        "value": "Charisma"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Dexterity"
+        "value": "Dexterity"
+      },
+      {
+        "type": "talent",
+        "value": "Banter"
+      },
+      {
+        "type": "talent",
+        "value": "Center of Attention"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Acrobatics",
           "Athletics",
@@ -1252,16 +1392,20 @@
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Charisma"
+        "value": "Charisma"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Constitution"
+        "value": "Constitution"
+      },
+      {
+        "type": "talent",
+        "value": "Command"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Deception",
           "Insight",
@@ -1276,7 +1420,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "choices": [
           "Intimidation",
           "Persuasion"
@@ -1315,16 +1459,20 @@
     "bonuscharacteristics": [
       {
         "type": "savingthrowproficiency",
-        "name": "Charisma"
+        "value": "Charisma"
       },
       {
         "type": "savingthrowproficiency",
-        "name": "Wisdom"
+        "value": "Wisdom"
+      },
+      {
+        "type": "talent",
+        "value": "Demoralize"
       }
     ],
     "userchoices": [
       {
-        "type": "skill",
+        "type": "skill.proficient",
         "choices": [
           "Deception",
           "Insight",
@@ -1337,7 +1485,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "expertise",
+        "type": "skill.expertise",
         "choices": [
           "Deception",
           "Intimidation",

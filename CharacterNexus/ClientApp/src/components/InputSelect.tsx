@@ -11,7 +11,7 @@ import { BonusAdjustments } from "../types/BonusAdjustment";
 import { BonusCharacteristics } from "../types/BonusCharacteristic";
 import { UserChoices } from "../types/UserChoice";
 import { toCamelCase } from "../utils/toCamelCase";
-import { handleRemoveBonusAdjustment, handleRemoveArrayValue } from "../hooks/useBonus";
+import { handleRemoveBonusAdjustment, handleRemoveFieldValue } from "../hooks/useBonus";
 
 interface Props {
   register: UseFormRegister<FieldValues>;
@@ -71,7 +71,7 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
   }, [getValues, name]);
 
   const watchedValue = useWatch({
-    name,
+    name: `${name}.value`,
   });
 
   useEffect(() => {
@@ -282,7 +282,7 @@ const handleSelectChange = (
 
   if (selectBonusCharacteristics) {
     for (const characteristic of bonusCharacteristics.reverse()) {
-      handleRemoveArrayValue(getValues, unregister, characteristic.type, characteristic.value);
+      handleRemoveFieldValue(getValues, setValue, unregister, characteristic.type, characteristic.value);
     }
 
     setBonusCharacteristics(bonusCharacteristics.filter((c: any) => c.origin !== event.target.name));

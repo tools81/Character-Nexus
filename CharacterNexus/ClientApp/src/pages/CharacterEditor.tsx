@@ -176,7 +176,7 @@ const CharacterEditor: React.FC = () => {
     const handleAddSelect = (component: any) => append({ value: "" });
 
     return (
-      <div>
+      <div {...!isVisible(field.name) ? { style: { display: 'none' } } : {}}>
         <label>{field.label}</label>
         {fields.map((item, index) => {
           const childComponent = { ...field.component, name: `${field.name}.${index}` };
@@ -435,6 +435,7 @@ const FormContents = ({
     schema.fields,
     control
   );
+  
   return (
     <>
       {schema.fields.map((field: any) =>
@@ -445,15 +446,34 @@ const FormContents = ({
         {({ userChoices, close }: any) => (
           <>
             <h2>Choice:</h2>
-            {userChoices.map((item: any) => (
-              <p key={item.type}>Choose {item.count}</p>
-            ))}
-            {choiceFields.map((field: any) => (
-              <div key={field.id}>
-                {renderField(field, disabledMap, visibilityMap, isVisible, field.includeLabel ?? true)}
+
+            {userChoices.map((item: any, index: number) => (
+              <div key={item.type}>
+                <p>Choose {item.count}</p>
+
+                {choiceFields
+                  .filter((field: any) =>
+                    field.name?.startsWith(`choice.${item.type}`)
+                  )
+                  .map((field: any) => (
+                    <div key={field.id}>
+                      {renderField(
+                        field,
+                        disabledMap,
+                        visibilityMap,
+                        isVisible,
+                        field.includeLabel ?? true
+                      )}
+                    </div>
+                  ))}
+
+                {index < userChoices.length - 1 && (
+                  <hr className="my-3" />
+                )}
               </div>
             ))}
-            <button onClick={close}>Close</button>
+            <br />
+            <button className="center-container" onClick={close}>Close</button>
           </>
         )}
       </userChoiceModal.Modal>

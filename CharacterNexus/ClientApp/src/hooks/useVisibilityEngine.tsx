@@ -32,6 +32,7 @@ const buildVisibilityMap = (
 
   for (const field of fields) {
     if (!field.name) continue;
+
     map[field.name.toLowerCase()] = isFieldVisible(field, values);
   }
 

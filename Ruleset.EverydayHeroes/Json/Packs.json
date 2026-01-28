@@ -1,342 +1,513 @@
 [
     {
         "name": "Badass Pack",
-        "Clothes": "Jeans, tank top, steel-toe boots",
-        "Items": [
-            "Multitool"
-        ],
-        "Armors": [
-            "Armored clothing"
-        ],
-        "Vehicles": [
-            "Muscle car"
+        "description": "<ul><li>Clothes: Jeans, tank top, steel-toe boots</li><li>Items: Multitool</li><li>Armors: Armored clothing</li><li>Vehicles: Muscle car</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "item",
+                "value": "Multitool"
+            },
+            {
+                "name": "armor",
+                "value": "Armored Clothing"
+            },
+            {
+                "name": "vehicle",
+                "value": "Muscle car"
+            }
         ],
         "price": 3
     },
     {
         "name": "Bodyguard Pack",
-        "Clothes": "Dark 3-piece suit, dress shoes, concealed holster, earpiece",
-        "Armors": [
-            "Ballistic vest, light"
-        ],
-        "Weapons": [
-            "Pistol, 9mm semi-auto",
-            "Stun gun"
-        ],
-        "Vehicles": [
-            "Luxury car"
+        "description": "<ul><li>Clothes: Dark 3-piece suit, dress shoes, concealed holster, earpiece</li><li>Weapons: 9mm semi-auto pistol, Stun gun</li><li>Armors: Light ballistic vest</li><li>Vehicles: Luxury car</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "weapon",
+                "value": "Pistol, 9mm semi-auto"
+            },
+            {
+                "name": "weapon",
+                "value": "Stun gun"
+            },
+            {
+                "name": "armor",
+                "value": "Ballistic vest, light"
+            },
+            {
+                "name": "vehicle",
+                "value": "Luxury car"
+            }
         ],
         "price": 3
     },
     {
         "name": "Detective Pack",
-        "Clothes": "Business casual shirt and pants, overcoat, rugged shoes",
-        "Items": [
-            "Evidence kit"
-        ],
-        "Weapons": [
-            "Pistol, holdout",
-            "Stun gun"
-        ],
-        "Vehicles": [
-            "Common car"
+        "description": "<ul><li>Clothes: Business casual shirt and pants, overcoat, rugged shoes</li><li>Items: Evidence kit</li><li>Weapons: Holdout pistol, Stun gun</li><li>Vehicles: Common car</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "item",
+                "value": "Evidence kit"
+            },
+            {
+                "name": "weapon",
+                "value": "Pistol, holdout"
+            },
+            {
+                "name": "weapon",
+                "value": "Stun gun"
+            },
+            {
+                "name": "vehicle",
+                "value": "Common car"
+            }
         ],
         "price": 2
     },
     {
         "name": "Entertainer Pack",
-        "Clothes": "Stylish clothing and footwear, a brimmed hat or cap",
-        "Items": [
-            "Disguise kit"
-        ],
-        "Weapons": [
-            "Pepper spray"
-        ],
-        "Vehicles": [
-            "Sports car"
+        "description": "<ul><li>Clothes: Stylish clothing and footwear, a brimmed hat or cap</li><li>Items: Disguise kit</li><li>Weapons: Pepper spray</li><li>Vehicles: Sports car</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "item",
+                "value": "Disguise kit"
+            },
+            {
+                "name": "weapon",
+                "value": "Pepper spray"
+            },
+            {
+                "name": "vehicle",
+                "value": "Sports car"
+            }
         ],
         "price": 4
     },
     {
         "name": "Everyday Pack",
-        "Clothes": "Jeans, t-shirt, light jacket, sneakers",
-        "Vehicles": [
-            "Common car"
+        "description": "<ul><li>Clothes: Jeans, t-shirt, light jacket, sneakers</li><li>Vehicles: Common car</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "vehicle",
+                "value": "Common car"
+            }
         ],
         "price": 2
     },
     {
         "name": "Executive Pack",
-        "Clothes": "Designer 3-piece suit or designer business dress, dress shoes or sensible heels",
-        "Vehicles": [
-            "Luxury car"
+        "description": "<ul><li>Clothes: Designer 3-piece suit or designer business dress, dress shoes or sensible heels</li><li>Vehicles: Luxury car</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "vehicle",
+                "value": "Luxury car"
+            }
         ],
         "price": 4
     },
     {
         "name": "Duelist Pack",
-        "Clothes": "Fencing uniform, cage helmet, stylish urban clothing, athletic shoes",
-        "Armor": [
-            "Armored clothing"
-        ],
-        "Weapons": [
-            "Rapier",
-            "Dagger"
-        ],
-        "Vehicles": [
-            "Common car"
+        "description": "<ul><li>Clothes: Fencing uniform, cage helmet, stylish urban clothing, athletic shoes</li><li>Weapons: Rapier, Dagger</li><li>Armor: Armored clothing</li><li>Vehicles: Common car</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "weapon",
+                "value": "Rapier"
+            },
+            {
+                "name": "weapon",
+                "value": "Dagger"
+            },
+            {
+                "name": "armor",
+                "value": "Armored clothing"
+            },
+            {
+                "name": "vehicle",
+                "value": "Common car"
+            }
         ],
         "price": 2
     },
     {
         "name": "Fitness Pack",
-        "Clothes": "Sweatpants, t-shirt, hoodie, sneakers",
-        "Items": [
-            "Smart watch"
-        ],
-        "Vehicles": [
-            "Common car"
+        "description": "<ul><li>Clothes: Sweatpants, t-shirt, hoodie, sneakers</li><li>Smart watch</li><li>Vehicles: Common car</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "item",
+                "value": "Smart watch"
+            },
+            {
+                "name": "vehicle",
+                "value": "Luxury car"
+            }
         ],
         "price": 2
     },
     {
         "name": "Hacker Pack",
-        "Clothes": "Comfortable pants, geek shirt, sneakers, hoodie, small backpack",
-        "Items": [
-            "Hacker kit",
-            "Laptop computer"
-        ],
-        "Vehicles": [
-            "Common car"
+        "description": "<ul><li>Clothes: Comfortable pants, geek shirt, sneakers, hoodie, small backpack</li><li>Hacker kit</li><li>Laptop computer</li><li>Vehicles: Common car</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "item",
+                "value": "Hacker kit"
+            },
+            {
+                "name": "item",
+                "value": "Laptop computer"
+            },
+            {
+                "name": "vehicle",
+                "value": "Common car"
+            }
         ],
         "price": 2
     },
     {
         "name": "Hunter Pack",
-        "Clothes": "Camouflage pants, t-shirt, camouflage hunting jacket, hiking boots",
-        "Items": [
-            "Camping kit",
-            "Survival kit"
-        ],
-        "Weapons": [
-            "Rifle, hunting",
-            "Knife, large"
-        ],
-        "Vehicles": [
-            "Pickup truck",
-            "ATV"
+        "description": "<ul><li>Clothes: Camouflage pants, t-shirt, camouflage hunting jacket, hiking boots</li><li>Items: Camping kit, Survival kit</li><li>Weapons: Hunting rifle, Large knife</li><li>Vehicles: Pickup truck, ATV</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "item",
+                "value": "Camping kit"
+            },
+            {
+                "name": "item",
+                "value": "Survival kit"
+            },
+            {
+                "name": "weapon",
+                "value": "Rifle, hunting"
+            },
+            {
+                "name": "weapon",
+                "value": "Knife, large"
+            },
+            {
+                "name": "vehicle",
+                "value": "Pickup truck"
+            },
+            {
+                "name": "vehicle",
+                "value": "ATV"
+            }
         ],
         "price": 2
     },
     {
         "name": "Martial Artist Pack",
-        "Clothes": "Traditional martial arts uniform, tabi slippers",
-        "Vehicles": [
-            "Common car"
+        "description": "<ul><li>Clothes: Traditional martial arts uniform, tabi slippers</li><li>Vehicles: Common car</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "vehicle",
+                "value": "Common car"
+            }
         ],
         "price": 2
     },
     {
         "name": "Mechanic Pack",
-        "Clothes": "A set of overalls with many pockets, stained t-shirt, work boots",
-        "Items": [
-            "Multitool",
-            "Mechanics kit",
-            "Welders kit"
-        ],
-        "Vehicles": [
-            "Van"
+        "description": "<ul><li>Clothes: A set of overalls with many pockets, stained t-shirt, work boots</li><li>Items: Multitool, Mechanics kit, Welders kit</li><li>Vehicles: Van</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "item",
+                "value": "Multitool"
+            },
+            {
+                "name": "item",
+                "value": "Mechanics kit"
+            },
+            {
+                "name": "item",
+                "value": "Welders kit"
+            },
+            {
+                "name": "vehicle",
+                "value": "Van"
+            }
         ],
         "price": 2
     },
     {
         "name": "Parent Pack",
-        "Clothes": "Everyday urban clothing",
-        "Vehicles": [
-            "Minivan"
+        "description": "<ul><li>Clothes: Everyday urban clothing</li><li>Vehicles: Minivan</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "vehicle",
+                "value": "Minivan"
+            }
         ],
         "price": 2
     },
     {
         "name": "Police Pack",
-        "Clothes": "Police uniform",
-        "Items": [
-            "Police kit",
-            "Police cruiser kit"
-        ],
-        "Armors": [
-            "Ballistic vest, medium"
-        ],
-        "Weapons": [
-            "Pistol, 9mm semi-auto",
-            "Taser",
-            "Club, small wooden"
-        ],
-        "Vehicles": [
-            "Police cruiser"
+        "description": "<ul><li>Clothes: Police uniform</li><li>Items: Police kit, Police cruiser kit</li><li>Weapons: 9mm semi-auto pistol, Taser, Small wooden club</li><li>Armors: Medium ballistic vest</li><li>Vehicles: Police Cruiser</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "item",
+                "value": "Police kit"
+            },
+            {
+                "name": "item",
+                "value": "Police cruiser kit"
+            },
+            {
+                "name": "weapon",
+                "value": "Pistol, 9mm semi-auto"
+            },
+            {
+                "name": "weapon",
+                "value": "Taser"
+            },
+            {
+                "name": "weapon",
+                "value": "Club, small wooden"
+            },
+            {
+                "name": "armor",
+                "value": "Ballistic vest, medium"
+            },
+            {
+                "name": "vehicle",
+                "value": "Police cruiser"
+            }
         ],
         "price": 0
     },
     {
         "name": "Riot Control Pack",
-        "Clothes": "Police uniform, police shoes, riot helmet with face shield",
-        "Items": [
-            "Police kit",
-            "Police cruiser kit",
-            "Zip ties",
-            "Zip ties",
-            "Zip ties",
-            "Zip ties",
-            "Zip ties",
-            "Zip ties",
-            "Zip ties",
-            "Zip ties",
-            "Zip ties",
-            "Zip ties"
-        ],
-        "Armors": [
-            "Modern combat armor"
-        ],
-        "Weapons": [
-            "Club, large wooden",
-            "Grenade, tear gas",
-            "Grenade, tear gas"
-        ],
-        "Vehicles": [
-            "Police van"
+        "description": "<ul><li>Clothes: Police uniform, police shoes, riot helmet with face shield</li><li>Items: Police kit, Police cruiser kit, Zip ties</li><li>Weapons: Tear gas grenade x2</li><li>Armors: Modern combat armor</li><li>Vehicles: Police van</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "item",
+                "value": "Police kit"
+            },
+            {
+                "name": "item",
+                "value": "Police cruiser kit"
+            },
+            {
+                "name": "item",
+                "value": "Zip ties"
+            },
+            {
+                "name": "weapon",
+                "value": "Grenade, tear gas"
+            },
+            {
+                "name": "weapon",
+                "value": "Grenade, tear gas"
+            },
+            {
+                "name": "weapon",
+                "value": "Club, large wooden"
+            },
+            {
+                "name": "armor",
+                "value": "Modern combat armor"
+            },
+            {
+                "name": "vehicle",
+                "value": "Police van"
+            }
         ],
         "price": 0
     },
     {
         "name": "Scientist Pack",
-        "Clothes": "Straight leg pants, long sleeve shirt, lab coat, safety goggles",
-        "Items": [
-            "Laptop computer",
-            "Chemistry kit",
-            "First Aid kit"
-        ],
-        "Vehicles": [
-            "Common car"
+        "description": "<ul><li>Clothes: Straight leg pants, long sleeve shirt, lab coat, safety goggles</li><li>Items: Laptop computer, Chemistry kit, First Aid kit</li><li>Vehicles: Common car</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "item",
+                "value": "Laptop computer"
+            },
+            {
+                "name": "item",
+                "value": "Chemistry kit"
+            },
+            {
+                "name": "item",
+                "value": "First Aid kit"
+            },
+            {
+                "name": "vehicle",
+                "value": "Common car"
+            }
         ],
         "price": 2
     },
     {
         "name": "Sniper Pack",
-        "Clothes": "Inconspicuous clothing",
-        "Items": [
-            "Binoculars"
-        ],
-        "Weapons": [
-            "Rifle, sniper"
-        ],
-        "Vehicles": [
-            "Common car"
+        "description": "<ul><li>Clothes: Inconspicuous clothing</li><li>Items: Binoculars</li><li>Weapons: Sniper rifle</li><li>Vehicles: Common car</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "item",
+                "value": "Binoculars"
+            },
+            {
+                "name": "weapon",
+                "value": "Rifle, sniper"
+            },
+            {
+                "name": "vehicle",
+                "value": "Common car"
+            }
         ],
         "price": 4
     },
     {
         "name": "Socialite Pack",
-        "Clothes": "Fashionable designer clothing and shoes",
-        "Items": [
-            "Laptop computer",
-            "Chemistry kit",
-            "First Aid kit"
-        ],
-        "Vehicles": [
-            "Luxury car"
+        "description": "<ul><li>Clothes: Fashionable designer clothing and shoes</li><li>Weapons: Pepper spray</li><li>Vehicles: Luxury car</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "weapon",
+                "value": "Pepper spray"
+            },
+            {
+                "name": "vehicle",
+                "value": "Luxury car"
+            }
         ],
         "price": 4
     },
     {
         "name": "Soldier Pack",
-        "Clothes": "Military fatigues, combat boots",
-        "Items": [
-            "Soldiers kit"
-        ],
-        "Armors": [
-            "Ballistic vest, heavy"
-        ],
-        "Weapons": [
-            "Rifle, assault carbine",
-            "Grenade, fragmentation",
-            "Grenade, fragmentation"
-        ],
-        "Vehicles": [
-            "4WD vehicle"
+        "description": "<ul><li>Clothes: Military fatigues, combat boots</li><li>Items: Soldiers kit</li><li>Weapons: Assault carbine rifle, Fragmentation grenade x2</li><li>Armors: Heavy ballistic vest</li><li>Vehicles: 4WD vehicle</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "item",
+                "value": "Soldiers kit"
+            },
+            {
+                "name": "weapon",
+                "value": "Rifle, assault carbine"
+            },
+            {
+                "name": "weapon",
+                "value": "Grenade, fragmentation"
+            },
+            {
+                "name": "weapon",
+                "value": "Grenade, fragmentation"
+            },
+            {
+                "name": "armor",
+                "value": "Ballistic vest, heavy"
+            },
+            {
+                "name": "vehicle",
+                "value": "4WD vehicle"
+            }
         ],
         "price": 0
     },
     {
         "name": "Spy Pack",
-        "Clothes": "Professional attire appropriate to the local area, concealed holster, secret pocket",
-        "Items": [
-            "Disguise kit",
-            "Surveillance kit"
-        ],
-        "Weapons": [
-            "Pistol, concealed carry"
-        ],
-        "Vehicles": [
-            "Luxury car"
+        "description": "<ul><li>Clothes: Professional attire appropriate to the local area, concealed holster, secret pocket</li><li>Items: Disguise kit, Surveillance kit</li><li>Weapons: Concealed carry pistol</li><li>Vehicles: Luxury car</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "item",
+                "value": "Disguise kit"
+            },
+            {
+                "name": "item",
+                "value": "Surveillance kit"
+            },
+            {
+                "name": "weapon",
+                "value": "Pistol, concealed carry"
+            },
+            {
+                "name": "vehicle",
+                "value": "Luxury car"
+            }
         ],
         "price": 3
     },
     {
         "name": "Street Criminal Pack",
-        "Clothes": "Jeans, t-shirt, hoodie, sneakers, small backpack",
-        "Items": [
-            "Burglars kit"
-        ],
-        "Weapons": [
-            "Pistol, 9mm semi-auto"
-        ],
-        "Vehicles": [
-            "Motorcycle"
+        "description": "<ul><li>Clothes: Jeans, t-shirt, hoodie, sneakers, small backpack</li><li>Items: Burglars kit</li><li>Weapons: 9mm semi-auto pistol</li><li>Vehicles: Motorcycle</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "item",
+                "value": "Burglars kit"
+            },
+            {
+                "name": "weapon",
+                "value": "Pistol, 9mm semi-auto"
+            },
+            {
+                "name": "vehicle",
+                "value": "Motorcycle"
+            }
         ],
         "price": 2
     },
     {
         "name": "Thug Pack",
-        "Clothes": "Jeans, an old t-shirt, combat boots",
-        "Armors": [
-            "Armored clothing"
-        ],
-        "Weapons": [
-            "Pistol, holdout",
-            "Brass knuckles"
-        ],
-        "Vehicles": [
-            "Junker"
+        "description": "<ul><li>Clothes: Jeans, an old t-shirt, combat boots</li><li>Weapons: Holdout pistol, Brass knuckles</li><li>Armor: Armored clothing</li><li>Vehicles: Junker</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "weapon",
+                "value": "Pistol, holdout"
+            },
+            {
+                "name": "weapon",
+                "value": "Brass knuckles"
+            },
+            {
+                "name": "armor",
+                "value": "Armored clothing"
+            },
+            {
+                "name": "vehicle",
+                "value": "Junker"
+            }
         ],
         "price": 2
     },
     {
         "name": "Underworld Pack",
-        "Clothes": "Stylish club outfit, trendy jacket, fashionable shoes, concealed carry holsters",
-        "Armors": [
-            "Ballistic vest, light"
-        ],
-        "Weapons": [
-            "Pistol, concealed carry",
-            "Pistol, concealed carry"
-        ],
-        "Vehicles": [
-            "Common car"
+        "description": "<ul><li>Clothes: Stylish club outfit, trendy jacket, fashionable shoes, concealed carry holsters</li><li>Weapons: Concealed carry pistol x2</li><li>Armor: Light ballistic vest</li><li>Vehicles: Common car</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "weapon",
+                "value": "Pistol, concealed carry"
+            },
+            {
+                "name": "weapon",
+                "value": "Pistol, concealed carry"
+            },
+            {
+                "name": "armor",
+                "value": "Ballistic vest, light"
+            },
+            {
+                "name": "vehicle",
+                "value": "Common car"
+            }
         ],
         "price": 2
     },
     {
         "name": "Weekend Warrior Pack",
-        "Clothes": "Camouflage clothing, combat boots, baseball hat",
-        "Armors": [
-            "Ballistic vest, medium"
-        ],
-        "Weapons": [
-            "Pistol, 9mm semi-auto",
-            "Rifle, tactical"
-        ],
-        "Vehicles": [
-            "4WD vehicle"
+        "description": "<ul><li>Clothes: Camouflage clothing, combat boots, baseball hat</li><li>Weapons: 9mm semi-auto pistol, Tactical rifle</li><li>Armor: Medium ballistic vest</li><li>Vehicles: 4WD vehicle</li></ul>",
+        "bonusCharacteristics": [
+            {
+                "name": "weapon",
+                "value": "Pistol, 9mm semi-auto"
+            },
+            {
+                "name": "weapon",
+                "value": "Rifle, tactical"
+            },
+            {
+                "name": "armor",
+                "value": "Ballistic vest, medium"
+            },
+            {
+                "name": "vehicle",
+                "value": "4WD vehicle"
+            }
         ],
         "price": 3
     }

@@ -64,7 +64,6 @@ const handleImageUpload = (event: ChangeEvent<HTMLInputElement>, setImagePreview
   >, setImageData: React.Dispatch<
   React.SetStateAction<File | null>
 >) => {
-    console.log(event.target.files);
     if (event.target.files && event.target.files.length > 0) {
       setImageData(event.target.files[0]);
 

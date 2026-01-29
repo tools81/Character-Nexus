@@ -253,11 +253,17 @@ const CharacterEditor: React.FC = () => {
           <DisabledPrereqWrapper component={field} disabled={disabledMap?.[field.name] === true}>
             <InputNumber
               register={register}
+              unregister={unregister}
+              getValues={getValues}
+              setValue={setValue}
               name={field.name}
               includeLabel={includeLabel}
               label={field.label}
               defaultValue={field.default}
               className={field.className}
+              inputBonusAdjustments={field.bonusAdjustments}
+              bonusAdjustments={bonusAdjustments}
+              setBonusAdjustments={setBonusAdjustments}
               validation={field.validation}
               disabled={disabledMap?.[field.name] === true}
               visible={isVisible(field.name)}

@@ -363,8 +363,8 @@ namespace EverydayHeroes
             {
                 children.Add(new
                 {
-                    name = $"attributes.{attribute.Name}",
-                    id = $"attributes.{attribute.Name.ToLower()}",
+                    name = $"attribute.{attribute.Name}",
+                    id = $"attribute.{attribute.Name.ToLower()}",
                     label = attribute.Name,
                     type = "number",
                     className = "form-control",

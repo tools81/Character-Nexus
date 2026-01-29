@@ -6,24 +6,31 @@ export function useBonusAdjustments(
   getValues: (field: string) => any,
   setValue: (field: string, value: any) => void
 ) {
+  
   useEffect(() => {
     if (!Array.isArray(bonusAdjustments)) return;
 
     for (const adjustment of bonusAdjustments) {
-      handleSetArrayValue(adjustment.type, adjustment.value);
+      handleSetValue(adjustment.type, adjustment.name, adjustment.value);
     }
-  }, [bonusAdjustments, getValues, setValue]);
+  }, [bonusAdjustments]);
 
-  const handleSetArrayValue = (array: string, value: number) => {
+  const handleSetValue = (type: string, name: string, bonusValue: number) => {
     // Guard against undefined or non-string array names which can cause
     // react-hook-form internals to call string methods like `startsWith` on
     // an undefined value (observed as a runtime error when inputs update).
-    if (!array || typeof array !== 'string') return;
+    if (!type || typeof type !== 'string') return;
 
-    const current = Array.isArray(getValues(array)) ? getValues(array) : [];
-    const exists = Array.isArray(current) && current.some((i: any) => i && i.value === value);
-    if (!exists) {
-      setValue(array, [...current, { value: value }]);
+    if (name && typeof name === 'string' && name !== "") {
+      type = `${type}.${name}`;
     }
+
+    const current = getValues(type);
+    setValue(type, +current + +bonusValue);
+    // const exists = current.some((i: any) => i && i.value === bonusValue);
+
+    // if (!exists) {
+    //   setValue(type, [...current, { value: bonusValue }]);
+    // }
   };
 }

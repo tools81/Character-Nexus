@@ -20,7 +20,6 @@ export function useBonusCharacteristics(
     if (!fieldName || typeof fieldName !== "string") return;
 
     const currentValue = getValues(fieldName);
-    // console.log('(useBonusCharacteristics) Current value for', fieldName, ':', currentValue);
 
     // ─────────────────────────────────────────────
     // ARRAY FIELD (checkbox group, multi-select)

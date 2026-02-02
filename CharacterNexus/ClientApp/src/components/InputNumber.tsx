@@ -2,6 +2,7 @@ import { ChangeEvent } from "react";
 import { UseFormRegister, FieldValues, useWatch, UseFormGetValues, UseFormSetValue, UseFormUnregister } from "react-hook-form";
 import { BonusAdjustments } from "../types/BonusAdjustment";
 import { handleRemoveBonusAdjustment, handleRemoveFieldValue } from "../hooks/useBonus";
+import { InputGroup } from "react-bootstrap";
 
 interface Props {
   register: UseFormRegister<FieldValues>,
@@ -13,6 +14,7 @@ interface Props {
   label: string;
   defaultValue: string;
   className: string;
+  image?: string;
   inputBonusAdjustments: any;
   bonusAdjustments: BonusAdjustments;
   setBonusAdjustments: React.Dispatch<React.SetStateAction<BonusAdjustments>>;
@@ -35,6 +37,7 @@ const InputNumber = ({
   label,
   defaultValue,
   className,
+  image,
   inputBonusAdjustments,
   bonusAdjustments,
   setBonusAdjustments,
@@ -53,28 +56,61 @@ const InputNumber = ({
           <br />
         </>
       )}
-      <input
-        id={name}
-        type="number"
-        className={className}
-        style={{ maxWidth: "100px" }}
-        data-bonusadjustments={inputBonusAdjustments}
-        {...register(name, { disabled })}
-        disabled={disabled}
-        min = {validation?.min}
-        max = {validation?.max}
-        value={value ? value : defaultValue}
-        onChange={(event) =>
-          handleInputChange(
-            event,
-            bonusAdjustments,
-            setBonusAdjustments,
-            getValues,
-            setValue,
-            unregister
-          )
-        }
-      ></input>
+      {image && (
+        <>
+          <InputGroup>
+            <InputGroup.Text>
+              <img src={image} alt="" style={{ maxHeight: "32px", objectFit: "cover" }} />
+            </InputGroup.Text>
+            <input
+              id={name}
+              type="number"
+              className={className}
+              style={{ maxWidth: "100px" }}
+              data-bonusadjustments={inputBonusAdjustments}
+              {...register(name, { disabled })}
+              disabled={disabled}
+              min = {validation?.min}
+              max = {validation?.max}
+              value={value ? value : defaultValue}
+              onChange={(event) =>
+                handleInputChange(
+                  event,
+                  bonusAdjustments,
+                  setBonusAdjustments,
+                  getValues,
+                  setValue,
+                  unregister
+                )
+              }
+            ></input>
+          </InputGroup>
+        </>
+      )}
+      {!image && (
+        <input
+          id={name}
+          type="number"
+          className={className}
+          style={{ maxWidth: "100px" }}
+          data-bonusadjustments={inputBonusAdjustments}
+          {...register(name, { disabled })}
+          disabled={disabled}
+          min = {validation?.min}
+          max = {validation?.max}
+          value={value ? value : defaultValue}
+          onChange={(event) =>
+            handleInputChange(
+              event,
+              bonusAdjustments,
+              setBonusAdjustments,
+              getValues,
+              setValue,
+              unregister
+            )
+          }
+        ></input>
+      )}
     </div>
   );
 };

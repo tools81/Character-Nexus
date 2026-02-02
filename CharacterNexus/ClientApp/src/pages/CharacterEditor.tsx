@@ -261,6 +261,7 @@ const CharacterEditor: React.FC = () => {
               label={field.label}
               defaultValue={field.default}
               className={field.className}
+              image={field.image}
               inputBonusAdjustments={field.bonusAdjustments}
               bonusAdjustments={bonusAdjustments}
               setBonusAdjustments={setBonusAdjustments}

@@ -90,8 +90,8 @@
     "scale": "Minor",
     "bonusadjustments": [
       {
-        "name": "WealthLevel",
-        "type": "WealthLevel",
+        "name": "",
+        "type": "wealthlevel",
         "value": 1
       }
     ]
@@ -413,7 +413,7 @@
     "scale": "Major",
     "bonusadjustments": [
       {
-        "name": "luckpoints",
+        "name": "",
         "type": "luckpoints",
         "Value": 3
       }
@@ -438,7 +438,7 @@
     "scale": "Major",
     "bonusadjustments": [
       {
-        "name": "hitpoints",
+        "name": "",
         "type": "hitpoints",
         "value": 2
       }
@@ -473,7 +473,21 @@
     "description": "You have learned how to use your strength to focus an aggressive offense.<br /><ul><li>You gain Basic Equipment proficiency.</li><li>You gain proficiency in one of the following skills: Athletics, Acrobatics, or Endurance.</li><li>Before making an attack, you can declare you are being reckless. You gain advantage on all melee weapon attack rolls but all opponents attacking you have advantage on their attack rolls. This lasts until the start of your next turn.</li></ul>",
     "type": "Multiclass",
     "scale": "Major",
-    "prerequisite": "Not a Strong Hero archetype, Strength 13+, Level 2+",
+    "prerequisite": [
+      {
+        "type": "archetype",
+        "formula": "!== 'Strong'"
+      },
+      {
+        "type": "attribute",
+        "name": "Strength",
+        "formula": ">= 13"
+      },
+      {
+        "type": "level",
+        "formula": ">= 2"
+      }
+    ],
     "bonuscharacteristics": [
       {
         "type": "equipmentproficiency",
@@ -501,27 +515,28 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Brawler"
+        "formula": "!== 'Brawler'"
       },
       {
         "type": "feat",
-        "value": "Brawler Training",
+        "name": "Brawler Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Strong"
+            "formula": "=== 'Strong'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ],
     "bonuscharacteristics": [
       {
         "type": "equipmentproficiency",
-        "choices": "Improvised"
+        "value": "Improvised"
       }
     ]
   },
@@ -533,15 +548,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Brawler"
+        "formula": "!== 'Brawler'"
       },
       {
         "type": "feat",
-        "value": "Brawler Training"
+        "name": "Brawler Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ]
   },
@@ -553,21 +569,22 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Heavy Gunner"
+        "formula": "!== 'Heavy Gunner'"
       },
       {
         "type": "feat",
-        "value": "Strong Hero Training",
+        "name": "Strong Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Strong"
+            "formula": "=== 'Strong'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">=4"
       }
     ],
     "bonuscharacteristics": [
@@ -585,15 +602,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Heavy Gunner"
+        "formula": "!== 'Heavy Gunner'"
       },
       {
         "type": "feat",
-        "value": "Heavy Gunner Training"
+        "name": "Heavy Gunner Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ],
     "bonuscharacteristics": [
@@ -611,11 +629,12 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!MMA Fighter"
+        "formula": "!== 'MMA Fighter'"
       },
       {
         "type": "feat",
-        "value": "Strong Hero Training",
+        "name": "Strong Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
@@ -625,7 +644,7 @@
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ]
   },
@@ -637,15 +656,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!MMA Fighter"
+        "formula": "!== 'MMA Fighter'"
       },
       {
         "type": "feat",
-        "value": "MMA Fighter Training"
+        "name": "MMA Fighter Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ]
   },
@@ -657,16 +677,16 @@
     "prerequisites": [
       {
         "type": "archetype",
-        "value": "!Agile"
+        "formula": "!== 'Agile'"
       },
       {
         "type": "attribute",
         "name": "Dexterity",
-        "value": 13
+        "formula": ">= 13"
       },
       {
         "type": "level",
-        "value": 2
+        "formula": ">= 2"
       }
     ],
     "bonuscharacteristics": [
@@ -697,15 +717,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Martial Artist"
+        "formula": "!== 'Martial Artist'"
       },
       {
         "type": "feat",
-        "value": "Martial Artist Training"
+        "name": "Martial Artist Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ],
     "bonuscharacteristics": [
@@ -723,21 +744,22 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Martial Artist"
+        "formula": "!== 'Martial Artist'"
       },
       {
         "type": "feat",
-        "value": "Agile Hero Training",
+        "name": "Agile Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Agile"
+            "formula": "=== 'Agile'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ],
     "bonuscharacteristics": [
@@ -755,21 +777,22 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Scoundrel"
+        "formula": "!== 'Scoundrel'"
       },
       {
         "type": "feat",
-        "value": "Agile Hero Training",
+        "name": "Agile Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Agile"
+            "formula": "=== 'Agile'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ],
     "bonuscharacteristics": [
@@ -803,15 +826,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Scoundrel"
+        "formula": "!== 'Scoundrel'"
       },
       {
         "type": "feat",
-        "value": "Scoundrel Training"
+        "name": "Scoundrel Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ],
     "userchoices": [
@@ -839,21 +863,22 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Sharpshooter"
+        "formula": "!== 'Sharpshooter'"
       },
       {
         "type": "feat",
-        "value": "Agile Hero Training",
+        "name": "Agile Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Agile"
+            "formula": "=== 'Agile'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ],
     "bonuscharacteristics": [
@@ -871,15 +896,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Sharpshooter"
+        "formula": "!== 'Sharpshooter'"
       },
       {
         "type": "feat",
-        "value": "Sharpshooter Training"
+        "name": "Sharpshooter Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ]
   },
@@ -891,16 +917,16 @@
     "prerequisites": [
       {
         "type": "archetype",
-        "value": "!Tough"
+        "formula": "!== 'Tough'"
       },
       {
         "type": "attribute",
         "name": "Constitution",
-        "value": "13"
+        "formula": ">= 13"
       },
       {
         "type": "level",
-        "value": 2
+        "formula": ">= 2"
       }
     ],
     "bonuscharacteristics": [
@@ -922,21 +948,22 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Bodyguard"
+        "formula": "!== 'Bodyguard'"
       },
       {
         "type": "feat",
-        "value": "Tough Hero Training",
+        "name": "Tough Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Tough"
+            "formula": "=== 'Tough'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ],
     "bonuscharacteristics": [
@@ -954,15 +981,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Bodyguard"
+        "formula": "!== 'Bodyguard'"
       },
       {
         "type": "feat",
-        "value": "Bodyguard Training"
+        "name": "Bodyguard Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ]
   },
@@ -974,21 +1002,22 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Commando"
+        "formula": "!== 'Commando'"
       },
       {
         "type": "feat",
-        "value": "Tough Hero Training",
+        "name": "Tough Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Tough"
+            "formula": "=== 'Tough'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ],
     "bonuscharacteristics": [
@@ -1006,15 +1035,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Commando"
+        "formula": "!== 'Commando'"
       },
       {
         "type": "feat",
-        "value": "Commando Training"
+        "name": "Commando Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ],
     "bonuscharacteristics": [
@@ -1039,21 +1069,22 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Scrapper"
+        "formula": "!== 'Scrapper'"
       },
       {
         "type": "feat",
-        "value": "Tough Hero Training",
+        "name": "Tough Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Tough"
+            "formula": "=== 'Tough'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ],
     "bonuscharacteristics": [
@@ -1071,15 +1102,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Scrapper"
+        "formula": "!== 'Scrapper'"
       },
       {
         "type": "feat",
-        "value": "Scrapper Training"
+        "name": "Scrapper Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ]
   },
@@ -1091,16 +1123,16 @@
     "prerequisites": [
       {
         "type": "archetype",
-        "value": "!Smart"
+        "formula": "!== 'Smart'"
       },
       {
         "type": "attribute",
         "name": "Intelligence",
-        "value": 13
+        "formula": ">= 13"
       },
       {
         "type": "level",
-        "value": 2
+        "formula": ">= 2"
       }
     ],
     "bonusadjustments": [
@@ -1128,21 +1160,22 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Engineer"
+        "formula": "!== 'Engineer'"
       },
       {
         "type": "feat",
-        "value": "Smart Hero Training",
+        "name": "Smart Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Smart"
+            "formula": "=== 'Smart'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ],
     "bonuscharacteristics": [
@@ -1170,15 +1203,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Engineer"
+        "formula": "!== 'Engineer'"
       },
       {
         "type": "feat",
-        "value": "Engineer Training"
+        "name": "Engineer Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ],
     "bonuscharacteristics": [
@@ -1214,21 +1248,22 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Hacker"
+        "formula": "!== 'Hacker'"
       },
       {
         "type": "feat",
-        "value": "Smart Hero Training",
+        "name": "Smart Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Smart"
+            "formula": "=== 'Smart'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ],
     "bonuscharacteristics": [
@@ -1263,15 +1298,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Hacker"
+        "formula": "!== 'Hacker'"
       },
       {
         "type": "feat",
-        "value": "Hacker Training"
+        "name": "Hacker Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ],
     "bonuscharacteristics": [
@@ -1307,21 +1343,22 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Mastermind"
+        "formula": "!== 'Mastermind'"
       },
       {
         "type": "feat",
-        "value": "Smart Hero Training",
+        "name": "Smart Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Smart"
+            "formula": "=== 'Smart'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ],
     "userchoices": [
@@ -1359,15 +1396,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Mastermind"
+        "formula": "!== 'Mastermind'"
       },
       {
         "type": "feat",
-        "value": "Mastermind Training"
+        "name": "Mastermind Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ],
     "userchoices": [
@@ -1406,21 +1444,22 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Scientist"
+        "formula": "!== 'Scientist'"
       },
       {
         "type": "feat",
-        "value": "Smart Hero Training",
+        "name": "Smart Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Smart"
+            "formula": "=== 'Smart'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ],
     "userchoices": [
@@ -1458,15 +1497,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Scientist"
+        "formula": "!== 'Scientist'"
       },
       {
         "type": "feat",
-        "value": "Scientist Training"
+        "name": "Scientist Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ],
     "userchoices": [
@@ -1505,16 +1545,16 @@
     "prerequisites": [
       {
         "type": "archetype",
-        "value": "!Wise"
+        "formula": "!== 'Wise'"
       },
       {
         "type": "attribute",
         "name": "Wisdom",
-        "value": 13
+        "formula": ">= 13"
       },
       {
         "type": "level",
-        "value": 2
+        "formula": ">= 2"
       }
     ],
     "bonusadjustments": [
@@ -1552,21 +1592,22 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Hunter"
+        "formula": "!== 'Hunter'"
       },
       {
         "type": "feat",
-        "value": "Wise Hero Training",
+        "name": "Wise Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Wise"
+            "formula": "=== 'Wise'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ],
     "bonusadjustments": [
@@ -1603,18 +1644,18 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Hunter"
+        "formula": "!== 'Hunter'"
       },
       {
         "type": "feat",
-        "value": "Hunter Training"
+        "name": "Hunter Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ],
-    "prerequisite": "Not a hunter (class), Hunter Training feat, Level 8+",
     "bonusadjustments": [
       {
         "name": "FocusPoints",
@@ -1643,21 +1684,22 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Master"
+        "formula": "!== 'Master'"
       },
       {
         "type": "feat",
-        "value": "Wise Hero Training",
+        "name": "Wise Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Wise"
+            "formula": "=== 'Wise'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ],
     "bonusadjustments": [
@@ -1682,15 +1724,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Master"
+        "formula": "!== 'Master'"
       },
       {
         "type": "feat",
-        "value": "Master Training"
+        "name": "Master Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ],
     "bonusadjustments": [
@@ -1709,21 +1752,22 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Sleuth"
+        "formula": "!== 'Sleuth'"
       },
       {
         "type": "feat",
-        "value": "Wise Hero Training",
+        "name": "Wise Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Wise"
+            "formula": "=== 'Wise'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ],
     "bonusadjustments": [
@@ -1762,15 +1806,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Sleuth"
+        "formula": "!== 'Sleuth'"
       },
       {
         "type": "feat",
-        "value": "Sleuth Training"
+        "name": "Sleuth Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ],
     "bonusadjustments": [
@@ -1803,16 +1848,16 @@
     "prerequisites": [
       {
         "type": "archetype",
-        "value": "!Charming"
+        "formula": "!== 'Charming'"
       },
       {
         "type": "attribute",
         "name": "Charisma",
-        "value": 13
+        "formula": ">= 13"
       },
       {
         "type": "level",
-        "value": 2
+        "formula": ">= 2"
       }
     ],
     "bonusadjustments": [
@@ -1855,21 +1900,22 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Duelist"
+        "formula": "!== 'Duelist'"
       },
       {
         "type": "feat",
-        "value": "Charming Hero Training",
+        "name": "Charming Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Charming"
+            "formula": "=== 'Charming'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ],
     "bonusadjustments": [
@@ -1908,15 +1954,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Duelist"
+        "formula": "!== 'Duelist'"
       },
       {
         "type": "feat",
-        "value": "Duelist Training"
+        "name": "Duelist Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ],
     "bonusadjustments": [
@@ -1945,21 +1992,22 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Icon"
+        "formula": "!== 'Icon'"
       },
       {
         "type": "feat",
-        "value": "Charming Hero Training",
+        "name": "Charming Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Charming"
+            "formula": "=== 'Charming'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ],
     "bonusadjustments": [
@@ -1998,15 +2046,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Icon"
+        "formula": "!== 'Icon'"
       },
       {
         "type": "feat",
-        "value": "Icon Training"
+        "name": "Icon Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ],
     "bonusadjustments": [
@@ -2035,21 +2084,22 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Leader"
+        "formula": "!== 'Leader'"
       },
       {
         "type": "feat",
-        "value": "Charming Hero Training",
+        "name": "Charming Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Charming"
+            "formula": "=== 'Charming'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ],
     "bonusadjustments": [
@@ -2088,15 +2138,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Leader"
+        "formula": "!== 'Leader'"
       },
       {
         "type": "feat",
-        "value": "Leader Training"
+        "name": "Leader Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ],
     "bonusadjustments": [
@@ -2125,21 +2176,22 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Manipulator"
+        "formula": "!== 'Manipulator'"
       },
       {
         "type": "feat",
-        "value": "Charming Hero Training",
+        "name": "Charming Hero Training",
+        "formula": "=== true",
         "logicalor": [
           {
             "type": "archetype",
-            "value": "Charming"
+            "formula": "=== 'Charming'"
           }
         ]
       },
       {
         "type": "level",
-        "value": 4
+        "formula": ">= 4"
       }
     ],
     "bonusadjustments": [
@@ -2168,15 +2220,16 @@
     "prerequisites": [
       {
         "type": "class",
-        "value": "!Manipulator"
+        "formula": "!== 'Manipulator'"
       },
       {
         "type": "feat",
-        "value": "Manipulator Training"
+        "name": "Manipulator Training",
+        "formula": "=== true"
       },
       {
         "type": "level",
-        "value": 8
+        "formula": ">= 8"
       }
     ],
     "bonusadjustments": [

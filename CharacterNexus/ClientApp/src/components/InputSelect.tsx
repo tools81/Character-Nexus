@@ -155,9 +155,11 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
                 className="custom-select__option"
                 onClick={() => handleCustomChange(option)}
               >
-                {option.image && (
-                  <img src={option.image} alt="" />
-                )}
+                <div>
+                  {option.image && (
+                    <img src={option.image} alt="" />
+                  )}
+                </div>
                 <div>
                   <strong>{option.label}</strong>
                   {option.description && (

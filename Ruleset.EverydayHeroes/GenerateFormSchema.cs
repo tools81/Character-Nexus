@@ -407,6 +407,7 @@ namespace EverydayHeroes
                     {
                         value = archetype.Name,
                         label = archetype.Name,
+                        image = archetype.Image,
                         description = archetype.Description
                     }
                 );

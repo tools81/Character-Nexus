@@ -7,6 +7,7 @@ namespace EverydayHeroes
     {
         public string Name { get; set; }
         public string Description { get; set; } 
+        public string Image { get; set; }
         public string HitDice { get; set; }
         public int Hitpoints { get; set; }
         public int HitpointsPerLevel { get; set; }

@@ -64,22 +64,20 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
   const [open, setOpen] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
-  // Sync FROM hidden select (automation, RHF)
-  useEffect(() => {
-    const current = getValues(name);
-    const option = options.find(o => o.value === current) ?? null;
-    setSelectedValue(option);
-  }, [getValues, name, options]);
+  const watchedValue = useWatch({ name });
 
-
-  const watchedValue = useWatch({
-    name,
-  });
+  const normalizedValue =
+    watchedValue && typeof watchedValue === "object" && "value" in watchedValue
+      ? (watchedValue as any).value
+      : watchedValue;
 
   useEffect(() => {
-    const option = options.find(o => o.value === watchedValue);
-    setSelectedValue(option);
-  }, [watchedValue, options]);
+    const match =
+      options.find(o => String(o.value) === String(normalizedValue)) ?? null;
+
+    setSelectedValue(match);
+  }, [normalizedValue, options]);
+
 
   useEffect(() => {
     const close = (e: MouseEvent) => {
@@ -93,7 +91,9 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
 
   // Handle clicks on the custom UI
   const handleCustomChange = (option: any) => {
-    setValue(name, option.value, {
+    const isArrayIndexField = /\.\d+$/.test(name);
+
+    setValue(name, isArrayIndexField ? option.value : option.value, {
       shouldDirty: true,
       shouldTouch: true,
       shouldValidate: true
@@ -243,6 +243,8 @@ const handleSelectChange = (
   const selectElement = event.target;
   const selectedOption = selectElement.options[selectElement.selectedIndex];
 
+  console.log("Element:", selectElement, "Selected:", selectedOption);
+
   const selectBonusAdjustmentsString = selectedOption.getAttribute("data-bonusadjustments");
   const selectBonusAdjustments = selectBonusAdjustmentsString
     ? JSON.parse(selectBonusAdjustmentsString)
@@ -305,5 +307,5 @@ const handleSelectChange = (
     if (value && openUserChoiceModal) {
       openUserChoiceModal(value);
     }
-  }
+  }  
 };

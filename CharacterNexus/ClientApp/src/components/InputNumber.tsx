@@ -123,9 +123,12 @@ const handleInputChange = (
   setValue: UseFormSetValue<FieldValues>,
   unregister: UseFormUnregister<FieldValues>
 ) => {
-  if (event.target.value == null) {
+  if (event.target.value == null || Number.isNaN(event.target.value) || event.target.value === "") {
     return;
   }
+
+  console.log("Target:", event.target);
+  console.log("Value:", event.target.value);
 
   setValue(event.target.name, event.target.value, {
     shouldDirty: true,

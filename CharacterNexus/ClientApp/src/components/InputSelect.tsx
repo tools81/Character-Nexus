@@ -67,11 +67,13 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
   // Sync FROM hidden select (automation, RHF)
   useEffect(() => {
     const current = getValues(name);
-    setSelectedValue(current ? current : "");
-  }, [getValues, name]);
+    const option = options.find(o => o.value === current) ?? null;
+    setSelectedValue(option);
+  }, [getValues, name, options]);
+
 
   const watchedValue = useWatch({
-    name: `${name}.value`,
+    name,
   });
 
   useEffect(() => {
@@ -96,7 +98,6 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
       shouldTouch: true,
       shouldValidate: true
     });
-
 
     // Update hidden select and trigger change event so existing handlers run
     if (selectRef.current) {

@@ -6,7 +6,7 @@ export function useBonusAdjustments(
   getValues: (field: string) => any,
   setValue: (field: string, value: any) => void
 ) {
-  
+
   useEffect(() => {
     if (!Array.isArray(bonusAdjustments)) return;
 

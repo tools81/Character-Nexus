@@ -1536,7 +1536,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "null",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Bodyguard'\"},{\"type\":\"feat\",\"name\":\"Bodyguard Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Advanced Brawler Training",
@@ -1545,7 +1545,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "null",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Brawler'\"},{\"type\":\"feat\",\"name\":\"Brawler Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Advanced Commando Training",
@@ -1554,7 +1554,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Military\"}]",
             "bonusAdjustments": "[{\"type\":\"defense\",\"name\":\"Defense\",\"value\":2}]",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Commando'\"},{\"type\":\"feat\",\"name\":\"Commando Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Advanced Duelist Training",
@@ -1563,7 +1563,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1}]",
             "userChoices": "[{\"type\":\"tricks\",\"choices\":[\"Duelist\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Duelist'\"},{\"type\":\"feat\",\"name\":\"Duelist Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Advanced Engineer Training",
@@ -1572,7 +1572,7 @@
             "bonusCharacteristics": "[{\"type\":\"skill.expertise\",\"value\":\"skill.expertise.Mechanics\"}]",
             "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1}]",
             "userChoices": "[{\"type\":\"plans\",\"choices\":[\"Shared\",\"Engineer\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Engineer'\"},{\"type\":\"feat\",\"name\":\"Engineer Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Advanced Hacker Training",
@@ -1581,7 +1581,7 @@
             "bonusCharacteristics": "[{\"type\":\"skill.expertise\",\"value\":\"skill.expertise.Computers\"}]",
             "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1}]",
             "userChoices": "[{\"type\":\"plans\",\"choices\":[\"Shared\",\"Hacker\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Hacker'\"},{\"type\":\"feat\",\"name\":\"Hacker Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Advanced Heavy Gunner Training",
@@ -1590,7 +1590,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Military\"}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Heavy Gunner'\"},{\"type\":\"feat\",\"name\":\"Heavy Gunner Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Advanced Hunter Training",
@@ -1599,7 +1599,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":1}]",
             "userChoices": "[{\"type\":\"skill.expertise\",\"choices\":[\"Perception\",\"Stealth\",\"Survival\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Hunter'\"},{\"type\":\"feat\",\"name\":\"Hunter Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Advanced Icon Training",
@@ -1608,7 +1608,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1}]",
             "userChoices": "[{\"type\":\"tricks\",\"choices\":[\"Icon\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Icon'\"},{\"type\":\"feat\",\"name\":\"Icon Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Advanced Leader Training",
@@ -1617,7 +1617,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1}]",
             "userChoices": "[{\"type\":\"tricks\",\"choices\":[\"Leader\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Leader'\"},{\"type\":\"feat\",\"name\":\"Leader Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Advanced Maniputator Training",
@@ -1626,7 +1626,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1}]",
             "userChoices": "[{\"type\":\"tricks\",\"choices\":[\"Manipulator\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Manipulator'\"},{\"type\":\"feat\",\"name\":\"Manipulator Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Advanced Martial Arts Training",
@@ -1635,7 +1635,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Historical\"}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Martial Artist'\"},{\"type\":\"feat\",\"name\":\"Agile Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "Advanced Master Training",
@@ -1644,7 +1644,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":1}]",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Master'\"},{\"type\":\"feat\",\"name\":\"Master Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Advanced Mastermind Training",
@@ -1653,7 +1653,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1}]",
             "userChoices": "[{\"type\":\"skill.expertise\",\"choices\":[\"Investigation\",\"Social Sciences\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"plans\",\"choices\":[\"Shared\",\"Mastermind\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Mastermind'\"},{\"type\":\"feat\",\"name\":\"Mastermind Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Advanced MMA Fighter Training",
@@ -1662,7 +1662,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "null",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'MMA Fighter'\"},{\"type\":\"feat\",\"name\":\"MMA Fighter Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Advanced Scientist Training",
@@ -1671,7 +1671,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1}]",
             "userChoices": "[{\"type\":\"skill.expertise\",\"choices\":[\"Medicine\",\"Natural Sciences\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"plans\",\"choices\":[\"Shared\",\"Scientist\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Scientist'\"},{\"type\":\"feat\",\"name\":\"Scientist Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Advanced Scoudrel Training",
@@ -1680,7 +1680,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "null",
             "userChoices": "[{\"type\":\"skill.expertise\",\"choices\":[\"Acrobatics\",\"Deception\",\"Intimidation\",\"Security\",\"Sleight of Hand\",\"Stealth\",\"Streetwise\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Scoundrel'\"},{\"type\":\"feat\",\"name\":\"Scoundrel Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Advanced Scrapper Training",
@@ -1689,7 +1689,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "null",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Scrapper'\"},{\"type\":\"feat\",\"name\":\"Scrapper Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Advanced Sharpshooter Training",
@@ -1698,7 +1698,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "null",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Sharpshooter'\"},{\"type\":\"feat\",\"name\":\"Sharpshooter Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Advanced Skill Training",
@@ -1716,7 +1716,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":1}]",
             "userChoices": "[{\"type\":\"skill.expertise\",\"choices\":[\"Insight\",\"Investigation\",\"Perception\",\"Security\",\"Streetwise\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Sleuth'\"},{\"type\":\"feat\",\"name\":\"Sleuth Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Agile Hero Training",
@@ -1725,7 +1725,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"\"}]",
             "bonusAdjustments": "null",
             "userChoices": "[{\"type\":\"skill.proficient\",\"choices\":[\"Acrobatics\",\"Sleight of Hand\",\"Stealth\",\"Vehicles\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"archetype\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"attribute\",\"name\":\"Dexterity\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"archetype\",\"name\":\"\",\"formula\":\"!== 'Agile'\"},{\"type\":\"attribute\",\"name\":\"Dexterity\",\"formula\":\">= 13\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 2\"}]"
           },
           {
             "value": "Animal Whisperer",
@@ -1788,16 +1788,16 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\"}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Bodyguard'\"},{\"type\":\"feat\",\"name\":\"Tough Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "Brawler Training",
             "label": "Brawler Training",
             "description": "You have trained yourself to be an engine of destruction, letting nothing stand between you and your target.<br /><ul><li>You gain Improvised Equipment proficiency.</li><li>You have advantage on any Strength check you make to break an object. In addition, your melee attacks have +1 Penetration Value.</li><li>As a bonus action, you can move up to your speed, but you must move toward an opponent. If there are no enemies present, you may move toward an obviously dangerous situation instead.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"\"}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Improvised\"}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Brawler'\"},{\"type\":\"feat\",\"name\":\"Brawler Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "Brute",
@@ -1815,7 +1815,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":2}]",
             "userChoices": "[{\"type\":\"skill.proficient\",\"choices\":[\"Deception\",\"Intimidation\",\"Performance\",\"Persuasion\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"skill.expertise\",\"choices\":[\"Deception\",\"Intimidation\",\"Performance\",\"Persuasion\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"archetype\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"attribute\",\"name\":\"Charisma\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"archetype\",\"name\":\"\",\"formula\":\"!== 'Charming'\"},{\"type\":\"attribute\",\"name\":\"Charisma\",\"formula\":\">= 13\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 2\"}]"
           },
           {
             "value": "Commando Training",
@@ -1824,7 +1824,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\"}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Commando'\"},{\"type\":\"feat\",\"name\":\"Tough Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "Cross Training",
@@ -1860,7 +1860,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentproficiency\",\"value\":\"Historical\"}]",
             "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1}]",
             "userChoices": "[{\"type\":\"tricks\",\"choices\":[\"Duelist\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Duelist'\"},{\"type\":\"feat\",\"name\":\"Charming Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "Engineer Training",
@@ -1869,7 +1869,7 @@
             "bonusCharacteristics": "[{\"type\":\"skill.proficient\",\"value\":\"skill.proficient.Mechanics\"}]",
             "bonusAdjustments": "null",
             "userChoices": "[{\"type\":\"plans\",\"choices\":[\"Engineer\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Engineer'\"},{\"type\":\"feat\",\"name\":\"Smart Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "Equipment Training",
@@ -1903,7 +1903,7 @@
             "label": "Fortunes Fool",
             "description": "You have learned to trust in providence, and somehow it has come to treat you kindly in return for your faith.<br /><ul><li>You gain 3 luck points, which are replenished each time you take a long rest.</li><li>You may spend a luck point to reroll an attack roll, saving throw, or ability check after the roll but before you know the result.</li></ul><br />If multiple d20s are rolled due to advantage or disadvantage, you choose only one to be re-rolled.",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"luckpoints\",\"name\":\"luckpoints\",\"value\":3}]",
+            "bonusAdjustments": "[{\"type\":\"luckpoints\",\"name\":\"\",\"value\":3}]",
             "userChoices": "null",
             "prerequisites": "null"
           },
@@ -1977,7 +1977,7 @@
             "bonusCharacteristics": "[{\"type\":\"skill.proficient\",\"value\":\"skill.proficient.Computers\"}]",
             "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1}]",
             "userChoices": "[{\"type\":\"plans\",\"choices\":[\"Hacker\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Hacker'\"},{\"type\":\"feat\",\"name\":\"Smart Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "Hardy",
@@ -2002,7 +2002,7 @@
             "label": "Healthy",
             "description": "Through rigorous activity and good living, you have become more resilient to injury and fatigue in battle.<br /><ul><li>On taking this feat, increase your hit point maximum by 2 per character level.</li><li>Each time you gain a level, increase your hit point maximum by 2.</li></ul>",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"hitpoints\",\"name\":\"hitpoints\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"hitpoints\",\"name\":\"\",\"value\":2}]",
             "userChoices": "null",
             "prerequisites": "null"
           },
@@ -2013,7 +2013,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\"}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Heavy Gunner'\"},{\"type\":\"feat\",\"name\":\"Strong Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">=4\"}]"
           },
           {
             "value": "Hunter Training",
@@ -2022,7 +2022,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\"}]",
             "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":1}]",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Hunter'\"},{\"type\":\"feat\",\"name\":\"Wise Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "Icon Training",
@@ -2031,7 +2031,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\"}]",
             "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1}]",
             "userChoices": "[{\"type\":\"tricks\",\"choices\":[\"Icon\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Icon'\"},{\"type\":\"feat\",\"name\":\"Charming Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "Impaler",
@@ -2056,7 +2056,7 @@
             "label": "Investments",
             "description": "You have either made wise investments or come into an inheritance of some kind. Each time you take this feat, you gain +1 Wealth Level (maximum 5).",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"WealthLevel\",\"name\":\"WealthLevel\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":1}]",
             "userChoices": "null",
             "prerequisites": "null"
           },
@@ -2094,7 +2094,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\"}]",
             "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1}]",
             "userChoices": "[{\"type\":\"tricks\",\"choices\":[\"Leader\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Leader'\"},{\"type\":\"feat\",\"name\":\"Charming Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "Maniputator Training",
@@ -2103,7 +2103,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1}]",
             "userChoices": "[{\"type\":\"tricks\",\"choices\":[\"Manipulator\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Manipulator'\"},{\"type\":\"feat\",\"name\":\"Charming Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "Martial Arts Training",
@@ -2112,7 +2112,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Historical\"}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Martial Artist'\"},{\"type\":\"feat\",\"name\":\"Martial Artist Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\"}]"
           },
           {
             "value": "Master Training",
@@ -2121,7 +2121,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Improvised\"}]",
             "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":1}]",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Master'\"},{\"type\":\"feat\",\"name\":\"Wise Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "Mastermind Training",
@@ -2130,7 +2130,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1}]",
             "userChoices": "[{\"type\":\"skill.proficient\",\"choices\":[\"Investigation\",\"Social Sciences\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"plans\",\"choices\":[\"Mastermind\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Mastermind'\"},{\"type\":\"feat\",\"name\":\"Smart Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "MMA Fighter Training",
@@ -2139,7 +2139,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "null",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'MMA Fighter'\"},{\"type\":\"feat\",\"name\":\"Strong Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "Pack Rat",
@@ -2256,7 +2256,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1}]",
             "userChoices": "[{\"type\":\"skill.proficient\",\"choices\":[\"Medicine\",\"Natural Sciences\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"plans\",\"choices\":[\"Scientist\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Scientist'\"},{\"type\":\"feat\",\"name\":\"Smart Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "Scoudrel Training",
@@ -2265,7 +2265,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\"}]",
             "bonusAdjustments": "null",
             "userChoices": "[{\"type\":\"skill.proficient\",\"choices\":[\"Acrobatics\",\"Deception\",\"Intimidation\",\"Security\",\"Sleight of Hand\",\"Stealth\",\"Streetwise\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Scoundrel'\"},{\"type\":\"feat\",\"name\":\"Agile Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "Scout",
@@ -2283,7 +2283,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\"}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Scrapper'\"},{\"type\":\"feat\",\"name\":\"Tough Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "Seducer",
@@ -2301,7 +2301,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\"}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Sharpshooter'\"},{\"type\":\"feat\",\"name\":\"Agile Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "Signature Weapon",
@@ -2337,7 +2337,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\"}]",
             "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":1}]",
             "userChoices": "[{\"type\":\"skill.proficient\",\"choices\":[\"Insight\",\"Investigation\",\"Perception\",\"Security\",\"Streetwise\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"feat\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Sleuth'\"},{\"type\":\"feat\",\"name\":\"Wise Hero Training\",\"formula\":\"=== true\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\"}]"
           },
           {
             "value": "Smart Hero Training",
@@ -2346,7 +2346,7 @@
             "bonusCharacteristics": "null",
             "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"\",\"value\":2}]",
             "userChoices": "[{\"type\":\"plans\",\"choices\":[\"Shared\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"archetype\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"attribute\",\"name\":\"Intelligence\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"archetype\",\"name\":\"\",\"formula\":\"!== 'Smart'\"},{\"type\":\"attribute\",\"name\":\"Intelligence\",\"formula\":\">= 13\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 2\"}]"
           },
           {
             "value": "Snatch Victory",
@@ -2373,7 +2373,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Basic\"}]",
             "bonusAdjustments": "null",
             "userChoices": "[{\"type\":\"skill.proficient\",\"choices\":[\"Athletics\",\"Acrobatics\",\"Endurance\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "null"
+            "prerequisites": "[{\"type\":\"archetype\",\"name\":\"\",\"formula\":\"!== 'Strong'\"},{\"type\":\"attribute\",\"name\":\"Strength\",\"formula\":\">= 13\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 2\"}]"
           },
           {
             "value": "Survival Training",
@@ -2409,7 +2409,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Basic\"},{\"type\":\"HasDamageReduction\",\"value\":\"true\"}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
-            "prerequisites": "[{\"type\":\"archetype\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"attribute\",\"name\":\"Constitution\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"archetype\",\"name\":\"\",\"formula\":\"!== 'Tough'\"},{\"type\":\"attribute\",\"name\":\"Constitution\",\"formula\":\">= 13\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 2\"}]"
           },
           {
             "value": "Tumbling",
@@ -2436,7 +2436,7 @@
             "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Basic\"}]",
             "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":2}]",
             "userChoices": "[{\"type\":\"skill.proficient\",\"choices\":[\"Insight\",\"Perception\",\"Streetwise\",\"Survival\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
-            "prerequisites": "[{\"type\":\"archetype\",\"name\":\"\",\"formula\":\"\"},{\"type\":\"attribute\",\"name\":\"Wisdom\",\"formula\":\"\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\"}]"
+            "prerequisites": "[{\"type\":\"archetype\",\"name\":\"\",\"formula\":\"!== 'Wise'\"},{\"type\":\"attribute\",\"name\":\"Wisdom\",\"formula\":\">= 13\"},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 2\"}]"
           }
         ]
       }

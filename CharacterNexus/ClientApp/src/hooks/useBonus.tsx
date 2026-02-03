@@ -2,10 +2,11 @@ import { FieldValues, UseFormGetValues, UseFormSetValue, UseFormUnregister } fro
 
 
 export const handleRemoveBonusAdjustment = (getValues: UseFormGetValues<FieldValues>, setValue: UseFormSetValue<FieldValues>, type: string, name: string, increment: number) => {
+  if (getValues(type) === undefined) return;
+  
   if (name && typeof name === 'string' && name !== "") {
     type = `${type}.${name}`;
   }
-  console.log(`Removing bonus adjustment of ${increment} from ${type}`);
   setValue(type, Number(getValues(type)) - increment);
 };
 

@@ -220,7 +220,7 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
           ))}
         </select>
       </div>
-      <div className="pb-3" />
+      {visible && <div className="pb-3" />}
     </>
   );
 });

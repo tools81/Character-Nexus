@@ -14,61 +14,112 @@ namespace VampireTheMasquerade
         private static List<object> _fields = new List<object>();
         private static string _jsonFilesPath = $"{new DirectoryInfo(AppContext.BaseDirectory).Parent.Parent.Parent.Parent}/Ruleset.VampireTheMasquerade/Json/";
         private static readonly Regex sWhitespace = new Regex(@"\s+");
+        private static readonly JsonSerializerSettings _jsonSettings = new JsonSerializerSettings
+        {
+            ContractResolver = JsonContractResolver.Get(),
+            Formatting = Formatting.None
+        };
 
         public static void InitializeSchema()
         {
             try
             {
-                string jsonAdvantagesData = File.ReadAllText(_jsonFilesPath + "Advantages.json");
-                List<Advantage>? advantages = JsonTo.List<Advantage>(jsonAdvantagesData);
-                string jsonAttributesData = File.ReadAllText(_jsonFilesPath + "Attributes.json");
-                List<Attribute>? attributes = JsonTo.List<Attribute>(jsonAttributesData);
-                string jsonBackgroundsData = File.ReadAllText(_jsonFilesPath + "Backgrounds.json");
-                List<Background>? backgrounds = JsonTo.List<Background>(jsonBackgroundsData);
+                // string jsonAdvantagesData = File.ReadAllText(_jsonFilesPath + "Advantages.json");
+                // List<Advantage>? advantages = JsonTo.List<Advantage>(jsonAdvantagesData);
+                // string jsonBackgroundsData = File.ReadAllText(_jsonFilesPath + "Backgrounds.json");
+                // List<Background>? backgrounds = JsonTo.List<Background>(jsonBackgroundsData);
+
                 string jsonClansData = File.ReadAllText(_jsonFilesPath + "Clans.json");
-                List<Clan>? clans = JsonTo.List<Clan>(jsonClansData);
-                string jsonGenerationsData = File.ReadAllText(_jsonFilesPath + "Generations.json");
-                List<Generation>? generations = JsonTo.List<Generation>(jsonGenerationsData);
-                string jsonCoteriesData = File.ReadAllText(_jsonFilesPath + "Coteries.json");
-                List<Coterie>? coteries = JsonTo.List<Coterie>(jsonCoteriesData);
-                string jsonDisciplinesData = File.ReadAllText(_jsonFilesPath + "Disciplines.json");
-                List<Discipline>? disciplines = JsonTo.List<Discipline>(jsonDisciplinesData);
-                string jsonFlawsData = File.ReadAllText(_jsonFilesPath + "Flaws.json");
-                List<Flaw>? flaws = JsonTo.List<Flaw>(jsonFlawsData);
-                string jsonMeritsData = File.ReadAllText(_jsonFilesPath + "Merits.json");
-                List<Merit>? merits = JsonTo.List<Merit>(jsonMeritsData);
-                string jsonOriginsData = File.ReadAllText(_jsonFilesPath + "Origins.json");
-                List<Origin>? origins = JsonTo.List<Origin>(jsonOriginsData);
-                string jsonPowersData = File.ReadAllText(_jsonFilesPath + "Powers.json");
-                List<Power>? powers = JsonTo.List<Power>(jsonPowersData);
+                List<Clan> clans = JsonConvert.DeserializeObject<List<Clan>>(jsonClansData);
+
+                if (clans == null)
+                {
+                    Console.WriteLine($"Unable to read clans json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
                 string jsonPredatorsData = File.ReadAllText(_jsonFilesPath + "Predators.json");
-                List<Predator>? predators = JsonTo.List<Predator>(jsonPredatorsData);
-                string jsonRitualsData = File.ReadAllText(_jsonFilesPath + "Rituals.json");
-                List<Ritual>? rituals = JsonTo.List<Ritual>(jsonRitualsData);
+                List<Predator> predators = JsonConvert.DeserializeObject<List<Predator>>(jsonPredatorsData);
+
+                if (predators == null)
+                {
+                    Console.WriteLine($"Unable to read predators json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonGenerationsData = File.ReadAllText(_jsonFilesPath + "Generations.json");
+                List<Generation> generations = JsonConvert.DeserializeObject<List<Generation>>(jsonGenerationsData);
+
+                if (generations == null)
+                {
+                    Console.WriteLine($"Unable to read generations json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonAttributesData = File.ReadAllText(_jsonFilesPath + "Attributes.json");
+                List<Attribute> attributes = JsonConvert.DeserializeObject<List<Attribute>>(jsonAttributesData);
+
+                if (attributes == null)
+                {
+                    Console.WriteLine($"Unable to read attributes json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
                 string jsonSkillsData = File.ReadAllText(_jsonFilesPath + "Skills.json");
-                List<Skill>? skills = JsonTo.List<Skill>(jsonSkillsData);
+                List<Skill> skills = JsonConvert.DeserializeObject<List<Skill>>(jsonSkillsData);
+
+                if (skills == null)
+                {
+                    Console.WriteLine($"Unable to read skills json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
                 string jsonSpecialtiesData = File.ReadAllText(_jsonFilesPath + "Specialties.json");
-                List<Specialty>? specialties = JsonTo.List<Specialty>(jsonSpecialtiesData);
-                string jsonWeaponsData = File.ReadAllText(_jsonFilesPath + "Weapons.json");
-                List<Weapon>? weapons = JsonTo.List<Weapon>(jsonWeaponsData);
-                string jsonArmorsData = File.ReadAllText(_jsonFilesPath + "Armors.json");
-                List<Armor>? armors = JsonTo.List<Armor>(jsonArmorsData);
+                List<Specialty> specialties = JsonConvert.DeserializeObject<List<Specialty>>(jsonSpecialtiesData);
+
+                if (specialties == null)
+                {
+                    Console.WriteLine($"Unable to read specialties json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                // string jsonCoteriesData = File.ReadAllText(_jsonFilesPath + "Coteries.json");
+                // List<Coterie>? coteries = JsonTo.List<Coterie>(jsonCoteriesData);
+                // string jsonDisciplinesData = File.ReadAllText(_jsonFilesPath + "Disciplines.json");
+                // List<Discipline>? disciplines = JsonTo.List<Discipline>(jsonDisciplinesData);
+                // string jsonFlawsData = File.ReadAllText(_jsonFilesPath + "Flaws.json");
+                // List<Flaw>? flaws = JsonTo.List<Flaw>(jsonFlawsData);
+                // string jsonMeritsData = File.ReadAllText(_jsonFilesPath + "Merits.json");
+                // List<Merit>? merits = JsonTo.List<Merit>(jsonMeritsData);
+                // string jsonPowersData = File.ReadAllText(_jsonFilesPath + "Powers.json");
+                // List<Power>? powers = JsonTo.List<Power>(jsonPowersData);
+                // string jsonRitualsData = File.ReadAllText(_jsonFilesPath + "Rituals.json");
+                // List<Ritual>? rituals = JsonTo.List<Ritual>(jsonRitualsData);
+                // string jsonWeaponsData = File.ReadAllText(_jsonFilesPath + "Weapons.json");
+                // List<Weapon>? weapons = JsonTo.List<Weapon>(jsonWeaponsData);
+                // string jsonArmorsData = File.ReadAllText(_jsonFilesPath + "Armors.json");
+                // List<Armor>? armors = JsonTo.List<Armor>(jsonArmorsData);
 
                 GenerateDescriptionSchema();
 
-                GenerateOriginSchema(origins, "origin", "Origin");
                 GenerateClanSchema(clans, "clan", "Clan");
-                GenerateGenerationSchema(generations, "generation", "Generation");
-                GenerateCoterieSchema(coteries, "coterie", "Coterie");
-                GenerateAttributeSchema(attributes, "attributes", "Attributes");
-                GenerateSkillSchema(skills, specialties, "skill", "Skill");
                 GeneratePredatorSchema(predators, "predator", "Predator");
-                GenerateDisciplineSchema(disciplines, powers, "disciplines", "Disciplines");
-                GenerateAdvantageSchema(advantages, backgrounds, merits, flaws, "advantages", "Advantages");
-                GenerateWeaponSchema(weapons, "weapons", "Weapons");
-                GenerateArmorSchema(armors, "armors", "Armors");
+                GenerateGenerationSchema(generations, "generation", "Generation");
+                GenerateAttributeSchema(attributes, "attributes", "Attributes");
+                GenerateSkillSchema(skills, specialties, "skill", "Skills");
+                // GenerateCoterieSchema(coteries, "coterie", "Coterie");                
+                // GenerateDisciplineSchema(disciplines, powers, "disciplines", "Disciplines");
+                // GenerateAdvantageSchema(advantages, backgrounds, merits, flaws, "advantages", "Advantages");
+                // GenerateWeaponSchema(weapons, "weapons", "Weapons");
+                // GenerateArmorSchema(armors, "armors", "Armors");
 
-                GenerateTemporaryValuesSchema();
+                // GenerateTemporaryValuesSchema();
 
                 var schema = new
                 {
@@ -219,22 +270,6 @@ namespace VampireTheMasquerade
             _fields.Add(
                 new
                 {
-                    name = "generation",
-                    id = "generation",
-                    label = "Generation",
-                    type = "number",
-                    className = "form-control",
-                    validation = new
-                    {
-                        required = true,
-                        min = 1,
-                        max = 17
-                    },
-                    @default = 12
-                });
-            _fields.Add(
-                new
-                {
                     name = "chronicle",
                     id = "chronicle",
                     label = "Chronicle",
@@ -350,60 +385,6 @@ namespace VampireTheMasquerade
                 });
         }
 
-        private static void GenerateOriginSchema(List<Origin> origins, string name, string label)
-        {
-            dynamic obj = new ExpandoObject();
-
-            obj.name = name;
-            obj.label = label;
-            obj.type = "select";
-            obj.className = "form-select";
-            obj.options = new List<object>();
-
-            foreach (var origin in origins)
-            {
-                obj.options.Add(
-                    new
-                    {
-                        value = origin.Name,
-                        label = origin.Name
-                    }
-                );
-            }
-
-            _fields.Add(obj);
-
-            foreach (var origin in origins)
-            {
-                var children = new List<object>
-                {
-                    new
-                    {
-                        name = $"info-{name}-{origin.Name}",
-                        label = "Information",
-                        type = "textblock",
-                        className = "text-block",
-                        text = origin.Description
-                    }
-                };
-
-                var div = new
-                {
-                    type = "div",
-                    className = "alert alert-secondary",
-                    children,
-                    dependsOn =
-                        new
-                        {
-                            field = name,
-                            value = origin.Name
-                        }
-                };
-
-                _fields.Add(div);
-            }
-        }
-
         private static void GenerateClanSchema(List<Clan> clans, string name, string label)
         {
             dynamic obj = new ExpandoObject();
@@ -420,42 +401,15 @@ namespace VampireTheMasquerade
                     new
                     {
                         value = clan.Name,
-                        label = clan.Name
+                        label = clan.Name,
+                        image = clan.Image,
+                        description = $"{clan.Description}<br /><b>Bane: </b>{clan.Bane}<br /><b>Compulsion: </b>{clan.Compulsion}",
+                        bonusCharacteristics = JsonConvert.SerializeObject(clan.BonusCharacteristics, _jsonSettings)
                     }
                 );
             }
 
             _fields.Add(obj);
-
-            foreach (var clan in clans)
-            {
-                var children = new List<object>
-                {
-                    new
-                    {
-                        name = $"info-{name}-{clan.Name}",
-                        label = "Information",
-                        type = "textblock",
-                        className = "text-block",
-                        text = clan.Description
-                    }
-                };
-
-                var div = new
-                {
-                    type = "div",
-                    className = "alert alert-secondary",
-                    children,
-                    dependsOn =
-                        new
-                        {
-                            field = name,
-                            value = clan.Name
-                        }
-                };
-
-                _fields.Add(div);
-            }
         }
 
         private static void GenerateGenerationSchema(List<Generation> generations, string name, string label)
@@ -474,42 +428,14 @@ namespace VampireTheMasquerade
                     new
                     {
                         value = generation.Name,
-                        label = generation.Name
+                        label = generation.Name,
+                        description = generation.Description,
+                        bonusAdjustments = JsonConvert.SerializeObject(generation.BonusAdjustments, _jsonSettings)
                     }
                 );
             }
 
             _fields.Add(obj);
-
-            foreach (var generation in generations)
-            {
-                var children = new List<object>
-                {
-                    new
-                    {
-                        name = $"info-{name}-{generation.Name}",
-                        label = "Information",
-                        type = "textblock",
-                        className = "text-block",
-                        text = generation.Description
-                    }
-                };
-
-                var div = new
-                {
-                    type = "div",
-                    className = "alert alert-secondary",
-                    children,
-                    dependsOn =
-                        new
-                        {
-                            field = name,
-                            value = generation.Name
-                        }
-                };
-
-                _fields.Add(div);
-            }
         }
 
         private static void GenerateCoterieSchema(List<Coterie> coteries, string name, string label)
@@ -567,19 +493,31 @@ namespace VampireTheMasquerade
         }
 
         private static void GenerateAttributeSchema(List<Attribute> attributes, string name, string label)
-        {
-            var children = new List<object>();
-
-            //TODO: Implement a radio list type rather than number to match look of WOD sheets
-            foreach (var attribute in attributes)
+        {  
+            _fields.Add( new
             {
-                children.Add(new
+                type = "divider"    
+            });
+
+            _fields.Add( new
+            {
+                name = $"{name}.label",
+                text = label,
+                type = "textblock"    
+            });
+
+            var physicalChildren = new List<object>();
+
+            foreach (var attribute in attributes.Where(a => a.Aspect == "Physical"))
+            {
+                physicalChildren.Add(new
                 {
                     name = $"attributes.{attribute.Name}",
                     id = $"attributes.{attribute.Name.ToLower()}",
                     label = attribute.Name,
-                    type = "number",
+                    type = "radiogroup",
                     className = "form-control",
+                    count = 5,
                     validation = new
                     {
                         required = true,
@@ -590,32 +528,28 @@ namespace VampireTheMasquerade
                 });
             }
 
-            var group = new
+            var physicalGroup = new
             {
                 type = "group",
-                name,
-                label,
-                children
+                name = $"{name}.physical",
+                label = "Physical",
+                children = physicalChildren
             };
 
-            _fields.Add(group);
-        }
+            _fields.Add(physicalGroup);
 
-        private static void GenerateSkillSchema(List<Skill> skills, List<Specialty> specialties, string name, string label)
-        {
-            var children = new List<object>();
+            var socialChildren = new List<object>();
 
-            foreach (var skill in skills)
+            foreach (var attribute in attributes.Where(a => a.Aspect == "Social"))
             {
-                var skillSpecialtyList = new List<object>();
-
-                skillSpecialtyList.Add(new
+                socialChildren.Add(new
                 {
-                    name = $"skills.{skill.Name}",
-                    id = $"skills.{skill.Name.ToLower()}",
-                    label = skill.Name,
-                    type = "number",
+                    name = $"attributes.{attribute.Name}",
+                    id = $"attributes.{attribute.Name.ToLower()}",
+                    label = attribute.Name,
+                    type = "radiogroup",
                     className = "form-control",
+                    count = 5,
                     validation = new
                     {
                         required = true,
@@ -624,6 +558,81 @@ namespace VampireTheMasquerade
                     },
                     @default = 0
                 });
+            }
+
+            var socialGroup = new
+            {
+                type = "group",
+                name = $"{name}.social",
+                label = "Social",
+                children = socialChildren
+            };
+
+            _fields.Add(socialGroup);
+
+            var mentalChildren = new List<object>();
+
+            foreach (var attribute in attributes.Where(a => a.Aspect == "Mental"))
+            {
+                mentalChildren.Add(new
+                {
+                    name = $"attributes.{attribute.Name}",
+                    id = $"attributes.{attribute.Name.ToLower()}",
+                    label = attribute.Name,
+                    type = "radiogroup",
+                    className = "form-control",
+                    count = 5,
+                    validation = new
+                    {
+                        required = true,
+                        min = 0,
+                        max = 5
+                    },
+                    @default = 0
+                });
+            }
+
+            var mentalGroup = new
+            {
+                type = "group",
+                name = $"{name}.mental",
+                label = "Mental",
+                children = mentalChildren
+            };
+
+            _fields.Add(mentalGroup);
+
+            _fields.Add( new
+            {
+                type = "divider"    
+            });
+        }
+
+        private static void GenerateSkillSchema(List<Skill> skills, List<Specialty> specialties, string name, string label)
+        {
+            var children = new List<object>();
+
+            foreach (var skill in skills)
+            {
+                var skillSpecialtyList = new List<object>
+                {
+                    new
+                    {
+                        name = $"skills.{skill.Name}",
+                        id = $"skills.{skill.Name.ToLower()}",
+                        label = skill.Name,
+                        type = "radiogroup",
+                        count = 5,
+                        className = "form-control",
+                        validation = new
+                        {
+                            required = true,
+                            min = 0,
+                            max = 5
+                        },
+                        @default = 0
+                    }
+                };
 
                 dynamic obj = new ExpandoObject();
 
@@ -650,7 +659,7 @@ namespace VampireTheMasquerade
                 {
                     type = "group",
                     name = "",
-                    label = "",
+                    label = skill.Name,
                     children = skillSpecialtyList
                 };
 
@@ -685,6 +694,7 @@ namespace VampireTheMasquerade
                     {
                         value = predator.Name,
                         label = predator.Name,
+                        description = predator.Description,
                         bonusAdjustments = JsonConvert.SerializeObject(predator.BonusAdjustments),
                         userChoices = JsonConvert.SerializeObject(predator.UserChoices)
                     }
@@ -692,36 +702,6 @@ namespace VampireTheMasquerade
             }
 
             _fields.Add(obj);
-
-            foreach (var predator in predators)
-            {
-                var children = new List<object>
-                {
-                    new
-                    {
-                        name = $"info-{name}-{predator.Name}",
-                        label = "Information",
-                        type = "textblock",
-                        className = "text-block",
-                        text = predator.Description
-                    }
-                };
-
-                var div = new
-                {
-                    type = "div",
-                    className = "alert alert-secondary",
-                    children,
-                    dependsOn =
-                        new
-                        {
-                            field = name,
-                            value = predator.Name
-                        }
-                };
-
-                _fields.Add(div);
-            }
         }
 
         private static void GenerateDisciplineSchema(List<Discipline> disciplines, List<Power> powers, string name, string label)

@@ -34,6 +34,16 @@ h1 {
   padding-bottom: 30px;
 }
 
+input {
+  background-color: transparent;
+  color: whitesmoke;
+}
+
+textarea {
+  background-color: transparent;
+  color: whitesmoke;
+}
+
 .plus-icon {
   height: 100%;
   width: 100%; 
@@ -139,6 +149,59 @@ h1 {
 
 .custom-select__option:hover {
   background: #95abe7;
+}
+
+.progressive-radio {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.progressive-radio input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Outer radio circle */
+.progressive-radio .radio-ui {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s ease;
+}
+
+/* Inner dot */
+.progressive-radio .radio-ui::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #007bff;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+/* Checked state */
+.progressive-radio input:checked + .radio-ui {
+  border-color: #007bff;
+}
+
+.progressive-radio input:checked + .radio-ui::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Disabled */
+.progressive-radio input:disabled + .radio-ui {
+  border-color: #ccc;
+  cursor: not-allowed;
 }
 
 

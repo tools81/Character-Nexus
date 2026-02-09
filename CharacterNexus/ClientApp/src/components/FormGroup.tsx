@@ -34,7 +34,7 @@ const FormGroup = ({
       <div key={name} className="input-group">
         {children.map((childField: any) => (            
             <div className="form-group p-2">
-              {includeLabel && (
+              {includeLabel && childField.type !== "group" && (
                 <>
                   <label>{childField.label}</label>
                   <br />

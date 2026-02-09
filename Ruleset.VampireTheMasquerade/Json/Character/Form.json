@@ -1,0 +1,2313 @@
+{
+  "title": "Hero Editor",
+  "fields": [
+    {
+      "name": "id",
+      "id": "id",
+      "label": "Id",
+      "type": "hidden",
+      "className": "form-control"
+    },
+    {
+      "name": "health",
+      "id": "health",
+      "label": "Health",
+      "type": "hidden",
+      "className": "form-control"
+    },
+    {
+      "name": "willpower",
+      "id": "willpower",
+      "label": "Willpower",
+      "type": "hidden",
+      "className": "form-control"
+    },
+    {
+      "name": "bloodPotency",
+      "id": "bloodPotency",
+      "label": "Blood Potency",
+      "type": "hidden",
+      "className": "form-control"
+    },
+    {
+      "name": "name",
+      "id": "name",
+      "label": "Name",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown"
+    },
+    {
+      "name": "image",
+      "id": "image",
+      "label": "Image",
+      "type": "image",
+      "className": "form-control"
+    },
+    {
+      "name": "appearance",
+      "id": "appearance",
+      "label": "Appearance",
+      "type": "textarea",
+      "className": "form-control",
+      "default": "Unknown"
+    },
+    {
+      "name": "distinguishingFeatures",
+      "id": "distinguishingFeatures",
+      "label": "Distinguishing Features",
+      "type": "textarea",
+      "className": "form-control",
+      "default": "Unknown"
+    },
+    {
+      "name": "concept",
+      "id": "concept",
+      "label": "Concept",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown"
+    },
+    {
+      "name": "age",
+      "id": "age",
+      "label": "Age",
+      "type": "number",
+      "className": "form-control"
+    },
+    {
+      "name": "dateOfBirth",
+      "id": "dateOfBirth",
+      "label": "Date of Birth",
+      "type": "date",
+      "className": "form-control"
+    },
+    {
+      "name": "dateOfDeath",
+      "id": "dateOfDeath",
+      "label": "Date of Death",
+      "type": "date",
+      "className": "form-control"
+    },
+    {
+      "name": "sire",
+      "id": "sire",
+      "label": "Sire",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown"
+    },
+    {
+      "name": "chronicle",
+      "id": "chronicle",
+      "label": "Chronicle",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown"
+    },
+    {
+      "name": "ambition",
+      "id": "ambition",
+      "label": "Ambition",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown"
+    },
+    {
+      "name": "desire",
+      "id": "desire",
+      "label": "Desire",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown"
+    },
+    {
+      "name": "chronicleTenets",
+      "id": "chronicleTenets",
+      "label": "Chronicle Tenets",
+      "type": "textarea",
+      "className": "form-control",
+      "default": "Unknown"
+    },
+    {
+      "name": "touchstonesConvictions",
+      "id": "touchstonesConvictions",
+      "label": "Touchstones and Convictions",
+      "type": "textarea",
+      "className": "form-control",
+      "default": "Unknown"
+    },
+    {
+      "name": "clan",
+      "label": "Clan",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Brujah",
+          "label": "Brujah",
+          "image": "https://characternexus.blob.core.windows.net/resources/VampireTheMasquerade/clan_brujah.png",
+          "description": "Clan Brujah have always Embraced from the ranks of those sympathetic to counterculture and revolution. They seek out allies who question normative ideas, and recognizing the fire of the oppressed, they gravitate toward the underdog.<br >Common perception place punks, gang-members, maladjusted immigrants rejected by the society that should protect them, and placard-carrying and Molotov-wielding rioters among the Brujah. While the clan definitely includes substantial numbers of vocal and visible outsiders, their desire for rebellion reaches as deep as the fraudster ripping off his own company, the lawyer representing the poor pro bono, the neo-Nazi claiming to be 'alt-right,' and the basement-dweller downloading thousands of movies illegally for redistribution on streaming sites. Fledglings Embraced to fight and protest are commonly known as rabble.<br >The Brujah can be passionate fighters but also critical thinkers; the clan activists are often very different from the clan theorists. On many occasions, the latter are Embraced from former gender studies or sociology students, those who have survived near-death experiences, and people who have in other ways suffered and endured great personal loss. The philosophical Brujah, known as Hellenes, believe the best method of dismantling the establishment is to understand the social and cultural systems that allow it to exist in the first place.<br /><b>Bane: </b>Violent Temper - The Blood of the Brujah simmers with barely contained rage, exploding at the slightest provocation. Subtract dice equal to the Bane Severity of the Brujah from any roll to resist fury frenzy. This cannot take the pool below one die.<br /><b>Compulsion: </b>Rebellion - The Brujah craves to take a stance against those who represent the status quo. This does not relent until they have gone against orders, expectations, or changed someone's mind. During this Compulsion, they suffer a -2 to dice all pools.",
+          "bonusCharacteristics": "[{\"type\":\"disciplines\",\"value\":\"Celerity\"},{\"type\":\"disciplines\",\"value\":\"Potence\"},{\"type\":\"disciplines\",\"value\":\"Presence\"}]"
+        },
+        {
+          "value": "Gangrel",
+          "label": "Gangrel",
+          "image": "https://characternexus.blob.core.windows.net/resources/VampireTheMasquerade/clan_gangrel.png",
+          "description": "Clan Gangrel are outcasts, wanderers, rogues, and hunters. They make havens in the poorest parts of the city and feel no shame for doing so. They claim few domains as their own but defer to no prince. If a feral enters a city, the prince will either accept it or have to fight the feral to get them to back down.<br >Gangrel Embrace from the ranks of survivors and fighters: leaders of prison crews and gangs, explorers (urban and otherwise), and any kine who sees the world as something to traverse instead of something to hide from. They care not for looks or title, but for accomplishment and reputation. A childe may be a challenge, but the clan follows rituals and initiations to ensure the fledgling is worth the time. Success means a new, honored member of the clan. Failure means simply a forgettable reject or a pile of ash.<br >Any mortal capable of projecting their will onto others, leading a group from disaster to success, or fighting impossible odds draws the clan's attention. This fact results in a symptom known as 'too many chiefs,' when the clan consists of more leaders than followers. Customs encourage fights for dominance, but these rarely last until final death, as Gangrel elders advocate against taking competition for authority personally, instead encouraging a culture of healthy rivalry.<br /><b>Bane: </b>Bestial Features - Gangrel relate to their Beast much as other Kindred relate to the Gangrel: suspicious partnership. In frenzy, Gangrel gain one or more animal features: a physical trait, a smell, or a behavioral tic. These features last for one more night afterward, lingering like a hangover following debauchery. Each feature reduces one Attribute by 1 point – the Storyteller may decide that a forked tongue or bearlike musk reduces Charisma, while batlike ears reduce Resolve ('all those distracting sounds'). If nothing immediately occurs to you, the feature reduces Intelligence or Manipulation.<br >The number of features a Gangrel manifests equals their Bane Severity. If your character Rides the Wave of their frenzy (see p. 219) you can choose only one feature to manifest, thus taking only one penalty to their Attributes.<br /><b>Compulsion: </b>Feral Impulses - Unleash the animal hidden in their Blood. This urges the Gangrel to regress into an animalistic state where speech becomes difficult, clothes become too constrictive and arguments and best settled with claws and teeth. For one scene the Gangrel suffers a -3 dice penalty to all rolls involving Manipulation and Intelligence as they are only able to speak one word sentences during this Compulsion.",
+          "bonusCharacteristics": "[{\"type\":\"disciplines\",\"value\":\"Animalism\"},{\"type\":\"disciplines\",\"value\":\"Fortitude\"},{\"type\":\"disciplines\",\"value\":\"Protean\"}]"
+        },
+        {
+          "value": "Malkavian",
+          "label": "Malkavian",
+          "image": "https://characternexus.blob.core.windows.net/resources/VampireTheMasquerade/clan_malkavian.png",
+          "description": "It has long been the misconception that few Kindred families are as disparate as the Clan of the Moon. Other clans see them and reason, 'they are each mad, so why should their respective origins matter?' To the Malkavians, origins matter a great deal. Though sires may pick childer from all walks of life, age groups, ethnicities, and genders, every mortal selected for the Embrace possesses something only visible to a Malkavian.<br > One of the gifts the Malkavians look for in a mortal is what they call 'second sight.' If a person interprets dreams, can perceive spirits, or unerringly predicts future events, the Malkavians take notice. Such a person acts as a beacon, calling out to every member of the clan that sees them.<br >Another gift revered by the Malkavians, is that of 'insight.' A high level of empathy, finely-tuned knowledge of complex subject matter, or just an obsessive drive to pursue the answers to philosophical questions each appeal to the clan. As insight is often tied to profession, the clan benefits from a range of academics and doctors – especially therapists and psychologists.<br >Finally, the Clan of the Moon are fascinated by the 'broken' – individuals who have been changed by traumatic experiences or who were simply born slightly detached from themselves and the rest of society. To the Malkavians, they are but one gentle push away from having access to an altogether different plane of reality. Rather than treating them as burdens, the clan sees them as having great potential.<br >All Malkavians suffer mental illness following the Embrace -sometimes accentuating an existing condition, other times adding a new dimension to their instability. As if their thoughts and actions were based on otherworldly logic, there seems to be no knowing when their condition will manifest destructively or when it will offer important perspectives where such were previously lacking. As a rule, no other Kindred feels completely comfortable around a known Malkavian, often viewing them as unpredictable maniacs whose flashes of insight are rarely worth the fits of insanity.<br >Some Malkavians claim there is a common factor to their madness; that they are all psychically linked through a communal wavelength, a shared consciousness of sorts. Those who are aware of its existence refer to it as the cobweb or, more recently, the madness network.<br /><b>Bane: </b>Fractured Perspective - Afflicted by their lineage, all Malkavians are cursed with at least one type of mental derangement. Depending on their history and the state of their mind at death, they may experience delusions, visions of terrible clarity, or something entirely different.<br >When the Malkavian suffers a Bestial Failure or a Compulsion, their curse comes to the fore. Suffer a penalty equal to your character's Bane Severity to one category of dice pools (Physical, Social, or Mental) for the entire scene. This is in addition to any penalties incurred by Compulsions.<br >You and the Storyteller decide the type of penalty and the exact nature of the character's affliction during character creation.<br /><b>Compulsion: </b>Delusion - Whether it's figments of their imagination or extrasensory perception of the truths. For one scene, the Malkavian suffers a 2 dice penalty to rolls involving Dexterity, Manipulation, Composure, and Wits. As well as rolls to resist terror Frenzy.",
+          "bonusCharacteristics": "[{\"type\":\"disciplines\",\"value\":\"Auspex\"},{\"type\":\"disciplines\",\"value\":\"Dominate\"},{\"type\":\"disciplines\",\"value\":\"Obfuscate\"}]"
+        },
+        {
+          "value": "Nosferatu",
+          "label": "Nosferatu",
+          "image": "https://characternexus.blob.core.windows.net/resources/VampireTheMasquerade/clan_nosferatu.png",
+          "description": "For the Nosferatu the Embrace is a journey through abjection, as the Blood of the horror gradually deforms the struggling tissues of the human body into grotesque abominations. Weeks of pain result in deformities similar to terrible birth defects, cancer growths, crippling injuries, and leper-like sores. Those who endure it find themselves as monstrous echoes of Murnau's silver-screen vision. But perhaps pain and humiliation teaches compassion. The Nosferatu, as they jokingly call themselves, are the most humane of the Kindred, wearing their curse on the outside rather than the inside. To blend in, some call on the Blood to wear the borrowed faces of their victims or disappear from sight, while others rely on prosthetics and heavy make-up.<br /><b>Bane: </b>Repulsiveness - Hideous and vile, all Nosferatu count as having the Repulsive Flaw (-2) and can never increase their rating in the Looks Merit. In addition, any attempt to disguise themselves as human incur a penalty to your dice pool equal to your character’s Bane Severity (this includes the Obfuscate powers Mask of a Thousand Faces and Impostor's Guise).<br /><b>Compulsion: </b>Cryptophilia - Consumed by a hunger for private secrets, the Nosferatu seeks to obtain knowledge no matter big or small as long as it's not a well-known bit of information. During this, they also refuse to give up their secrets except in strict trade for something greater than their own. Any action not actively working towards gaining them a secret they take a two-dice penalty. This Compulsion does not end till they learn a secret they deem to be useful, sharing this secret is entirely optional.",
+          "bonusCharacteristics": "[{\"type\":\"disciplines\",\"value\":\"Animalism\"},{\"type\":\"disciplines\",\"value\":\"Obfuscate\"},{\"type\":\"disciplines\",\"value\":\"Potence\"}]"
+        },
+        {
+          "value": "Toreador",
+          "label": "Toreador",
+          "image": "https://characternexus.blob.core.windows.net/resources/VampireTheMasquerade/clan_toreador.png",
+          "description": "Clan Toreador has ever preached selectiveness in its rituals of the Embrace. The clan elders stress time and again that the clan requires pioneers among the arts and every kind of avant-garde. The clan is at its strongest when comprised of the freshest thinkers and those who desire experimentation and aesthetic discovery. For this reason, many Toreador emerge from the ranks of accomplished artists, both new and faded. But not all artists need wield a brush: To the Toreador, art encompasses all forms of entertainment and stimulation. The clan courts the greatest actors, singers, writers, dancers, and even sex workers, if the degenerates believe such mortals will offer something new to their clan.<br >Despite the custom of Embracing only the best, the Toreador fixation on beauty and innocence has caused many a diva to make a fledgling in haste. Many a moonlit night, new clan members have emerged as shallow hedonists, one-hit wonders, or just a stunning body with nothing else to offer. The greatest mistakes are erased and forgotten. Still, the clan is diverse, its members considering the ensemble as a kaleidoscope of talent and beauty.<br /><b>Bane: </b>Aesthetic Fixation - Toreador exemplify the old saying that art in the blood takes strange forms. They desire beauty so intensely that they suffer in its absence. While your character finds itself in less than beautiful surroundings, lose the equivalent of their Bane Severity in dice from dice pools to use Disciplines. The Storyteller decides specifically how the beauty or ugliness of the Toreador’s environment (including clothing, blood dolls, etc.) penalizes them, based on the character's aesthetics. That said, even devotees of the Ashcan School never find normal streets perfectly beautiful. This obsession with aesthetics also causes divas to lose themselves in moments of beauty and a bestial failure often results in a rapt trance, as detailed in the Compulsion rules (p. 208).<br /><b>Compulsion: </b>Obsession - Utterly obsessed with a single thing, the Toreador cannot speak of anything but that object. Be it a person, a piece of artwork, a blood splatter in the right lighting, or the sunrise itself, they cannot take their attention from it. Any other actions receive a two-dice penalty. This Compulsion lasts until they can no longer perceive the object or the scene ends.",
+          "bonusCharacteristics": "[{\"type\":\"disciplines\",\"value\":\"Auspex\"},{\"type\":\"disciplines\",\"value\":\"Celerity\"},{\"type\":\"disciplines\",\"value\":\"Presence\"}]"
+        },
+        {
+          "value": "Tremere",
+          "label": "Tremere",
+          "image": "https://characternexus.blob.core.windows.net/resources/VampireTheMasquerade/clan_tremere.png",
+          "description": "After the Second Inquisition destroyed the Prime Chantry in Vienna in 2008, the Tremere fell from gray eminences to personae non gratae in many regions. The arrogance of the Pyramid had made the Usurpers few friends. But the need for sorcery has not disappeared; if anything, it grows as the cursed Blood shifts in the veins of the Kindred.<br >Without the Pyramid ordering them into rank and value, the warlocks find themselves competing with their fellow Kindred and, increasingly, with each other for anything that might allow them to regain some of their former power. A clan-wide chase for artifacts and grimoires belonging to their ashen ancestors rival the social intrigues in ugliness, and the alliance with the Camarilla is an oft-used weapon between the houses of Clan Tremere. Meanwhile, the term 'mercenary magus' is becoming increasingly widespread, as warlocks who were formerly Bound by the will of their masters find themselves free to serve for whatever price they choose.<br >Tremere serve in three ways: the Warlocks serve the other clans with occult expertise, they serve the Camarilla with Blood Sorcery, and they serve themselves with their missions to grasp power. Though more Tremere ascend to praxis these nights than ever before, they still claim fewer thrones worldwide than Clan Nosferatu. In truth, most Warlocks acknowledge that becoming the Prince is only useful if it helps them expand their knowledge. Tremere see true power as knowing the ways of shaping the world, having access to the right blood, and owning the rarest of ancient artifacts.<br >As the Tremere ally with confused coteries seeking them out, hunt for well-protected relics and artifacts, or closely analyze fragments of lore relating to the Cainite mythos – all the while miserly guarding their secrets from each other – they are all united in their thirst for knowledge. A Kindred who wishes to understand a piece of their history will do well to approach the Tremere for answers, as long as they are at peace with sharing a few secrets of their own – knowingly or otherwise.<br /><b>Bane: </b>Deficient Blood - Once the clan was defined by a rigid hierarchy of Blood Bonds reaching from the top to the bottom of the Pyramid. But after the fall of Vienna, their Blood has recoiled and aborted all such connections. Tremere vitae can no longer Blood Bond other Kindred, though they themselves can be Bound by Kindred from other clans. A Tremere can still bind mortals and ghouls, though the corrupted vitae must be drunk an additional number of times equal to the vampire's Bane Severity for the bond to form. Some theorize this change is the revenge of the Antediluvian devoured by Tremere, others attribute it to a simple mutation. Regardless, the clan studies their vitae intently to discover if the process can be reversed, and, indeed, determine if they would want to do so.<br /><b>Compulsion: </b>Perfectionism - Nothing but the best will satisfy them, anything less than exceptional still instills a profound sense of failure. When afflicted by this, the Warlock suffers a two-dice penalty to all dice pools. The penalty is reduced to one die when actions are being repeated and removed entirely on a second repeat. This does not end till they managed to score a critical win on a Skill roll or the scene ends.",
+          "bonusCharacteristics": "[{\"type\":\"disciplines\",\"value\":\"Auspex\"},{\"type\":\"disciplines\",\"value\":\"Blood Sorcery\"},{\"type\":\"disciplines\",\"value\":\"Dominate\"}]"
+        },
+        {
+          "value": "Ventrue",
+          "label": "Ventrue",
+          "image": "https://characternexus.blob.core.windows.net/resources/VampireTheMasquerade/clan_ventrue.png",
+          "description": "Clan Ventrue has long been the leaders of the Camarilla, holding more positions of power than any other clan, and they are loath to give that up. Even after losing their most prominent representative to a Brujah assassination, the Ventrue continue to maintain that they are destined to rule all Kindred, no matter the sacrifices involved.<br >The Ventrue believe in the strength of tradition and lineage. The Embrace is one of the their most important rituals, and the choice of childe affects the way other members of the clan treat the sire. Ventrue therefore aim to Embrace overachievers, politically or financially powerful kine, or those with a talent that sets them apart from the masses.<br >These nights, the Ventrue are cautious. The talentless fall by the wayside, while the best blend in with humanity as bankers, shadow directors, reclusive moguls, and chiefs of staff. No longer can a Ventrue openly lead a board or take a prominent position in a mortal community. They resent having to influence their surroundings from the shadows, but know that the risk of a fatal Masquerade breach is too high to risk anything else.<br >The Ventrue are the establishment. They set and maintain the rules, punishing those who break them, and occasionally rewarding those who follow. Their critics consider them tyrants or the jailers of other Kindred. The uncomfortable truth is that without them, the Masquerade, and the Camarilla with it, would have fallen long ago. The Ventrue are more loyal to their cause these nights than ever before, adversity only making them more determined to succeed and more certain that they have the right to do whatever it takes.<br /><b>Bane: </b>Rarified Tastes - The Ventrue are in possession of rarefied palates. When a Ventrue drinks blood from any mortal outside their preference, a profound exertion of will is required or the blood taken surges back up as scarlet vomit. Preferences range greatly, from Ventrue who can only feed from genuine brunettes, individuals of Swiss descent, or homosexuals, to others who can only feed from soldiers, mortals who suffer from PTSD, or methamphetamine users. With a Resolve + Awareness test (Difficulty 4 or more) your character can sense if a mortal possesses the blood they require.<br >If you want your character to feed from anything but their preferred victim, you must spend Willpower points equal to the character’s Bane Severity.<br /><b>Compulsion: </b>Arrogance - Fueled by the beast and their natural desire for power, the Ventrue must force someone to obey a command given. The order cannot be given through supernatural means such as Dominate. Until they satisfy the requirements, they receive a two-dice penalty for any actions not directly related to leadership.",
+          "bonusCharacteristics": "[{\"type\":\"disciplines\",\"value\":\"Dominate\"},{\"type\":\"disciplines\",\"value\":\"Fortitude\"},{\"type\":\"disciplines\",\"value\":\"Presence\"}]"
+        },
+        {
+          "value": "Caitiff",
+          "label": "Caitiff",
+          "image": "https://characternexus.blob.core.windows.net/resources/VampireTheMasquerade/clan_caitiff.png",
+          "description": "Many Kindred incorrectly assume all Caitiff are created accidentally, that the clanless target no mortals for the Embrace. This view is outdated and ignorant. These nights, the clanless are increasingly becoming a force to be reckoned with. Though more disparate, individualistic, and chaotic than their cousins, they are all survivors, and they have begun to gather, build alliances, and make childer of their own.<br >The Caitiff who seek out mortals to perform the Embrace generally target the strong-willed and those used to uncommon hardship. A Caitiff's position in the hierarchy of Kindred is at the bottom, just above the thin-blooded who should not have been born at all, and they are forced to fight for their place or fall and be forgotten. The Caitiff see little point in Embracing mortals unlikely to make it through the night on their own.<br >While the Caitiff have begun to purposefully increase their numbers, most are still created when a fledgling Embraced into one of the clans does not form an attachment with their ancestral Blood and does not exhibit the tell-tale signs of their clan's curse. When other Kindred talk of the Caitiff, they tell tales of Nosferatu abandoned for weeks on end without ever developing any hideousness, painfully sane Malkavians, and young Ventrue able to feed from whomever they want. Unwilling to accept such a childe as one of their own, the clan abandon them. Or the childe senses in their Blood that they do not belong, despite their sire's protests. The creation of a Caitiff is not an exact science, and many abandoned childer still manifest some of the characteristics of their parent clan despite the absence of their bane.<br /><b>Bane: </b>Outcast - Untouched by the Antediluvians, the Caitiff share no common bane. Caitiff characters begin with the Suspect (•) Flaw and you may not purchase positive Status for them during character creation. The Storyteller may always impose a one or two dice penalty on Social tests against fellow Kindred who know they are Caitiff, regardless of their eventual Status.<br >Further, to improve one of the Disciplines of a Caitiff costs six times the level purchased in experience points.<br /><b>Compulsion: </b>None",
+          "bonusCharacteristics": "[{\"type\":\"disciplines\",\"value\":\"Animalism\"},{\"type\":\"disciplines\",\"value\":\"Auspex\"},{\"type\":\"disciplines\",\"value\":\"Blood Sorcery\"},{\"type\":\"disciplines\",\"value\":\"Celerity\"},{\"type\":\"disciplines\",\"value\":\"Dominate\"},{\"type\":\"disciplines\",\"value\":\"Fortitude\"},{\"type\":\"disciplines\",\"value\":\"Obfuscate\"},{\"type\":\"disciplines\",\"value\":\"Oblivion\"},{\"type\":\"disciplines\",\"value\":\"Fortitude\"},{\"type\":\"disciplines\",\"value\":\"Potence\"},{\"type\":\"disciplines\",\"value\":\"Presence\"},{\"type\":\"disciplines\",\"value\":\"Protean\"}]"
+        },
+        {
+          "value": "Lasombra",
+          "label": "Lasombra",
+          "image": "https://characternexus.blob.core.windows.net/resources/VampireTheMasquerade/clan_lasombra.png",
+          "description": "<br /><b>Bane: </b>Distorted Image - In reflections or recordings (live or not) the Lasombra appear to be distorted; those who know what vampires are know precisely what's going on, while others might be confused but know something is wrong. This does not however, hide their identity with any certainty and they are not likely to be caught more often on surveillance than any other Kindred. In addition to this, modern technology which includes making a phone call requires a Technology test at Difficulty 2 + Bane Severity as microphones struggle with them as much as cameras. Avoiding any electronic vampire detection system is also done with a penalty equal to their Bane Severity.<br /><b>Compulsion: </b>Ruthlessness - The next time the vampire fails an action they receive a two-dice penalty to all rolls until a future attempt at the same action succeeds. This penalty applies to future attempts of the same action still.",
+          "bonusCharacteristics": "[{\"type\":\"disciplines\",\"value\":\"Dominate\"},{\"type\":\"disciplines\",\"value\":\"Oblivion\"},{\"type\":\"disciplines\",\"value\":\"Potence\"}]"
+        },
+        {
+          "value": "Banu Haqim",
+          "label": "Banu Haqim",
+          "image": "https://characternexus.blob.core.windows.net/resources/VampireTheMasquerade/clan_banu_haqim.png",
+          "description": "Regardless of the individual Banu Haqim's stance, they all adhere to some type of strict code, be it blood laws, personal ethics, governmental or religious rules. Nevertheless, that doesn't mean they are free of self-interest, and often such codes of conduct are a self-regulation method to keep in check their desire for Kindred blood. The Banu Haqim's instinct to find the guilty is intrinsic to the Blood and not bound by religion; those guilty of whatever transgression a Child of Haqim deems unforgivable must be punished, and punishment might even include taking their unlife from their veins through diablerie. They are also not tied to a specific cultural or geographical background, and modern Banu Haqim hail from all over the world, representing various beliefs. Their individual code is also not necessarily tied to a faith, and may come from personal convictions rather than religion.<br /><b>Bane: </b>Blood Addiction - When the Banu Haqim slakes at least one Hunger level from another vampire, they must make a Hunger Frenzy test at difficulty 2 plus Bane Severity. If they fail, they must gorge themselves on vitae, in turn opening the door to possible Diablerie.<br /><b>Compulsion: </b>Judgement - Urged to punish a wrongdoer, the vampire must slake one Hunger from anyone that acts against their own Convictions. Failing to do so results in a three-dice penalty to all rolls until the Compulsion is satisfied or the scene ends. Should the victim be a vampire, the Bane applies.",
+          "bonusCharacteristics": "[{\"type\":\"disciplines\",\"value\":\"Blood Sorcery\"},{\"type\":\"disciplines\",\"value\":\"Celerity\"},{\"type\":\"disciplines\",\"value\":\"Obfuscate\"}]"
+        },
+        {
+          "value": "Hecata",
+          "label": "Hecata",
+          "image": "https://characternexus.blob.core.windows.net/resources/VampireTheMasquerade/clan_hecata.png",
+          "description": "A clan steeped in death, they practice the arts of necromancy and communication with the dead. The clan tends to favour mortals either from their own mortal family or those with useful connections to other outside families. It is speculated that the reason all Hecata share the same Disciplines unlike their ancestors is caused by the unification of the necromantic bloodlines that formed clan Hecata and the destruction of so many Giovanni elders.<br /><b>Bane: </b>Painful Kiss - Hecata may only take harmful drinks from mortals which result in blood loss. Unwilling mortals that are able to escape will make the attempt, even those who are convinced or willing must succeed in a Stamina + Resolve test against Difficulty 2 + Bane Severity in order to not recoil. Vampires who are willingly bit must make a Frenzy test against Difficulty 3 to avoid terror Frenzy.<br /><b>Compulsion: </b>Morbidity - The vampire must move something from life to death or vice versa, any action not taken to end or resurrect something suffers a two-dice penalty. The subject does not have to be a living thing and can instead be an object or more abstract such as ideas or conversation points. This Compulsion lasts until they manage to kill or return something to life.",
+          "bonusCharacteristics": "[{\"type\":\"disciplines\",\"value\":\"Auspex\"},{\"type\":\"disciplines\",\"value\":\"Fortitude\"},{\"type\":\"disciplines\",\"value\":\"Oblivion\"}]"
+        },
+        {
+          "value": "Ravnos",
+          "label": "Ravnos",
+          "image": "https://characternexus.blob.core.windows.net/resources/VampireTheMasquerade/clan_ravnos.png",
+          "description": "The Ravnos were almost annihilated during the beginning act of the Gehenna War during the Week of Nightmares but with time is now growing stronger once more. They may be known as wandering Kindred, those utilized to bring messages or as those who wish to do nothing else but mess with the minds of others. Generally they move across the lands, rarely settling down in attempt to remain one step ahead of the judgement that runs through their veins. Their methods are not usually those of brute force, gaining adoring fans or overdrawn plans that take centuries to complete. Instead most Ravnos rely on their wits, clever charm and illusions. They prefer not to bleed when able, using more subtle methods to obtain whatever it is they desire. For this reason it is rare they make their true nature known and once they have, they disappear into the night as quickly as they appeared.<br /><b>Bane: </b>Doomed - Anytime they daysleep within the same place more than once in seven nights, roll a number of dice equal to their Bane Severity. If they receive any 10's they then take 1 Aggravated damage for each as they are scorched from within. What constitutes as the same place is defined by the chronicle, but generally will need a mile distance between the two resting places before the bane is triggered. Mobile havens do work as long as the haven is moved a mile away. Due to this, the Ravnos may not take the No Haven Flaw.<br /><b>Compulsion: </b>Tempting Fate - When faced with their next problem, the Daredevil must attempt the solution with the most dangerous or daring of actions, anything less incurs a two-dice penalty. Context appropriate flashy or risky attempts may even net bonus dice. They are free to convince others to follow them in their actions but may as well go it alone. This Compulsion persists until the problem is solved or further attempts become impossible to accomplish.",
+          "bonusCharacteristics": "[{\"type\":\"disciplines\",\"value\":\"Animalism\"},{\"type\":\"disciplines\",\"value\":\"Obfuscate\"},{\"type\":\"disciplines\",\"value\":\"Presence\"}]"
+        },
+        {
+          "value": "Salubri",
+          "label": "Salubri",
+          "image": "https://characternexus.blob.core.windows.net/resources/VampireTheMasquerade/clan_salubri.png",
+          "description": "Once known for their wisdom and knowledge, the clan barely exists these nights. Their legacy is one of tragedy and a painful lesson of the eternal struggle. Their childer are few in the modern nights; as per their customs, they generally only embrace once they've reached Golconda, even though this is only speculation given the current state of Kindred affairs. The choice of a childe for the Salubri is an intensely personal decision in comparison to other clans. They usually desire those with inquisitive behaviors and personal struggles within them. Salubri rarely embrace on a mere whim. Choosing a childe who has a problem which they must then solve for themselves, be it terminal illness or an unquenchable drive to right a wrong done to them.<br /><b>Bane: </b>Hunted - Their vitae has a unique trait where, when another clan partakes in their Blood, they find it difficult to pull away. Once a non-Salubri has consumed at least one Hunger level worth, they must make a Hunger Frenzy test at difficulty 2 + the Salubri's Bane Severity (3 + the Salubri's Bane Severity for Banu Haqim). If they fail, they will continue to consume the Salubri until pried off. Additionally, each Salubri has a third eye, and while it's not always human-like, it's always present and cannot be obscured by supernatural powers. In addition to this, whenever they activate a Discipline, the eye weeps vitae, with its intensity correlating to the level of the Discipline used. The Blood flowing from the eye can trigger a Hunger Frenzy test from nearby vampires with Hunger 4 or more.<br /><b>Compulsion: </b>Affective Empathy - Overwhelmed with empathy for a personal problem of someone else, any action not taken to help the person mitigate their suffering is at a two-dice penalty. This Compulsion continues until the sufferer's burden is eased, a more critical problem arises, or the scene ends.",
+          "bonusCharacteristics": "[{\"type\":\"disciplines\",\"value\":\"Auspex\"},{\"type\":\"disciplines\",\"value\":\"Dominate\"},{\"type\":\"disciplines\",\"value\":\"Fortitude\"}]"
+        },
+        {
+          "value": "Tzimisce",
+          "label": "Tzimisce",
+          "image": "https://characternexus.blob.core.windows.net/resources/VampireTheMasquerade/clan_tzimisce.png",
+          "description": "The dragons view ownership above all, they aim to conquer and rule the subject of their possessiveness. Traditionally their charges were based on geographical locations, hence the stereotype of a vampire in a looming castle. However, in the modern age, the younger generations have taken a more loose approach, staking claim over mortals rather than their land. Their desire to own is only limited by their lack of expansion, but once they've sunk their claws in they are hard to shake loose. These possessive traits extend beyond others and property and into their own body. Many dragons specialize in a form of Protean known as Vicissitude which allows them to alter their bodies how they deem fit, including the bodies of others willing or not. These Tzimisce go beyond just the physical perfectionism and lean into the metaphysical and stretch the very limits of vampirism itself. Transforming their bodies into statues, or altering the traits of gender, reaching as far as to create groups of mortal lookalikes to subsume their individuality. Some tales even speak of Dragons going as far as to become one with their haven, merging into the soil of their domain.<br /><b>Bane: </b>Grounded - Each Tzimisce must select a specific charge, be it physical location, a group of people, or something even more esoteric. Each night they must sleep surrounded by their charge, if they do not, they sustain aggravated Willpower damage equal to their Bane Severity upon waking the following night.<br /><b>Compulsion: </b>Covetousness - When afflicted with this compulsion they become obsessed with owning something in the scene, be it an object, or property to a living person. Whatever it is, they must add it to their collection and any action taken not towards this purpose incurs a two-dice penalty. This penalty continues until ownership is established or the object of their desire is unobtainable.",
+          "bonusCharacteristics": "[{\"type\":\"disciplines\",\"value\":\"Animalism\"},{\"type\":\"disciplines\",\"value\":\"Dominate\"},{\"type\":\"disciplines\",\"value\":\"Protean\"}]"
+        },
+        {
+          "value": "The Ministry",
+          "label": "The Ministry",
+          "image": "https://characternexus.blob.core.windows.net/resources/VampireTheMasquerade/clan_ministry.png",
+          "description": "The Ministry always has something to offer. This often cult-like clan recruits those able to employ temptation as a weapon. They Embrace those with the will and means to sway, entrap, and ultimately liberate their targets from whatever they seek: the victim's possessions, allegiance, or even faith. To the Serpents, everything has a price. The clan was formerly known as the Followers of Set. For as much as a cult as they are a clan, the majority of their members adhere to a disruptive system of beliefs. They are known as as a group of the devious type, tricksters, tempters and liars. Due to this their relationships in the modern age and in the past are rocky at best, given their tendencies to play all sides during major conflicts. Their entry into the Camarilla was rejected, leaving most to side up with the Anarchs.<br /><b>Bane: </b>Abhors the Light - When a Minister is exposed to direct illumination, be it naturally caused or artificial, they receive a penalty equal to their Bane Severity to all dice pools while subject to the light. They also add their Bane Severity to Aggravated damage taken from sunlight.<br /><b>Compulsion: </b>Transgression - The Minister suffers a burning desire to influence those around them to shatter the chains of their own making. They suffer a two-dice penalty to all dice pools that do not relate to enticing someone or themselves to break a Chronicle or personal Conviction. The Compulsion ends once the Minister causes someone, or themselves, at least one stain.",
+          "bonusCharacteristics": "[{\"type\":\"disciplines\",\"value\":\"Obfuscate\"},{\"type\":\"disciplines\",\"value\":\"Presence\"},{\"type\":\"disciplines\",\"value\":\"Protean\"}]"
+        }
+      ]
+    },
+    {
+      "name": "predator",
+      "label": "Predator",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Alleycat",
+          "label": "Alleycat",
+          "description": "A combative assault-feeder, you stalk, overpower, and drink from whomever you can, when you can. You may or may not attempt to threaten or Dominate victims into silence or mask the feeding as a robbery. Think about how you arrived at this direct approach to feeding and what makes you comfortable with an unlife of stalking, attacking, feeding, and escaping. You could have been homeless, an SAS soldier, a cartel hit-man, or a big-game hunter.",
+          "bonusAdjustments": "[{\"Type\":\"Humanity\",\"Name\":\"\",\"Value\":-1},{\"Type\":\"Background\",\"Name\":\"Criminal Contacts\",\"Value\":3}]",
+          "userChoices": "[{\"Type\":\"Specialty\",\"Choices\":[\"Intimidation|Stickups\",\"Brawl|Grappling\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"Disipline\",\"Choices\":[\"Celerity\",\"Potence\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+        },
+        {
+          "value": "Bagger",
+          "label": "Bagger",
+          "description": "You steal, buy, or otherwise procure cold blood rather than hunt, relying on the black market or your skills as a burglar or ambulance chaser. Perhaps you still work the night shift at the hospital. Ventrue may not pick this Predator type.",
+          "bonusAdjustments": "[{\"Type\":\"Merit\",\"Name\":\"Iron Gullet\",\"Value\":3},{\"Type\":\"Flaw\",\"Name\":\"Enemy\",\"Value\":2}]",
+          "userChoices": "[{\"Type\":\"Specialty\",\"Choices\":[\"Larceny|Lockpicking\",\"Streetwise|Black Markets\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"Disipline\",\"Choices\":[\"Blood Sorcery\",\"Obfuscate\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+        },
+        {
+          "value": "Blood Leech",
+          "label": "Blood Leech",
+          "description": "You drink from other vampires, either by hunting, coercion or by taking Blood as payment - the only truly moral way of feeding you can think of. Unfortunately, this practice is usually forbidden in Kindred society. It is either risky as all fuck or requires a position of enviable power.",
+          "bonusAdjustments": "[{\"Type\":\"Humanity\",\"Name\":\"\",\"Value\":-1},{\"Type\":\"Potency\",\"Name\":\"\",\"Value\":1},{\"Type\":\"Flaw\",\"Name\":\"Prey Exclusion\",\"Value\":2}]",
+          "userChoices": "[{\"Type\":\"Specialty\",\"Choices\":[\"Brawl|Kindred\",\"Stealth|Kindred\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"Disipline\",\"Choices\":[\"Celerity\",\"Protean\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"Flaw\",\"Choices\":[\"Diablerist\",\"Shunned\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+        },
+        {
+          "value": "Cleaver",
+          "label": "Cleaver",
+          "description": "You feed covertly from your (or someone's) mortal family and friends with whom you still maintain ties. The most extreme cleavers adopt children, marry a human, and try to maintain a family life for as long as they can. Add your family to the Relationship Map.<br >Cleavers often go to great lengths to keep the truth of their condition from their family, but some also maintain unwholesome relationships with their own kin. The Camarilla forbids taking a human family in this fashion, and it frowns on cleavers as Masquerade breaches waiting to happen. Wiser Kindred may massacre your family for your own good if they find out your secret and care what happens to you.",
+          "bonusAdjustments": "[{\"Type\":\"Background\",\"Name\":\"Herd\",\"Value\":2},{\"Type\":\"Flaw\",\"Name\":\"Cleaver\",\"Value\":1}]",
+          "userChoices": "[{\"Type\":\"Specialty\",\"Choices\":[\"Persuasion|Gaslighting\",\"Subterfuge|Coverups\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"Disipline\",\"Choices\":[\"Animalism\",\"Dominate\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+        },
+        {
+          "value": "Consensualist",
+          "label": "Consensualist",
+          "description": "You never feed against your victim's free will. You masquerade as a representative of a charity blood drive, as a blood-drinking kink-lord in the 'real vampire community,' or by actually telling your victims what you are and getting their permission to feed. The Camarilla call that last method a Masquerade breach, but many Anarch philosophers consider it an acceptable risk. You could have been anything in life, but a sex-worker, a political organizer, or a lawyer could all be wary of feeding without consent.",
+          "bonusAdjustments": "[{\"Type\":\"Humanity\",\"Name\":\"\",\"Value\":1},{\"Type\":\"Flaw\",\"Name\":\"Dark Secret\",\"Value\":1},{\"Type\":\"Flaw\",\"Name\":\"Prey Exclusion\",\"Value\":1}]",
+          "userChoices": "[{\"Type\":\"Specialty\",\"Choices\":[\"Medicine|Phlebotomy\",\"Persuasion|Victims\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"Disipline\",\"Choices\":[\"Auspex\",\"Fortitude\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+        },
+        {
+          "value": "Farmer",
+          "label": "Farmer",
+          "description": "You only feed from animals. Your Hunger constantly gnaws at you, but you have not killed a single human being so far (except perhaps that one time), and you intend to keep it that way. You could have been anyone in life, but your choice speaks to someone obsessed by morality. Perhaps you were an activist, priest, aidworker, or vegan in life, but the choice never to risk a human life is one anyone could arrive at and struggle to maintain. Ventrue may not pick this Predator type.<br >You cannot pick this Predator type if your Blood Potency is 3 or higher.",
+          "bonusAdjustments": "[{\"Type\":\"Humanity\",\"Name\":\"\",\"Value\":1},{\"Type\":\"Flaw\",\"Name\":\"Vegan\",\"Value\":2}]",
+          "userChoices": "[{\"Type\":\"Specialty\",\"Choices\":[\"Animal Ken|(Specific)\",\"Survival|Hunting\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"Disipline\",\"Choices\":[\"Animalism\",\"Protean\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+        },
+        {
+          "value": "Osiris",
+          "label": "Osiris",
+          "description": "You are a celebrity among mortals or else you run a cult, a church, or something similar. You feed from your fans or worshippers, who treat you as a deity. You always have access to easy blood, but followers breed problems with the authorities, organized religion, and indeed the Camarilla. In life, you might have been a DJ, a writer, a cultist, a preacher, or a LARP organizer.",
+          "bonusAdjustments": "null",
+          "userChoices": "[{\"Type\":\"Specialty\",\"Choices\":[\"Occult|(Specific)\",\"Performance|(Specific)\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"Disipline\",\"Choices\":[\"Blood Sorcery\",\"Presence\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+        },
+        {
+          "value": "Sandman",
+          "label": "Sandman",
+          "description": "You rely on your stealth or Disciplines to feed from sleeping victims. If they never wake during the feeding, they won’t know you exist. Perhaps you were very anti-social in life; you don’t feel cut out for the intense interpersonal nightlife or physical violence of more extroverted hunters.",
+          "bonusAdjustments": "[{\"Type\":\"Background\",\"Name\":\"Resources\",\"Value\":1}]",
+          "userChoices": "[{\"Type\":\"Specialty\",\"Choices\":[\"Medicine|Anesthetics\",\"Steath|Break-in\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"Disipline\",\"Choices\":[\"Auspex\",\"Obfuscate\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+        },
+        {
+          "value": "Scene Queen",
+          "label": "Scene Queen",
+          "description": "You rely on your familiarity with a certain subculture and a wellcrafted pose, feeding on an exclusive subculture that believes you to be one of them. Your victims adore you for your status in the scene, and the ones who understand what you are disbelieved. You may belong to the street or be literal upper-class, abusing the weak with false hope and promises of taking them to the next level. In life, you almost certainly belonged to a scene similar to the one you stalk now.",
+          "bonusAdjustments": "[{\"Type\":\"Merit\",\"Name\":\"Fame\",\"Value\":1},{\"Type\":\"Background\",\"Name\":\"Contacts\",\"Value\":1},{\"Type\":\"Flaw\",\"Name\":\"Dark Secret\",\"Value\":1}]",
+          "userChoices": "[{\"Type\":\"Specialty\",\"Choices\":[\"Ettiquete|(Specific)\",\"Leadership|(Specific)\",\"Streetwise|(Specific)\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"Disipline\",\"Choices\":[\"Dominate\",\"Potence\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"Flaw\",\"Choices\":[\"Disliked\",\"Prey Exclusion\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+        },
+        {
+          "value": "Siren",
+          "label": "Siren",
+          "description": "You feed almost exclusively during or while feigning sex, and you rely on your Disciplines, seduction skills, or the unquenchable appetites of others to conceal your carnivorous nature. You have mastered the art of the one night stand or move through the sex-club scene like a dark star. You think of yourself as a sexy beast, but in your darkest moments, you fear that you're at best a problematic lover, at worst a habitual rapist. A former lover who escaped destruction might be your Touchstone or your stalker. (If so, add them to the Relationship Map.) Maybe in life you were a pick-up artist, movie producer, author, a glorious slutty kinkster – or a virgin who intends to make up for lost time post-mortem.",
+          "bonusAdjustments": "[{\"Type\":\"Merit\",\"Name\":\"Beautiful\",\"Value\":2},{\"Type\":\"Flaw\",\"Name\":\"Enemy\",\"Value\":1}]",
+          "userChoices": "[{\"Type\":\"Specialty\",\"Choices\":[\"Persuasion|Seduction\",\"Subterfuge|Seduction\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"Disipline\",\"Choices\":[\"Fortitude\",\"Presence\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+        }
+      ]
+    },
+    {
+      "name": "generation",
+      "label": "Generation",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Childer",
+          "label": "Childer",
+          "description": "Embraced within the last 15 years, down to as recently as last week or last night for an all-fledgling chronicle. The more recent the Embrace, the more likely the characters are to be thinbloods of the 14th, 15th, or 16th Generation. However, new childer of the 12th and 13th Generation remain plausible even tonight.",
+          "bonusAdjustments": "[{\"type\":\"bloodPotency\",\"name\":\"\",\"value\":0}]"
+        },
+        {
+          "value": "Neonate",
+          "label": "Neonate",
+          "description": "Embraced within a human lifetime, roughly between World War II and the present. Neonates are most likely of the 12th or 13th Generation. Thinbloods were vanishingly rare before recent decades, mostly because older Kindred persecuted them mercilessly as signs of Gehenna.",
+          "bonusAdjustments": "[{\"type\":\"bloodPotency\",\"name\":\"\",\"value\":1}]"
+        },
+        {
+          "value": "Ancillae",
+          "label": "Ancillae",
+          "description": "Embraced between the American Revolution and World War II, under 250 years old. An ancilla came of age during the modern era or at least in an era when the divine right of princes were becoming an eccentric joke instead of the foundation of society. It was the contrast between their relative modernity and the medieval mindset of the Camarilla that led to the rise of the Anarch Movement. Even hard-line Camarilla ancillae believe the system should loosen up – which other Kindred interpret to mean 'give us more power.' Ancilla characters can be as low as 10th or 11th Generation.",
+          "bonusAdjustments": "[{\"type\":\"bloodPotency\",\"name\":\"\",\"value\":2}]"
+        },
+        {
+          "value": "Elder",
+          "label": "Elder",
+          "description": "Older than 250 years old, Ninth Generation or lower. The Beckoning slowly calls the elders to the Gehenna War, and they are not available as player characters in this book.",
+          "bonusAdjustments": "[{\"type\":\"bloodPotency\",\"name\":\"\",\"value\":3}]"
+        }
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "attributes.label",
+      "text": "Attributes",
+      "type": "textblock"
+    },
+    {
+      "type": "group",
+      "name": "attributes.physical",
+      "label": "Physical",
+      "children": [
+        {
+          "name": "attributes.Strength",
+          "id": "attributes.strength",
+          "label": "Strength",
+          "type": "radiogroup",
+          "className": "form-control",
+          "count": 5,
+          "validation": {
+            "required": true,
+            "min": 0,
+            "max": 5
+          },
+          "default": 0
+        },
+        {
+          "name": "attributes.Dexterity",
+          "id": "attributes.dexterity",
+          "label": "Dexterity",
+          "type": "radiogroup",
+          "className": "form-control",
+          "count": 5,
+          "validation": {
+            "required": true,
+            "min": 0,
+            "max": 5
+          },
+          "default": 0
+        },
+        {
+          "name": "attributes.Stamina",
+          "id": "attributes.stamina",
+          "label": "Stamina",
+          "type": "radiogroup",
+          "className": "form-control",
+          "count": 5,
+          "validation": {
+            "required": true,
+            "min": 0,
+            "max": 5
+          },
+          "default": 0
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "attributes.social",
+      "label": "Social",
+      "children": [
+        {
+          "name": "attributes.Charisma",
+          "id": "attributes.charisma",
+          "label": "Charisma",
+          "type": "radiogroup",
+          "className": "form-control",
+          "count": 5,
+          "validation": {
+            "required": true,
+            "min": 0,
+            "max": 5
+          },
+          "default": 0
+        },
+        {
+          "name": "attributes.Manipulation",
+          "id": "attributes.manipulation",
+          "label": "Manipulation",
+          "type": "radiogroup",
+          "className": "form-control",
+          "count": 5,
+          "validation": {
+            "required": true,
+            "min": 0,
+            "max": 5
+          },
+          "default": 0
+        },
+        {
+          "name": "attributes.Composure",
+          "id": "attributes.composure",
+          "label": "Composure",
+          "type": "radiogroup",
+          "className": "form-control",
+          "count": 5,
+          "validation": {
+            "required": true,
+            "min": 0,
+            "max": 5
+          },
+          "default": 0
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "attributes.mental",
+      "label": "Mental",
+      "children": [
+        {
+          "name": "attributes.Intelligence",
+          "id": "attributes.intelligence",
+          "label": "Intelligence",
+          "type": "radiogroup",
+          "className": "form-control",
+          "count": 5,
+          "validation": {
+            "required": true,
+            "min": 0,
+            "max": 5
+          },
+          "default": 0
+        },
+        {
+          "name": "attributes.Wits",
+          "id": "attributes.wits",
+          "label": "Wits",
+          "type": "radiogroup",
+          "className": "form-control",
+          "count": 5,
+          "validation": {
+            "required": true,
+            "min": 0,
+            "max": 5
+          },
+          "default": 0
+        },
+        {
+          "name": "attributes.Resolve",
+          "id": "attributes.resolve",
+          "label": "Resolve",
+          "type": "radiogroup",
+          "className": "form-control",
+          "count": 5,
+          "validation": {
+            "required": true,
+            "min": 0,
+            "max": 5
+          },
+          "default": 0
+        }
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "group",
+      "name": "skill",
+      "label": "Skills",
+      "children": [
+        {
+          "type": "group",
+          "name": "",
+          "label": "Academics",
+          "children": [
+            {
+              "name": "skills.Academics",
+              "id": "skills.academics",
+              "label": "Academics",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Academics",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Architecture",
+                  "label": "Architecture"
+                },
+                {
+                  "value": "English Literature",
+                  "label": "English Literature"
+                },
+                {
+                  "value": "History (specific field or period)",
+                  "label": "History (specific field or period)"
+                },
+                {
+                  "value": "History of Art",
+                  "label": "History of Art"
+                },
+                {
+                  "value": "Journalism",
+                  "label": "Journalism"
+                },
+                {
+                  "value": "Philosophy",
+                  "label": "Philosophy"
+                },
+                {
+                  "value": "Research",
+                  "label": "Research"
+                },
+                {
+                  "value": "Teaching",
+                  "label": "Teaching"
+                },
+                {
+                  "value": "Theology",
+                  "label": "Theology"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Animal Ken",
+          "children": [
+            {
+              "name": "skills.Animal Ken",
+              "id": "skills.animal ken",
+              "label": "Animal Ken",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Animal Ken",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Attack Training",
+                  "label": "Attack Training"
+                },
+                {
+                  "value": "Cats",
+                  "label": "Cats"
+                },
+                {
+                  "value": "Dogs",
+                  "label": "Dogs"
+                },
+                {
+                  "value": "Falconry",
+                  "label": "Falconry"
+                },
+                {
+                  "value": "Horses",
+                  "label": "Horses"
+                },
+                {
+                  "value": "Pacification",
+                  "label": "Pacification"
+                },
+                {
+                  "value": "Rats",
+                  "label": "Rats"
+                },
+                {
+                  "value": "Snakes",
+                  "label": "Snakes"
+                },
+                {
+                  "value": "Stunt Training",
+                  "label": "Stunt Training"
+                },
+                {
+                  "value": "Wolves",
+                  "label": "Wolves"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Athletics",
+          "children": [
+            {
+              "name": "skills.Athletics",
+              "id": "skills.athletics",
+              "label": "Athletics",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Athletics",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Acrobatics",
+                  "label": "Acrobatics"
+                },
+                {
+                  "value": "Archery",
+                  "label": "Archery"
+                },
+                {
+                  "value": "Climbing",
+                  "label": "Climbing"
+                },
+                {
+                  "value": "Endurance",
+                  "label": "Endurance"
+                },
+                {
+                  "value": "Jumping",
+                  "label": "Jumping"
+                },
+                {
+                  "value": "Parkour",
+                  "label": "Parkour"
+                },
+                {
+                  "value": "Swimming",
+                  "label": "Swimming"
+                },
+                {
+                  "value": "Throwing",
+                  "label": "Throwing"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Awareness",
+          "children": [
+            {
+              "name": "skills.Awareness",
+              "id": "skills.awareness",
+              "label": "Awareness",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Awareness",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Ambushes",
+                  "label": "Ambushes"
+                },
+                {
+                  "value": "Camouflage",
+                  "label": "Camouflage"
+                },
+                {
+                  "value": "Concealed Objects",
+                  "label": "Concealed Objects"
+                },
+                {
+                  "value": "Hearing",
+                  "label": "Hearing"
+                },
+                {
+                  "value": "Instincts",
+                  "label": "Instincts"
+                },
+                {
+                  "value": "Smell",
+                  "label": "Smell"
+                },
+                {
+                  "value": "Sight",
+                  "label": "Sight"
+                },
+                {
+                  "value": "Traps",
+                  "label": "Traps"
+                },
+                {
+                  "value": "Wilderness",
+                  "label": "Wilderness"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Brawl",
+          "children": [
+            {
+              "name": "skills.Brawl",
+              "id": "skills.brawl",
+              "label": "Brawl",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Brawl",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Animals",
+                  "label": "Animals"
+                },
+                {
+                  "value": "Armed Mortals",
+                  "label": "Armed Mortals"
+                },
+                {
+                  "value": "Bar Fights",
+                  "label": "Bar Fights"
+                },
+                {
+                  "value": "Grappling",
+                  "label": "Grappling"
+                },
+                {
+                  "value": "Kindred",
+                  "label": "Kindred"
+                },
+                {
+                  "value": "Sporting Combat",
+                  "label": "Sporting Combat"
+                },
+                {
+                  "value": "Unarmed Mortals",
+                  "label": "Unarmed Mortals"
+                },
+                {
+                  "value": "Werewolves",
+                  "label": "Werewolves"
+                },
+                {
+                  "value": "In Protean Beast Form",
+                  "label": "In Protean Beast Form"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Craft",
+          "children": [
+            {
+              "name": "skills.Craft",
+              "id": "skills.craft",
+              "label": "Craft",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Craft",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Carpentry",
+                  "label": "Carpentry"
+                },
+                {
+                  "value": "Carving",
+                  "label": "Carving"
+                },
+                {
+                  "value": "Design",
+                  "label": "Design"
+                },
+                {
+                  "value": "Painting",
+                  "label": "Painting"
+                },
+                {
+                  "value": "Sculpting",
+                  "label": "Sculpting"
+                },
+                {
+                  "value": "Sewing",
+                  "label": "Sewing"
+                },
+                {
+                  "value": "Weaponsmithing",
+                  "label": "Weaponsmithing"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Drive",
+          "children": [
+            {
+              "name": "skills.Drive",
+              "id": "skills.drive",
+              "label": "Drive",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Drive",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "All-Terrain Vehicles",
+                  "label": "All-Terrain Vehicles"
+                },
+                {
+                  "value": "Evasion",
+                  "label": "Evasion"
+                },
+                {
+                  "value": "Motorcycles",
+                  "label": "Motorcycles"
+                },
+                {
+                  "value": "Street Racing",
+                  "label": "Street Racing"
+                },
+                {
+                  "value": "Stunts",
+                  "label": "Stunts"
+                },
+                {
+                  "value": "Tailing",
+                  "label": "Tailing"
+                },
+                {
+                  "value": "Trucks",
+                  "label": "Trucks"
+                },
+                {
+                  "value": "Vintage Models",
+                  "label": "Vintage Models"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Etiquette",
+          "children": [
+            {
+              "name": "skills.Etiquette",
+              "id": "skills.etiquette",
+              "label": "Etiquette",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Etiquette",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Anarch",
+                  "label": "Anarch"
+                },
+                {
+                  "value": "Camarilla",
+                  "label": "Camarilla"
+                },
+                {
+                  "value": "Celebrities",
+                  "label": "Celebrities"
+                },
+                {
+                  "value": "Corporate",
+                  "label": "Corporate"
+                },
+                {
+                  "value": "Elysium",
+                  "label": "Elysium"
+                },
+                {
+                  "value": "Feudal",
+                  "label": "Feudal"
+                },
+                {
+                  "value": "One-Percenter",
+                  "label": "One-Percenter"
+                },
+                {
+                  "value": "Secret Society",
+                  "label": "Secret Society"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Finance",
+          "children": [
+            {
+              "name": "skills.Finance",
+              "id": "skills.finance",
+              "label": "Finance",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Finance",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Appraisal",
+                  "label": "Appraisal"
+                },
+                {
+                  "value": "Banking",
+                  "label": "Banking"
+                },
+                {
+                  "value": "Black Markets",
+                  "label": "Black Markets"
+                },
+                {
+                  "value": "Corporate Finance",
+                  "label": "Corporate Finance"
+                },
+                {
+                  "value": "Currency Manipulation",
+                  "label": "Currency Manipulation"
+                },
+                {
+                  "value": "Fine Art",
+                  "label": "Fine Art"
+                },
+                {
+                  "value": "Forensic Accounting",
+                  "label": "Forensic Accounting"
+                },
+                {
+                  "value": "Money Laundering",
+                  "label": "Money Laundering"
+                },
+                {
+                  "value": "Stock Market",
+                  "label": "Stock Market"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Firearms",
+          "children": [
+            {
+              "name": "skills.Firearms",
+              "id": "skills.firearms",
+              "label": "Firearms",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Firearms",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Crossbows",
+                  "label": "Crossbows"
+                },
+                {
+                  "value": "Gun-Dealing",
+                  "label": "Gun-Dealing"
+                },
+                {
+                  "value": "Gunsmithing",
+                  "label": "Gunsmithing"
+                },
+                {
+                  "value": "Handloading Ammunition",
+                  "label": "Handloading Ammunition"
+                },
+                {
+                  "value": "Quick-Draw",
+                  "label": "Quick-Draw"
+                },
+                {
+                  "value": "Sniper",
+                  "label": "Sniper"
+                },
+                {
+                  "value": "Trick Shooting",
+                  "label": "Trick Shooting"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Insight",
+          "children": [
+            {
+              "name": "skills.Insight",
+              "id": "skills.insight",
+              "label": "Insight",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Insight",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Ambitions",
+                  "label": "Ambitions"
+                },
+                {
+                  "value": "Desires",
+                  "label": "Desires"
+                },
+                {
+                  "value": "Detect Lies",
+                  "label": "Detect Lies"
+                },
+                {
+                  "value": "Emotions",
+                  "label": "Emotions"
+                },
+                {
+                  "value": "Empathy",
+                  "label": "Empathy"
+                },
+                {
+                  "value": "Interrogation",
+                  "label": "Interrogation"
+                },
+                {
+                  "value": "Motives",
+                  "label": "Motives"
+                },
+                {
+                  "value": "Phobias",
+                  "label": "Phobias"
+                },
+                {
+                  "value": "Vices",
+                  "label": "Vices"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Intimidation",
+          "children": [
+            {
+              "name": "skills.Intimidation",
+              "id": "skills.intimidation",
+              "label": "Intimidation",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Intimidation",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Extortion",
+                  "label": "Extortion"
+                },
+                {
+                  "value": "Insults",
+                  "label": "Insults"
+                },
+                {
+                  "value": "Interrogation",
+                  "label": "Interrogation"
+                },
+                {
+                  "value": "Physical Coercion",
+                  "label": "Physical Coercion"
+                },
+                {
+                  "value": "Staredowns",
+                  "label": "Staredowns"
+                },
+                {
+                  "value": "Stickups",
+                  "label": "Stickups"
+                },
+                {
+                  "value": "Veiled Threats",
+                  "label": "Veiled Threats"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Investigation",
+          "children": [
+            {
+              "name": "skills.Investigation",
+              "id": "skills.investigation",
+              "label": "Investigation",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Investigation",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Criminology",
+                  "label": "Criminology"
+                },
+                {
+                  "value": "Deduction",
+                  "label": "Deduction"
+                },
+                {
+                  "value": "Forensics",
+                  "label": "Forensics"
+                },
+                {
+                  "value": "Missing Persons",
+                  "label": "Missing Persons"
+                },
+                {
+                  "value": "Murder",
+                  "label": "Murder"
+                },
+                {
+                  "value": "Paranormal Mysteries",
+                  "label": "Paranormal Mysteries"
+                },
+                {
+                  "value": "Traffic Analysis",
+                  "label": "Traffic Analysis"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Larceny",
+          "children": [
+            {
+              "name": "skills.Larceny",
+              "id": "skills.larceny",
+              "label": "Larceny",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Larceny",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Alarms",
+                  "label": "Alarms"
+                },
+                {
+                  "value": "Forgery",
+                  "label": "Forgery"
+                },
+                {
+                  "value": "Grand Theft Auto",
+                  "label": "Grand Theft Auto"
+                },
+                {
+                  "value": "Housebreaking",
+                  "label": "Housebreaking"
+                },
+                {
+                  "value": "Lockpicking",
+                  "label": "Lockpicking"
+                },
+                {
+                  "value": "Pickpocket",
+                  "label": "Pickpocket"
+                },
+                {
+                  "value": "Safecracking",
+                  "label": "Safecracking"
+                },
+                {
+                  "value": "Security Analysis",
+                  "label": "Security Analysis"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Leadership",
+          "children": [
+            {
+              "name": "skills.Leadership",
+              "id": "skills.leadership",
+              "label": "Leadership",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Leadership",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Command",
+                  "label": "Command"
+                },
+                {
+                  "value": "Inspiration",
+                  "label": "Inspiration"
+                },
+                {
+                  "value": "Oratory",
+                  "label": "Oratory"
+                },
+                {
+                  "value": "Praxis",
+                  "label": "Praxis"
+                },
+                {
+                  "value": "Team Dynamics",
+                  "label": "Team Dynamics"
+                },
+                {
+                  "value": "War Pack",
+                  "label": "War Pack"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Medicine",
+          "children": [
+            {
+              "name": "skills.Medicine",
+              "id": "skills.medicine",
+              "label": "Medicine",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Medicine",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "First Aid",
+                  "label": "First Aid"
+                },
+                {
+                  "value": "Haematology",
+                  "label": "Haematology"
+                },
+                {
+                  "value": "Pathology",
+                  "label": "Pathology"
+                },
+                {
+                  "value": "Pharmacy",
+                  "label": "Pharmacy"
+                },
+                {
+                  "value": "Phlebotomy",
+                  "label": "Phlebotomy"
+                },
+                {
+                  "value": "Surgery",
+                  "label": "Surgery"
+                },
+                {
+                  "value": "Trauma Care",
+                  "label": "Trauma Care"
+                },
+                {
+                  "value": "Veterinary",
+                  "label": "Veterinary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Melee",
+          "children": [
+            {
+              "name": "skills.Melee",
+              "id": "skills.melee",
+              "label": "Melee",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Melee",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Axes",
+                  "label": "Axes"
+                },
+                {
+                  "value": "Chains",
+                  "label": "Chains"
+                },
+                {
+                  "value": "Clubs",
+                  "label": "Clubs"
+                },
+                {
+                  "value": "Fencing",
+                  "label": "Fencing"
+                },
+                {
+                  "value": "Disarming Blows",
+                  "label": "Disarming Blows"
+                },
+                {
+                  "value": "Garrotes",
+                  "label": "Garrotes"
+                },
+                {
+                  "value": "Improvised Weapons",
+                  "label": "Improvised Weapons"
+                },
+                {
+                  "value": "Knives",
+                  "label": "Knives"
+                },
+                {
+                  "value": "Stakes",
+                  "label": "Stakes"
+                },
+                {
+                  "value": "Swords",
+                  "label": "Swords"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Occult",
+          "children": [
+            {
+              "name": "skills.Occult",
+              "id": "skills.occult",
+              "label": "Occult",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Occult",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Alchemy",
+                  "label": "Alchemy"
+                },
+                {
+                  "value": "Blood Magic",
+                  "label": "Blood Magic"
+                },
+                {
+                  "value": "Faeries",
+                  "label": "Faeries"
+                },
+                {
+                  "value": "Ghosts",
+                  "label": "Ghosts"
+                },
+                {
+                  "value": "Grimoires",
+                  "label": "Grimoires"
+                },
+                {
+                  "value": "Infernalism",
+                  "label": "Infernalism"
+                },
+                {
+                  "value": "Magic",
+                  "label": "Magic"
+                },
+                {
+                  "value": "Necromancy",
+                  "label": "Necromancy"
+                },
+                {
+                  "value": "Noddism",
+                  "label": "Noddism"
+                },
+                {
+                  "value": "Parapsychology",
+                  "label": "Parapsychology"
+                },
+                {
+                  "value": "Voudun",
+                  "label": "Voudun"
+                },
+                {
+                  "value": "Werewolves",
+                  "label": "Werewolves"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Performance",
+          "children": [
+            {
+              "name": "skills.Performance",
+              "id": "skills.performance",
+              "label": "Performance",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Performance",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Comedy",
+                  "label": "Comedy"
+                },
+                {
+                  "value": "Dance",
+                  "label": "Dance"
+                },
+                {
+                  "value": "Drama",
+                  "label": "Drama"
+                },
+                {
+                  "value": "Drums",
+                  "label": "Drums"
+                },
+                {
+                  "value": "Guitar",
+                  "label": "Guitar"
+                },
+                {
+                  "value": "Keyboards",
+                  "label": "Keyboards"
+                },
+                {
+                  "value": "Poetry",
+                  "label": "Poetry"
+                },
+                {
+                  "value": "Public Speaking",
+                  "label": "Public Speaking"
+                },
+                {
+                  "value": "Rap",
+                  "label": "Rap"
+                },
+                {
+                  "value": "Singing",
+                  "label": "Singing"
+                },
+                {
+                  "value": "Violin",
+                  "label": "Violin"
+                },
+                {
+                  "value": "Wind Instruments",
+                  "label": "Wind Instruments"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Persuasion",
+          "children": [
+            {
+              "name": "skills.Persuasion",
+              "id": "skills.persuasion",
+              "label": "Persuasion",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Persuasion",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Bargaining",
+                  "label": "Bargaining"
+                },
+                {
+                  "value": "Fast Talk",
+                  "label": "Fast Talk"
+                },
+                {
+                  "value": "Gaslighting",
+                  "label": "Gaslighting"
+                },
+                {
+                  "value": "Interrogation",
+                  "label": "Interrogation"
+                },
+                {
+                  "value": "Legal Argument",
+                  "label": "Legal Argument"
+                },
+                {
+                  "value": "Negotiation",
+                  "label": "Negotiation"
+                },
+                {
+                  "value": "Rhetoric",
+                  "label": "Rhetoric"
+                },
+                {
+                  "value": "Victims",
+                  "label": "Victims"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Politics",
+          "children": [
+            {
+              "name": "skills.Politics",
+              "id": "skills.politics",
+              "label": "Politics",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Politics",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Anarchs",
+                  "label": "Anarchs"
+                },
+                {
+                  "value": "Camarilla",
+                  "label": "Camarilla"
+                },
+                {
+                  "value": "City Government",
+                  "label": "City Government"
+                },
+                {
+                  "value": "Clan (specific)",
+                  "label": "Clan (specific)"
+                },
+                {
+                  "value": "Diplomacy",
+                  "label": "Diplomacy"
+                },
+                {
+                  "value": "Media",
+                  "label": "Media"
+                },
+                {
+                  "value": "National Politics",
+                  "label": "National Politics"
+                },
+                {
+                  "value": "State-Provincial Politics",
+                  "label": "State-Provincial Politics"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Science",
+          "children": [
+            {
+              "name": "skills.Science",
+              "id": "skills.science",
+              "label": "Science",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Science",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Astronomy",
+                  "label": "Astronomy"
+                },
+                {
+                  "value": "Biology",
+                  "label": "Biology"
+                },
+                {
+                  "value": "Chemistry",
+                  "label": "Chemistry"
+                },
+                {
+                  "value": "Demolitions",
+                  "label": "Demolitions"
+                },
+                {
+                  "value": "Engineering",
+                  "label": "Engineering"
+                },
+                {
+                  "value": "Genetics",
+                  "label": "Genetics"
+                },
+                {
+                  "value": "Geology",
+                  "label": "Geology"
+                },
+                {
+                  "value": "Mathematics",
+                  "label": "Mathematics"
+                },
+                {
+                  "value": "Physics",
+                  "label": "Physics"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Stealth",
+          "children": [
+            {
+              "name": "skills.Stealth",
+              "id": "skills.stealth",
+              "label": "Stealth",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Stealth",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Ambushes",
+                  "label": "Ambushes"
+                },
+                {
+                  "value": "Crowds",
+                  "label": "Crowds"
+                },
+                {
+                  "value": "Disguise",
+                  "label": "Disguise"
+                },
+                {
+                  "value": "Hiding",
+                  "label": "Hiding"
+                },
+                {
+                  "value": "Kindred",
+                  "label": "Kindred"
+                },
+                {
+                  "value": "Shadowing",
+                  "label": "Shadowing"
+                },
+                {
+                  "value": "Silent Movement",
+                  "label": "Silent Movement"
+                },
+                {
+                  "value": "Urban",
+                  "label": "Urban"
+                },
+                {
+                  "value": "Wilderness",
+                  "label": "Wilderness"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Streetwise",
+          "children": [
+            {
+              "name": "skills.Streetwise",
+              "id": "skills.streetwise",
+              "label": "Streetwise",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Streetwise",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Arms Dealing",
+                  "label": "Arms Dealing"
+                },
+                {
+                  "value": "Black Market",
+                  "label": "Black Market"
+                },
+                {
+                  "value": "Bribery",
+                  "label": "Bribery"
+                },
+                {
+                  "value": "Drugs",
+                  "label": "Drugs"
+                },
+                {
+                  "value": "Fence Stolen Goods",
+                  "label": "Fence Stolen Goods"
+                },
+                {
+                  "value": "Gangs",
+                  "label": "Gangs"
+                },
+                {
+                  "value": "Graffiti",
+                  "label": "Graffiti"
+                },
+                {
+                  "value": "Personal Rep",
+                  "label": "Personal Rep"
+                },
+                {
+                  "value": "Sex Trade",
+                  "label": "Sex Trade"
+                },
+                {
+                  "value": "Urban Survival",
+                  "label": "Urban Survival"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Subterfuge",
+          "children": [
+            {
+              "name": "skills.Subterfuge",
+              "id": "skills.subterfuge",
+              "label": "Subterfuge",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Subterfuge",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Bluff",
+                  "label": "Bluff"
+                },
+                {
+                  "value": "Coverups",
+                  "label": "Coverups"
+                },
+                {
+                  "value": "Feign Mortality",
+                  "label": "Feign Mortality"
+                },
+                {
+                  "value": "Impeccable Lies",
+                  "label": "Impeccable Lies"
+                },
+                {
+                  "value": "Innocence",
+                  "label": "Innocence"
+                },
+                {
+                  "value": "The Long Con",
+                  "label": "The Long Con"
+                },
+                {
+                  "value": "Seduction",
+                  "label": "Seduction"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Survival",
+          "children": [
+            {
+              "name": "skills.Survival",
+              "id": "skills.survival",
+              "label": "Survival",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Survival",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Desert",
+                  "label": "Desert"
+                },
+                {
+                  "value": "Hunting",
+                  "label": "Hunting"
+                },
+                {
+                  "value": "Jungle",
+                  "label": "Jungle"
+                },
+                {
+                  "value": "Tracking",
+                  "label": "Tracking"
+                },
+                {
+                  "value": "Traps",
+                  "label": "Traps"
+                },
+                {
+                  "value": "Shelters",
+                  "label": "Shelters"
+                },
+                {
+                  "value": "Urban Exploration",
+                  "label": "Urban Exploration"
+                },
+                {
+                  "value": "Woodlands",
+                  "label": "Woodlands"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "",
+          "label": "Technology",
+          "children": [
+            {
+              "name": "skills.Technology",
+              "id": "skills.technology",
+              "label": "Technology",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "specialties.Technology",
+              "label": "Specialty",
+              "type": "select",
+              "className": "form-select",
+              "options": [
+                {
+                  "value": "Artillery",
+                  "label": "Artillery"
+                },
+                {
+                  "value": "Coding",
+                  "label": "Coding"
+                },
+                {
+                  "value": "Computer Building",
+                  "label": "Computer Building"
+                },
+                {
+                  "value": "Data Mining",
+                  "label": "Data Mining"
+                },
+                {
+                  "value": "Hacking",
+                  "label": "Hacking"
+                },
+                {
+                  "value": "Networks",
+                  "label": "Networks"
+                },
+                {
+                  "value": "Phones",
+                  "label": "Phones"
+                },
+                {
+                  "value": "Surveillance Systems",
+                  "label": "Surveillance Systems"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

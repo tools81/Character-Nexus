@@ -10,8 +10,8 @@ namespace VampireTheMasquerade
     {
         public string Name => "Vampire the Masquerade";
         public string RulesetName => "Ruleset.VampireTheMasquerade";
-        public string ImageSource => "https://characternexus.blob.core.windows.net/resources/card_vampire.jpg";
-        public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_vampire.png";
+        public string ImageSource => "https://characternexus.blob.core.windows.net/resources/card_vampire_the_masquerade.jpg";
+        public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_vampire_the_masquerade.png";
         public string FormResource => "Ruleset.VampireTheMasquerade.Json.Character.Form.json";
         public string  Instructions => string.Empty;
 

@@ -15,6 +15,8 @@ import InputHidden from "../components/InputHidden";
 import InputSelect from "../components/InputSelect";
 import InputSwitch from "../components/InputSwitch";
 import InputImage from "../components/InputImage";
+import InputDatePicker from "../components/InputDatePicker";
+import ProgressiveRadioGroup from "../components/ProgressiveRadioGroup";
 import FormGroup from "../components/FormGroup";
 import FormListGroup from "../components/FormListGroup";
 import FormAccordion from "../components/FormAccordion";
@@ -218,6 +220,8 @@ const CharacterEditor: React.FC = () => {
         );
       case "divider":
         return <hr />;
+      case "linebreak":
+        return <br />;
       case "text":
         return (
           <DisabledPrereqWrapper component={field} disabled={disabledMap?.[field.name] === true}>
@@ -315,6 +319,36 @@ const CharacterEditor: React.FC = () => {
               userChoices={userChoices}
               setUserChoices={setUserChoices}
               openUserChoiceModal={openUserChoiceModal}
+              disabled={disabledMap?.[field.name] === true}
+              visible={isVisible(field.name)}
+            />
+          </DisabledPrereqWrapper>
+        );
+      case "date":
+        return (
+          <DisabledPrereqWrapper component={field} disabled={disabledMap?.[field.name] === true}>
+            <InputDatePicker
+              register={register}
+              name={field.name}
+              includeLabel={includeLabel}
+              label={field.label}
+              defaultValue={field.default}
+              disabled={disabledMap?.[field.name] === true}
+              visible={isVisible(field.name)}
+            />
+          </DisabledPrereqWrapper>
+        );
+      case "radiogroup":
+        return (
+          <DisabledPrereqWrapper component={field} disabled={disabledMap?.[field.name] === true}>
+            <ProgressiveRadioGroup
+              register={register}
+              setValue={setValue}
+              watch={watch}
+              name={field.name}
+              count={field.count}
+              includeLabel={includeLabel}
+              label={field.label}
               disabled={disabledMap?.[field.name] === true}
               visible={isVisible(field.name)}
             />

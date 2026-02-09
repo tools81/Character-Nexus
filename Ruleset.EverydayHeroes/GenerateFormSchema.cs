@@ -475,7 +475,7 @@ namespace EverydayHeroes
                     {
                         value = background.Name,
                         label = background.Name,
-                        description = background.Description,
+                        description = $"{background.Description}<br />Special feature: {background.SpecialFeature}",
                         bonusCharacteristics = JsonConvert.SerializeObject(background.BonusCharacteristics, _jsonSettings),
                         bonusAdjustments = JsonConvert.SerializeObject(background.BonusAdjustments, _jsonSettings),
                         userChoices = JsonConvert.SerializeObject(background.UserChoices, _jsonSettings)
@@ -505,7 +505,7 @@ namespace EverydayHeroes
                     {
                         value = profession.Name,
                         label = profession.Name,
-                        description = profession.Description,
+                        description = $"{profession.Description}<br />Sample careers: {profession.SampleCareers}<br />Special feature: {profession.SpecialFeature}",
                         bonusCharacteristics = JsonConvert.SerializeObject(profession.BonusCharacteristics, _jsonSettings),
                         bonusAdjustments = JsonConvert.SerializeObject(profession.BonusAdjustments, _jsonSettings),
                         userChoices = JsonConvert.SerializeObject(profession.UserChoices, _jsonSettings)
@@ -595,7 +595,7 @@ namespace EverydayHeroes
                     {
                         value = feat.Name,
                         label = feat.Name,
-                        description = feat.Description,
+                        description = $"Scale: {feat.Scale}<br />{feat.Description}",
                         bonusCharacteristics = JsonConvert.SerializeObject(feat.BonusCharacteristics, _jsonSettings),
                         bonusAdjustments = JsonConvert.SerializeObject(feat.BonusAdjustments, _jsonSettings),
                         userChoices = JsonConvert.SerializeObject(feat.UserChoices, _jsonSettings),
@@ -658,7 +658,7 @@ namespace EverydayHeroes
             obj.className = "form-select";
             obj.options = new List<object>();
 
-            foreach (var plan in plans.OrderBy(t => t.Name))
+            foreach (var plan in plans.OrderBy(t => t.Class))
             {
                 obj.options.Add(
                     new

@@ -5,16 +5,38 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Json\Character\Form.json" />
+    <EmbeddedResource Include="Json\Advantages.json" />
+    <EmbeddedResource Include="Json\Alchemy.json" />
+    <EmbeddedResource Include="Json\Armors.json" />
+    <EmbeddedResource Include="Json\Attributes.json" />
+    <EmbeddedResource Include="Json\Backgrounds.json" />
+    <EmbeddedResource Include="Json\Clans.json" />
+    <EmbeddedResource Include="Json\Coteries.json" />
+    <EmbeddedResource Include="Json\Disciplines.json" />
+    <EmbeddedResource Include="Json\Flaws.json" />
+    <EmbeddedResource Include="Json\Generations.json" />
+    <EmbeddedResource Include="Json\Merits.json" />
+    <EmbeddedResource Include="Json\Powers.json" />
+    <EmbeddedResource Include="Json\Predators.json" />
+    <EmbeddedResource Include="Json\Rituals.json" />
+    <EmbeddedResource Include="Json\Skills.json" />
+    <EmbeddedResource Include="Json\Specialties.json" />
+    <EmbeddedResource Include="Json\Weapons.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Utility\Utility.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Json\Character\" />
-    <Folder Include="Equipment\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <Content Include="Resources\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

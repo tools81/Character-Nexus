@@ -18,7 +18,6 @@ namespace VampireTheMasquerade
         public string Appearance { get; set; } = string.Empty;
         public string DistinguishingFeatures { get; set; } = string.Empty;
         public string History { get; set; } = string.Empty;
-        public Origin Origin { get; set; } = new Origin();
         public Predator Predator { get; set; } = new Predator();
         public string Chronicle { get; set; } = string.Empty;
         public string Ambition { get; set; } = string.Empty;
@@ -66,7 +65,7 @@ namespace VampireTheMasquerade
                 Image = Image,
                 Level = Humanity,
                 LevelName = "Humanity",
-                Details = $"{Origin.Name} | {Clan.Name}",
+                Details = $"{Clan.Name}",
                 CharacterSheet = CharacterSheet
             };
         }

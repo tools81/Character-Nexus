@@ -24,11 +24,6 @@ namespace VampireTheMasquerade
         {
             try
             {
-                // string jsonAdvantagesData = File.ReadAllText(_jsonFilesPath + "Advantages.json");
-                // List<Advantage>? advantages = JsonTo.List<Advantage>(jsonAdvantagesData);
-                // string jsonBackgroundsData = File.ReadAllText(_jsonFilesPath + "Backgrounds.json");
-                // List<Background>? backgrounds = JsonTo.List<Background>(jsonBackgroundsData);
-
                 string jsonClansData = File.ReadAllText(_jsonFilesPath + "Clans.json");
                 List<Clan> clans = JsonConvert.DeserializeObject<List<Clan>>(jsonClansData);
 
@@ -55,6 +50,16 @@ namespace VampireTheMasquerade
                 if (generations == null)
                 {
                     Console.WriteLine($"Unable to read generations json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonCoteriesData = File.ReadAllText(_jsonFilesPath + "Coteries.json");
+                List<Coterie> coteries = JsonConvert.DeserializeObject<List<Coterie>>(jsonCoteriesData);
+
+                if (coteries == null)
+                {
+                    Console.WriteLine($"Unable to read coteries json file. Aborting...");
                     Console.Read();
                     return;
                 }
@@ -89,37 +94,122 @@ namespace VampireTheMasquerade
                     return;
                 }
 
-                // string jsonCoteriesData = File.ReadAllText(_jsonFilesPath + "Coteries.json");
-                // List<Coterie>? coteries = JsonTo.List<Coterie>(jsonCoteriesData);
-                // string jsonDisciplinesData = File.ReadAllText(_jsonFilesPath + "Disciplines.json");
-                // List<Discipline>? disciplines = JsonTo.List<Discipline>(jsonDisciplinesData);
-                // string jsonFlawsData = File.ReadAllText(_jsonFilesPath + "Flaws.json");
-                // List<Flaw>? flaws = JsonTo.List<Flaw>(jsonFlawsData);
-                // string jsonMeritsData = File.ReadAllText(_jsonFilesPath + "Merits.json");
-                // List<Merit>? merits = JsonTo.List<Merit>(jsonMeritsData);
-                // string jsonPowersData = File.ReadAllText(_jsonFilesPath + "Powers.json");
-                // List<Power>? powers = JsonTo.List<Power>(jsonPowersData);
-                // string jsonRitualsData = File.ReadAllText(_jsonFilesPath + "Rituals.json");
-                // List<Ritual>? rituals = JsonTo.List<Ritual>(jsonRitualsData);
-                // string jsonWeaponsData = File.ReadAllText(_jsonFilesPath + "Weapons.json");
-                // List<Weapon>? weapons = JsonTo.List<Weapon>(jsonWeaponsData);
-                // string jsonArmorsData = File.ReadAllText(_jsonFilesPath + "Armors.json");
-                // List<Armor>? armors = JsonTo.List<Armor>(jsonArmorsData);
+                string jsonDisciplinesData = File.ReadAllText(_jsonFilesPath + "Disciplines.json");
+                List<Discipline> disciplines = JsonConvert.DeserializeObject<List<Discipline>>(jsonDisciplinesData);
+
+                if (disciplines == null)
+                {
+                    Console.WriteLine($"Unable to read disciplines json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonPowersData = File.ReadAllText(_jsonFilesPath + "Powers.json");
+                List<Power> powers = JsonConvert.DeserializeObject<List<Power>>(jsonPowersData);
+
+                if (powers == null)
+                {
+                    Console.WriteLine($"Unable to read powers json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonAdvantagesData = File.ReadAllText(_jsonFilesPath + "Advantages.json");
+                List<Advantage> advantages = JsonConvert.DeserializeObject<List<Advantage>>(jsonAdvantagesData);
+
+                if (advantages == null)
+                {
+                    Console.WriteLine($"Unable to read advantages json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonMeritsData = File.ReadAllText(_jsonFilesPath + "Merits.json");
+                List<Merit> merits = JsonConvert.DeserializeObject<List<Merit>>(jsonMeritsData);
+
+                if (powers == null)
+                {
+                    Console.WriteLine($"Unable to read powers json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonFlawsData = File.ReadAllText(_jsonFilesPath + "Flaws.json");
+                List<Flaw> flaws = JsonConvert.DeserializeObject<List<Flaw>>(jsonFlawsData);
+
+                if (flaws == null)
+                {
+                    Console.WriteLine($"Unable to read flaws json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonBackgroundsData = File.ReadAllText(_jsonFilesPath + "Backgrounds.json");
+                List<Background> backgrounds = JsonConvert.DeserializeObject<List<Background>>(jsonBackgroundsData);
+
+                if (backgrounds == null)
+                {
+                    Console.WriteLine($"Unable to read backgrounds json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonRitualsData = File.ReadAllText(_jsonFilesPath + "Rituals.json");
+                List<Ritual> rituals = JsonConvert.DeserializeObject<List<Ritual>>(jsonRitualsData);
+
+                if (rituals == null)
+                {
+                    Console.WriteLine($"Unable to read rituals json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonWeaponsData = File.ReadAllText(_jsonFilesPath + "Weapons.json");
+                List<Weapon> weapons = JsonConvert.DeserializeObject<List<Weapon>>(jsonWeaponsData);
+
+                if (weapons == null)
+                {
+                    Console.WriteLine($"Unable to read weapons json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonArmorsData = File.ReadAllText(_jsonFilesPath + "Armors.json");
+                List<Armor> armors = JsonConvert.DeserializeObject<List<Armor>>(jsonArmorsData);
+
+                if (armors == null)
+                {
+                    Console.WriteLine($"Unable to read armors json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
+                string jsonGearsData = File.ReadAllText(_jsonFilesPath + "Gears.json");
+                List<Gear> gears = JsonConvert.DeserializeObject<List<Gear>>(jsonGearsData);
+
+                if (gears == null)
+                {
+                    Console.WriteLine($"Unable to read gears json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
 
                 GenerateDescriptionSchema();
 
                 GenerateClanSchema(clans, "clan", "Clan");
                 GeneratePredatorSchema(predators, "predator", "Predator");
                 GenerateGenerationSchema(generations, "generation", "Generation");
+                GenerateCoterieSchema(coteries, "coterie", "Coterie"); 
                 GenerateAttributeSchema(attributes, "attributes", "Attributes");
                 GenerateSkillSchema(skills, specialties, "skill", "Skills");
-                // GenerateCoterieSchema(coteries, "coterie", "Coterie");                
-                // GenerateDisciplineSchema(disciplines, powers, "disciplines", "Disciplines");
-                // GenerateAdvantageSchema(advantages, backgrounds, merits, flaws, "advantages", "Advantages");
-                // GenerateWeaponSchema(weapons, "weapons", "Weapons");
-                // GenerateArmorSchema(armors, "armors", "Armors");
+                GenerateDisciplineSchema(disciplines, powers, "disciplines", "Disciplines");
+                GenerateRitualSchema(rituals, "rituals", "Rituals");                                               
+                GenerateAdvantageSchema(advantages, backgrounds, merits, flaws, "advantages", "Advantages");
+                GenerateWeaponSchema(weapons, "weapons", "Weapons");
+                GenerateArmorSchema(armors, "armors", "Armors");
+                GenerateGearSchema(gears, "gears", "Gears");
 
-                // GenerateTemporaryValuesSchema();
+                GenerateTemporaryValuesSchema();
 
                 var schema = new
                 {
@@ -151,36 +241,6 @@ namespace VampireTheMasquerade
                     type = "hidden",
                     className = "form-control"
                 });
-            _fields.Add(
-                new
-                {
-                    name = "health",
-                    id = "health",
-                    label = "Health",
-                    type = "hidden",
-                    className = "form-control"
-                }
-            );
-            _fields.Add(
-                new
-                {
-                    name = "willpower",
-                    id = "willpower",
-                    label = "Willpower",
-                    type = "hidden",
-                    className = "form-control"
-                }
-            );
-            _fields.Add(
-                new
-                {
-                    name = "bloodPotency",
-                    id = "bloodPotency",
-                    label = "Blood Potency",
-                    type = "hidden",
-                    className = "form-control"
-                }
-            );
             _fields.Add(
                 new
                 {
@@ -316,44 +376,92 @@ namespace VampireTheMasquerade
                     type = "textarea",
                     className = "form-control",
                     @default = "Unknown"
-                });            
+                }); 
+            _fields.Add(
+                new
+                {
+                    name = "notes",
+                    id = "notes",
+                    label = "Notes",
+                    type = "textarea",
+                    className = "form-control",
+                    @default = "Unknown"
+                });  
+            _fields.Add(
+                new
+                {
+                    name = "history",
+                    id = "history",
+                    label = "History",
+                    type = "textarea",
+                    className = "form-control",
+                    @default = "Unknown"
+                });         
         }
 
         private static void GenerateTemporaryValuesSchema()
-        {
+        {     
+            _fields.Add( new
+            {
+                name = "health.label",
+                text = "Health",
+                type = "textblock"    
+            });
             _fields.Add(
                 new
                 {
-                    name = "resonance",
-                    id = "resonance",
-                    label = "Resonance",
-                    type = "text",
-                    className = "form-control",
-                    @default = "Unknown"
-                });
-            _fields.Add(
-                new
-                {
-                    name = "hunger",
-                    id = "hunger",
-                    label = "Hunger",
-                    type = "number",
+                    name = "health",
+                    id = "health",
+                    includeLabel = false,
+                    type = "radiogroup",
                     className = "form-control",
                     validation = new
                     {
                         required = true,
                         min = 0,
-                        max = 5
+                        max = 15
                     },
+                    count = 15,
                     @default = 0
                 });
+
+            _fields.Add( new
+            {
+                name = "willpower.label",
+                text = "Willpower",
+                type = "textblock"    
+            });
+            _fields.Add(
+                new
+                {
+                    name = "willpower",
+                    id = "willpower",
+                    includeLabel = false,
+                    type = "radiogroup",
+                    className = "form-control",
+                    validation = new
+                    {
+                        required = true,
+                        min = 0,
+                        max = 15
+                    },
+                    count = 15,
+                    @default = 0
+                });
+            
+            _fields.Add( new
+            {
+                name = "humanity.label",
+                text = "Humanity",
+                type = "textblock"    
+            });
             _fields.Add(
                 new
                 {
                     name = "humanity",
                     id = "humanity",
-                    label = "Humanity",
-                    type = "number",
+                    includeLabel = false,
+                    type = "radiogroup",
                     className = "form-control",
                     validation = new
                     {
@@ -361,8 +469,63 @@ namespace VampireTheMasquerade
                         min = 0,
                         max = 10
                     },
+                    count = 10,
                     @default = 0
                 });
+
+            _fields.Add( new
+            {
+                name = "bloodpotency.label",
+                text = "Blood Potency",
+                type = "textblock"    
+            });
+            _fields.Add(
+                new
+                {
+                    name = "bloodpotency",
+                    id = "bloodpotency",
+                    includeLabel = false,
+                    type = "radiogroup",
+                    className = "form-control",
+                    validation = new
+                    {
+                        required = true,
+                        min = 0,
+                        max = 10
+                    },
+                    count = 10,
+                    @default = 0
+                });
+
+            _fields.Add( new
+            {
+                name = "hunger.label",
+                text = "Hunger",
+                type = "textblock"    
+            });
+            _fields.Add(
+                new
+                {
+                    name = "hunger",
+                    id = "hunger",
+                    includeLabel = false,
+                    type = "radiogroup",
+                    className = "form-control",
+                    validation = new
+                    {
+                        required = true,
+                        min = 0,
+                        max = 5
+                    },
+                    count = 5,
+                    @default = 0
+                });
+
+            _fields.Add( new
+            {
+                type = "divider"    
+            });
+            
             _fields.Add(
                 new
                 {
@@ -454,56 +617,27 @@ namespace VampireTheMasquerade
                     new
                     {
                         value = coterie.Name,
-                        label = coterie.Name
+                        label = coterie.Name,
+                        description = coterie.Description
                     }
                 );
             }
 
             _fields.Add(obj);
-
-            foreach (var coterie in coteries)
-            {
-                var children = new List<object>
-                {
-                    new
-                    {
-                        name = $"info-{name}-{coterie.Name}",
-                        label = "Information",
-                        type = "textblock",
-                        className = "text-block",
-                        text = coterie.Description
-                    }
-                };
-
-                var div = new
-                {
-                    type = "div",
-                    className = "alert alert-secondary",
-                    children,
-                    dependsOn =
-                        new
-                        {
-                            field = name,
-                            value = coterie.Name
-                        }
-                };
-
-                _fields.Add(div);
-            }
         }
 
         private static void GenerateAttributeSchema(List<Attribute> attributes, string name, string label)
-        {  
-            _fields.Add( new
-            {
-                type = "divider"    
-            });
-
+        {              
             _fields.Add( new
             {
                 name = $"{name}.label",
                 text = label,
                 type = "textblock"    
+            });
+
+            _fields.Add( new
+            {
+                type = "divider"    
             });
 
             var physicalChildren = new List<object>();
@@ -538,6 +672,11 @@ namespace VampireTheMasquerade
 
             _fields.Add(physicalGroup);
 
+            _fields.Add( new
+            {
+                type = "divider"    
+            });
+
             var socialChildren = new List<object>();
 
             foreach (var attribute in attributes.Where(a => a.Aspect == "Social"))
@@ -569,6 +708,11 @@ namespace VampireTheMasquerade
             };
 
             _fields.Add(socialGroup);
+
+            _fields.Add( new
+            {
+                type = "divider"    
+            });
 
             var mentalChildren = new List<object>();
 
@@ -706,7 +850,6 @@ namespace VampireTheMasquerade
 
         private static void GenerateDisciplineSchema(List<Discipline> disciplines, List<Power> powers, string name, string label)
         {
-            //TODO: Include Powers
             var accordion = new
             {
                 id = name,
@@ -720,61 +863,100 @@ namespace VampireTheMasquerade
                 dynamic accordionItem = new ExpandoObject();
                 accordionItem.header = discipline.Name;
                 accordionItem.name = discipline.Name.ReplaceWhitespace("");
+                accordionItem.embedField = new
+                {
+                    name = $"disciplines.{discipline.Name}",
+                    id = $"disciplines.{discipline.Name.ToLower()}",
+                    label = "",
+                    includeLabel = false,
+                    type = "radiogroup",
+                    count = 5,
+                    className = "form-control",
+                    validation = new
+                    {
+                        required = true,
+                        min = 0,
+                        max = 5
+                    },
+                    @default = 0
+                };
+
                 accordionItem.component = new
                 {
+                    name = $"discipline.list.group",
                     type = "listgroup",
                     items = new List<object>()
                 };
 
-                var children = new List<object>();
-
-                for (int i = 1; i < 5; i++)
+                foreach (var power in powers.Where(p => p.Discipline == discipline.Name).OrderBy(p => p.Level))
                 {
-                    children.Add( 
+                    var component = 
                         new
                         {
-                            name = discipline.Name.ToLower(),
-                            id = $"{discipline.Name}{i}",
-                            label = "",
-                            type = "radio",
-                            value = i
+                            name = $"powers.{power.Name.ToLower()}",
+                            id = $"{discipline.Name}-{power.Name}",
+                            label = $"{power.Name} - Level: {power.Level}",
+                            type = "switch"
+                        };
+
+                    var text = new
+                        {
+                            name = $"info-power-{discipline.Name}-{power.Name}",
+                            label = "Information",
+                            type = "textblock",
+                            className = "text-block",
+                            text = $"{power.Description}<br /><b>Cost:</b> {power.Cost}<br /><b>Duration:</b> {power.Duration}<br /><b>Dicepool:</b> {power.DicePool}<br /><b>System:</b> {power.System}"
+                        };
+                    
+                    accordionItem.component.items.Add(
+                        new
+                        {
+                            component,
+                            text
                         }
-                    );                    
+                    );
                 }
-
-                var group = new
-                {
-                    type = "group",
-                    name = discipline.Name,
-                    label = discipline.Name,
-                    children
-                };
-
-                var text = new
-                {
-                    name = $"info-discipline-{discipline.Name}",
-                    label = "Information",
-                    type = "textblock",
-                    className = "text-block",
-                    text = discipline.Description
-                };
-
-                accordionItem.component.items.Add(
-                    new
-                    {
-                        group,
-                        text
-                    }
-                );
-
                 accordion.items.Add(accordionItem);
             }
 
             _fields.Add(accordion);
         }
 
-        private static void GenerateAdvantageSchema(List<Advantage> advantages, List<Background> backgrounds, List<Merit> merits, 
-            List<Flaw> flaws, string name, string label)
+        private static void GenerateRitualSchema(List<Ritual> rituals, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var ritual in rituals.OrderBy(r => r.Level))
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = ritual.Name,
+                        label = ritual.Name,
+                        description = $"{ritual.Description}<br /><b>Level: </b>{ritual.Level}<br /><b>Type: </b>{ritual.Type}<br /><b>Ingredients: </b>{ritual.Ingredients}<br /><b>Process: </b>{ritual.Process}<br /><b>System: </b>{ritual.System}"
+                    }
+                );
+            }
+
+            dynamic array = new
+            {
+                name,
+                label,
+                type = "array",
+                component = obj
+            };
+
+            _fields.Add(array);
+        }
+
+        private static void GenerateAdvantageSchema(List<Advantage> advantages, List<Background> backgrounds, 
+            List<Merit> merits, List<Flaw> flaws, string name, string label)
         {
             var accordion = new
             {
@@ -784,13 +966,14 @@ namespace VampireTheMasquerade
                 items = new List<object>()
             };
 
-            foreach (var advantage in advantages)
+            foreach (var advantage in advantages.OrderBy(a => a.Name))
             {
                 dynamic accordionItem = new ExpandoObject();
                 accordionItem.header = advantage.Name;
                 accordionItem.name = advantage.Name.ReplaceWhitespace("");
                 accordionItem.component = new
                 {
+                    name ="advantage.list.group",
                     type = "listgroup",
                     items = new List<object>()
                 };
@@ -799,30 +982,24 @@ namespace VampireTheMasquerade
 
                 if (filteredBackgrounds.Any())
                 {
-                    var header = new
-                    {
-                        name = $"header-background-{advantage.Name}",
-                        label = "Information",
-                        type = "textblock",
-                        className = "text-block",
-                        text = "Background"
-                    };
-
-                    accordionItem.component.items.Add(
-                        new
-                        {
-                            header
-                        }
-                    );
-
                     foreach (var background in filteredBackgrounds)
                     {
                         var component = new
                         {
                             name = background.Name.ToLower(),
-                            id = $"{advantage.Name}-{background.Name}",
-                            label = background.Name,
-                            type = "switch"
+                            id = $"{advantage.Name}.{background.Name}",
+                            label = $"BACKGROUND - {background.Name}",
+                            includeLabel = true,
+                            type = "radiogroup",
+                            className = "form-control",
+                            count = background.Range,
+                            validation = new
+                            {
+                                required = false,
+                                min = 0,
+                                max = background.Range
+                            },
+                            @default = 0
                         };
 
                         var text = new
@@ -848,31 +1025,40 @@ namespace VampireTheMasquerade
 
                 if (filteredMerits.Any())
                 {
-                    var header = new
-                    {
-                        name = $"header-merit-{advantage.Name}",
-                        label = "Information",
-                        type = "textblock",
-                        className = "text-block",
-                        text = "Merits"
-                    };
-
-                    accordionItem.component.items.Add(
-                        new
-                        {
-                            header
-                        }
-                    );
-
                     foreach (var merit in filteredMerits)
                     {
-                        var component = new
+                        var component = new object(); 
+
+                        if (merit.Range == 0)
                         {
-                            name = merit.Name.ToLower(),
-                            id = $"{advantage.Name}-{merit.Name}",
-                            label = merit.Name,
-                            type = "switch"
-                        };
+                            component = new
+                            {
+                                name = merit.Name.ToLower(),
+                                id = $"{advantage.Name}.{merit.Name}",
+                                label = $"MERIT - {merit.Name}",
+                                type = "switch"
+                            };
+                        }
+                        else
+                        {
+                            component = new
+                            {
+                                name = merit.Name.ToLower(),
+                                id = $"{advantage.Name}.{merit.Name}",
+                                label = $"MERIT - {merit.Name}",
+                                includeLabel = true,
+                                type = "radiogroup",
+                                className = "form-control",
+                                count = merit.Range,
+                                validation = new
+                                {
+                                    required = false,
+                                    min = 0,
+                                    max = merit.Range
+                                },
+                                @default = 0
+                            };
+                        }
 
                         var text = new
                         {
@@ -897,31 +1083,40 @@ namespace VampireTheMasquerade
 
                 if (filteredFlaws.Any())
                 {
-                    var header = new
-                    {
-                        name = $"header-flaw-{advantage.Name}",
-                        label = "Information",
-                        type = "textblock",
-                        className = "text-block",
-                        text = "Flaws"
-                    };
-
-                    accordionItem.component.items.Add(
-                        new
-                        {
-                            header
-                        }
-                    );
-
                     foreach (var flaw in filteredFlaws)
                     {
-                        var component = new
+                        var component = new object(); 
+
+                        if (flaw.Range == 0)
                         {
-                            name = flaw.Name.ToLower(),
-                            id = $"{advantage.Name}-{flaw.Name}",
-                            label = flaw.Name,
-                            type = "switch"
-                        };
+                            component = new
+                            {
+                                name = flaw.Name.ToLower(),
+                                id = $"{advantage.Name}.{flaw.Name}",
+                                label = $"FLAW - {flaw.Name}",
+                                type = "switch"
+                            };
+                        }
+                        else
+                        {
+                            component = new
+                            {
+                                name = flaw.Name.ToLower(),
+                                id = $"{advantage.Name}.{flaw.Name}",
+                                label = $"FLAW - {flaw.Name}",
+                                includeLabel= true,
+                                type = "radiogroup",
+                                className = "form-control",
+                                count = flaw.Range,
+                                validation = new
+                                {
+                                    required = false,
+                                    min = 0,
+                                    max = flaw.Range
+                                },
+                                @default = 0
+                            };
+                        }
 
                         var text = new
                         {
@@ -958,13 +1153,14 @@ namespace VampireTheMasquerade
             obj.className = "form-select";
             obj.options = new List<object>();
 
-            foreach (var weapon in weapons)
+            foreach (var weapon in weapons.OrderBy(w => w.Name))
             {
                 obj.options.Add(
                     new
                     {
                         value = weapon.Name,
-                        label = weapon.Name
+                        label = weapon.Name,
+                        description = $"{weapon.Description}<br /><b>Type: </b>{weapon.Type}<br /><b>Damage: </b>{weapon.Damage}"
                     }
                 );
             }
@@ -990,18 +1186,60 @@ namespace VampireTheMasquerade
             obj.className = "form-select";
             obj.options = new List<object>();
 
-            foreach (var armor in armors)
+            foreach (var armor in armors.OrderBy(a => a.Name))
             {
                 obj.options.Add(
                     new
                     {
                         value = armor.Name,
-                        label = armor.Name
+                        label = armor.Name,
+                        description = $"{armor.Description}<br /><b>Ballistic: </b>{armor.Ballistic}<br /><b>Physical: </b>{armor.Physical}"
                     }
                 );
             }
 
-            _fields.Add(obj);            
+            dynamic array = new
+            {
+                name,
+                label,
+                type = "array",
+                component = obj
+            };
+
+            _fields.Add(array);            
+        }
+
+        private static void GenerateGearSchema(List<Gear> gears, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var gear in gears.OrderBy(g => g.Name))
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = gear.Name,
+                        label = gear.Name,
+                        description = gear.Description
+                    }
+                );
+            }
+
+            dynamic array = new
+            {
+                name,
+                label,
+                type = "array",
+                component = obj
+            };
+
+            _fields.Add(array);            
         }
     }
 }

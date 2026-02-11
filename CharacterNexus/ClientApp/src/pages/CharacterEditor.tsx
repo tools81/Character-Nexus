@@ -382,7 +382,10 @@ const CharacterEditor: React.FC = () => {
           <div key={field.name} className="mb-3">
             {field.image && <img src={field.image} alt="" />}
             &nbsp;
-            {field.text}
+            <div dangerouslySetInnerHTML={{
+              __html: field.text,
+            }}
+            ></div>
           </div>
         );
       case "div":

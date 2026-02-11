@@ -34,7 +34,6 @@ namespace VampireTheMasquerade
         public List<Power> Power { get; set; } = new List<Power>();
         public List<Ritual> Rituals { get; set; } = new List<Ritual>();
         public List<Alchemy> Alchemy { get; set; } = new List<Alchemy>();
-        public string Resonance { get; set; } = string.Empty;
         public int Hunger { get; set; }
         public int Humanity { get; set; }
         public string ChronicleTenets { get; set; } = string.Empty;
@@ -46,6 +45,9 @@ namespace VampireTheMasquerade
         public Coterie Coterie { get; set; } = new Coterie();
         public int TotalExperience { get; set; }
         public int SpentExperience { get; set; }
+        public List<Weapon> Weapons { get; set; }
+        public List<Armor> Armors { get; set; }
+        public List<Gear> Gears { get; set; }
 
         public CharacterSegment CharacterSegment { get => GetCharacterSegment(); }
 

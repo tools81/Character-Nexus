@@ -27,8 +27,8 @@ const FormListGroup = ({
           id={childItem.component.name}
           key={childItem.component.name}
         >
-          {renderField(childItem.component, disabledMap, visibilityMap, isVisible, false)}
-          {renderField(childItem.text, disabledMap, visibilityMap, isVisible, false)}
+          {renderField(childItem.component, disabledMap, visibilityMap, isVisible, childItem.component.includeLabel)}
+          {renderField(childItem.text, disabledMap, visibilityMap, isVisible, childItem.component.includeLabel)}
         </li>
       ))}
     </ul>

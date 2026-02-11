@@ -42,7 +42,16 @@ const FormAccordion: React.FC<FormAccordionProps> = ({
                   data-bs-target={`#${collapseId}`}
                   aria-controls={collapseId}
                 >
-                  {item.header}
+                  {item.embedField && (
+                    renderField(
+                    item.embedField, 
+                    disabledMap,
+                    visibilityMap,
+                    isVisible,
+                    item.includeLabel
+                  ))}
+                  &nbsp;
+                  {item.header}                                    
                 </button>
               </h2>
 
@@ -58,7 +67,7 @@ const FormAccordion: React.FC<FormAccordionProps> = ({
                     disabledMap,
                     visibilityMap,
                     isVisible,
-                    true
+                    item.includeLabel
                   )}
                 </div>
               </div>

@@ -41,10 +41,6 @@ const ProgressiveRadioGroup: React.FC<Props> = ({
 
   return (
     <div>
-      {includeLabel && label && (
-        <label className="form-label">{label}</label>
-      )}
-
       <div className="d-flex gap-2">
         {Array.from({ length: count }).map((_, index) => {
           const checked = index < value;
@@ -62,6 +58,9 @@ const ProgressiveRadioGroup: React.FC<Props> = ({
             </label>
           );
         })}
+        {includeLabel && (
+          <label className=""><b>{label}</b></label>
+        )}
       </div>
 
       {/* Hidden field registered with RHF */}

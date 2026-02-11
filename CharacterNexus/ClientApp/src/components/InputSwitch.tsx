@@ -83,7 +83,7 @@ const InputSwitch = ({
         }
       />
       <label className="form-check-label" htmlFor={id}>
-        {label}
+        <b>{label}</b>
       </label>
     </div>
   );

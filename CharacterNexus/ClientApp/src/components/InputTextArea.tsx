@@ -31,7 +31,7 @@ const InputTextArea = ({
       )}
       <textarea
         id={name}
-        defaultValue={defaultValue}
+        placeholder={defaultValue}
         className={className}
         {...register(name, { disabled })}
         disabled={disabled}

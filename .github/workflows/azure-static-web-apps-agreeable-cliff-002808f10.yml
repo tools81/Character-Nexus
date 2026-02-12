@@ -43,6 +43,7 @@ jobs:
       # 6️⃣ Build React App
       - name: Build React App
         working-directory: ./CharacterNexus/ClientApp
+        env: CI: false
         run: npm run build
 
       # 7️⃣ Deploy React app to Azure Static Web Apps

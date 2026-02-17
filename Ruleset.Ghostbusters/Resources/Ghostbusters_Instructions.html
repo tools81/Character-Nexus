@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghostbusters International — New Employee Intake Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --slime:        #7FD13B;
+            --slime-dark:   #4A8A14;
+            --slime-glow:   rgba(127, 209, 59, 0.25);
+            --ecto-blue:    #5BC8F5;
+            --proton:       #FF6B1A;
+            --danger-red:   #D42B2B;
+            --parchment:    #F2EDDE;
+            --paper:        #EDE8D8;
+            --paper-dark:   #D8D0BB;
+            --ink:          #1A1510;
+            --ink-faded:    #4A4035;
+            --ink-light:    #7A6E5E;
+            --stamp-red:    #C0392B;
+            --stamp-blue:   #1A4E8C;
+            --bg:           #2A2015;
+            --stripe:       #221A0E;
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'IBM Plex Mono', monospace;
+            background: var(--bg);
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 28px,
+                    rgba(0,0,0,0.15) 28px,
+                    rgba(0,0,0,0.15) 29px
+                );
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            color: var(--ink);
+        }
+
+        /* ── PAPER CONTAINER ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--parchment);
+            position: relative;
+            box-shadow:
+                0 4px 6px rgba(0,0,0,0.4),
+                0 12px 40px rgba(0,0,0,0.6),
+                0 0 0 1px rgba(0,0,0,0.2),
+                inset 0 1px 0 rgba(255,255,255,0.5);
+            animation: dropIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        /* coffee ring stain decoration */
+        .instr-container .container::before {
+            content: '';
+            position: absolute;
+            top: 4.5rem;
+            right: 1.5rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 6px solid rgba(139, 90, 43, 0.2);
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* second smaller coffee ring */
+        .instr-container .container::after {
+            content: '';
+            position: absolute;
+            top: 5.5rem;
+            right: 3.5rem;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 4px solid rgba(139, 90, 43, 0.12);
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        @keyframes dropIn {
+            from { opacity: 0; transform: translateY(-30px) rotate(-0.5deg); }
+            to   { opacity: 1; transform: translateY(0) rotate(0deg); }
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            background: var(--ink);
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .instr-container .danger-stripe {
+            height: 12px;
+            background: repeating-linear-gradient(
+                -45deg,
+                var(--proton),
+                var(--proton) 10px,
+                var(--ink) 10px,
+                var(--ink) 20px
+            );
+        }
+
+        .instr-container .header-inner {
+            padding: 2rem 2rem 1.75rem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .instr-container .logo-ghost {
+            font-size: 5rem;
+            line-height: 1;
+            filter: drop-shadow(0 0 12px var(--slime));
+            animation: float 3s ease-in-out infinite;
+            user-select: none;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-6px); }
+        }
+
+        .instr-container .header-text h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            line-height: 0.9;
+            color: var(--slime);
+            text-shadow:
+                0 0 15px var(--slime-glow),
+                0 0 40px rgba(127,209,59,0.2);
+            letter-spacing: 0.04em;
+        }
+
+        .instr-container .header-text h1 .intl {
+            display: block;
+            font-size: 1.8rem;
+            color: var(--ecto-blue);
+            text-shadow: 0 0 15px rgba(91,200,245,0.5);
+            letter-spacing: 0.12em;
+        }
+
+        .instr-container .header-text .tagline {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--ink-light);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-top: 0.75rem;
+            color: rgba(127, 209, 59, 0.6);
+        }
+
+        /* ── FORM HEADER BAND ── */
+        .instr-container .form-header {
+            background: var(--paper-dark);
+            border-top: 3px solid var(--ink);
+            border-bottom: 3px double var(--ink);
+            padding: 0.75rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .instr-container .form-title {
+            font-family: 'Special Elite', cursive;
+            font-size: 0.95rem;
+            color: var(--ink);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .instr-container .form-number {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--ink-faded);
+            letter-spacing: 0.1em;
+        }
+
+        /* ── STAMP ── */
+        .instr-container .stamp {
+            position: absolute;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%) rotate(12deg);
+            border: 4px solid var(--stamp-red);
+            color: var(--stamp-red);
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
+            padding: 0.3rem 0.7rem;
+            letter-spacing: 0.1em;
+            opacity: 0.65;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2rem 2rem;
+            background: var(--paper);
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 27px,
+                    rgba(0,0,0,0.06) 27px,
+                    rgba(0,0,0,0.06) 28px
+                );
+            position: relative;
+        }
+
+        /* left red margin line */
+        .instr-container .content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 3.5rem;
+            bottom: 0;
+            width: 2px;
+            background: rgba(196, 80, 80, 0.35);
+            pointer-events: none;
+        }
+
+        /* hole punches */
+        .instr-container .holes {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3.5rem;
+            background: var(--paper-dark);
+            border-right: 1px solid rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 3rem 0;
+            pointer-events: none;
+        }
+
+        .instr-container .hole {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--bg);
+            border: 1px solid rgba(0,0,0,0.3);
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.3rem;
+            color: var(--ink);
+            margin: 2.5rem 0 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            display: flex;
+            align-items: baseline;
+            gap: 0.6rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid var(--ink);
+            animation: typeIn 0.4s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.05s);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2 .section-num {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            color: var(--proton);
+            line-height: 1;
+            text-shadow: 0 0 8px rgba(255,107,26,0.4);
+        }
+
+        .instr-container h2 .section-stamp {
+            margin-left: auto;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.62rem;
+            color: var(--ink-light);
+            letter-spacing: 0.1em;
+            font-style: italic;
+        }
+
+        @keyframes typeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        .instr-container h3 {
+            font-family: 'Special Elite', cursive;
+            font-size: 1rem;
+            color: var(--ink-faded);
+            margin: 1.75rem 0 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .instr-container p {
+            font-size: 0.9rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            color: var(--ink-faded);
+        }
+
+        .instr-container ul, ol {
+            margin: 0.75rem 0 1.25rem 1.5rem;
+        }
+
+        .instr-container li {
+            font-size: 0.88rem;
+            line-height: 1.85;
+            margin-bottom: 0.35rem;
+            color: var(--ink-faded);
+        }
+
+        .instr-container strong {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        .instr-container em {
+            color: var(--ink-light);
+            font-style: italic;
+        }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2rem 0;
+            border: none;
+            border-top: 1px dashed var(--ink-light);
+            opacity: 0.5;
+        }
+
+        /* ── TYPEWRITTEN NOTE ── */
+        .instr-container .typed-note {
+            background: rgba(255,255,200,0.45);
+            border: 1px solid rgba(180,160,60,0.4);
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            font-family: 'Special Elite', cursive;
+            font-size: 0.88rem;
+            line-height: 1.85;
+            color: var(--ink-faded);
+            position: relative;
+            transform: rotate(-0.4deg);
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.12);
+        }
+
+        .instr-container .typed-note-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--ink-light);
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        /* tape strip at top of note */
+        .instr-container .typed-note::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 16px;
+            background: rgba(200,200,150,0.5);
+            border: 1px solid rgba(180,160,60,0.3);
+        }
+
+        /* ── TRAITS BOX ── */
+        .instr-container .traits-box {
+            background: var(--paper-dark);
+            border: 2px solid var(--ink);
+            padding: 1.1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+
+        .instr-container .traits-box-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            color: var(--ink);
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--ink-light);
+            padding-bottom: 0.4rem;
+            margin-bottom: 0.85rem;
+        }
+
+        /* ── TRAIT GRID (4 core traits) ── */
+        .instr-container .trait-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .trait-card {
+            background: var(--parchment);
+            border: 2px solid var(--ink);
+            padding: 0.85rem 1rem;
+            position: relative;
+            transition: background 0.2s;
+        }
+
+        .instr-container .trait-card:hover {
+            background: #fff;
+        }
+
+        .instr-container .trait-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
+            color: var(--ink);
+            letter-spacing: 0.06em;
+            line-height: 1;
+            margin-bottom: 0.35rem;
+        }
+
+        .instr-container .trait-score-line {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .trait-box-num {
+            width: 1.6rem;
+            height: 1.6rem;
+            border: 2px solid var(--ink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--stamp-blue);
+            background: white;
+        }
+
+        .instr-container .trait-governs {
+            font-size: 0.73rem;
+            color: var(--ink-light);
+            letter-spacing: 0.06em;
+            line-height: 1.4;
+        }
+
+        /* ── TALENT LIST ── */
+        .instr-container .talent-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.45rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .talent-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.75rem;
+            background: var(--parchment);
+            border: 1px solid var(--ink-light);
+            border-left: 4px solid var(--slime-dark);
+            padding: 0.65rem 0.9rem;
+            align-items: start;
+            transition: border-left-color 0.2s;
+        }
+
+        .instr-container .talent-item:hover {
+            border-left-color: var(--slime);
+        }
+
+        .instr-container .talent-bullet {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            color: var(--slime-dark);
+            line-height: 1.2;
+        }
+
+        .instr-container .talent-name {
+            font-family: 'Special Elite', cursive;
+            font-size: 0.9rem;
+            color: var(--ink);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .instr-container .talent-desc {
+            font-size: 0.82rem;
+            color: var(--ink-faded);
+            margin-top: 0.1rem;
+            line-height: 1.5;
+        }
+
+        /* ── EQUIPMENT GRID ── */
+        .instr-container .gear-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .gear-item {
+            background: var(--parchment);
+            border: 1px solid var(--ink-light);
+            border-top: 3px solid var(--proton);
+            padding: 0.7rem 0.9rem;
+            font-size: 0.83rem;
+            line-height: 1.6;
+            transition: border-top-color 0.2s;
+        }
+
+        .instr-container .gear-item:hover {
+            border-top-color: var(--slime-dark);
+        }
+
+        .instr-container .gear-name {
+            font-family: 'Special Elite', cursive;
+            font-size: 0.9rem;
+            color: var(--ink);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .gear-desc {
+            font-size: 0.78rem;
+            color: var(--ink-light);
+            line-height: 1.5;
+        }
+
+        /* ── DICE TABLE ── */
+        .instr-container .dice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: 0.85rem;
+        }
+
+        .instr-container .dice-table th {
+            background: var(--ink);
+            color: var(--parchment);
+            font-family: 'Special Elite', cursive;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.55rem 0.9rem;
+            text-align: left;
+        }
+
+        .instr-container .dice-table td {
+            padding: 0.55rem 0.9rem;
+            border-bottom: 1px solid var(--paper-dark);
+            color: var(--ink-faded);
+            background: var(--parchment);
+            vertical-align: top;
+            line-height: 1.6;
+        }
+
+        .instr-container .dice-table tr:nth-child(even) td {
+            background: var(--paper);
+        }
+
+        .instr-container .dice-table tr:hover td {
+            background: #fff;
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--ink);
+            padding: 0;
+        }
+
+        .instr-container .footer-stripe {
+            height: 10px;
+            background: repeating-linear-gradient(
+                -45deg,
+                var(--proton),
+                var(--proton) 8px,
+                var(--ink) 8px,
+                var(--ink) 16px
+            );
+        }
+
+        .instr-container .footer-inner {
+            padding: 1.5rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .instr-container .footer-slogan {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            color: var(--slime);
+            letter-spacing: 0.08em;
+            text-shadow: 0 0 12px var(--slime-glow);
+        }
+
+        .instr-container .footer-sub {
+            font-size: 0.68rem;
+            color: rgba(127,209,59,0.45);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-top: 0.15rem;
+        }
+
+        .instr-container .footer-logo {
+            font-size: 2.8rem;
+            filter: drop-shadow(0 0 8px var(--slime-glow));
+        }
+
+        @media (max-width: 480px) {
+            .header-inner { grid-template-columns: 1fr; text-align: center; }
+            .logo-ghost { font-size: 4rem; }
+            .header-text h1 { font-size: 2.5rem; }
+            .header-text h1 .intl { font-size: 1.5rem; }
+            .trait-grid { grid-template-columns: 1fr; }
+            .gear-grid { grid-template-columns: 1fr; }
+            .content { padding: 1.5rem 1.25rem; }
+            .content::before { display: none; }
+            .holes { display: none; }
+            .footer-inner { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <div class="danger-stripe"></div>
+            <div class="header-inner">
+                <div class="logo-ghost">👻</div>
+                <div class="header-text">
+                    <h1>
+                        Ghostbusters
+                        <span class="intl">International</span>
+                    </h1>
+                    <div class="tagline">// Who ya gonna call? — West End Games RPG System //</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- FORM HEADER -->
+        <div class="form-header" style="position:relative;">
+            <span class="form-title">New Employee Intake &amp; Paranormal Operative Profile</span>
+            <span class="form-number">GBI FORM NE-1A (Rev. 1989)</span>
+            <div class="stamp">APPROVED</div>
+        </div>
+
+        <!-- HOLES + CONTENT -->
+        <div style="position:relative;">
+            <div class="holes">
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+            </div>
+
+            <div class="content" style="padding-left: 4.5rem;">
+
+                <p style="font-family: 'Special Elite', cursive; font-size: 0.88rem; border: 1px solid var(--ink-light); padding: 0.75rem 1rem; background: var(--parchment); margin-bottom: 2rem; line-height: 1.8;">
+                    <strong>ATTENTION APPLICANT:</strong> Please complete all sections of this form to the best of your ability. Ghostbusters International reserves the right to assign you to Class V Full Roaming Vapors on your first day. Completion of this form does not guarantee your survival. Have a great day.
+                </p>
+
+                <!-- SECTION 1: CONCEPT -->
+                <h2 style="--i:1;"><span class="section-num">1</span>Operative Concept <span class="section-stamp">[ SEE INSTRUCTIONS REVERSE ]</span></h2>
+                <p>Ghostbusters International is a <strong>light, comedic RPG</strong> built for fast, funny paranormal adventures. Before filling in any numbers, decide the kind of ghostbuster you are. The game leans into farce, slapstick, and the absurdity of billing ghosts by the hour.</p>
+
+                <ul>
+                    <li><strong>Archetype:</strong> The brainiac? The musclehead? The coward who screams first? The businessperson who's here for the invoicing?</li>
+                    <li><strong>Comedic Hook:</strong> What's your character's signature source of trouble? Over-confidence? Total incompetence in one area? Pathological cheapness?</li>
+                    <li><strong>Why Are You Here?</strong> The pay is terrible, the work is dangerous, and your equipment smells like ectoplasm. So why?</li>
+                </ul>
+
+                <div class="typed-note">
+                    <span class="typed-note-label">NOTE FROM OPERATIONS</span>
+                    Ghostbusters is not a game about brooding antiheroes. The tone is the original films: competent in the chaos, overwhelmed by the weird, and usually arguing about money. Embrace the comedy.
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- SECTION 2: TRAITS -->
+                <h2 style="--i:2;"><span class="section-num">2</span>Assign Your Four Traits</h2>
+                <p>Every Ghostbuster is defined by <strong>four core Traits</strong>. Distribute <strong>12 points</strong> among them however you like, with a minimum of <strong>1</strong> and a maximum of <strong>5</strong> in any single Trait at character creation.</p>
+
+                <div class="trait-grid">
+                    <div class="trait-card">
+                        <div class="trait-name">Brains</div>
+                        <div class="trait-score-line">
+                            <div class="trait-box-num"> </div>
+                            <div class="trait-box-num"> </div>
+                            <div class="trait-box-num"> </div>
+                            <div class="trait-box-num"> </div>
+                            <div class="trait-box-num"> </div>
+                        </div>
+                        <div class="trait-governs">Science, knowledge, investigation, piloting, and anything requiring actual intelligence</div>
+                    </div>
+                    <div class="trait-card">
+                        <div class="trait-name">Muscles</div>
+                        <div class="trait-score-line">
+                            <div class="trait-box-num"> </div>
+                            <div class="trait-box-num"> </div>
+                            <div class="trait-box-num"> </div>
+                            <div class="trait-box-num"> </div>
+                            <div class="trait-box-num"> </div>
+                        </div>
+                        <div class="trait-governs">Fighting, lifting, carrying, intimidating, and surviving things that should kill you</div>
+                    </div>
+                    <div class="trait-card">
+                        <div class="trait-name">Moves</div>
+                        <div class="trait-score-line">
+                            <div class="trait-box-num"> </div>
+                            <div class="trait-box-num"> </div>
+                            <div class="trait-box-num"> </div>
+                            <div class="trait-box-num"> </div>
+                            <div class="trait-box-num"> </div>
+                        </div>
+                        <div class="trait-governs">Speed, stealth, dexterity, dodging, and getting out of the way of proton streams</div>
+                    </div>
+                    <div class="trait-card">
+                        <div class="trait-name">Cool</div>
+                        <div class="trait-score-line">
+                            <div class="trait-box-num"> </div>
+                            <div class="trait-box-num"> </div>
+                            <div class="trait-box-num"> </div>
+                            <div class="trait-box-num"> </div>
+                            <div class="trait-box-num"> </div>
+                        </div>
+                        <div class="trait-governs">Persuasion, deception, willpower, keeping it together when face-to-face with a Class VII apparition</div>
+                    </div>
+                </div>
+
+                <p>Multiply each Trait by 3 to get its <strong>Brownie Point value</strong> — the number you'll be rolling against during play. You'll be rolling a six-sided die and trying to roll <em>equal to or under</em> your target number.</p>
+
+                <div class="divider"></div>
+
+                <!-- SECTION 3: TALENTS -->
+                <h2 style="--i:3;"><span class="section-num">3</span>Choose Your Talents</h2>
+                <p>Talents are specific areas of expertise within your Traits. Each Talent is tied to one of your four Traits and gives you a <strong>+3 bonus</strong> to your Brownie Point target when the Talent applies. You start with <strong>3 Talents</strong>.</p>
+
+                <p>Talents are player-invented descriptors, not a fixed list — write something that fits your character. Below are examples to spark ideas:</p>
+
+                <div class="talent-list">
+                    <div class="talent-item">
+                        <div class="talent-bullet">B</div>
+                        <div>
+                            <div class="talent-name">Paranormal Research (Brains)</div>
+                            <div class="talent-desc">Academic knowledge of ghosts, spectral entities, and the supernatural — the kind you get from reading, not from field experience</div>
+                        </div>
+                    </div>
+                    <div class="talent-item">
+                        <div class="talent-bullet">B</div>
+                        <div>
+                            <div class="talent-name">Proton Pack Operation (Brains)</div>
+                            <div class="talent-desc">You've actually read the manual. You know which settings cause a nuclear explosion and try to avoid them</div>
+                        </div>
+                    </div>
+                    <div class="talent-item">
+                        <div class="talent-bullet">M</div>
+                        <div>
+                            <div class="talent-name">Throwing Things (Muscles)</div>
+                            <div class="talent-desc">Whether it's a ghost trap, a colleague, or a piece of furniture — if it can be thrown, you're the one to throw it</div>
+                        </div>
+                    </div>
+                    <div class="talent-item">
+                        <div class="talent-bullet">M</div>
+                        <div>
+                            <div class="talent-name">Staying Upright Under Slime (Muscles)</div>
+                            <div class="talent-desc">You've developed an improbable resistance to being knocked down, sat upon, or otherwise physically inconvenienced by apparitions</div>
+                        </div>
+                    </div>
+                    <div class="talent-item">
+                        <div class="talent-bullet">V</div>
+                        <div>
+                            <div class="talent-name">Driving the Ecto-1 (Moves)</div>
+                            <div class="talent-desc">You can navigate New York traffic, jump curbs, and park illegally outside a haunted building with smooth professionalism</div>
+                        </div>
+                    </div>
+                    <div class="talent-item">
+                        <div class="talent-bullet">V</div>
+                        <div>
+                            <div class="talent-name">Running Away (Moves)</div>
+                            <div class="talent-desc">Your instinct for self-preservation makes you exceptionally fast when retreating from something terrifying. A valuable skill</div>
+                        </div>
+                    </div>
+                    <div class="talent-item">
+                        <div class="talent-bullet">C</div>
+                        <div>
+                            <div class="talent-name">Customer Relations (Cool)</div>
+                            <div class="talent-desc">Convincing terrified people to sign a contract, pay a deposit, and not sue you when you destroy their kitchen</div>
+                        </div>
+                    </div>
+                    <div class="talent-item">
+                        <div class="talent-bullet">C</div>
+                        <div>
+                            <div class="talent-name">Not Screaming (Cool)</div>
+                            <div class="talent-desc">Sometimes the job requires not alerting the ghost. You can, with effort, suppress the scream. Most of the time</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- SECTION 4: BROWNIE POINTS & DICE -->
+                <h2 style="--i:4;"><span class="section-num">4</span>How the Dice Work</h2>
+                <p>Ghostbusters uses a beautifully simple system. When you attempt something, your <strong>Game Master</strong> (called the <em>Ghost Master</em>) decides which Trait applies and sets a <strong>difficulty</strong>. You roll one or more six-sided dice and try to roll <strong>equal to or under</strong> your Trait × 3 (your Brownie Points).</p>
+
+                <table class="dice-table">
+                    <thead>
+                        <tr>
+                            <th>Situation</th>
+                            <th>How It Works</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Simple Task</strong></td>
+                            <td>Roll 1d6, beat your Brownie Points — no modifier</td>
+                        </tr>
+                        <tr>
+                            <td><strong>With Talent</strong></td>
+                            <td>Add +3 to your Brownie Points for this roll</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hard Task</strong></td>
+                            <td>Ghost Master subtracts from your Brownie Points (difficulty 3, 6, 9, etc.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>The Ghost Die</strong></td>
+                            <td>One die in any roll is the special Ghost Die — if it shows the ghost symbol (6), something goes wrong regardless of success</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Brownie Points</strong></td>
+                            <td>Also the reward currency — earn them for clever, funny, or heroic play. Spend to improve Traits and Talents</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="typed-note" style="transform: rotate(0.3deg);">
+                    <span class="typed-note-label">GHOST MASTER'S REMINDER</span>
+                    The Ghost Die is the heart of the system. A roll that scores a 6 on the Ghost Die means something complicates the situation — even if you succeeded. This is how a perfectly good ghost containment unit ends up venting ectoplasm into the break room.
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- SECTION 5: GOALS -->
+                <h2 style="--i:5;"><span class="section-num">5</span>Define Your Goal</h2>
+                <p>Every Ghostbuster has a personal <strong>Goal</strong> — a specific ambition they're working toward. This isn't just flavour: your Goal is the primary way you earn <strong>Brownie Points</strong> (the game's advancement currency) between sessions.</p>
+
+                <div class="traits-box">
+                    <div class="traits-box-title">Goal Examples</div>
+                    <ul style="margin: 0 0 0 1.25rem;">
+                        <li>Get rich enough to never wear this jumpsuit again</li>
+                        <li>Prove that Ghostbusting is a legitimate scientific discipline</li>
+                        <li>Capture a full Class VII before retiring</li>
+                        <li>Earn enough to pay off my student loans by age forty</li>
+                        <li>Make it through a single job without being covered in ectoplasm</li>
+                        <li>Build a proton pack from scratch without anyone dying</li>
+                        <li>Get the Mayor to officially recognize our franchise</li>
+                        <li>Find the ghost that haunted my grandmother's kitchen and evict it once and for all</li>
+                    </ul>
+                </div>
+
+                <p>Goals should be <strong>specific and achievable</strong> within a session or two. Once you accomplish a Goal, choose a new one. The Ghost Master awards extra Brownie Points when you make real progress.</p>
+
+                <div class="divider"></div>
+
+                <!-- SECTION 6: EQUIPMENT -->
+                <h2 style="--i:6;"><span class="section-num">6</span>Standard Issue Equipment</h2>
+                <p>All new Ghostbusters operatives are issued the following equipment upon signing their employment contract and acknowledging the associated liability waiver.</p>
+
+                <div class="gear-grid">
+                    <div class="gear-item">
+                        <div class="gear-name">Proton Pack</div>
+                        <div class="gear-desc">Unlicensed nuclear accelerator worn on the back. Do not cross the streams. Seriously. Don't.</div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-name">Ghost Trap</div>
+                        <div class="gear-desc">Floor-deployed containment unit. Requires coordinated team deployment. Stomp pedal to open.</div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-name">PKE Meter</div>
+                        <div class="gear-desc">Psycho-Kinetic Energy detector. Locates and classifies paranormal entities in your vicinity.</div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-name">Ghostbusters Uniform</div>
+                        <div class="gear-desc">Grey coverall with logo patch. No known protective value. Does wash out eventually. Mostly.</div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-name">Slime Kit</div>
+                        <div class="gear-desc">Sampling tools, containment bags, and industrial degreaser. Issued reluctantly by accounting.</div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-name">Ghost Goggles</div>
+                        <div class="gear-desc">Spectral-frequency eyewear for seeing entities not visible to the naked eye. Prone to fogging.</div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- SECTION 7: BROWNIE POINT ECONOMY -->
+                <h2 style="--i:7;"><span class="section-num">7</span>Earning &amp; Spending Brownie Points</h2>
+                <p>Brownie Points serve dual purpose: they're your <strong>task resolution target numbers</strong> (Trait × 3) <em>and</em> the game's <strong>advancement and reward currency</strong>.</p>
+
+                <h3>Earning Brownie Points</h3>
+                <ul>
+                    <li><strong>Completing Jobs:</strong> Successfully busting a ghost and billing the client earns points for the whole team</li>
+                    <li><strong>Advancing Your Goal:</strong> Making meaningful progress toward your personal Goal earns bonus points</li>
+                    <li><strong>Playing in Character:</strong> Good roleplaying, funny moments, and heroic decisions at personal cost earn points at the Ghost Master's discretion</li>
+                    <li><strong>Team Contribution:</strong> Helping other players succeed in memorable ways</li>
+                </ul>
+
+                <h3>Spending Brownie Points</h3>
+                <ul>
+                    <li><strong>Improve a Trait:</strong> Raise one Trait by 1 point (cost = new level × 10 Brownie Points)</li>
+                    <li><strong>Add a Talent:</strong> Purchase a new Talent for 10 Brownie Points</li>
+                    <li><strong>Improve a Talent:</strong> Raise a Talent's bonus from +3 to a higher bonus (rare)</li>
+                </ul>
+
+                <div class="divider"></div>
+
+                <!-- SECTION 8: SANITY -->
+                <h2 style="--i:8;"><span class="section-num">8</span>Sanity &amp; Survival</h2>
+                <p>Ghostbusters doesn't use traditional hit points. Instead, the consequences of failure are <strong>narrative and comedic</strong> — you get covered in slime, embarrassed in front of a client, fired from a bridge, etc.</p>
+
+                <p>However, severe paranormal encounters can test your mental composure. The <strong>Cool Trait</strong> measures your resistance to supernatural terror. Failing Cool checks when confronted with truly horrific entities can result in:</p>
+
+                <ul>
+                    <li><strong>Panic:</strong> Your character acts irrationally — runs, hides, or does something spectacularly unhelpful</li>
+                    <li><strong>Temporary Brownie Point Loss:</strong> Your shaken confidence imposes a temporary penalty</li>
+                    <li><strong>Ghost Master Complications:</strong> Something amusing and inconvenient happens as a result of your failure of nerve</li>
+                </ul>
+
+                <div class="typed-note">
+                    <span class="typed-note-label">HEALTH & SAFETY NOTICE</span>
+                    Physical damage in Ghostbusters is handled the same way. Getting blasted by a ghost, falling off a building, or having a chandelier dropped on you doesn't kill you — it just results in funny, inconvenient outcomes that further complicate the job. This is that kind of game.
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- SECTION 9: THE FRANCHISE -->
+                <h2 style="--i:9;"><span class="section-num">9</span>Your Franchise</h2>
+                <p>Ghostbusters International is a <strong>franchise operation</strong>. Your team is either working out of the original NYC HQ or running a licensed regional franchise. Work with your Ghost Master to establish:</p>
+
+                <ul>
+                    <li><strong>Location:</strong> What city or region does your franchise cover? (Or are you at the original New York base?)</li>
+                    <li><strong>The Firehouse:</strong> Describe your HQ. Is it a converted firehouse? A strip mall between a dry cleaner and a nail salon? A condemned office building you got suspiciously cheap?</li>
+                    <li><strong>The Ecto Vehicle:</strong> Every franchise has a vehicle. Converted ambulance? Modified station wagon? What's yours called and what's wrong with it?</li>
+                    <li><strong>Containment Unit:</strong> Where do captured ghosts go? Is it well-maintained or quietly terrifying?</li>
+                    <li><strong>Finances:</strong> Are you solvent? Do you owe money to someone the team should probably be afraid of? What does your current monthly budget look like?</li>
+                </ul>
+
+                <div class="divider"></div>
+
+                <!-- SECTION 10: FINISHING UP -->
+                <h2 style="--i:10;"><span class="section-num">10</span>Finishing Touches</h2>
+
+                <h3>Personal Details</h3>
+                <ul>
+                    <li><strong>Name</strong> (and any nicknames the team has given you against your will)</li>
+                    <li><strong>Age &amp; Physical Description</strong></li>
+                    <li><strong>Professional Background</strong> — what were you before you put on the jumpsuit? Grad student? Ex-cop? Failed actor? Unemployed?</li>
+                    <li><strong>Why They Hired You</strong> — which of your Traits convinced them you were worth the liability?</li>
+                </ul>
+
+                <h3>Team Connections</h3>
+                <p>Establish at least one connection with each team member:</p>
+                <ul>
+                    <li>How long have you known them?</li>
+                    <li>What's the one thing about them that drives you absolutely insane?</li>
+                    <li>What's the one thing you'd never admit you admire about them?</li>
+                </ul>
+
+                <div class="traits-box" style="margin-top: 1.5rem;">
+                    <div class="traits-box-title">Final Checklist — GBI Form NE-1A</div>
+                    <ul style="margin: 0 0 0 1.5rem; list-style: none;">
+                        <li>☐ &nbsp;Four Traits assigned (12 points total, 1–5 each)</li>
+                        <li>☐ &nbsp;Three Talents chosen and written on character sheet</li>
+                        <li>☐ &nbsp;Brownie Points calculated (Trait × 3 for each)</li>
+                        <li>☐ &nbsp;Personal Goal defined and agreed with Ghost Master</li>
+                        <li>☐ &nbsp;Standard equipment acknowledged and signed for</li>
+                        <li>☐ &nbsp;Franchise location and vehicle established</li>
+                        <li>☐ &nbsp;Team connections defined</li>
+                        <li>☐ &nbsp;Liability waiver signed (form GBI-LW-47c, separate document)</li>
+                        <li>☐ &nbsp;Ready to bust some ghosts</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-stripe"></div>
+            <div class="footer-inner">
+                <div>
+                    <div class="footer-slogan">If there's something strange... we're on it.</div>
+                    <div class="footer-sub">Ghostbusters International • Licensed Paranormal Elimination Services • Est. 1984</div>
+                </div>
+                <div class="footer-logo">👻</div>
+            </div>
+        </footer>
+
+    </div>
+    </body>
+</div>
+</html>

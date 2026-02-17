@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Multiverse RPG – Character Creation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --marvel-red: #EC1D24;
+            --marvel-dark-red: #A50E14;
+            --marvel-blue: #0066CC;
+            --marvel-navy: #00214D;
+            --ink-black: #0D0D0D;
+            --panel-dark: #141414;
+            --halftone-bg: #1A1A1A;
+            --yellow-accent: #F8C300;
+            --text-light: #F0F0F0;
+            --text-muted: #AAAAAA;
+            --panel-border: #333;
+        }
+
+        .instr-container * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .instr-container body {
+            font-family: 'Barlow', sans-serif;
+            background: var(--ink-black);
+            color: var(--text-light);
+            min-height: 100vh;
+            padding: 1.5rem 1rem;
+            background-image:
+                radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 8px 8px;
+        }
+
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--panel-dark);
+            border: 4px solid var(--ink-black);
+            outline: 2px solid var(--panel-border);
+            box-shadow:
+                8px 8px 0 var(--marvel-red),
+                12px 12px 0 var(--ink-black);
+            animation: smash 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+            position: relative;
+        }
+
+        @keyframes smash {
+            0%   { opacity: 0; transform: scale(1.06) rotate(-0.5deg); }
+            60%  { transform: scale(0.98) rotate(0.2deg); }
+            100% { opacity: 1; transform: scale(1) rotate(0); }
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            background: var(--marvel-red);
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid var(--ink-black);
+        }
+
+        .instr-container .header-top-bar {
+            background: var(--ink-black);
+            padding: 0.4rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border-bottom: 2px solid var(--marvel-red);
+        }
+
+        .instr-container .marvel-logo {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 1.4rem;
+            color: var(--text-light);
+            letter-spacing: 0.12em;
+            background: var(--marvel-red);
+            padding: 0.1rem 0.6rem;
+            clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
+        }
+
+        .instr-container .header-tag {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .instr-container .header-main {
+            padding: 2.5rem 2rem 2rem;
+            background:
+                repeating-linear-gradient(
+                    -45deg,
+                    rgba(0,0,0,0.08),
+                    rgba(0,0,0,0.08) 4px,
+                    transparent 4px,
+                    transparent 12px
+                ),
+                var(--marvel-red);
+            position: relative;
+        }
+
+        .instr-container .header-main::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--yellow-accent) 0px,
+                var(--yellow-accent) 12px,
+                var(--ink-black) 12px,
+                var(--ink-black) 16px
+            );
+        }
+
+        .instr-container h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 3.2rem;
+            line-height: 0.9;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow:
+                4px 4px 0 var(--marvel-dark-red),
+                -1px -1px 0 rgba(0,0,0,0.5);
+            letter-spacing: 0.02em;
+            margin-bottom: 0.75rem;
+        }
+
+        .instr-container .subtitle {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--yellow-accent);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2rem 1.75rem;
+        }
+
+        .instr-container .intro-box {
+            background: var(--marvel-navy);
+            border: 2px solid var(--marvel-blue);
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
+            font-size: 1.05rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #fff;
+            margin: 2.5rem 0 1.25rem;
+            padding: 0.6rem 1rem 0.6rem 1.25rem;
+            background: var(--marvel-red);
+            border-left: 6px solid var(--yellow-accent);
+            border-right: 2px solid rgba(0,0,0,0.3);
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);
+            animation: slidein 0.4s ease-out backwards;
+            animation-delay: calc(var(--i, 0) * 0.05s);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        @keyframes slidein {
+            from { opacity: 0; transform: translateX(-24px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+
+        .instr-container h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--yellow-accent);
+            margin: 1.75rem 0 0.6rem;
+            border-bottom: 2px solid var(--panel-border);
+            padding-bottom: 0.35rem;
+        }
+
+        .instr-container p {
+            font-size: 1rem;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .instr-container ul, ol {
+            margin: 0.75rem 0 1.25rem 1.25rem;
+        }
+
+        .instr-container li {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+            padding-left: 0.25rem;
+        }
+
+        .instr-container strong {
+            color: var(--yellow-accent);
+            font-weight: 700;
+        }
+
+        .instr-container em {
+            color: #ccc;
+            font-style: italic;
+        }
+
+        /* ── STEP BADGE ── */
+        .instr-container .step-label {
+            display: inline-block;
+            background: var(--yellow-accent);
+            color: var(--ink-black);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 0.15rem 0.6rem;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+
+        /* ── STAT GRID ── */
+        .instr-container .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .stat-card {
+            background: var(--halftone-bg);
+            border: 2px solid var(--panel-border);
+            padding: 0.9rem 1rem;
+            border-top: 3px solid var(--marvel-red);
+            transition: border-color 0.2s;
+        }
+
+        .instr-container .stat-card:hover {
+            border-top-color: var(--yellow-accent);
+        }
+
+        .instr-container .stat-name {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-light);
+        }
+
+        .instr-container .stat-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+            line-height: 1.5;
+        }
+
+        /* ── CALLOUT / NOTE ── */
+        .instr-container .callout {
+            background: rgba(248, 195, 0, 0.08);
+            border: 2px solid var(--yellow-accent);
+            border-left-width: 5px;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            font-size: 0.97rem;
+            line-height: 1.7;
+            position: relative;
+        }
+
+        .instr-container .callout-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--yellow-accent);
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        /* ── INFO BLOCK ── */
+        .instr-container .info-block {
+            background: var(--halftone-bg);
+            border: 2px solid var(--panel-border);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+        }
+
+        /* ── RANK TABLE ── */
+        .instr-container .rank-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .instr-container .rank-table th {
+            background: var(--marvel-red);
+            color: #fff;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.55rem 0.9rem;
+            text-align: left;
+        }
+
+        .instr-container .rank-table td {
+            padding: 0.55rem 0.9rem;
+            border-bottom: 1px solid var(--panel-border);
+            color: var(--text-light);
+        }
+
+        .instr-container .rank-table tr:nth-child(even) td {
+            background: rgba(255,255,255,0.03);
+        }
+
+        .instr-container .rank-table tr:hover td {
+            background: rgba(236, 29, 36, 0.08);
+        }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            height: 3px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--panel-border) 0px,
+                var(--panel-border) 8px,
+                transparent 8px,
+                transparent 12px
+            );
+            margin: 2rem 0;
+        }
+
+        /* ── POWER TAG ── */
+        .instr-container .power-tag {
+            display: inline-block;
+            background: var(--marvel-blue);
+            color: #fff;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.82rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.2rem 0.6rem;
+            margin: 0.2rem 0.2rem 0.2rem 0;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .instr-container footer {
+            background: var(--marvel-red);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            border-top: 4px solid var(--ink-black);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #fff;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.4);
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.65rem; }
+            .stat-grid { grid-template-columns: 1fr; }
+            .content { padding: 1.5rem 1.25rem; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <div class="header-top-bar">
+                <span class="marvel-logo">Marvel</span>
+                <span class="header-tag">Multiverse Role-Playing Game</span>
+            </div>
+            <div class="header-main">
+                <h1>Hero<br>Creation</h1>
+                <div class="subtitle">Assemble Your Champion</div>
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="intro-box">
+                The Marvel Multiverse RPG uses the <strong>d616 System</strong> — roll 3d6 (one being the special Marvel die) and add your relevant stat. Creating a hero is a narrative and mechanical process that produces a character unique to the Marvel universe.
+            </div>
+
+            <!-- STEP 1 -->
+            <h2 style="--i:1;"><span class="step-label">Step 1</span>Choose Your Origin</h2>
+            <p>Your origin describes how you gained your powers and shapes the starting framework of your hero. It grants you an <strong>Origin Trait</strong> and informs your backstory.</p>
+
+            <div class="info-block">
+                <strong style="color: var(--text-light); font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 0.75rem;">Core Origins</strong>
+                <ul style="margin: 0 0 0 1.25rem;">
+                    <li><strong>Altered Human:</strong> Changed by accident, experiment, or cosmic event (Spider-Man, Hulk, Captain America)</li>
+                    <li><strong>High-Tech:</strong> Power comes from advanced technology you build or wear (Iron Man, War Machine)</li>
+                    <li><strong>Mutant:</strong> Born with the X-gene granting you superhuman abilities (X-Men, Magneto)</li>
+                    <li><strong>Supernatural:</strong> Powers granted by magic, mysticism, or divine forces (Doctor Strange, Thor)</li>
+                    <li><strong>Inhuman:</strong> Transformed by Terrigenesis into a super-powered being</li>
+                    <li><strong>Alien:</strong> Non-human heritage provides extraordinary abilities (Captain Marvel, Groot)</li>
+                    <li><strong>Training:</strong> Peak-human mastery through intense discipline (Hawkeye, Black Widow)</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2 -->
+            <h2 style="--i:2;"><span class="step-label">Step 2</span>Establish Your Rank</h2>
+            <p>Rank is the core measure of a hero's overall power level. It determines how many points you have for building stats and powers, and how you compare to the wider Marvel universe.</p>
+
+            <table class="rank-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Description</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>1 – Basic</strong></td><td>Street-level hero</td><td>45</td></tr>
+                    <tr><td><strong>2 – Experienced</strong></td><td>Established hero</td><td>55</td></tr>
+                    <tr><td><strong>3 – Veteran</strong></td><td>Seasoned champion</td><td>65</td></tr>
+                    <tr><td><strong>4 – Superhuman</strong></td><td>Top-tier powered hero</td><td>75</td></tr>
+                    <tr><td><strong>5 – Cosmic</strong></td><td>World-class power</td><td>90</td></tr>
+                    <tr><td><strong>6 – Multiverse</strong></td><td>Reality-shaping force</td><td>110</td></tr>
+                </tbody>
+            </table>
+
+            <div class="callout">
+                <span class="callout-label">⚡ Narrator's Note</span>
+                Most new heroes begin at <strong>Rank 1 or 2</strong>. Talk with your Narrator (GM) to determine an appropriate starting Rank for your campaign's power level.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3 -->
+            <h2 style="--i:3;"><span class="step-label">Step 3</span>Assign Your Stats</h2>
+            <p>Every hero has <strong>six core stats</strong>. Distribute your available points (determined by Rank) among them. Each stat starts at 0 and represents your hero's core capabilities.</p>
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-name">Might</div>
+                    <div class="stat-desc">Physical strength, toughness, and endurance</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Agility</div>
+                    <div class="stat-desc">Speed, reflexes, and physical coordination</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Resilience</div>
+                    <div class="stat-desc">Resistance to damage, disease, and hardship</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Vigilance</div>
+                    <div class="stat-desc">Perception, awareness, and tactical thinking</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Ego</div>
+                    <div class="stat-desc">Mental strength, willpower, and personality force</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Logic</div>
+                    <div class="stat-desc">Intelligence, problem-solving, and technical skill</div>
+                </div>
+            </div>
+
+            <p>The maximum number of points you may put in any single stat depends on your Rank. Higher Rank heroes can invest more in any one area.</p>
+
+            <div class="callout">
+                <span class="callout-label">🎲 How It Works</span>
+                When you roll, choose the relevant stat and add its value to your 3d6 roll (using the Marvel die). Meet or beat a Difficulty Number to succeed. The Marvel die can grant a <strong>Fantastic success</strong> when it shows 1 or 6.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4 -->
+            <h2 style="--i:4;"><span class="step-label">Step 4</span>Select Your Powers</h2>
+            <p>Powers are your hero's special abilities beyond normal human capacity. Each power has its own rules and can be upgraded over time. Powers have both a base effect and can be enhanced with <strong>Power Sets</strong>.</p>
+
+            <h3>Power Sets</h3>
+            <p>Powers are grouped into thematic sets. Choose power sets that match your origin and concept:</p>
+
+            <div style="margin: 1rem 0 1.5rem;">
+                <span class="power-tag">Basic Hand-to-Hand</span>
+                <span class="power-tag">Basic Ranged</span>
+                <span class="power-tag">Elemental Control</span>
+                <span class="power-tag">Energy Control</span>
+                <span class="power-tag">Flight</span>
+                <span class="power-tag">Healing Factor</span>
+                <span class="power-tag">Illusion</span>
+                <span class="power-tag">Intellect</span>
+                <span class="power-tag">Magic</span>
+                <span class="power-tag">Melee Weapons</span>
+                <span class="power-tag">Phasing</span>
+                <span class="power-tag">Psychic</span>
+                <span class="power-tag">Ranged Weapons</span>
+                <span class="power-tag">Shield Bearer</span>
+                <span class="power-tag">Size Changing</span>
+                <span class="power-tag">Spider-Powers</span>
+                <span class="power-tag">Super-Speed</span>
+                <span class="power-tag">Super-Strength</span>
+                <span class="power-tag">Telekinesis</span>
+                <span class="power-tag">Teleportation</span>
+                <span class="power-tag">Weather Control</span>
+            </div>
+
+            <h3>Purchasing Powers</h3>
+            <p>Powers are purchased with your Rank points. Each power has a point cost. You must purchase the prerequisite powers in a set before advancing to higher-tier abilities.</p>
+
+            <ul>
+                <li>All heroes start with at least one power set from their origin</li>
+                <li>You may purchase powers from multiple sets if your concept warrants it</li>
+                <li>Powers can be <strong>Signature Powers</strong> — especially iconic abilities — which improve on Fantastic successes</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5 -->
+            <h2 style="--i:5;"><span class="step-label">Step 5</span>Choose Your Traits</h2>
+            <p>Traits are descriptive tags that reflect your hero's skills, knowledge, and experience. They grant bonus dice or narrative advantages in relevant situations.</p>
+
+            <h3>Trait Categories</h3>
+            <ul>
+                <li><strong>Occupation Traits:</strong> "Scientist," "Soldier," "Street Fighter," "Spy," "Journalist" — represent professional background</li>
+                <li><strong>Knowledge Traits:</strong> "History of Asgard," "Criminal Underworld," "S.H.I.E.L.D. Protocols" — specialized information</li>
+                <li><strong>Personality Traits:</strong> "Natural Leader," "Never Gives Up," "Wisecracker" — character qualities that aid in relevant situations</li>
+                <li><strong>Reputation Traits:</strong> "Feared by Criminals," "Trusted Avenger," "Famous Scientist" — how the world perceives your hero</li>
+            </ul>
+
+            <div class="callout">
+                <span class="callout-label">💡 Narrator's Tip</span>
+                Traits work best when they're specific enough to be meaningful but broad enough to apply in multiple situations. A trait should feel like something your hero would say about themselves.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6 -->
+            <h2 style="--i:6;"><span class="step-label">Step 6</span>Determine Health &amp; Focus</h2>
+
+            <h3>Health</h3>
+            <p>Health represents your hero's physical durability. It is calculated as:</p>
+            <div class="info-block">
+                <strong>Health = (Might + Resilience) × Rank multiplier</strong>
+                <p style="margin-top: 0.75rem; margin-bottom: 0; color: var(--text-muted); font-size: 0.95rem;">The exact multiplier is provided in the Narrator's charts and varies by Rank. Rank 1 heroes typically have Health around 30–60.</p>
+            </div>
+
+            <h3>Focus</h3>
+            <p>Focus fuels special abilities, powers, and heroic actions that require concentration or willpower. It is calculated as:</p>
+            <div class="info-block">
+                <strong>Focus = (Ego + Logic) × Rank multiplier</strong>
+                <p style="margin-top: 0.75rem; margin-bottom: 0; color: var(--text-muted); font-size: 0.95rem;">Focus recovers during the encounter and between scenes. Many powerful abilities require spending Focus to activate.</p>
+            </div>
+
+            <h3>Defense &amp; Damage</h3>
+            <ul>
+                <li><strong>Melee Defense:</strong> 10 + Agility</li>
+                <li><strong>Ranged Defense:</strong> 10 + Vigilance</li>
+                <li><strong>Melee Damage Bonus:</strong> Based on Might rank</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7 -->
+            <h2 style="--i:7;"><span class="step-label">Step 7</span>Pick Your Team Affiliation</h2>
+            <p>Where does your hero belong? Team affiliation provides narrative context and can offer mechanical benefits when working with allies.</p>
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-name">Avengers</div>
+                    <div class="stat-desc">Earth's Mightiest Heroes — and all its sub-teams</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">X-Men</div>
+                    <div class="stat-desc">Mutant heroes fighting for a world that fears them</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Fantastic Four</div>
+                    <div class="stat-desc">First family of Marvel exploration and discovery</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Guardians</div>
+                    <div class="stat-desc">Cosmic guardians of the galaxy</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">S.H.I.E.L.D.</div>
+                    <div class="stat-desc">Strategic global intelligence and protection</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Solo</div>
+                    <div class="stat-desc">Independent — a hero on their own terms</div>
+                </div>
+            </div>
+
+            <p>Your affiliation may provide access to resources, contacts, and support — or it may saddle you with responsibilities, politics, and enemies.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8 -->
+            <h2 style="--i:8;"><span class="step-label">Step 8</span>Define Your Tags</h2>
+            <p>Tags are descriptive labels that help the Narrator and players understand what your hero is all about. They have no direct mechanical effect but guide roleplay and story decisions.</p>
+
+            <ul>
+                <li><strong>Distinction:</strong> A core personality quality ("Noble," "Reckless," "Driven by Guilt")</li>
+                <li><strong>Relationship:</strong> A key connection ("Mentor: Captain America," "Rival: Ultron," "Partner: Black Widow")</li>
+                <li><strong>Secret Identity:</strong> Do you have a civilian identity you protect?</li>
+                <li><strong>Motivation:</strong> What drives your hero? ("Protect the innocent," "Prove mutants deserve respect," "Atone for past failures")</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9 -->
+            <h2 style="--i:9;"><span class="step-label">Step 9</span>Choose Your Equipment</h2>
+            <p>Some heroes rely on gadgets, weapons, and gear. Equipment that is integral to your hero's identity can be treated as powers from a <em>High-Tech</em> or <em>Ranged/Melee Weapons</em> power set.</p>
+
+            <ul>
+                <li>Iconic items (Iron Man's armor, Thor's hammer) are purchased as part of your power set</li>
+                <li>Standard gear (uniforms, vehicles, communications) is handled narratively</li>
+                <li>Tech heroes may list specific gadgets with costs from their point budget</li>
+                <li>Items can have their own Rank for damage or defense purposes</li>
+            </ul>
+
+            <div class="callout">
+                <span class="callout-label">⚠️ Signature Items</span>
+                If your hero's identity is inseparable from a piece of equipment, flag it as a <strong>Signature Item</strong>. Losing it temporarily becomes a dramatic story moment rather than just a mechanical inconvenience.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10 -->
+            <h2 style="--i:10;"><span class="step-label">Step 10</span>Write Your Backstory</h2>
+            <p>Bring your hero fully to life by answering these questions with your Narrator:</p>
+
+            <ul>
+                <li><strong>The Origin Moment:</strong> How did you gain your powers? What happened that day?</li>
+                <li><strong>The Inciting Incident:</strong> What drove you to become a hero rather than use your abilities for personal gain — or do nothing at all?</li>
+                <li><strong>The Greatest Failure:</strong> What have you done (or failed to do) that still haunts you?</li>
+                <li><strong>The Secret:</strong> What does your hero hide from the world, or from themselves?</li>
+                <li><strong>The Relationship:</strong> Who is the most important person in your life, and what would you sacrifice to protect them?</li>
+                <li><strong>The Villain:</strong> Who is your nemesis, and why is it personal?</li>
+            </ul>
+
+            <h3>Final Details</h3>
+            <ul>
+                <li><strong>Hero Name:</strong> What the world calls you</li>
+                <li><strong>Real Name:</strong> (if you have a secret identity)</li>
+                <li><strong>Appearance:</strong> Costume colors, build, distinctive features</li>
+                <li><strong>Base of Operations:</strong> New York rooftops? Wakandan palace? Deep space?</li>
+            </ul>
+
+            <div class="info-block" style="border-top: 3px solid var(--marvel-red);">
+                <p style="margin: 0;"><strong style="color: var(--text-light);">With Great Power…</strong><br>
+                The Marvel Multiverse RPG is built on the stories of extraordinary people facing impossible odds. Your character sheet is just the foundation — the real hero is written in every session through the choices you make, the sacrifices you take, and the lives you change.</p>
+            </div>
+
+        </div>
+
+        <footer>
+            ★ &nbsp; Your Story Starts Now &nbsp; ★
+        </footer>
+
+    </div>
+    </body>
+</div>
+</html>

@@ -672,11 +672,6 @@ namespace VampireTheMasquerade
 
             _fields.Add(physicalGroup);
 
-            _fields.Add( new
-            {
-                type = "divider"    
-            });
-
             var socialChildren = new List<object>();
 
             foreach (var attribute in attributes.Where(a => a.Aspect == "Social"))
@@ -708,11 +703,6 @@ namespace VampireTheMasquerade
             };
 
             _fields.Add(socialGroup);
-
-            _fields.Add( new
-            {
-                type = "divider"    
-            });
 
             var mentalChildren = new List<object>();
 
@@ -754,9 +744,21 @@ namespace VampireTheMasquerade
 
         private static void GenerateSkillSchema(List<Skill> skills, List<Specialty> specialties, string name, string label)
         {
-            var children = new List<object>();
+            _fields.Add( new
+            {
+                name = $"{name}.label",
+                text = label,
+                type = "textblock"    
+            });
 
-            foreach (var skill in skills)
+            _fields.Add( new
+            {
+                type = "divider"    
+            });
+
+            var physicalChildren = new List<object>();
+
+            foreach (var skill in skills.Where(s => s.Aspect == "Physical"))
             {
                 var skillSpecialtyList = new List<object>
                 {
@@ -782,6 +784,7 @@ namespace VampireTheMasquerade
 
                 obj.name = $"specialties.{skill.Name}";
                 obj.label = "Specialty";
+                obj.includeLabel = false;
                 obj.type = "select";
                 obj.className = "form-select";
                 obj.options = new List<object>();
@@ -797,28 +800,194 @@ namespace VampireTheMasquerade
                     );
                 }
 
-                skillSpecialtyList.Add(obj);
+                dynamic array = new
+                {
+                    name = $"{skill.Name}.specialties",
+                    includeLabel = false,
+                    type = "array",
+                    component = obj
+                };
+
+                skillSpecialtyList.Add(new { type = "linebreak" });
+                skillSpecialtyList.Add(array);                
 
                 var groupSkillSpecialty = new
                 {
                     type = "group",
-                    name = "",
+                    name = $"{skill.Name}.specialties",
                     label = skill.Name,
                     children = skillSpecialtyList
                 };
 
-                children.Add(groupSkillSpecialty);
+                physicalChildren.Add(groupSkillSpecialty);
             }
 
-            var group = new
+            var physicalGroup = new
             {
                 type = "group",
-                name,
-                label,
-                children
+                name = $"{name}.physical",
+                label = "Physical",
+                children = physicalChildren
             };
 
-            _fields.Add(group);
+            _fields.Add(physicalGroup);
+
+            var socialChildren = new List<object>();
+
+            foreach (var skill in skills.Where(s => s.Aspect == "Social"))
+            {
+                var skillSpecialtyList = new List<object>
+                {
+                    new
+                    {
+                        name = $"skills.{skill.Name}",
+                        id = $"skills.{skill.Name.ToLower()}",
+                        label = skill.Name,
+                        type = "radiogroup",
+                        count = 5,
+                        className = "form-control",
+                        validation = new
+                        {
+                            required = true,
+                            min = 0,
+                            max = 5
+                        },
+                        @default = 0
+                    }
+                };
+
+                dynamic obj = new ExpandoObject();
+
+                obj.name = $"specialties.{skill.Name}";
+                obj.label = "Specialty";
+                obj.includeLabel = false;
+                obj.type = "select";
+                obj.className = "form-select";
+                obj.options = new List<object>();
+
+                foreach (var specialty in specialties.Where(s => s.Skill == skill.Name))
+                {
+                    obj.options.Add(
+                        new
+                        {
+                            value = specialty.Name,
+                            label = specialty.Name
+                        }
+                    );
+                }
+
+                dynamic array = new
+                {
+                    name = $"{skill.Name}.specialties",
+                    includeLabel = false,
+                    type = "array",
+                    component = obj
+                };
+
+                skillSpecialtyList.Add(new { type = "linebreak" });
+                skillSpecialtyList.Add(array);
+
+                var groupSkillSpecialty = new
+                {
+                    type = "group",
+                    name = $"{skill.Name}.specialties",
+                    label = skill.Name,
+                    children = skillSpecialtyList
+                };
+
+                socialChildren.Add(groupSkillSpecialty);
+            }
+
+            var socialGroup = new
+            {
+                type = "group",
+                name = $"{name}.social",
+                label = "Social",
+                children = socialChildren
+            };
+
+            _fields.Add(socialGroup);
+
+            var mentalChildren = new List<object>();
+
+            foreach (var skill in skills.Where(s => s.Aspect == "Mental"))
+            {
+                var skillSpecialtyList = new List<object>
+                {
+                    new
+                    {
+                        name = $"skills.{skill.Name}",
+                        id = $"skills.{skill.Name.ToLower()}",
+                        label = skill.Name,
+                        type = "radiogroup",
+                        count = 5,
+                        className = "form-control",
+                        validation = new
+                        {
+                            required = true,
+                            min = 0,
+                            max = 5
+                        },
+                        @default = 0
+                    }
+                };
+
+                dynamic obj = new ExpandoObject();
+
+                obj.name = $"specialties.{skill.Name}";
+                obj.label = "Specialty";
+                obj.includeLabel = false;
+                obj.type = "select";
+                obj.className = "form-select";
+                obj.options = new List<object>();
+
+                foreach (var specialty in specialties.Where(s => s.Skill == skill.Name))
+                {
+                    obj.options.Add(
+                        new
+                        {
+                            value = specialty.Name,
+                            label = specialty.Name
+                        }
+                    );
+                }
+
+                dynamic array = new
+                {
+                    name = $"{skill.Name}.specialties",
+                    includeLabel = false,
+                    type = "array",
+                    component = obj
+                };
+
+                skillSpecialtyList.Add(new { type = "linebreak" });
+                skillSpecialtyList.Add(array);
+
+                var groupSkillSpecialty = new
+                {
+                    type = "group",
+                    name = $"{skill.Name}.specialties",
+                    label = skill.Name,
+                    children = skillSpecialtyList
+                };
+
+                mentalChildren.Add(groupSkillSpecialty);
+            }
+
+            var mentalGroup = new
+            {
+                type = "group",
+                name = $"{name}.mental",
+                label = "Mental",
+                children = mentalChildren
+            };
+
+            _fields.Add(mentalGroup);
+
+            _fields.Add( new
+            {
+                type = "divider"    
+            });
         }
 
         private static void GeneratePredatorSchema(List<Predator> predators, string name, string label)

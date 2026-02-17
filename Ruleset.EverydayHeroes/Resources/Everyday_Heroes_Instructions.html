@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everyday Heroes – Character Creation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --orange:      #E8781A;
+            --orange-dim:  #B55A0E;
+            --teal:        #1ABDE8;
+            --dark:        #0C0C0C;
+            --panel:       #131313;
+            --panel-mid:   #1C1C1C;
+            --panel-light: #242424;
+            --border:      #2E2E2E;
+            --text:        #D8D2C8;
+            --text-dim:    #7A7670;
+            --white:       #F2EDE6;
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Titillium Web', sans-serif;
+            background: var(--dark);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 1.5rem 1rem;
+            /* film-grain overlay */
+            background-image:
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+        }
+
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--panel);
+            position: relative;
+            animation: cinemaIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            /* letterbox bars */
+            border-top: 18px solid #000;
+            border-bottom: 18px solid #000;
+            box-shadow:
+                0 0 0 1px var(--border),
+                0 30px 80px rgba(0,0,0,0.9),
+                0 0 60px rgba(232, 120, 26, 0.08);
+        }
+
+        @keyframes cinemaIn {
+            from {
+                opacity: 0;
+                clip-path: inset(50% 0);
+            }
+            to {
+                opacity: 1;
+                clip-path: inset(0% 0);
+            }
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            position: relative;
+            overflow: hidden;
+            background: #000;
+            padding: 3rem 2rem 2.5rem;
+        }
+
+        .instr-container .header-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 80% 50%, rgba(232, 120, 26, 0.22) 0%, transparent 65%),
+                radial-gradient(ellipse at 20% 80%, rgba(26, 189, 232, 0.1) 0%, transparent 55%),
+                linear-gradient(160deg, #111 0%, #000 100%);
+        }
+
+        /* horizontal scan-line shimmer */
+        .instr-container .header-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 3px,
+                rgba(255,255,255,0.015) 3px,
+                rgba(255,255,255,0.015) 4px
+            );
+        }
+
+        .instr-container .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container .eyebrow {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.72rem;
+            letter-spacing: 0.3em;
+            color: var(--teal);
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+            opacity: 0.85;
+        }
+
+        .instr-container h1 {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 3.6rem;
+            line-height: 0.88;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .instr-container h1 span {
+            display: block;
+            color: var(--orange);
+            font-size: 2.1rem;
+            letter-spacing: 0.1em;
+        }
+
+        .instr-container .header-rule {
+            height: 3px;
+            background: linear-gradient(90deg, var(--orange), var(--teal), transparent);
+            margin: 1.25rem 0 1rem;
+        }
+
+        .instr-container .header-sub {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.78rem;
+            color: var(--text-dim);
+            letter-spacing: 0.15em;
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2rem 2rem;
+        }
+
+        /* ── SECTION TITLE ── */
+        .instr-container h2 {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 1.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--white);
+            margin: 2.75rem 0 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            animation: fadeUp 0.4s ease-out backwards;
+            animation-delay: calc(var(--i, 0) * 0.06s);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: attr(data-step);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 2.1rem;
+            height: 2.1rem;
+            background: var(--orange);
+            color: #000;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.9rem;
+            font-weight: 400;
+            flex-shrink: 0;
+            clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);
+            padding: 0 0.4rem;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(12px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .instr-container h3 {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--teal);
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .instr-container p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .instr-container ul, ol {
+            margin: 0.75rem 0 1.25rem 1.5rem;
+        }
+
+        .instr-container li {
+            font-size: 0.98rem;
+            line-height: 1.75;
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container strong { color: var(--orange); font-weight: 700; }
+        .instr-container em { color: #aaa; font-style: italic; }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.25rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), var(--border), transparent);
+            position: relative;
+        }
+
+        .instr-container .divider::before {
+            content: '//';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--panel);
+            padding: 0 0.75rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+        }
+
+        /* ── CALLOUT ── */
+        .instr-container .callout {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--orange);
+            padding: 1.1rem 1.35rem;
+            margin: 1.5rem 0;
+            font-size: 0.96rem;
+            line-height: 1.75;
+        }
+
+        .instr-container .callout-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.68rem;
+            letter-spacing: 0.25em;
+            color: var(--orange);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        /* ── INFO PANEL ── */
+        .instr-container .info-panel {
+            background: var(--panel-light);
+            border: 1px solid var(--border);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+        }
+
+        .instr-container .info-panel-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.9rem;
+        }
+
+        /* ── STAT GRID ── */
+        .instr-container .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .stat-card {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            border-top: 2px solid var(--orange);
+            padding: 0.85rem 1rem;
+            transition: background 0.2s, border-top-color 0.2s;
+        }
+
+        .instr-container .stat-card:hover {
+            background: var(--panel-light);
+            border-top-color: var(--teal);
+        }
+
+        .instr-container .stat-name {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--white);
+        }
+
+        .instr-container .stat-abbr {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.72rem;
+            color: var(--orange);
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .stat-desc {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+            margin-top: 0.2rem;
+        }
+
+        /* ── CLASS GRID ── */
+        .instr-container .class-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .class-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.75rem;
+            align-items: start;
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            padding: 0.8rem 1rem;
+            transition: background 0.2s;
+        }
+
+        .instr-container .class-item:hover {
+            background: var(--panel-light);
+        }
+
+        .instr-container .class-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--orange);
+            border-radius: 50%;
+            margin-top: 0.45rem;
+            flex-shrink: 0;
+        }
+
+        .instr-container .class-name {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--white);
+        }
+
+        .instr-container .class-desc {
+            font-size: 0.87rem;
+            color: var(--text-dim);
+            margin-top: 0.15rem;
+            line-height: 1.5;
+        }
+
+        /* ── SCORE METHOD TABLE ── */
+        .instr-container .score-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: 0.94rem;
+        }
+
+        .instr-container .score-table th {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            border-bottom: 2px solid var(--orange);
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--white);
+            padding: 0.6rem 1rem;
+            text-align: left;
+            font-size: 0.88rem;
+        }
+
+        .instr-container .score-table td {
+            padding: 0.6rem 1rem;
+            border: 1px solid var(--border);
+            color: var(--text);
+            vertical-align: top;
+            line-height: 1.6;
+        }
+
+        .instr-container .score-table tr:hover td {
+            background: rgba(232,120,26,0.05);
+        }
+
+        /* ── SKILL TAGS ── */
+        .instr-container .skill-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin: 0.75rem 0 1.25rem;
+        }
+
+        .instr-container .skill-tag {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.76rem;
+            color: var(--text);
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            padding: 0.25rem 0.65rem;
+            letter-spacing: 0.06em;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .instr-container .skill-tag:hover {
+            border-color: var(--teal);
+            color: var(--teal);
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: #000;
+            border-top: 1px solid var(--border);
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .instr-container .footer-rule {
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .instr-container .footer-text {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.72rem;
+            letter-spacing: 0.2em;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.8rem; }
+            h1 span { font-size: 1.7rem; }
+            h2 { font-size: 1.55rem; }
+            .stat-grid { grid-template-columns: 1fr; }
+            .content { padding: 1.5rem 1.25rem; }
+            header { padding: 2.5rem 1.25rem 2rem; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <div class="header-bg"></div>
+            <div class="header-content">
+                <div class="eyebrow">// HERO DOSSIER PROTOCOL — INIT</div>
+                <h1>
+                    Everyday
+                    <span>Heroes</span>
+                </h1>
+                <div class="header-rule"></div>
+                <div class="header-sub">CHARACTER CREATION — CORE RULEBOOK v1.0 &nbsp;|&nbsp; d20 MODERN SYSTEM</div>
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <p style="color: var(--text-dim); font-size: 0.97rem; line-height: 1.85; margin-bottom: 2rem; border-left: 3px solid var(--border); padding-left: 1rem;">
+                Everyday Heroes is a cinematic action RPG built on the d20 system and powered by the 5E OGL. You don't play a wizard or an elf — you play a soldier, a spy, a wheelman, or an ordinary person thrust into extraordinary circumstances. Think action movies. Think grit.
+            </p>
+
+            <!-- STEP 1: CONCEPT -->
+            <h2 data-step="01" style="--i:1;">Choose Your Concept</h2>
+            <p>Before touching your character sheet, crystallize a clear mental picture of who your hero is. Everyday Heroes characters are grounded in cinematic realism — ordinary (and extraordinary) people shaped by profession, circumstance, and will.</p>
+
+            <p>Ask yourself:</p>
+            <ul>
+                <li><strong>Genre:</strong> What kind of action movie are you in? Spy thriller? Grindhouse? Military shooter? Disaster survival?</li>
+                <li><strong>Hook:</strong> What is the one defining thing about your character that makes them memorable?</li>
+                <li><strong>Motivation:</strong> What do they want badly enough to risk their life for?</li>
+                <li><strong>Cost:</strong> What have they already sacrificed to get here?</li>
+            </ul>
+
+            <div class="callout">
+                <span class="callout-label">// Director's Note</span>
+                Your GM is called the <strong>Game Master (GM)</strong> or sometimes the <strong>Director</strong>. Work with them to ensure your concept fits the campaign's tone and setting — whether that's a gritty 80s action pastiche, a modern espionage thriller, or a post-apocalyptic survival story.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: ANCESTRY / BACKGROUND -->
+            <h2 data-step="02" style="--i:2;">Select Your Background</h2>
+            <p>Your Background represents your life before becoming a hero — your civilian career, upbringing, and the skills you bring from that past. Backgrounds provide <strong>skill proficiencies</strong>, <strong>tool proficiencies</strong>, <strong>starting equipment</strong>, and a unique <strong>Background Feature</strong>.</p>
+
+            <div class="info-panel">
+                <div class="info-panel-title">Example Backgrounds</div>
+                <ul style="margin: 0 0 0 1.25rem;">
+                    <li><strong>Criminal / Contact:</strong> You have a history of breaking the law and a network of shady contacts</li>
+                    <li><strong>Entertainer:</strong> You've performed for audiences — and know how to command a room</li>
+                    <li><strong>Folk Hero:</strong> Ordinary circumstances made you an icon in your community</li>
+                    <li><strong>Military Veteran:</strong> Service has made you disciplined, resourceful, and battle-hardened</li>
+                    <li><strong>Noble / Elite:</strong> Wealth and privilege opened doors — and made enemies</li>
+                    <li><strong>Outlander:</strong> You come from beyond civilization, with survival instincts honed by necessity</li>
+                    <li><strong>Sage / Academic:</strong> Institutional knowledge is your power — archives and expertise</li>
+                    <li><strong>Urchin:</strong> The streets raised you fast — stealth, street-smarts, and contacts</li>
+                </ul>
+            </div>
+
+            <p>Each Background also provides your character with <strong>Personality Traits</strong>, an <strong>Ideal</strong>, a <strong>Bond</strong>, and a <strong>Flaw</strong> — use these or create your own to flesh out who you are.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: CLASS -->
+            <h2 data-step="03" style="--i:3;">Choose Your Class</h2>
+            <p>Your Class is the defining role you fill — your genre archetype, your action-movie identity. Every Class provides hit dice, proficiencies, starting equipment, and a suite of cinematic abilities. You pick a <strong>subclass (Archetype)</strong> within your Class at 3rd level.</p>
+
+            <div class="class-list">
+                <div class="class-item">
+                    <div class="class-dot"></div>
+                    <div>
+                        <div class="class-name">Soldier</div>
+                        <div class="class-desc">Trained for combat and tactical operations. Weapons are your language; the battlefield is your classroom.</div>
+                    </div>
+                </div>
+                <div class="class-item">
+                    <div class="class-dot"></div>
+                    <div>
+                        <div class="class-name">Martial Artist</div>
+                        <div class="class-desc">Your body is the weapon. Years of discipline have forged you into a finely-tuned fighting machine.</div>
+                    </div>
+                </div>
+                <div class="class-item">
+                    <div class="class-dot"></div>
+                    <div>
+                        <div class="class-name">Spy</div>
+                        <div class="class-desc">Information, infiltration, and misdirection. You work in the shadows and thrive on secrets.</div>
+                    </div>
+                </div>
+                <div class="class-item">
+                    <div class="class-dot"></div>
+                    <div>
+                        <div class="class-name">Wheelman</div>
+                        <div class="class-desc">Behind the wheel — or the controls of anything that moves — you are supernaturally skilled.</div>
+                    </div>
+                </div>
+                <div class="class-item">
+                    <div class="class-dot"></div>
+                    <div>
+                        <div class="class-name">Gadgeteer</div>
+                        <div class="class-desc">Technology is your edge. You build, modify, and improvise devices that give your team a decisive advantage.</div>
+                    </div>
+                </div>
+                <div class="class-item">
+                    <div class="class-dot"></div>
+                    <div>
+                        <div class="class-name">Medic</div>
+                        <div class="class-desc">You keep people alive under fire — medic, combat surgeon, or field doctor with ice in your veins.</div>
+                    </div>
+                </div>
+                <div class="class-item">
+                    <div class="class-dot"></div>
+                    <div>
+                        <div class="class-name">Sniper</div>
+                        <div class="class-desc">Patience, distance, precision. One shot, one kill — and the ability to vanish before they find you.</div>
+                    </div>
+                </div>
+                <div class="class-item">
+                    <div class="class-dot"></div>
+                    <div>
+                        <div class="class-name">Tough</div>
+                        <div class="class-desc">You absorb punishment that would kill anyone else and keep coming. Resilience made flesh.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="callout">
+                <span class="callout-label">// Archetype Note</span>
+                Each Class has multiple <strong>Archetypes</strong> (subclasses) that specialize your role — for example, a Soldier might choose <em>Commando</em>, <em>Green Beret</em>, or <em>Ranger</em>. Archetypes are selected at <strong>3rd level</strong>, so at character creation you simply choose your base Class.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: ABILITY SCORES -->
+            <h2 data-step="04" style="--i:4;">Generate Ability Scores</h2>
+            <p>Everyday Heroes uses the same six ability scores as classic d20 systems. These are the foundation of every roll you make.</p>
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-abbr">STR</div>
+                    <div class="stat-name">Strength</div>
+                    <div class="stat-desc">Brute force, melee attacks, and carrying capacity</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-abbr">DEX</div>
+                    <div class="stat-name">Dexterity</div>
+                    <div class="stat-desc">Reflexes, finesse, ranged attacks, and stealth</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-abbr">CON</div>
+                    <div class="stat-name">Constitution</div>
+                    <div class="stat-desc">Endurance, hit points, and physical toughness</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-abbr">INT</div>
+                    <div class="stat-name">Intelligence</div>
+                    <div class="stat-desc">Knowledge, technical skills, and reasoning</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-abbr">WIS</div>
+                    <div class="stat-name">Wisdom</div>
+                    <div class="stat-desc">Perception, intuition, and street sense</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-abbr">CHA</div>
+                    <div class="stat-name">Charisma</div>
+                    <div class="stat-desc">Persuasion, intimidation, leadership, and presence</div>
+                </div>
+            </div>
+
+            <h3>Score Generation Methods</h3>
+            <table class="score-table">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>How It Works</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Standard Array</strong></td>
+                        <td>Assign 15, 14, 13, 12, 10, 8 to your six scores in any order</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Point Buy</strong></td>
+                        <td>Start all scores at 8. Spend 27 points to raise them (costs increase at higher values)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dice Rolling</strong></td>
+                        <td>Roll 4d6 and drop the lowest die, six times. Assign freely</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>After assigning scores, apply any <strong>racial or background modifiers</strong>, then calculate your <strong>Ability Modifiers</strong> ((Score − 10) ÷ 2, rounded down).</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: PROFICIENCIES & SKILLS -->
+            <h2 data-step="05" style="--i:5;">Skills &amp; Proficiencies</h2>
+            <p>Your Class and Background each grant you proficiency in a number of skills. Add your <strong>Proficiency Bonus (+2 at 1st level)</strong> to any check using a skill you're proficient in.</p>
+
+            <h3>The Skill List</h3>
+            <div class="skill-wrap">
+                <span class="skill-tag">Acrobatics</span>
+                <span class="skill-tag">Animal Handling</span>
+                <span class="skill-tag">Athletics</span>
+                <span class="skill-tag">Computers</span>
+                <span class="skill-tag">Deception</span>
+                <span class="skill-tag">Demolitions</span>
+                <span class="skill-tag">Engineering</span>
+                <span class="skill-tag">History</span>
+                <span class="skill-tag">Insight</span>
+                <span class="skill-tag">Intimidation</span>
+                <span class="skill-tag">Investigation</span>
+                <span class="skill-tag">Medicine</span>
+                <span class="skill-tag">Nature</span>
+                <span class="skill-tag">Perception</span>
+                <span class="skill-tag">Performance</span>
+                <span class="skill-tag">Persuasion</span>
+                <span class="skill-tag">Piloting</span>
+                <span class="skill-tag">Religion</span>
+                <span class="skill-tag">Science</span>
+                <span class="skill-tag">Sleight of Hand</span>
+                <span class="skill-tag">Stealth</span>
+                <span class="skill-tag">Streetwise</span>
+                <span class="skill-tag">Survival</span>
+                <span class="skill-tag">Vehicles</span>
+            </div>
+
+            <h3>Weapon &amp; Tool Proficiencies</h3>
+            <p>Your Class determines which modern <strong>weapons</strong> you're trained with — from handguns and rifles to heavy ordnance and explosives. Backgrounds may add <strong>tool proficiencies</strong> (lockpicks, mechanic's tools, hacking hardware, etc.).</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: CINEMATIC TALENTS -->
+            <h2 data-step="06" style="--i:6;">Choose Cinematic Talents</h2>
+            <p>Cinematic Talents are Everyday Heroes' version of feats — special abilities that represent your hero's signature moves, training, and action-movie style. You select one at 1st level (or in place of an Ability Score Improvement as you advance).</p>
+
+            <div class="info-panel">
+                <div class="info-panel-title">Sample Cinematic Talents</div>
+                <ul style="margin: 0 0 0 1.25rem;">
+                    <li><strong>Action Hero:</strong> Once per short rest, you can reroll a failed saving throw and keep the new result</li>
+                    <li><strong>Combat Medic:</strong> You can use a bonus action to stabilize a dying ally and grant them 1 HP</li>
+                    <li><strong>Dual Wielder:</strong> You can engage with two weapons simultaneously with only a minor off-hand penalty</li>
+                    <li><strong>Evasive:</strong> When you're not incapacitated, attackers have disadvantage on opportunity attacks against you</li>
+                    <li><strong>Gun Fu:</strong> When you take the Attack action with a firearm, you may make a melee attack as a bonus action</li>
+                    <li><strong>Hard to Kill:</strong> When you drop to 0 HP, roll a CON save (DC 10 + damage taken above 0). On success, stay at 1 HP</li>
+                    <li><strong>MacGyver:</strong> You can craft improvised tools and weapons from available materials in the field</li>
+                    <li><strong>One-Liner:</strong> Once per combat, deal extra psychic damage with a devastating comeback</li>
+                    <li><strong>Spray and Pray:</strong> Make a suppressive-fire attack that affects a cone area</li>
+                    <li><strong>Tactical Driver:</strong> You can make vehicle attacks as part of the same action as a regular attack</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: HIT POINTS -->
+            <h2 data-step="07" style="--i:7;">Calculate Hit Points &amp; Defense</h2>
+
+            <h3>Hit Points</h3>
+            <p>At 1st level, your HP equals your Class's Hit Die maximum plus your <strong>Constitution modifier</strong>.</p>
+            <div class="info-panel" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1.5rem;">
+                <div><span style="color: var(--orange); font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 1rem; display: block; text-transform: uppercase; letter-spacing: 0.08em;">d6</span><span style="font-size: 0.88rem; color: var(--text-dim);">Gadgeteer, Spy</span></div>
+                <div><span style="color: var(--orange); font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 1rem; display: block; text-transform: uppercase; letter-spacing: 0.08em;">d8</span><span style="font-size: 0.88rem; color: var(--text-dim);">Martial Artist, Medic, Wheelman</span></div>
+                <div><span style="color: var(--orange); font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 1rem; display: block; text-transform: uppercase; letter-spacing: 0.08em;">d10</span><span style="font-size: 0.88rem; color: var(--text-dim);">Sniper, Soldier</span></div>
+                <div><span style="color: var(--orange); font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 1rem; display: block; text-transform: uppercase; letter-spacing: 0.08em;">d12</span><span style="font-size: 0.88rem; color: var(--text-dim);">Tough</span></div>
+            </div>
+
+            <h3>Armor Class (Defense)</h3>
+            <ul>
+                <li><strong>Unarmored:</strong> 10 + Dexterity modifier</li>
+                <li><strong>Light Armor:</strong> Armor value + Dexterity modifier (max +2)</li>
+                <li><strong>Medium Armor:</strong> Armor value + Dexterity modifier (max +5)</li>
+                <li><strong>Heavy Armor:</strong> Fixed armor value (no Dexterity modifier)</li>
+            </ul>
+
+            <h3>Trauma</h3>
+            <p>Everyday Heroes introduces a <strong>Trauma system</strong> alongside hit points. Massive damage, critical failures, or psychologically devastating events can impose <em>Trauma Conditions</em> — narrative impairments representing the real cost of a life spent in the action.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: EQUIPMENT -->
+            <h2 data-step="08" style="--i:8;">Starting Equipment</h2>
+            <p>Choose starting gear from your Class's options or roll for it. Equipment in Everyday Heroes is purpose-built for the modern world.</p>
+
+            <h3>Weapon Categories</h3>
+            <ul>
+                <li><strong>Melee:</strong> Combat knives, batons, improvised weapons, martial arts weapons</li>
+                <li><strong>Handguns:</strong> Pistols, revolvers — concealable, versatile</li>
+                <li><strong>Rifles:</strong> Assault rifles, battle rifles, precision rifles for range and stopping power</li>
+                <li><strong>Shotguns:</strong> Close-range devastation</li>
+                <li><strong>SMGs:</strong> Compact, high rate of fire, close-quarters</li>
+                <li><strong>Explosives:</strong> Grenades, breaching charges, C4 — controlled demolition</li>
+                <li><strong>Heavy Weapons:</strong> LMGs, RPGs, crew-served weapons for the biggest threats</li>
+            </ul>
+
+            <h3>Gear &amp; Equipment</h3>
+            <ul>
+                <li>Body armor appropriate to your Class proficiencies</li>
+                <li>Communication devices (earpiece, radio, encrypted phone)</li>
+                <li>Vehicles relevant to your Class (Wheelman starts with one)</li>
+                <li>Class-specific tools (medical kit, hacking rig, explosives kit, etc.)</li>
+                <li>Background equipment from your pre-hero life</li>
+            </ul>
+
+            <div class="callout">
+                <span class="callout-label">// Signature Gear</span>
+                Consider designating one item as your <strong>Signature Piece</strong> — the weapon or tool most associated with your character's identity. This is a narrative choice that the GM may use to create dramatic moments if you're ever separated from it.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: PERSONALITY -->
+            <h2 data-step="09" style="--i:9;">Define Your Personality</h2>
+            <p>Everyday Heroes characters have mechanical personality anchors drawn from (or inspired by) your Background. These aren't just flavour — they can earn you <strong>Inspiration</strong> when you play to them.</p>
+
+            <div class="info-panel">
+                <div class="info-panel-title">The Four Anchors</div>
+                <ul style="margin: 0 0 0 1.25rem;">
+                    <li><strong>Personality Trait:</strong> A specific habit, mannerism, or attitude that colors how you act ("I never leave a man behind." / "I always have an exit strategy.")</li>
+                    <li><strong>Ideal:</strong> A core principle you believe in, regardless of cost ("Justice must be served, no matter who you are." / "The mission always comes first.")</li>
+                    <li><strong>Bond:</strong> A person, organization, or cause that ties you to the world and gives you something to lose ("I'll do anything to protect my sister." / "My unit is my family.")</li>
+                    <li><strong>Flaw:</strong> A weakness, vice, or blind spot that creates drama and trouble ("I can't walk away from a fight even when I should." / "I trust no one — not even my team.")</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: FINAL DETAILS -->
+            <h2 data-step="10" style="--i:10;">Final Details &amp; Connections</h2>
+
+            <h3>Personal Details</h3>
+            <ul>
+                <li><strong>Name &amp; Alias:</strong> Real name and any cover identities</li>
+                <li><strong>Age, appearance, and distinguishing marks</strong></li>
+                <li><strong>Background narrative:</strong> The 3-sentence origin that explains how you got here</li>
+                <li><strong>Cover Story:</strong> What does the average civilian think you do for work?</li>
+            </ul>
+
+            <h3>Team Connections</h3>
+            <p>Work with the group to establish at least one connection to each other PC:</p>
+            <ul>
+                <li>How did you first meet? Was it a job, a crisis, or something personal?</li>
+                <li>What do you owe them — or what do they owe you?</li>
+                <li>Is there an unresolved tension, secret, or shared trauma?</li>
+            </ul>
+
+            <h3>Campaign Hooks</h3>
+            <p>Give the GM at least <strong>two usable hooks</strong> from your backstory — enemies who might resurface, people you're trying to protect, debts still owed. The best action heroes always have unfinished business.</p>
+
+            <div class="info-panel" style="border-top: 2px solid var(--orange); margin-top: 1.5rem;">
+                <p style="margin: 0; font-size: 0.97rem; line-height: 1.8; color: var(--text);">
+                    <strong style="display: block; margin-bottom: 0.4rem; color: var(--white); font-size: 1rem; font-family: 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: 0.08em;">Ready to Roll</strong>
+                    Everyday Heroes strips away the fantasy and magic to ask a simpler question: when it all goes wrong, what kind of person are you? Your character sheet is your answer. Now go find out if it's enough.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-rule"></div>
+            <span class="footer-text">Hero status: Active // Stay dangerous</span>
+            <div class="footer-rule"></div>
+        </footer>
+
+    </div>
+    </body>
+</div>
+</html>

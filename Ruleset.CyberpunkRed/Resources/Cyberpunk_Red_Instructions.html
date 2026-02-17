@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk RED — Build Your Edgerunner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Share+Tech+Mono&family=Barlow:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --hot:        #FF0055;
+            --hot-dim:    #8A002E;
+            --yellow:     #FFE000;
+            --yellow-dim: #806000;
+            --chrome:     #C8D8E8;
+            --chrome-dim: #4A5A6A;
+            --cyan:       #00FFEE;
+            --cyan-dim:   #006058;
+            --ink:        #080808;
+            --panel:      #0D0D0D;
+            --panel-mid:  #141414;
+            --panel-lt:   #1C1C1C;
+            --border:     #2A2A2A;
+            --border-hot: #3A0015;
+            --text:       #C0C8D0;
+            --text-dim:   #505860;
+            --white:      #F0F4F8;
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Barlow', sans-serif;
+            background: var(--ink);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 1.5rem 1rem;
+            /* halftone dot background */
+            background-image: radial-gradient(
+                circle,
+                rgba(255,0,85,0.06) 1px,
+                transparent 1px
+            );
+            background-size: 14px 14px;
+        }
+
+        /* ── CONTAINER ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--panel);
+            position: relative;
+            /* diagonal corner cuts */
+            clip-path: polygon(
+                0 0,
+                calc(100% - 20px) 0,
+                100% 20px,
+                100% 100%,
+                20px 100%,
+                0 calc(100% - 20px)
+            );
+            box-shadow:
+                0 0 0 1px var(--border),
+                0 0 60px rgba(255,0,85,0.12),
+                0 0 120px rgba(0,0,0,0.95);
+            animation: jackIn 0.6s cubic-bezier(0.16,1,0.3,1);
+        }
+
+        @keyframes jackIn {
+            0%  { opacity:0; transform: scaleY(0.04) scaleX(0.8); filter: brightness(4); }
+            15% { opacity:1; transform: scaleY(1.04) scaleX(0.97); filter: brightness(1.5); }
+            30% { transform: scaleY(0.98) scaleX(1.01); }
+            100%{ transform: scale(1); filter: brightness(1); }
+        }
+
+        /* ── GLITCH HELPER ── */
+        @keyframes glitch {
+            0%,94%,100% { clip-path: none; transform: none; }
+            95% { clip-path: inset(30% 0 50% 0); transform: translateX(-4px); }
+            96% { clip-path: inset(60% 0 10% 0); transform: translateX(4px); }
+            97% { clip-path: inset(10% 0 70% 0); transform: translateX(-2px); }
+        }
+
+        @keyframes glitch2 {
+            0%,96%,100% { clip-path: none; transform: none; color: var(--hot); }
+            97% { clip-path: inset(20% 0 60% 0); transform: translateX(6px); color: var(--cyan); }
+            98% { clip-path: inset(70% 0 5%  0); transform: translateX(-6px); }
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            background: var(--ink);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* hot-magenta slash across header */
+        .instr-container header::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -60px;
+            width: 260px;
+            height: 340px;
+            background: var(--hot);
+            transform: rotate(18deg);
+            opacity: 0.07;
+            pointer-events: none;
+        }
+
+        .instr-container .header-tape {
+            background: var(--hot);
+            padding: 0.35rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .instr-container .tape-text {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            color: #000;
+            text-transform: uppercase;
+        }
+
+        .instr-container .header-inner {
+            padding: 2.5rem 2rem 2rem;
+            position: relative;
+        }
+
+        /* large faded RED watermark */
+        .instr-container .header-inner::before {
+            content: 'RED';
+            position: absolute;
+            right: 1.5rem;
+            bottom: 1rem;
+            font-family: 'Black Ops One', cursive;
+            font-size: 9rem;
+            color: var(--hot);
+            opacity: 0.06;
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .instr-container h1 {
+            font-family: 'Black Ops One', cursive;
+            font-size: 4rem;
+            line-height: 0.88;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            position: relative;
+            margin-bottom: 0.5rem;
+            /* glitch on title */
+            animation: glitch 7s ease-in-out infinite;
+        }
+
+        .instr-container h1::before {
+            content: attr(data-text);
+            position: absolute;
+            inset: 0;
+            color: var(--hot);
+            animation: glitch2 7s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .instr-container h1 .red-word {
+            color: var(--hot);
+            text-shadow: 0 0 20px rgba(255,0,85,0.6);
+            display: inline;
+        }
+
+        .instr-container .h1-sub {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.82rem;
+            letter-spacing: 0.3em;
+            color: var(--yellow);
+            text-transform: uppercase;
+            text-shadow: 0 0 8px rgba(255,224,0,0.5);
+            margin-bottom: 1.25rem;
+            display: block;
+        }
+
+        .instr-container .header-stats {
+            display: flex;
+            gap: 0;
+            flex-wrap: wrap;
+            border-top: 1px solid var(--border);
+            padding-top: 0.85rem;
+            margin-top: 0.25rem;
+        }
+
+        .instr-container .hstat {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.67rem;
+            letter-spacing: 0.12em;
+            color: var(--text-dim);
+            padding-right: 1.25rem;
+        }
+
+        .instr-container .hstat b { color: var(--chrome); }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2rem;
+        }
+
+        /* ── LEDE ── */
+        .instr-container .lede {
+            border-left: 4px solid var(--hot);
+            padding: 1.1rem 1.35rem;
+            margin-bottom: 2.25rem;
+            background: var(--panel-mid);
+            font-size: 0.97rem;
+            line-height: 1.85;
+            position: relative;
+        }
+
+        .instr-container .lede::before {
+            content: 'NIGHT CITY WIRE — EDGERUNNER INTAKE';
+            display: block;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.22em;
+            color: var(--hot);
+            margin-bottom: 0.5rem;
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Black Ops One', cursive;
+            font-size: 1.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--white);
+            margin: 2.75rem 0 1.25rem;
+            padding: 0.5rem 1rem 0.5rem 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            animation: fadeUp 0.4s ease-out backwards;
+            animation-delay: calc(var(--i,0)*0.06s);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        /* yellow left slash accent */
+        .instr-container h2::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 2rem;
+            background: var(--yellow);
+            flex-shrink: 0;
+            box-shadow: 0 0 10px rgba(255,224,0,0.4);
+        }
+
+        .instr-container .step-tag {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            color: var(--yellow);
+            background: rgba(255,224,0,0.08);
+            border: 1px solid var(--yellow-dim);
+            padding: 0.2rem 0.5rem;
+            margin-left: auto;
+            text-shadow: 0 0 6px rgba(255,224,0,0.3);
+            white-space: nowrap;
+        }
+
+        @keyframes fadeUp {
+            from { opacity:0; transform:translateY(14px); }
+            to   { opacity:1; transform:translateY(0); }
+        }
+
+        .instr-container h3 {
+            font-family: 'Black Ops One', cursive;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--hot);
+            margin: 1.75rem 0 0.6rem;
+            text-shadow: 0 0 8px rgba(255,0,85,0.3);
+        }
+
+        .instr-container p {
+            font-size: 0.96rem;
+            line-height: 1.85;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .instr-container ul, ol { margin: 0.75rem 0 1.25rem 1.35rem; }
+        .instr-container li {
+            font-size: 0.93rem;
+            line-height: 1.8;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { color: var(--yellow); font-weight: 700; }
+        .instr-container em     { color: var(--hot); font-style: italic; }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.25rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .instr-container .divider::before,
+        .instr-container .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .instr-container .divider-icon {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            color: var(--text-dim);
+            white-space: nowrap;
+        }
+
+        /* ── STREET ALERT ── */
+        .instr-container .street-note {
+            background: var(--panel-mid);
+            border: 1px solid var(--border-hot);
+            border-left: 4px solid var(--hot);
+            padding: 1.1rem 1.35rem;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        .instr-container .street-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.22em;
+            color: var(--hot);
+            display: block;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+        }
+
+        /* ── DATA BLOCK ── */
+        .instr-container .data-block {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            position: relative;
+        }
+
+        .instr-container .data-block::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -0.6rem;
+            left: 1rem;
+            background: var(--panel-mid);
+            padding: 0 0.5rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            color: var(--chrome-dim);
+        }
+
+        /* ── STAT CARDS ── */
+        .instr-container .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .stat-card {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            border-bottom: 2px solid var(--hot-dim);
+            padding: 0.85rem 1rem;
+            position: relative;
+            transition: border-bottom-color 0.18s, background 0.18s;
+        }
+
+        .instr-container .stat-card:hover {
+            background: var(--panel-lt);
+            border-bottom-color: var(--hot);
+        }
+
+        .instr-container .stat-abbr {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            color: var(--hot);
+            text-shadow: 0 0 6px rgba(255,0,85,0.35);
+            margin-bottom: 0.15rem;
+        }
+
+        .instr-container .stat-name {
+            font-family: 'Black Ops One', cursive;
+            font-size: 0.95rem;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .stat-desc {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        .instr-container .stat-range {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.85rem;
+            font-family: 'Black Ops One', cursive;
+            font-size: 0.85rem;
+            color: var(--yellow);
+            text-shadow: 0 0 6px rgba(255,224,0,0.3);
+        }
+
+        /* ── ROLE LIST ── */
+        .instr-container .role-list {
+            display: grid;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .role-card {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 1rem;
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            padding: 0.85rem 1rem;
+            transition: border-color 0.18s, background 0.18s;
+        }
+
+        .instr-container .role-card:hover {
+            background: var(--panel-lt);
+            border-color: var(--hot-dim);
+        }
+
+        .instr-container .role-code {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            color: var(--yellow);
+            text-shadow: 0 0 6px rgba(255,224,0,0.3);
+            border: 1px solid var(--yellow-dim);
+            padding: 0.2rem 0.45rem;
+            white-space: nowrap;
+        }
+
+        .instr-container .role-name {
+            font-family: 'Black Ops One', cursive;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: var(--white);
+            letter-spacing: 0.05em;
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .role-desc {
+            font-size: 0.82rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        .instr-container .role-ability {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.67rem;
+            letter-spacing: 0.08em;
+            color: var(--hot);
+            white-space: nowrap;
+            text-align: right;
+        }
+
+        /* ── SKILL COLUMNS ── */
+        .instr-container .skill-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            margin: 0.75rem 0 1.25rem;
+        }
+
+        .instr-container .skill-chip {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.76rem;
+            letter-spacing: 0.06em;
+            color: var(--text);
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            padding: 0.25rem 0.65rem;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        .instr-container .skill-chip:hover {
+            border-color: var(--hot-dim);
+            color: var(--chrome);
+        }
+
+        /* ── COMBAT TABLE ── */
+        .instr-container .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: 0.86rem;
+        }
+
+        .instr-container .data-table th {
+            background: var(--hot);
+            color: #000;
+            font-family: 'Black Ops One', cursive;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.55rem 0.9rem;
+            text-align: left;
+            font-size: 0.82rem;
+        }
+
+        .instr-container .data-table td {
+            padding: 0.55rem 0.9rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+            vertical-align: top;
+            line-height: 1.65;
+        }
+
+        .instr-container .data-table tr:hover td { background: rgba(255,0,85,0.04); }
+
+        /* ── CYBERWARE GRID ── */
+        .instr-container .cyber-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .cyber-item {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            border-top: 2px solid var(--cyan-dim);
+            padding: 0.85rem 1rem;
+            transition: border-top-color 0.18s;
+        }
+
+        .instr-container .cyber-item:hover { border-top-color: var(--cyan); }
+
+        .instr-container .cyber-name {
+            font-family: 'Black Ops One', cursive;
+            font-size: 0.88rem;
+            color: var(--cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.3rem;
+            text-shadow: 0 0 8px rgba(0,255,238,0.25);
+        }
+
+        .instr-container .cyber-hl {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--hot);
+            letter-spacing: 0.12em;
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .cyber-desc {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        /* ── HUMANITY TRACK ── */
+        .instr-container .hl-track {
+            display: flex;
+            gap: 4px;
+            margin: 0.75rem 0 1rem;
+            flex-wrap: wrap;
+        }
+
+        .instr-container .hl-box {
+            width: 20px;
+            height: 20px;
+            border: 1px solid var(--border);
+            background: var(--panel-mid);
+            transition: background 0.15s;
+            position: relative;
+        }
+
+        .instr-container .hl-box.filled { background: var(--hot); border-color: var(--hot-dim); }
+        .instr-container .hl-box.danger { background: var(--yellow); border-color: var(--yellow-dim); }
+        .instr-container .hl-box.cyber  { background: var(--cyan); border-color: var(--cyan-dim); }
+
+        .instr-container .hl-legend {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            color: var(--text-dim);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .hl-legend span { display: flex; align-items: center; gap: 0.4rem; }
+
+        .instr-container .hl-swatch {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+        }
+
+        /* ── LIFEPATH SECTION ── */
+        .instr-container .lifepath-grid {
+            display: grid;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .lp-item {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            padding: 0.85rem 1rem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.85rem;
+            align-items: start;
+            transition: background 0.15s;
+        }
+
+        .instr-container .lp-item:hover { background: var(--panel-lt); }
+
+        .instr-container .lp-num {
+            font-family: 'Black Ops One', cursive;
+            font-size: 1.4rem;
+            color: var(--hot);
+            text-shadow: 0 0 8px rgba(255,0,85,0.3);
+            line-height: 1;
+            min-width: 1.5rem;
+        }
+
+        .instr-container .lp-title {
+            font-family: 'Black Ops One', cursive;
+            font-size: 0.92rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--white);
+            margin-bottom: 0.25rem;
+        }
+
+        .instr-container .lp-desc {
+            font-size: 0.83rem;
+            color: var(--text-dim);
+            line-height: 1.55;
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--ink);
+            border-top: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .instr-container .footer-hot-bar {
+            height: 4px;
+            background: linear-gradient(90deg, var(--hot), var(--yellow), var(--cyan), var(--hot));
+            background-size: 300% 100%;
+            animation: slidebar 4s linear infinite;
+        }
+
+        @keyframes slidebar {
+            from { background-position: 0% 50%; }
+            to   { background-position: 100% 50%; }
+        }
+
+        .instr-container .footer-inner {
+            padding: 1.75rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .instr-container .footer-slogan {
+            font-family: 'Black Ops One', cursive;
+            font-size: 1.5rem;
+            color: var(--hot);
+            text-shadow: 0 0 15px rgba(255,0,85,0.5);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            color: var(--text-dim);
+            margin-top: 0.3rem;
+        }
+
+        .instr-container .footer-mark {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.12em;
+            color: var(--text-dim);
+            text-align: right;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 1.5rem; }
+            .stat-grid  { grid-template-columns: 1fr; }
+            .cyber-grid { grid-template-columns: 1fr; }
+            .role-card  { grid-template-columns: 1fr; gap: 0.4rem; }
+            .role-ability { text-align: left; }
+            .content { padding: 1.5rem 1.25rem; }
+            .footer-inner { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <div class="header-tape">
+                <span class="tape-text">NIGHT CITY // 2045 // DANGER ZONE</span>
+                <span class="tape-text">DO NOT FLATLINE</span>
+            </div>
+            <div class="header-inner">
+                <span class="h1-sub">// INTERLOCK SYSTEM — EDGERUNNER PROFILE //</span>
+                <h1 data-text="Cyberpunk">CYBER<span class="red-word">PUNK</span><br>RED</h1>
+            </div>
+            <div style="padding: 0 2rem 1.5rem; position:relative; z-index:1;">
+                <div class="header-stats">
+                    <span class="hstat">SYSTEM: <b>INTERLOCK</b></span>
+                    <span class="hstat">PUBLISHER: <b>R.TALSORIAN</b></span>
+                    <span class="hstat">LOCALE: <b>NIGHT CITY</b></span>
+                    <span class="hstat">ERA: <b>TIME OF THE RED</b></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="lede">
+                The Corporations burned the world. Now it's 2045 and Night City is still standing — barely. This is the <strong>Time of the Red</strong>: roads turned to combat zones, the NET a hostile wasteland, and every edgerunner scrambling for eddies, chrome, and survival. Style matters. So does staying alive. Make your Edgerunner — and try not to get flatlined.
+            </div>
+
+            <!-- STEP 1: ROLE -->
+            <h2 style="--i:1;"><span>Choose Your Role</span><span class="step-tag">STEP 01</span></h2>
+            <p>Your <strong>Role</strong> is your identity in Night City — your job, your rep, and your edge over everyone else. Each Role comes with a unique <strong>Special Ability</strong> that only you can use. Pick the one that matches how you want to play.</p>
+
+            <div class="role-list">
+                <div class="role-card">
+                    <span class="role-code">SOLO</span>
+                    <div>
+                        <div class="role-name">Solo</div>
+                        <div class="role-desc">Combat operative, gun for hire, professional killer. The blade when other solutions have failed.</div>
+                    </div>
+                    <div class="role-ability">Combat Sense</div>
+                </div>
+                <div class="role-card">
+                    <span class="role-code">NETRUNNER</span>
+                    <div>
+                        <div class="role-name">Netrunner</div>
+                        <div class="role-desc">Hacker of the post-Collapse NET. Jacks in, breaks ICE, steals data, and ghosts out before they trace the signal.</div>
+                    </div>
+                    <div class="role-ability">Interface</div>
+                </div>
+                <div class="role-card">
+                    <span class="role-code">TECH</span>
+                    <div>
+                        <div class="role-name">Tech</div>
+                        <div class="role-desc">Builder, fixer, inventor. If it's broken, they make it better. If it works, they make it lethal.</div>
+                    </div>
+                    <div class="role-ability">Maker</div>
+                </div>
+                <div class="role-card">
+                    <span class="role-code">MEDTECH</span>
+                    <div>
+                        <div class="role-name">Medtech</div>
+                        <div class="role-desc">Street doctor, trauma surgeon, cyberware installer. The only thing standing between you and a body bag.</div>
+                    </div>
+                    <div class="role-ability">Medicine</div>
+                </div>
+                <div class="role-card">
+                    <span class="role-code">MEDIA</span>
+                    <div>
+                        <div class="role-name">Media</div>
+                        <div class="role-desc">Investigative journalist, truth-teller, corporate exposer. The pen is mightier — when backed by a backup Solo.</div>
+                    </div>
+                    <div class="role-ability">Credibility</div>
+                </div>
+                <div class="role-card">
+                    <span class="role-code">EXEC</span>
+                    <div>
+                        <div class="role-name">Exec</div>
+                        <div class="role-desc">Corporate operative. Resources, contacts, and leverage — plus the willingness to use all three without hesitation.</div>
+                    </div>
+                    <div class="role-ability">Teamwork</div>
+                </div>
+                <div class="role-card">
+                    <span class="role-code">LAWMAN</span>
+                    <div>
+                        <div class="role-name">Lawman</div>
+                        <div class="role-desc">Badge and gun. Sometimes it's NCPD, sometimes it's corporate security. Either way, they have authority and they use it.</div>
+                    </div>
+                    <div class="role-ability">Backup</div>
+                </div>
+                <div class="role-card">
+                    <span class="role-code">FIXER</span>
+                    <div>
+                        <div class="role-name">Fixer</div>
+                        <div class="role-desc">Dealer, broker, middleman for anything. Connects people and problems. Knows who to call and what it costs.</div>
+                    </div>
+                    <div class="role-ability">Operator</div>
+                </div>
+                <div class="role-card">
+                    <span class="role-code">NOMAD</span>
+                    <div>
+                        <div class="role-name">Nomad</div>
+                        <div class="role-desc">Road warrior, clan runner, wasteland survivor. Their vehicle is their home. Their clan is their law.</div>
+                    </div>
+                    <div class="role-ability">Moto</div>
+                </div>
+                <div class="role-card">
+                    <span class="role-code">ROCKERBOY</span>
+                    <div>
+                        <div class="role-name">Rockerboy</div>
+                        <div class="role-desc">Rock star rebel, cultural weapon, voice of resistance. They move crowds and move product — sometimes at the same time.</div>
+                    </div>
+                    <div class="role-ability">Charismatic Impact</div>
+                </div>
+            </div>
+
+            <div class="divider"><span class="divider-icon">// CONTINUING //</span></div>
+
+            <!-- STEP 2: STATS -->
+            <h2 style="--i:2;"><span>Assign Your Stats</span><span class="step-tag">STEP 02</span></h2>
+            <p>Every Edgerunner has <strong>ten base statistics</strong>. Distribute <strong>62 points</strong> among them. Each stat has a minimum of <strong>2</strong> and a maximum of <strong>8</strong> at character creation. Your Role may adjust one or two stats.</p>
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-abbr">INT</div>
+                    <div class="stat-name">Intelligence</div>
+                    <div class="stat-range">2–8</div>
+                    <div class="stat-desc">Mental acuity, problem-solving, NET awareness</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-abbr">REF</div>
+                    <div class="stat-name">Reflexes</div>
+                    <div class="stat-range">2–8</div>
+                    <div class="stat-desc">Speed, coordination, combat initiative</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-abbr">DEX</div>
+                    <div class="stat-name">Dexterity</div>
+                    <div class="stat-range">2–8</div>
+                    <div class="stat-desc">Agility, stealth, sleight of hand</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-abbr">TECH</div>
+                    <div class="stat-name">Technology</div>
+                    <div class="stat-range">2–8</div>
+                    <div class="stat-desc">Technical knowledge, fabrication, cyberware max</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-abbr">COOL</div>
+                    <div class="stat-name">Cool</div>
+                    <div class="stat-range">2–8</div>
+                    <div class="stat-desc">Willpower under pressure, interrogation resistance</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-abbr">WILL</div>
+                    <div class="stat-name">Willpower</div>
+                    <div class="stat-range">2–8</div>
+                    <div class="stat-desc">Mental resilience, Humanity recovery, resolve</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-abbr">LUCK</div>
+                    <div class="stat-name">Luck</div>
+                    <div class="stat-range">2–8</div>
+                    <div class="stat-desc">Bonus dice pool; spent and refreshed each session</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-abbr">MOVE</div>
+                    <div class="stat-name">Move</div>
+                    <div class="stat-range">2–8</div>
+                    <div class="stat-desc">Movement speed in combat and chase scenes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-abbr">BODY</div>
+                    <div class="stat-name">Body</div>
+                    <div class="stat-range">2–8</div>
+                    <div class="stat-desc">Raw physical power, carrying capacity, HP foundation</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-abbr">EMP</div>
+                    <div class="stat-name">Empathy</div>
+                    <div class="stat-range">2–8</div>
+                    <div class="stat-desc">Social ability <em>and</em> Humanity — reduced by cyberware</div>
+                </div>
+            </div>
+
+            <div class="street-note">
+                <span class="street-label">⚡ STREET WISDOM</span>
+                <strong>Empathy is your most fragile stat.</strong> Every piece of cyberware you install reduces your <em>Humanity</em> (EMP × 10). Drop too low and you risk Cyberpsychosis — a one-way trip to the Psych Squad. Chrome your body. Keep your soul. Easier said than done on the Street.
+            </div>
+
+            <div class="divider"><span class="divider-icon">// CONTINUING //</span></div>
+
+            <!-- STEP 3: DERIVED STATS -->
+            <h2 style="--i:3;"><span>Calculate Derived Stats</span><span class="step-tag">STEP 03</span></h2>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Stat</th>
+                        <th>Formula</th>
+                        <th>Function</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Hit Points</strong></td>
+                        <td>10 + (5 × (BODY + WILL) ÷ 2)</td>
+                        <td>How much damage before you're Seriously Wounded or dead</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Seriously Wounded</strong></td>
+                        <td>HP ÷ 2</td>
+                        <td>Below this threshold, all actions take −2 penalty</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Death Save</strong></td>
+                        <td>BODY stat</td>
+                        <td>Roll equal or under to survive going to 0 HP</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Humanity</strong></td>
+                        <td>EMP × 10</td>
+                        <td>Starting Humanity pool — drained by cyberware installation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cyberpsychosis</strong></td>
+                        <td>Humanity 0</td>
+                        <td>Character becomes an NPC under GM control. Not great.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Humanity Loss</strong></td>
+                        <td>Per cyberware</td>
+                        <td>Each implant has a Humanity Cost — tracked cumulatively</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="divider"><span class="divider-icon">// CONTINUING //</span></div>
+
+            <!-- STEP 4: SKILLS -->
+            <h2 style="--i:4;"><span>Assign Skills</span><span class="step-tag">STEP 04</span></h2>
+            <p>Skills are purchased separately from stats. Each skill is tied to a governing stat and adds to it on a check. You roll <strong>1d10 + Stat + Skill</strong> against a Difficulty Value (DV). Standard DV is 15 for most street-level tasks.</p>
+
+            <p>Distribute <strong>86 skill points</strong> total. Skills cost 1 point per level up to 6, then 2 points per level from 7–10. Your Role grants you one skill at level 4 for free.</p>
+
+            <h3>Skill Categories</h3>
+
+            <div class="data-block" data-label="// AWARENESS">
+                <div class="skill-wrap">
+                    <span class="skill-chip">Concentration</span>
+                    <span class="skill-chip">Conceal/Reveal Object</span>
+                    <span class="skill-chip">Lip Reading</span>
+                    <span class="skill-chip">Perception</span>
+                    <span class="skill-chip">Tracking</span>
+                </div>
+            </div>
+
+            <div class="data-block" data-label="// BODY">
+                <div class="skill-wrap">
+                    <span class="skill-chip">Athletics</span>
+                    <span class="skill-chip">Contortionist</span>
+                    <span class="skill-chip">Dance</span>
+                    <span class="skill-chip">Endurance</span>
+                    <span class="skill-chip">Resist Torture/Drugs</span>
+                    <span class="skill-chip">Stealth</span>
+                </div>
+            </div>
+
+            <div class="data-block" data-label="// CONTROL">
+                <div class="skill-wrap">
+                    <span class="skill-chip">Drive Land Vehicle</span>
+                    <span class="skill-chip">Pilot Air Vehicle</span>
+                    <span class="skill-chip">Pilot Sea Vehicle</span>
+                    <span class="skill-chip">Riding</span>
+                </div>
+            </div>
+
+            <div class="data-block" data-label="// EDUCATION">
+                <div class="skill-wrap">
+                    <span class="skill-chip">Accounting</span>
+                    <span class="skill-chip">Animal Handling</span>
+                    <span class="skill-chip">Bureaucracy</span>
+                    <span class="skill-chip">Business</span>
+                    <span class="skill-chip">Composition</span>
+                    <span class="skill-chip">Criminology</span>
+                    <span class="skill-chip">Cryptography</span>
+                    <span class="skill-chip">Deduction</span>
+                    <span class="skill-chip">Education</span>
+                    <span class="skill-chip">Gamble</span>
+                    <span class="skill-chip">Language</span>
+                    <span class="skill-chip">Library Search</span>
+                    <span class="skill-chip">Local Expert</span>
+                    <span class="skill-chip">Science</span>
+                    <span class="skill-chip">Tactics</span>
+                    <span class="skill-chip">Wilderness Survival</span>
+                    <span class="skill-chip">Streetwise</span>
+                    <span class="skill-chip">Trading</span>
+                </div>
+            </div>
+
+            <div class="data-block" data-label="// FIGHTING">
+                <div class="skill-wrap">
+                    <span class="skill-chip">Brawling</span>
+                    <span class="skill-chip">Evasion</span>
+                    <span class="skill-chip">Martial Arts</span>
+                    <span class="skill-chip">Melee Weapon</span>
+                </div>
+            </div>
+
+            <div class="data-block" data-label="// PERFORMANCE">
+                <div class="skill-wrap">
+                    <span class="skill-chip">Acting</span>
+                    <span class="skill-chip">Play Instrument</span>
+                </div>
+            </div>
+
+            <div class="data-block" data-label="// RANGED WEAPON">
+                <div class="skill-wrap">
+                    <span class="skill-chip">Archery</span>
+                    <span class="skill-chip">Autofire</span>
+                    <span class="skill-chip">Handgun</span>
+                    <span class="skill-chip">Heavy Weapons</span>
+                    <span class="skill-chip">Shoulder Arms</span>
+                </div>
+            </div>
+
+            <div class="data-block" data-label="// SOCIAL">
+                <div class="skill-wrap">
+                    <span class="skill-chip">Bribery</span>
+                    <span class="skill-chip">Conversation</span>
+                    <span class="skill-chip">Human Perception</span>
+                    <span class="skill-chip">Interrogation</span>
+                    <span class="skill-chip">Persuasion</span>
+                    <span class="skill-chip">Personal Grooming</span>
+                    <span class="skill-chip">Streetwise</span>
+                    <span class="skill-chip">Trading</span>
+                    <span class="skill-chip">Wardrobe & Style</span>
+                </div>
+            </div>
+
+            <div class="data-block" data-label="// TECHNIQUE">
+                <div class="skill-wrap">
+                    <span class="skill-chip">Air Vehicle Tech</span>
+                    <span class="skill-chip">Basic Tech</span>
+                    <span class="skill-chip">Cybertech</span>
+                    <span class="skill-chip">Demolitions</span>
+                    <span class="skill-chip">Electronics/Security Tech</span>
+                    <span class="skill-chip">First Aid</span>
+                    <span class="skill-chip">Forgery</span>
+                    <span class="skill-chip">Land Vehicle Tech</span>
+                    <span class="skill-chip">Paint/Draw/Sculpt</span>
+                    <span class="skill-chip">Paramedic</span>
+                    <span class="skill-chip">Photography/Film</span>
+                    <span class="skill-chip">Pick Lock</span>
+                    <span class="skill-chip">Pick Pocket</span>
+                    <span class="skill-chip">Sea Vehicle Tech</span>
+                    <span class="skill-chip">Weaponstech</span>
+                </div>
+            </div>
+
+            <div class="divider"><span class="divider-icon">// CONTINUING //</span></div>
+
+            <!-- STEP 5: CYBERWARE -->
+            <h2 style="--i:5;"><span>Choose Cyberware</span><span class="step-tag">STEP 05</span></h2>
+            <p>Chrome is how you get ahead in Night City. Cyberware gives you abilities no unmodified human can match — but every implant costs <strong>Humanity</strong>. New Edgerunners typically begin with <strong>one or two starting implants</strong> determined by their Role or purchased with starting eddies.</p>
+
+            <div class="cyber-grid">
+                <div class="cyber-item">
+                    <div class="cyber-name">Neuralware</div>
+                    <div class="cyber-hl">HL: 2d6 per implant</div>
+                    <div class="cyber-desc">Neural links, chipware slots, pain editors, Reflex Boosters — your brain, upgraded</div>
+                </div>
+                <div class="cyber-item">
+                    <div class="cyber-name">Cyberoptics</div>
+                    <div class="cyber-hl">HL: 2d6 per eye</div>
+                    <div class="cyber-desc">Image enhancement, infrared, targeting scopes, chyron display, anti-dazzle</div>
+                </div>
+                <div class="cyber-item">
+                    <div class="cyber-name">Cyberaudio</div>
+                    <div class="cyber-hl">HL: 2d6 per suite</div>
+                    <div class="cyber-desc">Amplified hearing, bug detectors, radar, voice stress analyzers</div>
+                </div>
+                <div class="cyber-item">
+                    <div class="cyber-name">Internal Cyberware</div>
+                    <div class="cyber-hl">HL: varies</div>
+                    <div class="cyber-desc">Hidden weapons, toxin binders, grafted muscle and bone, subdermal armor</div>
+                </div>
+                <div class="cyber-item">
+                    <div class="cyber-name">External Cyberware</div>
+                    <div class="cyber-hl">HL: 2d6 per item</div>
+                    <div class="cyber-desc">Visible chrome: linear frames, skin weave, implanted subdermal plating</div>
+                </div>
+                <div class="cyber-item">
+                    <div class="cyber-name">Cyberlimbs</div>
+                    <div class="cyber-hl">HL: 2d6 per limb</div>
+                    <div class="cyber-desc">Replacement or additional arms, legs, hands — with optional weapon and tool mods</div>
+                </div>
+                <div class="cyber-item">
+                    <div class="cyber-name">Borgware</div>
+                    <div class="cyber-hl">HL: 4d6 — extreme</div>
+                    <div class="cyber-desc">Cyborg-level replacement. Massive ability gains. Massive Humanity cost. Walk carefully.</div>
+                </div>
+                <div class="cyber-item">
+                    <div class="cyber-name">Fashionware</div>
+                    <div class="cyber-hl">HL: 0 — style only</div>
+                    <div class="cyber-desc">Skinwatch, light tattoos, shift-tacts, nasal filters. The chrome that doesn't cost your soul.</div>
+                </div>
+            </div>
+
+            <p>Track your <strong>Humanity Loss (HL)</strong> carefully. Losing 4 or more Humanity at once requires a <strong>Humanity check</strong>. Hitting specific thresholds causes increasingly severe psychological symptoms — the road to Cyberpsychosis is paved with good reasons.</p>
+
+            <div class="divider"><span class="divider-icon">// CONTINUING //</span></div>
+
+            <!-- STEP 6: LIFEPATH -->
+            <h2 style="--i:6;"><span>Run Your Lifepath</span><span class="step-tag">STEP 06</span></h2>
+            <p>The Lifepath system defines who your Edgerunner is before the campaign starts. Roll on the tables (or choose with your GM) to build a personal history full of the kind of complications that make Night City stories worth telling.</p>
+
+            <div class="lifepath-grid">
+                <div class="lp-item">
+                    <div class="lp-num">01</div>
+                    <div>
+                        <div class="lp-title">Cultural Origin</div>
+                        <div class="lp-desc">Where you come from and the cultural background that shaped your worldview. Affects starting language and cultural knowledge.</div>
+                    </div>
+                </div>
+                <div class="lp-item">
+                    <div class="lp-num">02</div>
+                    <div>
+                        <div class="lp-title">Personality</div>
+                        <div class="lp-desc">Your core traits: feelings toward people, valued possession, and the way you dress. These define your personal style on the Street.</div>
+                    </div>
+                </div>
+                <div class="lp-item">
+                    <div class="lp-num">03</div>
+                    <div>
+                        <div class="lp-title">Motivations</div>
+                        <div class="lp-desc">What you value most, what you feel about most people, and what you want out of life in a city that doesn't care about your wants.</div>
+                    </div>
+                </div>
+                <div class="lp-item">
+                    <div class="lp-num">04</div>
+                    <div>
+                        <div class="lp-title">Life Events</div>
+                        <div class="lp-desc">Roll five times on the Life Events table. These define major experiences — friends made, enemies earned, tragedies survived, fortunes lost.</div>
+                    </div>
+                </div>
+                <div class="lp-item">
+                    <div class="lp-num">05</div>
+                    <div>
+                        <div class="lp-title">Role-Specific Lifepath</div>
+                        <div class="lp-desc">Each Role has its own additional Lifepath tables — a Solo rolls on Background and Motive for Killing, a Rockerboy on Musical Style and Instruments.</div>
+                    </div>
+                </div>
+                <div class="lp-item">
+                    <div class="lp-num">06</div>
+                    <div>
+                        <div class="lp-title">Friends &amp; Enemies</div>
+                        <div class="lp-desc">Your Lifepath generates specific NPCs — people who owe you, people who want you dead, and the complicated cases in between.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"><span class="divider-icon">// CONTINUING //</span></div>
+
+            <!-- STEP 7: GEAR & EDDIES -->
+            <h2 style="--i:7;"><span>Gear &amp; Starting Eddies</span><span class="step-tag">STEP 07</span></h2>
+            <p>New Edgerunners start with <strong>2,550 Eurodollars (eddies)</strong> plus any starting gear granted by their Role. Spend it on weapons, armor, cyberware, and survival equipment before hitting the streets.</p>
+
+            <h3>Essential Starting Gear</h3>
+            <ul>
+                <li><strong>Weapon:</strong> At minimum a handgun or melee weapon — anything else is an invitation to get flatlined immediately</li>
+                <li><strong>Armor:</strong> Body armor (light, medium, or heavy) — your SP (Stopping Power) is subtracted from every hit that lands</li>
+                <li><strong>Clothing:</strong> Night City is a fashion war zone. Your <em>Wardrobe &amp; Style</em> skill isn't just vanity — it's reputation armor</li>
+                <li><strong>Agent (smart phone):</strong> Your connection to the world — maps, contacts, limited NET access, and emergency calls</li>
+                <li><strong>Medscanner or First Aid kit:</strong> Because medics cost eddies and the Street doesn't offer health insurance</li>
+                <li><strong>Role-specific gear:</strong> Netrunners need a Cyberdeck; Techs need tools; Medtechs need their kit. Non-negotiable.</li>
+            </ul>
+
+            <div class="street-note">
+                <span class="street-label">⚡ FIXER TIP</span>
+                Don't blow all your starting eddies on chrome. Cyberware is expensive and the Ripperdoc needs cash up front. Save enough to last your first few gigs — you can upgrade after you stop bleeding.
+            </div>
+
+            <div class="divider"><span class="divider-icon">// CONTINUING //</span></div>
+
+            <!-- STEP 8: HOW TO PLAY -->
+            <h2 style="--i:8;"><span>How the System Works</span><span class="step-tag">STEP 08</span></h2>
+            <p>Cyberpunk RED uses the <strong>Interlock System</strong>. When you try something with meaningful risk, roll <strong>1d10 + Stat + Skill</strong> and meet or beat a <strong>Difficulty Value (DV)</strong>.</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr><th>Difficulty</th><th>DV</th><th>Example</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Everyday</strong></td><td>9</td><td>Fixing a common appliance, recalling basic info</td></tr>
+                    <tr><td><strong>Difficult</strong></td><td>15</td><td>Hacking a corp terminal, treating a gunshot wound</td></tr>
+                    <tr><td><strong>Very Difficult</strong></td><td>21</td><td>Bypassing military ICE, field surgery without equipment</td></tr>
+                    <tr><td><strong>Heroic</strong></td><td>24</td><td>Surviving an ambush alone, decrypting black ICE</td></tr>
+                    <tr><td><strong>Legendary</strong></td><td>29</td><td>Things even the best in Night City rarely pull off</td></tr>
+                    <tr><td><strong>Almost Impossible</strong></td><td>35</td><td>The stuff of rumor and legend — if it even happened</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Luck</h3>
+            <p>Your <strong>LUCK stat</strong> is a pool of points that refreshes every session. Spend Luck points to add +1 to any roll, after you see the result. It's the difference between a cool story and a trip to the body bank.</p>
+
+            <h3>Critical Injuries</h3>
+            <p>Hits in combat don't just drain HP — certain damage thresholds force a <strong>Critical Injury roll</strong>. These produce specific wounds: cracked ribs, blinded eye, dismembered limb — each with mechanical penalties and narrative consequences. Night City leaves marks.</p>
+
+            <div class="divider"><span class="divider-icon">// CONTINUING //</span></div>
+
+            <!-- STEP 9: STREET CRED -->
+            <h2 style="--i:9;"><span>Street Cred &amp; Rep</span><span class="step-tag">STEP 09</span></h2>
+            <p>New Edgerunners start with <strong>Street Cred 0</strong>. Cred is the currency of reputation — it determines who takes your calls, who rents you gear, and who sends work your way.</p>
+
+            <ul>
+                <li><strong>Street Cred 1–4:</strong> Local. Nobody outside your neighborhood knows you exist.</li>
+                <li><strong>Street Cred 5–9:</strong> Regional. Word is out. Fixers are calling. Corps are watching.</li>
+                <li><strong>Street Cred 10–19:</strong> Night City wide. You're known. That's good and dangerous.</li>
+                <li><strong>Street Cred 20+:</strong> Legend. You don't need to introduce yourself. That's also a target.</li>
+            </ul>
+
+            <p>Cred is earned by completing gigs, making influential contacts, and doing things worth talking about. It also makes you a target — the higher you climb, the harder the corps and gangs work to knock you back down.</p>
+
+            <div class="divider"><span class="divider-icon">// CONTINUING //</span></div>
+
+            <!-- STEP 10: FINISH THE FILE -->
+            <h2 style="--i:10;"><span>Finish Your File</span><span class="step-tag">STEP 10</span></h2>
+
+            <h3>Personal Data</h3>
+            <ul>
+                <li><strong>Handle (street name)</strong> — Never your real name. Never.</li>
+                <li><strong>Real name</strong> — Known to fewer people the longer you survive</li>
+                <li><strong>Age, appearance, and style</strong> — Night City is a visual culture. What does your chrome look like? What do you wear?</li>
+                <li><strong>Current address</strong> — Coffin hotel? Street squat? Corporate dormitory? Nomad camp?</li>
+            </ul>
+
+            <h3>Your Crew</h3>
+            <p>Work with the rest of the table to establish the group. Night City is brutal for solo operators. Define:</p>
+            <ul>
+                <li>How did you all meet? (Shared gig? Same fixer? Survived something together?)</li>
+                <li>Who holds the group's eddies when someone's compromised?</li>
+                <li>Who is the fixer for your crew — or are you hiring out?</li>
+                <li>What does your crew call itself, if anything?</li>
+            </ul>
+
+            <h3>Your First Gig</h3>
+            <p>The GM (called the <strong>Game Master</strong> or just GM in Cyberpunk RED) runs the city. Work with them to establish your crew's first gig. Gigs are the lifeblood of the game — corporate extraction, black-market smuggling, gang negotiation, or something worse. Night City always has work for people willing to get their hands dirty.</p>
+
+            <div class="data-block" data-label="// LAST WORD" style="border-left: 3px solid var(--hot); margin-top: 1.75rem;">
+                <p style="margin:0; font-size:0.95rem; line-height:1.9;">
+                    The corps own the city. The gangs own the streets. And you — you own nothing but your skills, your chrome, and your crew. <strong>Style over substance is a lie they tell you to keep you spending.</strong> In Night City, style IS substance. Look like prey and you become it. Now get out there and earn your rep before someone earns it for you.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-hot-bar"></div>
+            <div class="footer-inner">
+                <div>
+                    <div class="footer-slogan">Style.<br>Speed.<br>Survive.</div>
+                    <div class="footer-sub">CYBERPUNK RED // R. TALSORIAN GAMES // NIGHT CITY 2045</div>
+                </div>
+                <div class="footer-mark">
+                    INTERLOCK<br>
+                    SYSTEM<br>
+                    CORE<br>
+                    RULEBOOK
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    </body>
+</div>
+</html>

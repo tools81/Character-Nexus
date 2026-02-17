@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blade Runner RPG — Operative File</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Oxanium:wght@300;400;600;700;800&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-teal:     #00E5CC;
+            --neon-teal-dim: #007A6B;
+            --neon-amber:    #FFB830;
+            --neon-amber-dim:#7A5000;
+            --neon-pink:     #FF3F8E;
+            --neon-blue:     #4DA8FF;
+            --rain-dark:     #060C10;
+            --panel:         #0A1318;
+            --panel-mid:     #0F1C24;
+            --panel-light:   #162530;
+            --border-dim:    #1A3040;
+            --border:        #1E3D52;
+            --text:          #A8C8D8;
+            --text-dim:      #4A7080;
+            --text-bright:   #D0EAF5;
+            --holo:          rgba(0, 229, 204, 0.07);
+            --holo-line:     rgba(0, 229, 204, 0.15);
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Share Tech Mono', monospace;
+            background: var(--rain-dark);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 1.5rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Rain animation */
+        .instr-container body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                repeating-linear-gradient(
+                    90deg,
+                    transparent 0px,
+                    transparent 3px,
+                    rgba(0,229,204,0.018) 3px,
+                    rgba(0,229,204,0.018) 4px
+                );
+            background-size: 80px 100%;
+            pointer-events: none;
+            z-index: 0;
+            animation: rain 0.8s linear infinite;
+        }
+
+        @keyframes rain {
+            from { background-position: 0 -100vh; }
+            to   { background-position: 40px 100vh; }
+        }
+
+        /* CRT scanline */
+        .instr-container body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 3px,
+                rgba(0,0,0,0.12) 3px,
+                rgba(0,0,0,0.12) 4px
+            );
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* ── CONTAINER ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            box-shadow:
+                0 0 0 1px var(--border-dim),
+                0 0 40px rgba(0, 229, 204, 0.08),
+                0 0 100px rgba(0, 0, 0, 0.9),
+                inset 0 0 80px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 1;
+            animation: flicker 0.1s steps(1) 3;
+        }
+
+        @keyframes flicker {
+            0%   { opacity: 1; }
+            33%  { opacity: 0; }
+            66%  { opacity: 1; }
+            100% { opacity: 1; }
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            background: var(--panel);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .instr-container .header-neon-bar {
+            height: 3px;
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                var(--neon-teal) 20%,
+                var(--neon-amber) 50%,
+                var(--neon-pink) 80%,
+                transparent 100%
+            );
+            box-shadow:
+                0 0 10px var(--neon-teal),
+                0 0 20px rgba(0,229,204,0.3);
+        }
+
+        .instr-container .header-inner {
+            padding: 2.5rem 2rem 2rem;
+            position: relative;
+        }
+
+        /* holographic grid overlay */
+        .instr-container .header-inner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(var(--holo-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--holo-line) 1px, transparent 1px);
+            background-size: 30px 30px;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .instr-container .header-inner::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 0%, rgba(0,229,204,0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .instr-container .lapd-badge {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .instr-container .badge-text {
+            font-family: 'Oxanium', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            color: var(--neon-amber);
+            text-transform: uppercase;
+            text-shadow: 0 0 8px rgba(255,184,48,0.5);
+        }
+
+        .instr-container .badge-sep {
+            width: 1px;
+            height: 1rem;
+            background: var(--border);
+        }
+
+        .instr-container .badge-unit {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            color: var(--text-dim);
+        }
+
+        .instr-container h1 {
+            font-family: 'Oxanium', sans-serif;
+            font-weight: 800;
+            font-size: 3.2rem;
+            line-height: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--neon-teal);
+            text-shadow:
+                0 0 15px rgba(0,229,204,0.7),
+                0 0 40px rgba(0,229,204,0.3),
+                0 0 80px rgba(0,229,204,0.1);
+            position: relative;
+            z-index: 1;
+            margin-bottom: 0.4rem;
+            animation: hologlow 4s ease-in-out infinite;
+        }
+
+        @keyframes hologlow {
+            0%, 100% {
+                text-shadow:
+                    0 0 15px rgba(0,229,204,0.7),
+                    0 0 40px rgba(0,229,204,0.3);
+            }
+            50% {
+                text-shadow:
+                    0 0 20px rgba(0,229,204,1),
+                    0 0 60px rgba(0,229,204,0.5),
+                    0 0 100px rgba(0,229,204,0.2);
+            }
+        }
+
+        .instr-container h1 .sub {
+            display: block;
+            font-size: 1.4rem;
+            color: var(--neon-amber);
+            text-shadow: 0 0 10px rgba(255,184,48,0.6);
+            letter-spacing: 0.2em;
+            font-weight: 600;
+        }
+
+        .instr-container .header-meta {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border-dim);
+        }
+
+        .instr-container .meta-item {
+            font-size: 0.68rem;
+            letter-spacing: 0.15em;
+            color: var(--text-dim);
+        }
+
+        .instr-container .meta-item span {
+            color: var(--neon-teal);
+            font-weight: 600;
+        }
+
+        /* ── FILE BAND ── */
+        .instr-container .file-band {
+            background: var(--panel-mid);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 0.6rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .instr-container .file-title {
+            font-family: 'Oxanium', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--text-bright);
+            text-transform: uppercase;
+        }
+
+        .instr-container .file-id {
+            font-size: 0.68rem;
+            letter-spacing: 0.12em;
+            color: var(--text-dim);
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2rem;
+        }
+
+        .instr-container .vk-intro {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--neon-teal);
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            line-height: 1.9;
+            color: var(--text);
+            position: relative;
+        }
+
+        .instr-container .vk-intro::before {
+            content: 'VK.BRIEFING';
+            position: absolute;
+            top: -0.6rem;
+            left: 1rem;
+            background: var(--panel-mid);
+            padding: 0 0.5rem;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            color: var(--neon-teal);
+            text-shadow: 0 0 6px rgba(0,229,204,0.5);
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Oxanium', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-bright);
+            margin: 2.75rem 0 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            animation: fadeLeft 0.4s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.06s);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container .sec-num {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--neon-amber);
+            background: rgba(255,184,48,0.08);
+            border: 1px solid var(--neon-amber-dim);
+            padding: 0.2rem 0.5rem;
+            letter-spacing: 0.1em;
+            text-shadow: 0 0 6px rgba(255,184,48,0.4);
+            white-space: nowrap;
+        }
+
+        .instr-container h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--border), transparent);
+        }
+
+        @keyframes fadeLeft {
+            from { opacity: 0; transform: translateX(-16px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+
+        .instr-container h3 {
+            font-family: 'Oxanium', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--neon-amber);
+            margin: 1.75rem 0 0.6rem;
+            text-shadow: 0 0 6px rgba(255,184,48,0.3);
+        }
+
+        .instr-container p {
+            font-size: 0.91rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .instr-container ul, ol {
+            margin: 0.75rem 0 1.25rem 1.25rem;
+        }
+
+        .instr-container li {
+            font-size: 0.89rem;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { color: var(--neon-teal); font-weight: 600; }
+        .instr-container em     { color: var(--neon-amber); font-style: normal; }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.25rem 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            position: relative;
+        }
+
+        .instr-container .divider::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background: var(--panel);
+            padding: 0 0.75rem;
+            font-size: 0.65rem;
+            letter-spacing: 0.25em;
+            color: var(--text-dim);
+        }
+
+        /* ── HOLO PANEL ── */
+        .instr-container .holo-panel {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            position: relative;
+        }
+
+        .instr-container .holo-panel::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -0.6rem;
+            left: 1rem;
+            background: var(--panel-mid);
+            padding: 0 0.5rem;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            color: var(--neon-teal);
+            text-shadow: 0 0 6px rgba(0,229,204,0.4);
+        }
+
+        /* ── ALERT ── */
+        .instr-container .alert {
+            background: rgba(255,63,142,0.06);
+            border: 1px solid rgba(255,63,142,0.3);
+            border-left: 3px solid var(--neon-pink);
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            font-size: 0.88rem;
+            line-height: 1.85;
+        }
+
+        .instr-container .alert-label {
+            font-family: 'Oxanium', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            color: var(--neon-pink);
+            display: block;
+            margin-bottom: 0.35rem;
+            text-shadow: 0 0 8px rgba(255,63,142,0.5);
+        }
+
+        /* ── ATTRIBUTE GRID ── */
+        .instr-container .attr-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .attr-card {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            border-top: 2px solid var(--neon-teal-dim);
+            padding: 0.85rem 1rem;
+            position: relative;
+            transition: border-top-color 0.2s, background 0.2s;
+        }
+
+        .instr-container .attr-card:hover {
+            background: var(--panel-light);
+            border-top-color: var(--neon-teal);
+        }
+
+        .instr-container .attr-code {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--neon-teal);
+            letter-spacing: 0.15em;
+            margin-bottom: 0.2rem;
+            text-shadow: 0 0 6px rgba(0,229,204,0.4);
+        }
+
+        .instr-container .attr-name {
+            font-family: 'Oxanium', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-bright);
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .attr-desc {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        .instr-container .attr-range {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.85rem;
+            font-family: 'Oxanium', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--neon-amber);
+            text-shadow: 0 0 6px rgba(255,184,48,0.4);
+        }
+
+        /* ── ARCHETYPE LIST ── */
+        .instr-container .archetype-list {
+            display: grid;
+            gap: 0.45rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .archetype-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.75rem;
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            padding: 0.8rem 1rem;
+            align-items: start;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .instr-container .archetype-item:hover {
+            background: var(--panel-light);
+            border-color: var(--neon-teal-dim);
+        }
+
+        .instr-container .arch-icon {
+            font-family: 'Oxanium', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--neon-teal);
+            padding: 0.2rem 0.45rem;
+            border: 1px solid var(--neon-teal-dim);
+            text-shadow: 0 0 6px rgba(0,229,204,0.4);
+            white-space: nowrap;
+        }
+
+        .instr-container .arch-name {
+            font-family: 'Oxanium', sans-serif;
+            font-weight: 700;
+            font-size: 0.97rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-bright);
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .arch-desc {
+            font-size: 0.83rem;
+            color: var(--text-dim);
+            line-height: 1.55;
+        }
+
+        /* ── SKILL LIST ── */
+        .instr-container .skill-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.3rem 1.5rem;
+            margin: 0.75rem 0 1.25rem;
+        }
+
+        .instr-container .skill-entry {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.3rem 0;
+            border-bottom: 1px solid var(--border-dim);
+            font-size: 0.83rem;
+            color: var(--text);
+            transition: color 0.2s;
+        }
+
+        .instr-container .skill-entry:hover { color: var(--neon-teal); }
+
+        .instr-container .skill-dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--neon-teal-dim);
+            flex-shrink: 0;
+        }
+
+        .instr-container .skill-attr {
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            margin-left: auto;
+            letter-spacing: 0.05em;
+        }
+
+        /* ── DICE EXPLAINER ── */
+        .instr-container .dice-block {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .dice-item {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            padding: 0.85rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .instr-container .dice-face {
+            font-family: 'Oxanium', sans-serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: var(--neon-teal);
+            text-shadow: 0 0 12px rgba(0,229,204,0.6);
+            min-width: 2.2rem;
+            text-align: center;
+        }
+
+        .instr-container .dice-text {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        .instr-container .dice-text strong { color: var(--text-bright); font-size: 0.85rem; display: block; margin-bottom: 0.1rem; }
+
+        /* ── HUMANITY TABLE ── */
+        .instr-container .hum-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: 0.85rem;
+        }
+
+        .instr-container .hum-table th {
+            background: var(--panel-light);
+            border: 1px solid var(--border);
+            border-bottom: 1px solid var(--neon-teal-dim);
+            font-family: 'Oxanium', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--neon-teal);
+            padding: 0.55rem 0.9rem;
+            text-align: left;
+            font-size: 0.72rem;
+            text-shadow: 0 0 6px rgba(0,229,204,0.3);
+        }
+
+        .instr-container .hum-table td {
+            padding: 0.55rem 0.9rem;
+            border: 1px solid var(--border-dim);
+            color: var(--text);
+            vertical-align: top;
+            line-height: 1.6;
+        }
+
+        .instr-container .hum-table tr:hover td { background: var(--holo); }
+
+        /* ── VK QUESTION BLOCK ── */
+        .instr-container .vk-block {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--neon-amber);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .instr-container .vk-label {
+            font-family: 'Oxanium', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            color: var(--neon-amber);
+            text-shadow: 0 0 6px rgba(255,184,48,0.4);
+            display: block;
+            margin-bottom: 0.85rem;
+        }
+
+        .instr-container .vk-question {
+            display: flex;
+            gap: 0.75rem;
+            align-items: baseline;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-dim);
+            font-size: 0.87rem;
+            line-height: 1.7;
+        }
+
+        .instr-container .vk-question:last-child { border-bottom: none; padding-bottom: 0; }
+
+        .instr-container .vk-q-num {
+            font-family: 'Oxanium', sans-serif;
+            font-size: 0.7rem;
+            color: var(--neon-amber);
+            font-weight: 700;
+            min-width: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            border-top: 1px solid var(--border);
+            background: var(--panel);
+        }
+
+        .instr-container .footer-neon {
+            height: 2px;
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                var(--neon-pink) 20%,
+                var(--neon-amber) 50%,
+                var(--neon-teal) 80%,
+                transparent 100%
+            );
+            opacity: 0.7;
+        }
+
+        .instr-container .footer-inner {
+            padding: 1.5rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .instr-container .footer-quote {
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.82rem;
+            font-style: italic;
+            color: var(--text-dim);
+            line-height: 1.7;
+        }
+
+        .instr-container .footer-quote cite {
+            display: block;
+            font-style: normal;
+            font-size: 0.72rem;
+            letter-spacing: 0.15em;
+            color: var(--neon-teal-dim);
+            margin-top: 0.3rem;
+        }
+
+        .instr-container .footer-seal {
+            font-family: 'Oxanium', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--neon-amber);
+            text-align: right;
+            text-shadow: 0 0 6px rgba(255,184,48,0.3);
+            line-height: 1.7;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.5rem; }
+            h1 .sub { font-size: 1.1rem; }
+            h2 { font-size: 1.25rem; }
+            .attr-grid { grid-template-columns: 1fr; }
+            .dice-block { grid-template-columns: 1fr; }
+            .skill-cols { grid-template-columns: 1fr; }
+            .content { padding: 1.5rem 1.25rem; }
+            .footer-inner { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <div class="header-neon-bar"></div>
+            <div class="header-inner">
+                <div class="lapd-badge">
+                    <span class="badge-text">L.A.P.D. • Rep-Detect Unit</span>
+                    <div class="badge-sep"></div>
+                    <span class="badge-unit">LOS ANGELES // 2037</span>
+                </div>
+                <h1>
+                    Blade Runner
+                    <span class="sub">The Roleplaying Game</span>
+                </h1>
+                <div class="header-meta">
+                    <div class="meta-item">SYSTEM: <span>YEAR ZERO ENGINE</span></div>
+                    <div class="meta-item">PUBLISHER: <span>FREE LEAGUE</span></div>
+                    <div class="meta-item">PROTOCOL: <span>OPERATIVE FILE INIT</span></div>
+                    <div class="meta-item">STATUS: <span>ACTIVE</span></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- FILE BAND -->
+        <div class="file-band">
+            <span class="file-title">Character Creation — Operative Profile</span>
+            <span class="file-id">FORM VK-1 // CLASSIFICATION: OPEN</span>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="vk-intro">
+                You're a Blade Runner working for the Rep-Detect Unit of the LAPD in a rain-soaked Los Angeles circa 2037. The Tyrell Corporation is gone. Replicants walk the streets — some knowing what they are, others living lies. Your job is to find them. The question that follows you everywhere: what are <em>you</em>?
+            </div>
+
+            <!-- STEP 1: ARCHETYPE -->
+            <h2 style="--i:1;"><span class="sec-num">01</span> Choose Your Archetype</h2>
+            <p>Your Archetype is your operative role within the Rep-Detect Unit. It defines your starting attributes, key skills, and how you approach the casework and moral complexity of the job.</p>
+
+            <div class="archetype-list">
+                <div class="archetype-item">
+                    <span class="arch-icon">INSP</span>
+                    <div>
+                        <div class="arch-name">Inspector</div>
+                        <div class="arch-desc">The classic Blade Runner. Sharp instincts, combat-ready, and carrying the weight of every retirement they've ordered. Balanced stat spread, strong in Coolness and Strength.</div>
+                    </div>
+                </div>
+                <div class="archetype-item">
+                    <span class="arch-icon">ENFC</span>
+                    <div>
+                        <div class="arch-name">Enforcer</div>
+                        <div class="arch-desc">Brute force and raw intimidation. The Unit's blunt instrument — effective, unsettling, and difficult to reason with when the heat is on.</div>
+                    </div>
+                </div>
+                <div class="archetype-item">
+                    <span class="arch-icon">ANAT</span>
+                    <div>
+                        <div class="arch-name">Analyst</div>
+                        <div class="arch-desc">The technical mind of the unit. Forensics, data retrieval, replicant biology, and interrogation through clinical detachment rather than aggression.</div>
+                    </div>
+                </div>
+                <div class="archetype-item">
+                    <span class="arch-icon">INFM</span>
+                    <div>
+                        <div class="arch-name">Informant</div>
+                        <div class="arch-desc">Lives in the city's shadows — the deals, the contacts, the whisper networks. More street than precinct. Information is the currency; everyone owes something.</div>
+                    </div>
+                </div>
+                <div class="archetype-item">
+                    <span class="arch-icon">RPLT</span>
+                    <div>
+                        <div class="arch-name">Replicant</div>
+                        <div class="arch-desc">You are one of them — working for the unit that hunts your kind. The question of your own humanity is not abstract. It is the central fact of your existence.</div>
+                    </div>
+                </div>
+            </div>
+
+            <p>Your Archetype provides starting ratings for each attribute, your Key Attribute (used for Pushing rolls), a starting Specialty, and a unique Archetype ability.</p>
+
+            <div class="divider" data-label="// DATA CONTINUES //"></div>
+
+            <!-- STEP 2: ATTRIBUTES -->
+            <h2 style="--i:2;"><span class="sec-num">02</span> Set Your Attributes</h2>
+            <p>Every operative has <strong>four core attributes</strong>. Your Archetype sets a starting value for each. You then distribute <strong>10 additional points</strong> among them, with a maximum of <strong>5</strong> in any single attribute at character creation.</p>
+
+            <div class="attr-grid">
+                <div class="attr-card">
+                    <div class="attr-code">ATTR.01</div>
+                    <div class="attr-name">Strength</div>
+                    <div class="attr-range">1–5</div>
+                    <div class="attr-desc">Physical power, endurance, and the capacity to absorb punishment in the city's darker corners</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">ATTR.02</div>
+                    <div class="attr-name">Agility</div>
+                    <div class="attr-range">1–5</div>
+                    <div class="attr-desc">Speed, reflexes, and coordination — essential for pursuit through crowded markets and rain-slicked rooftops</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">ATTR.03</div>
+                    <div class="attr-name">Wits</div>
+                    <div class="attr-range">1–5</div>
+                    <div class="attr-desc">Perception, intelligence, and the analytical edge that separates a good Blade Runner from a dead one</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">ATTR.04</div>
+                    <div class="attr-name">Empathy</div>
+                    <div class="attr-range">1–5</div>
+                    <div class="attr-desc">Social intelligence and emotional acuity — and the uncomfortable measure of what you still share with the things you hunt</div>
+                </div>
+            </div>
+
+            <div class="alert">
+                <span class="alert-label">⚠ REPLICANT NOTE</span>
+                Replicant operatives have a modified attribute cap. Their Empathy may only reach 3 at character creation — but their Strength cap is raised to 6. This asymmetry is intentional. It is a design choice by the Tyrell Corporation that you live with every day.
+            </div>
+
+            <div class="divider" data-label="// DATA CONTINUES //"></div>
+
+            <!-- STEP 3: HOW THE DICE WORK -->
+            <h2 style="--i:3;"><span class="sec-num">03</span> The Dice System</h2>
+            <p>Blade Runner uses the <strong>Year Zero Engine</strong>. When your character attempts something with meaningful risk, you build a dice pool and roll all at once looking for successes.</p>
+
+            <div class="dice-block">
+                <div class="dice-item">
+                    <div class="dice-face">D</div>
+                    <div class="dice-text">
+                        <strong>Base Dice (d6)</strong>
+                        Count your Attribute + Skill value — roll that many d6s. Each 6 is a success.
+                    </div>
+                </div>
+                <div class="dice-item">
+                    <div class="dice-face">G</div>
+                    <div class="dice-text">
+                        <strong>Gear Dice (d6)</strong>
+                        Relevant gear adds extra dice. Gear has a Bonus Die rating. Also d6s — sixes succeed.
+                    </div>
+                </div>
+                <div class="dice-item">
+                    <div class="dice-face">S</div>
+                    <div class="dice-text">
+                        <strong>Stress Dice (d6)</strong>
+                        Stress adds dice — but ones rolled on stress dice cause Panic. High-risk, high-reward.
+                    </div>
+                </div>
+                <div class="dice-item">
+                    <div class="dice-face">!</div>
+                    <div class="dice-text">
+                        <strong>Pushing</strong>
+                        Failed roll? Push it — reroll all non-success dice once. Ones on base dice cause damage or Conditions.
+                    </div>
+                </div>
+            </div>
+
+            <p>Most tasks require <strong>one success</strong>. Extra successes can be spent on <em>stunts</em> — extra effects, faster resolution, or helping allies. The system is fast and brutal, as the city demands.</p>
+
+            <div class="divider" data-label="// DATA CONTINUES //"></div>
+
+            <!-- STEP 4: SKILLS -->
+            <h2 style="--i:4;"><span class="sec-num">04</span> Assign Skills</h2>
+            <p>Skills represent your operative's training and expertise. Each skill is tied to one of your four Attributes. Skills start at <strong>0</strong> and can be raised to a maximum of <strong>3</strong> at character creation.</p>
+            <p>Distribute <strong>10 skill points</strong> among the skills below. Your Archetype designates two or three <strong>Key Skills</strong> that may not cost extra to advance later.</p>
+
+            <div class="skill-cols">
+                <div class="skill-entry"><span class="skill-dot"></span> Close Combat <span class="skill-attr">STR</span></div>
+                <div class="skill-entry"><span class="skill-dot"></span> Observation <span class="skill-attr">WIT</span></div>
+                <div class="skill-entry"><span class="skill-dot"></span> Stamina <span class="skill-attr">STR</span></div>
+                <div class="skill-entry"><span class="skill-dot"></span> Deduction <span class="skill-attr">WIT</span></div>
+                <div class="skill-entry"><span class="skill-dot"></span> Driving <span class="skill-attr">AGI</span></div>
+                <div class="skill-entry"><span class="skill-dot"></span> Manipulation <span class="skill-attr">EMP</span></div>
+                <div class="skill-entry"><span class="skill-dot"></span> Firearms <span class="skill-attr">AGI</span></div>
+                <div class="skill-entry"><span class="skill-dot"></span> Interrogation <span class="skill-attr">EMP</span></div>
+                <div class="skill-entry"><span class="skill-dot"></span> Mobility <span class="skill-attr">AGI</span></div>
+                <div class="skill-entry"><span class="skill-dot"></span> Connections <span class="skill-attr">EMP</span></div>
+                <div class="skill-entry"><span class="skill-dot"></span> Stealth <span class="skill-attr">AGI</span></div>
+                <div class="skill-entry"><span class="skill-dot"></span> Medical Aid <span class="skill-attr">WIT</span></div>
+                <div class="skill-entry"><span class="skill-dot"></span> Intimidation <span class="skill-attr">STR</span></div>
+                <div class="skill-entry"><span class="skill-dot"></span> Repair <span class="skill-attr">WIT</span></div>
+            </div>
+
+            <h3>Specialty</h3>
+            <p>Choose one <strong>Specialty</strong> — a narrow area of exceptional expertise within a broader skill. Specialties grant a bonus die when they apply. Examples: <em>Interrogating Replicants, Spinners, Forensic Analysis, Street Contacts, Sniper Positions.</em></p>
+
+            <div class="divider" data-label="// DATA CONTINUES //"></div>
+
+            <!-- STEP 5: DERIVED STATS -->
+            <h2 style="--i:5;"><span class="sec-num">05</span> Derived Statistics</h2>
+
+            <table class="hum-table">
+                <thead>
+                    <tr>
+                        <th>Statistic</th>
+                        <th>Calculation</th>
+                        <th>Function</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Health</strong></td>
+                        <td>Strength + 2</td>
+                        <td>Physical damage capacity before Broken</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Resolve</strong></td>
+                        <td>Empathy + 2</td>
+                        <td>Mental damage capacity before Broken</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stress</strong></td>
+                        <td>0 at start</td>
+                        <td>Accumulates under pressure; adds dice but risks Panic</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Panic Rating</strong></td>
+                        <td>Stress value</td>
+                        <td>Check when ones appear on Stress dice; higher Stress = worse Panic</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Humanity</strong></td>
+                        <td>Empathy × 2</td>
+                        <td>Your moral and emotional coherence — see below</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="divider" data-label="// DATA CONTINUES //"></div>
+
+            <!-- STEP 6: HUMANITY -->
+            <h2 style="--i:6;"><span class="sec-num">06</span> Humanity</h2>
+            <p>Humanity is the most important number on your sheet — and the hardest to protect. It begins at <strong>Empathy × 2</strong> and can be damaged by the moral weight of the work: retiring replicants, watching the city's suffering, moral compromise, and the slow erosion of what you tell yourself you are.</p>
+
+            <div class="holo-panel" data-label="// HUMANITY EFFECTS">
+                <ul style="margin: 0.5rem 0 0 1.25rem;">
+                    <li><strong>High Humanity (8–10):</strong> Fully present, emotionally intact — and therefore vulnerable. The city feels everything more sharply.</li>
+                    <li><strong>Mid Humanity (4–7):</strong> Functional detachment. You do the job. You try not to think about it too much.</li>
+                    <li><strong>Low Humanity (1–3):</strong> Burnt out, morally hollowed, or something worse. The work has gotten inside you.</li>
+                    <li><strong>Humanity 0:</strong> You are Broken — not dead, but unable to function as an operative without help. Something fundamental has given way.</li>
+                </ul>
+            </div>
+
+            <p>Humanity can be recovered — through rest, meaningful connection, or moments of genuine human contact — but the city is not generous with those.</p>
+
+            <div class="divider" data-label="// DATA CONTINUES //"></div>
+
+            <!-- STEP 7: GEAR -->
+            <h2 style="--i:7;"><span class="sec-num">07</span> Gear &amp; Equipment</h2>
+            <p>Every Blade Runner operative is issued standard LAPD equipment on deployment. Additional gear can be requisitioned, purchased on the street, or acquired through the city's grey markets.</p>
+
+            <h3>Standard Issue</h3>
+            <ul>
+                <li><strong>LAPD Blaster (PKD):</strong> The iconic sidearm — reliable, lethal at close range, and recognized everywhere. Bonus die for intimidation when visible.</li>
+                <li><strong>Badge &amp; ID:</strong> Your authority in a city that barely respects authority. Useful — sometimes.</li>
+                <li><strong>Spinner Access:</strong> Unit-assigned aerial vehicle. Requires Driving (Spinners) specialty for full performance.</li>
+                <li><strong>Voigt-Kampff Apparatus:</strong> For the Interrogation of suspected replicants. Measures involuntary micro-response. Cumbersome, but irreplaceable.</li>
+                <li><strong>ESPER Terminal:</strong> Photo analysis system. The machine sees what the eye can't. Slow but thorough.</li>
+                <li><strong>Comms Device &amp; Database Access:</strong> City records, LAPD files, Tyrell Registry (heavily redacted).</li>
+            </ul>
+
+            <h3>Gear Ratings</h3>
+            <p>All equipment has a <strong>Gear Bonus</strong> (0–3 bonus dice) and a <strong>Reliability</strong> value. When you Push a roll using gear, roll a reliability die — a 1 means the gear takes damage. Damaged gear adds fewer dice. Destroyed gear adds none.</p>
+
+            <div class="alert">
+                <span class="alert-label">⚠ BLACK MARKET NOTE</span>
+                Unlicensed weapons, Nexus-series contacts, and off-registry replicant parts are available through the right connections — but possession invites the kind of attention that ends careers and sometimes lives. The city runs on two sets of rules.
+            </div>
+
+            <div class="divider" data-label="// DATA CONTINUES //"></div>
+
+            <!-- STEP 8: RELATIONSHIPS -->
+            <h2 style="--i:8;"><span class="sec-num">08</span> Relationships &amp; Contacts</h2>
+            <p>No one survives this city alone. Establish at least <strong>three Relationships</strong> at character creation — these are the people who complicate your existence in ways both useful and dangerous.</p>
+
+            <div class="vk-block">
+                <span class="vk-label">// RELATIONSHIP CATEGORIES — SELECT OR CREATE</span>
+                <div class="vk-question">
+                    <span class="vk-q-num">01</span>
+                    <span><strong>Partner / Colleague:</strong> Someone in the unit you work closely with. Trust level? What do you owe each other?</span>
+                </div>
+                <div class="vk-question">
+                    <span class="vk-q-num">02</span>
+                    <span><strong>Informant / Contact:</strong> A street-level source. How did the relationship form? What keeps it going?</span>
+                </div>
+                <div class="vk-question">
+                    <span class="vk-q-num">03</span>
+                    <span><strong>Personal:</strong> Someone outside the work — a family member, a lover, a memory. The thing that reminds you there's something to lose.</span>
+                </div>
+                <div class="vk-question">
+                    <span class="vk-q-num">04</span>
+                    <span><strong>Antagonist:</strong> Someone who complicates your life. A rival in the unit. A target who got away. A person who knows something about you.</span>
+                </div>
+                <div class="vk-question">
+                    <span class="vk-q-num">05</span>
+                    <span><strong>Unknown:</strong> Optional. Someone you're connected to but don't fully understand. The Game Runner will use this.</span>
+                </div>
+            </div>
+
+            <div class="divider" data-label="// DATA CONTINUES //"></div>
+
+            <!-- STEP 9: THE VOIGT-KAMPFF -->
+            <h2 style="--i:9;"><span class="sec-num">09</span> The Question of What You Are</h2>
+            <p>All Blade Runner operatives — including Replicants — answer the following profile questions during character creation. These questions have no mechanical function. They exist to establish who your character believes themselves to be.</p>
+            <p>Answer them honestly. Or don't. The machine can always tell the difference. Can you?</p>
+
+            <div class="vk-block" style="border-left-color: var(--neon-pink);">
+                <span class="vk-label" style="color: var(--neon-pink); text-shadow: 0 0 6px rgba(255,63,142,0.4);">// VOIGT-KAMPFF PROFILE — OPERATIVE INTAKE</span>
+                <div class="vk-question">
+                    <span class="vk-q-num" style="color: var(--neon-pink);">VK1</span>
+                    <span>What is the first memory you are certain is real?</span>
+                </div>
+                <div class="vk-question">
+                    <span class="vk-q-num" style="color: var(--neon-pink);">VK2</span>
+                    <span>You've been assigned to retire a subject. You find them in a school. What do you do?</span>
+                </div>
+                <div class="vk-question">
+                    <span class="vk-q-num" style="color: var(--neon-pink);">VK3</span>
+                    <span>What do you do on your days off? Do you have days off?</span>
+                </div>
+                <div class="vk-question">
+                    <span class="vk-q-num" style="color: var(--neon-pink);">VK4</span>
+                    <span>If you discovered you were a Replicant, what would you do next?</span>
+                </div>
+                <div class="vk-question">
+                    <span class="vk-q-num" style="color: var(--neon-pink);">VK5</span>
+                    <span>What do you want? Not what the department wants. Not what the city needs. <em>You.</em></span>
+                </div>
+            </div>
+
+            <div class="divider" data-label="// DATA CONTINUES //"></div>
+
+            <!-- STEP 10: FINISHING -->
+            <h2 style="--i:10;"><span class="sec-num">10</span> Finishing the File</h2>
+
+            <h3>Personal Details</h3>
+            <ul>
+                <li><strong>Name &amp; Badge Number</strong></li>
+                <li><strong>Physical Description:</strong> The city changes people. What does yours look like after years in it?</li>
+                <li><strong>Residence:</strong> Where in the stack do you live? What does the view look like?</li>
+                <li><strong>Serial Number</strong> (Replicants only — if known)</li>
+                <li><strong>Incept Date</strong> (Replicants only — your birthday, your timer)</li>
+            </ul>
+
+            <h3>Your Case</h3>
+            <p>Work with the Game Runner to establish the central case you'll be investigating. The Blade Runner RPG is <strong>case-driven</strong> — each session is built around an investigation with a defined location, suspects, and escalating complications. Your starting case should connect to at least one of your Relationships.</p>
+
+            <h3>The Drive</h3>
+            <p>Every operative has something that keeps them walking through the rain. Name it — a person, a truth, a debt. The Game Runner will find ways to threaten it.</p>
+
+            <div class="holo-panel" data-label="// CASE FILE OPEN" style="border-color: var(--neon-teal-dim); margin-top: 1.75rem;">
+                <p style="margin: 0; font-size: 0.9rem; line-height: 1.9; color: var(--text);">The city does not care about your answers. It has never cared. There are four million people between the acid clouds and the flooded streets, and somewhere among them are things that look like people but were made in factories. Your job is to find them. What you do after — what you feel after — that's between you and whatever you decide you are.</p>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-neon"></div>
+            <div class="footer-inner">
+                <div class="footer-quote">
+                    "All those moments will be lost in time, like tears in rain."
+                    <cite>— Roy Batty, Nexus-6 Combat Model // 2019</cite>
+                </div>
+                <div class="footer-seal">
+                    L.A.P.D.<br>
+                    REP-DETECT<br>
+                    UNIT<br>
+                    2037
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    </body>
+</div>
+</html>

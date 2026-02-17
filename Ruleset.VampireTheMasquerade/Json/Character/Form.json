@@ -496,9 +496,6 @@
       ]
     },
     {
-      "type": "divider"
-    },
-    {
       "type": "group",
       "name": "attributes.social",
       "label": "Social",
@@ -546,9 +543,6 @@
           "default": 0
         }
       ]
-    },
-    {
-      "type": "divider"
     },
     {
       "type": "group",
@@ -600,147 +594,24 @@
       ]
     },
     {
+      "type": "divider"
+    },
+    {
+      "name": "skill.label",
+      "text": "Skills",
+      "type": "textblock"
+    },
+    {
+      "type": "divider"
+    },
+    {
       "type": "group",
-      "name": "skill",
-      "label": "Skills",
+      "name": "skill.physical",
+      "label": "Physical",
       "children": [
         {
           "type": "group",
-          "name": "",
-          "label": "Academics",
-          "children": [
-            {
-              "name": "skills.Academics",
-              "id": "skills.academics",
-              "label": "Academics",
-              "type": "radiogroup",
-              "count": 5,
-              "className": "form-control",
-              "validation": {
-                "required": true,
-                "min": 0,
-                "max": 5
-              },
-              "default": 0
-            },
-            {
-              "name": "specialties.Academics",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Architecture",
-                  "label": "Architecture"
-                },
-                {
-                  "value": "English Literature",
-                  "label": "English Literature"
-                },
-                {
-                  "value": "History (specific field or period)",
-                  "label": "History (specific field or period)"
-                },
-                {
-                  "value": "History of Art",
-                  "label": "History of Art"
-                },
-                {
-                  "value": "Journalism",
-                  "label": "Journalism"
-                },
-                {
-                  "value": "Philosophy",
-                  "label": "Philosophy"
-                },
-                {
-                  "value": "Research",
-                  "label": "Research"
-                },
-                {
-                  "value": "Teaching",
-                  "label": "Teaching"
-                },
-                {
-                  "value": "Theology",
-                  "label": "Theology"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "name": "",
-          "label": "Animal Ken",
-          "children": [
-            {
-              "name": "skills.Animal Ken",
-              "id": "skills.animal ken",
-              "label": "Animal Ken",
-              "type": "radiogroup",
-              "count": 5,
-              "className": "form-control",
-              "validation": {
-                "required": true,
-                "min": 0,
-                "max": 5
-              },
-              "default": 0
-            },
-            {
-              "name": "specialties.Animal Ken",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Attack Training",
-                  "label": "Attack Training"
-                },
-                {
-                  "value": "Cats",
-                  "label": "Cats"
-                },
-                {
-                  "value": "Dogs",
-                  "label": "Dogs"
-                },
-                {
-                  "value": "Falconry",
-                  "label": "Falconry"
-                },
-                {
-                  "value": "Horses",
-                  "label": "Horses"
-                },
-                {
-                  "value": "Pacification",
-                  "label": "Pacification"
-                },
-                {
-                  "value": "Rats",
-                  "label": "Rats"
-                },
-                {
-                  "value": "Snakes",
-                  "label": "Snakes"
-                },
-                {
-                  "value": "Stunt Training",
-                  "label": "Stunt Training"
-                },
-                {
-                  "value": "Wolves",
-                  "label": "Wolves"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "name": "",
+          "name": "Athletics.specialties",
           "label": "Athletics",
           "children": [
             {
@@ -758,115 +629,59 @@
               "default": 0
             },
             {
-              "name": "specialties.Athletics",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Acrobatics",
-                  "label": "Acrobatics"
-                },
-                {
-                  "value": "Archery",
-                  "label": "Archery"
-                },
-                {
-                  "value": "Climbing",
-                  "label": "Climbing"
-                },
-                {
-                  "value": "Endurance",
-                  "label": "Endurance"
-                },
-                {
-                  "value": "Jumping",
-                  "label": "Jumping"
-                },
-                {
-                  "value": "Parkour",
-                  "label": "Parkour"
-                },
-                {
-                  "value": "Swimming",
-                  "label": "Swimming"
-                },
-                {
-                  "value": "Throwing",
-                  "label": "Throwing"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "name": "",
-          "label": "Awareness",
-          "children": [
-            {
-              "name": "skills.Awareness",
-              "id": "skills.awareness",
-              "label": "Awareness",
-              "type": "radiogroup",
-              "count": 5,
-              "className": "form-control",
-              "validation": {
-                "required": true,
-                "min": 0,
-                "max": 5
-              },
-              "default": 0
+              "type": "linebreak"
             },
             {
-              "name": "specialties.Awareness",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Ambushes",
-                  "label": "Ambushes"
-                },
-                {
-                  "value": "Camouflage",
-                  "label": "Camouflage"
-                },
-                {
-                  "value": "Concealed Objects",
-                  "label": "Concealed Objects"
-                },
-                {
-                  "value": "Hearing",
-                  "label": "Hearing"
-                },
-                {
-                  "value": "Instincts",
-                  "label": "Instincts"
-                },
-                {
-                  "value": "Smell",
-                  "label": "Smell"
-                },
-                {
-                  "value": "Sight",
-                  "label": "Sight"
-                },
-                {
-                  "value": "Traps",
-                  "label": "Traps"
-                },
-                {
-                  "value": "Wilderness",
-                  "label": "Wilderness"
-                }
-              ]
+              "name": "Athletics.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Athletics",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Acrobatics",
+                    "label": "Acrobatics"
+                  },
+                  {
+                    "value": "Archery",
+                    "label": "Archery"
+                  },
+                  {
+                    "value": "Climbing",
+                    "label": "Climbing"
+                  },
+                  {
+                    "value": "Endurance",
+                    "label": "Endurance"
+                  },
+                  {
+                    "value": "Jumping",
+                    "label": "Jumping"
+                  },
+                  {
+                    "value": "Parkour",
+                    "label": "Parkour"
+                  },
+                  {
+                    "value": "Swimming",
+                    "label": "Swimming"
+                  },
+                  {
+                    "value": "Throwing",
+                    "label": "Throwing"
+                  }
+                ]
+              }
             }
           ]
         },
         {
           "type": "group",
-          "name": "",
+          "name": "Brawl.specialties",
           "label": "Brawl",
           "children": [
             {
@@ -884,54 +699,63 @@
               "default": 0
             },
             {
-              "name": "specialties.Brawl",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Animals",
-                  "label": "Animals"
-                },
-                {
-                  "value": "Armed Mortals",
-                  "label": "Armed Mortals"
-                },
-                {
-                  "value": "Bar Fights",
-                  "label": "Bar Fights"
-                },
-                {
-                  "value": "Grappling",
-                  "label": "Grappling"
-                },
-                {
-                  "value": "Kindred",
-                  "label": "Kindred"
-                },
-                {
-                  "value": "Sporting Combat",
-                  "label": "Sporting Combat"
-                },
-                {
-                  "value": "Unarmed Mortals",
-                  "label": "Unarmed Mortals"
-                },
-                {
-                  "value": "Werewolves",
-                  "label": "Werewolves"
-                },
-                {
-                  "value": "In Protean Beast Form",
-                  "label": "In Protean Beast Form"
-                }
-              ]
+              "type": "linebreak"
+            },
+            {
+              "name": "Brawl.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Brawl",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Animals",
+                    "label": "Animals"
+                  },
+                  {
+                    "value": "Armed Mortals",
+                    "label": "Armed Mortals"
+                  },
+                  {
+                    "value": "Bar Fights",
+                    "label": "Bar Fights"
+                  },
+                  {
+                    "value": "Grappling",
+                    "label": "Grappling"
+                  },
+                  {
+                    "value": "Kindred",
+                    "label": "Kindred"
+                  },
+                  {
+                    "value": "Sporting Combat",
+                    "label": "Sporting Combat"
+                  },
+                  {
+                    "value": "Unarmed Mortals",
+                    "label": "Unarmed Mortals"
+                  },
+                  {
+                    "value": "Werewolves",
+                    "label": "Werewolves"
+                  },
+                  {
+                    "value": "In Protean Beast Form",
+                    "label": "In Protean Beast Form"
+                  }
+                ]
+              }
             }
           ]
         },
         {
           "type": "group",
-          "name": "",
+          "name": "Craft.specialties",
           "label": "Craft",
           "children": [
             {
@@ -949,46 +773,55 @@
               "default": 0
             },
             {
-              "name": "specialties.Craft",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Carpentry",
-                  "label": "Carpentry"
-                },
-                {
-                  "value": "Carving",
-                  "label": "Carving"
-                },
-                {
-                  "value": "Design",
-                  "label": "Design"
-                },
-                {
-                  "value": "Painting",
-                  "label": "Painting"
-                },
-                {
-                  "value": "Sculpting",
-                  "label": "Sculpting"
-                },
-                {
-                  "value": "Sewing",
-                  "label": "Sewing"
-                },
-                {
-                  "value": "Weaponsmithing",
-                  "label": "Weaponsmithing"
-                }
-              ]
+              "type": "linebreak"
+            },
+            {
+              "name": "Craft.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Craft",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Carpentry",
+                    "label": "Carpentry"
+                  },
+                  {
+                    "value": "Carving",
+                    "label": "Carving"
+                  },
+                  {
+                    "value": "Design",
+                    "label": "Design"
+                  },
+                  {
+                    "value": "Painting",
+                    "label": "Painting"
+                  },
+                  {
+                    "value": "Sculpting",
+                    "label": "Sculpting"
+                  },
+                  {
+                    "value": "Sewing",
+                    "label": "Sewing"
+                  },
+                  {
+                    "value": "Weaponsmithing",
+                    "label": "Weaponsmithing"
+                  }
+                ]
+              }
             }
           ]
         },
         {
           "type": "group",
-          "name": "",
+          "name": "Drive.specialties",
           "label": "Drive",
           "children": [
             {
@@ -1006,176 +839,59 @@
               "default": 0
             },
             {
-              "name": "specialties.Drive",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "All-Terrain Vehicles",
-                  "label": "All-Terrain Vehicles"
-                },
-                {
-                  "value": "Evasion",
-                  "label": "Evasion"
-                },
-                {
-                  "value": "Motorcycles",
-                  "label": "Motorcycles"
-                },
-                {
-                  "value": "Street Racing",
-                  "label": "Street Racing"
-                },
-                {
-                  "value": "Stunts",
-                  "label": "Stunts"
-                },
-                {
-                  "value": "Tailing",
-                  "label": "Tailing"
-                },
-                {
-                  "value": "Trucks",
-                  "label": "Trucks"
-                },
-                {
-                  "value": "Vintage Models",
-                  "label": "Vintage Models"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "name": "",
-          "label": "Etiquette",
-          "children": [
-            {
-              "name": "skills.Etiquette",
-              "id": "skills.etiquette",
-              "label": "Etiquette",
-              "type": "radiogroup",
-              "count": 5,
-              "className": "form-control",
-              "validation": {
-                "required": true,
-                "min": 0,
-                "max": 5
-              },
-              "default": 0
+              "type": "linebreak"
             },
             {
-              "name": "specialties.Etiquette",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Anarch",
-                  "label": "Anarch"
-                },
-                {
-                  "value": "Camarilla",
-                  "label": "Camarilla"
-                },
-                {
-                  "value": "Celebrities",
-                  "label": "Celebrities"
-                },
-                {
-                  "value": "Corporate",
-                  "label": "Corporate"
-                },
-                {
-                  "value": "Elysium",
-                  "label": "Elysium"
-                },
-                {
-                  "value": "Feudal",
-                  "label": "Feudal"
-                },
-                {
-                  "value": "One-Percenter",
-                  "label": "One-Percenter"
-                },
-                {
-                  "value": "Secret Society",
-                  "label": "Secret Society"
-                }
-              ]
+              "name": "Drive.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Drive",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "All-Terrain Vehicles",
+                    "label": "All-Terrain Vehicles"
+                  },
+                  {
+                    "value": "Evasion",
+                    "label": "Evasion"
+                  },
+                  {
+                    "value": "Motorcycles",
+                    "label": "Motorcycles"
+                  },
+                  {
+                    "value": "Street Racing",
+                    "label": "Street Racing"
+                  },
+                  {
+                    "value": "Stunts",
+                    "label": "Stunts"
+                  },
+                  {
+                    "value": "Tailing",
+                    "label": "Tailing"
+                  },
+                  {
+                    "value": "Trucks",
+                    "label": "Trucks"
+                  },
+                  {
+                    "value": "Vintage Models",
+                    "label": "Vintage Models"
+                  }
+                ]
+              }
             }
           ]
         },
         {
           "type": "group",
-          "name": "",
-          "label": "Finance",
-          "children": [
-            {
-              "name": "skills.Finance",
-              "id": "skills.finance",
-              "label": "Finance",
-              "type": "radiogroup",
-              "count": 5,
-              "className": "form-control",
-              "validation": {
-                "required": true,
-                "min": 0,
-                "max": 5
-              },
-              "default": 0
-            },
-            {
-              "name": "specialties.Finance",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Appraisal",
-                  "label": "Appraisal"
-                },
-                {
-                  "value": "Banking",
-                  "label": "Banking"
-                },
-                {
-                  "value": "Black Markets",
-                  "label": "Black Markets"
-                },
-                {
-                  "value": "Corporate Finance",
-                  "label": "Corporate Finance"
-                },
-                {
-                  "value": "Currency Manipulation",
-                  "label": "Currency Manipulation"
-                },
-                {
-                  "value": "Fine Art",
-                  "label": "Fine Art"
-                },
-                {
-                  "value": "Forensic Accounting",
-                  "label": "Forensic Accounting"
-                },
-                {
-                  "value": "Money Laundering",
-                  "label": "Money Laundering"
-                },
-                {
-                  "value": "Stock Market",
-                  "label": "Stock Market"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "name": "",
+          "name": "Firearms.specialties",
           "label": "Firearms",
           "children": [
             {
@@ -1193,225 +909,55 @@
               "default": 0
             },
             {
-              "name": "specialties.Firearms",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Crossbows",
-                  "label": "Crossbows"
-                },
-                {
-                  "value": "Gun-Dealing",
-                  "label": "Gun-Dealing"
-                },
-                {
-                  "value": "Gunsmithing",
-                  "label": "Gunsmithing"
-                },
-                {
-                  "value": "Handloading Ammunition",
-                  "label": "Handloading Ammunition"
-                },
-                {
-                  "value": "Quick-Draw",
-                  "label": "Quick-Draw"
-                },
-                {
-                  "value": "Sniper",
-                  "label": "Sniper"
-                },
-                {
-                  "value": "Trick Shooting",
-                  "label": "Trick Shooting"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "name": "",
-          "label": "Insight",
-          "children": [
-            {
-              "name": "skills.Insight",
-              "id": "skills.insight",
-              "label": "Insight",
-              "type": "radiogroup",
-              "count": 5,
-              "className": "form-control",
-              "validation": {
-                "required": true,
-                "min": 0,
-                "max": 5
-              },
-              "default": 0
+              "type": "linebreak"
             },
             {
-              "name": "specialties.Insight",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Ambitions",
-                  "label": "Ambitions"
-                },
-                {
-                  "value": "Desires",
-                  "label": "Desires"
-                },
-                {
-                  "value": "Detect Lies",
-                  "label": "Detect Lies"
-                },
-                {
-                  "value": "Emotions",
-                  "label": "Emotions"
-                },
-                {
-                  "value": "Empathy",
-                  "label": "Empathy"
-                },
-                {
-                  "value": "Interrogation",
-                  "label": "Interrogation"
-                },
-                {
-                  "value": "Motives",
-                  "label": "Motives"
-                },
-                {
-                  "value": "Phobias",
-                  "label": "Phobias"
-                },
-                {
-                  "value": "Vices",
-                  "label": "Vices"
-                }
-              ]
+              "name": "Firearms.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Firearms",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Crossbows",
+                    "label": "Crossbows"
+                  },
+                  {
+                    "value": "Gun-Dealing",
+                    "label": "Gun-Dealing"
+                  },
+                  {
+                    "value": "Gunsmithing",
+                    "label": "Gunsmithing"
+                  },
+                  {
+                    "value": "Handloading Ammunition",
+                    "label": "Handloading Ammunition"
+                  },
+                  {
+                    "value": "Quick-Draw",
+                    "label": "Quick-Draw"
+                  },
+                  {
+                    "value": "Sniper",
+                    "label": "Sniper"
+                  },
+                  {
+                    "value": "Trick Shooting",
+                    "label": "Trick Shooting"
+                  }
+                ]
+              }
             }
           ]
         },
         {
           "type": "group",
-          "name": "",
-          "label": "Intimidation",
-          "children": [
-            {
-              "name": "skills.Intimidation",
-              "id": "skills.intimidation",
-              "label": "Intimidation",
-              "type": "radiogroup",
-              "count": 5,
-              "className": "form-control",
-              "validation": {
-                "required": true,
-                "min": 0,
-                "max": 5
-              },
-              "default": 0
-            },
-            {
-              "name": "specialties.Intimidation",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Extortion",
-                  "label": "Extortion"
-                },
-                {
-                  "value": "Insults",
-                  "label": "Insults"
-                },
-                {
-                  "value": "Interrogation",
-                  "label": "Interrogation"
-                },
-                {
-                  "value": "Physical Coercion",
-                  "label": "Physical Coercion"
-                },
-                {
-                  "value": "Staredowns",
-                  "label": "Staredowns"
-                },
-                {
-                  "value": "Stickups",
-                  "label": "Stickups"
-                },
-                {
-                  "value": "Veiled Threats",
-                  "label": "Veiled Threats"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "name": "",
-          "label": "Investigation",
-          "children": [
-            {
-              "name": "skills.Investigation",
-              "id": "skills.investigation",
-              "label": "Investigation",
-              "type": "radiogroup",
-              "count": 5,
-              "className": "form-control",
-              "validation": {
-                "required": true,
-                "min": 0,
-                "max": 5
-              },
-              "default": 0
-            },
-            {
-              "name": "specialties.Investigation",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Criminology",
-                  "label": "Criminology"
-                },
-                {
-                  "value": "Deduction",
-                  "label": "Deduction"
-                },
-                {
-                  "value": "Forensics",
-                  "label": "Forensics"
-                },
-                {
-                  "value": "Missing Persons",
-                  "label": "Missing Persons"
-                },
-                {
-                  "value": "Murder",
-                  "label": "Murder"
-                },
-                {
-                  "value": "Paranormal Mysteries",
-                  "label": "Paranormal Mysteries"
-                },
-                {
-                  "value": "Traffic Analysis",
-                  "label": "Traffic Analysis"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "name": "",
+          "name": "Larceny.specialties",
           "label": "Larceny",
           "children": [
             {
@@ -1429,164 +975,59 @@
               "default": 0
             },
             {
-              "name": "specialties.Larceny",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Alarms",
-                  "label": "Alarms"
-                },
-                {
-                  "value": "Forgery",
-                  "label": "Forgery"
-                },
-                {
-                  "value": "Grand Theft Auto",
-                  "label": "Grand Theft Auto"
-                },
-                {
-                  "value": "Housebreaking",
-                  "label": "Housebreaking"
-                },
-                {
-                  "value": "Lockpicking",
-                  "label": "Lockpicking"
-                },
-                {
-                  "value": "Pickpocket",
-                  "label": "Pickpocket"
-                },
-                {
-                  "value": "Safecracking",
-                  "label": "Safecracking"
-                },
-                {
-                  "value": "Security Analysis",
-                  "label": "Security Analysis"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "name": "",
-          "label": "Leadership",
-          "children": [
-            {
-              "name": "skills.Leadership",
-              "id": "skills.leadership",
-              "label": "Leadership",
-              "type": "radiogroup",
-              "count": 5,
-              "className": "form-control",
-              "validation": {
-                "required": true,
-                "min": 0,
-                "max": 5
-              },
-              "default": 0
+              "type": "linebreak"
             },
             {
-              "name": "specialties.Leadership",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Command",
-                  "label": "Command"
-                },
-                {
-                  "value": "Inspiration",
-                  "label": "Inspiration"
-                },
-                {
-                  "value": "Oratory",
-                  "label": "Oratory"
-                },
-                {
-                  "value": "Praxis",
-                  "label": "Praxis"
-                },
-                {
-                  "value": "Team Dynamics",
-                  "label": "Team Dynamics"
-                },
-                {
-                  "value": "War Pack",
-                  "label": "War Pack"
-                }
-              ]
+              "name": "Larceny.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Larceny",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Alarms",
+                    "label": "Alarms"
+                  },
+                  {
+                    "value": "Forgery",
+                    "label": "Forgery"
+                  },
+                  {
+                    "value": "Grand Theft Auto",
+                    "label": "Grand Theft Auto"
+                  },
+                  {
+                    "value": "Housebreaking",
+                    "label": "Housebreaking"
+                  },
+                  {
+                    "value": "Lockpicking",
+                    "label": "Lockpicking"
+                  },
+                  {
+                    "value": "Pickpocket",
+                    "label": "Pickpocket"
+                  },
+                  {
+                    "value": "Safecracking",
+                    "label": "Safecracking"
+                  },
+                  {
+                    "value": "Security Analysis",
+                    "label": "Security Analysis"
+                  }
+                ]
+              }
             }
           ]
         },
         {
           "type": "group",
-          "name": "",
-          "label": "Medicine",
-          "children": [
-            {
-              "name": "skills.Medicine",
-              "id": "skills.medicine",
-              "label": "Medicine",
-              "type": "radiogroup",
-              "count": 5,
-              "className": "form-control",
-              "validation": {
-                "required": true,
-                "min": 0,
-                "max": 5
-              },
-              "default": 0
-            },
-            {
-              "name": "specialties.Medicine",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "First Aid",
-                  "label": "First Aid"
-                },
-                {
-                  "value": "Haematology",
-                  "label": "Haematology"
-                },
-                {
-                  "value": "Pathology",
-                  "label": "Pathology"
-                },
-                {
-                  "value": "Pharmacy",
-                  "label": "Pharmacy"
-                },
-                {
-                  "value": "Phlebotomy",
-                  "label": "Phlebotomy"
-                },
-                {
-                  "value": "Surgery",
-                  "label": "Surgery"
-                },
-                {
-                  "value": "Trauma Care",
-                  "label": "Trauma Care"
-                },
-                {
-                  "value": "Veterinary",
-                  "label": "Veterinary"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "name": "",
+          "name": "Melee.specialties",
           "label": "Melee",
           "children": [
             {
@@ -1604,399 +1045,67 @@
               "default": 0
             },
             {
-              "name": "specialties.Melee",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Axes",
-                  "label": "Axes"
-                },
-                {
-                  "value": "Chains",
-                  "label": "Chains"
-                },
-                {
-                  "value": "Clubs",
-                  "label": "Clubs"
-                },
-                {
-                  "value": "Fencing",
-                  "label": "Fencing"
-                },
-                {
-                  "value": "Disarming Blows",
-                  "label": "Disarming Blows"
-                },
-                {
-                  "value": "Garrotes",
-                  "label": "Garrotes"
-                },
-                {
-                  "value": "Improvised Weapons",
-                  "label": "Improvised Weapons"
-                },
-                {
-                  "value": "Knives",
-                  "label": "Knives"
-                },
-                {
-                  "value": "Stakes",
-                  "label": "Stakes"
-                },
-                {
-                  "value": "Swords",
-                  "label": "Swords"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "name": "",
-          "label": "Occult",
-          "children": [
-            {
-              "name": "skills.Occult",
-              "id": "skills.occult",
-              "label": "Occult",
-              "type": "radiogroup",
-              "count": 5,
-              "className": "form-control",
-              "validation": {
-                "required": true,
-                "min": 0,
-                "max": 5
-              },
-              "default": 0
+              "type": "linebreak"
             },
             {
-              "name": "specialties.Occult",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Alchemy",
-                  "label": "Alchemy"
-                },
-                {
-                  "value": "Blood Magic",
-                  "label": "Blood Magic"
-                },
-                {
-                  "value": "Faeries",
-                  "label": "Faeries"
-                },
-                {
-                  "value": "Ghosts",
-                  "label": "Ghosts"
-                },
-                {
-                  "value": "Grimoires",
-                  "label": "Grimoires"
-                },
-                {
-                  "value": "Infernalism",
-                  "label": "Infernalism"
-                },
-                {
-                  "value": "Magic",
-                  "label": "Magic"
-                },
-                {
-                  "value": "Necromancy",
-                  "label": "Necromancy"
-                },
-                {
-                  "value": "Noddism",
-                  "label": "Noddism"
-                },
-                {
-                  "value": "Parapsychology",
-                  "label": "Parapsychology"
-                },
-                {
-                  "value": "Voudun",
-                  "label": "Voudun"
-                },
-                {
-                  "value": "Werewolves",
-                  "label": "Werewolves"
-                }
-              ]
+              "name": "Melee.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Melee",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Axes",
+                    "label": "Axes"
+                  },
+                  {
+                    "value": "Chains",
+                    "label": "Chains"
+                  },
+                  {
+                    "value": "Clubs",
+                    "label": "Clubs"
+                  },
+                  {
+                    "value": "Fencing",
+                    "label": "Fencing"
+                  },
+                  {
+                    "value": "Disarming Blows",
+                    "label": "Disarming Blows"
+                  },
+                  {
+                    "value": "Garrotes",
+                    "label": "Garrotes"
+                  },
+                  {
+                    "value": "Improvised Weapons",
+                    "label": "Improvised Weapons"
+                  },
+                  {
+                    "value": "Knives",
+                    "label": "Knives"
+                  },
+                  {
+                    "value": "Stakes",
+                    "label": "Stakes"
+                  },
+                  {
+                    "value": "Swords",
+                    "label": "Swords"
+                  }
+                ]
+              }
             }
           ]
         },
         {
           "type": "group",
-          "name": "",
-          "label": "Performance",
-          "children": [
-            {
-              "name": "skills.Performance",
-              "id": "skills.performance",
-              "label": "Performance",
-              "type": "radiogroup",
-              "count": 5,
-              "className": "form-control",
-              "validation": {
-                "required": true,
-                "min": 0,
-                "max": 5
-              },
-              "default": 0
-            },
-            {
-              "name": "specialties.Performance",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Comedy",
-                  "label": "Comedy"
-                },
-                {
-                  "value": "Dance",
-                  "label": "Dance"
-                },
-                {
-                  "value": "Drama",
-                  "label": "Drama"
-                },
-                {
-                  "value": "Drums",
-                  "label": "Drums"
-                },
-                {
-                  "value": "Guitar",
-                  "label": "Guitar"
-                },
-                {
-                  "value": "Keyboards",
-                  "label": "Keyboards"
-                },
-                {
-                  "value": "Poetry",
-                  "label": "Poetry"
-                },
-                {
-                  "value": "Public Speaking",
-                  "label": "Public Speaking"
-                },
-                {
-                  "value": "Rap",
-                  "label": "Rap"
-                },
-                {
-                  "value": "Singing",
-                  "label": "Singing"
-                },
-                {
-                  "value": "Violin",
-                  "label": "Violin"
-                },
-                {
-                  "value": "Wind Instruments",
-                  "label": "Wind Instruments"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "name": "",
-          "label": "Persuasion",
-          "children": [
-            {
-              "name": "skills.Persuasion",
-              "id": "skills.persuasion",
-              "label": "Persuasion",
-              "type": "radiogroup",
-              "count": 5,
-              "className": "form-control",
-              "validation": {
-                "required": true,
-                "min": 0,
-                "max": 5
-              },
-              "default": 0
-            },
-            {
-              "name": "specialties.Persuasion",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Bargaining",
-                  "label": "Bargaining"
-                },
-                {
-                  "value": "Fast Talk",
-                  "label": "Fast Talk"
-                },
-                {
-                  "value": "Gaslighting",
-                  "label": "Gaslighting"
-                },
-                {
-                  "value": "Interrogation",
-                  "label": "Interrogation"
-                },
-                {
-                  "value": "Legal Argument",
-                  "label": "Legal Argument"
-                },
-                {
-                  "value": "Negotiation",
-                  "label": "Negotiation"
-                },
-                {
-                  "value": "Rhetoric",
-                  "label": "Rhetoric"
-                },
-                {
-                  "value": "Victims",
-                  "label": "Victims"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "name": "",
-          "label": "Politics",
-          "children": [
-            {
-              "name": "skills.Politics",
-              "id": "skills.politics",
-              "label": "Politics",
-              "type": "radiogroup",
-              "count": 5,
-              "className": "form-control",
-              "validation": {
-                "required": true,
-                "min": 0,
-                "max": 5
-              },
-              "default": 0
-            },
-            {
-              "name": "specialties.Politics",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Anarchs",
-                  "label": "Anarchs"
-                },
-                {
-                  "value": "Camarilla",
-                  "label": "Camarilla"
-                },
-                {
-                  "value": "City Government",
-                  "label": "City Government"
-                },
-                {
-                  "value": "Clan (specific)",
-                  "label": "Clan (specific)"
-                },
-                {
-                  "value": "Diplomacy",
-                  "label": "Diplomacy"
-                },
-                {
-                  "value": "Media",
-                  "label": "Media"
-                },
-                {
-                  "value": "National Politics",
-                  "label": "National Politics"
-                },
-                {
-                  "value": "State-Provincial Politics",
-                  "label": "State-Provincial Politics"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "name": "",
-          "label": "Science",
-          "children": [
-            {
-              "name": "skills.Science",
-              "id": "skills.science",
-              "label": "Science",
-              "type": "radiogroup",
-              "count": 5,
-              "className": "form-control",
-              "validation": {
-                "required": true,
-                "min": 0,
-                "max": 5
-              },
-              "default": 0
-            },
-            {
-              "name": "specialties.Science",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Astronomy",
-                  "label": "Astronomy"
-                },
-                {
-                  "value": "Biology",
-                  "label": "Biology"
-                },
-                {
-                  "value": "Chemistry",
-                  "label": "Chemistry"
-                },
-                {
-                  "value": "Demolitions",
-                  "label": "Demolitions"
-                },
-                {
-                  "value": "Engineering",
-                  "label": "Engineering"
-                },
-                {
-                  "value": "Genetics",
-                  "label": "Genetics"
-                },
-                {
-                  "value": "Geology",
-                  "label": "Geology"
-                },
-                {
-                  "value": "Mathematics",
-                  "label": "Mathematics"
-                },
-                {
-                  "value": "Physics",
-                  "label": "Physics"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "name": "",
+          "name": "Stealth.specialties",
           "label": "Stealth",
           "children": [
             {
@@ -2014,180 +1123,63 @@
               "default": 0
             },
             {
-              "name": "specialties.Stealth",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Ambushes",
-                  "label": "Ambushes"
-                },
-                {
-                  "value": "Crowds",
-                  "label": "Crowds"
-                },
-                {
-                  "value": "Disguise",
-                  "label": "Disguise"
-                },
-                {
-                  "value": "Hiding",
-                  "label": "Hiding"
-                },
-                {
-                  "value": "Kindred",
-                  "label": "Kindred"
-                },
-                {
-                  "value": "Shadowing",
-                  "label": "Shadowing"
-                },
-                {
-                  "value": "Silent Movement",
-                  "label": "Silent Movement"
-                },
-                {
-                  "value": "Urban",
-                  "label": "Urban"
-                },
-                {
-                  "value": "Wilderness",
-                  "label": "Wilderness"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "name": "",
-          "label": "Streetwise",
-          "children": [
-            {
-              "name": "skills.Streetwise",
-              "id": "skills.streetwise",
-              "label": "Streetwise",
-              "type": "radiogroup",
-              "count": 5,
-              "className": "form-control",
-              "validation": {
-                "required": true,
-                "min": 0,
-                "max": 5
-              },
-              "default": 0
+              "type": "linebreak"
             },
             {
-              "name": "specialties.Streetwise",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Arms Dealing",
-                  "label": "Arms Dealing"
-                },
-                {
-                  "value": "Black Market",
-                  "label": "Black Market"
-                },
-                {
-                  "value": "Bribery",
-                  "label": "Bribery"
-                },
-                {
-                  "value": "Drugs",
-                  "label": "Drugs"
-                },
-                {
-                  "value": "Fence Stolen Goods",
-                  "label": "Fence Stolen Goods"
-                },
-                {
-                  "value": "Gangs",
-                  "label": "Gangs"
-                },
-                {
-                  "value": "Graffiti",
-                  "label": "Graffiti"
-                },
-                {
-                  "value": "Personal Rep",
-                  "label": "Personal Rep"
-                },
-                {
-                  "value": "Sex Trade",
-                  "label": "Sex Trade"
-                },
-                {
-                  "value": "Urban Survival",
-                  "label": "Urban Survival"
-                }
-              ]
+              "name": "Stealth.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Stealth",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Ambushes",
+                    "label": "Ambushes"
+                  },
+                  {
+                    "value": "Crowds",
+                    "label": "Crowds"
+                  },
+                  {
+                    "value": "Disguise",
+                    "label": "Disguise"
+                  },
+                  {
+                    "value": "Hiding",
+                    "label": "Hiding"
+                  },
+                  {
+                    "value": "Kindred",
+                    "label": "Kindred"
+                  },
+                  {
+                    "value": "Shadowing",
+                    "label": "Shadowing"
+                  },
+                  {
+                    "value": "Silent Movement",
+                    "label": "Silent Movement"
+                  },
+                  {
+                    "value": "Urban",
+                    "label": "Urban"
+                  },
+                  {
+                    "value": "Wilderness",
+                    "label": "Wilderness"
+                  }
+                ]
+              }
             }
           ]
         },
         {
           "type": "group",
-          "name": "",
-          "label": "Subterfuge",
-          "children": [
-            {
-              "name": "skills.Subterfuge",
-              "id": "skills.subterfuge",
-              "label": "Subterfuge",
-              "type": "radiogroup",
-              "count": 5,
-              "className": "form-control",
-              "validation": {
-                "required": true,
-                "min": 0,
-                "max": 5
-              },
-              "default": 0
-            },
-            {
-              "name": "specialties.Subterfuge",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Bluff",
-                  "label": "Bluff"
-                },
-                {
-                  "value": "Coverups",
-                  "label": "Coverups"
-                },
-                {
-                  "value": "Feign Mortality",
-                  "label": "Feign Mortality"
-                },
-                {
-                  "value": "Impeccable Lies",
-                  "label": "Impeccable Lies"
-                },
-                {
-                  "value": "Innocence",
-                  "label": "Innocence"
-                },
-                {
-                  "value": "The Long Con",
-                  "label": "The Long Con"
-                },
-                {
-                  "value": "Seduction",
-                  "label": "Seduction"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "name": "",
+          "name": "Survival.specialties",
           "label": "Survival",
           "children": [
             {
@@ -2205,50 +1197,1311 @@
               "default": 0
             },
             {
-              "name": "specialties.Survival",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Desert",
-                  "label": "Desert"
-                },
-                {
-                  "value": "Hunting",
-                  "label": "Hunting"
-                },
-                {
-                  "value": "Jungle",
-                  "label": "Jungle"
-                },
-                {
-                  "value": "Tracking",
-                  "label": "Tracking"
-                },
-                {
-                  "value": "Traps",
-                  "label": "Traps"
-                },
-                {
-                  "value": "Shelters",
-                  "label": "Shelters"
-                },
-                {
-                  "value": "Urban Exploration",
-                  "label": "Urban Exploration"
-                },
-                {
-                  "value": "Woodlands",
-                  "label": "Woodlands"
-                }
-              ]
+              "type": "linebreak"
+            },
+            {
+              "name": "Survival.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Survival",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Desert",
+                    "label": "Desert"
+                  },
+                  {
+                    "value": "Hunting",
+                    "label": "Hunting"
+                  },
+                  {
+                    "value": "Jungle",
+                    "label": "Jungle"
+                  },
+                  {
+                    "value": "Tracking",
+                    "label": "Tracking"
+                  },
+                  {
+                    "value": "Traps",
+                    "label": "Traps"
+                  },
+                  {
+                    "value": "Shelters",
+                    "label": "Shelters"
+                  },
+                  {
+                    "value": "Urban Exploration",
+                    "label": "Urban Exploration"
+                  },
+                  {
+                    "value": "Woodlands",
+                    "label": "Woodlands"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skill.social",
+      "label": "Social",
+      "children": [
+        {
+          "type": "group",
+          "name": "Animal Ken.specialties",
+          "label": "Animal Ken",
+          "children": [
+            {
+              "name": "skills.Animal Ken",
+              "id": "skills.animal ken",
+              "label": "Animal Ken",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "Animal Ken.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Animal Ken",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Attack Training",
+                    "label": "Attack Training"
+                  },
+                  {
+                    "value": "Cats",
+                    "label": "Cats"
+                  },
+                  {
+                    "value": "Dogs",
+                    "label": "Dogs"
+                  },
+                  {
+                    "value": "Falconry",
+                    "label": "Falconry"
+                  },
+                  {
+                    "value": "Horses",
+                    "label": "Horses"
+                  },
+                  {
+                    "value": "Pacification",
+                    "label": "Pacification"
+                  },
+                  {
+                    "value": "Rats",
+                    "label": "Rats"
+                  },
+                  {
+                    "value": "Snakes",
+                    "label": "Snakes"
+                  },
+                  {
+                    "value": "Stunt Training",
+                    "label": "Stunt Training"
+                  },
+                  {
+                    "value": "Wolves",
+                    "label": "Wolves"
+                  }
+                ]
+              }
             }
           ]
         },
         {
           "type": "group",
-          "name": "",
+          "name": "Etiquette.specialties",
+          "label": "Etiquette",
+          "children": [
+            {
+              "name": "skills.Etiquette",
+              "id": "skills.etiquette",
+              "label": "Etiquette",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "Etiquette.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Etiquette",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Anarch",
+                    "label": "Anarch"
+                  },
+                  {
+                    "value": "Camarilla",
+                    "label": "Camarilla"
+                  },
+                  {
+                    "value": "Celebrities",
+                    "label": "Celebrities"
+                  },
+                  {
+                    "value": "Corporate",
+                    "label": "Corporate"
+                  },
+                  {
+                    "value": "Elysium",
+                    "label": "Elysium"
+                  },
+                  {
+                    "value": "Feudal",
+                    "label": "Feudal"
+                  },
+                  {
+                    "value": "One-Percenter",
+                    "label": "One-Percenter"
+                  },
+                  {
+                    "value": "Secret Society",
+                    "label": "Secret Society"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Insight.specialties",
+          "label": "Insight",
+          "children": [
+            {
+              "name": "skills.Insight",
+              "id": "skills.insight",
+              "label": "Insight",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "Insight.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Insight",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Ambitions",
+                    "label": "Ambitions"
+                  },
+                  {
+                    "value": "Desires",
+                    "label": "Desires"
+                  },
+                  {
+                    "value": "Detect Lies",
+                    "label": "Detect Lies"
+                  },
+                  {
+                    "value": "Emotions",
+                    "label": "Emotions"
+                  },
+                  {
+                    "value": "Empathy",
+                    "label": "Empathy"
+                  },
+                  {
+                    "value": "Interrogation",
+                    "label": "Interrogation"
+                  },
+                  {
+                    "value": "Motives",
+                    "label": "Motives"
+                  },
+                  {
+                    "value": "Phobias",
+                    "label": "Phobias"
+                  },
+                  {
+                    "value": "Vices",
+                    "label": "Vices"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Intimidation.specialties",
+          "label": "Intimidation",
+          "children": [
+            {
+              "name": "skills.Intimidation",
+              "id": "skills.intimidation",
+              "label": "Intimidation",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "Intimidation.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Intimidation",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Extortion",
+                    "label": "Extortion"
+                  },
+                  {
+                    "value": "Insults",
+                    "label": "Insults"
+                  },
+                  {
+                    "value": "Interrogation",
+                    "label": "Interrogation"
+                  },
+                  {
+                    "value": "Physical Coercion",
+                    "label": "Physical Coercion"
+                  },
+                  {
+                    "value": "Staredowns",
+                    "label": "Staredowns"
+                  },
+                  {
+                    "value": "Stickups",
+                    "label": "Stickups"
+                  },
+                  {
+                    "value": "Veiled Threats",
+                    "label": "Veiled Threats"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Leadership.specialties",
+          "label": "Leadership",
+          "children": [
+            {
+              "name": "skills.Leadership",
+              "id": "skills.leadership",
+              "label": "Leadership",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "Leadership.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Leadership",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Command",
+                    "label": "Command"
+                  },
+                  {
+                    "value": "Inspiration",
+                    "label": "Inspiration"
+                  },
+                  {
+                    "value": "Oratory",
+                    "label": "Oratory"
+                  },
+                  {
+                    "value": "Praxis",
+                    "label": "Praxis"
+                  },
+                  {
+                    "value": "Team Dynamics",
+                    "label": "Team Dynamics"
+                  },
+                  {
+                    "value": "War Pack",
+                    "label": "War Pack"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Performance.specialties",
+          "label": "Performance",
+          "children": [
+            {
+              "name": "skills.Performance",
+              "id": "skills.performance",
+              "label": "Performance",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "Performance.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Performance",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Comedy",
+                    "label": "Comedy"
+                  },
+                  {
+                    "value": "Dance",
+                    "label": "Dance"
+                  },
+                  {
+                    "value": "Drama",
+                    "label": "Drama"
+                  },
+                  {
+                    "value": "Drums",
+                    "label": "Drums"
+                  },
+                  {
+                    "value": "Guitar",
+                    "label": "Guitar"
+                  },
+                  {
+                    "value": "Keyboards",
+                    "label": "Keyboards"
+                  },
+                  {
+                    "value": "Poetry",
+                    "label": "Poetry"
+                  },
+                  {
+                    "value": "Public Speaking",
+                    "label": "Public Speaking"
+                  },
+                  {
+                    "value": "Rap",
+                    "label": "Rap"
+                  },
+                  {
+                    "value": "Singing",
+                    "label": "Singing"
+                  },
+                  {
+                    "value": "Violin",
+                    "label": "Violin"
+                  },
+                  {
+                    "value": "Wind Instruments",
+                    "label": "Wind Instruments"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Persuasion.specialties",
+          "label": "Persuasion",
+          "children": [
+            {
+              "name": "skills.Persuasion",
+              "id": "skills.persuasion",
+              "label": "Persuasion",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "Persuasion.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Persuasion",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Bargaining",
+                    "label": "Bargaining"
+                  },
+                  {
+                    "value": "Fast Talk",
+                    "label": "Fast Talk"
+                  },
+                  {
+                    "value": "Gaslighting",
+                    "label": "Gaslighting"
+                  },
+                  {
+                    "value": "Interrogation",
+                    "label": "Interrogation"
+                  },
+                  {
+                    "value": "Legal Argument",
+                    "label": "Legal Argument"
+                  },
+                  {
+                    "value": "Negotiation",
+                    "label": "Negotiation"
+                  },
+                  {
+                    "value": "Rhetoric",
+                    "label": "Rhetoric"
+                  },
+                  {
+                    "value": "Victims",
+                    "label": "Victims"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Streetwise.specialties",
+          "label": "Streetwise",
+          "children": [
+            {
+              "name": "skills.Streetwise",
+              "id": "skills.streetwise",
+              "label": "Streetwise",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "Streetwise.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Streetwise",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Arms Dealing",
+                    "label": "Arms Dealing"
+                  },
+                  {
+                    "value": "Black Market",
+                    "label": "Black Market"
+                  },
+                  {
+                    "value": "Bribery",
+                    "label": "Bribery"
+                  },
+                  {
+                    "value": "Drugs",
+                    "label": "Drugs"
+                  },
+                  {
+                    "value": "Fence Stolen Goods",
+                    "label": "Fence Stolen Goods"
+                  },
+                  {
+                    "value": "Gangs",
+                    "label": "Gangs"
+                  },
+                  {
+                    "value": "Graffiti",
+                    "label": "Graffiti"
+                  },
+                  {
+                    "value": "Personal Rep",
+                    "label": "Personal Rep"
+                  },
+                  {
+                    "value": "Sex Trade",
+                    "label": "Sex Trade"
+                  },
+                  {
+                    "value": "Urban Survival",
+                    "label": "Urban Survival"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Subterfuge.specialties",
+          "label": "Subterfuge",
+          "children": [
+            {
+              "name": "skills.Subterfuge",
+              "id": "skills.subterfuge",
+              "label": "Subterfuge",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "Subterfuge.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Subterfuge",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Bluff",
+                    "label": "Bluff"
+                  },
+                  {
+                    "value": "Coverups",
+                    "label": "Coverups"
+                  },
+                  {
+                    "value": "Feign Mortality",
+                    "label": "Feign Mortality"
+                  },
+                  {
+                    "value": "Impeccable Lies",
+                    "label": "Impeccable Lies"
+                  },
+                  {
+                    "value": "Innocence",
+                    "label": "Innocence"
+                  },
+                  {
+                    "value": "The Long Con",
+                    "label": "The Long Con"
+                  },
+                  {
+                    "value": "Seduction",
+                    "label": "Seduction"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "skill.mental",
+      "label": "Mental",
+      "children": [
+        {
+          "type": "group",
+          "name": "Academics.specialties",
+          "label": "Academics",
+          "children": [
+            {
+              "name": "skills.Academics",
+              "id": "skills.academics",
+              "label": "Academics",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "Academics.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Academics",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Architecture",
+                    "label": "Architecture"
+                  },
+                  {
+                    "value": "English Literature",
+                    "label": "English Literature"
+                  },
+                  {
+                    "value": "History (specific field or period)",
+                    "label": "History (specific field or period)"
+                  },
+                  {
+                    "value": "History of Art",
+                    "label": "History of Art"
+                  },
+                  {
+                    "value": "Journalism",
+                    "label": "Journalism"
+                  },
+                  {
+                    "value": "Philosophy",
+                    "label": "Philosophy"
+                  },
+                  {
+                    "value": "Research",
+                    "label": "Research"
+                  },
+                  {
+                    "value": "Teaching",
+                    "label": "Teaching"
+                  },
+                  {
+                    "value": "Theology",
+                    "label": "Theology"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Awareness.specialties",
+          "label": "Awareness",
+          "children": [
+            {
+              "name": "skills.Awareness",
+              "id": "skills.awareness",
+              "label": "Awareness",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "Awareness.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Awareness",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Ambushes",
+                    "label": "Ambushes"
+                  },
+                  {
+                    "value": "Camouflage",
+                    "label": "Camouflage"
+                  },
+                  {
+                    "value": "Concealed Objects",
+                    "label": "Concealed Objects"
+                  },
+                  {
+                    "value": "Hearing",
+                    "label": "Hearing"
+                  },
+                  {
+                    "value": "Instincts",
+                    "label": "Instincts"
+                  },
+                  {
+                    "value": "Smell",
+                    "label": "Smell"
+                  },
+                  {
+                    "value": "Sight",
+                    "label": "Sight"
+                  },
+                  {
+                    "value": "Traps",
+                    "label": "Traps"
+                  },
+                  {
+                    "value": "Wilderness",
+                    "label": "Wilderness"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Finance.specialties",
+          "label": "Finance",
+          "children": [
+            {
+              "name": "skills.Finance",
+              "id": "skills.finance",
+              "label": "Finance",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "Finance.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Finance",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Appraisal",
+                    "label": "Appraisal"
+                  },
+                  {
+                    "value": "Banking",
+                    "label": "Banking"
+                  },
+                  {
+                    "value": "Black Markets",
+                    "label": "Black Markets"
+                  },
+                  {
+                    "value": "Corporate Finance",
+                    "label": "Corporate Finance"
+                  },
+                  {
+                    "value": "Currency Manipulation",
+                    "label": "Currency Manipulation"
+                  },
+                  {
+                    "value": "Fine Art",
+                    "label": "Fine Art"
+                  },
+                  {
+                    "value": "Forensic Accounting",
+                    "label": "Forensic Accounting"
+                  },
+                  {
+                    "value": "Money Laundering",
+                    "label": "Money Laundering"
+                  },
+                  {
+                    "value": "Stock Market",
+                    "label": "Stock Market"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Investigation.specialties",
+          "label": "Investigation",
+          "children": [
+            {
+              "name": "skills.Investigation",
+              "id": "skills.investigation",
+              "label": "Investigation",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "Investigation.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Investigation",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Criminology",
+                    "label": "Criminology"
+                  },
+                  {
+                    "value": "Deduction",
+                    "label": "Deduction"
+                  },
+                  {
+                    "value": "Forensics",
+                    "label": "Forensics"
+                  },
+                  {
+                    "value": "Missing Persons",
+                    "label": "Missing Persons"
+                  },
+                  {
+                    "value": "Murder",
+                    "label": "Murder"
+                  },
+                  {
+                    "value": "Paranormal Mysteries",
+                    "label": "Paranormal Mysteries"
+                  },
+                  {
+                    "value": "Traffic Analysis",
+                    "label": "Traffic Analysis"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Medicine.specialties",
+          "label": "Medicine",
+          "children": [
+            {
+              "name": "skills.Medicine",
+              "id": "skills.medicine",
+              "label": "Medicine",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "Medicine.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Medicine",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "First Aid",
+                    "label": "First Aid"
+                  },
+                  {
+                    "value": "Haematology",
+                    "label": "Haematology"
+                  },
+                  {
+                    "value": "Pathology",
+                    "label": "Pathology"
+                  },
+                  {
+                    "value": "Pharmacy",
+                    "label": "Pharmacy"
+                  },
+                  {
+                    "value": "Phlebotomy",
+                    "label": "Phlebotomy"
+                  },
+                  {
+                    "value": "Surgery",
+                    "label": "Surgery"
+                  },
+                  {
+                    "value": "Trauma Care",
+                    "label": "Trauma Care"
+                  },
+                  {
+                    "value": "Veterinary",
+                    "label": "Veterinary"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Occult.specialties",
+          "label": "Occult",
+          "children": [
+            {
+              "name": "skills.Occult",
+              "id": "skills.occult",
+              "label": "Occult",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "Occult.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Occult",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Alchemy",
+                    "label": "Alchemy"
+                  },
+                  {
+                    "value": "Blood Magic",
+                    "label": "Blood Magic"
+                  },
+                  {
+                    "value": "Faeries",
+                    "label": "Faeries"
+                  },
+                  {
+                    "value": "Ghosts",
+                    "label": "Ghosts"
+                  },
+                  {
+                    "value": "Grimoires",
+                    "label": "Grimoires"
+                  },
+                  {
+                    "value": "Infernalism",
+                    "label": "Infernalism"
+                  },
+                  {
+                    "value": "Magic",
+                    "label": "Magic"
+                  },
+                  {
+                    "value": "Necromancy",
+                    "label": "Necromancy"
+                  },
+                  {
+                    "value": "Noddism",
+                    "label": "Noddism"
+                  },
+                  {
+                    "value": "Parapsychology",
+                    "label": "Parapsychology"
+                  },
+                  {
+                    "value": "Voudun",
+                    "label": "Voudun"
+                  },
+                  {
+                    "value": "Werewolves",
+                    "label": "Werewolves"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Politics.specialties",
+          "label": "Politics",
+          "children": [
+            {
+              "name": "skills.Politics",
+              "id": "skills.politics",
+              "label": "Politics",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "Politics.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Politics",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Anarchs",
+                    "label": "Anarchs"
+                  },
+                  {
+                    "value": "Camarilla",
+                    "label": "Camarilla"
+                  },
+                  {
+                    "value": "City Government",
+                    "label": "City Government"
+                  },
+                  {
+                    "value": "Clan (specific)",
+                    "label": "Clan (specific)"
+                  },
+                  {
+                    "value": "Diplomacy",
+                    "label": "Diplomacy"
+                  },
+                  {
+                    "value": "Media",
+                    "label": "Media"
+                  },
+                  {
+                    "value": "National Politics",
+                    "label": "National Politics"
+                  },
+                  {
+                    "value": "State-Provincial Politics",
+                    "label": "State-Provincial Politics"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Science.specialties",
+          "label": "Science",
+          "children": [
+            {
+              "name": "skills.Science",
+              "id": "skills.science",
+              "label": "Science",
+              "type": "radiogroup",
+              "count": 5,
+              "className": "form-control",
+              "validation": {
+                "required": true,
+                "min": 0,
+                "max": 5
+              },
+              "default": 0
+            },
+            {
+              "type": "linebreak"
+            },
+            {
+              "name": "Science.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Science",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Astronomy",
+                    "label": "Astronomy"
+                  },
+                  {
+                    "value": "Biology",
+                    "label": "Biology"
+                  },
+                  {
+                    "value": "Chemistry",
+                    "label": "Chemistry"
+                  },
+                  {
+                    "value": "Demolitions",
+                    "label": "Demolitions"
+                  },
+                  {
+                    "value": "Engineering",
+                    "label": "Engineering"
+                  },
+                  {
+                    "value": "Genetics",
+                    "label": "Genetics"
+                  },
+                  {
+                    "value": "Geology",
+                    "label": "Geology"
+                  },
+                  {
+                    "value": "Mathematics",
+                    "label": "Mathematics"
+                  },
+                  {
+                    "value": "Physics",
+                    "label": "Physics"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Technology.specialties",
           "label": "Technology",
           "children": [
             {
@@ -2266,48 +2519,60 @@
               "default": 0
             },
             {
-              "name": "specialties.Technology",
-              "label": "Specialty",
-              "type": "select",
-              "className": "form-select",
-              "options": [
-                {
-                  "value": "Artillery",
-                  "label": "Artillery"
-                },
-                {
-                  "value": "Coding",
-                  "label": "Coding"
-                },
-                {
-                  "value": "Computer Building",
-                  "label": "Computer Building"
-                },
-                {
-                  "value": "Data Mining",
-                  "label": "Data Mining"
-                },
-                {
-                  "value": "Hacking",
-                  "label": "Hacking"
-                },
-                {
-                  "value": "Networks",
-                  "label": "Networks"
-                },
-                {
-                  "value": "Phones",
-                  "label": "Phones"
-                },
-                {
-                  "value": "Surveillance Systems",
-                  "label": "Surveillance Systems"
-                }
-              ]
+              "type": "linebreak"
+            },
+            {
+              "name": "Technology.specialties",
+              "includeLabel": false,
+              "type": "array",
+              "component": {
+                "name": "specialties.Technology",
+                "label": "Specialty",
+                "includeLabel": false,
+                "type": "select",
+                "className": "form-select",
+                "options": [
+                  {
+                    "value": "Artillery",
+                    "label": "Artillery"
+                  },
+                  {
+                    "value": "Coding",
+                    "label": "Coding"
+                  },
+                  {
+                    "value": "Computer Building",
+                    "label": "Computer Building"
+                  },
+                  {
+                    "value": "Data Mining",
+                    "label": "Data Mining"
+                  },
+                  {
+                    "value": "Hacking",
+                    "label": "Hacking"
+                  },
+                  {
+                    "value": "Networks",
+                    "label": "Networks"
+                  },
+                  {
+                    "value": "Phones",
+                    "label": "Phones"
+                  },
+                  {
+                    "value": "Surveillance Systems",
+                    "label": "Surveillance Systems"
+                  }
+                ]
+              }
             }
           ]
         }
       ]
+    },
+    {
+      "type": "divider"
     },
     {
       "id": "disciplines",
@@ -5988,6 +6253,9 @@
       },
       "count": 5,
       "default": 0
+    },
+    {
+      "type": "divider"
     },
     {
       "name": "totalExperience",

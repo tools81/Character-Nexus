@@ -166,9 +166,10 @@ const CharacterEditor: React.FC = () => {
   const onSubmit = async (data: any) => {
     if (!currentRuleset) return;
 
+    console.log("Data: ", data);
     await dispatch(saveCharacter({ rulesetName: currentRuleset.name, characterData: data, imageFile: imageData ?? undefined }));
 
-    navigate("/ruleset");
+    //navigate("/ruleset");
   };
 
   // Field rendering helper

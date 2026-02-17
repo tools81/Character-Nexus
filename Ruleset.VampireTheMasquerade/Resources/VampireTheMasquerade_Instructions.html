@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V5 Character Creation Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blood-red: #8B0000;
+            --dark-red: #5C0000;
+            --parchment: #E8D4B8;
+            --dark-bg: #0A0A0A;
+            --darker-bg: #050505;
+            --border-gold: #8B7355;
+            --text-cream: #D4C5AA;
+            --shadow-deep: rgba(139, 0, 0, 0.3);
+        }
+
+        .instr-container * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .instr-container body {
+            font-family: 'Crimson Text', serif;
+            background: linear-gradient(180deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+            color: var(--text-cream);
+            line-height: 1.7;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: rgba(10, 10, 10, 0.85);
+            border: 2px solid var(--border-gold);
+            box-shadow: 
+                0 0 60px var(--shadow-deep),
+                inset 0 0 100px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .instr-container .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(139, 0, 0, 0.03) 2px,
+                    rgba(139, 0, 0, 0.03) 4px
+                );
+            pointer-events: none;
+            opacity: 0.4;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .instr-container header {
+            background: linear-gradient(135deg, var(--dark-red) 0%, var(--blood-red) 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 3px double var(--border-gold);
+            position: relative;
+            animation: slideDown 0.6s ease-out 0.2s backwards;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .instr-container h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--parchment);
+            text-shadow: 
+                2px 2px 4px rgba(0, 0, 0, 0.8),
+                0 0 20px rgba(139, 0, 0, 0.5);
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .instr-container .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-cream);
+            font-style: italic;
+            opacity: 0.9;
+            letter-spacing: 0.1em;
+        }
+
+        .instr-container .content {
+            padding: 2.5rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--blood-red);
+            margin: 2.5rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-gold);
+            text-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
+            animation: fadeInUp 0.5s ease-out backwards;
+            animation-delay: calc(var(--section-index, 0) * 0.1s);
+        }
+
+        .instr-container h2:first-child {
+            margin-top: 0;
+        }
+
+        .instr-container h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: var(--parchment);
+            margin: 1.5rem 0 0.75rem 0;
+            font-weight: 600;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .instr-container p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .instr-container ul, ol {
+            margin: 1rem 0 1rem 1.5rem;
+        }
+
+        .instr-container li {
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        .instr-container strong {
+            color: var(--blood-red);
+            font-weight: 700;
+        }
+
+        .instr-container em {
+            color: var(--parchment);
+        }
+
+        .instr-container .step-number {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            background: var(--blood-red);
+            color: var(--parchment);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 2rem;
+            font-weight: 700;
+            margin-right: 0.5rem;
+            box-shadow: 0 2px 8px rgba(139, 0, 0, 0.5);
+        }
+
+        .instr-container .divider {
+            height: 1px;
+            background: linear-gradient(
+                to right,
+                transparent,
+                var(--border-gold),
+                transparent
+            );
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .instr-container .note {
+            background: rgba(139, 0, 0, 0.1);
+            border-left: 3px solid var(--blood-red);
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .instr-container .attribute-group {
+            background: rgba(92, 0, 0, 0.15);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            border: 1px solid rgba(139, 117, 85, 0.3);
+        }
+
+        .instr-container footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 2px solid var(--border-gold);
+            background: rgba(5, 5, 5, 0.8);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .content {
+                padding: 2rem 1.5rem;
+            }
+            
+            header {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+        <div class="container">
+            <header>
+                <h1>Character Creation</h1>
+                <div class="subtitle">Vampire: The Masquerade Fifth Edition</div>
+            </header>
+
+            <div class="content">
+                <h2 style="--section-index: 1;"><span class="step-number">1</span>Character Concept</h2>
+                <p>Begin by envisioning your vampire's identity before and after the Embrace. Consider their mortal life, how they were turned, and who they've become in undeath.</p>
+                <ul>
+                    <li><strong>Chronicle Tenets:</strong> Discuss with your Storyteller the core beliefs and rules of your chronicle</li>
+                    <li><strong>Predator Type:</strong> Choose how your vampire feeds (Alleycat, Bagger, Blood Leech, Cleaver, Consensualist, Farmer, Osiris, Sandman, Scene Queen, Siren, or Extortionist)</li>
+                    <li><strong>Ambition:</strong> Define a concrete goal your character seeks to achieve</li>
+                    <li><strong>Desire:</strong> Establish what truly drives your character emotionally</li>
+                </ul>
+
+                <div class="divider"></div>
+
+                <h2 style="--section-index: 2;"><span class="step-number">2</span>Clan Selection</h2>
+                <p>Your clan determines your vampiric lineage, inherent powers, and curse. Each of the thirteen clans offers a unique experience:</p>
+                
+                <div class="attribute-group">
+                    <strong>The Thirteen Clans:</strong> Brujah, Gangrel, Malkavian, Nosferatu, Toreador, Tremere, Ventrue, Caitiff, Banu Haqim, Hecata, Lasombra, The Ministry, Ravnos, Salubri, Tzimisce
+                </div>
+
+                <p>Each clan grants you:</p>
+                <ul>
+                    <li>Two clan Disciplines at one dot each</li>
+                    <li>A clan Compulsion (triggered when you roll a Bestial Failure)</li>
+                    <li>A unique clan Bane (your vampiric curse)</li>
+                </ul>
+
+                <div class="divider"></div>
+
+                <h2 style="--section-index: 3;"><span class="step-number">3</span>Attributes</h2>
+                <p>Distribute dots among the nine Attributes, divided into three categories. You have three priority levels:</p>
+
+                <div class="attribute-group">
+                    <h3>Physical</h3>
+                    <p><strong>Strength</strong> • <strong>Dexterity</strong> • <strong>Stamina</strong></p>
+                </div>
+
+                <div class="attribute-group">
+                    <h3>Social</h3>
+                    <p><strong>Charisma</strong> • <strong>Manipulation</strong> • <strong>Composure</strong></p>
+                </div>
+
+                <div class="attribute-group">
+                    <h3>Mental</h3>
+                    <p><strong>Intelligence</strong> • <strong>Wits</strong> • <strong>Resolve</strong></p>
+                </div>
+
+                <ul>
+                    <li><strong>Primary (4 dots):</strong> Distribute among one category</li>
+                    <li><strong>Secondary (3 dots):</strong> Distribute among another category</li>
+                    <li><strong>Tertiary (2 dots):</strong> Distribute among the remaining category</li>
+                </ul>
+
+                <p class="note">All Attributes start at 1 dot. The dots you distribute are in addition to this base.</p>
+
+                <div class="divider"></div>
+
+                <h2 style="--section-index: 4;"><span class="step-number">4</span>Skills</h2>
+                <p>Skills represent your character's learned abilities and training. Distribute dots using the same priority system as Attributes:</p>
+
+                <div class="attribute-group">
+                    <h3>Physical Skills</h3>
+                    <p>Athletics, Brawl, Craft, Drive, Firearms, Larceny, Melee, Stealth, Survival</p>
+                </div>
+
+                <div class="attribute-group">
+                    <h3>Social Skills</h3>
+                    <p>Animal Ken, Etiquette, Insight, Intimidation, Leadership, Performance, Persuasion, Streetwise, Subterfuge</p>
+                </div>
+
+                <div class="attribute-group">
+                    <h3>Mental Skills</h3>
+                    <p>Academics, Awareness, Finance, Investigation, Medicine, Occult, Politics, Science, Technology</p>
+                </div>
+
+                <ul>
+                    <li><strong>Primary (7 dots):</strong> Distribute among one category, max 3 dots per skill</li>
+                    <li><strong>Secondary (5 dots):</strong> Distribute among another category, max 3 dots per skill</li>
+                    <li><strong>Tertiary (3 dots):</strong> Distribute among the remaining category, max 3 dots per skill</li>
+                </ul>
+
+                <h3>Skill Specialties</h3>
+                <p>Choose one specialty for each skill you have at 4 dots or higher. Specialties grant a +1 bonus to specific uses of that skill.</p>
+
+                <div class="divider"></div>
+
+                <h2 style="--section-index: 5;"><span class="step-number">5</span>Disciplines</h2>
+                <p>Your Predator Type and Clan already grant you some Discipline dots. Now distribute <strong>2 additional dots</strong> among any Disciplines you already possess (you cannot purchase new Disciplines at character creation without special permission).</p>
+
+                <div class="note">
+                    Disciplines represent your vampiric supernatural powers. Common Disciplines include Animalism, Auspex, Blood Sorcery, Celerity, Dominate, Fortitude, Obfuscate, Oblivion, Potence, Presence, and Protean.
+                </div>
+
+                <div class="divider"></div>
+
+                <h2 style="--section-index: 6;"><span class="step-number">6</span>Advantages</h2>
+                
+                <h3>Backgrounds</h3>
+                <p>Distribute <strong>3 dots</strong> among Backgrounds, which represent your resources, allies, and connections:</p>
+                <ul>
+                    <li><strong>Allies:</strong> Mortals who assist you</li>
+                    <li><strong>Contacts:</strong> Sources of information</li>
+                    <li><strong>Fame:</strong> Mortal renown</li>
+                    <li><strong>Haven:</strong> Quality and security of your sanctuary</li>
+                    <li><strong>Herd:</strong> Reliable feeding sources</li>
+                    <li><strong>Influence:</strong> Political or institutional power</li>
+                    <li><strong>Mask:</strong> Quality of your mortal facade</li>
+                    <li><strong>Resources:</strong> Wealth and assets</li>
+                    <li><strong>Retainers:</strong> Loyal servants</li>
+                    <li><strong>Status:</strong> Position in vampire society</li>
+                </ul>
+
+                <h3>Merits & Flaws</h3>
+                <p>Spend up to <strong>7 dots on Merits</strong>. You may take Flaws (worth 1-2 dots each) to gain additional Merit dots, up to a maximum of 2 additional dots.</p>
+
+                <div class="divider"></div>
+
+                <h2 style="--section-index: 7;"><span class="step-number">7</span>Convictions & Touchstones</h2>
+                
+                <h3>Convictions</h3>
+                <p>Create <strong>3 Convictions</strong> — core moral beliefs your character holds. These are tested when you commit acts that violate them, potentially leading to Stains on your Humanity.</p>
+
+                <h3>Touchstones</h3>
+                <p>Establish <strong>1 Touchstone</strong> per dot of Humanity. Touchstones are mortals (or rarely, other beings) who anchor you to your Humanity. Losing Touchstones can cause you to lose Humanity as well.</p>
+
+                <div class="note">
+                    Work with your Storyteller to ensure your Convictions create meaningful dramatic tension and aren't simply ways to avoid all moral consequences.
+                </div>
+
+                <div class="divider"></div>
+
+                <h2 style="--section-index: 8;"><span class="step-number">8</span>Humanity</h2>
+                <p>All characters begin with <strong>Humanity 7</strong> unless your Predator Type, clan, or specific character concept modifies this.</p>
+
+                <p>Humanity represents your connection to mortal ethics and your resistance to the Beast. It ranges from 10 (saint-like) to 0 (completely monstrous).</p>
+
+                <ul>
+                    <li>Higher Humanity makes it easier to resist frenzy and avoid Compulsions</li>
+                    <li>Violating your Convictions causes Stains on your Humanity</li>
+                    <li>Accumulating too many Stains can permanently reduce your Humanity</li>
+                </ul>
+
+                <div class="divider"></div>
+
+                <h2 style="--section-index: 9;"><span class="step-number">9</span>Additional Traits</h2>
+                
+                <h3>Blood Potency</h3>
+                <p>All new vampires start at <strong>Blood Potency 1</strong>. This measures the strength of your vitae and increases over centuries or through diablerie.</p>
+
+                <h3>Health & Willpower</h3>
+                <ul>
+                    <li><strong>Health:</strong> Equal to Stamina + 3</li>
+                    <li><strong>Willpower:</strong> Equal to Composure + Resolve</li>
+                </ul>
+
+                <h3>Generation</h3>
+                <p>Most starting characters are <strong>13th generation</strong>, though this may vary by chronicle. Thin-bloods are 14th or 15th generation.</p>
+
+                <div class="divider"></div>
+
+                <h2 style="--section-index: 10;"><span class="step-number">10</span>Finishing Touches</h2>
+                <p>Complete your character with these final details:</p>
+
+                <ul>
+                    <li><strong>Name, age, and apparent age</strong></li>
+                    <li><strong>Sire:</strong> Who Embraced you?</li>
+                    <li><strong>Chronicle Tenets:</strong> Finalize with Storyteller</li>
+                    <li><strong>Resonance:</strong> Your preferred emotional flavor when feeding</li>
+                    <li><strong>Relationship Map:</strong> Connections to other characters</li>
+                    <li><strong>Physical description and history</strong></li>
+                    <li><strong>True Age:</strong> Time since your Embrace</li>
+                </ul>
+
+                <div class="note">
+                    <strong>Experience Points:</strong> Some Storytellers grant bonus XP at character creation for experienced chronicles. Discuss this with your group.
+                </div>
+            </div>
+
+            <footer>
+                <p>The night awaits. May your Requiem be unforgettable.</p>
+            </footer>
+        </div>
+    </body>
+</div>
+</html>

@@ -39,9 +39,7 @@ const FormGroup = ({
           // ─────────────────────────────
           if (childField.type === "linebreak") {
             return (
-              <br
-                key={childField.id ?? childField.name}
-              />
+              <div className="w-100"></div>
             );
           }
 

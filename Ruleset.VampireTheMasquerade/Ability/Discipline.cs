@@ -10,5 +10,6 @@ namespace VampireTheMasquerade
         public AspectType Aspect { get; set; }
         public string Threat { get; set; }
         public string Resonance { get; set; }
+        public int Value { get; set; }
     }
 }

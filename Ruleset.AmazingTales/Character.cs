@@ -22,14 +22,15 @@ namespace AmazingTales
 
         public byte[] BuildCharacterSheet()
         {
-            var dict = new Dictionary<string, string>();
-
-            dict.Add("Name", Name);
-            dict.Add("D12Attribute", D12Attribute);
-            dict.Add("D10Attribute", D10Attribute);
-            dict.Add("D8Attribute", D8Attribute);
-            dict.Add("D6Attribute", D6Attribute);
-            dict.Add("Notes", Notes);
+            var dict = new Dictionary<string, string>
+            {
+                { "Name", Name },
+                { "D12Attribute", D12Attribute },
+                { "D10Attribute", D10Attribute },
+                { "D8Attribute", D8Attribute },
+                { "D6Attribute", D6Attribute },
+                { "Notes", Notes }
+            };
 
             return PDFSchema.Generate(dict, Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Amazing_Tales_Character_Sheet.pdf");
         }

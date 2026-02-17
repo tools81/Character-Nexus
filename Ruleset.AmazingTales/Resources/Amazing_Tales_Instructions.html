@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Tales — Let's Make a Hero!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky:        #4FC3F7;
+            --sky-light:  #B3E5FC;
+            --sky-dark:   #0288D1;
+            --grass:      #66BB6A;
+            --grass-dark: #388E3C;
+            --sun:        #FFD740;
+            --sun-dark:   #FFA000;
+            --pink:       #F48FB1;
+            --pink-dark:  #C2185B;
+            --purple:     #CE93D8;
+            --purple-dark:#7B1FA2;
+            --orange:     #FFAB40;
+            --orange-dark:#E65100;
+            --red:        #EF5350;
+            --paper:      #FFFDE7;
+            --paper-2:    #FFF8E1;
+            --ink:        #2D2A1E;
+            --ink-soft:   #5D5240;
+            --cloud:      #FFFFFF;
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--sky);
+            background-image:
+                radial-gradient(ellipse at 20% 15%, #fff 0%, #fff 4%, transparent 4.5%),
+                radial-gradient(ellipse at 30% 12%, #fff 0%, #fff 6%, transparent 6.5%),
+                radial-gradient(ellipse at 25% 17%, #fff 0%, #fff 3%, transparent 3.5%),
+                radial-gradient(ellipse at 70% 8%,  #fff 0%, #fff 5%, transparent 5.5%),
+                radial-gradient(ellipse at 80% 5%,  #fff 0%, #fff 7%, transparent 7.5%),
+                radial-gradient(ellipse at 75% 11%, #fff 0%, #fff 3%, transparent 3.5%),
+                linear-gradient(180deg, #87CEEB 0%, #B0E0FF 60%, #C8EEC8 100%);
+            min-height: 100vh;
+            padding: 1.5rem 1rem 3rem;
+        }
+
+        /* ── CONTAINER (like a big storybook page) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--paper);
+            border-radius: 16px;
+            border: 4px solid var(--ink);
+            box-shadow:
+                6px 6px 0 var(--ink),
+                0 20px 60px rgba(0,0,0,0.2);
+            overflow: hidden;
+            animation: bounceIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+        }
+
+        @keyframes bounceIn {
+            from { opacity: 0; transform: scale(0.85) translateY(20px); }
+            to   { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            background: linear-gradient(135deg, var(--sky) 0%, #64B5F6 100%);
+            padding: 2.5rem 2rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid var(--ink);
+        }
+
+        /* little star decorations */
+        .instr-container header::before {
+            content: '★ ✦ ★ ✦ ★ ✦ ★ ✦ ★';
+            display: block;
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 0.4em;
+            margin-bottom: 1rem;
+            animation: twinkle 2s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.6; }
+            50%       { opacity: 1; }
+        }
+
+        .instr-container .header-emoji {
+            font-size: 4.5rem;
+            display: block;
+            margin-bottom: 0.5rem;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+            animation: wobble 3s ease-in-out infinite;
+        }
+
+        @keyframes wobble {
+            0%, 100% { transform: rotate(-4deg) scale(1); }
+            50%       { transform: rotate(4deg) scale(1.05); }
+        }
+
+        .instr-container h1 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 3.8rem;
+            line-height: 0.95;
+            color: #fff;
+            text-shadow:
+                3px 3px 0 var(--sky-dark),
+                -1px -1px 0 rgba(0,0,0,0.1);
+            letter-spacing: 0.02em;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container h1 .subtitle-line {
+            display: block;
+            font-size: 1.6rem;
+            color: var(--sun);
+            text-shadow: 2px 2px 0 var(--sun-dark);
+            letter-spacing: 0.08em;
+        }
+
+        .instr-container .header-tagline {
+            font-size: 1rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.9);
+            margin-top: 0.75rem;
+            font-style: italic;
+        }
+
+        /* ── WAVY BORDER between header and content ── */
+        .instr-container .wavy {
+            display: block;
+            width: 100%;
+            height: 30px;
+            background: var(--paper);
+            clip-path: ellipse(52% 100% at 50% 100%);
+            margin-top: -1px;
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 1rem 2rem 2rem;
+        }
+
+        /* ── INTRO BUBBLE ── */
+        .instr-container .intro-bubble {
+            background: var(--sky-light);
+            border: 3px solid var(--sky-dark);
+            border-radius: 20px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--ink);
+            position: relative;
+        }
+
+        .instr-container .intro-bubble::after {
+            content: '▼';
+            position: absolute;
+            bottom: -1.2rem;
+            left: 2rem;
+            font-size: 1rem;
+            color: var(--sky-dark);
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2rem;
+            color: var(--ink);
+            margin: 2.5rem 0 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            letter-spacing: 0.02em;
+            animation: fadeUp 0.4s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.07s);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container .step-bubble {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 50%;
+            border: 3px solid var(--ink);
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.2rem;
+            color: #fff;
+            flex-shrink: 0;
+            box-shadow: 2px 2px 0 var(--ink);
+        }
+
+        .instr-container .step-bubble.c1 { background: var(--red); }
+        .instr-container .step-bubble.c2 { background: var(--orange); }
+        .instr-container .step-bubble.c3 { background: var(--sun-dark); }
+        .instr-container .step-bubble.c4 { background: var(--grass); }
+        .instr-container .step-bubble.c5 { background: var(--sky-dark); }
+        .instr-container .step-bubble.c6 { background: var(--purple-dark); }
+        .instr-container .step-bubble.c7 { background: var(--pink-dark); }
+        .instr-container .step-bubble.c8 { background: var(--grass-dark); }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .instr-container h3 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.3rem;
+            color: var(--sky-dark);
+            margin: 1.5rem 0 0.5rem;
+            letter-spacing: 0.02em;
+        }
+
+        .instr-container p {
+            font-size: 1rem;
+            line-height: 1.85;
+            margin-bottom: 1rem;
+            color: var(--ink-soft);
+        }
+
+        .instr-container ul, ol {
+            margin: 0.75rem 0 1.25rem 1.5rem;
+        }
+
+        .instr-container li {
+            font-size: 0.97rem;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+            color: var(--ink-soft);
+        }
+
+        .instr-container strong { color: var(--ink); font-weight: 800; }
+        .instr-container em { color: var(--sky-dark); font-style: italic; }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2rem 0;
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--ink-soft);
+            opacity: 0.4;
+            letter-spacing: 0.5em;
+        }
+
+        /* ── STORYBOOK CALLOUT ── */
+        .instr-container .story-note {
+            background: var(--paper-2);
+            border: 3px dashed var(--sun-dark);
+            border-radius: 12px;
+            padding: 1.1rem 1.35rem;
+            margin: 1.5rem 0;
+            font-size: 0.97rem;
+            line-height: 1.8;
+            color: var(--ink-soft);
+            position: relative;
+        }
+
+        .instr-container .story-note-label {
+            font-family: 'Fredoka One', cursive;
+            font-size: 0.85rem;
+            color: var(--sun-dark);
+            letter-spacing: 0.08em;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container .story-note .note-emoji {
+            position: absolute;
+            top: -1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* ── SKILL CARD GRID ── */
+        .instr-container .skill-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .skill-card {
+            border: 3px solid var(--ink);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 3px 3px 0 var(--ink);
+            transition: transform 0.15s, box-shadow 0.15s;
+            cursor: default;
+        }
+
+        .instr-container .skill-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0 var(--ink);
+        }
+
+        .instr-container .skill-card.red    { background: #FFEBEE; border-color: var(--red); box-shadow: 3px 3px 0 var(--red); }
+        .instr-container .skill-card.orange { background: #FFF3E0; border-color: var(--orange-dark); box-shadow: 3px 3px 0 var(--orange-dark); }
+        .instr-container .skill-card.green  { background: #E8F5E9; border-color: var(--grass-dark); box-shadow: 3px 3px 0 var(--grass-dark); }
+        .instr-container .skill-card.blue   { background: #E3F2FD; border-color: var(--sky-dark); box-shadow: 3px 3px 0 var(--sky-dark); }
+        .instr-container .skill-card.purple { background: #F3E5F5; border-color: var(--purple-dark); box-shadow: 3px 3px 0 var(--purple-dark); }
+        .instr-container .skill-card.pink   { background: #FCE4EC; border-color: var(--pink-dark); box-shadow: 3px 3px 0 var(--pink-dark); }
+
+        .instr-container .skill-card.red:hover    { box-shadow: 5px 5px 0 var(--red); }
+        .instr-container .skill-card.orange:hover { box-shadow: 5px 5px 0 var(--orange-dark); }
+        .instr-container .skill-card.green:hover  { box-shadow: 5px 5px 0 var(--grass-dark); }
+        .instr-container .skill-card.blue:hover   { box-shadow: 5px 5px 0 var(--sky-dark); }
+        .instr-container .skill-card.purple:hover { box-shadow: 5px 5px 0 var(--purple-dark); }
+        .instr-container .skill-card.pink:hover   { box-shadow: 5px 5px 0 var(--pink-dark); }
+
+        .instr-container .skill-emoji { font-size: 2rem; display: block; margin-bottom: 0.3rem; }
+        .instr-container .skill-name  {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.05rem;
+            color: var(--ink);
+            margin-bottom: 0.25rem;
+        }
+        .instr-container .skill-example {
+            font-size: 0.8rem;
+            color: var(--ink-soft);
+            line-height: 1.4;
+            font-style: italic;
+        }
+
+        /* ── DIE CARDS ── */
+        .instr-container .die-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .die-card {
+            border: 3px solid var(--ink);
+            border-radius: 10px;
+            padding: 0.75rem 0.5rem;
+            text-align: center;
+            box-shadow: 3px 3px 0 var(--ink);
+            transition: transform 0.15s;
+        }
+
+        .instr-container .die-card:hover { transform: translateY(-3px) rotate(3deg); }
+
+        .instr-container .die-card.d6  { background: #FFEBEE; }
+        .instr-container .die-card.d8  { background: #FFF3E0; }
+        .instr-container .die-card.d10 { background: #E8F5E9; }
+        .instr-container .die-card.d12 { background: #E3F2FD; }
+
+        .instr-container .die-face {
+            font-size: 2.2rem;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .die-label {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.2rem;
+            color: var(--ink);
+        }
+
+        .instr-container .die-desc {
+            font-size: 0.72rem;
+            color: var(--ink-soft);
+            margin-top: 0.2rem;
+            line-height: 1.4;
+        }
+
+        /* ── WORLD CARDS ── */
+        .instr-container .world-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .world-card {
+            border: 3px solid var(--ink);
+            border-radius: 12px;
+            padding: 0.85rem 1rem;
+            box-shadow: 3px 3px 0 var(--ink);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .instr-container .world-card:hover {
+            transform: translate(-2px,-2px);
+            box-shadow: 5px 5px 0 var(--ink);
+        }
+
+        .instr-container .world-card.w1 { background: #E8F5E9; }
+        .instr-container .world-card.w2 { background: #E3F2FD; }
+        .instr-container .world-card.w3 { background: #FFF3E0; }
+        .instr-container .world-card.w4 { background: #F3E5F5; }
+        .instr-container .world-card.w5 { background: #FCE4EC; }
+        .instr-container .world-card.w6 { background: #FFEBEE; }
+        .instr-container .world-card.w7 { background: #E0F2F1; }
+        .instr-container .world-card.w8 { background: #FFF8E1; }
+
+        .instr-container .world-emoji { font-size: 1.8rem; flex-shrink: 0; }
+        .instr-container .world-name  {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1rem;
+            color: var(--ink);
+            margin-bottom: 0.15rem;
+        }
+        .instr-container .world-desc { font-size: 0.8rem; color: var(--ink-soft); line-height: 1.45; }
+
+        /* ── EXAMPLE CHARACTER BLOCK ── */
+        .instr-container .example-char {
+            background: var(--sun);
+            border: 3px solid var(--ink);
+            border-radius: 16px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 4px 4px 0 var(--ink);
+        }
+
+        .instr-container .example-char-title {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.1rem;
+            color: var(--ink);
+            margin-bottom: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .instr-container .example-skill-row {
+            display: grid;
+            grid-template-columns: 1.5rem 1fr auto;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 0;
+            border-bottom: 1px dashed rgba(0,0,0,0.15);
+            font-size: 0.9rem;
+            color: var(--ink-soft);
+        }
+
+        .instr-container .example-skill-row:last-child { border-bottom: none; }
+        .instr-container .example-skill-row .emoji { font-size: 1rem; }
+        .instr-container .example-skill-row .die-pill {
+            font-family: 'Fredoka One', cursive;
+            font-size: 0.85rem;
+            background: var(--ink);
+            color: var(--sun);
+            padding: 0.15rem 0.5rem;
+            border-radius: 20px;
+        }
+
+        /* ── RULES BOX ── */
+        .instr-container .rules-box {
+            background: var(--grass);
+            border: 3px solid var(--ink);
+            border-radius: 16px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 4px 4px 0 var(--ink);
+        }
+
+        .instr-container .rules-box-title {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 0.75rem;
+            text-shadow: 1px 1px 0 var(--grass-dark);
+        }
+
+        .instr-container .rules-box p, .rules-box li {
+            color: var(--ink);
+            font-size: 0.92rem;
+        }
+
+        .instr-container .rules-box ul { margin-left: 1.25rem; }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: linear-gradient(135deg, var(--grass) 0%, var(--grass-dark) 100%);
+            border-top: 4px solid var(--ink);
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .instr-container .footer-stars {
+            font-size: 1.5rem;
+            letter-spacing: 0.4em;
+            display: block;
+            margin-bottom: 0.5rem;
+            animation: twinkle 2s ease-in-out infinite;
+        }
+
+        .instr-container .footer-text {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 0 var(--grass-dark);
+            letter-spacing: 0.04em;
+        }
+
+        .instr-container .footer-sub {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.75);
+            margin-top: 0.4rem;
+            font-weight: 700;
+        }
+
+        /* little grass blades at top of footer */
+        .instr-container footer::before {
+            content: '🌿🌱🌿🌱🌿🌱🌿🌱🌿🌱🌿🌱🌿';
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.1em;
+        }
+
+        @media (max-width: 480px) {
+            h1           { font-size: 3rem; }
+            h1 .subtitle-line { font-size: 1.3rem; }
+            h2           { font-size: 1.7rem; }
+            .skill-grid  { grid-template-columns: 1fr; }
+            .world-grid  { grid-template-columns: 1fr; }
+            .die-row     { grid-template-columns: repeat(2, 1fr); }
+            .content     { padding: 1rem 1.25rem 1.5rem; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <span class="header-emoji">🌟</span>
+            <h1>
+                Amazing Tales
+                <span class="subtitle-line">Let's Make a Hero!</span>
+            </h1>
+            <p class="header-tagline">The RPG for children and the grown-ups who love them</p>
+        </header>
+        <span class="wavy"></span>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="intro-bubble">
+                <strong>Welcome, adventurers big and small!</strong> 🎉 Amazing Tales is the perfect first roleplaying game — made especially for children aged 4 and up to play with a parent or grown-up friend. One person is the <strong>Storyteller</strong>, and everyone else plays a <strong>hero</strong> in a wonderful adventure. You'll only need a few dice and your imagination!
+            </div>
+
+            <!-- STEP 1: PICK A WORLD -->
+            <h2 style="--i:1;"><span class="step-bubble c1">1</span> Pick Your World</h2>
+            <p>First, the Storyteller and players decide together what kind of story to tell. Amazing Tales can go anywhere your imagination takes you!</p>
+
+            <div class="world-grid">
+                <div class="world-card w1">
+                    <span class="world-emoji">🏰</span>
+                    <div>
+                        <div class="world-name">Fantasy Kingdom</div>
+                        <div class="world-desc">Knights, dragons, wizards, enchanted forests, and magical quests</div>
+                    </div>
+                </div>
+                <div class="world-card w2">
+                    <span class="world-emoji">🚀</span>
+                    <div>
+                        <div class="world-name">Outer Space</div>
+                        <div class="world-desc">Spaceships, alien planets, robots, and adventures among the stars</div>
+                    </div>
+                </div>
+                <div class="world-card w3">
+                    <span class="world-emoji">🌊</span>
+                    <div>
+                        <div class="world-name">Pirate Seas</div>
+                        <div class="world-desc">Sailing ships, buried treasure, sea monsters, and island adventures</div>
+                    </div>
+                </div>
+                <div class="world-card w4">
+                    <span class="world-emoji">🦸</span>
+                    <div>
+                        <div class="world-name">Superheroes</div>
+                        <div class="world-desc">Capes, special powers, secret identities, and saving the day</div>
+                    </div>
+                </div>
+                <div class="world-card w5">
+                    <span class="world-emoji">🦖</span>
+                    <div>
+                        <div class="world-name">Dinosaur Land</div>
+                        <div class="world-desc">Giant dinosaurs, prehistoric jungles, and ancient mysteries</div>
+                    </div>
+                </div>
+                <div class="world-card w6">
+                    <span class="world-emoji">🧚</span>
+                    <div>
+                        <div class="world-name">Fairyland</div>
+                        <div class="world-desc">Fairies, talking animals, magical creatures, and enchanted places</div>
+                    </div>
+                </div>
+                <div class="world-card w7">
+                    <span class="world-emoji">🤖</span>
+                    <div>
+                        <div class="world-name">Future World</div>
+                        <div class="world-desc">Robots, flying cars, high-tech gadgets, and tomorrow's adventures</div>
+                    </div>
+                </div>
+                <div class="world-card w8">
+                    <span class="world-emoji">🌋</span>
+                    <div>
+                        <div class="world-name">Make Your Own!</div>
+                        <div class="world-desc">Any world you can imagine. The only limit is your creativity!</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider">✦ ✦ ✦</div>
+
+            <!-- STEP 2: WHO IS YOUR HERO? -->
+            <h2 style="--i:2;"><span class="step-bubble c2">2</span> Who Is Your Hero?</h2>
+            <p>Now it's time to imagine your character! Your hero can be anything you like — a brave knight, a friendly robot, a talking cat, a young wizard, a kid with superpowers... anything!</p>
+
+            <p>Think about:</p>
+            <ul>
+                <li>🎨 <strong>What do they look like?</strong> Are they big or small? What do they wear?</li>
+                <li>💛 <strong>What are they good at?</strong> Are they fast? Super smart? Really friendly?</li>
+                <li>🌈 <strong>What do they care about?</strong> Their friends? Helping people? Finding treasure?</li>
+                <li>✨ <strong>What's their name?</strong> Make it something you love!</li>
+            </ul>
+
+            <div class="story-note">
+                <span class="note-emoji">💡</span>
+                <span class="story-note-label">GROWN-UP TIP</span>
+                Let your child describe their hero freely first. Then help them figure out which of the four skills best match what they've described. There are no wrong answers — the goal is to make a hero they're excited to play!
+            </div>
+
+            <div class="divider">✦ ✦ ✦</div>
+
+            <!-- STEP 3: FOUR SKILLS -->
+            <h2 style="--i:3;"><span class="step-bubble c3">3</span> Choose Your Four Skills</h2>
+            <p>Every hero in Amazing Tales has exactly <strong>four skills</strong>. A skill is something your hero is good at — like "running really fast" or "making friends with animals" or "building clever gadgets."</p>
+
+            <p>You get to <strong>make up your own skills!</strong> They should match your hero and fit your world. Here are some ideas to get you started:</p>
+
+            <div class="skill-grid">
+                <div class="skill-card red">
+                    <span class="skill-emoji">⚔️</span>
+                    <div class="skill-name">Fighting</div>
+                    <div class="skill-example">Sword fighting, karate, wrestling dragons</div>
+                </div>
+                <div class="skill-card orange">
+                    <span class="skill-emoji">🏃</span>
+                    <div class="skill-name">Moving Fast</div>
+                    <div class="skill-example">Running, jumping, climbing, sneaking</div>
+                </div>
+                <div class="skill-card green">
+                    <span class="skill-emoji">🧠</span>
+                    <div class="skill-name">Being Clever</div>
+                    <div class="skill-example">Solving puzzles, reading maps, knowing things</div>
+                </div>
+                <div class="skill-card blue">
+                    <span class="skill-emoji">💬</span>
+                    <div class="skill-name">Talking &amp; Helping</div>
+                    <div class="skill-example">Making friends, calming people, being kind</div>
+                </div>
+                <div class="skill-card purple">
+                    <span class="skill-emoji">✨</span>
+                    <div class="skill-name">Using Magic</div>
+                    <div class="skill-example">Casting spells, using powers, making things happen</div>
+                </div>
+                <div class="skill-card pink">
+                    <span class="skill-emoji">🔧</span>
+                    <div class="skill-name">Building Things</div>
+                    <div class="skill-example">Making gadgets, fixing stuff, crafting tools</div>
+                </div>
+            </div>
+
+            <p>Your four skills can be anything — and they should be written in your own words, not from a fixed list! <em>"Befriending sea creatures," "baking magical cakes,"</em> and <em>"talking to robots"</em> are all wonderful skills.</p>
+
+            <div class="divider">✦ ✦ ✦</div>
+
+            <!-- STEP 4: ASSIGN DICE -->
+            <h2 style="--i:4;"><span class="step-bubble c4">4</span> Give Each Skill a Die</h2>
+            <p>This is the most important bit of the numbers! Each of your four skills gets a <strong>special dice</strong>. A bigger die means your hero is better at that thing.</p>
+
+            <div class="die-row">
+                <div class="die-card d6">
+                    <span class="die-face">🎲</span>
+                    <div class="die-label">d6</div>
+                    <div class="die-desc">Pretty good at this!</div>
+                </div>
+                <div class="die-card d8">
+                    <span class="die-face">🎲</span>
+                    <div class="die-label">d8</div>
+                    <div class="die-desc">Really good at this!</div>
+                </div>
+                <div class="die-card d10">
+                    <span class="die-face">🎲</span>
+                    <div class="die-label">d10</div>
+                    <div class="die-desc">Very, very good!</div>
+                </div>
+                <div class="die-card d12">
+                    <span class="die-face">🎲</span>
+                    <div class="die-label">d12</div>
+                    <div class="die-desc">The BEST at this! 🌟</div>
+                </div>
+            </div>
+
+            <p>You give out <strong>one d6, one d8, one d10, and one d12</strong> — one to each skill. You decide which skill gets which die! Put the <strong>d12</strong> on the thing your hero is really, really great at.</p>
+
+            <div class="example-char">
+                <div class="example-char-title">🦸 Example: Captain Sparkle the Space Hero</div>
+                <div class="example-skill-row">
+                    <span class="emoji">🚀</span>
+                    <span>Flying her spaceship</span>
+                    <span class="die-pill">d12</span>
+                </div>
+                <div class="example-skill-row">
+                    <span class="emoji">💥</span>
+                    <span>Zapping things with her ray gun</span>
+                    <span class="die-pill">d10</span>
+                </div>
+                <div class="example-skill-row">
+                    <span class="emoji">🤝</span>
+                    <span>Making friends with aliens</span>
+                    <span class="die-pill">d8</span>
+                </div>
+                <div class="example-skill-row">
+                    <span class="emoji">🔬</span>
+                    <span>Knowing space facts</span>
+                    <span class="die-pill">d6</span>
+                </div>
+            </div>
+
+            <div class="divider">✦ ✦ ✦</div>
+
+            <!-- STEP 5: HOW ROLLING WORKS -->
+            <h2 style="--i:5;"><span class="step-bubble c5">5</span> How Rolling Works</h2>
+            <p>Amazing Tales is super easy to play! When your hero tries something exciting or tricky, here's what happens:</p>
+
+            <div class="rules-box">
+                <div class="rules-box-title">🎲 The Simple Rules!</div>
+                <ul>
+                    <li><strong>Roll your skill's die</strong> when you try something challenging</li>
+                    <li>The Storyteller picks a <strong>target number</strong> based on how hard it is</li>
+                    <li><strong>Roll the number or higher — you succeed! 🎉</strong></li>
+                    <li><strong>Roll lower than the number — something goes wrong 😬</strong></li>
+                    <li>If you don't have a skill for what you're trying, use the <strong>d6</strong></li>
+                </ul>
+            </div>
+
+            <h3>How Hard Is It?</h3>
+            <p>The Storyteller decides the target number:</p>
+            <ul>
+                <li>🟢 <strong>Easy</strong> — Target: <strong>2</strong> (almost anyone can do it)</li>
+                <li>🟡 <strong>Tricky</strong> — Target: <strong>4</strong> (needs a bit of skill)</li>
+                <li>🟠 <strong>Hard</strong> — Target: <strong>6</strong> (takes real talent)</li>
+                <li>🔴 <strong>Really Hard</strong> — Target: <strong>8</strong> (only the best can manage this!)</li>
+            </ul>
+
+            <div class="story-note">
+                <span class="note-emoji">⭐</span>
+                <span class="story-note-label">STORYTELLER'S GOLDEN RULE</span>
+                Only ask for a roll when <em>both success and failure lead somewhere interesting</em>. Don't make children roll for tying their shoes — roll when the dragon is watching and the outcome will change the story!
+            </div>
+
+            <div class="divider">✦ ✦ ✦</div>
+
+            <!-- STEP 6: SPECIAL THING -->
+            <h2 style="--i:6;"><span class="step-bubble c6">6</span> Your Hero's Special Thing</h2>
+            <p>Every hero has one <strong>Special Thing</strong> — a magical item, a clever gadget, a trusty animal companion, or a unique power that belongs only to them.</p>
+
+            <p>This isn't mechanical — it's about making your hero feel special and unique. Work with the Storyteller to figure out what it can do and when it might help.</p>
+
+            <div class="world-grid" style="grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem;">
+                <div class="world-card w1" style="flex-direction: column; text-align: center; gap: 0.3rem;">
+                    <span class="world-emoji">🪄</span>
+                    <div class="world-name" style="font-size: 0.85rem;">Magic Wand</div>
+                </div>
+                <div class="world-card w2" style="flex-direction: column; text-align: center; gap: 0.3rem;">
+                    <span class="world-emoji">🐉</span>
+                    <div class="world-name" style="font-size: 0.85rem;">Pet Dragon</div>
+                </div>
+                <div class="world-card w3" style="flex-direction: column; text-align: center; gap: 0.3rem;">
+                    <span class="world-emoji">🤖</span>
+                    <div class="world-name" style="font-size: 0.85rem;">Robot Pal</div>
+                </div>
+                <div class="world-card w4" style="flex-direction: column; text-align: center; gap: 0.3rem;">
+                    <span class="world-emoji">🗡️</span>
+                    <div class="world-name" style="font-size: 0.85rem;">Magic Sword</div>
+                </div>
+                <div class="world-card w5" style="flex-direction: column; text-align: center; gap: 0.3rem;">
+                    <span class="world-emoji">🎒</span>
+                    <div class="world-name" style="font-size: 0.85rem;">Magical Bag</div>
+                </div>
+                <div class="world-card w6" style="flex-direction: column; text-align: center; gap: 0.3rem;">
+                    <span class="world-emoji">🌟</span>
+                    <div class="world-name" style="font-size: 0.85rem;">Your Idea!</div>
+                </div>
+            </div>
+
+            <div class="divider">✦ ✦ ✦</div>
+
+            <!-- STEP 7: TELL YOUR HERO'S STORY -->
+            <h2 style="--i:7;"><span class="step-bubble c7">7</span> Tell Your Hero's Story</h2>
+            <p>Give your hero a little backstory! This doesn't need to be complicated — even two or three sentences is perfect. Try answering these questions:</p>
+
+            <ul>
+                <li>🏠 <strong>Where does your hero live?</strong></li>
+                <li>👨‍👩‍👧 <strong>Who are the people they love?</strong></li>
+                <li>🌟 <strong>What's the most exciting thing they've ever done?</strong></li>
+                <li>🎯 <strong>What do they really, really want to do or find or achieve?</strong></li>
+            </ul>
+
+            <div class="example-char" style="background: var(--purple); border-color: var(--ink);">
+                <div class="example-char-title" style="color: #fff;">📖 Story Example</div>
+                <p style="color: var(--ink); font-size: 0.92rem; line-height: 1.8; margin: 0;">
+                    <em>"Pip is a young wizard who lives in a tall tower with their owl, Buttons. Pip's mum taught them their first spell before going on a big adventure herself. Now Pip wants to be just as brave — and maybe find where Mum went. Pip's best at magic but sometimes forgets which spell is which!"</em>
+                </p>
+            </div>
+
+            <div class="divider">✦ ✦ ✦</div>
+
+            <!-- STEP 8: READY TO PLAY -->
+            <h2 style="--i:8;"><span class="step-bubble c8">8</span> You're Ready to Play!</h2>
+            <p>That's it! Amazing Tales is designed to be quick and easy so you can spend more time playing and less time preparing. Here's a quick reminder of everything on your hero's sheet:</p>
+
+            <div class="rules-box">
+                <div class="rules-box-title">✅ Your Hero Sheet Checklist</div>
+                <ul>
+                    <li>☐ &nbsp; <strong>Hero's name</strong> and what they look like</li>
+                    <li>☐ &nbsp; <strong>Four skills</strong> written in your own words</li>
+                    <li>☐ &nbsp; <strong>One d6, one d8, one d10, one d12</strong> — one per skill</li>
+                    <li>☐ &nbsp; <strong>One Special Thing</strong> (magic item, pet, power, or gadget)</li>
+                    <li>☐ &nbsp; <strong>A little story</strong> about who your hero is</li>
+                    <li>☐ &nbsp; <strong>A goal</strong> — what adventure are you going on?</li>
+                </ul>
+            </div>
+
+            <div class="story-note" style="transform: rotate(0.3deg); background: #E8F5E9; border-color: var(--grass-dark);">
+                <span class="note-emoji">👨‍👩‍👧</span>
+                <span class="story-note-label">FOR GROWN-UP STORYTELLERS</span>
+                Remember: Amazing Tales is about creating a warm, exciting, and safe story together. Say "yes, and…" as much as possible. Let young players feel powerful and clever. When things go wrong, make it funny and interesting — never frightening. The dice guide the story; your kindness makes it magical.
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <span class="footer-stars">🌟 ⭐ 🌟 ⭐ 🌟</span>
+            <div class="footer-text">Your Adventure Begins Now!</div>
+            <div class="footer-sub">Amazing Tales by Martin Lloyd — The RPG for children aged 4 and up</div>
+        </footer>
+
+    </div>
+    </body>
+</div>
+</html>

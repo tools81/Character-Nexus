@@ -137,10 +137,6 @@ namespace VampireTheMasquerade
                                     var jsonContent = clansReader.ReadToEnd();
                                     var clans = JsonTo.List<Clan>(jsonContent);
 
-                                    //Select input items return an object, so must read to get beyond StartObject property and into Value property
-                                    reader.Read();
-                                    reader.Read();
-
                                     var clan = clans.Find(o => o.Name.ToLower() == reader.Value.ToString().ToLower());
 
                                     //Read the end object
@@ -157,10 +153,6 @@ namespace VampireTheMasquerade
                                 {
                                     var jsonContent = predatorsReader.ReadToEnd();
                                     var predators = JsonTo.List<Predator>(jsonContent);
-
-                                    //Select input items return an object, so must read to get beyond StartObject property and into Value property
-                                    reader.Read();
-                                    reader.Read();
 
                                     var predator = predators.Find(o => o.Name.ToLower() == reader.Value.ToString().ToLower());
 
@@ -179,10 +171,6 @@ namespace VampireTheMasquerade
                                     var jsonContent = generationsReader.ReadToEnd();
                                     var generations = JsonTo.List<Generation>(jsonContent);
 
-                                    //Select input items return an object, so must read to get beyond StartObject property and into Value property
-                                    reader.Read();
-                                    reader.Read();
-
                                     var generation = generations.Find(o => o.Name.ToLower() == reader.Value.ToString().ToLower());
 
                                     //Read the end object
@@ -199,10 +187,6 @@ namespace VampireTheMasquerade
                                 {
                                     var jsonContent = coteriesReader.ReadToEnd();
                                     var coteries = JsonTo.List<Coterie>(jsonContent);
-
-                                    //Select input items return an object, so must read to get beyond StartObject property and into Value property
-                                    reader.Read();
-                                    reader.Read();
 
                                     var coterie = coteries.Find(o => o.Name.ToLower() == reader.Value.ToString().ToLower());
 
@@ -342,9 +326,6 @@ namespace VampireTheMasquerade
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        reader.Read();
-                                        reader.Read();
-
                                         var found = rituals.Find(w => w.Name.ToLower() == (reader.Value.ToString()).ToLower());
 
                                         reader.Read();
@@ -455,9 +436,6 @@ namespace VampireTheMasquerade
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        reader.Read();
-                                        reader.Read();
-
                                         var found = weapons.Find(w => w.Name.ToLower() == (reader.Value.ToString()).ToLower());
 
                                         reader.Read();
@@ -484,9 +462,6 @@ namespace VampireTheMasquerade
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        reader.Read();
-                                        reader.Read();
-
                                         var found = armors.Find(w => w.Name.ToLower() == (reader.Value.ToString()).ToLower());
 
                                         reader.Read();
@@ -513,9 +488,6 @@ namespace VampireTheMasquerade
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        reader.Read();
-                                        reader.Read();
-
                                         var found = gears.Find(w => w.Name.ToLower() == (reader.Value.ToString()).ToLower());
 
                                         reader.Read();

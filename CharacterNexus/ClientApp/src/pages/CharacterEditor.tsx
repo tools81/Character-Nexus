@@ -348,6 +348,7 @@ const CharacterEditor: React.FC = () => {
               watch={watch}
               name={field.name}
               count={field.count}
+              minimum={field.minimum}
               includeLabel={includeLabel}
               label={field.label}
               disabled={disabledMap?.[field.name] === true}

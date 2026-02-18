@@ -422,7 +422,7 @@ namespace VampireTheMasquerade
                         max = 15
                     },
                     count = 15,
-                    @default = 0
+                    @default = 3
                 });
 
             _fields.Add( new
@@ -470,7 +470,7 @@ namespace VampireTheMasquerade
                         max = 10
                     },
                     count = 10,
-                    @default = 0
+                    @default = 7
                 });
 
             _fields.Add( new
@@ -494,7 +494,7 @@ namespace VampireTheMasquerade
                         max = 10
                     },
                     count = 10,
-                    @default = 0
+                    @default = 1
                 });
 
             _fields.Add( new
@@ -658,7 +658,7 @@ namespace VampireTheMasquerade
                         min = 0,
                         max = 5
                     },
-                    @default = 0
+                    @default = 1
                 });
             }
 
@@ -1008,8 +1008,8 @@ namespace VampireTheMasquerade
                         value = predator.Name,
                         label = predator.Name,
                         description = predator.Description,
-                        bonusAdjustments = JsonConvert.SerializeObject(predator.BonusAdjustments),
-                        userChoices = JsonConvert.SerializeObject(predator.UserChoices)
+                        bonusAdjustments = JsonConvert.SerializeObject(predator.BonusAdjustments, _jsonSettings),
+                        userChoices = JsonConvert.SerializeObject(predator.UserChoices, _jsonSettings)
                     }
                 );
             }
@@ -1127,22 +1127,22 @@ namespace VampireTheMasquerade
         private static void GenerateAdvantageSchema(List<Advantage> advantages, List<Background> backgrounds, 
             List<Merit> merits, List<Flaw> flaws, string name, string label)
         {
-            var accordion = new
+            var backgroundAccordion = new
             {
                 id = name,
-                label,
+                label = "Backgrounds",
                 type = "accordion",
                 items = new List<object>()
             };
 
-            foreach (var advantage in advantages.OrderBy(a => a.Name))
+            foreach (var advantage in advantages.Where(a => a.Category == "Background").OrderBy(a => a.Name))
             {
                 dynamic accordionItem = new ExpandoObject();
                 accordionItem.header = advantage.Name;
                 accordionItem.name = advantage.Name.ReplaceWhitespace("");
                 accordionItem.component = new
                 {
-                    name ="advantage.list.group",
+                    name ="background.list.group",
                     type = "listgroup",
                     items = new List<object>()
                 };
@@ -1190,6 +1190,89 @@ namespace VampireTheMasquerade
                     }
                 }
 
+                var filteredFlaws = flaws.Where(f => f.Advantage == advantage.Name);
+
+                if (filteredFlaws.Any())
+                {
+                    foreach (var flaw in filteredFlaws)
+                    {
+                        var component = new object(); 
+
+                        if (flaw.Range == 0)
+                        {
+                            component = new
+                            {
+                                name = flaw.Name.ToLower(),
+                                id = $"{advantage.Name}.{flaw.Name}",
+                                label = $"FLAW - {flaw.Name}",
+                                type = "switch"
+                            };
+                        }
+                        else
+                        {
+                            component = new
+                            {
+                                name = flaw.Name.ToLower(),
+                                id = $"{advantage.Name}.{flaw.Name}",
+                                label = $"FLAW - {flaw.Name}",
+                                includeLabel= true,
+                                type = "radiogroup",
+                                className = "form-control",
+                                count = flaw.Range,
+                                validation = new
+                                {
+                                    required = false,
+                                    min = flaw.Minimum,
+                                    max = flaw.Range
+                                },
+                                @default = 0
+                            };
+                        }
+
+                        var text = new
+                        {
+                            name = $"info-flaw-{advantage.Name}-{flaw.Name}",
+                            label = "Information",
+                            type = "textblock",
+                            className = "text-block",
+                            text = flaw.Description
+                        };
+
+                        accordionItem.component.items.Add(
+                            new
+                            {
+                                component,
+                                text
+                            }
+                        );
+                    }
+                }                
+
+                backgroundAccordion.items.Add(accordionItem);
+            }
+
+            _fields.Add(backgroundAccordion);
+
+            var meritAccordion = new
+            {
+                id = name,
+                label = "Merits",
+                type = "accordion",
+                items = new List<object>()
+            };
+
+            foreach (var advantage in advantages.Where(a => a.Category == "Merit").OrderBy(a => a.Name))
+            {
+                dynamic accordionItem = new ExpandoObject();
+                accordionItem.header = advantage.Name;
+                accordionItem.name = advantage.Name.ReplaceWhitespace("");
+                accordionItem.component = new
+                {
+                    name ="merits.list.group",
+                    type = "listgroup",
+                    items = new List<object>()
+                };
+
                 var filteredMerits = merits.Where(m => m.Advantage == advantage.Name);
 
                 if (filteredMerits.Any())
@@ -1222,7 +1305,7 @@ namespace VampireTheMasquerade
                                 validation = new
                                 {
                                     required = false,
-                                    min = 0,
+                                    min = merit.Minimum,
                                     max = merit.Range
                                 },
                                 @default = 0
@@ -1280,7 +1363,7 @@ namespace VampireTheMasquerade
                                 validation = new
                                 {
                                     required = false,
-                                    min = 0,
+                                    min = flaw.Minimum,
                                     max = flaw.Range
                                 },
                                 @default = 0
@@ -1306,10 +1389,10 @@ namespace VampireTheMasquerade
                     }
                 }                
 
-                accordion.items.Add(accordionItem);
+                meritAccordion.items.Add(accordionItem);
             }
 
-            _fields.Add(accordion);
+            _fields.Add(meritAccordion);
         }
 
         private static void GenerateWeaponSchema(List<Weapon> weapons, string name, string label)

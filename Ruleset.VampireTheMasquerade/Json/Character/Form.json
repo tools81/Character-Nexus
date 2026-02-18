@@ -255,71 +255,71 @@
           "value": "Alleycat",
           "label": "Alleycat",
           "description": "A combative assault-feeder, you stalk, overpower, and drink from whomever you can, when you can. You may or may not attempt to threaten or Dominate victims into silence or mask the feeding as a robbery. Think about how you arrived at this direct approach to feeding and what makes you comfortable with an unlife of stalking, attacking, feeding, and escaping. You could have been homeless, an SAS soldier, a cartel hit-man, or a big-game hunter.",
-          "bonusAdjustments": "[{\"Type\":\"humanity\",\"Name\":\"\",\"Value\":-1},{\"Type\":\"background\",\"Name\":\"Criminal Contacts\",\"Value\":3}]",
-          "userChoices": "[{\"Type\":\"specialty\",\"Choices\":[\"Intimidation.Stickups\",\"Brawl.Grappling\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"disipline\",\"Choices\":[\"Celerity\",\"Potence\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+          "bonusAdjustments": "[{\"type\":\"humanity\",\"name\":\"\",\"value\":-1},{\"type\":\"background\",\"name\":\"Criminal Contacts\",\"value\":3}]",
+          "userChoices": "[{\"type\":\"specialty\",\"choices\":[\"Intimidation.Stickups\",\"Brawl.Grappling\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disipline\",\"choices\":[\"Celerity\",\"Potence\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Bagger",
           "label": "Bagger",
           "description": "You steal, buy, or otherwise procure cold blood rather than hunt, relying on the black market or your skills as a burglar or ambulance chaser. Perhaps you still work the night shift at the hospital. Ventrue may not pick this Predator type.",
-          "bonusAdjustments": "[{\"Type\":\"merit\",\"Name\":\"Iron Gullet\",\"Value\":3},{\"Type\":\"flaw\",\"Name\":\"Enemy\",\"Value\":2}]",
-          "userChoices": "[{\"Type\":\"specialty\",\"Choices\":[\"Larceny.Lockpicking\",\"Streetwise.Black Markets\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"disipline\",\"Choices\":[\"Blood Sorcery\",\"Obfuscate\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+          "bonusAdjustments": "[{\"type\":\"merit\",\"name\":\"Iron Gullet\",\"value\":3},{\"type\":\"flaw\",\"name\":\"Enemy\",\"value\":2}]",
+          "userChoices": "[{\"type\":\"specialty\",\"choices\":[\"Larceny.Lockpicking\",\"Streetwise.Black Markets\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disipline\",\"choices\":[\"Blood Sorcery\",\"Obfuscate\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Blood Leech",
           "label": "Blood Leech",
           "description": "You drink from other vampires, either by hunting, coercion or by taking Blood as payment - the only truly moral way of feeding you can think of. Unfortunately, this practice is usually forbidden in Kindred society. It is either risky as all fuck or requires a position of enviable power.",
-          "bonusAdjustments": "[{\"Type\":\"humanity\",\"Name\":\"\",\"Value\":-1},{\"Type\":\"potency\",\"Name\":\"\",\"Value\":1},{\"Type\":\"flaw\",\"Name\":\"Prey Exclusion\",\"Value\":2}]",
-          "userChoices": "[{\"Type\":\"specialty\",\"Choices\":[\"Brawl.Kindred\",\"Stealth.Kindred\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"disipline\",\"Choices\":[\"Celerity\",\"Protean\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"flaw\",\"Choices\":[\"Diablerist\",\"Shunned\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+          "bonusAdjustments": "[{\"type\":\"humanity\",\"name\":\"\",\"value\":-1},{\"type\":\"potency\",\"name\":\"\",\"value\":1},{\"type\":\"flaw\",\"name\":\"Prey Exclusion\",\"value\":2}]",
+          "userChoices": "[{\"type\":\"specialty\",\"choices\":[\"Brawl.Kindred\",\"Stealth.Kindred\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disipline\",\"choices\":[\"Celerity\",\"Protean\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"flaw\",\"choices\":[\"Diablerist\",\"Shunned\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
           "value": "Cleaver",
           "label": "Cleaver",
           "description": "You feed covertly from your (or someone's) mortal family and friends with whom you still maintain ties. The most extreme cleavers adopt children, marry a human, and try to maintain a family life for as long as they can. Add your family to the Relationship Map.<br >Cleavers often go to great lengths to keep the truth of their condition from their family, but some also maintain unwholesome relationships with their own kin. The Camarilla forbids taking a human family in this fashion, and it frowns on cleavers as Masquerade breaches waiting to happen. Wiser Kindred may massacre your family for your own good if they find out your secret and care what happens to you.",
-          "bonusAdjustments": "[{\"Type\":\"background\",\"Name\":\"Herd\",\"Value\":2},{\"Type\":\"flaw\",\"Name\":\"Cleaver\",\"Value\":1}]",
-          "userChoices": "[{\"Type\":\"specialty\",\"Choices\":[\"Persuasion.Gaslighting\",\"Subterfuge.Coverups\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"disipline\",\"Choices\":[\"Animalism\",\"Dominate\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+          "bonusAdjustments": "[{\"type\":\"background\",\"name\":\"Herd\",\"value\":2},{\"type\":\"flaw\",\"name\":\"Cleaver\",\"value\":1}]",
+          "userChoices": "[{\"type\":\"specialty\",\"choices\":[\"Persuasion.Gaslighting\",\"Subterfuge.Coverups\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disipline\",\"choices\":[\"Animalism\",\"Dominate\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Consensualist",
           "label": "Consensualist",
           "description": "You never feed against your victim's free will. You masquerade as a representative of a charity blood drive, as a blood-drinking kink-lord in the 'real vampire community,' or by actually telling your victims what you are and getting their permission to feed. The Camarilla call that last method a Masquerade breach, but many Anarch philosophers consider it an acceptable risk. You could have been anything in life, but a sex-worker, a political organizer, or a lawyer could all be wary of feeding without consent.",
-          "bonusAdjustments": "[{\"Type\":\"humanity\",\"Name\":\"\",\"Value\":1},{\"Type\":\"flaw\",\"Name\":\"Dark Secret\",\"Value\":1},{\"Type\":\"flaw\",\"Name\":\"Prey Exclusion\",\"Value\":1}]",
-          "userChoices": "[{\"Type\":\"specialty\",\"Choices\":[\"Medicine.Phlebotomy\",\"Persuasion.Victims\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"disipline\",\"Choices\":[\"Auspex\",\"Fortitude\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+          "bonusAdjustments": "[{\"type\":\"humanity\",\"name\":\"\",\"value\":1},{\"type\":\"flaw\",\"name\":\"Dark Secret\",\"value\":1},{\"type\":\"flaw\",\"name\":\"Prey Exclusion\",\"value\":1}]",
+          "userChoices": "[{\"type\":\"specialty\",\"choices\":[\"Medicine.Phlebotomy\",\"Persuasion.Victims\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disipline\",\"choices\":[\"Auspex\",\"Fortitude\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Farmer",
           "label": "Farmer",
           "description": "You only feed from animals. Your Hunger constantly gnaws at you, but you have not killed a single human being so far (except perhaps that one time), and you intend to keep it that way. You could have been anyone in life, but your choice speaks to someone obsessed by morality. Perhaps you were an activist, priest, aidworker, or vegan in life, but the choice never to risk a human life is one anyone could arrive at and struggle to maintain. Ventrue may not pick this Predator type.<br >You cannot pick this Predator type if your Blood Potency is 3 or higher.",
-          "bonusAdjustments": "[{\"Type\":\"humanity\",\"Name\":\"\",\"Value\":1},{\"Type\":\"flaw\",\"Name\":\"Vegan\",\"Value\":2}]",
-          "userChoices": "[{\"Type\":\"specialty\",\"Choices\":[\"Animal Ken.(Specific)\",\"Survival.Hunting\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"disipline\",\"Choices\":[\"Animalism\",\"Protean\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+          "bonusAdjustments": "[{\"type\":\"humanity\",\"name\":\"\",\"value\":1},{\"type\":\"flaw\",\"name\":\"Vegan\",\"value\":2}]",
+          "userChoices": "[{\"type\":\"specialty\",\"choices\":[\"Animal Ken.(Specific)\",\"Survival.Hunting\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disipline\",\"choices\":[\"Animalism\",\"Protean\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Osiris",
           "label": "Osiris",
           "description": "You are a celebrity among mortals or else you run a cult, a church, or something similar. You feed from your fans or worshippers, who treat you as a deity. You always have access to easy blood, but followers breed problems with the authorities, organized religion, and indeed the Camarilla. In life, you might have been a DJ, a writer, a cultist, a preacher, or a LARP organizer.",
           "bonusAdjustments": "null",
-          "userChoices": "[{\"Type\":\"specialty\",\"Choices\":[\"Occult.(Specific)\",\"Performance.(Specific)\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"disipline\",\"Choices\":[\"Blood Sorcery\",\"Presence\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+          "userChoices": "[{\"type\":\"specialty\",\"choices\":[\"Occult.(Specific)\",\"Performance.(Specific)\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disipline\",\"choices\":[\"Blood Sorcery\",\"Presence\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Sandman",
           "label": "Sandman",
           "description": "You rely on your stealth or Disciplines to feed from sleeping victims. If they never wake during the feeding, they won’t know you exist. Perhaps you were very anti-social in life; you don’t feel cut out for the intense interpersonal nightlife or physical violence of more extroverted hunters.",
-          "bonusAdjustments": "[{\"Type\":\"background\",\"Name\":\"Resources\",\"Value\":1}]",
-          "userChoices": "[{\"Type\":\"specialty\",\"Choices\":[\"Medicine.Anesthetics\",\"Steath.Break-in\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"disipline\",\"Choices\":[\"Auspex\",\"Obfuscate\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+          "bonusAdjustments": "[{\"type\":\"background\",\"name\":\"Resources\",\"value\":1}]",
+          "userChoices": "[{\"type\":\"specialty\",\"choices\":[\"Medicine.Anesthetics\",\"Steath.Break-in\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disipline\",\"choices\":[\"Auspex\",\"Obfuscate\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Scene Queen",
           "label": "Scene Queen",
           "description": "You rely on your familiarity with a certain subculture and a wellcrafted pose, feeding on an exclusive subculture that believes you to be one of them. Your victims adore you for your status in the scene, and the ones who understand what you are disbelieved. You may belong to the street or be literal upper-class, abusing the weak with false hope and promises of taking them to the next level. In life, you almost certainly belonged to a scene similar to the one you stalk now.",
-          "bonusAdjustments": "[{\"Type\":\"merit\",\"Name\":\"Fame\",\"Value\":1},{\"Type\":\"background\",\"Name\":\"Contacts\",\"Value\":1},{\"Type\":\"flaw\",\"Name\":\"Dark Secret\",\"Value\":1}]",
-          "userChoices": "[{\"Type\":\"specialty\",\"Choices\":[\"Ettiquete.(Specific)\",\"Leadership.(Specific)\",\"Streetwise.(Specific)\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"disipline\",\"Choices\":[\"Dominate\",\"Potence\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"flaw\",\"Choices\":[\"Disliked\",\"Prey Exclusion\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+          "bonusAdjustments": "[{\"type\":\"merit\",\"name\":\"Fame\",\"value\":1},{\"type\":\"background\",\"name\":\"Contacts\",\"value\":1},{\"type\":\"flaw\",\"name\":\"Dark Secret\",\"value\":1}]",
+          "userChoices": "[{\"type\":\"specialty\",\"choices\":[\"Ettiquete.(Specific)\",\"Leadership.(Specific)\",\"Streetwise.(Specific)\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disipline\",\"choices\":[\"Dominate\",\"Potence\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"flaw\",\"choices\":[\"Disliked\",\"Prey Exclusion\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
           "value": "Siren",
           "label": "Siren",
           "description": "You feed almost exclusively during or while feigning sex, and you rely on your Disciplines, seduction skills, or the unquenchable appetites of others to conceal your carnivorous nature. You have mastered the art of the one night stand or move through the sex-club scene like a dark star. You think of yourself as a sexy beast, but in your darkest moments, you fear that you're at best a problematic lover, at worst a habitual rapist. A former lover who escaped destruction might be your Touchstone or your stalker. (If so, add them to the Relationship Map.) Maybe in life you were a pick-up artist, movie producer, author, a glorious slutty kinkster – or a virgin who intends to make up for lost time post-mortem.",
-          "bonusAdjustments": "[{\"Type\":\"merit\",\"Name\":\"Beautiful\",\"Value\":2},{\"Type\":\"flaw\",\"Name\":\"Enemy\",\"Value\":1}]",
-          "userChoices": "[{\"Type\":\"specialty\",\"Choices\":[\"Persuasion.Seduction\",\"Subterfuge.Seduction\"],\"Count\":1,\"Category\":null,\"Value\":null},{\"Type\":\"disipline\",\"Choices\":[\"Fortitude\",\"Presence\"],\"Count\":1,\"Category\":null,\"Value\":null}]"
+          "bonusAdjustments": "[{\"type\":\"merit\",\"name\":\"Beautiful\",\"value\":2},{\"type\":\"flaw\",\"name\":\"Enemy\",\"value\":1}]",
+          "userChoices": "[{\"type\":\"specialty\",\"choices\":[\"Persuasion.Seduction\",\"Subterfuge.Seduction\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disipline\",\"choices\":[\"Fortitude\",\"Presence\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         }
       ]
     },
@@ -463,7 +463,7 @@
             "min": 0,
             "max": 5
           },
-          "default": 0
+          "default": 1
         },
         {
           "name": "attributes.Dexterity",
@@ -477,7 +477,7 @@
             "min": 0,
             "max": 5
           },
-          "default": 0
+          "default": 1
         },
         {
           "name": "attributes.Stamina",
@@ -491,7 +491,7 @@
             "min": 0,
             "max": 5
           },
-          "default": 0
+          "default": 1
         }
       ]
     },
@@ -4296,14 +4296,14 @@
     },
     {
       "id": "advantages",
-      "label": "Advantages",
+      "label": "Backgrounds",
       "type": "accordion",
       "items": [
         {
           "header": "Allies",
           "name": "Allies",
           "component": {
-            "name": "advantage.list.group",
+            "name": "background.list.group",
             "type": "listgroup",
             "items": [
               {
@@ -4358,150 +4358,10 @@
           }
         },
         {
-          "header": "Archaic",
-          "name": "Archaic",
-          "component": {
-            "name": "advantage.list.group",
-            "type": "listgroup",
-            "items": [
-              {
-                "component": {
-                  "name": "archaic",
-                  "id": "Archaic.Archaic",
-                  "label": "FLAW - Archaic",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-flaw-Archaic-Archaic",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You haven't been able to adapt to the present, or you have been long in torpor. You cannot use computers or cell phones, and your Technology rating is permanently 0. The Storyteller may penalize other dice pools involving very modern technology by one die."
-                }
-              },
-              {
-                "component": {
-                  "name": "living in the past",
-                  "id": "Archaic.Living in the Past",
-                  "label": "FLAW - Living in the Past",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-flaw-Archaic-Living in the Past",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You haven't grasped the modern mindset, or you just don't want to. You have one or more seriously outdated Convictions, e.g. 'The Pope's word is law,' 'Women are delicate flowers,' 'Lower classes exist only to serve,' or 'Burn your enemies' baggage.' These archaic moralities maintain your Humanity but are odious to many; you lose one die from Social test dice pools involving such archaic beliefs except with vampires your age and older, who may admire your steadfast virtue."
-                }
-              }
-            ]
-          }
-        },
-        {
-          "header": "Bonding",
-          "name": "Bonding",
-          "component": {
-            "name": "advantage.list.group",
-            "type": "listgroup",
-            "items": [
-              {
-                "component": {
-                  "name": "bond resistance",
-                  "id": "Bonding.Bond Resistance",
-                  "label": "MERIT - Bond Resistance",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Bonding-Bond Resistance",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "Your Blood rebels against control. Add one die to your dice pools to resist a Blood Bond per level you take of this Merit (maximum three)."
-                }
-              },
-              {
-                "component": {
-                  "name": "short bond",
-                  "id": "Bonding.Short Bond",
-                  "label": "MERIT - Short Bond",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Bonding-Short Bond",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "Blood Bonds on you lose their Bond strength more rapidly than normal, decreasing at both the full moon and new moon (i.e., by two each month) if not reinforced."
-                }
-              },
-              {
-                "component": {
-                  "name": "unbondable",
-                  "id": "Bonding.Unbondable",
-                  "label": "MERIT - Unbondable",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Bonding-Unbondable",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You cannot be Blood Bound. If you're ever short of cash, you can probably sell your vitae to alchemists, too."
-                }
-              },
-              {
-                "component": {
-                  "name": "bondslave",
-                  "id": "Bonding.Bondslave",
-                  "label": "FLAW - Bondslave",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-flaw-Bonding-Bondslave",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You bond instantly with the taste of another's vitae; only one drink of blood binds you, not three. Either you begin as your sire's thrall, or consult with the Storyteller to come up with a reason that first bond has broken. Possibly your sire has been staked or in another city for more than six months?"
-                }
-              },
-              {
-                "component": {
-                  "name": "bond junkie",
-                  "id": "Bonding.Bond Junkie",
-                  "label": "FLAW - Bond Junkie",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-flaw-Bonding-Bond Junkie",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": " The Bond feels sweeter to you once it happens. Subtract one die from your dice pools to act against a Blood Bond."
-                }
-              },
-              {
-                "component": {
-                  "name": "long bond",
-                  "id": "Bonding.Long Bond",
-                  "label": "FLAW - Long Bond",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-flaw-Bonding-Long Bond",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "Blood Bonds on you lose their Bond strength more slowly than normal, decreasing by one for each three months without being reinforced."
-                }
-              }
-            ]
-          }
-        },
-        {
           "header": "Contacts",
           "name": "Contacts",
           "component": {
-            "name": "advantage.list.group",
+            "name": "background.list.group",
             "type": "listgroup",
             "items": [
               {
@@ -4525,7 +4385,7 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": "You know people - human people - from many different walks of life. Contacts primarily provide you with information in their areas of expertise, and they may want to exchange favors of various kinds. For different kinds of help, use your Influence (p. 187) in the mortal world, or call on your Allies (p. 184) or Mawla (p. 192).<br />A Contact is someone in an excellent position to get information. They might be a police dispatcher, rather than a homicide lieutenant, or a congressional staffer, rather than a senator. Information brokers, gossip columnists, underworld fixers, and reporters make excellent Contacts. You can define your Contacts when you buy this Background or as you need to introduce them in play. Whenever you create them, make sure to add them to the Relationship Map."
+                  "text": ""
                 }
               }
             ]
@@ -4535,7 +4395,7 @@
           "header": "Fame",
           "name": "Fame",
           "component": {
-            "name": "advantage.list.group",
+            "name": "background.list.group",
             "type": "listgroup",
             "items": [
               {
@@ -4567,7 +4427,16 @@
                   "name": "cleaver",
                   "id": "Fame.Cleaver",
                   "label": "FLAW - Cleaver",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 2,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Fame-Cleaver",
@@ -4582,7 +4451,16 @@
                   "name": "debt",
                   "id": "Fame.Debt",
                   "label": "FLAW - Debt",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Fame-Debt",
@@ -4603,7 +4481,7 @@
                   "count": 5,
                   "validation": {
                     "required": false,
-                    "min": 0,
+                    "min": null,
                     "max": 5
                   },
                   "default": 0
@@ -4621,7 +4499,16 @@
                   "name": "dark secret",
                   "id": "Fame.Dark Secret",
                   "label": "FLAW - Dark Secret",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 5,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 5
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Fame-Dark Secret",
@@ -4635,110 +4522,10 @@
           }
         },
         {
-          "header": "Feeding",
-          "name": "Feeding",
-          "component": {
-            "name": "advantage.list.group",
-            "type": "listgroup",
-            "items": [
-              {
-                "component": {
-                  "name": "bloodhound",
-                  "id": "Feeding.Bloodhound",
-                  "label": "MERIT - Bloodhound",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Feeding-Bloodhound",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You can smell the Resonance of a human's blood without tasting it. You still need to be within olfactory range of the person. Make a Resolve + Awareness test at Difficulty 3. Increase Difficulty for perfume or distance; lower it for more intimate contact."
-                }
-              },
-              {
-                "component": {
-                  "name": "iron gullet",
-                  "id": "Feeding.Iron Gullet",
-                  "label": "MERIT - Iron Gullet",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Feeding-Iron Gullet",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You can feed from cold blood, rancid blood, and fractionated plasma. None of these provide Resonances. Ventrue may not take this Merit."
-                }
-              },
-              {
-                "component": {
-                  "name": "vegan",
-                  "id": "Feeding.Vegan",
-                  "label": "FLAW - Vegan",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-flaw-Feeding-Vegan",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You feed only on animal blood. You must spend two points of Willpower to drink human blood. Ventrue may not take this Flaw."
-                }
-              },
-              {
-                "component": {
-                  "name": "organovore",
-                  "id": "Feeding.Organovore",
-                  "label": "FLAW - Organovore",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-flaw-Feeding-Organovore",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You can slake Hunger only by eating human flesh and organs, especially those rich in blood such as the heart, liver, lungs, placenta, and spleen. (Most organovore Kindred these nights make smoothies from the organs first.) Only the heart provides Resonance, if any."
-                }
-              },
-              {
-                "component": {
-                  "name": "methuselah's thirst",
-                  "id": "Feeding.Methuselah's Thirst",
-                  "label": "FLAW - Methuselah's Thirst",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-flaw-Feeding-Methuselah's Thirst",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "Your Hunger can only be fully slaked by the blood of supernatural creatures. (Alchemists may be able to thicken the Blood of thin-bloods enough to sate you.) Otherwise, it constantly remains at a minimum of 1. (Or higher, depending on Blood Potency (see p. 215)."
-                }
-              },
-              {
-                "component": {
-                  "name": "prey exclusion",
-                  "id": "Feeding.Prey Exclusion",
-                  "label": "FLAW - Prey Exclusion",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-flaw-Feeding-Prey Exclusion",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You refuse to hunt a certain class of prey: drug users, women, children, policemen, innocents, a given minority or ethnic group, etc. If you feed on such prey, you gain Stains as though you had violated a chronicle Tenet. Witnessing other Kindred feeding on the object of your exclusion without interfering might also give Stains, at the Storyteller's discretion. Ventrue with this Flaw gain an additional restriction, making their choice of vessels extremely narrow."
-                }
-              }
-            ]
-          }
-        },
-        {
           "header": "Haven",
           "name": "Haven",
           "component": {
-            "name": "advantage.list.group",
+            "name": "background.list.group",
             "type": "listgroup",
             "items": [
               {
@@ -4767,190 +4554,19 @@
               },
               {
                 "component": {
-                  "name": "base haven",
-                  "id": "Haven.Base Haven",
-                  "label": "MERIT - Base Haven",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Haven-Base Haven",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "• Small haven, but more secure and private than the default. Examples: basement apartment, crypt, locked storeroom in a warehouse.<br />•• Good size, security, or privacy. Examples: a singlefamily home or row house, wolf enclosure at the zoo, branch sewer tunnel.<br />••• Very large, secure, or private. Examples: a compound outside town, a bank building, a decommissioned subway station."
-                }
-              },
-              {
-                "component": {
-                  "name": "hidden armory",
-                  "id": "Haven.Hidden Armory",
-                  "label": "MERIT - Hidden Armory",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Haven-Hidden Armory",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "Each dot in this Merit adds a stand of arms to your haven's supply: one pistol and one long firearm, with ammunition. They are as secure from discovery as your resting place."
-                }
-              },
-              {
-                "component": {
-                  "name": "cell",
-                  "id": "Haven.Cell",
-                  "label": "MERIT - Cell",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Haven-Cell",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "Your haven has a dedicated, locked place to store two prisoners, with a base Difficulty to escape of 5. Each extra dot either allows you to store twice as many prisoners (up to a maximum of 32, only in very large havens) or adds +1 to the escape Difficulty. This Merit is not available in small havens."
-                }
-              },
-              {
-                "component": {
-                  "name": "watchmen",
-                  "id": "Haven.Watchmen",
-                  "label": "MERIT - Watchmen",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Haven-Watchmen",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You have either private security or criminal thugs guarding your haven. Each dot of this Merit supplies four Average guards and one Gifted boss (see Mortal Templates, p. 185). If guards would be conspicuous here, buy this Merit cautiously."
-                }
-              },
-              {
-                "component": {
-                  "name": "laboratory",
-                  "id": "Haven.Laboratory",
-                  "label": "MERIT - Laboratory",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Haven-Laboratory",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "Your haven has an equipped laboratory with a dedicated industrial sink, gas jet, reinforced floor, etc. Each dot of this Merit adds one to the dice pool for rolls related to one Science or Technology specialty or to Alchemy dice pools for thin-bloods using the Fixatio method (p. 284). This Merit is not available in small havens."
-                }
-              },
-              {
-                "component": {
-                  "name": "library",
-                  "id": "Haven.Library",
-                  "label": "MERIT - Library",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Haven-Library",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "Your Haven has a dedicated library on the occult, Cainite legends, city history, vampire lore, or the like. Each dot of this Merit adds one to the dice pool for research rolls for one Academics, Investigation, or Occult specialty. Small havens limit this Merit to a maximum of one dot."
-                }
-              },
-              {
-                "component": {
-                  "name": "location",
-                  "id": "Haven.Location",
-                  "label": "MERIT - Location",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Haven-Location",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "Your haven nestles in one of the most fashionable or otherwise exclusive areas of the city, in the Rack, on a small island, or otherwise in a prime spot. Add two dice (or +2 to foes' Difficulty) to bonuses on the relevant die rolls from either Chasse (p. 195) or from your base Haven rating (pick one). If neither modifier precisely maps to what you have in mind, work out with your Storyteller when you can expect a two-dice bonus to occur. For example, a Haven close to Elysium might grant a two-dice bonus to Etiquette tests in Elysium and on tests to pick up on court gossip."
-                }
-              },
-              {
-                "component": {
-                  "name": "luxury",
-                  "id": "Haven.Luxury",
-                  "label": "MERIT - Luxury",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Haven-Luxury",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "High-definition flat screens, designer furniture, objets d'art, or other expensive details give you a two-dice bonus to Social tests dealing with mortal guests in your haven. If you don’t have at least three dots of Resources (•••), your décor was gained illegally."
-                }
-              },
-              {
-                "component": {
-                  "name": "postern",
-                  "id": "Haven.Postern",
-                  "label": "MERIT - Postern",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Haven-Postern",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "Your Haven has a rear exit, secret tunnel, grating in the cellar leading into the sewers, or other unobtrusive way out. For each dot of this Merit, add one die to your dice pools to evade or escape surveillance near your haven."
-                }
-              },
-              {
-                "component": {
-                  "name": "security system",
-                  "id": "Haven.Security System",
-                  "label": "MERIT - Security System",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Haven-Security System",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "Your haven has a better-than-average security system. For each dot of this Merit, add one die to your dice pool to resist (or alert you to) unauthorized entry into your haven."
-                }
-              },
-              {
-                "component": {
-                  "name": "surgery",
-                  "id": "Haven.Surgery",
-                  "label": "MERIT - Surgery",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Haven-Surgery",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "Your haven has one room equipped as a field surgery or better. Add two dice to relevant dice pools, generally Medicine, for tests performed in your haven. This Merit is not available in small havens."
-                }
-              },
-              {
-                "component": {
-                  "name": "warding",
-                  "id": "Haven.Warding",
-                  "label": "MERIT - Warding",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Haven-Warding",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "Your haven possesses some kind of magical ward barring supernatural forces. You may not be able to deactivate it, but it allows you to pass. Discuss the limits of your ward with the Storyteller. Each dot of this Merit adds one to the dice pool to resist supernatural scrying, as well as whatever other entry the Storyteller allows it to prevent. The Storyteller may require you to possess Occult 3 or better, or Blood Sorcery, to buy this Merit."
-                }
-              },
-              {
-                "component": {
                   "name": "no haven",
                   "id": "Haven.No Haven",
                   "label": "FLAW - No Haven",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Haven-No Haven",
@@ -4965,7 +4581,16 @@
                   "name": "no haven",
                   "id": "Haven.No Haven",
                   "label": "FLAW - No Haven",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Haven-No Haven",
@@ -4980,7 +4605,16 @@
                   "name": "compromised",
                   "id": "Haven.Compromised",
                   "label": "FLAW - Compromised",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 2,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Haven-Compromised",
@@ -4995,7 +4629,16 @@
                   "name": "creepy",
                   "id": "Haven.Creepy",
                   "label": "FLAW - Creepy",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Haven-Creepy",
@@ -5010,7 +4653,16 @@
                   "name": "haunted",
                   "id": "Haven.Haunted",
                   "label": "FLAW - Haunted",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 5,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 5
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Haven-Haunted",
@@ -5027,7 +4679,7 @@
           "header": "Herd",
           "name": "Herd",
           "component": {
-            "name": "advantage.list.group",
+            "name": "background.list.group",
             "type": "listgroup",
             "items": [
               {
@@ -5059,7 +4711,16 @@
                   "name": "obvious predator",
                   "id": "Herd.Obvious Predator",
                   "label": "FLAW - Obvious Predator",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 2,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Herd-Obvious Predator",
@@ -5076,7 +4737,7 @@
           "header": "Influence",
           "name": "Influence",
           "component": {
-            "name": "advantage.list.group",
+            "name": "background.list.group",
             "type": "listgroup",
             "items": [
               {
@@ -5108,7 +4769,16 @@
                   "name": "despised",
                   "id": "Influence.Despised",
                   "label": "FLAW - Despised",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 2,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Influence-Despised",
@@ -5123,7 +4793,16 @@
                   "name": "disliked",
                   "id": "Influence.Disliked",
                   "label": "FLAW - Disliked",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Influence-Disliked",
@@ -5137,129 +4816,10 @@
           }
         },
         {
-          "header": "Linguistics",
-          "name": "Linguistics",
-          "component": {
-            "name": "advantage.list.group",
-            "type": "listgroup",
-            "items": [
-              {
-                "component": {
-                  "name": "linguistics",
-                  "id": "Linguistics.Linguistics",
-                  "label": "MERIT - Linguistics",
-                  "includeLabel": true,
-                  "type": "radiogroup",
-                  "className": "form-control",
-                  "count": 4,
-                  "validation": {
-                    "required": false,
-                    "min": 0,
-                    "max": 4
-                  },
-                  "default": 0
-                },
-                "text": {
-                  "name": "info-merit-Linguistics-Linguistics",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "Each dot in Linguistics allows the character to fluently speak, write, and read one additional language besides those two default languages."
-                }
-              },
-              {
-                "component": {
-                  "name": "illiterate",
-                  "id": "Linguistics.Illiterate",
-                  "label": "FLAW - Illiterate",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-flaw-Linguistics-Illiterate",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You cannot read or write. Your Academics and Science Skills are capped at 1, and you can have no specialty in them incorporating modern knowledge."
-                }
-              }
-            ]
-          }
-        },
-        {
-          "header": "Looks",
-          "name": "Looks",
-          "component": {
-            "name": "advantage.list.group",
-            "type": "listgroup",
-            "items": [
-              {
-                "component": {
-                  "name": "beautiful",
-                  "id": "Looks.Beautiful",
-                  "label": "MERIT - Beautiful",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Looks-Beautiful",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You add one extra die to all appropriate Social dice pools."
-                }
-              },
-              {
-                "component": {
-                  "name": "stunning",
-                  "id": "Looks.Stunning",
-                  "label": "MERIT - Stunning",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Looks-Stunning",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You add two extra dice to all appropriate Social dice pools, as above."
-                }
-              },
-              {
-                "component": {
-                  "name": "repulsive",
-                  "id": "Looks.Repulsive",
-                  "label": "FLAW - Repulsive",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-flaw-Looks-Repulsive",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You lose two dice from all relevant Social dice pools."
-                }
-              },
-              {
-                "component": {
-                  "name": "ugly",
-                  "id": "Looks.Ugly",
-                  "label": "FLAW - Ugly",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-flaw-Looks-Ugly",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You lose one die from all relevant Social dice pools."
-                }
-              }
-            ]
-          }
-        },
-        {
           "header": "Loresheet",
           "name": "Loresheet",
           "component": {
-            "name": "advantage.list.group",
+            "name": "background.list.group",
             "type": "listgroup",
             "items": [
               {
@@ -5293,7 +4853,7 @@
           "header": "Mask",
           "name": "Mask",
           "component": {
-            "name": "advantage.list.group",
+            "name": "background.list.group",
             "type": "listgroup",
             "items": [
               {
@@ -5322,40 +4882,19 @@
               },
               {
                 "component": {
-                  "name": "zeroed",
-                  "id": "Mask.Zeroed",
-                  "label": "MERIT - Zeroed",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Mask-Zeroed",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "Someone in high places has purged your real records. You officially don't exist."
-                }
-              },
-              {
-                "component": {
-                  "name": "cobbler",
-                  "id": "Mask.Cobbler",
-                  "label": "MERIT - Cobbler",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Mask-Cobbler",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You can make or source Masks. Making a Mask takes three days per dot and possibly exposes you online; sourcing Masks takes one day per dot, but costs something in return. How much depends on your leverage, margin on the Social test, or whatever else the Storyteller decides."
-                }
-              },
-              {
-                "component": {
                   "name": "known blankbody",
                   "id": "Mask.Known Blankbody",
                   "label": "FLAW - Known Blankbody",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 2,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Mask-Known Blankbody",
@@ -5370,7 +4909,16 @@
                   "name": "known corpse",
                   "id": "Mask.Known Corpse",
                   "label": "FLAW - Known Corpse",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Mask-Known Corpse",
@@ -5387,7 +4935,7 @@
           "header": "Mawla",
           "name": "Mawla",
           "component": {
-            "name": "advantage.list.group",
+            "name": "background.list.group",
             "type": "listgroup",
             "items": [
               {
@@ -5418,95 +4966,10 @@
           }
         },
         {
-          "header": "Mythic",
-          "name": "Mythic",
-          "component": {
-            "name": "advantage.list.group",
-            "type": "listgroup",
-            "items": [
-              {
-                "component": {
-                  "name": "eat food",
-                  "id": "Mythic.Eat Food",
-                  "label": "MERIT - Eat Food",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-merit-Mythic-Eat Food",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You can consume food without effort and might even enjoy it, though it gives no nourishment and must be expelled before resting for the day."
-                }
-              },
-              {
-                "component": {
-                  "name": "stake bait",
-                  "id": "Mythic.Stake Bait",
-                  "label": "FLAW - Stake Bait",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-flaw-Mythic-Stake Bait",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You meet Final Death when staked through the heart, rather than entering torpor."
-                }
-              },
-              {
-                "component": {
-                  "name": "folkloric bane",
-                  "id": "Mythic.Folkloric Bane",
-                  "label": "FLAW - Folkloric Bane",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-flaw-Mythic-Folkloric Bane",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You take Aggravated damage from a folkloric bane. Folkloric banes include:<br /><ul><li>Ultraviolet light (damage as direct sunlight)</li><li>Silver or silver-plated weapons (damage as weapon damage: simply touching a silver coin or silverware does one point of Aggravated damage)</li><li>Holy water (damage as fire)</li></ul>"
-                }
-              },
-              {
-                "component": {
-                  "name": "folkloric block",
-                  "id": "Mythic.Folkloric Block",
-                  "label": "FLAW - Folkloric Block",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-flaw-Mythic-Folkloric Block",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "When faced with a folkloric block, you must shrink away from it or spend a Willpower point to push through it.<br />Each folkloric block you take counts as a separate one-point Flaw. Folkloric blocks include:<br /><ul><li>Holy symbols presented by any believer (even without True Faith)</li><li>Crossing visible running water (not recommended in certain cities, such as Amsterdam, Stockholm, or Venice)</li><li>Crossing a threshold to a home uninvited by the owner</li><li>White animal</li><li>Garlic</li><li>Wild roses</li><li>Spilled seeds you haven't counted</li></ul>"
-                }
-              },
-              {
-                "component": {
-                  "name": "stigmata",
-                  "id": "Mythic.Stigmata",
-                  "label": "FLAW - Stigmata",
-                  "type": "switch"
-                },
-                "text": {
-                  "name": "info-flaw-Mythic-Stigmata",
-                  "label": "Information",
-                  "type": "textblock",
-                  "className": "text-block",
-                  "text": "You begin to bleed from open wounds on your hands, feet, and forehead when you reach Hunger 4. This attracts attention, leaves traces, and may penalize some dice pools at the Storyteller’s discretion."
-                }
-              }
-            ]
-          }
-        },
-        {
           "header": "Resources",
           "name": "Resources",
           "component": {
-            "name": "advantage.list.group",
+            "name": "background.list.group",
             "type": "listgroup",
             "items": [
               {
@@ -5544,7 +5007,7 @@
                   "count": 5,
                   "validation": {
                     "required": false,
-                    "min": 0,
+                    "min": null,
                     "max": 5
                   },
                   "default": 0
@@ -5562,7 +5025,16 @@
                   "name": "destitute",
                   "id": "Resources.Destitute",
                   "label": "FLAW - Destitute",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Resources-Destitute",
@@ -5579,7 +5051,7 @@
           "header": "Retainers",
           "name": "Retainers",
           "component": {
-            "name": "advantage.list.group",
+            "name": "background.list.group",
             "type": "listgroup",
             "items": [
               {
@@ -5611,7 +5083,16 @@
                   "name": "stalkers",
                   "id": "Retainers.Stalkers",
                   "label": "FLAW - Stalkers",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Retainers-Stalkers",
@@ -5628,7 +5109,7 @@
           "header": "Status",
           "name": "Status",
           "component": {
-            "name": "advantage.list.group",
+            "name": "background.list.group",
             "type": "listgroup",
             "items": [
               {
@@ -5660,7 +5141,16 @@
                   "name": "shunned",
                   "id": "Status.Shunned",
                   "label": "FLAW - Shunned",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 2,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Status-Shunned",
@@ -5675,7 +5165,16 @@
                   "name": "suspect",
                   "id": "Status.Suspect",
                   "label": "FLAW - Suspect",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Status-Suspect",
@@ -5687,12 +5186,573 @@
               }
             ]
           }
+        }
+      ]
+    },
+    {
+      "id": "advantages",
+      "label": "Merits",
+      "type": "accordion",
+      "items": [
+        {
+          "header": "Archaic",
+          "name": "Archaic",
+          "component": {
+            "name": "merits.list.group",
+            "type": "listgroup",
+            "items": [
+              {
+                "component": {
+                  "name": "archaic",
+                  "id": "Archaic.Archaic",
+                  "label": "FLAW - Archaic",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 2,
+                    "max": 2
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-flaw-Archaic-Archaic",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "You haven't been able to adapt to the present, or you have been long in torpor. You cannot use computers or cell phones, and your Technology rating is permanently 0. The Storyteller may penalize other dice pools involving very modern technology by one die."
+                }
+              },
+              {
+                "component": {
+                  "name": "living in the past",
+                  "id": "Archaic.Living in the Past",
+                  "label": "FLAW - Living in the Past",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-flaw-Archaic-Living in the Past",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "You haven't grasped the modern mindset, or you just don't want to. You have one or more seriously outdated Convictions, e.g. 'The Pope's word is law,' 'Women are delicate flowers,' 'Lower classes exist only to serve,' or 'Burn your enemies' baggage.' These archaic moralities maintain your Humanity but are odious to many; you lose one die from Social test dice pools involving such archaic beliefs except with vampires your age and older, who may admire your steadfast virtue."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "header": "Bonding",
+          "name": "Bonding",
+          "component": {
+            "name": "merits.list.group",
+            "type": "listgroup",
+            "items": [
+              {
+                "component": {
+                  "name": "bond resistance",
+                  "id": "Bonding.Bond Resistance",
+                  "label": "MERIT - Bond Resistance",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-merit-Bonding-Bond Resistance",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "Your Blood rebels against control. Add one die to your dice pools to resist a Blood Bond per level you take of this Merit (maximum three)."
+                }
+              },
+              {
+                "component": {
+                  "name": "short bond",
+                  "id": "Bonding.Short Bond",
+                  "label": "MERIT - Short Bond",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 2,
+                    "max": 2
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-merit-Bonding-Short Bond",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "Blood Bonds on you lose their Bond strength more rapidly than normal, decreasing at both the full moon and new moon (i.e., by two each month) if not reinforced."
+                }
+              },
+              {
+                "component": {
+                  "name": "unbondable",
+                  "id": "Bonding.Unbondable",
+                  "label": "MERIT - Unbondable",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 5,
+                  "validation": {
+                    "required": false,
+                    "min": 5,
+                    "max": 5
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-merit-Bonding-Unbondable",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "You cannot be Blood Bound. If you're ever short of cash, you can probably sell your vitae to alchemists, too."
+                }
+              },
+              {
+                "component": {
+                  "name": "bondslave",
+                  "id": "Bonding.Bondslave",
+                  "label": "FLAW - Bondslave",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 2,
+                    "max": 2
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-flaw-Bonding-Bondslave",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "You bond instantly with the taste of another's vitae; only one drink of blood binds you, not three. Either you begin as your sire's thrall, or consult with the Storyteller to come up with a reason that first bond has broken. Possibly your sire has been staked or in another city for more than six months?"
+                }
+              },
+              {
+                "component": {
+                  "name": "bond junkie",
+                  "id": "Bonding.Bond Junkie",
+                  "label": "FLAW - Bond Junkie",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-flaw-Bonding-Bond Junkie",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": " The Bond feels sweeter to you once it happens. Subtract one die from your dice pools to act against a Blood Bond."
+                }
+              },
+              {
+                "component": {
+                  "name": "long bond",
+                  "id": "Bonding.Long Bond",
+                  "label": "FLAW - Long Bond",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-flaw-Bonding-Long Bond",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "Blood Bonds on you lose their Bond strength more slowly than normal, decreasing by one for each three months without being reinforced."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "header": "Feeding",
+          "name": "Feeding",
+          "component": {
+            "name": "merits.list.group",
+            "type": "listgroup",
+            "items": [
+              {
+                "component": {
+                  "name": "bloodhound",
+                  "id": "Feeding.Bloodhound",
+                  "label": "MERIT - Bloodhound",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-merit-Feeding-Bloodhound",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "You can smell the Resonance of a human's blood without tasting it. You still need to be within olfactory range of the person. Make a Resolve + Awareness test at Difficulty 3. Increase Difficulty for perfume or distance; lower it for more intimate contact."
+                }
+              },
+              {
+                "component": {
+                  "name": "iron gullet",
+                  "id": "Feeding.Iron Gullet",
+                  "label": "MERIT - Iron Gullet",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 3,
+                  "validation": {
+                    "required": false,
+                    "min": 3,
+                    "max": 3
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-merit-Feeding-Iron Gullet",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "You can feed from cold blood, rancid blood, and fractionated plasma. None of these provide Resonances. Ventrue may not take this Merit."
+                }
+              },
+              {
+                "component": {
+                  "name": "vegan",
+                  "id": "Feeding.Vegan",
+                  "label": "FLAW - Vegan",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 2,
+                    "max": 2
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-flaw-Feeding-Vegan",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "You feed only on animal blood. You must spend two points of Willpower to drink human blood. Ventrue may not take this Flaw."
+                }
+              },
+              {
+                "component": {
+                  "name": "organovore",
+                  "id": "Feeding.Organovore",
+                  "label": "FLAW - Organovore",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 2,
+                    "max": 2
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-flaw-Feeding-Organovore",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "You can slake Hunger only by eating human flesh and organs, especially those rich in blood such as the heart, liver, lungs, placenta, and spleen. (Most organovore Kindred these nights make smoothies from the organs first.) Only the heart provides Resonance, if any."
+                }
+              },
+              {
+                "component": {
+                  "name": "methuselah's thirst",
+                  "id": "Feeding.Methuselah's Thirst",
+                  "label": "FLAW - Methuselah's Thirst",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-flaw-Feeding-Methuselah's Thirst",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "Your Hunger can only be fully slaked by the blood of supernatural creatures. (Alchemists may be able to thicken the Blood of thin-bloods enough to sate you.) Otherwise, it constantly remains at a minimum of 1. (Or higher, depending on Blood Potency (see p. 215)."
+                }
+              },
+              {
+                "component": {
+                  "name": "prey exclusion",
+                  "id": "Feeding.Prey Exclusion",
+                  "label": "FLAW - Prey Exclusion",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 2
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-flaw-Feeding-Prey Exclusion",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "You refuse to hunt a certain class of prey: drug users, women, children, policemen, innocents, a given minority or ethnic group, etc. If you feed on such prey, you gain Stains as though you had violated a chronicle Tenet. Witnessing other Kindred feeding on the object of your exclusion without interfering might also give Stains, at the Storyteller's discretion. Ventrue with this Flaw gain an additional restriction, making their choice of vessels extremely narrow."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "header": "Linguistics",
+          "name": "Linguistics",
+          "component": {
+            "name": "merits.list.group",
+            "type": "listgroup",
+            "items": [
+              {
+                "component": {
+                  "name": "linguistics",
+                  "id": "Linguistics.Linguistics",
+                  "label": "MERIT - Linguistics",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 5,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 5
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-merit-Linguistics-Linguistics",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "Each dot in Linguistics allows the character to fluently speak, write, and read one additional language besides those two default languages."
+                }
+              },
+              {
+                "component": {
+                  "name": "illiterate",
+                  "id": "Linguistics.Illiterate",
+                  "label": "FLAW - Illiterate",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 2,
+                    "max": 2
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-flaw-Linguistics-Illiterate",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "You cannot read or write. Your Academics and Science Skills are capped at 1, and you can have no specialty in them incorporating modern knowledge."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "header": "Mythic",
+          "name": "Mythic",
+          "component": {
+            "name": "merits.list.group",
+            "type": "listgroup",
+            "items": [
+              {
+                "component": {
+                  "name": "eat food",
+                  "id": "Mythic.Eat Food",
+                  "label": "MERIT - Eat Food",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 2,
+                    "max": 2
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-merit-Mythic-Eat Food",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "You can consume food without effort and might even enjoy it, though it gives no nourishment and must be expelled before resting for the day."
+                }
+              },
+              {
+                "component": {
+                  "name": "stake bait",
+                  "id": "Mythic.Stake Bait",
+                  "label": "FLAW - Stake Bait",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 2,
+                    "max": 2
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-flaw-Mythic-Stake Bait",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "You meet Final Death when staked through the heart, rather than entering torpor."
+                }
+              },
+              {
+                "component": {
+                  "name": "folkloric bane",
+                  "id": "Mythic.Folkloric Bane",
+                  "label": "FLAW - Folkloric Bane",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-flaw-Mythic-Folkloric Bane",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "You take Aggravated damage from a folkloric bane. Folkloric banes include:<br /><ul><li>Ultraviolet light (damage as direct sunlight)</li><li>Silver or silver-plated weapons (damage as weapon damage: simply touching a silver coin or silverware does one point of Aggravated damage)</li><li>Holy water (damage as fire)</li></ul>"
+                }
+              },
+              {
+                "component": {
+                  "name": "folkloric block",
+                  "id": "Mythic.Folkloric Block",
+                  "label": "FLAW - Folkloric Block",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-flaw-Mythic-Folkloric Block",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "When faced with a folkloric block, you must shrink away from it or spend a Willpower point to push through it.<br />Each folkloric block you take counts as a separate one-point Flaw. Folkloric blocks include:<br /><ul><li>Holy symbols presented by any believer (even without True Faith)</li><li>Crossing visible running water (not recommended in certain cities, such as Amsterdam, Stockholm, or Venice)</li><li>Crossing a threshold to a home uninvited by the owner</li><li>White animal</li><li>Garlic</li><li>Wild roses</li><li>Spilled seeds you haven't counted</li></ul>"
+                }
+              },
+              {
+                "component": {
+                  "name": "stigmata",
+                  "id": "Mythic.Stigmata",
+                  "label": "FLAW - Stigmata",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-flaw-Mythic-Stigmata",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "You begin to bleed from open wounds on your hands, feet, and forehead when you reach Hunger 4. This attracts attention, leaves traces, and may penalize some dice pools at the Storyteller’s discretion."
+                }
+              }
+            ]
+          }
         },
         {
           "header": "Substance Use",
           "name": "SubstanceUse",
           "component": {
-            "name": "advantage.list.group",
+            "name": "merits.list.group",
             "type": "listgroup",
             "items": [
               {
@@ -5700,7 +5760,16 @@
                   "name": "high-functioning addict",
                   "id": "Substance Use.High-Functioning Addict",
                   "label": "MERIT - High-Functioning Addict",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Substance Use-High-Functioning Addict",
@@ -5715,7 +5784,16 @@
                   "name": "hopeless addiction",
                   "id": "Substance Use.Hopeless Addiction",
                   "label": "FLAW - Hopeless Addiction",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 2,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Substance Use-Hopeless Addiction",
@@ -5730,7 +5808,16 @@
                   "name": "addiction",
                   "id": "Substance Use.Addiction",
                   "label": "FLAW - Addiction",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Substance Use-Addiction",
@@ -5747,7 +5834,7 @@
           "header": "Thin-Blood",
           "name": "Thin-Blood",
           "component": {
-            "name": "advantage.list.group",
+            "name": "merits.list.group",
             "type": "listgroup",
             "items": [
               {
@@ -5755,7 +5842,16 @@
                   "name": "anarch comrades",
                   "id": "Thin-Blood.Anarch Comrades",
                   "label": "MERIT - Anarch Comrades",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Thin-Blood-Anarch Comrades",
@@ -5770,7 +5866,16 @@
                   "name": "camarilla contact",
                   "id": "Thin-Blood.Camarilla Contact",
                   "label": "MERIT - Camarilla Contact",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Thin-Blood-Camarilla Contact",
@@ -5785,7 +5890,16 @@
                   "name": "catenating blood",
                   "id": "Thin-Blood.Catenating Blood",
                   "label": "MERIT - Catenating Blood",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Thin-Blood-Catenating Blood",
@@ -5800,7 +5914,16 @@
                   "name": "day drinker",
                   "id": "Thin-Blood.Day Drinker",
                   "label": "MERIT - Day Drinker",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Thin-Blood-Day Drinker",
@@ -5815,7 +5938,16 @@
                   "name": "discipline affinity",
                   "id": "Thin-Blood.Discipline Affinity",
                   "label": "MERIT - Discipline Affinity",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Thin-Blood-Discipline Affinity",
@@ -5830,7 +5962,16 @@
                   "name": "lifelike",
                   "id": "Thin-Blood.Lifelike",
                   "label": "MERIT - Lifelike",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Thin-Blood-Lifelike",
@@ -5845,7 +5986,16 @@
                   "name": "thin-blood alchemist",
                   "id": "Thin-Blood.Thin-blood Alchemist",
                   "label": "MERIT - Thin-blood Alchemist",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Thin-Blood-Thin-blood Alchemist",
@@ -5860,7 +6010,16 @@
                   "name": "vampiric resilience",
                   "id": "Thin-Blood.Vampiric Resilience",
                   "label": "MERIT - Vampiric Resilience",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Thin-Blood-Vampiric Resilience",
@@ -5875,7 +6034,16 @@
                   "name": "baby teeth",
                   "id": "Thin-Blood.Baby Teeth",
                   "label": "FLAW - Baby Teeth",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Thin-Blood-Baby Teeth",
@@ -5890,7 +6058,16 @@
                   "name": "beastial temper",
                   "id": "Thin-Blood.Beastial Temper",
                   "label": "FLAW - Beastial Temper",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Thin-Blood-Beastial Temper",
@@ -5905,7 +6082,16 @@
                   "name": "branded by the camarilla",
                   "id": "Thin-Blood.Branded By The Camarilla",
                   "label": "FLAW - Branded By The Camarilla",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Thin-Blood-Branded By The Camarilla",
@@ -5920,7 +6106,16 @@
                   "name": "clan curse",
                   "id": "Thin-Blood.Clan Curse",
                   "label": "FLAW - Clan Curse",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Thin-Blood-Clan Curse",
@@ -5935,7 +6130,16 @@
                   "name": "dead flesh",
                   "id": "Thin-Blood.Dead Flesh",
                   "label": "FLAW - Dead Flesh",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Thin-Blood-Dead Flesh",
@@ -5950,7 +6154,16 @@
                   "name": "mortal frailty",
                   "id": "Thin-Blood.Mortal Frailty",
                   "label": "FLAW - Mortal Frailty",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Thin-Blood-Mortal Frailty",
@@ -5965,7 +6178,16 @@
                   "name": "shunned by the anarchs",
                   "id": "Thin-Blood.Shunned By The Anarchs",
                   "label": "FLAW - Shunned By The Anarchs",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Thin-Blood-Shunned By The Anarchs",
@@ -5980,7 +6202,16 @@
                   "name": "vitae dependency",
                   "id": "Thin-Blood.Vitae Dependency",
                   "label": "FLAW - Vitae Dependency",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "validation": {
+                    "required": false,
+                    "min": null,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Thin-Blood-Vitae Dependency",
@@ -6176,7 +6407,7 @@
         "max": 15
       },
       "count": 15,
-      "default": 0
+      "default": 3
     },
     {
       "name": "willpower.label",
@@ -6214,7 +6445,7 @@
         "max": 10
       },
       "count": 10,
-      "default": 0
+      "default": 7
     },
     {
       "name": "bloodpotency.label",
@@ -6233,7 +6464,7 @@
         "max": 10
       },
       "count": 10,
-      "default": 0
+      "default": 1
     },
     {
       "name": "hunger.label",

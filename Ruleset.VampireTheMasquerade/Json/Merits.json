@@ -3,224 +3,230 @@
     "name": "Linguistics",
     "advantage": "Linguistics",
     "description": "Each dot in Linguistics allows the character to fluently speak, write, and read one additional language besides those two default languages.",
-    "range": 4,
+    "range": 5,
     "value": 0
   },
   {
     "name": "Beautiful",
     "advantage": "Looks",
     "description": "You add one extra die to all appropriate Social dice pools.",
-    "range": 0,
+    "range": 2,
+    "minimum": 2,
     "value": 2
   },
   {
     "name": "Stunning",
     "advantage": "Looks",
     "description": "You add two extra dice to all appropriate Social dice pools, as above.",
-    "range": 0,
+    "range": 4,
+    "minimum": 4,
     "value": 4
   },
   {
     "name": "High-Functioning Addict",
     "advantage": "Substance Use",
     "description": "You add one die to any one category of pool (specify when you choose which substance you use) when the last person you fed from was on your drug.",
-    "range": 0,
+    "range": 1,
     "value": 1
   },
   {
     "name": "Bond Resistance",
     "advantage": "Bonding",
     "description": "Your Blood rebels against control. Add one die to your dice pools to resist a Blood Bond per level you take of this Merit (maximum three).",
-    "range": 0,
+    "range": 1,
     "value": 1
   },
   {
     "name": "Short Bond",
     "advantage": "Bonding",
     "description": "Blood Bonds on you lose their Bond strength more rapidly than normal, decreasing at both the full moon and new moon (i.e., by two each month) if not reinforced.",
-    "range": 0,
+    "range": 2,
+    "minimum": 2,
     "value": 2
   },
   {
     "name": "Unbondable",
     "advantage": "Bonding",
     "description": "You cannot be Blood Bound. If you're ever short of cash, you can probably sell your vitae to alchemists, too.",
-    "range": 0,
+    "range": 5,
+    "minimum": 5,
     "value": 5
   },
   {
     "name": "Bloodhound",
     "advantage": "Feeding",
     "description": "You can smell the Resonance of a human's blood without tasting it. You still need to be within olfactory range of the person. Make a Resolve + Awareness test at Difficulty 3. Increase Difficulty for perfume or distance; lower it for more intimate contact.",
-    "range": 0,
+    "range": 1,
     "value": 1
   },
   {
     "name": "Iron Gullet",
     "advantage": "Feeding",
     "description": "You can feed from cold blood, rancid blood, and fractionated plasma. None of these provide Resonances. Ventrue may not take this Merit.",
-    "range": 0,
+    "range": 3,
+    "minimum": 3,
     "value": 3
   },
   {
     "name": "Eat Food",
     "advantage": "Mythic",
     "description": "You can consume food without effort and might even enjoy it, though it gives no nourishment and must be expelled before resting for the day.",
-    "range": 0,
+    "range": 2,
+    "minimum": 2,
     "value": 2
   },
   {
     "name": "Zeroed",
     "advantage": "Mask",
     "description": "Someone in high places has purged your real records. You officially don't exist.",
-    "range": 0,
+    "range": 1,
     "value": 1
   },
   {
     "name": "Cobbler",
     "advantage": "Mask",
     "description": "You can make or source Masks. Making a Mask takes three days per dot and possibly exposes you online; sourcing Masks takes one day per dot, but costs something in return. How much depends on your leverage, margin on the Social test, or whatever else the Storyteller decides.",
-    "range": 0,
+    "range": 1,
     "value": 1
   },
   {
     "name": "Anarch Comrades",
     "advantage": "Thin-Blood",
     "description": "You have befriended the members of an Anarch coterie who tolerate your presence or even affectionately treat you as their pet. They cumulatively act as a one-dot Anarch Mawla, as long as you don't deviate from the party line. Write them on the Relationship Map.",
-    "range": 0,
+    "range": 1,
     "value": 1
   },
   {
     "name": "Camarilla Contact",
     "advantage": "Thin-Blood",
     "description": "You have caught the eye of a Camarilla recruiter who has promised you admittance and a chance at becoming a real vampire. All you need to do is keep your eyes and ears open, report on your and your coterie's activities, and be prepared to perform any task asked of you. You have the equivalent of a one-dot Camarilla Mawla who treats you badly. Write them on the Relationship Map.",
-    "range": 0,
+    "range": 1,
     "value": 1
   },
   {
     "name": "Catenating Blood",
     "advantage": "Thin-Blood",
     "description": "You can create Blood Bonds and perform theEmbrace as a regular vampire. Any vampire you create this way will be a thin-blood.",
-    "range": 0,
+    "range": 1,
     "value": 1
   },
   {
     "name": "Day Drinker",
     "advantage": "Thin-Blood",
     "description": "Sunlight halves your Health tracker (rounded up), but otherwise simply removes your vampiric abilities, including all Disciplines and Health benefits, and does no other damage. You still suffer from Hunger, however, and sooner or later you'll need to sleep. If your health drops below your currently sustained damage levels as a result of this, you suffer the effects of Impairment or torpor (depending on type of damage) until you are clear of sunlight.",
-    "range": 0,
+    "range": 1,
     "value": 1
   },
   {
     "name": "Discipline Affinity",
     "advantage": "Thin-Blood",
     "description": "You have an affinity for a certain Discipline, picked at character creation. You gain a dot in this Discipline and can learn and retain additional dots in it through experience expenditures, as if you were a normal vampire. (The experience point cost is the same as an out-of-clan Discipline.) Drinking blood with matching Resonance does not reward you with any extra dots in this Discipline, temporary or not.",
-    "range": 0,
+    "range": 1,
     "value": 1
   },
   {
     "name": "Lifelike",
     "advantage": "Thin-Blood",
     "description": "You have a heartbeat, can eat food, and enjoy sexual activities like a mortal. All but the most advanced medical inspections reveal nothing out of the ordinary, assuming they happen at night.",
-    "range": 0,
+    "range": 1,
     "value": 1
   },
   {
     "name": "Thin-blood Alchemist",
     "advantage": "Thin-Blood",
     "description": "The Duskborn change as they feed. Thin-Blood Alchemy is the mastery of this process. Whether it is spontaneous or a skill learned by comparing notes with other blood-cookers, you have gained one dot and one formula (p. 282) in Thin-blood Alchemy. You can purchase additional dots and formulae through experience as usual.",
-    "range": 0,
+    "range": 1,
     "value": 1
   },
   {
     "name": "Vampiric Resilience",
     "advantage": "Thin-Blood",
     "description": "You suffer damage as a regular vampire, treating regular puncture and slashing wounds as Superficial damage.",
-    "range": 0,
+    "range": 1,
     "value": 1
   },
   {
     "name": "Base Haven",
     "advantage": "Haven",
     "description": "• Small haven, but more secure and private than the default. Examples: basement apartment, crypt, locked storeroom in a warehouse.<br />•• Good size, security, or privacy. Examples: a singlefamily home or row house, wolf enclosure at the zoo, branch sewer tunnel.<br />••• Very large, secure, or private. Examples: a compound outside town, a bank building, a decommissioned subway station.",
-    "range": 0,
+    "range": 1,
     "value": 1
   },
   {
     "name": "Hidden Armory",
     "advantage": "Haven",
     "description": "Each dot in this Merit adds a stand of arms to your haven's supply: one pistol and one long firearm, with ammunition. They are as secure from discovery as your resting place.",
-    "range": 0,
-    "value": 5
+    "range": 5,
+    "value": 0
   },
   {
     "name": "Cell",
     "advantage": "Haven",
     "description": "Your haven has a dedicated, locked place to store two prisoners, with a base Difficulty to escape of 5. Each extra dot either allows you to store twice as many prisoners (up to a maximum of 32, only in very large havens) or adds +1 to the escape Difficulty. This Merit is not available in small havens.",
-    "range": 0,
-    "value": 5
+    "range": 5,
+    "value": 0
   },
   {
     "name": "Watchmen",
     "advantage": "Haven",
     "description": "You have either private security or criminal thugs guarding your haven. Each dot of this Merit supplies four Average guards and one Gifted boss (see Mortal Templates, p. 185). If guards would be conspicuous here, buy this Merit cautiously.",
-    "range": 0,
-    "value": 5
+    "range": 5,
+    "value": 0
   },
   {
     "name": "Laboratory",
     "advantage": "Haven",
     "description": "Your haven has an equipped laboratory with a dedicated industrial sink, gas jet, reinforced floor, etc. Each dot of this Merit adds one to the dice pool for rolls related to one Science or Technology specialty or to Alchemy dice pools for thin-bloods using the Fixatio method (p. 284). This Merit is not available in small havens.",
-    "range": 0,
-    "value": 5
+    "range": 5,
+    "value": 0
   },
   {
     "name": "Library",
     "advantage": "Haven",
     "description": "Your Haven has a dedicated library on the occult, Cainite legends, city history, vampire lore, or the like. Each dot of this Merit adds one to the dice pool for research rolls for one Academics, Investigation, or Occult specialty. Small havens limit this Merit to a maximum of one dot.",
-    "range": 0,
-    "value": 5
+    "range": 5,
+    "value": 0
   },
   {
     "name": "Location",
     "advantage": "Haven",
     "description": "Your haven nestles in one of the most fashionable or otherwise exclusive areas of the city, in the Rack, on a small island, or otherwise in a prime spot. Add two dice (or +2 to foes' Difficulty) to bonuses on the relevant die rolls from either Chasse (p. 195) or from your base Haven rating (pick one). If neither modifier precisely maps to what you have in mind, work out with your Storyteller when you can expect a two-dice bonus to occur. For example, a Haven close to Elysium might grant a two-dice bonus to Etiquette tests in Elysium and on tests to pick up on court gossip.",
-    "range": 0,
+    "range": 1,
     "value": 1
   },
   {
     "name": "Luxury",
     "advantage": "Haven",
     "description": "High-definition flat screens, designer furniture, objets d'art, or other expensive details give you a two-dice bonus to Social tests dealing with mortal guests in your haven. If you don’t have at least three dots of Resources (•••), your décor was gained illegally.",
-    "range": 0,
-    "value": 5
+    "range": 5,
+    "value": 0
   },
   {
     "name": "Postern",
     "advantage": "Haven",
     "description": "Your Haven has a rear exit, secret tunnel, grating in the cellar leading into the sewers, or other unobtrusive way out. For each dot of this Merit, add one die to your dice pools to evade or escape surveillance near your haven.",
-    "range": 0,
-    "value": 5
+    "range": 5,
+    "value": 0
   },
   {
     "name": "Security System",
     "advantage": "Haven",
     "description": "Your haven has a better-than-average security system. For each dot of this Merit, add one die to your dice pool to resist (or alert you to) unauthorized entry into your haven.",
-    "range": 0,
-    "value": 5
+    "range": 5,
+    "value": 0
   },
   {
     "name": "Surgery",
     "advantage": "Haven",
     "description": "Your haven has one room equipped as a field surgery or better. Add two dice to relevant dice pools, generally Medicine, for tests performed in your haven. This Merit is not available in small havens.",
-    "range": 0,
-    "value": 5
+    "range": 5,
+    "value": 0
   },
   {
     "name": "Warding",
     "advantage": "Haven",
     "description": "Your haven possesses some kind of magical ward barring supernatural forces. You may not be able to deactivate it, but it allows you to pass. Discuss the limits of your ward with the Storyteller. Each dot of this Merit adds one to the dice pool to resist supernatural scrying, as well as whatever other entry the Storyteller allows it to prevent. The Storyteller may require you to possess Occult 3 or better, or Blood Sorcery, to buy this Merit.",
-    "range": 0,
-    "value": 1
+    "range": 5,
+    "value": 0
   }
 ]

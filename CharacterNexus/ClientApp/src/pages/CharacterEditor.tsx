@@ -106,7 +106,7 @@ const CharacterEditor: React.FC = () => {
 
     userChoices.forEach((item: UserChoice) => {
       item.choices.forEach((choice: any, index: any) => {
-        const name = `choice.${item.type}.${index}`;
+        const name = `choice.${item.type}.${item.origin}.${index}`;
         if (item.category === "Characteristic") {
           const bonusChar = { type: item.type, value: choice };
           newFields.push({

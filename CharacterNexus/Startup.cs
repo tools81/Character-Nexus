@@ -49,15 +49,15 @@ namespace CharacterNexus
             services.AddSingleton(configuration);
 
             services.AddSingleton<IRuleset, AmazingTales.Ruleset>();
-            services.AddSingleton<IRuleset, BladeRunner.Ruleset>();
+            //services.AddSingleton<IRuleset, BladeRunner.Ruleset>();
             services.AddSingleton<IRuleset, DarkCrystal.Ruleset>();
-            services.AddSingleton<IRuleset, EverydayHeroes.Ruleset>();
-            services.AddSingleton<IRuleset, Ghostbusters.Ruleset>();
+            //services.AddSingleton<IRuleset, EverydayHeroes.Ruleset>();
+            //services.AddSingleton<IRuleset, Ghostbusters.Ruleset>();
             //services.AddSingleton<IRuleset, GiJoe.Ruleset>();
             services.AddSingleton<IRuleset, Marvel.Ruleset>();
             //services.AddSingleton<IRuleset, Starfinder.Ruleset>();
             //services.AddSingleton<IRuleset, Transformers.Ruleset>();
-            services.AddSingleton<IRuleset, VampireTheMasquerade.Ruleset>();
+            //services.AddSingleton<IRuleset, VampireTheMasquerade.Ruleset>();
             //services.AddSingleton<IRuleset, WerewolfTheApocalypse.Ruleset>();
 
             services.AddSingleton<IStorage, AzureBlobStorage.Storage>();

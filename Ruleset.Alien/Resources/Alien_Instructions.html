@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALIEN RPG — Crew Manifest Protocol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Courier+Prime:wght@400;700&family=Saira+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --warning:      #F4C430;
+            --warning-dim:  #7A5F00;
+            --caution:      #D97D00;
+            --crt-green:    #33FF33;
+            --crt-dim:      #1A6B1A;
+            --crt-glow:     rgba(51,255,51,0.2);
+            --emergency:    #FF4400;
+            --panel:        #1C1C1C;
+            --panel-dark:   #0D0D0D;
+            --panel-mid:    #242424;
+            --panel-light:  #2E2E2E;
+            --metal:        #4A4A4A;
+            --metal-light:  #6A6A6A;
+            --border:       #3A3A3A;
+            --border-warn:  #5A4500;
+            --text:         #AFAFAF;
+            --text-dim:     #6A6A6A;
+            --white:        #E8E8E8;
+            --stripe-black: #000000;
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Courier Prime', monospace;
+            background: var(--panel-dark);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 1.5rem 1rem;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 1px,
+                    rgba(255,255,255,0.02) 1px,
+                    rgba(255,255,255,0.02) 2px
+                );
+        }
+
+        /* ── CONTAINER ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            box-shadow:
+                0 0 0 1px #000,
+                0 0 60px rgba(0,0,0,0.9),
+                inset 0 0 40px rgba(0,0,0,0.5);
+            position: relative;
+            animation: boot 0.8s steps(8) forwards;
+        }
+
+        @keyframes boot {
+            0%   { opacity: 0; filter: brightness(3); }
+            20%  { opacity: 0; }
+            25%  { opacity: 1; filter: brightness(1.5); }
+            50%  { opacity: 0.7; }
+            75%  { opacity: 1; filter: brightness(1.2); }
+            100% { opacity: 1; filter: brightness(1); }
+        }
+
+        /* ── HAZARD STRIPES ── */
+        .instr-container .hazard-top {
+            height: 24px;
+            background: repeating-linear-gradient(
+                -45deg,
+                var(--stripe-black) 0px,
+                var(--stripe-black) 20px,
+                var(--warning) 20px,
+                var(--warning) 40px
+            );
+        }
+
+        .instr-container .hazard-bottom {
+            height: 16px;
+            background: repeating-linear-gradient(
+                -45deg,
+                var(--stripe-black) 0px,
+                var(--stripe-black) 16px,
+                var(--caution) 16px,
+                var(--caution) 32px
+            );
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            background: var(--panel-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .instr-container .corp-bar {
+            background: var(--panel-mid);
+            border-bottom: 1px solid var(--border);
+            padding: 0.6rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .instr-container .corp-logo {
+            font-family: 'Michroma', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.25em;
+            color: var(--text);
+        }
+
+        .instr-container .corp-tagline {
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            color: var(--text-dim);
+            font-style: italic;
+        }
+
+        .instr-container .header-inner {
+            padding: 2.5rem 2rem 2rem;
+            position: relative;
+        }
+
+        /* Large ALIEN watermark */
+        .instr-container .header-inner::before {
+            content: 'ALIEN';
+            position: absolute;
+            right: 1rem;
+            bottom: 0.5rem;
+            font-family: 'Michroma', sans-serif;
+            font-size: 7rem;
+            color: var(--crt-green);
+            opacity: 0.03;
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .instr-container .doc-type {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            color: var(--warning);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .instr-container h1 {
+            font-family: 'Michroma', sans-serif;
+            font-size: 2.8rem;
+            line-height: 1.1;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px rgba(51,255,51,0.15);
+            position: relative;
+        }
+
+        .instr-container h1 .sub {
+            display: block;
+            font-size: 1.2rem;
+            color: var(--crt-green);
+            text-shadow: 0 0 10px var(--crt-glow);
+            letter-spacing: 0.2em;
+            font-weight: 400;
+        }
+
+        .instr-container .header-meta {
+            border-top: 1px solid var(--border);
+            padding-top: 0.85rem;
+            margin-top: 0.75rem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.5rem 1.5rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+        }
+
+        .instr-container .meta-label { color: var(--text-dim); }
+        .instr-container .meta-value { color: var(--crt-green); font-weight: 700; }
+
+        /* ── FILE HEADER ── */
+        .instr-container .file-header {
+            background: var(--panel-mid);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 0.7rem 2rem;
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--white);
+            text-transform: uppercase;
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2rem;
+        }
+
+        /* ── MISSION BRIEFING ── */
+        .instr-container .briefing {
+            background: var(--panel-dark);
+            border: 1px solid var(--border-warn);
+            border-left: 4px solid var(--warning);
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2.25rem;
+            font-size: 0.92rem;
+            line-height: 1.9;
+            position: relative;
+        }
+
+        .instr-container .briefing::before {
+            content: '// MISSION BRIEFING — CREW INITIATION PROTOCOL';
+            display: block;
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            color: var(--warning);
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Michroma', sans-serif;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--white);
+            margin: 2.75rem 0 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            animation: scanIn 0.4s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.06s);
+            position: relative;
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: attr(data-section);
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            color: var(--crt-green);
+            background: rgba(51,255,51,0.08);
+            border: 1px solid var(--crt-dim);
+            padding: 0.2rem 0.5rem;
+            text-shadow: 0 0 6px var(--crt-glow);
+            flex-shrink: 0;
+        }
+
+        @keyframes scanIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        .instr-container h3 {
+            font-family: 'Saira Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--crt-green);
+            margin: 1.75rem 0 0.6rem;
+            text-shadow: 0 0 8px rgba(51,255,51,0.2);
+        }
+
+        .instr-container p {
+            font-size: 0.92rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .instr-container ul, ol { margin: 0.75rem 0 1.25rem 1.35rem; }
+        .instr-container li {
+            font-size: 0.9rem;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { color: var(--warning); font-weight: 700; }
+        .instr-container em     { color: var(--crt-green); font-style: normal; }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.25rem 0;
+            height: 1px;
+            background: var(--border);
+            position: relative;
+        }
+
+        .instr-container .divider::before {
+            content: '// ────────────────────────────────── //';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background: var(--panel);
+            padding: 0 0.75rem;
+            font-size: 0.65rem;
+            letter-spacing: 0.05em;
+            color: var(--text-dim);
+            white-space: nowrap;
+        }
+
+        /* ── WARNING BOX ── */
+        .instr-container .warning-box {
+            background: rgba(244,196,48,0.06);
+            border: 1px solid var(--border-warn);
+            border-left: 4px solid var(--warning);
+            padding: 1.1rem 1.35rem;
+            margin: 1.5rem 0;
+            font-size: 0.88rem;
+            line-height: 1.85;
+        }
+
+        .instr-container .warning-label {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            color: var(--warning);
+            display: block;
+            margin-bottom: 0.35rem;
+            text-transform: uppercase;
+        }
+
+        /* ── DATA PANEL ── */
+        .instr-container .data-panel {
+            background: var(--panel-dark);
+            border: 1px solid var(--border);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            position: relative;
+        }
+
+        .instr-container .data-panel::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -0.6rem;
+            left: 1rem;
+            background: var(--panel-dark);
+            padding: 0 0.5rem;
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--crt-green);
+            text-shadow: 0 0 6px var(--crt-glow);
+            text-transform: uppercase;
+        }
+
+        /* ── ATTRIBUTE GRID ── */
+        .instr-container .attr-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .attr-card {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            border-top: 2px solid var(--metal);
+            padding: 0.85rem 1rem;
+            position: relative;
+            transition: border-top-color 0.2s, background 0.2s;
+        }
+
+        .instr-container .attr-card:hover {
+            background: var(--panel-light);
+            border-top-color: var(--metal-light);
+        }
+
+        .instr-container .attr-code {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--crt-green);
+            text-shadow: 0 0 6px var(--crt-glow);
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .attr-name {
+            font-family: 'Michroma', sans-serif;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--white);
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .attr-desc {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        .instr-container .attr-range {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.85rem;
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--warning);
+        }
+
+        /* ── CAREER LIST ── */
+        .instr-container .career-list {
+            display: grid;
+            gap: 0.45rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .career-item {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 1rem;
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            padding: 0.8rem 1rem;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .instr-container .career-item:hover {
+            background: var(--panel-light);
+            border-color: var(--metal);
+        }
+
+        .instr-container .career-code {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--warning);
+            border: 1px solid var(--border-warn);
+            padding: 0.2rem 0.45rem;
+            white-space: nowrap;
+        }
+
+        .instr-container .career-name {
+            font-family: 'Michroma', sans-serif;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--white);
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .career-desc {
+            font-size: 0.82rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        .instr-container .career-talent {
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.67rem;
+            letter-spacing: 0.08em;
+            color: var(--crt-green);
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        /* ── SKILL TABLE ── */
+        .instr-container .skill-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: 0.86rem;
+        }
+
+        .instr-container .skill-table th {
+            background: var(--panel-light);
+            border: 1px solid var(--border);
+            border-bottom: 2px solid var(--metal);
+            font-family: 'Saira Condensed', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--white);
+            padding: 0.55rem 0.9rem;
+            text-align: left;
+            font-size: 0.75rem;
+        }
+
+        .instr-container .skill-table td {
+            padding: 0.55rem 0.9rem;
+            border: 1px solid var(--border);
+            color: var(--text);
+            vertical-align: top;
+            line-height: 1.6;
+        }
+
+        .instr-container .skill-table tr:hover td { background: rgba(51,255,51,0.03); }
+
+        .instr-container .skill-attr {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--crt-green);
+            letter-spacing: 0.1em;
+        }
+
+        /* ── STRESS TRACK ── */
+        .instr-container .stress-track {
+            display: flex;
+            gap: 4px;
+            margin: 0.75rem 0 1rem;
+            flex-wrap: wrap;
+        }
+
+        .instr-container .stress-box {
+            width: 22px;
+            height: 22px;
+            border: 1px solid var(--border);
+            background: var(--panel-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-dim);
+            transition: background 0.15s;
+        }
+
+        .instr-container .stress-box.panic { background: var(--emergency); border-color: var(--emergency); color: #000; }
+        .instr-container .stress-box.high  { background: var(--caution); border-color: var(--caution); color: #000; }
+        .instr-container .stress-box.med   { background: var(--warning); border-color: var(--warning); color: #000; }
+
+        /* ── DICE EXPLAINER ── */
+        .instr-container .dice-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .dice-item {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            padding: 0.85rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .instr-container .dice-icon {
+            font-family: 'Michroma', sans-serif;
+            font-size: 1.6rem;
+            color: var(--crt-green);
+            text-shadow: 0 0 12px var(--crt-glow);
+            min-width: 2rem;
+            text-align: center;
+        }
+
+        .instr-container .dice-text {
+            font-size: 0.8rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+
+        .instr-container .dice-text strong {
+            color: var(--white);
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 0.1rem;
+        }
+
+        /* ── GEAR BLOCK ── */
+        .instr-container .gear-grid {
+            display: grid;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .gear-item {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            padding: 0.8rem 1rem;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 0.85rem;
+            transition: background 0.15s;
+        }
+
+        .instr-container .gear-item:hover { background: var(--panel-light); }
+
+        .instr-container .gear-icon {
+            font-size: 1.2rem;
+        }
+
+        .instr-container .gear-name {
+            font-family: 'Michroma', sans-serif;
+            font-size: 0.88rem;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.15rem;
+        }
+
+        .instr-container .gear-desc {
+            font-size: 0.78rem;
+            color: var(--text-dim);
+            line-height: 1.45;
+        }
+
+        .instr-container .gear-stat {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--warning);
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        /* ── AGENDA BLOCK ── */
+        .instr-container .agenda-block {
+            background: var(--panel-dark);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--crt-green);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .instr-container .agenda-label {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            color: var(--crt-green);
+            text-shadow: 0 0 6px var(--crt-glow);
+            display: block;
+            margin-bottom: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        .instr-container .agenda-item {
+            display: flex;
+            gap: 0.75rem;
+            align-items: baseline;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.87rem;
+            line-height: 1.7;
+        }
+
+        .instr-container .agenda-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+        .instr-container .agenda-num {
+            font-family: 'Michroma', sans-serif;
+            font-size: 0.75rem;
+            color: var(--crt-green);
+            font-weight: 700;
+            min-width: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--panel-dark);
+            border-top: 1px solid var(--border);
+            position: relative;
+        }
+
+        .instr-container .footer-inner {
+            padding: 1.75rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .instr-container .footer-quote {
+            font-size: 0.88rem;
+            font-style: italic;
+            color: var(--text-dim);
+            line-height: 1.75;
+        }
+
+        .instr-container .footer-quote cite {
+            display: block;
+            font-style: normal;
+            font-size: 0.7rem;
+            font-family: 'Saira Condensed', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--crt-dim);
+            margin-top: 0.3rem;
+            text-transform: uppercase;
+        }
+
+        .instr-container .footer-seal {
+            font-family: 'Michroma', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.15em;
+            color: var(--text-dim);
+            text-align: right;
+            line-height: 1.9;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.2rem; }
+            h1 .sub { font-size: 1rem; }
+            h2 { font-size: 1.2rem; }
+            .attr-grid { grid-template-columns: 1fr; }
+            .dice-grid { grid-template-columns: 1fr; }
+            .gear-item { grid-template-columns: 1fr; gap: 0.4rem; }
+            .gear-stat { text-align: left; }
+            .career-item { grid-template-columns: 1fr; gap: 0.4rem; }
+            .career-talent { text-align: left; }
+            .content { padding: 1.5rem 1.25rem; }
+            .footer-inner { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+
+        <!-- HAZARD STRIPE -->
+        <div class="hazard-top"></div>
+
+        <!-- HEADER -->
+        <header>
+            <div class="corp-bar">
+                <span class="corp-logo">WEYLAND-YUTANI CORPORATION</span>
+                <span class="corp-tagline">"Building Better Worlds"</span>
+            </div>
+            <div class="header-inner">
+                <div class="doc-type">USCSS CREW MANIFEST — PERSONNEL FILE INITIALIZATION</div>
+                <h1>
+                    ALIEN
+                    <span class="sub">The Roleplaying Game</span>
+                </h1>
+                <div class="header-meta">
+                    <span class="meta-label">SYSTEM:</span>
+                    <span class="meta-value">YEAR ZERO ENGINE</span>
+                    <span class="meta-label">PUBLISHER:</span>
+                    <span class="meta-value">FREE LEAGUE PUBLISHING</span>
+                    <span class="meta-label">SETTING:</span>
+                    <span class="meta-value">FRONTIER / DEEP SPACE / COLONIAL</span>
+                    <span class="meta-label">CLASSIFICATION:</span>
+                    <span class="meta-value">CREW OPERATIONS MANUAL</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- FILE HEADER -->
+        <div class="file-header">
+            CHARACTER CREATION PROTOCOL — SPACER PERSONNEL RECORD
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="briefing">
+                Space is vast, indifferent, and hostile. The Frontier is a corporate zone where profit margins matter more than lives and the distances between stations are measured in light-years and loneliness. You're crew on a ship — maybe hauling cargo, maybe surveying, maybe just trying to survive the long dark between jumps. Something is about to go <strong>very</strong> wrong. Make your character. Try to stay alive.
+            </div>
+
+            <!-- STEP 1: CAREER -->
+            <h2 data-section="1.0" style="--i:1;">Select Career</h2>
+            <p>Your <strong>Career</strong> is your job, your training, and your reason for being on this ship. Each Career provides starting skills, a unique <strong>Talent</strong>, and access to specific equipment. Choose the role that fits how you see yourself in the crew.</p>
+
+            <div class="career-list">
+                <div class="career-item">
+                    <span class="career-code">CR01</span>
+                    <div>
+                        <div class="career-name">Company Agent</div>
+                        <div class="career-desc">Corporate operative. You represent the Company's interests — which may not align with the crew's survival.</div>
+                    </div>
+                    <div class="career-talent">COMPANY MAN</div>
+                </div>
+                <div class="career-item">
+                    <span class="career-code">CR02</span>
+                    <div>
+                        <div class="career-name">Colonial Marshal</div>
+                        <div class="career-desc">Law enforcement on the Frontier. Badge, gun, and authority — for whatever that's worth out here.</div>
+                    </div>
+                    <div class="career-talent">AUTHORITY</div>
+                </div>
+                <div class="career-item">
+                    <span class="career-code">CR03</span>
+                    <div>
+                        <div class="career-name">Colonial Marine</div>
+                        <div class="career-desc">Military. Trained for combat in hostile environments. The only thing standing between soft targets and hard vacuum.</div>
+                    </div>
+                    <div class="career-talent">OORAH!</div>
+                </div>
+                <div class="career-item">
+                    <span class="career-code">CR04</span>
+                    <div>
+                        <div class="career-name">Kid</div>
+                        <div class="career-desc">You're young. You shouldn't be here. But survival doesn't care about age — and sometimes small size is an advantage.</div>
+                    </div>
+                    <div class="career-talent">ALL GROWN UP</div>
+                </div>
+                <div class="career-item">
+                    <span class="career-code">CR05</span>
+                    <div>
+                        <div class="career-name">Medic</div>
+                        <div class="career-desc">Doctor, nurse, or trauma specialist. You keep the crew alive — which means you see exactly how fragile they are.</div>
+                    </div>
+                    <div class="career-talent">FIELD SURGEON</div>
+                </div>
+                <div class="career-item">
+                    <span class="career-code">CR06</span>
+                    <div>
+                        <div class="career-name">Officer</div>
+                        <div class="career-desc">Ship's command crew. Captain, navigator, or executive. You give the orders. Whether anyone follows is another question.</div>
+                    </div>
+                    <div class="career-talent">COMMAND</div>
+                </div>
+                <div class="career-item">
+                    <span class="career-code">CR07</span>
+                    <div>
+                        <div class="career-name">Pilot</div>
+                        <div class="career-desc">You fly. Shuttles, dropships, escape pods — whatever has thrusters and a prayer of getting you out alive.</div>
+                    </div>
+                    <div class="career-talent">FULL THROTTLE</div>
+                </div>
+                <div class="career-item">
+                    <span class="career-code">CR08</span>
+                    <div>
+                        <div class="career-name">Roughneck</div>
+                        <div class="career-desc">Loader, miner, dock worker. Blue-collar labor in deep space. You work the hardest jobs for the worst pay.</div>
+                    </div>
+                    <div class="career-talent">HARD TO KILL</div>
+                </div>
+                <div class="career-item">
+                    <span class="career-code">CR09</span>
+                    <div>
+                        <div class="career-name">Scientist</div>
+                        <div class="career-desc">Researcher, xenobiologist, engineer. You're here for discovery. The universe does not owe you safe answers.</div>
+                    </div>
+                    <div class="career-talent">ANALYSIS</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: ATTRIBUTES -->
+            <h2 data-section="2.0" style="--i:2;">Assign Attributes</h2>
+            <p>Every crew member has <strong>four core Attributes</strong>. Distribute <strong>14 points</strong> among them. Each Attribute has a minimum of <strong>2</strong> and a maximum of <strong>5</strong> at character creation. Your Career may adjust one Attribute by +1.</p>
+
+            <div class="attr-grid">
+                <div class="attr-card">
+                    <div class="attr-code">ATTR//STR</div>
+                    <div class="attr-name">Strength</div>
+                    <div class="attr-range">2–5</div>
+                    <div class="attr-desc">Physical power, endurance, carrying capacity in hazardous environments</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">ATTR//AGL</div>
+                    <div class="attr-name">Agility</div>
+                    <div class="attr-range">2–5</div>
+                    <div class="attr-desc">Speed, reflexes, coordination under pressure and in zero-G</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">ATTR//WIT</div>
+                    <div class="attr-name">Wits</div>
+                    <div class="attr-range">2–5</div>
+                    <div class="attr-desc">Perception, instinct, and situational awareness — critical for survival</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">ATTR//EMP</div>
+                    <div class="attr-name">Empathy</div>
+                    <div class="attr-range">2–5</div>
+                    <div class="attr-desc">Social intelligence, manipulation, and what remains of your humanity</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: SKILLS -->
+            <h2 data-section="3.0" style="--i:3;">Distribute Skill Points</h2>
+            <p>Skills represent specific training and expertise. Each skill is tied to an Attribute. You start with <strong>10 skill points</strong> to distribute. Your Career provides additional skill points in specific skills. Skills range from <strong>0</strong> (untrained) to <strong>5</strong> (expert).</p>
+
+            <table class="skill-table">
+                <thead>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Attribute</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Close Combat</strong></td>
+                        <td><span class="skill-attr">STR</span></td>
+                        <td>Melee fighting, grappling, improvised weapons</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Heavy Machinery</strong></td>
+                        <td><span class="skill-attr">STR</span></td>
+                        <td>Operating loaders, excavators, industrial equipment</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stamina</strong></td>
+                        <td><span class="skill-attr">STR</span></td>
+                        <td>Endurance, resisting exhaustion, prolonged exertion</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mobility</strong></td>
+                        <td><span class="skill-attr">AGL</span></td>
+                        <td>Climbing, jumping, zero-G maneuvering, parkour</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Piloting</strong></td>
+                        <td><span class="skill-attr">AGL</span></td>
+                        <td>Flying ships, shuttles, dropships, and escape craft</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ranged Combat</strong></td>
+                        <td><span class="skill-attr">AGL</span></td>
+                        <td>Firearms, thrown weapons, targeting systems</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Comtech</strong></td>
+                        <td><span class="skill-attr">WIT</span></td>
+                        <td>Computer systems, hacking, communications, sensors</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Observation</strong></td>
+                        <td><span class="skill-attr">WIT</span></td>
+                        <td>Noticing details, searching, detecting threats</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Survival</strong></td>
+                        <td><span class="skill-attr">WIT</span></td>
+                        <td>Navigation, tracking, wilderness/hostile environment survival</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Command</strong></td>
+                        <td><span class="skill-attr">EMP</span></td>
+                        <td>Leadership, giving orders, inspiring or intimidating crew</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Manipulation</strong></td>
+                        <td><span class="skill-attr">EMP</span></td>
+                        <td>Lying, persuading, negotiating, reading intentions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Medical Aid</strong></td>
+                        <td><span class="skill-attr">EMP</span></td>
+                        <td>Treating injuries, surgery, diagnosing conditions</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: DICE SYSTEM -->
+            <h2 data-section="4.0" style="--i:4;">Understanding The Dice</h2>
+            <p>ALIEN uses the <strong>Year Zero Engine</strong>. When you attempt something risky, roll a pool of d6s equal to <strong>Attribute + Skill</strong>. Each <strong>6</strong> rolled is a success. Most tasks require <strong>one success</strong>.</p>
+
+            <div class="dice-grid">
+                <div class="dice-item">
+                    <div class="dice-icon">D</div>
+                    <div class="dice-text">
+                        <strong>Base Dice</strong>
+                        Yellow d6s. Roll Attribute + Skill dice. Sixes succeed. More dice = better chance.
+                    </div>
+                </div>
+                <div class="dice-item">
+                    <div class="dice-icon">G</div>
+                    <div class="dice-text">
+                        <strong>Gear Dice</strong>
+                        Equipment grants bonus d6s. Good gear helps. Broken gear doesn't.
+                    </div>
+                </div>
+                <div class="dice-item">
+                    <div class="dice-icon">S</div>
+                    <div class="dice-text">
+                        <strong>Stress Dice</strong>
+                        Black d6s. Add dice = higher chance to succeed. But ones on Stress dice trigger Panic.
+                    </div>
+                </div>
+                <div class="dice-item">
+                    <div class="dice-icon">!</div>
+                    <div class="dice-text">
+                        <strong>Pushing</strong>
+                        Failed? Push it once. Reroll all non-sixes. Ones on Base dice = damage or broken gear.
+                    </div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <span class="warning-label">⚠ STRESS WARNING</span>
+                <strong>Stress makes you better — and more fragile.</strong> Every Stress die you add increases your chance of success, but rolling a 1 on any Stress die triggers a <strong>Panic Roll</strong>. Panic can cause you to freeze, flee, or worse. Stress accumulates. It doesn't go away easily. The longer you're in danger, the closer you are to breaking.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: STRESS & PANIC -->
+            <h2 data-section="5.0" style="--i:5;">Stress &amp; Panic</h2>
+            <p>Every character has a <strong>Stress Level</strong> starting at <strong>0</strong>. Stress increases when you face threats, witness violence, or push yourself beyond safe limits. Your current Stress Level is how many <strong>Stress Dice</strong> you can add to any roll.</p>
+
+            <div class="data-panel" data-label="// STRESS PROGRESSION">
+                <div class="stress-track">
+                    <div class="stress-box">0</div>
+                    <div class="stress-box">1</div>
+                    <div class="stress-box">2</div>
+                    <div class="stress-box">3</div>
+                    <div class="stress-box">4</div>
+                    <div class="stress-box med">5</div>
+                    <div class="stress-box med">6</div>
+                    <div class="stress-box high">7</div>
+                    <div class="stress-box high">8</div>
+                    <div class="stress-box panic">9</div>
+                    <div class="stress-box panic">10</div>
+                </div>
+                <p style="margin-top:1rem; margin-bottom:0; font-size:0.88rem; color:var(--text-dim);">
+                    At Stress 10, you are <strong>BROKEN</strong> — incapacitated by terror until you can recover. Stress is removed slowly: one point per Turn of rest in a safe location, or through specific Talents and medical intervention.
+                </p>
+            </div>
+
+            <h3>Panic Roll</h3>
+            <p>When a <strong>1</strong> appears on any Stress die, immediately roll <strong>1d6 + current Stress Level</strong> and consult the Panic Table. Results range from temporary hesitation (6 or less) to complete psychological breakdown, fleeing in terror, or attacking allies (13+). The higher your Stress, the worse the Panic.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: HEALTH -->
+            <h2 data-section="6.0" style="--i:6;">Health &amp; Damage</h2>
+            <p>Your <strong>Health</strong> equals your <strong>Strength</strong> Attribute. When you take damage, mark it off your Health track. At <strong>0 Health</strong>, you are <strong>Broken</strong> and cannot act without help. At <strong>negative Health equal to your Strength</strong>, you die.</p>
+
+            <h3>Critical Injuries</h3>
+            <p>When damage reduces you to <strong>0 Health</strong> or you take damage <strong>equal to or greater than your Strength</strong> in one hit, roll on the <strong>Critical Injury table</strong>. Critical Injuries produce specific wounds with mechanical and narrative consequences: broken limbs, internal bleeding, collapsed lung — each with time limits, penalties, and treatment requirements.</p>
+
+            <div class="warning-box">
+                <span class="warning-label">⚠ MEDICAL NOTICE</span>
+                Critical Injuries require treatment within a time limit or they worsen. Some require surgery. Untreated Critical Injuries can kill you even after the immediate threat is over. Space is not forgiving. Neither is biology.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: GEAR -->
+            <h2 data-section="7.0" style="--i:7;">Standard Issue Equipment</h2>
+            <p>Your Career determines your starting equipment. All crew members receive basic survival gear. Specialized equipment depends on your role and the ship's inventory.</p>
+
+            <div class="gear-grid">
+                <div class="gear-item">
+                    <span class="gear-icon">🔦</span>
+                    <div>
+                        <div class="gear-name">Flashlight</div>
+                        <div class="gear-desc">Standard-issue portable illumination. Battery-powered, magnetic mount.</div>
+                    </div>
+                    <div class="gear-stat">+2 GEAR</div>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-icon">📡</span>
+                    <div>
+                        <div class="gear-name">Personal Comms</div>
+                        <div class="gear-desc">Short-range radio link to crew and ship systems. Essential.</div>
+                    </div>
+                    <div class="gear-stat">+1 GEAR</div>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-icon">🔧</span>
+                    <div>
+                        <div class="gear-name">Tool Kit</div>
+                        <div class="gear-desc">Basic repair tools for shipboard maintenance and emergency fixes.</div>
+                    </div>
+                    <div class="gear-stat">+2 GEAR</div>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-icon">💊</span>
+                    <div>
+                        <div class="gear-name">MedKit</div>
+                        <div class="gear-desc">Field medical supplies: bandages, stims, painkillers, sutures.</div>
+                    </div>
+                    <div class="gear-stat">+2 GEAR</div>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-icon">🔫</span>
+                    <div>
+                        <div class="gear-name">M4A3 Service Pistol</div>
+                        <div class="gear-desc">Standard sidearm. Limited stopping power. Better than nothing.</div>
+                    </div>
+                    <div class="gear-stat">DMG 2</div>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-icon">🛡️</span>
+                    <div>
+                        <div class="gear-name">Compressed Armor</div>
+                        <div class="gear-desc">Lightweight ballistic vest. Minimal protection. Worn under clothing.</div>
+                    </div>
+                    <div class="gear-stat">AR 3</div>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-icon">🎒</span>
+                    <div>
+                        <div class="gear-name">Supply Pack</div>
+                        <div class="gear-desc">Rations, water, emergency beacon, thermal blanket, flares.</div>
+                    </div>
+                    <div class="gear-stat">SURVIVAL</div>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-icon">⚙️</span>
+                    <div>
+                        <div class="gear-name">Motion Tracker</div>
+                        <div class="gear-desc">Detects movement within 50 meters. Unreliable. Better than blind.</div>
+                    </div>
+                    <div class="gear-stat">+3 GEAR</div>
+                </div>
+            </div>
+
+            <p>Weapons, vehicles, and specialized equipment (Colonial Marine pulse rifles, heavy loaders, etc.) are issued based on mission parameters and availability. Requisition requests must be approved by ship command or Company authority.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: AGENDA -->
+            <h2 data-section="8.0" style="--i:8;">Personal Agenda</h2>
+            <p>Every character has a <strong>Personal Agenda</strong> — a hidden goal, secret directive, or private motivation that may conflict with the mission or the crew. Work with the GM to establish your Agenda. It should create tension and difficult choices.</p>
+
+            <div class="agenda-block">
+                <span class="agenda-label">// AGENDA CATEGORIES — SELECT OR CREATE</span>
+                <div class="agenda-item">
+                    <span class="agenda-num">A1</span>
+                    <span><strong>Personal Survival:</strong> Get out alive, no matter the cost to others. Self-preservation above all.</span>
+                </div>
+                <div class="agenda-item">
+                    <span class="agenda-num">A2</span>
+                    <span><strong>Corporate Orders:</strong> The Company sent you for a reason. Complete your secret objective. Crew expendable.</span>
+                </div>
+                <div class="agenda-item">
+                    <span class="agenda-num">A3</span>
+                    <span><strong>Protect Someone:</strong> One member of the crew matters more than the rest. Keep them alive. At any cost.</span>
+                </div>
+                <div class="agenda-item">
+                    <span class="agenda-num">A4</span>
+                    <span><strong>Scientific Discovery:</strong> This is an opportunity for unprecedented research. Document everything. Samples matter.</span>
+                </div>
+                <div class="agenda-item">
+                    <span class="agenda-num">A5</span>
+                    <span><strong>Sabotage:</strong> Someone hired you to ensure this mission fails. Or specific people don't make it back.</span>
+                </div>
+                <div class="agenda-item">
+                    <span class="agenda-num">A6</span>
+                    <span><strong>Redemption:</strong> Your past haunts you. This mission is your chance to prove you're more than your mistakes.</span>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: SIGNATURE ITEM -->
+            <h2 data-section="9.0" style="--i:9;">Signature Item</h2>
+            <p>Choose one <strong>Signature Item</strong> — a personal possession that defines your character. It has no mechanical benefit, but it matters to you. Losing it is a narrative crisis. Examples: family photo, military service medal, lucky charm, last letter from someone who didn't make it, corporate contract you're trying to pay off.</p>
+
+            <p>The Signature Item is a GM tool for personal stakes. It can be threatened, stolen, destroyed — forcing you to choose between pragmatism and what you care about.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: FINAL DETAILS -->
+            <h2 data-section="10.0" style="--i:10;">Finalize Personnel Record</h2>
+
+            <h3>Personal Data</h3>
+            <ul>
+                <li><strong>Full Name:</strong> Legal name on corporate contracts</li>
+                <li><strong>Nickname:</strong> What the crew calls you</li>
+                <li><strong>Age &amp; Appearance:</strong> Physical description, distinguishing marks</li>
+                <li><strong>Homeworld/Station:</strong> Where you come from, if it still exists</li>
+                <li><strong>Next of Kin:</strong> Emergency contact for casualty notification</li>
+            </ul>
+
+            <h3>Crew Relationships</h3>
+            <p>Establish at least one relationship with another PC:</p>
+            <ul>
+                <li><strong>Buddy:</strong> Someone you trust. Why?</li>
+                <li><strong>Rival:</strong> Someone you clash with. What's the tension?</li>
+                <li><strong>Dependent:</strong> Someone who relies on you — or you on them.</li>
+            </ul>
+
+            <h3>Mission Briefing</h3>
+            <p>Work with the GM to understand the mission parameters:</p>
+            <ul>
+                <li>What ship are you on? What's its designation and current status?</li>
+                <li>What's the official mission? Cargo haul? Survey? Colony support?</li>
+                <li>How long until you reach your destination?</li>
+                <li>What are the standing orders if something goes wrong?</li>
+            </ul>
+
+            <div class="data-panel" data-label="// MISSION CLASSIFICATION" style="border-left: 4px solid var(--warning); margin-top: 1.75rem;">
+                <p style="margin:0; font-size:0.92rem; line-height:1.9;">
+                    Space is hostile. The Company is indifferent. Your crew is all you have — and even they may not be trustworthy when it comes down to survival versus the mission. <strong>Stay alert. Stay alive. Stay human.</strong> But understand: when the choice comes between those three things, you may only get to keep one.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-inner">
+                <div class="footer-quote">
+                    "In space, no one can hear you scream."
+                    <cite>— USCSS Nostromo Tagline // 2122</cite>
+                </div>
+                <div class="footer-seal">
+                    Weyland-Yutani<br>
+                    Corporation<br>
+                    Personnel<br>
+                    Division
+                </div>
+            </div>
+        </footer>
+
+        <!-- BOTTOM HAZARD -->
+        <div class="hazard-bottom"></div>
+
+    </div>
+    </body>
+</div>
+</html>

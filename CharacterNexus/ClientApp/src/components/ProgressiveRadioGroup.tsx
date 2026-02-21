@@ -7,6 +7,7 @@ interface Props {
   minimum: number;
   label?: string;
   includeLabel?: boolean;
+  defaultValue: number;
   register: UseFormRegister<any>;
   setValue: UseFormSetValue<any>;
   watch: UseFormWatch<any>;
@@ -20,6 +21,7 @@ const ProgressiveRadioGroup: React.FC<Props> = ({
   minimum = 0,
   label,
   includeLabel = true,
+  defaultValue = 0,
   register,
   setValue,
   watch,
@@ -46,7 +48,7 @@ const ProgressiveRadioGroup: React.FC<Props> = ({
       <div className="d-flex gap-2">
         {Array.from({ length: count }).map((_, index) => {
           const checked = index < value;
-          const readonly = disabled || index < minimum
+          const readonly = disabled || index + 1 < minimum
 
           return (
             <label className="progressive-radio">
@@ -56,19 +58,30 @@ const ProgressiveRadioGroup: React.FC<Props> = ({
                 type="checkbox"
                 checked={checked}
                 disabled={readonly}
-                onChange={() => handleClick(index)}
+                onChange={() => {
+                  if (readonly) return;
+                  if (index == value - 1) {
+                    handleClick(-1);
+                  }
+                  else {
+                    handleClick(index);
+                  }
+                }}
               />
               <span className="radio-ui" />
             </label>
           );
         })}
         {includeLabel && (
-          <label className=""><b>{label}</b></label>
+          <label><b>{label}</b></label>
         )}
       </div>
 
       {/* Hidden field registered with RHF */}
-      <input type="hidden" ref={ref} {...rest} />
+      <input type="hidden" 
+        value={value ? value : defaultValue} 
+        ref={ref} 
+        {...rest} />
     </div>
   );
 };

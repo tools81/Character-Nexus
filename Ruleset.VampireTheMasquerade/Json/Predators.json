@@ -4,7 +4,7 @@
     "description": "A combative assault-feeder, you stalk, overpower, and drink from whomever you can, when you can. You may or may not attempt to threaten or Dominate victims into silence or mask the feeding as a robbery. Think about how you arrived at this direct approach to feeding and what makes you comfortable with an unlife of stalking, attacking, feeding, and escaping. You could have been homeless, an SAS soldier, a cartel hit-man, or a big-game hunter.",
     "userchoices": [
       {
-        "type": "specialty",
+        "type": "specialties",
         "choices": [
           "Intimidation.Stickups",
           "Brawl.Grappling"
@@ -13,7 +13,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "disipline",
+        "type": "disciplines",
         "choices": [
           "Celerity",
           "Potence"
@@ -29,7 +29,7 @@
         "value": -1
       },
       {
-        "type": "background",
+        "type": "backgrounds",
         "name": "Criminal Contacts",
         "value": 3
       }
@@ -40,7 +40,7 @@
     "description": "You steal, buy, or otherwise procure cold blood rather than hunt, relying on the black market or your skills as a burglar or ambulance chaser. Perhaps you still work the night shift at the hospital. Ventrue may not pick this Predator type.",
     "userchoices": [
       {
-        "type": "specialty",
+        "type": "specialties",
         "choices": [
           "Larceny.Lockpicking",
           "Streetwise.Black Markets"
@@ -49,7 +49,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "disipline",
+        "type": "disciplines",
         "choices": [
           "Blood Sorcery",
           "Obfuscate"
@@ -61,12 +61,12 @@
     ],
     "bonusadjustments": [
       {
-        "type": "merit",
+        "type": "merits",
         "name": "Iron Gullet",
         "value": 3
       },
       {
-        "type": "flaw",
+        "type": "flaws",
         "name": "Enemy",
         "value": 2
       }
@@ -77,7 +77,7 @@
     "description": "You drink from other vampires, either by hunting, coercion or by taking Blood as payment - the only truly moral way of feeding you can think of. Unfortunately, this practice is usually forbidden in Kindred society. It is either risky as all fuck or requires a position of enviable power.",
     "userchoices": [
       {
-        "type": "specialty",
+        "type": "specialties",
         "choices": [
           "Brawl.Kindred",
           "Stealth.Kindred"
@@ -86,7 +86,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "disipline",
+        "type": "disciplines",
         "choices": [
           "Celerity",
           "Protean"
@@ -96,7 +96,7 @@
         "category": "Adjustment"
       },
       {
-        "type": "flaw",
+        "type": "flaws",
         "choices": [
           "Diablerist",
           "Shunned"
@@ -115,7 +115,7 @@
         "value": 1
       },
       {
-        "type": "flaw",
+        "type": "flaws",
         "name": "Prey Exclusion",
         "value": 2
       }
@@ -126,7 +126,7 @@
     "description": "You feed covertly from your (or someone's) mortal family and friends with whom you still maintain ties. The most extreme cleavers adopt children, marry a human, and try to maintain a family life for as long as they can. Add your family to the Relationship Map.<br >Cleavers often go to great lengths to keep the truth of their condition from their family, but some also maintain unwholesome relationships with their own kin. The Camarilla forbids taking a human family in this fashion, and it frowns on cleavers as Masquerade breaches waiting to happen. Wiser Kindred may massacre your family for your own good if they find out your secret and care what happens to you.",
     "userchoices": [
       {
-        "type": "specialty",
+        "type": "specialties",
         "choices": [
           "Persuasion.Gaslighting",
           "Subterfuge.Coverups"
@@ -135,7 +135,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "disipline",
+        "type": "disciplines",
         "choices": [
           "Animalism",
           "Dominate"
@@ -147,12 +147,12 @@
     ],
     "bonusadjustments": [
       {
-        "type": "background",
+        "type": "backgrounds",
         "name": "Herd",
         "value": 2
       },
       {
-        "type": "flaw",
+        "type": "flaws",
         "name": "Cleaver",
         "value": 1
       }
@@ -163,7 +163,7 @@
     "description": "You never feed against your victim's free will. You masquerade as a representative of a charity blood drive, as a blood-drinking kink-lord in the 'real vampire community,' or by actually telling your victims what you are and getting their permission to feed. The Camarilla call that last method a Masquerade breach, but many Anarch philosophers consider it an acceptable risk. You could have been anything in life, but a sex-worker, a political organizer, or a lawyer could all be wary of feeding without consent.",
     "userchoices": [
       {
-        "type": "specialty",
+        "type": "specialties",
         "choices": [
           "Medicine.Phlebotomy",
           "Persuasion.Victims"
@@ -172,7 +172,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "disipline",
+        "type": "disciplines",
         "choices": [
           "Auspex",
           "Fortitude"
@@ -188,12 +188,12 @@
         "value": 1
       },
       {
-        "type": "flaw",
+        "type": "flaws",
         "name": "Dark Secret",
         "value": 1
       },
       {
-        "type": "flaw",
+        "type": "flaws",
         "name": "Prey Exclusion",
         "value": 1
       }
@@ -204,7 +204,7 @@
     "description": "You only feed from animals. Your Hunger constantly gnaws at you, but you have not killed a single human being so far (except perhaps that one time), and you intend to keep it that way. You could have been anyone in life, but your choice speaks to someone obsessed by morality. Perhaps you were an activist, priest, aidworker, or vegan in life, but the choice never to risk a human life is one anyone could arrive at and struggle to maintain. Ventrue may not pick this Predator type.<br >You cannot pick this Predator type if your Blood Potency is 3 or higher.",
     "userchoices": [
       {
-        "type": "specialty",
+        "type": "specialties",
         "choices": [
           "Animal Ken.(Specific)",
           "Survival.Hunting"
@@ -213,7 +213,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "disipline",
+        "type": "disciplines",
         "choices": [
           "Animalism",
           "Protean"
@@ -229,7 +229,7 @@
         "value": 1
       },
       {
-        "type": "flaw",
+        "type": "flaws",
         "name": "Vegan",
         "value": 2
       }
@@ -240,7 +240,7 @@
     "description": "You are a celebrity among mortals or else you run a cult, a church, or something similar. You feed from your fans or worshippers, who treat you as a deity. You always have access to easy blood, but followers breed problems with the authorities, organized religion, and indeed the Camarilla. In life, you might have been a DJ, a writer, a cultist, a preacher, or a LARP organizer.",
     "userchoices": [
       {
-        "type": "specialty",
+        "type": "specialties",
         "choices": [
           "Occult.(Specific)",
           "Performance.(Specific)"
@@ -249,7 +249,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "disipline",
+        "type": "disciplines",
         "choices": [
           "Blood Sorcery",
           "Presence"
@@ -265,7 +265,7 @@
     "description": "You rely on your stealth or Disciplines to feed from sleeping victims. If they never wake during the feeding, they won’t know you exist. Perhaps you were very anti-social in life; you don’t feel cut out for the intense interpersonal nightlife or physical violence of more extroverted hunters.",
     "userchoices": [
       {
-        "type": "specialty",
+        "type": "specialties",
         "choices": [
           "Medicine.Anesthetics",
           "Steath.Break-in"
@@ -274,7 +274,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "disipline",
+        "type": "disciplines",
         "choices": [
           "Auspex",
           "Obfuscate"
@@ -286,7 +286,7 @@
     ],
     "bonusadjustments": [
       {
-        "type": "background",
+        "type": "backgrounds",
         "name": "Resources",
         "value": 1
       }
@@ -297,7 +297,7 @@
     "description": "You rely on your familiarity with a certain subculture and a wellcrafted pose, feeding on an exclusive subculture that believes you to be one of them. Your victims adore you for your status in the scene, and the ones who understand what you are disbelieved. You may belong to the street or be literal upper-class, abusing the weak with false hope and promises of taking them to the next level. In life, you almost certainly belonged to a scene similar to the one you stalk now.",
     "userchoices": [
       {
-        "type": "specialty",
+        "type": "specialties",
         "choices": [
           "Ettiquete.(Specific)",
           "Leadership.(Specific)",
@@ -307,7 +307,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "disipline",
+        "type": "disciplines",
         "choices": [
           "Dominate",
           "Potence"
@@ -317,7 +317,7 @@
         "category": "Adjustment"
       },
       {
-        "type": "flaw",
+        "type": "flaws",
         "choices": [
           "Disliked",
           "Prey Exclusion"
@@ -328,17 +328,17 @@
     ],
     "bonusadjustments": [
       {
-        "type": "merit",
+        "type": "merits",
         "name": "Fame",
         "value": 1
       },
       {
-        "type": "background",
+        "type": "backgrounds",
         "name": "Contacts",
         "value": 1
       },
       {
-        "type": "flaw",
+        "type": "flaws",
         "name": "Dark Secret",
         "value": 1
       }
@@ -349,7 +349,7 @@
     "description": "You feed almost exclusively during or while feigning sex, and you rely on your Disciplines, seduction skills, or the unquenchable appetites of others to conceal your carnivorous nature. You have mastered the art of the one night stand or move through the sex-club scene like a dark star. You think of yourself as a sexy beast, but in your darkest moments, you fear that you're at best a problematic lover, at worst a habitual rapist. A former lover who escaped destruction might be your Touchstone or your stalker. (If so, add them to the Relationship Map.) Maybe in life you were a pick-up artist, movie producer, author, a glorious slutty kinkster – or a virgin who intends to make up for lost time post-mortem.",
     "userchoices": [
       {
-        "type": "specialty",
+        "type": "specialties",
         "choices": [
           "Persuasion.Seduction",
           "Subterfuge.Seduction"
@@ -358,7 +358,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "disipline",
+        "type": "disciplines",
         "choices": [
           "Fortitude",
           "Presence"
@@ -370,12 +370,12 @@
     ],
     "bonusadjustments": [
       {
-        "type": "merit",
+        "type": "merits",
         "name": "Beautiful",
         "value": 2
       },
       {
-        "type": "flaw",
+        "type": "flaws",
         "name": "Enemy",
         "value": 1
       }

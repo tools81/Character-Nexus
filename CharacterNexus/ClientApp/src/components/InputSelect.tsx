@@ -245,8 +245,6 @@ const handleSelectChange = (
   const selectElement = event.target;
   const selectedOption = selectElement.options[selectElement.selectedIndex];
 
-  console.log("Element:", selectElement, "Selected:", selectedOption);
-
   const selectBonusAdjustmentsString = selectedOption.getAttribute("data-bonusadjustments");
   const selectBonusAdjustments = selectBonusAdjustmentsString
     ? JSON.parse(selectBonusAdjustmentsString)
@@ -269,8 +267,8 @@ const handleSelectChange = (
       handleRemoveBonusAdjustment(
         getValues,
         setValue,
-        toCamelCase(adjustment.type),
-        toCamelCase(adjustment.name),
+        adjustment.type,
+        adjustment.name,
         adjustment.value
       );
     }

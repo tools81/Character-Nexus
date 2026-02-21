@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUNTER: THE RECKONING — Hunter Manifesto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Impact&family=Permanent+Marker&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blood-red:    #C41E3A;
+            --red-dark:     #8A0E1E;
+            --warn-yellow:  #FFD800;
+            --yellow-dark:  #B89600;
+            --sick-green:   #9ACD32;
+            --green-dark:   #5A7D1E;
+            --concrete:     #D4D4D4;
+            --concrete-dk:  #A8A8A8;
+            --asphalt:      #2A2A2A;
+            --ink:          #0A0A0A;
+            --paper:        #E8E8E8;
+            --paper-dirty:  #D8D8D8;
+            --white:        #F8F8F8;
+            --spray:        rgba(196,30,58,0.8);
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Courier Prime', monospace;
+            background: var(--asphalt);
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0,0,0,0.15) 2px,
+                    rgba(0,0,0,0.15) 4px
+                );
+            color: var(--ink);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* ── CONTAINER (photocopied zine) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--paper);
+            border: 1px solid var(--concrete-dk);
+            box-shadow:
+                0 0 0 3px var(--asphalt),
+                0 20px 60px rgba(0,0,0,0.8);
+            position: relative;
+            animation: appear 0.4s ease-out;
+        }
+
+        @keyframes appear {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Photocopier artifacts */
+        .instr-container .container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(ellipse at 10% 20%, rgba(0,0,0,0.08) 0%, transparent 15%),
+                radial-gradient(ellipse at 85% 75%, rgba(0,0,0,0.06) 0%, transparent 20%),
+                linear-gradient(180deg, rgba(0,0,0,0.02) 0%, transparent 50%);
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        /* Paper texture */
+        .instr-container .container::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        /* ── WARNING STRIPE ── */
+        .instr-container .warn-bar {
+            height: 30px;
+            background: repeating-linear-gradient(
+                -45deg,
+                var(--warn-yellow),
+                var(--warn-yellow) 20px,
+                var(--ink) 20px,
+                var(--ink) 40px
+            );
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            padding: 2.5rem 2.5rem 2rem;
+            border-bottom: 4px solid var(--ink);
+            position: relative;
+            background: var(--paper-dirty);
+        }
+
+        /* Spray paint graffiti */
+        .instr-container .spray-tag {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.8rem;
+            color: var(--spray);
+            transform: rotate(-8deg);
+            opacity: 0.85;
+            text-shadow: 
+                2px 2px 4px rgba(0,0,0,0.4),
+                0 0 8px rgba(196,30,58,0.3);
+            pointer-events: none;
+        }
+
+        .instr-container .urgent {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            color: var(--blood-red);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            border: 2px solid var(--blood-red);
+            padding: 0.4rem 0.8rem;
+            display: inline-block;
+            transform: rotate(-1deg);
+        }
+
+        .instr-container h1 {
+            font-family: 'Impact', sans-serif;
+            font-size: 4rem;
+            line-height: 0.85;
+            font-weight: 900;
+            color: var(--ink);
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.3rem;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container h1 .hunter {
+            color: var(--blood-red);
+        }
+
+        .instr-container h1 .reckoning {
+            display: block;
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-top: 0.2rem;
+        }
+
+        .instr-container .tagline {
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--ink);
+            margin-top: 1.25rem;
+            text-transform: uppercase;
+            border-top: 2px solid var(--ink);
+            border-bottom: 2px solid var(--ink);
+            padding: 0.5rem 0;
+        }
+
+        .instr-container .doc-meta {
+            margin-top: 1.25rem;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            color: var(--ink);
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .instr-container .doc-meta span { opacity: 0.6; }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2.5rem;
+            background: var(--paper);
+        }
+
+        /* ── MANIFESTO BOX ── */
+        .instr-container .manifesto {
+            background: var(--white);
+            border: 3px solid var(--ink);
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 2.5rem;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            position: relative;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container .manifesto::before {
+            content: 'THEY ARE REAL. YOU ARE NOT CRAZY.';
+            position: absolute;
+            top: -0.75rem;
+            left: 1.5rem;
+            background: var(--blood-red);
+            color: var(--white);
+            padding: 0.3rem 0.8rem;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Impact', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--ink);
+            margin: 2.75rem 0 1.25rem;
+            padding: 0.4rem 0;
+            border-bottom: 4px solid var(--blood-red);
+            position: relative;
+            animation: slideIn 0.4s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.08s);
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: attr(data-num);
+            position: absolute;
+            left: -2.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.5rem;
+            color: var(--blood-red);
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-15px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+
+        .instr-container h3 {
+            font-family: 'Bebas Neue', cursive;
+            font-weight: 400;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--blood-red);
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .instr-container p {
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            color: var(--ink);
+        }
+
+        .instr-container ul, ol { margin: 0.75rem 0 1.25rem 1.5rem; }
+        .instr-container li {
+            font-size: 0.98rem;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { color: var(--blood-red); font-weight: 700; }
+        .instr-container em     { color: var(--ink); font-style: italic; font-weight: 700; }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.5rem 0;
+            height: 3px;
+            background: var(--ink);
+            position: relative;
+        }
+
+        .instr-container .divider::before {
+            content: '✦';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background: var(--paper);
+            padding: 0 0.75rem;
+            font-size: 1.2rem;
+            color: var(--blood-red);
+        }
+
+        /* ── WARNING BOX ── */
+        .instr-container .warning {
+            background: var(--warn-yellow);
+            border: 3px solid var(--ink);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.85;
+            position: relative;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container .warning::before {
+            content: '⚠ WARNING';
+            position: absolute;
+            top: -0.7rem;
+            left: 1.5rem;
+            background: var(--blood-red);
+            color: var(--white);
+            padding: 0.3rem 0.8rem;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        /* ── HANDWRITTEN NOTE ── */
+        .instr-container .note {
+            background: var(--sick-green);
+            border: 2px dashed var(--green-dark);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 0.95rem;
+            line-height: 1.9;
+            transform: rotate(-0.5deg);
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .instr-container .note-label {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: var(--green-dark);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        /* ── FILE BOX ── */
+        .instr-container .file-box {
+            background: var(--paper-dirty);
+            border: 2px solid var(--concrete-dk);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            position: relative;
+        }
+
+        .instr-container .file-box::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -0.65rem;
+            left: 1.5rem;
+            background: var(--paper-dirty);
+            padding: 0 0.5rem;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: var(--ink);
+            text-transform: uppercase;
+        }
+
+        /* ── CREED CARDS ── */
+        .instr-container .creed-grid {
+            display: grid;
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .creed-card {
+            background: var(--white);
+            border: 3px solid var(--ink);
+            padding: 1rem 1.25rem;
+            position: relative;
+            transition: transform 0.15s, box-shadow 0.15s;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container .creed-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container .creed-tag {
+            position: absolute;
+            top: -0.7rem;
+            left: 1.25rem;
+            background: var(--blood-red);
+            color: var(--white);
+            font-family: 'Bebas Neue', cursive;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            padding: 0.3rem 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .instr-container .creed-name {
+            font-family: 'Impact', sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+
+        .instr-container .creed-desc {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: var(--ink);
+            margin-bottom: 0.75rem;
+        }
+
+        .instr-container .creed-edge {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            color: var(--blood-red);
+            text-transform: uppercase;
+            border-top: 1px solid var(--concrete-dk);
+            padding-top: 0.5rem;
+        }
+
+        /* ── VIRTUE TABLE ── */
+        .instr-container .virtue-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .virtue-card {
+            background: var(--white);
+            border: 2px solid var(--ink);
+            padding: 0.85rem 0.75rem;
+            text-align: center;
+            box-shadow: 2px 2px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container .virtue-name {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.1rem;
+            letter-spacing: 0.12em;
+            color: var(--blood-red);
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .virtue-range {
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.8rem;
+            color: var(--ink);
+            font-weight: 700;
+        }
+
+        /* ── EDGE LIST ── */
+        .instr-container .edge-list {
+            display: grid;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .edge-item {
+            background: var(--paper-dirty);
+            border: 2px solid var(--concrete-dk);
+            border-left: 4px solid var(--blood-red);
+            padding: 0.8rem 1rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: baseline;
+            gap: 1rem;
+        }
+
+        .instr-container .edge-name {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.05rem;
+            letter-spacing: 0.1em;
+            color: var(--ink);
+            text-transform: uppercase;
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .edge-desc {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: var(--ink);
+        }
+
+        .instr-container .edge-cost {
+            font-family: 'Impact', sans-serif;
+            font-size: 1.2rem;
+            color: var(--blood-red);
+            white-space: nowrap;
+        }
+
+        /* ── CONVICTION TRACK ── */
+        .instr-container .conviction-box {
+            background: var(--ink);
+            color: var(--white);
+            border: 4px solid var(--blood-red);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .instr-container .conviction-title {
+            font-family: 'Impact', sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--warn-yellow);
+            margin-bottom: 0.75rem;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+        }
+
+        .instr-container .conviction-track {
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+            margin: 0.75rem 0;
+            flex-wrap: wrap;
+        }
+
+        .instr-container .conv-pip {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--white);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .instr-container .conv-pip.filled { background: var(--blood-red); border-color: var(--blood-red); }
+
+        .instr-container .conviction-desc {
+            font-size: 0.88rem;
+            line-height: 1.7;
+            margin-top: 0.75rem;
+            color: var(--concrete);
+        }
+
+        /* ── DICE EXPLAINER ── */
+        .instr-container .dice-block {
+            display: grid;
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .dice-row {
+            background: var(--white);
+            border: 2px solid var(--concrete-dk);
+            padding: 0.85rem 1rem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: start;
+            gap: 1rem;
+            box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+
+        .instr-container .dice-icon {
+            font-family: 'Impact', sans-serif;
+            font-size: 2.5rem;
+            color: var(--blood-red);
+            line-height: 1;
+            min-width: 3rem;
+            text-align: center;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+
+        .instr-container .dice-name {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ink);
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .dice-desc {
+            font-size: 0.88rem;
+            color: var(--ink);
+            line-height: 1.6;
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--paper-dirty);
+            padding: 2rem 2.5rem;
+            border-top: 4px solid var(--ink);
+            text-align: center;
+            position: relative;
+        }
+
+        .instr-container .footer-motto {
+            font-family: 'Impact', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--blood-red);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.5rem;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            color: var(--ink);
+            text-transform: uppercase;
+        }
+
+        /* Warning tape at bottom */
+        .instr-container .bottom-tape {
+            height: 20px;
+            background: repeating-linear-gradient(
+                -45deg,
+                var(--warn-yellow),
+                var(--warn-yellow) 15px,
+                var(--ink) 15px,
+                var(--ink) 30px
+            );
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 3rem; }
+            h1 .reckoning { font-size: 1.8rem; }
+            h2 { font-size: 1.8rem; }
+            h2::before { display: none; }
+            .virtue-grid { grid-template-columns: 1fr 1fr; }
+            .edge-item { grid-template-columns: 1fr; gap: 0.4rem; }
+            .edge-cost { text-align: left; }
+            .content { padding: 2rem 1.5rem; }
+            header { padding: 2rem 1.5rem; }
+            .spray-tag { right: 1.5rem; font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+
+        <!-- WARNING STRIPE -->
+        <div class="warn-bar"></div>
+
+        <!-- HEADER -->
+        <header>
+            <div class="spray-tag">WAKE UP</div>
+            <div class="urgent">⚠ URGENT: READ THIS NOW</div>
+            <h1>
+                <span class="hunter">HUNTER:</span>
+                <span class="reckoning">THE RECKONING</span>
+            </h1>
+            <div class="tagline">You saw something you weren't supposed to see. Now you can't unsee it.</div>
+            <div class="doc-meta">
+                <span>SYSTEM: STORYTELLER (D10 POOL)</span>
+                <span>PUBLISHER: RENEGADE GAME STUDIOS</span>
+                <span>SETTING: WORLD OF DARKNESS</span>
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="manifesto">
+                You were normal. You had a life — job, family, bills, routines. Then one night you saw <strong>them</strong>. The things that hide in plain sight. Vampires. Werewolves. Worse things without names. And when you saw them, something <em>changed</em>. You were <strong>Imbued</strong> — chosen by forces you don't understand to fight monsters you can't explain. Welcome to the Hunt. You can't go back.
+            </div>
+
+            <!-- STEP 1: THE IMBUING -->
+            <h2 data-num="01" style="--i:1;">The Imbuing</h2>
+            <p>You didn't choose this. <strong>Something</strong> chose you. In a moment of crisis — witnessing a murder, stumbling on a feeding, being in the wrong place at the wrong time — you received the <strong>Imbuing</strong>. Your eyes opened. You see the monsters now. All of them. And you feel the <em>call</em> to hunt.</p>
+
+            <h3>What Happened to You?</h3>
+            <ul>
+                <li>What was your life before the Imbuing? Job? Family? Relationships?</li>
+                <li>What did you see that night? Vampire feeding? Werewolf transformation? Something worse?</li>
+                <li>How did you react? Did you freeze? Fight? Run?</li>
+                <li>Who believes you now? Who thinks you've lost your mind?</li>
+                <li>What did you lose when this happened? Job? Home? Sanity?</li>
+            </ul>
+
+            <div class="note">
+                <span class="note-label">STREET WISDOM</span>
+                The Imbuing isn't a gift. It's a burden. You're not a superhero. You're an ordinary person with extraordinary sight and a compulsion you can't ignore. Most Hunters don't survive their first year.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: CREED -->
+            <h2 data-num="02" style="--i:2;">Choose Your Creed</h2>
+            <p>Your <strong>Creed</strong> is the philosophy that drives your Hunt. It defines <em>why</em> you hunt and <em>how</em> you justify what you do. Each Creed grants access to specific <strong>Edges</strong> — supernatural powers fueled by Conviction.</p>
+
+            <div class="creed-grid">
+                <div class="creed-card">
+                    <div class="creed-tag">MERCY</div>
+                    <div class="creed-name">Innocent</div>
+                    <div class="creed-desc">You protect the helpless. Monsters are evil, but some victims can be saved. You stand between predator and prey.</div>
+                    <div class="creed-edge">Edges: Defense, Martyrdom, Succor</div>
+                </div>
+                <div class="creed-card">
+                    <div class="creed-tag">VISION</div>
+                    <div class="creed-name">Visionary</div>
+                    <div class="creed-desc">You see patterns others miss. The Hunt is cosmic war. You understand the bigger picture — even if it drives you mad.</div>
+                    <div class="creed-edge">Edges: Foresight, Illumination, Radiance</div>
+                </div>
+                <div class="creed-card">
+                    <div class="creed-tag">ZEAL</div>
+                    <div class="creed-name">Zealot</div>
+                    <div class="creed-desc">You are righteous fury incarnate. Monsters are abominations. No mercy. No hesitation. Purge them all.</div>
+                    <div class="creed-edge">Edges: Judgement, Cleave, Burn</div>
+                </div>
+                <div class="creed-card">
+                    <div class="creed-tag">VENGEANCE</div>
+                    <div class="creed-name">Avenger</div>
+                    <div class="creed-desc">They took something from you. Family. Friend. Life. Now you take from them. Every kill is personal.</div>
+                    <div class="creed-edge">Edges: Demand, Punish, Ravage</div>
+                </div>
+                <div class="creed-card">
+                    <div class="creed-tag">REDEMPTION</div>
+                    <div class="creed-name">Redeemer</div>
+                    <div class="creed-desc">Not all monsters are beyond saving. You believe in redemption — even for the damned. This will break your heart.</div>
+                    <div class="creed-edge">Edges: Discern, Respire, Restore</div>
+                </div>
+                <div class="creed-card">
+                    <div class="creed-tag">DEFENSE</div>
+                    <div class="creed-name">Defender</div>
+                    <div class="creed-desc">You hold the line. Protect your territory. Guard your people. Let nothing through.</div>
+                    <div class="creed-edge">Edges: Ward, Blaze, Brand</div>
+                </div>
+                <div class="creed-card">
+                    <div class="creed-tag">JUSTICE</div>
+                    <div class="creed-name">Judge</div>
+                    <div class="creed-desc">You determine guilt. You pass sentence. You execute judgment. Cold. Methodical. Fair — by your definition.</div>
+                    <div class="creed-edge">Edges: Balance, Pierce, Expose</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: VIRTUES -->
+            <h2 data-num="03" style="--i:3;">Assign Virtues</h2>
+            <p>Every Hunter has three <strong>Virtues</strong> rated from <strong>1 to 5</strong>. These measure your moral strength and fuel your Edges. Distribute <strong>7 points</strong> among them, with a maximum of <strong>3</strong> in any Virtue at character creation.</p>
+
+            <div class="virtue-grid">
+                <div class="virtue-card">
+                    <div class="virtue-name">Zeal</div>
+                    <div class="virtue-range">1–5</div>
+                </div>
+                <div class="virtue-card">
+                    <div class="virtue-name">Mercy</div>
+                    <div class="virtue-range">1–5</div>
+                </div>
+                <div class="virtue-card">
+                    <div class="virtue-name">Vision</div>
+                    <div class="virtue-range">1–5</div>
+                </div>
+            </div>
+
+            <div class="file-box" data-label="VIRTUE DESCRIPTIONS">
+                <ul style="margin: 0 0 0 1.5rem; line-height: 1.8;">
+                    <li><strong>Zeal</strong> — Righteous fury, determination, willingness to act without hesitation. Raw drive to destroy evil.</li>
+                    <li><strong>Mercy</strong> — Compassion, protection of innocents, belief in redemption. The soft heart that refuses to become the monster.</li>
+                    <li><strong>Vision</strong> — Insight, understanding, seeing the bigger picture. The cold clarity that cuts through illusion.</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: ATTRIBUTES -->
+            <h2 data-num="04" style="--i:4;">Set Attributes</h2>
+            <p>Hunters use standard <strong>Storyteller attributes</strong> — nine traits in three categories. Prioritize categories (7/5/3 dots), then distribute within each category.</p>
+
+            <h3>Physical</h3>
+            <ul>
+                <li><strong>Strength</strong> — Raw muscle power, carrying capacity, melee damage</li>
+                <li><strong>Dexterity</strong> — Speed, agility, reflexes, coordination, aim</li>
+                <li><strong>Stamina</strong> — Endurance, toughness, resistance to damage and fatigue</li>
+            </ul>
+
+            <h3>Social</h3>
+            <ul>
+                <li><strong>Charisma</strong> — Force of personality, charm, natural leadership</li>
+                <li><strong>Manipulation</strong> — Persuasion, deception, getting what you want</li>
+                <li><strong>Appearance</strong> — Physical attractiveness, first impressions, presence</li>
+            </ul>
+
+            <h3>Mental</h3>
+            <ul>
+                <li><strong>Perception</strong> — Awareness, noticing details, reading situations</li>
+                <li><strong>Intelligence</strong> — Raw mental power, analysis, problem-solving</li>
+                <li><strong>Wits</strong> — Quick thinking, reaction time, street smarts</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: ABILITIES -->
+            <h2 data-num="05" style="--i:5;">Distribute Abilities</h2>
+            <p>Abilities are skills and knowledge. Prioritize categories (13/9/5 dots). Max <strong>3 dots</strong> in any Ability at creation. No Ability can exceed its governing Attribute.</p>
+
+            <h3>Talents (Natural abilities, no training required)</h3>
+            <p style="font-size: 0.9rem; line-height: 1.7;">Alertness, Athletics, Awareness, Brawl, Dodge, Empathy, Expression, Intimidation, Leadership, Streetwise, Subterfuge</p>
+
+            <h3>Skills (Learned through practice)</h3>
+            <p style="font-size: 0.9rem; line-height: 1.7;">Animal Ken, Crafts, Drive, Etiquette, Firearms, Larceny, Melee, Performance, Stealth, Survival, Technology</p>
+
+            <h3>Knowledges (Academic or specialized learning)</h3>
+            <p style="font-size: 0.9rem; line-height: 1.7;">Academics, Computer, Finance, Investigation, Law, Linguistics, Medicine, Occult, Politics, Science</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: EDGES -->
+            <h2 data-num="06" style="--i:6;">Select Edges</h2>
+            <p><strong>Edges</strong> are supernatural powers granted by the Imbuing. Your Creed determines which Edges you can access. Choose <strong>3 dots</strong> worth of Edges at creation. Each level costs 1 dot.</p>
+
+            <div class="edge-list">
+                <div class="edge-item">
+                    <div>
+                        <div class="edge-name">Cleave (Zealot)</div>
+                        <div class="edge-desc">Weapon strikes ignore supernatural protection. Your blade cuts through vampiric resilience like paper.</div>
+                    </div>
+                    <div class="edge-cost">ZEAL</div>
+                </div>
+                <div class="edge-item">
+                    <div>
+                        <div class="edge-name">Succor (Innocent)</div>
+                        <div class="edge-desc">Heal injuries with a touch. Burn Conviction to restore Health levels to yourself or others.</div>
+                    </div>
+                    <div class="edge-cost">MERCY</div>
+                </div>
+                <div class="edge-item">
+                    <div>
+                        <div class="edge-name">Illuminate (Visionary)</div>
+                        <div class="edge-desc">See the true nature of people and places. Illusions fail. Disguises crumble. Truth revealed.</div>
+                    </div>
+                    <div class="edge-cost">VISION</div>
+                </div>
+                <div class="edge-item">
+                    <div>
+                        <div class="edge-name">Ravage (Avenger)</div>
+                        <div class="edge-desc">Cause terrible aggravated damage with bare hands. Your rage becomes literal fire.</div>
+                    </div>
+                    <div class="edge-cost">ZEAL</div>
+                </div>
+                <div class="edge-item">
+                    <div>
+                        <div class="edge-name">Ward (Defender)</div>
+                        <div class="edge-desc">Create protective barriers against supernatural intrusion. Hold the line. Nothing gets through.</div>
+                    </div>
+                    <div class="edge-cost">VISION</div>
+                </div>
+                <div class="edge-item">
+                    <div>
+                        <div class="edge-name">Restore (Redeemer)</div>
+                        <div class="edge-desc">Cleanse supernatural taint. Remove curses. Heal corruption. Possibly redeem the damned.</div>
+                    </div>
+                    <div class="edge-cost">MERCY</div>
+                </div>
+            </div>
+
+            <p>Edges are powered by spending <strong>Conviction</strong> (temporary resource) or <strong>Willpower</strong>. Higher levels of an Edge are more powerful but cost more to activate.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: CONVICTION -->
+            <h2 data-num="07" style="--i:7;">Conviction &amp; Willpower</h2>
+
+            <div class="conviction-box">
+                <div class="conviction-title">CONVICTION</div>
+                <div class="conviction-track">
+                    <div class="conv-pip"></div>
+                    <div class="conv-pip"></div>
+                    <div class="conv-pip"></div>
+                    <div class="conv-pip"></div>
+                    <div class="conv-pip"></div>
+                    <div class="conv-pip"></div>
+                    <div class="conv-pip"></div>
+                    <div class="conv-pip"></div>
+                    <div class="conv-pip"></div>
+                    <div class="conv-pip"></div>
+                </div>
+                <div class="conviction-desc">
+                    Conviction is your fuel. It powers Edges and sustains your Hunt. You start with your highest Virtue in Conviction. Regain it by acting according to your Creed. Lose it by betraying your principles.
+                </div>
+            </div>
+
+            <h3>Willpower</h3>
+            <ul>
+                <li><strong>Starting Willpower = 3</strong></li>
+                <li>Spend to resist supernatural powers, push through pain, or activate certain Edges</li>
+                <li>Regain slowly through rest or achieving personal goals</li>
+                <li>Different from Conviction — Willpower is personal strength, Conviction is divine purpose</li>
+            </ul>
+
+            <div class="warning">
+                Running out of Conviction is dangerous. Without it, you're just a normal person who sees monsters. You can't activate Edges. You can't defend yourself. And the monsters know when you're weak.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: DICE MECHANICS -->
+            <h2 data-num="08" style="--i:8;">How Rolling Works</h2>
+            <p>Hunter uses the <strong>Storyteller System</strong> — roll d10s, count successes. Simple. Brutal. Deadly.</p>
+
+            <div class="dice-block">
+                <div class="dice-row">
+                    <div class="dice-icon">D10</div>
+                    <div>
+                        <div class="dice-name">Build Your Pool</div>
+                        <div class="dice-desc">Attribute + Ability = number of d10s you roll. Example: Dexterity 3 + Firearms 2 = roll 5 dice.</div>
+                    </div>
+                </div>
+                <div class="dice-row">
+                    <div class="dice-icon">6+</div>
+                    <div>
+                        <div class="dice-name">Count Successes</div>
+                        <div class="dice-desc">Every die showing 6 or higher = 1 success. Difficulty usually 6. More successes = better result.</div>
+                    </div>
+                </div>
+                <div class="dice-row">
+                    <div class="dice-icon">10</div>
+                    <div>
+                        <div class="dice-name">Roll Again</div>
+                        <div class="dice-desc">Roll a 10? That's 1 success AND you roll it again. 10s keep adding up. Miracles happen.</div>
+                    </div>
+                </div>
+                <div class="dice-row">
+                    <div class="dice-icon">1</div>
+                    <div>
+                        <div class="dice-name">Botch Risk</div>
+                        <div class="dice-desc">Roll NO successes AND any 1s? That's a botch. Critical failure. Something goes very wrong.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: NATURE & DEMEANOR -->
+            <h2 data-num="09" style="--i:9;">Nature &amp; Demeanor</h2>
+            <p>Choose your <strong>Nature</strong> (true personality) and <strong>Demeanor</strong> (public face). Acting according to your Nature restores Willpower.</p>
+
+            <div class="file-box" data-label="ARCHETYPE EXAMPLES">
+                <p style="line-height: 1.8; margin-bottom: 0.5rem;"><strong>Activist, Architect, Autocrat, Bon Vivant, Bravo, Caregiver, Competitor, Conformist, Conniver, Curmudgeon, Deviant, Director, Fanatic, Gallant, Judge, Loner, Martyr, Masochist, Monster, Pedagogue, Penitent, Perfectionist, Rebel, Survivor, Thrill-Seeker, Traditionalist, Trickster, Visionary</strong></p>
+            </div>
+
+            <h3>Your Hunt</h3>
+            <ul>
+                <li><strong>What's your method?</strong> Solo stalker? Part of a cell? Reluctant warrior?</li>
+                <li><strong>What are your rules?</strong> No killing humans? No mercy for monsters? Children are off-limits?</li>
+                <li><strong>What's your goal?</strong> Protect your neighborhood? Hunt a specific monster? Find answers?</li>
+                <li><strong>What keeps you sane?</strong> (Or do you pretend you still are?)</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: FINISHING TOUCHES -->
+            <h2 data-num="10" style="--i:10;">Final Details</h2>
+
+            <h3>Personal Information</h3>
+            <ul>
+                <li><strong>Name:</strong> Real name and any Hunter aliases</li>
+                <li><strong>Age:</strong> How old were you when Imbued?</li>
+                <li><strong>Appearance:</strong> What do you look like? How has the Hunt changed you?</li>
+                <li><strong>Former Life:</strong> What job/life did you abandon?</li>
+                <li><strong>Current Resources:</strong> Where do you live? How do you survive?</li>
+            </ul>
+
+            <h3>Equipment</h3>
+            <ul>
+                <li>Hunters use normal weapons — guns, knives, improvised gear</li>
+                <li>No special equipment. You're not funded. You're not trained.</li>
+                <li>You have whatever you could afford or steal</li>
+                <li>Edges are your real weapons</li>
+            </ul>
+
+            <h3>Connections</h3>
+            <ul>
+                <li><strong>Cell members:</strong> Other Hunters you work with (if any)</li>
+                <li><strong>Mortal ties:</strong> Family/friends who don't know what you do</li>
+                <li><strong>Resources:</strong> Safe houses, contacts, information sources</li>
+                <li><strong>Enemies:</strong> What monsters know your face?</li>
+            </ul>
+
+            <div class="file-box" data-label="FINAL CHECKLIST" style="border: 3px solid var(--blood-red); margin-top: 2rem;">
+                <ul style="margin: 0 0 0 1.5rem; list-style: none; line-height: 1.9; font-weight: 700;">
+                    <li>☐ Concept and Imbuing story established</li>
+                    <li>☐ Creed chosen</li>
+                    <li>☐ Three Virtues assigned (7 dots total)</li>
+                    <li>☐ Nine Attributes set (7/5/3 priority)</li>
+                    <li>☐ Abilities distributed (13/9/5 priority)</li>
+                    <li>☐ Three dots of Edges selected</li>
+                    <li>☐ Conviction = highest Virtue</li>
+                    <li>☐ Willpower = 3</li>
+                    <li>☐ Nature and Demeanor chosen</li>
+                    <li>☐ Personal details completed</li>
+                    <li>☐ Equipment and resources noted</li>
+                    <li>☐ Connections established</li>
+                    <li>☐ Ready to Hunt</li>
+                </ul>
+            </div>
+
+            <div class="note" style="margin-top: 2rem;">
+                <span class="note-label">ONE LAST THING</span>
+                You're going to die. Maybe not today. Maybe not this year. But Hunters don't retire. You'll keep hunting until something kills you or you become the monster you're hunting. The only question is how much good you do before the end. Make it count.
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-motto">NO MERCY</div>
+            <div class="footer-sub">Hunter: The Reckoning // Renegade Game Studios // Storyteller System</div>
+        </footer>
+
+        <!-- BOTTOM TAPE -->
+        <div class="bottom-tape"></div>
+
+    </div>
+    </body>
+</div>
+</html>

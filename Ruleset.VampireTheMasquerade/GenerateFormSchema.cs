@@ -567,7 +567,7 @@ namespace VampireTheMasquerade
                         label = clan.Name,
                         image = clan.Image,
                         description = $"{clan.Description}<br /><b>Bane: </b>{clan.Bane}<br /><b>Compulsion: </b>{clan.Compulsion}",
-                        bonusCharacteristics = JsonConvert.SerializeObject(clan.BonusCharacteristics, _jsonSettings)
+                        userChoices = JsonConvert.SerializeObject(clan.UserChoices, _jsonSettings)
                     }
                 );
             }
@@ -690,7 +690,7 @@ namespace VampireTheMasquerade
                         min = 0,
                         max = 5
                     },
-                    @default = 0
+                    @default = 1
                 });
             }
 
@@ -722,7 +722,7 @@ namespace VampireTheMasquerade
                         min = 0,
                         max = 5
                     },
-                    @default = 0
+                    @default = 1
                 });
             }
 
@@ -802,7 +802,7 @@ namespace VampireTheMasquerade
 
                 dynamic array = new
                 {
-                    name = $"{skill.Name}.specialties",
+                    name = $"specialties.{skill.Name}",
                     includeLabel = false,
                     type = "array",
                     component = obj
@@ -814,7 +814,7 @@ namespace VampireTheMasquerade
                 var groupSkillSpecialty = new
                 {
                     type = "group",
-                    name = $"{skill.Name}.specialties",
+                    name = $"specialties.{skill.Name}",
                     label = skill.Name,
                     children = skillSpecialtyList
                 };
@@ -825,7 +825,7 @@ namespace VampireTheMasquerade
             var physicalGroup = new
             {
                 type = "group",
-                name = $"{name}.physical",
+                name = $"physical.{name}",
                 label = "Physical",
                 children = physicalChildren
             };
@@ -878,7 +878,7 @@ namespace VampireTheMasquerade
 
                 dynamic array = new
                 {
-                    name = $"{skill.Name}.specialties",
+                    name = $"specialties.{skill.Name}",
                     includeLabel = false,
                     type = "array",
                     component = obj
@@ -890,7 +890,7 @@ namespace VampireTheMasquerade
                 var groupSkillSpecialty = new
                 {
                     type = "group",
-                    name = $"{skill.Name}.specialties",
+                    name = $"specialties.{skill.Name}",
                     label = skill.Name,
                     children = skillSpecialtyList
                 };
@@ -901,7 +901,7 @@ namespace VampireTheMasquerade
             var socialGroup = new
             {
                 type = "group",
-                name = $"{name}.social",
+                name = $"social.{name}",
                 label = "Social",
                 children = socialChildren
             };
@@ -954,7 +954,7 @@ namespace VampireTheMasquerade
 
                 dynamic array = new
                 {
-                    name = $"{skill.Name}.specialties",
+                    name = $"specialties.{skill.Name}",
                     includeLabel = false,
                     type = "array",
                     component = obj
@@ -966,7 +966,7 @@ namespace VampireTheMasquerade
                 var groupSkillSpecialty = new
                 {
                     type = "group",
-                    name = $"{skill.Name}.specialties",
+                    name = $"specialties.{skill.Name}",
                     label = skill.Name,
                     children = skillSpecialtyList
                 };
@@ -977,7 +977,7 @@ namespace VampireTheMasquerade
             var mentalGroup = new
             {
                 type = "group",
-                name = $"{name}.mental",
+                name = $"mental.{name}",
                 label = "Mental",
                 children = mentalChildren
             };
@@ -1035,7 +1035,7 @@ namespace VampireTheMasquerade
                 accordionItem.embedField = new
                 {
                     name = $"disciplines.{discipline.Name}",
-                    id = $"disciplines.{discipline.Name.ToLower()}",
+                    id = $"disciplines.{discipline.Name}",
                     label = "",
                     includeLabel = false,
                     type = "radiogroup",
@@ -1155,8 +1155,8 @@ namespace VampireTheMasquerade
                     {
                         var component = new
                         {
-                            name = background.Name.ToLower(),
-                            id = $"{advantage.Name}.{background.Name}",
+                            name = $"backgrounds.{background.Name.ToLower()}",
+                            id = $"backgrounds.{background.Name}",
                             label = $"BACKGROUND - {background.Name}",
                             includeLabel = true,
                             type = "radiogroup",
@@ -1196,38 +1196,13 @@ namespace VampireTheMasquerade
                 {
                     foreach (var flaw in filteredFlaws)
                     {
-                        var component = new object(); 
-
-                        if (flaw.Range == 0)
+                        var component =  new
                         {
-                            component = new
-                            {
-                                name = flaw.Name.ToLower(),
-                                id = $"{advantage.Name}.{flaw.Name}",
-                                label = $"FLAW - {flaw.Name}",
-                                type = "switch"
-                            };
-                        }
-                        else
-                        {
-                            component = new
-                            {
-                                name = flaw.Name.ToLower(),
-                                id = $"{advantage.Name}.{flaw.Name}",
-                                label = $"FLAW - {flaw.Name}",
-                                includeLabel= true,
-                                type = "radiogroup",
-                                className = "form-control",
-                                count = flaw.Range,
-                                validation = new
-                                {
-                                    required = false,
-                                    min = flaw.Minimum,
-                                    max = flaw.Range
-                                },
-                                @default = 0
-                            };
-                        }
+                            name = $"flaws.{flaw.Name.ToLower()}",
+                            id = $"flaws.{flaw.Name}",
+                            label = $"FLAW - {flaw.Name}",
+                            type = "switch"
+                        };
 
                         var text = new
                         {
@@ -1279,38 +1254,13 @@ namespace VampireTheMasquerade
                 {
                     foreach (var merit in filteredMerits)
                     {
-                        var component = new object(); 
-
-                        if (merit.Range == 0)
+                        var component = new
                         {
-                            component = new
-                            {
-                                name = merit.Name.ToLower(),
-                                id = $"{advantage.Name}.{merit.Name}",
-                                label = $"MERIT - {merit.Name}",
-                                type = "switch"
-                            };
-                        }
-                        else
-                        {
-                            component = new
-                            {
-                                name = merit.Name.ToLower(),
-                                id = $"{advantage.Name}.{merit.Name}",
-                                label = $"MERIT - {merit.Name}",
-                                includeLabel = true,
-                                type = "radiogroup",
-                                className = "form-control",
-                                count = merit.Range,
-                                validation = new
-                                {
-                                    required = false,
-                                    min = merit.Minimum,
-                                    max = merit.Range
-                                },
-                                @default = 0
-                            };
-                        }
+                            name = $"merits.{merit.Name.ToLower()}",
+                            id = $"merits.{merit.Name}",
+                            label = $"MERIT - {merit.Name}",
+                            type = "switch"
+                        };
 
                         var text = new
                         {
@@ -1337,38 +1287,13 @@ namespace VampireTheMasquerade
                 {
                     foreach (var flaw in filteredFlaws)
                     {
-                        var component = new object(); 
-
-                        if (flaw.Range == 0)
+                        var component = new
                         {
-                            component = new
-                            {
-                                name = flaw.Name.ToLower(),
-                                id = $"{advantage.Name}.{flaw.Name}",
-                                label = $"FLAW - {flaw.Name}",
-                                type = "switch"
-                            };
-                        }
-                        else
-                        {
-                            component = new
-                            {
-                                name = flaw.Name.ToLower(),
-                                id = $"{advantage.Name}.{flaw.Name}",
-                                label = $"FLAW - {flaw.Name}",
-                                includeLabel= true,
-                                type = "radiogroup",
-                                className = "form-control",
-                                count = flaw.Range,
-                                validation = new
-                                {
-                                    required = false,
-                                    min = flaw.Minimum,
-                                    max = flaw.Range
-                                },
-                                @default = 0
-                            };
-                        }
+                            name = $"flaws.{flaw.Name.ToLower()}",
+                            id = $"flaws.{flaw.Name}",
+                            label = $"FLAW - {flaw.Name}",
+                            type = "switch"
+                        };
 
                         var text = new
                         {

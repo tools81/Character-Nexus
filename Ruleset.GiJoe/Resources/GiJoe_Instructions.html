@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G.I. JOE RPG — Personnel Dossier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&family=Courier+Prime:wght@400;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --olive:        #5A6B4F;
+            --olive-dark:   #3A4B2F;
+            --tan:          #D4C5A0;
+            --tan-dark:     #B8A578;
+            --manila:       #F5EDD6;
+            --paper:        #FAF6E8;
+            --red-stamp:    #C8281E;
+            --red-dark:     #8A1810;
+            --blue-stamp:   #1E3A5F;
+            --ink:          #1A1A1A;
+            --ink-fade:     #4A4A4A;
+            --ink-light:    #7A7A7A;
+            --joe-blue:     #0047AB;
+            --joe-red:      #DC143C;
+            --stripe-white: #FFFFFF;
+            --classified:   rgba(0,0,0,0.85);
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Courier Prime', monospace;
+            background: #3A3A3A;
+            background-image:
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 10px,
+                    rgba(0,0,0,0.03) 10px,
+                    rgba(0,0,0,0.03) 20px
+                );
+            color: var(--ink);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* ── CONTAINER (manila folder) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--manila);
+            border: 1px solid var(--tan-dark);
+            box-shadow:
+                0 0 0 2px rgba(0,0,0,0.1),
+                0 20px 60px rgba(0,0,0,0.6),
+                inset 0 0 100px rgba(180,165,120,0.15);
+            position: relative;
+            animation: file-open 0.6s ease-out;
+        }
+
+        @keyframes file-open {
+            from { opacity: 0; transform: translateY(-30px) rotateX(15deg); }
+            to   { opacity: 1; transform: translateY(0) rotateX(0deg); }
+        }
+
+        /* Paper texture */
+        .instr-container .container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        /* File tabs at top */
+        .instr-container .file-tabs {
+            display: flex;
+            gap: 0;
+            background: var(--tan-dark);
+            padding: 0;
+        }
+
+        .instr-container .tab {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--ink);
+            background: var(--tan);
+            padding: 0.5rem 1.25rem;
+            border-right: 1px solid var(--tan-dark);
+            text-transform: uppercase;
+        }
+
+        .instr-container .tab.active {
+            background: var(--manila);
+            position: relative;
+        }
+
+        .instr-container .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--red-stamp);
+        }
+
+        /* ── TOP SECRET STRIPE ── */
+        .instr-container .classified-bar {
+            height: 20px;
+            background: repeating-linear-gradient(
+                -45deg,
+                var(--red-stamp) 0px,
+                var(--red-stamp) 15px,
+                var(--stripe-white) 15px,
+                var(--stripe-white) 30px
+            );
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            padding: 2rem 2.5rem;
+            border-bottom: 3px solid var(--olive-dark);
+            position: relative;
+            background: var(--paper);
+        }
+
+        /* CLASSIFIED stamp */
+        .instr-container .stamp-classified {
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            transform: rotate(-12deg);
+            border: 4px solid var(--red-stamp);
+            color: var(--red-stamp);
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            padding: 0.4rem 1rem;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .instr-container .clearance {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--red-stamp);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .instr-container h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.8rem;
+            line-height: 0.9;
+            font-weight: 900;
+            color: var(--ink);
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container h1 .joe {
+            color: var(--joe-blue);
+        }
+
+        .instr-container h1 .subtitle {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--olive-dark);
+            letter-spacing: 0.15em;
+            margin-top: 0.3rem;
+        }
+
+        .instr-container .tagline {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            color: var(--ink-fade);
+            margin-top: 1rem;
+            text-transform: uppercase;
+        }
+
+        .instr-container .doc-info {
+            margin-top: 1.25rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--tan-dark);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.4rem 1.5rem;
+            font-size: 0.75rem;
+        }
+
+        .instr-container .doc-label { color: var(--ink-light); text-transform: uppercase; }
+        .instr-container .doc-value { color: var(--ink); font-weight: 700; }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2.5rem;
+            background: var(--paper);
+        }
+
+        /* ── BRIEFING ── */
+        .instr-container .briefing {
+            background: var(--manila);
+            border: 2px solid var(--olive-dark);
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2.5rem;
+            font-size: 1rem;
+            line-height: 1.9;
+            position: relative;
+        }
+
+        .instr-container .briefing::before {
+            content: 'MISSION BRIEFING';
+            position: absolute;
+            top: -0.65rem;
+            left: 1.5rem;
+            background: var(--manila);
+            padding: 0 0.5rem;
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--olive-dark);
+            text-transform: uppercase;
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--olive-dark);
+            margin: 2.75rem 0 1.25rem;
+            padding: 0.5rem 0 0.5rem 1rem;
+            border-left: 6px solid var(--joe-red);
+            background: rgba(90,107,79,0.08);
+            position: relative;
+            animation: slideIn 0.4s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.07s);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: attr(data-section);
+            position: absolute;
+            left: -2.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            color: var(--ink-light);
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-15px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+
+        .instr-container h3 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--joe-blue);
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .instr-container p {
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            color: var(--ink);
+        }
+
+        .instr-container ul, ol { margin: 0.75rem 0 1.25rem 1.5rem; }
+        .instr-container li {
+            font-size: 0.98rem;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { color: var(--olive-dark); font-weight: 700; }
+        .instr-container em     { color: var(--joe-red); font-style: normal; }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.5rem 0;
+            height: 2px;
+            background: var(--tan-dark);
+            position: relative;
+        }
+
+        .instr-container .divider::before {
+            content: '★';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background: var(--paper);
+            padding: 0 0.75rem;
+            font-size: 1rem;
+            color: var(--joe-red);
+        }
+
+        /* ── FIELD NOTE ── */
+        .instr-container .field-note {
+            background: rgba(220,20,60,0.06);
+            border: 1px solid var(--red-dark);
+            border-left: 4px solid var(--red-stamp);
+            padding: 1.1rem 1.35rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.85;
+        }
+
+        .instr-container .note-label {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            color: var(--red-stamp);
+            display: block;
+            margin-bottom: 0.35rem;
+            text-transform: uppercase;
+        }
+
+        /* ── FILE CARD (like action figure back) ── */
+        .instr-container .file-card {
+            background: var(--manila);
+            border: 3px solid var(--olive-dark);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            position: relative;
+        }
+
+        .instr-container .file-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--joe-blue) 0px,
+                var(--joe-blue) 4px,
+                var(--joe-red) 4px,
+                var(--joe-red) 8px
+            );
+        }
+
+        .instr-container .file-card-header {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: var(--olive-dark);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--tan-dark);
+        }
+
+        /* ── ATTRIBUTE GRID ── */
+        .instr-container .attr-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .attr-card {
+            background: rgba(0,0,0,0.02);
+            border: 2px solid var(--tan-dark);
+            padding: 0.85rem 1rem;
+            position: relative;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .instr-container .attr-card:hover {
+            background: rgba(90,107,79,0.05);
+            border-color: var(--olive);
+        }
+
+        .instr-container .attr-code {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            color: var(--joe-red);
+            margin-bottom: 0.15rem;
+        }
+
+        .instr-container .attr-name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--ink);
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .attr-desc {
+            font-size: 0.85rem;
+            color: var(--ink-fade);
+            line-height: 1.5;
+        }
+
+        .instr-container .attr-range {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.85rem;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--olive-dark);
+        }
+
+        /* ── SPECIALTY LIST ── */
+        .instr-container .specialty-list {
+            display: grid;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .spec-item {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(0,0,0,0.02);
+            border: 1px solid var(--tan-dark);
+            border-left: 4px solid var(--olive-dark);
+            padding: 0.8rem 1rem;
+            transition: border-left-color 0.2s;
+        }
+
+        .instr-container .spec-item:hover { border-left-color: var(--joe-blue); }
+
+        .instr-container .spec-code {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            color: var(--olive-dark);
+            border: 1px solid var(--tan-dark);
+            padding: 0.2rem 0.45rem;
+            white-space: nowrap;
+        }
+
+        .instr-container .spec-name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--ink);
+            margin-bottom: 0.15rem;
+        }
+
+        .instr-container .spec-desc {
+            font-size: 0.85rem;
+            color: var(--ink-fade);
+            line-height: 1.5;
+        }
+
+        .instr-container .spec-tag {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--joe-red);
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        /* ── RANK TABLE ── */
+        .instr-container .rank-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: 0.92rem;
+        }
+
+        .instr-container .rank-table th {
+            background: var(--olive-dark);
+            color: var(--stripe-white);
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.6rem 0.9rem;
+            text-align: left;
+            font-size: 0.85rem;
+        }
+
+        .instr-container .rank-table td {
+            padding: 0.55rem 0.9rem;
+            border: 1px solid var(--tan-dark);
+            color: var(--ink);
+            vertical-align: top;
+            line-height: 1.6;
+            background: rgba(0,0,0,0.01);
+        }
+
+        .instr-container .rank-table tr:hover td { background: rgba(90,107,79,0.05); }
+
+        /* ── SKILL COLUMNS ── */
+        .instr-container .skill-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.4rem 1.5rem;
+            margin: 0.75rem 0 1.25rem;
+        }
+
+        .instr-container .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.3rem 0;
+            border-bottom: 1px solid var(--tan-dark);
+            font-size: 0.88rem;
+            transition: color 0.2s;
+        }
+
+        .instr-container .skill-item:hover { color: var(--joe-blue); }
+
+        .instr-container .skill-pip {
+            width: 6px;
+            height: 6px;
+            background: var(--olive-dark);
+            flex-shrink: 0;
+        }
+
+        /* ── DICE SYSTEM ── */
+        .instr-container .dice-block {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .dice-row {
+            background: rgba(0,0,0,0.02);
+            border: 1px solid var(--tan-dark);
+            padding: 0.85rem 1rem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: start;
+            gap: 0.85rem;
+        }
+
+        .instr-container .dice-num {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--joe-blue);
+            line-height: 1;
+            min-width: 2.5rem;
+            text-align: center;
+        }
+
+        .instr-container .dice-name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--ink);
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .dice-desc {
+            font-size: 0.88rem;
+            color: var(--ink-fade);
+            line-height: 1.6;
+        }
+
+        /* ── REDACTED TEXT ── */
+        .instr-container .redacted {
+            background: var(--classified);
+            color: transparent;
+            padding: 0.1rem 0.3rem;
+            display: inline-block;
+            min-width: 100px;
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--manila);
+            padding: 2rem 2.5rem;
+            border-top: 3px solid var(--olive-dark);
+            text-align: center;
+            position: relative;
+        }
+
+        .instr-container .footer-motto {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--joe-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: var(--ink-fade);
+            text-transform: uppercase;
+        }
+
+        .instr-container footer::before {
+            content: '★ ★ ★';
+            display: block;
+            font-size: 1.2rem;
+            color: var(--joe-red);
+            letter-spacing: 0.5em;
+            margin-bottom: 1rem;
+        }
+
+        /* ── BOTTOM STRIPE ── */
+        .instr-container .bottom-stripe {
+            height: 12px;
+            background: repeating-linear-gradient(
+                -45deg,
+                var(--olive-dark) 0px,
+                var(--olive-dark) 12px,
+                var(--tan-dark) 12px,
+                var(--tan-dark) 24px
+            );
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.8rem; }
+            h1 .subtitle { font-size: 1.3rem; }
+            h2 { font-size: 1.5rem; }
+            h2::before { display: none; }
+            .attr-grid { grid-template-columns: 1fr; }
+            .skill-cols { grid-template-columns: 1fr; }
+            .spec-item { grid-template-columns: 1fr; gap: 0.4rem; }
+            .spec-tag { text-align: left; }
+            .content { padding: 2rem 1.5rem; }
+            header { padding: 1.5rem 1.5rem; }
+            .stamp-classified { right: 1.5rem; font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+
+        <!-- FILE TABS -->
+        <div class="file-tabs">
+            <div class="tab active">Personnel</div>
+            <div class="tab">Operations</div>
+            <div class="tab">Equipment</div>
+            <div class="tab">Classified</div>
+        </div>
+
+        <!-- TOP SECRET STRIPE -->
+        <div class="classified-bar"></div>
+
+        <!-- HEADER -->
+        <header>
+            <div class="stamp-classified">CLASSIFIED</div>
+            <div class="clearance">Security Clearance: Level 3 // For Official Use Only</div>
+            <h1>
+                <span class="joe">G.I. JOE</span>
+                <span class="subtitle">A Real American Hero</span>
+            </h1>
+            <div class="tagline">Roleplaying Game — Personnel File Creation</div>
+            <div class="doc-info">
+                <span class="doc-label">Publisher:</span>
+                <span class="doc-value">RENEGADE GAME STUDIOS</span>
+                <span class="doc-label">System:</span>
+                <span class="doc-value">D6 SYSTEM</span>
+                <span class="doc-label">Classification:</span>
+                <span class="doc-value">RESTRICTED</span>
+                <span class="doc-label">File Date:</span>
+                <span class="doc-value">CURRENT</span>
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="briefing">
+                G.I. Joe is America's elite special operations force — a highly trained, mobile strike team assembled to counter the terrorist organization known as <strong>Cobra</strong>. You are a new recruit being processed into the team. This dossier will guide you through personnel file creation. Remember: knowing is half the battle. The other half is shooting accurately and not getting blown up.
+            </div>
+
+            <!-- STEP 1: CODE NAME -->
+            <h2 data-section="01" style="--i:1;">Select Code Name &amp; Specialty</h2>
+            <p>Every G.I. Joe operative is identified by a <strong>Code Name</strong> — a callsign that defines your reputation and role. Your <strong>Specialty</strong> is your military occupational classification (MOS) — what you're trained to do.</p>
+
+            <h3>Code Name Guidelines</h3>
+            <ul>
+                <li>Should reflect your specialty, personality, or combat style</li>
+                <li>One or two words, memorable and distinctive</li>
+                <li>Examples: <em>Snake Eyes, Scarlett, Duke, Roadblock, Shipwreck, Gung-Ho</em></li>
+                <li>Avoid names already taken by established Joe team members</li>
+            </ul>
+
+            <h3>Specialty Categories</h3>
+            <div class="specialty-list">
+                <div class="spec-item">
+                    <span class="spec-code">MOS-01</span>
+                    <div>
+                        <div class="spec-name">Infantry</div>
+                        <div class="spec-desc">Ground combat specialist, small arms expert, tactical operations</div>
+                    </div>
+                    <div class="spec-tag">COMBAT</div>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-code">MOS-02</span>
+                    <div>
+                        <div class="spec-name">Sniper</div>
+                        <div class="spec-desc">Long-range marksman, reconnaissance, precision elimination</div>
+                    </div>
+                    <div class="spec-tag">COMBAT</div>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-code">MOS-03</span>
+                    <div>
+                        <div class="spec-name">Heavy Weapons</div>
+                        <div class="spec-desc">Machine gunner, rocket launcher operator, suppressive fire specialist</div>
+                    </div>
+                    <div class="spec-tag">COMBAT</div>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-code">MOS-04</span>
+                    <div>
+                        <div class="spec-name">Commando</div>
+                        <div class="spec-desc">Hand-to-hand combat, silent infiltration, close-quarters battle</div>
+                    </div>
+                    <div class="spec-tag">STEALTH</div>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-code">MOS-05</span>
+                    <div>
+                        <div class="spec-name">Intelligence</div>
+                        <div class="spec-desc">Espionage, counterintelligence, cryptography, interrogation</div>
+                    </div>
+                    <div class="spec-tag">STEALTH</div>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-code">MOS-06</span>
+                    <div>
+                        <div class="spec-name">Pilot</div>
+                        <div class="spec-desc">Fixed-wing or rotary aircraft, aerial combat, transport operations</div>
+                    </div>
+                    <div class="spec-tag">VEHICLE</div>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-code">MOS-07</span>
+                    <div>
+                        <div class="spec-name">Vehicle Specialist</div>
+                        <div class="spec-desc">Armor, transport, or specialized vehicle operation and combat</div>
+                    </div>
+                    <div class="spec-tag">VEHICLE</div>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-code">MOS-08</span>
+                    <div>
+                        <div class="spec-name">Medic</div>
+                        <div class="spec-desc">Combat medicine, trauma surgery, field triage, evacuation</div>
+                    </div>
+                    <div class="spec-tag">SUPPORT</div>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-code">MOS-09</span>
+                    <div>
+                        <div class="spec-name">Engineer</div>
+                        <div class="spec-desc">Demolitions, construction, repair, technical systems operation</div>
+                    </div>
+                    <div class="spec-tag">SUPPORT</div>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-code">MOS-10</span>
+                    <div>
+                        <div class="spec-name">Communications</div>
+                        <div class="spec-desc">Radio operator, signals intelligence, electronic warfare, hacking</div>
+                    </div>
+                    <div class="spec-tag">SUPPORT</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: ATTRIBUTES -->
+            <h2 data-section="02" style="--i:2;">Roll Attributes</h2>
+            <p>Every Joe has <strong>six core Attributes</strong> rated from <strong>1D to 4D</strong>. Roll <strong>7D</strong> total to distribute among your six Attributes, with a minimum of <strong>2D</strong> and a maximum of <strong>4D</strong> in any single Attribute at character creation.</p>
+
+            <div class="attr-grid">
+                <div class="attr-card">
+                    <div class="attr-code">ATTR_AGI</div>
+                    <div class="attr-name">Agility</div>
+                    <div class="attr-range">2D–4D</div>
+                    <div class="attr-desc">Speed, reflexes, acrobatics, dodging</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">ATTR_SMT</div>
+                    <div class="attr-name">Smarts</div>
+                    <div class="attr-range">2D–4D</div>
+                    <div class="attr-desc">Intelligence, technical knowledge, tactics</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">ATTR_SPI</div>
+                    <div class="attr-name">Spirit</div>
+                    <div class="attr-range">2D–4D</div>
+                    <div class="attr-desc">Willpower, leadership, morale, courage</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">ATTR_STR</div>
+                    <div class="attr-name">Strength</div>
+                    <div class="attr-range">2D–4D</div>
+                    <div class="attr-desc">Physical power, melee combat, carrying</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">ATTR_VIG</div>
+                    <div class="attr-name">Vigor</div>
+                    <div class="attr-range">2D–4D</div>
+                    <div class="attr-desc">Endurance, toughness, resistance to damage</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">ATTR_CMD</div>
+                    <div class="attr-name">Command</div>
+                    <div class="attr-range">2D–4D</div>
+                    <div class="attr-desc">Leadership ability, tactical coordination</div>
+                </div>
+            </div>
+
+            <div class="field-note">
+                <span class="note-label">⚠ TACTICAL NOTE</span>
+                <strong>The "D" represents six-sided dice.</strong> An Attribute of 3D means you roll three six-sided dice when using that Attribute. Higher is better. Your Specialty determines which Attributes are most critical for your role.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: SKILLS -->
+            <h2 data-section="03" style="--i:3;">Assign Skills</h2>
+            <p>Skills are specific areas of training tied to your Attributes. You receive <strong>7D</strong> to distribute among skills. Each die added to a skill increases your capability. Skills can't exceed <strong>Attribute +2D</strong> at creation.</p>
+
+            <div class="file-card">
+                <div class="file-card-header">Core Skill List</div>
+                <div class="skill-cols">
+                    <div class="skill-item"><span class="skill-pip"></span> Brawling (STR)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Driving (AGI)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Climbing (STR)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Piloting (AGI)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Demolitions (SMT)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> First Aid (SMT)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Dodge (AGI)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Persuasion (SPI)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Firearms (AGI)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Stealth (AGI)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Heavy Weapons (AGI)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Survival (SMT)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Intimidation (SPI)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Tactics (SMT)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Investigation (SMT)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Throwing (AGI)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Leadership (CMD)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Swimming (VIG)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Melee Weapons (STR)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Stamina (VIG)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Notice (SMT)</div>
+                    <div class="skill-item"><span class="skill-pip"></span> Repair (SMT)</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: RANK -->
+            <h2 data-section="04" style="--i:4;">Determine Rank</h2>
+            <p>Your <strong>Military Rank</strong> reflects your experience and position in the command structure. Starting characters typically begin as <strong>E-5 (Sergeant)</strong> or equivalent, though special circumstances may warrant higher or lower rank.</p>
+
+            <table class="rank-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Grade</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Private / Airman</strong></td>
+                        <td>E-1 to E-3</td>
+                        <td>Basic training complete, learning specialty</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Corporal / Specialist</strong></td>
+                        <td>E-4</td>
+                        <td>Experienced in specialty, may lead small teams</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sergeant</strong></td>
+                        <td>E-5</td>
+                        <td>Squad leader, tactical decision-maker — standard PC rank</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Staff Sergeant</strong></td>
+                        <td>E-6</td>
+                        <td>Platoon-level NCO, coordinates multiple squads</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lieutenant</strong></td>
+                        <td>O-1 to O-2</td>
+                        <td>Junior officer, leads platoons or specialized units</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Captain / Major</strong></td>
+                        <td>O-3 to O-4</td>
+                        <td>Company/battalion command, strategic planning</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: DICE MECHANICS -->
+            <h2 data-section="05" style="--i:5;">How Rolling Works</h2>
+            <p>The G.I. Joe RPG uses a <strong>D6 dice pool system</strong>. When you attempt something challenging, roll your Attribute dice + any Skill dice. The <strong>Wild Die</strong> adds drama and risk.</p>
+
+            <div class="dice-block">
+                <div class="dice-row">
+                    <div class="dice-num">1</div>
+                    <div>
+                        <div class="dice-name">Roll Your Pool</div>
+                        <div class="dice-desc">Add Attribute + Skill dice together. Roll them all. Add up the total.</div>
+                    </div>
+                </div>
+                <div class="dice-row">
+                    <div class="dice-num">2</div>
+                    <div>
+                        <div class="dice-name">The Wild Die</div>
+                        <div class="dice-desc">One die in your pool is a different color — the Wild Die. If it shows <strong>6</strong>, roll it again and add. If it shows <strong>1</strong>, remove the highest die from your total.</div>
+                    </div>
+                </div>
+                <div class="dice-row">
+                    <div class="dice-num">3</div>
+                    <div>
+                        <div class="dice-name">Beat the Difficulty</div>
+                        <div class="dice-desc">Your total must equal or exceed the Difficulty Number set by the GM. Standard difficulty is <strong>10</strong>.</div>
+                    </div>
+                </div>
+                <div class="dice-row">
+                    <div class="dice-num">4</div>
+                    <div>
+                        <div class="dice-name">Success &amp; Failure</div>
+                        <div class="dice-desc">Meet or beat the DN = success. Fall short = failure. Beating DN by 10+ = exceptional success.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field-note">
+                <span class="note-label">⚠ WILD DIE COMPLICATION</span>
+                The Wild Die keeps every roll tense. Roll a 6, you're a hero. Roll a 1, something goes wrong — even if you succeed overall. This is by design. War is unpredictable.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: WOUNDS & SURVIVAL -->
+            <h2 data-section="06" style="--i:6;">Wounds &amp; Combat</h2>
+            <p>Damage is measured in <strong>Wound Levels</strong>. When you take a hit, the attacker's damage roll is compared to your <strong>Strength + armor</strong>. The difference determines severity.</p>
+
+            <table class="rank-table">
+                <thead>
+                    <tr>
+                        <th>Wound Level</th>
+                        <th>Effect</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Stunned</strong></td>
+                        <td>No damage but lose next action</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Wounded</strong></td>
+                        <td>-1D to all actions until treated</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Severely Wounded</strong></td>
+                        <td>-2D to all actions, may become incapacitated</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Incapacitated</strong></td>
+                        <td>Cannot act, will die without immediate medical attention</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mortally Wounded</strong></td>
+                        <td>Death imminent — say your last words</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Multiple wounds at the same level advance you to the next level. Combat in G.I. Joe is dangerous — body armor and cover are not optional.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: EQUIPMENT -->
+            <h2 data-section="07" style="--i:7;">Standard Issue Equipment</h2>
+            <p>All G.I. Joe operatives receive standard field gear. Your Specialty determines additional equipment available for requisition.</p>
+
+            <h3>Universal Kit</h3>
+            <ul>
+                <li><strong>M16A2 Assault Rifle</strong> or equivalent primary weapon (Damage 5D, Range 50m)</li>
+                <li><strong>M1911 Sidearm</strong> (Damage 4D, Range 10m)</li>
+                <li><strong>Combat Knife</strong> (Damage STR+1D)</li>
+                <li><strong>Body Armor</strong> (+2D vs. physical damage)</li>
+                <li><strong>Field Uniform</strong> (woodland or desert camouflage)</li>
+                <li><strong>Web Gear</strong> (ammunition pouches, canteen, first aid kit)</li>
+                <li><strong>Radio Communicator</strong> (squad frequency)</li>
+                <li><strong>Rations</strong> (3 days)</li>
+            </ul>
+
+            <h3>Specialty Equipment (Examples)</h3>
+            <ul>
+                <li><strong>Sniper:</strong> M24 Sniper Rifle (Damage 6D, Range 300m), spotter scope, ghillie suit</li>
+                <li><strong>Heavy Weapons:</strong> M60 Machine Gun (Damage 6D, sustained fire), extra ammo belts</li>
+                <li><strong>Medic:</strong> Advanced medical kit (+2D to First Aid), stretcher, morphine</li>
+                <li><strong>Engineer:</strong> C-4 explosives, detonators, wire cutters, toolkit</li>
+                <li><strong>Pilot:</strong> Flight suit, survival kit, flare gun, ejection seat (hopefully never needed)</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: BACKGROUND -->
+            <h2 data-section="08" style="--i:8;">Personal Background</h2>
+            <p>Every Joe has a story. Fill in the following to give your character depth and provide the GM with narrative hooks.</p>
+
+            <div class="file-card">
+                <div class="file-card-header">Personnel Data — For Official Record</div>
+                <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 2;">
+                    <li><strong>Legal Name:</strong> <span class="redacted">████████████</span></li>
+                    <li><strong>Code Name:</strong> _______________________</li>
+                    <li><strong>Birthplace:</strong> _______________________</li>
+                    <li><strong>Service Branch:</strong> Army / Navy / Air Force / Marines / Coast Guard</li>
+                    <li><strong>Years of Service:</strong> _______</li>
+                    <li><strong>Prior Assignments:</strong> _______________________</li>
+                    <li><strong>Commendations:</strong> _______________________</li>
+                    <li><strong>Distinguishing Features:</strong> _______________________</li>
+                    <li><strong>Next of Kin:</strong> <span class="redacted">████████████</span></li>
+                </ul>
+            </div>
+
+            <h3>Character Questions</h3>
+            <ul>
+                <li><strong>What made you join the military?</strong> Patriotism? Family tradition? Escaping something?</li>
+                <li><strong>Why were you selected for G.I. Joe?</strong> Exceptional skill? Right place, right time? Personal connection?</li>
+                <li><strong>What drives you?</strong> Duty? Vengeance against Cobra? Proving yourself?</li>
+                <li><strong>What's your relationship with authority?</strong> By-the-book soldier? Maverick who gets results?</li>
+                <li><strong>Who on the team do you trust most?</strong> Establish at least one connection with another PC.</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: THE ENEMY -->
+            <h2 data-section="09" style="--i:9;">Know Your Enemy</h2>
+            <p><strong>Cobra</strong> is a ruthless terrorist organization determined to rule the world. Led by the mysterious <strong>Cobra Commander</strong>, they deploy advanced weaponry, mind-control technology, and fanatical troops against freedom.</p>
+
+            <h3>Common Cobra Forces</h3>
+            <ul>
+                <li><strong>Cobra Troopers:</strong> Faceless infantry — expendable, numerous, poorly trained but well-armed</li>
+                <li><strong>Crimson Guard:</strong> Elite soldiers — disciplined, dangerous, personally loyal to Cobra Commander</li>
+                <li><strong>Vipers:</strong> Special operations — skilled in various specialties (helicopter pilots, shock troops, saboteurs)</li>
+                <li><strong>B.A.T.s:</strong> Battle Android Troopers — robots with built-in weapons, no fear, no mercy</li>
+            </ul>
+
+            <p>Your mission is simple: stop them. The methods are up to you — and command approval.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: READY TO DEPLOY -->
+            <h2 data-section="10" style="--i:10;">Final Briefing</h2>
+
+            <div class="file-card" style="border-color: var(--joe-blue); border-width: 4px;">
+                <div class="file-card-header">Deployment Checklist</div>
+                <ul style="margin: 0.5rem 0 0 1.5rem; list-style: none; line-height: 1.9;">
+                    <li>☐ Code Name and Specialty selected</li>
+                    <li>☐ Six Attributes assigned (7D total, 2D–4D each)</li>
+                    <li>☐ Skills distributed (7D total)</li>
+                    <li>☐ Military Rank determined</li>
+                    <li>☐ Understanding of dice mechanics (Wild Die especially)</li>
+                    <li>☐ Wound tolerance noted</li>
+                    <li>☐ Standard equipment issued</li>
+                    <li>☐ Specialty equipment requisitioned</li>
+                    <li>☐ Personal background completed</li>
+                    <li>☐ Team connections established</li>
+                    <li>☐ Mission briefing received from GM</li>
+                    <li>☐ Ready to engage Cobra forces</li>
+                </ul>
+            </div>
+
+            <div class="field-note" style="margin-top: 2rem; border-color: var(--joe-blue); background: rgba(0,71,171,0.05);">
+                <span class="note-label" style="color: var(--joe-blue);">⭐ COMMAND MESSAGE</span>
+                You are now part of an elite team dedicated to defending freedom against tyranny. G.I. Joe doesn't fail. We adapt, overcome, and complete the mission. Trust your training. Trust your team. <strong>And remember: knowing is half the battle. Yo Joe!</strong>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-motto">YO JOE!</div>
+            <div class="footer-sub">G.I. Joe RPG // Renegade Game Studios // D6 System</div>
+        </footer>
+
+        <!-- BOTTOM STRIPE -->
+        <div class="bottom-stripe"></div>
+
+    </div>
+    </body>
+</div>
+</html>

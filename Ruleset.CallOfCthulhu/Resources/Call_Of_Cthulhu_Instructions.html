@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call of Cthulhu — Investigator's Dossier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Special+Elite&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --parchment:    #F4EBD9;
+            --parchment-dk: #E8DCC0;
+            --ink:          #2C1810;
+            --ink-fade:     #5C4838;
+            --ink-light:    #8C7868;
+            --burgundy:     #6B1F1F;
+            --burgundy-dim: #4A1515;
+            --green:        #2C4A2C;
+            --green-dim:    #1A2A1A;
+            --eldritch:     #4A2C5C;
+            --seal:         #8B4513;
+            --shadow:       rgba(44,24,16,0.15);
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Crimson Text', serif;
+            background: #2A2420;
+            background-image: 
+                radial-gradient(ellipse at center, #2A2420 0%, #1A1410 100%);
+            color: var(--ink);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* ── CONTAINER (aged paper document) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--parchment);
+            /* torn/aged edges */
+            box-shadow:
+                0 0 0 1px rgba(0,0,0,0.1),
+                0 20px 60px rgba(0,0,0,0.7),
+                inset 0 0 80px rgba(139,69,19,0.08);
+            position: relative;
+            animation: unfold 0.8s ease-out;
+        }
+
+        @keyframes unfold {
+            from { opacity: 0; transform: perspective(600px) rotateX(-12deg); }
+            to   { opacity: 1; transform: perspective(600px) rotateX(0deg); }
+        }
+
+        /* age spots and stains */
+        .instr-container .container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 85% 15%, rgba(139,69,19,0.12) 0%, transparent 8%),
+                radial-gradient(circle at 10% 75%, rgba(139,69,19,0.08) 0%, transparent 12%),
+                radial-gradient(circle at 92% 88%, rgba(139,69,19,0.1) 0%, transparent 6%);
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        /* paper texture */
+        .instr-container .container::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            padding: 3rem 2.5rem 2rem;
+            border-bottom: 3px double var(--ink);
+            position: relative;
+        }
+
+        /* decorative corner flourish */
+        .instr-container header::before {
+            content: '✦';
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--burgundy);
+            opacity: 0.3;
+        }
+
+        .instr-container header::after {
+            content: '✦';
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--burgundy);
+            opacity: 0.3;
+        }
+
+        .instr-container .case-number {
+            font-family: 'Special Elite', cursive;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            color: var(--ink-fade);
+            margin-bottom: 1.25rem;
+            text-transform: uppercase;
+        }
+
+        .instr-container h1 {
+            font-family: 'IM Fell English', serif;
+            font-size: 3.5rem;
+            line-height: 1;
+            font-weight: 400;
+            color: var(--ink);
+            text-align: center;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.02em;
+        }
+
+        .instr-container .h1-sub {
+            font-family: 'IM Fell English', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--burgundy);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .instr-container .edition {
+            font-family: 'Special Elite', cursive;
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            color: var(--ink-light);
+            text-align: center;
+        }
+
+        /* ── LIBRARY STAMP ── */
+        .instr-container .stamp {
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            width: 80px;
+            height: 80px;
+            border: 3px solid var(--seal);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(8deg);
+            opacity: 0.35;
+            pointer-events: none;
+        }
+
+        .instr-container .stamp-text {
+            font-family: 'Special Elite', cursive;
+            font-size: 0.55rem;
+            letter-spacing: 0.08em;
+            color: var(--seal);
+            text-align: center;
+            line-height: 1.3;
+            text-transform: uppercase;
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2.5rem 2.5rem 3rem;
+            position: relative;
+        }
+
+        /* ── PREFACE ── */
+        .instr-container .preface {
+            border: 1px solid var(--ink-fade);
+            background: rgba(44,24,16,0.03);
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2.5rem;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            font-style: italic;
+            position: relative;
+        }
+
+        .instr-container .preface::before {
+            content: '"';
+            position: absolute;
+            top: -0.5rem;
+            left: 1rem;
+            font-size: 3rem;
+            color: var(--burgundy);
+            font-family: 'IM Fell English', serif;
+            opacity: 0.3;
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'IM Fell English', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--burgundy);
+            margin: 2.75rem 0 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--burgundy-dim);
+            position: relative;
+            animation: fadeIn 0.5s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.08s);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: attr(data-roman);
+            position: absolute;
+            left: -2.5rem;
+            top: 0;
+            font-family: 'Special Elite', cursive;
+            font-size: 0.8rem;
+            color: var(--ink-light);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        .instr-container h3 {
+            font-family: 'IM Fell English', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--green);
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .instr-container p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            color: var(--ink);
+        }
+
+        .instr-container ul, ol { margin: 0.75rem 0 1.25rem 1.5rem; }
+        .instr-container li {
+            font-size: 1.02rem;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { color: var(--burgundy); font-weight: 700; }
+        .instr-container em     { color: var(--green); font-style: italic; }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            text-align: center;
+            margin: 2.5rem 0;
+            font-size: 1rem;
+            color: var(--ink-light);
+            letter-spacing: 0.5em;
+        }
+
+        /* ── INVESTIGATOR'S NOTE ── */
+        .instr-container .note {
+            background: rgba(107,31,31,0.05);
+            border-left: 4px solid var(--burgundy-dim);
+            padding: 1.1rem 1.35rem;
+            margin: 1.5rem 0;
+            font-family: 'Special Elite', cursive;
+            font-size: 0.9rem;
+            line-height: 1.85;
+            position: relative;
+        }
+
+        .instr-container .note-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            color: var(--burgundy);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        /* ── MANUSCRIPT BOX ── */
+        .instr-container .manuscript {
+            background: var(--parchment-dk);
+            border: 1px solid var(--ink-fade);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            position: relative;
+            box-shadow: inset 0 1px 3px var(--shadow);
+        }
+
+        .instr-container .manuscript::before {
+            content: attr(data-title);
+            position: absolute;
+            top: -0.65rem;
+            left: 1.5rem;
+            background: var(--parchment);
+            padding: 0 0.5rem;
+            font-family: 'IM Fell English', serif;
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--green);
+        }
+
+        /* ── CHARACTERISTIC GRID ── */
+        .instr-container .char-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .char-card {
+            background: rgba(0,0,0,0.02);
+            border: 1px solid var(--ink-fade);
+            padding: 0.85rem 1rem;
+            position: relative;
+            transition: background 0.2s;
+        }
+
+        .instr-container .char-card:hover { background: rgba(107,31,31,0.04); }
+
+        .instr-container .char-abbr {
+            font-family: 'Special Elite', cursive;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            color: var(--burgundy);
+            margin-bottom: 0.15rem;
+        }
+
+        .instr-container .char-name {
+            font-family: 'IM Fell English', serif;
+            font-size: 1.1rem;
+            color: var(--ink);
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .char-desc {
+            font-size: 0.85rem;
+            color: var(--ink-fade);
+            line-height: 1.5;
+        }
+
+        .instr-container .char-range {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.85rem;
+            font-family: 'Special Elite', cursive;
+            font-size: 0.75rem;
+            color: var(--green);
+        }
+
+        /* ── OCCUPATION LIST ── */
+        .instr-container .occupation-list {
+            display: grid;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .occ-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.85rem;
+            background: rgba(0,0,0,0.02);
+            border: 1px solid var(--ink-fade);
+            padding: 0.8rem 1rem;
+            align-items: start;
+            transition: background 0.2s;
+        }
+
+        .instr-container .occ-item:hover { background: rgba(44,74,44,0.04); }
+
+        .instr-container .occ-mark {
+            font-family: 'IM Fell English', serif;
+            font-size: 1.8rem;
+            color: var(--green);
+            line-height: 1;
+            opacity: 0.5;
+            min-width: 1.5rem;
+            text-align: center;
+        }
+
+        .instr-container .occ-name {
+            font-family: 'IM Fell English', serif;
+            font-size: 1.1rem;
+            color: var(--ink);
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .occ-desc {
+            font-size: 0.9rem;
+            color: var(--ink-fade);
+            line-height: 1.6;
+        }
+
+        /* ── SKILL TABLE ── */
+        .instr-container .skill-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .instr-container .skill-table th {
+            background: var(--parchment-dk);
+            border: 1px solid var(--ink-fade);
+            border-bottom: 2px solid var(--burgundy-dim);
+            font-family: 'IM Fell English', serif;
+            font-weight: 600;
+            color: var(--burgundy);
+            padding: 0.6rem 0.9rem;
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        .instr-container .skill-table td {
+            padding: 0.55rem 0.9rem;
+            border: 1px solid var(--ink-fade);
+            color: var(--ink);
+            vertical-align: top;
+            line-height: 1.65;
+            background: rgba(0,0,0,0.01);
+        }
+
+        .instr-container .skill-table tr:hover td { background: rgba(107,31,31,0.03); }
+
+        .instr-container .skill-base {
+            font-family: 'Special Elite', cursive;
+            font-size: 0.75rem;
+            color: var(--ink-light);
+        }
+
+        /* ── SANITY METER ── */
+        .instr-container .sanity-box {
+            background: var(--parchment-dk);
+            border: 2px solid var(--eldritch);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            position: relative;
+        }
+
+        .instr-container .sanity-box::before {
+            content: '⚠';
+            position: absolute;
+            top: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            color: var(--eldritch);
+            background: var(--parchment);
+            padding: 0 0.5rem;
+        }
+
+        .instr-container .sanity-title {
+            font-family: 'IM Fell English', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--eldritch);
+            text-align: center;
+            margin-bottom: 0.85rem;
+        }
+
+        .instr-container .sanity-track {
+            display: flex;
+            gap: 3px;
+            margin: 0.75rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .instr-container .sanity-pip {
+            width: 18px;
+            height: 18px;
+            border: 1px solid var(--eldritch);
+            background: rgba(74,44,92,0.08);
+        }
+
+        .instr-container .sanity-pip.lost { background: var(--eldritch); }
+
+        .instr-container .sanity-desc {
+            font-size: 0.88rem;
+            line-height: 1.7;
+            text-align: center;
+            color: var(--ink-fade);
+            margin-top: 0.75rem;
+        }
+
+        /* ── DICE SYSTEM ── */
+        .instr-container .dice-block {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .dice-row {
+            background: rgba(0,0,0,0.02);
+            border: 1px solid var(--ink-fade);
+            padding: 0.85rem 1rem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: start;
+            gap: 0.85rem;
+        }
+
+        .instr-container .dice-icon {
+            font-family: 'IM Fell English', serif;
+            font-size: 2rem;
+            color: var(--burgundy);
+            line-height: 1;
+            min-width: 2rem;
+            text-align: center;
+        }
+
+        .instr-container .dice-name {
+            font-family: 'IM Fell English', serif;
+            font-size: 1.05rem;
+            color: var(--ink);
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .dice-desc {
+            font-size: 0.88rem;
+            color: var(--ink-fade);
+            line-height: 1.6;
+        }
+
+        /* ── BACKSTORY PROMPTS ── */
+        .instr-container .prompt-list {
+            display: grid;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .prompt-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.75rem;
+            padding: 0.65rem 0;
+            border-bottom: 1px solid var(--ink-fade);
+            align-items: baseline;
+        }
+
+        .instr-container .prompt-item:last-child { border-bottom: none; }
+
+        .instr-container .prompt-num {
+            font-family: 'IM Fell English', serif;
+            font-size: 1.1rem;
+            color: var(--burgundy);
+            font-weight: 600;
+            min-width: 1.5rem;
+        }
+
+        .instr-container .prompt-text {
+            font-size: 0.98rem;
+            line-height: 1.7;
+            color: var(--ink);
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            padding: 2rem 2.5rem;
+            border-top: 3px double var(--ink);
+            text-align: center;
+            position: relative;
+        }
+
+        .instr-container .footer-quote {
+            font-family: 'IM Fell English', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--ink-fade);
+            line-height: 1.8;
+            margin-bottom: 0.75rem;
+        }
+
+        .instr-container .footer-attr {
+            font-family: 'Special Elite', cursive;
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            color: var(--ink-light);
+            text-transform: uppercase;
+        }
+
+        /* decorative footer flourish */
+        .instr-container footer::before {
+            content: '✦ ✦ ✦';
+            display: block;
+            font-size: 0.9rem;
+            color: var(--burgundy);
+            opacity: 0.3;
+            letter-spacing: 0.5em;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.6rem; }
+            h2::before { display: none; }
+            .char-grid { grid-template-columns: 1fr; }
+            .content { padding: 2rem 1.5rem; }
+            header { padding: 2.5rem 1.5rem 1.5rem; }
+            .stamp { width: 60px; height: 60px; top: 1.5rem; right: 1.5rem; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <div class="stamp">
+                <div class="stamp-text">Miskatonic<br>University<br>Library</div>
+            </div>
+            <div class="case-number">Case File — Investigator Personnel Record</div>
+            <h1>Call of Cthulhu</h1>
+            <div class="h1-sub">Horror Roleplaying in the Worlds of H.P. Lovecraft</div>
+            <div class="edition">Seventh Edition — Chaosium Inc.</div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="preface">
+                The most merciful thing in the world, I think, is the inability of the human mind to correlate all its contents. We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far. You are about to create an <strong>Investigator</strong> — someone who will venture into those dark waters and discover truths that shatter sanity.
+            </div>
+
+            <!-- STEP 1: CHARACTERISTICS -->
+            <h2 data-roman="I." style="--i:1;">Roll Your Characteristics</h2>
+            <p>Every Investigator has <strong>eight core characteristics</strong> that define their physical, mental, and social capabilities. Roll dice to generate each characteristic as indicated. Record both the rolled value and the <strong>half value</strong> (rounded down) and <strong>fifth value</strong> (rounded down) — these are crucial for skill checks.</p>
+
+            <div class="char-grid">
+                <div class="char-card">
+                    <div class="char-abbr">STR</div>
+                    <div class="char-name">Strength</div>
+                    <div class="char-range">3D6</div>
+                    <div class="char-desc">Physical might and brute force</div>
+                </div>
+                <div class="char-card">
+                    <div class="char-abbr">CON</div>
+                    <div class="char-name">Constitution</div>
+                    <div class="char-range">3D6</div>
+                    <div class="char-desc">Health, vigor, and resistance to injury</div>
+                </div>
+                <div class="char-card">
+                    <div class="char-abbr">SIZ</div>
+                    <div class="char-name">Size</div>
+                    <div class="char-range">2D6+6</div>
+                    <div class="char-desc">Physical mass and stature</div>
+                </div>
+                <div class="char-card">
+                    <div class="char-abbr">DEX</div>
+                    <div class="char-name">Dexterity</div>
+                    <div class="char-range">3D6</div>
+                    <div class="char-desc">Agility, reflexes, and manual skill</div>
+                </div>
+                <div class="char-card">
+                    <div class="char-abbr">APP</div>
+                    <div class="char-name">Appearance</div>
+                    <div class="char-range">3D6</div>
+                    <div class="char-desc">Physical attractiveness and charisma</div>
+                </div>
+                <div class="char-card">
+                    <div class="char-abbr">INT</div>
+                    <div class="char-name">Intelligence</div>
+                    <div class="char-range">2D6+6</div>
+                    <div class="char-desc">Reasoning ability and learning capacity</div>
+                </div>
+                <div class="char-card">
+                    <div class="char-abbr">POW</div>
+                    <div class="char-name">Power</div>
+                    <div class="char-range">3D6</div>
+                    <div class="char-desc">Force of will and connection to the unseen</div>
+                </div>
+                <div class="char-card">
+                    <div class="char-abbr">EDU</div>
+                    <div class="char-name">Education</div>
+                    <div class="char-range">2D6+6</div>
+                    <div class="char-desc">Formal learning and accumulated knowledge</div>
+                </div>
+            </div>
+
+            <div class="note">
+                <span class="note-label">Keeper's Note</span>
+                For <strong>Luck</strong>, roll 3D6 × 5. This characteristic can be spent to influence events, avoid disaster, or simply survive what should be fatal. When Luck is gone, fate is no longer on your side.
+            </div>
+
+            <div class="divider">✦ ✦ ✦</div>
+
+            <!-- STEP 2: DERIVED ATTRIBUTES -->
+            <h2 data-roman="II." style="--i:2;">Calculate Derived Attributes</h2>
+            <p>Several crucial values are derived from your characteristics. These determine your survivability and capacity for action in the face of cosmic horror.</p>
+
+            <table class="skill-table">
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Formula</th>
+                        <th>Function</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Hit Points</strong></td>
+                        <td>(CON + SIZ) ÷ 10</td>
+                        <td>How much physical damage you can sustain</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Magic Points</strong></td>
+                        <td>POW ÷ 5</td>
+                        <td>Used to cast spells and resist supernatural influence</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sanity Points</strong></td>
+                        <td>POW</td>
+                        <td>Mental stability — lost through witnessing the unnatural</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Move Rate</strong></td>
+                        <td>Based on age, DEX, and STR</td>
+                        <td>Movement per combat round — typically 7 to 9</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Damage Bonus</strong></td>
+                        <td>STR + SIZ combined</td>
+                        <td>Extra damage in hand-to-hand combat</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Build</strong></td>
+                        <td>STR + SIZ combined</td>
+                        <td>Resistance to being moved or knocked down</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="divider">✦ ✦ ✦</div>
+
+            <!-- STEP 3: OCCUPATION -->
+            <h2 data-roman="III." style="--i:3;">Choose Your Occupation</h2>
+            <p>Your Occupation represents your professional life and determines which skills receive additional development points. It shapes who you are before the darkness finds you.</p>
+
+            <div class="occupation-list">
+                <div class="occ-item">
+                    <div class="occ-mark">§</div>
+                    <div>
+                        <div class="occ-name">Antiquarian</div>
+                        <div class="occ-desc">Dealer in rare books, artifacts, and relics. Intimate knowledge of the occult, often acquired at terrible cost.</div>
+                    </div>
+                </div>
+                <div class="occ-item">
+                    <div class="occ-mark">§</div>
+                    <div>
+                        <div class="occ-name">Author</div>
+                        <div class="occ-desc">Writer of fiction or academic works. Skilled in research and observation, driven by curiosity that may prove fatal.</div>
+                    </div>
+                </div>
+                <div class="occ-item">
+                    <div class="occ-mark">§</div>
+                    <div>
+                        <div class="occ-name">Detective</div>
+                        <div class="occ-desc">Private investigator or police detective. Trained to find answers — even when those answers destroy everything.</div>
+                    </div>
+                </div>
+                <div class="occ-item">
+                    <div class="occ-mark">§</div>
+                    <div>
+                        <div class="occ-name">Doctor of Medicine</div>
+                        <div class="occ-desc">Physician, surgeon, or psychiatrist. Healers who discover that some wounds cannot be sutured, some minds cannot be mended.</div>
+                    </div>
+                </div>
+                <div class="occ-item">
+                    <div class="occ-mark">§</div>
+                    <div>
+                        <div class="occ-name">Journalist</div>
+                        <div class="occ-desc">Reporter seeking the truth. The pen may be mightier than the sword, but neither can stop what lurks beyond.</div>
+                    </div>
+                </div>
+                <div class="occ-item">
+                    <div class="occ-mark">§</div>
+                    <div>
+                        <div class="occ-name">Professor</div>
+                        <div class="occ-desc">Academic researcher and teacher. Vast knowledge that opens doors better left sealed forever.</div>
+                    </div>
+                </div>
+                <div class="occ-item">
+                    <div class="occ-mark">§</div>
+                    <div>
+                        <div class="occ-name">Occultist</div>
+                        <div class="occ-desc">Student of forbidden lore and esoteric mysteries. Seeking power that inevitably exacts a price.</div>
+                    </div>
+                </div>
+                <div class="occ-item">
+                    <div class="occ-mark">§</div>
+                    <div>
+                        <div class="occ-name">Dilettante</div>
+                        <div class="occ-desc">Wealthy amateur scholar with time and resources to pursue dangerous interests without professional obligation.</div>
+                    </div>
+                </div>
+            </div>
+
+            <p>Each Occupation grants a set of <strong>Occupation Skills</strong> and determines how many points you may allocate to develop them. Consult the rulebook for complete Occupation listings and skill point calculations.</p>
+
+            <div class="divider">✦ ✦ ✦</div>
+
+            <!-- STEP 4: SKILL POINTS -->
+            <h2 data-roman="IV." style="--i:4;">Allocate Skill Points</h2>
+            <p>Skills begin at a <strong>base value</strong> determined by their governing characteristic. You receive points to distribute based on your Occupation and personal interests.</p>
+
+            <h3>Skill Point Pools</h3>
+            <ul>
+                <li><strong>Occupation Points:</strong> EDU × 2 + (Additional points from Occupation) — spend on Occupation skills only</li>
+                <li><strong>Personal Interest Points:</strong> INT × 2 — spend on any skills you choose</li>
+            </ul>
+
+            <div class="manuscript" data-title="Sample Skill List">
+                <p style="margin-bottom: 0.5rem;"><strong>Core Skills (partial list):</strong></p>
+                <div style="columns: 2; font-size: 0.92rem; line-height: 1.7;">
+                    Accounting, Anthropology, Appraise, Archaeology, Art/Craft, Charm, Climb, Credit Rating, Cthulhu Mythos, Disguise, Dodge, Drive Auto, Fast Talk, Fighting (various), Firearms (various), First Aid, History, Intimidate, Jump, Language (various), Law, Library Use, Listen, Locksmith, Mechanical Repair, Medicine, Natural World, Navigate, Occult, Persuade, Psychoanalysis, Psychology, Ride, Science (various), Sleight of Hand, Spot Hidden, Stealth, Survival, Swim, Throw, Track
+                </div>
+            </div>
+
+            <div class="note">
+                <span class="note-label">Important</span>
+                The skill <strong>Cthulhu Mythos</strong> begins at 0 and can only be increased through exposure to forbidden knowledge. Every point gained in Cthulhu Mythos <em>permanently reduces your maximum Sanity</em> by the same amount. Knowledge is a poison with no antidote.
+            </div>
+
+            <div class="divider">✦ ✦ ✦</div>
+
+            <!-- STEP 5: DICE SYSTEM -->
+            <h2 data-roman="V." style="--i:5;">Understanding Skill Checks</h2>
+            <p>Call of Cthulhu uses a percentile system. Roll <strong>1d100</strong> (two ten-sided dice, one for tens, one for ones). To succeed, roll <strong>equal to or under</strong> your skill value.</p>
+
+            <div class="dice-block">
+                <div class="dice-row">
+                    <div class="dice-icon">⚀</div>
+                    <div>
+                        <div class="dice-name">Regular Success</div>
+                        <div class="dice-desc">Roll equal to or under your full skill value. This is a standard success.</div>
+                    </div>
+                </div>
+                <div class="dice-row">
+                    <div class="dice-icon">⚁</div>
+                    <div>
+                        <div class="dice-name">Hard Success</div>
+                        <div class="dice-desc">Roll equal to or under <strong>half</strong> your skill value. A difficult task performed well.</div>
+                    </div>
+                </div>
+                <div class="dice-row">
+                    <div class="dice-icon">⚂</div>
+                    <div>
+                        <div class="dice-name">Extreme Success</div>
+                        <div class="dice-desc">Roll equal to or under <strong>one-fifth</strong> your skill value. Exceptional performance under pressure.</div>
+                    </div>
+                </div>
+                <div class="dice-row">
+                    <div class="dice-icon">⚃</div>
+                    <div>
+                        <div class="dice-name">Critical Success</div>
+                        <div class="dice-desc">Roll <strong>01</strong>. Perfect execution — the best possible outcome.</div>
+                    </div>
+                </div>
+                <div class="dice-row">
+                    <div class="dice-icon">⚅</div>
+                    <div>
+                        <div class="dice-name">Fumble</div>
+                        <div class="dice-desc">Roll <strong>100</strong>, or 96–99 if skill is 50% or higher. Catastrophic failure with consequences.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider">✦ ✦ ✦</div>
+
+            <!-- STEP 6: SANITY -->
+            <h2 data-roman="VI." style="--i:6;">The Fragility of Sanity</h2>
+            <p>Your <strong>Sanity Points</strong> equal your POW characteristic at the start. Witnessing the unnatural, reading forbidden texts, or encountering cosmic entities causes <strong>Sanity loss</strong>. This is measured in two ways:</p>
+
+            <ul>
+                <li><strong>Temporary Insanity:</strong> Lose 5+ Sanity in one encounter — roll on the Temporary Insanity table for immediate psychological breakdown</li>
+                <li><strong>Indefinite Insanity:</strong> Lose 20% or more of current Sanity in one day — severe mental trauma requiring rest and treatment</li>
+                <li><strong>Permanent Insanity:</strong> When current Sanity drops to 0, you are permanently insane and become an NPC</li>
+            </ul>
+
+            <div class="sanity-box">
+                <div class="sanity-title">Sanity represents the mind's coherence in the face of cosmic horror</div>
+                <div class="sanity-track">
+                    <div class="sanity-pip"></div>
+                    <div class="sanity-pip"></div>
+                    <div class="sanity-pip"></div>
+                    <div class="sanity-pip"></div>
+                    <div class="sanity-pip"></div>
+                    <div class="sanity-pip"></div>
+                    <div class="sanity-pip"></div>
+                    <div class="sanity-pip"></div>
+                    <div class="sanity-pip"></div>
+                    <div class="sanity-pip"></div>
+                    <div class="sanity-pip"></div>
+                    <div class="sanity-pip"></div>
+                    <div class="sanity-pip"></div>
+                    <div class="sanity-pip"></div>
+                    <div class="sanity-pip"></div>
+                    <div class="sanity-pip"></div>
+                    <div class="sanity-pip"></div>
+                    <div class="sanity-pip"></div>
+                    <div class="sanity-pip lost"></div>
+                    <div class="sanity-pip lost"></div>
+                </div>
+                <div class="sanity-desc">
+                    Each pip represents 5 Sanity Points. As they darken and fade, so does your grip on reality.
+                </div>
+            </div>
+
+            <p>Sanity can be restored through rest, psychotherapy, or spending time in safe, comforting environments. However, <strong>maximum Sanity</strong> is reduced permanently by Cthulhu Mythos knowledge — there are truths from which the mind cannot recover.</p>
+
+            <div class="divider">✦ ✦ ✦</div>
+
+            <!-- STEP 7: BACKSTORY -->
+            <h2 data-roman="VII." style="--i:7;">Develop Your Backstory</h2>
+            <p>Give your Investigator depth and history by answering these questions. Your answers inform roleplaying and provide the Keeper with narrative hooks.</p>
+
+            <div class="prompt-list">
+                <div class="prompt-item">
+                    <div class="prompt-num">1.</div>
+                    <div class="prompt-text"><strong>Personal Description:</strong> What do you look like? How do you dress? What mannerisms define you?</div>
+                </div>
+                <div class="prompt-item">
+                    <div class="prompt-num">2.</div>
+                    <div class="prompt-text"><strong>Ideology/Beliefs:</strong> What do you believe in? Religion, science, personal philosophy?</div>
+                </div>
+                <div class="prompt-item">
+                    <div class="prompt-num">3.</div>
+                    <div class="prompt-text"><strong>Significant People:</strong> Who matters most to you? Family, lover, mentor, friend?</div>
+                </div>
+                <div class="prompt-item">
+                    <div class="prompt-num">4.</div>
+                    <div class="prompt-text"><strong>Meaningful Locations:</strong> Where is your place of comfort? Home, library, a remembered landscape?</div>
+                </div>
+                <div class="prompt-item">
+                    <div class="prompt-num">5.</div>
+                    <div class="prompt-text"><strong>Treasured Possessions:</strong> What object do you value above all? Why?</div>
+                </div>
+                <div class="prompt-item">
+                    <div class="prompt-num">6.</div>
+                    <div class="prompt-text"><strong>Traits:</strong> What are your defining personality characteristics? Brave? Skeptical? Curious?</div>
+                </div>
+                <div class="prompt-item">
+                    <div class="prompt-num">7.</div>
+                    <div class="prompt-text"><strong>Injuries &amp; Scars:</strong> What physical or psychological wounds do you carry?</div>
+                </div>
+                <div class="prompt-item">
+                    <div class="prompt-num">8.</div>
+                    <div class="prompt-text"><strong>Phobias &amp; Manias:</strong> What irrational fears or compulsions define you?</div>
+                </div>
+            </div>
+
+            <div class="divider">✦ ✦ ✦</div>
+
+            <!-- STEP 8: EQUIPMENT -->
+            <h2 data-roman="VIII." style="--i:8;">Equipment &amp; Resources</h2>
+            <p>Your <strong>Credit Rating</strong> skill (0–99) determines your standard of living and starting cash. Most Investigators begin with modest means — enough for daily life, basic tools of their trade, and little more.</p>
+
+            <h3>Typical Starting Equipment</h3>
+            <ul>
+                <li>Appropriate clothing for your Occupation and social standing</li>
+                <li>Tools of your profession (doctor's bag, camera, lockpicks, etc.)</li>
+                <li>A weapon if your background warrants it (typically a small revolver or knife)</li>
+                <li>Personal effects (pocket watch, wallet, keys, journal)</li>
+                <li>Transportation appropriate to your era and means (bicycle, automobile, etc.)</li>
+            </ul>
+
+            <div class="note">
+                <span class="note-label">Historical Note</span>
+                The classic Call of Cthulhu setting is the <strong>1920s</strong>, the Jazz Age — though campaigns may be set in any era. Adjust equipment, technology, and social attitudes accordingly. A Victorian gentleman carries a pocket watch; a modern investigator carries a smartphone.
+            </div>
+
+            <div class="divider">✦ ✦ ✦</div>
+
+            <!-- STEP 9: CONNECTIONS -->
+            <h2 data-roman="IX." style="--i:9;">Establish Connections</h2>
+            <p>No Investigator exists in isolation. Work with the Keeper and other players to establish relationships that tie you to the world and to each other.</p>
+
+            <ul>
+                <li><strong>Fellow Investigators:</strong> How do you know the other player characters? Colleagues? Friends? Chance acquaintances?</li>
+                <li><strong>Organizations:</strong> Are you affiliated with Miskatonic University? A museum? A newspaper? The police?</li>
+                <li><strong>Contacts:</strong> Who can you call for information, resources, or assistance? Librarians, former patients, underworld connections?</li>
+                <li><strong>Dependents:</strong> Who relies on you? Spouse, children, aging parents, students?</li>
+            </ul>
+
+            <p>These connections provide both motivation and vulnerability. The Mythos does not limit its depredations to you alone.</p>
+
+            <div class="divider">✦ ✦ ✦</div>
+
+            <!-- STEP 10: FINAL DETAILS -->
+            <h2 data-roman="X." style="--i:10;">Complete Your Dossier</h2>
+
+            <h3>Final Checklist</h3>
+            <div class="manuscript" data-title="Investigator Record">
+                <ul style="margin: 0 0 0 1.5rem; list-style: none;">
+                    <li>☐ Eight characteristics rolled and recorded (with half & fifth values)</li>
+                    <li>☐ Luck characteristic determined</li>
+                    <li>☐ Hit Points, Magic Points, and Sanity calculated</li>
+                    <li>☐ Move Rate, Damage Bonus, and Build determined</li>
+                    <li>☐ Occupation selected and skills assigned</li>
+                    <li>☐ Occupation skill points allocated</li>
+                    <li>☐ Personal interest points allocated</li>
+                    <li>☐ Credit Rating established and starting cash determined</li>
+                    <li>☐ Backstory questions answered</li>
+                    <li>☐ Connections and relationships defined</li>
+                    <li>☐ Equipment purchased and listed</li>
+                    <li>☐ Portrait (physical description) completed</li>
+                </ul>
+            </div>
+
+            <div class="note" style="margin-top: 1.75rem;">
+                <span class="note-label">Keeper's Final Word</span>
+                Your Investigator is now complete — a rational human being with skills, relationships, and a life worth protecting. Remember this when the darkness comes. Remember what you stand to lose. The Cthulhu Mythos is vast, ancient, and utterly indifferent to human existence. Your sanity, your life, and your very concept of reality are fragile things in the face of cosmic truth. <strong>Tread carefully.</strong> Some doors, once opened, can never be closed.
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-quote">
+                "The sciences, each straining in its own direction, have hitherto harmed us little; but some day the piecing together of dissociated knowledge will open up such terrifying vistas of reality..."
+            </div>
+            <div class="footer-attr">— H.P. Lovecraft, The Call of Cthulhu (1926)</div>
+        </footer>
+
+    </div>
+    </body>
+</div>
+</html>

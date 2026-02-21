@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEREWOLF: THE APOCALYPSE — Rite of Passage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Philosopher:ital,wght@0,400;0,700;1,400&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --earth:        #5C4033;
+            --earth-dark:   #3A2419;
+            --bark:         #8B7355;
+            --stone:        #A8978F;
+            --bone:         #E8DCC8;
+            --parchment:    #F5ECD7;
+            --rage-red:     #8B1A1A;
+            --rage-bright:  #D32F2F;
+            --moon:         #C5C5BA;
+            --moon-bright:  #E8E8D8;
+            --green-life:   #4A7C59;
+            --green-dark:   #2A4A35;
+            --rust:         #A0522D;
+            --soot:         #1A1A1A;
+            --ink:          #2A1810;
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Philosopher', sans-serif;
+            background: var(--earth-dark);
+            background-image:
+                radial-gradient(ellipse at center, var(--earth-dark) 0%, var(--soot) 100%);
+            color: var(--ink);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* ── CONTAINER (torn parchment) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--parchment);
+            position: relative;
+            box-shadow:
+                0 0 0 2px var(--bark),
+                0 20px 60px rgba(0,0,0,0.8),
+                inset 0 0 100px rgba(92,64,51,0.1);
+            /* Torn top edge */
+            clip-path: polygon(
+                0 8px,
+                5% 4px,
+                10% 10px,
+                15% 3px,
+                20% 9px,
+                25% 2px,
+                30% 8px,
+                35% 5px,
+                40% 11px,
+                45% 4px,
+                50% 9px,
+                55% 3px,
+                60% 10px,
+                65% 5px,
+                70% 8px,
+                75% 2px,
+                80% 9px,
+                85% 4px,
+                90% 10px,
+                95% 5px,
+                100% 8px,
+                100% 100%,
+                0 100%
+            );
+            animation: manifest 0.8s ease-out;
+        }
+
+        @keyframes manifest {
+            from { opacity: 0; transform: scale(0.95) translateY(-20px); }
+            to   { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        /* Parchment stains and texture */
+        .instr-container .container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(ellipse at 75% 20%, rgba(139,26,26,0.08) 0%, transparent 15%),
+                radial-gradient(ellipse at 15% 80%, rgba(74,124,89,0.06) 0%, transparent 20%),
+                radial-gradient(ellipse at 90% 70%, rgba(92,64,51,0.1) 0%, transparent 12%);
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        /* Wood grain texture */
+        .instr-container .container::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: 
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(92,64,51,0.02) 2px,
+                    rgba(92,64,51,0.02) 4px
+                );
+            pointer-events: none;
+            opacity: 0.3;
+        }
+
+        /* Claw mark decorations */
+        .instr-container .claw-top {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 80px;
+            height: 4px;
+            background: var(--rage-red);
+            transform: rotate(-25deg);
+            box-shadow:
+                0 8px 0 var(--rage-red),
+                0 16px 0 var(--rage-red);
+            opacity: 0.3;
+        }
+
+        .instr-container .claw-bottom {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 4px;
+            background: var(--rage-red);
+            transform: rotate(15deg);
+            box-shadow:
+                0 8px 0 var(--rage-red),
+                0 16px 0 var(--rage-red);
+            opacity: 0.3;
+        }
+
+        /* ── TRIBAL BORDER ── */
+        .instr-container .tribal-bar {
+            height: 25px;
+            background: var(--earth);
+            background-image: 
+                repeating-linear-gradient(
+                    45deg,
+                    var(--earth),
+                    var(--earth) 10px,
+                    var(--earth-dark) 10px,
+                    var(--earth-dark) 20px
+                );
+            border-bottom: 3px solid var(--rage-red);
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            padding: 2.5rem 2.5rem 2rem;
+            border-bottom: 4px double var(--earth);
+            position: relative;
+            background: var(--bone);
+        }
+
+        /* Moon phase symbol */
+        .instr-container .moon-symbol {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 4px solid var(--moon);
+            background: radial-gradient(circle, var(--moon-bright) 0%, var(--moon) 100%);
+            box-shadow: 
+                inset -15px 0 20px rgba(0,0,0,0.2),
+                0 0 30px rgba(197,197,186,0.4);
+            opacity: 0.6;
+        }
+
+        .instr-container .rite-tag {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--rage-red);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            border: 2px solid var(--rage-red);
+            padding: 0.4rem 0.8rem;
+            display: inline-block;
+        }
+
+        .instr-container h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.8rem;
+            line-height: 0.9;
+            font-weight: 900;
+            color: var(--earth-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.4rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .instr-container h1 .werewolf {
+            color: var(--rage-red);
+        }
+
+        .instr-container h1 .apocalypse {
+            display: block;
+            font-size: 2rem;
+            letter-spacing: 0.2em;
+            color: var(--green-dark);
+            margin-top: 0.3rem;
+        }
+
+        .instr-container .gaia-call {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 1rem;
+            font-style: italic;
+            letter-spacing: 0.05em;
+            color: var(--green-life);
+            margin-top: 1.25rem;
+            font-weight: 700;
+        }
+
+        .instr-container .doc-line {
+            margin-top: 1.25rem;
+            padding-top: 1rem;
+            border-top: 2px solid var(--stone);
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            color: var(--bark);
+            line-height: 1.8;
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2.5rem;
+            background: var(--parchment);
+            position: relative;
+        }
+
+        /* Tribal pattern sidebar */
+        .instr-container .tribal-pattern {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 30px;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 15px,
+                    var(--bark) 15px,
+                    var(--bark) 18px,
+                    transparent 18px,
+                    transparent 25px,
+                    var(--bark) 25px,
+                    var(--bark) 30px
+                );
+            opacity: 0.15;
+        }
+
+        /* ── PROPHECY BOX ── */
+        .instr-container .prophecy {
+            background: var(--bone);
+            border: 3px solid var(--earth);
+            border-left: 6px solid var(--rage-red);
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 2.5rem;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            position: relative;
+            box-shadow: 4px 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .instr-container .prophecy::before {
+            content: 'THE PROPHECY OF THE APOCALYPSE';
+            position: absolute;
+            top: -0.75rem;
+            left: 1.5rem;
+            background: var(--rage-red);
+            color: var(--bone);
+            padding: 0.3rem 0.8rem;
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--earth-dark);
+            margin: 2.75rem 0 1.25rem;
+            padding: 0.5rem 0;
+            border-bottom: 3px solid var(--earth);
+            position: relative;
+            animation: fadeIn 0.5s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.08s);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: '🐺';
+            position: absolute;
+            left: -2.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            opacity: 0.4;
+        }
+
+        .instr-container h2::after {
+            content: attr(data-moon);
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Philosopher', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--moon);
+            padding: 0.3rem 0.8rem;
+            background: var(--earth-dark);
+            border-radius: 12px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        .instr-container h3 {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--rage-red);
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .instr-container p {
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            color: var(--ink);
+        }
+
+        .instr-container ul, ol { margin: 0.75rem 0 1.25rem 1.5rem; }
+        .instr-container li {
+            font-size: 0.98rem;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { color: var(--rage-red); font-weight: 700; }
+        .instr-container em     { color: var(--green-life); font-style: italic; font-weight: 700; }
+
+        /* ── DIVIDER (claw marks) ── */
+        .instr-container .divider {
+            margin: 2.5rem 0;
+            height: 4px;
+            background: var(--earth);
+            position: relative;
+        }
+
+        .instr-container .divider::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 4px;
+            background: var(--rage-red);
+            box-shadow:
+                0 -8px 0 var(--rage-red),
+                0 8px 0 var(--rage-red);
+        }
+
+        /* ── ELDER'S WISDOM ── */
+        .instr-container .wisdom {
+            background: var(--stone);
+            border: 2px solid var(--bark);
+            border-left: 5px solid var(--green-dark);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.85;
+            font-style: italic;
+            box-shadow: 3px 3px 6px rgba(0,0,0,0.15);
+        }
+
+        .instr-container .wisdom-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--green-dark);
+            display: block;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+            font-style: normal;
+        }
+
+        /* ── TRIBAL LORE BOX ── */
+        .instr-container .lore-box {
+            background: var(--bone);
+            border: 3px solid var(--earth);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            position: relative;
+        }
+
+        .instr-container .lore-box::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -0.65rem;
+            left: 1.5rem;
+            background: var(--bone);
+            padding: 0 0.5rem;
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--earth-dark);
+            text-transform: uppercase;
+        }
+
+        /* ── BREED/AUSPICE/TRIBE CARDS ── */
+        .instr-container .choice-grid {
+            display: grid;
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .choice-card {
+            background: var(--bone);
+            border: 3px solid var(--bark);
+            padding: 1rem 1.25rem;
+            position: relative;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container .choice-card:hover {
+            border-color: var(--earth-dark);
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container .choice-tag {
+            position: absolute;
+            top: -0.7rem;
+            left: 1.25rem;
+            background: var(--rage-red);
+            color: var(--bone);
+            font-family: 'Philosopher', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            padding: 0.3rem 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .instr-container .choice-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--earth-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .choice-desc {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .choice-gift {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 0.82rem;
+            font-style: italic;
+            color: var(--green-life);
+            border-top: 1px solid var(--stone);
+            padding-top: 0.5rem;
+        }
+
+        /* ── RAGE TRACK ── */
+        .instr-container .rage-box {
+            background: var(--rage-bright);
+            color: var(--bone);
+            border: 4px solid var(--rage-red);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            box-shadow: 
+                4px 4px 8px rgba(0,0,0,0.3),
+                inset 0 0 40px rgba(0,0,0,0.2);
+        }
+
+        .instr-container .rage-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--bone);
+            margin-bottom: 0.75rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+        }
+
+        .instr-container .rage-track {
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+            margin: 0.75rem 0;
+            flex-wrap: wrap;
+        }
+
+        .instr-container .rage-pip {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--bone);
+            background: rgba(255,255,255,0.2);
+            transform: rotate(45deg);
+        }
+
+        .instr-container .rage-pip.filled { 
+            background: var(--soot); 
+            border-color: var(--soot);
+            box-shadow: 0 0 8px rgba(0,0,0,0.5);
+        }
+
+        .instr-container .rage-desc {
+            font-size: 0.88rem;
+            line-height: 1.7;
+            margin-top: 0.75rem;
+            color: var(--bone);
+        }
+
+        /* ── GIFTS TABLE ── */
+        .instr-container .gift-list {
+            display: grid;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .gift-item {
+            background: var(--bone);
+            border: 2px solid var(--bark);
+            border-left: 4px solid var(--green-dark);
+            padding: 0.8rem 1rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: baseline;
+            gap: 1rem;
+        }
+
+        .instr-container .gift-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: var(--earth-dark);
+            text-transform: uppercase;
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .gift-desc {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: var(--ink);
+        }
+
+        .instr-container .gift-level {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--rage-red);
+            white-space: nowrap;
+        }
+
+        /* ── RENOWN DISPLAY ── */
+        .instr-container .renown-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .renown-card {
+            background: var(--bone);
+            border: 3px solid var(--earth);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .instr-container .renown-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .renown-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--earth-dark);
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .renown-desc {
+            font-size: 0.82rem;
+            color: var(--bark);
+            line-height: 1.4;
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--bone);
+            padding: 2rem 2.5rem;
+            border-top: 4px double var(--earth);
+            text-align: center;
+            position: relative;
+        }
+
+        .instr-container .footer-howl {
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--rage-red);
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            color: var(--bark);
+            text-transform: uppercase;
+        }
+
+        .instr-container footer::before {
+            content: '⟡ ⟡ ⟡';
+            display: block;
+            font-size: 1.2rem;
+            color: var(--green-life);
+            letter-spacing: 0.5em;
+            margin-bottom: 1rem;
+        }
+
+        /* Bottom tribal pattern */
+        .instr-container .tribal-bottom {
+            height: 20px;
+            background: var(--earth);
+            background-image:
+                repeating-linear-gradient(
+                    -45deg,
+                    var(--earth),
+                    var(--earth) 8px,
+                    var(--earth-dark) 8px,
+                    var(--earth-dark) 16px
+                );
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 3rem; }
+            h1 .apocalypse { font-size: 1.6rem; }
+            h2 { font-size: 1.7rem; }
+            h2::before { display: none; }
+            h2::after { position: static; transform: none; display: block; margin-top: 0.5rem; }
+            .renown-grid { grid-template-columns: 1fr; }
+            .gift-item { grid-template-columns: 1fr; gap: 0.4rem; }
+            .gift-level { text-align: left; }
+            .content { padding: 2rem 1.5rem; }
+            header { padding: 2rem 1.5rem; }
+            .moon-symbol { width: 50px; height: 50px; }
+            .tribal-pattern { display: none; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+        <div class="claw-top"></div>
+        <div class="claw-bottom"></div>
+
+        <!-- TRIBAL BAR -->
+        <div class="tribal-bar"></div>
+
+        <!-- HEADER -->
+        <header>
+            <div class="moon-symbol"></div>
+            <div class="rite-tag">⚠ RITE OF PASSAGE — GAROU INITIATION</div>
+            <h1>
+                <span class="werewolf">WEREWOLF:</span>
+                <span class="apocalypse">THE APOCALYPSE</span>
+            </h1>
+            <div class="gaia-call">"Gaia bleeds. The Wyrm corrupts. The end draws near."</div>
+            <div class="doc-line">
+                SYSTEM: STORYTELLER (D10 POOL) // PUBLISHER: RENEGADE GAME STUDIOS<br>
+                SETTING: WORLD OF DARKNESS // STATUS: THE FINAL DAYS
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+            <div class="tribal-pattern"></div>
+
+            <div class="prophecy">
+                You are <strong>Garou</strong> — werewolf, shapeshifter, warrior of Gaia. Born of human and wolf, you stand between worlds. The Wyrm — the cosmic force of corruption and entropy — spreads its taint across the earth. Cities sprawl. Forests burn. Species die. This is the <em>Apocalypse</em>, and you are among the last defenders. Your Rage burns hot. Your claws are sharp. The war is here. Will you die well?
+            </div>
+
+            <!-- STEP 1: BREED -->
+            <h2 data-moon="LUNA" style="--i:1;">Choose Your Breed</h2>
+            <p>Your <strong>Breed</strong> is what you were born — the circumstances of your birth and early life before your First Change. It determines your starting Gnosis, your relationship with human and wolf society, and certain advantages.</p>
+
+            <div class="choice-grid">
+                <div class="choice-card">
+                    <div class="choice-tag">HUMAN-BORN</div>
+                    <div class="choice-name">Homid</div>
+                    <div class="choice-desc">Born to humans, raised in civilization. You understand the human world — its technologies, its lies, its comforts. You walked on two legs until puberty brought the Change. The city is your hunting ground.</div>
+                    <div class="choice-gift">Starting Gnosis: 1 // Gift: Persuasion or City Running</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">WOLF-BORN</div>
+                    <div class="choice-name">Lupus</div>
+                    <div class="choice-desc">Born a wolf in the wilderness. You ran with the pack, hunted prey, knew only instinct until the spirits called. Human speech feels strange. Their cities are alien. But your connection to Gaia runs deep and pure.</div>
+                    <div class="choice-gift">Starting Gnosis: 5 // Gift: Scent of Running Water or Leap of the Kangaroo</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">GAROU-BORN</div>
+                    <div class="choice-name">Metis</div>
+                    <div class="choice-desc">Born deformed from the forbidden union of two Garou. You are sterile, outcast, marked by shame. But you were raised knowing what you are. No confusion. No lost years. Only the weight of your people's judgment.</div>
+                    <div class="choice-gift">Starting Gnosis: 3 // Gift: Create Element or Sense Wyrm // Born with deformity</div>
+                </div>
+            </div>
+
+            <div class="wisdom">
+                <span class="wisdom-label">ELDER'S WISDOM</span>
+                The Litany forbids mating between Garou — Metis are the proof of why. But they are still Gaia's children, still warriors, and the Apocalypse needs every claw. Reject them at your peril.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: AUSPICE -->
+            <h2 data-moon="PHASE" style="--i:2;">Discover Your Auspice</h2>
+            <p>Your <strong>Auspice</strong> is the phase of the moon under which you were born — and had your First Change. Luna herself marked you for a purpose. Your Auspice determines your starting Rage and your role in Garou society.</p>
+
+            <div class="choice-grid">
+                <div class="choice-card">
+                    <div class="choice-tag">NEW MOON</div>
+                    <div class="choice-name">Ragabash</div>
+                    <div class="choice-desc">Trickster, scout, questioner of authority. You slip through shadows, mock the proud, and find truths others miss. The pack needs your cunning — and tolerates your irreverence.</div>
+                    <div class="choice-gift">Starting Rage: 1 // Role: Scout, Spy, Trickster</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">CRESCENT</div>
+                    <div class="choice-name">Theurge</div>
+                    <div class="choice-desc">Mystic, shaman, spirit-talker. You walk between worlds. The spirits answer your call. You see what others cannot — and bear the weight of terrible knowledge.</div>
+                    <div class="choice-gift">Starting Rage: 2 // Role: Mystic, Spirit Master, Seer</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">HALF MOON</div>
+                    <div class="choice-name">Philodox</div>
+                    <div class="choice-desc">Judge, mediator, keeper of the law. You balance Rage and Reason. You settle disputes, enforce the Litany, and hold the pack together when fury threatens to tear it apart.</div>
+                    <div class="choice-gift">Starting Rage: 3 // Role: Judge, Mediator, Lawkeeper</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">GIBBOUS</div>
+                    <div class="choice-name">Galliard</div>
+                    <div class="choice-desc">Bard, storyteller, keeper of history. You remember the old tales. You inspire the pack. Your howls carry across battlefields — songs of glory and songs of mourning.</div>
+                    <div class="choice-gift">Starting Rage: 4 // Role: Storyteller, Lorekeeper, Warrior-Poet</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">FULL MOON</div>
+                    <div class="choice-name">Ahroun</div>
+                    <div class="choice-desc">Warrior born. You are fury incarnate, the tip of the spear, the first into battle. When the Wyrm comes, you meet it with claws bared and Rage unleashed. You were born to kill.</div>
+                    <div class="choice-gift">Starting Rage: 5 // Role: Warrior, War Leader, Champion</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: TRIBE -->
+            <h2 data-moon="SEPT" style="--i:3;">Join Your Tribe</h2>
+            <p>Your <strong>Tribe</strong> is your extended family, your culture, your traditions. Each Tribe has its own territory, philosophy, and Gifts. Some are noble. Some are pragmatic. Some have fallen to the Wyrm.</p>
+
+            <div class="choice-grid">
+                <div class="choice-card">
+                    <div class="choice-tag">LEADERSHIP</div>
+                    <div class="choice-name">Silver Fangs</div>
+                    <div class="choice-desc">Nobility and madness. Once the unquestioned leaders of the Garou Nation. Now plagued by inbreeding and hubris — but still proud, still powerful, still believing themselves chosen.</div>
+                    <div class="choice-gift">Tribal Gift: Falcon's Grasp // Flaw: Harano or madness runs in the bloodline</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">HONOR</div>
+                    <div class="choice-name">Shadow Lords</div>
+                    <div class="choice-desc">Eastern European alphas. Pragmatic, ruthless, ambitious. They believe the Silver Fangs have failed and that they should lead. They might be right.</div>
+                    <div class="choice-gift">Tribal Gift: Aura of Confidence // Advantage: Natural leaders and manipulators</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">WAR</div>
+                    <div class="choice-name">Get of Fenris</div>
+                    <div class="choice-desc">Viking berserkers. They embrace battle, test themselves constantly, and die gloriously. Honorable to the point of stupidity. Brave to the point of suicide.</div>
+                    <div class="choice-gift">Tribal Gift: Resist Pain // Advantage: Combat bonuses, endure anything</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">NATURE</div>
+                    <div class="choice-name">Red Talons</div>
+                    <div class="choice-desc">Wolf-born only. They hate humans and blame them for Gaia's death. Some want humanity wiped out. They're not entirely wrong about the problem.</div>
+                    <div class="choice-gift">Tribal Gift: Scent of Sight // Restriction: Lupus only, cannot purchase human-related skills</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">MYSTICISM</div>
+                    <div class="choice-name">Uktena</div>
+                    <div class="choice-desc">Native American mystics. Spirit-walkers who guard dangerous secrets. They know forbidden lore and pay the price for it.</div>
+                    <div class="choice-gift">Tribal Gift: Shroud // Advantage: Occult and spirit knowledge</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">VIGILANCE</div>
+                    <div class="choice-name">Wendigo</div>
+                    <div class="choice-desc">Northern guardians. They remember when Europeans came and remember what was lost. Cold fury. Long memory. Patient vengeance.</div>
+                    <div class="choice-gift">Tribal Gift: Camouflage // Advantage: Survival in harsh environments</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">ADAPTATION</div>
+                    <div class="choice-name">Glass Walkers</div>
+                    <div class="choice-desc">Urban werewolves. They adapted to the city, made deals with the Weaver. Corporate offices and rooftop territories. The other Tribes distrust them.</div>
+                    <div class="choice-gift">Tribal Gift: Control Simple Machine // Advantage: Technology and city expertise</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">REDEMPTION</div>
+                    <div class="choice-name">Children of Gaia</div>
+                    <div class="choice-desc">Peace-seekers who believe all life is sacred. They try to heal, not destroy. Noble. Idealistic. Often dead because of it.</div>
+                    <div class="choice-gift">Tribal Gift: Resist Toxin // Philosophy: Seek redemption, minimize killing</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">BALANCE</div>
+                    <div class="choice-name">Black Furies</div>
+                    <div class="choice-desc">Women warriors (and female Metis only). They guard ancient sites and remember when men nearly destroyed the Garou. Fierce. Uncompromising. Necessary.</div>
+                    <div class="choice-gift">Tribal Gift: Heightened Senses // Restriction: Female only</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">OUTCASTS</div>
+                    <div class="choice-name">Bone Gnawers</div>
+                    <div class="choice-desc">Urban survivors. Homeless, forgotten, but resilient. They see what others ignore and survive what kills the proud. Never underestimate the desperate.</div>
+                    <div class="choice-gift">Tribal Gift: Cooking // Advantage: Street survival, urban camouflage</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">SILENCE</div>
+                    <div class="choice-name">Silent Striders</div>
+                    <div class="choice-desc">Egyptian nomads cursed never to have a homeland. They wander, carry messages, and know death intimately. Valuable allies. Unsettling company.</div>
+                    <div class="choice-gift">Tribal Gift: Speed of Thought // Curse: Cannot claim territory</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">WILDNESS</div>
+                    <div class="choice-name">Fianna</div>
+                    <div class="choice-desc">Celtic warriors, poets, drunks. They fight with passion, celebrate with excess, and mourn with soul-deep sorrow. Beautiful. Tragic. Dangerous.</div>
+                    <div class="choice-gift">Tribal Gift: Persuasion // Flaw: Prone to excess and melancholy</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: ATTRIBUTES -->
+            <h2 data-moon="FORM" style="--i:4;">Set Attributes</h2>
+            <p>Standard <strong>Storyteller attributes</strong> — nine traits in three categories. Prioritize categories (7/5/3 dots). Some forms will modify these.</p>
+
+            <div class="lore-box" data-label="NINE ATTRIBUTES">
+                <h3>Physical</h3>
+                <p style="font-size: 0.92rem; line-height: 1.7; margin-bottom: 0.75rem;">Strength (raw power) • Dexterity (speed and coordination) • Stamina (endurance and toughness)</p>
+                <h3>Social</h3>
+                <p style="font-size: 0.92rem; line-height: 1.7; margin-bottom: 0.75rem;">Charisma (force of personality) • Manipulation (persuasion and deception) • Appearance (physical attractiveness)</p>
+                <h3>Mental</h3>
+                <p style="font-size: 0.92rem; line-height: 1.7; margin-bottom: 0;">Perception (awareness) • Intelligence (analysis) • Wits (quick thinking)</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: ABILITIES -->
+            <h2 data-moon="SKILL" style="--i:5;">Distribute Abilities</h2>
+            <p>Prioritize categories (13/9/5 dots). Max <strong>3 dots</strong> at creation. Garou tend toward physical Talents and survival Skills.</p>
+
+            <p><strong>Talents:</strong> Alertness, Athletics, Brawl, Dodge, Empathy, Expression, Intimidation, Primal-Urge, Streetwise, Subterfuge</p>
+            <p><strong>Skills:</strong> Animal Ken, Crafts, Drive, Etiquette, Firearms, Leadership, Melee, Performance, Stealth, Survival</p>
+            <p><strong>Knowledges:</strong> Computer, Enigmas, Investigation, Law, Linguistics, Medicine, Occult, Rituals, Science, Technology</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: GIFTS -->
+            <h2 data-moon="SPIRIT" style="--i:6;">Learn Your Gifts</h2>
+            <p><strong>Gifts</strong> are spirit-taught supernatural powers. You start with <strong>three Gifts</strong> at Level 1: one from your Breed, one from your Auspice, and one from your Tribe. Higher levels unlock more powerful Gifts.</p>
+
+            <div class="gift-list">
+                <div class="gift-item">
+                    <div>
+                        <div class="gift-name">Razor Claws</div>
+                        <div class="gift-desc">Your claws become supernaturally sharp. They ignore 2 points of armor and cause aggravated damage.</div>
+                    </div>
+                    <div class="gift-level">LVL 1</div>
+                </div>
+                <div class="gift-item">
+                    <div>
+                        <div class="gift-name">Scent of Running Water</div>
+                        <div class="gift-desc">Mask your scent completely. Even supernatural tracking fails. Leave no trail.</div>
+                    </div>
+                    <div class="gift-level">LVL 1</div>
+                </div>
+                <div class="gift-item">
+                    <div>
+                        <div class="gift-name">Inspiration</div>
+                        <div class="gift-desc">Your howl or speech inspires the pack. Grant allies bonus dice to resist fear or gain temporary Willpower.</div>
+                    </div>
+                    <div class="gift-level">LVL 1</div>
+                </div>
+                <div class="gift-item">
+                    <div>
+                        <div class="gift-name">Spirit Speech</div>
+                        <div class="gift-desc">Understand and speak with any spirit in its own tongue. Essential for Theurges.</div>
+                    </div>
+                    <div class="gift-level">LVL 1</div>
+                </div>
+                <div class="gift-item">
+                    <div>
+                        <div class="gift-name">Master of Fire</div>
+                        <div class="gift-desc">Create and control flame with a thought. Fire obeys your will. Burn the Wyrm.</div>
+                    </div>
+                    <div class="gift-level">LVL 2</div>
+                </div>
+                <div class="gift-item">
+                    <div>
+                        <div class="gift-name">Claws of the Wyrm</div>
+                        <div class="gift-desc">Your claws glow with silver fire. They ignore all armor and cause terrible wounds that refuse to heal. Death incarnate.</div>
+                    </div>
+                    <div class="gift-level">LVL 5</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: RAGE/GNOSIS/WILLPOWER -->
+            <h2 data-moon="POWER" style="--i:7;">Set Rage, Gnosis, Willpower</h2>
+
+            <div class="rage-box">
+                <div class="rage-title">RAGE</div>
+                <div class="rage-track">
+                    <div class="rage-pip"></div>
+                    <div class="rage-pip"></div>
+                    <div class="rage-pip"></div>
+                    <div class="rage-pip filled"></div>
+                    <div class="rage-pip filled"></div>
+                    <div class="rage-pip filled"></div>
+                    <div class="rage-pip filled"></div>
+                    <div class="rage-pip filled"></div>
+                    <div class="rage-pip"></div>
+                    <div class="rage-pip"></div>
+                </div>
+                <div class="rage-desc">
+                    Rage is your fury, your combat power, your curse. High Rage gives extra actions but makes you terrifying to humans. Lose control and enter Frenzy — a berserker state where friend and foe blur. Starting Rage = Auspice rating.
+                </div>
+            </div>
+
+            <h3>Gnosis (Spiritual Power)</h3>
+            <ul>
+                <li><strong>Starting Gnosis = Breed rating</strong></li>
+                <li>Your connection to Gaia and the spirit world</li>
+                <li>Spend to activate Gifts, step sideways into the Umbra, or fuel rituals</li>
+                <li>Regains slowly through meditation at sacred sites</li>
+            </ul>
+
+            <h3>Willpower (Mental Strength)</h3>
+            <ul>
+                <li><strong>Starting Willpower = 3</strong></li>
+                <li>Resist supernatural powers, avoid Frenzy, push through pain</li>
+                <li>Regains through achieving goals, resting, or acting according to your Nature</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: RENOWN -->
+            <h2 data-moon="GLORY" style="--i:8;">Understand Renown</h2>
+            <p><strong>Renown</strong> is reputation among the Garou. You earn it through deeds and lose it through shame. Accumulate enough and you gain <strong>Rank</strong> — social standing and access to higher-level Gifts.</p>
+
+            <div class="renown-grid">
+                <div class="renown-card">
+                    <div class="renown-icon">⚔️</div>
+                    <div class="renown-name">Glory</div>
+                    <div class="renown-desc">Valor in battle, heroic deeds, legendary victories</div>
+                </div>
+                <div class="renown-card">
+                    <div class="renown-icon">⚖️</div>
+                    <div class="renown-name">Honor</div>
+                    <div class="renown-desc">Following the Litany, keeping oaths, acting with integrity</div>
+                </div>
+                <div class="renown-card">
+                    <div class="renown-icon">🌙</div>
+                    <div class="renown-name">Wisdom</div>
+                    <div class="renown-desc">Learning lore, making good decisions, mastering rituals</div>
+                </div>
+            </div>
+
+            <p>You begin at <strong>Rank 1 (Cliath)</strong> after surviving your Rite of Passage. Higher Ranks (Fostern, Adren, Athro, Elder) require years of service and accumulated Renown.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: FORMS -->
+            <h2 data-moon="SHIFT" style="--i:9;">The Five Forms</h2>
+            <p>Garou can shift between five forms. Each has advantages. Most combat happens in <strong>Crinos</strong> — the nine-foot war form that inspires terror.</p>
+
+            <div class="lore-box" data-label="SHAPESHIFT FORMS">
+                <ul style="margin: 0 0 0 1.5rem; line-height: 1.9;">
+                    <li><strong>Homid:</strong> Human form. Normal human capabilities. Can use human tools and society.</li>
+                    <li><strong>Glabro:</strong> Near-human. Larger, stronger (+2 Str, +1 Sta, -1 App). Slightly inhuman appearance.</li>
+                    <li><strong>Crinos:</strong> War form. Nine feet tall, massive. (+4 Str, +1 Dex, +3 Sta, -3 App). Causes Delirium in humans.</li>
+                    <li><strong>Hispo:</strong> Dire wolf. Large wolf form. (+3 Str, +2 Dex, +3 Sta, -3 Manip). Fast, terrifying.</li>
+                    <li><strong>Lupus:</strong> Wolf form. True wolf. (+2 Dex, +2 Sta, -4 Manip). Natural movement, animal senses.</li>
+                </ul>
+            </div>
+
+            <h3>The Delirium</h3>
+            <p>When humans see Crinos form, they suffer <strong>Delirium</strong> — primal terror. Most flee, forget, or rationalize what they saw. This protects the Garou but isolates them from humanity. You are a living nightmare.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: FINAL DETAILS -->
+            <h2 data-moon="PACK" style="--i:10;">Final Preparations</h2>
+
+            <h3>Personal History</h3>
+            <ul>
+                <li><strong>Name:</strong> Human name and deed name (earned after First Change)</li>
+                <li><strong>First Change:</strong> What triggered your transformation? Who died?</li>
+                <li><strong>Pack:</strong> Who are your packmates? Do you trust them?</li>
+                <li><strong>Sept:</strong> Which sacred site do you guard? Who leads it?</li>
+                <li><strong>Totem:</strong> What spirit does your pack serve? (Stag, Bear, Griffin, etc.)</li>
+            </ul>
+
+            <h3>The Litany</h3>
+            <p>The Litany is Garou law. Break it at your peril:</p>
+            <ul>
+                <li>Garou shall not mate with Garou</li>
+                <li>Combat the Wyrm wherever it breeds</li>
+                <li>Respect the territory of another</li>
+                <li>Accept an honorable surrender</li>
+                <li>Submit to those of higher station</li>
+                <li>The first share of the kill for the greatest in station</li>
+                <li>Ye shall not eat the flesh of humans</li>
+                <li>Respect for those beneath ye — all are of Gaia</li>
+                <li>The Veil shall not be lifted</li>
+                <li>Do not suffer thy people to tend thy sickness</li>
+            </ul>
+
+            <div class="wisdom" style="margin-top: 1.75rem;">
+                <span class="wisdom-label">ELDER'S FINAL WORD</span>
+                You are Garou. You will know glory and you will know horror. You will watch friends die and species vanish. The Apocalypse is here — not tomorrow, not someday, <strong>now</strong>. The Wyrm has already won unless we fight harder, rage fiercer, and die better than any who came before. Your claws are sharp. Your Rage is ready. Gaia needs you. Die well, cub. Die well.
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-howl">Howl of Defiance</div>
+            <div class="footer-sub">Werewolf: The Apocalypse // Renegade Game Studios // Storyteller System</div>
+        </footer>
+
+        <!-- TRIBAL BOTTOM -->
+        <div class="tribal-bottom"></div>
+
+    </div>
+    </body>
+</div>
+</html>

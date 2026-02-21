@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRANSFORMERS RPG — Bot Construction Protocol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Audiowide&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --energon-blue:  #00E5FF;
+            --energon-dim:   #0088AA;
+            --autobot-red:   #FF1744;
+            --decepticon:    #9C27B0;
+            --decepticon-dim:#6A1B75;
+            --chrome:        #C0D0E0;
+            --chrome-dark:   #708090;
+            --cybertron:     #1A1F2E;
+            --panel:         #0D1117;
+            --panel-mid:     #161B22;
+            --panel-light:   #1F2531;
+            --grid:          rgba(0,229,255,0.1);
+            --grid-dim:      rgba(0,229,255,0.05);
+            --warn:          #FFD600;
+            --warn-dim:      #AA8800;
+            --border:        #2A3040;
+            --text:          #B8C8D8;
+            --text-dim:      #6A7A8A;
+            --white:         #E8F0F8;
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Rajdhani', sans-serif;
+            background: var(--cybertron);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 1.5rem 1rem;
+            position: relative;
+        }
+
+        /* Cybertronian grid background */
+        .instr-container body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(var(--grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ── CONTAINER ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--panel);
+            /* angular Cybertronian cut corners */
+            clip-path: polygon(
+                30px 0,
+                100% 0,
+                100% calc(100% - 30px),
+                calc(100% - 30px) 100%,
+                0 100%,
+                0 30px
+            );
+            border: 2px solid var(--border);
+            box-shadow:
+                0 0 60px rgba(0,229,255,0.15),
+                0 0 120px rgba(0,0,0,0.8),
+                inset 0 0 80px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+            animation: transform-in 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        @keyframes transform-in {
+            0%   { opacity: 0; transform: scale(1.2) rotateY(90deg); filter: brightness(3); }
+            50%  { opacity: 0.5; transform: scale(0.95) rotateY(0deg); }
+            100% { opacity: 1; transform: scale(1) rotateY(0deg); filter: brightness(1); }
+        }
+
+        /* Corner accent marks */
+        .instr-container .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            border-top: 2px solid var(--energon-blue);
+            border-left: 2px solid var(--energon-blue);
+            clip-path: polygon(0 0, 100% 0, 0 100%);
+        }
+
+        .instr-container .container::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            border-bottom: 2px solid var(--energon-blue);
+            border-right: 2px solid var(--energon-blue);
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
+        }
+
+        /* ── ENERGON BAR ── */
+        .instr-container .energon-bar {
+            height: 6px;
+            background: linear-gradient(
+                90deg,
+                var(--autobot-red) 0%,
+                var(--energon-blue) 50%,
+                var(--decepticon) 100%
+            );
+            box-shadow: 0 0 15px var(--energon-blue);
+            animation: energon-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes energon-pulse {
+            0%, 100% { opacity: 0.8; box-shadow: 0 0 15px var(--energon-blue); }
+            50%       { opacity: 1; box-shadow: 0 0 25px var(--energon-blue), 0 0 40px rgba(0,229,255,0.4); }
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            background: var(--panel);
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .instr-container .faction-bar {
+            background: var(--panel-mid);
+            border-bottom: 1px solid var(--border);
+            padding: 0.6rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .instr-container .faction-logo {
+            font-family: 'Audiowide', cursive;
+            font-size: 0.75rem;
+            letter-spacing: 0.25em;
+            color: var(--energon-blue);
+            text-shadow: 0 0 10px rgba(0,229,255,0.5);
+        }
+
+        .instr-container .faction-tag {
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            color: var(--text-dim);
+            text-transform: uppercase;
+        }
+
+        .instr-container .header-inner {
+            padding: 2.5rem 2rem 2rem;
+            position: relative;
+        }
+
+        /* Large TRANSFORM watermark */
+        .instr-container .header-inner::before {
+            content: 'TRANSFORM';
+            position: absolute;
+            right: 1rem;
+            bottom: 0;
+            font-family: 'Audiowide', cursive;
+            font-size: 5rem;
+            color: var(--energon-blue);
+            opacity: 0.03;
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+            letter-spacing: 0.1em;
+        }
+
+        /* Animated grid overlay */
+        .instr-container .header-inner::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(var(--grid-dim) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-dim) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.4;
+            pointer-events: none;
+            animation: grid-scan 8s linear infinite;
+        }
+
+        @keyframes grid-scan {
+            from { background-position: 0 0; }
+            to   { background-position: 40px 40px; }
+        }
+
+        .instr-container .sys-tag {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            color: var(--warn);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container h1 {
+            font-family: 'Audiowide', cursive;
+            font-size: 3.5rem;
+            line-height: 0.95;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 0.4rem;
+            text-shadow:
+                0 0 20px rgba(0,229,255,0.4),
+                0 0 40px rgba(0,229,255,0.2);
+        }
+
+        .instr-container h1 .sub {
+            display: block;
+            font-size: 1.3rem;
+            color: var(--energon-blue);
+            text-shadow: 0 0 15px rgba(0,229,255,0.6);
+            letter-spacing: 0.2em;
+        }
+
+        .instr-container .header-meta {
+            border-top: 1px solid var(--border);
+            padding-top: 0.85rem;
+            margin-top: 0.75rem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.5rem 1.5rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container .meta-label { color: var(--text-dim); }
+        .instr-container .meta-value { color: var(--energon-blue); font-weight: 700; }
+
+        /* ── TECH SPEC BAR ── */
+        .instr-container .tech-bar {
+            background: var(--panel-mid);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 0.7rem 2rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--white);
+            text-transform: uppercase;
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2rem;
+        }
+
+        /* ── INTRO BRIEFING ── */
+        .instr-container .briefing {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--energon-blue);
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2.25rem;
+            font-size: 0.96rem;
+            line-height: 1.9;
+            position: relative;
+        }
+
+        .instr-container .briefing::before {
+            content: '// INITIALIZATION PROTOCOL — BOT CONSTRUCTION SEQUENCE';
+            display: block;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--energon-blue);
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            text-shadow: 0 0 8px rgba(0,229,255,0.4);
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Audiowide', cursive;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--white);
+            margin: 2.75rem 0 1.25rem;
+            padding: 0.6rem 1rem;
+            background: var(--panel-mid);
+            border-left: 6px solid var(--energon-blue);
+            border-right: 1px solid var(--border);
+            position: relative;
+            animation: slideIn 0.4s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.06s);
+            box-shadow: 0 0 15px rgba(0,229,255,0.08);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: attr(data-num);
+            position: absolute;
+            left: -2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--energon-blue);
+            text-shadow: 0 0 8px rgba(0,229,255,0.4);
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+
+        .instr-container h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--warn);
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .instr-container p {
+            font-size: 0.98rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .instr-container ul, ol { margin: 0.75rem 0 1.25rem 1.35rem; }
+        .instr-container li {
+            font-size: 0.95rem;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { color: var(--energon-blue); font-weight: 700; }
+        .instr-container em     { color: var(--warn); font-style: normal; }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.25rem 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            position: relative;
+        }
+
+        .instr-container .divider::before {
+            content: '◆';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background: var(--panel);
+            padding: 0 0.75rem;
+            font-size: 1rem;
+            color: var(--energon-blue);
+            text-shadow: 0 0 10px rgba(0,229,255,0.5);
+        }
+
+        /* ── DATA ALERT ── */
+        .instr-container .data-alert {
+            background: rgba(255,214,0,0.06);
+            border: 1px solid var(--warn-dim);
+            border-left: 4px solid var(--warn);
+            padding: 1.1rem 1.35rem;
+            margin: 1.5rem 0;
+            font-size: 0.92rem;
+            line-height: 1.85;
+        }
+
+        .instr-container .alert-label {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            color: var(--warn);
+            display: block;
+            margin-bottom: 0.35rem;
+            text-transform: uppercase;
+        }
+
+        /* ── TECH SPEC PANEL ── */
+        .instr-container .spec-panel {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            position: relative;
+        }
+
+        .instr-container .spec-panel::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -0.6rem;
+            left: 1rem;
+            background: var(--panel-mid);
+            padding: 0 0.5rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--energon-blue);
+            text-shadow: 0 0 6px rgba(0,229,255,0.4);
+            text-transform: uppercase;
+        }
+
+        /* ── ATTRIBUTE BARS (Transformers style) ── */
+        .instr-container .attr-grid {
+            display: grid;
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .attr-row {
+            display: grid;
+            grid-template-columns: 7rem 1fr auto;
+            align-items: center;
+            gap: 1rem;
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            padding: 0.7rem 1rem;
+        }
+
+        .instr-container .attr-name {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--white);
+        }
+
+        .instr-container .attr-bar {
+            height: 12px;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .instr-container .attr-fill {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, var(--energon-dim), var(--energon-blue));
+            box-shadow: 0 0 10px rgba(0,229,255,0.4);
+        }
+
+        .instr-container .attr-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--energon-blue);
+            text-shadow: 0 0 6px rgba(0,229,255,0.4);
+            white-space: nowrap;
+        }
+
+        /* ── FACTION CHOICE ── */
+        .instr-container .faction-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .faction-card {
+            background: var(--panel-mid);
+            border: 2px solid var(--border);
+            padding: 1.25rem 1.25rem;
+            text-align: center;
+            transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+            cursor: default;
+            position: relative;
+        }
+
+        .instr-container .faction-card.autobot {
+            border-color: var(--autobot-red);
+        }
+
+        .instr-container .faction-card.autobot:hover {
+            border-color: var(--autobot-red);
+            box-shadow: 0 0 20px rgba(255,23,68,0.3);
+            transform: scale(1.02);
+        }
+
+        .instr-container .faction-card.decepticon {
+            border-color: var(--decepticon);
+        }
+
+        .instr-container .faction-card.decepticon:hover {
+            border-color: var(--decepticon);
+            box-shadow: 0 0 20px rgba(156,39,176,0.3);
+            transform: scale(1.02);
+        }
+
+        .instr-container .faction-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            filter: drop-shadow(0 0 8px currentColor);
+        }
+
+        .instr-container .faction-card.autobot .faction-icon { color: var(--autobot-red); }
+        .instr-container .faction-card.decepticon .faction-icon { color: var(--decepticon); }
+
+        .instr-container .faction-name {
+            font-family: 'Audiowide', cursive;
+            font-size: 1.3rem;
+            letter-spacing: 0.08em;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .faction-motto {
+            font-size: 0.82rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        /* ── ROLE LIST ── */
+        .instr-container .role-list {
+            display: grid;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .role-card {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 1rem;
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            padding: 0.85rem 1rem;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .instr-container .role-card:hover {
+            background: var(--panel-light);
+            border-color: var(--energon-dim);
+        }
+
+        .instr-container .role-code {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--energon-blue);
+            border: 1px solid var(--energon-dim);
+            padding: 0.2rem 0.45rem;
+            text-shadow: 0 0 6px rgba(0,229,255,0.3);
+            white-space: nowrap;
+        }
+
+        .instr-container .role-name {
+            font-family: 'Audiowide', cursive;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--white);
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .role-desc {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        .instr-container .role-special {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.08em;
+            color: var(--warn);
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        /* ── ALT MODE GRID ── */
+        .instr-container .alt-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .alt-item {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            border-top: 2px solid var(--warn-dim);
+            padding: 0.85rem 1rem;
+            transition: border-top-color 0.2s;
+        }
+
+        .instr-container .alt-item:hover { border-top-color: var(--warn); }
+
+        .instr-container .alt-icon {
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .alt-name {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--white);
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .alt-desc {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            line-height: 1.45;
+        }
+
+        /* ── DICE SYSTEM ── */
+        .instr-container .dice-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .dice-item {
+            background: var(--panel-mid);
+            border: 1px solid var(--border);
+            padding: 0.85rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .instr-container .dice-icon {
+            font-family: 'Audiowide', cursive;
+            font-size: 1.6rem;
+            color: var(--energon-blue);
+            text-shadow: 0 0 12px rgba(0,229,255,0.5);
+            min-width: 2rem;
+            text-align: center;
+        }
+
+        .instr-container .dice-text {
+            font-size: 0.84rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+
+        .instr-container .dice-text strong {
+            color: var(--white);
+            font-size: 0.88rem;
+            display: block;
+            margin-bottom: 0.1rem;
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--panel);
+            border-top: 1px solid var(--border);
+        }
+
+        .instr-container .footer-inner {
+            padding: 1.75rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .instr-container .footer-slogan {
+            font-family: 'Audiowide', cursive;
+            font-size: 1.6rem;
+            color: var(--energon-blue);
+            text-shadow: 0 0 15px rgba(0,229,255,0.5);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            line-height: 1.3;
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            color: var(--text-dim);
+            margin-top: 0.3rem;
+        }
+
+        .instr-container .footer-mark {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.12em;
+            color: var(--text-dim);
+            text-align: right;
+            line-height: 1.9;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.5rem; }
+            h1 .sub { font-size: 1.1rem; }
+            h2 { font-size: 1.35rem; }
+            h2::before { display: none; }
+            .faction-grid { grid-template-columns: 1fr; }
+            .alt-grid { grid-template-columns: 1fr; }
+            .dice-grid { grid-template-columns: 1fr; }
+            .role-card { grid-template-columns: 1fr; gap: 0.4rem; }
+            .role-special { text-align: left; }
+            .content { padding: 1.5rem 1.25rem; }
+            .footer-inner { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+
+        <!-- ENERGON BAR -->
+        <div class="energon-bar"></div>
+
+        <!-- HEADER -->
+        <header>
+            <div class="faction-bar">
+                <span class="faction-logo">TRANSFORMERS</span>
+                <span class="faction-tag">Bot Construction Interface v2.0</span>
+            </div>
+            <div class="header-inner">
+                <div class="sys-tag">⚡ SYSTEM ONLINE — CYBERTRON PROTOCOL ACTIVE</div>
+                <h1>
+                    TRANSFORMERS
+                    <span class="sub">Roleplaying Game</span>
+                </h1>
+                <div class="header-meta">
+                    <span class="meta-label">SYSTEM:</span>
+                    <span class="meta-value">NARRATIVE DICE (2D20)</span>
+                    <span class="meta-label">PUBLISHER:</span>
+                    <span class="meta-value">RENEGADE GAME STUDIOS</span>
+                    <span class="meta-label">ERA:</span>
+                    <span class="meta-value">CYBERTRON / EARTH / MULTIVERSE</span>
+                    <span class="meta-label">STATUS:</span>
+                    <span class="meta-value">READY TO ROLL OUT</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- TECH BAR -->
+        <div class="tech-bar">
+            CHARACTER CREATION — TECH SPEC INITIALIZATION
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="briefing">
+                The war between Autobots and Decepticons has raged for millennia. Cybertron is dying — or dead, depending on when your story begins. You are a <strong>Transformer</strong> — a sentient robot capable of reconfiguring your form. More than meets the eye. Robots in disguise. Pick your faction. Choose your alt mode. Roll out.
+            </div>
+
+            <!-- STEP 1: FACTION -->
+            <h2 data-num="01" style="--i:1;">Choose Your Faction</h2>
+            <p>Every Transformer belongs to a faction. This isn't just politics — it's identity, philosophy, and destiny. Your faction determines your allies, your enemies, and what you're fighting for.</p>
+
+            <div class="faction-grid">
+                <div class="faction-card autobot">
+                    <div class="faction-icon">⬢</div>
+                    <div class="faction-name">AUTOBOTS</div>
+                    <div class="faction-motto">"Freedom is the right of all sentient beings"</div>
+                </div>
+                <div class="faction-card decepticon">
+                    <div class="faction-icon">◆</div>
+                    <div class="faction-name">DECEPTICONS</div>
+                    <div class="faction-motto">"Peace through tyranny"</div>
+                </div>
+            </div>
+
+            <p>Autobots fight to preserve freedom and protect life. Decepticons believe in strength, order through power, and Cybertronian supremacy. Some bots question their faction's choices. Others remain loyal unto death. There are also <strong>Unaligned</strong> Transformers — neutrals, mercenaries, or those who've abandoned both sides.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: ROLE -->
+            <h2 data-num="02" style="--i:2;">Select Your Role</h2>
+            <p>Your <strong>Role</strong> is your function within your faction — your specialty, your purpose, and your place in the hierarchy. Each Role grants unique abilities and determines which skills you excel at.</p>
+
+            <div class="role-list">
+                <div class="role-card">
+                    <span class="role-code">ROLE_01</span>
+                    <div>
+                        <div class="role-name">Warrior</div>
+                        <div class="role-desc">Front-line combat specialist. Built for battle, trained for war, designed to survive what kills others.</div>
+                    </div>
+                    <div class="role-special">COMBAT PROTOCOLS</div>
+                </div>
+                <div class="role-card">
+                    <span class="role-code">ROLE_02</span>
+                    <div>
+                        <div class="role-name">Scout</div>
+                        <div class="role-desc">Reconnaissance and intelligence. Fast, observant, and essential for gathering data before engaging.</div>
+                    </div>
+                    <div class="role-special">ADVANCED SENSORS</div>
+                </div>
+                <div class="role-card">
+                    <span class="role-code">ROLE_03</span>
+                    <div>
+                        <div class="role-name">Medic</div>
+                        <div class="role-desc">Repair specialist and field surgeon. Keeps the team functional when energon reserves run low and damage mounts.</div>
+                    </div>
+                    <div class="role-special">REPAIR SYSTEMS</div>
+                </div>
+                <div class="role-card">
+                    <span class="role-code">ROLE_04</span>
+                    <div>
+                        <div class="role-name">Scientist</div>
+                        <div class="role-desc">Researcher, inventor, and technical expert. Understands systems that others only operate.</div>
+                    </div>
+                    <div class="role-special">ANALYTICAL CORE</div>
+                </div>
+                <div class="role-card">
+                    <span class="role-code">ROLE_05</span>
+                    <div>
+                        <div class="role-name">Leader</div>
+                        <div class="role-desc">Commander and tactician. Coordinates the team, makes the hard calls, and inspires others to follow.</div>
+                    </div>
+                    <div class="role-special">COMMAND MATRIX</div>
+                </div>
+                <div class="role-card">
+                    <span class="role-code">ROLE_06</span>
+                    <div>
+                        <div class="role-name">Infiltrator</div>
+                        <div class="role-desc">Spy and saboteur. Works in shadows, gathers intelligence, disrupts enemy operations from within.</div>
+                    </div>
+                    <div class="role-special">STEALTH SUITE</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: ALT MODE -->
+            <h2 data-num="03" style="--i:3;">Choose Your Alt Mode</h2>
+            <p>Every Transformer has an <strong>Alternate Mode</strong> — a secondary form you can transform into. Your alt mode grants specific abilities and determines your mobility, utility, and tactical options.</p>
+
+            <div class="alt-grid">
+                <div class="alt-item">
+                    <span class="alt-icon">🚗</span>
+                    <div class="alt-name">Ground Vehicle</div>
+                    <div class="alt-desc">Cars, trucks, motorcycles — speed, maneuverability, and blending into Earth traffic</div>
+                </div>
+                <div class="alt-item">
+                    <span class="alt-icon">✈️</span>
+                    <div class="alt-name">Aircraft</div>
+                    <div class="alt-desc">Jets, helicopters, drones — aerial superiority, recon, and rapid deployment</div>
+                </div>
+                <div class="alt-item">
+                    <span class="alt-icon">🦖</span>
+                    <div class="alt-name">Beast Mode</div>
+                    <div class="alt-desc">Animals, dinosaurs, predators — organic disguise, natural weapons, primal power</div>
+                </div>
+                <div class="alt-item">
+                    <span class="alt-icon">🚀</span>
+                    <div class="alt-name">Spacecraft</div>
+                    <div class="alt-desc">Shuttles, fighters, deep-space vessels — vacuum operations, long-range travel</div>
+                </div>
+                <div class="alt-item">
+                    <span class="alt-icon">🏗️</span>
+                    <div class="alt-name">Construction</div>
+                    <div class="alt-desc">Cranes, excavators, bulldozers — heavy lifting, industrial power, terrain manipulation</div>
+                </div>
+                <div class="alt-item">
+                    <span class="alt-icon">⚙️</span>
+                    <div class="alt-name">Cybertronian</div>
+                    <div class="alt-desc">Native Cybertronian forms — no Earth disguise, pure function, designed for war</div>
+                </div>
+            </div>
+
+            <p>Your alt mode affects movement speed, environmental adaptability, and combat capabilities. A jet can fly but stands out. A sports car is fast but fragile. Choose based on your Role and the campaign's setting.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: ATTRIBUTES -->
+            <h2 data-num="04" style="--i:4;">Assign Attributes</h2>
+            <p>Every Transformer has <strong>four core Attributes</strong> measured on a scale from <strong>1 to 5</strong>. Distribute points among them based on your Role and concept. Higher values mean greater capability.</p>
+
+            <div class="attr-grid">
+                <div class="attr-row">
+                    <div class="attr-name">Strength</div>
+                    <div class="attr-bar">
+                        <div class="attr-fill" style="width: 60%;"></div>
+                    </div>
+                    <div class="attr-value">3 / 5</div>
+                </div>
+                <div class="attr-row">
+                    <div class="attr-name">Intelligence</div>
+                    <div class="attr-bar">
+                        <div class="attr-fill" style="width: 80%;"></div>
+                    </div>
+                    <div class="attr-value">4 / 5</div>
+                </div>
+                <div class="attr-row">
+                    <div class="attr-name">Speed</div>
+                    <div class="attr-bar">
+                        <div class="attr-fill" style="width: 100%;"></div>
+                    </div>
+                    <div class="attr-value">5 / 5</div>
+                </div>
+                <div class="attr-row">
+                    <div class="attr-name">Endurance</div>
+                    <div class="attr-bar">
+                        <div class="attr-fill" style="width: 40%;"></div>
+                    </div>
+                    <div class="attr-value">2 / 5</div>
+                </div>
+            </div>
+
+            <div class="spec-panel" data-label="// ATTRIBUTE FUNCTIONS">
+                <ul style="margin: 0 0 0 1.25rem;">
+                    <li><strong>Strength:</strong> Physical power, melee combat, heavy lifting, structural damage resistance</li>
+                    <li><strong>Intelligence:</strong> Problem-solving, technical skills, tactical analysis, hacking systems</li>
+                    <li><strong>Speed:</strong> Reaction time, initiative, evasion, pursuit, and transformation speed</li>
+                    <li><strong>Endurance:</strong> Damage capacity, energon efficiency, system stability under stress</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: SKILLS -->
+            <h2 data-num="05" style="--i:5;">Select Skills</h2>
+            <p>Skills represent specific training and expertise. You receive a number of skill points based on your Role. Distribute them among the following skills, with a maximum of <strong>5 ranks</strong> in any single skill at creation.</p>
+
+            <div class="spec-panel" data-label="// SKILL LIST">
+                <div style="columns: 2; font-size: 0.9rem; line-height: 1.8; column-gap: 2rem;">
+                    <p style="margin: 0;"><strong>Combat Skills:</strong><br>
+                    Brawl, Firearms, Heavy Weapons, Tactical Maneuvers</p>
+                    <p style="margin: 0.75rem 0 0 0;"><strong>Technical Skills:</strong><br>
+                    Repair, Hacking, Science, Engineering</p>
+                    <p style="margin: 0.75rem 0 0 0;"><strong>Movement Skills:</strong><br>
+                    Drive, Fly, Stealth, Athletics</p>
+                    <p style="margin: 0.75rem 0 0 0;"><strong>Social Skills:</strong><br>
+                    Leadership, Intimidate, Persuasion, Deception</p>
+                    <p style="margin: 0.75rem 0 0 0;"><strong>Perception Skills:</strong><br>
+                    Observation, Investigation, Survival</p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: DICE SYSTEM -->
+            <h2 data-num="06" style="--i:6;">How Rolling Works</h2>
+            <p>Transformers RPG uses a <strong>2d20 system</strong>. When you attempt something risky, roll 2d20 and try to roll <strong>equal to or under</strong> your Attribute + Skill. Each success counts separately.</p>
+
+            <div class="dice-grid">
+                <div class="dice-item">
+                    <div class="dice-icon">◆</div>
+                    <div class="dice-text">
+                        <strong>Target Number</strong>
+                        Your Attribute + Skill value. Roll under this on d20 to succeed.
+                    </div>
+                </div>
+                <div class="dice-item">
+                    <div class="dice-icon">✦</div>
+                    <div class="dice-text">
+                        <strong>Successes</strong>
+                        Each die that rolls under your TN = 1 success. Most tasks need 1 success.
+                    </div>
+                </div>
+                <div class="dice-item">
+                    <div class="dice-icon">⬡</div>
+                    <div class="dice-text">
+                        <strong>Critical Success</strong>
+                        Roll a natural 1 — exceptional result, extra effect, or heroic outcome.
+                    </div>
+                </div>
+                <div class="dice-item">
+                    <div class="dice-icon">⬢</div>
+                    <div class="dice-text">
+                        <strong>Complication</strong>
+                        Roll a natural 20 — succeed or fail, something goes wrong. GM decides what.
+                    </div>
+                </div>
+            </div>
+
+            <p>Extra successes can be spent on bonus effects: extra damage, helping allies, gathering information, or achieving objectives faster. The more successes, the better the outcome.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: ENERGON & HEALTH -->
+            <h2 data-num="07" style="--i:7;">Energon &amp; Damage</h2>
+            <p>You have two crucial resource tracks: <strong>Health</strong> (structural integrity) and <strong>Energon</strong> (fuel and power).</p>
+
+            <h3>Health</h3>
+            <ul>
+                <li><strong>Health Points = Endurance × 3</strong></li>
+                <li>When you take damage, reduce Health. At <strong>0 Health</strong>, you're offline and need immediate repair</li>
+                <li>Critical damage can cause <strong>System Malfunctions</strong> — specific subsystems fail until repaired</li>
+            </ul>
+
+            <h3>Energon</h3>
+            <ul>
+                <li><strong>Energon Points = Endurance × 2</strong></li>
+                <li>Spend Energon to power special abilities, boost rolls, activate weapons, or maintain systems</li>
+                <li>Energon recharges slowly over time or by consuming energon cubes</li>
+                <li>Running out of Energon imposes penalties to all actions — you're operating on reserves</li>
+            </ul>
+
+            <div class="data-alert">
+                <span class="alert-label">⚠ SYSTEM WARNING</span>
+                <strong>Energon depletion is a serious threat.</strong> Extended missions without refueling can leave you vulnerable. Warriors burn energon in combat. Medics use it for repairs. Scientists need it for complex calculations. Manage your reserves carefully — running dry in hostile territory is often fatal.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: SPECIAL ABILITIES -->
+            <h2 data-num="08" style="--i:8;">Special Abilities &amp; Gear</h2>
+            <p>Your Role grants you one <strong>Role Ability</strong> — a unique power that defines your function. Additionally, select <strong>starting equipment</strong> appropriate to your character.</p>
+
+            <h3>Role Abilities (Examples)</h3>
+            <ul>
+                <li><strong>Warrior — Tactical Strike:</strong> Spend 1 Energon to add +2d20 to an attack roll</li>
+                <li><strong>Scout — Enhanced Sensors:</strong> Gain +2 to all Observation checks and detect hidden threats automatically</li>
+                <li><strong>Medic — Emergency Repair:</strong> Restore 1d6 Health to yourself or an ally as an action</li>
+                <li><strong>Leader — Rally Cry:</strong> All allies within earshot gain +1 to their next roll</li>
+            </ul>
+
+            <h3>Starting Gear</h3>
+            <ul>
+                <li>One <strong>primary weapon</strong> (energon blade, ion blaster, fusion cannon)</li>
+                <li>One <strong>utility tool</strong> (repair kit, scanner, cloaking device)</li>
+                <li>Armor plating appropriate to your size class</li>
+                <li>Personal comm system and basic survival equipment</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: PERSONALITY -->
+            <h2 data-num="09" style="--i:9;">Define Your Character</h2>
+            <p>Give your Transformer personality, history, and motivation. Answer these questions to flesh out who you are beyond the stats:</p>
+
+            <div class="spec-panel" data-label="// PERSONALITY MATRIX">
+                <ul style="margin: 0 0 0 1.25rem;">
+                    <li><strong>Designation:</strong> What is your name? (Optimus, Starscream, Bumblebee, etc.)</li>
+                    <li><strong>Function:</strong> What do you do for your faction beyond your Role?</li>
+                    <li><strong>Motto:</strong> What phrase defines your philosophy or approach?</li>
+                    <li><strong>Origin:</strong> Were you forged on Cybertron? Built on Earth? Created in a lab?</li>
+                    <li><strong>Loyalty:</strong> How deep is your faction allegiance? Unwavering? Conflicted?</li>
+                    <li><strong>Personal Goal:</strong> What do you want beyond winning the war?</li>
+                    <li><strong>Greatest Fear:</strong> What threatens to compromise your function?</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: FINAL ASSEMBLY -->
+            <h2 data-num="10" style="--i:10;">Final Assembly</h2>
+
+            <h3>Finishing Checklist</h3>
+            <div class="spec-panel" data-label="// CONSTRUCTION COMPLETE">
+                <ul style="margin: 0 0 0 1.25rem; list-style: none;">
+                    <li>☐ Faction chosen (Autobot / Decepticon / Unaligned)</li>
+                    <li>☐ Role selected and Role Ability noted</li>
+                    <li>☐ Alt Mode determined</li>
+                    <li>☐ Four Attributes assigned (1–5 scale)</li>
+                    <li>☐ Skills distributed according to Role</li>
+                    <li>☐ Health calculated (Endurance × 3)</li>
+                    <li>☐ Energon calculated (Endurance × 2)</li>
+                    <li>☐ Starting equipment selected</li>
+                    <li>☐ Personality matrix completed</li>
+                    <li>☐ Designation (name) finalized</li>
+                    <li>☐ Connections to other PCs established</li>
+                    <li>☐ Ready to roll out</li>
+                </ul>
+            </div>
+
+            <div class="data-alert" style="margin-top: 1.75rem;">
+                <span class="alert-label">⚡ FINAL TRANSMISSION</span>
+                The war is ancient. The stakes are existential. Cybertron may be dead, but the fight continues across the stars and on Earth. You are a Transformer — <strong>more than meets the eye</strong>. Whether you fight for freedom or conquest, whether you believe in your cause or question everything, you are now part of a conflict that has reshaped galaxies. Transform and roll out.
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-inner">
+                <div>
+                    <div class="footer-slogan">Autobots,<br>Roll Out!</div>
+                    <div class="footer-sub">TRANSFORMERS RPG // RENEGADE GAME STUDIOS // 2D20 SYSTEM</div>
+                </div>
+                <div class="footer-mark">
+                    More Than<br>
+                    Meets<br>
+                    The Eye
+                </div>
+            </div>
+        </footer>
+
+        <!-- BOTTOM ENERGON BAR -->
+        <div class="energon-bar"></div>
+
+    </div>
+    </body>
+</div>
+</html>

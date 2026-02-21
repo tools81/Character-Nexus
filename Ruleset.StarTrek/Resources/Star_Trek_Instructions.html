@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAR TREK ADVENTURES — Personnel Database</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Helvetica+Neue:wght@400;500;700&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lcars-orange:   #FF9966;
+            --lcars-peach:    #FFCC99;
+            --lcars-red:      #CC6666;
+            --lcars-violet:   #CC99CC;
+            --lcars-blue:     #9999FF;
+            --lcars-sky:      #99CCFF;
+            --lcars-teal:     #99CCCC;
+            --lcars-purple:   #9966CC;
+            --lcars-tan:      #CCAA77;
+            --lcars-gold:     #FFAA00;
+            --starfleet-blue: #5B7C99;
+            --bg-dark:        #000000;
+            --bg-panel:       #111111;
+            --text-primary:   #FF9966;
+            --text-second:    #FFCC99;
+            --text-white:     #FFFFFF;
+            --text-dim:       #9999AA;
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Antonio', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-second);
+            min-height: 100vh;
+            padding: 1.5rem 1rem;
+            position: relative;
+        }
+
+        /* Starfield background */
+        .instr-container body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                radial-gradient(2px 2px at 20% 30%, white, transparent),
+                radial-gradient(2px 2px at 60% 70%, white, transparent),
+                radial-gradient(1px 1px at 50% 50%, white, transparent),
+                radial-gradient(1px 1px at 80% 10%, white, transparent),
+                radial-gradient(2px 2px at 90% 60%, white, transparent),
+                radial-gradient(1px 1px at 33% 90%, white, transparent),
+                radial-gradient(1px 1px at 15% 80%, white, transparent);
+            background-size: 200% 200%;
+            background-position: 0% 0%;
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 0;
+            animation: stars 60s linear infinite;
+        }
+
+        @keyframes stars {
+            from { background-position: 0% 0%; }
+            to   { background-position: 100% 100%; }
+        }
+
+        /* ── CONTAINER (LCARS Interface) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--bg-dark);
+            border: 2px solid var(--lcars-orange);
+            position: relative;
+            z-index: 1;
+            animation: interface-boot 0.8s ease-out;
+        }
+
+        @keyframes interface-boot {
+            0%   { opacity: 0; filter: brightness(3); }
+            20%  { opacity: 0.5; }
+            40%  { opacity: 0; }
+            60%  { opacity: 0.8; }
+            100% { opacity: 1; filter: brightness(1); }
+        }
+
+        /* LCARS corner elements */
+        .instr-container .corner-tl {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 80px;
+            background: var(--lcars-orange);
+            border-radius: 0 0 80px 0;
+        }
+
+        .instr-container .corner-br {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            background: var(--lcars-purple);
+            border-radius: 60px 0 0 0;
+        }
+
+        /* ── TOP BAR (LCARS style) ── */
+        .instr-container .top-bar {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            height: 60px;
+            background: var(--bg-panel);
+        }
+
+        .instr-container .bar-left {
+            background: var(--lcars-orange);
+            border-radius: 0 0 30px 0;
+        }
+
+        .instr-container .bar-right {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            padding: 0 1rem;
+        }
+
+        .instr-container .bar-block {
+            height: 28px;
+            border-radius: 14px;
+            flex: 1;
+        }
+
+        .instr-container .bar-block.b1 { background: var(--lcars-peach); max-width: 80px; }
+        .instr-container .bar-block.b2 { background: var(--lcars-violet); max-width: 100px; }
+        .instr-container .bar-block.b3 { background: var(--lcars-blue); }
+        .instr-container .bar-block.b4 { background: var(--lcars-sky); max-width: 60px; }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            padding: 2rem 2rem;
+            border-bottom: 1px solid var(--lcars-orange);
+            position: relative;
+        }
+
+        .instr-container .fed-logo {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid var(--lcars-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            background: var(--bg-panel);
+            opacity: 0.6;
+        }
+
+        .instr-container .status-line {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            color: var(--lcars-sky);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .instr-container h1 {
+            font-family: 'Antonio', sans-serif;
+            font-size: 3.2rem;
+            line-height: 1;
+            font-weight: 700;
+            color: var(--text-white);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container h1 .adventures {
+            color: var(--lcars-orange);
+        }
+
+        .instr-container h1 .edition {
+            display: block;
+            font-size: 1.3rem;
+            color: var(--lcars-blue);
+            letter-spacing: 0.15em;
+            margin-top: 0.3rem;
+        }
+
+        .instr-container .subhead {
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            color: var(--text-dim);
+            margin-top: 1rem;
+            text-transform: uppercase;
+        }
+
+        .instr-container .header-meta {
+            margin-top: 1.25rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--lcars-violet);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.4rem 1.5rem;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+        }
+
+        .instr-container .meta-label { color: var(--text-dim); }
+        .instr-container .meta-value { color: var(--lcars-orange); font-weight: 700; }
+
+        /* ── SIDE PANEL (LCARS blocks) ── */
+        .instr-container .side-panel {
+            position: absolute;
+            left: 0;
+            top: 80px;
+            bottom: 80px;
+            width: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 1rem 0;
+            z-index: -99;
+        }
+
+        .instr-container .side-block {
+            height: 60px;
+            border-radius: 0 20px 20px 0;
+        }
+
+        .instr-container .side-block.s1 { background: var(--lcars-orange); flex: 1; }
+        .instr-container .side-block.s2 { background: var(--lcars-peach); }
+        .instr-container .side-block.s3 { background: var(--lcars-purple); flex: 1; }
+        .instr-container .side-block.s4 { background: var(--lcars-teal); }
+        .instr-container .side-block.s5 { background: var(--lcars-sky); flex: 1; }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2rem 2rem 2rem 3rem;
+            position: relative;
+        }
+
+        /* ── BRIEFING ── */
+        .instr-container .briefing {
+            background: var(--bg-panel);
+            border: 1px solid var(--lcars-blue);
+            border-left: 4px solid var(--lcars-blue);
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2.25rem;
+            font-size: 0.96rem;
+            line-height: 1.9;
+            position: relative;
+        }
+
+        .instr-container .briefing::before {
+            content: 'STARFLEET PERSONNEL BRIEFING';
+            position: absolute;
+            top: -0.6rem;
+            left: 1rem;
+            background: var(--bg-panel);
+            padding: 0 0.5rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--lcars-blue);
+            text-transform: uppercase;
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Antonio', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-white);
+            margin: 2.75rem 0 1.25rem;
+            padding: 0.6rem 1rem 0.6rem 0;
+            position: relative;
+            animation: fadeIn 0.4s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.06s);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: var(--lcars-orange);
+            border-radius: 3px;
+        }
+
+        .instr-container h2::after {
+            content: attr(data-code);
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--lcars-teal);
+            padding: 0.3rem 0.8rem;
+            background: var(--bg-panel);
+            border: 1px solid var(--lcars-teal);
+            border-radius: 12px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        .instr-container h3 {
+            font-family: 'Antonio', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--lcars-sky);
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .instr-container p {
+            font-size: 0.96rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            color: var(--text-second);
+        }
+
+        .instr-container ul, ol { margin: 0.75rem 0 1.25rem 1.35rem; }
+        .instr-container li {
+            font-size: 0.94rem;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { color: var(--text-white); font-weight: 700; }
+        .instr-container em     { color: var(--lcars-orange); font-style: normal; }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.25rem 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--lcars-orange), var(--lcars-violet), var(--lcars-blue));
+        }
+
+        /* ── ALERT BOX ── */
+        .instr-container .alert-box {
+            background: rgba(255,153,102,0.08);
+            border: 1px solid var(--lcars-orange);
+            border-left: 4px solid var(--lcars-orange);
+            padding: 1.1rem 1.35rem;
+            margin: 1.5rem 0;
+            font-size: 0.92rem;
+            line-height: 1.85;
+        }
+
+        .instr-container .alert-label {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            color: var(--lcars-orange);
+            display: block;
+            margin-bottom: 0.35rem;
+            text-transform: uppercase;
+        }
+
+        /* ── DATA PANEL ── */
+        .instr-container .data-panel {
+            background: var(--bg-panel);
+            border: 1px solid var(--lcars-violet);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            position: relative;
+        }
+
+        .instr-container .data-panel::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -0.6rem;
+            left: 1rem;
+            background: var(--bg-panel);
+            padding: 0 0.5rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--lcars-violet);
+            text-transform: uppercase;
+        }
+
+        /* ── ATTRIBUTE GRID ── */
+        .instr-container .attr-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .attr-card {
+            background: var(--bg-panel);
+            border: 1px solid var(--lcars-peach);
+            border-top: 3px solid var(--lcars-peach);
+            padding: 0.85rem 1rem;
+            position: relative;
+            transition: border-top-color 0.2s;
+        }
+
+        .instr-container .attr-card:hover { border-top-color: var(--lcars-orange); }
+
+        .instr-container .attr-code {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--lcars-sky);
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .attr-name {
+            font-family: 'Antonio', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-white);
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .attr-desc {
+            font-size: 0.83rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        .instr-container .attr-range {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.85rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--lcars-orange);
+        }
+
+        /* ── SPECIES LIST ── */
+        .instr-container .species-list {
+            display: grid;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .species-item {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 1rem;
+            background: var(--bg-panel);
+            border: 1px solid var(--lcars-violet);
+            padding: 0.8rem 1rem;
+            transition: border-color 0.2s;
+        }
+
+        .instr-container .species-item:hover { border-color: var(--lcars-blue); }
+
+        .instr-container .species-icon {
+            font-size: 1.5rem;
+        }
+
+        .instr-container .species-name {
+            font-family: 'Antonio', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-white);
+            margin-bottom: 0.15rem;
+        }
+
+        .instr-container .species-desc {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        .instr-container .species-trait {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--lcars-teal);
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        /* ── ROLE CARDS ── */
+        .instr-container .role-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .role-card {
+            background: var(--bg-panel);
+            border: 2px solid var(--lcars-gold);
+            padding: 1rem;
+            text-align: center;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .instr-container .role-card:hover {
+            border-color: var(--lcars-orange);
+            box-shadow: 0 0 15px rgba(255,153,102,0.2);
+        }
+
+        .instr-container .role-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--lcars-gold);
+        }
+
+        .instr-container .role-name {
+            font-family: 'Antonio', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-white);
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .role-sub {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            line-height: 1.4;
+        }
+
+        /* ── SKILL TABLE ── */
+        .instr-container .skill-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .instr-container .skill-table th {
+            background: var(--bg-panel);
+            border: 1px solid var(--lcars-violet);
+            border-bottom: 2px solid var(--lcars-orange);
+            font-family: 'Antonio', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--lcars-orange);
+            padding: 0.6rem 0.9rem;
+            text-align: left;
+            font-size: 0.85rem;
+        }
+
+        .instr-container .skill-table td {
+            padding: 0.55rem 0.9rem;
+            border: 1px solid var(--lcars-violet);
+            color: var(--text-second);
+            vertical-align: top;
+            line-height: 1.6;
+        }
+
+        .instr-container .skill-table tr:hover td { background: rgba(255,153,102,0.05); }
+
+        .instr-container .skill-attr {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--lcars-sky);
+            letter-spacing: 0.1em;
+        }
+
+        /* ── DICE DISPLAY ── */
+        .instr-container .dice-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .dice-item {
+            background: var(--bg-panel);
+            border: 1px solid var(--lcars-blue);
+            padding: 0.85rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .instr-container .dice-num {
+            font-family: 'Antonio', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--lcars-blue);
+            min-width: 2.5rem;
+            text-align: center;
+        }
+
+        .instr-container .dice-text {
+            font-size: 0.84rem;
+            color: var(--text-second);
+            line-height: 1.5;
+        }
+
+        .instr-container .dice-text strong {
+            color: var(--text-white);
+            font-size: 0.88rem;
+            display: block;
+            margin-bottom: 0.1rem;
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            padding: 0;
+            position: relative;
+        }
+
+        .instr-container .bottom-bar {
+            display: grid;
+            grid-template-columns: 1fr 100px;
+            height: 60px;
+            background: var(--bg-panel);
+        }
+
+        .instr-container .bottom-left {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            padding: 0 1rem;
+        }
+
+        .instr-container .bottom-block {
+            height: 28px;
+            border-radius: 14px;
+            flex: 1;
+        }
+
+        .instr-container .bottom-block.bb1 { background: var(--lcars-teal); max-width: 80px; }
+        .instr-container .bottom-block.bb2 { background: var(--lcars-purple); }
+        .instr-container .bottom-block.bb3 { background: var(--lcars-peach); max-width: 100px; }
+        .instr-container .bottom-block.bb4 { background: var(--lcars-orange); max-width: 60px; }
+
+        .instr-container .bottom-right {
+            background: var(--lcars-purple);
+            border-radius: 30px 0 0 0;
+        }
+
+        .instr-container .footer-text {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .instr-container .footer-motto {
+            font-family: 'Antonio', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-white);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--text-dim);
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 480px) {
+            .side-panel { display: none; }
+            h1 { font-size: 2.5rem; }
+            h1 .edition { font-size: 1.1rem; }
+            h2 { font-size: 1.5rem; }
+            h2::before { left: -1rem; width: 4px; }
+            h2::after { position: static; transform: none; display: block; margin-top: 0.5rem; }
+            .attr-grid { grid-template-columns: 1fr; }
+            .role-grid { grid-template-columns: 1fr; }
+            .dice-grid { grid-template-columns: 1fr; }
+            .species-item { grid-template-columns: 1fr; gap: 0.4rem; }
+            .species-trait { text-align: left; }
+            .content { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+        <div class="corner-tl"></div>
+        <div class="corner-br"></div>
+
+        <!-- TOP LCARS BAR -->
+        <div class="top-bar">
+            <div class="bar-left"></div>
+            <div class="bar-right">
+                <div class="bar-block b1"></div>
+                <div class="bar-block b2"></div>
+                <div class="bar-block b3"></div>
+                <div class="bar-block b4"></div>
+            </div>
+        </div>
+
+        <!-- HEADER -->
+        <header>
+            <div class="fed-logo">✦</div>
+            <div class="status-line">UNITED FEDERATION OF PLANETS // STARFLEET COMMAND</div>
+            <h1>
+                STAR TREK <span class="adventures">ADVENTURES</span>
+                <span class="edition">Second Edition</span>
+            </h1>
+            <div class="subhead">Personnel Database — Character Creation Protocol</div>
+            <div class="header-meta">
+                <span class="meta-label">System:</span>
+                <span class="meta-value">2D20 ENGINE</span>
+                <span class="meta-label">Publisher:</span>
+                <span class="meta-value">MODIPHIUS ENTERTAINMENT</span>
+                <span class="meta-label">Era:</span>
+                <span class="meta-value">24TH CENTURY / TNG ERA</span>
+                <span class="meta-label">Access Level:</span>
+                <span class="meta-value">AUTHORIZED</span>
+            </div>
+        </header>
+
+        <!-- SIDE LCARS PANEL -->
+        <div class="side-panel">
+            <div class="side-block s1"></div>
+            <div class="side-block s2"></div>
+            <div class="side-block s3"></div>
+            <div class="side-block s4"></div>
+            <div class="side-block s5"></div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="briefing">
+                Space — the final frontier. You are a member of <strong>Starfleet</strong>, the deep-space exploratory and defense service of the United Federation of Planets. Your mission: to explore strange new worlds, seek out new life and new civilizations, and boldly go where no one has gone before. This database will guide you through personnel file creation. Computer, begin.
+            </div>
+
+            <!-- STEP 1: SPECIES -->
+            <h2 data-code="FILE-01" style="--i:1;">Select Species</h2>
+            <p>The Federation is a diverse alliance of worlds. Your <strong>Species</strong> determines your natural abilities, cultural background, and how you interact with the universe. Each species has unique <strong>Traits</strong> that reflect their biology and culture.</p>
+
+            <div class="species-list">
+                <div class="species-item">
+                    <span class="species-icon">👤</span>
+                    <div>
+                        <div class="species-name">Human</div>
+                        <div class="species-desc">Earth — adaptable, driven, curious. The heart of the Federation.</div>
+                    </div>
+                    <div class="species-trait">ADAPTABLE</div>
+                </div>
+                <div class="species-item">
+                    <span class="species-icon">🖖</span>
+                    <div>
+                        <div class="species-name">Vulcan</div>
+                        <div class="species-desc">Logic, discipline, and extraordinary mental abilities. Emotion suppressed, reason elevated.</div>
+                    </div>
+                    <div class="species-trait">LOGICAL</div>
+                </div>
+                <div class="species-item">
+                    <span class="species-icon">⚔️</span>
+                    <div>
+                        <div class="species-name">Klingon</div>
+                        <div class="species-desc">Warriors of honor. Strength, courage, and loyalty define their culture.</div>
+                    </div>
+                    <div class="species-trait">HONORABLE</div>
+                </div>
+                <div class="species-item">
+                    <span class="species-icon">🎭</span>
+                    <div>
+                        <div class="species-name">Betazoid</div>
+                        <div class="species-desc">Empathic and telepathic. They sense emotions and thoughts of others.</div>
+                    </div>
+                    <div class="species-trait">EMPATHIC</div>
+                </div>
+                <div class="species-item">
+                    <span class="species-icon">🔧</span>
+                    <div>
+                        <div class="species-name">Andorian</div>
+                        <div class="species-desc">Blue-skinned warriors and explorers. Passionate, honorable, and fiercely loyal.</div>
+                    </div>
+                    <div class="species-trait">RESILIENT</div>
+                </div>
+                <div class="species-item">
+                    <span class="species-icon">🌊</span>
+                    <div>
+                        <div class="species-name">Trill (Joined)</div>
+                        <div class="species-desc">Symbiotic species carrying centuries of memories from previous hosts.</div>
+                    </div>
+                    <div class="species-trait">EXPERIENCED</div>
+                </div>
+                <div class="species-item">
+                    <span class="species-icon">🎨</span>
+                    <div>
+                        <div class="species-name">Bajoran</div>
+                        <div class="species-desc">Deeply spiritual people with a history of occupation and resistance.</div>
+                    </div>
+                    <div class="species-trait">SPIRITUAL</div>
+                </div>
+                <div class="species-item">
+                    <span class="species-icon">⚡</span>
+                    <div>
+                        <div class="species-name">Half-Human Hybrid</div>
+                        <div class="species-desc">Mixed heritage brings unique perspectives and abilities from multiple worlds.</div>
+                    </div>
+                    <div class="species-trait">VERSATILE</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: ATTRIBUTES -->
+            <h2 data-code="FILE-02" style="--i:2;">Assign Attributes</h2>
+            <p>Every character has <strong>six core Attributes</strong> rated from <strong>7 to 12</strong>. Distribute points using either a <strong>standard array</strong> (10, 10, 9, 9, 8, 7) or <strong>point buy</strong> system. Your Species may modify certain Attributes.</p>
+
+            <div class="attr-grid">
+                <div class="attr-card">
+                    <div class="attr-code">ATTR//CTRL</div>
+                    <div class="attr-name">Control</div>
+                    <div class="attr-range">7–12</div>
+                    <div class="attr-desc">Self-discipline, focus, precision, emotional regulation</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">ATTR//DARING</div>
+                    <div class="attr-name">Daring</div>
+                    <div class="attr-range">7–12</div>
+                    <div class="attr-desc">Boldness, improvisation, taking risks, thinking fast</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">ATTR//FTNS</div>
+                    <div class="attr-name">Fitness</div>
+                    <div class="attr-range">7–12</div>
+                    <div class="attr-desc">Physical strength, stamina, coordination, health</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">ATTR//INSGT</div>
+                    <div class="attr-name">Insight</div>
+                    <div class="attr-range">7–12</div>
+                    <div class="attr-desc">Empathy, intuition, reading people, understanding motives</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">ATTR//PRSN</div>
+                    <div class="attr-name">Presence</div>
+                    <div class="attr-range">7–12</div>
+                    <div class="attr-desc">Charisma, force of personality, leadership, persuasion</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">ATTR//RSNS</div>
+                    <div class="attr-name">Reason</div>
+                    <div class="attr-range">7–12</div>
+                    <div class="attr-desc">Logic, analysis, problem-solving, technical knowledge</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: DISCIPLINES -->
+            <h2 data-code="FILE-03" style="--i:3;">Choose Disciplines</h2>
+            <p><strong>Disciplines</strong> represent your training and expertise in Starfleet operations. Distribute <strong>6 points</strong> among the six Disciplines, with a minimum of <strong>1</strong> and a maximum of <strong>4</strong> at creation.</p>
+
+            <table class="skill-table">
+                <thead>
+                    <tr>
+                        <th>Discipline</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Command</strong> <span class="skill-attr">PRSN</span></td>
+                        <td>Leadership, diplomacy, tactical decision-making, coordinating teams</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Conn</strong> <span class="skill-attr">DARING</span></td>
+                        <td>Piloting ships, navigation, evasive maneuvers, helm operations</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Security</strong> <span class="skill-attr">FTNS</span></td>
+                        <td>Combat training, threat assessment, tactical operations, ship defense</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Engineering</strong> <span class="skill-attr">CTRL</span></td>
+                        <td>Systems repair, warp drive, power distribution, technical problems</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Science</strong> <span class="skill-attr">RSNS</span></td>
+                        <td>Research, analysis, sensors, understanding phenomena, making discoveries</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Medicine</strong> <span class="skill-attr">INSGT</span></td>
+                        <td>Healing, diagnosis, surgery, xenobiology, counseling</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: ROLE -->
+            <h2 data-code="FILE-04" style="--i:4;">Select Role</h2>
+            <p>Your <strong>Role</strong> is your primary duty assignment aboard a Starfleet vessel. It determines your focus, responsibilities, and access to specialized abilities.</p>
+
+            <div class="role-grid">
+                <div class="role-card">
+                    <div class="role-icon">⭐</div>
+                    <div class="role-name">Commanding Officer</div>
+                    <div class="role-sub">Command decisions, tactical strategy, crew coordination</div>
+                </div>
+                <div class="role-card">
+                    <div class="role-icon">🎯</div>
+                    <div class="role-name">Executive Officer</div>
+                    <div class="role-sub">Ship operations, crew management, backup command</div>
+                </div>
+                <div class="role-card">
+                    <div class="role-icon">🚀</div>
+                    <div class="role-name">Operations Manager</div>
+                    <div class="role-sub">Systems coordination, resource allocation, problem-solving</div>
+                </div>
+                <div class="role-card">
+                    <div class="role-icon">🛸</div>
+                    <div class="role-name">Flight Controller</div>
+                    <div class="role-sub">Helm control, navigation, evasive maneuvers</div>
+                </div>
+                <div class="role-card">
+                    <div class="role-icon">🔬</div>
+                    <div class="role-name">Chief Science Officer</div>
+                    <div class="role-sub">Research, sensor analysis, scientific discovery</div>
+                </div>
+                <div class="role-card">
+                    <div class="role-icon">⚙️</div>
+                    <div class="role-name">Chief Engineer</div>
+                    <div class="role-sub">Warp drive, power systems, technical repairs</div>
+                </div>
+                <div class="role-card">
+                    <div class="role-icon">🛡️</div>
+                    <div class="role-name">Chief of Security</div>
+                    <div class="role-sub">Tactical operations, ship defense, threat assessment</div>
+                </div>
+                <div class="role-card">
+                    <div class="role-icon">🏥</div>
+                    <div class="role-name">Chief Medical Officer</div>
+                    <div class="role-sub">Medical care, diagnosis, crew health, counseling</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: DICE SYSTEM -->
+            <h2 data-code="FILE-05" style="--i:5;">Task Resolution Protocol</h2>
+            <p>Star Trek Adventures uses the <strong>2d20 system</strong>. When attempting a task, roll 2d20 and try to roll <strong>equal to or under</strong> your Attribute + Discipline. Each success counts.</p>
+
+            <div class="dice-grid">
+                <div class="dice-item">
+                    <div class="dice-num">2D20</div>
+                    <div class="dice-text">
+                        <strong>Roll the Pool</strong>
+                        Roll two twenty-sided dice. Each die that rolls ≤ (Attribute + Discipline) = 1 success.
+                    </div>
+                </div>
+                <div class="dice-item">
+                    <div class="dice-num">TN</div>
+                    <div class="dice-text">
+                        <strong>Target Number</strong>
+                        Your Attribute + Discipline (e.g., Reason 10 + Science 3 = TN 13).
+                    </div>
+                </div>
+                <div class="dice-item">
+                    <div class="dice-num">1+</div>
+                    <div class="dice-text">
+                        <strong>Successes Needed</strong>
+                        Most tasks require 1 success. Complex tasks need 2–5 successes.
+                    </div>
+                </div>
+                <div class="dice-item">
+                    <div class="dice-num">⚠</div>
+                    <div class="dice-text">
+                        <strong>Complications</strong>
+                        Roll a 20 = complication. Something goes wrong even if you succeed.
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-panel" data-label="// MOMENTUM SYSTEM">
+                <p style="margin-bottom: 0.5rem; font-size: 0.92rem; line-height: 1.8;">
+                    <strong>Momentum</strong> is the party resource that tracks tactical advantage. Spend Momentum to: add extra d20s to rolls, obtain information, create advantages, or activate special abilities. Gain Momentum by rolling 1 on a d20 (critical success) or by generating extra successes beyond what's needed. <strong>Threat</strong> is the GM's counter-resource — complications and failures add to the Threat pool, which the GM spends to create challenges.
+                </p>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: FOCUSES -->
+            <h2 data-code="FILE-06" style="--i:6;">Select Focuses</h2>
+            <p><strong>Focuses</strong> are specific areas of expertise within Disciplines. When a Focus applies, you score critical successes (generate 2 successes) on rolls of <strong>1</strong>. Choose <strong>6 Focuses</strong> at character creation.</p>
+
+            <div class="data-panel" data-label="// FOCUS EXAMPLES">
+                <p style="font-size: 0.88rem; line-height: 1.7; margin-bottom: 0.5rem;"><strong>Command:</strong> Composure, Diplomacy, Lead by Example, Inspiration, Starship Tactics</p>
+                <p style="font-size: 0.88rem; line-height: 1.7; margin-bottom: 0.5rem;"><strong>Conn:</strong> Evasive Action, Helm Operations, Navigation, Shuttlecraft, Warp Speed Calculations</p>
+                <p style="font-size: 0.88rem; line-height: 1.7; margin-bottom: 0.5rem;"><strong>Security:</strong> Hand-to-Hand Combat, Infiltration, Phasers, Small Unit Tactics, Threat Assessment</p>
+                <p style="font-size: 0.88rem; line-height: 1.7; margin-bottom: 0.5rem;"><strong>Engineering:</strong> Computers, EPS Power Grid, Structural Engineering, Transporters, Warp Engines</p>
+                <p style="font-size: 0.88rem; line-height: 1.7; margin-bottom: 0.5rem;"><strong>Science:</strong> Astrophysics, Botany, Genetics, Quantum Mechanics, Sensors, Tricorder Analysis</p>
+                <p style="font-size: 0.88rem; line-height: 1.7; margin-bottom: 0;"><strong>Medicine:</strong> Emergency Medicine, Infectious Diseases, Psychology, Surgery, Xenobiology</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: VALUES -->
+            <h2 data-code="FILE-07" style="--i:7;">Define Values</h2>
+            <p><strong>Values</strong> are core beliefs that define your character. You have <strong>4 Values</strong> — short phrases that guide your decisions. Invoking a Value lets you re-roll dice but creates a complication. Challenging a Value earns Determination.</p>
+
+            <h3>Value Examples</h3>
+            <ul>
+                <li>"The needs of the many outweigh the needs of the few"</li>
+                <li>"Seek out new life and new civilizations"</li>
+                <li>"Never leave a crewmate behind"</li>
+                <li>"There are always alternatives to violence"</li>
+                <li>"The Prime Directive is absolute"</li>
+                <li>"Logic is the beginning of wisdom, not the end"</li>
+            </ul>
+
+            <div class="alert-box">
+                <span class="alert-label">⚠ VALUES IN PLAY</span>
+                <strong>Values create drama.</strong> When you invoke a Value to help your roll, you add a Complication — something goes wrong narratively. When your Value conflicts with the mission, you can challenge it to gain Determination (powerful meta-currency). Values aren't just flavor — they're mechanical and drive roleplay.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: TALENTS -->
+            <h2 data-code="FILE-08" style="--i:8;">Choose Talents</h2>
+            <p><strong>Talents</strong> are special abilities that grant unique benefits. Choose <strong>4 Talents</strong> at creation — typically one from your Species, one from your Role, and two general Talents.</p>
+
+            <h3>Sample Talents</h3>
+            <ul>
+                <li><strong>Advisor (Role):</strong> You may assist allies by spending 1 Momentum to grant them an automatic success</li>
+                <li><strong>Dauntless (General):</strong> When you attempt a task, you may choose to use Daring instead of another Attribute</li>
+                <li><strong>Follow My Lead (Command):</strong> When you succeed at a Command task, generate 1 bonus Momentum</li>
+                <li><strong>Intense Scrutiny (Vulcan):</strong> When you succeed at a Science task, gain 1 bonus Momentum for further investigation</li>
+                <li><strong>Jury-Rig (Engineering):</strong> Spend 2 Momentum to repair a damaged system temporarily</li>
+                <li><strong>Triage (Medicine):</strong> Treat multiple patients simultaneously without penalty</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: STRESS & DETERMINATION -->
+            <h2 data-code="FILE-09" style="--i:9;">Stress &amp; Determination</h2>
+            <p>Characters have two key resources:</p>
+
+            <h3>Stress</h3>
+            <ul>
+                <li><strong>Stress = Fitness + Security Discipline</strong></li>
+                <li>Represents physical and mental resilience</li>
+                <li>Reduce Stress when taking damage or suffering consequences</li>
+                <li>At 0 Stress, you're incapacitated</li>
+                <li>Recovers through medical treatment or rest</li>
+            </ul>
+
+            <h3>Determination</h3>
+            <ul>
+                <li>Begin each session with <strong>1 Determination point</strong></li>
+                <li>Gain more by challenging your Values, accepting story complications, or heroic moments</li>
+                <li>Spend Determination to: re-roll all dice, avoid being taken out, create a perfect moment, or activate powerful effects</li>
+                <li>Determination is precious — spend it wisely</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: FINISHING -->
+            <h2 data-code="FILE-10" style="--i:10;">Complete Personnel File</h2>
+
+            <h3>Personal Details</h3>
+            <ul>
+                <li><strong>Name:</strong> Full legal name and any nicknames</li>
+                <li><strong>Rank:</strong> Typically Ensign or Lieutenant for player characters</li>
+                <li><strong>Assignment:</strong> Current ship and duty station</li>
+                <li><strong>Homeworld:</strong> Where were you born?</li>
+                <li><strong>Age:</strong> How long have you been in service?</li>
+                <li><strong>Physical Description:</strong> What do you look like?</li>
+            </ul>
+
+            <h3>Backstory</h3>
+            <p>Work through <strong>Lifepath</strong> to generate your character's history:</p>
+            <ul>
+                <li><strong>Environment:</strong> Where did you grow up? (Homeworld, colony, starship, etc.)</li>
+                <li><strong>Upbringing:</strong> What was your childhood like?</li>
+                <li><strong>Starfleet Academy Track:</strong> What did you specialize in at the Academy?</li>
+                <li><strong>Career Events:</strong> What major events shaped your career?</li>
+            </ul>
+
+            <h3>Crew Connections</h3>
+            <ul>
+                <li>Establish at least one connection with another PC</li>
+                <li>How do you know them? Do you trust them?</li>
+                <li>What shared history do you have?</li>
+            </ul>
+
+            <div class="data-panel" data-label="// FINAL CHECKLIST" style="border-color: var(--lcars-orange); margin-top: 1.75rem;">
+                <ul style="margin: 0 0 0 1.25rem; list-style: none; line-height: 1.9; font-size: 0.92rem;">
+                    <li>☐ Species selected and Traits noted</li>
+                    <li>☐ Six Attributes assigned (standard array or point buy)</li>
+                    <li>☐ Six Disciplines distributed (6 points total)</li>
+                    <li>☐ Role chosen and noted</li>
+                    <li>☐ Six Focuses selected</li>
+                    <li>☐ Four Values defined</li>
+                    <li>☐ Four Talents chosen</li>
+                    <li>☐ Stress calculated (Fitness + Security)</li>
+                    <li>☐ Determination set to 1</li>
+                    <li>☐ Equipment and uniform issued</li>
+                    <li>☐ Lifepath completed</li>
+                    <li>☐ Personal details and backstory written</li>
+                    <li>☐ Crew connections established</li>
+                    <li>☐ Ready for duty</li>
+                </ul>
+            </div>
+
+            <div class="alert-box" style="margin-top: 2rem; border-color: var(--lcars-blue); background: rgba(153,153,255,0.06);">
+                <span class="alert-label" style="color: var(--lcars-blue);">⭐ STARFLEET COMMAND</span>
+                You are now a member of Starfleet — an organization dedicated to exploration, diplomacy, and the defense of the Federation. Your mission will take you beyond known space, into situations that test your skills, your ethics, and your courage. <strong>Remember the ideals you serve. Live long and prosper.</strong>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-text">
+                <div class="footer-motto">To Boldly Go</div>
+                <div class="footer-sub">Star Trek Adventures 2E // Modiphius Entertainment // 2D20 System</div>
+            </div>
+            <div class="bottom-bar">
+                <div class="bottom-left">
+                    <div class="bottom-block bb1"></div>
+                    <div class="bottom-block bb2"></div>
+                    <div class="bottom-block bb3"></div>
+                    <div class="bottom-block bb4"></div>
+                </div>
+                <div class="bottom-right"></div>
+            </div>
+        </footer>
+
+    </div>
+    </body>
+</div>
+</html>

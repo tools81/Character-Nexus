@@ -127,9 +127,6 @@ const handleInputChange = (
     return;
   }
 
-  console.log("Target:", event.target);
-  console.log("Value:", event.target.value);
-
   setValue(event.target.name, event.target.value, {
     shouldDirty: true,
     shouldTouch: true,

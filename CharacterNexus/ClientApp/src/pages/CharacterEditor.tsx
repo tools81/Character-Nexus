@@ -169,7 +169,7 @@ const CharacterEditor: React.FC = () => {
     console.log("Data: ", data);
     await dispatch(saveCharacter({ rulesetName: currentRuleset.name, characterData: data, imageFile: imageData ?? undefined }));
 
-    //navigate("/ruleset");
+    navigate("/ruleset");
   };
 
   // Field rendering helper
@@ -350,6 +350,7 @@ const CharacterEditor: React.FC = () => {
               count={field.count}
               minimum={field.minimum}
               includeLabel={includeLabel}
+              defaultValue={field.default}
               label={field.label}
               disabled={disabledMap?.[field.name] === true}
               visible={isVisible(field.name)}

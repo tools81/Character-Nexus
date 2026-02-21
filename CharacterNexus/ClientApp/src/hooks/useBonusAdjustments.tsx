@@ -13,6 +13,8 @@ export function useBonusAdjustments(
     for (const adjustment of bonusAdjustments) {
       handleSetValue(adjustment.type, adjustment.name, adjustment.value);
     }
+
+    console.log("Bonus Adjustments:", bonusAdjustments);
   }, [bonusAdjustments]);
 
   const handleSetValue = (type: string, name: string, bonusValue: number) => {

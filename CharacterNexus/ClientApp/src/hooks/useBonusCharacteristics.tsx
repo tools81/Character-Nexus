@@ -12,8 +12,19 @@ export function useBonusCharacteristics(
     if (!Array.isArray(bonusCharacteristics)) return;
 
     for (const characteristic of bonusCharacteristics) {
+      const periodIndex: number = characteristic.value.indexOf(".");
+
+      if (periodIndex > -1)
+      {
+        // If the value of the choice string contains a period, treat it as a sub name for an array. Use the value after the period to set the field.
+        characteristic.type = `${characteristic.type}.${characteristic.value.substring(0, periodIndex)}`;
+        characteristic.value = characteristic.value.substring(periodIndex + 1);
+      }
+
       handleSetFieldValue(characteristic.type, characteristic.value);
     }
+
+    console.log("Bonus Characteristics:", bonusCharacteristics);
   }, [bonusCharacteristics]);
 
   const handleSetFieldValue = (fieldName: string, choice: string) => {
@@ -27,7 +38,7 @@ export function useBonusCharacteristics(
     if (Array.isArray(currentValue)) {
       const exists = currentValue.some(
         (v: any) => v === choice || v?.value === choice
-      );
+      );      
 
       if (!exists) {
         setValue(

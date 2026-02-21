@@ -204,6 +204,18 @@ textarea {
   cursor: not-allowed;
 }
 
+.progressive-radio input:disabled:checked + .radio-ui {
+  background-color: #adb5bd; /* grey */
+  border-color: #adb5bd;
+  transform: scale(1);
+  cursor: not-allowed;
+}
+
+.progressive-radio.is-disabled {
+  pointer-events: none;
+  opacity: 0.75;
+}
+
 
 @keyframes slideInY {
   to {

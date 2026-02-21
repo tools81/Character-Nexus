@@ -231,7 +231,7 @@ namespace VampireTheMasquerade
                                 throw new JsonException("Expected StartObject token for powers");
                             }
 
-                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.Marvel.Json.Powers.json"))
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.VampireTheMasquerade.Json.Powers.json"))
                             {
                                 using (var powersReader = new StreamReader(stream))
                                 {
@@ -315,7 +315,7 @@ namespace VampireTheMasquerade
                                 throw new JsonException("Expected StartArray token for rituals");
                             }
 
-                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.Marvel.Json.Rituals.json"))
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.VampireTheMasquerade.Json.Rituals.json"))
                             {
                                 using (var ritualsReader = new StreamReader(stream))
                                 {
@@ -356,9 +356,12 @@ namespace VampireTheMasquerade
                                         reader.Read();
                                         var value = int.Parse(reader.Value.ToString());
 
-                                        var found = backgrounds.Find(p => p.Name.ToLower() == propName.ToLower());
-                                        found.Value = value;
-                                        character.Backgrounds.Add(found);
+                                        if (value > 0)
+                                        {
+                                            var found = backgrounds.Find(p => p.Name.ToLower() == propName.ToLower());
+                                            found.Value = value;
+                                            character.Backgrounds.Add(found);
+                                        }
                                     }
                                 }
                             }
@@ -384,9 +387,12 @@ namespace VampireTheMasquerade
                                         reader.Read();
                                         var value = int.Parse(reader.Value.ToString());
 
-                                        var found = merits.Find(p => p.Name.ToLower() == propName.ToLower());
-                                        found.Value = value;
-                                        character.Merits.Add(found);
+                                        if (value > 0)
+                                        {
+                                            var found = merits.Find(p => p.Name.ToLower() == propName.ToLower());
+                                            found.Value = value;
+                                            character.Merits.Add(found);
+                                        }
                                     }
                                 }
                             }
@@ -412,9 +418,12 @@ namespace VampireTheMasquerade
                                         reader.Read();
                                         var value = int.Parse(reader.Value.ToString());
 
-                                        var found = flaws.Find(p => p.Name.ToLower() == propName.ToLower());
+                                        if (value > 0)
+                                        {
+                                            var found = flaws.Find(p => p.Name.ToLower() == propName.ToLower());
                                         found.Value = value;
                                         character.Flaws.Add(found);
+                                        }          
                                     }
                                 }
                             }
@@ -425,7 +434,7 @@ namespace VampireTheMasquerade
                                 throw new JsonException("Expected StartArray token for weapons");
                             }
 
-                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.Marvel.Json.Weapons.json"))
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.VampireTheMasquerade.Json.Weapons.json"))
                             {
                                 using (var weaponsReader = new StreamReader(stream))
                                 {
@@ -451,7 +460,7 @@ namespace VampireTheMasquerade
                                 throw new JsonException("Expected StartArray token for armors");
                             }
 
-                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.Marvel.Json.Armors.json"))
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.VampireTheMasquerade.Json.Armors.json"))
                             {
                                 using (var armorsReader = new StreamReader(stream))
                                 {
@@ -477,7 +486,7 @@ namespace VampireTheMasquerade
                                 throw new JsonException("Expected StartArray token for gears");
                             }
 
-                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.Marvel.Json.Gears.json"))
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.VampireTheMasquerade.Json.Gears.json"))
                             {
                                 using (var gearsReader = new StreamReader(stream))
                                 {

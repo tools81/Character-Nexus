@@ -55,6 +55,7 @@ namespace EverydayHeroes
         public int InfluencePoints { get; set; }
         public int LuckPoints { get; set; }
         public bool Inspiration { get; set; }
+        public Choice Choice { get; set; } = new Choice();
         public CharacterSegment CharacterSegment { get => GetCharacterSegment(); }
         public string CharacterSheet { get; set; }
 

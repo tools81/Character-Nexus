@@ -21,6 +21,7 @@ namespace DarkCrystal
         public string Notes { get; set; } = string.Empty;
         public CharacterSegment CharacterSegment { get => GetCharacterSegment(); }
         public string CharacterSheet { get; set; } = string.Empty;
+        public Choice Choice { get; set; } = new Choice();
 
         public byte[] BuildCharacterSheet()
         {

@@ -250,8 +250,26 @@ namespace DarkCrystal
                                 }
                             }
                             break;
+                        //Storing the user choices selected in the UI
                         case "choice":
-                            while (reader.Read() && reader.TokenType != JsonToken.EndObject) {};
+                            if (reader.TokenType != JsonToken.StartObject)
+                            {
+                                throw new JsonException("Expected StartObject token for flaws");
+                            }
+
+                            while (reader.Read() && reader.TokenType != JsonToken.EndObject)
+                            {
+                                if (reader.TokenType != JsonToken.PropertyName)
+                                    continue;
+
+                                string sectionName = (string)reader.Value!;
+                                reader.Read(); // StartObject
+
+                                var sectionDict = new Dictionary<string, List<object?>>();
+                                ReadSection(reader, sectionDict);
+
+                                character.Choice.Sections[sectionName] = sectionDict;        
+                            }
                         break;
                     }
                 }
@@ -274,6 +292,28 @@ namespace DarkCrystal
                     { "Skills", Newtonsoft.Json.Linq.JArray.FromObject(character.Skills, serializer) },
                     { "Clan", Newtonsoft.Json.Linq.JObject.FromObject(character.Clan, serializer) }
                 };
+            }
+        }
+
+        private static void ReadSection(JsonReader reader,
+        Dictionary<string, List<object?>> sectionDict)
+        {
+            while (reader.Read() && reader.TokenType != JsonToken.EndObject)
+            {
+                if (reader.TokenType != JsonToken.PropertyName)
+                    continue;
+
+                string propertyName = (string)reader.Value!;
+                reader.Read(); // StartArray
+
+                var values = new List<object?>();
+
+                while (reader.Read() && reader.TokenType != JsonToken.EndArray)
+                {
+                    values.Add(reader.Value);
+                }
+
+                sectionDict[propertyName] = values;
             }
         }
     }

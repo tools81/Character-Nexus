@@ -12,6 +12,7 @@ import { BonusCharacteristics } from "../types/BonusCharacteristic";
 import { UserChoices } from "../types/UserChoice";
 import { toCamelCase } from "../utils/toCamelCase";
 import { handleRemoveBonusAdjustment, handleRemoveFieldValue } from "../hooks/useBonus";
+import { DropdownDivider } from "react-bootstrap";
 
 interface Props {
   register: UseFormRegister<FieldValues>;
@@ -171,6 +172,7 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
                     />
                   )}
                 </div>
+                <DropdownDivider />
               </div>
             ))}
           </div>

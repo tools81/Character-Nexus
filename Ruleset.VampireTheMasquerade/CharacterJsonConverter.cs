@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.IO;
 using System.Reflection;
 using Utility;
@@ -37,70 +38,70 @@ namespace VampireTheMasquerade
                         case "id":
                             var id = reader.Value.ToString();
                             character.Id = id == string.Empty ? Guid.NewGuid() : new Guid(id);
-                            break;
+                        break;
                         case "image":
                             character.Image = reader.Value.ToString();
-                            break;
+                        break;
                         case "name":
                             character.Name = reader.Value.ToString();
-                            break;
+                        break;
                         case "notes":
                             character.Notes = reader.Value.ToString();
-                            break;
+                        break;
                         case "concept":
                             character.Concept = reader.Value.ToString();
-                            break;
+                        break;
                         case "age":
                             character.Age = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
-                            break;
+                        break;
                         case "dateOfBirth":
                             character.DateOfBirth = DateTime.TryParse(reader.Value.ToString(), out dateTime) ? dateTime : DateTime.MinValue;
-                            break;
+                        break;
                         case "dateOfDeath":
                             character.DateOfDeath = DateTime.TryParse(reader.Value.ToString(), out dateTime) ? dateTime : DateTime.MinValue;
-                            break;
+                        break;
                         case "distinguishingFeatures":
                             character.DistinguishingFeatures = reader.Value.ToString();
-                            break;
+                        break;
                         case "appearance":
                             character.Appearance = reader.Value.ToString();
-                            break;
+                        break;
                         case "history":
                             character.History = reader.Value.ToString();
-                            break;
+                        break;
                         case "chronicle":
                             character.Chronicle = reader.Value.ToString();
-                            break;
+                        break;
                         case "ambition":
                             character.Ambition = reader.Value.ToString();
-                            break;
+                        break;
                         case "sire":
                             character.Sire = reader.Value.ToString();
-                            break;
+                        break;
                         case "desire":
                             character.Desire = reader.Value.ToString();
-                            break;
+                        break;
                         case "health":
                             character.Health = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
-                            break;
+                        break;
                         case "willpower":
                             character.Willpower = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
-                            break;
+                        break;
                         case "humanity":
                             character.Humanity = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
-                            break;
+                        break;
                         case "hunger":
                             character.Hunger = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
-                            break;
+                        break;
                         case "bloodPotency":
                             character.BloodPotency = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
-                            break;
+                        break;
                         case "totalExperience":
                             character.TotalExperience = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
-                            break;
+                        break;
                         case "spentExperience":
                             character.SpentExperience = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
-                            break;
+                        break;
                         case "attributes":
                             if (reader.TokenType != JsonToken.StartObject)
                             {
@@ -128,7 +129,7 @@ namespace VampireTheMasquerade
                                     }
                                 }
                             }
-                            break;
+                        break;
                         case "clan":
                             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.VampireTheMasquerade.Json.Clans.json"))
                             {
@@ -145,7 +146,7 @@ namespace VampireTheMasquerade
                                     character.Clan = clan;
                                 }
                             }
-                            break;
+                        break;
                         case "predator":
                             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.VampireTheMasquerade.Json.Predators.json"))
                             {
@@ -162,7 +163,7 @@ namespace VampireTheMasquerade
                                     character.Predator = predator;
                                 }
                             }
-                            break;
+                        break;
                         case "generation":
                             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.VampireTheMasquerade.Json.Generations.json"))
                             {
@@ -179,7 +180,7 @@ namespace VampireTheMasquerade
                                     character.Generation = generation;
                                 }
                             }
-                            break;
+                        break;
                         case "coterie":
                             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.VampireTheMasquerade.Json.Coteries.json"))
                             {
@@ -196,7 +197,7 @@ namespace VampireTheMasquerade
                                     character.Coterie = coterie;
                                 }
                             }
-                            break;
+                        break;
                         case "disciplines":
                             if (reader.TokenType != JsonToken.StartObject)
                             {
@@ -224,7 +225,7 @@ namespace VampireTheMasquerade
                                     }
                                 }
                             }
-                            break;
+                        break;
                         case "powers":
                             if (reader.TokenType != JsonToken.StartObject)
                             {
@@ -254,7 +255,7 @@ namespace VampireTheMasquerade
                                     }
                                 }
                             }
-                            break;
+                        break;
                         case "skills":
                             if (reader.TokenType != JsonToken.StartObject)
                             {
@@ -282,7 +283,7 @@ namespace VampireTheMasquerade
                                     }
                                 }
                             }
-                            break;
+                        break;
                         case "specialties":
                             if (reader.TokenType != JsonToken.StartObject)
                             {
@@ -300,15 +301,26 @@ namespace VampireTheMasquerade
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndObject)
                                     {
-                                        var propName = reader.Value.ToString();
-                                        reader.Read();
+                                        if (reader.TokenType == JsonToken.StartArray)
+                                        {
+                                            reader.Read();
 
-                                        var found = specialties.Find(p => p.Name.ToLower() == propName.ToLower());
-                                        character.Specialties.Add(found);
+                                            if (reader.TokenType != JsonToken.EndArray)
+                                            {
+                                                reader.Read();
+                                                reader.Read();
+
+                                                var found = specialties.Find(w => w.Name.ToLower() == reader.Value.ToString().ToLower());
+
+                                                reader.Read();
+
+                                                character.Specialties.Add(found);                                                
+                                            }
+                                        }
                                     }
                                 }
                             }
-                            break;
+                        break;
                         case "rituals":
                             if (reader.TokenType != JsonToken.StartArray)
                             {
@@ -326,7 +338,7 @@ namespace VampireTheMasquerade
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        var found = rituals.Find(w => w.Name.ToLower() == (reader.Value.ToString()).ToLower());
+                                        var found = rituals.Find(w => w.Name.ToLower() == reader.Value.ToString().ToLower());
 
                                         reader.Read();
 
@@ -334,7 +346,7 @@ namespace VampireTheMasquerade
                                     }
                                 }
                             }
-                            break;
+                        break;
                         case "backgrounds":
                             if (reader.TokenType != JsonToken.StartObject)
                             {
@@ -365,7 +377,7 @@ namespace VampireTheMasquerade
                                     }
                                 }
                             }
-                            break;
+                        break;
                         case "merits":
                             if (reader.TokenType != JsonToken.StartObject)
                             {
@@ -396,7 +408,7 @@ namespace VampireTheMasquerade
                                     }
                                 }
                             }
-                            break;
+                        break;
                         case "flaws":
                             if (reader.TokenType != JsonToken.StartObject)
                             {
@@ -427,7 +439,7 @@ namespace VampireTheMasquerade
                                     }
                                 }
                             }
-                            break;
+                        break;
                         case "weapons":
                             if (reader.TokenType != JsonToken.StartArray)
                             {
@@ -453,7 +465,7 @@ namespace VampireTheMasquerade
                                     }
                                 }
                             }
-                            break;
+                        break;
                         case "armors":
                             if (reader.TokenType != JsonToken.StartArray)
                             {
@@ -479,7 +491,7 @@ namespace VampireTheMasquerade
                                     }
                                 }
                             }
-                            break;
+                        break;
                         case "gears":
                             if (reader.TokenType != JsonToken.StartArray)
                             {
@@ -505,7 +517,28 @@ namespace VampireTheMasquerade
                                     }
                                 }
                             }
-                            break;
+                        break;
+                        //Storing the user choices selected in the UI
+                        case "choice":
+                            if (reader.TokenType != JsonToken.StartObject)
+                            {
+                                throw new JsonException("Expected StartObject token for flaws");
+                            }
+
+                            while (reader.Read() && reader.TokenType != JsonToken.EndObject)
+                            {
+                                if (reader.TokenType != JsonToken.PropertyName)
+                                    continue;
+
+                                string sectionName = (string)reader.Value!;
+                                reader.Read(); // StartObject
+
+                                var sectionDict = new Dictionary<string, List<object?>>();
+                                ReadSection(reader, sectionDict);
+
+                                character.Choice.Sections[sectionName] = sectionDict;        
+                            }
+                        break;
                     }
                 }
             }
@@ -746,6 +779,28 @@ namespace VampireTheMasquerade
             writer.WriteEndArray();
 
             writer.WriteEndObject();
+        }
+
+        private static void ReadSection(JsonReader reader,
+        Dictionary<string, List<object?>> sectionDict)
+        {
+            while (reader.Read() && reader.TokenType != JsonToken.EndObject)
+            {
+                if (reader.TokenType != JsonToken.PropertyName)
+                    continue;
+
+                string propertyName = (string)reader.Value!;
+                reader.Read(); // StartArray
+
+                var values = new List<object?>();
+
+                while (reader.Read() && reader.TokenType != JsonToken.EndArray)
+                {
+                    values.Add(reader.Value);
+                }
+
+                sectionDict[propertyName] = values;
+            }
         }
     }
 }

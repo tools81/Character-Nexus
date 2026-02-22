@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARFINDER 2E — Pact Worlds Personnel Database</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&family=Russo+One&family=Audiowide&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cyan:         #00E5FF;
+            --cyan-dark:    #0097A7;
+            --magenta:      #FF00FF;
+            --magenta-dark: #AD1AAF;
+            --electric:     #76FF03;
+            --electric-dim: #33691E;
+            --gold:         #FFC107;
+            --gold-dim:     #F57F17;
+            --deep-space:   #0A0E27;
+            --void:         #050814;
+            --panel:        #0D1328;
+            --panel-light:  #1A2332;
+            --border:       #1E3A5F;
+            --text:         #E0F7FA;
+            --text-dim:     #80DEEA;
+            --white:        #FFFFFF;
+            --warning:      #FF6D00;
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Exo 2', sans-serif;
+            background: var(--void);
+            background-image:
+                radial-gradient(circle at 20% 80%, rgba(0,229,255,0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,0,255,0.03) 0%, transparent 50%);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 1.5rem 1rem;
+            position: relative;
+        }
+
+        /* Animated star field */
+        .instr-container body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                radial-gradient(1px 1px at 10% 20%, white, transparent),
+                radial-gradient(1px 1px at 40% 70%, white, transparent),
+                radial-gradient(2px 2px at 80% 30%, rgba(0,229,255,0.8), transparent),
+                radial-gradient(1px 1px at 60% 90%, white, transparent),
+                radial-gradient(2px 2px at 30% 40%, rgba(255,0,255,0.6), transparent),
+                radial-gradient(1px 1px at 90% 60%, white, transparent);
+            background-size: 100% 100%;
+            opacity: 0.3;
+            pointer-events: none;
+            z-index: 0;
+            animation: starTwinkle 4s ease-in-out infinite;
+        }
+
+        @keyframes starTwinkle {
+            0%, 100% { opacity: 0.3; }
+            50%      { opacity: 0.5; }
+        }
+
+        /* ── CONTAINER (Holographic Terminal) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--deep-space);
+            border: 2px solid var(--cyan);
+            position: relative;
+            z-index: 1;
+            box-shadow:
+                0 0 30px rgba(0,229,255,0.3),
+                0 0 60px rgba(0,229,255,0.1),
+                0 20px 80px rgba(0,0,0,0.8),
+                inset 0 0 60px rgba(0,229,255,0.02);
+            animation: bootSequence 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        @keyframes bootSequence {
+            0%   { opacity: 0; transform: scale(0.9); filter: brightness(0) hue-rotate(180deg); }
+            40%  { opacity: 0.5; filter: brightness(3); }
+            70%  { transform: scale(1.02); }
+            100% { opacity: 1; transform: scale(1); filter: brightness(1) hue-rotate(0deg); }
+        }
+
+        /* Holographic scan lines */
+        .instr-container .container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0,229,255,0.03) 2px,
+                    rgba(0,229,255,0.03) 4px
+                );
+            pointer-events: none;
+            z-index: 100;
+            animation: scanlines 8s linear infinite;
+        }
+
+        @keyframes scanlines {
+            from { background-position: 0 0; }
+            to   { background-position: 0 40px; }
+        }
+
+        /* Corner hex decorations */
+        .instr-container .hex-corner {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: var(--cyan);
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+            opacity: 0.4;
+            z-index: 10;
+            box-shadow: 0 0 20px rgba(0,229,255,0.5);
+        }
+
+        .instr-container .hex-corner.tl { top: -20px; left: -20px; }
+        .instr-container .hex-corner.tr { top: -20px; right: -20px; }
+        .instr-container .hex-corner.bl { bottom: -20px; left: -20px; }
+        .instr-container .hex-corner.br { bottom: -20px; right: -20px; }
+
+        /* ── TOP STATUS BAR ── */
+        .instr-container .status-bar {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            padding: 0.6rem 1.5rem;
+            background: var(--panel);
+            border-bottom: 1px solid var(--cyan);
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .instr-container .status-left {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--electric);
+            text-transform: uppercase;
+            text-shadow: 0 0 8px rgba(118,255,3,0.6);
+        }
+
+        .instr-container .status-right {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .instr-container .status-pip {
+            width: 8px;
+            height: 8px;
+            background: var(--electric);
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(118,255,3,0.8);
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50%      { opacity: 0.3; }
+        }
+
+        .instr-container .status-pip:nth-child(2) { animation-delay: 0.3s; }
+        .instr-container .status-pip:nth-child(3) { animation-delay: 0.6s; }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            padding: 2rem 2rem 1.5rem;
+            background: linear-gradient(135deg, var(--panel) 0%, var(--deep-space) 100%);
+            border-bottom: 2px solid var(--magenta);
+            position: relative;
+        }
+
+        /* Planetary orbit decoration */
+        .instr-container header::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 1.5rem;
+            transform: translateY(-50%);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px dashed var(--cyan);
+            opacity: 0.2;
+            animation: orbit 20s linear infinite;
+        }
+
+        @keyframes orbit {
+            from { transform: translateY(-50%) rotate(0deg); }
+            to   { transform: translateY(-50%) rotate(360deg); }
+        }
+
+        .instr-container header::after {
+            content: '◆';
+            position: absolute;
+            top: 50%;
+            right: 3rem;
+            font-size: 1rem;
+            color: var(--magenta);
+            text-shadow: 0 0 15px rgba(255,0,255,0.8);
+            animation: planetOrbit 20s linear infinite;
+        }
+
+        @keyframes planetOrbit {
+            from { transform: translate(0, -50%) rotate(0deg) translateX(40px) rotate(0deg); }
+            to   { transform: translate(0, -50%) rotate(360deg) translateX(40px) rotate(-360deg); }
+        }
+
+        .instr-container .system-tag {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            color: var(--magenta);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(255,0,255,0.6);
+        }
+
+        .instr-container h1 {
+            font-family: 'Russo One', sans-serif;
+            font-size: 4rem;
+            line-height: 0.9;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.3rem;
+            text-shadow:
+                0 0 20px rgba(0,229,255,0.6),
+                0 0 40px rgba(0,229,255,0.3),
+                3px 3px 0 rgba(0,0,0,0.5);
+        }
+
+        .instr-container h1 .star {
+            color: var(--cyan);
+        }
+
+        .instr-container h1 .finder {
+            display: block;
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, var(--magenta), var(--cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .instr-container .edition {
+            font-family: 'Audiowide', cursive;
+            font-size: 1.1rem;
+            letter-spacing: 0.2em;
+            color: var(--electric);
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+            text-shadow: 0 0 10px rgba(118,255,3,0.6);
+        }
+
+        .instr-container .meta-grid {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.4rem 1.5rem;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+        }
+
+        .instr-container .meta-label { color: var(--text-dim); }
+        .instr-container .meta-value { color: var(--cyan); font-weight: 700; }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2rem;
+        }
+
+        /* ── TRANSMISSION BOX ── */
+        .instr-container .transmission {
+            background: var(--panel);
+            border: 2px solid var(--electric);
+            border-left: 6px solid var(--electric);
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2.25rem;
+            font-size: 0.98rem;
+            line-height: 1.9;
+            position: relative;
+            box-shadow:
+                0 0 20px rgba(118,255,3,0.15),
+                inset 0 0 30px rgba(118,255,3,0.03);
+        }
+
+        .instr-container .transmission::before {
+            content: '⟫ INCOMING TRANSMISSION — CHARACTER INITIALIZATION PROTOCOL';
+            position: absolute;
+            top: -0.65rem;
+            left: 1.5rem;
+            background: var(--panel);
+            padding: 0 0.5rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--electric);
+            text-shadow: 0 0 8px rgba(118,255,3,0.6);
+            text-transform: uppercase;
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Audiowide', cursive;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--white);
+            margin: 2.75rem 0 1.25rem;
+            padding: 0.6rem 1rem 0.6rem 0;
+            background: linear-gradient(90deg, var(--panel-light) 0%, transparent 100%);
+            border-left: 6px solid var(--cyan);
+            position: relative;
+            animation: fadeIn 0.4s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.06s);
+            text-shadow: 0 0 15px rgba(0,229,255,0.4);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: attr(data-hex);
+            position: absolute;
+            left: -3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--magenta);
+            text-shadow: 0 0 10px rgba(255,0,255,0.6);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        .instr-container h3 {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 800;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--magenta);
+            margin: 1.75rem 0 0.6rem;
+            text-shadow: 0 0 10px rgba(255,0,255,0.4);
+        }
+
+        .instr-container p {
+            font-size: 0.98rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .instr-container ul, ol { margin: 0.75rem 0 1.25rem 1.35rem; }
+        .instr-container li {
+            font-size: 0.95rem;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { color: var(--cyan); font-weight: 700; }
+        .instr-container em     { color: var(--electric); font-style: normal; }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.25rem 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--cyan), var(--magenta), transparent);
+            box-shadow: 0 0 10px rgba(0,229,255,0.3);
+        }
+
+        /* ── ALERT BOX ── */
+        .instr-container .alert {
+            background: rgba(255,109,0,0.08);
+            border: 1px solid var(--warning);
+            border-left: 4px solid var(--warning);
+            padding: 1.1rem 1.35rem;
+            margin: 1.5rem 0;
+            font-size: 0.92rem;
+            line-height: 1.85;
+        }
+
+        .instr-container .alert-label {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            color: var(--warning);
+            display: block;
+            margin-bottom: 0.35rem;
+            text-transform: uppercase;
+        }
+
+        /* ── DATA DISPLAY ── */
+        .instr-container .data-display {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            position: relative;
+            box-shadow: inset 0 0 20px rgba(0,229,255,0.03);
+        }
+
+        .instr-container .data-display::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -0.6rem;
+            left: 1rem;
+            background: var(--panel);
+            padding: 0 0.5rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--cyan);
+            text-shadow: 0 0 8px rgba(0,229,255,0.6);
+            text-transform: uppercase;
+        }
+
+        /* ── ANCESTRY/CLASS CARDS ── */
+        .instr-container .choice-grid {
+            display: grid;
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .choice-card {
+            background: var(--panel);
+            border: 2px solid var(--border);
+            border-left: 4px solid var(--magenta);
+            padding: 1rem 1.25rem;
+            position: relative;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .instr-container .choice-card:hover {
+            border-color: var(--cyan);
+            box-shadow:
+                0 0 20px rgba(0,229,255,0.2),
+                inset 0 0 30px rgba(0,229,255,0.05);
+        }
+
+        .instr-container .choice-tag {
+            position: absolute;
+            top: -0.7rem;
+            left: 1.25rem;
+            background: var(--magenta);
+            color: var(--white);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            padding: 0.3rem 0.8rem;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px rgba(255,0,255,0.5);
+        }
+
+        .instr-container .choice-name {
+            font-family: 'Audiowide', cursive;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 10px rgba(0,229,255,0.3);
+        }
+
+        .instr-container .choice-desc {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .choice-trait {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--electric);
+            border-top: 1px solid var(--border);
+            padding-top: 0.5rem;
+        }
+
+        /* ── ABILITY GRID ── */
+        .instr-container .ability-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .ability-card {
+            background: var(--panel);
+            border: 2px solid var(--border);
+            border-top: 3px solid var(--cyan);
+            padding: 0.85rem 0.75rem;
+            text-align: center;
+            transition: border-top-color 0.2s;
+        }
+
+        .instr-container .ability-card:hover { 
+            border-top-color: var(--electric);
+            box-shadow: 0 0 15px rgba(118,255,3,0.2);
+        }
+
+        .instr-container .ability-code {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: var(--magenta);
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .ability-name {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--white);
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .ability-desc {
+            font-size: 0.78rem;
+            color: var(--text-dim);
+            line-height: 1.4;
+        }
+
+        /* ── RESOLVE/STAMINA DISPLAY ── */
+        .instr-container .resource-box {
+            background: linear-gradient(135deg, var(--panel) 0%, var(--panel-light) 100%);
+            border: 2px solid var(--electric);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            box-shadow:
+                0 0 30px rgba(118,255,3,0.15),
+                inset 0 0 40px rgba(118,255,3,0.05);
+        }
+
+        .instr-container .resource-title {
+            font-family: 'Russo One', sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--electric);
+            margin-bottom: 0.75rem;
+            text-shadow: 0 0 15px rgba(118,255,3,0.6);
+        }
+
+        .instr-container .resource-formula {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            color: var(--text);
+            margin: 0.75rem 0;
+        }
+
+        .instr-container .resource-desc {
+            font-size: 0.88rem;
+            line-height: 1.7;
+            color: var(--text-dim);
+            margin-top: 0.75rem;
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            padding: 0;
+            background: var(--panel);
+            border-top: 2px solid var(--magenta);
+        }
+
+        .instr-container .footer-inner {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .instr-container .footer-motto {
+            font-family: 'Russo One', sans-serif;
+            font-size: 2rem;
+            color: var(--cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            text-shadow:
+                0 0 20px rgba(0,229,255,0.6),
+                0 0 40px rgba(0,229,255,0.3);
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--text-dim);
+            text-transform: uppercase;
+        }
+
+        .instr-container footer::before {
+            content: '◆ ◆ ◆';
+            display: block;
+            padding: 1rem 0;
+            font-size: 1rem;
+            color: var(--magenta);
+            letter-spacing: 1em;
+            text-shadow: 0 0 15px rgba(255,0,255,0.6);
+        }
+
+        /* Bottom status bar */
+        .instr-container .bottom-bar {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 0.6rem 1.5rem;
+            background: var(--void);
+            border-top: 1px solid var(--cyan);
+            gap: 1rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--text-dim);
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 3rem; }
+            h1 .finder { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            h2::before { display: none; }
+            .ability-grid { grid-template-columns: 1fr; }
+            .choice-card { padding: 1rem; }
+            .content { padding: 1.5rem 1.25rem; }
+            header { padding: 1.5rem 1.25rem; }
+            .bottom-bar { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+        <div class="hex-corner tl"></div>
+        <div class="hex-corner tr"></div>
+        <div class="hex-corner bl"></div>
+        <div class="hex-corner br"></div>
+
+        <!-- STATUS BAR -->
+        <div class="status-bar">
+            <div class="status-left">⟫ SYSTEM ONLINE — AWAITING INPUT</div>
+            <div class="status-right">
+                <div class="status-pip"></div>
+                <div class="status-pip"></div>
+                <div class="status-pip"></div>
+            </div>
+        </div>
+
+        <!-- HEADER -->
+        <header>
+            <div class="system-tag">◆ PACT WORLDS DATABASE // PERSONNEL INITIALIZATION</div>
+            <h1>
+                <span class="star">STAR</span><span class="finder">FINDER</span>
+            </h1>
+            <div class="edition">Second Edition</div>
+            <div class="meta-grid">
+                <span class="meta-label">System:</span>
+                <span class="meta-value">PATHFINDER SECOND EDITION (MODIFIED)</span>
+                <span class="meta-label">Publisher:</span>
+                <span class="meta-value">PAIZO INC.</span>
+                <span class="meta-label">Setting:</span>
+                <span class="meta-value">PACT WORLDS / THE VAST / NEAR SPACE</span>
+                <span class="meta-label">Access Level:</span>
+                <span class="meta-value">AUTHORIZED — STARFINDER SOCIETY</span>
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="transmission">
+                The Pact Worlds await. Whether you're a <strong>soldier</strong> from the Veskarium, a <strong>technomancer</strong> from the Idari, or a <strong>mechanic</strong> with a custom drone, the galaxy needs you. Ancient alien empires. Corporate intrigue. Dimensional rifts. Lost planets. You're a <em>Starfinder</em> — an explorer, adventurer, and problem-solver in a universe full of both. Ready your weapon, charge your spell amp, and plot a course. Adventure awaits among the stars.
+            </div>
+
+            <!-- STEP 1: ANCESTRY -->
+            <h2 data-hex="◇01" style="--i:1;">Select Ancestry</h2>
+            <p>Your <strong>Ancestry</strong> is your species and determines your biology, culture, and natural abilities. The Pact Worlds are home to dozens of sentient species — each with unique traits and perspectives.</p>
+
+            <div class="choice-grid">
+                <div class="choice-card">
+                    <div class="choice-tag">CORE SPECIES</div>
+                    <div class="choice-name">Human</div>
+                    <div class="choice-desc">Adaptable, ambitious, and diverse. Humans spread across the galaxy faster than any other species. They excel at everything and specialize in nothing — or everything.</div>
+                    <div class="choice-trait">Trait: Versatile Heritage (bonus ancestry feat)</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">ANDROID</div>
+                    <div class="choice-name">Android</div>
+                    <div class="choice-desc">Synthetic beings with souls. Created as servants, now free. They struggle with identity and purpose but possess unmatched computational minds.</div>
+                    <div class="choice-trait">Trait: Constructed (don't breathe, bonus to tech)</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">WARRIOR</div>
+                    <div class="choice-name">Vesk</div>
+                    <div class="choice-desc">Reptilian warriors from a militaristic empire. Strong, honorable, and bred for combat. They respect strength and despise weakness.</div>
+                    <div class="choice-trait">Trait: Natural Weapons (claws/bite attacks)</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">SMALL</div>
+                    <div class="choice-name">Ysoki</div>
+                    <div class="choice-desc">Ratfolk scavengers and engineers. Small but clever. They salvage, tinker, and survive through ingenuity. Never underestimate a Ysoki with tools.</div>
+                    <div class="choice-trait">Trait: Cheek Pouches (store items, bonus to tech)</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">PSYCHIC</div>
+                    <div class="choice-name">Lashunta</div>
+                    <div class="choice-desc">Telepathic scholars and warriors. Dimorphic species: Damaya (intellectual) or Korasha (martial). Beauty, charm, and mental power.</div>
+                    <div class="choice-trait">Trait: Limited Telepathy (communicate mentally)</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">INSECTOID</div>
+                    <div class="choice-name">Shirren</div>
+                    <div class="choice-desc">Former hive-mind insectoids now independent. Community-focused, empathetic, and dedicated to cooperation after escaping the Swarm.</div>
+                    <div class="choice-trait">Trait: Cultural Fascination (diplomacy bonus)</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">NOMAD</div>
+                    <div class="choice-name">Kasatha</div>
+                    <div class="choice-desc">Four-armed desert wanderers. Patient, disciplined, and traditional. They value history and honor above innovation.</div>
+                    <div class="choice-trait">Trait: Four-Armed (wield extra weapons/items)</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">NATIVE</div>
+                    <div class="choice-name">Other Ancestries</div>
+                    <div class="choice-desc">Dozens more species exist: Skittermanders (helpful six-armed), Nuar (minotaur-like), Barathu (gas-giant floaters), and more. Choose what fits your concept.</div>
+                    <div class="choice-trait">Trait: Varies by ancestry</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: CLASS -->
+            <h2 data-hex="◇02" style="--i:2;">Choose Your Class</h2>
+            <p>Your <strong>Class</strong> is your training, profession, and combat role. It determines your abilities, skills, and how you approach challenges.</p>
+
+            <div class="choice-grid">
+                <div class="choice-card">
+                    <div class="choice-tag">COMBAT</div>
+                    <div class="choice-name">Soldier</div>
+                    <div class="choice-desc">Elite combatant trained in weapons, tactics, and warfare. You excel in firefights and hit hard with advanced weaponry.</div>
+                    <div class="choice-trait">Key Ability: Strength or Dexterity // Combat Style specialization</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">TECH + COMBAT</div>
+                    <div class="choice-name">Solarian</div>
+                    <div class="choice-desc">Stellar warrior channeling cosmic power. Manifest solar armor or weapons. Balance between photon (offense) and graviton (defense).</div>
+                    <div class="choice-trait">Key Ability: Charisma // Stellar Mode (photon/graviton)</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">TECH EXPERT</div>
+                    <div class="choice-name">Mechanic</div>
+                    <div class="choice-desc">Engineer with a custom drone or AI. Hack systems, repair tech, and build gadgets. Your drone is your partner.</div>
+                    <div class="choice-trait">Key Ability: Intelligence // Drone or AI companion</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">MAGIC</div>
+                    <div class="choice-name">Technomancer</div>
+                    <div class="choice-desc">Blend technology and magic. Hack with spells. Empower tech with arcane energy. The impossible becomes possible.</div>
+                    <div class="choice-trait">Key Ability: Intelligence // Spellcasting + tech hacking</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">PSYCHIC</div>
+                    <div class="choice-name">Mystic</div>
+                    <div class="choice-desc">Divine spellcaster connecting to cosmic forces. Heal, support, and access profound knowledge through your spiritual connection.</div>
+                    <div class="choice-trait">Key Ability: Wisdom // Spellcasting + healing</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">STEALTH</div>
+                    <div class="choice-name">Operative</div>
+                    <div class="choice-desc">Spy, thief, assassin. Specialize in stealth, precision strikes, and skills. You're the scalpel, not the hammer.</div>
+                    <div class="choice-trait">Key Ability: Dexterity // Trick Attack for massive damage</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">SUPPORT</div>
+                    <div class="choice-name">Envoy</div>
+                    <div class="choice-desc">Leader, diplomat, and skill specialist. Grant bonuses to allies, talk your way out of anything, excel at every skill.</div>
+                    <div class="choice-trait">Key Ability: Charisma // Improvisations (team buffs)</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">HYBRID</div>
+                    <div class="choice-name">Witchwarper</div>
+                    <div class="choice-desc">Reality manipulator drawing on infinite alternate timelines. Twist probability, alter outcomes, reshape existence with magic.</div>
+                    <div class="choice-trait">Key Ability: Charisma // Spellcasting + reality warping</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: ABILITY SCORES -->
+            <h2 data-hex="◇03" style="--i:3;">Assign Ability Scores</h2>
+            <p>Every character has <strong>six Ability Scores</strong>. Start with <strong>10 in each</strong>. Apply your Ancestry boosts, Background boosts, Class boost, and four free boosts at 1st level.</p>
+
+            <div class="ability-grid">
+                <div class="ability-card">
+                    <div class="ability-code">STR</div>
+                    <div class="ability-name">Strength</div>
+                    <div class="ability-desc">Physical power, melee combat</div>
+                </div>
+                <div class="ability-card">
+                    <div class="ability-code">DEX</div>
+                    <div class="ability-name">Dexterity</div>
+                    <div class="ability-desc">Agility, ranged combat, Reflex</div>
+                </div>
+                <div class="ability-card">
+                    <div class="ability-code">CON</div>
+                    <div class="ability-name">Constitution</div>
+                    <div class="ability-desc">Toughness, health, endurance</div>
+                </div>
+                <div class="ability-card">
+                    <div class="ability-code">INT</div>
+                    <div class="ability-name">Intelligence</div>
+                    <div class="ability-desc">Logic, skills, tech, some magic</div>
+                </div>
+                <div class="ability-card">
+                    <div class="ability-code">WIS</div>
+                    <div class="ability-name">Wisdom</div>
+                    <div class="ability-desc">Awareness, Will, some magic</div>
+                </div>
+                <div class="ability-card">
+                    <div class="ability-code">CHA</div>
+                    <div class="ability-name">Charisma</div>
+                    <div class="ability-desc">Personality, leadership, some magic</div>
+                </div>
+            </div>
+
+            <div class="data-display" data-label="ABILITY BOOST SYSTEM">
+                <p style="margin-bottom: 0.5rem;"><strong>How Boosts Work:</strong></p>
+                <ul style="margin: 0 0 0 1.5rem; line-height: 1.8; font-size: 0.92rem;">
+                    <li>Each boost increases an ability score by +2 (up to 18)</li>
+                    <li>Your <strong>Ancestry</strong> grants 2 specific boosts (and sometimes a flaw)</li>
+                    <li>Your <strong>Background</strong> grants 2 ability boosts</li>
+                    <li>Your <strong>Class</strong> grants 1 key ability boost</li>
+                    <li>You get <strong>4 free boosts</strong> to assign wherever you want</li>
+                    <li>You cannot boost the same ability more than once from the same source</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: BACKGROUND -->
+            <h2 data-hex="◇04" style="--i:4;">Select Background</h2>
+            <p>Your <strong>Background</strong> represents your life before becoming a Starfinder. It grants ability boosts, a skill feat, and defines your history.</p>
+
+            <h3>Sample Backgrounds</h3>
+            <ul>
+                <li><strong>Corporate Agent:</strong> You worked for a megacorp. Deception or Diplomacy trained.</li>
+                <li><strong>Bounty Hunter:</strong> You tracked targets for credits. Survival or Intimidation trained.</li>
+                <li><strong>Street Rat:</strong> You survived in the undercity. Stealth or Thievery trained.</li>
+                <li><strong>Colonist:</strong> You helped settle new worlds. Athletics or Nature trained.</li>
+                <li><strong>Scholar:</strong> You studied at an institution. Any Lore skill trained.</li>
+                <li><strong>Spacefarer:</strong> You grew up on ships. Piloting or Engineering trained.</li>
+                <li><strong>Mercenary:</strong> You fought for whoever paid. Warfare Lore or Athletics trained.</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: SKILLS -->
+            <h2 data-hex="◇05" style="--i:5;">Train Skills</h2>
+            <p>Skills represent specific areas of expertise. Your class grants skill ranks. Additional ranks come from Intelligence modifier and Background.</p>
+
+            <div class="data-display" data-label="SKILL PROFICIENCY RANKS">
+                <p style="font-size: 0.92rem; line-height: 1.8; margin-bottom: 0.75rem;">
+                    <strong>Untrained:</strong> 0 // <strong>Trained:</strong> Level + 2 // <strong>Expert:</strong> Level + 4 // <strong>Master:</strong> Level + 6 // <strong>Legendary:</strong> Level + 8
+                </p>
+                <p style="font-size: 0.88rem; line-height: 1.7; margin-bottom: 0;">
+                    Your class determines initial trained skills. Most classes grant 4-8 trained skills at 1st level plus additional from your Intelligence modifier.
+                </p>
+            </div>
+
+            <h3>Key Skills</h3>
+            <p style="font-size: 0.9rem; line-height: 1.7;">
+                <strong>Physical:</strong> Acrobatics, Athletics<br>
+                <strong>Social:</strong> Deception, Diplomacy, Intimidation<br>
+                <strong>Mental:</strong> Lore (various), Medicine, Nature, Occultism, Religion, Society<br>
+                <strong>Tech:</strong> Computers, Engineering, Piloting<br>
+                <strong>Subterfuge:</strong> Stealth, Thievery
+            </p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: FEATS -->
+            <h2 data-hex="◇06" style="--i:6;">Choose Feats</h2>
+            <p>At 1st level, you gain multiple feats: <strong>Ancestry Feat</strong>, <strong>Background Skill Feat</strong>, <strong>Class Feat</strong>, and <strong>General Feat</strong>. Feats grant unique abilities and customize your character.</p>
+
+            <div class="alert">
+                <span class="alert-label">⚠ FEAT SELECTION</span>
+                <strong>Feats are how you specialize.</strong> Your Class Feats make you unique within your class. General Feats provide utility. Skill Feats unlock expert maneuvers. Choose feats that support your concept and playstyle. You'll gain more feats every level.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: HIT POINTS & RESOURCES -->
+            <h2 data-hex="◇07" style="--i:7;">Calculate Hit Points &amp; Resources</h2>
+
+            <div class="resource-box">
+                <div class="resource-title">HIT POINTS (HP)</div>
+                <div class="resource-formula">
+                    Ancestry HP + Class HP + Constitution Modifier
+                </div>
+                <div class="resource-desc">
+                    Example: Human (10 HP) + Soldier (10 HP) + Con 16 (+3) = 23 HP at 1st level. Gain additional HP every level.
+                </div>
+            </div>
+
+            <h3>Stamina Points (SP)</h3>
+            <p>Starfinder 2E uses <strong>Stamina Points</strong> for temporary damage absorption. You have <strong>SP equal to your Constitution modifier + your class's SP per level</strong>. Stamina recovers quickly with 10-minute rests. HP is more serious and requires longer rest or healing.</p>
+
+            <h3>Resolve Points (RP)</h3>
+            <p><strong>Resolve Points</strong> represent determination and luck. You have <strong>RP equal to 1 + your key ability modifier</strong> (minimum 1). Spend Resolve to:</p>
+            <ul>
+                <li>Regain Stamina (1 RP = all SP recovered)</li>
+                <li>Stabilize when dying (1 RP to avoid death)</li>
+                <li>Activate certain class features</li>
+            </ul>
+            <p>Resolve recovers after an 8-hour rest.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: EQUIPMENT -->
+            <h2 data-hex="◇08" style="--i:8;">Acquire Equipment</h2>
+            <p>You start with <strong>1,000 credits</strong> to purchase gear. Buy weapons, armor, tech, and supplies. Your class and concept determine priorities.</p>
+
+            <h3>Essential Gear</h3>
+            <ul>
+                <li><strong>Weapon:</strong> Ranged (laser rifle, pistol) or melee (tactical knife, sword)</li>
+                <li><strong>Armor:</strong> Light, heavy, or powered armor based on class</li>
+                <li><strong>Comm Unit:</strong> Personal communicator (standard issue)</li>
+                <li><strong>Datapad:</strong> Computer access (most people have one)</li>
+                <li><strong>Credstick:</strong> Digital currency storage</li>
+                <li><strong>Hygiene Kit:</strong> Basic toiletries and supplies</li>
+                <li><strong>Field Rations:</strong> Week's worth of food</li>
+            </ul>
+
+            <h3>Class-Specific Gear</h3>
+            <ul>
+                <li><strong>Soldier:</strong> Heavy armor, advanced longarm</li>
+                <li><strong>Operative:</strong> Light armor, suppressed pistol, hacking tools</li>
+                <li><strong>Mechanic:</strong> Custom tools, drone upgrades</li>
+                <li><strong>Technomancer/Mystic:</strong> Spell amp, battery for spells</li>
+                <li><strong>Envoy:</strong> Professional clothing, social tools</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: THEME -->
+            <h2 data-hex="◇09" style="--i:9;">Select Theme</h2>
+            <p>Your <strong>Theme</strong> represents your specialized experience or background focus. It grants a 1st-level ability and additional benefits at higher levels.</p>
+
+            <div class="choice-grid">
+                <div class="choice-card">
+                    <div class="choice-tag">THEME</div>
+                    <div class="choice-name">Ace Pilot</div>
+                    <div class="choice-desc">You're a legendary pilot. +1 to Piloting, reduced penalties for risky maneuvers.</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">THEME</div>
+                    <div class="choice-name">Bounty Hunter</div>
+                    <div class="choice-desc">You track and capture targets. +1 to Survival, gain contacts in underworld.</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">THEME</div>
+                    <div class="choice-name">Icon</div>
+                    <div class="choice-desc">You're famous (or infamous). +1 to Diplomacy or Intimidation, fans recognize you.</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">THEME</div>
+                    <div class="choice-name">Mercenary</div>
+                    <div class="choice-desc">Professional soldier for hire. +1 to Athletics, combat-focused training.</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">THEME</div>
+                    <div class="choice-name">Scholar</div>
+                    <div class="choice-desc">You're an academic expert. +1 to any Lore skill, specialized knowledge.</div>
+                </div>
+                <div class="choice-card">
+                    <div class="choice-tag">THEME</div>
+                    <div class="choice-name">Themeless</div>
+                    <div class="choice-desc">Jack of all trades. +1 to any skill of your choice. Versatile but unfocused.</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: FINAL DETAILS -->
+            <h2 data-hex="◇10" style="--i:10;">Finalize Character</h2>
+
+            <h3>Personal Information</h3>
+            <ul>
+                <li><strong>Name:</strong> Character name (species-appropriate or creative)</li>
+                <li><strong>Homeworld:</strong> Where were you born? (Absalom Station, Castrovel, Vesk-3, etc.)</li>
+                <li><strong>Appearance:</strong> What do you look like? Describe clothing, cybernetics, markings</li>
+                <li><strong>Personality:</strong> Describe your character's demeanor and beliefs</li>
+                <li><strong>Motivations:</strong> Why did you become a Starfinder? What drives you?</li>
+            </ul>
+
+            <h3>Connections</h3>
+            <ul>
+                <li>Establish relationships with other PCs (former allies, rivals, crew)</li>
+                <li>Define any important NPCs (mentors, contacts, family)</li>
+                <li>Determine your standing with factions (Starfinder Society, Veskarium, etc.)</li>
+            </ul>
+
+            <h3>Ready to Launch</h3>
+            <div class="data-display" data-label="FINAL CHECKLIST" style="border: 2px solid var(--electric); margin-top: 1.75rem;">
+                <ul style="margin: 0 0 0 1.25rem; list-style: none; line-height: 1.9; font-size: 0.92rem;">
+                    <li>☐ Ancestry selected and traits noted</li>
+                    <li>☐ Class chosen and key ability identified</li>
+                    <li>☐ Background selected</li>
+                    <li>☐ Ability scores calculated (boosts applied)</li>
+                    <li>☐ Skills trained (class + background + Intelligence)</li>
+                    <li>☐ Feats chosen (ancestry, class, general, skill)</li>
+                    <li>☐ Hit Points calculated</li>
+                    <li>☐ Stamina Points calculated</li>
+                    <li>☐ Resolve Points calculated</li>
+                    <li>☐ Equipment purchased (1,000 credits)</li>
+                    <li>☐ Theme selected</li>
+                    <li>☐ Saving throws calculated</li>
+                    <li>☐ Perception calculated</li>
+                    <li>☐ Personal details finalized</li>
+                    <li>☐ Ready for launch</li>
+                </ul>
+            </div>
+
+            <div class="transmission" style="margin-top: 2rem; border-left-color: var(--cyan);">
+                Your character is complete. You're now a <strong>Starfinder</strong> — ready to explore the Vast, uncover ancient secrets, and face threats both cosmic and corporate. The galaxy is vast. The Drift connects distant worlds. Ancient alien technology waits to be discovered. <em>Chart your course. Power up your weapons. Engage your hyperdrive.</em> Adventure awaits among infinite stars.
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-inner">
+                <div class="footer-motto">EXPLORE • REPORT • COOPERATE</div>
+                <div class="footer-sub">Starfinder 2E // Paizo Inc. // Pathfinder 2E System</div>
+            </div>
+            <div class="bottom-bar">
+                <span>SYS STATUS: OPTIMAL</span>
+                <span>CONN: SECURE</span>
+                <span>PWR: NOMINAL</span>
+            </div>
+        </footer>
+
+    </div>
+    </body>
+</div>
+</html>

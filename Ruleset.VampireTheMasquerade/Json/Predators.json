@@ -30,7 +30,7 @@
       },
       {
         "type": "backgrounds",
-        "name": "Criminal Contacts",
+        "name": "Contacts",
         "value": 3
       }
     ]
@@ -43,7 +43,7 @@
         "type": "specialties",
         "choices": [
           "Larceny.Lockpicking",
-          "Streetwise.Black Markets"
+          "Streetwise.Black Market"
         ],
         "count": 1,
         "category": "Characteristic"
@@ -102,7 +102,8 @@
           "Shunned"
         ],
         "count": 1,
-        "category": "Characteristic"
+        "value": 1,
+        "category": "Adjustment"
       }
     ],
     "bonusadjustments": [
@@ -206,7 +207,13 @@
       {
         "type": "specialties",
         "choices": [
-          "Animal Ken.(Specific)",
+          "Animal Ken.Cats",
+          "Animal Ken.Dogs",
+          "Animal Ken.Falconry",
+          "Animal Ken.Horses",
+          "Animal Ken.Rats",
+          "Animal Ken.Snakes",
+          "Animal Ken.Wolves",
           "Survival.Hunting"
         ],
         "count": 1,
@@ -242,8 +249,30 @@
       {
         "type": "specialties",
         "choices": [
-          "Occult.(Specific)",
-          "Performance.(Specific)"
+          "Occult.Alchemy",
+          "Occult.Blood Magic",
+          "Occult.Faeries",
+          "Occult.Ghosts",
+          "Occult.Grimoires",
+          "Occult.Infernalism",
+          "Occult.Magic",
+          "Occult.Necromancy",
+          "Occult.Noddism",
+          "Occult.Parapsychology",
+          "Occult.Voudun",
+          "Occult.Werewolves",
+          "Performance.Comedy",
+          "Performance.Dance",
+          "Performance.Drama",
+          "Performance.Drums",
+          "Performance.Guitar",
+          "Performance.Keyboards",
+          "Performance.Poetry",
+          "Performance.Public Speaking",
+          "Performance.Rap",
+          "Performance.Singing",
+          "Performance.Violin",
+          "Performance.Wind Instruments"
         ],
         "count": 1,
         "category": "Characteristic"
@@ -299,9 +328,30 @@
       {
         "type": "specialties",
         "choices": [
-          "Ettiquete.(Specific)",
-          "Leadership.(Specific)",
-          "Streetwise.(Specific)"
+          "Ettiquete.Anarch",
+          "Ettiquete.Camarilla",
+          "Ettiquete.Celebrities",
+          "Ettiquete.Corporate",
+          "Ettiquete.Elysium",
+          "Ettiquete.Feudal",
+          "Ettiquete.One-Percenter",
+          "Ettiquete.Secret Society",
+          "Leadership.Command",
+          "Leadership.Inspiration",
+          "Leadership.Oratory",
+          "Leadership.Praxis",
+          "Leadership.Team Dynamic",
+          "Leadership.War Pack",
+          "Streetwise.Arms Dealing",
+          "Streetwise.Black Market",
+          "Streetwise.Bribery",
+          "Streetwise.Drugs",
+          "Streetwise.Fence Stolen Goods",
+          "Streetwise.Gangs",
+          "Streetwise.Graffiti",
+          "Streetwise.Personal Rep",
+          "Streetwise.Sex Trade",
+          "Streetwise.Urban Survival"
         ],
         "count": 1,
         "category": "Characteristic"
@@ -323,12 +373,13 @@
           "Prey Exclusion"
         ],
         "count": 1,
-        "category": "Characteristic"
+        "value": 1,
+        "category": "Adjustment"
       }
     ],
     "bonusadjustments": [
       {
-        "type": "merits",
+        "type": "backgrounds",
         "name": "Fame",
         "value": 1
       },

@@ -401,53 +401,53 @@ namespace VampireTheMasquerade
 
         private static void GenerateTemporaryValuesSchema()
         {     
-            _fields.Add( new
-            {
-                name = "health.label",
-                text = "Health",
-                type = "textblock"    
-            });
-            _fields.Add(
-                new
-                {
-                    name = "health",
-                    id = "health",
-                    includeLabel = false,
-                    type = "radiogroup",
-                    className = "form-control",
-                    validation = new
-                    {
-                        required = true,
-                        min = 0,
-                        max = 15
-                    },
-                    count = 15,
-                    @default = 3
-                });
+            // _fields.Add( new
+            // {
+            //     name = "health.label",
+            //     text = "Health",
+            //     type = "textblock"    
+            // });
+            // _fields.Add(
+            //     new
+            //     {
+            //         name = "health",
+            //         id = "health",
+            //         includeLabel = false,
+            //         type = "radiogroup",
+            //         className = "form-control",
+            //         validation = new
+            //         {
+            //             required = true,
+            //             min = 0,
+            //             max = 15
+            //         },
+            //         count = 15,
+            //         @default = 3
+            //     });
 
-            _fields.Add( new
-            {
-                name = "willpower.label",
-                text = "Willpower",
-                type = "textblock"    
-            });
-            _fields.Add(
-                new
-                {
-                    name = "willpower",
-                    id = "willpower",
-                    includeLabel = false,
-                    type = "radiogroup",
-                    className = "form-control",
-                    validation = new
-                    {
-                        required = true,
-                        min = 0,
-                        max = 15
-                    },
-                    count = 15,
-                    @default = 0
-                });
+            // _fields.Add( new
+            // {
+            //     name = "willpower.label",
+            //     text = "Willpower",
+            //     type = "textblock"    
+            // });
+            // _fields.Add(
+            //     new
+            //     {
+            //         name = "willpower",
+            //         id = "willpower",
+            //         includeLabel = false,
+            //         type = "radiogroup",
+            //         className = "form-control",
+            //         validation = new
+            //         {
+            //             required = true,
+            //             min = 0,
+            //             max = 15
+            //         },
+            //         count = 15,
+            //         @default = 0
+            //     });
             
             _fields.Add( new
             {
@@ -475,15 +475,15 @@ namespace VampireTheMasquerade
 
             _fields.Add( new
             {
-                name = "bloodpotency.label",
+                name = "bloodPotency.label",
                 text = "Blood Potency",
                 type = "textblock"    
             });
             _fields.Add(
                 new
                 {
-                    name = "bloodpotency",
-                    id = "bloodpotency",
+                    name = "bloodPotency",
+                    id = "bloodPotency",
                     includeLabel = false,
                     type = "radiogroup",
                     className = "form-control",
@@ -1155,7 +1155,7 @@ namespace VampireTheMasquerade
                     {
                         var component = new
                         {
-                            name = $"backgrounds.{background.Name.ToLower()}",
+                            name = $"backgrounds.{background.Name}",
                             id = $"backgrounds.{background.Name}",
                             label = $"BACKGROUND - {background.Name}",
                             includeLabel = true,
@@ -1198,10 +1198,21 @@ namespace VampireTheMasquerade
                     {
                         var component =  new
                         {
-                            name = $"flaws.{flaw.Name.ToLower()}",
+                            name = $"flaws.{flaw.Name}",
                             id = $"flaws.{flaw.Name}",
                             label = $"FLAW - {flaw.Name}",
-                            type = "switch"
+                            includeLabel = true,
+                            type = "radiogroup",
+                            className = "form-control",
+                            count = flaw.Range,
+                            minimum = flaw.Minimum,
+                            validation = new
+                            {
+                                required = false,
+                                min = 0,
+                                max = flaw.Range
+                            },
+                            @default = 0
                         };
 
                         var text = new
@@ -1256,10 +1267,21 @@ namespace VampireTheMasquerade
                     {
                         var component = new
                         {
-                            name = $"merits.{merit.Name.ToLower()}",
+                            name = $"merits.{merit.Name}",
                             id = $"merits.{merit.Name}",
                             label = $"MERIT - {merit.Name}",
-                            type = "switch"
+                            includeLabel = true,
+                            type = "radiogroup",
+                            className = "form-control",
+                            count = merit.Range,
+                            minimum = merit.Minimum,
+                            validation = new
+                            {
+                                required = false,
+                                min = 0,
+                                max = merit.Range
+                            },
+                            @default = 0
                         };
 
                         var text = new
@@ -1289,10 +1311,21 @@ namespace VampireTheMasquerade
                     {
                         var component = new
                         {
-                            name = $"flaws.{flaw.Name.ToLower()}",
+                            name = $"flaws.{flaw.Name}",
                             id = $"flaws.{flaw.Name}",
                             label = $"FLAW - {flaw.Name}",
-                            type = "switch"
+                            includeLabel = true,
+                            type = "radiogroup",
+                            className = "form-control",
+                            count = flaw.Range,
+                            minimum = flaw.Minimum,
+                            validation = new
+                            {
+                                required = false,
+                                min = 0,
+                                max = flaw.Range
+                            },
+                            @default = 0
                         };
 
                         var text = new

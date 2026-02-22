@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUNE: ADVENTURES IN THE IMPERIUM — Character Dossier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Cinzel:wght@600;700;900&family=Trajan+Pro&family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --spice-orange:  #D2691E;
+            --spice-gold:    #DAA520;
+            --desert-sand:   #EDC9AF;
+            --sand-dark:     #C19A6B;
+            --imperial-blue: #1A4D6D;
+            --deep-blue:     #0B2838;
+            --atreides-green:#2F5233;
+            --harkonnen-black:#1C1C1C;
+            --parchment:     #F4E8D0;
+            --parchment-old: #E8D5B7;
+            --ink:           #2A1810;
+            --ink-fade:      #5C4A3A;
+            --gold-accent:   #B8860B;
+            --bronze:        #8C6239;
+            --white:         #FAF8F0;
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'EB Garamond', serif;
+            background: var(--sand-dark);
+            background-image:
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 50px,
+                    rgba(218,165,32,0.03) 50px,
+                    rgba(218,165,32,0.03) 100px
+                );
+            color: var(--ink);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* ── CONTAINER (Imperial Document) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--parchment);
+            border: 3px solid var(--bronze);
+            box-shadow:
+                0 0 0 1px var(--gold-accent),
+                0 0 0 8px var(--parchment-old),
+                0 0 0 11px var(--bronze),
+                0 25px 80px rgba(0,0,0,0.6),
+                inset 0 0 100px rgba(210,105,30,0.08);
+            position: relative;
+            animation: unfold 1s ease-out;
+        }
+
+        @keyframes unfold {
+            from { opacity: 0; transform: perspective(1000px) rotateX(-15deg) scale(0.95); }
+            to   { opacity: 1; transform: perspective(1000px) rotateX(0deg) scale(1); }
+        }
+
+        /* Parchment texture and aging */
+        .instr-container .container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(ellipse at 80% 20%, rgba(210,105,30,0.12) 0%, transparent 30%),
+                radial-gradient(ellipse at 20% 80%, rgba(184,134,11,0.08) 0%, transparent 25%);
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        /* Spice stains */
+        .instr-container .spice-stain {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(210,105,30,0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .instr-container .stain-1 { top: 8%; right: 5%; width: 100px; height: 100px; }
+        .instr-container .stain-2 { bottom: 12%; left: 8%; width: 80px; height: 80px; }
+
+        /* Ornate corner decorations */
+        .instr-container .corner-ornament {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border: 2px solid var(--gold-accent);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .instr-container .corner-ornament.tl {
+            top: -1px;
+            left: -1px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .instr-container .corner-ornament.tr {
+            top: -1px;
+            right: -1px;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .instr-container .corner-ornament.bl {
+            bottom: -1px;
+            left: -1px;
+            border-right: none;
+            border-top: none;
+        }
+
+        .instr-container .corner-ornament.br {
+            bottom: -1px;
+            right: -1px;
+            border-left: none;
+            border-top: none;
+        }
+
+        /* Imperial seal */
+        .instr-container .imperial-seal {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid var(--gold-accent);
+            background: radial-gradient(circle, var(--spice-gold) 0%, var(--gold-accent) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--ink);
+            opacity: 0.3;
+            box-shadow:
+                inset 0 0 20px rgba(0,0,0,0.2),
+                0 0 20px rgba(218,165,32,0.3);
+        }
+
+        /* ── GEOMETRIC BORDER ── */
+        .instr-container .geo-border {
+            height: 30px;
+            background: var(--imperial-blue);
+            background-image:
+                repeating-linear-gradient(
+                    45deg,
+                    var(--imperial-blue),
+                    var(--imperial-blue) 10px,
+                    var(--deep-blue) 10px,
+                    var(--deep-blue) 20px
+                );
+            border-bottom: 2px solid var(--gold-accent);
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            padding: 2.5rem 2.5rem 2rem;
+            background: var(--parchment-old);
+            border-bottom: 4px double var(--bronze);
+            position: relative;
+        }
+
+        /* Sandworm texture in background */
+        .instr-container header::before {
+            content: 'ॐ';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 12rem;
+            color: var(--spice-orange);
+            opacity: 0.04;
+            pointer-events: none;
+        }
+
+        .instr-container .guild-tag {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            color: var(--imperial-blue);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            border: 2px solid var(--imperial-blue);
+            padding: 0.4rem 0.8rem;
+            display: inline-block;
+        }
+
+        .instr-container h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.8rem;
+            line-height: 1;
+            font-weight: 900;
+            color: var(--ink);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.4rem;
+            text-shadow: 2px 2px 4px rgba(210,105,30,0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container h1 .dune {
+            color: var(--spice-orange);
+        }
+
+        .instr-container h1 .imperium {
+            display: block;
+            font-size: 1.8rem;
+            letter-spacing: 0.25em;
+            color: var(--imperial-blue);
+            margin-top: 0.5rem;
+        }
+
+        .instr-container .bene-gesserit {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+            font-style: italic;
+            letter-spacing: 0.08em;
+            color: var(--ink-fade);
+            margin-top: 1.5rem;
+            border-top: 1px solid var(--gold-accent);
+            border-bottom: 1px solid var(--gold-accent);
+            padding: 0.6rem 0;
+            text-align: center;
+        }
+
+        .instr-container .doc-metadata {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 2px solid var(--sand-dark);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            line-height: 1.9;
+            color: var(--ink-fade);
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2.5rem 2.5rem;
+            background: var(--parchment);
+            position: relative;
+        }
+
+        /* Decorative border pattern */
+        .instr-container .border-pattern {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 25px;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 20px,
+                    var(--gold-accent) 20px,
+                    var(--gold-accent) 22px,
+                    transparent 22px,
+                    transparent 30px,
+                    var(--gold-accent) 30px,
+                    var(--gold-accent) 34px
+                );
+            opacity: 0.2;
+        }
+
+        /* ── LITANY BOX ── */
+        .instr-container .litany {
+            background: var(--white);
+            border: 3px solid var(--spice-orange);
+            border-left: 8px solid var(--spice-orange);
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 2.5rem;
+            font-size: 1.05rem;
+            line-height: 2;
+            font-style: italic;
+            position: relative;
+            box-shadow: 4px 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .instr-container .litany::before {
+            content: '⟨ THE LITANY AGAINST FEAR ⟩';
+            position: absolute;
+            top: -0.75rem;
+            left: 1.5rem;
+            background: var(--white);
+            padding: 0 0.5rem;
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--spice-orange);
+            text-transform: uppercase;
+            font-style: normal;
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--imperial-blue);
+            margin: 2.75rem 0 1.25rem;
+            padding: 0.6rem 0 0.6rem 1.5rem;
+            border-left: 6px solid var(--spice-orange);
+            border-bottom: 2px solid var(--gold-accent);
+            background: linear-gradient(90deg, rgba(218,165,32,0.08) 0%, transparent 100%);
+            position: relative;
+            animation: fadeIn 0.5s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.08s);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: attr(data-chapter);
+            position: absolute;
+            left: -3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--spice-orange);
+            letter-spacing: 0.1em;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        .instr-container h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: 0.08em;
+            color: var(--spice-orange);
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .instr-container p {
+            font-size: 1.05rem;
+            line-height: 2;
+            margin-bottom: 1rem;
+            color: var(--ink);
+        }
+
+        .instr-container ul, ol { margin: 0.75rem 0 1.25rem 1.5rem; }
+        .instr-container li {
+            font-size: 1rem;
+            line-height: 1.95;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { color: var(--imperial-blue); font-weight: 700; }
+        .instr-container em     { color: var(--spice-orange); font-style: italic; }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.5rem 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
+            position: relative;
+        }
+
+        .instr-container .divider::before {
+            content: '⟡';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--parchment);
+            padding: 0 0.75rem;
+            font-size: 1.2rem;
+            color: var(--spice-orange);
+        }
+
+        /* ── MENTATS WISDOM ── */
+        .instr-container .mentat {
+            background: var(--imperial-blue);
+            color: var(--white);
+            border: 3px solid var(--deep-blue);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.9;
+            box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .instr-container .mentat-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            color: var(--spice-gold);
+            display: block;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+        }
+
+        /* ── RECORD SCROLL ── */
+        .instr-container .record-scroll {
+            background: var(--parchment-old);
+            border: 2px solid var(--bronze);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            position: relative;
+            box-shadow: inset 0 0 30px rgba(210,105,30,0.05);
+        }
+
+        .instr-container .record-scroll::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -0.65rem;
+            left: 1.5rem;
+            background: var(--parchment-old);
+            padding: 0 0.5rem;
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--bronze);
+            text-transform: uppercase;
+        }
+
+        /* ── HOUSE CARDS ── */
+        .instr-container .house-grid {
+            display: grid;
+            gap: 0.75rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .house-card {
+            background: var(--white);
+            border: 3px solid var(--bronze);
+            padding: 1.25rem 1.5rem;
+            position: relative;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+        }
+
+        .instr-container .house-card:hover {
+            border-color: var(--gold-accent);
+            box-shadow: 6px 6px 0 rgba(218,165,32,0.2);
+        }
+
+        .instr-container .house-sigil {
+            position: absolute;
+            top: -1rem;
+            right: 1.5rem;
+            background: var(--spice-gold);
+            color: var(--ink);
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            padding: 0.4rem 1rem;
+            text-transform: uppercase;
+            border: 2px solid var(--gold-accent);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .instr-container .house-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--imperial-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .house-desc {
+            font-size: 0.98rem;
+            line-height: 1.8;
+            color: var(--ink);
+            margin-bottom: 0.75rem;
+        }
+
+        .instr-container .house-trait {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--spice-orange);
+            border-top: 1px solid var(--sand-dark);
+            padding-top: 0.5rem;
+        }
+
+        /* ── ATTRIBUTE DISPLAY ── */
+        .instr-container .attr-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .attr-card {
+            background: var(--white);
+            border: 2px solid var(--sand-dark);
+            border-top: 4px solid var(--imperial-blue);
+            padding: 0.85rem 1rem;
+            text-align: center;
+        }
+
+        .instr-container .attr-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: var(--imperial-blue);
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .attr-desc {
+            font-size: 0.85rem;
+            color: var(--ink-fade);
+            line-height: 1.5;
+        }
+
+        .instr-container .attr-range {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--spice-orange);
+            margin-top: 0.5rem;
+        }
+
+        /* ── SKILL LIST ── */
+        .instr-container .skill-list {
+            display: grid;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .skill-item {
+            background: var(--white);
+            border: 2px solid var(--sand-dark);
+            border-left: 5px solid var(--bronze);
+            padding: 0.8rem 1rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: baseline;
+            gap: 1rem;
+        }
+
+        .instr-container .skill-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--ink);
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .skill-desc {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: var(--ink-fade);
+        }
+
+        .instr-container .skill-focus {
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            color: var(--spice-orange);
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        /* ── SPICE METER ── */
+        .instr-container .spice-box {
+            background: linear-gradient(135deg, var(--spice-orange) 0%, var(--spice-gold) 100%);
+            color: var(--ink);
+            border: 4px solid var(--gold-accent);
+            padding: 1.75rem 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            box-shadow:
+                0 0 30px rgba(218,165,32,0.4),
+                inset 0 0 60px rgba(0,0,0,0.15);
+        }
+
+        .instr-container .spice-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--white);
+            margin-bottom: 0.75rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .instr-container .spice-desc {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-top: 0.75rem;
+            color: var(--ink);
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--parchment-old);
+            padding: 2rem 2.5rem;
+            border-top: 4px double var(--bronze);
+            text-align: center;
+            position: relative;
+        }
+
+        .instr-container .footer-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--imperial-blue);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--ink-fade);
+            text-transform: uppercase;
+        }
+
+        .instr-container footer::before {
+            content: '⟡ ⟡ ⟡';
+            display: block;
+            font-size: 1.2rem;
+            color: var(--spice-orange);
+            letter-spacing: 1em;
+            margin-bottom: 1.25rem;
+        }
+
+        /* Bottom geometric border */
+        .instr-container .geo-bottom {
+            height: 25px;
+            background: var(--imperial-blue);
+            background-image:
+                repeating-linear-gradient(
+                    -45deg,
+                    var(--imperial-blue),
+                    var(--imperial-blue) 10px,
+                    var(--deep-blue) 10px,
+                    var(--deep-blue) 20px
+                );
+            border-top: 2px solid var(--gold-accent);
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 3rem; }
+            h1 .imperium { font-size: 1.5rem; }
+            h2 { font-size: 1.8rem; }
+            h2::before { display: none; }
+            .attr-grid { grid-template-columns: 1fr; }
+            .skill-item { grid-template-columns: 1fr; gap: 0.4rem; }
+            .skill-focus { text-align: left; }
+            .content { padding: 2rem 1.5rem; }
+            header { padding: 2rem 1.5rem; }
+            .imperial-seal { width: 50px; height: 50px; font-size: 1.4rem; }
+            .border-pattern { display: none; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+        <div class="spice-stain stain-1"></div>
+        <div class="spice-stain stain-2"></div>
+        <div class="corner-ornament tl"></div>
+        <div class="corner-ornament tr"></div>
+        <div class="corner-ornament bl"></div>
+        <div class="corner-ornament br"></div>
+        <div class="imperial-seal">⬡</div>
+
+        <!-- GEOMETRIC BORDER -->
+        <div class="geo-border"></div>
+
+        <!-- HEADER -->
+        <header>
+            <div class="guild-tag">⟨ SPACING GUILD CERTIFIED RECORD ⟩</div>
+            <h1>
+                <span class="dune">DUNE:</span>
+                <span class="imperium">ADVENTURES IN THE IMPERIUM</span>
+            </h1>
+            <div class="bene-gesserit">"I must not fear. Fear is the mind-killer."</div>
+            <div class="doc-metadata">
+                <strong>System:</strong> 2d20 Engine (Modiphius Entertainment)<br>
+                <strong>Setting:</strong> Frank Herbert's Dune Universe<br>
+                <strong>Imperial Year:</strong> 10,191 A.G. (After Guild)<br>
+                <strong>Classification:</strong> House Personnel Record
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+            <div class="border-pattern"></div>
+
+            <div class="litany">
+                You are a member of a Great House — noble, merchant, or servant. The Imperium spans ten thousand worlds. <strong>Melange</strong>, the spice, controls all. The Spacing Guild monopolizes travel. The Bene Gesserit manipulate bloodlines. CHOAM regulates commerce. And your House? Your House fights for survival, power, and legacy. Politics. Assassination. Desert power. This is <em>Dune</em>. Welcome to the greatest game in the known universe.
+            </div>
+
+            <!-- STEP 1: HOUSE -->
+            <h2 data-chapter="I." style="--i:1;">Your Great House</h2>
+            <p>Before you exist as an individual, you exist as part of a <strong>Great House</strong>. Your House is your family, your power base, your legacy. Work with your group to create your House or choose an established one.</p>
+
+            <div class="house-grid">
+                <div class="house-card">
+                    <div class="house-sigil">MAJOR HOUSE</div>
+                    <div class="house-name">House Atreides</div>
+                    <div class="house-desc">Noble, honorable, and idealistic. "A Great Man doesn't seek to lead — he's called to it." Respected but politically vulnerable. Desert power awaits on Arrakis.</div>
+                    <div class="house-trait">Traits: Noble, Honorable, Strategic // Fief: Caladan (water world)</div>
+                </div>
+                <div class="house-card">
+                    <div class="house-sigil">MAJOR HOUSE</div>
+                    <div class="house-name">House Harkonnen</div>
+                    <div class="house-desc">Brutal, cunning, and ruthlessly efficient. They ruled Arrakis for generations through fear and exploitation. Wealth built on suffering.</div>
+                    <div class="house-trait">Traits: Ruthless, Wealthy, Industrious // Fief: Giedi Prime (industrial)</div>
+                </div>
+                <div class="house-card">
+                    <div class="house-sigil">MINOR HOUSE</div>
+                    <div class="house-name">Create Your Own</div>
+                    <div class="house-desc">Define your House's history, homeworld, resources, and political standing. What makes you unique? What threatens your survival?</div>
+                    <div class="house-trait">Traits: Choose 3 // Fief: Define your world</div>
+                </div>
+            </div>
+
+            <h3>House Creation</h3>
+            <p>If creating a custom House, define:</p>
+            <ul>
+                <li><strong>Name and Heraldry:</strong> House name, colors, sigil</li>
+                <li><strong>Homeworld:</strong> Desert? Ocean? Industrial? Forest?</li>
+                <li><strong>Domains:</strong> Assign 5 points among Traits (max 3 in any Domain)</li>
+                <li><strong>Resources:</strong> Military strength, wealth, spies, technology</li>
+                <li><strong>Allies and Rivals:</strong> Which Houses support you? Which oppose you?</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: ARCHETYPE -->
+            <h2 data-chapter="II." style="--i:2;">Choose Your Archetype</h2>
+            <p>Your <strong>Archetype</strong> is your role within your House and the Imperium. It determines your starting skills, talents, and focus.</p>
+
+            <div class="house-grid">
+                <div class="house-card">
+                    <div class="house-sigil">NOBLE</div>
+                    <div class="house-name">Noble Scion</div>
+                    <div class="house-desc">Heir, diplomat, or political operative. You navigate courts, forge alliances, and represent your House's interests.</div>
+                    <div class="house-trait">Focus: Command, Discipline, Communicate</div>
+                </div>
+                <div class="house-card">
+                    <div class="house-sigil">WARRIOR</div>
+                    <div class="house-name">Swordmaster</div>
+                    <div class="house-desc">Elite combatant trained in blade and shield. Shields stop fast projectiles — only the blade remains.</div>
+                    <div class="house-trait">Focus: Battle, Move, Discipline</div>
+                </div>
+                <div class="house-card">
+                    <div class="house-sigil">ADVISOR</div>
+                    <div class="house-name">Mentat</div>
+                    <div class="house-desc">Human computer. Thinking machines are banned — you are logic incarnate. Analyze, calculate, strategize.</div>
+                    <div class="house-trait">Focus: Understand, Discipline, Communicate</div>
+                </div>
+                <div class="house-card">
+                    <div class="house-sigil">INFILTRATOR</div>
+                    <div class="house-name">Bene Gesserit Adept</div>
+                    <div class="house-desc">Trained in the Way. Prana-bindu control, Voice, observation. Manipulate from shadows. Serve the Sisterhood's agenda.</div>
+                    <div class="house-trait">Focus: Understand, Move, Communicate</div>
+                </div>
+                <div class="house-card">
+                    <div class="house-sigil">SPECIALIST</div>
+                    <div class="house-name">Planetologist</div>
+                    <div class="house-desc">Scientist and explorer. Understand ecosystems, weather, resources. Essential on Arrakis.</div>
+                    <div class="house-trait">Focus: Understand, Move, Discipline</div>
+                </div>
+                <div class="house-card">
+                    <div class="house-sigil">MEDIC</div>
+                    <div class="house-name">Suk Doctor</div>
+                    <div class="house-desc">Imperial Conditioning prevents you from harming patients. Trusted healer bound by unbreakable programming.</div>
+                    <div class="house-trait">Focus: Understand, Discipline, Communicate</div>
+                </div>
+                <div class="house-card">
+                    <div class="house-sigil">NATIVE</div>
+                    <div class="house-name">Fremen Warrior</div>
+                    <div class="house-desc">Desert-born. You know the deep desert. Water discipline. Riding sandworms. Surviving what kills outsiders.</div>
+                    <div class="house-trait">Focus: Battle, Move, Discipline</div>
+                </div>
+                <div class="house-card">
+                    <div class="house-sigil">AGENT</div>
+                    <div class="house-name">Master of Assassins</div>
+                    <div class="house-desc">Death is your craft. Poison, blade, intrigue. Every House needs someone willing to do what others won't.</div>
+                    <div class="house-trait">Focus: Move, Battle, Understand</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: ATTRIBUTES -->
+            <h2 data-chapter="III." style="--i:3;">Assign Attributes</h2>
+            <p>Every character has <strong>five core Attributes</strong> rated from <strong>4 to 12</strong>. Distribute points using the array: <strong>10, 9, 9, 8, 7</strong>. Your Archetype may modify these.</p>
+
+            <div class="attr-grid">
+                <div class="attr-card">
+                    <div class="attr-name">Communicate</div>
+                    <div class="attr-desc">Diplomacy, persuasion, leadership</div>
+                    <div class="attr-range">4–12</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-name">Move</div>
+                    <div class="attr-desc">Agility, stealth, physical grace</div>
+                    <div class="attr-range">4–12</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-name">Understand</div>
+                    <div class="attr-desc">Intelligence, perception, analysis</div>
+                    <div class="attr-range">4–12</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-name">Battle</div>
+                    <div class="attr-desc">Combat prowess, tactical skill</div>
+                    <div class="attr-range">4–12</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-name">Discipline</div>
+                    <div class="attr-desc">Mental fortitude, endurance, will</div>
+                    <div class="attr-range">4–12</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: SKILLS -->
+            <h2 data-chapter="IV." style="--i:4;">Select Skills</h2>
+            <p>Skills represent specific training and expertise. Your Archetype grants starting skill ranks. Focus on skills that support your role.</p>
+
+            <div class="skill-list">
+                <div class="skill-item">
+                    <div>
+                        <div class="skill-name">Battle (Combat)</div>
+                        <div class="skill-desc">Hand-to-hand combat, blade work, shield fighting, personal combat tactics</div>
+                    </div>
+                    <div class="skill-focus">BATTLE</div>
+                </div>
+                <div class="skill-item">
+                    <div>
+                        <div class="skill-name">Communicate (Diplomacy)</div>
+                        <div class="skill-desc">Negotiation, persuasion, building alliances, political maneuvering</div>
+                    </div>
+                    <div class="skill-focus">COMMUNICATE</div>
+                </div>
+                <div class="skill-item">
+                    <div>
+                        <div class="skill-name">Communicate (Leadership)</div>
+                        <div class="skill-desc">Command troops, inspire loyalty, coordinate operations</div>
+                    </div>
+                    <div class="skill-focus">COMMUNICATE</div>
+                </div>
+                <div class="skill-item">
+                    <div>
+                        <div class="skill-name">Discipline (Discipline)</div>
+                        <div class="skill-desc">Mental fortitude, resist intimidation, maintain focus under pressure</div>
+                    </div>
+                    <div class="skill-focus">DISCIPLINE</div>
+                </div>
+                <div class="skill-item">
+                    <div>
+                        <div class="skill-name">Move (Infiltrate)</div>
+                        <div class="skill-desc">Stealth, disguise, moving unseen, bypassing security</div>
+                    </div>
+                    <div class="skill-focus">MOVE</div>
+                </div>
+                <div class="skill-item">
+                    <div>
+                        <div class="skill-name">Move (Dexterity)</div>
+                        <div class="skill-desc">Acrobatics, piloting, manual dexterity, physical grace</div>
+                    </div>
+                    <div class="skill-focus">MOVE</div>
+                </div>
+                <div class="skill-item">
+                    <div>
+                        <div class="skill-name">Understand (Investigate)</div>
+                        <div class="skill-desc">Research, analysis, uncovering secrets, following leads</div>
+                    </div>
+                    <div class="skill-focus">UNDERSTAND</div>
+                </div>
+                <div class="skill-item">
+                    <div>
+                        <div class="skill-name">Understand (Spice)</div>
+                        <div class="skill-desc">Knowledge of melange, desert ecology, Arrakis, spice operations</div>
+                    </div>
+                    <div class="skill-focus">UNDERSTAND</div>
+                </div>
+            </div>
+
+            <div class="record-scroll" data-label="SKILL FOCUSES">
+                <p style="font-size: 0.92rem; line-height: 1.9; margin-bottom: 0.5rem;">
+                    Each skill has <strong>Focuses</strong> — specific areas of expertise. When a Focus applies, you gain additional benefits. Your Archetype grants several Focuses automatically.
+                </p>
+                <p style="font-size: 0.88rem; line-height: 1.8; margin: 0;">
+                    <strong>Example Focuses:</strong> Politics, Desert Survival, Poison, Ornithopter Piloting, Fremen Culture, Swordplay, Bene Gesserit Training, Economics, Military Tactics
+                </p>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: DRIVES -->
+            <h2 data-chapter="V." style="--i:5;">Define Your Drives</h2>
+            <p><strong>Drives</strong> are core motivations that define your character. Choose three: <strong>Duty</strong>, <strong>Faith</strong>, <strong>Justice</strong>, <strong>Power</strong>, <strong>Truth</strong>, or <strong>Wealth</strong>. When you act according to a Drive, you can regain Determination.</p>
+
+            <div class="record-scroll" data-label="DRIVE DESCRIPTIONS">
+                <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.9;">
+                    <li><strong>Duty:</strong> Loyalty to House, Emperor, or cause above self-interest</li>
+                    <li><strong>Faith:</strong> Belief in religion, prophecy, or spiritual truth</li>
+                    <li><strong>Justice:</strong> Righting wrongs, punishing the guilty, protecting the innocent</li>
+                    <li><strong>Power:</strong> Accumulating influence, control, and authority</li>
+                    <li><strong>Truth:</strong> Seeking knowledge, exposing lies, understanding reality</li>
+                    <li><strong>Wealth:</strong> Accumulating resources, securing financial power</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: TALENTS -->
+            <h2 data-chapter="VI." style="--i:6;">Choose Talents</h2>
+            <p><strong>Talents</strong> are special abilities unique to your training. Your Archetype grants starting Talents. Choose additional Talents as you advance.</p>
+
+            <h3>Sample Talents</h3>
+            <ul>
+                <li><strong>The Voice (Bene Gesserit):</strong> Command obedience through vocal control</li>
+                <li><strong>Mentat Computation:</strong> Perform complex calculations instantly, predict outcomes</li>
+                <li><strong>Shield Fighter:</strong> Expert in slow-blade combat, bypass shields with precision</li>
+                <li><strong>Desert Born (Fremen):</strong> Survive in harsh desert, ride sandworms, conserve water</li>
+                <li><strong>Assassin's Strike:</strong> Deliver devastating attacks when striking from surprise</li>
+                <li><strong>Galactic Traveler:</strong> Knowledge of cultures, languages, and customs across worlds</li>
+                <li><strong>Suk Conditioning:</strong> Cannot harm patients, trusted implicitly by nobility</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: DETERMINATION & ASSETS -->
+            <h2 data-chapter="VII." style="--i:7;">Determination &amp; Momentum</h2>
+
+            <div class="spice-box">
+                <div class="spice-title">DETERMINATION</div>
+                <div class="spice-desc">
+                    <strong>Determination</strong> represents your willpower and resolve. Start with 1 Determination. Spend it to re-roll dice, perform heroic actions, or resist threats. Regain by acting according to your Drives or accepting complications.
+                </div>
+            </div>
+
+            <h3>Momentum</h3>
+            <p><strong>Momentum</strong> is the shared resource pool for your group. When you roll well, generate Momentum. Spend it to:</p>
+            <ul>
+                <li>Gain additional dice on tests</li>
+                <li>Obtain information</li>
+                <li>Create advantages</li>
+                <li>Activate special abilities</li>
+            </ul>
+            <p>But beware — the GM has <strong>Threat</strong>, their counter-resource. Complications add to Threat. Balance success with caution.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: DICE MECHANICS -->
+            <h2 data-chapter="VIII." style="--i:8;">The 2d20 System</h2>
+            <p>When you attempt something risky, roll <strong>2d20</strong>. You're trying to roll <strong>equal to or under</strong> your Attribute + Skill. Each success counts.</p>
+
+            <div class="mentat">
+                <span class="mentat-label">⟡ MENTAT ANALYSIS ⟡</span>
+                <strong>Target Number (TN):</strong> Your Attribute + Skill (e.g., Communicate 9 + Diplomacy 2 = TN 11).<br>
+                <strong>Roll 2d20:</strong> Each die showing ≤ TN = 1 success. Most tasks need 1 success.<br>
+                <strong>Difficulty:</strong> GM sets difficulty (0-5 successes needed).<br>
+                <strong>Complications:</strong> Roll 20 = complication. Something goes wrong even on success.<br>
+                <strong>Momentum:</strong> Extra successes beyond what's needed generate Momentum for the group.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: ASSETS -->
+            <h2 data-chapter="IX." style="--i:9;">Assets &amp; Traits</h2>
+            <p>Characters may have <strong>Assets</strong> — advantages that grant bonus dice. These include equipment, contacts, resources, or circumstances.</p>
+
+            <h3>Creating Assets</h3>
+            <ul>
+                <li><strong>Spend Momentum:</strong> Create an Asset by spending 1-2 Momentum</li>
+                <li><strong>Asset Grants:</strong> +1d20 to relevant tests</li>
+                <li><strong>Examples:</strong> "High Ground," "Trusted Informant," "Ornithopter," "Poison Snooper"</li>
+                <li><strong>Duration:</strong> Assets last for a scene unless specified otherwise</li>
+            </ul>
+
+            <h3>Traits</h3>
+            <p><strong>Traits</strong> are descriptors — character aspects, item qualities, or situation features. Use Traits creatively to create Assets or add narrative flavor.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: FINISHING -->
+            <h2 data-chapter="X." style="--i:10;">Complete Your Dossier</h2>
+
+            <h3>Personal Details</h3>
+            <ul>
+                <li><strong>Name:</strong> Full name and titles</li>
+                <li><strong>Homeworld:</strong> Where were you born?</li>
+                <li><strong>Appearance:</strong> What do you look like? How do you present yourself?</li>
+                <li><strong>Personality:</strong> Formal? Cunning? Honorable? Brutal?</li>
+                <li><strong>Relationships:</strong> Allies within your House? Rivals? Mentors?</li>
+            </ul>
+
+            <h3>House Connections</h3>
+            <ul>
+                <li>Define your role within the House hierarchy</li>
+                <li>Establish relationships with other PCs</li>
+                <li>Identify key NPCs (Duke, Mentat, Swordmaster, etc.)</li>
+                <li>Understand your House's current political situation</li>
+            </ul>
+
+            <div class="record-scroll" data-label="FINAL VERIFICATION" style="border: 3px solid var(--spice-orange); margin-top: 2rem;">
+                <ul style="margin: 0 0 0 1.25rem; list-style: none; line-height: 1.9; font-weight: 600;">
+                    <li>☐ Great House defined or chosen</li>
+                    <li>☐ Archetype selected</li>
+                    <li>☐ Five Attributes assigned (standard array or custom)</li>
+                    <li>☐ Skills selected and Focuses noted</li>
+                    <li>☐ Three Drives chosen</li>
+                    <li>☐ Talents acquired (Archetype + any additional)</li>
+                    <li>☐ Determination set to 1</li>
+                    <li>☐ Understanding of Momentum/Threat economy</li>
+                    <li>☐ Equipment and resources noted</li>
+                    <li>☐ Personal background completed</li>
+                    <li>☐ House relationships established</li>
+                    <li>☐ Ready to navigate the politics of the Imperium</li>
+                </ul>
+            </div>
+
+            <div class="litany" style="margin-top: 2rem; border-left-color: var(--imperial-blue);">
+                You are ready. The Imperium awaits. Whether you serve your Duke on Arrakis, plot in the shadows of the Landsraad, or survive in the deep desert with the Fremen, your fate is now tied to <em>Dune</em>. The spice must flow. Alliances will shift. Knives will strike from darkness. <strong>And you must be ready for all of it.</strong> May your blade stay sharp and your water plentiful.
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-quote">"The mystery of life isn't a problem to solve, but a reality to experience."</div>
+            <div class="footer-sub">Dune: Adventures in the Imperium // Modiphius Entertainment // 2d20 System</div>
+        </footer>
+
+        <!-- BOTTOM GEOMETRIC -->
+        <div class="geo-bottom"></div>
+
+    </div>
+    </body>
+</div>
+</html>

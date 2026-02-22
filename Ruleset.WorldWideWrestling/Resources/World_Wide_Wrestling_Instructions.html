@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORLD WIDE WRESTLING — Create Your Wrestler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Passion+One:wght@400;700;900&family=Anton&family=Staatliches&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold:         #FFD700;
+            --gold-dark:    #B8860B;
+            --gold-bright:  #FFEA00;
+            --red:          #E60000;
+            --red-dark:     #A80000;
+            --blue:         #0066CC;
+            --blue-dark:    #004080;
+            --white:        #FFFFFF;
+            --cream:        #FFF8E1;
+            --black:        #000000;
+            --grey:         #333333;
+            --grey-light:   #666666;
+            --silver:       #C0C0C0;
+            --spotlight:    rgba(255,215,0,0.2);
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Staatliches', cursive;
+            background: var(--black);
+            background-image:
+                radial-gradient(ellipse at 50% 50%, #1A1A1A 0%, var(--black) 100%);
+            color: var(--white);
+            min-height: 100vh;
+            padding: 1.5rem 1rem;
+            position: relative;
+        }
+
+        /* Spotlight rays */
+        .instr-container body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(45deg, transparent 45%, rgba(255,215,0,0.03) 50%, transparent 55%),
+                linear-gradient(-45deg, transparent 45%, rgba(255,215,0,0.03) 50%, transparent 55%);
+            background-size: 400px 400px;
+            background-position: 0 0, 200px 200px;
+            pointer-events: none;
+            z-index: 0;
+            animation: spotlightSweep 20s linear infinite;
+        }
+
+        @keyframes spotlightSweep {
+            from { background-position: 0 0, 200px 200px; }
+            to   { background-position: 400px 400px, 600px 600px; }
+        }
+
+        /* ── CONTAINER (Wrestling Poster) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--cream);
+            border: 8px solid var(--gold);
+            box-shadow:
+                0 0 0 4px var(--black),
+                0 0 60px rgba(255,215,0,0.4),
+                0 20px 80px rgba(0,0,0,0.9),
+                inset 0 0 80px rgba(255,215,0,0.1);
+            position: relative;
+            z-index: 1;
+            animation: entrance 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        @keyframes entrance {
+            0%   { opacity: 0; transform: scale(0.8) rotateY(-20deg); filter: brightness(3); }
+            60%  { transform: scale(1.05) rotateY(5deg); }
+            100% { opacity: 1; transform: scale(1) rotateY(0deg); filter: brightness(1); }
+        }
+
+        /* Corner championship plates */
+        .instr-container .corner-plate {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: var(--gold);
+            border: 3px solid var(--gold-dark);
+            box-shadow:
+                inset 0 0 15px rgba(255,255,255,0.3),
+                0 0 20px rgba(255,215,0,0.4);
+            z-index: 10;
+        }
+
+        .instr-container .corner-plate.tl { 
+            top: -4px; 
+            left: -4px; 
+            clip-path: polygon(0 0, 100% 0, 0 100%);
+        }
+
+        .instr-container .corner-plate.tr { 
+            top: -4px; 
+            right: -4px; 
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+        }
+
+        .instr-container .corner-plate.bl { 
+            bottom: -4px; 
+            left: -4px; 
+            clip-path: polygon(0 0, 0 100%, 100% 100%);
+        }
+
+        .instr-container .corner-plate.br { 
+            bottom: -4px; 
+            right: -4px; 
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
+        }
+
+        /* ── LIGHTNING STRIPE ── */
+        .instr-container .lightning-bar {
+            height: 40px;
+            background: linear-gradient(
+                135deg,
+                var(--red) 0%,
+                var(--red-dark) 25%,
+                var(--blue) 50%,
+                var(--blue-dark) 75%,
+                var(--gold) 100%
+            );
+            background-size: 300% 100%;
+            animation: lightningSlide 3s linear infinite;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        @keyframes lightningSlide {
+            from { background-position: 0% 50%; }
+            to   { background-position: 100% 50%; }
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            padding: 2.5rem 2rem 2rem;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Championship belt graphic */
+        .instr-container header::before {
+            content: '★';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18rem;
+            color: var(--gold);
+            opacity: 0.06;
+            pointer-events: none;
+        }
+
+        .instr-container .live-tag {
+            display: inline-block;
+            background: var(--red);
+            color: var(--white);
+            font-family: 'Passion One', cursive;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            padding: 0.4rem 1rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 4px 8px rgba(0,0,0,0.3); }
+            50%      { transform: scale(1.05); box-shadow: 0 6px 12px rgba(230,0,0,0.5); }
+        }
+
+        .instr-container h1 {
+            font-family: 'Alfa Slab One', cursive;
+            font-size: 4.5rem;
+            line-height: 0.85;
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.3rem;
+            text-shadow:
+                4px 4px 0 var(--black),
+                8px 8px 0 rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container h1 .world {
+            display: block;
+            color: var(--blue);
+        }
+
+        .instr-container h1 .wrestling {
+            display: block;
+            font-size: 3.5rem;
+            color: var(--gold);
+            text-shadow:
+                3px 3px 0 var(--black),
+                6px 6px 0 rgba(0,0,0,0.3),
+                0 0 30px rgba(255,215,0,0.5);
+        }
+
+        .instr-container .edition-tag {
+            font-family: 'Passion One', cursive;
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 0.2em;
+            color: var(--black);
+            text-transform: uppercase;
+            margin-top: 0.75rem;
+            text-shadow: 2px 2px 0 rgba(255,215,0,0.3);
+        }
+
+        .instr-container .tagline {
+            font-family: 'Anton', sans-serif;
+            font-size: 1.3rem;
+            letter-spacing: 0.08em;
+            color: var(--grey);
+            margin-top: 1.5rem;
+            text-transform: uppercase;
+            background: var(--gold);
+            color: var(--black);
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            transform: skewX(-5deg);
+        }
+
+        .instr-container .meta-line {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 3px solid var(--gold);
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            color: var(--grey);
+            line-height: 1.8;
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2.5rem 2rem;
+            background: var(--cream);
+        }
+
+        /* ── INTRO PROMO ── */
+        .instr-container .promo {
+            background: var(--white);
+            border: 4px solid var(--gold);
+            border-left: 8px solid var(--red);
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 2.5rem;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            position: relative;
+            box-shadow: 6px 6px 0 rgba(0,0,0,0.1);
+        }
+
+        .instr-container .promo::before {
+            content: '🎤 WELCOME TO THE SHOW';
+            position: absolute;
+            top: -1rem;
+            left: 1.5rem;
+            background: var(--red);
+            color: var(--white);
+            padding: 0.4rem 1rem;
+            font-family: 'Passion One', cursive;
+            font-size: 0.9rem;
+            font-weight: 900;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Alfa Slab One', cursive;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--red);
+            margin: 2.75rem 0 1.25rem;
+            padding: 0.5rem 0;
+            position: relative;
+            animation: slideIn 0.5s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.06s);
+            text-shadow:
+                3px 3px 0 var(--black),
+                6px 6px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 100%;
+            background: var(--gold);
+            box-shadow: 0 0 10px rgba(255,215,0,0.5);
+        }
+
+        .instr-container h2::after {
+            content: attr(data-step);
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Passion One', cursive;
+            font-size: 1.2rem;
+            font-weight: 900;
+            letter-spacing: 0.15em;
+            color: var(--white);
+            background: var(--blue);
+            padding: 0.3rem 1rem;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-30px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+
+        .instr-container h3 {
+            font-family: 'Passion One', cursive;
+            font-weight: 900;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--blue);
+            margin: 1.75rem 0 0.6rem;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            color: var(--grey);
+        }
+
+        .instr-container ul, ol { margin: 0.75rem 0 1.25rem 1.5rem; }
+        .instr-container li {
+            font-size: 1rem;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+            color: var(--grey);
+        }
+
+        .instr-container strong { color: var(--red); font-weight: 700; }
+        .instr-container em     { color: var(--blue); font-style: normal; font-weight: 700; }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.5rem 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--red), var(--gold), var(--blue));
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        /* ── HYPE BOX ── */
+        .instr-container .hype {
+            background: var(--gold);
+            border: 4px solid var(--gold-dark);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 1rem;
+            line-height: 1.85;
+            box-shadow: 6px 6px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container .hype-label {
+            font-family: 'Passion One', cursive;
+            font-size: 1rem;
+            font-weight: 900;
+            letter-spacing: 0.2em;
+            color: var(--red);
+            display: block;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+        }
+
+        /* ── GIMMICK CARDS ── */
+        .instr-container .gimmick-grid {
+            display: grid;
+            gap: 0.75rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .gimmick-card {
+            background: var(--white);
+            border: 4px solid var(--grey);
+            padding: 1.25rem 1.5rem;
+            position: relative;
+            transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.1);
+        }
+
+        .instr-container .gimmick-card:hover {
+            border-color: var(--gold);
+            transform: translate(-2px, -2px);
+            box-shadow: 8px 8px 0 rgba(255,215,0,0.3);
+        }
+
+        .instr-container .gimmick-tag {
+            position: absolute;
+            top: -0.9rem;
+            left: 1.5rem;
+            background: var(--red);
+            color: var(--white);
+            font-family: 'Anton', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            padding: 0.4rem 1rem;
+            text-transform: uppercase;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .instr-container .gimmick-name {
+            font-family: 'Alfa Slab One', cursive;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--black);
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 0 rgba(255,215,0,0.3);
+        }
+
+        .instr-container .gimmick-desc {
+            font-size: 0.98rem;
+            line-height: 1.7;
+            color: var(--grey);
+            margin-bottom: 0.75rem;
+        }
+
+        .instr-container .gimmick-moves {
+            font-family: 'Passion One', cursive;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--blue);
+            border-top: 2px solid var(--gold);
+            padding-top: 0.5rem;
+        }
+
+        /* ── STAT DISPLAY ── */
+        .instr-container .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .stat-card {
+            background: var(--white);
+            border: 3px solid var(--gold);
+            border-bottom: 6px solid var(--gold-dark);
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+        }
+
+        .instr-container .stat-name {
+            font-family: 'Passion One', cursive;
+            font-size: 1.3rem;
+            font-weight: 900;
+            letter-spacing: 0.12em;
+            color: var(--red);
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .stat-desc {
+            font-size: 0.88rem;
+            color: var(--grey);
+            line-height: 1.5;
+        }
+
+        .instr-container .stat-range {
+            font-family: 'Alfa Slab One', cursive;
+            font-size: 1.5rem;
+            color: var(--gold-dark);
+            margin-top: 0.5rem;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+
+        /* ── MOVE LIST ── */
+        .instr-container .move-list {
+            display: grid;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .move-item {
+            background: var(--white);
+            border: 3px solid var(--grey-light);
+            border-left: 6px solid var(--blue);
+            padding: 0.85rem 1rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: baseline;
+            gap: 1rem;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+
+        .instr-container .move-name {
+            font-family: 'Passion One', cursive;
+            font-size: 1.2rem;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            color: var(--black);
+            text-transform: uppercase;
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .move-desc {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--grey);
+        }
+
+        .instr-container .move-type {
+            font-family: 'Anton', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            color: var(--red);
+            background: rgba(230,0,0,0.1);
+            padding: 0.3rem 0.8rem;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        /* ── AUDIENCE METER ── */
+        .instr-container .audience-box {
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            color: var(--white);
+            border: 6px solid var(--gold);
+            padding: 1.75rem 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            box-shadow:
+                0 0 30px rgba(255,215,0,0.3),
+                inset 0 0 40px rgba(0,0,0,0.2);
+        }
+
+        .instr-container .audience-title {
+            font-family: 'Alfa Slab One', cursive;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.4);
+        }
+
+        .instr-container .audience-track {
+            display: flex;
+            gap: 6px;
+            justify-content: center;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .instr-container .aud-pip {
+            width: 24px;
+            height: 24px;
+            border: 3px solid var(--white);
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+        }
+
+        .instr-container .aud-pip.filled { 
+            background: var(--gold); 
+            border-color: var(--gold);
+            box-shadow: 0 0 12px rgba(255,215,0,0.8);
+        }
+
+        .instr-container .audience-desc {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-top: 1rem;
+            color: var(--cream);
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-top: 8px solid var(--gold);
+            text-align: center;
+            position: relative;
+        }
+
+        .instr-container .footer-champ {
+            font-family: 'Alfa Slab One', cursive;
+            font-size: 3rem;
+            color: var(--gold-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.75rem;
+            text-shadow:
+                3px 3px 0 var(--black),
+                0 0 20px rgba(255,215,0,0.3);
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'Passion One', cursive;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--grey);
+            text-transform: uppercase;
+        }
+
+        .instr-container footer::before {
+            content: '★ ★ ★';
+            display: block;
+            font-size: 1.8rem;
+            color: var(--gold);
+            letter-spacing: 0.5em;
+            margin-bottom: 1.25rem;
+            text-shadow: 0 0 10px rgba(255,215,0,0.5);
+        }
+
+        /* Bottom lightning */
+        .instr-container .lightning-bottom {
+            height: 30px;
+            background: linear-gradient(
+                -135deg,
+                var(--blue) 0%,
+                var(--blue-dark) 25%,
+                var(--red) 50%,
+                var(--red-dark) 75%,
+                var(--gold) 100%
+            );
+            background-size: 300% 100%;
+            animation: lightningSlide 3s linear infinite;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 3.5rem; }
+            h1 .wrestling { font-size: 2.8rem; }
+            h2 { font-size: 2.2rem; }
+            h2::before { display: none; }
+            h2::after { position: static; transform: none; display: block; margin-top: 0.75rem; }
+            .stat-grid { grid-template-columns: 1fr; }
+            .move-item { grid-template-columns: 1fr; gap: 0.4rem; }
+            .move-type { text-align: left; }
+            .content { padding: 2rem 1.25rem; }
+            header { padding: 2rem 1.25rem; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+        <div class="corner-plate tl"></div>
+        <div class="corner-plate tr"></div>
+        <div class="corner-plate bl"></div>
+        <div class="corner-plate br"></div>
+
+        <!-- LIGHTNING BAR -->
+        <div class="lightning-bar"></div>
+
+        <!-- HEADER -->
+        <header>
+            <div class="live-tag">🔴 LIVE</div>
+            <h1>
+                <span class="world">WORLD</span>
+                <span class="world">WIDE</span>
+                <span class="wrestling">WRESTLING</span>
+            </h1>
+            <div class="edition-tag">Second Edition</div>
+            <div class="tagline">Create Your Legendary Wrestler</div>
+            <div class="meta-line">
+                SYSTEM: POWERED BY THE APOCALYPSE // PUBLISHER: NDPDESIGN<br>
+                GENRE: PROFESSIONAL WRESTLING DRAMA // STATUS: READY TO RUMBLE
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="promo">
+                Welcome to the greatest spectacle in sports entertainment! You're about to create a <strong>wrestler</strong> — a larger-than-life performer who thrills crowds, cuts promos, and fights for championship gold. This isn't about winning or losing. This is about <em>putting on a show</em>. The storylines are real. The drama is real. The audience's love and hate? That's the <strong>realest thing in the world</strong>. Now grab that mic and show us what you've got!
+            </div>
+
+            <!-- STEP 1: GIMMICK -->
+            <h2 data-step="STEP 01" style="--i:1;">Choose Your Gimmick</h2>
+            <p>Your <strong>Gimmick</strong> is your character, your persona, your whole identity in the ring. It determines your wrestling style, your storylines, and how you interact with the crowd. Pick the Gimmick that speaks to you — then make it <em>legendary</em>.</p>
+
+            <div class="gimmick-grid">
+                <div class="gimmick-card">
+                    <div class="gimmick-tag">POWERHOUSE</div>
+                    <div class="gimmick-name">The Monster</div>
+                    <div class="gimmick-desc">You're an unstoppable force. Size. Power. Intimidation. You dominate opponents through sheer physical presence. They fear you before the bell even rings.</div>
+                    <div class="gimmick-moves">Signature: Power Bomb // Finisher: Total Domination</div>
+                </div>
+                <div class="gimmick-card">
+                    <div class="gimmick-tag">TECHNICIAN</div>
+                    <div class="gimmick-name">The Veteran</div>
+                    <div class="gimmick-desc">You've been around. You've seen it all. Wrestling is an art and you're a master. Every move is crisp. Every counter is perfect. Respect the craft.</div>
+                    <div class="gimmick-moves">Signature: Submission Hold // Finisher: Technical Excellence</div>
+                </div>
+                <div class="gimmick-card">
+                    <div class="gimmick-tag">HIGH-FLYER</div>
+                    <div class="gimmick-name">The High Flyer</div>
+                    <div class="gimmick-desc">Gravity is a suggestion. You soar through the air, defy physics, and leave audiences breathless. Risk everything for the perfect moment.</div>
+                    <div class="gimmick-moves">Signature: Top Rope Dive // Finisher: From the Heavens</div>
+                </div>
+                <div class="gimmick-card">
+                    <div class="gimmick-tag">BRAWLER</div>
+                    <div class="gimmick-name">The Hardcore</div>
+                    <div class="gimmick-desc">Rules are for people who can't win without them. Chairs. Tables. Steel. Blood. You thrive in chaos and violence. The crowd loves it.</div>
+                    <div class="gimmick-moves">Signature: Weapon Shot // Finisher: Extreme Impact</div>
+                </div>
+                <div class="gimmick-card">
+                    <div class="gimmick-tag">SHOWBOAT</div>
+                    <div class="gimmick-name">The Provocateur</div>
+                    <div class="gimmick-desc">Wrestling is theater and you're the star. Trash talk. Mind games. Spectacular entrances. You get inside their heads before the match even starts.</div>
+                    <div class="gimmick-moves">Signature: Taunt // Finisher: The Show-Stopper</div>
+                </div>
+                <div class="gimmick-card">
+                    <div class="gimmick-tag">UNDERDOG</div>
+                    <div class="gimmick-name">The Babyface</div>
+                    <div class="gimmick-desc">You're the hero the people believe in. Against the odds. Against the villains. Against all logic. You fight for them and they love you for it.</div>
+                    <div class="gimmick-moves">Signature: Comeback Rally // Finisher: Hope Spot Victory</div>
+                </div>
+                <div class="gimmick-card">
+                    <div class="gimmick-tag">VILLAIN</div>
+                    <div class="gimmick-name">The Heel</div>
+                    <div class="gimmick-desc">They can boo all they want — you're still going to win. Cheating? That's just smart strategy. The rules exist to be bent. Greatness requires sacrifice. Theirs, not yours.</div>
+                    <div class="gimmick-moves">Signature: Cheap Shot // Finisher: Villainous Victory</div>
+                </div>
+                <div class="gimmick-card">
+                    <div class="gimmick-tag">LEGEND</div>
+                    <div class="gimmick-name">The Icon</div>
+                    <div class="gimmick-desc">You transcend wrestling. You're a brand. A legend. When you walk through that curtain, history is made. The question isn't if you'll win — it's how spectacular the win will be.</div>
+                    <div class="gimmick-moves">Signature: Legendary Comeback // Finisher: Icon's Triumph</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: STATS -->
+            <h2 data-step="STEP 02" style="--i:2;">Assign Your Stats</h2>
+            <p>Every wrestler has <strong>four core Stats</strong>. Distribute points using the array: <strong>+2, +1, +1, 0</strong>. These modify your rolls and determine how effectively you perform different types of actions.</p>
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-name">Look</div>
+                    <div class="stat-desc">Appearance, presence, charisma, working the crowd</div>
+                    <div class="stat-range">+0 to +2</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Power</div>
+                    <div class="stat-desc">Strength, impact, devastating moves, dominance</div>
+                    <div class="stat-range">+0 to +2</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Real</div>
+                    <div class="stat-desc">Authenticity, believability, emotional connection</div>
+                    <div class="stat-range">+0 to +2</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Work</div>
+                    <div class="stat-desc">Technical skill, ring psychology, putting on a match</div>
+                    <div class="stat-range">+0 to +2</div>
+                </div>
+            </div>
+
+            <div class="hype">
+                <span class="hype-label">💪 BOOKING TIP</span>
+                <strong>Your Stats aren't about being the best wrestler.</strong> They're about being the best <em>character</em>. A +2 in Look means you're incredibly compelling to watch. A +2 in Real means people believe every word you say. Choose Stats that match your Gimmick and the story you want to tell.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: MOVES -->
+            <h2 data-step="STEP 03" style="--i:3;">Select Your Moves</h2>
+            <p>Every wrestler has <strong>Basic Moves</strong> everyone can use, plus <strong>Gimmick Moves</strong> unique to your character. Your Gimmick grants you specific moves — choose which ones fit your style.</p>
+
+            <h3>Basic Moves (Everyone Gets These)</h3>
+            <div class="move-list">
+                <div class="move-item">
+                    <div>
+                        <div class="move-name">Cut a Promo</div>
+                        <div class="move-desc">Grab the mic and talk. Hype your match, trash your opponent, work the crowd. Roll +Look.</div>
+                    </div>
+                    <div class="move-type">LOOK</div>
+                </div>
+                <div class="move-item">
+                    <div>
+                        <div class="move-name">Make a Wrestling Move</div>
+                        <div class="move-desc">Perform a signature move in the ring. Roll +Power or +Work depending on the move type.</div>
+                    </div>
+                    <div class="move-type">POWER/WORK</div>
+                </div>
+                <div class="move-item">
+                    <div>
+                        <div class="move-name">Work the Audience</div>
+                        <div class="move-desc">Play to the crowd. Get them on your side or make them hate you. Roll +Look.</div>
+                    </div>
+                    <div class="move-type">LOOK</div>
+                </div>
+                <div class="move-item">
+                    <div>
+                        <div class="move-name">Break Kayfabe</div>
+                        <div class="move-desc">Step out of character backstage. Have a real conversation. Roll +Real.</div>
+                    </div>
+                    <div class="move-type">REAL</div>
+                </div>
+                <div class="move-item">
+                    <div>
+                        <div class="move-name">Run-In</div>
+                        <div class="move-desc">Interfere in someone else's match. Change the story. Create chaos. Roll +Power.</div>
+                    </div>
+                    <div class="move-type">POWER</div>
+                </div>
+            </div>
+
+            <h3>Gimmick Moves</h3>
+            <p>Your Gimmick provides <strong>3-4 unique moves</strong> that only you can do. These define your style and create your signature moments. Consult your Gimmick playbook for the full list and choose the moves that feel right for your character.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: AUDIENCE -->
+            <h2 data-step="STEP 04" style="--i:4;">Understand Audience</h2>
+            <p><strong>Audience</strong> is the most important currency in wrestling. It measures how much the crowd cares about you — whether they love you or hate you doesn't matter. What matters is they <em>care</em>. Gain Audience by putting on great matches, cutting killer promos, and creating memorable moments.</p>
+
+            <div class="audience-box">
+                <div class="audience-title">AUDIENCE METER</div>
+                <div class="audience-track">
+                    <div class="aud-pip"></div>
+                    <div class="aud-pip"></div>
+                    <div class="aud-pip filled"></div>
+                    <div class="aud-pip filled"></div>
+                    <div class="aud-pip filled"></div>
+                    <div class="aud-pip"></div>
+                    <div class="aud-pip"></div>
+                    <div class="aud-pip"></div>
+                </div>
+                <div class="audience-desc">
+                    Spend Audience to: interrupt someone's promo, insert yourself into a match, force a title shot, or create a storyline opportunity. Max Audience is 4. When full, you're the hottest thing in the promotion.
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: HEAT -->
+            <h2 data-step="STEP 05" style="--i:5;">Track Your Heat</h2>
+            <p><strong>Heat</strong> represents your ongoing feuds and rivalries with other wrestlers. When you have Heat with someone, every interaction is charged with tension. Matches with Heat are always more intense, more personal, and draw bigger reactions.</p>
+
+            <h3>How Heat Works</h3>
+            <ul>
+                <li>Gain Heat when someone betrays you, costs you a match, or calls you out publicly</li>
+                <li>Gain Heat when you attack someone unprovoked or interfere in their business</li>
+                <li>Heat makes your matches <em>matter</em> — the crowd is invested in who wins</li>
+                <li>Resolve Heat through a blowoff match (steel cage, no DQ, retirement match, etc.)</li>
+                <li>Good Heat = compelling storylines. No Heat = nobody cares.</li>
+            </ul>
+
+            <div class="hype">
+                <span class="hype-label">🔥 CREATIVE TIP</span>
+                <strong>Embrace Heat.</strong> The best feuds come from real tension between characters. If another player's wrestler costs you the championship, <em>that's good</em>. Now you have a story. Now the rematch means something. Heat drives drama and drama drives wrestling.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: ENTRANCE & FINISHER -->
+            <h2 data-step="STEP 06" style="--i:6;">Design Your Entrance</h2>
+            <p>Your <strong>Entrance</strong> is how you enter the arena. Music. Pyro. Theatrics. This is your moment to show the audience who you are before you even touch the ring. Your <strong>Finisher</strong> is your signature devastating move — the one that ends matches.</p>
+
+            <h3>Entrance Elements</h3>
+            <ul>
+                <li><strong>Music:</strong> What song plays when you walk out? Describe it.</li>
+                <li><strong>Visual:</strong> Lights? Smoke? Pyrotechnics? Darkness?</li>
+                <li><strong>Attitude:</strong> Confident strut? Intense stare? Playing to the crowd?</li>
+                <li><strong>Signature Gesture:</strong> What do you do that the crowd mimics?</li>
+            </ul>
+
+            <h3>Your Finisher</h3>
+            <ul>
+                <li>Give it a <strong>name</strong> (The Destroyer, The Final Bell, Lights Out, etc.)</li>
+                <li>Describe what it <strong>looks like</strong> (top rope splash, submission hold, power bomb)</li>
+                <li>Describe the <strong>setup</strong> — how do you signal it's coming?</li>
+                <li>When you hit your Finisher, the match is <strong>over</strong> (unless the story says otherwise)</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: DICE MECHANICS -->
+            <h2 data-step="STEP 07" style="--i:7;">How Moves Work</h2>
+            <p>World Wide Wrestling uses the <strong>Powered by the Apocalypse</strong> system. When you make a Move, roll <strong>2d6 + Stat</strong>. Check the result:</p>
+
+            <div class="move-list">
+                <div class="move-item">
+                    <div>
+                        <div class="move-name">10+ Strong Hit</div>
+                        <div class="move-desc">You nail it. The move succeeds and you look amazing doing it. Gain Audience or create an advantage.</div>
+                    </div>
+                    <div class="move-type">SUCCESS</div>
+                </div>
+                <div class="move-item">
+                    <div>
+                        <div class="move-name">7-9 Weak Hit</div>
+                        <div class="move-desc">You succeed, but there's a cost or complication. Maybe you win but get injured. Maybe the crowd doesn't buy it. Choose hard.</div>
+                    </div>
+                    <div class="move-type">MIXED</div>
+                </div>
+                <div class="move-item">
+                    <div>
+                        <div class="move-name">6- Miss</div>
+                    <div class="move-desc">It goes wrong. You botch. The crowd groans. Your opponent gets the advantage. The GM makes a move against you.</div>
+                    </div>
+                    <div class="move-type">FAILURE</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: STORYLINES -->
+            <h2 data-step="STEP 08" style="--i:8;">Build Your Storyline</h2>
+            <p>Wrestling is about <strong>storylines</strong> — ongoing narratives that build over weeks or months. Work with the GM (called Creative) and other players to establish your character's story arc.</p>
+
+            <h3>Storyline Questions</h3>
+            <ul>
+                <li><strong>What do you want?</strong> Championship gold? Revenge? Respect? Redemption?</li>
+                <li><strong>Who stands in your way?</strong> Which wrestler is your natural rival?</li>
+                <li><strong>What's your character arc?</strong> Rise to glory? Fall from grace? Redemption tour?</li>
+                <li><strong>How do you work the crowd?</strong> Face (hero)? Heel (villain)? Tweener (complicated)?</li>
+                <li><strong>What's your signature feud?</strong> Who do you have the best chemistry with?</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: ADVANCEMENT -->
+            <h2 data-step="STEP 09" style="--i:9;">Advancement & Growth</h2>
+            <p>As you perform, you gain <strong>Experience</strong> (XP). Spend XP to improve your wrestler, learn new moves, or change your character direction.</p>
+
+            <h3>What You Can Do with XP</h3>
+            <ul>
+                <li><strong>+1 to a Stat</strong> (max +3 in any stat)</li>
+                <li><strong>Learn a new Gimmick Move</strong></li>
+                <li><strong>Change your Gimmick</strong> (heel turn, face turn, character evolution)</li>
+                <li><strong>Gain a Manager or Stable</strong></li>
+                <li><strong>Win a Championship</strong> (if the story supports it)</li>
+            </ul>
+
+            <div class="hype">
+                <span class="hype-label">⭐ CHAMPIONSHIP GOLD</span>
+                <strong>Titles matter.</strong> Holding a championship changes everything. You're the target. Every match is elevated. Your promos hit different. But titles are storytelling tools — not rewards for rolling well. Earn them through compelling narratives, not just mechanical success.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: FINAL DETAILS -->
+            <h2 data-step="STEP 10" style="--i:10;">Finishing Touches</h2>
+
+            <h3>Character Details</h3>
+            <ul>
+                <li><strong>Ring Name:</strong> Your wrestling persona (can be different from your real name)</li>
+                <li><strong>Real Name:</strong> Who you are behind the character (if different)</li>
+                <li><strong>Look:</strong> What do you wear? Mask? Face paint? Suit? Tights?</li>
+                <li><strong>Catchphrase:</strong> What's your signature line?</li>
+                <li><strong>Alignment:</strong> Face, Heel, or Tweener?</li>
+            </ul>
+
+            <h3>Relationships</h3>
+            <ul>
+                <li>Establish Heat with at least one other wrestler</li>
+                <li>Define a tag team partner, rival, or manager (if applicable)</li>
+                <li>Determine your position in the roster hierarchy</li>
+            </ul>
+
+            <h3>First Show</h3>
+            <ul>
+                <li><strong>What match are you booked in?</strong> Singles? Tag team? Battle royal?</li>
+                <li><strong>What's your role?</strong> Opening match? Main event? Mid-card?</li>
+                <li><strong>What story are you telling?</strong> Debut? Comeback? Revenge?</li>
+            </ul>
+
+            <div class="promo" style="margin-top: 2rem; border-left-color: var(--gold);">
+                You've created a wrestler. Now it's time to step through that curtain, hear your music hit, and feel thousands of eyes on you. The lights. The roar. The moment. <strong>This is your show.</strong> Make it legendary. Cut the promo of your life. Hit your finisher clean. Give them a match they'll never forget. Because in this ring, <em>you're not just a wrestler — you're a star.</em>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-champ">MAIN EVENT</div>
+            <div class="footer-sub">World Wide Wrestling 2E // Ndpdesign // Powered by the Apocalypse</div>
+        </footer>
+
+        <!-- LIGHTNING BOTTOM -->
+        <div class="lightning-bottom"></div>
+
+    </div>
+    </body>
+</div>
+</html>

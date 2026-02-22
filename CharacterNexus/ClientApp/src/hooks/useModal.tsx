@@ -51,8 +51,10 @@ const backdropStyle: React.CSSProperties = {
 };
 
 const modalStyle: React.CSSProperties = {
+  overflowY: "auto",
   background: "#110f38ff",
   padding: "1rem",
   borderRadius: "6px",
   minWidth: "320px",
+  maxHeight: "400px"
 };

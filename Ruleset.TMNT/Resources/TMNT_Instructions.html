@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMNT RPG — Mutant Character Creation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Titan+One&family=Permanent+Marker&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --leo-blue:     #0066CC;
+            --don-purple:   #6B3FA0;
+            --raph-red:     #E63946;
+            --mikey-orange: #FF6B35;
+            --comic-yellow: #FFD23F;
+            --comic-green:  #06A77D;
+            --pizza-tan:    #F4E4C1;
+            --ink:          #1A1A1A;
+            --white:        #FFFFFF;
+            --comic-bg:     #FFF9E6;
+            --shadow:       #2A2A2A;
+            --grey:         #6B6B6B;
+            --ooze-green:   #7FFF00;
+            --ooze-glow:    #39FF14;
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Comic Neue', cursive;
+            background: var(--comic-yellow);
+            background-image:
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 20px,
+                    rgba(255,107,53,0.05) 20px,
+                    rgba(255,107,53,0.05) 40px
+                );
+            color: var(--ink);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* ── CONTAINER (Comic Book Page) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--comic-bg);
+            border: 6px solid var(--ink);
+            box-shadow:
+                0 0 0 2px var(--white),
+                0 0 0 8px var(--ink),
+                12px 12px 0 rgba(0,0,0,0.3),
+                0 20px 60px rgba(0,0,0,0.5);
+            position: relative;
+            animation: comicPop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        @keyframes comicPop {
+            0%   { opacity: 0; transform: scale(0.5) rotate(-5deg); }
+            70%  { transform: scale(1.05) rotate(2deg); }
+            100% { opacity: 1; transform: scale(1) rotate(0deg); }
+        }
+
+        /* Halftone pattern overlay */
+        .instr-container .container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle, var(--ink) 1px, transparent 1px);
+            background-size: 8px 8px;
+            opacity: 0.06;
+            pointer-events: none;
+        }
+
+        /* Pizza grease stains */
+        .instr-container .grease-stain {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,107,53,0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .instr-container .grease-1 { top: 10%; right: 8%; width: 80px; height: 80px; }
+        .instr-container .grease-2 { bottom: 15%; left: 12%; width: 60px; height: 60px; }
+
+        /* Comic burst corners */
+        .instr-container .burst {
+            position: absolute;
+            font-family: 'Bangers', cursive;
+            font-size: 1.2rem;
+            padding: 0.3rem 0.6rem;
+            transform: rotate(-15deg);
+            z-index: 10;
+            text-shadow: 2px 2px 0 var(--white);
+        }
+
+        .instr-container .burst.tl {
+            top: -8px;
+            left: -8px;
+            background: var(--raph-red);
+            color: var(--white);
+            border: 3px solid var(--ink);
+            clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+        }
+
+        .instr-container .burst.br {
+            bottom: -8px;
+            right: -8px;
+            background: var(--leo-blue);
+            color: var(--white);
+            border: 3px solid var(--ink);
+            clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+            transform: rotate(15deg);
+        }
+
+        /* ── PIZZA BOX TOP ── */
+        .instr-container .pizza-box {
+            background: var(--pizza-tan);
+            border-bottom: 6px solid var(--ink);
+            padding: 1.5rem 2rem;
+            position: relative;
+            box-shadow: inset 0 0 50px rgba(255,107,53,0.1);
+        }
+
+        /* Pizza box text */
+        .instr-container .pizza-box::before {
+            content: 'COWABUNGA!';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-8deg);
+            font-family: 'Bangers', cursive;
+            font-size: 6rem;
+            color: var(--mikey-orange);
+            opacity: 0.08;
+            pointer-events: none;
+            letter-spacing: 0.1em;
+        }
+
+        .instr-container .issue-tag {
+            font-family: 'Bangers', cursive;
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            color: var(--raph-red);
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+            background: var(--white);
+            padding: 0.3rem 0.8rem;
+            border: 3px solid var(--ink);
+            transform: rotate(-2deg);
+        }
+
+        .instr-container h1 {
+            font-family: 'Titan One', cursive;
+            font-size: 3.5rem;
+            line-height: 0.9;
+            color: var(--ink);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            text-shadow:
+                4px 4px 0 var(--ooze-green),
+                8px 8px 0 rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container h1 .tmnt {
+            display: block;
+            font-size: 2rem;
+            color: var(--comic-green);
+            text-shadow:
+                3px 3px 0 var(--ooze-green),
+                6px 6px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container .subtitle {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.1rem;
+            color: var(--grey);
+            margin-top: 0.5rem;
+            transform: rotate(-1deg);
+        }
+
+        .instr-container .meta-box {
+            margin-top: 1.25rem;
+            padding: 0.75rem 1rem;
+            background: var(--white);
+            border: 3px solid var(--ink);
+            font-family: 'Comic Neue', cursive;
+            font-size: 0.75rem;
+            line-height: 1.8;
+            transform: rotate(0.5deg);
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2rem;
+            background: var(--comic-bg);
+            position: relative;
+        }
+
+        /* ── SPEECH BUBBLE ── */
+        .instr-container .speech-bubble {
+            background: var(--white);
+            border: 4px solid var(--ink);
+            border-radius: 30px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2.5rem;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            position: relative;
+            box-shadow: 6px 6px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container .speech-bubble::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50px;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 0px solid transparent;
+            border-top: 20px solid var(--ink);
+        }
+
+        .instr-container .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -13px;
+            left: 53px;
+            width: 0;
+            height: 0;
+            border-left: 16px solid transparent;
+            border-right: 0px solid transparent;
+            border-top: 16px solid var(--white);
+        }
+
+        /* ── SECTION HEADERS (Comic Panels) ── */
+        .instr-container h2 {
+            font-family: 'Bangers', cursive;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--white);
+            margin: 2.75rem 0 1.25rem;
+            padding: 0.75rem 1.25rem;
+            background: var(--leo-blue);
+            border: 5px solid var(--ink);
+            position: relative;
+            animation: slideIn 0.4s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.08s);
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+            transform: skewX(-3deg);
+            box-shadow: 6px 6px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: attr(data-pow);
+            position: absolute;
+            top: -1.5rem;
+            right: 1rem;
+            font-family: 'Bangers', cursive;
+            font-size: 3rem;
+            color: var(--comic-yellow);
+            text-shadow:
+                3px 3px 0 var(--ink),
+                0 0 20px rgba(255,210,63,0.6);
+            transform: rotate(-10deg);
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: skewX(-3deg) translateX(-30px); }
+            to   { opacity: 1; transform: skewX(-3deg) translateX(0); }
+        }
+
+        .instr-container h2.alt1 { background: var(--raph-red); }
+        .instr-container h2.alt2 { background: var(--don-purple); }
+        .instr-container h2.alt3 { background: var(--mikey-orange); }
+        .instr-container h2.alt4 { background: var(--comic-green); }
+
+        .instr-container h3 {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--raph-red);
+            margin: 1.75rem 0 0.6rem;
+            transform: rotate(-1deg);
+        }
+
+        .instr-container p {
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            color: var(--ink);
+        }
+
+        .instr-container ul, ol { margin: 0.75rem 0 1.25rem 1.5rem; }
+        .instr-container li {
+            font-size: 0.98rem;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { color: var(--raph-red); font-weight: 700; }
+        .instr-container em     { color: var(--leo-blue); font-style: normal; font-weight: 700; }
+
+        /* ── DIVIDER (Comic Panel Line) ── */
+        .instr-container .divider {
+            margin: 2.5rem 0;
+            height: 6px;
+            background: var(--ink);
+            box-shadow: 0 0 0 2px var(--white), 0 0 0 8px var(--ink);
+        }
+
+        /* ── THOUGHT BUBBLE ── */
+        .instr-container .thought-bubble {
+            background: var(--white);
+            border: 4px dashed var(--ink);
+            border-radius: 20px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.85;
+            font-style: italic;
+            position: relative;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+        }
+
+        .instr-container .thought-label {
+            font-family: 'Bangers', cursive;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            color: var(--don-purple);
+            display: block;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+            font-style: normal;
+        }
+
+        /* ── PANEL BOX ── */
+        .instr-container .panel-box {
+            background: var(--white);
+            border: 5px solid var(--ink);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            position: relative;
+            box-shadow: 6px 6px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container .panel-box::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -1rem;
+            left: 1.5rem;
+            background: var(--comic-yellow);
+            color: var(--ink);
+            padding: 0.3rem 0.8rem;
+            font-family: 'Bangers', cursive;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            border: 3px solid var(--ink);
+        }
+
+        /* ── ANIMAL CARDS ── */
+        .instr-container .animal-grid {
+            display: grid;
+            gap: 0.75rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .animal-card {
+            background: var(--white);
+            border: 5px solid var(--ink);
+            padding: 1.25rem 1.5rem;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 6px 6px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container .animal-card:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 9px 9px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container .animal-icon {
+            position: absolute;
+            top: -1rem;
+            right: 1rem;
+            font-size: 2.5rem;
+            background: var(--comic-yellow);
+            border: 4px solid var(--ink);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container .animal-name {
+            font-family: 'Bangers', cursive;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .animal-desc {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .animal-bonus {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 0.85rem;
+            color: var(--comic-green);
+            border-top: 2px solid var(--ink);
+            padding-top: 0.5rem;
+        }
+
+        /* ── MUTATION TABLE ── */
+        .instr-container .mutation-list {
+            display: grid;
+            gap: 0.5rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .mutation-item {
+            background: var(--white);
+            border: 3px solid var(--ink);
+            border-left: 6px solid var(--ooze-green);
+            padding: 0.85rem 1rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: baseline;
+            gap: 1rem;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+
+        .instr-container .mutation-name {
+            font-family: 'Bangers', cursive;
+            font-size: 1.1rem;
+            letter-spacing: 0.08em;
+            color: var(--ink);
+            text-transform: uppercase;
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .mutation-desc {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: var(--grey);
+        }
+
+        .instr-container .mutation-cost {
+            font-family: 'Titan One', cursive;
+            font-size: 1.3rem;
+            color: var(--ooze-green);
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.15);
+            white-space: nowrap;
+        }
+
+        /* ── OOZE METER ── */
+        .instr-container .ooze-box {
+            background: radial-gradient(circle, #39FF14 0%, #7FFF00 100%);
+            color: var(--ink);
+            border: 6px solid var(--ink);
+            padding: 1.75rem 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            box-shadow:
+                0 0 30px rgba(57,255,20,0.4),
+                6px 6px 0 rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .instr-container .ooze-box::before {
+            content: '☢';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 12rem;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .instr-container .ooze-title {
+            font-family: 'Bangers', cursive;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--ink);
+            margin-bottom: 0.75rem;
+            text-shadow:
+                3px 3px 0 rgba(255,255,255,0.5),
+                0 0 20px rgba(57,255,20,0.6);
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container .ooze-desc {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-top: 0.75rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── STATS DISPLAY ── */
+        .instr-container .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .stat-card {
+            background: var(--white);
+            border: 4px solid var(--ink);
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container .stat-name {
+            font-family: 'Bangers', cursive;
+            font-size: 1.3rem;
+            letter-spacing: 0.1em;
+            color: var(--leo-blue);
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .stat-desc {
+            font-size: 0.85rem;
+            color: var(--grey);
+            line-height: 1.4;
+        }
+
+        .instr-container .stat-dice {
+            font-family: 'Titan One', cursive;
+            font-size: 1.4rem;
+            color: var(--ink);
+            margin-top: 0.5rem;
+            text-shadow: 2px 2px 0 rgba(255,210,63,0.3);
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--pizza-tan);
+            padding: 2rem;
+            border-top: 6px solid var(--ink);
+            text-align: center;
+            position: relative;
+        }
+
+        .instr-container .footer-shout {
+            font-family: 'Bangers', cursive;
+            font-size: 3rem;
+            color: var(--raph-red);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.75rem;
+            text-shadow:
+                4px 4px 0 var(--ink),
+                0 0 20px rgba(230,57,70,0.4);
+            transform: rotate(-2deg);
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'Comic Neue', cursive;
+            font-size: 0.85rem;
+            color: var(--grey);
+            text-transform: uppercase;
+        }
+
+        .instr-container footer::before {
+            content: '🍕 🍕 🍕';
+            display: block;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.8rem; }
+            h1 .tmnt { font-size: 1.6rem; }
+            h2 { font-size: 2rem; }
+            h2::before { font-size: 2rem; top: -1rem; }
+            .stat-grid { grid-template-columns: 1fr; }
+            .mutation-item { grid-template-columns: 1fr; gap: 0.4rem; }
+            .mutation-cost { text-align: left; }
+            .content { padding: 1.5rem 1.25rem; }
+            .burst { font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+        <div class="grease-stain grease-1"></div>
+        <div class="grease-stain grease-2"></div>
+        <div class="burst tl">POW!</div>
+        <div class="burst br">ZAP!</div>
+
+        <!-- PIZZA BOX TOP -->
+        <div class="pizza-box">
+            <div class="issue-tag">⚡ ISSUE #1 — ORIGIN STORY</div>
+            <h1>
+                MUTANT
+                <span class="tmnt">Character Creation</span>
+            </h1>
+            <div class="subtitle">After the Bomb RPG • Palladium System</div>
+            <div class="meta-box">
+                <strong>PUBLISHER:</strong> Palladium Books<br>
+                <strong>SYSTEM:</strong> Palladium Megaversal (Percentile)<br>
+                <strong>SETTING:</strong> Post-Apocalyptic Earth / Mutant Animals<br>
+                <strong>REQUIRED:</strong> D100, D20, D6 dice + radical attitude
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="speech-bubble">
+                Dude! You're about to become a <strong>mutant animal</strong>! Maybe you're a turtle who learned ninjutsu in the sewers. Maybe you're a rat sensei. Maybe you're a cyborg rabbit with attitude. The world ended. Humanity's gone (mostly). Now it's <em>your</em> turn. Roll some dice, pick some powers, grab a weapon, and remember: <strong>pizza is still the most important food group.</strong> Cowabunga!
+            </div>
+
+            <!-- STEP 1: ANIMAL TYPE -->
+            <h2 data-pow="BOOM!" style="--i:1;">Choose Your Animal</h2>
+            <p>First things first: <strong>what kind of animal are you?</strong> This determines your base physical characteristics, natural abilities, and how you interact with the world. Remember — you're anthropomorphic (humanoid) but still retain animal traits.</p>
+
+            <div class="animal-grid">
+                <div class="animal-card">
+                    <div class="animal-icon">🐢</div>
+                    <div class="animal-name">Turtle/Tortoise</div>
+                    <div class="animal-desc">Natural armor plating. Slow but steady. Can retract into shell for protection. Herbivore or omnivore. Long lifespan.</div>
+                    <div class="animal-bonus">+2 P.S., +1 P.E., -2 Spd // Natural AR 10 (shell)</div>
+                </div>
+                <div class="animal-card">
+                    <div class="animal-icon">🐀</div>
+                    <div class="animal-name">Rat</div>
+                    <div class="animal-desc">Quick, clever, adaptable. Excellent senses. Can squeeze through tight spaces. Natural scavenger instincts.</div>
+                    <div class="animal-bonus">+2 I.Q., +1 P.P., +1 Spd // Keen smell, disease resistant</div>
+                </div>
+                <div class="animal-card">
+                    <div class="animal-icon">🦊</div>
+                    <div class="animal-name">Fox/Wolf/Canine</div>
+                    <div class="animal-desc">Pack mentality, keen senses, natural hunters. Fast and agile. Social creatures with strong loyalty instincts.</div>
+                    <div class="animal-bonus">+1 I.Q., +2 Spd, +1 P.E. // Enhanced hearing/smell</div>
+                </div>
+                <div class="animal-card">
+                    <div class="animal-icon">🐈</div>
+                    <div class="animal-name">Cat (Domestic/Big)</div>
+                    <div class="animal-desc">Natural hunters with retractable claws. Exceptional balance and night vision. Independent and stealthy.</div>
+                    <div class="animal-bonus">+2 P.P., +1 Spd // Natural climbing, prowl bonus</div>
+                </div>
+                <div class="animal-card">
+                    <div class="animal-icon">🐰</div>
+                    <div class="animal-name">Rabbit/Hare</div>
+                    <div class="animal-desc">Incredibly fast with powerful legs. Nervous but perceptive. Can leap great distances. Natural prey instincts.</div>
+                    <div class="animal-bonus">+3 Spd, +1 P.E. // Leap 20 feet, enhanced hearing</div>
+                </div>
+                <div class="animal-card">
+                    <div class="animal-icon">🦅</div>
+                    <div class="animal-name">Bird (Various)</div>
+                    <div class="animal-desc">Some can fly (if size permits). Exceptional vision. Hollow bones (fragile). Natural aerial awareness.</div>
+                    <div class="animal-bonus">+2 P.P., -1 P.S. // Flight (depends on size), hawk vision</div>
+                </div>
+                <div class="animal-card">
+                    <div class="animal-icon">🐻</div>
+                    <div class="animal-name">Bear</div>
+                    <div class="animal-desc">Massive strength and endurance. Natural weapons (claws). Omnivore. Intimidating presence.</div>
+                    <div class="animal-bonus">+4 P.S., +2 P.E., -1 Spd // Natural claws (2D6 damage)</div>
+                </div>
+                <div class="animal-card">
+                    <div class="animal-icon">🦎</div>
+                    <div class="animal-name">Lizard/Reptile</div>
+                    <div class="animal-desc">Cold-blooded (vulnerable to temperature). Some can regenerate tails. Natural camouflage abilities possible.</div>
+                    <div class="animal-bonus">+1 P.S., +1 P.P. // Varies by species</div>
+                </div>
+            </div>
+
+            <div class="thought-bubble">
+                <span class="thought-label">💭 GM TIP</span>
+                Choose an animal that fits your concept! Want to be a ninja? Small, agile animals work great. Want to be a tank? Go big. Want to fly? Bird's your word. Don't overthink it — just pick what sounds awesome.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: SIZE -->
+            <h2 data-pow="SMASH!" class="alt1" style="--i:2;">Determine Size</h2>
+            <p>How big are you? Size affects your strength, speed, and how the world interacts with you. <strong>Roll D100</strong> on your animal's size table or choose with GM approval.</p>
+
+            <div class="panel-box" data-label="SIZE CATEGORIES">
+                <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.9;">
+                    <li><strong>Tiny (Under 3 feet):</strong> Fast, sneaky, fragile. -2 P.S., +2 Spd. Examples: mice, small birds, rats.</li>
+                    <li><strong>Small (3-4 feet):</strong> Balanced. No modifiers. Examples: cats, raccoons, small dogs.</li>
+                    <li><strong>Medium (4-6 feet):</strong> Human-sized. Standard. Examples: wolves, larger apes, humans (if any left).</li>
+                    <li><strong>Large (6-8 feet):</strong> Imposing. +2 P.S., -1 Spd. Examples: bears, big cats, large reptiles.</li>
+                    <li><strong>Huge (8+ feet):</strong> Massive. +4 P.S., +2 P.E., -2 Spd, -1 P.P. Examples: elephants, rhinos, large mutants.</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: ATTRIBUTES -->
+            <h2 data-pow="WHAM!" class="alt2" style="--i:3;">Roll Attributes</h2>
+            <p>Every mutant has <strong>eight core attributes</strong>. Roll dice for each one. Your animal type and size apply bonuses/penalties.</p>
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-name">I.Q.</div>
+                    <div class="stat-desc">Intelligence & reasoning</div>
+                    <div class="stat-dice">3D6</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">M.E.</div>
+                    <div class="stat-desc">Mental Endurance & focus</div>
+                    <div class="stat-dice">3D6</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">M.A.</div>
+                    <div class="stat-desc">Mental Affinity & charm</div>
+                    <div class="stat-dice">3D6</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">P.S.</div>
+                    <div class="stat-desc">Physical Strength</div>
+                    <div class="stat-dice">3D6</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">P.P.</div>
+                    <div class="stat-desc">Physical Prowess & dexterity</div>
+                    <div class="stat-dice">3D6</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">P.E.</div>
+                    <div class="stat-desc">Physical Endurance</div>
+                    <div class="stat-dice">3D6</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">P.B.</div>
+                    <div class="stat-desc">Physical Beauty</div>
+                    <div class="stat-dice">3D6</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Spd</div>
+                    <div class="stat-desc">Speed (yards per melee)</div>
+                    <div class="stat-dice">3D6</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: BIO-E -->
+            <h2 data-pow="MUTATE!" class="alt3" style="--i:4;">Spend Bio-E Points</h2>
+            <p><strong>Bio-E (Biological Energy)</strong> represents your mutation level. You get a base amount to spend on mutations and enhancements. The more human-like you are, the more Bio-E you've spent.</p>
+
+            <div class="ooze-box">
+                <div class="ooze-title">☢ BIO-E BUDGET ☢</div>
+                <div class="ooze-desc">
+                    Roll <strong>2D4×10</strong> for starting Bio-E (20-80 points). Spend on mutations, human features, and abilities. Leftover points can be saved for later or converted to bonuses.
+                </div>
+            </div>
+
+            <h3>What Bio-E Buys</h3>
+            <div class="mutation-list">
+                <div class="mutation-item">
+                    <div>
+                        <div class="mutation-name">Hands (Full Human)</div>
+                        <div class="mutation-desc">Opposable thumbs, fine manipulation. Essential for using tools and weapons.</div>
+                    </div>
+                    <div class="mutation-cost">10 BIO-E</div>
+                </div>
+                <div class="mutation-item">
+                    <div>
+                        <div class="mutation-name">Hands (Partial)</div>
+                        <div class="mutation-desc">Some manipulation ability but clumsy. Can hold things but -20% to skills.</div>
+                    </div>
+                    <div class="mutation-cost">5 BIO-E</div>
+                </div>
+                <div class="mutation-item">
+                    <div>
+                        <div class="mutation-name">Biped (Full)</div>
+                        <div class="mutation-desc">Walk upright like a human. Frees hands for tool use. Normal human posture.</div>
+                    </div>
+                    <div class="mutation-cost">10 BIO-E</div>
+                </div>
+                <div class="mutation-item">
+                    <div>
+                        <div class="mutation-name">Speech (Full)</div>
+                        <div class="mutation-desc">Speak clearly like a human. Essential for communication and leadership.</div>
+                    </div>
+                    <div class="mutation-cost">10 BIO-E</div>
+                </div>
+                <div class="mutation-item">
+                    <div>
+                        <div class="mutation-name">Speech (Partial)</div>
+                        <div class="mutation-desc">Broken speech. Can communicate but sounds animal-like. -10% to social skills.</div>
+                    </div>
+                    <div class="mutation-cost">5 BIO-E</div>
+                </div>
+                <div class="mutation-item">
+                    <div>
+                        <div class="mutation-name">Looks (None)</div>
+                        <div class="mutation-desc">You look like a walking animal. Scary to humans. -10 P.B.</div>
+                    </div>
+                    <div class="mutation-cost">0 BIO-E</div>
+                </div>
+                <div class="mutation-item">
+                    <div>
+                        <div class="mutation-name">Looks (Partial)</div>
+                        <div class="mutation-desc">Some human features. Less intimidating. -5 P.B.</div>
+                    </div>
+                    <div class="mutation-cost">5 BIO-E</div>
+                </div>
+                <div class="mutation-item">
+                    <div>
+                        <div class="mutation-name">Looks (Full Human)</div>
+                        <div class="mutation-desc">You look mostly human with animal features (ears, tail, fur). No P.B. penalty.</div>
+                    </div>
+                    <div class="mutation-cost">20 BIO-E</div>
+                </div>
+                <div class="mutation-item">
+                    <div>
+                        <div class="mutation-name">Advanced Smell</div>
+                        <div class="mutation-desc">Track by scent, identify individuals, detect poison. +20% to related rolls.</div>
+                    </div>
+                    <div class="mutation-cost">5 BIO-E</div>
+                </div>
+                <div class="mutation-item">
+                    <div>
+                        <div class="mutation-name">Advanced Hearing</div>
+                        <div class="mutation-desc">Hear whispers at 100 feet, ultrasonic sounds. +10% perception audio.</div>
+                    </div>
+                    <div class="mutation-cost">5 BIO-E</div>
+                </div>
+                <div class="mutation-item">
+                    <div>
+                        <div class="mutation-name">Night Vision</div>
+                        <div class="mutation-desc">See in near-total darkness. No penalties in low light.</div>
+                    </div>
+                    <div class="mutation-cost">5 BIO-E</div>
+                </div>
+                <div class="mutation-item">
+                    <div>
+                        <div class="mutation-name">Extra Limbs</div>
+                        <div class="mutation-desc">Additional arms or prehensile tail. +1 attack per melee, can hold extra items.</div>
+                    </div>
+                    <div class="mutation-cost">10 BIO-E</div>
+                </div>
+                <div class="mutation-item">
+                    <div>
+                        <div class="mutation-name">Natural Weapons</div>
+                        <div class="mutation-desc">Claws, fangs, horns, quills. Damage varies by type (1D6 to 3D6).</div>
+                    </div>
+                    <div class="mutation-cost">5-15 BIO-E</div>
+                </div>
+                <div class="mutation-item">
+                    <div>
+                        <div class="mutation-name">Wings (Flight)</div>
+                        <div class="mutation-desc">Functional wings for powered flight. Must be appropriate size/species.</div>
+                    </div>
+                    <div class="mutation-cost">30 BIO-E</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: OCCUPATION -->
+            <h2 data-pow="SKILL!" class="alt4" style="--i:5;">Choose Occupation</h2>
+            <p>Your <strong>Occupation</strong> (or O.C.C. - Occupational Character Class) determines your training, skills, and role. This is what you DO, not just what you ARE.</p>
+
+            <h3>Sample Occupations</h3>
+            <ul>
+                <li><strong>Warrior/Fighter:</strong> Combat specialist. Weapon proficiencies, hand-to-hand expert, physical skills.</li>
+                <li><strong>Ninja/Assassin:</strong> Stealth and precision. Martial arts, acrobatics, prowl, climbing.</li>
+                <li><strong>Road Warrior:</strong> Vehicle expert. Pilot ground vehicles, repair, navigation, survival.</li>
+                <li><strong>Scientist:</strong> Technical genius. Computer ops, chemistry, biology, first aid, research.</li>
+                <li><strong>Scavenger:</strong> Survivalist and trader. Salvage, identify tech, streetwise, barter.</li>
+                <li><strong>Mystic/Shaman:</strong> Psychic or spiritual. May have psionic powers (if allowed).</li>
+                <li><strong>Medic:</strong> Healer. First aid, medical skills, chemistry, biology.</li>
+                <li><strong>Scout:</strong> Explorer and tracker. Wilderness survival, tracking, land navigation, prowl.</li>
+            </ul>
+
+            <div class="panel-box" data-label="SKILL SYSTEM">
+                <p style="margin-bottom: 0.5rem;"><strong>Skills are percentile-based.</strong> When you attempt something, roll D100. Roll <em>under</em> your skill percentage to succeed. Skills start at base level + bonuses from I.Q./attributes.</p>
+                <p style="margin: 0;">Your occupation grants <strong>Occupational Skills</strong> (automatic at higher level) plus <strong>Secondary Skills</strong> (chosen, lower starting %) and <strong>Related Skills</strong> (middle ground).</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: SKILLS -->
+            <h2 data-pow="TRAIN!" class="alt1" style="--i:6;">Select Skills</h2>
+            <p>Based on your occupation, choose skills. Every skill has a <strong>base percentage</strong> that improves with level. High I.Q. grants bonus skill selections.</p>
+
+            <h3>Skill Categories</h3>
+            <p style="font-size: 0.92rem; line-height: 1.7;">
+                <strong>Combat:</strong> Hand-to-hand, weapon proficiencies (W.P. Sword, W.P. Rifle, etc.)<br>
+                <strong>Physical:</strong> Acrobatics, Athletics, Climbing, Swimming, Prowl<br>
+                <strong>Technical:</strong> Computer Operation, Mechanics, Electronics, Demolitions<br>
+                <strong>Pilot:</strong> Pilot Automobile, Motorcycle, Aircraft, Boats, Combat Driving<br>
+                <strong>Medical:</strong> First Aid, Paramedic, Medical Doctor, Holistic Medicine<br>
+                <strong>Espionage:</strong> Intelligence, Disguise, Forgery, Pick Locks, Escape Artist<br>
+                <strong>Science:</strong> Biology, Chemistry, Mathematics, Botany, Zoology<br>
+                <strong>Wilderness:</strong> Land Navigation, Tracking, Hunting, Identify Plants & Fruits<br>
+                <strong>Rogue:</strong> Pick Pockets, Palming, Concealment, Streetwise<br>
+                <strong>Communications:</strong> Radio: Basic, Scrambler, Cryptography, Optic Systems
+            </p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: COMBAT -->
+            <h2 data-pow="FIGHT!" class="alt2" style="--i:7;">Combat &amp; Hit Points</h2>
+
+            <h3>Hit Points & S.D.C.</h3>
+            <p><strong>Hit Points (H.P.)</strong> = P.E. attribute. When H.P. reach 0, you're dying.<br>
+            <strong>Structural Damage Capacity (S.D.C.)</strong> = varies by animal/size. This is damage absorption before H.P. are touched.</p>
+
+            <div class="panel-box" data-label="COMBAT BASICS">
+                <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.9;">
+                    <li><strong>Initiative:</strong> Roll D20. Highest goes first each melee round (15 seconds).</li>
+                    <li><strong>Strike (Attack):</strong> Roll D20 + bonuses. Must beat opponent's Dodge/Parry.</li>
+                    <li><strong>Parry:</strong> Automatic defense. Roll D20 + bonuses to deflect attacks.</li>
+                    <li><strong>Dodge:</strong> Costs 1 attack. Roll D20 + bonuses to avoid damage completely.</li>
+                    <li><strong>Damage:</strong> Weapon damage + P.S. bonus (if applicable) reduces S.D.C., then H.P.</li>
+                    <li><strong>Attacks Per Melee:</strong> Starts at 2-4 depending on occupation and hand-to-hand training.</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: EQUIPMENT -->
+            <h2 data-pow="GEAR!" class="alt3" style="--i:8;">Get Equipment</h2>
+            <p>You start with basic gear based on your occupation. Scavenge, trade, or steal for better stuff. Money is barter-based (ammo, food, tech are currency).</p>
+
+            <h3>Common Gear</h3>
+            <ul>
+                <li><strong>Weapons:</strong> Melee (katana, staff, nunchaku) or Ranged (energy rifle, pistol, crossbow)</li>
+                <li><strong>Armor:</strong> Leather, Kevlar, pre-war military armor (if you can find it)</li>
+                <li><strong>Clothing:</strong> Whatever fits your mutant body (custom or scavenged)</li>
+                <li><strong>Backpack:</strong> Survival essentials (rope, canteen, rations, first aid kit)</li>
+                <li><strong>Tools:</strong> Multi-tool, flashlight, radio (if working)</li>
+                <li><strong>Transportation:</strong> Bicycle, motorcycle, vehicle (if lucky)</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: BACKGROUND -->
+            <h2 data-pow="STORY!" class="alt4" style="--i:9;">Create Your Background</h2>
+            <p>Who are you? Where did you come from? What's your story?</p>
+
+            <h3>Background Questions</h3>
+            <ul>
+                <li><strong>How were you mutated?</strong> Radioactive ooze? Genetic experiment? Natural evolution?</li>
+                <li><strong>Where do you live?</strong> Sewers? Ruins? Wilderness? Mutant settlement?</li>
+                <li><strong>Who raised you?</strong> Other mutants? Lone survivor? Sensei/mentor?</li>
+                <li><strong>What's your goal?</strong> Survival? Revenge? Build community? Find answers?</li>
+                <li><strong>Who are your allies?</strong> Other mutants? Humans (if any)? Solo operator?</li>
+                <li><strong>What do you fear?</strong> Humans? Other mutants? Losing humanity? Starvation?</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: READY -->
+            <h2 data-pow="GO!" class="alt1" style="--i:10;">You're Ready!</h2>
+
+            <div class="panel-box" data-label="FINAL CHECKLIST" style="border-color: var(--ooze-green); border-width: 5px;">
+                <ul style="margin: 0 0 0 1.25rem; list-style: none; line-height: 1.9; font-weight: 700;">
+                    <li>☐ Animal type chosen</li>
+                    <li>☐ Size determined</li>
+                    <li>☐ Eight attributes rolled (with animal/size modifiers)</li>
+                    <li>☐ Bio-E spent on mutations</li>
+                    <li>☐ Occupation (O.C.C.) selected</li>
+                    <li>☐ Skills chosen and percentages calculated</li>
+                    <li>☐ Hand-to-hand combat style selected</li>
+                    <li>☐ Hit Points and S.D.C. calculated</li>
+                    <li>☐ Equipment acquired</li>
+                    <li>☐ Background story created</li>
+                    <li>☐ Name and personality established</li>
+                    <li>☐ Pizza preference determined (very important)</li>
+                    <li>☐ Catchphrase ready</li>
+                    <li>☐ Ready to kick shell!</li>
+                </ul>
+            </div>
+
+            <div class="speech-bubble" style="margin-top: 2rem;">
+                You're a mutant now, dude! You've got skills, you've got attitude, and you've got <em>radical mutations</em>. Whether you're a turtle trained in the ancient ninja arts or a cybernetically-enhanced badger with a grudge, you're ready to explore the post-apocalyptic world. Find your crew. Defend your territory. Fight the good fight. And remember: <strong>when in doubt, go for the pizza.</strong> Turtle power!
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-shout">TURTLE POWER!</div>
+            <div class="footer-sub">
+                Teenage Mutant Ninja Turtles & Other Strangeness<br>
+                Palladium Books // After the Bomb // Megaversal System
+            </div>
+        </footer>
+
+    </div>
+    </body>
+</div>
+</html>

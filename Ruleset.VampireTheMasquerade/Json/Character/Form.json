@@ -255,7 +255,7 @@
           "value": "Alleycat",
           "label": "Alleycat",
           "description": "A combative assault-feeder, you stalk, overpower, and drink from whomever you can, when you can. You may or may not attempt to threaten or Dominate victims into silence or mask the feeding as a robbery. Think about how you arrived at this direct approach to feeding and what makes you comfortable with an unlife of stalking, attacking, feeding, and escaping. You could have been homeless, an SAS soldier, a cartel hit-man, or a big-game hunter.",
-          "bonusAdjustments": "[{\"type\":\"humanity\",\"name\":\"\",\"value\":-1},{\"type\":\"backgrounds\",\"name\":\"Criminal Contacts\",\"value\":3}]",
+          "bonusAdjustments": "[{\"type\":\"humanity\",\"name\":\"\",\"value\":-1},{\"type\":\"backgrounds\",\"name\":\"Contacts\",\"value\":3}]",
           "userChoices": "[{\"type\":\"specialties\",\"choices\":[\"Intimidation.Stickups\",\"Brawl.Grappling\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"choices\":[\"Celerity\",\"Potence\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
@@ -263,14 +263,14 @@
           "label": "Bagger",
           "description": "You steal, buy, or otherwise procure cold blood rather than hunt, relying on the black market or your skills as a burglar or ambulance chaser. Perhaps you still work the night shift at the hospital. Ventrue may not pick this Predator type.",
           "bonusAdjustments": "[{\"type\":\"merits\",\"name\":\"Iron Gullet\",\"value\":3},{\"type\":\"flaws\",\"name\":\"Enemy\",\"value\":2}]",
-          "userChoices": "[{\"type\":\"specialties\",\"choices\":[\"Larceny.Lockpicking\",\"Streetwise.Black Markets\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"choices\":[\"Blood Sorcery\",\"Obfuscate\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
+          "userChoices": "[{\"type\":\"specialties\",\"choices\":[\"Larceny.Lockpicking\",\"Streetwise.Black Market\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"choices\":[\"Blood Sorcery\",\"Obfuscate\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Blood Leech",
           "label": "Blood Leech",
           "description": "You drink from other vampires, either by hunting, coercion or by taking Blood as payment - the only truly moral way of feeding you can think of. Unfortunately, this practice is usually forbidden in Kindred society. It is either risky as all fuck or requires a position of enviable power.",
           "bonusAdjustments": "[{\"type\":\"humanity\",\"name\":\"\",\"value\":-1},{\"type\":\"potency\",\"name\":\"\",\"value\":1},{\"type\":\"flaws\",\"name\":\"Prey Exclusion\",\"value\":2}]",
-          "userChoices": "[{\"type\":\"specialties\",\"choices\":[\"Brawl.Kindred\",\"Stealth.Kindred\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"choices\":[\"Celerity\",\"Protean\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"flaws\",\"choices\":[\"Diablerist\",\"Shunned\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
+          "userChoices": "[{\"type\":\"specialties\",\"choices\":[\"Brawl.Kindred\",\"Stealth.Kindred\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"choices\":[\"Celerity\",\"Protean\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"flaws\",\"choices\":[\"Diablerist\",\"Shunned\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Cleaver",
@@ -291,14 +291,14 @@
           "label": "Farmer",
           "description": "You only feed from animals. Your Hunger constantly gnaws at you, but you have not killed a single human being so far (except perhaps that one time), and you intend to keep it that way. You could have been anyone in life, but your choice speaks to someone obsessed by morality. Perhaps you were an activist, priest, aidworker, or vegan in life, but the choice never to risk a human life is one anyone could arrive at and struggle to maintain. Ventrue may not pick this Predator type.<br >You cannot pick this Predator type if your Blood Potency is 3 or higher.",
           "bonusAdjustments": "[{\"type\":\"humanity\",\"name\":\"\",\"value\":1},{\"type\":\"flaws\",\"name\":\"Vegan\",\"value\":2}]",
-          "userChoices": "[{\"type\":\"specialties\",\"choices\":[\"Animal Ken.(Specific)\",\"Survival.Hunting\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"choices\":[\"Animalism\",\"Protean\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
+          "userChoices": "[{\"type\":\"specialties\",\"choices\":[\"Animal Ken.Cats\",\"Animal Ken.Dogs\",\"Animal Ken.Falconry\",\"Animal Ken.Horses\",\"Animal Ken.Rats\",\"Animal Ken.Snakes\",\"Animal Ken.Wolves\",\"Survival.Hunting\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"choices\":[\"Animalism\",\"Protean\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Osiris",
           "label": "Osiris",
           "description": "You are a celebrity among mortals or else you run a cult, a church, or something similar. You feed from your fans or worshippers, who treat you as a deity. You always have access to easy blood, but followers breed problems with the authorities, organized religion, and indeed the Camarilla. In life, you might have been a DJ, a writer, a cultist, a preacher, or a LARP organizer.",
           "bonusAdjustments": "null",
-          "userChoices": "[{\"type\":\"specialties\",\"choices\":[\"Occult.(Specific)\",\"Performance.(Specific)\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"choices\":[\"Blood Sorcery\",\"Presence\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
+          "userChoices": "[{\"type\":\"specialties\",\"choices\":[\"Occult.Alchemy\",\"Occult.Blood Magic\",\"Occult.Faeries\",\"Occult.Ghosts\",\"Occult.Grimoires\",\"Occult.Infernalism\",\"Occult.Magic\",\"Occult.Necromancy\",\"Occult.Noddism\",\"Occult.Parapsychology\",\"Occult.Voudun\",\"Occult.Werewolves\",\"Performance.Comedy\",\"Performance.Dance\",\"Performance.Drama\",\"Performance.Drums\",\"Performance.Guitar\",\"Performance.Keyboards\",\"Performance.Poetry\",\"Performance.Public Speaking\",\"Performance.Rap\",\"Performance.Singing\",\"Performance.Violin\",\"Performance.Wind Instruments\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"choices\":[\"Blood Sorcery\",\"Presence\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Sandman",
@@ -311,8 +311,8 @@
           "value": "Scene Queen",
           "label": "Scene Queen",
           "description": "You rely on your familiarity with a certain subculture and a wellcrafted pose, feeding on an exclusive subculture that believes you to be one of them. Your victims adore you for your status in the scene, and the ones who understand what you are disbelieved. You may belong to the street or be literal upper-class, abusing the weak with false hope and promises of taking them to the next level. In life, you almost certainly belonged to a scene similar to the one you stalk now.",
-          "bonusAdjustments": "[{\"type\":\"merits\",\"name\":\"Fame\",\"value\":1},{\"type\":\"backgrounds\",\"name\":\"Contacts\",\"value\":1},{\"type\":\"flaws\",\"name\":\"Dark Secret\",\"value\":1}]",
-          "userChoices": "[{\"type\":\"specialties\",\"choices\":[\"Ettiquete.(Specific)\",\"Leadership.(Specific)\",\"Streetwise.(Specific)\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"choices\":[\"Dominate\",\"Potence\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"flaws\",\"choices\":[\"Disliked\",\"Prey Exclusion\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
+          "bonusAdjustments": "[{\"type\":\"backgrounds\",\"name\":\"Fame\",\"value\":1},{\"type\":\"backgrounds\",\"name\":\"Contacts\",\"value\":1},{\"type\":\"flaws\",\"name\":\"Dark Secret\",\"value\":1}]",
+          "userChoices": "[{\"type\":\"specialties\",\"choices\":[\"Ettiquete.Anarch\",\"Ettiquete.Camarilla\",\"Ettiquete.Celebrities\",\"Ettiquete.Corporate\",\"Ettiquete.Elysium\",\"Ettiquete.Feudal\",\"Ettiquete.One-Percenter\",\"Ettiquete.Secret Society\",\"Leadership.Command\",\"Leadership.Inspiration\",\"Leadership.Oratory\",\"Leadership.Praxis\",\"Leadership.Team Dynamic\",\"Leadership.War Pack\",\"Streetwise.Arms Dealing\",\"Streetwise.Black Market\",\"Streetwise.Bribery\",\"Streetwise.Drugs\",\"Streetwise.Fence Stolen Goods\",\"Streetwise.Gangs\",\"Streetwise.Graffiti\",\"Streetwise.Personal Rep\",\"Streetwise.Sex Trade\",\"Streetwise.Urban Survival\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"choices\":[\"Dominate\",\"Potence\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"flaws\",\"choices\":[\"Disliked\",\"Prey Exclusion\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Siren",
@@ -1141,6 +1141,10 @@
                     "label": "Ambushes"
                   },
                   {
+                    "value": "Break-in",
+                    "label": "Break-in"
+                  },
+                  {
                     "value": "Crowds",
                     "label": "Crowds"
                   },
@@ -1752,6 +1756,10 @@
                     "label": "Rhetoric"
                   },
                   {
+                    "value": "Seduction",
+                    "label": "Seduction"
+                  },
+                  {
                     "value": "Victims",
                     "label": "Victims"
                   }
@@ -1890,6 +1898,10 @@
                   {
                     "value": "Innocence",
                     "label": "Innocence"
+                  },
+                  {
+                    "value": "Seduction",
+                    "label": "Seduction"
                   },
                   {
                     "value": "The Long Con",
@@ -2232,6 +2244,10 @@
                 "type": "select",
                 "className": "form-select",
                 "options": [
+                  {
+                    "value": "Anesthetics",
+                    "label": "Anesthetics"
+                  },
                   {
                     "value": "First Aid",
                     "label": "First Aid"
@@ -4308,7 +4324,7 @@
             "items": [
               {
                 "component": {
-                  "name": "backgrounds.allies_effectiveness",
+                  "name": "backgrounds.Allies_Effectiveness",
                   "id": "backgrounds.Allies_Effectiveness",
                   "label": "BACKGROUND - Allies_Effectiveness",
                   "includeLabel": true,
@@ -4327,12 +4343,12 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": ""
+                  "text": "Allies are mortals who support and help you: family, friends, or even a mortal organization that owes you some loyalty. Although Allies usually aid you willingly, without coaxing or coercion, they are not always available to offer assistance; they have their own concerns and can do only so much for the sake of your relationship. Usually, Allies appear about once per story. Allies can be almost anyone in your home city, depending on what your Storyteller will allow. You may have friends in the precinct morgue, at a tabloid newspaper or gossip blog, among high society, or at the railroad yard. Allies are generally trustworthy (though they probably don't know that you're a vampire, or even that vampires exist). However, nothing comes for free. If you wind up drawing favors from your friend in the Russian Mafia, he'll probably ask you to do him a favor in kind in the future. Enemies are the opposite of Allies and are taken as Flaws. You can use the Mortal Template rules to create Allies or Enemies when you buy them or first call on them, and you can write them down on the Relationship Map, though many groups leave this process up to the Storyteller. Build Allies or Enemies from a budget of points based on their Effectiveness and on their Reliability. The maximum points in one Ally is six. Ally or Enemy groups appear in numbers equal to the number of player characters. All Enemies are rated two fewer dots than their Effectiveness; a Gifted mortal Ally costs three dots as an Ally, but only provides one dot as a Flaw. Enemies all have the same Reliability: whenever the Storyteller thinks they should show up, but probably at least once per story."
                 }
               },
               {
                 "component": {
-                  "name": "backgrounds.allies_reliability",
+                  "name": "backgrounds.Allies_Reliability",
                   "id": "backgrounds.Allies_Reliability",
                   "label": "BACKGROUND - Allies_Reliability",
                   "includeLabel": true,
@@ -4351,7 +4367,7 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": ""
+                  "text": "Allies are mortals who support and help you: family, friends, or even a mortal organization that owes you some loyalty. Although Allies usually aid you willingly, without coaxing or coercion, they are not always available to offer assistance; they have their own concerns and can do only so much for the sake of your relationship. Usually, Allies appear about once per story. Allies can be almost anyone in your home city, depending on what your Storyteller will allow. You may have friends in the precinct morgue, at a tabloid newspaper or gossip blog, among high society, or at the railroad yard. Allies are generally trustworthy (though they probably don't know that you're a vampire, or even that vampires exist). However, nothing comes for free. If you wind up drawing favors from your friend in the Russian Mafia, he'll probably ask you to do him a favor in kind in the future. Enemies are the opposite of Allies and are taken as Flaws. You can use the Mortal Template rules to create Allies or Enemies when you buy them or first call on them, and you can write them down on the Relationship Map, though many groups leave this process up to the Storyteller. Build Allies or Enemies from a budget of points based on their Effectiveness and on their Reliability. The maximum points in one Ally is six. Ally or Enemy groups appear in numbers equal to the number of player characters. All Enemies are rated two fewer dots than their Effectiveness; a Gifted mortal Ally costs three dots as an Ally, but only provides one dot as a Flaw. Enemies all have the same Reliability: whenever the Storyteller thinks they should show up, but probably at least once per story."
                 }
               }
             ]
@@ -4366,7 +4382,7 @@
             "items": [
               {
                 "component": {
-                  "name": "backgrounds.contacts",
+                  "name": "backgrounds.Contacts",
                   "id": "backgrounds.Contacts",
                   "label": "BACKGROUND - Contacts",
                   "includeLabel": true,
@@ -4385,7 +4401,7 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": ""
+                  "text": "You know people - human people - from many different walks of life. Contacts primarily provide you with information in their areas of expertise, and they may want to exchange favors of various kinds. For different kinds of help, use your Influence (p. 187) in the mortal world, or call on your Allies (p. 184) or Mawla (p. 192).<br />A Contact is someone in an excellent position to get information. They might be a police dispatcher, rather than a homicide lieutenant, or a congressional staffer, rather than a senator. Information brokers, gossip columnists, underworld fixers, and reporters make excellent Contacts. You can define your Contacts when you buy this Background or as you need to introduce them in play. Whenever you create them, make sure to add them to the Relationship Map."
                 }
               }
             ]
@@ -4400,7 +4416,7 @@
             "items": [
               {
                 "component": {
-                  "name": "backgrounds.fame",
+                  "name": "backgrounds.Fame",
                   "id": "backgrounds.Fame",
                   "label": "BACKGROUND - Fame",
                   "includeLabel": true,
@@ -4419,15 +4435,25 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": ""
+                  "text": "Mortals know your name and eagerly seek out news of your activities. You might be a movie star, rock star, or other celebrity. Fame grants pull in mass and social media; you have more ways than most to manipulate the thoughts of the populace. You likely have ways to mask the fact that you’re never seen during the day, such as a body double. In some circumstances, the Storyteller may allow you to use Fame in a Social test dice pool instead of another Trait, especially to get into an otherwise exclusive venue or event. 'Do you know who I am?' doesn't work everywhere, but it does work. Each level of Fame subtracts one from the Difficulty of Social tests against your fans and from many hunting tests, depending on your predation strategy - you have less trouble attracting prey.<br />Fame has its downside, of course - it's harder for you to tail someone unobtrusively, for example, and who wants groupies hanging around the door to their haven all day tagging its location on Instagram? You should look into taking Disguise as a specialty.<br />By default, Fame applies among mortals, but you can also buy Fame that applies among Kindred for the same cost. Some vampires, such as Dracula or Elizabeth Bathory, might have both! Vampires may admire, or at least be more interested in, a Kindred who was famous or infamous in life: Arthur Rimbaud, Crispus Attucks, Billy the Kid, and the like."
                 }
               },
               {
                 "component": {
-                  "name": "flaws.cleaver",
+                  "name": "flaws.Cleaver",
                   "id": "flaws.Cleaver",
                   "label": "FLAW - Cleaver",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "minimum": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Fame-Cleaver",
@@ -4439,10 +4465,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.debt",
+                  "name": "flaws.Debt",
                   "id": "flaws.Debt",
                   "label": "FLAW - Debt",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Fame-Debt",
@@ -4454,10 +4490,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.infamy",
+                  "name": "flaws.Infamy",
                   "id": "flaws.Infamy",
                   "label": "FLAW - Infamy",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 5,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 5
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Fame-Infamy",
@@ -4469,10 +4515,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.dark secret",
+                  "name": "flaws.Dark Secret",
                   "id": "flaws.Dark Secret",
                   "label": "FLAW - Dark Secret",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 5,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 5
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Fame-Dark Secret",
@@ -4494,7 +4550,7 @@
             "items": [
               {
                 "component": {
-                  "name": "backgrounds.haven",
+                  "name": "backgrounds.Haven",
                   "id": "backgrounds.Haven",
                   "label": "BACKGROUND - Haven",
                   "includeLabel": true,
@@ -4513,15 +4569,25 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": ""
+                  "text": "Like all Backgrounds, the Haven Background is entirely optional. A vampire with no dots in Haven has a suicide's grave, a room in an abandoned motel, a rented office, or an apartment with windows blacked out with plastic bags. They can still remain safe and hidden by day in this relatively small and insecure haven by default. The Storyteller may allow a player character to default a somewhat better haven from another Background such as Resources, Status, or Influence. Of course, if those Backgrounds go away, so does the character's nice haven.<br />A character with none of those other Backgrounds, however, can still have a perfectly reasonable haven as long as they have this Background. For instance, a character might not have enough money to afford a 20-room Victorian mansion in today's economy, but if their great-grandmother left them one that had been fully paid for, there’s no reason they can't remain in residence as it slowly dilapidates.<br />Base ratings in Haven abstract the haven's size, security, and privacy. All of those factors affect the chance of spotting, penetrating, and surveilling the vampire's actual resting place. Add +1 to the Difficulty of, or one die to dice pools resisting, such efforts for each dot of base Haven rating.<br />Kindred know their havens intimately. For each dot of base Haven rating, add one per dot to dice pools to notice danger (including awakening rolls, p. 219) while in your haven."
                 }
               },
               {
                 "component": {
-                  "name": "flaws.no haven",
+                  "name": "flaws.No Haven",
                   "id": "flaws.No Haven",
                   "label": "FLAW - No Haven",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Haven-No Haven",
@@ -4533,10 +4599,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.compromised",
+                  "name": "flaws.Compromised",
                   "id": "flaws.Compromised",
                   "label": "FLAW - Compromised",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "minimum": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Haven-Compromised",
@@ -4548,10 +4624,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.creepy",
+                  "name": "flaws.Creepy",
                   "id": "flaws.Creepy",
                   "label": "FLAW - Creepy",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Haven-Creepy",
@@ -4563,10 +4649,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.haunted",
+                  "name": "flaws.Haunted",
                   "id": "flaws.Haunted",
                   "label": "FLAW - Haunted",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 5,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 5
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Haven-Haunted",
@@ -4588,7 +4684,7 @@
             "items": [
               {
                 "component": {
-                  "name": "backgrounds.herd",
+                  "name": "backgrounds.Herd",
                   "id": "backgrounds.Herd",
                   "label": "BACKGROUND - Herd",
                   "includeLabel": true,
@@ -4607,15 +4703,25 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": ""
+                  "text": "You have cultivated a group of vessels from whom you can feed without concern. You can use them to perform basic services, although they are neither as tightly controlled nor as loyal as Retainers. (If needed, build your Herd as a combination of Weak and Average mortals; see Mortal Templates, p. 185.) You can slake your Herd rating in Hunger each week without a roll. (This benefit can be shared among more than one vampire.) Overfeeding endangers your Herd, potentially dropping the rating as members die or flee."
                 }
               },
               {
                 "component": {
-                  "name": "flaws.obvious predator",
+                  "name": "flaws.Obvious Predator",
                   "id": "flaws.Obvious Predator",
                   "label": "FLAW - Obvious Predator",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "minimum": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Herd-Obvious Predator",
@@ -4637,7 +4743,7 @@
             "items": [
               {
                 "component": {
-                  "name": "backgrounds.influence",
+                  "name": "backgrounds.Influence",
                   "id": "backgrounds.Influence",
                   "label": "BACKGROUND - Influence",
                   "includeLabel": true,
@@ -4656,15 +4762,25 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": ""
+                  "text": "You have pull in the mortal community, whether through wealth, prestige, political office, blackmail, or supernatural manipulation. Kindred with high Influence can sway, and in rare cases even control, the politics and society of their city, especially the police and city bureaucracy.<br />By default, Influence applies most within one group or region of your city. Groups can be large, even diffuse: organized crime, media, religion, the police, city government, etc. Regions should be larger than neighborhoods or all but the largest individual domains: Brooklyn, the Rive Gauche, the South Side, the Ginza, etc. Your Influence applies to the city as a whole at one dot less than it does within your group or region. Using local Influence in another city in the same area, state, or province might be possible at an additional one-dot penalty, and so on. So, a vampire might be Powerful (••••) in Hollywood, Entrenched (•••) everywhere in Los Angeles, merely Influential (••) in San Diego or San Francisco, and just Well-Connected (•) in Chicago or New York.<br />The Storyteller may require you to use Influence in place of a Trait in some dice pools, particularly Social tests attempting to sway minor bureaucrats or the equivalent in your group. This Background helps you have an 'abandoned' building demolished (or preserved), not start global wars.<br />If the Storyteller wants to run a game of globe-spanning masterminds, they may recalibrate Influence to potentially apply nationally (••••) or even globally (•••••)."
                 }
               },
               {
                 "component": {
-                  "name": "flaws.despised",
+                  "name": "flaws.Despised",
                   "id": "flaws.Despised",
                   "label": "FLAW - Despised",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "minimum": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Influence-Despised",
@@ -4676,10 +4792,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.disliked",
+                  "name": "flaws.Disliked",
                   "id": "flaws.Disliked",
                   "label": "FLAW - Disliked",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Influence-Disliked",
@@ -4701,17 +4827,17 @@
             "items": [
               {
                 "component": {
-                  "name": "backgrounds.loresheet",
+                  "name": "backgrounds.Loresheet",
                   "id": "backgrounds.Loresheet",
                   "label": "BACKGROUND - Loresheet",
                   "includeLabel": true,
                   "type": "radiogroup",
                   "className": "form-control",
-                  "count": 0,
+                  "count": 5,
                   "validation": {
                     "required": false,
                     "min": 0,
-                    "max": 0
+                    "max": 5
                   },
                   "default": 0
                 },
@@ -4720,7 +4846,7 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": ""
+                  "text": "Buy an Advantage from a Loresheet and integrate the story of that lore into your character's lineage and connections. Some Loresheets (especially the 'Descendant of …') require the character be of a specific clan. Remember, that just like other Advantages, each level of a Loresheet is self-contained and must be bought separately. It does not automatically convey the 'lower' levels of that Loresheet. See Loresheets on p. 382 for more."
                 }
               }
             ]
@@ -4735,7 +4861,7 @@
             "items": [
               {
                 "component": {
-                  "name": "backgrounds.mask",
+                  "name": "backgrounds.Mask",
                   "id": "backgrounds.Mask",
                   "label": "BACKGROUND - Mask",
                   "includeLabel": true,
@@ -4754,15 +4880,25 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": ""
+                  "text": "As stealth predators, vampires have few weapons more potent than their pretense of humanity. The lies the Kindred live constantly shadow your stories, and no description of a lick should omit how they navigate mortal society – what they wear as a Mask. A good Mask explains the character's nocturnal existence and offers plenty of opportunities to be alone with mortals.<br />Some vampires switch back and forth between Masks, risking deep identity confusion and slipups, while others forge single plausible identities and strictly adhere to them for a human lifetime before they switch, adding makeup as they 'age,' and faking every aspect of life to look perfectly normal on paper. Others, almost always Nosferatu or unbound vampires, forswear safety for freedom off the grid or on the streets.<br />By default (at no dots) a vampire either has no need of a Mask, such as those recently Embraced and still able to pass as the human they were, or has a single Mask and fake ID that can stand up to a traffic stop or similar surface scrutiny. A zero-dot mask does not pass a background check, much less a proper investigation by the authorities."
                 }
               },
               {
                 "component": {
-                  "name": "flaws.known blankbody",
+                  "name": "flaws.Known Blankbody",
                   "id": "flaws.Known Blankbody",
                   "label": "FLAW - Known Blankbody",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "minimum": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Mask-Known Blankbody",
@@ -4774,10 +4910,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.known corpse",
+                  "name": "flaws.Known Corpse",
                   "id": "flaws.Known Corpse",
                   "label": "FLAW - Known Corpse",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Mask-Known Corpse",
@@ -4799,7 +4945,7 @@
             "items": [
               {
                 "component": {
-                  "name": "backgrounds.mawla",
+                  "name": "backgrounds.Mawla",
                   "id": "backgrounds.Mawla",
                   "label": "BACKGROUND - Mawla",
                   "includeLabel": true,
@@ -4818,7 +4964,7 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": ""
+                  "text": "This Trait represents one or a group of Kindred who looks out for you, offering guidance, information, or aid once in a while. The word comes from medieval Arabic, meaning different things from 'a trusted one' to 'uncle' to 'source of neighborly protection' to 'non-Muslim whose oath still binds them.' Western vampires brought the term back from the Crusades, and as the Ashirra and Camarilla find themselves increasingly allied in the Gehenna War, the word enjoys a resurgence in vampire society.<br />A Mawla may act as your mentor. Such a role commonly falls to your sire, if they don't treat you as property or ignore you.<br />Your Mawla might trade information to mutual benefit, or even come to your aid if you have respected the relationship. A Mawla may be powerful, but their power need not be direct. Depending on the number of dots in this Background, your Mawla might be nothing more than an ancilla with a remarkable information network, or they might be a centuries-old creature with tremendous influence and supernatural power. They may offer advice, speak to the Prince or Baron on your behalf, steer other elders clear of you, or give warning when you're walking into situations you don't understand. Your Mawla, of course, expects reciprocity.<br />A Mawla rating could even represent a group of like-minded vampires, such as the elders of the city's Tremere chantry or a Trotskyite clique amongst the Anarchs in town. (The plural of Mawla is Mawali.) As a general rule, a Mawla group costs one dot more than a single Kindred of that level: a coven of elder Mawali would be a three-dot Mawla group, for example.<br />Whoever they are, write them on your Relationship Map when you buy them.<br />As a general rule, Mawali provide a helpful word and occasional political pushes or cover, but they don't fight your battles or call in valuable favors. If they must do so for their own sake to aid you, you probably lose a dot or more of this Background, after arousing their ire.<br />Characters can also acquire one-off Minor Boons (p. 315) from other Kindred, only during character generation. These boons cost half the points (rounded up) of the equivalent Mawla."
                 }
               }
             ]
@@ -4833,7 +4979,7 @@
             "items": [
               {
                 "component": {
-                  "name": "backgrounds.resources",
+                  "name": "backgrounds.Resources",
                   "id": "backgrounds.Resources",
                   "label": "BACKGROUND - Resources",
                   "includeLabel": true,
@@ -4852,15 +4998,25 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": ""
+                  "text": "This Background describes your Resources. These benefits are not necessarily financial in nature and are rarely completely liquid, but you can often sell them to gain money. It could take weeks or even months to do so, depending on how much needs to be sold. Especially as the Second Inquisition closes down Kindred bank accounts, vampires increasingly return to holding their Resources in cash – or in gold, art, narcotics, guns, and slaves.<br />Dots of Resources provide an income for you to maintain your standard of unliving, but you must detail the source of your income and the form this Background takes. After all, it might dry up, get stolen, or otherwise vanish during the chronicle."
                 }
               },
               {
                 "component": {
-                  "name": "flaws.adversary",
+                  "name": "flaws.Adversary",
                   "id": "flaws.Adversary",
                   "label": "FLAW - Adversary",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 5,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 5
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Resources-Adversary",
@@ -4872,10 +5028,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.destitute",
+                  "name": "flaws.Destitute",
                   "id": "flaws.Destitute",
                   "label": "FLAW - Destitute",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Resources-Destitute",
@@ -4897,7 +5063,7 @@
             "items": [
               {
                 "component": {
-                  "name": "backgrounds.retainers",
+                  "name": "backgrounds.Retainers",
                   "id": "backgrounds.Retainers",
                   "label": "BACKGROUND - Retainers",
                   "includeLabel": true,
@@ -4916,15 +5082,25 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": ""
+                  "text": "You have one or more loyal and steadfast servants or assistants. Retainers may be ghouls who are blood bound to you, individuals you have so Dominated over the years that they are incapable of independent action, or individuals you have so overwhelmed with your Presence that they would do anything for you.<br />You must always control retainers in some fashion: a salary, vitae donation, or direct mesmerism. Though typically loyal, retainers may betray you if the reward outweighs the risk or if you have treated them badly. The Storyteller can always call for a scene between you and a retainer.<br />Retainers should act as characters, not puppets. Even ghoul retainers aren't supermen; the most skilled servants don't always show the highest loyalty. Everything in Vampire is a tradeoff. Storytellers can use Retainers to add flavor to the chronicle; don't let them or their misuse damage the story."
                 }
               },
               {
                 "component": {
-                  "name": "flaws.stalkers",
+                  "name": "flaws.Stalkers",
                   "id": "flaws.Stalkers",
                   "label": "FLAW - Stalkers",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Retainers-Stalkers",
@@ -4946,7 +5122,7 @@
             "items": [
               {
                 "component": {
-                  "name": "backgrounds.status",
+                  "name": "backgrounds.Status",
                   "id": "backgrounds.Status",
                   "label": "BACKGROUND - Status",
                   "includeLabel": true,
@@ -4965,15 +5141,25 @@
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": ""
+                  "text": "You have something of a reputation and standing (earned or unearned) within a specified local community of Kindred, probably Camarilla or Anarch. Status among Camarilla society derives as often from your sire's status and the respect due your particular bloodline as it does from personal achievement. High Status among Anarchs theoretically depends on the character's contributions, but more often to their degree of connection (by Blood or coterie) to the current Baron or other ruler.<br />Status in one sect does not transfer to the other. By and large, Status held in another city effectively reduces by one dot; an Influential (•••) vampire in Cartagena is only Respected (••) in Buenos Aires.<br />The Storyteller may occasionally call on you to add your Status to a dice pool along with a Social Trait, especially for first meetings and court happenings. In other cases, the Storyteller may allow you to substitute your Status for a Social Trait – but other vampires may notice that you're skating by on Status, instead of properly using the Etiquette Skill, for example.<br />Caitiff characters begin with the Suspect Flaw and may not purchase positive Status during character creation."
                 }
               },
               {
                 "component": {
-                  "name": "flaws.shunned",
+                  "name": "flaws.Shunned",
                   "id": "flaws.Shunned",
                   "label": "FLAW - Shunned",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "minimum": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Status-Shunned",
@@ -4985,10 +5171,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.suspect",
+                  "name": "flaws.Suspect",
                   "id": "flaws.Suspect",
                   "label": "FLAW - Suspect",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Status-Suspect",
@@ -5017,10 +5213,20 @@
             "items": [
               {
                 "component": {
-                  "name": "flaws.archaic",
+                  "name": "flaws.Archaic",
                   "id": "flaws.Archaic",
                   "label": "FLAW - Archaic",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "minimum": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Archaic-Archaic",
@@ -5032,10 +5238,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.living in the past",
+                  "name": "flaws.Living in the Past",
                   "id": "flaws.Living in the Past",
                   "label": "FLAW - Living in the Past",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Archaic-Living in the Past",
@@ -5057,10 +5273,20 @@
             "items": [
               {
                 "component": {
-                  "name": "merits.bond resistance",
+                  "name": "merits.Bond Resistance",
                   "id": "merits.Bond Resistance",
                   "label": "MERIT - Bond Resistance",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Bonding-Bond Resistance",
@@ -5072,10 +5298,20 @@
               },
               {
                 "component": {
-                  "name": "merits.short bond",
+                  "name": "merits.Short Bond",
                   "id": "merits.Short Bond",
                   "label": "MERIT - Short Bond",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "minimum": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Bonding-Short Bond",
@@ -5087,10 +5323,20 @@
               },
               {
                 "component": {
-                  "name": "merits.unbondable",
+                  "name": "merits.Unbondable",
                   "id": "merits.Unbondable",
                   "label": "MERIT - Unbondable",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 5,
+                  "minimum": 5,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 5
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Bonding-Unbondable",
@@ -5102,10 +5348,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.bondslave",
+                  "name": "flaws.Bondslave",
                   "id": "flaws.Bondslave",
                   "label": "FLAW - Bondslave",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "minimum": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Bonding-Bondslave",
@@ -5117,10 +5373,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.bond junkie",
+                  "name": "flaws.Bond Junkie",
                   "id": "flaws.Bond Junkie",
                   "label": "FLAW - Bond Junkie",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Bonding-Bond Junkie",
@@ -5132,10 +5398,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.long bond",
+                  "name": "flaws.Long Bond",
                   "id": "flaws.Long Bond",
                   "label": "FLAW - Long Bond",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Bonding-Long Bond",
@@ -5157,10 +5433,20 @@
             "items": [
               {
                 "component": {
-                  "name": "merits.bloodhound",
+                  "name": "merits.Bloodhound",
                   "id": "merits.Bloodhound",
                   "label": "MERIT - Bloodhound",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Feeding-Bloodhound",
@@ -5172,10 +5458,20 @@
               },
               {
                 "component": {
-                  "name": "merits.iron gullet",
+                  "name": "merits.Iron Gullet",
                   "id": "merits.Iron Gullet",
                   "label": "MERIT - Iron Gullet",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 3,
+                  "minimum": 3,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 3
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Feeding-Iron Gullet",
@@ -5187,10 +5483,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.vegan",
+                  "name": "flaws.Vegan",
                   "id": "flaws.Vegan",
                   "label": "FLAW - Vegan",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "minimum": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Feeding-Vegan",
@@ -5202,10 +5508,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.organovore",
+                  "name": "flaws.Organovore",
                   "id": "flaws.Organovore",
                   "label": "FLAW - Organovore",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "minimum": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Feeding-Organovore",
@@ -5217,10 +5533,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.methuselah's thirst",
+                  "name": "flaws.Methuselah's Thirst",
                   "id": "flaws.Methuselah's Thirst",
                   "label": "FLAW - Methuselah's Thirst",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Feeding-Methuselah's Thirst",
@@ -5232,10 +5558,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.prey exclusion",
+                  "name": "flaws.Prey Exclusion",
                   "id": "flaws.Prey Exclusion",
                   "label": "FLAW - Prey Exclusion",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Feeding-Prey Exclusion",
@@ -5257,25 +5593,45 @@
             "items": [
               {
                 "component": {
-                  "name": "merits.linguistics",
+                  "name": "merits.Linguistics",
                   "id": "merits.Linguistics",
                   "label": "MERIT - Linguistics",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 5,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 5
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Linguistics-Linguistics",
                   "label": "Information",
                   "type": "textblock",
                   "className": "text-block",
-                  "text": "Each dot in Linguistics allows the character to fluently speak, write, and read one additional language besides those two default languages."
+                  "text": "Every player character has perfect fluency in their birth language and (except perhaps for a charming Hungarian accent) in the dominant language of the chronicle setting. For example, a Lebanese vampire in a Mexico City-set chronicle can speak and read Arabic (or Aramaic, if they are a very old Lebanese vampire) and Spanish. Kindly Storytellers might allow vampires whose birth tongue matches that of the setting to take a second language anyway.<br />Each dot in Linguistics allows the character to fluently speak, write, and read one additional language besides those two default languages.<br />Don't get hung up on the changes in language over the centuries; assume that English remains English from Anglo-Saxon times to now, for instance, for the purposes of this rule, although reading centuries-old documents or chanting in a strange dialect may impose additional Difficulty to Academics or Occult tests."
                 }
               },
               {
                 "component": {
-                  "name": "flaws.illiterate",
+                  "name": "flaws.Illiterate",
                   "id": "flaws.Illiterate",
                   "label": "FLAW - Illiterate",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "minimum": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Linguistics-Illiterate",
@@ -5283,6 +5639,116 @@
                   "type": "textblock",
                   "className": "text-block",
                   "text": "You cannot read or write. Your Academics and Science Skills are capped at 1, and you can have no specialty in them incorporating modern knowledge."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "header": "Looks",
+          "name": "Looks",
+          "component": {
+            "name": "merits.list.group",
+            "type": "listgroup",
+            "items": [
+              {
+                "component": {
+                  "name": "merits.Beautiful",
+                  "id": "merits.Beautiful",
+                  "label": "MERIT - Beautiful",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "minimum": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 2
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-merit-Looks-Beautiful",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "You add one extra die to all appropriate Social dice pools."
+                }
+              },
+              {
+                "component": {
+                  "name": "merits.Stunning",
+                  "id": "merits.Stunning",
+                  "label": "MERIT - Stunning",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 4,
+                  "minimum": 4,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 4
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-merit-Looks-Stunning",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "You add two extra dice to all appropriate Social dice pools, as above."
+                }
+              },
+              {
+                "component": {
+                  "name": "flaws.Repulsive",
+                  "id": "flaws.Repulsive",
+                  "label": "FLAW - Repulsive",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "minimum": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 2
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-flaw-Looks-Repulsive",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "You lose two dice from all relevant Social dice pools."
+                }
+              },
+              {
+                "component": {
+                  "name": "flaws.Ugly",
+                  "id": "flaws.Ugly",
+                  "label": "FLAW - Ugly",
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
+                },
+                "text": {
+                  "name": "info-flaw-Looks-Ugly",
+                  "label": "Information",
+                  "type": "textblock",
+                  "className": "text-block",
+                  "text": "You lose one die from all relevant Social dice pools."
                 }
               }
             ]
@@ -5297,10 +5763,20 @@
             "items": [
               {
                 "component": {
-                  "name": "merits.eat food",
+                  "name": "merits.Eat Food",
                   "id": "merits.Eat Food",
                   "label": "MERIT - Eat Food",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "minimum": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Mythic-Eat Food",
@@ -5312,10 +5788,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.stake bait",
+                  "name": "flaws.Stake Bait",
                   "id": "flaws.Stake Bait",
                   "label": "FLAW - Stake Bait",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "minimum": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Mythic-Stake Bait",
@@ -5327,10 +5813,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.folkloric bane",
+                  "name": "flaws.Folkloric Bane",
                   "id": "flaws.Folkloric Bane",
                   "label": "FLAW - Folkloric Bane",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Mythic-Folkloric Bane",
@@ -5342,10 +5838,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.folkloric block",
+                  "name": "flaws.Folkloric Block",
                   "id": "flaws.Folkloric Block",
                   "label": "FLAW - Folkloric Block",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Mythic-Folkloric Block",
@@ -5357,10 +5863,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.stigmata",
+                  "name": "flaws.Stigmata",
                   "id": "flaws.Stigmata",
                   "label": "FLAW - Stigmata",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Mythic-Stigmata",
@@ -5382,10 +5898,20 @@
             "items": [
               {
                 "component": {
-                  "name": "merits.high-functioning addict",
+                  "name": "merits.High-Functioning Addict",
                   "id": "merits.High-Functioning Addict",
                   "label": "MERIT - High-Functioning Addict",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Substance Use-High-Functioning Addict",
@@ -5397,10 +5923,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.hopeless addiction",
+                  "name": "flaws.Hopeless Addiction",
                   "id": "flaws.Hopeless Addiction",
                   "label": "FLAW - Hopeless Addiction",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 2,
+                  "minimum": 2,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 2
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Substance Use-Hopeless Addiction",
@@ -5412,10 +5948,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.addiction",
+                  "name": "flaws.Addiction",
                   "id": "flaws.Addiction",
                   "label": "FLAW - Addiction",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Substance Use-Addiction",
@@ -5437,10 +5983,20 @@
             "items": [
               {
                 "component": {
-                  "name": "merits.anarch comrades",
+                  "name": "merits.Anarch Comrades",
                   "id": "merits.Anarch Comrades",
                   "label": "MERIT - Anarch Comrades",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Thin-Blood-Anarch Comrades",
@@ -5452,10 +6008,20 @@
               },
               {
                 "component": {
-                  "name": "merits.camarilla contact",
+                  "name": "merits.Camarilla Contact",
                   "id": "merits.Camarilla Contact",
                   "label": "MERIT - Camarilla Contact",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Thin-Blood-Camarilla Contact",
@@ -5467,10 +6033,20 @@
               },
               {
                 "component": {
-                  "name": "merits.catenating blood",
+                  "name": "merits.Catenating Blood",
                   "id": "merits.Catenating Blood",
                   "label": "MERIT - Catenating Blood",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Thin-Blood-Catenating Blood",
@@ -5482,10 +6058,20 @@
               },
               {
                 "component": {
-                  "name": "merits.day drinker",
+                  "name": "merits.Day Drinker",
                   "id": "merits.Day Drinker",
                   "label": "MERIT - Day Drinker",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Thin-Blood-Day Drinker",
@@ -5497,10 +6083,20 @@
               },
               {
                 "component": {
-                  "name": "merits.discipline affinity",
+                  "name": "merits.Discipline Affinity",
                   "id": "merits.Discipline Affinity",
                   "label": "MERIT - Discipline Affinity",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Thin-Blood-Discipline Affinity",
@@ -5512,10 +6108,20 @@
               },
               {
                 "component": {
-                  "name": "merits.lifelike",
+                  "name": "merits.Lifelike",
                   "id": "merits.Lifelike",
                   "label": "MERIT - Lifelike",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Thin-Blood-Lifelike",
@@ -5527,10 +6133,20 @@
               },
               {
                 "component": {
-                  "name": "merits.thin-blood alchemist",
+                  "name": "merits.Thin-blood Alchemist",
                   "id": "merits.Thin-blood Alchemist",
                   "label": "MERIT - Thin-blood Alchemist",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Thin-Blood-Thin-blood Alchemist",
@@ -5542,10 +6158,20 @@
               },
               {
                 "component": {
-                  "name": "merits.vampiric resilience",
+                  "name": "merits.Vampiric Resilience",
                   "id": "merits.Vampiric Resilience",
                   "label": "MERIT - Vampiric Resilience",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-merit-Thin-Blood-Vampiric Resilience",
@@ -5557,10 +6183,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.baby teeth",
+                  "name": "flaws.Baby Teeth",
                   "id": "flaws.Baby Teeth",
                   "label": "FLAW - Baby Teeth",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Thin-Blood-Baby Teeth",
@@ -5572,10 +6208,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.beastial temper",
+                  "name": "flaws.Beastial Temper",
                   "id": "flaws.Beastial Temper",
                   "label": "FLAW - Beastial Temper",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Thin-Blood-Beastial Temper",
@@ -5587,10 +6233,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.branded by the camarilla",
+                  "name": "flaws.Branded By The Camarilla",
                   "id": "flaws.Branded By The Camarilla",
                   "label": "FLAW - Branded By The Camarilla",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Thin-Blood-Branded By The Camarilla",
@@ -5602,10 +6258,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.clan curse",
+                  "name": "flaws.Clan Curse",
                   "id": "flaws.Clan Curse",
                   "label": "FLAW - Clan Curse",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Thin-Blood-Clan Curse",
@@ -5617,10 +6283,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.dead flesh",
+                  "name": "flaws.Dead Flesh",
                   "id": "flaws.Dead Flesh",
                   "label": "FLAW - Dead Flesh",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Thin-Blood-Dead Flesh",
@@ -5632,10 +6308,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.mortal frailty",
+                  "name": "flaws.Mortal Frailty",
                   "id": "flaws.Mortal Frailty",
                   "label": "FLAW - Mortal Frailty",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Thin-Blood-Mortal Frailty",
@@ -5647,10 +6333,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.shunned by the anarchs",
+                  "name": "flaws.Shunned By The Anarchs",
                   "id": "flaws.Shunned By The Anarchs",
                   "label": "FLAW - Shunned By The Anarchs",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Thin-Blood-Shunned By The Anarchs",
@@ -5662,10 +6358,20 @@
               },
               {
                 "component": {
-                  "name": "flaws.vitae dependency",
+                  "name": "flaws.Vitae Dependency",
                   "id": "flaws.Vitae Dependency",
                   "label": "FLAW - Vitae Dependency",
-                  "type": "switch"
+                  "includeLabel": true,
+                  "type": "radiogroup",
+                  "className": "form-control",
+                  "count": 1,
+                  "minimum": null,
+                  "validation": {
+                    "required": false,
+                    "min": 0,
+                    "max": 1
+                  },
+                  "default": 0
                 },
                 "text": {
                   "name": "info-flaw-Thin-Blood-Vitae Dependency",
@@ -5845,44 +6551,6 @@
       }
     },
     {
-      "name": "health.label",
-      "text": "Health",
-      "type": "textblock"
-    },
-    {
-      "name": "health",
-      "id": "health",
-      "includeLabel": false,
-      "type": "radiogroup",
-      "className": "form-control",
-      "validation": {
-        "required": true,
-        "min": 0,
-        "max": 15
-      },
-      "count": 15,
-      "default": 3
-    },
-    {
-      "name": "willpower.label",
-      "text": "Willpower",
-      "type": "textblock"
-    },
-    {
-      "name": "willpower",
-      "id": "willpower",
-      "includeLabel": false,
-      "type": "radiogroup",
-      "className": "form-control",
-      "validation": {
-        "required": true,
-        "min": 0,
-        "max": 15
-      },
-      "count": 15,
-      "default": 0
-    },
-    {
       "name": "humanity.label",
       "text": "Humanity",
       "type": "textblock"
@@ -5902,13 +6570,13 @@
       "default": 7
     },
     {
-      "name": "bloodpotency.label",
+      "name": "bloodPotency.label",
       "text": "Blood Potency",
       "type": "textblock"
     },
     {
-      "name": "bloodpotency",
-      "id": "bloodpotency",
+      "name": "bloodPotency",
+      "id": "bloodPotency",
       "includeLabel": false,
       "type": "radiogroup",
       "className": "form-control",

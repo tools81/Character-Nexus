@@ -52,6 +52,9 @@ namespace VampireTheMasquerade
         public List<Armor> Armors { get; set; }
         public List<Gear> Gears { get; set; }
 
+        //This field keeps the user choices selected in the UI
+        public Choice Choice { get; set; } = new Choice();
+
         public CharacterSegment CharacterSegment { get => GetCharacterSegment(); }
 
         public string CharacterSheet { get; set; } = string.Empty;

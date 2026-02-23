@@ -148,14 +148,7 @@ namespace Marvel
                                     var jsonContent = occupationsReader.ReadToEnd();
                                     var occupations = JsonTo.List<Occupation>(jsonContent);
 
-                                    //Select input items return an object, so must read to get beyond StartObject property and into Value property
-                                    reader.Read();
-                                    reader.Read();
-
                                     var occupation = occupations.Find(o => o.Name.ToLower() == reader.Value.ToString().ToLower());
-
-                                    //Read the end object
-                                    reader.Read();
 
                                     character.Occupation = occupation;
                                 }
@@ -169,12 +162,7 @@ namespace Marvel
                                     var jsonContent = originsReader.ReadToEnd();
                                     var origins = JsonTo.List<Origin>(jsonContent);
 
-                                    reader.Read();
-                                    reader.Read();
-
                                     var origin = origins.Find(o => o.Name.ToLower() == reader.Value.ToString().ToLower());
-
-                                    reader.Read();
 
                                     character.Origin = origin;
                                 }

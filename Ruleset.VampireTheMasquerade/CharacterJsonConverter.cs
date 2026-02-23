@@ -338,9 +338,10 @@ namespace VampireTheMasquerade
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
+                                        if (reader.TokenType != JsonToken.String)
+                                            continue;
+                                            
                                         var found = rituals.Find(w => w.Name.ToLower() == reader.Value.ToString().ToLower());
-
-                                        reader.Read();
 
                                         character.Rituals.Add(found);
                                     }
@@ -457,9 +458,10 @@ namespace VampireTheMasquerade
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
+                                        if (reader.TokenType != JsonToken.String)
+                                            continue;
+                                            
                                         var found = weapons.Find(w => w.Name.ToLower() == (reader.Value.ToString()).ToLower());
-
-                                        reader.Read();
 
                                         character.Weapons.Add(found);
                                     }
@@ -483,9 +485,10 @@ namespace VampireTheMasquerade
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
+                                        if (reader.TokenType != JsonToken.String)
+                                            continue;
+                                            
                                         var found = armors.Find(w => w.Name.ToLower() == (reader.Value.ToString()).ToLower());
-
-                                        reader.Read();
 
                                         character.Armors.Add(found);
                                     }
@@ -509,9 +512,10 @@ namespace VampireTheMasquerade
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        var found = gears.Find(w => w.Name.ToLower() == (reader.Value.ToString()).ToLower());
-
-                                        reader.Read();
+                                        if (reader.TokenType != JsonToken.String)
+                                            continue;
+                                            
+                                        var found = gears.Find(w => w.Name.ToLower() == reader.Value.ToString().ToLower());
 
                                         character.Gears.Add(found);
                                     }

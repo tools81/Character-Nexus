@@ -36,82 +36,82 @@ namespace Marvel
                         case "id":
                             var id = reader.Value.ToString();
                             character.Id = id == string.Empty ? Guid.NewGuid() : new Guid(id);
-                            break;
+                        break;
                         case "image":
                             character.Image = reader.Value.ToString();
-                            break;
+                        break;
                         case "name":
                             character.Name = reader.Value.ToString();
-                            break;
+                        break;
                         case "realName":
                             character.RealName = reader.Value.ToString();
-                            break;
+                        break;
                         case "rank":
                             character.Rank = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
-                            break;
+                        break;
                         case "height":
                             character.Height = reader.Value.ToString();
-                            break;
+                        break;
                         case "weight":
                             character.Weight = reader.Value.ToString();
-                            break;
+                        break;
                         case "gender":
                             character.Gender = reader.Value.ToString();
-                            break;
+                        break;
                         case "eyes":
                             character.Eyes = reader.Value.ToString();
-                            break;
+                        break;
                         case "hair":
                             character.Hair = reader.Value.ToString();
-                            break;
+                        break;
                         case "size":
                             character.Size = reader.Value.ToString();
-                            break;
+                        break;
                         case "distinguishingFeatures":
                             character.DistinguishingFeatures = reader.Value.ToString();
-                            break;
+                        break;
                         case "teams":
                             character.Teams = reader.Value.ToString();
-                            break;
+                        break;
                         case "base":
                             character.Base = reader.Value.ToString();
-                            break;
+                        break;
                         case "notes":
                             character.Notes = reader.Value.ToString();
-                            break;
+                        break;
                         case "history":
                             character.History = reader.Value.ToString();
-                            break;
+                        break;
                         case "personality":
                             character.Personality = reader.Value.ToString();
-                            break;
+                        break;
                         case "health":
                             character.Health = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
-                            break;
+                        break;
                         case "focus":
                             character.Focus = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
-                            break;
+                        break;
                         case "healthDamageReduction":
                             character.HealthDamageReduction = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
-                            break;
+                        break;
                         case "focusDamageReduction":
                             character.FocusDamageReduction = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
-                            break;
+                        break;
                         case "run":
                             character.Run = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
-                            break;
+                        break;
                         case "climb":
                             character.Climb = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
-                            break;
+                        break;
                         case "swim":
                             character.Swim = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
-                            break;
+                        break;
                         case "karma":
                             character.Karma = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
-                            break;
+                        break;
                         case "initiativeModifier":
                             character.InitiativeModifier = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
-                            break;
+                        break;
                         case "attributes":
                             if (reader.TokenType != JsonToken.StartObject)
                             {
@@ -139,7 +139,7 @@ namespace Marvel
                                     }
                                 }
                             }
-                            break;
+                        break;
                         case "occupation":
                             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.Marvel.Json.Occupations.json"))
                             {
@@ -160,7 +160,7 @@ namespace Marvel
                                     character.Occupation = occupation;
                                 }
                             }
-                            break;
+                        break;
                         case "origin":
                             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.Marvel.Json.Origins.json"))
                             {
@@ -179,7 +179,7 @@ namespace Marvel
                                     character.Origin = origin;
                                 }
                             }
-                            break;
+                        break;
                         case "tag":
                             if (reader.TokenType != JsonToken.StartArray)
                             {
@@ -197,18 +197,16 @@ namespace Marvel
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        reader.Read();
-                                        reader.Read();
-                                        
-                                        var found = tags.Find(t => t.Name.ToLower() == (reader.Value.ToString()).ToLower());
-
-                                        reader.Read();
+                                        if (reader.TokenType != JsonToken.String)
+                                            continue;
+                                            
+                                        var found = tags.Find(t => t.Name.ToLower() == reader.Value.ToString().ToLower());
 
                                         character.Tags.Add(found);
                                     }
                                 }
                             }
-                            break;
+                        break;
                         case "trait":
                             if (reader.TokenType != JsonToken.StartArray)
                             {
@@ -226,18 +224,16 @@ namespace Marvel
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        reader.Read();
-                                        reader.Read();
-
-                                        var found = traits.Find(t => t.Name.ToLower() == (reader.Value.ToString()).ToLower());
-
-                                        reader.Read();
+                                        if (reader.TokenType != JsonToken.String)
+                                            continue;
+                                            
+                                        var found = traits.Find(t => t.Name.ToLower() == reader.Value.ToString().ToLower());
 
                                         character.Traits.Add(found);
                                     }
                                 }
                             }
-                            break;
+                        break;
                         case "powers":
                             if (reader.TokenType != JsonToken.StartObject)
                             {
@@ -267,7 +263,7 @@ namespace Marvel
                                     }
                                 }
                             }
-                            break;
+                        break;
                         case "weapon":
                             if (reader.TokenType != JsonToken.StartArray)
                             {
@@ -285,18 +281,16 @@ namespace Marvel
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        reader.Read();
-                                        reader.Read();
-
-                                        var found = weapons.Find(w => w.Name.ToLower() == (reader.Value.ToString()).ToLower());
-
-                                        reader.Read();
+                                        if (reader.TokenType != JsonToken.String)
+                                            continue;
+                                            
+                                        var found = weapons.Find(w => w.Name.ToLower() == reader.Value.ToString().ToLower());
 
                                         character.Weapons.Add(found);
                                     }
                                 }
                             }
-                            break;
+                        break;
                     }
                 }
             }

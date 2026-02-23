@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOON RPG — Cartoon Character Creation!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Luckiest+Guy&family=Chewy&family=Boogaloo&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cartoon-red:    #FF3333;
+            --cartoon-blue:   #3366FF;
+            --cartoon-yellow: #FFDD00;
+            --cartoon-green:  #33CC33;
+            --cartoon-purple: #CC33FF;
+            --cartoon-orange: #FF9933;
+            --cel-white:      #FFFFFF;
+            --cel-cream:      #FFFDF7;
+            --outline:        #000000;
+            --shadow:         #1A1A1A;
+            --grey:           #666666;
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Boogaloo', cursive;
+            background: var(--cartoon-blue);
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.2) 0%, transparent 40%);
+            color: var(--outline);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* Floating cartoon clouds */
+        .instr-container body::before {
+            content: '☁';
+            position: fixed;
+            top: 10%;
+            left: 15%;
+            font-size: 4rem;
+            color: rgba(255,255,255,0.4);
+            animation: float 20s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .instr-container body::after {
+            content: '☁';
+            position: fixed;
+            top: 60%;
+            right: 20%;
+            font-size: 5rem;
+            color: rgba(255,255,255,0.3);
+            animation: float 25s ease-in-out infinite reverse;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            50%      { transform: translateY(-20px) translateX(30px); }
+        }
+
+        /* ── CONTAINER (Cel Animation Frame) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--cel-cream);
+            border: 8px solid var(--outline);
+            border-radius: 20px;
+            box-shadow:
+                0 0 0 4px var(--cartoon-yellow),
+                0 0 0 12px var(--outline),
+                0 25px 60px rgba(0,0,0,0.4);
+            position: relative;
+            animation: bounce-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            overflow: hidden;
+        }
+
+        @keyframes bounce-in {
+            0%   { opacity: 0; transform: scale(0.3) rotate(-10deg); }
+            50%  { transform: scale(1.1) rotate(5deg); }
+            70%  { transform: scale(0.95) rotate(-2deg); }
+            100% { opacity: 1; transform: scale(1) rotate(0deg); }
+        }
+
+        /* Film strip perforations */
+        .instr-container .film-strip {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            background: var(--outline);
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    var(--outline) 0px,
+                    var(--outline) 10px,
+                    var(--cel-cream) 10px,
+                    var(--cel-cream) 15px
+                );
+        }
+
+        .instr-container .film-strip.right {
+            left: auto;
+            right: 0;
+        }
+
+        /* Cartoon stars decoration */
+        .instr-container .cartoon-star {
+            position: absolute;
+            font-size: 2.5rem;
+            animation: spin 4s linear infinite, twinkle 2s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .instr-container .star-1 { top: 5%; right: 8%; color: var(--cartoon-yellow); }
+        .instr-container .star-2 { bottom: 10%; left: 12%; color: var(--cartoon-red); animation-delay: 1s; }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50%      { opacity: 0.6; transform: scale(0.8); }
+        }
+
+        /* ── EXPLOSION HEADER ── */
+        .instr-container .explosion-bar {
+            height: 50px;
+            background: repeating-linear-gradient(
+                -45deg,
+                var(--cartoon-red),
+                var(--cartoon-red) 20px,
+                var(--cartoon-yellow) 20px,
+                var(--cartoon-yellow) 40px
+            );
+            border-bottom: 8px solid var(--outline);
+            position: relative;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50%      { transform: scale(1.02); }
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            padding: 2rem 2.5rem;
+            background: var(--cel-white);
+            border-bottom: 8px solid var(--outline);
+            position: relative;
+        }
+
+        /* ACME watermark */
+        .instr-container header::before {
+            content: 'ACME';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-15deg);
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 10rem;
+            color: var(--cartoon-red);
+            opacity: 0.05;
+            pointer-events: none;
+            letter-spacing: 0.2em;
+        }
+
+        .instr-container .toon-tag {
+            display: inline-block;
+            background: var(--cartoon-yellow);
+            color: var(--outline);
+            font-family: 'Fredoka One', cursive;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            padding: 0.5rem 1.2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            border: 5px solid var(--outline);
+            border-radius: 15px;
+            box-shadow: 4px 4px 0 var(--shadow);
+            transform: rotate(-3deg);
+        }
+
+        .instr-container h1 {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 5rem;
+            line-height: 0.9;
+            color: var(--cartoon-red);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            text-shadow:
+                5px 5px 0 var(--cartoon-yellow),
+                10px 10px 0 var(--outline);
+            position: relative;
+            z-index: 1;
+            animation: wiggle 3s ease-in-out infinite;
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-1deg); }
+            50%      { transform: rotate(1deg); }
+        }
+
+        .instr-container h1 .cartoon {
+            display: block;
+            font-size: 2.5rem;
+            color: var(--cartoon-blue);
+            text-shadow:
+                4px 4px 0 var(--cartoon-yellow),
+                8px 8px 0 var(--outline);
+        }
+
+        .instr-container .subtitle {
+            font-family: 'Chewy', cursive;
+            font-size: 1.3rem;
+            color: var(--grey);
+            margin-top: 1rem;
+            transform: rotate(2deg);
+        }
+
+        .instr-container .meta-box {
+            margin-top: 1.5rem;
+            padding: 1rem 1.25rem;
+            background: var(--cartoon-green);
+            border: 5px solid var(--outline);
+            border-radius: 15px;
+            font-family: 'Boogaloo', cursive;
+            font-size: 0.85rem;
+            line-height: 1.9;
+            color: var(--cel-white);
+            box-shadow: 4px 4px 0 var(--shadow);
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2.5rem 2.5rem;
+            background: var(--cel-cream);
+            position: relative;
+        }
+
+        /* ── SPEECH BUBBLE ── */
+        .instr-container .speech-bubble {
+            background: var(--cel-white);
+            border: 6px solid var(--outline);
+            border-radius: 30px;
+            padding: 1.75rem 2rem;
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            line-height: 2;
+            position: relative;
+            box-shadow: 6px 6px 0 var(--shadow);
+        }
+
+        .instr-container .speech-bubble::before {
+            content: '';
+            position: absolute;
+            bottom: -25px;
+            left: 60px;
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 0px solid transparent;
+            border-top: 30px solid var(--outline);
+        }
+
+        .instr-container .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -16px;
+            left: 65px;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 0px solid transparent;
+            border-top: 24px solid var(--cel-white);
+        }
+
+        /* ── SECTION HEADERS (Sound Effects) ── */
+        .instr-container h2 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cel-white);
+            margin: 2.75rem 0 1.25rem;
+            padding: 1rem 1.5rem;
+            background: var(--cartoon-red);
+            border: 8px solid var(--outline);
+            border-radius: 25px;
+            position: relative;
+            animation: pop 0.4s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.08s);
+            text-shadow:
+                4px 4px 0 var(--cartoon-yellow),
+                8px 8px 0 var(--outline);
+            box-shadow: 8px 8px 0 var(--shadow);
+            transform: rotate(-2deg);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: attr(data-sfx);
+            position: absolute;
+            top: -1.8rem;
+            right: 1.5rem;
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 4rem;
+            color: var(--cartoon-yellow);
+            text-shadow:
+                4px 4px 0 var(--outline),
+                0 0 20px rgba(255,221,0,0.6);
+            transform: rotate(8deg);
+        }
+
+        @keyframes pop {
+            0%   { opacity: 0; transform: scale(0) rotate(-2deg); }
+            50%  { transform: scale(1.15) rotate(-2deg); }
+            100% { opacity: 1; transform: scale(1) rotate(-2deg); }
+        }
+
+        .instr-container h2.alt1 { background: var(--cartoon-blue); transform: rotate(2deg); }
+        .instr-container h2.alt2 { background: var(--cartoon-green); transform: rotate(-3deg); }
+        .instr-container h2.alt3 { background: var(--cartoon-purple); transform: rotate(1deg); }
+        .instr-container h2.alt4 { background: var(--cartoon-orange); transform: rotate(-1deg); }
+
+        .instr-container h3 {
+            font-family: 'Chewy', cursive;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cartoon-red);
+            margin: 1.75rem 0 0.6rem;
+            transform: rotate(-1deg);
+        }
+
+        .instr-container p {
+            font-size: 1.05rem;
+            line-height: 2;
+            margin-bottom: 1rem;
+            color: var(--outline);
+        }
+
+        .instr-container ul, ol { margin: 0.75rem 0 1.25rem 1.5rem; }
+        .instr-container li {
+            font-size: 1rem;
+            line-height: 1.95;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { color: var(--cartoon-red); font-weight: 700; }
+        .instr-container em     { color: var(--cartoon-blue); font-style: normal; font-weight: 700; }
+
+        /* ── DIVIDER (Impact Stars) ── */
+        .instr-container .divider {
+            margin: 2.5rem 0;
+            height: 8px;
+            background: var(--outline);
+            position: relative;
+            border-radius: 4px;
+        }
+
+        .instr-container .divider::before {
+            content: '★';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5rem;
+            color: var(--cartoon-yellow);
+            text-shadow: 3px 3px 0 var(--outline);
+        }
+
+        /* ── THOUGHT CLOUD ── */
+        .instr-container .thought-cloud {
+            background: var(--cel-white);
+            border: 5px dashed var(--cartoon-blue);
+            border-radius: 40px;
+            padding: 1.5rem 1.75rem;
+            margin: 1.5rem 0;
+            font-size: 1rem;
+            line-height: 1.9;
+            font-style: italic;
+            position: relative;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container .thought-label {
+            font-family: 'Fredoka One', cursive;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            color: var(--cartoon-blue);
+            display: block;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+            font-style: normal;
+        }
+
+        /* ── PANEL BOX ── */
+        .instr-container .panel-box {
+            background: var(--cartoon-yellow);
+            border: 6px solid var(--outline);
+            border-radius: 20px;
+            padding: 1.5rem 1.75rem;
+            margin: 1.25rem 0;
+            position: relative;
+            box-shadow: 6px 6px 0 var(--shadow);
+        }
+
+        .instr-container .panel-box::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -1.2rem;
+            left: 1.5rem;
+            background: var(--cartoon-red);
+            color: var(--cel-white);
+            padding: 0.4rem 1rem;
+            font-family: 'Fredoka One', cursive;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: 4px solid var(--outline);
+            border-radius: 15px;
+            box-shadow: 4px 4px 0 var(--shadow);
+        }
+
+        /* ── SPECIES CARDS ── */
+        .instr-container .species-grid {
+            display: grid;
+            gap: 1rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .species-card {
+            background: var(--cel-white);
+            border: 6px solid var(--outline);
+            border-radius: 20px;
+            padding: 1.5rem 1.75rem;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 6px 6px 0 var(--shadow);
+        }
+
+        .instr-container .species-card:hover {
+            transform: translate(-3px, -3px) rotate(-1deg);
+            box-shadow: 9px 9px 0 var(--shadow);
+        }
+
+        .instr-container .species-icon {
+            position: absolute;
+            top: -1.5rem;
+            right: 1.5rem;
+            font-size: 3.5rem;
+            background: var(--cartoon-yellow);
+            border: 5px solid var(--outline);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 4px 4px 0 var(--shadow);
+        }
+
+        .instr-container .species-name {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cartoon-red);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .species-desc {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--outline);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .species-bonus {
+            font-family: 'Chewy', cursive;
+            font-size: 0.95rem;
+            color: var(--cartoon-green);
+            border-top: 3px solid var(--outline);
+            padding-top: 0.5rem;
+        }
+
+        /* ── STAT DISPLAY ── */
+        .instr-container .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .stat-card {
+            background: var(--cartoon-blue);
+            color: var(--cel-white);
+            border: 6px solid var(--outline);
+            border-radius: 20px;
+            padding: 1.25rem 1rem;
+            text-align: center;
+            box-shadow: 6px 6px 0 var(--shadow);
+            transform: rotate(-1deg);
+        }
+
+        .instr-container .stat-card:nth-child(even) { transform: rotate(1deg); }
+
+        .instr-container .stat-name {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.6rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+            text-shadow: 3px 3px 0 var(--shadow);
+        }
+
+        .instr-container .stat-desc {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .stat-range {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 2rem;
+            color: var(--cartoon-yellow);
+            text-shadow: 3px 3px 0 var(--outline);
+        }
+
+        /* ── SKILL LIST ── */
+        .instr-container .skill-list {
+            display: grid;
+            gap: 0.75rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .skill-item {
+            background: var(--cel-white);
+            border: 5px solid var(--outline);
+            border-radius: 15px;
+            padding: 1rem 1.25rem;
+            box-shadow: 4px 4px 0 var(--shadow);
+            transform: rotate(-0.5deg);
+        }
+
+        .instr-container .skill-item:nth-child(even) { transform: rotate(0.5deg); }
+
+        .instr-container .skill-name {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.3rem;
+            letter-spacing: 0.05em;
+            color: var(--cartoon-purple);
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .skill-desc {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--grey);
+        }
+
+        /* ── ACME BOX ── */
+        .instr-container .acme-box {
+            background: linear-gradient(135deg, var(--cartoon-red) 0%, var(--cartoon-orange) 100%);
+            color: var(--cel-white);
+            border: 8px solid var(--outline);
+            border-radius: 25px;
+            padding: 2rem 1.75rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            box-shadow:
+                0 0 30px rgba(255,51,51,0.3),
+                8px 8px 0 var(--shadow);
+            position: relative;
+        }
+
+        .instr-container .acme-box::before {
+            content: 'ACME';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 8rem;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        .instr-container .acme-title {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.75rem;
+            text-shadow:
+                4px 4px 0 var(--outline),
+                0 0 20px rgba(255,221,0,0.6);
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container .acme-desc {
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-top: 0.75rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--cel-white);
+            padding: 2.5rem 2rem;
+            border-top: 8px solid var(--outline);
+            text-align: center;
+            position: relative;
+        }
+
+        .instr-container .footer-shout {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 3.5rem;
+            color: var(--cartoon-red);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.75rem;
+            text-shadow:
+                4px 4px 0 var(--cartoon-yellow),
+                8px 8px 0 var(--outline);
+            transform: rotate(-2deg);
+            animation: shake 2s ease-in-out infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(-2deg); }
+            25%      { transform: rotate(-3deg) translateX(-2px); }
+            75%      { transform: rotate(-1deg) translateX(2px); }
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'Boogaloo', cursive;
+            font-size: 0.95rem;
+            color: var(--grey);
+        }
+
+        .instr-container footer::before {
+            content: '★ ★ ★';
+            display: block;
+            font-size: 2rem;
+            color: var(--cartoon-yellow);
+            letter-spacing: 1em;
+            margin-bottom: 1.25rem;
+            text-shadow: 2px 2px 0 var(--outline);
+        }
+
+        /* Bottom explosion bar */
+        .instr-container .explosion-bottom {
+            height: 40px;
+            background: repeating-linear-gradient(
+                45deg,
+                var(--cartoon-blue),
+                var(--cartoon-blue) 20px,
+                var(--cartoon-yellow) 20px,
+                var(--cartoon-yellow) 40px
+            );
+            border-top: 8px solid var(--outline);
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 3.5rem; }
+            h1 .cartoon { font-size: 2rem; }
+            h2 { font-size: 2.5rem; }
+            h2::before { font-size: 2.5rem; top: -1.2rem; }
+            .stat-grid { grid-template-columns: 1fr; }
+            .content { padding: 2rem 1.5rem; }
+            header { padding: 1.75rem 1.5rem; }
+            .film-strip { display: none; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+        <div class="film-strip"></div>
+        <div class="film-strip right"></div>
+        <div class="cartoon-star star-1">★</div>
+        <div class="cartoon-star star-2">★</div>
+
+        <!-- EXPLOSION BAR -->
+        <div class="explosion-bar"></div>
+
+        <!-- HEADER -->
+        <header>
+            <div class="toon-tag">🎬 NOW SHOWING!</div>
+            <h1>
+                TOON!
+                <span class="cartoon">Cartoon RPG</span>
+            </h1>
+            <div class="subtitle">Where Anything Can Happen (And Usually Does!)</div>
+            <div class="meta-box">
+                <strong>STUDIO:</strong> Steve Jackson Games<br>
+                <strong>ANIMATION TYPE:</strong> Classic Cartoon Comedy<br>
+                <strong>RATING:</strong> Silly for All Ages<br>
+                <strong>REQUIRED:</strong> Six-Sided Dice, Sense of Humor, Anvils
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="speech-bubble">
+                Welcome to <strong>Toon</strong>! You're about to become a cartoon character in a world where gravity is optional, anvils fall from nowhere, and getting flattened by a steamroller just means you're temporarily two-dimensional. You can't die (just get <em>knocked out</em> for a scene), physics are suggestions, and the only limit is your imagination (and maybe the GM's patience). Ready to cause some cartoon chaos? Let's go!
+            </div>
+
+            <!-- STEP 1: SPECIES -->
+            <h2 data-sfx="BOING!" style="--i:1;">Pick Your Species</h2>
+            <p>What kind of cartoon are you? A talking animal? A robot? A human? In Toon, your <strong>Species</strong> is just the starting point for silliness!</p>
+
+            <div class="species-grid">
+                <div class="species-card">
+                    <div class="species-icon">🐰</div>
+                    <div class="species-name">Funny Animal</div>
+                    <div class="species-desc">Classic cartoon critter! You're a talking, walking animal doing human things. Bugs Bunny, Mickey Mouse, Donald Duck — you get the idea. Walk on two legs, wear clothes, cause mayhem.</div>
+                    <div class="species-bonus">Natural Skills: Jump Good, Smell Stuff</div>
+                </div>
+                <div class="species-card">
+                    <div class="species-icon">👤</div>
+                    <div class="species-name">Human</div>
+                    <div class="species-desc">Regular person in a cartoon world! You're either the straight man trying to make sense of chaos, or you're just as wacky as everyone else. Either way, physics still doesn't apply to you.</div>
+                    <div class="species-bonus">Natural Skills: Drive Crazy, Fix Anything</div>
+                </div>
+                <div class="species-card">
+                    <div class="species-icon">🤖</div>
+                    <div class="species-name">Robot</div>
+                    <div class="species-desc">Mechanical mayhem! Springs pop out when you're surprised. Gears turn visibly. You can detach limbs and keep going. Beep boop, you're a walking disaster (in the best way).</div>
+                    <div class="species-bonus">Natural Skills: Compute Stuff, Shock People</div>
+                </div>
+                <div class="species-card">
+                    <div class="species-icon">👻</div>
+                    <div class="species-name">Supernatural</div>
+                    <div class="species-desc">Ghost, vampire, monster, alien — whatever weird thing you want! You've got spooky powers but you're still fundamentally silly. Think Casper, not horror movie.</div>
+                    <div class="species-bonus">Natural Skills: Spook People, Walk Through Walls</div>
+                </div>
+                <div class="species-card">
+                    <div class="species-icon">🎪</div>
+                    <div class="species-name">Anything Else!</div>
+                    <div class="species-desc">Be creative! Animated object? Living food? Sentient vehicle? In Toon, if you can imagine it, you can play it. Just make sure it's funny!</div>
+                    <div class="species-bonus">Natural Skills: Whatever Makes Sense!</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: STATS -->
+            <h2 data-sfx="WHOOSH!" class="alt1" style="--i:2;">Roll Your Stats</h2>
+            <p>Every Toon has <strong>four stats</strong>. Roll <strong>3d6</strong> for each one, or assign these numbers: <strong>12, 10, 9, 7</strong>. Higher is better!</p>
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-name">Muscle</div>
+                    <div class="stat-desc">How strong you are! Lift pianos, punch through walls, carry ridiculous loads.</div>
+                    <div class="stat-range">3-18</div>
+                </div>
+                <div class="stat-card" style="background: var(--cartoon-green);">
+                    <div class="stat-name">Zip</div>
+                    <div class="stat-desc">How fast you are! Run like the wind, dodge falling anvils, zip around corners.</div>
+                    <div class="stat-range">3-18</div>
+                </div>
+                <div class="stat-card" style="background: var(--cartoon-purple);">
+                    <div class="stat-name">Smarts</div>
+                    <div class="stat-desc">How clever you are! Come up with plans, solve puzzles, outsmart opponents.</div>
+                    <div class="stat-range">3-18</div>
+                </div>
+                <div class="stat-card" style="background: var(--cartoon-orange);">
+                    <div class="stat-name">Chutzpah</div>
+                    <div class="stat-desc">How bold you are! Talk your way out of trouble, resist fear, stay confident when flattened.</div>
+                    <div class="stat-range">3-18</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: SKILLS -->
+            <h2 data-sfx="ZOOM!" class="alt2" style="--i:3;">Choose Your Skills</h2>
+            <p>Pick <strong>four Skills</strong> at level 6, plus <strong>two Skills</strong> at level 3. Skills let you do specific things better. Want more skills? Lower existing ones to get new ones at level 3!</p>
+
+            <div class="skill-list">
+                <div class="skill-item">
+                    <div class="skill-name">Drive Crazy</div>
+                    <div class="skill-desc">Pilot any vehicle at breakneck speed! Cars, planes, rocket ships, rollercoasters — you can drive 'em all (terribly).</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Dodge</div>
+                    <div class="skill-desc">Get out of the way of danger! Anvils, pianos, giant boulders, explosions — nope! Not today!</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Fight</div>
+                    <div class="skill-desc">Hit things! Punch, kick, bonk with mallets, drop anvils on heads. Combat, cartoon style.</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Fast-Talk</div>
+                    <div class="skill-desc">Talk your way out of anything! Con people, make deals, distract guards, sell snake oil.</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Jump Good</div>
+                    <div class="skill-desc">Leap tall buildings! Jump over chasms! Bounce like a superball! Fall slowly if you don't look down!</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Identify Dangerous Things</div>
+                    <div class="skill-desc">Spot traps, notice TNT, realize that's not a real tunnel painted on the wall. Knowledge saves you!</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Sleight of Hand</div>
+                    <div class="skill-desc">Pick pockets, do magic tricks, pull impossibly large items from your pockets (where do they all fit?).</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Climb Up Walls</div>
+                    <div class="skill-desc">Scramble up anything! Buildings, trees, cliffs — gravity only works if you think about it.</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">See in the Dark</div>
+                    <div class="skill-desc">Navigate darkness! Your eyes glow comically. You might pull out a flashlight from nowhere.</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Bamboozle</div>
+                    <div class="skill-desc">Confuse people with nonsense! Distract, mislead, overwhelm with gibberish. Works surprisingly often!</div>
+                </div>
+            </div>
+
+            <div class="thought-cloud">
+                <span class="thought-label">💭 DIRECTOR'S NOTE</span>
+                You can make up new skills! "Juggle Chainsaws"? Sure! "Cook Terrible Food"? Absolutely! "Annoy People"? Classic! Just get your GM's okay and you're good to go!
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: BELIEFS -->
+            <h2 data-sfx="KAPOW!" class="alt3" style="--i:4;">Set Your Beliefs</h2>
+            <p>Every Toon has <strong>Beliefs</strong> — things your character thinks are true. These shape how you play. Pick two or three!</p>
+
+            <div class="panel-box" data-label="EXAMPLE BELIEFS">
+                <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 2; font-size: 1.05rem;">
+                    <li><strong>"I'm the smartest character here!"</strong> (Even if you're not)</li>
+                    <li><strong>"Violence solves everything!"</strong> (Hit it with a mallet)</li>
+                    <li><strong>"I'm irresistible!"</strong> (To everyone's confusion)</li>
+                    <li><strong>"Rules don't apply to me!"</strong> (Gravity included)</li>
+                    <li><strong>"I can talk my way out of anything!"</strong> (Usually true in Toon)</li>
+                    <li><strong>"Nobody appreciates my genius!"</strong> (They really don't)</li>
+                    <li><strong>"If it can go wrong, it will!"</strong> (Murphy's Law: Cartoon Edition)</li>
+                    <li><strong>"There's always a better way!"</strong> (Even if it's more complicated)</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: PLOT POINTS -->
+            <h2 data-sfx="DING!" class="alt4" style="--i:5;">Get Plot Points</h2>
+            <p>You start with <strong>3 Plot Points</strong>. Spend them to:</p>
+
+            <div class="acme-box">
+                <div class="acme-title">PLOT POINTS!</div>
+                <div class="acme-desc">
+                    <strong>• Re-roll a failed roll</strong><br>
+                    <strong>• Do something amazing</strong><br>
+                    <strong>• Get exactly the item you need (pull it from nowhere)</strong><br>
+                    <strong>• Survive something that should definitely knock you out</strong><br>
+                    Gain more Plot Points by being funny, entertaining everyone, or doing ridiculous things!
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: HOW TO PLAY -->
+            <h2 data-sfx="BANG!" class="alt1" style="--i:6;">How to Roll</h2>
+            <p>When you try something tricky, roll <strong>1d6</strong>. Add your <strong>Stat</strong> and <strong>Skill</strong>. Compare to the <strong>Difficulty Number</strong> (set by the GM, usually 7-14).</p>
+
+            <div class="panel-box" data-label="ROLLING RULES">
+                <p style="font-size: 1.05rem; line-height: 2; margin-bottom: 1rem;">
+                    <strong>Roll 1d6 + Stat + Skill vs. Difficulty</strong>
+                </p>
+                <ul style="margin: 0 0 0 1.5rem; line-height: 1.9;">
+                    <li><strong>Equal or Higher:</strong> You succeed!</li>
+                    <li><strong>Lower:</strong> You fail (often hilariously)</li>
+                    <li><strong>Roll a 6:</strong> Critical success! Add +2 to your total!</li>
+                    <li><strong>Roll a 1:</strong> Critical failure! Subtract 2 from your total (and something funny happens)!</li>
+                </ul>
+            </div>
+
+            <h3>Example Difficulties</h3>
+            <ul>
+                <li><strong>7:</strong> Easy (jump over a log)</li>
+                <li><strong>9:</strong> Average (dodge a thrown pie)</li>
+                <li><strong>11:</strong> Hard (drive through a busy street backwards)</li>
+                <li><strong>14:</strong> Very Hard (catch a falling anvil)</li>
+                <li><strong>18+:</strong> Nearly Impossible (talk the villain into reforming)</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: DAMAGE -->
+            <h2 data-sfx="BONK!" class="alt2" style="--i:7;">Getting Hit</h2>
+            <p>When something hits you (anvil, explosion, fist), you take <strong>damage</strong>. Each hit reduces your <strong>Hit Points</strong> (start at your <strong>Muscle + Chutzpah</strong>).</p>
+
+            <div class="thought-cloud">
+                <span class="thought-label">💭 IMPORTANT!</span>
+                You can't die in Toon! When you run out of Hit Points, you're <strong>knocked out</strong> until the next scene. You come back totally fine, no permanent damage. Cartoon logic!
+            </div>
+
+            <h3>Falling Down & Getting Up</h3>
+            <p>When knocked out:</p>
+            <ul>
+                <li>You're out for the rest of the scene</li>
+                <li>You wake up with full Hit Points next scene</li>
+                <li>You might have funny cartoon injuries (stars circling your head, accordion body, etc.) but they don't affect gameplay</li>
+                <li>You're totally fine and ready to get flattened again!</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: STUFF -->
+            <h2 data-sfx="SPROING!" class="alt3" style="--i:8;">Your Stuff</h2>
+            <p>You can carry whatever makes sense for your character! In Toon, you can pull things from <strong>hammerspace</strong> (nowhere) if it's funny.</p>
+
+            <h3>Common Cartoon Items</h3>
+            <ul>
+                <li><strong>Mallet:</strong> For bonking people. Does 1d6 damage.</li>
+                <li><strong>Portable Hole:</strong> Put it on walls to make a tunnel! Put it on the ground to make a pit!</li>
+                <li><strong>ACME Product:</strong> Whatever you need, ACME makes it (and it probably doesn't work right).</li>
+                <li><strong>Rocket Skates:</strong> Super fast! Also super dangerous!</li>
+                <li><strong>Giant Magnet:</strong> Attracts metal things (including bullets flying at you).</li>
+                <li><strong>Disguise Kit:</strong> Look like anyone! Usually poorly, but it works anyway.</li>
+                <li><strong>TNT:</strong> For when you need an explosion. Comes with convenient fuse.</li>
+                <li><strong>Rope:</strong> Infinite length. Somehow fits in your pocket.</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: PERSONALITY -->
+            <h2 data-sfx="YAHOO!" class="alt4" style="--i:9;">Add Personality</h2>
+            <p>What makes your Toon <em>you</em>? Think about:</p>
+
+            <div class="panel-box" data-label="CHARACTER QUESTIONS">
+                <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 2;">
+                    <li><strong>What's your catchphrase?</strong> ("What's up, Doc?" / "Sufferin' succotash!")</li>
+                    <li><strong>What's your goal?</strong> (Catch that rabbit / Get rich / Be famous / Cause chaos)</li>
+                    <li><strong>What always goes wrong for you?</strong> (Plans backfire / Gravity kicks in at the worst time)</li>
+                    <li><strong>Who's your nemesis?</strong> (That pesky rabbit / The mean cat / The grumpy cop)</li>
+                    <li><strong>What makes you laugh?</strong> (Pranks / Slapstick / Wordplay / Everything)</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: READY TO TOON -->
+            <h2 data-sfx="BLAMMO!" class="alt1" style="--i:10;">You're Ready!</h2>
+
+            <div class="panel-box" data-label="FINAL CHECKLIST" style="background: var(--cartoon-green); color: var(--cel-white); font-weight: 700;">
+                <ul style="margin: 0 0 0 1.25rem; list-style: none; line-height: 2; font-size: 1.05rem;">
+                    <li>☐ Species picked</li>
+                    <li>☐ Four stats set (Muscle, Zip, Smarts, Chutzpah)</li>
+                    <li>☐ Four skills at level 6, two at level 3</li>
+                    <li>☐ 2-3 Beliefs chosen</li>
+                    <li>☐ 3 Plot Points ready</li>
+                    <li>☐ Hit Points calculated (Muscle + Chutzpah)</li>
+                    <li>☐ Starting equipment decided</li>
+                    <li>☐ Personality and catchphrase ready</li>
+                    <li>☐ Goal/motivation set</li>
+                    <li>☐ Ready to cause cartoon chaos!</li>
+                </ul>
+            </div>
+
+            <div class="speech-bubble" style="margin-top: 2rem; background: var(--cartoon-yellow);">
+                That's all, folks! You're now a fully-formed cartoon character ready to defy physics, survive explosions, and generally cause mayhem. Remember: in Toon, <strong>the funnier you are, the better you do</strong>. Go wild! Be silly! Drop anvils! Paint fake tunnels! Pull giant mallets from nowhere! And most importantly: <em>have fun!</em> Now get out there and TOON!
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-shout">THAT'S ALL FOLKS!</div>
+            <div class="footer-sub">
+                TOON: The Cartoon Roleplaying Game<br>
+                Steve Jackson Games • By Greg Costikyan & Warren Spector
+            </div>
+        </footer>
+
+        <!-- BOTTOM EXPLOSION -->
+        <div class="explosion-bottom"></div>
+
+    </div>
+    </body>
+</div>
+</html>

@@ -50,15 +50,17 @@ namespace DarkCrystal
                             character.Notes = reader.Value.ToString();
                             break;
                         case "gender":
+                            if (reader.TokenType != JsonToken.String)
+                            {
+                                throw new JsonException("Expected String token for gender");
+                            }
+
                             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.DarkCrystal.Json.Gender.json"))
                             {
                                 using (var gendersReader = new StreamReader(stream))
                                 {
                                     var jsonContent = gendersReader.ReadToEnd();
                                     var genders = JsonTo.List<Gender>(jsonContent);
-
-                                    reader.Read();
-                                    reader.Read();
 
                                     var gender = genders.Find(o => o.Name.ToLower() == reader.Value.ToString().ToLower());
 
@@ -69,9 +71,9 @@ namespace DarkCrystal
                             }
                             break;
                         case "clan":
-                            if (reader.TokenType != JsonToken.StartObject)
+                            if (reader.TokenType != JsonToken.String)
                             {
-                                throw new JsonException("Expected StartObject token for clans");
+                                throw new JsonException("Expected String token for clan");
                             }
 
                             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.DarkCrystal.Json.Clans.json"))
@@ -80,10 +82,6 @@ namespace DarkCrystal
                                 {
                                     var jsonContent = clansReader.ReadToEnd();
                                     var clans = JsonTo.List<Clan>(jsonContent);
-
-                                    //Select input items return an object, so must read to get beyond StartObject property and into Value property
-                                    reader.Read();
-                                    reader.Read();
 
                                     var clan = clans.Find(o => o.Name.ToLower() == reader.Value.ToString().ToLower());
 
@@ -111,12 +109,10 @@ namespace DarkCrystal
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        reader.Read();
-                                        reader.Read();
+                                        if (reader.TokenType != JsonToken.String)
+                                            continue;
 
                                         var found = traits.Find(w => w.Name.ToLower() == reader.Value.ToString().ToLower());
-
-                                        reader.Read();
 
                                         character.Traits.Add(found);
                                     }
@@ -176,18 +172,12 @@ namespace DarkCrystal
                                     character.Specializations = new List<Specialization>();
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndObject)
-                                    {                                       
-                                        if (reader.TokenType == JsonToken.StartObject)
-                                        {
-                                            reader.Read();
-                                            reader.Read();
+                                    {   
+                                        if (reader.TokenType != JsonToken.String)
+                                            continue;
 
-                                            var found = specializations.Find(w => w.Name.ToLower() == reader.Value.ToString().ToLower());                                        
-                                            character.Specializations.Add(found);
-                                            
-                                            reader.Read();
-                                            reader.Read();
-                                        }                                    
+                                        var found = specializations.Find(w => w.Name.ToLower() == reader.Value.ToString().ToLower());                                        
+                                        character.Specializations.Add(found);                                
                                     }
                                 }
                             }
@@ -209,12 +199,10 @@ namespace DarkCrystal
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        reader.Read();
-                                        reader.Read();
-
+                                        if (reader.TokenType != JsonToken.String)
+                                            continue;
+                                            
                                         var found = flaws.Find(w => w.Name.ToLower() == reader.Value.ToString().ToLower());
-
-                                        reader.Read();
 
                                         character.Flaws.Add(found);
                                     }
@@ -238,12 +226,10 @@ namespace DarkCrystal
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        reader.Read();
-                                        reader.Read();
-
+                                        if (reader.TokenType != JsonToken.String)
+                                            continue;
+                                            
                                         var found = gears.Find(w => w.Name.ToLower() == (reader.Value.ToString()).ToLower());
-
-                                        reader.Read();
 
                                         character.Gear.Add(found);
                                     }

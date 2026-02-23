@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TALES FROM THE LOOP — Kid Investigator File</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=VT323&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --loop-teal:     #5B9A8B;
+            --loop-rust:     #B4846C;
+            --loop-grey:     #7A7D7D;
+            --loop-beige:    #D4C5B9;
+            --loop-blue:     #6B8CAE;
+            --loop-pink:     #C49991;
+            --faded-red:     #A85C5C;
+            --faded-yellow:  #D4B896;
+            --concrete:      #9A9A9A;
+            --asphalt:       #4A4A4A;
+            --paper:         #E8E3DA;
+            --paper-old:     #D9D4CB;
+            --ink:           #2A2A2A;
+            --ink-fade:      #5A5A5A;
+            --white:         #F5F3EE;
+            --shadow:        rgba(0,0,0,0.3);
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Courier Prime', monospace;
+            background: var(--concrete);
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0,0,0,0.03) 2px,
+                    rgba(0,0,0,0.03) 4px
+                );
+            color: var(--ink);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* ── CONTAINER (Polaroid/Case File) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--paper);
+            border: 1px solid var(--loop-grey);
+            box-shadow:
+                0 4px 8px rgba(0,0,0,0.1),
+                0 20px 60px rgba(0,0,0,0.4),
+                inset 0 0 80px rgba(0,0,0,0.03);
+            position: relative;
+            animation: develop 1s ease-out;
+        }
+
+        @keyframes develop {
+            from { opacity: 0; filter: brightness(1.5) contrast(0.5); }
+            to   { opacity: 1; filter: brightness(1) contrast(1); }
+        }
+
+        /* Photo grain texture */
+        .instr-container .container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        /* Coffee stain */
+        .instr-container .coffee-stain {
+            position: absolute;
+            top: 8%;
+            right: 6%;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(180,132,108,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* VHS tracking lines */
+        .instr-container .vhs-lines {
+            position: absolute;
+            inset: 0;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 3px,
+                    rgba(0,0,0,0.02) 3px,
+                    rgba(0,0,0,0.02) 6px
+                );
+            pointer-events: none;
+            opacity: 0.4;
+        }
+
+        /* Tape edge at top */
+        .instr-container .tape {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 25px;
+            background: rgba(255,255,235,0.6);
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+
+        .instr-container .tape::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            width: 80%;
+            height: 2px;
+            background: rgba(0,0,0,0.05);
+        }
+
+        /* ── TOP BAR ── */
+        .instr-container .date-bar {
+            background: var(--loop-teal);
+            padding: 0.8rem 1.5rem;
+            border-bottom: 3px solid var(--asphalt);
+            font-family: 'VT323', monospace;
+            font-size: 1.1rem;
+            letter-spacing: 0.15em;
+            color: var(--white);
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            padding: 2.5rem 2.5rem 2rem;
+            background: var(--paper-old);
+            border-bottom: 2px solid var(--loop-grey);
+            position: relative;
+        }
+
+        /* Giant loop watermark */
+        .instr-container header::before {
+            content: '⭘';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 15rem;
+            color: var(--loop-teal);
+            opacity: 0.04;
+            pointer-events: none;
+        }
+
+        .instr-container .case-tag {
+            font-family: 'Special Elite', cursive;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: var(--faded-red);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: inline-block;
+            border: 2px solid var(--faded-red);
+            padding: 0.3rem 0.8rem;
+            background: rgba(168,92,92,0.05);
+        }
+
+        .instr-container h1 {
+            font-family: 'Special Elite', cursive;
+            font-size: 3.2rem;
+            line-height: 1.1;
+            color: var(--ink);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container h1 .tales {
+            color: var(--loop-teal);
+        }
+
+        .instr-container h1 .loop {
+            display: block;
+            font-size: 1.6rem;
+            color: var(--loop-rust);
+            letter-spacing: 0.15em;
+            margin-top: 0.3rem;
+        }
+
+        .instr-container .tagline {
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--ink-fade);
+            margin-top: 1.25rem;
+            line-height: 1.6;
+        }
+
+        .instr-container .metadata {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--loop-grey);
+            font-size: 0.75rem;
+            line-height: 1.9;
+            color: var(--ink-fade);
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2.5rem;
+            background: var(--paper);
+        }
+
+        /* ── NOTEBOOK ENTRY ── */
+        .instr-container .notebook {
+            background: var(--white);
+            border: 2px solid var(--loop-blue);
+            border-left: 4px solid var(--loop-rust);
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 2.5rem;
+            font-size: 1rem;
+            line-height: 2;
+            position: relative;
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+        }
+
+        .instr-container .notebook::before {
+            content: '[ INVESTIGATOR''S NOTEBOOK ]';
+            position: absolute;
+            top: -0.65rem;
+            left: 1.5rem;
+            background: var(--white);
+            padding: 0 0.5rem;
+            font-family: 'VT323', monospace;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            color: var(--loop-blue);
+            text-transform: uppercase;
+        }
+
+        /* Notebook lines */
+        .instr-container .notebook::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 31px,
+                    rgba(91,154,139,0.1) 31px,
+                    rgba(91,154,139,0.1) 32px
+                );
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .instr-container .notebook p {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--loop-teal);
+            margin: 2.75rem 0 1.25rem;
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            border-left: 5px solid var(--loop-rust);
+            background: linear-gradient(90deg, rgba(180,132,108,0.08) 0%, transparent 100%);
+            position: relative;
+            animation: fadeIn 0.5s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.08s);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: attr(data-num);
+            position: absolute;
+            left: -2.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'VT323', monospace;
+            font-size: 1rem;
+            color: var(--loop-rust);
+            letter-spacing: 0.1em;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        .instr-container h3 {
+            font-family: 'Courier Prime', monospace;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--loop-blue);
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .instr-container p {
+            font-size: 0.98rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            color: var(--ink);
+        }
+
+        .instr-container ul, ol { margin: 0.75rem 0 1.25rem 1.5rem; }
+        .instr-container li {
+            font-size: 0.95rem;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+        }
+
+        strong { color: var(--loop-teal); font-weight: 700; }
+        em     { color: var(--loop-rust); font-style: italic; }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.5rem 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--loop-grey), transparent);
+        }
+
+        /* ── FIELD NOTE ── */
+        .instr-container .field-note {
+            background: rgba(212,197,185,0.2);
+            border: 1px dashed var(--loop-rust);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 0.92rem;
+            line-height: 1.85;
+            font-style: italic;
+        }
+
+        .instr-container .note-label {
+            font-family: 'VT323', monospace;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            color: var(--loop-rust);
+            display: block;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+            font-style: normal;
+        }
+
+        /* ── RECORD BOX ── */
+        .instr-container .record-box {
+            background: var(--white);
+            border: 2px solid var(--loop-grey);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            position: relative;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.08);
+        }
+
+        .instr-container .record-box::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -0.65rem;
+            left: 1.5rem;
+            background: var(--white);
+            padding: 0 0.5rem;
+            font-family: 'VT323', monospace;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            color: var(--loop-grey);
+            text-transform: uppercase;
+        }
+
+        /* ── TYPE CARDS ── */
+        .instr-container .type-grid {
+            display: grid;
+            gap: 0.75rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .type-card {
+            background: var(--white);
+            border: 2px solid var(--loop-beige);
+            border-left: 5px solid var(--loop-teal);
+            padding: 1.25rem 1.5rem;
+            position: relative;
+            transition: border-left-color 0.2s, box-shadow 0.2s;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.08);
+        }
+
+        .instr-container .type-card:hover {
+            border-left-color: var(--loop-rust);
+            box-shadow: 4px 4px 10px rgba(0,0,0,0.12);
+        }
+
+        .instr-container .type-label {
+            position: absolute;
+            top: -0.7rem;
+            right: 1.5rem;
+            background: var(--loop-beige);
+            color: var(--ink);
+            font-family: 'VT323', monospace;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            padding: 0.3rem 0.8rem;
+            text-transform: uppercase;
+            border: 1px solid var(--loop-grey);
+        }
+
+        .instr-container .type-name {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .type-desc {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: var(--ink-fade);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .type-trait {
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.85rem;
+            color: var(--loop-teal);
+            border-top: 1px solid var(--loop-beige);
+            padding-top: 0.5rem;
+        }
+
+        /* ── ATTRIBUTE DISPLAY ── */
+        .instr-container .attr-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .attr-card {
+            background: var(--white);
+            border: 2px solid var(--loop-blue);
+            padding: 0.85rem 1rem;
+            text-align: center;
+        }
+
+        .instr-container .attr-name {
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            color: var(--loop-teal);
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .attr-desc {
+            font-size: 0.82rem;
+            color: var(--ink-fade);
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .attr-range {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--loop-rust);
+        }
+
+        /* ── SKILL TABLE ── */
+        .instr-container .skill-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: 0.9rem;
+            background: var(--white);
+        }
+
+        .instr-container .skill-table th {
+            background: var(--loop-teal);
+            color: var(--white);
+            font-family: 'VT323', monospace;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.6rem 0.9rem;
+            text-align: left;
+            font-size: 0.95rem;
+            border: 1px solid var(--asphalt);
+        }
+
+        .instr-container .skill-table td {
+            padding: 0.55rem 0.9rem;
+            border: 1px solid var(--loop-beige);
+            color: var(--ink);
+            vertical-align: top;
+            line-height: 1.6;
+        }
+
+        .instr-container .skill-table tr:hover td { background: rgba(91,154,139,0.05); }
+
+        /* ── CONDITIONS ── */
+        .instr-container .condition-box {
+            background: var(--loop-rust);
+            color: var(--white);
+            border: 3px solid var(--asphalt);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .instr-container .condition-title {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.75rem;
+        }
+
+        .instr-container .condition-track {
+            display: flex;
+            gap: 6px;
+            justify-content: center;
+            margin: 0.75rem 0;
+            flex-wrap: wrap;
+        }
+
+        .instr-container .condition-pip {
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--white);
+            background: rgba(255,255,255,0.2);
+        }
+
+        .instr-container .condition-desc {
+            font-size: 0.88rem;
+            line-height: 1.7;
+            margin-top: 0.75rem;
+        }
+
+        /* ── POLAROID STYLE ── */
+        .instr-container .polaroid {
+            background: var(--white);
+            border: 12px solid var(--white);
+            border-bottom: 50px solid var(--white);
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+            margin: 1.5rem auto;
+            max-width: 300px;
+            position: relative;
+        }
+
+        .instr-container .polaroid-img {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--loop-teal) 0%, var(--loop-blue) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 2rem;
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .instr-container .polaroid-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 0.85rem;
+            color: var(--ink-fade);
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--paper-old);
+            padding: 2rem 2.5rem;
+            border-top: 2px solid var(--loop-grey);
+            text-align: center;
+        }
+
+        .instr-container .footer-quote {
+            font-family: 'Courier Prime', monospace;
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--loop-teal);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            color: var(--ink-fade);
+            text-transform: uppercase;
+        }
+
+        /* Bottom stamp */
+        .instr-container .bottom-stamp {
+            background: var(--loop-grey);
+            padding: 0.6rem 1.5rem;
+            border-top: 2px solid var(--asphalt);
+            font-family: 'VT323', monospace;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            color: var(--white);
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.5rem; }
+            h1 .loop { font-size: 1.3rem; }
+            h2 { font-size: 1.5rem; }
+            h2::before { display: none; }
+            .attr-grid { grid-template-columns: 1fr; }
+            .content { padding: 2rem 1.5rem; }
+            header { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+        <div class="coffee-stain"></div>
+        <div class="vhs-lines"></div>
+        <div class="tape"></div>
+
+        <!-- DATE BAR -->
+        <div class="date-bar">
+            <span>[ SUMMER 1986 ]</span>
+            <span>[ FILE: ACTIVE ]</span>
+        </div>
+
+        <!-- HEADER -->
+        <header>
+            <div class="case-tag">⬡ CASE FILE — KID INVESTIGATOR</div>
+            <h1>
+                <span class="tales">TALES FROM</span>
+                <span class="loop">THE LOOP</span>
+            </h1>
+            <div class="tagline">
+                "Strange things happen near the Loop. Kids see things adults don't believe.<br>
+                This is how you become one of those kids."
+            </div>
+            <div class="metadata">
+                SYSTEM: Year Zero Engine (d6 Dice Pool)<br>
+                PUBLISHER: Free League Publishing<br>
+                SETTING: 1980s Alternate Reality / Sweden or USA<br>
+                THEMES: Mystery, Wonder, Coming of Age
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="notebook">
+                You're a <strong>kid</strong> — 10 to 15 years old. You live in a world where impossible machines exist, strange phenomena happen near the Loop (a massive particle accelerator), and adults are too busy to notice. You ride your bike to school. You have homework. You argue with your parents. But you also investigate mysteries, encounter robots in the woods, and see things that defy explanation. You can't die in this game — the worst that happens is you go home. But the mysteries? Those are real.
+            </div>
+
+            <!-- STEP 1: TYPE -->
+            <h2 data-num="01." style="--i:1;">Choose Your Type</h2>
+            <p>Your <strong>Type</strong> is the kind of kid you are — your personality and role in the group. Pick one that fits how you see yourself.</p>
+
+            <div class="type-grid">
+                <div class="type-card">
+                    <div class="type-label">TYPE</div>
+                    <div class="type-name">The Bookworm</div>
+                    <div class="type-desc">You read everything. Science fiction, mysteries, technical manuals. You know facts others don't and you love solving puzzles with knowledge.</div>
+                    <div class="type-trait">Key Skills: Investigate, Calculate // Iconic Item: Encyclopedia</div>
+                </div>
+                <div class="type-card">
+                    <div class="type-label">TYPE</div>
+                    <div class="type-name">The Popular Kid</div>
+                    <div class="type-desc">People like you. You're confident, charming, and know how to talk to anyone. You can get information, make friends, and lead the group.</div>
+                    <div class="type-trait">Key Skills: Charm, Lead // Iconic Item: Mixtape</div>
+                </div>
+                <div class="type-card">
+                    <div class="type-label">TYPE</div>
+                    <div class="type-name">The Weirdo</div>
+                    <div class="type-desc">You don't fit in and you don't care. You see things differently. You're creative, intuitive, and comfortable with the strange.</div>
+                    <div class="type-trait">Key Skills: Comprehend, Empathize // Iconic Item: Weird Doll/Toy</div>
+                </div>
+                <div class="type-card">
+                    <div class="type-label">TYPE</div>
+                    <div class="type-name">The Rocker</div>
+                    <div class="type-desc">Music is your life. You're rebellious, passionate, and expressive. You stand up to authority and inspire others with your confidence.</div>
+                    <div class="type-trait">Key Skills: Contact, Charm // Iconic Item: Cassette Player</div>
+                </div>
+                <div class="type-card">
+                    <div class="type-label">TYPE</div>
+                    <div class="type-name">The Hick</div>
+                    <div class="type-desc">You're from outside town or a working-class family. You're practical, tough, and resourceful. You know how to fix things and survive.</div>
+                    <div class="type-trait">Key Skills: Sneak, Tinker // Iconic Item: Pocketknife</div>
+                </div>
+                <div class="type-card">
+                    <div class="type-label">TYPE</div>
+                    <div class="type-name">The Troublemaker</div>
+                    <div class="type-desc">You break rules, take risks, and do what you want. You're brave (or reckless), quick-thinking, and always ready for action.</div>
+                    <div class="type-trait">Key Skills: Force, Move // Iconic Item: Firecrackers</div>
+                </div>
+                <div class="type-card">
+                    <div class="type-label">TYPE</div>
+                    <div class="type-name">The Jock</div>
+                    <div class="type-desc">You're athletic and competitive. Sports are your thing. You're strong, fast, and you don't give up when things get physical.</div>
+                    <div class="type-trait">Key Skills: Force, Move // Iconic Item: Lucky Ball</div>
+                </div>
+                <div class="type-card">
+                    <div class="type-label">TYPE</div>
+                    <div class="type-name">The Computer Geek</div>
+                    <div class="type-desc">Computers are the future and you're already there. You program, you hack (with a modem), and you understand technology.</div>
+                    <div class="type-trait">Key Skills: Program, Calculate // Iconic Item: Home Computer</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: ATTRIBUTES -->
+            <h2 data-num="02." style="--i:2;">Set Your Attributes</h2>
+            <p>Every kid has <strong>four Attributes</strong> rated from <strong>1 to 5</strong>. Distribute <strong>14 points</strong> total, with a minimum of <strong>2</strong> and maximum of <strong>5</strong> in any Attribute.</p>
+
+            <div class="attr-grid">
+                <div class="attr-card">
+                    <div class="attr-name">Body</div>
+                    <div class="attr-desc">Physical strength, toughness, athletic ability</div>
+                    <div class="attr-range">1–5</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-name">Tech</div>
+                    <div class="attr-desc">Technical knowledge, understanding machines, using tools</div>
+                    <div class="attr-range">1–5</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-name">Heart</div>
+                    <div class="attr-desc">Empathy, courage, emotional strength, intuition</div>
+                    <div class="attr-range">1–5</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-name">Mind</div>
+                    <div class="attr-desc">Intelligence, reasoning, memory, problem-solving</div>
+                    <div class="attr-range">1–5</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: SKILLS -->
+            <h2 data-num="03." style="--i:3;">Choose Skills</h2>
+            <p>Skills are specific abilities. Your Type gives you <strong>3 Favored Skills</strong> at level 1 automatically. Choose <strong>7 more points</strong> to distribute among any skills (max 3 in any skill at creation).</p>
+
+            <table class="skill-table">
+                <thead>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Attribute</th>
+                        <th>What It Does</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Sneak</strong></td>
+                        <td>Body</td>
+                        <td>Move quietly, hide, avoid detection</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Force</strong></td>
+                        <td>Body</td>
+                        <td>Break things, push/pull, use physical strength</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Move</strong></td>
+                        <td>Body</td>
+                        <td>Run, jump, climb, dodge, balance</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tinker</strong></td>
+                        <td>Tech</td>
+                        <td>Fix or build things, jury-rig solutions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Program</strong></td>
+                        <td>Tech</td>
+                        <td>Use computers, write code, hack systems</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Calculate</strong></td>
+                        <td>Tech</td>
+                        <td>Math, logic puzzles, technical knowledge</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contact</strong></td>
+                        <td>Heart</td>
+                        <td>Know people, get information, make friends</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Charm</strong></td>
+                        <td>Heart</td>
+                        <td>Persuade, lie convincingly, manipulate</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lead</strong></td>
+                        <td>Heart</td>
+                        <td>Inspire others, take charge, boost morale</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Investigate</strong></td>
+                        <td>Mind</td>
+                        <td>Search for clues, notice details, research</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Comprehend</strong></td>
+                        <td>Mind</td>
+                        <td>Understand strange things, grasp concepts quickly</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Empathize</strong></td>
+                        <td>Mind</td>
+                        <td>Read emotions, understand motivations, sense lies</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: LUCKY -->
+            <h2 data-num="04." style="--i:4;">Determine Luck</h2>
+            <p>Every kid has <strong>Luck</strong> — points you can spend to modify dice rolls or avoid bad situations. Your starting Luck equals <strong>15 minus your age</strong>.</p>
+
+            <div class="record-box" data-label="LUCK SYSTEM">
+                <p style="margin-bottom: 0.5rem;"><strong>Younger kids are luckier:</strong></p>
+                <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.8;">
+                    <li>Age 10 = 5 Luck</li>
+                    <li>Age 12 = 3 Luck</li>
+                    <li>Age 15 = 0 Luck</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9rem; line-height: 1.7;">
+                    Spend 1 Luck to: re-roll a failed roll, turn a failure into a success, avoid a Condition, or make something convenient happen. Luck recovers slowly (GM decides when).
+                </p>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: ICONIC ITEM -->
+            <h2 data-num="05." style="--i:5;">Choose Iconic Item</h2>
+            <p>Your Type suggests an <strong>Iconic Item</strong> — something meaningful to you. It might be useful, sentimental, or both. This item gives you +1 die when it's relevant to a roll.</p>
+
+            <h3>Example Iconic Items</h3>
+            <ul>
+                <li><strong>Your Bike:</strong> Freedom, mobility, escape</li>
+                <li><strong>Polaroid Camera:</strong> Evidence, documentation, memories</li>
+                <li><strong>Walkie-Talkie:</strong> Communication with friends</li>
+                <li><strong>Flashlight:</strong> Exploring dark places</li>
+                <li><strong>Comic Book Collection:</strong> Inspiration, knowledge of tropes</li>
+                <li><strong>Dad's Toolbox:</strong> Fixing things, looking capable</li>
+                <li><strong>Lucky Charm:</strong> Confidence, superstition</li>
+                <li><strong>Mixtape:</strong> Emotional connection, sharing with friends</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: RELATIONSHIPS -->
+            <h2 data-num="06." style="--i:6;">Define Relationships</h2>
+            <p>Who matters to you? Every kid has <strong>Anchors</strong> — people who ground you emotionally. Choose at least two.</p>
+
+            <h3>Types of Anchors</h3>
+            <ul>
+                <li><strong>Parent/Guardian:</strong> Mom, Dad, Grandparent — complicated but important</li>
+                <li><strong>Sibling:</strong> Annoying but you'd protect them</li>
+                <li><strong>Best Friend:</strong> Someone who gets you</li>
+                <li><strong>Crush:</strong> That person you think about constantly</li>
+                <li><strong>Mentor:</strong> Teacher, coach, older kid who inspires you</li>
+                <li><strong>Pet:</strong> Dog, cat, or other companion who's always there</li>
+            </ul>
+
+            <p>Anchors help you recover from Conditions — talking to them, being with them, helps you heal.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: HOW TO ROLL -->
+            <h2 data-num="07." style="--i:7;">Rolling Dice</h2>
+            <p>When you try something risky, roll <strong>d6s equal to Attribute + Skill</strong>. Each die showing <strong>6</strong> is a success. You usually need <strong>1 success</strong> to succeed.</p>
+
+            <div class="field-note">
+                <span class="note-label">[ DICE POOL EXAMPLE ]</span>
+                You're trying to climb a fence (Move skill, Body attribute). You have Body 3 and Move 2. Roll 5d6. You roll: 2, 4, 6, 6, 3. Two sixes = two successes! You climb the fence easily.
+            </div>
+
+            <h3>Results</h3>
+            <ul>
+                <li><strong>1+ Success:</strong> You succeed! Extra successes might mean you do it faster/better/quieter.</li>
+                <li><strong>0 Success:</strong> You fail. Something goes wrong or you can't do it.</li>
+                <li><strong>Push the Roll:</strong> If you fail, you can re-roll all non-6s BUT you take a Condition (get hurt, scared, upset, or exhausted).</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: CONDITIONS -->
+            <h2 data-num="08." style="--i:8;">Conditions &amp; Stress</h2>
+
+            <div class="condition-box">
+                <div class="condition-title">CONDITIONS</div>
+                <div class="condition-track">
+                    <div class="condition-pip"></div>
+                    <div class="condition-pip"></div>
+                    <div class="condition-pip"></div>
+                    <div class="condition-pip"></div>
+                    <div class="condition-pip"></div>
+                </div>
+                <div class="condition-desc">
+                    Track five Conditions: Upset, Scared, Exhausted, Injured, Broken.<br>
+                    When you mark all 5, you can't continue — you go home. You're safe, but out of the scene.
+                </div>
+            </div>
+
+            <h3>What Each Condition Means</h3>
+            <ul>
+                <li><strong>Upset:</strong> Angry, sad, frustrated. Emotional turmoil.</li>
+                <li><strong>Scared:</strong> Terrified, anxious, panicking.</li>
+                <li><strong>Exhausted:</strong> Tired, drained, pushing your limits.</li>
+                <li><strong>Injured:</strong> Hurt, bruised, bleeding.</li>
+                <li><strong>Broken:</strong> Completely overwhelmed — physically or emotionally.</li>
+            </ul>
+
+            <p>Recover Conditions by: resting at home, talking to an Anchor, or having a meaningful scene with someone who cares.</p>
+
+            <div class="field-note">
+                <span class="note-label">[ IMPORTANT ]</span>
+                <strong>You can't die.</strong> The worst that happens is you're too hurt/scared/upset to continue and you go home. Adults might find out. You might be grounded. But you're safe. Kids don't die in Tales From the Loop — but they do face consequences.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: PROBLEM -->
+            <h2 data-num="09." style="--i:9;">Choose Your Problem</h2>
+            <p>Every kid has a <strong>Problem</strong> — something wrong in your life. This grounds you in reality and gives you depth. Pick one or create your own.</p>
+
+            <div class="record-box" data-label="EXAMPLE PROBLEMS">
+                <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.9;">
+                    <li><strong>Your parents are getting divorced</strong></li>
+                    <li><strong>You're being bullied at school</strong></li>
+                    <li><strong>Your family is struggling financially</strong></li>
+                    <li><strong>You have a sick relative</strong></li>
+                    <li><strong>You moved to town recently and don't have friends</strong></li>
+                    <li><strong>Your parent works at the Loop and is never home</strong></li>
+                    <li><strong>You're dealing with grief from a loss</strong></li>
+                    <li><strong>You feel like an outsider everywhere</strong></li>
+                    <li><strong>You're questioning your identity</strong></li>
+                    <li><strong>You have a learning disability teachers don't understand</strong></li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: FINISHING -->
+            <h2 data-num="10." style="--i:10;">Complete Your Kid</h2>
+
+            <h3>Personal Details</h3>
+            <ul>
+                <li><strong>Name:</strong> What are you called?</li>
+                <li><strong>Age:</strong> 10–15 years old</li>
+                <li><strong>Appearance:</strong> What do you look like? What do you wear?</li>
+                <li><strong>Personality:</strong> How do you act? What's your vibe?</li>
+                <li><strong>Home Life:</strong> Who do you live with? What's it like?</li>
+                <li><strong>School:</strong> What grade? How do you do? Who are your teachers?</li>
+            </ul>
+
+            <h3>Your Place in the Group</h3>
+            <ul>
+                <li>How did you meet the other kids?</li>
+                <li>What role do you play in the group?</li>
+                <li>Who do you trust most?</li>
+                <li>What's one secret only you know?</li>
+            </ul>
+
+            <div class="polaroid">
+                <div class="polaroid-img">YOUR KID</div>
+                <div class="polaroid-caption">Summer '86 — Before Everything Changed</div>
+            </div>
+
+            <div class="record-box" data-label="FINAL CHECKLIST" style="border: 2px solid var(--loop-teal); margin-top: 2rem;">
+                <ul style="margin: 0 0 0 1.25rem; list-style: none; line-height: 1.9; font-weight: 600;">
+                    <li>☐ Type chosen (defines your personality and role)</li>
+                    <li>☐ Four Attributes set (Body, Tech, Heart, Mind — 14 points total)</li>
+                    <li>☐ Skills distributed (3 favored + 7 more points)</li>
+                    <li>☐ Age chosen (determines starting Luck)</li>
+                    <li>☐ Iconic Item selected</li>
+                    <li>☐ Anchors defined (at least 2 important relationships)</li>
+                    <li>☐ Problem chosen (personal struggle)</li>
+                    <li>☐ Five Condition boxes ready to track</li>
+                    <li>☐ Personal details completed</li>
+                    <li>☐ Relationships with other kids established</li>
+                    <li>☐ Bike ready (metaphorically and literally)</li>
+                    <li>☐ Ready to investigate the mysteries of the Loop</li>
+                </ul>
+            </div>
+
+            <div class="notebook" style="margin-top: 2rem;">
+                You're ready. Your bike is outside. Your friends are waiting. There's something strange happening near the Loop — adults won't listen, but you know it's real. Summer is here. School's out. And the mysteries won't solve themselves. You might get scared. You might get hurt. But you're <em>not alone</em>. Grab your flashlight. Check your walkie-talkie. It's time to find out what's really going on. The Loop is calling.
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-quote">
+                "Things from the Loop don't always make sense.<br>
+                But kids figure them out anyway."
+            </div>
+            <div class="footer-sub">
+                Tales From the Loop // Free League Publishing // Year Zero Engine
+            </div>
+        </footer>
+
+        <!-- BOTTOM STAMP -->
+        <div class="bottom-stamp">[ END TRANSMISSION — FILE ARCHIVED ]</div>
+
+    </div>
+    </body>
+</div>
+</html>

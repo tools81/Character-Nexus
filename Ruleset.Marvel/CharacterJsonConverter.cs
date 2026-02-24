@@ -239,15 +239,24 @@ namespace Marvel
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndObject)
                                     {
-                                        var propName = reader.Value.ToString();
+                                        var powersetName = reader.Value.ToString();
                                         reader.Read();
-                                        var value = (bool)reader.Value;
 
-                                        if (value)
+                                        if (reader.TokenType == JsonToken.StartObject)
                                         {
-                                            var found = powers.Find(p => p.Name.ToLower() == propName.ToLower());
-                                            character.Powers.Add(found);
-                                        }
+                                            while (reader.Read() && reader.TokenType != JsonToken.EndObject)
+                                            {
+                                                var powerName = reader.Value.ToString();
+                                                reader.Read();
+                                                var value = (bool)reader.Value;
+
+                                                if (value)
+                                                {
+                                                    var found = powers.Find(p => p.Name.ToLower() == powerName.ToLower());
+                                                    character.Powers.Add(found);
+                                                }
+                                            }
+                                        }                                        
                                     }
                                 }
                             }

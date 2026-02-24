@@ -551,7 +551,7 @@ namespace Marvel
                 {
                     var component = new
                     {
-                        name = $"powers.{power.Name.ToLower()}",
+                        name = $"powers.{powerset.Name.ToLower()}.{power.Name.ToLower()}",
                         id = $"{powerset.Name}-{power.Name}",
                         label = power.Name,
                         type = "switch",

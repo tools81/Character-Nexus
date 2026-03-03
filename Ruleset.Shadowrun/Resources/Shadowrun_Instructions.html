@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHADOWRUN 6E — Shadowrunner Dossier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&family=Electrolize&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cyber-cyan:    #00F0FF;
+            --cyber-magenta: #FF00FF;
+            --cyber-green:   #00FF41;
+            --cyber-purple:  #9D00FF;
+            --neon-pink:     #FF2A6D;
+            --neon-yellow:   #FFE900;
+            --corp-blue:     #0A4D68;
+            --deep-black:    #0D0D0D;
+            --dark-grey:     #1A1A1A;
+            --mid-grey:      #2A2A2A;
+            --light-grey:    #4A4A4A;
+            --text-grey:     #B8B8B8;
+            --text-white:    #E8E8E8;
+            --warning-red:   #FF0055;
+            --shadow:        rgba(0,240,255,0.3);
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Rajdhani', sans-serif;
+            background: var(--deep-black);
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(0,240,255,0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255,0,255,0.03) 0%, transparent 50%);
+            color: var(--text-white);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* Scanline effect */
+        .instr-container body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0,240,255,0.03) 2px,
+                    rgba(0,240,255,0.03) 4px
+                );
+            pointer-events: none;
+            z-index: 100;
+            animation: scanlines 8s linear infinite;
+        }
+
+        @keyframes scanlines {
+            from { transform: translateY(0); }
+            to   { transform: translateY(10px); }
+        }
+
+        /* ── CONTAINER (AR Interface) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--dark-grey);
+            border: 2px solid var(--cyber-cyan);
+            box-shadow:
+                0 0 20px var(--shadow),
+                0 0 40px rgba(0,240,255,0.1),
+                0 20px 80px rgba(0,0,0,0.9),
+                inset 0 0 60px rgba(0,240,255,0.02);
+            position: relative;
+            animation: bootup 1.2s ease-out;
+        }
+
+        @keyframes bootup {
+            0%   { opacity: 0; transform: scale(1.05); filter: blur(4px); }
+            50%  { opacity: 0.5; filter: blur(2px); }
+            100% { opacity: 1; transform: scale(1); filter: blur(0); }
+        }
+
+        /* Glitch effect corners */
+        .instr-container .glitch-corner {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--cyber-magenta);
+            opacity: 0.4;
+            animation: glitch 3s ease-in-out infinite;
+        }
+
+        .instr-container .glitch-corner.tl {
+            top: 10px;
+            left: 10px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .instr-container .glitch-corner.br {
+            bottom: 10px;
+            right: 10px;
+            border-left: none;
+            border-top: none;
+        }
+
+        @keyframes glitch {
+            0%, 100% { opacity: 0.4; transform: translate(0, 0); }
+            20%      { opacity: 0.8; transform: translate(-2px, 2px); }
+            40%      { opacity: 0.4; transform: translate(2px, -2px); }
+            60%      { opacity: 0.8; transform: translate(-1px, 1px); }
+            80%      { opacity: 0.4; transform: translate(1px, -1px); }
+        }
+
+        /* Matrix code rain */
+        .instr-container .matrix-rain {
+            position: absolute;
+            top: 0;
+            right: 20px;
+            height: 100%;
+            width: 20px;
+            background: linear-gradient(180deg, transparent, var(--cyber-green), transparent);
+            opacity: 0.1;
+            animation: rain 3s linear infinite;
+        }
+
+        @keyframes rain {
+            from { transform: translateY(-100%); }
+            to   { transform: translateY(100%); }
+        }
+
+        /* ── STATUS BAR ── */
+        .instr-container .status-bar {
+            background: var(--mid-grey);
+            border-bottom: 1px solid var(--cyber-cyan);
+            padding: 0.6rem 1.5rem;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 1rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+        }
+
+        .instr-container .status-icon {
+            color: var(--cyber-green);
+            text-shadow: 0 0 8px var(--cyber-green);
+            animation: blink 2s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50%      { opacity: 0.4; }
+        }
+
+        .instr-container .status-text {
+            color: var(--text-grey);
+            text-transform: uppercase;
+        }
+
+        .instr-container .status-time {
+            color: var(--cyber-cyan);
+            text-shadow: 0 0 5px var(--cyber-cyan);
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            padding: 2rem 2rem 1.5rem;
+            background: linear-gradient(135deg, var(--dark-grey) 0%, var(--mid-grey) 100%);
+            border-bottom: 2px solid var(--cyber-magenta);
+            position: relative;
+        }
+
+        /* Corporate logo watermark */
+        .instr-container header::before {
+            content: '◬';
+            position: absolute;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+            font-size: 8rem;
+            color: var(--cyber-cyan);
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        .instr-container .access-tag {
+            display: inline-block;
+            background: var(--warning-red);
+            color: var(--text-white);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            padding: 0.4rem 1rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px rgba(255,0,85,0.5);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 15px rgba(255,0,85,0.5); }
+            50%      { box-shadow: 0 0 25px rgba(255,0,85,0.8); }
+        }
+
+        .instr-container h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            line-height: 0.9;
+            font-weight: 900;
+            color: var(--text-white);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.3rem;
+            text-shadow:
+                0 0 20px var(--cyber-cyan),
+                0 0 40px var(--cyber-cyan),
+                2px 2px 0 var(--deep-black);
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container h1 .shadow {
+            color: var(--cyber-cyan);
+        }
+
+        .instr-container h1 .run {
+            display: block;
+            font-size: 2rem;
+            color: var(--cyber-magenta);
+            text-shadow:
+                0 0 20px var(--cyber-magenta),
+                0 0 40px var(--cyber-magenta),
+                2px 2px 0 var(--deep-black);
+        }
+
+        .instr-container .edition {
+            font-family: 'Electrolize', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            color: var(--cyber-green);
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+            text-shadow: 0 0 10px var(--cyber-green);
+        }
+
+        .instr-container .sys-info {
+            margin-top: 1.5rem;
+            padding: 0.75rem 1rem;
+            background: rgba(0,240,255,0.05);
+            border: 1px solid var(--cyber-cyan);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            line-height: 1.8;
+            color: var(--text-grey);
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2rem;
+            background: var(--dark-grey);
+            position: relative;
+        }
+
+        /* Digital noise pattern */
+        .instr-container .content::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        /* ── ALERT BOX ── */
+        .instr-container .alert {
+            background: rgba(255,0,85,0.08);
+            border: 2px solid var(--warning-red);
+            border-left: 6px solid var(--warning-red);
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 2.5rem;
+            font-size: 1rem;
+            line-height: 1.9;
+            position: relative;
+            box-shadow: 0 0 20px rgba(255,0,85,0.2);
+        }
+
+        .instr-container .alert::before {
+            content: '⚠ UNAUTHORIZED ACCESS — SHADOWRUNNER PROFILE DETECTED';
+            position: absolute;
+            top: -0.7rem;
+            left: 1.5rem;
+            background: var(--dark-grey);
+            padding: 0 0.5rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--warning-red);
+            text-transform: uppercase;
+            text-shadow: 0 0 10px var(--warning-red);
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--cyber-cyan);
+            margin: 2.75rem 0 1.25rem;
+            padding: 0.8rem 1.25rem 0.8rem 1.5rem;
+            background: var(--mid-grey);
+            border-left: 5px solid var(--cyber-magenta);
+            position: relative;
+            animation: slideIn 0.4s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.06s);
+            text-shadow: 0 0 15px var(--cyber-cyan);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: attr(data-hex);
+            position: absolute;
+            left: -3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--cyber-magenta);
+            text-shadow: 0 0 10px var(--cyber-magenta);
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+
+        .instr-container h3 {
+            font-family: 'Electrolize', sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--cyber-magenta);
+            margin: 1.75rem 0 0.6rem;
+            text-shadow: 0 0 10px var(--cyber-magenta);
+        }
+
+        .instr-container p {
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            color: var(--text-grey);
+        }
+
+        .instr-container ul, .instr-container ol { margin: 0.75rem 0 1.25rem 1.5rem; }
+        .instr-container li {
+            font-size: 0.98rem;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+            color: var(--text-grey);
+        }
+
+        .instr-container strong { color: var(--cyber-cyan); font-weight: 700; }
+        .instr-container em     { color: var(--cyber-green); font-style: normal; }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.5rem 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--cyber-cyan), var(--cyber-magenta), transparent);
+            box-shadow: 0 0 10px var(--cyber-cyan);
+        }
+
+        /* ── DATA PANEL ── */
+        .instr-container .data-panel {
+            background: var(--mid-grey);
+            border: 1px solid var(--light-grey);
+            border-left: 4px solid var(--cyber-green);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.85;
+            box-shadow: 0 0 15px rgba(0,255,65,0.1);
+        }
+
+        .instr-container .panel-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--cyber-green);
+            display: block;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+            text-shadow: 0 0 8px var(--cyber-green);
+        }
+
+        /* ── TERMINAL BOX ── */
+        .instr-container .terminal {
+            background: var(--deep-black);
+            border: 2px solid var(--cyber-green);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.85rem;
+            line-height: 1.9;
+            color: var(--cyber-green);
+            box-shadow: 0 0 20px rgba(0,255,65,0.2);
+            position: relative;
+        }
+
+        .instr-container .terminal::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -0.65rem;
+            left: 1rem;
+            background: var(--deep-black);
+            padding: 0 0.5rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px var(--cyber-green);
+        }
+
+        .instr-container .terminal-prompt {
+            color: var(--cyber-cyan);
+            text-shadow: 0 0 8px var(--cyber-cyan);
+        }
+
+        /* ── METATYPE CARDS ── */
+        .instr-container .meta-grid {
+            display: grid;
+            gap: 0.75rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .meta-card {
+            background: var(--mid-grey);
+            border: 2px solid var(--light-grey);
+            border-left: 4px solid var(--cyber-purple);
+            padding: 1.25rem 1.5rem;
+            position: relative;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .instr-container .meta-card:hover {
+            border-color: var(--cyber-cyan);
+            box-shadow: 0 0 20px rgba(0,240,255,0.2);
+        }
+
+        .instr-container .meta-icon {
+            position: absolute;
+            top: -0.8rem;
+            right: 1.5rem;
+            background: var(--cyber-purple);
+            color: var(--text-white);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            padding: 0.4rem 1rem;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px rgba(157,0,255,0.5);
+        }
+
+        .instr-container .meta-name {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .meta-desc {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-grey);
+            margin-bottom: 0.75rem;
+        }
+
+        .instr-container .meta-bonus {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--cyber-cyan);
+            border-top: 1px solid var(--light-grey);
+            padding-top: 0.5rem;
+        }
+
+        /* ── ATTRIBUTE DISPLAY ── */
+        .instr-container .attr-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .attr-card {
+            background: var(--mid-grey);
+            border: 2px solid var(--cyber-cyan);
+            padding: 0.85rem 1rem;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,240,255,0.1);
+        }
+
+        .instr-container .attr-code {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            color: var(--cyber-magenta);
+            margin-bottom: 0.2rem;
+            text-shadow: 0 0 8px var(--cyber-magenta);
+        }
+
+        .instr-container .attr-name {
+            font-family: 'Electrolize', sans-serif;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-white);
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .attr-range {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--cyber-green);
+            text-shadow: 0 0 8px var(--cyber-green);
+        }
+
+        /* ── PRIORITY TABLE ── */
+        .instr-container .priority-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: 0.85rem;
+            background: var(--mid-grey);
+            border: 2px solid var(--cyber-cyan);
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .instr-container .priority-table th {
+            background: var(--cyber-cyan);
+            color: var(--deep-black);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.6rem 0.8rem;
+            text-align: center;
+            font-size: 0.8rem;
+            border: 1px solid var(--cyber-cyan);
+        }
+
+        .instr-container .priority-table td {
+            padding: 0.5rem 0.8rem;
+            border: 1px solid var(--light-grey);
+            color: var(--text-grey);
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .instr-container .priority-table tr:hover td { 
+            background: var(--dark-grey);
+            color: var(--cyber-cyan);
+        }
+
+        /* ── EDGE BOX ── */
+        .instr-container .edge-box {
+            background: linear-gradient(135deg, var(--neon-pink) 0%, var(--cyber-purple) 100%);
+            color: var(--text-white);
+            border: 3px solid var(--neon-pink);
+            padding: 1.75rem 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            box-shadow:
+                0 0 30px rgba(255,42,109,0.4),
+                inset 0 0 40px rgba(0,0,0,0.3);
+        }
+
+        .instr-container .edge-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.75rem;
+            text-shadow:
+                0 0 20px var(--text-white),
+                2px 2px 0 var(--deep-black);
+        }
+
+        .instr-container .edge-desc {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-top: 0.75rem;
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--mid-grey);
+            padding: 2rem;
+            border-top: 2px solid var(--cyber-cyan);
+            text-align: center;
+        }
+
+        .instr-container .footer-motto {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--cyber-magenta);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 0.75rem;
+            text-shadow:
+                0 0 20px var(--cyber-magenta),
+                0 0 40px var(--cyber-magenta);
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            color: var(--text-grey);
+            text-transform: uppercase;
+        }
+
+        .instr-container footer::before {
+            content: '◬ ◬ ◬';
+            display: block;
+            font-size: 1.2rem;
+            color: var(--cyber-cyan);
+            letter-spacing: 1em;
+            margin-bottom: 1.25rem;
+            text-shadow: 0 0 15px var(--cyber-cyan);
+        }
+
+        /* Bottom status */
+        .instr-container .bottom-status {
+            background: var(--deep-black);
+            border-top: 1px solid var(--cyber-cyan);
+            padding: 0.6rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--cyber-green);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        @media (max-width: 480px) {
+            .instr-container h1 { font-size: 3rem; }
+            .instr-container h1 .run { font-size: 1.6rem; }
+            .instr-container h2 { font-size: 1.6rem; }
+            .instr-container h2::before { display: none; }
+            .instr-container .attr-grid { grid-template-columns: 1fr; }
+            .instr-container .meta-card { padding: 1rem; }
+            .instr-container .content { padding: 1.75rem 1.5rem; }
+            .instr-container header { padding: 1.75rem 1.5rem; }
+            .instr-container .matrix-rain { display: none; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+        <div class="glitch-corner tl"></div>
+        <div class="glitch-corner br"></div>
+        <div class="matrix-rain"></div>
+
+        <!-- STATUS BAR -->
+        <div class="status-bar">
+            <div class="status-icon">●</div>
+            <div class="status-text">Matrix Connection: Active // Access Level: Unauthorized</div>
+            <div class="status-time">2080.11.23 // 03:47</div>
+        </div>
+
+        <!-- HEADER -->
+        <header>
+            <div class="access-tag">⚠ UNAUTHORIZED DATA ACCESS</div>
+            <h1>
+                <span class="shadow">SHADOW</span><span class="run">RUN</span>
+            </h1>
+            <div class="edition">Sixth World Edition</div>
+            <div class="sys-info">
+                SYSTEM: Anarchy-Derived Edge Mechanics<br>
+                PUBLISHER: Catalyst Game Labs<br>
+                SETTING: 2080s Cyberpunk Fantasy / Megacorporate Dystopia<br>
+                WARNING: Magic, Dragons, and Megacorps Are All Real
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="alert">
+                Welcome to the Sixth World, <strong>chummer</strong>. Magic returned in 2011. Elves, orks, trolls — they're all real now. Megacorporations run everything. The Matrix is everywhere. Dragons sit on corporate boards. And you? You're a <em>shadowrunner</em> — a deniable asset doing illegal jobs for corps who pretend you don't exist. You hack systems, sling spells, or just break things with chrome and steel. The streets are deadly. The corps are deadlier. But the nuyen's good if you survive. <strong>Jack in, chummer. Time to make your runner.</strong>
+            </div>
+
+            <!-- STEP 1: METATYPE -->
+            <h2 data-hex="0x01" style="--i:1;">Select Metatype</h2>
+            <p>Your <strong>Metatype</strong> is your species. In 2011, Unexplained Genetic Expression (UGE) triggered — humans gave birth to elves and dwarfs. Then came Goblinization in 2021 — more orks and trolls. Choose what you are.</p>
+
+            <div class="meta-grid">
+                <div class="meta-card">
+                    <div class="meta-icon">META-H</div>
+                    <div class="meta-name">Human</div>
+                    <div class="meta-desc">Still the most common metatype. Adaptable, numerous, and underestimated. Humanity's strength is versatility — you can excel at anything.</div>
+                    <div class="meta-bonus">Edge: 2 // Special Attributes: 0 // Adjustments: None</div>
+                </div>
+                <div class="meta-card">
+                    <div class="meta-icon">META-E</div>
+                    <div class="meta-name">Elf</div>
+                    <div class="meta-desc">Graceful and beautiful with pointed ears. Natural charisma and agility. Often privileged but face resentment from other metatypes.</div>
+                    <div class="meta-bonus">Edge: 1 // Special Attributes: 0 // Adjustments: +1 AGI, +2 CHA</div>
+                </div>
+                <div class="meta-card">
+                    <div class="meta-icon">META-D</div>
+                    <div class="meta-name">Dwarf</div>
+                    <div class="meta-desc">Short, stocky, and tough. Resistant to toxins and pathogens. Natural miners and engineers. Often underestimated — use it.</div>
+                    <div class="meta-bonus">Edge: 1 // Special Attributes: 0 // Adjustments: +2 BOD, +1 WIL, -1 REA</div>
+                </div>
+                <div class="meta-card">
+                    <div class="meta-icon">META-O</div>
+                    <div class="meta-name">Ork</div>
+                    <div class="meta-desc">Large, strong, and intimidating with tusks. Face discrimination but thriving through resilience. Short lifespans but fierce lives.</div>
+                    <div class="meta-bonus">Edge: 1 // Special Attributes: 0 // Adjustments: +3 BOD, -1 LOG, -1 CHA</div>
+                </div>
+                <div class="meta-card">
+                    <div class="meta-icon">META-T</div>
+                    <div class="meta-name">Troll</div>
+                    <div class="meta-desc">Massive and powerful with horns and dermal deposits. Intimidating presence. The world isn't built for you but you adapt — or break things.</div>
+                    <div class="meta-bonus">Edge: 0 // Special Attributes: 0 // Adjustments: +5 BOD, +2 STR, -1 AGI, -2 LOG, -2 CHA</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: PRIORITY SYSTEM -->
+            <h2 data-hex="0x02" style="--i:2;">Priority Selection</h2>
+            <p>Shadowrun uses a <strong>Priority System</strong>. Assign priorities <strong>A through E</strong> to five categories: Metatype, Attributes, Magic/Resonance, Skills, and Resources. Each choice shapes your character.</p>
+
+            <table class="priority-table">
+                <thead>
+                    <tr>
+                        <th>Priority</th>
+                        <th>Metatype</th>
+                        <th>Attributes</th>
+                        <th>Magic/Res</th>
+                        <th>Skills</th>
+                        <th>Resources</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>A</strong></td>
+                        <td>Elf/Dwarf/Ork<br>or Human (9)</td>
+                        <td>24 Points</td>
+                        <td>Magician<br>Technomancer</td>
+                        <td>46/10</td>
+                        <td>450,000¥</td>
+                    </tr>
+                    <tr>
+                        <td><strong>B</strong></td>
+                        <td>Human (7)<br>Elf (3)</td>
+                        <td>20 Points</td>
+                        <td>Aspected<br>Adept</td>
+                        <td>36/5</td>
+                        <td>275,000¥</td>
+                    </tr>
+                    <tr>
+                        <td><strong>C</strong></td>
+                        <td>Human (5)<br>Elf (0)</td>
+                        <td>16 Points</td>
+                        <td>Adept<br>Aware</td>
+                        <td>28/2</td>
+                        <td>150,000¥</td>
+                    </tr>
+                    <tr>
+                        <td><strong>D</strong></td>
+                        <td>Human (3)</td>
+                        <td>14 Points</td>
+                        <td>Adept<br>Aspected</td>
+                        <td>22/0</td>
+                        <td>50,000¥</td>
+                    </tr>
+                    <tr>
+                        <td><strong>E</strong></td>
+                        <td>Human (1)</td>
+                        <td>12 Points</td>
+                        <td>Mundane</td>
+                        <td>18/0</td>
+                        <td>6,000¥</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="data-panel">
+                <span class="panel-label">[ PRIORITY EXPLANATION ]</span>
+                <strong>Skills:</strong> First number is skill points, second is skill group points.<br>
+                <strong>Resources:</strong> Nuyen (¥) to buy gear, cyberware, weapons, etc.<br>
+                <strong>Magic/Resonance:</strong> Determines if you can use magic or hack with your mind.<br>
+                <strong>Metatype:</strong> Number in parentheses is Special Attribute points for Edge/Magic.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: ATTRIBUTES -->
+            <h2 data-hex="0x03" style="--i:3;">Assign Attributes</h2>
+            <p>Every runner has <strong>nine Attributes</strong> rated <strong>1-6+</strong> (metatype maximums vary). Spend your Attribute points from Priority selection. Mental and Physical start at 1, Special start at 0.</p>
+
+            <div class="attr-grid">
+                <div class="attr-card">
+                    <div class="attr-code">BOD</div>
+                    <div class="attr-name">Body</div>
+                    <div class="attr-range">1-6+</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">AGI</div>
+                    <div class="attr-name">Agility</div>
+                    <div class="attr-range">1-6+</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">REA</div>
+                    <div class="attr-name">Reaction</div>
+                    <div class="attr-range">1-6+</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">STR</div>
+                    <div class="attr-name">Strength</div>
+                    <div class="attr-range">1-6+</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">WIL</div>
+                    <div class="attr-name">Willpower</div>
+                    <div class="attr-range">1-6+</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">LOG</div>
+                    <div class="attr-name">Logic</div>
+                    <div class="attr-range">1-6+</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">INT</div>
+                    <div class="attr-name">Intuition</div>
+                    <div class="attr-range">1-6+</div>
+                </div>
+                <div class="attr-card">
+                    <div class="attr-code">CHA</div>
+                    <div class="attr-name">Charisma</div>
+                    <div class="attr-range">1-6+</div>
+                </div>
+            </div>
+
+            <h3>Special Attributes</h3>
+            <ul>
+                <li><strong>Edge:</strong> Luck, fate, plot armor. Spend to re-roll, negate glitches, or save your life.</li>
+                <li><strong>Magic:</strong> If awakened, determines spell power (Priority-dependent)</li>
+                <li><strong>Resonance:</strong> If technomancer, determines Matrix power (Priority-dependent)</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: SKILLS -->
+            <h2 data-hex="0x04" style="--i:4;">Distribute Skills</h2>
+            <p>Skills are what you can DO. Spend your skill points from Priority selection. Skills range from <strong>1-6</strong>. Specializations give +2 dice in specific situations.</p>
+
+            <div class="terminal" data-label="[ SKILL CATEGORIES ]">
+    <span class="terminal-prompt">> LISTING SKILL DATABASES...</span>
+
+    <strong>COMBAT SKILLS</strong>
+    • Close Combat, Firearms, Exotic Weapons
+
+    <strong>PHYSICAL SKILLS</strong>
+    • Athletics, Stealth, Piloting
+
+    <strong>SOCIAL SKILLS</strong>
+    • Con, Etiquette, Intimidation, Leadership, Negotiation
+
+    <strong>TECHNICAL SKILLS</strong>
+    • Cracking, Electronics, Biotechnology, Engineering
+
+    <strong>MAGICAL SKILLS</strong>
+    • Sorcery, Conjuring, Enchanting (if Awakened)
+
+    <strong>RESONANCE SKILLS</strong>
+    • Tasking (if Technomancer)
+
+    <span class="terminal-prompt">> ACCESS GRANTED</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: MAGIC -->
+            <h2 data-hex="0x05" style="--i:5;">Magic & Resonance</h2>
+            <p>If your Priority gives you <strong>Magic</strong> or <strong>Resonance</strong>, you're special. Magicians cast spells. Adepts have superhuman physical abilities. Technomancers hack with their minds.</p>
+
+            <h3>Awakened Types</h3>
+            <ul>
+                <li><strong>Magician:</strong> Full spellcaster. Learn spells, summon spirits, see astral space.</li>
+                <li><strong>Adept:</strong> Physical magic. Channel magic into combat abilities, enhanced senses, or incredible reflexes.</li>
+                <li><strong>Aspected Magician:</strong> Limited magic (sorcery OR conjuring, not both).</li>
+                <li><strong>Aware:</strong> Can perceive magic/astral but can't cast spells.</li>
+            </ul>
+
+            <h3>Technomancers</h3>
+            <p>You interface with the Matrix through your mind — no cyberdeck needed. Compile sprites (digital spirits), thread complex forms (living programs), and see the digital world in ways no hacker can. Corps fear and hunt you.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: GEAR -->
+            <h2 data-hex="0x06" style="--i:6;">Purchase Equipment</h2>
+            <p>Spend your <strong>Resources</strong> from Priority. Buy weapons, armor, cyberware, vehicles, fake IDs, commlinks — everything you need to survive.</p>
+
+            <h3>Essential Gear</h3>
+            <ul>
+                <li><strong>Commlink:</strong> Your phone/computer. Everyone has one. (¥1,000-50,000+)</li>
+                <li><strong>Fake SIN:</strong> Fake identity. Mandatory. Rating 4+ recommended. (¥10,000+)</li>
+                <li><strong>Armor:</strong> Armor jacket, full body suit, or armored clothing. (¥1,000-15,000)</li>
+                <li><strong>Weapon:</strong> Pistol, SMG, rifle, or melee. Depends on role. (¥500-25,000)</li>
+                <li><strong>Lifestyle:</strong> Where you live. Street (free) to Luxury (¥100,000/month).</li>
+            </ul>
+
+            <h3>Cyberware</h3>
+            <p>Augmentations replace body parts with chrome and circuits. They're powerful but cost <strong>Essence</strong> (your humanity/magic potential). Too much and you can't cast spells — or worse.</p>
+
+            <ul>
+                <li><strong>Cybereyes:</strong> Enhanced vision, low-light, thermographic (¥2,000+)</li>
+                <li><strong>Cyberarms:</strong> Superhuman strength, weapon mounts (¥15,000+)</li>
+                <li><strong>Wired Reflexes:</strong> Enhanced speed, more actions (¥30,000+)</li>
+                <li><strong>Datajack:</strong> Direct neural interface for Matrix access (¥1,000)</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: EDGE -->
+            <h2 data-hex="0x07" style="--i:7;">Understanding Edge</h2>
+
+            <div class="edge-box">
+                <div class="edge-title">EDGE</div>
+                <div class="edge-desc">
+                    <strong>Edge is everything.</strong> It's luck, fate, heroism. Spend Edge to: re-roll dice, ignore wounds, negate glitches, push the odds, or pull off miracles. It resets every session. When you run out, you're playing on hard mode. <strong>Use it or lose it.</strong>
+                </div>
+            </div>
+
+            <h3>How to Spend Edge</h3>
+            <ul>
+                <li><strong>Before Roll:</strong> Add Edge rating to dice pool</li>
+                <li><strong>After Roll:</strong> Re-roll failures</li>
+                <li><strong>Burn Edge:</strong> One permanent point for auto-success or cheat death</li>
+                <li><strong>Push the Limit:</strong> Ignore wound penalties, limits, or other restrictions</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: DICE MECHANICS -->
+            <h2 data-hex="0x08" style="--i:8;">Roll Mechanics</h2>
+            <p>Shadowrun uses <strong>dice pools</strong>. Roll <strong>Attribute + Skill</strong> in d6s. Each die showing <strong>5 or 6</strong> is a success (<strong>"hit"</strong>). You need hits to beat thresholds or opposed rolls.</p>
+
+            <div class="terminal" data-label="[ DICE SYSTEM ]">
+    <span class="terminal-prompt">> CALCULATING SUCCESS PROBABILITY...</span>
+
+    <strong>ROLLING:</strong> Attribute + Skill = Dice Pool
+    <strong>SUCCESS:</strong> Each 5 or 6 = 1 Hit
+    <strong>THRESHOLD:</strong> Number of hits needed to succeed
+
+    <strong>EXAMPLE:</strong>
+    Shooting a guard (Agility 5 + Firearms 4 = 9 dice)
+    Roll: 1, 2, 5, 5, 6, 3, 4, 6, 5 = 5 Hits
+    Guard Defends: Reaction 4 + Intuition 3 = 7 dice = 3 Hits
+    You win by 2 hits. Guard is hit.
+
+    <strong>GLITCHES:</strong> If more than half dice show 1s
+    • Glitch = Bad luck, complications
+    • Critical Glitch (0 hits + glitch) = Catastrophic failure
+
+    <span class="terminal-prompt">> SYSTEM READY</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: CONTACT -->
+            <h2 data-hex="0x09" style="--i:9;">Establish Contacts</h2>
+            <p><strong>Contacts</strong> are people who help you. Fixers, gang members, corporate insiders, hackers — they provide info, gear, or jobs. You get (Charisma + Loyalty) points to build contacts.</p>
+
+            <h3>Contact Stats</h3>
+            <ul>
+                <li><strong>Connection:</strong> How well-connected they are (1-6)</li>
+                <li><strong>Loyalty:</strong> How much they like you (1-6)</li>
+                <li><strong>Cost:</strong> Connection + Loyalty = total points spent</li>
+            </ul>
+
+            <h3>Example Contacts</h3>
+            <ul>
+                <li><strong>Fixer (Connection 4, Loyalty 2):</strong> Gets you gear and jobs</li>
+                <li><strong>Street Doc (Connection 2, Loyalty 3):</strong> Patches you up no questions asked</li>
+                <li><strong>Corp Exec (Connection 5, Loyalty 1):</strong> Insider info on megacorps</li>
+                <li><strong>Decker Friend (Connection 2, Loyalty 4):</strong> Matrix support, loyal as hell</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: FINALIZE -->
+            <h2 data-hex="0x0A" style="--i:10;">Finalize Your Runner</h2>
+
+            <h3>Character Details</h3>
+            <ul>
+                <li><strong>Name/Street Name:</strong> What do people call you?</li>
+                <li><strong>Age:</strong> How old are you?</li>
+                <li><strong>Appearance:</strong> What do you look like? Visible cyberware? Style?</li>
+                <li><strong>Personality:</strong> Cold professional? Wisecracking hacker? Honorable warrior?</li>
+                <li><strong>Background:</strong> Where did you come from? Why shadowrun?</li>
+            </ul>
+
+            <h3>Game Statistics</h3>
+            <ul>
+                <li><strong>Initiative:</strong> Reaction + Intuition + 1d6 (determines turn order)</li>
+                <li><strong>Physical Monitor:</strong> 8 + (Body ÷ 2) boxes (damage track)</li>
+                <li><strong>Stun Monitor:</strong> 8 + (Willpower ÷ 2) boxes (stun/drain damage)</li>
+                <li><strong>Condition Monitor:</strong> Mark boxes when injured</li>
+            </ul>
+
+            <div class="terminal" data-label="[ RUNNER PROFILE COMPLETE ]" style="border-color: var(--cyber-cyan); margin-top: 2rem;">
+    <span class="terminal-prompt">> SHADOWRUNNER DOSSIER COMPILED</span>
+
+    ☐ Metatype Selected
+    ☐ Priorities Assigned (A-E)
+    ☐ Attributes Distributed
+    ☐ Skills Purchased
+    ☐ Magic/Resonance Configured (if applicable)
+    ☐ Gear Purchased with Resources
+    ☐ Cyberware Installed (Essence tracked)
+    ☐ Edge Calculated
+    ☐ Contacts Established
+    ☐ Monitors Calculated
+    ☐ Background Story Written
+    ☐ Street Name Chosen
+
+    <span class="terminal-prompt">> STATUS: READY FOR THE SHADOWS</span>
+            </div>
+
+            <div class="data-panel" style="margin-top: 2rem; border-left-color: var(--cyber-magenta);">
+                <span class="panel-label">[ FINAL TRANSMISSION ]</span>
+                Your runner is ready. You've got skills, chrome (maybe), contacts, and gear. The megacorps own everything. Governments are puppets. Magic and technology clash in neon-lit streets. Dragons manipulate markets. And you? You're expendable. <strong>But you're fast, skilled, and desperate enough to take the jobs nobody else will.</strong> The Johnson has a job. The nuyen's good. The risks? Lethal. Welcome to the shadows, chummer. <em>Watch your back. Shoot straight. Conserve ammo. And never, ever cut a deal with a dragon.</em>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-motto">NEVER DEAL WITH A DRAGON</div>
+            <div class="footer-sub">
+                Shadowrun 6E // Catalyst Game Labs // Cyberpunk Fantasy
+            </div>
+        </footer>
+
+        <!-- BOTTOM STATUS -->
+        <div class="bottom-status">
+            <span>Matrix Link: Secured</span>
+            <span>Trace Status: Clear</span>
+            <span>Session: Active</span>
+        </div>
+
+    </div>
+    </body>
+</div>
+</html>

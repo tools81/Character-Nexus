@@ -1,7 +1,7 @@
 import { ChangeEvent } from "react";
 import { UseFormRegister, FieldValues, useWatch, UseFormGetValues, UseFormSetValue, UseFormUnregister } from "react-hook-form";
 import { BonusAdjustments } from "../types/BonusAdjustment";
-import { handleRemoveBonusAdjustment, handleRemoveFieldValue } from "../hooks/useBonus";
+import { handleRemoveBonusAdjustment } from "../hooks/useBonus";
 import { InputGroup } from "react-bootstrap";
 
 interface Props {
@@ -12,7 +12,7 @@ interface Props {
   name: string;
   includeLabel: boolean;
   label: string;
-  defaultValue: string;
+  defaultValue: any;
   className: string;
   image?: string;
   inputBonusAdjustments: any;
@@ -46,8 +46,18 @@ const InputNumber = ({
   visible = true
 }: Props) => {
   var watchedValue = useWatch({ name });
-  var value = watchedValue !== undefined ? watchedValue : "";
-  
+  var value = watchedValue !== undefined && watchedValue !== null ? watchedValue : "";
+
+  // Call register exactly once to avoid duplicate field entries
+  const { onChange: rhfOnChange, onBlur, name: fieldName, ref } = register(name, { disabled });
+
+  const controlledValue = value !== "" ? value : (defaultValue ?? "");
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    rhfOnChange(event);
+    handleInputChange(event, bonusAdjustments, setBonusAdjustments, getValues, setValue, unregister);
+  };
+
   return (
     <div key={name} className="mb-3" {...(!visible ? { style: { display: 'none' } } : {})}>
       {includeLabel && (
@@ -57,35 +67,26 @@ const InputNumber = ({
         </>
       )}
       {image && (
-        <>
-          <InputGroup>
-            <InputGroup.Text>
-              <img src={image} alt="" style={{ maxHeight: "32px", objectFit: "cover" }} />
-            </InputGroup.Text>
-            <input
-              id={name}
-              type="number"
-              className={className}
-              style={{ maxWidth: "100px" }}
-              data-bonusadjustments={inputBonusAdjustments}
-              {...register(name, { disabled })}
-              disabled={disabled}
-              min = {validation?.min}
-              max = {validation?.max}
-              value={value ? value : defaultValue}
-              onChange={(event) =>
-                handleInputChange(
-                  event,
-                  bonusAdjustments,
-                  setBonusAdjustments,
-                  getValues,
-                  setValue,
-                  unregister
-                )
-              }
-            ></input>
-          </InputGroup>
-        </>
+        <InputGroup>
+          <InputGroup.Text>
+            <img src={image} alt="" style={{ maxHeight: "32px", objectFit: "cover" }} />
+          </InputGroup.Text>
+          <input
+            id={name}
+            type="number"
+            className={className}
+            style={{ maxWidth: "100px" }}
+            data-bonusadjustments={inputBonusAdjustments}
+            ref={ref}
+            name={fieldName}
+            onBlur={onBlur}
+            disabled={disabled}
+            min={validation?.min}
+            max={validation?.max}
+            value={controlledValue}
+            onChange={handleChange}
+          />
+        </InputGroup>
       )}
       {!image && (
         <input
@@ -94,22 +95,15 @@ const InputNumber = ({
           className={className}
           style={{ maxWidth: "100px" }}
           data-bonusadjustments={inputBonusAdjustments}
-          {...register(name, { disabled })}
+          ref={ref}
+          name={fieldName}
+          onBlur={onBlur}
           disabled={disabled}
-          min = {validation?.min}
-          max = {validation?.max}
-          value={value ? value : defaultValue}
-          onChange={(event) =>
-            handleInputChange(
-              event,
-              bonusAdjustments,
-              setBonusAdjustments,
-              getValues,
-              setValue,
-              unregister
-            )
-          }
-        ></input>
+          min={validation?.min}
+          max={validation?.max}
+          value={controlledValue}
+          onChange={handleChange}
+        />
       )}
     </div>
   );
@@ -126,11 +120,6 @@ const handleInputChange = (
   if (event.target.value == null || Number.isNaN(event.target.value) || event.target.value === "") {
     return;
   }
-
-  setValue(event.target.name, event.target.value, {
-    shouldDirty: true,
-    shouldTouch: true,
-  });
 
   const fieldElement = event.target;
   const fieldBonusAdjustmentsString = fieldElement.getAttribute(

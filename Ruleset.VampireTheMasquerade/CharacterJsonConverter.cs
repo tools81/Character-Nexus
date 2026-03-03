@@ -526,7 +526,7 @@ namespace VampireTheMasquerade
                         case "choice":
                             if (reader.TokenType != JsonToken.StartObject)
                             {
-                                throw new JsonException("Expected StartObject token for flaws");
+                                throw new JsonException("Expected StartObject token for choices");
                             }
 
                             while (reader.Read() && reader.TokenType != JsonToken.EndObject)

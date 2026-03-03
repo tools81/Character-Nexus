@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELTA GREEN — CLASSIFIED OPERATIONAL BRIEFING</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=IBM+Plex+Mono:wght@400;600;700&family=Special+Elite&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --terminal-green: #00FF41;
+            --green-dark:     #00AA2B;
+            --green-glow:     #00FF41;
+            --redacted:       #000000;
+            --doc-white:      #F5F5F0;
+            --doc-grey:       #E8E8E3;
+            --ink-black:      #1A1A1A;
+            --blood-red:      #8B0000;
+            --warning-yellow: #FFD700;
+            --form-blue:      #4A5568;
+            --shadow:         rgba(0,0,0,0.4);
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Courier Prime', monospace;
+            background: #2A2A2A;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0,255,65,0.02) 2px,
+                    rgba(0,255,65,0.02) 4px
+                );
+            color: var(--ink-black);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* ── CONTAINER (Classified Document) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--doc-white);
+            border: 1px solid #999;
+            box-shadow:
+                0 0 0 4px var(--doc-grey),
+                0 20px 60px rgba(0,0,0,0.6);
+            position: relative;
+            animation: declassify 1s ease-out;
+        }
+
+        @keyframes declassify {
+            from { opacity: 0; filter: blur(2px); }
+            to   { opacity: 1; filter: blur(0); }
+        }
+
+        /* Paper texture */
+        .instr-container .container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        /* Redaction bars */
+        .instr-container .redacted {
+            background: var(--redacted);
+            color: transparent;
+            display: inline-block;
+            min-width: 100px;
+            height: 1.2em;
+            vertical-align: middle;
+        }
+
+        /* Classification stamps */
+        .instr-container .stamp {
+            position: absolute;
+            font-family: 'Special Elite', cursive;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            border: 4px solid;
+            padding: 0.4rem 1.2rem;
+            opacity: 0.3;
+            z-index: 10;
+        }
+
+        .instr-container .stamp.top-secret {
+            top: 2rem;
+            right: 2rem;
+            color: var(--blood-red);
+            border-color: var(--blood-red);
+            transform: rotate(-15deg);
+        }
+
+        .instr-container .stamp.eyes-only {
+            bottom: 3rem;
+            left: 2rem;
+            color: var(--blood-red);
+            border-color: var(--blood-red);
+            transform: rotate(8deg);
+        }
+
+        /* ── CLASSIFICATION BAR ── */
+        .instr-container .class-bar {
+            background: var(--redacted);
+            color: var(--doc-white);
+            padding: 0.8rem 2rem;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-align: center;
+            border-bottom: 3px solid var(--blood-red);
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            padding: 2rem 2.5rem;
+            background: var(--doc-grey);
+            border-bottom: 3px solid var(--ink-black);
+            position: relative;
+        }
+
+        /* Delta symbol watermark */
+        .instr-container header::before {
+            content: '△';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18rem;
+            color: var(--terminal-green);
+            opacity: 0.02;
+            pointer-events: none;
+        }
+
+        .instr-container .doc-header {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--ink-black);
+        }
+
+        .instr-container .doc-seal {
+            width: 80px;
+            height: 80px;
+            border: 3px solid var(--terminal-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--terminal-green);
+            background: var(--ink-black);
+        }
+
+        .instr-container .doc-info {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.7rem;
+            line-height: 1.8;
+        }
+
+        .instr-container .doc-info strong {
+            color: var(--blood-red);
+        }
+
+        .instr-container h1 {
+            font-family: 'Special Elite', cursive;
+            font-size: 3.2rem;
+            line-height: 1.1;
+            color: var(--ink-black);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container h1 .delta {
+            color: var(--terminal-green);
+        }
+
+        .instr-container .operation-name {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--blood-red);
+            text-transform: uppercase;
+            margin-top: 1rem;
+            padding: 0.5rem 0;
+            border-top: 1px solid var(--ink-black);
+            border-bottom: 1px solid var(--ink-black);
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2rem 2.5rem;
+            background: var(--doc-white);
+        }
+
+        /* ── TERMINAL BOX ── */
+        .instr-container .terminal {
+            background: var(--ink-black);
+            border: 3px solid var(--terminal-green);
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+            line-height: 1.9;
+            color: var(--terminal-green);
+            box-shadow:
+                0 0 20px rgba(0,255,65,0.3),
+                inset 0 0 40px rgba(0,255,65,0.05);
+            position: relative;
+        }
+
+        .instr-container .terminal::before {
+            content: '> ACCESSING DELTA GREEN DATABASE...';
+            position: absolute;
+            top: -0.7rem;
+            left: 1rem;
+            background: var(--ink-black);
+            padding: 0 0.5rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-shadow: 0 0 10px var(--terminal-green);
+        }
+
+        .instr-container .terminal-prompt {
+            color: var(--green-glow);
+            text-shadow: 0 0 8px var(--terminal-green);
+        }
+
+        /* Scanlines effect */
+        .instr-container .terminal::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0,0,0,0.2) 2px,
+                    rgba(0,0,0,0.2) 4px
+                );
+            pointer-events: none;
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--ink-black);
+            margin: 2.75rem 0 1.25rem;
+            padding: 0.8rem 1rem;
+            background: var(--doc-grey);
+            border-left: 6px solid var(--terminal-green);
+            border-bottom: 2px solid var(--ink-black);
+            position: relative;
+            animation: typeIn 0.4s steps(20) backwards;
+            animation-delay: calc(var(--i,0) * 0.06s);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: attr(data-section);
+            position: absolute;
+            left: -3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--blood-red);
+        }
+
+        @keyframes typeIn {
+            from { opacity: 0; letter-spacing: 0.15em; }
+            to   { opacity: 1; letter-spacing: 0.08em; }
+        }
+
+        .instr-container h3 {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--terminal-green);
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .instr-container p {
+            font-size: 0.95rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            color: var(--ink-black);
+        }
+
+        .instr-container ul, .instr-container ol { margin: 0.75rem 0 1.25rem 1.5rem; }
+        .instr-container li {
+            font-size: 0.92rem;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { 
+            color: var(--blood-red); 
+            font-weight: 700;
+        }
+        
+        .instr-container em     { 
+            color: var(--terminal-green); 
+            font-style: normal; 
+            font-weight: 600;
+        }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.5rem 0;
+            height: 2px;
+            background: var(--ink-black);
+            opacity: 0.3;
+        }
+
+        /* ── WARNING BOX ── */
+        .instr-container .warning {
+            background: rgba(139,0,0,0.05);
+            border: 3px solid var(--blood-red);
+            border-left: 8px solid var(--blood-red);
+            padding: 1.5rem 1.75rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.85;
+        }
+
+        .instr-container .warning-label {
+            font-family: 'Special Elite', cursive;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--blood-red);
+            display: block;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+        }
+
+        /* ── FORM BOX ── */
+        .instr-container .form-box {
+            background: var(--doc-grey);
+            border: 2px solid var(--ink-black);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        .instr-container .form-box::before {
+            content: attr(data-label);
+            display: block;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--terminal-green);
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--ink-black);
+            padding-bottom: 0.5rem;
+        }
+
+        .instr-container .form-field {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container .field-label {
+            color: var(--ink-black);
+            font-weight: 700;
+        }
+
+        .instr-container .field-value {
+            color: var(--form-blue);
+        }
+
+        /* ── PROFESSION CARDS ── */
+        .instr-container .prof-grid {
+            display: grid;
+            gap: 0.75rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .prof-card {
+            background: var(--doc-grey);
+            border: 2px solid var(--ink-black);
+            border-left: 5px solid var(--terminal-green);
+            padding: 1.25rem 1.5rem;
+            position: relative;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .instr-container .prof-card:hover {
+            border-color: var(--blood-red);
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container .prof-code {
+            position: absolute;
+            top: -0.7rem;
+            right: 1.5rem;
+            background: var(--ink-black);
+            color: var(--terminal-green);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            padding: 0.3rem 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .instr-container .prof-name {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--ink-black);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .prof-desc {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: var(--ink-black);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .prof-skills {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--terminal-green);
+            border-top: 1px solid var(--ink-black);
+            padding-top: 0.5rem;
+        }
+
+        /* ── STAT TABLE ── */
+        .instr-container .stat-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: 0.85rem;
+            background: var(--doc-grey);
+            border: 2px solid var(--ink-black);
+        }
+
+        .instr-container .stat-table th {
+            background: var(--ink-black);
+            color: var(--terminal-green);
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.6rem 0.8rem;
+            text-align: left;
+            font-size: 0.8rem;
+            border: 1px solid var(--ink-black);
+        }
+
+        .instr-container .stat-table td {
+            padding: 0.5rem 0.8rem;
+            border: 1px solid var(--ink-black);
+            color: var(--ink-black);
+            vertical-align: top;
+            line-height: 1.6;
+        }
+
+        .instr-container .stat-table tr:hover td { background: var(--doc-white); }
+
+        /* ── SANITY TRACKER ── */
+        .instr-container .sanity-box {
+            background: var(--blood-red);
+            color: var(--doc-white);
+            border: 4px solid var(--ink-black);
+            padding: 1.75rem 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(139,0,0,0.4);
+        }
+
+        .instr-container .sanity-title {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.75rem;
+        }
+
+        .instr-container .sanity-desc {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            margin-top: 0.75rem;
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--doc-grey);
+            padding: 2rem 2.5rem;
+            border-top: 3px solid var(--ink-black);
+            text-align: center;
+        }
+
+        .instr-container .footer-warning {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.4rem;
+            color: var(--blood-red);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 0.75rem;
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            color: var(--form-blue);
+            text-transform: uppercase;
+        }
+
+        .instr-container footer::before {
+            content: '△ △ △';
+            display: block;
+            font-size: 1.2rem;
+            color: var(--terminal-green);
+            letter-spacing: 1em;
+            margin-bottom: 1.25rem;
+        }
+
+        /* Bottom classification bar */
+        .instr-container .bottom-class {
+            background: var(--redacted);
+            color: var(--doc-white);
+            padding: 0.8rem 2rem;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-align: center;
+            border-top: 3px solid var(--blood-red);
+        }
+
+        @media (max-width: 480px) {
+            .instr-container h1 { font-size: 2.5rem; }
+            .instr-container h2 { font-size: 1.3rem; }
+            .instr-container h2::before { display: none; }
+            .instr-container .content { padding: 1.75rem 1.5rem; }
+            .instr-container header { padding: 1.75rem 1.5rem; }
+            .instr-container footer { padding: 1.75rem 1.5rem; }
+            .instr-container .doc-header { grid-template-columns: 1fr; }
+            .instr-container .doc-seal { margin: 0 auto; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+        <div class="stamp top-secret">TOP SECRET</div>
+        <div class="stamp eyes-only">EYES ONLY</div>
+
+        <!-- CLASSIFICATION BAR -->
+        <div class="class-bar">
+            ■ TOP SECRET // DELTA GREEN // AUTHORIZED PERSONNEL ONLY ■
+        </div>
+
+        <!-- HEADER -->
+        <header>
+            <div class="doc-header">
+                <div class="doc-seal">△</div>
+                <div class="doc-info">
+                    <strong>FROM:</strong> DELTA GREEN COMMAND<br>
+                    <strong>TO:</strong> FIELD OPERATIVES<br>
+                    <strong>RE:</strong> AGENT RECRUITMENT & INDOCTRINATION<br>
+                    <strong>DATE:</strong> <span class="redacted">████████</span><br>
+                    <strong>CLASSIFICATION:</strong> TOP SECRET // MAJIC EYES ONLY
+                </div>
+            </div>
+            <h1>
+                <span class="delta">DELTA</span> GREEN
+            </h1>
+            <div class="operation-name">
+                OPERATION: CHARACTER GENERATION PROTOCOL
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="terminal">
+    <span class="terminal-prompt">> SYSTEM INITIALIZED</span>
+    <span class="terminal-prompt">> LOADING OPERATIONAL DATABASE...</span>
+
+    Welcome to <strong>DELTA GREEN</strong>. You don't know us. We don't exist. Officially.
+
+    We are the last defense against <em>unnatural threats</em> — things that 
+    violate reality itself. Lovecraftian horrors. Deep Ones. Mi-Go. Creatures 
+    from beyond space and time. The government covered them up. We clean up 
+    what's left.
+
+    You are now an <strong>AGENT</strong>. You have a normal life — FBI, CDC, military, 
+    law enforcement. But when Delta Green calls, you answer. You investigate. 
+    You contain. You destroy. And you <em>never talk about it</em>.
+
+    The cost? Your sanity. Your family. Your soul. Welcome to the Program.
+
+    <span class="terminal-prompt">> ACCESS GRANTED</span>
+            </div>
+
+            <!-- STEP 1: PROFESSION -->
+            <h2 data-section="§1" style="--i:1;">Select Cover Profession</h2>
+            <p>Your <strong>Profession</strong> is your cover — your day job. It provides skills and access. Delta Green recruits from agencies that can investigate the unnatural without raising suspicion.</p>
+
+            <div class="prof-grid">
+                <div class="prof-card">
+                    <div class="prof-code">FED-001</div>
+                    <div class="prof-name">Federal Agent</div>
+                    <div class="prof-desc">FBI, DEA, ATF, or similar. You investigate crimes. You have federal authority, access to databases, and can cross state lines.</div>
+                    <div class="prof-skills">Skills: Criminology 60%, Firearms 50%, Law 40%, Persuade 50%</div>
+                </div>
+                <div class="prof-card">
+                    <div class="prof-code">INT-002</div>
+                    <div class="prof-name">Intelligence Officer</div>
+                    <div class="prof-desc">CIA, NSA, DIA. You gather intelligence. You have contacts abroad, access to classified info, and training in covert operations.</div>
+                    <div class="prof-skills">Skills: Foreign Language 50%, HUMINT 60%, Persuade 50%, Stealth 50%</div>
+                </div>
+                <div class="prof-card">
+                    <div class="prof-code">MIL-003</div>
+                    <div class="prof-name">Special Operator</div>
+                    <div class="prof-desc">Delta Force, SEAL Team, or similar special operations. You're combat trained. When things go kinetic, you handle it.</div>
+                    <div class="prof-skills">Skills: Athletics 60%, Firearms 60%, Melee 50%, Stealth 50%</div>
+                </div>
+                <div class="prof-card">
+                    <div class="prof-code">SCI-004</div>
+                    <div class="prof-name">Scientist</div>
+                    <div class="prof-desc">CDC, DARPA, university researcher. You understand biology, chemistry, or physics. You investigate outbreaks and anomalies.</div>
+                    <div class="prof-skills">Skills: Science (Biology/Chemistry/Physics) 60%, Medicine 40%, Computer Science 40%</div>
+                </div>
+                <div class="prof-card">
+                    <div class="prof-code">MED-005</div>
+                    <div class="prof-name">Physician</div>
+                    <div class="prof-desc">Medical doctor, forensic pathologist, psychiatrist. You treat the wounded and examine the dead. Sometimes the dead aren't dead.</div>
+                    <div class="prof-skills">Skills: Medicine 60%, Pharmacy 50%, Science (Biology) 40%, Psychotherapy 40%</div>
+                </div>
+                <div class="prof-card">
+                    <div class="prof-code">LEO-006</div>
+                    <div class="prof-name">Police Officer</div>
+                    <div class="prof-desc">Detective, SWAT, homicide investigator. You work the streets. You see the weird cases nobody wants.</div>
+                    <div class="prof-skills">Skills: Alertness 60%, Criminology 40%, Firearms 50%, Drive 50%</div>
+                </div>
+                <div class="prof-card">
+                    <div class="prof-code">CIV-007</div>
+                    <div class="prof-name">Criminal</div>
+                    <div class="prof-desc">Former asset, reformed criminal, or someone with underworld connections. You know how to break laws without getting caught.</div>
+                    <div class="prof-skills">Skills: Stealth 60%, Alertness 50%, Drive 50%, Persuade 40%</div>
+                </div>
+                <div class="prof-card">
+                    <div class="prof-code">ANL-008</div>
+                    <div class="prof-name">Historian/Librarian</div>
+                    <div class="prof-desc">You research. Occult texts, ancient rituals, forbidden knowledge. Sometimes knowing is worse than not knowing.</div>
+                    <div class="prof-skills">Skills: History 60%, Foreign Language 50%, Occult 40%, Search 50%</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: STATISTICS -->
+            <h2 data-section="§2" style="--i:2;">Generate Statistics</h2>
+            <p>Roll your <strong>Statistics</strong> using percentile dice (d100). These represent your core abilities. Higher is better.</p>
+
+            <table class="stat-table">
+                <thead>
+                    <tr>
+                        <th>Statistic</th>
+                        <th>Roll</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Strength (STR)</strong></td>
+                        <td>3D6 × 5</td>
+                        <td>Physical power, melee damage</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Constitution (CON)</strong></td>
+                        <td>3D6 × 5</td>
+                        <td>Health, stamina, disease resistance</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dexterity (DEX)</strong></td>
+                        <td>3D6 × 5</td>
+                        <td>Agility, reflexes, manual dexterity</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Intelligence (INT)</strong></td>
+                        <td>2D6+6 × 5</td>
+                        <td>Reasoning, memory, learning</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Power (POW)</strong></td>
+                        <td>3D6 × 5</td>
+                        <td>Willpower, mental strength, luck</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Charisma (CHA)</strong></td>
+                        <td>3D6 × 5</td>
+                        <td>Personality, leadership, persuasion</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="form-box" data-label="DERIVED STATISTICS">
+                <div class="form-field">
+                    <span class="field-label">Hit Points:</span>
+                    <span class="field-value">(STR + CON) ÷ 10 (round up)</span>
+                </div>
+                <div class="form-field">
+                    <span class="field-label">Willpower:</span>
+                    <span class="field-value">Equal to POW (starting)</span>
+                </div>
+                <div class="form-field">
+                    <span class="field-label">Sanity:</span>
+                    <span class="field-value">Equal to POW (starting) — THIS WILL DECREASE</span>
+                </div>
+                <div class="form-field">
+                    <span class="field-label">Breaking Point:</span>
+                    <span class="field-value">SAN - POW (when SAN drops below BP, trauma occurs)</span>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: SKILLS -->
+            <h2 data-section="§3" style="--i:3;">Distribute Skill Points</h2>
+            <p>Your Profession grants starting skill percentages. You also get <strong>personal interest points</strong> to spend: INT × 2. Distribute among any skills.</p>
+
+            <h3>Core Skills</h3>
+            <ul>
+                <li><strong>Alertness:</strong> Notice danger, spot clues, avoid ambush</li>
+                <li><strong>Athletics:</strong> Running, jumping, climbing, swimming</li>
+                <li><strong>Criminology:</strong> Crime scene investigation, forensics</li>
+                <li><strong>Firearms:</strong> Handguns, rifles, shotguns</li>
+                <li><strong>Foreign Language:</strong> Speak/read another language (specify)</li>
+                <li><strong>HUMINT:</strong> Human intelligence gathering, reading people</li>
+                <li><strong>Medicine:</strong> Treat wounds, diagnose illness, surgery</li>
+                <li><strong>Melee Weapons:</strong> Knives, batons, improvised weapons</li>
+                <li><strong>Occult:</strong> Knowledge of myths, rituals, forbidden lore</li>
+                <li><strong>Persuade:</strong> Convince, intimidate, negotiate</li>
+                <li><strong>Science:</strong> Biology, chemistry, physics (specify)</li>
+                <li><strong>Search:</strong> Find hidden objects, research information</li>
+                <li><strong>Stealth:</strong> Move quietly, hide, avoid detection</li>
+                <li><strong>Unarmed Combat:</strong> Hand-to-hand fighting</li>
+            </ul>
+
+            <div class="warning">
+                <span class="warning-label">⚠ OPERATIONAL NOTE</span>
+                <strong>Skills above 80% are suspicious.</strong> Delta Green recruits are competent but not superhuman. Exceptional skills draw attention. Stay under the radar.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: BONDS -->
+            <h2 data-section="§4" style="--i:4;">Establish Bonds</h2>
+            <p><strong>Bonds</strong> are relationships that keep you sane. Family, friends, lovers. Each Bond starts with a score (usually CHA ÷ 2). When you lose Sanity, you can destroy a Bond instead to preserve your mind.</p>
+
+            <h3>Example Bonds</h3>
+            <ul>
+                <li><strong>Spouse/Partner:</strong> The person you come home to</li>
+                <li><strong>Child:</strong> Your son or daughter — you want to protect them from the truth</li>
+                <li><strong>Parent:</strong> Your mother or father — you owe them everything</li>
+                <li><strong>Best Friend:</strong> Someone who knows you (but not Delta Green)</li>
+                <li><strong>Mentor:</strong> Someone who trained you, guided you</li>
+                <li><strong>Fellow Agent:</strong> Another Delta Green operative — they understand</li>
+            </ul>
+
+            <div class="form-box" data-label="BOND MECHANICS">
+                <strong>When Bonds Break:</strong><br>
+                Every time you lose SAN, you can choose to reduce a Bond's score instead. When a Bond reaches 0, that relationship is destroyed. Your spouse divorces you. Your kids won't speak to you. Your friend calls the police.<br><br>
+                <strong>This is the cost of serving Delta Green.</strong>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: MOTIVATIONS -->
+            <h2 data-section="§5" style="--i:5;">Define Motivations</h2>
+            <p>Why do you do this? What keeps you in the Program when you could walk away?</p>
+
+            <h3>Common Motivations</h3>
+            <ul>
+                <li><strong>Duty:</strong> Someone has to protect the world. Might as well be you.</li>
+                <li><strong>Revenge:</strong> The unnatural took someone you loved. You'll make it pay.</li>
+                <li><strong>Curiosity:</strong> You need to know the truth, no matter the cost.</li>
+                <li><strong>Redemption:</strong> You failed before. This is your second chance.</li>
+                <li><strong>Patriotism:</strong> You serve your country. This is part of that service.</li>
+                <li><strong>Power:</strong> Delta Green has resources. Knowledge. Access. You want it.</li>
+                <li><strong>Survival:</strong> You know too much. They'd kill you if you left.</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: SANITY -->
+            <h2 data-section="§6" style="--i:6;">Understand Sanity</h2>
+
+            <div class="sanity-box">
+                <div class="sanity-title">SANITY SYSTEM</div>
+                <div class="sanity-desc">
+                    Your <strong>Sanity (SAN)</strong> represents your mental stability. It starts equal to your POW.<br>
+                    Every time you encounter the unnatural, you lose SAN. See a corpse animated by alien technology? Lose SAN. Watch your partner torn apart by a creature that shouldn't exist? Lose more SAN.<br><br>
+                    <strong>When SAN drops below your Breaking Point, you suffer trauma.</strong><br>
+                    Temporary insanity. Disorders. Violent outbursts. Your character changes.
+                </div>
+            </div>
+
+            <h3>Sanity Loss Examples</h3>
+            <ul>
+                <li><strong>See a dead body:</strong> 0/1D4 SAN</li>
+                <li><strong>See a mutilated corpse:</strong> 1/1D6 SAN</li>
+                <li><strong>See a friend die:</strong> 1D6/1D10 SAN</li>
+                <li><strong>Encounter a Deep One:</strong> 1/1D6 SAN</li>
+                <li><strong>Witness alien geometry:</strong> 1D6/1D20 SAN</li>
+                <li><strong>Read the Necronomicon:</strong> 1D6/1D10 SAN (and gain Occult skill)</li>
+                <li><strong>Summon an entity from beyond:</strong> 1D10/1D100 SAN</li>
+            </ul>
+
+            <div class="warning">
+                <span class="warning-label">⚠ CRITICAL</span>
+                <strong>If SAN reaches 0, your character is permanently insane.</strong> They're institutionalized or dead. Roll a new character. This is not a game where everyone survives.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: DISORDER -->
+            <h2 data-section="§7" style="--i:7;">Mental Disorders</h2>
+            <p>When SAN drops below your Breaking Point, you develop a <strong>Disorder</strong>. Roll or choose:</p>
+
+            <ul>
+                <li><strong>Addiction:</strong> Alcohol, drugs, anything to numb the pain</li>
+                <li><strong>Depression:</strong> Nothing matters. You're just going through motions.</li>
+                <li><strong>Paranoia:</strong> They're watching. They're everywhere. Trust no one.</li>
+                <li><strong>Violence:</strong> You solve problems with force. Too much force.</li>
+                <li><strong>Hypervigilance:</strong> You can't relax. Ever. Exhaustion sets in.</li>
+                <li><strong>Flashbacks:</strong> You see it again. The thing. The blood. The screaming.</li>
+                <li><strong>Dissociation:</strong> You feel disconnected from reality, yourself, others.</li>
+            </ul>
+
+            <p>Disorders affect gameplay. They trigger in stress. They damage Bonds. They make you <em>worse</em> at your job.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: EQUIPMENT -->
+            <h2 data-section="§8" style="--i:8;">Standard Loadout</h2>
+            <p>Delta Green doesn't issue equipment. You use what your cover provides. FBI agents have bureau weapons. Military operators have military gear. Scientists have lab equipment.</p>
+
+            <h3>Common Equipment</h3>
+            <ul>
+                <li><strong>Firearm:</strong> Service weapon (Glock 19, M4 carbine, etc.)</li>
+                <li><strong>Body Armor:</strong> Kevlar vest (if appropriate to cover)</li>
+                <li><strong>Credentials:</strong> ID, badge, authority</li>
+                <li><strong>Communication:</strong> Cell phone, radio (encrypted)</li>
+                <li><strong>Vehicle:</strong> Government sedan, tactical vehicle, rental</li>
+                <li><strong>First Aid Kit:</strong> Basic medical supplies</li>
+                <li><strong>Flashlight:</strong> High-powered tactical light</li>
+                <li><strong>Evidence Kit:</strong> Bags, gloves, camera</li>
+            </ul>
+
+            <h3>Unnatural Weapons (Rarely Available)</h3>
+            <ul>
+                <li><strong>Hypergeometric Weapons:</strong> Alien tech that doesn't obey physics</li>
+                <li><strong>Ritual Implements:</strong> Tools for containing entities</li>
+                <li><strong>Chemical Agents:</strong> Things that kill the unkillable</li>
+            </ul>
+
+            <div class="warning">
+                <span class="warning-label">⚠ CLASSIFIED</span>
+                <strong>Use of unnatural weapons is unauthorized.</strong> Command will deny knowledge. You will be disavowed. Plausible deniability is mandatory.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: TASK RESOLUTION -->
+            <h2 data-section="§9" style="--i:9;">Operational Procedures (Dice Rolls)</h2>
+            <p>When attempting a task, roll <strong>d100 (percentile dice)</strong>. Roll <strong>equal to or under</strong> your skill percentage to succeed.</p>
+
+            <div class="terminal" style="margin-top: 1.5rem;">
+    <span class="terminal-prompt">> TASK RESOLUTION PROTOCOL</span>
+
+    <strong>STANDARD ROLL:</strong>
+    • Roll d100
+    • Equal or under skill % = SUCCESS
+    • Over skill % = FAILURE
+
+    <strong>CRITICAL SUCCESS:</strong> Roll 01 — exceptional outcome
+    <strong>CRITICAL FAILURE:</strong> Roll 00 or 100 — catastrophic failure
+
+    <strong>OPPOSED ROLLS:</strong>
+    Both parties roll. Higher success wins.
+    Both fail? Nobody succeeds.
+
+    <strong>DIFFICULTY MODIFIERS:</strong>
+    • Easy: +20% to skill
+    • Hard: -20% to skill
+    • Impossible: -40% to skill (or just say no)
+
+    <span class="terminal-prompt">> PROTOCOL COMPLETE</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: COVER -->
+            <h2 data-section="§10" style="--i:10;">Mission Parameters</h2>
+
+            <h3>Personal Information</h3>
+            <ul>
+                <li><strong>Name:</strong> Legal name (aliases if necessary)</li>
+                <li><strong>Age:</strong> How old are you?</li>
+                <li><strong>Appearance:</strong> Physical description, distinguishing features</li>
+                <li><strong>Cover Profession:</strong> What's your day job?</li>
+                <li><strong>Agency:</strong> FBI? CIA? Military? Local PD?</li>
+                <li><strong>Clearance:</strong> What level of classified access do you have?</li>
+            </ul>
+
+            <h3>Delta Green Status</h3>
+            <ul>
+                <li><strong>Cell Assignment:</strong> Who do you operate with?</li>
+                <li><strong>Case Officer:</strong> Who gives you orders? (Codename only)</li>
+                <li><strong>Security Clearance:</strong> How much do you know about the Program?</li>
+                <li><strong>First Encounter:</strong> When did you learn the truth?</li>
+            </ul>
+
+            <div class="form-box" data-label="AGENT REGISTRATION COMPLETE">
+                <strong>OPERATIONAL STATUS:</strong> ACTIVE<br>
+                <strong>COVER:</strong> <span class="redacted">████████████</span><br>
+                <strong>HANDLER:</strong> <span class="redacted">████████</span><br>
+                <strong>CLEARANCE:</strong> DELTA GREEN PROGRAM ACCESS<br>
+                <strong>PSYCHOLOGICAL EVAL:</strong> FIT FOR DUTY (subject to review)<br><br>
+                <strong>MISSION PARAMETERS:</strong><br>
+                1. Investigate reports of unnatural activity<br>
+                2. Contain threats to reality<br>
+                3. Destroy what cannot be contained<br>
+                4. Maintain cover at all costs<br>
+                5. Trust no one outside the Program<br>
+                6. <span class="redacted">████████████████████</span><br><br>
+                <strong>ACKNOWLEDGMENT REQUIRED:</strong><br>
+                By proceeding, you acknowledge:<br>
+                • The unnatural is real<br>
+                • Your life is forfeit<br>
+                • Your sacrifice protects humanity<br>
+                • You will never speak of this<br>
+                • <em>You cannot leave</em>
+            </div>
+
+            <div class="terminal" style="margin-top: 2rem; border-color: var(--blood-red);">
+    <span class="terminal-prompt" style="color: var(--blood-red); text-shadow: 0 0 8px var(--blood-red);">> FINAL BRIEFING</span>
+
+    Your character is ready. You're an Agent now. You have a cover life — job, 
+    family, bills. But when Delta Green calls, you drop everything.
+
+    The missions don't stop. The horrors don't stop. Your Sanity will erode. 
+    Your Bonds will break. You'll develop Disorders. You might die. You 
+    probably will.
+
+    But someone has to do it. Someone has to stand between humanity and the 
+    things that crawl between dimensions. Someone has to burn the evidence, 
+    silence the witnesses, and lie to everyone they love.
+
+    Welcome to Delta Green. <em>The truth will destroy you.</em>
+
+    <span class="terminal-prompt" style="color: var(--blood-red); text-shadow: 0 0 8px var(--blood-red);">> END TRANSMISSION</span>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-warning">
+                NEED TO KNOW BASIS ONLY
+            </div>
+            <div class="footer-sub">
+                Delta Green RPG // Arc Dream Publishing // BRP System
+            </div>
+        </footer>
+
+        <!-- BOTTOM CLASSIFICATION -->
+        <div class="bottom-class">
+            ■ TOP SECRET // DELTA GREEN // DESTROY AFTER READING ■
+        </div>
+
+    </div>
+    </body>
+</div>
+</html>

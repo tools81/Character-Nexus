@@ -1,4 +1,4 @@
-import { ReactNode, useCallback, useState } from "react";
+import { ReactNode, useCallback, useRef, useState } from "react";
 import { UserChoices } from "../types/UserChoice";
 
 export interface UseUserChoiceModalReturn {
@@ -13,20 +13,25 @@ export interface UseUserChoiceModalReturn {
 }
 
 export function useModal(): UseUserChoiceModalReturn {
-  const [isOpen, setIsOpen] = useState(false);
-  const [choice, setChoice] = useState<UserChoices | null>(null);
+  // Use a ref for modal state so the Modal component reference stays stable
+  const stateRef = useRef({ isOpen: false, choice: null as UserChoices | null });
+  const [, forceUpdate] = useState(0);
 
   const open = useCallback((value: UserChoices) => {
-    setChoice(value);
-    setIsOpen(true);
+    stateRef.current = { isOpen: true, choice: value };
+    forceUpdate(n => n + 1);
   }, []);
 
   const close = useCallback(() => {
-    setIsOpen(false);
-    setChoice(null);
+    stateRef.current = { isOpen: false, choice: null };
+    forceUpdate(n => n + 1);
   }, []);
 
-  const Modal: UseUserChoiceModalReturn["Modal"] = ({ children }) => {
+  // Modal is memoized so its reference stays stable across parent re-renders.
+  // A stable reference means React will NOT unmount/remount Modal children
+  // when the parent component re-renders (e.g. from setBonusAdjustments).
+  const Modal = useCallback<UseUserChoiceModalReturn["Modal"]>(({ children }) => {
+    const { isOpen, choice } = stateRef.current;
     if (!isOpen || choice === null) return null;
 
     return (
@@ -36,7 +41,7 @@ export function useModal(): UseUserChoiceModalReturn {
         </div>
       </div>
     );
-  };
+  }, [close]); // close is stable (empty deps), so Modal is always the same reference
 
   return { open, close, Modal };
 }

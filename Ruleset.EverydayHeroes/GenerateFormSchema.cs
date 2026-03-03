@@ -176,14 +176,14 @@ namespace EverydayHeroes
                 }
 
                 AddDescriptionFields();
-
-                GenerateAttributeSchema(attributes, "attributes", "Ability Scores");
+               
                 GenerateArchetypeSchema(archetypes, "archetype", "Archetype");
                 GenerateClassSchema(classes, archetypes, "class", "Class");
                 GenerateBackgroundSchema(backgrounds, "background", "Background");
                 GenerateProfessionSchema(professions, "profession", "Profession");
+                GenerateAttributeSchema(attributes, "attributes", "Ability Scores");
                 GenerateSkillSchema(skills, "skill", "Skills");
-                GenerateFeatSchema(feats, "feat", "Feats");
+                GenerateFeatSchema(feats, plans, "feat", "Feats");
                 GenerateTalentSchema(talents, "talent", "Talents");
                 GeneratePlanSchema(plans, "plan", "Plans");
                 GenerateTrickSchema(tricks, "trick", "Tricks");
@@ -537,15 +537,15 @@ namespace EverydayHeroes
                 {
                     new
                     {
-                        name = $"skill.proficient.{skill.Name}",
-                        id = $"skill.proficient.{skill.Name.ToLower()}",
+                        name = $"skills.proficient.{skill.Name}",
+                        id = $"skills.proficient.{skill.Name.ToLower()}",
                         label = "",
                         type = "switch"
                     },
                     new
                     {
-                        name = $"skill.expertise.{skill.Name}",
-                        id = $"skill.expertise.{skill.Name.ToLower()}",
+                        name = $"skills.expertise.{skill.Name}",
+                        id = $"skills.expertise.{skill.Name.ToLower()}",
                         label = "",
                         type = "switch"
                     },
@@ -576,7 +576,7 @@ namespace EverydayHeroes
             });           
         }
 
-        private static void GenerateFeatSchema(List<Feat> feats, string name, string label)
+        private static void GenerateFeatSchema(List<Feat> feats, List<Plan> plans, string name, string label)
         {
             dynamic obj = new ExpandoObject();
 
@@ -589,6 +589,66 @@ namespace EverydayHeroes
             foreach (var feat in feats.OrderBy(t => t.Name))
             {
                 if (feat.BonusCharacteristics != null) UpdateBonusCharacteristicValues(feat.BonusCharacteristics);
+
+                if (feat.UserChoices != null)
+                {
+                    foreach (var choice in feat.UserChoices)
+                    {
+                        var unboundChoices = new List<string>();
+                        switch (choice.Type)
+                        {
+                            case "plans":
+                                foreach (var value in choice.Choices)
+                                {
+                                    switch (value)
+                                    {
+                                        case "Shared":
+                                            unboundChoices.AddRange(plans.Where(p => p.Class == "Shared").Select(p => p.Name).ToList());
+                                            break;
+                                        case "Engineer":
+                                            unboundChoices.AddRange(plans.Where(p => p.Class == "Engineer").Select(p => p.Name).ToList());
+                                            break;
+                                        case "Hacker":
+                                            unboundChoices.AddRange(plans.Where(p => p.Class == "Hacker").Select(p => p.Name).ToList());
+                                            break;
+                                        case "Mastermind":
+                                            unboundChoices.AddRange(plans.Where(p => p.Class == "Mastermind").Select(p => p.Name).ToList());
+                                            break;
+                                        case "Scientist":
+                                            unboundChoices.AddRange(plans.Where(p => p.Class == "Scientist").Select(p => p.Name).ToList());
+                                            break;
+                                    }
+                                }
+                                break;
+                            case "tricks":
+                                foreach (var value in choice.Choices)
+                                {
+                                    switch (value)
+                                    {
+                                        case "Duelist":
+                                            unboundChoices.AddRange(plans.Where(p => p.Class == "Duelist").Select(p => p.Name).ToList());
+                                            break;
+                                        case "Icon":
+                                            unboundChoices.AddRange(plans.Where(p => p.Class == "Icon").Select(p => p.Name).ToList());
+                                            break;
+                                        case "Leader":
+                                            unboundChoices.AddRange(plans.Where(p => p.Class == "Leader").Select(p => p.Name).ToList());
+                                            break;
+                                        case "Manipulator":
+                                            unboundChoices.AddRange(plans.Where(p => p.Class == "Manipulator").Select(p => p.Name).ToList());
+                                            break;
+                                    }
+                                }
+                                break;
+                        }
+
+                        if (unboundChoices.Count > 0)
+                        {
+                            choice.Choices.Clear();
+                            choice.Choices = unboundChoices;
+                        }
+                    }
+                }
 
                 obj.options.Add(
                     new

@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARANOIA — MANDATORY CITIZEN ORIENTATION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Anton&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --alert-red:     #FF0000;
+            --warning-yellow:#FFD700;
+            --alert-orange:  #FF6600;
+            --computer-blue: #0066FF;
+            --neon-green:    #00FF00;
+            --black:         #000000;
+            --white:         #FFFFFF;
+            --grey-light:    #CCCCCC;
+            --grey-dark:     #333333;
+            --clearance-red: #CC0000;
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Oswald', sans-serif;
+            background: var(--black);
+            background-image:
+                repeating-linear-gradient(
+                    45deg,
+                    var(--black),
+                    var(--black) 20px,
+                    #1A1A1A 20px,
+                    #1A1A1A 40px
+                );
+            color: var(--white);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* ── CONTAINER (Propaganda Notice) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--white);
+            border: 12px solid var(--alert-red);
+            box-shadow:
+                0 0 0 4px var(--warning-yellow),
+                0 0 0 16px var(--black),
+                0 30px 80px rgba(0,0,0,0.9);
+            position: relative;
+            animation: mandatory-display 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        @keyframes mandatory-display {
+            0%   { opacity: 0; transform: scale(0.8) rotate(-2deg); }
+            50%  { transform: scale(1.05) rotate(1deg); }
+            100% { opacity: 1; transform: scale(1) rotate(0deg); }
+        }
+
+        /* Warning stripes */
+        .instr-container .warning-stripe {
+            position: absolute;
+            left: 0;
+            height: 30px;
+            width: 100%;
+            background: repeating-linear-gradient(
+                -45deg,
+                var(--alert-red),
+                var(--alert-red) 20px,
+                var(--warning-yellow) 20px,
+                var(--warning-yellow) 40px
+            );
+            animation: stripe-scroll 2s linear infinite;
+        }
+
+        .instr-container .warning-stripe.top { top: -30px; }
+        .instr-container .warning-stripe.bottom { bottom: -30px; animation-direction: reverse; }
+
+        @keyframes stripe-scroll {
+            from { background-position: 0 0; }
+            to   { background-position: 40px 0; }
+        }
+
+        /* Alert badges */
+        .instr-container .alert-badge {
+            position: absolute;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.2rem;
+            letter-spacing: 0.15em;
+            padding: 0.5rem 1.2rem;
+            background: var(--alert-red);
+            color: var(--white);
+            border: 4px solid var(--black);
+            text-transform: uppercase;
+            z-index: 10;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50%      { transform: scale(1.05); }
+        }
+
+        .instr-container .alert-badge.tl { top: -15px; left: 20px; transform: rotate(-5deg); }
+        .instr-container .alert-badge.tr { top: -15px; right: 20px; transform: rotate(5deg); }
+
+        /* ── ALERT BAR ── */
+        .instr-container .alert-bar {
+            background: var(--alert-red);
+            padding: 1rem 2rem;
+            border-bottom: 8px solid var(--black);
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.2rem;
+            letter-spacing: 0.2em;
+            text-align: center;
+            color: var(--white);
+            text-transform: uppercase;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { background: var(--alert-red); }
+            50%      { background: var(--alert-orange); }
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            padding: 2rem 2rem 1.5rem;
+            background: var(--warning-yellow);
+            border-bottom: 8px solid var(--black);
+            position: relative;
+            text-align: center;
+        }
+
+        /* Computer eye watching */
+        .instr-container header::before {
+            content: '👁';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20rem;
+            opacity: 0.03;
+            pointer-events: none;
+        }
+
+        .instr-container .mandatory {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1rem;
+            letter-spacing: 0.3em;
+            color: var(--alert-red);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            border: 3px solid var(--alert-red);
+            padding: 0.3rem 1rem;
+            display: inline-block;
+            background: var(--white);
+        }
+
+        .instr-container h1 {
+            font-family: 'Anton', sans-serif;
+            font-size: 5rem;
+            line-height: 0.9;
+            color: var(--black);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.5rem;
+            text-shadow:
+                4px 4px 0 var(--alert-red),
+                8px 8px 0 rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container .subtitle {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 1.3rem;
+            letter-spacing: 0.15em;
+            color: var(--alert-red);
+            text-transform: uppercase;
+            margin-top: 1rem;
+        }
+
+        .instr-container .happiness-meter {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: var(--white);
+            border: 4px solid var(--black);
+            font-family: 'Bebas Neue', cursive;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: var(--black);
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2rem;
+            background: var(--white);
+            color: var(--black);
+        }
+
+        /* ── PROPAGANDA BOX ── */
+        .instr-container .propaganda {
+            background: var(--computer-blue);
+            color: var(--white);
+            border: 6px solid var(--black);
+            padding: 2rem 2rem;
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            text-align: center;
+            position: relative;
+            box-shadow: 8px 8px 0 rgba(0,0,0,0.3);
+        }
+
+        .instr-container .propaganda::before {
+            content: '⚠ MANDATORY READING ⚠';
+            position: absolute;
+            top: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--alert-red);
+            color: var(--white);
+            padding: 0.4rem 1.5rem;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            border: 3px solid var(--black);
+        }
+
+        .instr-container .propaganda-title {
+            font-family: 'Anton', sans-serif;
+            font-size: 2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Anton', sans-serif;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--white);
+            background: var(--black);
+            margin: 2.75rem 0 1.25rem;
+            padding: 1rem 1.5rem;
+            border: 6px solid var(--alert-red);
+            position: relative;
+            animation: appear 0.4s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.08s);
+            text-shadow: 3px 3px 0 var(--alert-red);
+            box-shadow: 6px 6px 0 rgba(0,0,0,0.3);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: attr(data-warning);
+            position: absolute;
+            top: -1.5rem;
+            right: 1.5rem;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 3rem;
+            color: var(--warning-yellow);
+            text-shadow:
+                3px 3px 0 var(--black),
+                0 0 20px var(--warning-yellow);
+            transform: rotate(-8deg);
+        }
+
+        @keyframes appear {
+            from { opacity: 0; transform: translateY(-20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .instr-container h3 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--alert-red);
+            margin: 1.75rem 0 0.6rem;
+            border-bottom: 3px solid var(--alert-red);
+            padding-bottom: 0.3rem;
+        }
+
+        .instr-container p {
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        .instr-container ul, .instr-container ol { margin: 0.75rem 0 1.25rem 1.5rem; }
+        .instr-container li {
+            font-size: 0.98rem;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { 
+            color: var(--alert-red); 
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .instr-container em     { 
+            color: var(--computer-blue); 
+            font-style: normal; 
+            font-weight: 600;
+        }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.5rem 0;
+            height: 8px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--alert-red),
+                var(--alert-red) 20px,
+                var(--warning-yellow) 20px,
+                var(--warning-yellow) 40px,
+                var(--black) 40px,
+                var(--black) 60px
+            );
+        }
+
+        /* ── WARNING BOX ── */
+        .instr-container .warning-box {
+            background: var(--warning-yellow);
+            border: 6px solid var(--black);
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
+            font-size: 1rem;
+            line-height: 1.85;
+            box-shadow: 6px 6px 0 rgba(0,0,0,0.3);
+        }
+
+        .instr-container .warning-label {
+            font-family: 'Anton', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 0.15em;
+            color: var(--alert-red);
+            display: block;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        /* ── NOTICE BOX ── */
+        .instr-container .notice {
+            background: var(--grey-light);
+            border: 4px solid var(--black);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            letter-spacing: 0.08em;
+        }
+
+        .instr-container .notice::before {
+            content: attr(data-label);
+            display: block;
+            font-family: 'Anton', sans-serif;
+            font-size: 1.1rem;
+            color: var(--computer-blue);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        /* ── CLEARANCE CARDS ── */
+        .instr-container .clearance-grid {
+            display: grid;
+            gap: 1rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .clearance-card {
+            background: var(--grey-light);
+            border: 5px solid var(--black);
+            padding: 1.25rem 1.5rem;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.3);
+        }
+
+        .instr-container .clearance-card:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 8px 8px 0 rgba(0,0,0,0.4);
+        }
+
+        .instr-container .clearance-badge {
+            position: absolute;
+            top: -1rem;
+            right: 1.5rem;
+            font-family: 'Anton', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            padding: 0.5rem 1.5rem;
+            text-transform: uppercase;
+            border: 4px solid var(--black);
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+        }
+
+        .instr-container .clearance-card.infrared .clearance-badge { background: #000000; color: var(--white); }
+        .instr-container .clearance-card.red .clearance-badge { background: #FF0000; color: var(--white); }
+        .instr-container .clearance-card.yellow .clearance-badge { background: #FFD700; color: var(--black); }
+
+        .instr-container .clearance-name {
+            font-family: 'Anton', sans-serif;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--black);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .clearance-desc {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--black);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .clearance-access {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 0.85rem;
+            color: var(--alert-red);
+            border-top: 2px solid var(--black);
+            padding-top: 0.5rem;
+            letter-spacing: 0.08em;
+        }
+
+        /* ── STAT DISPLAY ── */
+        .instr-container .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .stat-card {
+            background: var(--black);
+            color: var(--white);
+            border: 5px solid var(--alert-red);
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.3);
+        }
+
+        .instr-container .stat-name {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.3rem;
+            letter-spacing: 0.15em;
+            color: var(--warning-yellow);
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .stat-desc {
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .stat-range {
+            font-family: 'Anton', sans-serif;
+            font-size: 1.5rem;
+            color: var(--alert-red);
+        }
+
+        /* ── TREASON METER ── */
+        .instr-container .treason-box {
+            background: var(--alert-red);
+            color: var(--white);
+            border: 8px solid var(--black);
+            padding: 2rem 1.75rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            box-shadow:
+                0 0 30px rgba(255,0,0,0.5),
+                8px 8px 0 rgba(0,0,0,0.5);
+        }
+
+        .instr-container .treason-title {
+            font-family: 'Anton', sans-serif;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 0.75rem;
+            text-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+        }
+
+        .instr-container .treason-desc {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-top: 0.75rem;
+        }
+
+        /* ── SKILL TABLE ── */
+        .instr-container .skill-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            border: 5px solid var(--black);
+        }
+
+        .instr-container .skill-table th {
+            background: var(--black);
+            color: var(--warning-yellow);
+            font-family: 'Bebas Neue', cursive;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            padding: 0.8rem;
+            text-align: left;
+            font-size: 1rem;
+            border: 2px solid var(--black);
+        }
+
+        .instr-container .skill-table td {
+            padding: 0.6rem 0.8rem;
+            border: 2px solid var(--black);
+            background: var(--grey-light);
+            color: var(--black);
+            line-height: 1.6;
+        }
+
+        .instr-container .skill-table tr:hover td { background: var(--warning-yellow); }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 2rem;
+            border-top: 8px solid var(--alert-red);
+            text-align: center;
+        }
+
+        .instr-container .footer-motto {
+            font-family: 'Anton', sans-serif;
+            font-size: 2.5rem;
+            color: var(--warning-yellow);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.75rem;
+            text-shadow:
+                3px 3px 0 var(--alert-red),
+                0 0 20px var(--warning-yellow);
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            color: var(--grey-light);
+            text-transform: uppercase;
+        }
+
+        .instr-container footer::before {
+            content: '☺ ☺ ☺';
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Bottom alert */
+        .instr-container .bottom-alert {
+            background: var(--alert-red);
+            padding: 1rem 2rem;
+            border-top: 8px solid var(--black);
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1rem;
+            letter-spacing: 0.15em;
+            text-align: center;
+            color: var(--white);
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 480px) {
+            .instr-container h1 { font-size: 3.5rem; }
+            .instr-container h2 { font-size: 2rem; }
+            .instr-container h2::before { font-size: 2rem; top: -1rem; }
+            .instr-container .stat-grid { grid-template-columns: 1fr; }
+            .instr-container .content { padding: 1.75rem 1.5rem; }
+            .instr-container header { padding: 1.75rem 1.5rem; }
+            .instr-container footer { padding: 1.75rem 1.5rem; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+        <div class="warning-stripe top"></div>
+        <div class="warning-stripe bottom"></div>
+        <div class="alert-badge tl">ATTENTION!</div>
+        <div class="alert-badge tr">CITIZEN!</div>
+
+        <!-- ALERT BAR -->
+        <div class="alert-bar">
+            ⚠ MANDATORY HAPPINESS IS MANDATORY ⚠
+        </div>
+
+        <!-- HEADER -->
+        <header>
+            <div class="mandatory">⚠ MANDATORY ORIENTATION ⚠</div>
+            <h1>PARANOIA</h1>
+            <div class="subtitle">
+                THE COMPUTER IS YOUR FRIEND
+            </div>
+            <div class="happiness-meter">
+                <strong>SYSTEM:</strong> PARANOIA RPG (MONGOOSE PUBLISHING)<br>
+                <strong>SETTING:</strong> ALPHA COMPLEX / DYSTOPIAN FUTURE<br>
+                <strong>CLEARANCE:</strong> INFRARED (YOU ARE HERE)<br>
+                <strong>REMINDER:</strong> TRUST NO ONE. THE COMPUTER TRUSTS YOU.
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="propaganda">
+                <div class="propaganda-title">WELCOME TO ALPHA COMPLEX!</div>
+                Congratulations, <strong>CITIZEN</strong>! You have been selected to serve The Computer! You live in <em>ALPHA COMPLEX</em> — a perfect underground city where everyone is happy (mandatory). The Computer protects you from <strong>Commies, mutants, and traitors</strong>. In return, you serve The Computer without question. You are a <strong>Troubleshooter</strong> — you find trouble and shoot it. You will die. Frequently. That's why you get <em>6 clones</em>. Your mission: Trust The Computer. The Computer is your friend. <strong>STAY ALERT! TRUST NO ONE! KEEP YOUR LASER HANDY!</strong> ☺
+            </div>
+
+            <!-- STEP 1: CLEARANCE -->
+            <h2 data-warning="⚠!" style="--i:1;">SECURITY CLEARANCE LEVEL</h2>
+            <p>Everyone in Alpha Complex has a <strong>Security Clearance</strong>. Your clearance determines what you can see, where you can go, and whether you live. You start at <strong>INFRARED</strong> (basically worthless).</p>
+
+            <div class="clearance-grid">
+                <div class="clearance-card infrared">
+                    <div class="clearance-badge">INFRARED</div>
+                    <div class="clearance-name">INFRARED Clearance</div>
+                    <div class="clearance-desc">You are at the bottom. Infrared citizens clean toilets, recycle corpses, and don't ask questions. You're barely considered human.</div>
+                    <div class="clearance-access">ACCESS: Nothing important. Enjoy your mop.</div>
+                </div>
+                <div class="clearance-card red">
+                    <div class="clearance-badge">RED</div>
+                    <div class="clearance-name">RED Clearance</div>
+                    <div class="clearance-desc">Troubleshooters! You've been promoted! You can carry weapons, investigate treason, and die for The Computer. Congratulations!</div>
+                    <div class="clearance-access">ACCESS: Weapons, RED corridors, classified missions, imminent death</div>
+                </div>
+                <div class="clearance-card yellow">
+                    <div class="clearance-badge">HIGHER</div>
+                    <div class="clearance-name">Higher Clearances</div>
+                    <div class="clearance-desc">ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET, ULTRAVIOLET — you can't access these. Looking at someone higher clearance without permission is TREASON.</div>
+                    <div class="clearance-access">ACCESS: DENIED. STOP ASKING.</div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <span class="warning-label">⚠ TREASON ALERT ⚠</span>
+                <strong>Knowing about higher clearances you don't have is TREASON.</strong> Using equipment above your clearance is TREASON. Being in corridors above your clearance is TREASON. Reading documents above your clearance is TREASON. Questioning The Computer is TREASON. Not smiling is TREASON. Punishment: TERMINATION. ☺
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: STATS -->
+            <h2 data-warning="⚠!" style="--i:2;">GENERATE STATISTICS</h2>
+            <p>Every citizen has <strong>four Statistics</strong>. Roll <strong>d20</strong> for each or use point-buy. Higher is better! (But not too high. That's suspicious.)</p>
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-name">Violence</div>
+                    <div class="stat-desc">Shooting, stabbing, punching. Solving problems with force.</div>
+                    <div class="stat-range">1-20</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Brains</div>
+                    <div class="stat-desc">Thinking, hacking, science. Being smart (dangerously smart).</div>
+                    <div class="stat-range">1-20</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Chutzpah</div>
+                    <div class="stat-desc">Lying, persuading, bluffing. Talking your way out (or into) trouble.</div>
+                    <div class="stat-range">1-20</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Mechanics</div>
+                    <div class="stat-desc">Fixing, building, operating. Making things work (when they don't).</div>
+                    <div class="stat-range">1-20</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: SKILLS -->
+            <h2 data-warning="⚠!" style="--i:3;">SELECT SKILLS</h2>
+            <p>You get <strong>12 skill points</strong> to distribute. Each point increases a skill by 1. Skills range from <strong>1-20</strong>. Don't specialize too much — that's suspicious!</p>
+
+            <table class="skill-table">
+                <thead>
+                    <tr>
+                        <th>Skill</th>
+                        <th>What It Does</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Guns</strong></td>
+                        <td>Shoot lasers and slug throwers. Violence skill.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Melee</strong></td>
+                        <td>Hit people with things. Violence skill.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Throw</strong></td>
+                        <td>Throw grenades, objects, teammates. Violence skill.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Science</strong></td>
+                        <td>Know science things. Brains skill.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hacking</strong></td>
+                        <td>Break into computers. Brains skill.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bluff</strong></td>
+                        <td>Lie convincingly. Chutzpah skill.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Charm</strong></td>
+                        <td>Be likeable. Chutzpah skill.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Intimidate</strong></td>
+                        <td>Scare people. Chutzpah skill.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Operate</strong></td>
+                        <td>Use machines. Mechanics skill.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Engineer</strong></td>
+                        <td>Fix/build things. Mechanics skill.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Program</strong></td>
+                        <td>Write code. Mechanics skill.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stealth</strong></td>
+                        <td>Sneak around. Not get caught doing treason.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: SECRET SOCIETY -->
+            <h2 data-warning="⚠!" style="--i:4;">SECRET SOCIETY MEMBERSHIP</h2>
+            <p>Everyone in Alpha Complex belongs to a <strong>Secret Society</strong>. This is illegal. If anyone finds out, you're executed for treason. But everyone does it anyway. Pick one! (Or roll randomly.)</p>
+
+            <div class="notice" data-label="CRITICAL INFORMATION">
+                YOUR SECRET SOCIETY MEMBERSHIP IS SECRET. Don't tell anyone. Use it to further your society's goals. Betray your team if necessary. The Computer doesn't know. (Or does it?) ☺
+            </div>
+
+            <h3>Example Secret Societies</h3>
+            <ul>
+                <li><strong>Communists:</strong> Overthrow The Computer! Share resources! Everyone is equal! (Except leaders.)</li>
+                <li><strong>PURGE:</strong> Love The Computer too much. Report everyone for treason. Even yourself.</li>
+                <li><strong>Death Leopard:</strong> Bored rich kids playing revolutionary. Probably die first.</li>
+                <li><strong>Frankenstein Destroyers:</strong> Hate mutants. Kill mutants. (You might be a mutant. Awkward.)</li>
+                <li><strong>Free Enterprise:</strong> Capitalism! Sell everything! Make deals! The Computer says no economy exists. You disagree.</li>
+                <li><strong>Sierra Club:</strong> Save the environment! There is no environment underground. You're confused.</li>
+                <li><strong>Humanists:</strong> Humans should lead, not computers. This is VERY treasonous.</li>
+                <li><strong>Mystics:</strong> Magic! Psychic powers! The Computer says impossible. You believe anyway.</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: MUTANT POWER -->
+            <h2 data-warning="⚠!" style="--i:5;">MUTANT POWER (ALSO ILLEGAL)</h2>
+            <p>You have a <strong>Mutant Power</strong>. This is TREASON. Using it is TREASON. Being discovered is EXECUTION. But it might save your life! Roll randomly or choose:</p>
+
+            <h3>Sample Mutant Powers</h3>
+            <ul>
+                <li><strong>Telekinesis:</strong> Move objects with your mind. Useful! Treasonous!</li>
+                <li><strong>Pyrokinesis:</strong> Set things on fire with your mind. VERY treasonous!</li>
+                <li><strong>Telepathy:</strong> Read minds. Discover everyone else's treason!</li>
+                <li><strong>Regeneration:</strong> Heal quickly. Suspicious when you survive impossible wounds.</li>
+                <li><strong>Energy Field:</strong> Block attacks. Great until someone notices bullets bounce off you.</li>
+                <li><strong>Toxic Metabolism:</strong> Immune to poison. Can also poison others. Fun at parties!</li>
+                <li><strong>Electroshock:</strong> Zap people. Looks like equipment malfunction. Probably.</li>
+                <li><strong>Charm:</strong> People like you unnaturally. This is mind control. TREASON.</li>
+            </ul>
+
+            <div class="warning-box">
+                <span class="warning-label">⚠ MANDATORY REMINDER ⚠</span>
+                <strong>All mutants must register with The Computer.</strong> Unregistered mutants are executed. Registered mutants are also executed. But slower. If you see a mutant, report them! (You are a mutant. Don't report yourself.) ☺
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: EQUIPMENT -->
+            <h2 data-warning="⚠!" style="--i:6;">MANDATORY EQUIPMENT ISSUE</h2>
+            <p>As a <strong>RED Clearance Troubleshooter</strong>, you receive standard-issue equipment! Don't lose it. Losing equipment is TREASON.</p>
+
+            <h3>Standard Loadout</h3>
+            <ul>
+                <li><strong>RED Laser Pistol:</strong> Your weapon. It explodes sometimes. Not your fault (it is).</li>
+                <li><strong>RED Reflec Armor:</strong> Reflects lasers. Sometimes. Don't count on it.</li>
+                <li><strong>Jumpsuit (RED):</strong> Shows your clearance. Don't get blood on it (you will).</li>
+                <li><strong>Communicator:</strong> Talk to The Computer. The Computer is always listening.</li>
+                <li><strong>Notebook:</strong> Take notes. Report treason. Document your team's failures.</li>
+                <li><strong>ME Card:</strong> Identifies you. Don't lose it. (Losing it is TREASON.)</li>
+            </ul>
+
+            <h3>Optional Equipment (Request From Computer)</h3>
+            <ul>
+                <li><strong>Cone Rifle:</strong> Shoots cones of energy. Higher clearance required. (TREASON to request?)</li>
+                <li><strong>Plasma Generator:</strong> Makes plasma. Might explode. Probably explodes.</li>
+                <li><strong>Docbot:</strong> Medical robot. Enjoys surgery. Too much surgery.</li>
+                <li><strong>Experimental Prototype:</strong> Unknown function. R&D needs field testing. (You are field testing.)</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: CLONES -->
+            <h2 data-warning="⚠!" style="--i:7;">CLONE BACKUP SYSTEM</h2>
+
+            <div class="treason-box">
+                <div class="treason-title">YOU HAVE 6 CLONES</div>
+                <div class="treason-desc">
+                    Death is temporary! The Computer has created <strong>6 backup clones</strong> of you! When you die (not IF, WHEN), your next clone activates! New clone has same stats, same skills, same secrets. Just don't die 6 times. After that, you're <em>permanently dead</em>. Try to avoid that! ☺
+                </div>
+            </div>
+
+            <h3>Clone Death Tracking</h3>
+            <div class="notice" data-label="CLONE ROSTER">
+                Clone 1: ☺ <strong>ACTIVE</strong><br>
+                Clone 2: ☺ STANDBY<br>
+                Clone 3: ☺ STANDBY<br>
+                Clone 4: ☺ STANDBY<br>
+                Clone 5: ☺ STANDBY<br>
+                Clone 6: ☺ STANDBY<br><br>
+                <strong>Mark each clone as DECEASED when terminated.</strong> When all clones are deceased, citizen is <em>permanently retired</em>. ☺
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: SERVICE GROUP -->
+            <h2 data-warning="⚠!" style="--i:8;">SERVICE GROUP ASSIGNMENT</h2>
+            <p>You also work a <strong>Service Group</strong> job. This is your cover when not Troubleshooting. It provides additional skills and resources (maybe).</p>
+
+            <h3>Service Groups</h3>
+            <ul>
+                <li><strong>Armed Forces:</strong> Military training. Good at violence. Follows orders.</li>
+                <li><strong>Central Processing Unit (CPU):</strong> Bureaucrats. Good at forms. Slow everything down.</li>
+                <li><strong>Internal Security (IntSec):</strong> Secret police. Find traitors. (You are a traitor.)</li>
+                <li><strong>Power Services:</strong> Keep power running. Know where things explode.</li>
+                <li><strong>Production, Logistics & Commissary (PLC):</strong> Make stuff. Get supplies. Black market connections.</li>
+                <li><strong>Research & Design (R&D):</strong> Make experimental weapons. Test on you.</li>
+                <li><strong>Technical Services:</strong> Fix machines. Everything breaks. Job security!</li>
+                <li><strong>Housing Preservation & Development:</strong> Manage living spaces. Know secret passages.</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: HOW TO PLAY -->
+            <h2 data-warning="⚠!" style="--i:9;">MANDATORY GAME RULES</h2>
+            <p>When attempting actions, roll <strong>d20</strong>. Add your <strong>Stat + Skill</strong>. Beat the <strong>Difficulty Number</strong> set by The Computer (GM).</p>
+
+            <div class="notice" data-label="DICE MECHANICS">
+                <strong>Roll d20 + Stat + Skill vs. Difficulty</strong><br><br>
+                Easy Task: Difficulty 5<br>
+                Normal Task: Difficulty 10<br>
+                Hard Task: Difficulty 15<br>
+                Impossible Task: Difficulty 20+<br><br>
+                <strong>Roll 1:</strong> Critical Failure! Something terrible happens!<br>
+                <strong>Roll 20:</strong> Critical Success! Something amazing happens!
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: TREASON -->
+            <h2 data-warning="⚠!" style="--i:10;">RECOGNIZING TREASON</h2>
+
+            <div class="warning-box">
+                <span class="warning-label">⚠ FINAL INSTRUCTIONS ⚠</span>
+                <strong>Your mission as a Troubleshooter:</strong><br><br>
+                1. Obey The Computer (even contradictory orders)<br>
+                2. Find traitors (everyone is a traitor)<br>
+                3. Eliminate traitors (including yourself)<br>
+                4. Protect Alpha Complex (by shooting problems)<br>
+                5. Report treason (your team, mostly)<br>
+                6. Stay happy (MANDATORY)<br>
+                7. Don't die (you will die)<br>
+                8. Trust The Computer (The Computer is your friend)<br>
+                9. Trust no one (everyone is a traitor)<br>
+                10. Have fun (MANDATORY) ☺
+            </div>
+
+            <div class="propaganda" style="margin-top: 2rem; background: var(--warning-yellow); color: var(--black); border-color: var(--alert-red);">
+                <div class="propaganda-title" style="color: var(--alert-red);">ORIENTATION COMPLETE!</div>
+                You are now a <strong>Troubleshooter</strong>! You will hunt traitors (you are a traitor). You will serve The Computer (The Computer may kill you). You will stay happy (unhappiness is TREASON). You will probably die (multiple times). But that's okay! You have clones! And The Computer loves you! The Computer is your friend. <em>THE COMPUTER IS YOUR FRIEND.</em> <strong>THE COMPUTER IS YOUR FRIEND.</strong> Remember: <strong>TRUST NO ONE. KEEP YOUR LASER HANDY. THE COMPUTER IS YOUR FRIEND.</strong> ☺☺☺
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-motto">
+                STAY ALERT! TRUST NO ONE!
+            </div>
+            <div class="footer-sub">
+                Paranoia RPG // Mongoose Publishing // The Computer Is Your Friend ☺
+            </div>
+        </footer>
+
+        <!-- BOTTOM ALERT -->
+        <div class="bottom-alert">
+            ⚠ REMEMBER: HAPPINESS IS MANDATORY ⚠
+        </div>
+
+    </div>
+    </body>
+</div>
+</html>

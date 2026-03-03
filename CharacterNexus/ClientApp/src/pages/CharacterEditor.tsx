@@ -1,13 +1,10 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { useForm, useFieldArray, FormProvider } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../store/configureStore";
-import { fetchCharacterSchema, fetchCharacterByName, saveCharacter } from "../store/slices/characterSlice";
+import { saveCharacter } from "../store/slices/characterSlice";
 import { BonusAdjustments } from "../types/BonusAdjustment";
 import { BonusCharacteristics } from "../types/BonusCharacteristic";
-import { UserChoices, UserChoice } from "../types/UserChoice";
-import { getFileNameFromUrl } from "../utils/getFileNameFromUrl";
-import { getURLParameter } from "../utils/getUrlParameter";
 import InputText from "../components/InputText";
 import InputTextArea from "../components/InputTextArea";
 import InputNumber from "../components/InputNumber";
@@ -28,145 +25,37 @@ import { useBonusAdjustments } from "../hooks/useBonusAdjustments";
 import { useModal } from "../hooks/useModal";
 import { useDisableEngine } from "../hooks/useDisableEngine";
 import { useVisibilityEngine } from "../hooks/useVisibilityEngine";
+import { useCharacterLoader } from "../hooks/useCharacterLoader";
+import { useUserChoices } from "../hooks/useUserChoices";
 
 const CharacterEditor: React.FC = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
-  const { currentRuleset } = useAppSelector((state: { ruleset: any; }) => state.ruleset);
-  const { schema, currentCharacter, isLoading: charLoading, error: charError } = useAppSelector((state: { character: any; }) => state.character);
+  const { currentRuleset } = useAppSelector((state: { ruleset: any }) => state.ruleset);
+  const { schema, isLoading: charLoading, error: charError } = useAppSelector((state: { character: any }) => state.character);
 
   const [bonusCharacteristics, setBonusCharacteristics] = useState<BonusCharacteristics>([]);
   const [bonusAdjustments, setBonusAdjustments] = useState<BonusAdjustments>([]);
-  const [userChoices, setUserChoices] = useState<UserChoices>([]);
-  const [choiceFields, setChoiceFields] = useState<any[]>([]);
-  const modalFieldNamesRef = useRef<string[]>([]);
-  const [imagePreview, setImagePreview] = useState<string | null>(null);
-  const [imageData, setImageData] = useState<File | null>(null);
-  const watchedRef = useRef<Set<string>>(new Set());
 
   const methods = useForm({ shouldUnregister: false });
   const { register, unregister, handleSubmit, watch, control, getValues, setValue, reset } = methods;
 
   const userChoiceModal = useModal();
-
-  // Open modal with choices
-  const openUserChoiceModal = (choices: UserChoices) => {
-    modalFieldNamesRef.current.forEach((name) => {
-      unregister(name);
-      setValue(name, undefined);
-    });
-    modalFieldNamesRef.current = [];
-    setChoiceFields([]);
-    setUserChoices(choices);
-    userChoiceModal.open(choices);
-  };
-
-  // Load schema on ruleset change
-  useEffect(() => {
-    if (!currentRuleset) return;
-    dispatch(fetchCharacterSchema(currentRuleset.name));
-  }, [currentRuleset, dispatch]);
-
-  // Load character if query param exists
-  useEffect(() => {
-    if (!currentRuleset || !schema) return;
-
-    const characterName = getURLParameter("character");
-    if (characterName) {
-      dispatch(fetchCharacterByName({ rulesetName: currentRuleset.name, characterName }));
-    }
-  }, [currentRuleset, schema, dispatch]);
-
-  // When currentCharacter loads, reset form
-  useEffect(() => {
-    if (!currentCharacter) return;
-
-    reset(currentCharacter);
-
-    // Load image from URL if exists
-    if (currentCharacter.image) {
-      fetch(currentCharacter.image)
-        .then((res) => res.blob())
-        .then((blob) => {
-          const file = new File([blob], getFileNameFromUrl(currentCharacter.image), { type: blob.type });
-          setValue("image", file, { shouldDirty: true });
-          setImageData(file);
-          setImagePreview(URL.createObjectURL(file));
-        });
-    }
-  }, [currentCharacter, reset, setValue]);
-
-  // Build choice fields dynamically
-  useEffect(() => {
-    if (!userChoices || userChoices.length === 0) return;
-
-    const newFields: any[] = [];
-    const newNames: string[] = [];
-
-    userChoices.forEach((item: UserChoice) => {
-      item.choices.forEach((choice: any, index: any) => {
-        const name = `choice.${item.type}.${item.origin}.${index}`;
-        if (item.category === "Characteristic") {
-          const bonusChar = { type: item.type, value: choice };
-          newFields.push({
-            id: name,
-            key: name,
-            name,
-            label: choice,
-            type: "switch",
-            defaultValue: false,
-            bonusCharacteristics: JSON.stringify([bonusChar])
-          });
-        }
-        if (item.category === "Adjustment") {
-          const bonusAdj = { type: item.type, name: choice, value: 0 };
-          newFields.push({
-            id: name,
-            key: name,
-            name,
-            label: choice,
-            type: "number",
-            bonusAdjustments: JSON.stringify([bonusAdj]),
-            defaultValue: 0
-          });
-        }
-        newNames.push(name);
-      });
-    });
-
-    modalFieldNamesRef.current = newNames;
-    setChoiceFields(newFields);
-  }, [userChoices]);
-
-  // Initialize form values for choice fields
-  useEffect(() => {
-    if (!choiceFields.length) return;
-    choiceFields.forEach((field) => {
-      setValue(field.name, field.defaultValue ?? null, { shouldDirty: false, shouldTouch: false, shouldValidate: false });
-    });
-  }, [choiceFields, setValue]);
-
-  // Watch dynamic fields
-  useEffect(() => {
-    if (!choiceFields.length) return;
-    choiceFields.forEach((field) => {
-      if (!watchedRef.current.has(field.name)) {
-        watch(field.name);
-        watchedRef.current.add(field.name);
-      }
-    });
-  }, [choiceFields, watch]);
+  const { imagePreview, imageData, setImagePreview, setImageData } = useCharacterLoader(reset, setValue);
+  const { userChoices, setUserChoices, choiceFields, openUserChoiceModal } = useUserChoices(unregister, setValue, watch, userChoiceModal);
 
   useBonusAdjustments(bonusAdjustments, getValues, setValue);
-  useBonusCharacteristics(bonusCharacteristics, getValues, setValue); 
-  useFieldCalculations(schema, getValues, setValue, watch);  
+  useBonusCharacteristics(bonusCharacteristics, getValues, setValue);
+  useFieldCalculations(schema, getValues, setValue, watch);
 
   // Submit handler
   const onSubmit = async (data: any) => {
     if (!currentRuleset) return;
 
     console.log("Data: ", data);
+    console.log("choice fields in submitted data:", JSON.stringify(data?.choice));
+    console.log("getValues('choice'):", getValues("choice"));
     await dispatch(saveCharacter({ rulesetName: currentRuleset.name, characterData: data, imageFile: imageData ?? undefined }));
 
     navigate("/ruleset");
@@ -264,7 +153,7 @@ const CharacterEditor: React.FC = () => {
               name={field.name}
               includeLabel={includeLabel}
               label={field.label}
-              defaultValue={field.default}
+              defaultValue={field.defaultValue ?? field.default}
               className={field.className}
               image={field.image}
               inputBonusAdjustments={field.bonusAdjustments}
@@ -500,7 +389,7 @@ const FormContents = ({
 
                 {choiceFields
                   .filter((field: any) =>
-                    field.name?.startsWith(`choice.${item.type}`)
+                    field.name?.startsWith(`choice.${item.type}.${item.origin}.`)
                   )
                   .map((field: any) => (
                     <div key={field.id}>

@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERO KIDS — Let's Make a Hero!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka+One&family=Luckiest+Guy&family=Chewy&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --crayon-red:    #FF3366;
+            --crayon-blue:   #3399FF;
+            --crayon-yellow: #FFCC00;
+            --crayon-green:  #33CC66;
+            --crayon-purple: #9966FF;
+            --crayon-orange: #FF9933;
+            --crayon-pink:   #FF99CC;
+            --sky-blue:      #87CEEB;
+            --grass-green:   #90EE90;
+            --sun-yellow:    #FFF44F;
+            --white:         #FFFFFF;
+            --black:         #333333;
+            --paper-cream:   #FFFEF7;
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Bubblegum Sans', cursive;
+            background: var(--sky-blue);
+            background-image:
+                radial-gradient(circle at 30% 20%, rgba(255,255,255,0.3) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(255,255,255,0.2) 0%, transparent 40%);
+            color: var(--black);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* Floating decorations */
+        .instr-container .float-star {
+            position: fixed;
+            font-size: 2rem;
+            animation: float 4s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .instr-container .star-1 { top: 10%; left: 10%; color: var(--crayon-yellow); animation-delay: 0s; }
+        .instr-container .star-2 { top: 20%; right: 15%; color: var(--crayon-pink); animation-delay: 1s; }
+        .instr-container .star-3 { bottom: 15%; left: 20%; color: var(--crayon-purple); animation-delay: 2s; }
+        .instr-container .star-4 { bottom: 25%; right: 10%; color: var(--crayon-orange); animation-delay: 0.5s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50%      { transform: translateY(-15px) rotate(10deg); }
+        }
+
+        /* ── CONTAINER (Storybook Page) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--paper-cream);
+            border: 8px solid var(--crayon-red);
+            border-radius: 20px;
+            box-shadow:
+                0 0 0 4px var(--crayon-yellow),
+                0 0 0 12px var(--crayon-blue),
+                0 20px 60px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+            animation: pop-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        @keyframes pop-in {
+            0%   { opacity: 0; transform: scale(0.5) rotate(-5deg); }
+            50%  { transform: scale(1.1) rotate(2deg); }
+            100% { opacity: 1; transform: scale(1) rotate(0deg); }
+        }
+
+        /* Crayon scribble texture */
+        .instr-container .container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+            pointer-events: none;
+            border-radius: 15px;
+        }
+
+        /* Corner stickers */
+        .instr-container .sticker {
+            position: absolute;
+            font-size: 3rem;
+            z-index: 10;
+            animation: wiggle 2s ease-in-out infinite;
+        }
+
+        .instr-container .sticker-1 { top: -15px; left: 20px; transform: rotate(-15deg); }
+        .instr-container .sticker-2 { top: -15px; right: 20px; transform: rotate(15deg); }
+        .instr-container .sticker-3 { bottom: -15px; left: 30px; transform: rotate(10deg); }
+        .instr-container .sticker-4 { bottom: -15px; right: 30px; transform: rotate(-10deg); }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-15deg); }
+            50%      { transform: rotate(-10deg) scale(1.05); }
+        }
+
+        /* ── TOP BAR ── */
+        .instr-container .top-bar {
+            background: var(--crayon-yellow);
+            padding: 1rem 2rem;
+            border-bottom: 6px solid var(--crayon-orange);
+            border-radius: 15px 15px 0 0;
+            text-align: center;
+            font-family: 'Fredoka One', cursive;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            color: var(--crayon-red);
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .instr-container .top-bar::before {
+            content: '⭐';
+            position: absolute;
+            left: 2rem;
+            font-size: 2rem;
+            animation: spin 3s linear infinite;
+        }
+
+        .instr-container .top-bar::after {
+            content: '⭐';
+            position: absolute;
+            right: 2rem;
+            font-size: 2rem;
+            animation: spin 3s linear infinite reverse;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            padding: 2.5rem 2.5rem 2rem;
+            background: linear-gradient(135deg, var(--crayon-pink) 0%, var(--crayon-purple) 100%);
+            border-bottom: 8px solid var(--crayon-red);
+            position: relative;
+            text-align: center;
+        }
+
+        /* Rainbow decoration */
+        .instr-container .rainbow {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 100px;
+            background:
+                radial-gradient(ellipse at 50% 100%, transparent 50%, var(--crayon-red) 50%, var(--crayon-red) 55%, transparent 55%),
+                radial-gradient(ellipse at 50% 100%, transparent 60%, var(--crayon-orange) 60%, var(--crayon-orange) 65%, transparent 65%),
+                radial-gradient(ellipse at 50% 100%, transparent 70%, var(--crayon-yellow) 70%, var(--crayon-yellow) 75%, transparent 75%),
+                radial-gradient(ellipse at 50% 100%, transparent 80%, var(--crayon-green) 80%, var(--crayon-green) 85%, transparent 85%),
+                radial-gradient(ellipse at 50% 100%, transparent 90%, var(--crayon-blue) 90%, var(--crayon-blue) 95%, transparent 95%);
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .instr-container .for-kids {
+            display: inline-block;
+            background: var(--sun-yellow);
+            color: var(--crayon-red);
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            padding: 0.5rem 1.5rem;
+            margin-bottom: 1rem;
+            border: 5px solid var(--crayon-red);
+            border-radius: 25px;
+            box-shadow: 4px 4px 0 var(--crayon-orange);
+            transform: rotate(-3deg);
+        }
+
+        .instr-container h1 {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 4.5rem;
+            line-height: 1;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            text-shadow:
+                4px 4px 0 var(--crayon-red),
+                8px 8px 0 var(--crayon-blue),
+                12px 12px 0 rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container h1 .hero {
+            color: var(--sun-yellow);
+        }
+
+        .instr-container h1 .kids {
+            display: block;
+            font-size: 2.5rem;
+            color: var(--crayon-green);
+        }
+
+        .instr-container .tagline {
+            font-family: 'Chewy', cursive;
+            font-size: 1.3rem;
+            color: var(--white);
+            margin-top: 1rem;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2.5rem;
+            background: var(--paper-cream);
+            border-radius: 0 0 15px 15px;
+        }
+
+        /* ── WELCOME BOX ── */
+        .instr-container .welcome {
+            background: var(--crayon-blue);
+            color: var(--white);
+            border: 6px solid var(--crayon-red);
+            border-radius: 20px;
+            padding: 2rem 2rem;
+            margin-bottom: 2.5rem;
+            font-size: 1.15rem;
+            line-height: 2;
+            text-align: center;
+            box-shadow: 6px 6px 0 rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .instr-container .welcome::before {
+            content: '🌟';
+            position: absolute;
+            top: -2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 4rem;
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2.5rem;
+            color: var(--white);
+            background: var(--crayon-red);
+            margin: 2.75rem 0 1.25rem;
+            padding: 1rem 1.5rem;
+            border: 6px solid var(--crayon-blue);
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            animation: bounce-appear 0.5s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.08s);
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+            box-shadow: 6px 6px 0 rgba(0,0,0,0.2);
+            transform: rotate(-1deg);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: attr(data-emoji);
+            position: absolute;
+            left: -1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3rem;
+        }
+
+        .instr-container h2::after {
+            content: attr(data-emoji);
+            position: absolute;
+            right: -1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3rem;
+        }
+
+        @keyframes bounce-appear {
+            0%   { opacity: 0; transform: scale(0.5) rotate(-1deg); }
+            50%  { transform: scale(1.1) rotate(-1deg); }
+            100% { opacity: 1; transform: scale(1) rotate(-1deg); }
+        }
+
+        .instr-container h3 {
+            font-family: 'Chewy', cursive;
+            font-size: 1.5rem;
+            color: var(--crayon-purple);
+            margin: 1.75rem 0 0.6rem;
+            text-transform: uppercase;
+        }
+
+        .instr-container p {
+            font-size: 1.1rem;
+            line-height: 2;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        .instr-container ul, .instr-container ol { margin: 0.75rem 0 1.25rem 1.5rem; }
+        .instr-container li {
+            font-size: 1.05rem;
+            line-height: 2;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { 
+            color: var(--crayon-red); 
+            font-weight: 700;
+        }
+        
+        .instr-container em     { 
+            color: var(--crayon-blue); 
+            font-style: normal; 
+            font-weight: 600;
+        }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.5rem 0;
+            height: 8px;
+            background: linear-gradient(
+                90deg,
+                var(--crayon-red),
+                var(--crayon-orange),
+                var(--crayon-yellow),
+                var(--crayon-green),
+                var(--crayon-blue),
+                var(--crayon-purple),
+                var(--crayon-pink)
+            );
+            border-radius: 10px;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+
+        /* ── FUN BOX ── */
+        .instr-container .fun-box {
+            background: var(--crayon-yellow);
+            border: 5px solid var(--crayon-orange);
+            border-radius: 20px;
+            padding: 1.5rem 1.75rem;
+            margin: 1.5rem 0;
+            font-size: 1.05rem;
+            line-height: 2;
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.15);
+            transform: rotate(1deg);
+        }
+
+        .instr-container .fun-label {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.2rem;
+            color: var(--crayon-red);
+            display: block;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        /* ── HERO CARDS ── */
+        .instr-container .hero-grid {
+            display: grid;
+            gap: 1rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .hero-card {
+            background: var(--white);
+            border: 6px solid var(--crayon-blue);
+            border-radius: 20px;
+            padding: 1.5rem 1.75rem;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container .hero-card:hover {
+            transform: translate(-3px, -3px) rotate(-2deg);
+            box-shadow: 8px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container .hero-icon {
+            position: absolute;
+            top: -1.5rem;
+            right: 1.5rem;
+            font-size: 3.5rem;
+            background: var(--crayon-yellow);
+            border: 5px solid var(--crayon-red);
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container .hero-name {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2rem;
+            color: var(--crayon-red);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .instr-container .hero-desc {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--black);
+            margin-bottom: 0.75rem;
+        }
+
+        .instr-container .hero-power {
+            font-family: 'Chewy', cursive;
+            font-size: 0.95rem;
+            color: var(--crayon-green);
+            background: rgba(51,204,102,0.1);
+            padding: 0.5rem;
+            border-radius: 10px;
+            border: 2px solid var(--crayon-green);
+        }
+
+        /* ── DICE BOX ── */
+        .instr-container .dice-box {
+            background: var(--crayon-green);
+            color: var(--white);
+            border: 6px solid var(--crayon-blue);
+            border-radius: 20px;
+            padding: 2rem 1.75rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            box-shadow: 6px 6px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container .dice-title {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+        }
+
+        .instr-container .dice-icons {
+            font-size: 3rem;
+            margin: 1rem 0;
+            letter-spacing: 0.5em;
+        }
+
+        .instr-container .dice-desc {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-top: 0.75rem;
+        }
+
+        /* ── STEP BOXES ── */
+        .instr-container .step-box {
+            background: var(--crayon-pink);
+            border: 5px solid var(--crayon-purple);
+            border-radius: 20px;
+            padding: 1.5rem 1.75rem;
+            margin: 1.25rem 0;
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container .step-number {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 2.5rem;
+            color: var(--white);
+            display: inline-block;
+            background: var(--crayon-red);
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            margin-bottom: 0.75rem;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+        }
+
+        /* ── EQUIPMENT LIST ── */
+        .instr-container .equipment-list {
+            display: grid;
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .equipment-item {
+            background: var(--white);
+            border: 4px solid var(--crayon-orange);
+            border-radius: 15px;
+            padding: 1rem 1.25rem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1rem;
+            align-items: center;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+
+        .instr-container .equipment-emoji {
+            font-size: 2.5rem;
+        }
+
+        .instr-container .equipment-text {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .instr-container .equipment-name {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.2rem;
+            color: var(--crayon-red);
+            margin-bottom: 0.2rem;
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: linear-gradient(135deg, var(--crayon-green) 0%, var(--crayon-blue) 100%);
+            padding: 2.5rem 2rem;
+            border-top: 8px solid var(--crayon-yellow);
+            border-radius: 0 0 15px 15px;
+            text-align: center;
+        }
+
+        .instr-container .footer-message {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 3rem;
+            color: var(--white);
+            margin-bottom: 0.75rem;
+            text-shadow:
+                3px 3px 0 var(--crayon-red),
+                6px 6px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'Chewy', cursive;
+            font-size: 1.1rem;
+            color: var(--white);
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container footer::before {
+            content: '⭐ 💖 ⭐';
+            display: block;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 480px) {
+            .instr-container h1 { font-size: 3.5rem; }
+            .instr-container h1 .kids { font-size: 2rem; }
+            .instr-container h2 { font-size: 2rem; }
+            .instr-container h2::before, .instr-container h2::after { font-size: 2rem; left: -1rem; right: -1rem; }
+            .instr-container .content { padding: 2rem 1.5rem; }
+            .instr-container header { padding: 2rem 1.5rem; }
+            .instr-container footer { padding: 2rem 1.5rem; }
+            .instr-container .sticker { display: none; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="float-star star-1">⭐</div>
+    <div class="float-star star-2">⭐</div>
+    <div class="float-star star-3">⭐</div>
+    <div class="float-star star-4">⭐</div>
+
+    <div class="container">
+        <div class="sticker sticker-1">🦸</div>
+        <div class="sticker sticker-2">⚔️</div>
+        <div class="sticker sticker-3">🛡️</div>
+        <div class="sticker sticker-4">✨</div>
+
+        <!-- TOP BAR -->
+        <div class="top-bar">
+            ✨ Let's Make a Hero Together! ✨
+        </div>
+
+        <!-- HEADER -->
+        <header>
+            <div class="rainbow"></div>
+            <div class="for-kids">🎮 For Kids Ages 4-10! 🎮</div>
+            <h1>
+                <span class="hero">HERO</span>
+                <span class="kids">KIDS</span>
+            </h1>
+            <div class="tagline">
+                Be Brave! Have Adventures! Save the Day!
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="welcome">
+                Welcome, young hero! You're going to create your very own <strong>character</strong> for an adventure! Will you be a brave <em>Warrior</em>? A clever <em>Healer</em>? A sneaky <em>Rogue</em>? Or a magical <em>Wizard</em>? Let's find out! This is going to be <strong>SO MUCH FUN!</strong> 🌟
+            </div>
+
+            <!-- STEP 1: CHOOSE HERO -->
+            <h2 data-emoji="🦸" style="--i:1;">Step 1: Pick Your Hero!</h2>
+            <p>What kind of hero do you want to be? Each hero is good at different things! Choose the one that sounds the most fun to YOU!</p>
+
+            <div class="hero-grid">
+                <div class="hero-card">
+                    <div class="hero-icon">⚔️</div>
+                    <div class="hero-name">Warrior</div>
+                    <div class="hero-desc">You're strong and brave! You fight monsters with your sword and protect your friends. Nothing scares you!</div>
+                    <div class="hero-power">⭐ Special Power: Really good at fighting! ⭐</div>
+                </div>
+                <div class="hero-card">
+                    <div class="hero-icon">💖</div>
+                    <div class="hero-name">Healer</div>
+                    <div class="hero-desc">You're kind and helpful! When your friends get hurt, you make them feel better. You're like a super doctor!</div>
+                    <div class="hero-power">⭐ Special Power: Make your friends healthy again! ⭐</div>
+                </div>
+                <div class="hero-card">
+                    <div class="hero-icon">🏹</div>
+                    <div class="hero-name">Hunter</div>
+                    <div class="hero-desc">You're quick and clever! You can shoot arrows from far away and you're great at finding things. Bullseye!</div>
+                    <div class="hero-power">⭐ Special Power: Hit enemies from far away! ⭐</div>
+                </div>
+                <div class="hero-card">
+                    <div class="hero-icon">🗡️</div>
+                    <div class="hero-name">Rogue</div>
+                    <div class="hero-desc">You're sneaky and fast! You can hide in shadows and sneak past enemies. You're super good at finding treasure!</div>
+                    <div class="hero-power">⭐ Special Power: Sneak and hide really well! ⭐</div>
+                </div>
+                <div class="hero-card">
+                    <div class="hero-icon">✨</div>
+                    <div class="hero-name">Wizard</div>
+                    <div class="hero-desc">You're magical and smart! You cast spells to help your friends and stop bad guys. Magic is so cool!</div>
+                    <div class="hero-power">⭐ Special Power: Cast amazing spells! ⭐</div>
+                </div>
+                <div class="hero-card">
+                    <div class="hero-icon">🐕</div>
+                    <div class="hero-name">Bard</div>
+                    <div class="hero-desc">You love music and making friends! You play songs that help everyone and make them happy. You're the best!</div>
+                    <div class="hero-power">⭐ Special Power: Help friends with music! ⭐</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: NAME -->
+            <h2 data-emoji="✏️" style="--i:2;">Step 2: Give Your Hero a Name!</h2>
+            <p>Every hero needs a cool name! You can choose any name you want. Here are some ideas:</p>
+
+            <div class="fun-box">
+                <span class="fun-label">✨ Name Ideas! ✨</span>
+                <strong>Boys:</strong> Max, Leo, Finn, Jack, Oliver, Sam, Ben, Luke<br>
+                <strong>Girls:</strong> Luna, Ruby, Maya, Zoe, Lily, Emma, Ava, Mia<br>
+                <strong>Cool Names:</strong> Storm, Star, Shadow, Blaze, River, Sky<br>
+                <strong>Funny Names:</strong> Pickle, Noodle, Muffin, Zippy, Bounce<br><br>
+                Or make up your own! It's YOUR hero! 🌟
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: APPEARANCE -->
+            <h2 data-emoji="🎨" style="--i:3;">Step 3: What Does Your Hero Look Like?</h2>
+            <p>Think about what your hero looks like! You can draw them or just imagine them in your head!</p>
+
+            <div class="step-box">
+                <div class="step-number">💭</div>
+                <strong>Think About:</strong><br>
+                • What color is their hair?<br>
+                • What color are their eyes?<br>
+                • Are they tall or short?<br>
+                • What clothes do they wear?<br>
+                • Do they have any cool accessories? (like a hat or cape!)<br>
+                • What color is their favorite? That can be their hero color!
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: EQUIPMENT -->
+            <h2 data-emoji="🎒" style="--i:4;">Step 4: Your Hero's Equipment!</h2>
+            <p>Every hero needs tools for their adventures! Here's what your hero starts with:</p>
+
+            <div class="equipment-list">
+                <div class="equipment-item">
+                    <div class="equipment-emoji">⚔️</div>
+                    <div class="equipment-text">
+                        <div class="equipment-name">Your Weapon</div>
+                        Warriors get swords! Hunters get bows! Wizards get magic staffs! Each hero gets their special weapon!
+                    </div>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-emoji">🛡️</div>
+                    <div class="equipment-text">
+                        <div class="equipment-name">Your Armor</div>
+                        Something to protect you! It might be strong armor, leather clothes, or magic robes!
+                    </div>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-emoji">🎒</div>
+                    <div class="equipment-text">
+                        <div class="equipment-name">Your Backpack</div>
+                        Every hero has a backpack to carry stuff! Snacks, rope, a flashlight, and other useful things!
+                    </div>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-emoji">✨</div>
+                    <div class="equipment-text">
+                        <div class="equipment-name">Something Special</div>
+                        Pick one cool thing that makes your hero unique! A lucky charm, a special hat, or a pet companion!
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: HOW TO PLAY -->
+            <h2 data-emoji="🎲" style="--i:5;">Step 5: How to Play the Game!</h2>
+
+            <div class="dice-box">
+                <div class="dice-title">Rolling Dice is FUN!</div>
+                <div class="dice-icons">🎲 🎲 🎲</div>
+                <div class="dice-desc">
+                    When you want to DO something (like fight a monster or find treasure), you roll dice! Roll more dice than the monster, and you WIN! Roll fewer, and you try again! It's that easy!
+                </div>
+            </div>
+
+            <div class="fun-box">
+                <span class="fun-label">🎯 How It Works! 🎯</span>
+                <strong>1.</strong> Say what you want to do! ("I want to fight the goblin!")<br>
+                <strong>2.</strong> The grown-up (Game Master) tells you how many dice to roll!<br>
+                <strong>3.</strong> Roll your dice! Count how many are 4, 5, or 6 — those are HITS!<br>
+                <strong>4.</strong> If you get enough hits, YOU WIN! If not, try something else!<br>
+                <strong>5.</strong> Have FUN! That's the most important part! 🌟
+            </div>
+
+            <h3>🎪 Example Time!</h3>
+            <p style="background: var(--crayon-yellow); padding: 1rem; border-radius: 15px; border: 3px solid var(--crayon-orange);">
+                <strong>You:</strong> "I want to hit the skeleton with my sword!"<br>
+                <strong>Game Master:</strong> "Great! Roll 3 dice!"<br>
+                <strong>You roll:</strong> 2, 5, 6 — that's TWO hits!<br>
+                <strong>Game Master:</strong> "You need 2 hits to win! YOU DID IT! The skeleton falls down!"<br>
+                <strong>Everyone:</strong> "HOORAY!" 🎉
+            </p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: HEALTH -->
+            <h2 data-emoji="💖" style="--i:6;">Step 6: Your Hero's Health!</h2>
+            <p>Your hero has <strong>Health Points</strong>! These show how healthy you are. When you get hurt, you lose some hearts. When you rest or get healed, you get them back!</p>
+
+            <div class="step-box">
+                <div class="step-number">💖</div>
+                <strong>Most Heroes Start With 3 Hearts!</strong><br><br>
+                💖 💖 💖 = Full health! Feeling great!<br>
+                💖 💖 ♡ = Hurt a little! Ouch!<br>
+                💖 ♡ ♡ = Really hurt! Need help!<br>
+                ♡ ♡ ♡ = Too hurt to fight! Time to rest!<br><br>
+                <em>Don't worry! Your friends can help you feel better! That's what teamwork is all about!</em>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: PERSONALITY -->
+            <h2 data-emoji="😊" style="--i:7;">Step 7: Your Hero's Personality!</h2>
+            <p>What's your hero like? Are they funny? Brave? Shy? Nice? Think about what makes YOUR hero special!</p>
+
+            <div class="fun-box">
+                <span class="fun-label">✨ Personality Ideas! ✨</span>
+                <strong>Brave:</strong> Your hero isn't scared of anything!<br>
+                <strong>Kind:</strong> Your hero always helps others!<br>
+                <strong>Funny:</strong> Your hero makes everyone laugh!<br>
+                <strong>Smart:</strong> Your hero knows lots of things!<br>
+                <strong>Curious:</strong> Your hero wants to explore everything!<br>
+                <strong>Loyal:</strong> Your hero is the best friend ever!<br>
+                <strong>Energetic:</strong> Your hero is always ready to GO!<br>
+                <strong>Calm:</strong> Your hero stays cool in scary times!
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: TEAM -->
+            <h2 data-emoji="👫" style="--i:8;">Step 8: Your Team of Heroes!</h2>
+            <p>You're not alone! You have a whole team of hero friends! Together, you can do ANYTHING!</p>
+
+            <div class="step-box">
+                <div class="step-number">🌟</div>
+                <strong>Why Teams Are AWESOME:</strong><br><br>
+                • <strong>Warriors</strong> protect everyone!<br>
+                • <strong>Healers</strong> make hurt friends feel better!<br>
+                • <strong>Hunters</strong> fight from far away!<br>
+                • <strong>Rogues</strong> find treasure and sneak around!<br>
+                • <strong>Wizards</strong> cast helpful spells!<br>
+                • <strong>Bards</strong> make everyone happy!<br><br>
+                <em>When you work together, you're UNSTOPPABLE! 💪</em>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: ADVENTURES -->
+            <h2 data-emoji="🗺️" style="--i:9;">Step 9: Go On Adventures!</h2>
+            <p>Now your hero is ready! Here are some adventures you might have:</p>
+
+            <ul style="font-size: 1.1rem; line-height: 2;">
+                <li>🏰 <strong>Rescue someone</strong> trapped in a tower!</li>
+                <li>🐉 <strong>Find treasure</strong> guarded by a dragon!</li>
+                <li>👻 <strong>Stop ghosts</strong> from being mean!</li>
+                <li>🧙 <strong>Help a wizard</strong> find magical ingredients!</li>
+                <li>🐺 <strong>Save the village</strong> from scary wolves!</li>
+                <li>🗝️ <strong>Solve a mystery</strong> in a spooky mansion!</li>
+                <li>⚔️ <strong>Battle goblins</strong> in the forest!</li>
+                <li>🌟 <strong>Make new friends</strong> and save the day!</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: READY -->
+            <h2 data-emoji="🎉" style="--i:10;">You're Ready to Be a Hero!</h2>
+
+            <div class="fun-box" style="background: var(--crayon-green); color: var(--white); border-color: var(--crayon-blue);">
+                <span class="fun-label" style="color: var(--sun-yellow);">✅ HERO CHECKLIST! ✅</span>
+                ☐ Picked your hero type (Warrior, Healer, Hunter, etc.)<br>
+                ☐ Gave your hero a cool name!<br>
+                ☐ Decided what they look like!<br>
+                ☐ Got your equipment (weapon, armor, backpack)!<br>
+                ☐ Know how to roll dice!<br>
+                ☐ Have your health hearts (💖💖💖)!<br>
+                ☐ Thought about your personality!<br>
+                ☐ Ready to work with your team!<br>
+                ☐ Excited for adventures!<br>
+                ☐ READY TO SAVE THE DAY! 🌟
+            </div>
+
+            <div class="welcome" style="background: var(--crayon-purple); margin-top: 2rem;">
+                <strong>CONGRATULATIONS!</strong> 🎉<br><br>
+                You made a hero! You're going to have so much fun! Remember: <em>be brave, help your friends, and always try your best!</em> Every hero makes mistakes sometimes — that's okay! The important thing is to <strong>HAVE FUN</strong> and use your imagination! Your adventure is about to begin! Are you ready? Let's GO! 🦸⭐💖
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-message">
+                BE A HERO! 🌟
+            </div>
+            <div class="footer-sub">
+                Hero Kids // RPG for Kids // Justin Halliday<br>
+                For Ages 4-10 // Be Brave, Be Kind, Have Fun!
+            </div>
+        </footer>
+
+    </div>
+    </body>
+</div>
+</html>

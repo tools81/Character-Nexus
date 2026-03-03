@@ -27,4 +27,8 @@
     <ProjectReference Include="..\Utility\Utility.csproj" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <PostBuildEvent>"$(TargetDir)SchemaGenerator.exe"</PostBuildEvent>
+  </PropertyGroup>
+
 </Project>

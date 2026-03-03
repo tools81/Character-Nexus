@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIDS ON BIKES — Character Notebook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Indie+Flower&family=Patrick+Hand&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper-white:   #FFFEF0;
+            --paper-yellow:  #FFF9E3;
+            --line-blue:     #A7BED3;
+            --pencil-grey:   #6B6B6B;
+            --pen-blue:      #1E3A8A;
+            --pen-black:     #1A1A1A;
+            --red-pen:       #DC2626;
+            --highlighter:   #FEF08A;
+            --eraser-pink:   #FFE4E6;
+            --marker-green:  #34D399;
+            --marker-orange: #FB923C;
+            --marker-purple: #A78BFA;
+            --shadow:        rgba(0,0,0,0.1);
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Caveat', cursive;
+            background: #E8E8E8;
+            background-image:
+                radial-gradient(circle at 30% 40%, rgba(0,0,0,0.02) 0%, transparent 50%);
+            color: var(--pen-black);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* ── CONTAINER (Spiral Notebook) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--paper-yellow);
+            border: 1px solid #D4D4D4;
+            box-shadow:
+                -3px 0 0 #E0E0E0,
+                -6px 0 0 #D8D8D8,
+                0 8px 20px rgba(0,0,0,0.15);
+            position: relative;
+            animation: flip-open 0.6s ease-out;
+        }
+
+        @keyframes flip-open {
+            from { opacity: 0; transform: perspective(1000px) rotateY(-15deg); }
+            to   { opacity: 1; transform: perspective(1000px) rotateY(0deg); }
+        }
+
+        /* Spiral binding holes */
+        .instr-container .spiral-hole {
+            position: absolute;
+            left: 15px;
+            width: 12px;
+            height: 12px;
+            background: var(--paper-yellow);
+            border: 2px solid #AAA;
+            border-radius: 50%;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .instr-container .spiral-hole:nth-child(1) { top: 30px; }
+        .instr-container .spiral-hole:nth-child(2) { top: 90px; }
+        .instr-container .spiral-hole:nth-child(3) { top: 150px; }
+        .instr-container .spiral-hole:nth-child(4) { top: 210px; }
+        .instr-container .spiral-hole:nth-child(5) { top: 270px; }
+        .instr-container .spiral-hole:nth-child(6) { bottom: 30px; }
+
+        /* Red margin line */
+        .instr-container .margin-line {
+            position: absolute;
+            left: 50px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--red-pen);
+            opacity: 0.3;
+        }
+
+        /* Paper texture */
+        .instr-container .container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        /* Doodle decorations */
+        .instr-container .doodle {
+            position: absolute;
+            font-family: 'Shadows Into Light', cursive;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .instr-container .doodle-star {
+            top: 15%;
+            right: 10%;
+            font-size: 2rem;
+            color: var(--marker-orange);
+            transform: rotate(-15deg);
+        }
+
+        .instr-container .doodle-heart {
+            bottom: 15%;
+            left: 8%;
+            font-size: 1.8rem;
+            color: var(--red-pen);
+            transform: rotate(8deg);
+        }
+
+        .instr-container .doodle-bike {
+            top: 40%;
+            right: 5%;
+            font-size: 2.5rem;
+            opacity: 0.2;
+            transform: rotate(5deg);
+        }
+
+        /* ── HEADER (Notebook Cover) ── */
+        .instr-container header {
+            padding: 2.5rem 3rem 2rem 4rem;
+            background: var(--paper-yellow);
+            border-bottom: 3px solid var(--line-blue);
+            position: relative;
+        }
+
+        /* Lined paper background */
+        .instr-container .lined-bg {
+            position: absolute;
+            inset: 0;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 29px,
+                    var(--line-blue) 29px,
+                    var(--line-blue) 30px
+                );
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .instr-container .notebook-label {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 0.9rem;
+            color: var(--red-pen);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: inline-block;
+            border: 3px solid var(--red-pen);
+            padding: 0.3rem 1rem;
+            background: var(--paper-white);
+            transform: rotate(-2deg);
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container h1 {
+            font-family: 'Indie Flower', cursive;
+            font-size: 4rem;
+            line-height: 1.1;
+            color: var(--pen-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 1;
+            transform: rotate(-1deg);
+        }
+
+        .instr-container h1 .kids {
+            color: var(--marker-green);
+        }
+
+        .instr-container h1 .bikes {
+            display: block;
+            font-size: 2.5rem;
+            color: var(--marker-orange);
+            transform: rotate(1deg);
+            margin-top: 0.3rem;
+        }
+
+        .instr-container .subtitle {
+            font-family: 'Caveat', cursive;
+            font-size: 1.2rem;
+            color: var(--pencil-grey);
+            margin-top: 1rem;
+            transform: rotate(0.5deg);
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container .notebook-meta {
+            margin-top: 1.5rem;
+            padding: 0.75rem 1rem;
+            background: var(--highlighter);
+            border: 2px dashed var(--pen-black);
+            font-size: 0.85rem;
+            line-height: 1.8;
+            transform: rotate(-0.5deg);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2rem 3rem 2rem 4rem;
+            background: var(--paper-yellow);
+            position: relative;
+        }
+
+        /* Lined paper throughout */
+        .instr-container .content::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 29px,
+                    var(--line-blue) 29px,
+                    var(--line-blue) 30px
+                );
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        /* ── CLUB RULES BOX ── */
+        .instr-container .club-rules {
+            background: var(--paper-white);
+            border: 3px solid var(--marker-purple);
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 2.5rem;
+            font-size: 1.05rem;
+            line-height: 2;
+            position: relative;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+            transform: rotate(0.5deg);
+        }
+
+        .instr-container .club-rules::before {
+            content: '★ NO PARENTS ALLOWED! ★';
+            position: absolute;
+            top: -1rem;
+            left: 50%;
+            transform: translateX(-50%) rotate(-2deg);
+            background: var(--marker-purple);
+            color: var(--paper-white);
+            padding: 0.4rem 1.2rem;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+        }
+
+        /* ── SECTION HEADERS (Underlined Notes) ── */
+        .instr-container h2 {
+            font-family: 'Indie Flower', cursive;
+            font-size: 2.2rem;
+            color: var(--pen-blue);
+            margin: 2.75rem 0 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--marker-green);
+            position: relative;
+            animation: write-in 0.4s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.08s);
+            transform: rotate(-0.5deg);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: attr(data-num);
+            position: absolute;
+            left: -2.5rem;
+            top: 0;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.2rem;
+            color: var(--red-pen);
+        }
+
+        .instr-container h2::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -8px;
+            width: 40px;
+            height: 40px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M 5 20 Q 20 10, 35 20' stroke='%23FB923C' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        @keyframes write-in {
+            from { opacity: 0; transform: rotate(-0.5deg) translateY(-10px); }
+            to   { opacity: 1; transform: rotate(-0.5deg) translateY(0); }
+        }
+
+        .instr-container h3 {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.3rem;
+            color: var(--marker-orange);
+            margin: 1.75rem 0 0.6rem;
+            transform: rotate(-0.5deg);
+        }
+
+        .instr-container p {
+            font-size: 1.1rem;
+            line-height: 2;
+            margin-bottom: 1rem;
+            color: var(--pen-black);
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container ul, .instr-container ol { 
+            margin: 0.75rem 0 1.25rem 1.5rem; 
+            position: relative;
+            z-index: 1;
+        }
+        
+        .instr-container li {
+            font-size: 1.05rem;
+            line-height: 2;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { 
+            color: var(--marker-green); 
+            font-weight: 700;
+            background: rgba(52,211,153,0.1);
+            padding: 0 0.2rem;
+        }
+        
+        .instr-container em     { 
+            color: var(--marker-orange); 
+            font-style: normal; 
+            font-weight: 600;
+        }
+
+        /* ── DIVIDER (Scribble Line) ── */
+        .instr-container .divider {
+            margin: 2.5rem 0;
+            height: 3px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 3'%3E%3Cpath d='M 0 1.5 Q 50 0, 100 1.5 Q 150 3, 200 1.5 Q 250 0, 300 1.5 Q 350 3, 400 1.5 Q 450 0, 500 1.5 Q 550 3, 600 1.5' stroke='%236B6B6B' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+            background-size: 100% 100%;
+            opacity: 0.3;
+        }
+
+        /* ── MARGIN NOTE ── */
+        .instr-container .margin-note {
+            background: var(--eraser-pink);
+            border: 2px dashed var(--red-pen);
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.9;
+            font-style: italic;
+            transform: rotate(1deg);
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container .note-arrow {
+            font-family: 'Shadows Into Light', cursive;
+            font-size: 0.8rem;
+            color: var(--red-pen);
+            display: block;
+            margin-bottom: 0.3rem;
+            font-style: normal;
+        }
+
+        /* ── HIGHLIGHT BOX ── */
+        .instr-container .highlight-box {
+            background: var(--highlighter);
+            border: 3px solid var(--marker-orange);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            position: relative;
+            z-index: 1;
+            transform: rotate(-0.5deg);
+        }
+
+        .instr-container .highlight-box::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -0.8rem;
+            left: 1.5rem;
+            background: var(--marker-orange);
+            color: var(--paper-white);
+            padding: 0.3rem 0.8rem;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* ── AGE CARDS ── */
+        .instr-container .age-grid {
+            display: grid;
+            gap: 0.75rem;
+            margin: 1rem 0 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container .age-card {
+            background: var(--paper-white);
+            border: 3px solid var(--pen-blue);
+            padding: 1.25rem 1.5rem;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+            transform: rotate(0deg);
+        }
+
+        .instr-container .age-card:hover {
+            transform: rotate(-1deg) translate(-2px, -2px);
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container .age-label {
+            position: absolute;
+            top: -0.8rem;
+            right: 1.5rem;
+            background: var(--pen-blue);
+            color: var(--paper-white);
+            font-family: 'Patrick Hand', cursive;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            padding: 0.3rem 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .instr-container .age-name {
+            font-family: 'Indie Flower', cursive;
+            font-size: 1.6rem;
+            color: var(--pen-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .age-desc {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--pen-black);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .age-stats {
+            font-family: 'Caveat', cursive;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--marker-green);
+            border-top: 2px solid var(--line-blue);
+            padding-top: 0.5rem;
+        }
+
+        /* ── STAT CIRCLES ── */
+        .instr-container .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin: 1rem 0 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container .stat-card {
+            background: var(--paper-white);
+            border: 3px solid var(--marker-purple);
+            padding: 1rem;
+            text-align: center;
+            transform: rotate(-1deg);
+        }
+
+        .instr-container .stat-card:nth-child(even) { transform: rotate(1deg); }
+
+        .instr-container .stat-name {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--marker-purple);
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .stat-desc {
+            font-size: 0.9rem;
+            color: var(--pencil-grey);
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .stat-dice {
+            font-family: 'Indie Flower', cursive;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--pen-blue);
+        }
+
+        /* ── STRENGTH/FLAW LIST ── */
+        .instr-container .trait-list {
+            display: grid;
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container .trait-item {
+            background: var(--paper-white);
+            border: 2px solid var(--line-blue);
+            border-left: 5px solid var(--marker-green);
+            padding: 0.85rem 1.1rem;
+            transform: rotate(0.5deg);
+        }
+
+        .instr-container .trait-item.flaw { border-left-color: var(--red-pen); }
+
+        .instr-container .trait-name {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--pen-black);
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .trait-desc {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--pencil-grey);
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--paper-yellow);
+            padding: 2rem 3rem 2rem 4rem;
+            border-top: 3px solid var(--line-blue);
+            text-align: center;
+            position: relative;
+        }
+
+        .instr-container footer::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 29px,
+                    var(--line-blue) 29px,
+                    var(--line-blue) 30px
+                );
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .instr-container .footer-motto {
+            font-family: 'Indie Flower', cursive;
+            font-size: 2.5rem;
+            color: var(--marker-orange);
+            margin-bottom: 0.75rem;
+            transform: rotate(-1deg);
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'Caveat', cursive;
+            font-size: 1rem;
+            color: var(--pencil-grey);
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container footer .doodle {
+            font-size: 1.5rem;
+            display: inline-block;
+            margin: 0 0.5rem;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 480px) {
+            .instr-container h1 { font-size: 3rem; }
+            .instr-container h1 .bikes { font-size: 2rem; }
+            .instr-container h2 { font-size: 1.8rem; }
+            .instr-container h2::before { display: none; }
+            .instr-container .stat-grid { grid-template-columns: 1fr; }
+            .instr-container .content { padding: 1.75rem 2rem 1.75rem 3rem; }
+            .instr-container header { padding: 2rem 2rem 1.75rem 3rem; }
+            .instr-container footer { padding: 1.75rem 2rem 1.75rem 3rem; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+        <div class="spiral-hole"></div>
+        <div class="spiral-hole"></div>
+        <div class="spiral-hole"></div>
+        <div class="spiral-hole"></div>
+        <div class="spiral-hole"></div>
+        <div class="spiral-hole"></div>
+        <div class="margin-line"></div>
+        <div class="doodle doodle-star">★</div>
+        <div class="doodle doodle-heart">♥</div>
+        <div class="doodle doodle-bike">🚲</div>
+
+        <!-- HEADER -->
+        <header>
+            <div class="lined-bg"></div>
+            <div class="notebook-label">My Character Notebook</div>
+            <h1>
+                <span class="kids">KIDS ON</span>
+                <span class="bikes">BIKES</span>
+            </h1>
+            <div class="subtitle">
+                (secret club adventures — summer 1987)
+            </div>
+            <div class="notebook-meta">
+                <strong>System:</strong> Collaborative d4/d6/d8/d10/d12/d20<br>
+                <strong>Made By:</strong> Renegade Game Studios<br>
+                <strong>Setting:</strong> Small town America, 1980s nostalgia<br>
+                <strong>Remember:</strong> Bring flashlights!
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="club-rules">
+                You're a <strong>kid</strong> in a small town. Maybe it's the 1980s. Maybe it's today. Strange things are happening — mysteries nobody believes, adventures nobody knows about. Adults don't listen. Teachers don't understand. But you and your friends? You know something's up. You've got bikes, flashlights, and each other. That's all you need. Time to solve mysteries, find adventure, and <em>be home before dark</em>.
+            </div>
+
+            <!-- STEP 1: AGE -->
+            <h2 data-num="1." style="--i:1;">Pick Your Age</h2>
+            <p>How old are you? Your age determines your stats and what you're good at. Younger kids are more creative and brave. Older kids are stronger and smarter.</p>
+
+            <div class="age-grid">
+                <div class="age-card">
+                    <div class="age-label">AGES 11-12</div>
+                    <div class="age-name">The Younger Kid</div>
+                    <div class="age-desc">You're the youngest in the group. Adults underestimate you. That's your advantage. You notice things others miss and you're not afraid to try crazy stuff.</div>
+                    <div class="age-stats">Stats: d12 Guts, d10 Charm, d8 Smarts, d6 Brawn, d4 Fight, d4 Flight</div>
+                </div>
+                <div class="age-card">
+                    <div class="age-label">AGES 13-14</div>
+                    <div class="age-name">The Middle Kid</div>
+                    <div class="age-desc">You're right in the middle — not too young, not too old. You balance everything. You're adaptable and can handle most situations.</div>
+                    <div class="age-stats">Stats: d12 Charm, d10 Smarts, d8 Guts, d6 Fight, d4 Brawn, d4 Flight</div>
+                </div>
+                <div class="age-card">
+                    <div class="age-label">AGES 15-16</div>
+                    <div class="age-name">The Older Kid</div>
+                    <div class="age-desc">You're the oldest (or close to it). More mature, stronger, and people actually listen to you sometimes. You can drive (maybe), and you've got responsibilities.</div>
+                    <div class="age-stats">Stats: d12 Smarts, d10 Brawn, d8 Flight, d6 Charm, d4 Guts, d4 Fight</div>
+                </div>
+                <div class="age-card">
+                    <div class="age-label">AGES 17-18</div>
+                    <div class="age-name">The Almost-Adult</div>
+                    <div class="age-desc">You're on the edge of adulthood. You can actually drive. You work part-time. You're responsible for stuff. But you still remember being a kid.</div>
+                    <div class="age-stats">Stats: d12 Brawn, d10 Flight, d8 Smarts, d6 Fight, d4 Charm, d4 Guts</div>
+                </div>
+            </div>
+
+            <div class="margin-note">
+                <span class="note-arrow">→ IMPORTANT!</span>
+                Your age gives you different-sized dice for each stat. Bigger dice = better at that thing! A d12 is way better than a d4. You'll roll these dice when you try stuff.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: STATS -->
+            <h2 data-num="2." style="--i:2;">Your Stats Explained</h2>
+            <p>Every kid has <strong>six stats</strong>. Each stat uses a different die based on your age. When you try something, you roll the appropriate die!</p>
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-name">Brawn</div>
+                    <div class="stat-desc">Physical strength, athletics, toughness</div>
+                    <div class="stat-dice">d4-d12</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Charm</div>
+                    <div class="stat-desc">Talking to people, lying, being likeable</div>
+                    <div class="stat-dice">d4-d12</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Fight</div>
+                    <div class="stat-desc">Standing your ground, not backing down</div>
+                    <div class="stat-dice">d4-d12</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Flight</div>
+                    <div class="stat-desc">Running away, avoiding danger, escaping</div>
+                    <div class="stat-dice">d4-d12</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Guts</div>
+                    <div class="stat-desc">Bravery, willpower, facing fear</div>
+                    <div class="stat-dice">d4-d12</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-name">Smarts</div>
+                    <div class="stat-desc">Intelligence, problem-solving, knowledge</div>
+                    <div class="stat-dice">d4-d12</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: STRENGTHS -->
+            <h2 data-num="3." style="--i:3;">Pick Your Strengths</h2>
+            <p>Choose <strong>two Strengths</strong> — things you're really good at. When you use a Strength, you roll with advantage (roll twice, keep the better result)!</p>
+
+            <div class="trait-list">
+                <div class="trait-item">
+                    <div class="trait-name">Athletic</div>
+                    <div class="trait-desc">You're good at sports, running, climbing, physical stuff. You're in shape!</div>
+                </div>
+                <div class="trait-item">
+                    <div class="trait-name">Bookworm</div>
+                    <div class="trait-desc">You read everything. You know random facts. You're the encyclopedia of the group.</div>
+                </div>
+                <div class="trait-item">
+                    <div class="trait-name">Charming</div>
+                    <div class="trait-desc">People like you. You can talk your way out of (or into) anything. Natural charisma!</div>
+                </div>
+                <div class="trait-item">
+                    <div class="trait-name">Creative</div>
+                    <div class="trait-desc">You think outside the box. Art, music, weird solutions — you've got imagination!</div>
+                </div>
+                <div class="trait-item">
+                    <div class="trait-name">Loyal</div>
+                    <div class="trait-desc">You never abandon your friends. Ever. They can count on you no matter what.</div>
+                </div>
+                <div class="trait-item">
+                    <div class="trait-name">Mechanical</div>
+                    <div class="trait-desc">You fix things. Bikes, radios, whatever. You understand how stuff works.</div>
+                </div>
+                <div class="trait-item">
+                    <div class="trait-name">Observant</div>
+                    <div class="trait-desc">You notice details others miss. Clues, lies, hidden stuff — you see it.</div>
+                </div>
+                <div class="trait-item">
+                    <div class="trait-name">Rebellious</div>
+                    <div class="trait-desc">You break rules, take risks, and question authority. Sometimes that's exactly what's needed.</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: FLAWS -->
+            <h2 data-num="4." style="--i:4;">Pick Your Flaw</h2>
+            <p>Choose <strong>one Flaw</strong> — something that makes your life harder. When your Flaw comes up, you roll with disadvantage (roll twice, keep the worse result). But flaws make you interesting!</p>
+
+            <div class="trait-list">
+                <div class="trait-item flaw">
+                    <div class="trait-name">Clumsy</div>
+                    <div class="trait-desc">You trip, drop things, knock stuff over. Your coordination isn't great.</div>
+                </div>
+                <div class="trait-item flaw">
+                    <div class="trait-name">Coward</div>
+                    <div class="trait-desc">You scare easily. Loud noises, dark places, strange things — you want to run!</div>
+                </div>
+                <div class="trait-item flaw">
+                    <div class="trait-name">Impulsive</div>
+                    <div class="trait-desc">You act before thinking. This gets you (and your friends) into trouble constantly.</div>
+                </div>
+                <div class="trait-item flaw">
+                    <div class="trait-name">Liar</div>
+                    <div class="trait-desc">You lie a lot. Sometimes you can't help it. People are starting to notice.</div>
+                </div>
+                <div class="trait-item flaw">
+                    <div class="trait-name">Outcast</div>
+                    <div class="trait-desc">You don't fit in. Other kids avoid you. Social situations are hard.</div>
+                </div>
+                <div class="trait-item flaw">
+                    <div class="trait-name">Sheltered</div>
+                    <div class="trait-desc">Your parents are super protective. You don't know much about the "real world."</div>
+                </div>
+                <div class="trait-item flaw">
+                    <div class="trait-name">Short-Tempered</div>
+                    <div class="trait-desc">You get angry fast. You say things you regret. You might throw punches.</div>
+                </div>
+                <div class="trait-item flaw">
+                    <div class="trait-name">Weak</div>
+                    <div class="trait-desc">You're not physically strong. Heavy things, long runs, fights — you struggle.</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: ROLLING -->
+            <h2 data-num="5." style="--i:5;">How to Roll Dice</h2>
+            <p>When you try something, the GM (Game Master) tells you which stat to roll. Roll that die. Higher is better! You're trying to beat a <strong>target number</strong>.</p>
+
+            <div class="highlight-box" data-label="DICE RULES">
+                <p style="margin-bottom: 0.5rem; font-weight: 600;">Simple version:</p>
+                <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.9;">
+                    <li><strong>Easy stuff:</strong> Roll 3+ to succeed</li>
+                    <li><strong>Normal stuff:</strong> Roll 7+ to succeed</li>
+                    <li><strong>Hard stuff:</strong> Roll 11+ to succeed</li>
+                    <li><strong>Really hard stuff:</strong> Roll 15+ to succeed</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.95rem;">
+                    Your Strengths help (roll twice, keep better). Your Flaw hurts (roll twice, keep worse). That's it!
+                </p>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: ADVERSITY TOKENS -->
+            <h2 data-num="6." style="--i:6;">Adversity Tokens</h2>
+            <p>When you fail a roll, you get an <strong>Adversity Token</strong>. Save them up! You can spend tokens to:</p>
+
+            <ul>
+                <li><strong>Re-roll a failed roll</strong> (spend 1 token)</li>
+                <li><strong>Help a friend</strong> — give them +1 to their roll (spend 1 token)</li>
+                <li><strong>Flashback</strong> — declare you brought something useful (spend 2 tokens)</li>
+                <li><strong>Coincidence</strong> — make something convenient happen (spend 3 tokens)</li>
+            </ul>
+
+            <p>Failing isn't the end — it gives you tokens to be awesome later!</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: EQUIPMENT -->
+            <h2 data-num="7." style="--i:7;">Your Stuff</h2>
+            <p>What do you have? You're a kid, so nothing too fancy. But you've got the essentials!</p>
+
+            <h3>Everyone Has:</h3>
+            <ul>
+                <li><strong>Your bike</strong> — freedom, transportation, escape</li>
+                <li><strong>Flashlight</strong> — for dark places (bring extra batteries!)</li>
+                <li><strong>Backpack</strong> — holds all your stuff</li>
+                <li><strong>$5-20</strong> — allowance money or babysitting cash</li>
+            </ul>
+
+            <h3>Pick 2-3 Extra Things:</h3>
+            <ul>
+                <li>Walkie-talkie (talk to friends from far away)</li>
+                <li>First aid kit (Band-Aids and stuff)</li>
+                <li>Camera (take pictures of evidence!)</li>
+                <li>Baseball bat (for "protection")</li>
+                <li>Rope (always useful)</li>
+                <li>Comic books (inspiration and comfort)</li>
+                <li>Snacks (granola bars, candy)</li>
+                <li>Map of town (hand-drawn is fine)</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: PERSONALITY -->
+            <h2 data-num="8." style="--i:8;">Who Are You?</h2>
+            <p>Now the important stuff. Who is your character? Think about:</p>
+
+            <div class="highlight-box" data-label="CHARACTER QUESTIONS">
+                <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 2;">
+                    <li><strong>What's your name?</strong> (nickname too!)</li>
+                    <li><strong>What do you look like?</strong> (clothes, hair, anything special?)</li>
+                    <li><strong>Where do you live?</strong> (big house? apartment? trailer park?)</li>
+                    <li><strong>What's your family like?</strong> (siblings? strict parents? divorced?)</li>
+                    <li><strong>What's your deal at school?</strong> (popular? nerd? troublemaker?)</li>
+                    <li><strong>What do you want?</strong> (fit in? be brave? solve mysteries?)</li>
+                    <li><strong>What scares you?</strong> (the dark? bullies? being alone?)</li>
+                    <li><strong>Why do you hang out with this group?</strong></li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: CONNECTIONS -->
+            <h2 data-num="9." style="--i:9;">Your Friends</h2>
+            <p>You're not alone! You've got your crew. Define your relationships with the other kids in the group.</p>
+
+            <h3>For Each Friend, Decide:</h3>
+            <ul>
+                <li><strong>How did you meet?</strong> (school? neighbors? forced together?)</li>
+                <li><strong>Why do you like them?</strong> (what's good about them?)</li>
+                <li><strong>What annoys you about them?</strong> (nobody's perfect)</li>
+                <li><strong>What secret do you share?</strong> (something only you two know)</li>
+            </ul>
+
+            <div class="margin-note">
+                <span class="note-arrow">→ Pro Tip!</span>
+                The best groups have some tension. Maybe you and another kid both like the same person. Maybe there's a rivalry. Maybe you're enemies who have to work together. Drama makes it fun!
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: READY -->
+            <h2 data-num="10." style="--i:10;">You're Ready!</h2>
+
+            <div class="highlight-box" data-label="FINAL CHECKLIST" style="border-color: var(--marker-green);">
+                <ul style="margin: 0 0 0 1.25rem; list-style: none; line-height: 2; font-weight: 600;">
+                    <li>☐ Age picked (determines your dice)</li>
+                    <li>☐ Stats assigned (different die for each)</li>
+                    <li>☐ Two Strengths chosen</li>
+                    <li>☐ One Flaw chosen</li>
+                    <li>☐ Name and appearance described</li>
+                    <li>☐ Background established</li>
+                    <li>☐ Equipment selected</li>
+                    <li>☐ Relationships with friends defined</li>
+                    <li>☐ Bike ready to ride</li>
+                    <li>☐ Flashlight has batteries</li>
+                    <li>☐ Ready for adventure!</li>
+                </ul>
+            </div>
+
+            <div class="club-rules" style="margin-top: 2rem; border-color: var(--marker-green);">
+                That's it! You're ready to ride your bike into adventure. Remember: <strong>be home before dark</strong> (but you probably won't be). Adults won't believe what you find. Teachers will tell you to focus on homework. Parents will ground you if they catch you sneaking out. But mysteries don't solve themselves. Strange things are happening in your town. And you and your friends? <em>You're the only ones who can stop them.</em> Now grab your flashlight and let's go!
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-motto">
+                Adventure Awaits! 🚲
+            </div>
+            <div class="footer-sub">
+                Kids on Bikes // Renegade Game Studios // Powered by Dice!<br>
+                <span class="doodle">★</span>
+                <span class="doodle">♥</span>
+                <span class="doodle">→</span>
+            </div>
+        </footer>
+
+    </div>
+    </body>
+</div>
+</html>

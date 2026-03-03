@@ -1418,7 +1418,7 @@
                   "label": "Accuracy 2",
                   "type": "switch",
                   "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Agility\",\"value\":2},{\"type\":\"attributeCheck\",\"name\":\"Agility\",\"value\":2}]",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"Accuracy 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"Accuracy 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Accuracy 2",
@@ -1435,7 +1435,7 @@
                   "label": "Accuracy 3",
                   "type": "switch",
                   "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Agility\",\"value\":3},{\"type\":\"attributeCheck\",\"name\":\"Agility\",\"value\":3}]",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"accuracy 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"accuracy 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Accuracy 3",
@@ -1452,7 +1452,7 @@
                   "label": "Accuracy 4",
                   "type": "switch",
                   "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Agility\",\"value\":4},{\"type\":\"attributeCheck\",\"name\":\"Agility\",\"value\":4}]",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"accuracy 3\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"accuracy 3\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Accuracy 4",
@@ -1486,7 +1486,7 @@
                   "label": "Anger",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"mighty 3\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"mighty 3\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Anger",
@@ -1537,7 +1537,7 @@
                   "label": "Brilliance 2",
                   "type": "switch",
                   "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Logic\",\"value\":2},{\"type\":\"attributeCheck\",\"name\":\"Logic\",\"value\":2}]",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"brilliance 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"brilliance 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Brilliance 2",
@@ -1554,7 +1554,7 @@
                   "label": "Brilliance 3",
                   "type": "switch",
                   "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Logic\",\"value\":3},{\"type\":\"attributeCheck\",\"name\":\"Logic\",\"value\":3}]",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"brilliance 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"brilliance 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Brilliance 3",
@@ -1571,7 +1571,7 @@
                   "label": "Brilliance 4",
                   "type": "switch",
                   "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Logic\",\"value\":4},{\"type\":\"attributeCheck\",\"name\":\"Logic\",\"value\":4}]",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"brilliance 3\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"brilliance 3\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Brilliance 4",
@@ -1588,7 +1588,7 @@
                   "label": "Combat Trickery",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Combat Trickery",
@@ -1622,7 +1622,7 @@
                   "label": "Discipline 2",
                   "type": "switch",
                   "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Ego\",\"value\":2},{\"type\":\"attributeCheck\",\"name\":\"Ego\",\"value\":2}]",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"discipline 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"discipline 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Discipline 2",
@@ -1639,7 +1639,7 @@
                   "label": "Discipline 3",
                   "type": "switch",
                   "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Ego\",\"value\":3},{\"type\":\"attributeCheck\",\"name\":\"Ego\",\"value\":3}]",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"discipline 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"discipline 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Discipline 3",
@@ -1656,7 +1656,7 @@
                   "label": "Discipline 4",
                   "type": "switch",
                   "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Ego\",\"value\":4},{\"type\":\"attributeCheck\",\"name\":\"Ego\",\"value\":4}]",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"discipline 3\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"discipline 3\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Discipline 4",
@@ -1690,7 +1690,7 @@
                   "label": "Energy Absorption",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Energy Absorption",
@@ -1741,7 +1741,7 @@
                   "label": "Flight 1",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Flight 1",
@@ -1758,7 +1758,7 @@
                   "label": "Flight 2",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"flight 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"flight 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Flight 2",
@@ -1775,7 +1775,7 @@
                   "label": "Group Flight ",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"flight 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"flight 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Group Flight ",
@@ -1826,7 +1826,7 @@
                   "label": "Heightened Senses 2",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"heightened senses 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"heightened senses 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Heightened Senses 2",
@@ -1911,7 +1911,7 @@
                   "label": "Mighty 2",
                   "type": "switch",
                   "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Melee\",\"value\":2},{\"type\":\"attributeCheck\",\"name\":\"Melee\",\"value\":2}]",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"mighty 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"mighty 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Mighty 2",
@@ -1928,7 +1928,7 @@
                   "label": "Mighty 3",
                   "type": "switch",
                   "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Melee\",\"value\":3},{\"type\":\"attributeCheck\",\"name\":\"Melee\",\"value\":3}]",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"mighty 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"mighty 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Mighty 3",
@@ -1945,7 +1945,7 @@
                   "label": "Mighty 4",
                   "type": "switch",
                   "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Melee\",\"value\":4},{\"type\":\"attributeCheck\",\"name\":\"Melee\",\"value\":4}]",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"mighty 3\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"mighty 3\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Mighty 4",
@@ -1979,7 +1979,7 @@
                   "label": "Shape-Shift",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"disguise\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"disguise\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Shape-Shift",
@@ -2030,7 +2030,7 @@
                   "label": "Sturdy 2",
                   "type": "switch",
                   "bonusAdjustments": "[{\"type\":\"HealthDamageReduction\",\"name\":\"\",\"value\":2}]",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"sturdy 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"sturdy 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Sturdy 2",
@@ -2047,7 +2047,7 @@
                   "label": "Sturdy 3",
                   "type": "switch",
                   "bonusAdjustments": "[{\"type\":\"HealthDamageReduction\",\"name\":\"\",\"value\":3}]",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"sturdy 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"sturdy 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Sturdy 3",
@@ -2064,7 +2064,7 @@
                   "label": "Sturdy 4",
                   "type": "switch",
                   "bonusAdjustments": "[{\"type\":\"HealthDamageReduction\",\"name\":\"\",\"value\":4}]",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=6\"},{\"type\":\"powers\",\"name\":\"sturdy 3\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=6\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"sturdy 3\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Sturdy 4",
@@ -2098,7 +2098,7 @@
                   "label": "Uncanny 2",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"uncanny 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"uncanny 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Uncanny 2",
@@ -2115,7 +2115,7 @@
                   "label": "Uncanny 3",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"uncanny 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"uncanny 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Uncanny 3",
@@ -2132,7 +2132,7 @@
                   "label": "Uncanny 4",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=6\"},{\"type\":\"powers\",\"name\":\"uncanny 3\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=6\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"uncanny 3\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Basic-Uncanny 4",
@@ -2194,7 +2194,7 @@
                   "label": "Elemental Barrage",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"elemental blast\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"elemental blast\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Barrage",
@@ -2211,7 +2211,7 @@
                   "label": "Elemental Barrier",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"elemental blast\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"elemental blast\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Barrier",
@@ -2228,7 +2228,7 @@
                   "label": "Elemental Blast",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"elemental burst\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"elemental burst\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Blast",
@@ -2262,7 +2262,7 @@
                   "label": "Elemental Form",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"elemental reinforcement\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"elemental reinforcement\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Form",
@@ -2279,7 +2279,7 @@
                   "label": "Elemental Grab",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"elemental burst\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"elemental burst\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Grab",
@@ -2296,7 +2296,7 @@
                   "label": "Elemental Infusion",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"elemental burst\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"elemental burst\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Infusion",
@@ -2313,7 +2313,7 @@
                   "label": "Elemental Prison",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"elemental protection 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"elemental protection 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Prison",
@@ -2330,7 +2330,7 @@
                   "label": "Elemental Protection 1",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"elemental barrier\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"elemental barrier\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Protection 1",
@@ -2347,7 +2347,7 @@
                   "label": "Elemental Protection 2",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"elemental protection 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"elemental protection 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Protection 2",
@@ -2364,7 +2364,7 @@
                   "label": "Elemental Protection 3",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"elemental protection 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"elemental protection 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Protection 3",
@@ -2381,7 +2381,7 @@
                   "label": "Elemental Protection 4",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=5\"},{\"type\":\"powers\",\"name\":\"elemental protection 3\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=5\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"elemental protection 3\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Protection 4",
@@ -2398,7 +2398,7 @@
                   "label": "Elemental Push",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"elemental protection 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"elemental protection 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Push",
@@ -2415,7 +2415,7 @@
                   "label": "Elemental Reinforcement",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"elemental protection 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"elemental protection 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Reinforcement",
@@ -2432,7 +2432,7 @@
                   "label": "Elemental Ricochet",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"elemental burst\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"elemental burst\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Ricochet",
@@ -2449,7 +2449,7 @@
                   "label": "Elemental Sphere",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"elemental protection 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"elemental protection 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Sphere",
@@ -2466,7 +2466,7 @@
                   "label": "Elemental Suffocation",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"elemental grab\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"elemental grab\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Elemental Suffocation",
@@ -2483,7 +2483,7 @@
                   "label": "Supernova",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"elemental blast\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"elemental blast\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Elemental Control-Supernova",
@@ -2511,7 +2511,7 @@
                   "label": "Animated Illusion",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"static illusion\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"static illusion\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Animated Illusion",
@@ -2528,7 +2528,7 @@
                   "label": "Darkness",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"illumination\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"illumination\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Darkness",
@@ -2545,7 +2545,7 @@
                   "label": "Dazzle",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"illumination\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"illumination\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Dazzle",
@@ -2562,7 +2562,7 @@
                   "label": "Deafen",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"illumination\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"illumination\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Deafen",
@@ -2579,7 +2579,7 @@
                   "label": "Extend Invisibility",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"invisibility\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"invisibility\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Extend Invisibility",
@@ -2596,7 +2596,7 @@
                   "label": "Flare",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"illumination\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"illumination\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Flare",
@@ -2613,7 +2613,7 @@
                   "label": "Grand Illusion",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"animated illusion\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"animated illusion\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Grand Illusion",
@@ -2630,7 +2630,7 @@
                   "label": "Group Invisibility",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"extend invisibility\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"extend invisibility\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Group Invisibility",
@@ -2664,7 +2664,7 @@
                   "label": "Invisibility",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Invisibility",
@@ -2681,7 +2681,7 @@
                   "label": "Mirror Images",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"animated illusion\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"animated illusion\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Mirror Images",
@@ -2698,7 +2698,7 @@
                   "label": "Silence Area",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"illumination\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"illumination\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Silence Area",
@@ -2715,7 +2715,7 @@
                   "label": "Silence Self",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"illumination\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"illumination\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Silence Self",
@@ -2732,7 +2732,7 @@
                   "label": "Static Illusion",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"illumination\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"illumination\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Illusion-Static Illusion",
@@ -2760,7 +2760,7 @@
                   "label": "Astral Form",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Astral Form",
@@ -2777,7 +2777,7 @@
                   "label": "Bolts of Balthakk",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Bolts of Balthakk",
@@ -2794,7 +2794,7 @@
                   "label": "Brain Drain",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Brain Drain",
@@ -2811,7 +2811,7 @@
                   "label": "Crimson Bands of Cyttorak",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Crimson Bands of Cyttorak",
@@ -2828,7 +2828,7 @@
                   "label": "Dispel Spell",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Dispel Spell",
@@ -2845,7 +2845,7 @@
                   "label": "Exorcism",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Exorcism",
@@ -2862,7 +2862,7 @@
                   "label": "Flames of the Faltine",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Flames of the Faltine",
@@ -2879,7 +2879,7 @@
                   "label": "Hellfire Chains",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Cursed\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Cursed\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Hellfire Chains",
@@ -2896,7 +2896,7 @@
                   "label": "Hex Bolt",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Chaotic\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Chaotic\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Hex Bolt",
@@ -2913,7 +2913,7 @@
                   "label": "Icy Tendrils of Ikthalon",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Icy Tendrils of Ikthalon",
@@ -2930,7 +2930,7 @@
                   "label": "Images of Ikonn",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Images of Ikonn",
@@ -2947,7 +2947,7 @@
                   "label": "Jinx",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Chaotic\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Chaotic\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Jinx",
@@ -2964,7 +2964,7 @@
                   "label": "Leech Life",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Leech Life",
@@ -2981,7 +2981,7 @@
                   "label": "Mists of Morpheus",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Mists of Morpheus",
@@ -2998,7 +2998,7 @@
                   "label": "Mists of Munnopor",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Mists of Munnopor",
@@ -3015,7 +3015,7 @@
                   "label": "Penance Stare",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Cursed\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Cursed\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Penance Stare",
@@ -3032,7 +3032,7 @@
                   "label": "Possess Vehicle",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Cursed\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Cursed\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Possess Vehicle",
@@ -3049,7 +3049,7 @@
                   "label": "Possession",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=5\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Cursed\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=5\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Cursed\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Possession",
@@ -3066,7 +3066,7 @@
                   "label": "Powerful Hex",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Chaotic\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Chaotic\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Powerful Hex",
@@ -3083,7 +3083,7 @@
                   "label": "Probability-Manipulation Hex",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Chaotic\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Chaotic\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Probability-Manipulation Hex",
@@ -3100,7 +3100,7 @@
                   "label": "Protection Hex",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Chaotic\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Chaotic\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Protection Hex",
@@ -3117,7 +3117,7 @@
                   "label": "Sense Sins",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Chaotic\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Chaotic\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Sense Sins",
@@ -3151,7 +3151,7 @@
                   "label": "Shield of the Seraphim",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Shield of the Seraphim",
@@ -3168,7 +3168,7 @@
                   "label": "Summon Portal",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Summon Portal",
@@ -3185,7 +3185,7 @@
                   "label": "Vapors of Valtorr",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Vapors of Valtorr",
@@ -3202,7 +3202,7 @@
                   "label": "Winds of Watoomb",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"\",\"name\":\"tag\",\"formula\":\".some(x => x === \\\"Sorcerous\\\")\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Magic-Winds of Watoomb",
@@ -3230,7 +3230,7 @@
                   "label": "Always Ready",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"do this all day\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"do this all day\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Always Ready",
@@ -3281,7 +3281,7 @@
                   "label": "Brace For Impact",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"do this all day\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"do this all day\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Brace For Impact",
@@ -3298,7 +3298,7 @@
                   "label": "Chain Strikes",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"fast strikes\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"fast strikes\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Chain Strikes",
@@ -3315,7 +3315,7 @@
                   "label": "Counterstrike Technique",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"attack stance\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"attack stance\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Counterstrike Technique",
@@ -3332,7 +3332,7 @@
                   "label": "Crushing Grip",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Crushing Grip",
@@ -3366,7 +3366,7 @@
                   "label": "Do This All Day",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Do This All Day",
@@ -3400,7 +3400,7 @@
                   "label": "Flying Double Kick",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"leg sweep\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"leg sweep\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Flying Double Kick",
@@ -3417,7 +3417,7 @@
                   "label": "Focused Strike",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"chain strikes\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"chain strikes\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Focused Strike",
@@ -3434,7 +3434,7 @@
                   "label": "Grappling Technique",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Grappling Technique",
@@ -3451,7 +3451,7 @@
                   "label": "Leaping Leglock",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"flying double kick\",\"formula\":\"=== true\"},{\"type\":\"powers\",\"name\":\"crushing grip\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"flying double kick\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"crushing grip\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Leaping Leglock",
@@ -3468,7 +3468,7 @@
                   "label": "Leg Sweep",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"fast strikes\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"fast strikes\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Leg Sweep",
@@ -3485,7 +3485,7 @@
                   "label": "Regain Focus",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"unflappable poise\",\"formula\":\"=== true\"},{\"type\":\"powers\",\"name\":\"untouchable position\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"unflappable poise\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"untouchable position\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Regain Focus",
@@ -3502,7 +3502,7 @@
                   "label": "Reverse-Momentum Throw",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"defense stance\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"defense stance\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Reverse-Momentum Throw",
@@ -3519,7 +3519,7 @@
                   "label": "Spin and Throw",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"defense stance\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"defense stance\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Spin and Throw",
@@ -3536,7 +3536,7 @@
                   "label": "Unflappable Poise",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"defense stance\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"defense stance\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Unflappable Poise",
@@ -3553,7 +3553,7 @@
                   "label": "Untouchable Position",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"counterstrike technique\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"counterstrike technique\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Martial Arts-Untouchable Position",
@@ -3581,7 +3581,7 @@
                   "label": "Exploit",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"vicious attack\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"vicious attack\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Melee Weapons-Exploit",
@@ -3632,7 +3632,7 @@
                   "label": "Furious Attacks",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"whirling frenzy\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"whirling frenzy\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Melee Weapons-Furious Attacks",
@@ -3683,7 +3683,7 @@
                   "label": "Unstoppable Assault",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"furious attacks\",\"formula\":\"=== true\"},{\"type\":\"powers\",\"name\":\"focused fury\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"furious attacks\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"focused fury\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Melee Weapons-Unstoppable Assault",
@@ -3717,7 +3717,7 @@
                   "label": "Whirling Frenzy",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"fast attacks\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"fast attacks\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Melee Weapons-Whirling Frenzy",
@@ -3745,7 +3745,7 @@
                   "label": "Dimensional Portal",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"dimensional travel together\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"dimensional travel together\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Dimensional Portal",
@@ -3762,7 +3762,7 @@
                   "label": "Dimensional Travel",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Dimensional Travel",
@@ -3779,7 +3779,7 @@
                   "label": "Dimensional Travel Other",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"dimensional travel\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"dimensional travel\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Dimensional Travel Other",
@@ -3796,7 +3796,7 @@
                   "label": "Dimensional Travel Together",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"dimensional travel\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"dimensional travel\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Dimensional Travel Together",
@@ -3813,7 +3813,7 @@
                   "label": "Instant Replay",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Instant Replay",
@@ -3830,7 +3830,7 @@
                   "label": "Multiversal Portal",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"multiversal travel together\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"multiversal travel together\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Multiversal Portal",
@@ -3847,7 +3847,7 @@
                   "label": "Multiversal Travel",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Multiversal Travel",
@@ -3864,7 +3864,7 @@
                   "label": "Multiversal Travel Other",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"multiversal travel\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"multiversal travel\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Multiversal Travel Other",
@@ -3881,7 +3881,7 @@
                   "label": "Multiversal Travel Together",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"multiversal travel\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"multiversal travel\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Multiversal Travel Together",
@@ -3898,7 +3898,7 @@
                   "label": "Time Portal",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"time travel together\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"time travel together\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Time Portal",
@@ -3915,7 +3915,7 @@
                   "label": "Time Travel",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Time Travel",
@@ -3932,7 +3932,7 @@
                   "label": "Time Travel Other",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"time travel\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"time travel\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Time Travel Other",
@@ -3949,7 +3949,7 @@
                   "label": "Time Travel Together",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"time travel\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"time travel\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Time Travel Together",
@@ -3966,7 +3966,7 @@
                   "label": "Time-Out",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"instant replay\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"instant replay\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Time-Out",
@@ -3983,7 +3983,7 @@
                   "label": "Time-Out Bubble",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"time-out\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"time-out\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Time-Out Bubble",
@@ -4000,7 +4000,7 @@
                   "label": "Time-Out Tag",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"time-out\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"time-out\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Omniversal Travel-Time-Out Tag",
@@ -4028,7 +4028,7 @@
                   "label": "Disrupt Electronics",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"phase self\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"phase self\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Phasing-Disrupt Electronics",
@@ -4045,7 +4045,7 @@
                   "label": "Disrupt Nerves",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"phase self\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"phase self\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Phasing-Disrupt Nerves",
@@ -4062,7 +4062,7 @@
                   "label": "Disrupt Person",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"phase self\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"phase self\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Phasing-Disrupt Person",
@@ -4079,7 +4079,7 @@
                   "label": "Partial Phase",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"phase self\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"phase self\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Phasing-Partial Phase",
@@ -4096,7 +4096,7 @@
                   "label": "Phase Object",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"phase self\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"phase self\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Phasing-Phase Object",
@@ -4113,7 +4113,7 @@
                   "label": "Phase Other",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"phase self\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"phase self\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Phasing-Phase Other",
@@ -4147,7 +4147,7 @@
                   "label": "Phase Walk",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"phase self\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"phase self\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Phasing-Phase Walk",
@@ -4164,7 +4164,7 @@
                   "label": "Quick Phase",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"phase self\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"phase self\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Phasing-Quick Phase",
@@ -4192,7 +4192,7 @@
                   "label": "Body Sheet",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"flexible bones 2\",\"formula\":\"=== true\"},{\"type\":\"powers\",\"name\":\"extended reach 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"flexible bones 2\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"extended reach 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Body Sheet",
@@ -4209,7 +4209,7 @@
                   "label": "Body Sphere",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"body sheet\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"body sheet\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Body Sphere",
@@ -4226,7 +4226,7 @@
                   "label": "Bounce Back",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"flexible bones 1\",\"formula\":\"=== true\"},{\"type\":\"powers\",\"name\":\"slip free\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"flexible bones 1\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"slip free\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Bounce Back",
@@ -4243,7 +4243,7 @@
                   "label": "Coiling Crush",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"extended reach 1\",\"formula\":\"=== true\"},{\"type\":\"powers\",\"name\":\"reverse punch\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"extended reach 1\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"reverse punch\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Coiling Crush",
@@ -4277,7 +4277,7 @@
                   "label": "Extended Reach 2",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"extended reach 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"extended reach 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Extended Reach 2",
@@ -4311,7 +4311,7 @@
                   "label": "Flexible Bones 2",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"flexible bones 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"flexible bones 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Flexible Bones 2",
@@ -4345,7 +4345,7 @@
                   "label": "Reverse Punch",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"flexible bones 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"flexible bones 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Reverse Punch",
@@ -4362,7 +4362,7 @@
                   "label": "Rubberneck",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"extended reach 1\",\"formula\":\"=== true\"},{\"type\":\"powers\",\"name\":\"flexible bones 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"extended reach 1\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"flexible bones 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Rubberneck",
@@ -4396,7 +4396,7 @@
                   "label": "Stilt Steps",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"extended reach 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"extended reach 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Plasticity-Stilt Steps",
@@ -4424,7 +4424,7 @@
                   "label": "Boost Powers",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"bump power\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"bump power\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Power Control-Boost Powers",
@@ -4441,7 +4441,7 @@
                   "label": "Bump Power",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Power Control-Bump Power",
@@ -4458,7 +4458,7 @@
                   "label": "Clone Moves",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Power Control-Clone Moves",
@@ -4475,7 +4475,7 @@
                   "label": "Clone Powers",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"copy power\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"copy power\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Power Control-Clone Powers",
@@ -4509,7 +4509,7 @@
                   "label": "Copy Power",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Power Control-Copy Power",
@@ -4560,7 +4560,7 @@
                   "label": "Shutdown Powers",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"dampen power\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"dampen power\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Power Control-Shutdown Powers",
@@ -4577,7 +4577,7 @@
                   "label": "Steal Powers",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"clone powers\",\"formula\":\"=== true\"},{\"type\":\"powers\",\"name\":\"shutdown powers\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"clone powers\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"shutdown powers\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Power Control-Steal Powers",
@@ -4594,7 +4594,7 @@
                   "label": "Swipe Power",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"copy power\",\"formula\":\"=== true\"},{\"type\":\"powers\",\"name\":\"dampen power\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"copy power\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"dampen power\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Power Control-Swipe Power",
@@ -4622,7 +4622,7 @@
                   "label": "Covering Fire",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"return fire\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"return fire\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Covering Fire",
@@ -4639,7 +4639,7 @@
                   "label": "Dance of Death",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"slow-motion shoot dodge\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"slow-motion shoot dodge\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Dance of Death",
@@ -4673,7 +4673,7 @@
                   "label": "Fast Hands",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"point-blank parry\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"point-blank parry\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Fast Hands",
@@ -4690,7 +4690,7 @@
                   "label": "Headshot",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"stopping power\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"stopping power\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Headshot",
@@ -4707,7 +4707,7 @@
                   "label": "Kill Zone",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"covering fire\",\"formula\":\"=== true\"},{\"type\":\"powers\",\"name\":\"headshot\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"covering fire\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"headshot\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Kill Zone",
@@ -4724,7 +4724,7 @@
                   "label": "Orchestra of Overkill",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"dance of death\",\"formula\":\"=== true\"},{\"type\":\"powers\",\"name\":\"fast hands\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"dance of death\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"fast hands\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Orchestra of Overkill",
@@ -4741,7 +4741,7 @@
                   "label": "Point-Blank Parry",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Point-Blank Parry",
@@ -4758,7 +4758,7 @@
                   "label": "Return Fire",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"suppressive fire\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"suppressive fire\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Return Fire",
@@ -4775,7 +4775,7 @@
                   "label": "Slow-Motion Shoot Dodge",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"slow-motion dodge\",\"formula\":\"=== true\"},{\"type\":\"powers\",\"name\":\"weapons blazing\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"slow-motion dodge\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"weapons blazing\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Slow-Motion Shoot Dodge",
@@ -4809,7 +4809,7 @@
                   "label": "Sniping",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Sniping",
@@ -4826,7 +4826,7 @@
                   "label": "Stopping Power",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"double tap\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"double tap\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Stopping Power",
@@ -4860,7 +4860,7 @@
                   "label": "Weapons Blazing",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"snap shooting\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"snap shooting\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Ranged Weapons-Weapons Blazing",
@@ -4905,7 +4905,7 @@
                   "label": "Grow 2",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"grow 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"grow 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Grow 2",
@@ -4922,7 +4922,7 @@
                   "label": "Grow 3",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"grow 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"grow 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Grow 3",
@@ -4939,7 +4939,7 @@
                   "label": "Grow 4",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"grow 3\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"grow 3\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Grow 4",
@@ -4956,7 +4956,7 @@
                   "label": "Growing Attack",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"grow 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"grow 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Growing Attack",
@@ -4973,7 +4973,7 @@
                   "label": "Macrodimensional Travel",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"grow 4\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"grow 4\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Macrodimensional Travel",
@@ -4990,7 +4990,7 @@
                   "label": "Microdimensional Travel",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"shrink 4\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"shrink 4\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Microdimensional Travel",
@@ -5007,7 +5007,7 @@
                   "label": "Resize Object",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"grow 2\",\"formula\":\"=== true\"},{\"type\":\"powers\",\"name\":\"shrink 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"grow 2\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"shrink 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Resize Object",
@@ -5024,7 +5024,7 @@
                   "label": "Resize Other",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"grow 2\",\"formula\":\"=== true\"},{\"type\":\"powers\",\"name\":\"shrink 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"grow 2\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"shrink 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Resize Other",
@@ -5058,7 +5058,7 @@
                   "label": "Shrink 2",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"shrink 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"shrink 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Shrink 2",
@@ -5075,7 +5075,7 @@
                   "label": "Shrink 3",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"shrink 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"shrink 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Shrink 3",
@@ -5092,7 +5092,7 @@
                   "label": "Shrink 4",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"shrink 3\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"shrink 3\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Shrink 4",
@@ -5109,7 +5109,7 @@
                   "label": "Shrinking Dodge",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"shrink 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"shrink 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Resize-Shrinking Dodge",
@@ -5137,7 +5137,7 @@
                   "label": "Brace For Impact",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"do this all day\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"do this all day\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Brace For Impact",
@@ -5154,7 +5154,7 @@
                   "label": "Do This All Day",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Do This All Day",
@@ -5171,7 +5171,7 @@
                   "label": "Hurled Shield Bash",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"shield bash\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"shield bash\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Hurled Shield Bash",
@@ -5188,7 +5188,7 @@
                   "label": "Hurled Shield Block",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"shield 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"shield 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Hurled Shield Block",
@@ -5205,7 +5205,7 @@
                   "label": "Hurled Shield Deflection",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"shield deflection\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"shield deflection\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Hurled Shield Deflection",
@@ -5239,7 +5239,7 @@
                   "label": "Rico-Shield",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"hurled shield bash\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"hurled shield bash\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Rico-Shield",
@@ -5273,7 +5273,7 @@
                   "label": "Shield 2",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"shield 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"shield 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Shield 2",
@@ -5290,7 +5290,7 @@
                   "label": "Shield 3",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"shield 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"shield 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Shield 3",
@@ -5307,7 +5307,7 @@
                   "label": "Shield 4",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=6\"},{\"type\":\"powers\",\"name\":\"shield 3\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=6\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"shield 3\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Shield 4",
@@ -5358,7 +5358,7 @@
                   "label": "Shield Wall",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"brace for impact\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"brace for impact\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Shield Bearer-Shield Wall",
@@ -5386,7 +5386,7 @@
                   "label": "Jump 1",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Jump 1",
@@ -5403,7 +5403,7 @@
                   "label": "Jump 2",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"jump 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"jump 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Jump 2",
@@ -5420,7 +5420,7 @@
                   "label": "Jump 3",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"jump 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"jump 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Jump 3",
@@ -5556,7 +5556,7 @@
                   "label": "Webgliding",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"webcasting\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"webcasting\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Webgliding",
@@ -5573,7 +5573,7 @@
                   "label": "Webgrabbing",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"webcasting\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"webcasting\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Webgrabbing",
@@ -5590,7 +5590,7 @@
                   "label": "Webslinging",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"webcasting\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"webcasting\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Webslinging",
@@ -5607,7 +5607,7 @@
                   "label": "Webtrapping",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"webgrabbing\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"webgrabbing\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Spider Powers-Webtrapping",
@@ -5635,7 +5635,7 @@
                   "label": "Blazing-Fast Fists",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Blazing-Fast Fists",
@@ -5652,7 +5652,7 @@
                   "label": "Blur",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"speed run 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"speed run 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Blur",
@@ -5669,7 +5669,7 @@
                   "label": "Catch Bullets",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"speed run 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"speed run 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Catch Bullets",
@@ -5686,7 +5686,7 @@
                   "label": "Lightning Actions",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Lightning Actions",
@@ -5703,7 +5703,7 @@
                   "label": "Molecular Destabilization",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"speed run 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"speed run 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Molecular Destabilization",
@@ -5720,7 +5720,7 @@
                   "label": "Run On Water",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"speed run 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"speed run 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Run On Water",
@@ -5737,7 +5737,7 @@
                   "label": "Speed Blast",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"speed run 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"speed run 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Speed Blast",
@@ -5754,7 +5754,7 @@
                   "label": "Speed Run 1",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Speed Run 1",
@@ -5771,7 +5771,7 @@
                   "label": "Speed Run 2",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"speed run 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"speed run 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Speed Run 2",
@@ -5788,7 +5788,7 @@
                   "label": "Speed Swim",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Super Speed-Speed Swim",
@@ -5833,7 +5833,7 @@
                   "label": "Crushing Grip",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Crushing Grip",
@@ -5867,7 +5867,7 @@
                   "label": "Jump 1",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Jump 1",
@@ -5884,7 +5884,7 @@
                   "label": "Jump 2",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"jump 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"jump 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Jump 2",
@@ -5901,7 +5901,7 @@
                   "label": "Jump 3",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"jump 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"jump 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Jump 3",
@@ -5935,7 +5935,7 @@
                   "label": "Ground-Shaking Stomp",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"smash\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"smash\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Ground-Shaking Stomp",
@@ -5952,7 +5952,7 @@
                   "label": "Quick Toss",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"crushing grip\",\"formula\":\"=== true\"},{\"type\":\"powers\",\"name\":\"mighty 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"crushing grip\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"mighty 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Quick Toss",
@@ -5969,7 +5969,7 @@
                   "label": "Smash",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"clobber\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"clobber\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Smash",
@@ -5986,7 +5986,7 @@
                   "label": "Unrelenting Smash",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"ground-shaking stomp\",\"formula\":\"=== true\"},{\"type\":\"powers\",\"name\":\"mighty 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"ground-shaking stomp\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"mighty 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Super Strength-Unrelenting Smash",
@@ -6014,7 +6014,7 @@
                   "label": "Advance",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"rally on me\",\"formula\":\"=== true\"},{\"type\":\"powers\",\"name\":\"scatter\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"rally on me\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"scatter\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-Advance",
@@ -6031,7 +6031,7 @@
                   "label": "Battle Plan",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"inspiration\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"inspiration\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-Battle Plan",
@@ -6048,7 +6048,7 @@
                   "label": "Change of Plans",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"inspiration\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"inspiration\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-Change of Plans",
@@ -6065,7 +6065,7 @@
                   "label": "Combat Support",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"change of plans\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"change of plans\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-Combat Support",
@@ -6082,7 +6082,7 @@
                   "label": "Focus Fire",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"battle plan\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"battle plan\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-Focus Fire",
@@ -6099,7 +6099,7 @@
                   "label": "Hit the Dirt",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"keep moving\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"keep moving\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-Hit the Dirt",
@@ -6133,7 +6133,7 @@
                   "label": "On Your Feet",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"keep moving\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"keep moving\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-On Your Feet",
@@ -6150,7 +6150,7 @@
                   "label": "Operations Center",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"combat support\",\"formula\":\"=== true\"},{\"type\":\"powers\",\"name\":\"focus fire\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"combat support\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"focus fire\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-Operations Center",
@@ -6167,7 +6167,7 @@
                   "label": "Rally On Me",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"on your feet\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"on your feet\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-Rally On Me",
@@ -6184,7 +6184,7 @@
                   "label": "Scatter",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"hit the dirt\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"hit the dirt\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Tactics-Scatter",
@@ -6212,7 +6212,7 @@
                   "label": "Group Levitation",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"levitation\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"levitation\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Group Levitation",
@@ -6246,7 +6246,7 @@
                   "label": "Telekinetic Attack",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"telekinetic manipulation\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"telekinetic manipulation\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Attack",
@@ -6263,7 +6263,7 @@
                   "label": "Telekinetic Barrier",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"telekinetic grab\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"telekinetic grab\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Barrier",
@@ -6280,7 +6280,7 @@
                   "label": "Telekinetic Crush",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"telekinetic grab\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"telekinetic grab\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Crush",
@@ -6297,7 +6297,7 @@
                   "label": "Telekinetic Grab",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"telekinetic manipulation\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"telekinetic manipulation\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Grab",
@@ -6331,7 +6331,7 @@
                   "label": "Telekinetic Protection 1",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"telekinetic barrier\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"telekinetic barrier\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Protection 1",
@@ -6348,7 +6348,7 @@
                   "label": "Telekinetic Protection 2",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"telekinetic protection 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"telekinetic protection 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Protection 2",
@@ -6365,7 +6365,7 @@
                   "label": "Telekinetic Protection 3",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"telekinetic protection 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"telekinetic protection 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Protection 3",
@@ -6382,7 +6382,7 @@
                   "label": "Telekinetic Protection 4",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=5\"},{\"type\":\"powers\",\"name\":\"telekinetic protection 3\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=5\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"telekinetic protection 3\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Protection 4",
@@ -6399,7 +6399,7 @@
                   "label": "Telekinetic Reinforcement",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"telekinetic protection 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"telekinetic protection 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Reinforcement",
@@ -6416,7 +6416,7 @@
                   "label": "Telekinetic Sphere",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"telekinetic protection 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"telekinetic protection 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Sphere",
@@ -6433,7 +6433,7 @@
                   "label": "Telekinetic Toss",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"telekinetic grab\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"telekinetic grab\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telekinesis-Telekinetic Toss",
@@ -6495,7 +6495,7 @@
                   "label": "Astral Form",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Astral Form",
@@ -6512,7 +6512,7 @@
                   "label": "Borrow Senses",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Borrow Senses",
@@ -6529,7 +6529,7 @@
                   "label": "Cloak",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Cloak",
@@ -6546,7 +6546,7 @@
                   "label": "Cloak Group",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"cloak\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"cloak\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Cloak Group",
@@ -6563,7 +6563,7 @@
                   "label": "Command",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Command",
@@ -6580,7 +6580,7 @@
                   "label": "Domination",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=5\"},{\"type\":\"powers\",\"name\":\"orders\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=5\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"orders\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Domination",
@@ -6597,7 +6597,7 @@
                   "label": "Edit Memory",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"memory blip\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"memory blip\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Edit Memory",
@@ -6631,7 +6631,7 @@
                   "label": "Fool",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Fool",
@@ -6648,7 +6648,7 @@
                   "label": "Grand Fool",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"fool\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"fool\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Grand Fool",
@@ -6665,7 +6665,7 @@
                   "label": "Grand Mirage",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"mirage\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"mirage\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Grand Mirage",
@@ -6682,7 +6682,7 @@
                   "label": "Information Upload",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Information Upload",
@@ -6716,7 +6716,7 @@
                   "label": "Memory Blip",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Memory Blip",
@@ -6750,7 +6750,7 @@
                   "label": "Mental Shelter",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"uncanny 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"uncanny 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Mental Shelter",
@@ -6767,7 +6767,7 @@
                   "label": "Mind Interrogation",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"mind reading\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"mind reading\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Mind Interrogation",
@@ -6784,7 +6784,7 @@
                   "label": "Mind Reading",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Mind Reading",
@@ -6801,7 +6801,7 @@
                   "label": "Mirage",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Mirage",
@@ -6818,7 +6818,7 @@
                   "label": "Orders",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"command\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"command\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Orders",
@@ -6835,7 +6835,7 @@
                   "label": "Telepathic Blast",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Telepathic Blast",
@@ -6869,7 +6869,7 @@
                   "label": "Telepathic Network",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"telepathic link\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Telepathic Network",
@@ -6886,7 +6886,7 @@
                   "label": "Telepathic Possession",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=5\"},{\"type\":\"powers\",\"name\":\"orders\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=5\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"orders\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Telepathy-Telepathic Possession",
@@ -6931,7 +6931,7 @@
                   "label": "Blink Barrage",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"},{\"type\":\"powers\",\"name\":\"blink\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"blink\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Blink Barrage",
@@ -6948,7 +6948,7 @@
                   "label": "Blink Defense",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"blink\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"blink\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Blink Defense",
@@ -6965,7 +6965,7 @@
                   "label": "Teleport 1",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"blink\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"blink\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Teleport 1",
@@ -6982,7 +6982,7 @@
                   "label": "Teleport 2",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"teleport 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"powers\",\"name\":\"teleport 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Teleport 2",
@@ -6999,7 +6999,7 @@
                   "label": "Teleport Blind",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"teleport 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"teleport 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Teleport Blind",
@@ -7016,7 +7016,7 @@
                   "label": "Teleport Object",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"teleport 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"teleport 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Teleport Object",
@@ -7033,7 +7033,7 @@
                   "label": "Teleport Other",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"teleport 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"teleport 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Teleport Other",
@@ -7050,7 +7050,7 @@
                   "label": "Teleport Together",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"teleport 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"teleport 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Teleport Together",
@@ -7067,7 +7067,7 @@
                   "label": "Teleportal",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"teleport 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"teleport 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Teleportation-Teleportal",
@@ -7112,7 +7112,7 @@
                   "label": "Control Weather 1",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Weather Control-Control Weather 1",
@@ -7129,7 +7129,7 @@
                   "label": "Control Weather 2",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\"},{\"type\":\"powers\",\"name\":\"control weather 1\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"control weather 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Weather Control-Control Weather 2",
@@ -7146,7 +7146,7 @@
                   "label": "Control Weather 3",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\"},{\"type\":\"powers\",\"name\":\"control weather 2\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"control weather 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Weather Control-Control Weather 3",
@@ -7163,7 +7163,7 @@
                   "label": "Control Weather 4",
                   "type": "switch",
                   "bonusAdjustments": "null",
-                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=5\"},{\"type\":\"powers\",\"name\":\"control weather 3\",\"formula\":\"=== true\"}]"
+                  "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=5\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"control weather 3\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
                   "name": "info-power-Weather Control-Control Weather 4",

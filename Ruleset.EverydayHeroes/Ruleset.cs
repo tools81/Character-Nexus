@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace EverydayHeroes
 {
@@ -86,12 +87,26 @@ namespace EverydayHeroes
 
         public ICharacter? SaveCharacter(string data)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var character = JsonConvert.DeserializeObject<Character>(data, new CharacterJsonConverter());
+                return character;
+            }
+            catch (JsonException ex)
+            {
+                Console.WriteLine($"Error parsing Json on save character: {ex.Message}");
+                return null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving character: {ex.Message}");
+                return null;
+            }
         }
 
         public string LoadCharacter(ICharacter character)
         {
-            throw new NotImplementedException();
+            return JsonConvert.SerializeObject(character, new CharacterJsonConverter());
         }
 
         public bool DeleteCharacter(string id)

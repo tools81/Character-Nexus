@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVELLER — Imperial Personnel Bureau Character Dossier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Roboto+Mono:wght@400;600;700&family=Michroma&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --imperial-red:   #CC0000;
+            --red-dark:       #880000;
+            --navy-grey:      #4A5568;
+            --grey-dark:      #2D3748;
+            --grey-light:     #718096;
+            --form-white:     #F7FAFC;
+            --form-grey:      #EDF2F7;
+            --terminal-amber: #FFB366;
+            --terminal-green: #00FF41;
+            --black:          #1A202C;
+            --ink:            #2D3748;
+            --border:         #CBD5E0;
+            --shadow:         rgba(0,0,0,0.2);
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Rajdhani', sans-serif;
+            background: var(--grey-dark);
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 50px,
+                    rgba(0,0,0,0.05) 50px,
+                    rgba(0,0,0,0.05) 100px
+                );
+            color: var(--ink);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* Hexagonal grid background pattern */
+        .instr-container body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                repeating-linear-gradient(
+                    60deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(255,255,255,0.02) 40px,
+                    rgba(255,255,255,0.02) 41px
+                ),
+                repeating-linear-gradient(
+                    -60deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(255,255,255,0.02) 40px,
+                    rgba(255,255,255,0.02) 41px
+                );
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ── CONTAINER (Official Document) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--form-white);
+            border: 3px solid var(--navy-grey);
+            box-shadow:
+                0 0 0 1px var(--border),
+                0 20px 60px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+            animation: materialize 0.8s ease-out;
+        }
+
+        @keyframes materialize {
+            from { opacity: 0; transform: scale(0.98); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+
+        /* Official stamps */
+        .instr-container .stamp {
+            position: absolute;
+            font-family: 'Michroma', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.5rem 1rem;
+            border: 3px solid var(--imperial-red);
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--imperial-red);
+            opacity: 0.15;
+            transform: rotate(-15deg);
+            z-index: 10;
+        }
+
+        .instr-container .stamp.top-right { top: 3rem; right: 2rem; }
+        .instr-container .stamp.bottom-left { bottom: 3rem; left: 2rem; transform: rotate(12deg); }
+
+        /* Hexagonal corner markers */
+        .instr-container .hex-marker {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: var(--navy-grey);
+            clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
+            opacity: 0.3;
+        }
+
+        .instr-container .hex-marker.tl { top: -15px; left: -15px; }
+        .instr-container .hex-marker.tr { top: -15px; right: -15px; }
+        .instr-container .hex-marker.bl { bottom: -15px; left: -15px; }
+        .instr-container .hex-marker.br { bottom: -15px; right: -15px; }
+
+        /* ── HEADER BAR ── */
+        .instr-container .header-bar {
+            background: var(--imperial-red);
+            padding: 0.8rem 2rem;
+            border-bottom: 3px solid var(--red-dark);
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .instr-container .bureau-code {
+            font-family: 'Michroma', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--form-white);
+        }
+
+        .instr-container .header-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--form-white);
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .instr-container .doc-number {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--form-white);
+        }
+
+        /* ── HEADER SECTION ── */
+        .instr-container header {
+            padding: 2rem 2.5rem;
+            background: var(--form-grey);
+            border-bottom: 3px solid var(--navy-grey);
+            position: relative;
+        }
+
+        /* Imperial starburst watermark */
+        .instr-container header::before {
+            content: '✦';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18rem;
+            color: var(--navy-grey);
+            opacity: 0.03;
+            pointer-events: none;
+        }
+
+        .instr-container .classification {
+            font-family: 'Michroma', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            color: var(--imperial-red);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: inline-block;
+            border: 2px solid var(--imperial-red);
+            padding: 0.3rem 0.8rem;
+        }
+
+        .instr-container h1 {
+            font-family: 'Michroma', sans-serif;
+            font-size: 3.5rem;
+            line-height: 1;
+            font-weight: 700;
+            color: var(--black);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container h1 .traveller {
+            color: var(--imperial-red);
+        }
+
+        .instr-container .edition {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            color: var(--grey-light);
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+        }
+
+        .instr-container .form-meta {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: var(--form-white);
+            border: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.4rem 1.5rem;
+            font-size: 0.75rem;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .instr-container .meta-label { color: var(--grey-light); font-weight: 600; }
+        .instr-container .meta-value { color: var(--ink); }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2rem 2.5rem;
+            background: var(--form-white);
+        }
+
+        /* Grid pattern sidebar */
+        .instr-container .grid-pattern {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 30px;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 10px,
+                    var(--border) 10px,
+                    var(--border) 11px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 10px,
+                    var(--border) 10px,
+                    var(--border) 11px
+                );
+            opacity: 0.3;
+        }
+
+        /* ── BRIEFING BOX ── */
+        .instr-container .briefing {
+            background: var(--form-grey);
+            border: 2px solid var(--navy-grey);
+            border-left: 5px solid var(--imperial-red);
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 2.5rem;
+            font-size: 1rem;
+            line-height: 1.9;
+            position: relative;
+        }
+
+        .instr-container .briefing::before {
+            content: '[ PERSONNEL BRIEFING — CHARACTER GENERATION PROCEDURES ]';
+            position: absolute;
+            top: -0.7rem;
+            left: 1.5rem;
+            background: var(--form-grey);
+            padding: 0 0.5rem;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--imperial-red);
+            text-transform: uppercase;
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Michroma', sans-serif;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--black);
+            margin: 2.75rem 0 1.25rem;
+            padding: 0.8rem 1.25rem;
+            background: var(--navy-grey);
+            color: var(--form-white);
+            border-left: 6px solid var(--imperial-red);
+            position: relative;
+            animation: slideIn 0.4s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.06s);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: attr(data-step);
+            position: absolute;
+            left: -3.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--imperial-red);
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+
+        .instr-container h3 {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--navy-grey);
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .instr-container p {
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            color: var(--ink);
+        }
+
+        .instr-container ul, .instr-container ol { margin: 0.75rem 0 1.25rem 1.5rem; }
+        .instr-container li {
+            font-size: 0.98rem;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { color: var(--imperial-red); font-weight: 700; }
+        .instr-container em     { color: var(--navy-grey); font-style: normal; font-weight: 600; }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.5rem 0;
+            height: 2px;
+            background: var(--border);
+            position: relative;
+        }
+
+        .instr-container .divider::before {
+            content: '⬢';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--form-white);
+            padding: 0 0.75rem;
+            font-size: 1.2rem;
+            color: var(--imperial-red);
+        }
+
+        /* ── NOTICE BOX ── */
+        .instr-container .notice {
+            background: rgba(204,0,0,0.05);
+            border: 2px solid var(--imperial-red);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.85;
+        }
+
+        .instr-container .notice-label {
+            font-family: 'Michroma', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--imperial-red);
+            display: block;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+        }
+
+        /* ── FORM FIELD ── */
+        .instr-container .form-field {
+            background: var(--form-white);
+            border: 1px solid var(--border);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            position: relative;
+        }
+
+        .instr-container .form-field::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -0.65rem;
+            left: 1rem;
+            background: var(--form-white);
+            padding: 0 0.5rem;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: var(--grey-light);
+            text-transform: uppercase;
+        }
+
+        /* ── CAREER CARDS ── */
+        .instr-container .career-grid {
+            display: grid;
+            gap: 0.75rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .career-card {
+            background: var(--form-grey);
+            border: 2px solid var(--navy-grey);
+            border-left: 4px solid var(--imperial-red);
+            padding: 1.25rem 1.5rem;
+            position: relative;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .instr-container .career-card:hover {
+            border-color: var(--imperial-red);
+            box-shadow: 4px 4px 0 var(--shadow);
+        }
+
+        .instr-container .career-code {
+            position: absolute;
+            top: -0.7rem;
+            right: 1.5rem;
+            background: var(--navy-grey);
+            color: var(--form-white);
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            padding: 0.3rem 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .instr-container .career-name {
+            font-family: 'Michroma', sans-serif;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--black);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .career-desc {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: var(--ink);
+            margin-bottom: 0.75rem;
+        }
+
+        .instr-container .career-qual {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--grey-light);
+            border-top: 1px solid var(--border);
+            padding-top: 0.5rem;
+        }
+
+        /* ── CHARACTERISTICS TABLE ── */
+        .instr-container .char-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.6rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .char-card {
+            background: var(--form-grey);
+            border: 2px solid var(--navy-grey);
+            border-top: 3px solid var(--imperial-red);
+            padding: 0.85rem 0.75rem;
+            text-align: center;
+        }
+
+        .instr-container .char-abbr {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--imperial-red);
+            margin-bottom: 0.2rem;
+        }
+
+        .instr-container .char-name {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--black);
+            margin-bottom: 0.3rem;
+        }
+
+        .instr-container .char-roll {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--grey-light);
+        }
+
+        /* ── SKILL TABLE ── */
+        .instr-container .skill-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: 0.9rem;
+            background: var(--form-white);
+            border: 1px solid var(--border);
+        }
+
+        .instr-container .skill-table th {
+            background: var(--navy-grey);
+            color: var(--form-white);
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.6rem 0.9rem;
+            text-align: left;
+            font-size: 0.85rem;
+            border: 1px solid var(--grey-dark);
+        }
+
+        .instr-container .skill-table td {
+            padding: 0.55rem 0.9rem;
+            border: 1px solid var(--border);
+            color: var(--ink);
+            vertical-align: top;
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+
+        .instr-container .skill-table tr:hover td { background: var(--form-grey); }
+
+        /* ── TERM BOX ── */
+        .instr-container .term-box {
+            background: var(--navy-grey);
+            color: var(--form-white);
+            border: 3px solid var(--grey-dark);
+            padding: 1.75rem 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .instr-container .term-title {
+            font-family: 'Michroma', sans-serif;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.75rem;
+        }
+
+        .instr-container .term-years {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.2rem;
+            margin: 0.75rem 0;
+            color: var(--terminal-amber);
+        }
+
+        .instr-container .term-desc {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-top: 0.75rem;
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--form-grey);
+            padding: 2rem 2.5rem;
+            border-top: 3px solid var(--navy-grey);
+            text-align: center;
+        }
+
+        .instr-container .footer-motto {
+            font-family: 'Michroma', sans-serif;
+            font-size: 1.4rem;
+            color: var(--navy-grey);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.75rem;
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            color: var(--grey-light);
+            text-transform: uppercase;
+        }
+
+        .instr-container footer::before {
+            content: '⬢ ⬢ ⬢';
+            display: block;
+            font-size: 1.2rem;
+            color: var(--imperial-red);
+            letter-spacing: 1em;
+            margin-bottom: 1.25rem;
+        }
+
+        /* Bottom bar */
+        .instr-container .bottom-bar {
+            background: var(--imperial-red);
+            padding: 0.6rem 2rem;
+            border-top: 3px solid var(--red-dark);
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--form-white);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.5rem; }
+            h2::before { display: none; }
+            .instr-container .char-grid { grid-template-columns: repeat(2, 1fr); }
+            .instr-container .career-card { padding: 1rem; }
+            .instr-container .content { padding: 1.75rem 1.5rem; }
+            header { padding: 1.75rem 1.5rem; }
+            .instr-container .grid-pattern { display: none; }
+            .instr-container .header-bar { grid-template-columns: 1fr; text-align: center; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+        <div class="stamp top-right">APPROVED</div>
+        <div class="stamp bottom-left">VERIFIED</div>
+        <div class="hex-marker tl"></div>
+        <div class="hex-marker tr"></div>
+        <div class="hex-marker bl"></div>
+        <div class="hex-marker br"></div>
+
+        <!-- HEADER BAR -->
+        <div class="header-bar">
+            <div class="bureau-code">IPB-3I</div>
+            <div class="header-title">Third Imperium Personnel Bureau</div>
+            <div class="doc-number">FORM-CG-001</div>
+        </div>
+
+        <!-- HEADER -->
+        <header>
+            <div class="classification">⬢ OFFICIAL PERSONNEL RECORD</div>
+            <h1>
+                <span class="traveller">TRAVELLER</span>
+            </h1>
+            <div class="edition">Mongoose Publishing — Second Edition</div>
+            <div class="form-meta">
+                <span class="meta-label">System:</span>
+                <span class="meta-value">2D6 + Modifiers (Roll High)</span>
+                <span class="meta-label">Publisher:</span>
+                <span class="meta-value">Mongoose Publishing</span>
+                <span class="meta-label">Setting:</span>
+                <span class="meta-value">Third Imperium / OTU / Hard Science Fiction</span>
+                <span class="meta-label">Era:</span>
+                <span class="meta-value">Year 1105 Imperial Calendar</span>
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+            <div class="grid-pattern"></div>
+
+            <div class="briefing">
+                You are a <strong>traveller</strong> — spacer, trader, mercenary, scout, or drifter navigating the vast expanse between the stars. The Third Imperium spans thousands of worlds connected by jump drives. You've survived your career (or careers), accumulated skills, and maybe a few scars. Character creation simulates your life before the game begins. <em>Warning:</em> Your character can die during generation. Roll poorly, make bad choices, and you'll be rolling up a new character. That's Traveller.
+            </div>
+
+            <!-- STEP 1: CHARACTERISTICS -->
+            <h2 data-step="01" style="--i:1;">Roll Characteristics</h2>
+            <p>Every traveller has <strong>six Characteristics</strong>, each rolled with <strong>2D6</strong>. These are physical and mental attributes. Record both the numeric value (2-12) and the hex code (0-F).</p>
+
+            <div class="char-grid">
+                <div class="char-card">
+                    <div class="char-abbr">STR</div>
+                    <div class="char-name">Strength</div>
+                    <div class="char-roll">2D6</div>
+                </div>
+                <div class="char-card">
+                    <div class="char-abbr">DEX</div>
+                    <div class="char-name">Dexterity</div>
+                    <div class="char-roll">2D6</div>
+                </div>
+                <div class="char-card">
+                    <div class="char-abbr">END</div>
+                    <div class="char-name">Endurance</div>
+                    <div class="char-roll">2D6</div>
+                </div>
+                <div class="char-card">
+                    <div class="char-abbr">INT</div>
+                    <div class="char-name">Intelligence</div>
+                    <div class="char-roll">2D6</div>
+                </div>
+                <div class="char-card">
+                    <div class="char-abbr">EDU</div>
+                    <div class="char-name">Education</div>
+                    <div class="char-roll">2D6</div>
+                </div>
+                <div class="char-card">
+                    <div class="char-abbr">SOC</div>
+                    <div class="char-name">Social Standing</div>
+                    <div class="char-roll">2D6</div>
+                </div>
+            </div>
+
+            <div class="form-field" data-label="CHARACTERISTIC DMs">
+                <p style="font-size: 0.95rem; line-height: 1.8; margin-bottom: 0.5rem;">
+                    Each Characteristic provides a <strong>Dice Modifier (DM)</strong> based on its value:
+                </p>
+                <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.8; font-size: 0.9rem; font-family: 'Roboto Mono', monospace;">
+                    <li>0-1: DM-2 // 2: DM-1 // 3-5: DM-1 // 6-8: DM+0</li>
+                    <li>9-11: DM+1 // 12-14: DM+2 // 15+: DM+3</li>
+                </ul>
+                <p style="margin-top: 0.75rem; font-size: 0.88rem; line-height: 1.7;">
+                    These DMs apply to skill checks. High characteristics make you better at related tasks.
+                </p>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: BACKGROUND -->
+            <h2 data-step="02" style="--i:2;">Determine Background</h2>
+            <p>Before your career, you had a <strong>Background</strong>. This grants your first skill. Roll on the Background Skills table or choose based on your homeworld.</p>
+
+            <h3>Common Background Skills</h3>
+            <ul>
+                <li><strong>Admin</strong> — Bureaucracy, record-keeping</li>
+                <li><strong>Art</strong> — Creative expression</li>
+                <li><strong>Athletics</strong> — Physical activity, sports</li>
+                <li><strong>Carouse</strong> — Social drinking, partying, networking</li>
+                <li><strong>Drive</strong> — Operating ground vehicles</li>
+                <li><strong>Science</strong> — Academic knowledge (pick specialty)</li>
+                <li><strong>Streetwise</strong> — Urban survival, black market dealings</li>
+                <li><strong>Survival</strong> — Wilderness survival (pick environment)</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: CAREER -->
+            <h2 data-step="03" style="--i:3;">Choose Your Career</h2>
+            <p>Your <strong>Career</strong> is what you did before becoming a traveller. Each career has qualifications, risks, and benefits. You can attempt multiple careers over your lifetime.</p>
+
+            <div class="career-grid">
+                <div class="career-card">
+                    <div class="career-code">MIL-001</div>
+                    <div class="career-name">Navy</div>
+                    <div class="career-desc">Served aboard starships as crew or officer. Combat operations, exploration, or patrol duty in the Imperial Navy.</div>
+                    <div class="career-qual">Qualification: INT 6+ or EDU 5+ // Survival: INT 5+ // Advancement: EDU 7+</div>
+                </div>
+                <div class="career-card">
+                    <div class="career-code">MIL-002</div>
+                    <div class="career-name">Marines</div>
+                    <div class="career-desc">Shipboard security, boarding actions, planetary assault. The tip of the Imperial spear.</div>
+                    <div class="career-qual">Qualification: END 6+ or STR 5+ // Survival: END 6+ // Advancement: EDU 7+</div>
+                </div>
+                <div class="career-card">
+                    <div class="career-code">MIL-003</div>
+                    <div class="career-name">Army</div>
+                    <div class="career-desc">Ground forces. Infantry, armor, artillery. Defending worlds and fighting planetary wars.</div>
+                    <div class="career-qual">Qualification: END 5+ or STR 6+ // Survival: END 5+ // Advancement: EDU 6+</div>
+                </div>
+                <div class="career-card">
+                    <div class="career-code">EXP-001</div>
+                    <div class="career-name">Scout</div>
+                    <div class="career-desc">Exploration service. Charting new systems, surveying worlds, maintaining communication routes. Dangerous work.</div>
+                    <div class="career-qual">Qualification: INT 5+ // Survival: END 7+ // Advancement: EDU 9+</div>
+                </div>
+                <div class="career-card">
+                    <div class="career-code">COM-001</div>
+                    <div class="career-name">Merchant</div>
+                    <div class="career-desc">Free trader, corporate employee, or ship crew. Moving cargo between the stars for profit.</div>
+                    <div class="career-qual">Qualification: INT 4+ // Survival: EDU 5+ // Advancement: INT 7+</div>
+                </div>
+                <div class="career-card">
+                    <div class="career-code">CIV-001</div>
+                    <div class="career-name">Agent</div>
+                    <div class="career-desc">Law enforcement, intelligence operative, or corporate spy. Careers in investigation and espionage.</div>
+                    <div class="career-qual">Qualification: INT 6+ // Survival: INT 6+ // Advancement: INT 8+</div>
+                </div>
+                <div class="career-card">
+                    <div class="career-code">CIV-002</div>
+                    <div class="career-name">Drifter</div>
+                    <div class="career-desc">Wanderer, barbarian, or scavenger. Life on the margins of society. No qualifications needed — anyone can drift.</div>
+                    <div class="career-qual">Qualification: Automatic // Survival: END 7+ // Advancement: INT 9+</div>
+                </div>
+                <div class="career-card">
+                    <div class="career-code">ENT-001</div>
+                    <div class="career-name">Entertainer</div>
+                    <div class="career-desc">Performer, artist, or athlete. Fame and fortune across the stars (if you're good and lucky).</div>
+                    <div class="career-qual">Qualification: INT 5+ or SOC 8+ // Survival: INT 5+ // Advancement: SOC 6+</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: TERMS -->
+            <h2 data-step="04" style="--i:4;">Serve Terms</h2>
+            <p>Each <strong>Term</strong> is <strong>4 years</strong> of service. During a term, you roll for survival, advancement, skills, and events. You can leave after any term or continue serving.</p>
+
+            <div class="term-box">
+                <div class="term-title">CAREER TERM</div>
+                <div class="term-years">1 TERM = 4 YEARS</div>
+                <div class="term-desc">
+                    Each term ages you by 4 years and may grant skills, rank, and benefits.<br>
+                    Fail a survival roll and you may be injured, killed, or forced out.
+                </div>
+            </div>
+
+            <h3>Term Sequence</h3>
+            <ol>
+                <li><strong>Survival Roll:</strong> Roll 2D6 + DMs. Meet target or face consequences (injury/death table)</li>
+                <li><strong>Skill Check:</strong> Choose a skill table and roll for a skill</li>
+                <li><strong>Event Roll:</strong> Roll on the Events table for your career</li>
+                <li><strong>Advancement Roll:</strong> Roll to increase rank (if eligible)</li>
+                <li><strong>Aging Check:</strong> If 34+ years old, roll on Aging table (characteristics may decline)</li>
+                <li><strong>Re-enlistment Decision:</strong> Continue for another term or muster out?</li>
+            </ol>
+
+            <div class="notice">
+                <span class="notice-label">⬢ WARNING: CHARACTER DEATH</span>
+                <strong>If you fail a survival roll and roll poorly on the injury table, your character dies.</strong> This is intentional. Traveller characters are survivors — they've already beaten the odds just by making it to the game. Start over with a new concept if this happens.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: SKILLS -->
+            <h2 data-step="05" style="--i:5;">Acquire Skills</h2>
+            <p>Skills are learned abilities. You gain skills from Background, Career tables, and service. Skills have levels (0-4+). Higher levels mean greater competence.</p>
+
+            <table class="skill-table">
+                <thead>
+                    <tr>
+                        <th>Skill Category</th>
+                        <th>Example Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Combat</strong></td>
+                        <td>Gun Combat, Melee, Heavy Weapons, Tactics</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Spaceship</strong></td>
+                        <td>Pilot, Engineer, Gunner, Astrogation, Sensors</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Technical</strong></td>
+                        <td>Mechanic, Electronics, Computer, Explosives, Medic</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vehicle</strong></td>
+                        <td>Drive, Flyer, Seafarer (land/air/water vehicles)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Knowledge</strong></td>
+                        <td>Admin, Advocate, Broker, Diplomat, Science</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Physical</strong></td>
+                        <td>Athletics, Stealth, Recon, Survival</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Social</strong></td>
+                        <td>Carouse, Deception, Persuade, Streetwise</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="form-field" data-label="SKILL LEVELS">
+                <ul style="margin: 0 0 0 1.5rem; line-height: 1.9;">
+                    <li><strong>Level 0:</strong> Basic familiarity — you know enough not to hurt yourself</li>
+                    <li><strong>Level 1:</strong> Trained professional</li>
+                    <li><strong>Level 2:</strong> Experienced veteran</li>
+                    <li><strong>Level 3:</strong> Expert</li>
+                    <li><strong>Level 4+:</strong> Master, recognized authority</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: MUSTERING OUT -->
+            <h2 data-step="06" style="--i:6;">Muster Out Benefits</h2>
+            <p>When you leave service, you receive <strong>Benefits</strong> — one roll per term served, plus extra rolls for high rank. Roll on Cash or Material Benefits tables.</p>
+
+            <h3>Cash Benefits</h3>
+            <p>Credits (Cr) for immediate spending. You need money to survive, pay passage, and outfit yourself.</p>
+
+            <h3>Material Benefits</h3>
+            <ul>
+                <li><strong>Weapon:</strong> Military-grade sidearm or rifle</li>
+                <li><strong>Armor:</strong> Combat armor, vacc suit, or protective gear</li>
+                <li><strong>Ship Share:</strong> Partial ownership in a starship (accumulate shares to own one)</li>
+                <li><strong>Scientific Equipment:</strong> Lab, sensors, or specialized tools</li>
+                <li><strong>Contacts:</strong> Useful allies in various fields</li>
+                <li><strong>Passage:</strong> Free high or middle passage tickets</li>
+            </ul>
+
+            <p>The most valuable benefit is <strong>Ship Share</strong>. Accumulate enough and you own a starship — freedom, livelihood, and adventure.</p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: DICE MECHANICS -->
+            <h2 data-step="07" style="--i:7;">Task Resolution System</h2>
+            <p>To attempt a task, roll <strong>2D6 + Skill Level + Characteristic DM</strong>. Compare to target number (usually <strong>8+</strong>).</p>
+
+            <div class="form-field" data-label="DIFFICULTY MODIFIERS">
+                <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.9; font-family: 'Roboto Mono', monospace; font-size: 0.9rem;">
+                    <li>Simple (+6) // Easy (+4) // Routine (+2) // Average (+0)</li>
+                    <li>Difficult (-2) // Very Difficult (-4) // Formidable (-6)</li>
+                </ul>
+            </div>
+
+            <h3>Example Check</h3>
+            <p style="font-size: 0.95rem; line-height: 1.8; font-family: 'Roboto Mono', monospace; background: var(--form-grey); padding: 1rem; margin: 1rem 0;">
+                Repairing ship's jump drive (Mechanic check, Average difficulty):<br>
+                Roll 2D6 + Mechanic 2 + INT DM+1 = 2D6+3 vs. 8+<br>
+                Result: 5+3 = 8. Success!
+            </p>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: AGING -->
+            <h2 data-step="08" style="--i:8;">Handle Aging Effects</h2>
+            <p>At age 34 and every 4 years after, you must roll on the <strong>Aging Table</strong>. Your physical characteristics may decline. This represents the toll of time and hard living.</p>
+
+            <div class="notice">
+                <span class="notice-label">⬢ AGING CRISIS</span>
+                <strong>Aging can cripple your character.</strong> High-term characters are skilled but physically declining. Medical technology (Anagathics) can slow aging for the wealthy. Plan your career length wisely.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: EQUIPMENT -->
+            <h2 data-step="09" style="--i:9;">Acquire Initial Gear</h2>
+            <p>Use your mustered-out cash and benefits to equip yourself. You'll need basics plus career-appropriate gear.</p>
+
+            <h3>Essential Equipment</h3>
+            <ul>
+                <li><strong>Clothing:</strong> Standard or environment-appropriate (Cr 50-200)</li>
+                <li><strong>Comms:</strong> Personal communicator (Cr 50)</li>
+                <li><strong>Survival Gear:</strong> Breather mask, survival kit, tools</li>
+                <li><strong>Weapon:</strong> If legal and you have one from benefits/training</li>
+                <li><strong>Datapad:</strong> Computer access (Cr 100-1000)</li>
+                <li><strong>Passage Tickets:</strong> Transportation between worlds</li>
+            </ul>
+
+            <h3>Career-Specific Gear</h3>
+            <ul>
+                <li><strong>Navy/Marines:</strong> Vacc suit, weapon, rank insignia</li>
+                <li><strong>Scout:</strong> Survey equipment, survival gear, ship (if lucky)</li>
+                <li><strong>Merchant:</strong> Trader software, contacts, cargo manifest</li>
+                <li><strong>Agent:</strong> Investigation tools, credentials, concealed weapon</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: FINALIZE -->
+            <h2 data-step="10" style="--i:10;">Complete Personnel File</h2>
+
+            <h3>Personal Information</h3>
+            <ul>
+                <li><strong>Name:</strong> Full legal name</li>
+                <li><strong>Age:</strong> Calculate from terms served (18 + [Terms × 4])</li>
+                <li><strong>Homeworld:</strong> Where were you born? (affects background)</li>
+                <li><strong>Current Location:</strong> Where does your story begin?</li>
+                <li><strong>Appearance:</strong> Physical description, bearing, style</li>
+            </ul>
+
+            <h3>Service Record</h3>
+            <ul>
+                <li>List all careers served</li>
+                <li>Final rank achieved</li>
+                <li>Notable events or awards</li>
+                <li>Reason for leaving service</li>
+                <li>Contacts made during career</li>
+            </ul>
+
+            <h3>Current Status</h3>
+            <ul>
+                <li><strong>Why are you travelling?</strong> Seeking work? Running from something? Exploring?</li>
+                <li><strong>What do you want?</strong> Wealth? Adventure? Redemption? Home?</li>
+                <li><strong>What do you need?</strong> Ship passage? Crew? Patron? Credits?</li>
+                <li><strong>Who knows you?</strong> Allies, enemies, former comrades?</li>
+            </ul>
+
+            <div class="form-field" data-label="TRAVELLER ID CODE" style="border: 2px solid var(--imperial-red); margin-top: 2rem;">
+                <p style="font-family: 'Roboto Mono', monospace; font-size: 0.95rem; line-height: 2; margin-bottom: 1rem;">
+                    <strong>FULL NAME:</strong> ______________________________<br>
+                    <strong>UPP:</strong> ___-___-___ (Characteristics in hex)<br>
+                    <strong>AGE:</strong> _____ YEARS<br>
+                    <strong>CAREERS:</strong> ______________________________<br>
+                    <strong>RANK:</strong> _______________<br>
+                    <strong>SKILLS:</strong> ______________________________<br>
+                    <strong>EQUIPMENT:</strong> ___________________________<br>
+                    <strong>CREDITS:</strong> Cr ___________<br>
+                    <strong>SHIP SHARES:</strong> _____
+                </p>
+                <p style="text-align: center; margin-top: 1.5rem; font-size: 0.85rem; color: var(--grey-light);">
+                    ⬢ PERSONNEL FILE COMPLETE — APPROVED FOR INTERSTELLAR TRAVEL ⬢
+                </p>
+            </div>
+
+            <div class="briefing" style="margin-top: 2rem; border-left-color: var(--navy-grey);">
+                Your character is complete. You've survived career generation (congratulations — many don't). You have skills, experience, contacts, and maybe a few credits. The galaxy awaits. Jump routes connect thousands of worlds. Megacorporations, noble houses, and the Imperium itself all need people like you. Will you trade between the stars? Explore uncharted systems? Fight as a mercenary? The choice is yours. <strong>Good luck, Traveller. Jump when ready.</strong>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-motto">Ad Astra</div>
+            <div class="footer-sub">
+                Traveller RPG // Mongoose Publishing // Classic 2D6 System
+            </div>
+        </footer>
+
+        <!-- BOTTOM BAR -->
+        <div class="bottom-bar">
+            <span>Imperial Personnel Bureau</span>
+            <span>Year 1105</span>
+            <span>Approved</span>
+        </div>
+
+    </div>
+    </body>
+</div>
+</html>

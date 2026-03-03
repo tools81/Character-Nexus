@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRESDEN FILES RPG — Case File</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --manila-tan:    #F4E4C1;
+            --paper-cream:   #FAF6E9;
+            --coffee-stain:  #C19A6B;
+            --ink-black:     #1A1A1A;
+            --ink-blue:      #1E3A5F;
+            --red-string:    #B91C1C;
+            --highlighter:   #FEF08A;
+            --sticky-yellow: #FEFCE8;
+            --pencil-grey:   #6B7280;
+            --paper-white:   #FFFFFF;
+            --folder-brown:  #8B7355;
+            --shadow:        rgba(0,0,0,0.3);
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Courier Prime', monospace;
+            background: #4A4A4A;
+            background-image:
+                radial-gradient(circle at 30% 40%, rgba(0,0,0,0.1) 0%, transparent 50%);
+            color: var(--ink-black);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* ── CONTAINER (Manila Folder) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--manila-tan);
+            border: 2px solid var(--folder-brown);
+            box-shadow:
+                0 10px 40px rgba(0,0,0,0.4),
+                inset 0 0 100px rgba(0,0,0,0.05);
+            position: relative;
+            animation: folder-open 0.8s ease-out;
+        }
+
+        @keyframes folder-open {
+            from { opacity: 0; transform: perspective(800px) rotateX(-10deg); }
+            to   { opacity: 1; transform: perspective(800px) rotateX(0deg); }
+        }
+
+        /* Paper texture */
+        .instr-container .container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        /* Coffee cup ring stains */
+        .instr-container .coffee-ring {
+            position: absolute;
+            border: 3px solid var(--coffee-stain);
+            border-radius: 50%;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        .instr-container .ring-1 { top: 5%; right: 8%; width: 80px; height: 80px; }
+        .instr-container .ring-2 { bottom: 12%; left: 10%; width: 65px; height: 65px; }
+
+        /* Paperclip */
+        .instr-container .paperclip {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            width: 30px;
+            height: 60px;
+            border: 3px solid #A0A0A0;
+            border-radius: 8px;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+
+        .instr-container .paperclip::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 14px;
+            height: 40px;
+            border: 3px solid #A0A0A0;
+            border-radius: 6px;
+        }
+
+        /* Red string connecting clues */
+        .instr-container .red-string {
+            position: absolute;
+            height: 2px;
+            background: var(--red-string);
+            opacity: 0.3;
+            transform-origin: left center;
+            pointer-events: none;
+        }
+
+        .instr-container .string-1 { top: 15%; left: 10%; width: 150px; transform: rotate(25deg); }
+        .instr-container .string-2 { bottom: 20%; right: 15%; width: 120px; transform: rotate(-15deg); }
+
+        /* ── TAB HEADER ── */
+        .instr-container .file-tab {
+            background: var(--folder-brown);
+            padding: 0.8rem 2rem;
+            border-bottom: 3px solid #6B5642;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Special Elite', cursive;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            color: var(--paper-cream);
+            text-transform: uppercase;
+        }
+
+        .instr-container .case-number { color: var(--highlighter); }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            padding: 2rem 2.5rem;
+            background: var(--paper-cream);
+            border-bottom: 3px solid var(--ink-black);
+            position: relative;
+        }
+
+        /* Stamped "CONFIDENTIAL" */
+        .instr-container .stamp {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-family: 'Special Elite', cursive;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            color: var(--red-string);
+            text-transform: uppercase;
+            border: 4px solid var(--red-string);
+            padding: 0.5rem 1.5rem;
+            transform: rotate(-15deg);
+            opacity: 0.4;
+        }
+
+        .instr-container .case-label {
+            font-family: 'Special Elite', cursive;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            color: var(--red-string);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .instr-container h1 {
+            font-family: 'Special Elite', cursive;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            color: var(--ink-black);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+
+        .instr-container h1 .dresden {
+            color: var(--ink-blue);
+        }
+
+        .instr-container h1 .files {
+            display: block;
+            font-size: 2rem;
+            color: var(--ink-black);
+        }
+
+        .instr-container .subtitle {
+            font-family: 'Courier Prime', monospace;
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--pencil-grey);
+            margin-top: 1rem;
+        }
+
+        .instr-container .header-meta {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: var(--sticky-yellow);
+            border: 1px solid #E5E7EB;
+            border-left: 4px solid var(--red-string);
+            font-size: 0.85rem;
+            line-height: 1.8;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2rem 2.5rem;
+            background: var(--manila-tan);
+        }
+
+        /* ── CASE NOTES ── */
+        .instr-container .case-notes {
+            background: var(--paper-white);
+            border: 2px solid var(--ink-black);
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 2.5rem;
+            font-size: 1rem;
+            line-height: 1.9;
+            position: relative;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container .case-notes::before {
+            content: '— CASE FILE: CHARACTER GENERATION —';
+            position: absolute;
+            top: -0.7rem;
+            left: 1.5rem;
+            background: var(--paper-white);
+            padding: 0 0.5rem;
+            font-family: 'Special Elite', cursive;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            color: var(--ink-blue);
+            text-transform: uppercase;
+        }
+
+        /* Handwritten note in margin */
+        .instr-container .margin-scribble {
+            position: absolute;
+            right: -1.5rem;
+            top: 50%;
+            transform: translateY(-50%) rotate(5deg);
+            font-family: 'Kalam', cursive;
+            font-size: 0.85rem;
+            color: var(--ink-blue);
+            background: var(--sticky-yellow);
+            padding: 0.5rem;
+            border: 1px solid #E5E7EB;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            width: 120px;
+            line-height: 1.4;
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--ink-black);
+            margin: 2.75rem 0 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px double var(--ink-black);
+            position: relative;
+            animation: typewriter 0.4s steps(20) backwards;
+            animation-delay: calc(var(--i,0) * 0.08s);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: attr(data-section);
+            position: absolute;
+            left: -3rem;
+            top: 0;
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.9rem;
+            color: var(--red-string);
+        }
+
+        @keyframes typewriter {
+            from { opacity: 0; letter-spacing: 0.2em; }
+            to   { opacity: 1; letter-spacing: 0.08em; }
+        }
+
+        .instr-container h3 {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--ink-blue);
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .instr-container p {
+            font-size: 0.98rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            color: var(--ink-black);
+        }
+
+        .instr-container ul, .instr-container ol { margin: 0.75rem 0 1.25rem 1.5rem; }
+        .instr-container li {
+            font-size: 0.95rem;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+        }
+
+        .instr-container strong { 
+            color: var(--ink-blue); 
+            font-weight: 700;
+            text-decoration: underline;
+            text-decoration-style: wavy;
+            text-decoration-color: var(--highlighter);
+        }
+        
+        .instr-container em     { 
+            color: var(--red-string); 
+            font-style: italic; 
+        }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.5rem 0;
+            height: 2px;
+            background: var(--ink-black);
+            opacity: 0.3;
+        }
+
+        /* ── STICKY NOTE ── */
+        .instr-container .sticky-note {
+            background: var(--sticky-yellow);
+            border: 1px solid #E5E7EB;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            font-family: 'Kalam', cursive;
+            font-size: 0.95rem;
+            line-height: 1.85;
+            position: relative;
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.15);
+            transform: rotate(-1deg);
+        }
+
+        .instr-container .sticky-note::before {
+            content: '📌';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            font-size: 1.5rem;
+        }
+
+        /* ── TYPEWRITER BOX ── */
+        .instr-container .typewriter-box {
+            background: var(--paper-white);
+            border: 1px solid var(--ink-black);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            position: relative;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .instr-container .typewriter-box::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -0.65rem;
+            left: 1rem;
+            background: var(--paper-white);
+            padding: 0 0.5rem;
+            font-family: 'Special Elite', cursive;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            color: var(--pencil-grey);
+            text-transform: uppercase;
+        }
+
+        /* ── ASPECT CARDS ── */
+        .instr-container .aspect-grid {
+            display: grid;
+            gap: 0.75rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .aspect-card {
+            background: var(--paper-cream);
+            border: 2px solid var(--ink-black);
+            border-left: 5px solid var(--ink-blue);
+            padding: 1.25rem 1.5rem;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container .aspect-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container .aspect-type {
+            position: absolute;
+            top: -0.7rem;
+            right: 1.5rem;
+            background: var(--ink-blue);
+            color: var(--paper-white);
+            font-family: 'Special Elite', cursive;
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            padding: 0.3rem 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .instr-container .aspect-name {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--ink-black);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .aspect-desc {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: var(--ink-black);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .aspect-example {
+            font-family: 'Kalam', cursive;
+            font-size: 0.85rem;
+            color: var(--ink-blue);
+            font-style: italic;
+            border-top: 1px solid var(--pencil-grey);
+            padding-top: 0.5rem;
+        }
+
+        /* ── SKILL PYRAMID ── */
+        .instr-container .skill-pyramid {
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: var(--paper-white);
+            border: 2px solid var(--ink-black);
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container .pyramid-row {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .pyramid-box {
+            background: var(--manila-tan);
+            border: 2px solid var(--ink-black);
+            padding: 0.6rem 1rem;
+            font-family: 'Special Elite', cursive;
+            font-size: 0.8rem;
+            text-align: center;
+            min-width: 80px;
+        }
+
+        .instr-container .pyramid-label {
+            font-family: 'Special Elite', cursive;
+            font-size: 0.9rem;
+            color: var(--ink-blue);
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        /* ── EVIDENCE BOARD ── */
+        .instr-container .evidence-board {
+            background: var(--paper-cream);
+            border: 3px solid var(--folder-brown);
+            padding: 1.75rem 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .instr-container .evidence-board::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 20px,
+                    rgba(185,28,28,0.05) 20px,
+                    rgba(185,28,28,0.05) 21px
+                ),
+                repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 20px,
+                    rgba(185,28,28,0.05) 20px,
+                    rgba(185,28,28,0.05) 21px
+                );
+            pointer-events: none;
+        }
+
+        .instr-container .evidence-title {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--ink-black);
+            margin-bottom: 0.75rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container .evidence-desc {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-top: 0.75rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--paper-cream);
+            padding: 2rem 2.5rem;
+            border-top: 3px solid var(--ink-black);
+            text-align: center;
+        }
+
+        .instr-container .footer-quote {
+            font-family: 'Courier Prime', monospace;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--ink-blue);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'Special Elite', cursive;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            color: var(--pencil-grey);
+            text-transform: uppercase;
+        }
+
+        .instr-container footer::before {
+            content: '✦ ✦ ✦';
+            display: block;
+            font-size: 1rem;
+            color: var(--red-string);
+            letter-spacing: 1em;
+            margin-bottom: 1.25rem;
+        }
+
+        /* Bottom case closed stamp */
+        .instr-container .case-closed {
+            background: var(--folder-brown);
+            padding: 0.6rem 2rem;
+            border-top: 2px solid #6B5642;
+            font-family: 'Special Elite', cursive;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: var(--paper-cream);
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 480px) {
+            .instr-container h1 { font-size: 2.8rem; }
+            .instr-container h1 .files { font-size: 1.6rem; }
+            .instr-container h2 { font-size: 1.5rem; }
+            .instr-container h2::before { display: none; }
+            .instr-container .content { padding: 1.75rem 1.5rem; }
+            .instr-container header { padding: 1.75rem 1.5rem; }
+            .instr-container footer { padding: 1.75rem 1.5rem; }
+            .instr-container .margin-scribble { display: none; }
+            .instr-container .paperclip { top: 10px; right: 10px; }
+        }
+    </style>
+</head>
+<div class="instr-container">
+    <body>
+    <div class="container">
+        <div class="coffee-ring ring-1"></div>
+        <div class="coffee-ring ring-2"></div>
+        <div class="paperclip"></div>
+        <div class="red-string string-1"></div>
+        <div class="red-string string-2"></div>
+
+        <!-- FILE TAB -->
+        <div class="file-tab">
+            <span>CHICAGO SUPERNATURAL INVESTIGATIONS</span>
+            <span class="case-number">FILE #: CHAR-GEN-001</span>
+        </div>
+
+        <!-- HEADER -->
+        <header>
+            <div class="stamp">CONFIDENTIAL</div>
+            <div class="case-label">■ CASE FILE: PRACTITIONER REGISTRATION</div>
+            <h1>
+                <span class="dresden">THE DRESDEN</span>
+                <span class="files">FILES RPG</span>
+            </h1>
+            <div class="subtitle">
+                "Magic. It can get a guy killed."
+            </div>
+            <div class="header-meta">
+                <strong>SYSTEM:</strong> FATE Core (Powered by Evil Hat)<br>
+                <strong>SETTING:</strong> Jim Butcher's Dresden Files Universe<br>
+                <strong>GENRE:</strong> Urban Fantasy Noir / Chicago, Modern Day<br>
+                <strong>NOTE:</strong> The supernatural is real. The White Council won't save you.
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="case-notes">
+                Welcome to the <strong>Dresdenverse</strong> — Chicago's supernatural underworld. Wizards walk among mortals. Vampires run nightclubs. Faeries make deals. Demons lurk. And somewhere between magic and monsters, there's you. Maybe you're a wizard consulting for the CPD. Maybe you're a werewolf PI. Maybe you're just someone who knows <em>too much</em>. The mundane world thinks it's safe. You know better. Your story begins here. <strong>Try not to die.</strong>
+                <div class="margin-scribble">Don't trust the fae. Ever. -H.D.</div>
+            </div>
+
+            <!-- STEP 1: CITY CREATION -->
+            <h2 data-section="§1" style="--i:1;">Create Your City</h2>
+            <p>Before you make characters, <strong>create the city</strong> together. Dresden Files is about <em>place</em>. Where do you live? What supernatural forces control it? Who are the major players?</p>
+
+            <h3>City Aspects (Choose 2-3)</h3>
+            <ul>
+                <li><strong>Theme:</strong> What defines your city? ("Vegas Never Sleeps" / "Rust Belt Blues")</li>
+                <li><strong>Threat:</strong> What danger looms? ("Red Court Controls Downtown" / "Wild Hunt Rides Monthly")</li>
+                <li><strong>Location:</strong> Notable places ("Old Cathedral Hides Secrets" / "The Docks Are Neutral Ground")</li>
+            </ul>
+
+            <div class="sticky-note">
+                City creation is collaborative! Everyone contributes. This makes the city <em>yours</em>. You'll care more about defending it when you've built it together.
+            </div>
+
+            <h3>Faces & Places</h3>
+            <p>Define <strong>Faces</strong> (important NPCs) and <strong>Places</strong> (significant locations) for each major supernatural faction:</p>
+            <ul>
+                <li><strong>White Council:</strong> Who represents wizard authority?</li>
+                <li><strong>Vampires:</strong> Red Court? White Court? Which court holds power?</li>
+                <li><strong>Faerie:</strong> Summer or Winter more active? Who's the local representative?</li>
+                <li><strong>Police/Mortal:</strong> Who knows about the supernatural?</li>
+                <li><strong>Wild Cards:</strong> Werewolves? Demons? Outsiders?</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 2: HIGH CONCEPT -->
+            <h2 data-section="§2" style="--i:2;">Define High Concept</h2>
+            <p>Your <strong>High Concept Aspect</strong> is a single phrase that sums up who you are. It's the elevator pitch for your character.</p>
+
+            <div class="aspect-grid">
+                <div class="aspect-card">
+                    <div class="aspect-type">EXAMPLE</div>
+                    <div class="aspect-name">Wizard P.I. for Hire</div>
+                    <div class="aspect-desc">You're a wizard who investigates supernatural crimes. Magic meets detective work. You consult for Chicago PD's Special Investigations.</div>
+                    <div class="aspect-example">"I'm like Harry Dresden, but cheaper and less dead."</div>
+                </div>
+                <div class="aspect-card">
+                    <div class="aspect-type">EXAMPLE</div>
+                    <div class="aspect-name">Werewolf Enforcer</div>
+                    <div class="aspect-desc">You're muscle for the local pack. When diplomacy fails, you step in. You're loyal, protective, and dangerous when crossed.</div>
+                    <div class="aspect-example">"The pack is family. Hurt them, answer to me."</div>
+                </div>
+                <div class="aspect-card">
+                    <div class="aspect-type">EXAMPLE</div>
+                    <div class="aspect-name">Knight of the Cross</div>
+                    <div class="aspect-desc">You wield one of three holy swords. God (or something) chose you to fight evil. You don't always understand why.</div>
+                    <div class="aspect-example">"Faith, hope, and a magical sword. Let's do this."</div>
+                </div>
+                <div class="aspect-card">
+                    <div class="aspect-type">EXAMPLE</div>
+                    <div class="aspect-name">Cop Who Knows Too Much</div>
+                    <div class="aspect-desc">You're mortal law enforcement who's seen the truth. Vampires are real. Magic exists. Your superiors think you're crazy.</div>
+                    <div class="aspect-example">"Protect and serve... even from things that shouldn't exist."</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 3: TROUBLE -->
+            <h2 data-section="§3" style="--i:3;">Choose Your Trouble</h2>
+            <p>Your <strong>Trouble Aspect</strong> is your character's major problem. This drives conflict and gets you into (and out of) messes.</p>
+
+            <h3>Example Troubles</h3>
+            <ul>
+                <li><strong>"The White Council Doesn't Trust Me"</strong> — You broke the Laws of Magic once. They're watching.</li>
+                <li><strong>"Hunger for More Power"</strong> — Magic is addictive. You want stronger spells. Dangerous path.</li>
+                <li><strong>"Winter Court Debt"</strong> — You owe Mab a favor. She will collect. Eventually.</li>
+                <li><strong>"My Girlfriend Is a Vampire"</strong> — Love is complicated. Love across species lines? Worse.</li>
+                <li><strong>"Haunted By My Past"</strong> — You killed someone (or something). It left scars. Mental and physical.</li>
+                <li><strong>"Too Curious For My Own Good"</strong> — You can't leave mysteries unsolved. Even when you should.</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 4: PHASE TRIO -->
+            <h2 data-section="§4" style="--i:4;">The Phase Trio</h2>
+            <p>Create three more Aspects through <strong>collaborative storytelling</strong>. This is where FATE shines — your backstories intertwine.</p>
+
+            <div class="typewriter-box" data-label="PHASE ONE: RISING ACTION">
+                <strong>Your First Adventure</strong><br><br>
+                Describe your first significant supernatural encounter. What happened? How did it change you? Write this as a one-sentence story title.<br><br>
+                <em>Example: "The Night the Vampires Came to Town"</em><br>
+                <em>Example: "Summoning Gone Wrong at the University"</em>
+            </div>
+
+            <div class="typewriter-box" data-label="PHASE TWO: CROSSING PATHS">
+                <strong>Guest Starring in Someone Else's Story</strong><br><br>
+                Pick another player's Phase One story. How did you show up and help (or complicate things)? What Aspect do you gain from this crossover?<br><br>
+                <em>Example: "I Always Repay My Debts" (you helped them; now they owe you)</em>
+            </div>
+
+            <div class="typewriter-box" data-label="PHASE THREE: FIRST PUBLICATION">
+                <strong>Another Guest Star Appearance</strong><br><br>
+                Pick a different player's Phase One story. How were you involved? This creates a web of connections. Your group is already linked.<br><br>
+                <em>Example: "Never Leave a Man Behind" (you saved someone; you're loyal)</em>
+            </div>
+
+            <div class="sticky-note">
+                The Phase Trio makes your group a <strong>group</strong>. You have shared history. You're not random strangers — you've already adventured together. This is brilliant design.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 5: SKILLS -->
+            <h2 data-section="§5" style="--i:5;">Select Skills</h2>
+            <p>Skills are what you can DO. Dresden Files uses the FATE Core skill list. Arrange skills in a <strong>pyramid</strong>.</p>
+
+            <div class="skill-pyramid">
+                <div class="pyramid-row">
+                    <div class="pyramid-box">+4<br>Great</div>
+                </div>
+                <div class="pyramid-row">
+                    <div class="pyramid-box">+3<br>Good</div>
+                    <div class="pyramid-box">+3<br>Good</div>
+                </div>
+                <div class="pyramid-row">
+                    <div class="pyramid-box">+2<br>Fair</div>
+                    <div class="pyramid-box">+2<br>Fair</div>
+                    <div class="pyramid-box">+2<br>Fair</div>
+                </div>
+                <div class="pyramid-row">
+                    <div class="pyramid-box">+1<br>Avg</div>
+                    <div class="pyramid-box">+1<br>Avg</div>
+                    <div class="pyramid-box">+1<br>Avg</div>
+                    <div class="pyramid-box">+1<br>Avg</div>
+                </div>
+                <div class="pyramid-label">Skills Pyramid (1 Great, 2 Good, 3 Fair, 4 Average)</div>
+            </div>
+
+            <h3>Key Skills</h3>
+            <ul>
+                <li><strong>Conviction:</strong> Mental defense, resisting temptation, faith</li>
+                <li><strong>Discipline:</strong> Mental control, casting spells under pressure</li>
+                <li><strong>Lore:</strong> Knowledge of the supernatural, occult, magic theory</li>
+                <li><strong>Contacts:</strong> Who you know, information gathering</li>
+                <li><strong>Investigation:</strong> Finding clues, research, detective work</li>
+                <li><strong>Alertness:</strong> Noticing danger, avoiding ambush</li>
+                <li><strong>Fists/Weapons:</strong> Combat (punching or armed)</li>
+                <li><strong>Deceit/Empathy:</strong> Lying or reading people</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 6: POWERS -->
+            <h2 data-section="§6" style="--i:6;">Choose Powers & Refresh</h2>
+            <p>If you're supernatural, you have <strong>Powers</strong>. They cost <strong>Refresh</strong> (your starting Fate Points). Balance power with flexibility.</p>
+
+            <h3>Supernatural Templates</h3>
+            <ul>
+                <li><strong>Pure Mortal:</strong> No powers, but +2 Refresh (10 total). You're scrappy and resourceful.</li>
+                <li><strong>Wizard:</strong> Channeling, Ritual, Thaumaturgy, The Sight. Powerful but limited by Laws of Magic.</li>
+                <li><strong>Werewolf:</strong> Beast Change, Claws, Inhuman Strength/Speed. Full moon optional.</li>
+                <li><strong>Vampire (White Court):</strong> Emotional Feeding, Superhuman abilities, Inhuman Recovery.</li>
+                <li><strong>Fae-Touched:</strong> Glamours, Sponsored Magic (Summer/Winter), obligations to Courts.</li>
+                <li><strong>Knight of the Cross:</strong> True Faith, Holy Touch, Item of Power (sword). Righteousness required.</li>
+                <li><strong>Changeling:</strong> Half-fae. Some powers, but Choice looms (become full fae or mortal?).</li>
+            </ul>
+
+            <div class="evidence-board">
+                <div class="evidence-title">REFRESH & FATE POINTS</div>
+                <div class="evidence-desc">
+                    You start with <strong>Refresh 8</strong>. Powers cost Refresh. Whatever's left becomes your starting Fate Points each session.<br><br>
+                    <strong>Example:</strong> Wizard with -6 in powers = 2 Refresh = Start each session with 2 Fate Points.<br>
+                    <strong>Example:</strong> Pure Mortal with no powers = 10 Refresh = Start each session with 10 Fate Points!<br><br>
+                    <em>Fate Points let you invoke Aspects for bonuses. More powers = less points. Choose wisely.</em>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 7: STUNTS -->
+            <h2 data-section="§7" style="--i:7;">Add Stunts</h2>
+            <p><strong>Stunts</strong> are special tricks or bonuses. You get stunts based on Refresh. Each character typically gets 1-3 stunts at creation.</p>
+
+            <h3>Example Stunts</h3>
+            <ul>
+                <li><strong>Ritual Specialist:</strong> +2 to Lore when preparing rituals with time</li>
+                <li><strong>Killer Instinct:</strong> +2 to Weapons when ambushing surprised targets</li>
+                <li><strong>Lies Upon Lies:</strong> +2 to Deceit when you've already established a cover story</li>
+                <li><strong>Steady Hands:</strong> +2 to Discipline when controlling or targeting spells</li>
+                <li><strong>Ear to the Ground:</strong> +2 to Contacts when gathering street-level information</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <!-- STEP 8: STRESS & CONSEQUENCES -->
+            <h2 data-section="§8" style="--i:8;">Calculate Stress & Consequences</h2>
+            <p>You have <strong>Physical</strong> and <strong>Mental</strong> stress tracks. When attacked, mark boxes. When boxes fill up, you take Consequences (injuries/trauma).</p>
+
+            <div class="typewriter-box" data-label="STRESS TRACKS">
+                <strong>Physical Stress:</strong> Based on Endurance skill<br>
+                • Average (0-1): 2 boxes<br>
+                • Fair (2): 3 boxes<br>
+                • Good (3-4): 4 boxes<br><br>
+                <strong>Mental Stress:</strong> Based on Conviction skill<br>
+                • Average (0-1): 2 boxes<br>
+                • Fair (2): 3 boxes<br>
+                • Good (3-4): 4 boxes<br><br>
+                <strong>Consequences:</strong> Everyone gets 3 consequence slots:<br>
+                • Mild (2-shift): "Bruised Ribs"<br>
+                • Moderate (4-shift): "Concussion"<br>
+                • Severe (6-shift): "Shattered Leg"<br>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 9: ASPECTS IN PLAY -->
+            <h2 data-section="§9" style="--i:9;">Using Aspects</h2>
+            <p><strong>Aspects are the heart of FATE.</strong> They're always true, and you can invoke them for bonuses by spending Fate Points.</p>
+
+            <h3>Invoking Your Aspects</h3>
+            <ul>
+                <li><strong>Spend 1 Fate Point:</strong> +2 to a roll OR re-roll the dice</li>
+                <li><strong>Your Aspects:</strong> "Wizard P.I. for Hire" applies to investigation using magic</li>
+                <li><strong>Scene Aspects:</strong> "Burning Building" — invoke for +2 to intimidate/escape</li>
+                <li><strong>Other's Aspects:</strong> Invoke enemy's "Overconfident" for +2 to trick them</li>
+            </ul>
+
+            <h3>Compels (Getting Fate Points)</h3>
+            <p>The GM (or other players) can <strong>Compel</strong> your Aspects to make your life harder. Accept the complication, get a Fate Point. Refuse, pay a Fate Point.</p>
+
+            <div class="sticky-note">
+                <strong>Example Compel:</strong> Your Trouble is "Winter Court Debt." The GM says: "Mab's messenger appears, demanding payment NOW — right in the middle of your investigation. This complicates things. Accept?"<br><br>
+                Say yes → get Fate Point. Say no → pay Fate Point.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- STEP 10: READY -->
+            <h2 data-section="§10" style="--i:10;">Case Closed: Character Complete</h2>
+
+            <div class="typewriter-box" data-label="FINAL DOSSIER CHECKLIST" style="border-color: var(--red-string);">
+                <strong>CHARACTER REGISTRATION COMPLETE</strong><br><br>
+                ☐ City created collaboratively (Aspects, Faces, Places)<br>
+                ☐ High Concept Aspect defined<br>
+                ☐ Trouble Aspect chosen<br>
+                ☐ Phase Trio completed (3 more Aspects from stories)<br>
+                ☐ Skills arranged in pyramid (1/2/3/4 distribution)<br>
+                ☐ Powers selected (if supernatural)<br>
+                ☐ Refresh calculated (8 minus power costs)<br>
+                ☐ Stunts chosen (1-3 depending on template)<br>
+                ☐ Stress tracks recorded (Physical & Mental)<br>
+                ☐ Consequence slots marked (Mild/Moderate/Severe)<br>
+                ☐ Starting Fate Points determined<br>
+                ☐ Background story written<br>
+                ☐ Connections to other PCs established<br>
+                ☐ Ready to face the supernatural
+            </div>
+
+            <div class="case-notes" style="margin-top: 2rem; border-color: var(--ink-blue);">
+                Your character is complete. You're part of the city now — its protector, its investigator, or just someone trying to survive. The supernatural doesn't care about your plans. Vampires hunt. Wizards scheme. Faeries bargain. And somewhere in Chicago's shadows, your story begins. <strong>Remember the rules:</strong> Don't invite vampires in. Don't give the fae your name. Don't break the Laws of Magic. And when in doubt? <em>Call Harry Dresden.</em> (If he answers.)
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-quote">
+                "The building was on fire, and it wasn't my fault."<br>
+                — Harry Dresden
+            </div>
+            <div class="footer-sub">
+                The Dresden Files RPG // Evil Hat Productions // FATE Core System
+            </div>
+        </footer>
+
+        <!-- CASE CLOSED -->
+        <div class="case-closed">
+            Case Status: Open // Investigation Ongoing // Authorized Personnel Only
+        </div>
+
+    </div>
+    </body>
+</div>
+</html>

@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using System.IO;
 
 namespace EverydayHeroes
 {
@@ -37,7 +39,14 @@ namespace EverydayHeroes
         public List<Attribute> Attributes { get; set; }
         public List<Skill> Skills { get; set; }
         public List<Talent> Talents { get; set; }
+        public List<Plan> Plans { get; set; }
+        public List<Trick> Tricks { get; set; }
+        public List<Pack> Packs { get; set; }
         public List<Feat> Feats { get; set; }
+        public List<Weapon> Weapons { get; set; }
+        public List<Item> Items { get; set; }
+        public List<Armor> Armors { get; set; }
+        public List<Vehicle> Vehicles { get; set; }
         public List<string> EquipmentProficiency { get; set; }
         public List<string> SavingThrowProficiency { get; set; }
         public int Speed { get => 30; }
@@ -67,7 +76,7 @@ namespace EverydayHeroes
                 Image = Image,
                 Level = Level,
                 LevelName = "Level",
-                Details = $"{Archetype} | {Class}",
+                Details = $"{Archetype.Name} | {Class.Name}",
                 CharacterSheet = CharacterSheet
             };
         }
@@ -132,7 +141,18 @@ namespace EverydayHeroes
 
         public byte[] BuildCharacterSheet()
         {
-            throw new NotImplementedException();
+            var dict = new Dictionary<string, string>();
+            // {
+            //     { "Name", Name },
+            //     { "Image", Image },
+            //     { "Level", Level.ToString() },
+            //     { "Archetype", Archetype.Name },
+            //     { "Class", Class.Name },
+            //     { "Background", Background.Name },
+            //     { "Profession", Profession.Name }
+            // };
+
+            return PDFSchema.Generate(dict, Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Everyday_Heroes_Character_Sheet.pdf");
         }
     }
 }

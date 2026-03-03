@@ -266,6 +266,7 @@ const handleSelectChange = (
 
   if (selectBonusAdjustments) {
     for (const adjustment of bonusAdjustments.reverse()) {
+      console.log("Removing Bonus Adjustment:", adjustment);
       handleRemoveBonusAdjustment(
         getValues,
         setValue,

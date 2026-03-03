@@ -28,7 +28,7 @@
     "scale": "Minor",
     "userchoices": [
       {
-        "type": "skill.expertise",
+        "type": "skills.expertise",
         "choices": [
           "Acrobatics",
           "Arts and Crafts",
@@ -65,13 +65,13 @@
     "scale": "Minor",
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Basic"
       }
     ],
     "userchoices": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "choices": [
           "Advanced",
           "Historical",
@@ -103,7 +103,7 @@
     "scale": "Minor",
     "userchoices": [
       {
-        "type": "skill.proficient",
+        "type": "skills.proficient",
         "choices": [
           "Acrobatics",
           "Arts and Crafts",
@@ -490,13 +490,13 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Basic"
       }
     ],
     "userchoices": [
       {
-        "type": "skill.proficient",
+        "type": "skills.proficient",
         "choices": [
           "Athletics",
           "Acrobatics",
@@ -523,7 +523,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Strong'"
           }
         ]
@@ -535,7 +535,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Improvised"
       }
     ]
@@ -577,7 +577,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Strong'"
           }
         ]
@@ -589,7 +589,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Advanced"
       }
     ]
@@ -616,7 +616,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Military"
       }
     ]
@@ -637,7 +637,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "value": "Strong"
           }
         ]
@@ -691,13 +691,13 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "choices": "Basic"
       }
     ],
     "userchoices": [
       {
-        "type": "skill.proficient",
+        "type": "skills.proficient",
         "choices": [
           "Acrobatics",
           "Sleight of Hand",
@@ -731,7 +731,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Historical"
       }
     ]
@@ -752,7 +752,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Agile'"
           }
         ]
@@ -764,7 +764,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Historical"
       }
     ]
@@ -785,7 +785,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Agile'"
           }
         ]
@@ -797,13 +797,13 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Advanced"
       }
     ],
     "userchoices": [
       {
-        "type": "skill.proficient",
+        "type": "skills.proficient",
         "choices": [
           "Acrobatics",
           "Deception",
@@ -840,7 +840,7 @@
     ],
     "userchoices": [
       {
-        "type": "skill.expertise",
+        "type": "skills.expertise",
         "choices": [
           "Acrobatics",
           "Deception",
@@ -871,7 +871,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Agile'"
           }
         ]
@@ -883,7 +883,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Advanced"
       }
     ]
@@ -931,7 +931,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Basic"
       },
       {
@@ -956,7 +956,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Tough'"
           }
         ]
@@ -968,7 +968,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Advanced"
       }
     ]
@@ -1010,7 +1010,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Tough'"
           }
         ]
@@ -1022,7 +1022,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Advanced"
       }
     ]
@@ -1049,7 +1049,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Military"
       }
     ],
@@ -1077,7 +1077,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Tough'"
           }
         ]
@@ -1089,7 +1089,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Advanced"
       }
     ]
@@ -1168,7 +1168,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Smart'"
           }
         ]
@@ -1180,7 +1180,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "skill.proficient",
+        "type": "skills.proficient",
         "value": "Mechanics"
       }
     ],
@@ -1217,7 +1217,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "skill.expertise",
+        "type": "skills.expertise",
         "value": "Mechanics"
       }
     ],
@@ -1256,7 +1256,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Smart'"
           }
         ]
@@ -1268,7 +1268,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "skill.proficient",
+        "type": "skills.proficient",
         "value": "Computers"
       }
     ],
@@ -1312,7 +1312,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "skill.expertise",
+        "type": "skills.expertise",
         "value": "Computers"
       }
     ],
@@ -1351,7 +1351,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Smart'"
           }
         ]
@@ -1363,7 +1363,7 @@
     ],
     "userchoices": [
       {
-        "type": "skill.proficient",
+        "type": "skills.proficient",
         "choices": [
           "Investigation",
           "Social Sciences"
@@ -1410,7 +1410,7 @@
     ],
     "userchoices": [
       {
-        "type": "skill.expertise",
+        "type": "skills.expertise",
         "choices": [
           "Investigation",
           "Social Sciences"
@@ -1452,7 +1452,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Smart'"
           }
         ]
@@ -1464,7 +1464,7 @@
     ],
     "userchoices": [
       {
-        "type": "skill.proficient",
+        "type": "skills.proficient",
         "choices": [
           "Medicine",
           "Natural Sciences"
@@ -1511,7 +1511,7 @@
     ],
     "userchoices": [
       {
-        "type": "skill.expertise",
+        "type": "skills.expertise",
         "choices": [
           "Medicine",
           "Natural Sciences"
@@ -1566,13 +1566,13 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Basic"
       }
     ],
     "userchoices": [
       {
-        "type": "skill.proficient",
+        "type": "skills.proficient",
         "choices": [
           "Insight",
           "Perception",
@@ -1600,7 +1600,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Wise'"
           }
         ]
@@ -1619,13 +1619,13 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Advanced"
       }
     ],
     "userchoice": [
       {
-        "type": "skill.proficient",
+        "type": "skills.proficient",
         "choices": [
           "Perception",
           "Stealth",
@@ -1665,7 +1665,7 @@
     ],
     "userchoices": [
       {
-        "type": "skill.expertise",
+        "type": "skills.expertise",
         "choices": [
           "Perception",
           "Stealth",
@@ -1692,7 +1692,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Wise'"
           }
         ]
@@ -1711,7 +1711,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Improvised"
       }
     ]
@@ -1760,7 +1760,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Wise'"
           }
         ]
@@ -1779,13 +1779,13 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Advanced"
       }
     ],
     "userchoices": [
       {
-        "type": "skill.proficient",
+        "type": "skills.proficient",
         "choices": [
           "Insight",
           "Investigation",
@@ -1827,7 +1827,7 @@
     ],
     "userchoices": [
       {
-        "type": "skill.expertise",
+        "type": "skills.expertise",
         "choices": [
           "Insight",
           "Investigation",
@@ -1869,7 +1869,7 @@
     ],
     "userchoices": [
       {
-        "type": "skill.proficient",
+        "type": "skills.proficient",
         "choices": [
           "Deception",
           "Intimidation",
@@ -1880,7 +1880,7 @@
         "category": "Characteristic"
       },
       {
-        "type": "skill.expertise",
+        "type": "skills.expertise",
         "choices": [
           "Deception",
           "Intimidation",
@@ -1908,7 +1908,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Charming'"
           }
         ]
@@ -1927,11 +1927,11 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Basic"
       },
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Historical"
       }
     ],
@@ -2000,7 +2000,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Charming'"
           }
         ]
@@ -2019,11 +2019,11 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Basic"
       },
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Advanced"
       }
     ],
@@ -2092,7 +2092,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Charming'"
           }
         ]
@@ -2111,11 +2111,11 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Basic"
       },
       {
-        "type": "equipmentproficiency",
+        "type": "equipmentProficiency",
         "value": "Advanced"
       }
     ],
@@ -2184,7 +2184,7 @@
         "formula": "=== true",
         "logicalor": [
           {
-            "type": "archetype",
+            "name": "archetype",
             "formula": "=== 'Charming'"
           }
         ]

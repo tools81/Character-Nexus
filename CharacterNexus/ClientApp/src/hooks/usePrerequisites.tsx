@@ -74,7 +74,20 @@ export const usePrerequisites = (
               const value = getValues(name);
               const expr = `${JSON.stringify(value)}${p.formula}`;
 
-              const result = Function(`return ${expr}`)();
+              let result = Function(`return ${expr}`)();
+
+              if (!result && p.logicalOr && p.logicalOr.length > 0) {
+                for (const orPrereq of p.logicalOr) {
+                  const orName = orPrereq.type
+                    ? `${orPrereq.type}.${orPrereq.name}`
+                    : orPrereq.name;
+                  const orValue = getValues(orName);
+                  const orExpr = `${JSON.stringify(orValue)}${orPrereq.formula}`;
+                  result = Function(`return ${orExpr}`)();
+                  if (result) break;
+                }
+              }
+
               if (!result) {
                 enabled = false;
                 break;

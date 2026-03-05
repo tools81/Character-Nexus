@@ -1,14 +1,6 @@
 ﻿using Newtonsoft.Json;
-using Org.BouncyCastle.Asn1.Cms;
-using System;
-using System.Collections.Generic;
 using System.Dynamic;
-using System.IO;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using Utility;
 
 namespace BladeRunner
@@ -18,6 +10,11 @@ namespace BladeRunner
         private static List<object> _fields = new List<object>();
         private static string _jsonFilesPath = $"{new DirectoryInfo(AppContext.BaseDirectory).Parent.Parent.Parent.Parent}/Ruleset.BladeRunner/Json/";
         private static readonly Regex sWhitespace = new Regex(@"\s+");
+        private static readonly JsonSerializerSettings _jsonSettings = new JsonSerializerSettings
+        {
+            ContractResolver = JsonContractResolver.Get(),
+            Formatting = Formatting.None
+        };
 
         public static void InitializeSchema()
         {
@@ -35,6 +32,8 @@ namespace BladeRunner
                 List<Skill>? skills = JsonTo.List<Skill>(jsonSkillsData);
                 string jsonSpecialtiesData = File.ReadAllText(_jsonFilesPath + "Specialties.json");
                 List<Specialty>? specialties = JsonTo.List<Specialty>(jsonSpecialtiesData);
+                string jsonAugmentationsData = File.ReadAllText(_jsonFilesPath + "Augmentations.json");
+                List<Augmentation>? augmentations = JsonTo.List<Augmentation>(jsonAugmentationsData);
                 string jsonGearsData = File.ReadAllText(_jsonFilesPath + "Gears.json");
                 List<Gear>? gears = JsonTo.List<Gear>(jsonGearsData);
                 string jsonArmorsData = File.ReadAllText(_jsonFilesPath + "Armors.json");
@@ -74,6 +73,7 @@ namespace BladeRunner
                     "relationship", "Key Relationship");
                 GenerateSkillSchema(skills, "skill", "Skill");
                 GenerateSpecialtySchema(specialties, "specialty", "Specialties");
+                GenerateAugmentationSchema(augmentations, "augmentation", "Augmentations");
                 GenerateWeaponSchema(weapons, "weapon", "Weapons");
                 GenerateArmorSchema(armors, "armor", "Armor");
                 GenerateGearSchema(gears, "gear", "Gear");
@@ -85,7 +85,7 @@ namespace BladeRunner
                     fields = _fields
                 };
 
-                string schemaJson = JsonConvert.SerializeObject(schema, Formatting.Indented);
+                string schemaJson = JsonConvert.SerializeObject(schema, _jsonSettings);
 
                 var schemaPath = _jsonFilesPath + "Character/Form.json";
                 File.WriteAllText(schemaPath, schemaJson);
@@ -220,44 +220,14 @@ namespace BladeRunner
                     {
                         value = origin.Name,
                         label = origin.Name,
-                        bonusAdjustments = JsonConvert.SerializeObject(origin.BonusAdjustments),
+                        description = origin.Description,
+                        bonusAdjustments = JsonConvert.SerializeObject(origin.BonusAdjustments, _jsonSettings),
                         userChoices = JsonConvert.SerializeObject(origin.UserChoices)
                     }
                 );
             }
 
             _fields.Add(obj);
-
-            //Add a div below dropdown after selecting a value, containing details of Origin
-            foreach (var origin in origins)
-            {
-                var children = new List<object>
-                {
-                    new
-                    {
-                        name = $"info-{name}-{origin.Name}",
-                        label = "Information",
-                        type = "textblock",
-                        className = "text-block",
-                        text = origin.Description
-                    }
-                };
-
-                var div = new
-                {
-                    type = "div",
-                    className = "alert alert-secondary",
-                    children,
-                    dependsOn =
-                        new
-                        {
-                            field = name,
-                            value = origin.Name
-                        }
-                };
-
-                _fields.Add(div);
-            }
         }
 
         private static void GenerateArchetypeSchema(List<Archetype> archetypes, string name, string label)
@@ -277,43 +247,14 @@ namespace BladeRunner
                     {
                         value = archetype.Name,
                         label = archetype.Name,
-                        bonusAdjustments = JsonConvert.SerializeObject(archetype.BonusAdjustments)
+                        description = archetype.Description,
+                        image = archetype.Image,
+                        bonusAdjustments = JsonConvert.SerializeObject(archetype.BonusAdjustments, _jsonSettings)
                     }
                 );
             }
 
             _fields.Add(obj);
-
-            //Add a div below dropdown after selecting a value, containing details of Origin
-            foreach (var archetype in archetypes)
-            {
-                var children = new List<object>
-                {
-                    new
-                    {
-                        name = $"info-{name}-{archetype.Name}",
-                        label = "Information",
-                        type = "textblock",
-                        className = "text-block",
-                        text = archetype.Description
-                    }
-                };
-
-                var div = new
-                {
-                    type = "div",
-                    className = "alert alert-secondary",
-                    children,
-                    dependsOn =
-                        new
-                        {
-                            field = name,
-                            value = archetype.Name
-                        }
-                };
-
-                _fields.Add(div);
-            }
         }
 
         private static void GenerateTenureSchema(List<Tenure> tenures, string name, string label)
@@ -333,8 +274,9 @@ namespace BladeRunner
                     {
                         value = tenure.Name,
                         label = tenure.Name,
-                        bonusAdjustments = JsonConvert.SerializeObject(tenure.BonusAdjustments),
-                        userChoices = JsonConvert.SerializeObject(tenure.UserChoices)
+                        description = tenure.Description,
+                        bonusAdjustments = JsonConvert.SerializeObject(tenure.BonusAdjustments, _jsonSettings),
+                        userChoices = JsonConvert.SerializeObject(tenure.UserChoices, _jsonSettings)
                     }
                 );
             }
@@ -605,7 +547,41 @@ namespace BladeRunner
                     new
                     {
                         value = specialty.Name,
-                        label = specialty.Name
+                        label = specialty.Name,
+                        description = specialty.Description
+                    }
+                );
+            }
+
+            dynamic array = new
+            {
+                name,
+                label,
+                type = "array",
+                component = obj
+            };
+
+            _fields.Add(array);
+        }
+
+        private static void GenerateAugmentationSchema(List<Augmentation> augmentations, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var augmentation in augmentations)
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = augmentation.Name,
+                        label = augmentation.Name,
+                        description = augmentation.Description
                     }
                 );
             }
@@ -637,7 +613,8 @@ namespace BladeRunner
                     new
                     {
                         value = weapon.Name,
-                        label = weapon.Name
+                        label = weapon.Name,
+                        description = weapon.Description
                     }
                 );
             }
@@ -669,7 +646,8 @@ namespace BladeRunner
                     new
                     {
                         value = armor.Name,
-                        label = armor.Name
+                        label = armor.Name,
+                        description = armor.Description
                     }
                 );
             }
@@ -701,7 +679,8 @@ namespace BladeRunner
                     new
                     {
                         value = gear.Name,
-                        label = gear.Name
+                        label = gear.Name,
+                        description = gear.Description
                     }
                 );
             }
@@ -733,7 +712,8 @@ namespace BladeRunner
                     new
                     {
                         value = vehicle.Name,
-                        label = vehicle.Name
+                        label = vehicle.Name,
+                        description = vehicle.Description
                     }
                 );
             }

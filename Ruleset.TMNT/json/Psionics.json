@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Detect Psionics",
+    "description": "This mental probe will detect psionics in others. There is a 75% chance that the psionic can be detected by other psionics in the area. This will not penetrate or detect a Mind Block, and a Mind Blocked character will not appear to be psionic.",
+    "range": "240 feet",
+    "duration": "2 minutes",
+    "savingthrow": "None"
+  },
+  {
+    "name": "Animal Control",
+    "description": "Allows a character to command creatures of their own kind. For example, a lion character could control other lions, not tigers or other felines. Two-way communication with the controlled animals is not possible without Animal Speech. The controlled animal will attempt to follow any orders. If the controlled animal is wounded it is allowed an additional saving throw. The psionic can renew Animal Control every 5 minutes, but the animal can roll to save every time.",
+    "range": "50 feet",
+    "duration": "5 minutes",
+    "savingthrow": "Standard"
+  },
+  {
+    "name": "Animal Speech",
+    "description": "Allows for complete two-way communication with animals of the same kind as the character. For example, a rat character could use Animal Speech only with other rats, not with mice or other rodents. The animals will recognize the character as one of their own and assume that any human looks are just ugly deformities.",
+    "range": "150 feet",
+    "duration": "10 minutes",
+    "savingthrow": "None"
+  },
+  {
+    "name": "Bio-Manipulation",
+    "description": "Each of the seven kinds of bio-manipulation must be purchased separately. Each affects only one person per attack and the victim must be within line of vision or their exact location must be known to the psionic. A creature using bio-manipulation can do no other psionics while the effect lasts due to the concentration required. If the psionic is knocked unconscious or uses any other psionic ability, the bio-manipulation immediately stops. The seven types are: Blind (victim is -9 to strike, parry and dodge), Deafness (victim cannot hear and is -6 to parry or dodge attacks from behind, -3 to strike/parry/dodge, and automatically loses initiative), Mute (speech is impossible; victim is -2 to strike, parry and dodge for the first round), Pain (nerve centers are hit directly; victim is -6 to strike/parry/dodge and takes 1 hit point damage per minute), Paralysis (arms and legs stop working; victim cannot parry or dodge), Stun (victim loses one attack per melee, speed is halved, and is -4 to strike/parry/dodge), and Tissue Manipulation (victim feels itchy, cold and hot; -1 to strike, parry and dodge).",
+    "range": "160 feet",
+    "duration": "4-16 minutes",
+    "savingthrow": "Standard"
+  },
+  {
+    "name": "Hypnotic Suggestion",
+    "description": "The psionic may induce their will upon another through the power of suggestion. This is a mental attack that requires eye contact and either verbal or telepathic reinforcement. The suggestion must be a reasonable one; victims will not do things that are completely out of character. For example, the suggestion 'kill yourself' would only work if the victim were already suicidal, while 'you don't see anything unusual' would be very useful for a strange-looking animal character. This works only on intelligent creatures, not on ordinary animals. A victim who saves against Hypnotic Suggestion will be totally unaware of the attack.",
+    "range": "12 feet",
+    "duration": "Varies",
+    "savingthrow": "Standard"
+  },
+  {
+    "name": "Mind Block",
+    "description": "This mental wall prevents the penetration of Telepathy, Empathy, Empathic Transfer, Detect Psionics and all other psionic attacks. The psionic will not even be aware that a psionic attack is taking place. Note that this also prevents the character from hearing Telepathic Transmission.",
+    "range": "Self",
+    "duration": "10 minutes",
+    "savingthrow": "None"
+  },
+  {
+    "name": "Mind Trap",
+    "description": "A psionic who successfully traps another mind can inflict whatever experience they like onto that mind \u2014 for example, making the victim believe they are trapped in a small cell or reliving an episode from the psionic's imagination. One strange effect is that the victim experiences one hour of subjective time for every minute in the trap. Victims can make another saving throw after being trapped; if successful, they realize the experience is imaginary but cannot escape it. Keeping the victim in the trap is simple with a basic environment (cage, desert, ocean), costing the attacker one attack per melee. Complex fantasies require the attacker to lose all other attacks or movements. Victims can optionally be driven temporarily insane if the psionic is insane, the experience is particularly horrible, or the fantasy involves the victim's death; the effect lasts 2-12 hours.",
+    "range": "6 feet",
+    "duration": "2-12 minutes",
+    "savingthrow": "Standard"
+  },
+  {
+    "name": "See Aura",
+    "description": "Allows the psionic to see the alignment, estimated level of power, type of creature (human, mutant, alien, meat-eating animal, grazing animal, etc.) and the physical condition of the creature in their aura. There is a 15% chance per level that the psionic can recognize an aura that has been seen before. Mind Blocked characters are not protected from See Aura.",
+    "range": "120 feet",
+    "duration": "4 melees / 1 minute",
+    "savingthrow": "None"
+  },
+  {
+    "name": "Sixth Sense",
+    "description": "A psionic intuition that can protect the character. There will be a premonition of danger when something is immediately threatening, including hidden ambushes, traps, or dangerous situations. Sixth Sense does not indicate what or where the danger is coming from, and does not work to protect anyone traveling with the character. The character must actively specify that the power is being used; it does not work automatically.",
+    "range": "90 feet / self",
+    "duration": "4 melees / 1 minute",
+    "savingthrow": "None"
+  },
+  {
+    "name": "Telepathic Transmission",
+    "description": "Acts as a mind-to-mind speech substitute, highly useful for animals without vocal cords. Range is roughly that of human speech but is not affected by background noise. Does not work with telephones or other communication devices. The psionic can focus the transmission so that only a specific person receives it, or broadcast to several people simultaneously so long as everyone is within the 150-foot range. Non-psionics will assume the Telepathic Transmission is normal speech. Cannot be used to read anything \u2014 it is only good for speaking. There is no saving throw because it is not an attack; at worst the psionic can shout unpleasantly and the receiver can choose to ignore the message.",
+    "range": "150 feet",
+    "duration": "Unlimited",
+    "savingthrow": "None"
+  }
+]

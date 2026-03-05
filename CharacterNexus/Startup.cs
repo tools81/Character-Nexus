@@ -40,7 +40,7 @@ namespace CharacterNexus
                 options.AddPolicy("DevCors", policy =>
                 {
                     policy
-                        .WithOrigins("http://localhost:3000")
+                        .WithOrigins("http://localhost:3000", "http://localhost:5001") // Local development domains
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 });
@@ -53,12 +53,9 @@ namespace CharacterNexus
             services.AddSingleton<IRuleset, DarkCrystal.Ruleset>();
             services.AddSingleton<IRuleset, EverydayHeroes.Ruleset>();
             //services.AddSingleton<IRuleset, Ghostbusters.Ruleset>();
-            //services.AddSingleton<IRuleset, GiJoe.Ruleset>();
             services.AddSingleton<IRuleset, Marvel.Ruleset>();
-            //services.AddSingleton<IRuleset, Starfinder.Ruleset>();
             //services.AddSingleton<IRuleset, Transformers.Ruleset>();
             services.AddSingleton<IRuleset, VampireTheMasquerade.Ruleset>();
-            //services.AddSingleton<IRuleset, WerewolfTheApocalypse.Ruleset>();
 
             services.AddSingleton<IStorage, AzureBlobStorage.Storage>();
         }

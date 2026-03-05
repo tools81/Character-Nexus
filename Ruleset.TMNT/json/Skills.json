@@ -1,0 +1,566 @@
+[
+  {
+    "name": "Computer Operation",
+    "description": "A knowledge of how computers work, along with the skills to operate peripherals like keyboards, printers and modems. Characters can follow computer directions, enter and retrieve information, and similar, basic, computer operations. Does <strong>not</strong> include programming.<br><em>Base Skill: 60% + 5% per level of experience.</em>",
+    "category": "Computer",
+    "value": 0
+  },
+  {
+    "name": "Computer Programming",
+    "description": "Designing, programming, debugging, and testing computer programs/software. <strong>Note:</strong> Computer Operation is required before taking Computer Programming.<br><em>Base Skill: 40% + 5% per level of experience.</em>",
+    "category": "Computer",
+    "value": 0
+  },
+  {
+    "name": "Cryptography",
+    "description": "Skill in recognizing, designing, and cracking secret codes and messages. After 10 minutes of studying a code, the character can attempt to decipher it, but at a &minus;10% chance. Otherwise, the character must study for two hours before every additional roll.<br><em>Base Skill: 30% + 5% per level of experience.</em>",
+    "category": "Communications",
+    "value": 0
+  },
+  {
+    "name": "Laser",
+    "description": "This skill provides the character with an in-depth knowledge of laser communication systems.<br><em>Base Skill: 50% + 5% per level of experience.</em>",
+    "category": "Communications",
+    "value": 0
+  },
+  {
+    "name": "Optic Systems",
+    "description": "Training covers a wide variety of optic systems, from video to optical enhancement devices, to laser optics. The character will understand the operation of optical readings, recording, transmission, and use of special equipment like thermo-imagers, passive light intensifiers, infrared, ultraviolet, etc.<br><em>Base Skill: 50% + 5% per level of experience.</em>",
+    "category": "Communications",
+    "value": 0
+  },
+  {
+    "name": "Radio: Basic Communications",
+    "description": "Knowledge of the operation and maintenance of field radios and walkie-talkies, wire laying, installation, radio procedure, communication security and visual signs/communications, as well as knowing Morse code.<br><em>Base Skill: 50% + 5% per level of experience.</em>",
+    "category": "Communications",
+    "value": 0
+  },
+  {
+    "name": "Radio: Scramblers",
+    "description": "Training in the use of electronic masking and scrambling (unscrambling) equipment and codes for increased security.<br><em>Base Skill: 40% + 5% per level of experience.</em>",
+    "category": "Communications",
+    "value": 0
+  },
+  {
+    "name": "Radio: Satellite Relay",
+    "description": "An understanding of the methods and operations of satellite transmission.<br><em>Base Skill: 25% + 5% per level of experience.</em>",
+    "category": "Communications",
+    "value": 0
+  },
+  {
+    "name": "Surveillance Systems",
+    "description": "Study and understanding of the operation, methods, and techniques in the use of surveillance systems. Includes motion detectors, simple and complex alarm systems, video and camera equipment, amplified sound systems, miniature listening devices (bugs, telephone tapping), recording methods, and some optical enhancement systems. Also covers tailing/following someone without their knowledge and stakeout procedures.<br><strong>Requires:</strong> Electronics (basic) or Electrical Engineering.<br><em>Base Skill: 40% + 5% per level of experience.</em>",
+    "category": "Communications",
+    "value": 0
+  },
+  {
+    "name": "T.V./Video",
+    "description": "Techniques and understanding of video and audio, filming, editing, special effects, transmissions and equipment. Spending two skill selections on this area makes the character of professional film quality/abilities, with a one-time bonus of +10%.<br><em>Base Skill: 40% + 5% per level of experience.</em>",
+    "category": "Communications",
+    "value": 0
+  },
+  {
+    "name": "Cook",
+    "description": "Skill in selecting, planning and preparing meals. A cooking roll failure means that the cooked food is either inedible (burnt!) or distasteful.<br><em>Base Skill: 60% + 5% per level of experience.</em>",
+    "category": "Domestic",
+    "value": 0
+  },
+  {
+    "name": "Dance",
+    "description": "A practiced skill in the art of dancing.<br><em>Base Skill: 40% + 5% per level of experience.</em>",
+    "category": "Domestic",
+    "value": 0
+  },
+  {
+    "name": "Fishing",
+    "description": "Fundamental methods and enjoyment of the relaxing sport of fishing. Areas of knowledge include the use of lures, baits, poles, line, and the cleaning and preparation of fish for eating.<br><em>Base Skill: 60% + 5% per level of experience.</em>",
+    "category": "Domestic",
+    "value": 0
+  },
+  {
+    "name": "Sewing",
+    "description": "The practiced skill with needle and thread to mend, layout, cut and sew simple patterns, and do minor alterations. Functions as a tailoring ability when taken as a scholastic skill.<br><em>Base Skill: 40% + 5% per level of experience.</em>",
+    "category": "Domestic",
+    "value": 0
+  },
+  {
+    "name": "Sing",
+    "description": "The simple ability to read music and carry a pleasant tune. The character's singing is of professional quality if taken as a scholastic skill.<br><em>Base Skill: 40% + 5% per level of experience.</em>",
+    "category": "Domestic",
+    "value": 0
+  },
+  {
+    "name": "Basic Electronics",
+    "description": "A rudimentary understanding of the principles of electricity, simple circuits, wiring, and so on. This person can do basic wiring, repair appliances and read schematics.<br><em>Base Skill: 40% + 5% per level of experience.</em>",
+    "category": "Electrical",
+    "value": 0
+  },
+  {
+    "name": "Electrical Engineer",
+    "description": "Knowledge of electricity. Characters can diagnose and locate electrical problems and put together electrical equipment. The character can attempt to bypass security systems and burglar alarms at &minus;25%; if Surveillance Systems is also taken, there is a +10% bonus instead.<br><em>Base Skill: 45% + 5% per level of experience.</em>",
+    "category": "Electrical",
+    "value": 0
+  },
+  {
+    "name": "Concealment",
+    "description": "The practiced ability of hiding something on one's body or in hand, usually by continually moving it around from hand to hand or place to place unnoticed. Objects must be no larger than 14 inches in height/length, 6 inches in width and weigh 10 lbs. or less. A penalty of &minus;5% applies to items over 7 inches. Items larger than 14 inches are impossible to conceal.<br><em>Base Skill: 20% + 5% per level of experience.</em>",
+    "category": "Espionage",
+    "value": 0
+  },
+  {
+    "name": "Detect Ambushes",
+    "description": "Training which develops an eye for spotting locations and terrain suitable for ambushes and being ambushed. Also provides a rudimentary knowledge of guerrilla tactics used by the enemy.<br><em>Base Skill: 40% + 5% per level of experience.</em>",
+    "category": "Espionage",
+    "value": 0
+  },
+  {
+    "name": "Detect Concealment",
+    "description": "A skill which enables the individual to spot and recognize camouflage, tricks, concealed huts, buildings and vehicles, as well as the ability to construct unobtrusive shelters that blend into the environment.<br><em>Base Skill: 30% + 5% per level of experience.</em>",
+    "category": "Espionage",
+    "value": 0
+  },
+  {
+    "name": "Disguise",
+    "description": "The character knows how to apply makeup, wigs, skull putty, and other special effects in order to alter his own appearance or those of somebody else.<br><em>Base Skill: 40% + 5% per level of experience.</em>",
+    "category": "Espionage",
+    "value": 0
+  },
+  {
+    "name": "Escape Artist",
+    "description": "The character knows the methods, principles, and tricks of escape artists. By tensing and relaxing muscles, flexing and popping joints, the character can try slipping out of handcuffs, straight jackets, etc. Also includes a knowledge of knots and the ability to conceal small objects on the person. Picking Locks is a separate skill.<br><em>Base Skill: 30% + 5% per level of experience.</em>",
+    "category": "Espionage",
+    "value": 0
+  },
+  {
+    "name": "Forgery",
+    "description": "The techniques of making false copies of official documents, signatures, passports, I.D., and other printed material. The character must have an original or photocopy to work from in order to make an accurate copy. Skilled forgers can recognize other counterfeits at 6%.<br><em>Base Skill: 30% + 5% per level of experience.</em>",
+    "category": "Espionage",
+    "value": 0
+  },
+  {
+    "name": "Impersonation",
+    "description": "Enables a person to impersonate another person or type of soldier. Requires rudimentary knowledge of the subject being impersonated, including dress, rank, and usually fluency in their language. A successful impersonation requires the player to roll under his skill for each of the first three encounters; afterward, he must roll for each encounter with an officer.<br><em>Base Skill: 40% to impersonate general personnel; 20% to impersonate a specific individual. +4% per level of experience.</em>",
+    "category": "Espionage",
+    "value": 0
+  },
+  {
+    "name": "Interrogation",
+    "description": "Training in the questioning of prisoners, captives and informers, and the assessment of that information.<br><em>Base Skill: 40% + 5% per level of experience.</em>",
+    "category": "Espionage",
+    "value": 0
+  },
+  {
+    "name": "Land Navigation",
+    "description": "Allows the person to stay on course while traveling over land by means of observation. Includes mentally marking/recognizing geographic landmarks, estimating distance and movement, recognizing sounds, and night travel techniques. Roll once for approximately every three miles traveled.<br><em>Base Skill: 40% + 4% per level of experience.</em>",
+    "category": "Espionage",
+    "value": 0
+  },
+  {
+    "name": "Palming",
+    "description": "The ability to pick up and seemingly make a small object such as a coin, key, playing card, or knife disappear by hiding or concealing it in one's hand. Adds a bonus of +5% to Pick Pocket skill.<br><em>Base Skill: 25% + 5% per level of experience.</em>",
+    "category": "Espionage",
+    "value": 0
+  },
+  {
+    "name": "Picking Locks",
+    "description": "The character knows the methods, techniques and tools for picking/opening key and basic tumbler-type locks. It takes 1D6 melee rounds for each attempt to pick a lock. A failed roll means the lock holds; try again.<br><em>Base Skill: 35% + 5% per level of experience.</em>",
+    "category": "Espionage",
+    "value": 0
+  },
+  {
+    "name": "Pick Pockets",
+    "description": "An ability to remove items from a person without their being aware of it. If a pick pocket attempt fails, the item has NOT been removed and there is a 67% likelihood of the intended victim recognizing the intent of action.<br><em>Base Skill: 30% + 5% per level of experience.</em>",
+    "category": "Espionage",
+    "value": 0
+  },
+  {
+    "name": "Tracking",
+    "description": "Visual tracking is the identification of tracks and following the path of men or animals by the signs they leave on the ground and vegetation. Includes evaluating tracks to determine load, pace, gender, and injury, as well as counter-tracking techniques. Roll once every 40 yards when following a trail. Three consecutive failed rolls mean the tracker has completely lost the trail.<br><em>Base Skill: 30% + 5% per level of experience.</em>",
+    "category": "Espionage",
+    "value": 0
+  },
+  {
+    "name": "Wilderness Survival",
+    "description": "Techniques for getting water, food, shelter, and help when stranded in wild forests, deserts or mountains. Characters without this skill will not be able to stay healthy for more than a few days in the wilderness.<br><em>Base Skill: 40% + 5% per level of experience.</em>",
+    "category": "Espionage",
+    "value": 0
+  },
+  {
+    "name": "Automotive Mechanics",
+    "description": "Ability to repair, rebuild, modify, and redesign conventional vehicles with internal combustion (gas) engines, as well as body work, turbine engines, and diesel truck engines.<br><em>Base Skill: 50% + 3% per level of experience.</em>",
+    "category": "Mechanical",
+    "value": 0
+  },
+  {
+    "name": "Aircraft Mechanics",
+    "description": "The understanding and ability to repair, rebuild, modify and redesign conventional aircraft; including single and twin engine airplanes, fan jets, jets, fighter jets, helicopters and shuttle craft.<br><em>Base Skill: 45% + 3% per level of experience.</em>",
+    "category": "Mechanical",
+    "value": 0
+  },
+  {
+    "name": "Basic Mechanics",
+    "description": "A rudimentary understanding of how machinery operates. This person can repair and maintain simple mechanisms and common automobiles.<br><em>Base Skill: 40% + 4% per level of experience.</em>",
+    "category": "Mechanical",
+    "value": 0
+  },
+  {
+    "name": "Computer Repair",
+    "description": "Knowledge of the internal electronics of computers and related devices (terminals, printers, etc.). The character can attempt to repair, sabotage, or fix computers. Figuring out a repair problem requires one roll, and the character must roll again before actually fixing it. Does <strong>not</strong> include computer operation or programming skills.<br><em>Base Skill: 40% + 5% per level of experience.</em>",
+    "category": "Mechanical",
+    "value": 0
+  },
+  {
+    "name": "Locksmith",
+    "description": "The practiced study of lock designs and the ability to repair, build, modify and open locks. Covers old-style key and tumbler, combination, and modern electronic locking systems. <strong>Special Bonus:</strong> Add +5% if the Electronics skill is also taken.<br><em>Base Skill: 25% + 5% per level of experience.</em>",
+    "category": "Mechanical",
+    "value": 0
+  },
+  {
+    "name": "Mechanical Engineer",
+    "description": "Training, understanding and knowledge of how machinery is designed, operated, built, and maintained. Characters can attempt to redesign, modify, sabotage, repair, or construct mechanical devices. The first percentage indicates how to operate/analyze/design machinery; the second is how to repair, construct or sabotage. <strong>Special Bonuses:</strong> +5% to Locksmith and +5% to Surveillance Systems.<br><em>Base Skill: 45% + 5% per level of experience.</em>",
+    "category": "Mechanical",
+    "value": 0
+  },
+  {
+    "name": "Criminal Sciences & Forensics",
+    "description": "Basic knowledge of police skills. Includes simple criminal law, fingerprinting, ballistics (matching bullets to weapons and angles of impact), and general investigative techniques. Forensic medicine is also included, allowing the character to find evidence of time of death, cause of death, and other details when examining a corpse.<br><strong>Requires:</strong> Biology, Chemistry, Chemistry-Analytical, and some Mathematics.<br><em>Base Skill: 35% + 5% per level of experience.</em>",
+    "category": "Medical",
+    "value": 0
+  },
+  {
+    "name": "First Aid",
+    "description": "Rudimentary medical treatment which includes how to bandage wounds, stop bleeding, administer CPR/artificial respiration, and use antiseptics and common anti-inflammatory drugs and pain killers. A failed roll means the patient has not responded to treatment or that treatment was improperly applied.<br><em>Base Skill: 50% + 5% per level of experience.</em>",
+    "category": "Medical",
+    "value": 0
+  },
+  {
+    "name": "Paramedic",
+    "description": "An advanced form of medical emergency treatment which includes all first aid techniques, the setting of broken bones, suturing of wounds, use of oxygen and emergency equipment, use of drugs, knowledge of how to move a critically injured person, and other lifesaving techniques. For serious injury or coma, roll three times consecutively \u2014 two successes out of three means the wound has been properly treated.<br><em>Base Skill: 50% + 6% per level of experience.</em>",
+    "category": "Medical",
+    "value": 0
+  },
+  {
+    "name": "Medical Doctor",
+    "description": "The character needs a Ph.D. (doctorate degree) with Master's of Science to be a practicing doctor. Training includes clinical skills, medical discipline, code of ethics, laboratory skills, physiology, pathology, pharmacology, and surgical procedures. <strong>Note:</strong> The first percentile number indicates the ability to diagnose a problem; the second is the ability to successfully treat it.<br><em>Base Skill: 70/60% + 3% per level of experience.</em>",
+    "category": "Medical",
+    "value": 0
+  },
+  {
+    "name": "Pathology",
+    "description": "The branch of medicine dealing with the nature of diseases, their causes and symptoms, and the functional and structural changes caused by disease. Training includes anatomy, physiology, cell biology, manifestation of disease, tissue injury and repair, diagnosis of human disease, tissue culture methods, analysis of drugs in biological samples, and laboratory research.<br><strong>Requires:</strong> Chemistry.<br><em>Base Skill: 45% + 5% per level of experience.</em>",
+    "category": "Medical",
+    "value": 0
+  },
+  {
+    "name": "Demolitions",
+    "description": "Advanced knowledge in the use and workings of explosives and detonation devices for the purpose of blowing up bridges, buildings, and sabotage. Includes all types of explosives (mines, dynamite, plastics, nitro, blasting caps, etc.) and a basic understanding of strategic placement of mines and booby traps. Also increases the character's awareness of suspicious rope, string, and wire. A failed roll means a dud \u2014 no explosion.<br><em>Base Skill: 60% + 3% per level of experience.</em>",
+    "category": "Military",
+    "value": 0
+  },
+  {
+    "name": "Demolitions Disposal",
+    "description": "Also known as Explosive Ordnance Disposal. Enables the character to safely defuse unexploded mines, bombs, explosive booby traps, dud artillery rounds, dud explosive charges, or any other explosive device. A failed roll means the item has exploded without warning.<br><em>Base Skill: 60% + 3% per level of experience.</em>",
+    "category": "Military",
+    "value": 0
+  },
+  {
+    "name": "Pilot Tank",
+    "description": "The piloting of armored assault vehicles, including armored all-terrain vehicles, amphibious recon, and other armored heavy vehicles and construction vehicles.<br><em>Base Skill: 50% + 4% per level of experience.</em>",
+    "category": "Military",
+    "value": 0
+  },
+  {
+    "name": "Hand to Hand: Basic",
+    "description": "Fighting techniques taught in military basic training or in self-defense. Counts as <strong>one skill</strong>. See the combat section for listing of specific abilities.",
+    "category": "Physical",
+    "value": 0
+  },
+  {
+    "name": "Hand to Hand: Expert",
+    "description": "An advanced form of self-defense and unarmed combat usually taught to commandos. Counts as <strong>two skills</strong>. See the combat section for listing of specific abilities.",
+    "category": "Physical",
+    "value": 0
+  },
+  {
+    "name": "Hand to Hand: Martial Arts",
+    "description": "Some form of oriental fighting skill (karate, kung-fu, etc.) that teaches advanced hand to hand combat. Counts as <strong>three skills</strong> (except for the Military Specialist and special conditions for upgrading Hand to Hand Combat). See the combat section for listing of specific abilities.",
+    "category": "Physical",
+    "value": 0
+  },
+  {
+    "name": "Acrobatics",
+    "description": "Aerial feats of agility and strength, such as walking a tightrope, high wire, trapeze, and stunts performed above the ground. Provides the following abilities:<br><ul><li>60% + 5%/level \u2014 Sense of Balance</li><li>60% + 5%/level \u2014 Walk Tightrope or High Wire</li><li>80% + 2%/level \u2014 Climb Rope</li><li>40% + 4%/level \u2014 Climbing (or +15% to Climb Skill)</li><li>60% + 5%/level \u2014 Back Flip</li><li>30% + 5%/level \u2014 Prowl (or +10% to Prowl Skill)</li><li>+3 to Roll with Punch/Fall</li><li>+2 to P.S., +1D4 to P.P., +1 to P.E., +3D6 to S.D.C.</li><li>Leap 4 feet high and 4 feet long, plus 2 feet per level</li></ul>",
+    "category": "Physical",
+    "value": 0
+  },
+  {
+    "name": "Athletics (General)",
+    "description": "Training in and enjoyment of vigorous exertion for competitive sports, exercises, and contests of strength, endurance and agility. Provides the following:<br><ul><li>+1 to parry and dodge</li><li>+1 to strike with a body block/tackle (1D4 damage)</li><li>+1 to roll with punch or fall</li><li>+1 to P.S., +1D4 to Spd., +1D8 to S.D.C.</li></ul>",
+    "category": "Physical",
+    "value": 0
+  },
+  {
+    "name": "Body Building",
+    "description": "Building muscle tone and body strength through weight lifting and exercise. Provides the following:<br><ul><li>+2 to P.S.</li><li>+10 to S.D.C.</li></ul>",
+    "category": "Physical",
+    "value": 0
+  },
+  {
+    "name": "Boxing",
+    "description": "The classic art of fighting with fists. Skilled boxers will automatically knockout opponents on a natural twenty for 1D6 melee rounds. Provides the following:<br><ul><li>One additional attack per melee</li><li>+2 to Parry/Dodge</li><li>+2 to Roll with Punch/Fall</li><li>+1D4 to P.S., +3D6 to S.D.C.</li></ul>",
+    "category": "Physical",
+    "value": 0
+  },
+  {
+    "name": "Climbing",
+    "description": "Knowledge of the tools and techniques for climbing up sheer surfaces. Roll once for every 20 ft. of a vertical climb. Every skilled climber gets a second roll to recover his/her hold. Rappelling is also included (minimum 30% + 5%/level). Provides the following:<br><ul><li>+1 to P.S., +1 to P.E., +1D6 to S.D.C.</li></ul><br><em>Base Skill: 50% + 8% per level of experience.</em>",
+    "category": "Physical",
+    "value": 0
+  },
+  {
+    "name": "Fencing",
+    "description": "The ancient art of Hand to Hand Weapon, learned from fencing teachers. Includes olympic-style fencing with foil, epee or saber, as well as Kendo and other weapons. Adds a bonus of +1 to strike and parry when combined with W.P. Sword. Note: Paired Weapons is a separate skill.",
+    "category": "Physical",
+    "value": 0
+  },
+  {
+    "name": "Gymnastics",
+    "description": "Learning to do falls, rolls, tumbles, cartwheels, and to work on rings and parallel bars. Characters with Gymnastics can leap 4 ft. up or 4 ft. across, plus 2 ft. per level. Provides the following abilities:<br><ul><li>50% + 5%/level \u2014 Sense of Balance</li><li>70% + 2%/level \u2014 Climb Rope</li><li>20% + 6%/level \u2014 Climbing (or +10% to Climb Skill)</li><li>70% + 8%/level \u2014 Back Flip</li><li>30% + 5%/level \u2014 Prowl</li><li>+2 to Roll with Punch/Fall</li><li>+1 to P.S., +1D4 to P.P., +1 to P.E., +1D6 to S.D.C.</li><li>Fearless of heights</li></ul>",
+    "category": "Physical",
+    "value": 0
+  },
+  {
+    "name": "Prowl",
+    "description": "This skill helps the character to move with stealth \u2014 quietly, slowly and carefully. Techniques include balance and footing, short steps and pacing, rifle positioning, prone positions for low visibility, and crawling. A failed Prowl roll means the character has been seen or heard. If successful, the character is not seen and may make a Sneak Attack.<br><em>Base Skill: 46% + 8% per level of experience.</em>",
+    "category": "Physical",
+    "value": 0
+  },
+  {
+    "name": "Running",
+    "description": "A routine and exercise to build speed and endurance. Provides the following:<br><ul><li>+1 to P.E.</li><li>+4D4 to Spd.</li><li>+1D6 to S.D.C.</li></ul>",
+    "category": "Physical",
+    "value": 0
+  },
+  {
+    "name": "Swimming",
+    "description": "The rudimentary skill of keeping afloat, dives, lifesaving, and swimming techniques. A character can swim a distance equal to 3&times; P.S. in yards per melee, maintainable for a total of melees equal to his P.E. Special bonus of +1 to parry and dodge while in water.<br><em>Base Skill: 50% + 8% per level of experience.</em>",
+    "category": "Physical",
+    "value": 0
+  },
+  {
+    "name": "Swimming: Advanced & S.C.U.B.A.",
+    "description": "Competitive swimming and advanced techniques including dives, lifesaving, snorkel and S.C.U.B.A. (Self-Contained Underwater Breathing Apparatus). A character can swim a distance equal to 4&times; P.S. in yards per melee, maintainable for 4&times; P.E. in melees. Provides the following:<br><ul><li>+2 to dodge underwater</li><li>+1 to P.S., +1 to P.E.</li><li>+3D4 to Spd. when swimming only</li><li>+1D6 to S.D.C.</li></ul><br><em>Base Skill: 50% + 5% per level of experience.</em>",
+    "category": "Physical",
+    "value": 0
+  },
+  {
+    "name": "Wrestling",
+    "description": "As taught in High Schools and Colleges, wrestling is more of a sport than a combat skill, but it does provide useful combat training. Provides the following:<br><ul><li>Pin/Incapacitate on a roll of 18, 19, or 20</li><li>Crush/Squeeze does 1D4 damage</li><li>Body Block/Tackle does 1D4 damage; opponent must Dodge or Parry to avoid being knocked down</li><li>+2 to Roll with Punch/Fall</li><li>+1 to P.E., +2 to P.S., +4D6 to S.D.C.</li></ul>",
+    "category": "Physical",
+    "value": 0
+  },
+  {
+    "name": "Astrophysics",
+    "description": "Knowledge of stellar astronomy and how it relates to nuclear physics, quantum mechanics, relativity, and other explanations for deep space phenomena like quasars and black holes.<br><strong>Requires:</strong> Basic and Advanced Mathematics.<br><em>Base Skill: 30% + 5% per level of experience.</em>",
+    "category": "Science",
+    "value": 0
+  },
+  {
+    "name": "Biology",
+    "description": "Basic understanding of cells, anatomy, physiology, evolution and genetics. The character will know the basic use of a microscope, cultivating bacteria, and how to classify new organisms.<br><em>Base Skill: 40% + 5% per level of experience.</em>",
+    "category": "Science",
+    "value": 0
+  },
+  {
+    "name": "Botany",
+    "description": "Plants, their categories and functions are studied extensively. Characters will know the basics of cross-fertilization, germinating and growing experimental plants.<br><em>Base Skill: 40% + 5% per level of experience.</em>",
+    "category": "Science",
+    "value": 0
+  },
+  {
+    "name": "Chemistry",
+    "description": "Basic understanding of chemical principles and formulae. Characters know enough chemical laboratory procedures for analyzing and synthesizing chemical compounds to be competent assistants.<br><em>Base Skill: 50% + 5% per level of experience.</em>",
+    "category": "Science",
+    "value": 0
+  },
+  {
+    "name": "Chemistry: Analytical",
+    "description": "Chemical engineering theory, useful in the analysis of compounds and their practical applications. Characters will be highly skilled in the use of laboratory equipment, and can analyze and synthesize chemicals.<br><strong>Requires:</strong> Basic and Advanced Mathematics.<br><em>Base Skill: 45% + 5% per level of experience.</em>",
+    "category": "Science",
+    "value": 0
+  },
+  {
+    "name": "Mathematics: Basic",
+    "description": "Includes algebra, geometry, trigonometry, calculus and techniques for advanced mathematics.<br><em>Base Skill: 80% + 2% per level of experience.</em>",
+    "category": "Science",
+    "value": 0
+  },
+  {
+    "name": "Mathematics: Advanced",
+    "description": "Includes algebra, geometry, trigonometry, calculus and techniques for advanced mathematics at a higher level.<br><em>Base Skill: 64% + 4% per level of experience.</em>",
+    "category": "Science",
+    "value": 0
+  },
+  {
+    "name": "Art",
+    "description": "The ability to draw, paint, sculpt or craft work. Scholastic art skills indicate a professional quality, while a secondary skill indicates a talented amateur.<br><em>Base Skill: 40% + 4% per level of experience.</em>",
+    "category": "Technical",
+    "value": 0
+  },
+  {
+    "name": "Language",
+    "description": "Characters with a language skill can understand, speak, write and read in a language other than their native tongue. Language may be selected repeatedly (for different languages) as a skill program and/or as a secondary skill. Three languages can be selected for each skill program, but only one per secondary skill selection.<br><em>Base Skill: 55% + 5% per level of experience.</em>",
+    "category": "Technical",
+    "value": 0
+  },
+  {
+    "name": "Photography",
+    "description": "Taking black and white or color still pictures. Characters will know how to load, develop and enlarge film.<br><em>Base Skill: 50% + 5% per level of experience.</em>",
+    "category": "Technical",
+    "value": 0
+  },
+  {
+    "name": "Writing",
+    "description": "The ability to write prose (stories), poems or journalistically (articles/news). Scholastic writing skill indicates professional quality, while a secondary skill indicates talented amateur.<br><em>Base Skill: 34% + 4% per level of experience.</em>",
+    "category": "Technical",
+    "value": 0
+  },
+  {
+    "name": "Pilot: Automobile",
+    "description": "Skills in driving conventional automatic and manual (stick) transmission cars, jeeps, and mini-vans.<br><em>Base Skill: 76% + 4% per level of experience.</em>",
+    "category": "Pilot Skills",
+    "value": 0
+  },
+  {
+    "name": "Pilot: Race Car",
+    "description": "Training in piloting automobiles specifically designed for high-speed competition (like Formula 500 cars) at speeds of 200 mph and greater.<br><em>Base Skill: 55% + 5% per level of experience.</em>",
+    "category": "Pilot Skills",
+    "value": 0
+  },
+  {
+    "name": "Pilot: Motorcycle",
+    "description": "The practical skill of riding a motorcycle.<br><em>Base Skill: 60% + 4% per level of experience.</em>",
+    "category": "Pilot Skills",
+    "value": 0
+  },
+  {
+    "name": "Pilot: Truck",
+    "description": "Manual or automatic transmission; includes vans and trailers.<br><em>Base Skill: 60% + 4% per level of experience.</em>",
+    "category": "Pilot Skills",
+    "value": 0
+  },
+  {
+    "name": "Pilot: Airplane",
+    "description": "Includes the old propeller, single and twin engine types.<br><em>Base Skill: 70% + 4% per level of experience.</em>",
+    "category": "Pilot Skills",
+    "value": 0
+  },
+  {
+    "name": "Pilot: Boats (Sail Type)",
+    "description": "Skill in piloting sail-type watercraft.<br><em>Base Skill: 60% + 4% per level of experience.</em>",
+    "category": "Pilot Skills",
+    "value": 0
+  },
+  {
+    "name": "Pilot: Boats (Motor Type)",
+    "description": "Skill in piloting large and small motor boats (not ships).<br><em>Base Skill: 60% + 4% per level of experience.</em>",
+    "category": "Pilot Skills",
+    "value": 0
+  },
+  {
+    "name": "Pilot: Basic Helicopter",
+    "description": "Includes the small two-seater observation types as well as large transport and assault helicopters.<br><em>Base Skill: 60% + 4% per level of experience.</em>",
+    "category": "Pilot Advanced Aircraft",
+    "value": 0
+  },
+  {
+    "name": "Pilot: Combat Helicopter",
+    "description": "Requires special training in assault-type helicopters of all kinds, as well as the use of their weapons.<br><em>Base Skill: 52% + 4% per level of experience.</em>",
+    "category": "Pilot Advanced Aircraft",
+    "value": 0
+  },
+  {
+    "name": "Pilot: Jet",
+    "description": "Includes the fan jet and commercial jet liners.<br><em>Base Skill: 60% + 4% per level of experience.</em>",
+    "category": "Pilot Advanced Aircraft",
+    "value": 0
+  },
+  {
+    "name": "Pilot: Fighter Jet",
+    "description": "Training in the flying, maneuvering, techniques and weapons of jet fighter planes.<br><em>Base Skill: 50% + 4% per level of experience.</em>",
+    "category": "Pilot Advanced Aircraft",
+    "value": 0
+  },
+  {
+    "name": "Navigation",
+    "description": "Skills in map reading, star charts, course computation, following landmarks, and use of navigational equipment. Includes air, land and water navigation, as well as piloting by instruments alone. A failed roll means the pilot is off course.<br><strong>Requires:</strong> Basic Mathematics and Read Sensory Equipment.<br><em>Base Skill: 60% + 5% per level of experience.</em>",
+    "category": "Pilot Related Skills",
+    "value": 0
+  },
+  {
+    "name": "Read Sensory Equipment",
+    "description": "Individuals with this training can maintain, understand, operate, and interpret sensory data from all types of conventional sensor devices. These include radar, sonar, motion detectors, surveillance equipment, optical enhancement, and instrument panels. <strong>Note:</strong> Characters without this skill cannot understand nor operate air vehicles, radar or detection/surveillance equipment.<br><em>Base Skill: 40% + 5% per level of experience.</em>",
+    "category": "Pilot Related Skills",
+    "value": 0
+  },
+  {
+    "name": "Weapon Systems",
+    "description": "Complete understanding of weapon units and systems incorporated in vehicles. Covers a vast variety of weapons, lasers, particle beams, auto cannons, missile launchers, and so on. <strong>Special Bonus:</strong> +2 to strike. Characters without this skill can operate vehicle weapons only if skilled in piloting that vehicle, but have no bonus to strike and never have initiative.<br><em>Base Skill: 50% + 2% per level of experience.</em>",
+    "category": "Pilot Related Skills",
+    "value": 0
+  },
+  {
+    "name": "W.P. Sword",
+    "description": "Combat skill with large and small swords. <strong>Bonuses:</strong> +1 to strike and parry at level 1; an additional +1 to strike and parry at level 4; and again at level 8.",
+    "category": "Weapon Proficiencies",
+    "value": 0
+  },
+  {
+    "name": "W.P. Blunt",
+    "description": "A skill with any type of blunt weapon including mace, hammer, cudgel, pipe, staff and club. <strong>Bonuses:</strong> +1 to strike and parry at level 1; add another +1 to strike and parry at level 4; and +1 to parry at level 8.",
+    "category": "Weapon Proficiencies",
+    "value": 0
+  },
+  {
+    "name": "W.P. Forked and Spear",
+    "description": "Combat training with all types of spears including Bisento, Yari and Naginata. <strong>Bonuses:</strong> +1 to strike and parry at level 1; additional +1 to strike and parry at levels 4, 7, 10 and 13. Bonus to strike when thrown: +1 at level 2; additional +1 at levels 6, 9 and 14.",
+    "category": "Weapon Proficiencies",
+    "value": 0
+  },
+  {
+    "name": "W.P. Targeting (Shuriken)",
+    "description": "A practiced skill in the use of thrown weapons and bow weapons. Adds bonuses to knives (thrown), throwing axe, spears/forks (thrown), sling, short bow, long bow, and cross bow. Adds +1 to strike at levels 2, 4, 7, 10 and 13, and increases effective range by 20 ft. per level of experience (10 ft. for knives, darts, and throwing axes).",
+    "category": "Weapon Proficiencies",
+    "value": 0
+  },
+  {
+    "name": "W.P. Bow",
+    "description": "The practiced use of a bow and arrow and cross bow. <strong>Bonus to strike:</strong> +1 at level 1, plus +1 to strike for each additional two levels. <strong>Rate of Fire:</strong> 2 at level 1, plus 1 additional shot for each additional two levels.<br><strong>Bow Ranges & Damage:</strong><ul><li>Short Bow (ninja) \u2014 420 ft / 1D6</li><li>Large Bow (long bow) \u2014 700 ft / 1D8</li><li>Compound Bow \u2014 800 ft / 2D6</li><li>Cross Bow \u2014 700 ft / 1D8</li></ul>",
+    "category": "Weapon Proficiencies",
+    "value": 0
+  },
+  {
+    "name": "W.P. Chain",
+    "description": "Includes ordinary lengths of chain, mace and chain, flail, nunchaku, etc. <strong>Bonuses:</strong> +1 to strike at level 1; add another +1 to strike and parry at level 4; and +1 at level 8.",
+    "category": "Weapon Proficiencies",
+    "value": 0
+  },
+  {
+    "name": "W.P. Knife",
+    "description": "Combat skill with all types of knives. <strong>Bonuses:</strong> +1 to strike and parry at level 1; +1 to strike and parry at level 2; +1 to parry at level 5; +1 to strike at level 6; and again at level 9.",
+    "category": "Weapon Proficiencies",
+    "value": 0
+  },
+  {
+    "name": "W.P. Paired Weapons",
+    "description": "Users of paired weapons can: (1) Strike and parry simultaneously; (2) Perform twin simultaneous strikes against the same target (counts as ONE attack); (3) Strike two different targets simultaneously; (4) Parry two attackers. Warriors skilled in paired weapons can often perform two actions for every one attack per melee, but every time they use twin actions they <strong>lose</strong> their automatic parry. Limited to one-handed weapons only; two-handed weapons cannot be used as paired weapons.",
+    "category": "Weapon Proficiencies",
+    "value": 0
+  },
+  {
+    "name": "W.P. Staff",
+    "description": "Combat skill with large and small wood or iron staves and spears. <strong>Bonuses:</strong> +1 to strike and parry at level 2; additional +1 to strike and parry at level 5; additional +1 to parry at level 8; and +1 to parry at level 11.",
+    "category": "Weapon Proficiencies",
+    "value": 0
+  }
+]

@@ -1,102 +1,114 @@
 [
   {
     "name": "Bodyguard",
-    "description": ""
+    "description": "If someone within SHORT range of you is hit by an attack, you can dive in to take the hit for them. Roll for MOBILITY. It doesn't count as an action in combat. If you roll one or more &#128065; you take the hit instead. You can push the roll."
   },
   {
     "name": "Cashflow",
-    "description": ""
+    "description": "You have an off-the-books source of cash and thus get a Chinyen Point at the start of every Case File."
   },
   {
     "name": "Controlled",
-    "description": ""
+    "description": "When rolling for a critical stress effect, you may re-roll the result once. If you do, you cannot go back to the earlier result."
   },
   {
     "name": "Counselor",
-    "description": ""
+    "description": "Once per Shift, you can heal a point of stress from another character by talking to them for a few minutes. You cannot use this specialty on yourself."
   },
   {
     "name": "Fast Reflexes",
-    "description": ""
+    "description": "You get to draw an additional initiative card at the start of combat. Choose the card you want to use."
   },
   {
     "name": "Gearhead",
-    "description": ""
+    "description": "You may choose a second type of favored gear (page 034)."
   },
   {
     "name": "Gutter Rat",
-    "description": ""
+    "description": "You can move to a new location in LA on foot without rolling CONNECTIONS (page 216)."
   },
   {
     "name": "Hardened",
-    "description": ""
+    "description": "Your maximum Resolve score is increased by 1. You can take this specialty up to three times.",
+    "bonusadjustments": [
+      {
+        "type": "resolve",
+        "value": 1
+      }
+    ]
   },
   {
     "name": "Hip Flask",
-    "description": ""
+    "description": "It burns like hell in your gut, but once per Shift you can take a swig to heal a point of stress."
   },
   {
     "name": "Insider",
-    "description": ""
+    "description": "You get an advantage to all CONNECTIONS rolls to acquire gear or other resources from the LAPD (page 163)."
   },
   {
     "name": "Interrogator",
-    "description": ""
+    "description": "You get an advantage to all MANIPULATION rolls for extracting information from a prisoner or a witness in court."
   },
   {
     "name": "Kickbacks",
-    "description": ""
+    "description": "You get an advantage to all CONNECTIONS rolls to buy or sell things on the black market (page 204)."
   },
   {
     "name": "Killer",
-    "description": ""
+    "description": "You can, if you want to, roll an extra Crit Die when inflicting a critical hit on a target and choose the result you prefer."
   },
   {
     "name": "Married to the Job",
-    "description": ""
+    "description": "You can go for four Shifts without Downtime before suffering stress instead of the normal three."
   },
   {
     "name": "Martial Arts",
-    "description": ""
+    "description": "You get an advantage to all CLOSE COMBAT rolls when fighting unarmed."
   },
   {
     "name": "Merciful",
-    "description": ""
+    "description": "You can always, if you want to, reduce the Crit Die rolled for a critical injury to make your crits less lethal."
   },
   {
     "name": "Musician",
-    "description": ""
+    "description": "You get an advantage to all MANIPULATION rolls in situations where singing or playing an instrument is helpful. The Game Runner has final say."
   },
   {
     "name": "Origami",
-    "description": ""
+    "description": "You can fold a mean origami figure. This takes a few minutes and heals one point of stress, but can only be done once per Shift."
   },
   {
     "name": "People Person",
-    "description": ""
+    "description": "You gain a second key relationship, with the same rules effects as your first."
   },
   {
     "name": "Protected",
-    "description": ""
+    "description": "When you lose a Promotion Point due to any failures in your duties, roll CONNECTIONS. For every &#128065; rolled, the amount of points lost is reduced by one (to a minimum of zero)."
   },
   {
     "name": "Scientist",
-    "description": ""
+    "description": "You get an advantage to all TECH or MEDICAL AID rolls when making an assessment of any sort that requires knowledge of physics, biology, geology, forensics, or any other natural science."
   },
   {
     "name": "Smokes",
-    "description": ""
+    "description": "They'll kill you in the end, but once per Shift you can light them up to heal a point of stress."
   },
   {
     "name": "Sniper",
-    "description": ""
+    "description": "You get an advantage to FIREARMS rolls when firing a single shot (not full auto) at LONG range or more, from a hidden position."
   },
   {
     "name": "Sycophant",
-    "description": ""
+    "description": "By constantly ingratiating yourself with your superiors you gain an additional Promotion Point at the end of each session."
   },
   {
     "name": "Tough",
-    "description": ""
+    "description": "Your maximum Health score is increased by 1. You can take this specialty up to three times.",
+    "bonusadjustments": [
+      {
+        "type": "health",
+        "value": 1
+      }
+    ]
   }
 ]

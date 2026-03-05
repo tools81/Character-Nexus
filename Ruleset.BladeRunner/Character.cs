@@ -26,6 +26,7 @@ namespace BladeRunner
         public Tenure? Tenure { get; set; }
         public List<Skill>? Skills { get; set; }
         public List<Specialty>? Specialties { get; set; }
+        public List<Augmentation>? Augmentations { get; set; }
         public Memory? Memory { get; set; }
         public Relationship? Relationship { get; set; }
         public string FavoredGear { get; set; }

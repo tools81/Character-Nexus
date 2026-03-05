@@ -1,12 +1,6 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using Utility;
 
 namespace BladeRunner
@@ -193,6 +187,29 @@ namespace BladeRunner
                                     {
                                         var found = specialties.Find(t => t.Name.ToLower() == reader.Value.ToString().ToLower());
                                         character.Specialties.Add(found);
+                                    }
+                                }
+                            }
+                            break;
+                        case "augmentations":
+                            if (reader.TokenType != JsonToken.StartArray)
+                            {
+                                throw new JsonException("Expected StartArray token for augmentations");
+                            }
+
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.BladeRunner.Json.Augmentations.json"))
+                            {
+                                using (var augmentationsReader = new StreamReader(stream))
+                                {
+                                    var jsonContent = augmentationsReader.ReadToEnd();
+                                    var augmentations = JsonTo.List<Augmentation>(jsonContent);
+
+                                    character.Augmentations = new List<Augmentation>();
+
+                                    while (reader.Read() && reader.TokenType != JsonToken.EndArray)
+                                    {
+                                        var found = augmentations.Find(t => t.Name.ToLower() == reader.Value.ToString().ToLower());
+                                        character.Augmentations.Add(found);
                                     }
                                 }
                             }

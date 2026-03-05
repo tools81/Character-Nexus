@@ -3,6 +3,7 @@ import { UseFormRegister, FieldValues, useWatch, UseFormGetValues, UseFormSetVal
 import { BonusAdjustments } from "../types/BonusAdjustment";
 import { handleRemoveBonusAdjustment } from "../hooks/useBonus";
 import { InputGroup } from "react-bootstrap";
+import DiceRollButton from "./DiceRollButton";
 
 interface Props {
   register: UseFormRegister<FieldValues>,
@@ -23,6 +24,7 @@ interface Props {
     min?: number;
     max?: number;
   };
+  dice?: boolean;
   disabled?: boolean;
   visible?: boolean;
 }
@@ -42,6 +44,7 @@ const InputNumber = ({
   bonusAdjustments,
   setBonusAdjustments,
   validation,
+  dice,
   disabled,
   visible = true
 }: Props) => {
@@ -52,6 +55,12 @@ const InputNumber = ({
   const { onChange: rhfOnChange, onBlur, name: fieldName, ref } = register(name, { disabled });
 
   const controlledValue = value !== "" ? value : (defaultValue ?? "");
+
+  const handleDiceRoll = () => {
+    const min = validation?.min ?? 1;
+    const max = validation?.max ?? 20;
+    setValue(name, Math.floor(Math.random() * (max - min + 1)) + min);
+  };
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     rhfOnChange(event);
@@ -86,24 +95,28 @@ const InputNumber = ({
             value={controlledValue}
             onChange={handleChange}
           />
+          {dice && <DiceRollButton onClick={handleDiceRoll} />}
         </InputGroup>
       )}
       {!image && (
-        <input
-          id={name}
-          type="number"
-          className={className}
-          style={{ maxWidth: "100px" }}
-          data-bonusadjustments={inputBonusAdjustments}
-          ref={ref}
-          name={fieldName}
-          onBlur={onBlur}
-          disabled={disabled}
-          min={validation?.min}
-          max={validation?.max}
-          value={controlledValue}
-          onChange={handleChange}
-        />
+        <span style={{ display: "inline-flex", alignItems: "center", gap: "4px" }}>
+          <input
+            id={name}
+            type="number"
+            className={className}
+            style={{ maxWidth: "100px" }}
+            data-bonusadjustments={inputBonusAdjustments}
+            ref={ref}
+            name={fieldName}
+            onBlur={onBlur}
+            disabled={disabled}
+            min={validation?.min}
+            max={validation?.max}
+            value={controlledValue}
+            onChange={handleChange}
+          />
+          {dice && <DiceRollButton onClick={handleDiceRoll} />}
+        </span>
       )}
     </div>
   );

@@ -303,7 +303,7 @@ namespace BladeRunner
                         min = -3,
                         max = 9
                     },
-                    @default = 0
+                    @default = 1
                 });
             }            
 
@@ -325,90 +325,95 @@ namespace BladeRunner
             var children = new List<object>();
 
             dynamic whenObj = new ExpandoObject();
-            whenObj.name = name;
-            whenObj.label = label;
+            whenObj.name = $"{name}.when";
+            whenObj.label = "When Did It Happen?";
             whenObj.type = "select";
             whenObj.className = "form-select";
+            whenObj.dice = true;
             whenObj.options = new List<object>();
             foreach (var whenItem in tableMemoryWhenItems)
             {
                 whenObj.options.Add(
                     new
                     {
-                        value = whenItem.Description,
-                        label = "When"
+                        value = whenItem.Value,
+                        label = whenItem.Description
                     }
                 );
             }
             children.Add(whenObj);
 
             dynamic whoObj = new ExpandoObject();
-            whoObj.name = name;
-            whoObj.label = label;
+            whoObj.name = $"{name}.who";
+            whoObj.label = "Who Was There?";
             whoObj.type = "select";
             whoObj.className = "form-select";
+            whoObj.dice = true;
             whoObj.options = new List<object>();
             foreach (var whoItem in tableMemoryWhoItems)
             {
                 whoObj.options.Add(
                     new
                     {
-                        value = whoItem.Description,
-                        label = "When"
+                        value = whoItem.Value,
+                        label = whoItem.Description
                     }
                 );
             }
             children.Add(whoObj);
 
             dynamic whereObj = new ExpandoObject();
-            whereObj.name = name;
-            whereObj.label = label;
+            whereObj.name = $"{name}.where";
+            whereObj.label = "Where Did It Happen?";
             whereObj.type = "select";
             whereObj.className = "form-select";
+            whereObj.dice = true;
             whereObj.options = new List<object>();
             foreach (var whereItem in tableMemoryWhereItems)
             {
                 whereObj.options.Add(
                     new
                     {
-                        value = whereItem.Description,
-                        label = "Where"
+                        value = whereItem.Value,
+                        label = whereItem.Description
                     }
                 );
             }
             children.Add(whereObj);
 
             dynamic whatObj = new ExpandoObject();
-            whatObj.name = name;
-            whatObj.label = label;
+            whatObj.name = $"{name}.what";
+            whatObj.label = "What Happened?";
             whatObj.type = "select";
             whatObj.className = "form-select";
+            whatObj.dice = true;
             whatObj.options = new List<object>();
             foreach (var whatItem in tableMemoryWhatItems)
             {
                 whatObj.options.Add(
                     new
                     {
-                        value = whatItem.Description,
-                        label = "What"
+                        value = whatItem.Value,
+                        label = whatItem.Description
                     }
                 );
             }
             children.Add(whatObj);
 
             dynamic howObj = new ExpandoObject();
-            howObj.name = name;
-            howObj.label = label;
+            howObj.name = $"{name}.how";
+            howObj.label = "How Did It Happen?";
             howObj.type = "select";
             howObj.className = "form-select";
+            howObj.dice = true;
             howObj.options = new List<object>();
             foreach (var howItem in tableMemoryHowItems)
             {
                 howObj.options.Add(
                     new
                     {
-                        value = howItem.Description,
-                        label = "How"
+                        value = howItem.Value,
+                        label = howItem.Description
                     }
                 );
             }
@@ -432,54 +437,57 @@ namespace BladeRunner
             var children = new List<object>();
 
             dynamic whoObj = new ExpandoObject();
-            whoObj.name = name;
-            whoObj.label = label;
+            whoObj.name = $"{name}.who";
+            whoObj.label = "Who Is It?";
             whoObj.type = "select";
             whoObj.className = "form-select";
+            whoObj.dice = true;
             whoObj.options = new List<object>();
             foreach (var whoItem in tableRelationshipWhoItems)
             {
                 whoObj.options.Add(
                     new
                     {
-                        value = whoItem.Description,
-                        label = "Who"
+                        value = whoItem.Value,
+                        label = whoItem.Description
                     }
                 );
             }
             children.Add(whoObj);
 
             dynamic whatObj = new ExpandoObject();
-            whatObj.name = name;
-            whatObj.label = label;
+            whatObj.name = $"{name}.what";
+            whatObj.label = "What's Your Relationship Like?";
             whatObj.type = "select";
             whatObj.className = "form-select";
+            whatObj.dice = true;
             whatObj.options = new List<object>();
             foreach (var whatItem in tableRelationshipWhatItems)
             {
                 whatObj.options.Add(
                     new
                     {
-                        value = whatItem.Description,
-                        label = "What"
+                        value = whatItem.Value,
+                        label = whatItem.Description
                     }
                 );
             }
             children.Add(whatObj);
 
             dynamic statusObj = new ExpandoObject();
-            statusObj.name = name;
-            statusObj.label = label;
+            statusObj.name = $"{name}.status";
+            statusObj.label = "What's Going On?";
             statusObj.type = "select";
             statusObj.className = "form-select";
+            statusObj.dice = true;
             statusObj.options = new List<object>();
             foreach (var statusItem in tableRelationshipStatusItems)
             {
-                whatObj.options.Add(
+                statusObj.options.Add(
                     new
                     {
-                        value = statusItem.Description,
-                        label = "Status"
+                        value = statusItem.Value,
+                        label = statusItem.Description
                     }
                 );
             }
@@ -614,7 +622,8 @@ namespace BladeRunner
                     {
                         value = weapon.Name,
                         label = weapon.Name,
-                        description = weapon.Description
+                        description = weapon.Description,
+                        image = weapon.Image
                     }
                 );
             }
@@ -647,7 +656,8 @@ namespace BladeRunner
                     {
                         value = armor.Name,
                         label = armor.Name,
-                        description = armor.Description
+                        description = armor.Description,
+                        image = armor.Image
                     }
                 );
             }
@@ -680,7 +690,8 @@ namespace BladeRunner
                     {
                         value = gear.Name,
                         label = gear.Name,
-                        description = gear.Description
+                        description = gear.Description,
+                        image = gear.Image
                     }
                 );
             }
@@ -713,7 +724,8 @@ namespace BladeRunner
                     {
                         value = vehicle.Name,
                         label = vehicle.Name,
-                        description = vehicle.Description
+                        description = vehicle.Description,
+                        image = vehicle.Image
                     }
                 );
             }

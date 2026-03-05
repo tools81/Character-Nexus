@@ -160,6 +160,7 @@ const CharacterEditor: React.FC = () => {
               bonusAdjustments={bonusAdjustments}
               setBonusAdjustments={setBonusAdjustments}
               validation={field.validation}
+              dice={field.dice}
               disabled={disabledMap?.[field.name] === true}
               visible={isVisible(field.name)}
             />
@@ -209,6 +210,7 @@ const CharacterEditor: React.FC = () => {
               userChoices={userChoices}
               setUserChoices={setUserChoices}
               openUserChoiceModal={openUserChoiceModal}
+              dice={field.dice}
               disabled={disabledMap?.[field.name] === true}
               visible={isVisible(field.name)}
             />

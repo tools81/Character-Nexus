@@ -13,6 +13,7 @@ import { UserChoices } from "../types/UserChoice";
 import { toCamelCase } from "../utils/toCamelCase";
 import { handleRemoveBonusAdjustment, handleRemoveFieldValue } from "../hooks/useBonus";
 import { DropdownDivider } from "react-bootstrap";
+import DiceRollButton from "./DiceRollButton";
 
 interface Props {
   register: UseFormRegister<FieldValues>;
@@ -31,6 +32,7 @@ interface Props {
   userChoices: UserChoices;
   setUserChoices: React.Dispatch<React.SetStateAction<UserChoices>>;
   openUserChoiceModal: (choices: UserChoices) => void;
+  dice?: boolean;
   disabled?: boolean;
   visible?: boolean;
 }
@@ -56,6 +58,7 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
     userChoices,
     setUserChoices,
     openUserChoiceModal,
+    dice,
     disabled,
     visible = true
   } = props;
@@ -89,6 +92,12 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
     document.addEventListener("mousedown", close);
     return () => document.removeEventListener("mousedown", close);
   }, []);  
+
+  const handleDiceRoll = () => {
+    if (!options || options.length === 0) return;
+    const randomOption = options[Math.floor(Math.random() * options.length)];
+    handleCustomChange(randomOption);
+  };
 
   // Handle clicks on the custom UI
   const handleCustomChange = (option: any) => {
@@ -124,60 +133,63 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
     </div>
 
       {/* ================= Custom Select UI ================= */}
-      <div
-        ref={wrapperRef}
-        className={`custom-select ${className}`}
-        aria-disabled={disabled}
-        {...(!visible ? { style: { display: 'none' } } : {})}
-      >
-        {/* Selected value */}
+      <span style={{ display: visible ? "flex" : "none", flex: 1, alignItems: "center", gap: "4px" }}>
         <div
-          className="custom-select__control"
-          onClick={() => !disabled && setOpen((v) => !v)}
+          ref={wrapperRef}
+          className={`custom-select ${className}`}
+          aria-disabled={disabled}
+          style={{ flex: 1 }}
         >
-          {selectedValue ? (
-            <div className="custom-select__value">
-              {selectedValue.image && (
-                <img src={selectedValue.image} alt="" />
-              )}
-              <span>{selectedValue.label}</span>
+          {/* Selected value */}
+          <div
+            className="custom-select__control"
+            onClick={() => !disabled && setOpen((v) => !v)}
+          >
+            {selectedValue ? (
+              <div className="custom-select__value">
+                {selectedValue.image && (
+                  <img src={selectedValue.image} alt="" />
+                )}
+                <span>{selectedValue.label}</span>
+              </div>
+            ) : (
+              <span>Select…</span>
+            )}
+          </div>
+
+          {/* Dropdown */}
+          {open && (
+            <div className="custom-select__menu">
+              {options.map((option) => (
+                <div
+                  key={option.value}
+                  className="custom-select__option"
+                  onClick={() => handleCustomChange(option)}
+                >
+                  <div>
+                    {option.image && (
+                      <img src={option.image} alt="" />
+                    )}
+                  </div>
+                  <div>
+                    <strong>{option.label}</strong>
+                    {option.description && (
+                      <div
+                        className="description"
+                        dangerouslySetInnerHTML={{
+                          __html: option.description,
+                        }}
+                      />
+                    )}
+                  </div>
+                  <DropdownDivider />
+                </div>
+              ))}
             </div>
-          ) : (
-            <span>Select…</span>
           )}
         </div>
-
-        {/* Dropdown */}
-        {open && (
-          <div className="custom-select__menu">
-            {options.map((option) => (
-              <div
-                key={option.value}
-                className="custom-select__option"
-                onClick={() => handleCustomChange(option)}
-              >
-                <div>
-                  {option.image && (
-                    <img src={option.image} alt="" />
-                  )}
-                </div>
-                <div>
-                  <strong>{option.label}</strong>
-                  {option.description && (
-                    <div
-                      className="description"
-                      dangerouslySetInnerHTML={{
-                        __html: option.description,
-                      }}
-                    />
-                  )}
-                </div>
-                <DropdownDivider />
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
+        {dice && <DiceRollButton onClick={handleDiceRoll} />}
+      </span>
       
       {/* ================= Hidden Select ================= */}
       <div className="sr-only">

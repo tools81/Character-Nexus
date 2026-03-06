@@ -54,8 +54,6 @@ const CharacterEditor: React.FC = () => {
     if (!currentRuleset) return;
 
     console.log("Data: ", data);
-    console.log("choice fields in submitted data:", JSON.stringify(data?.choice));
-    console.log("getValues('choice'):", getValues("choice"));
     await dispatch(saveCharacter({ rulesetName: currentRuleset.name, characterData: data, imageFile: imageData ?? undefined }));
 
     navigate("/ruleset");

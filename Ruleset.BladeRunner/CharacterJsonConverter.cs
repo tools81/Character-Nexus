@@ -64,12 +64,6 @@ namespace BladeRunner
                         case "favoredGear":
                             character.FavoredGear = reader.Value.ToString();
                             break;
-                        case "signatureItem":
-                            character.SignatureItem = reader.Value.ToString();
-                            break;
-                        case "home":
-                            character.Home = reader.Value.ToString();
-                            break;
                         case "origin":
                             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.BladeRunner.Json.Origins.json"))
                             {
@@ -85,7 +79,7 @@ namespace BladeRunner
                             }
                             break;
                         case "archetype":
-                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.Archetype.Json.Archetypes.json"))
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.BladeRunner.Json.Archetypes.json"))
                             {
                                 using (var archetypesReader = new StreamReader(stream))
                                 {
@@ -220,7 +214,87 @@ namespace BladeRunner
                                 throw new JsonException("Expected StartObject token for memory");
                             }
 
-                            character.Memory = (Memory)reader.Value;
+                            character.Memory = new Memory();
+
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.BladeRunner.Json.Table.Memory.When.json"))
+                            {
+                                reader.Read();
+
+                                using (var memoriesWhenReader = new StreamReader(stream))
+                                {
+                                    var jsonContent = memoriesWhenReader.ReadToEnd();
+                                    var whens = JsonTo.List<TableItem>(jsonContent);
+
+                                    reader.Read();
+
+                                    var found = whens.Find(t => t.Value == (int.TryParse(reader.Value.ToString(), out n) ? n : 0));
+                                    character.Memory.When = found.Description;
+                                }
+                            }
+
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.BladeRunner.Json.Table.Memory.Who.json"))
+                            {
+                                reader.Read();
+
+                                using (var memoriesWhoReader = new StreamReader(stream))
+                                {
+                                    var jsonContent = memoriesWhoReader.ReadToEnd();
+                                    var whos = JsonTo.List<TableItem>(jsonContent);
+
+                                    reader.Read();
+
+                                    var found = whos.Find(t => t.Value == (int.TryParse(reader.Value.ToString(), out n) ? n : 0));
+                                    character.Memory.Who = found.Description;
+                                }
+                            }
+
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.BladeRunner.Json.Table.Memory.Where.json"))
+                            {
+                                reader.Read();
+
+                                using (var memoriesWhereReader = new StreamReader(stream))
+                                {
+                                    var jsonContent = memoriesWhereReader.ReadToEnd();
+                                    var wheres = JsonTo.List<TableItem>(jsonContent);
+
+                                    reader.Read();
+
+                                    var found = wheres.Find(t => t.Value == (int.TryParse(reader.Value.ToString(), out n) ? n : 0));
+                                    character.Memory.Where = found.Description;
+                                }
+                            }
+
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.BladeRunner.Json.Table.Memory.What.json"))
+                            {
+                                reader.Read();
+
+                                using (var memoriesWhatReader = new StreamReader(stream))
+                                {
+                                    var jsonContent = memoriesWhatReader.ReadToEnd();
+                                    var whats = JsonTo.List<TableItem>(jsonContent);
+
+                                    reader.Read();
+
+                                    var found = whats.Find(t => t.Value == (int.TryParse(reader.Value.ToString(), out n) ? n : 0));
+                                    character.Memory.What = found.Description;
+                                }
+                            }
+
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.BladeRunner.Json.Table.Memory.How.json"))
+                            {
+                                reader.Read();
+
+                                using (var memoriesHowReader = new StreamReader(stream))
+                                {
+                                    var jsonContent = memoriesHowReader.ReadToEnd();
+                                    var hows = JsonTo.List<TableItem>(jsonContent);
+
+                                    reader.Read();
+
+                                    var found = hows.Find(t => t.Value == (int.TryParse(reader.Value.ToString(), out n) ? n : 0));
+                                    character.Memory.How = found.Description;
+                                }
+                            }
                             break;
                         case "relationship":
                             if (reader.TokenType != JsonToken.StartObject)
@@ -228,7 +302,85 @@ namespace BladeRunner
                                 throw new JsonException("Expected StartObject token for relationship");
                             }
 
-                            character.Relationship = (Relationship)reader.Value;
+                            character.Relationship = new Relationship();
+
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.BladeRunner.Json.Table.Relationship.Who.json"))
+                            {
+                                reader.Read();
+
+                                using (var relationshipsWhoReader = new StreamReader(stream))
+                                {
+                                    var jsonContent = relationshipsWhoReader.ReadToEnd();
+                                    var whos = JsonTo.List<TableItem>(jsonContent);
+
+                                    reader.Read();
+
+                                    var found = whos.Find(t => t.Value == (int.TryParse(reader.Value.ToString(), out n) ? n : 0));
+                                    character.Relationship.Who = found.Description;
+                                }
+                            }
+
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.BladeRunner.Json.Table.Relationship.What.json"))
+                            {
+                                reader.Read();
+
+                                using (var relationshipsWhatReader = new StreamReader(stream))
+                                {
+                                    var jsonContent = relationshipsWhatReader.ReadToEnd();
+                                    var whats = JsonTo.List<TableItem>(jsonContent);
+
+                                    reader.Read();
+
+                                    var found = whats.Find(t => t.Value == (int.TryParse(reader.Value.ToString(), out n) ? n : 0));
+                                    character.Relationship.What = found.Description;
+                                }
+                            }
+
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.BladeRunner.Json.Table.Relationship.Status.json"))
+                            {
+                                reader.Read();
+
+                                using (var relationshipsStatusReader = new StreamReader(stream))
+                                {
+                                    var jsonContent = relationshipsStatusReader.ReadToEnd();
+                                    var statuses = JsonTo.List<TableItem>(jsonContent);
+
+                                    reader.Read();
+
+                                    var found = statuses.Find(t => t.Value == (int.TryParse(reader.Value.ToString(), out n) ? n : 0));
+                                    character.Relationship.Status = found.Description;
+                                }
+                            }
+                            break;
+                        case "home":
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.BladeRunner.Json.Table.Homes.json"))
+                            {
+                                reader.Read();
+
+                                using (var homeReader = new StreamReader(stream))
+                                {
+                                    var jsonContent = homeReader.ReadToEnd();
+                                    var homes = JsonTo.List<TableItem>(jsonContent);
+
+                                    var found = homes.Find(t => t.Value == (int.TryParse(reader.Value.ToString(), out n) ? n : 0));
+                                    character.Home = found.Description;
+                                }
+                            }
+                            break;
+                        case "signatureItem":
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.BladeRunner.Json.Table.SignatureItems.json"))
+                            {
+                                reader.Read();
+
+                                using (var signatureItemReader = new StreamReader(stream))
+                                {
+                                    var jsonContent = signatureItemReader.ReadToEnd();
+                                    var signatureItems = JsonTo.List<TableItem>(jsonContent);
+
+                                    var found = signatureItems.Find(t => t.Value == (int.TryParse(reader.Value.ToString(), out n) ? n : 0));
+                                    character.SignatureItem = found.Description;
+                                }
+                            }
                             break;
                         case "gears":
                             if (reader.TokenType != JsonToken.StartArray)

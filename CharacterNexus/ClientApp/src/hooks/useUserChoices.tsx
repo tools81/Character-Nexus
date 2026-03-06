@@ -101,7 +101,6 @@ export function useUserChoices(
         initializedRef.current.add(field.name);
       }
     });
-    console.log("Choice Fields:", choiceFields.map(f => f.name));
   }, [choiceFields, setValue]);
 
   // Watch dynamic choice fields

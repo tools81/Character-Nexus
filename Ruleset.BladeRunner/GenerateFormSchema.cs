@@ -61,6 +61,12 @@ namespace BladeRunner
                 string jsonTableRelationshipStatusData = File.ReadAllText(_jsonFilesPath + "Table/Relationship/Status.json");
                 List<TableItem>? tableRelationshipStatusItems = JsonTo.List<TableItem>(jsonTableRelationshipStatusData);
 
+                string jsonTableHomeData = File.ReadAllText(_jsonFilesPath + "Table/Homes.json");
+                List<TableItem>? tableMemoryHomeItems = JsonTo.List<TableItem>(jsonTableHomeData);
+
+                string jsonTableSignatureItemData = File.ReadAllText(_jsonFilesPath + "Table/SignatureItems.json");
+                List<TableItem>? tableMemorySignatureItems = JsonTo.List<TableItem>(jsonTableSignatureItemData);
+
                 GenerateDescriptionSchema();
 
                 GenerateOriginSchema(origins, "origin", "Origin");
@@ -78,6 +84,8 @@ namespace BladeRunner
                 GenerateArmorSchema(armors, "armor", "Armor");
                 GenerateGearSchema(gears, "gear", "Gear");
                 GenerateVehicleSchema(vehicles, "vehicle", "Vehicle");
+                GenerateHomeSchema(tableMemoryHomeItems, "home", "Home");
+                GenerateSignatureItemSchema(tableMemorySignatureItems, "signatureitem", "Signature Item");
 
                 var schema = new
                 {
@@ -502,6 +510,56 @@ namespace BladeRunner
             };
 
             _fields.Add(group);
+        }
+
+        private static void GenerateHomeSchema(List<TableItem> tableMemoryHomeItems, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.dice = true;
+            obj.options = new List<object>();
+
+            foreach (var homeItem in tableMemoryHomeItems)
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = homeItem.Value,
+                        label = homeItem.Description
+                    }
+                );
+            }
+
+            _fields.Add(obj);
+        }
+
+        private static void GenerateSignatureItemSchema(List<TableItem> tableMemorySignatureItems, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.dice = true;
+            obj.options = new List<object>();
+
+            foreach (var signatureItem in tableMemorySignatureItems)
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = signatureItem.Value,
+                        label = signatureItem.Description
+                    }
+                );
+            }
+
+            _fields.Add(obj);
         }
 
         private static void GenerateSkillSchema(List<Skill> skills, string name, string label)

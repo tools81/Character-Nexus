@@ -23,8 +23,6 @@ export function useBonusCharacteristics(
 
       handleSetFieldValue(characteristic.type, characteristic.value);
     }
-
-    console.log("Bonus Characteristics:", bonusCharacteristics);
   }, [bonusCharacteristics]);
 
   const handleSetFieldValue = (fieldName: string, choice: string) => {

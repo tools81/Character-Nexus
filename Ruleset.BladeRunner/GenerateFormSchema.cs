@@ -125,7 +125,8 @@ namespace BladeRunner
                     id = "health",
                     label = "Health",
                     type = "hidden",
-                    className = "form-control"
+                    className = "form-control",
+                    calculation = $"Math.ceil(((2 * [attributes.strength] + 6) + (2 * [attributes.agility] + 6)) / 4)"
                 }
             );
             _fields.Add(
@@ -135,7 +136,8 @@ namespace BladeRunner
                     id = "resolve",
                     label = "Resolve",
                     type = "hidden",
-                    className = "form-control"
+                    className = "form-control",
+                    calculation = $"Math.ceil(((2 * [attributes.intelligence] + 6) + (2 * [attributes.empathy] + 6)) / 4)"
                 }
             );
             _fields.Add(

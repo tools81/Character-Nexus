@@ -40,12 +40,15 @@ namespace BladeRunner
             var dict = new Dictionary<string, string>();
             dict.Add("Name", Name);
 
-            List<string> appearanceArray = Appearance.DivideStringIntoWordArray(20);
-            for (int i = 0; i < appearanceArray.Count; i++)
+            if (!string.IsNullOrEmpty(Appearance))
             {
-                if (i < 3) //Maximum number of lines on character sheet
+                List<string> appearanceArray = Appearance.DivideStringIntoWordArray(20);
+                for (int i = 0; i < appearanceArray.Count; i++)
                 {
-                    dict.Add($"Appearance [{i}]", appearanceArray[i]);
+                    if (i < 3) //Maximum number of lines on character sheet
+                    {
+                        dict.Add($"Appearance [{i}]", appearanceArray[i]);
+                    }
                 }
             }
 
@@ -71,15 +74,18 @@ namespace BladeRunner
             dict.Add("Notes", Notes);
             dict.Add("Origin", Origin.Name);
             dict.Add("Archetype", Archetype.Name);
-            dict.Add("FavoredGear", FavoredGear.Length > 90 ? FavoredGear.Substring(0, 90) : FavoredGear);
-            dict.Add("SignatureItem", SignatureItem.Length > 90 ? SignatureItem.Substring(0, 90) : SignatureItem);
+            //dict.Add("FavoredGear", !string.IsNullOrEmpty(FavoredGear) && FavoredGear.Length > 90 ? FavoredGear.Substring(0, 90) : FavoredGear);
+            dict.Add("SignatureItem", !string.IsNullOrEmpty(SignatureItem) && SignatureItem.Length > 90 ? SignatureItem.Substring(0, 90) : SignatureItem);
 
-            List<string> homeArray = Home.DivideStringIntoWordArray(20);
-            for (int i = 0; i < homeArray.Count; i++)
+            if (!string.IsNullOrEmpty(Home))
             {
-                if (i < 2) //Maximum number of lines on character sheet
+                List<string> homeArray = Home.DivideStringIntoWordArray(20);
+                for (int i = 0; i < homeArray.Count; i++)
                 {
-                    dict.Add($"Home [{i}]", homeArray[i]);
+                    if (i < 2) //Maximum number of lines on character sheet
+                    {
+                        dict.Add($"Home [{i}]", homeArray[i]);
+                    }
                 }
             }
 
@@ -99,7 +105,7 @@ namespace BladeRunner
 
             for (int i = 0; i < Skills.Count; i++)
             {
-                dict.Add($"{Skills[i]}Rating", Skills[i].Value.ToString());
+                dict.Add($"{Skills[i].Name}", Skills[i].Value.ToString());
             }
 
             for (int i = 0; i < Specialties.Count; i++)
@@ -160,7 +166,8 @@ namespace BladeRunner
                 Id = Id,
                 Name = Name,
                 Image = Image,
-                Details = $"{Origin.Name} | {Archetype.Name} | {Tenure.Name}"
+                Details = $"{Origin.Name} | {Archetype.Name}",
+                Level = Tenure.Name
             };
         }
     }

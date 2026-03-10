@@ -262,7 +262,7 @@ namespace Marvel
                 Id = Id,
                 Name = Name,
                 Image = Image,
-                Level = Rank,
+                Level = Rank.ToString(),
                 LevelName = "Rank",
                 Details = $"{Origin?.Name} | {Occupation?.Name}",
                 CharacterSheet = CharacterSheet

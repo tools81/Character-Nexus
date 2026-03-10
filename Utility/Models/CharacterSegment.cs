@@ -7,7 +7,7 @@ namespace Utility
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string Image { get; set; }   
-        public int Level { get; set; }
+        public string Level { get; set; }
         public string LevelName { get; set; }
         public string Details { get; set; } 
         public string CharacterSheet { get; set; }   

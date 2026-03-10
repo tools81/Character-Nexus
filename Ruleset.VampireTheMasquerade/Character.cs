@@ -592,7 +592,7 @@ namespace VampireTheMasquerade
                 Id = Id,
                 Name = Name,
                 Image = Image,
-                Level = Humanity,
+                Level = Humanity.ToString(),
                 LevelName = "Humanity",
                 Details = $"{Clan.Name} | {Predator.Name}",
                 CharacterSheet = CharacterSheet

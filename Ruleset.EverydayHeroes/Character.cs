@@ -74,7 +74,7 @@ namespace EverydayHeroes
                 Id = Id,
                 Name = Name,
                 Image = Image,
-                Level = Level,
+                Level = Level.ToString(),
                 LevelName = "Level",
                 Details = $"{Archetype.Name} | {Class.Name}",
                 CharacterSheet = CharacterSheet

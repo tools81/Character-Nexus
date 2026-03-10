@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Json\*.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Json\Character\" />
   </ItemGroup>
 

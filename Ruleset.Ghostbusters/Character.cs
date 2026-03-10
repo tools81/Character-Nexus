@@ -63,7 +63,7 @@ namespace Ghostbusters
                 Id = Id,
                 Name = Name,
                 Image = Image,
-                Level = BrowniePoints,
+                Level = BrowniePoints.ToString(),
                 Details = $"{Residence} | {Telex} | {Phone}"
             };
         }

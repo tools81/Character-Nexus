@@ -162,7 +162,7 @@ namespace BladeRunner
                                 }
                             }
                             break;
-                        case "specialties":
+                        case "specialty":
                             if (reader.TokenType != JsonToken.StartArray)
                             {
                                 throw new JsonException("Expected StartArray token for specialties");
@@ -185,7 +185,7 @@ namespace BladeRunner
                                 }
                             }
                             break;
-                        case "augmentations":
+                        case "augmentation":
                             if (reader.TokenType != JsonToken.StartArray)
                             {
                                 throw new JsonException("Expected StartArray token for augmentations");
@@ -295,6 +295,9 @@ namespace BladeRunner
                                     character.Memory.How = found.Description;
                                 }
                             }
+
+                            //End object after reading all memory properties
+                            reader.Read();
                             break;
                         case "relationship":
                             if (reader.TokenType != JsonToken.StartObject)
@@ -351,12 +354,13 @@ namespace BladeRunner
                                     character.Relationship.Status = found.Description;
                                 }
                             }
+
+                            //End object after reading all relationship properties
+                            reader.Read();
                             break;
                         case "home":
                             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.BladeRunner.Json.Table.Homes.json"))
                             {
-                                reader.Read();
-
                                 using (var homeReader = new StreamReader(stream))
                                 {
                                     var jsonContent = homeReader.ReadToEnd();
@@ -367,11 +371,9 @@ namespace BladeRunner
                                 }
                             }
                             break;
-                        case "signatureItem":
+                        case "signatureitem":
                             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.BladeRunner.Json.Table.SignatureItems.json"))
                             {
-                                reader.Read();
-
                                 using (var signatureItemReader = new StreamReader(stream))
                                 {
                                     var jsonContent = signatureItemReader.ReadToEnd();
@@ -382,7 +384,7 @@ namespace BladeRunner
                                 }
                             }
                             break;
-                        case "gears":
+                        case "gear":
                             if (reader.TokenType != JsonToken.StartArray)
                             {
                                 throw new JsonException("Expected StartArray token for gears");
@@ -405,7 +407,7 @@ namespace BladeRunner
                                 }
                             }
                             break;
-                        case "armors":
+                        case "armor":
                             if (reader.TokenType != JsonToken.StartArray)
                             {
                                 throw new JsonException("Expected StartArray token for armors");
@@ -428,7 +430,7 @@ namespace BladeRunner
                                 }
                             }
                             break;
-                        case "weapons":
+                        case "weapon":
                             if (reader.TokenType != JsonToken.StartArray)
                             {
                                 throw new JsonException("Expected StartArray token for weapons");
@@ -451,7 +453,7 @@ namespace BladeRunner
                                 }
                             }
                             break;
-                        case "vehicles":
+                        case "vehicle":
                             if (reader.TokenType != JsonToken.StartArray)
                             {
                                 throw new JsonException("Expected StartArray token for vehicles");

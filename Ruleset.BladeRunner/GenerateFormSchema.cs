@@ -78,14 +78,14 @@ namespace BladeRunner
                 GenerateKeyRelationshipSchema(tableRelationshipWhoItems, tableRelationshipWhatItems, tableRelationshipStatusItems,
                     "relationship", "Key Relationship");
                 GenerateSkillSchema(skills, "skill", "Skill");
+                GenerateHomeSchema(tableMemoryHomeItems, "home", "Home");
+                GenerateSignatureItemSchema(tableMemorySignatureItems, "signatureitem", "Signature Item");
                 GenerateSpecialtySchema(specialties, "specialty", "Specialties");
                 GenerateAugmentationSchema(augmentations, "augmentation", "Augmentations");
                 GenerateWeaponSchema(weapons, "weapon", "Weapons");
                 GenerateArmorSchema(armors, "armor", "Armor");
                 GenerateGearSchema(gears, "gear", "Gear");
-                GenerateVehicleSchema(vehicles, "vehicle", "Vehicle");
-                GenerateHomeSchema(tableMemoryHomeItems, "home", "Home");
-                GenerateSignatureItemSchema(tableMemorySignatureItems, "signatureitem", "Signature Item");
+                GenerateVehicleSchema(vehicles, "vehicle", "Vehicle");                
 
                 var schema = new
                 {

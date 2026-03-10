@@ -27,7 +27,9 @@ const CharacterCard = ({ id, name, image, level, levelName, details, characterSh
           //onClick={() => onClick()}
         >
           <div className="card-header text-nowrap"><h5 className="card-title">{name}</h5></div>
-          <img src={image} className="card-img-top" alt="..." />
+          <td className="pointer" onClick={() => onEdit(name)}>
+            <img src={image} className="card-img-top" alt="..." />
+          </td>
           <div className="card-body">
             <h5 className="card-title text-nowrap">{details}</h5>
           </div>

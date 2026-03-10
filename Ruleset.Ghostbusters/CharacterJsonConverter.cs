@@ -46,11 +46,14 @@ namespace Ghostbusters
                         case "name":
                             character.Name = reader.Value.ToString();
                             break;
+                        case "alias":
+                            character.Alias = reader.Value.ToString();
+                            break;
                         case "browniePoints":
                             character.BrowniePoints = int.TryParse(reader.Value.ToString(), out n) ? n : 0;
                             break;
-                        case "personality":
-                            character.Personality = reader.Value.ToString();
+                        case "description":
+                            character.Description = reader.Value.ToString();
                             break;
                         case "notes":
                             character.Notes = reader.Value.ToString();
@@ -111,13 +114,8 @@ namespace Ghostbusters
                                     {
                                         var propName = reader.Value.ToString();
                                         reader.Read();
-                                        var value = (bool)reader.Value;
-
-                                        if (value)
-                                        {
-                                            var found = talents.Find(p => p.Name.ToLower() == propName.ToLower());
-                                            character.Talents.Add(found);
-                                        }
+                                        var found = talents.Find(p => p.Name.ToLower() == reader.Value.ToString().ToLower());
+                                        character.Talents.Add(found);
                                     }
                                 }
                             }
@@ -136,25 +134,48 @@ namespace Ghostbusters
                                 }
                             }
                             break;
-                        case "equipment":
+                        case "gears":
                             if (reader.TokenType != JsonToken.StartArray)
                             {
                                 throw new JsonException("Expected StartArray token for tags");
                             }
 
-                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.Ghostbuster.Json.Equipment.json"))
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.Ghostbusters.Json.Gears.json"))
                             {
-                                using (var equipmentReader = new StreamReader(stream))
+                                using (var gearReader = new StreamReader(stream))
                                 {
-                                    var jsonContent = equipmentReader.ReadToEnd();
-                                    var equipment = JsonTo.List<Equipment>(jsonContent);
+                                    var jsonContent = gearReader.ReadToEnd();
+                                    var gears = JsonTo.List<Gear>(jsonContent);
 
-                                    character.Equipments = new List<Equipment>();
+                                    character.Gears = new List<Gear>();
 
                                     while (reader.Read() && reader.TokenType != JsonToken.EndArray)
                                     {
-                                        var found = equipment.Find(t => t.Name.ToLower() == reader.Value.ToString().ToLower());
-                                        character.Equipments.Add(found);
+                                        var found = gears.Find(t => t.Name.ToLower() == reader.Value.ToString().ToLower());
+                                        character.Gears.Add(found);
+                                    }
+                                }
+                            }
+                            break;
+                        case "weapons":
+                            if (reader.TokenType != JsonToken.StartArray)
+                            {
+                                throw new JsonException("Expected StartArray token for weapons");
+                            }
+
+                            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.Ghostbusters.Json.Weapons.json"))
+                            {
+                                using (var weaponReader = new StreamReader(stream))
+                                {
+                                    var jsonContent = weaponReader.ReadToEnd();
+                                    var weapons = JsonTo.List<Weapon>(jsonContent);
+
+                                    character.Weapons = new List<Weapon>();
+
+                                    while (reader.Read() && reader.TokenType != JsonToken.EndArray)
+                                    {
+                                        var found = weapons.Find(t => t.Name.ToLower() == reader.Value.ToString().ToLower());
+                                        character.Weapons.Add(found);
                                     }
                                 }
                             }
@@ -163,7 +184,6 @@ namespace Ghostbusters
                 }
             }
 
-            reader.Close();
             return character;
         }
 
@@ -182,9 +202,6 @@ namespace Ghostbusters
 
             writer.WritePropertyName("browniePoints");
             writer.WriteValue(character.BrowniePoints);
-
-            writer.WritePropertyName("personality");
-            writer.WriteValue(character.Personality);
 
             writer.WritePropertyName("notes");
             writer.WriteValue(character.Notes);
@@ -231,15 +248,15 @@ namespace Ghostbusters
 
             writer.WritePropertyName("goal");
             writer.WriteStartObject();
-            writer.WriteValue(character.Goal.Name);
+            writer.WriteValue(character.Goal);
             writer.WriteEndObject();
 
-            writer.WritePropertyName("equipments");
+            writer.WritePropertyName("gears");
             writer.WriteStartArray();
-            foreach (var equipment in character.Equipments)
+            foreach (var gear in character.Gears)
             {
                 writer.WriteStartObject();
-                writer.WriteValue(equipment.Name);
+                writer.WriteValue(gear.Name);
                 writer.WriteEndObject();
             }
             writer.WriteEndArray();

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Dynamic;
 using System.IO;
 using System.Linq;
@@ -18,10 +19,11 @@ namespace Ghostbusters
         {
             try
             {
-                string jsonTalentsData = File.ReadAllText(_jsonFilesPath + "Talents.json");
-                string jsonTraitsData = File.ReadAllText(_jsonFilesPath + "Traits.json");
                 string jsonGoalsData = File.ReadAllText(_jsonFilesPath + "Goals.json");
-                string jsonEquipmentData = File.ReadAllText(_jsonFilesPath + "Equipment.json");
+                string jsonTalentsData = File.ReadAllText(_jsonFilesPath + "Talents.json");
+                string jsonTraitsData = File.ReadAllText(_jsonFilesPath + "Traits.json");                
+                string jsonGearData = File.ReadAllText(_jsonFilesPath + "Gears.json");
+                string jsonWeaponsData = File.ReadAllText(_jsonFilesPath + "Weapons.json");
 
                 List<Talent>? talents = JsonConvert.DeserializeObject<List<Talent>?>(jsonTalentsData);
 
@@ -50,20 +52,31 @@ namespace Ghostbusters
                     return;
                 }
 
-                List<Equipment>? equipments = JsonConvert.DeserializeObject<List<Equipment>?>(jsonEquipmentData);
+                List<Gear>? gears = JsonConvert.DeserializeObject<List<Gear>?>(jsonGearData);
 
-                if (equipments == null)
+                if (gears == null)
                 {
-                    Console.WriteLine($"Unable to read equipment json file. Aborting...");
+                    Console.WriteLine($"Unable to read gear json file. Aborting...");
                     Console.Read();
                     return;
                 }
+
+                List<Weapon>? weapons = JsonConvert.DeserializeObject<List<Weapon>?>(jsonWeaponsData);
+
+                if (weapons == null)
+                {
+                    Console.WriteLine($"Unable to read weapons json file. Aborting...");
+                    Console.Read();
+                    return;
+                }
+
                 GenerateDescriptionSchema();
 
-                GenerateTraitSchema(traits, "traits", "Trait Scores");
-                GenerateTalentSchema(traits, talents, "talents", "Talents");
                 GenerateGoalSchema(goals, "goal", "Goal");
-                GenerateEquipmentSchema(equipments, "equipments", "Equipment");
+                GenerateTraitSchema(traits, "traits", "Trait Scores");
+                GenerateTalentSchema(traits, talents, "talents", "Talents");                
+                GenerateGearSchema(gears, "gears", "Gears");
+                GenerateWeaponSchema(weapons, "weapons", "Weapons");
 
                 var schema = new
                 {
@@ -108,6 +121,16 @@ namespace Ghostbusters
             _fields.Add(
                 new
                 {
+                    name = "alias",
+                    id = "alias",
+                    label = "Alias",
+                    type = "text",
+                    className = "form-control",
+                    @default = "Unknown"
+                });
+            _fields.Add(
+                new
+                {
                     name = "browniePoints",
                     id = "browniePoints",
                     label = "Brownie Points",
@@ -133,9 +156,9 @@ namespace Ghostbusters
             _fields.Add(
                 new
                 {
-                    name = "personality",
-                    id = "personality",
-                    label = "Personality",
+                    name = "description",
+                    id = "description",
+                    label = "Description",
                     type = "textarea",
                     className = "form-control"
                 });
@@ -193,10 +216,10 @@ namespace Ghostbusters
                     validation = new
                     {
                         required = true,
-                        min = 0,
+                        min = 1,
                         max = 5
                     },
-                    @default = 0
+                    @default = 1
                 });
             }
 
@@ -215,10 +238,17 @@ namespace Ghostbusters
         {
             foreach (var trait in traits)
             {
+                _fields.Add( new
+                {
+                    name = $"{trait.Name}.label",
+                    text = $"{trait.Name} Talent",
+                    type = "textblock"    
+                });
+
                 dynamic obj = new ExpandoObject();
 
-                obj.name = name;
-                obj.label = label;
+                obj.name = $"talents.{trait.Name}";
+                obj.label = string.Empty;
                 obj.type = "select";
                 obj.className = "form-select";
                 obj.options = new List<object>();
@@ -254,47 +284,17 @@ namespace Ghostbusters
                     new
                     {
                         value = goal.Name,
-                        label = goal.Name
+                        label = goal.Name,
+                        description = goal.Description
                     }
                 );
             }
+
             _fields.Add(obj);
-
-            foreach (var goal in goals)
-            {
-                var children = new List<object>
-                {
-                    new
-                    {
-                        name = $"info-{name}-{goal.Name}",
-                        label = "Information",
-                        type = "textblock",
-                        className = "text-block",
-                        text = goal.Description
-                    }
-                };
-
-                var div = new
-                {
-                    type = "div",
-                    className = "alert alert-secondary",
-                    children,
-                    dependsOn =
-                        new
-                        {
-                            field = name,
-                            value = goal.Name
-                        }
-                };
-
-                _fields.Add(div);
-            }
         }
 
-        private static void GenerateEquipmentSchema(List<Equipment> equipments, string name, string label)
+        private static void GenerateGearSchema(List<Gear> gears, string name, string label)
         {
-            //TODO: Get the image and description in the item
-
             dynamic obj = new ExpandoObject();
 
             obj.name = name;
@@ -303,13 +303,45 @@ namespace Ghostbusters
             obj.className = "form-select";
             obj.options = new List<object>();
 
-            foreach (var equipment in equipments)
+            foreach (var gear in gears)
             {
                 obj.options.Add(
                     new
                     {
-                        value = equipment.Name,
-                        label = equipment.Name
+                        value = gear.Name,
+                        label = gear.Name
+                    }
+                );
+            }
+
+            dynamic array = new
+            {
+                name,
+                label,
+                type = "array",
+                component = obj
+            };
+
+            _fields.Add(array);
+        }
+
+        private static void GenerateWeaponSchema(List<Weapon> weapons, string name, string label)
+        {
+            dynamic obj = new ExpandoObject();
+
+            obj.name = name;
+            obj.label = label;
+            obj.type = "select";
+            obj.className = "form-select";
+            obj.options = new List<object>();
+
+            foreach (var weapon in weapons)
+            {
+                obj.options.Add(
+                    new
+                    {
+                        value = weapon.Name,
+                        label = weapon.Name
                     }
                 );
             }

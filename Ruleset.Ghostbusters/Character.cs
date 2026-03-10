@@ -10,30 +10,35 @@ namespace Ghostbusters
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
+        public string Alias { get; set; }
         public string Image { get; set; }
-        public string Personality { get; set; }
         public string Notes { get; set; }
         public string Residence { get; set; }
         public string Telex { get; set; }
         public string Phone { get; set; }
+        public string Description { get; set; }
         public List<Trait> Traits { get; set; }
         public List<Talent> Talents { get; set; }
         public Goal Goal { get; set; }
         public int BrowniePoints { get; set; }
-        public List<Equipment> Equipments { get; set; }
+        public List<Gear> Gears { get; set; }
+        public List<Weapon> Weapons { get; set; }
         public CharacterSegment CharacterSegment => GetCharacterSegment();
 
         public string CharacterSheet { get; set; }
 
         public byte[] BuildCharacterSheet()
         {
-            var dict = new Dictionary<string, string>();
-            dict.Add("Name", Name);
-            dict.Add("Personality", Personality);
-            dict.Add("Notes", Notes);
-            dict.Add("Residence", Residence);
-            dict.Add("Telex", Telex);
-            dict.Add("Phone", Phone);
+            var dict = new Dictionary<string, string>
+            {
+                { "Name", Name },
+                { "Alias", Alias },
+                { "Description", Description },
+                { "Notes", Notes },
+                { "Residence", Residence },
+                { "Telex", Telex },
+                { "Phone", Phone }
+            };
 
             for (int i = 0; i < Traits.Count; i++)
             {
@@ -45,12 +50,17 @@ namespace Ghostbusters
                 dict.Add($"Talent [{i}]", Talents[i].Name);
             }
 
-            dict.Add("Goal", Goal.Description);
+            dict.Add("Goal", Goal.Name);
             dict.Add("BrowniePoints", BrowniePoints.ToString());
 
-            for (int i = 0; i < Equipments.Count; i++)
+            for (int i = 0; i < Gears.Count; i++)
             {
-                dict.Add($"Equipment [{i}]", Equipments[i].Name);
+                dict.Add($"Gear [{i}]", Gears[i].Name);
+            }
+
+            for (int i = 0; i < Weapons.Count; i++)
+            {
+                dict.Add($"Weapon [{i}]", Weapons[i].Name);
             }
 
             return PDFSchema.Generate(dict, Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Ghostbusters_Character_Sheet.pdf");
@@ -64,7 +74,7 @@ namespace Ghostbusters
                 Name = Name,
                 Image = Image,
                 Level = BrowniePoints.ToString(),
-                Details = $"{Residence} | {Telex} | {Phone}"
+                Details = $"Telex: {Telex}"
             };
         }
     }

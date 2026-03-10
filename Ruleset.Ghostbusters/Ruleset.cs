@@ -18,6 +18,7 @@ namespace Ghostbusters
         public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_ghostbusters.png";
         public string FormResource => "Ruleset.Ghostbusters.Json.Character.Form.json";
         public string  Instructions => File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Ghostbusters_Instructions.html");
+        public string Stylesheet => File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Ghostbusters.css");
 
         public bool DeleteCharacter(string id)
         {

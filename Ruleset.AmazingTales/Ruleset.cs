@@ -15,6 +15,7 @@ namespace AmazingTales
 
         public string FormResource => "Ruleset.AmazingTales.Json.Character.Form.json";
         public string  Instructions => File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Amazing_Tales_Instructions.html");
+        public string Stylesheet => File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Amazing_Tales.css");
 
         public string NewCharacter()
         {

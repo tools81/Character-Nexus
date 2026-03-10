@@ -6,6 +6,7 @@ export interface Ruleset {
   imageSource: string;
   logoSource: string;
   instructions: string;
+  stylesheet: string;
 }
 
 export interface RulesetState {
@@ -14,14 +15,6 @@ export interface RulesetState {
   isLoading: boolean;
   error?: string | null;
 }
-
-const defaultRuleset: Ruleset = {
-  name: '',
-  rulesetName: '',
-  imageSource: '',
-  logoSource: '',
-  instructions: '',
-};
 
 const initialState: RulesetState = {
   rulesets: [],

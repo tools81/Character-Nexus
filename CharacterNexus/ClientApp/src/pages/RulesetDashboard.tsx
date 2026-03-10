@@ -4,6 +4,7 @@ import CharacterCard from '../components/CharacterCard';
 import AddCharacterCard from '../components/AddCharacterCard';
 import { useAppSelector, useAppDispatch } from '../store/configureStore';
 import { fetchCharacters, deleteCharacter, CharacterSegment } from '../store/slices/characterSegmentSlice';
+import { useRulesetTheme } from '../hooks/useRulesetTheme';
 
 const RulesetDashboard: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -11,6 +12,7 @@ const RulesetDashboard: React.FC = () => {
 
   // Read current ruleset from Redux
   const { currentRuleset } = useAppSelector((state) => state.ruleset);
+  useRulesetTheme(currentRuleset);
   const { characterSegments, isLoading, error } = useAppSelector((state) => state.characterSegment);
 
   // Fetch characters for the current ruleset on mount or when ruleset changes

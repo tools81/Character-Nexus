@@ -27,6 +27,7 @@ import { useDisableEngine } from "../hooks/useDisableEngine";
 import { useVisibilityEngine } from "../hooks/useVisibilityEngine";
 import { useCharacterLoader } from "../hooks/useCharacterLoader";
 import { useUserChoices } from "../hooks/useUserChoices";
+import { useRulesetTheme } from "../hooks/useRulesetTheme";
 
 const CharacterEditor: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -40,6 +41,8 @@ const CharacterEditor: React.FC = () => {
 
   const methods = useForm({ shouldUnregister: false });
   const { register, unregister, handleSubmit, watch, control, getValues, setValue, reset } = methods;
+
+  useRulesetTheme(currentRuleset);
 
   const userChoiceModal = useModal();
   const { imagePreview, imageData, setImagePreview, setImageData } = useCharacterLoader(reset, setValue);

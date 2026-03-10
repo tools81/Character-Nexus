@@ -16,6 +16,7 @@ namespace EverydayHeroes
 
         public string FormResource => "Ruleset.EverydayHeroes.Json.Character.Form.json";
         public string  Instructions => File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Everyday_Heroes_Instructions.html");
+        public string Stylesheet => File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Everyday_Heroes.css");
 
         public Ruleset()
         {

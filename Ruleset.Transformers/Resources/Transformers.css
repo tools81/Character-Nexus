@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Audiowide&display=swap');
+
+:root {
+  --tf-energon: #00E5FF;
+  --tf-autobot-red: #FF1744;
+  --tf-decepticon: #7B1FA2;
+  --tf-dark: #0A0A12;
+  --tf-panel: #0F1020;
+  --tf-steel: #5C6BC0;
+  --tf-light: #B0BEC5;
+  --tf-gold: #FFD54F;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-transformers {
+  background:
+    radial-gradient(ellipse at top,    rgba(0, 229, 255, 0.1) 0%, transparent 55%),
+    radial-gradient(ellipse at bottom, rgba(255, 23, 68, 0.08) 0%, transparent 55%),
+    linear-gradient(180deg, #0a0a12 0%, #0d0d18 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--tf-light);
+  font-family: 'Audiowide', sans-serif;
+}
+
+/* Cybertronian grid */
+body.theme-transformers::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-transformers h1,
+body.theme-transformers h2,
+body.theme-transformers h3,
+body.theme-transformers h4 {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+body.theme-transformers h1 {
+  color: var(--tf-energon);
+  text-shadow:
+    0 0 10px rgba(0, 229, 255, 0.9),
+    0 0 30px rgba(0, 229, 255, 0.5),
+    0 0 60px rgba(0, 229, 255, 0.25);
+  animation: tf-energon-pulse 3s ease-in-out infinite;
+}
+
+body.theme-transformers h2 {
+  color: var(--tf-autobot-red);
+  border-bottom: 2px solid rgba(255, 23, 68, 0.4);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px rgba(255, 23, 68, 0.4);
+}
+
+body.theme-transformers h3 {
+  color: var(--tf-steel);
+}
+
+body.theme-transformers label,
+body.theme-transformers .form-label {
+  font-family: 'Orbitron', sans-serif;
+  color: rgba(176, 190, 197, 0.7);
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-transformers input[type="text"],
+body.theme-transformers input[type="number"],
+body.theme-transformers textarea {
+  background-color: rgba(10, 10, 18, 0.85) !important;
+  color: var(--tf-light) !important;
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  border-radius: 2px;
+}
+
+body.theme-transformers input[type="text"]:focus,
+body.theme-transformers input[type="number"]:focus,
+body.theme-transformers textarea:focus {
+  outline: none;
+  border-color: var(--tf-energon);
+  box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.2), 0 0 8px rgba(0, 229, 255, 0.3);
+}
+
+body.theme-transformers input[type="checkbox"] {
+  accent-color: var(--tf-energon);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-transformers .custom-select__control {
+  background: rgba(10, 10, 18, 0.85);
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  border-radius: 2px;
+  color: var(--tf-light);
+}
+
+body.theme-transformers .custom-select__control:focus-visible,
+body.theme-transformers .custom-select__control:focus-within {
+  outline: 2px solid var(--tf-energon);
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.18), 0 0 12px rgba(0, 229, 255, 0.25);
+}
+
+body.theme-transformers .custom-select__menu {
+  background: #080810;
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(0, 229, 255, 0.12);
+}
+
+body.theme-transformers .custom-select__option {
+  color: var(--tf-light);
+  border-bottom: 1px solid rgba(0, 229, 255, 0.08);
+}
+
+body.theme-transformers .custom-select__option:hover {
+  background: rgba(0, 229, 255, 0.1);
+}
+
+body.theme-transformers .custom-select__value span {
+  color: var(--tf-light);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-transformers .submit-button {
+  background: linear-gradient(135deg, #0099bb, #00c4d8);
+  color: #000;
+  border: 1px solid var(--tf-energon);
+  box-shadow:
+    0 4px 16px rgba(0, 229, 255, 0.45),
+    0 0 8px rgba(0, 229, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-transformers .submit-button:hover {
+  box-shadow:
+    0 6px 24px rgba(0, 229, 255, 0.7),
+    0 0 16px rgba(0, 229, 255, 0.5);
+}
+
+body.theme-transformers .add-button {
+  background: rgba(255, 23, 68, 0.08);
+  color: var(--tf-autobot-red);
+  border: 1px solid rgba(255, 23, 68, 0.35);
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+body.theme-transformers .add-button:hover {
+  background: rgba(255, 23, 68, 0.18);
+}
+
+body.theme-transformers .btn-outline-secondary {
+  color: rgba(176, 190, 197, 0.5);
+  border-color: rgba(176, 190, 197, 0.25);
+}
+
+body.theme-transformers .btn-outline-secondary:hover {
+  background-color: rgba(176, 190, 197, 0.08);
+  color: var(--tf-light);
+}
+
+body.theme-transformers .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(255, 213, 79, 0.7));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-transformers hr {
+  border-color: rgba(0, 229, 255, 0.2);
+}
+
+body.theme-transformers .d-flex.mb-3 img {
+  filter: drop-shadow(0 0 12px rgba(0, 229, 255, 0.45));
+}
+
+/* ── Animations ──────────────────────────────────────────────── */
+@keyframes tf-energon-pulse {
+  0%, 100% {
+    text-shadow:
+      0 0 10px rgba(0, 229, 255, 0.9),
+      0 0 30px rgba(0, 229, 255, 0.5),
+      0 0 60px rgba(0, 229, 255, 0.25);
+  }
+  50% {
+    text-shadow:
+      0 0 20px rgba(0, 229, 255, 1),
+      0 0 50px rgba(0, 229, 255, 0.7),
+      0 0 80px rgba(0, 229, 255, 0.35);
+  }
+}

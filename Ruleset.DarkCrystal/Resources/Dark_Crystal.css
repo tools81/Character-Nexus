@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
+:root {
+  --dc-crystal-purple: #8B5FBF;
+  --dc-deep-purple: #5C3D7A;
+  --dc-soft-teal: #4A9B8E;
+  --dc-earth-brown: #8B7355;
+  --dc-light-crystal: #D4C1E8;
+  --dc-parchment: #F5EFE0;
+  --dc-dark-earth: #2D2416;
+  --dc-shimmer-gold: #D4AF37;
+  --dc-accent-violet: #B794F6;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-dark-crystal {
+  background:
+    radial-gradient(ellipse at top,    rgba(139, 95, 191, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse at bottom, rgba(74, 155, 142, 0.18) 0%, transparent 60%),
+    linear-gradient(135deg, #1a1410 0%, #2d2416 50%, #1a1410 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--dc-parchment);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-dark-crystal h1,
+body.theme-dark-crystal h2,
+body.theme-dark-crystal h3,
+body.theme-dark-crystal h4 {
+  font-family: 'Philosopher', sans-serif;
+}
+
+body.theme-dark-crystal h1 {
+  color: var(--dc-light-crystal);
+  text-shadow:
+    0 0 20px rgba(139, 95, 191, 0.8),
+    0 0 40px rgba(139, 95, 191, 0.4),
+    2px 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.06em;
+  animation: dc-glow 3s ease-in-out infinite;
+}
+
+body.theme-dark-crystal h2 {
+  color: var(--dc-accent-violet);
+  border-bottom: 2px solid var(--dc-soft-teal);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 15px rgba(139, 95, 191, 0.4);
+}
+
+body.theme-dark-crystal h3 {
+  color: var(--dc-soft-teal);
+}
+
+body.theme-dark-crystal label,
+body.theme-dark-crystal .form-label {
+  font-family: 'Philosopher', sans-serif;
+  color: var(--dc-light-crystal);
+  letter-spacing: 0.04em;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-dark-crystal input[type="text"],
+body.theme-dark-crystal input[type="number"],
+body.theme-dark-crystal textarea {
+  background-color: rgba(45, 36, 22, 0.7) !important;
+  color: var(--dc-parchment) !important;
+  border: 1px solid rgba(139, 95, 191, 0.4);
+  border-radius: 4px;
+}
+
+body.theme-dark-crystal input[type="text"]:focus,
+body.theme-dark-crystal input[type="number"]:focus,
+body.theme-dark-crystal textarea:focus {
+  outline: none;
+  border-color: var(--dc-crystal-purple);
+  box-shadow: 0 0 0 2px rgba(139, 95, 191, 0.35);
+}
+
+body.theme-dark-crystal input[type="checkbox"] {
+  accent-color: var(--dc-crystal-purple);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-dark-crystal .custom-select__control {
+  background: rgba(45, 36, 22, 0.7);
+  border: 1px solid rgba(139, 95, 191, 0.4);
+  border-radius: 4px;
+  color: var(--dc-parchment);
+}
+
+body.theme-dark-crystal .custom-select__control:focus-visible,
+body.theme-dark-crystal .custom-select__control:focus-within {
+  outline: 2px solid var(--dc-crystal-purple);
+  box-shadow: 0 0 0 3px rgba(139, 95, 191, 0.3);
+}
+
+body.theme-dark-crystal .custom-select__menu {
+  background: #2a1e12;
+  border: 1px solid rgba(139, 95, 191, 0.4);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(139, 95, 191, 0.2);
+}
+
+body.theme-dark-crystal .custom-select__option {
+  color: var(--dc-parchment);
+  border-bottom: 1px solid rgba(139, 95, 191, 0.15);
+}
+
+body.theme-dark-crystal .custom-select__option:hover {
+  background: rgba(92, 61, 122, 0.45);
+}
+
+body.theme-dark-crystal .custom-select__value span {
+  color: var(--dc-parchment);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-dark-crystal .submit-button {
+  background: linear-gradient(135deg, var(--dc-deep-purple), var(--dc-crystal-purple));
+  color: var(--dc-light-crystal);
+  border: 1px solid rgba(212, 193, 232, 0.3);
+  box-shadow:
+    0 4px 16px rgba(139, 95, 191, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  letter-spacing: 0.06em;
+  font-family: 'Philosopher', sans-serif;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-dark-crystal .submit-button:hover {
+  box-shadow:
+    0 6px 24px rgba(139, 95, 191, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+body.theme-dark-crystal .add-button {
+  background: rgba(74, 155, 142, 0.2);
+  color: var(--dc-soft-teal);
+  border: 1px solid rgba(74, 155, 142, 0.4);
+  font-family: 'Philosopher', sans-serif;
+  transition: background 0.2s ease;
+}
+
+body.theme-dark-crystal .add-button:hover {
+  background: rgba(74, 155, 142, 0.35);
+}
+
+body.theme-dark-crystal .btn-outline-secondary {
+  color: var(--dc-earth-brown);
+  border-color: var(--dc-earth-brown);
+}
+
+body.theme-dark-crystal .btn-outline-secondary:hover {
+  background-color: rgba(139, 115, 85, 0.25);
+  color: var(--dc-parchment);
+}
+
+body.theme-dark-crystal .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0.6));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-dark-crystal hr {
+  border-color: rgba(139, 95, 191, 0.35);
+}
+
+body.theme-dark-crystal .d-flex.mb-3 img {
+  filter: drop-shadow(0 0 12px rgba(139, 95, 191, 0.5));
+}
+
+/* ── Animations ──────────────────────────────────────────────── */
+@keyframes dc-glow {
+  0%, 100% {
+    text-shadow:
+      0 0 20px rgba(139, 95, 191, 0.8),
+      0 0 40px rgba(139, 95, 191, 0.4),
+      2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  50% {
+    text-shadow:
+      0 0 30px rgba(139, 95, 191, 1),
+      0 0 60px rgba(139, 95, 191, 0.6),
+      2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+}

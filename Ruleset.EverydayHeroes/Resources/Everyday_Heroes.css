@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Titillium+Web:wght@300;400;600&display=swap');
+
+:root {
+  --eh-orange: #E8781A;
+  --eh-teal: #1ABDE8;
+  --eh-dark: #0C0C0C;
+  --eh-mid-dark: #161616;
+  --eh-amber: #F5A623;
+  --eh-light: #D4D4D4;
+  --eh-dim: #8A8A8A;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-everyday-heroes {
+  background:
+    radial-gradient(ellipse at top right, rgba(232, 120, 26, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom left, rgba(26, 189, 232, 0.1) 0%, transparent 50%),
+    linear-gradient(180deg, #0c0c0c 0%, #111111 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--eh-light);
+  font-family: 'Titillium Web', sans-serif;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-everyday-heroes h1,
+body.theme-everyday-heroes h2,
+body.theme-everyday-heroes h3,
+body.theme-everyday-heroes h4 {
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+body.theme-everyday-heroes h1 {
+  color: var(--eh-orange);
+  text-shadow:
+    0 0 20px rgba(232, 120, 26, 0.6),
+    0 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+body.theme-everyday-heroes h2 {
+  color: var(--eh-teal);
+  border-bottom: 1px solid rgba(26, 189, 232, 0.4);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-everyday-heroes h3 {
+  color: var(--eh-amber);
+}
+
+body.theme-everyday-heroes label,
+body.theme-everyday-heroes .form-label {
+  font-family: 'Rajdhani', sans-serif;
+  color: var(--eh-dim);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-everyday-heroes input[type="text"],
+body.theme-everyday-heroes input[type="number"],
+body.theme-everyday-heroes textarea {
+  background-color: rgba(22, 22, 22, 0.85) !important;
+  color: var(--eh-light) !important;
+  border: 1px solid rgba(232, 120, 26, 0.3);
+  border-radius: 2px;
+}
+
+body.theme-everyday-heroes input[type="text"]:focus,
+body.theme-everyday-heroes input[type="number"]:focus,
+body.theme-everyday-heroes textarea:focus {
+  outline: none;
+  border-color: var(--eh-orange);
+  box-shadow: 0 0 0 2px rgba(232, 120, 26, 0.3);
+}
+
+body.theme-everyday-heroes input[type="checkbox"] {
+  accent-color: var(--eh-orange);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-everyday-heroes .custom-select__control {
+  background: rgba(22, 22, 22, 0.85);
+  border: 1px solid rgba(232, 120, 26, 0.3);
+  border-radius: 2px;
+  color: var(--eh-light);
+}
+
+body.theme-everyday-heroes .custom-select__control:focus-visible,
+body.theme-everyday-heroes .custom-select__control:focus-within {
+  outline: 2px solid var(--eh-orange);
+  box-shadow: 0 0 0 3px rgba(232, 120, 26, 0.25);
+}
+
+body.theme-everyday-heroes .custom-select__menu {
+  background: #111111;
+  border: 1px solid rgba(232, 120, 26, 0.35);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+}
+
+body.theme-everyday-heroes .custom-select__option {
+  color: var(--eh-light);
+  border-bottom: 1px solid rgba(232, 120, 26, 0.1);
+}
+
+body.theme-everyday-heroes .custom-select__option:hover {
+  background: rgba(232, 120, 26, 0.2);
+}
+
+body.theme-everyday-heroes .custom-select__value span {
+  color: var(--eh-light);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-everyday-heroes .submit-button {
+  background: linear-gradient(135deg, #b85c10, var(--eh-orange));
+  color: #fff;
+  border: 1px solid rgba(26, 189, 232, 0.2);
+  box-shadow:
+    0 4px 16px rgba(232, 120, 26, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-everyday-heroes .submit-button:hover {
+  box-shadow:
+    0 6px 24px rgba(232, 120, 26, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+body.theme-everyday-heroes .add-button {
+  background: rgba(26, 189, 232, 0.1);
+  color: var(--eh-teal);
+  border: 1px solid rgba(26, 189, 232, 0.35);
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+body.theme-everyday-heroes .add-button:hover {
+  background: rgba(26, 189, 232, 0.22);
+}
+
+body.theme-everyday-heroes .btn-outline-secondary {
+  color: var(--eh-dim);
+  border-color: rgba(138, 138, 138, 0.4);
+}
+
+body.theme-everyday-heroes .btn-outline-secondary:hover {
+  background-color: rgba(138, 138, 138, 0.12);
+  color: var(--eh-light);
+}
+
+body.theme-everyday-heroes .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(26, 189, 232, 0.6));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-everyday-heroes hr {
+  border-color: rgba(232, 120, 26, 0.3);
+}
+
+body.theme-everyday-heroes .d-flex.mb-3 img {
+  filter: drop-shadow(0 0 12px rgba(232, 120, 26, 0.45));
+}

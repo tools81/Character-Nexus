@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  --vtm-blood-red: #8B0000;
+  --vtm-crimson: #B22222;
+  --vtm-dark-bg: #0A0A0A;
+  --vtm-mid-dark: #111111;
+  --vtm-parchment: #E8D4B8;
+  --vtm-cream: #C9B99A;
+  --vtm-gold: #8B7355;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-vampire-the-masquerade {
+  background:
+    radial-gradient(ellipse at top, rgba(139, 0, 0, 0.15) 0%, transparent 55%),
+    radial-gradient(ellipse at bottom, rgba(100, 0, 0, 0.08) 0%, transparent 55%),
+    linear-gradient(180deg, #0a0a0a 0%, #0f0606 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--vtm-parchment);
+  font-family: 'Crimson Text', serif;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-vampire-the-masquerade h1,
+body.theme-vampire-the-masquerade h2,
+body.theme-vampire-the-masquerade h3,
+body.theme-vampire-the-masquerade h4 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.08em;
+}
+
+body.theme-vampire-the-masquerade h1 {
+  color: var(--vtm-crimson);
+  text-shadow:
+    0 0 20px rgba(139, 0, 0, 0.8),
+    0 0 40px rgba(139, 0, 0, 0.4),
+    2px 2px 4px rgba(0, 0, 0, 0.9);
+  animation: vtm-bleed 5s ease-in-out infinite;
+}
+
+body.theme-vampire-the-masquerade h2 {
+  color: var(--vtm-gold);
+  border-bottom: 1px solid rgba(139, 0, 0, 0.4);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-vampire-the-masquerade h3 {
+  color: var(--vtm-cream);
+}
+
+body.theme-vampire-the-masquerade label,
+body.theme-vampire-the-masquerade .form-label {
+  font-family: 'Cinzel', serif;
+  color: var(--vtm-cream);
+  letter-spacing: 0.05em;
+  font-size: 0.82rem;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-vampire-the-masquerade input[type="text"],
+body.theme-vampire-the-masquerade input[type="number"],
+body.theme-vampire-the-masquerade textarea {
+  background-color: rgba(15, 6, 6, 0.8) !important;
+  color: var(--vtm-parchment) !important;
+  border: 1px solid rgba(139, 0, 0, 0.4);
+  border-radius: 2px;
+}
+
+body.theme-vampire-the-masquerade input[type="text"]:focus,
+body.theme-vampire-the-masquerade input[type="number"]:focus,
+body.theme-vampire-the-masquerade textarea:focus {
+  outline: none;
+  border-color: var(--vtm-crimson);
+  box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.35);
+}
+
+body.theme-vampire-the-masquerade input[type="checkbox"] {
+  accent-color: var(--vtm-blood-red);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-vampire-the-masquerade .custom-select__control {
+  background: rgba(15, 6, 6, 0.8);
+  border: 1px solid rgba(139, 0, 0, 0.4);
+  border-radius: 2px;
+  color: var(--vtm-parchment);
+}
+
+body.theme-vampire-the-masquerade .custom-select__control:focus-visible,
+body.theme-vampire-the-masquerade .custom-select__control:focus-within {
+  outline: 2px solid var(--vtm-blood-red);
+  box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.3);
+}
+
+body.theme-vampire-the-masquerade .custom-select__menu {
+  background: #0a0404;
+  border: 1px solid rgba(139, 0, 0, 0.4);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(139, 0, 0, 0.15);
+}
+
+body.theme-vampire-the-masquerade .custom-select__option {
+  color: var(--vtm-parchment);
+  border-bottom: 1px solid rgba(139, 0, 0, 0.15);
+}
+
+body.theme-vampire-the-masquerade .custom-select__option:hover {
+  background: rgba(139, 0, 0, 0.2);
+}
+
+body.theme-vampire-the-masquerade .custom-select__value span {
+  color: var(--vtm-parchment);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-vampire-the-masquerade .submit-button {
+  background: linear-gradient(135deg, var(--vtm-blood-red), var(--vtm-crimson));
+  color: var(--vtm-parchment);
+  border: 1px solid rgba(139, 0, 0, 0.5);
+  box-shadow:
+    0 4px 16px rgba(139, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.08em;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-vampire-the-masquerade .submit-button:hover {
+  box-shadow:
+    0 6px 24px rgba(139, 0, 0, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+body.theme-vampire-the-masquerade .add-button {
+  background: rgba(139, 115, 85, 0.15);
+  color: var(--vtm-gold);
+  border: 1px solid rgba(139, 115, 85, 0.4);
+  font-family: 'Cinzel', serif;
+  transition: background 0.2s ease;
+}
+
+body.theme-vampire-the-masquerade .add-button:hover {
+  background: rgba(139, 115, 85, 0.28);
+}
+
+body.theme-vampire-the-masquerade .btn-outline-secondary {
+  color: var(--vtm-cream);
+  border-color: rgba(201, 185, 154, 0.3);
+}
+
+body.theme-vampire-the-masquerade .btn-outline-secondary:hover {
+  background-color: rgba(201, 185, 154, 0.08);
+  color: var(--vtm-parchment);
+}
+
+body.theme-vampire-the-masquerade .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(139, 0, 0, 0.7));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-vampire-the-masquerade hr {
+  border-color: rgba(139, 0, 0, 0.3);
+}
+
+body.theme-vampire-the-masquerade .d-flex.mb-3 img {
+  filter: drop-shadow(0 0 12px rgba(139, 0, 0, 0.5));
+}
+
+/* ── Animations ──────────────────────────────────────────────── */
+@keyframes vtm-bleed {
+  0%, 100% {
+    text-shadow:
+      0 0 20px rgba(139, 0, 0, 0.8),
+      0 0 40px rgba(139, 0, 0, 0.4),
+      2px 2px 4px rgba(0, 0, 0, 0.9);
+  }
+  50% {
+    text-shadow:
+      0 0 30px rgba(178, 34, 34, 1),
+      0 0 60px rgba(139, 0, 0, 0.6),
+      2px 2px 4px rgba(0, 0, 0, 0.9);
+  }
+}

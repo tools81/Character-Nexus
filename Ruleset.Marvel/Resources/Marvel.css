@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500;600&display=swap');
+
+:root {
+  --marvel-red: #EC1D24;
+  --marvel-navy: #00214D;
+  --marvel-dark: #0D0D0D;
+  --yellow-accent: #F8C300;
+  --marvel-silver: #C0C0C0;
+  --marvel-light: #E8E8E8;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-marvel {
+  background:
+    radial-gradient(ellipse at top, rgba(236, 29, 36, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at bottom, rgba(0, 33, 77, 0.25) 0%, transparent 60%),
+    linear-gradient(180deg, #0d0d0d 0%, #141414 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--marvel-light);
+  font-family: 'Barlow', sans-serif;
+}
+
+/* Halftone dot overlay */
+body.theme-marvel::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 12px 12px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-marvel h1,
+body.theme-marvel h2,
+body.theme-marvel h3,
+body.theme-marvel h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+body.theme-marvel h1 {
+  color: var(--marvel-red);
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+    0 0 20px rgba(236, 29, 36, 0.7);
+}
+
+body.theme-marvel h2 {
+  color: var(--yellow-accent);
+  border-bottom: 2px solid var(--marvel-red);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-marvel h3 {
+  color: var(--marvel-silver);
+}
+
+body.theme-marvel label,
+body.theme-marvel .form-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: var(--marvel-silver);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-marvel input[type="text"],
+body.theme-marvel input[type="number"],
+body.theme-marvel textarea {
+  background-color: rgba(0, 33, 77, 0.5) !important;
+  color: var(--marvel-light) !important;
+  border: 1px solid rgba(236, 29, 36, 0.4);
+  border-radius: 3px;
+}
+
+body.theme-marvel input[type="text"]:focus,
+body.theme-marvel input[type="number"]:focus,
+body.theme-marvel textarea:focus {
+  outline: none;
+  border-color: var(--marvel-red);
+  box-shadow: 0 0 0 2px rgba(236, 29, 36, 0.35);
+}
+
+body.theme-marvel input[type="checkbox"] {
+  accent-color: var(--marvel-red);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-marvel .custom-select__control {
+  background: rgba(0, 33, 77, 0.5);
+  border: 1px solid rgba(236, 29, 36, 0.4);
+  border-radius: 3px;
+  color: var(--marvel-light);
+}
+
+body.theme-marvel .custom-select__control:focus-visible,
+body.theme-marvel .custom-select__control:focus-within {
+  outline: 2px solid var(--marvel-red);
+  box-shadow: 0 0 0 3px rgba(236, 29, 36, 0.3);
+}
+
+body.theme-marvel .custom-select__menu {
+  background: #0a0e1a;
+  border: 1px solid rgba(236, 29, 36, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+}
+
+body.theme-marvel .custom-select__option {
+  color: var(--marvel-light);
+  border-bottom: 1px solid rgba(236, 29, 36, 0.1);
+}
+
+body.theme-marvel .custom-select__option:hover {
+  background: rgba(236, 29, 36, 0.25);
+}
+
+body.theme-marvel .custom-select__value span {
+  color: var(--marvel-light);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-marvel .submit-button {
+  background: linear-gradient(135deg, #b01018, var(--marvel-red));
+  color: #fff;
+  border: 1px solid rgba(248, 195, 0, 0.3);
+  box-shadow:
+    0 4px 16px rgba(236, 29, 36, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-marvel .submit-button:hover {
+  box-shadow:
+    0 6px 24px rgba(236, 29, 36, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+body.theme-marvel .add-button {
+  background: rgba(0, 33, 77, 0.4);
+  color: var(--yellow-accent);
+  border: 1px solid rgba(248, 195, 0, 0.4);
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+body.theme-marvel .add-button:hover {
+  background: rgba(0, 33, 77, 0.65);
+}
+
+body.theme-marvel .btn-outline-secondary {
+  color: var(--marvel-silver);
+  border-color: rgba(192, 192, 192, 0.4);
+}
+
+body.theme-marvel .btn-outline-secondary:hover {
+  background-color: rgba(192, 192, 192, 0.15);
+  color: #fff;
+}
+
+body.theme-marvel .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(248, 195, 0, 0.7));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-marvel hr {
+  border-color: rgba(236, 29, 36, 0.4);
+}
+
+body.theme-marvel .d-flex.mb-3 img {
+  filter: drop-shadow(0 0 12px rgba(236, 29, 36, 0.5));
+}

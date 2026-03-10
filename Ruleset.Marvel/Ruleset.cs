@@ -12,6 +12,7 @@ namespace Marvel
         public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_marvel.png";
         public string FormResource => "Ruleset.Marvel.Json.Character.Form.json";
         public string  Instructions => File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Marvel_Instructions.html");
+        public string Stylesheet => File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Marvel.css");
 
         public string NewCharacter()
         {

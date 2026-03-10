@@ -17,7 +17,8 @@ namespace DarkCrystal
         public string ImageSource => "https://characternexus.blob.core.windows.net/resources/card_dark_crystal.jpg";
         public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_dark_crystal.png";
         public string FormResource => "Ruleset.DarkCrystal.Json.Character.Form.json";
-        public string  Instructions => File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Dark_Crystal_Instructions.html");
+        public string Instructions => File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Dark_Crystal_Instructions.html");
+        public string Stylesheet => File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Dark_Crystal.css");
 
         public bool DeleteCharacter(string id)
         {

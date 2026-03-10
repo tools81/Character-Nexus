@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Oxanium:wght@400;500;600;700&display=swap');
+
+:root {
+  --br-neon-teal: #00E5CC;
+  --br-neon-amber: #FFB830;
+  --br-neon-pink: #FF3F8E;
+  --br-dark: #060C10;
+  --br-darker: #030608;
+  --br-text: #B0D4D8;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-blade-runner {
+  background:
+    radial-gradient(ellipse at top,    rgba(0, 229, 204, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at bottom, rgba(255, 63, 142, 0.06) 0%, transparent 55%),
+    linear-gradient(180deg, #060c10 0%, #030608 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--br-text);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* Vertical scan-line overlay */
+body.theme-blade-runner::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 40px,
+      rgba(0, 229, 204, 0.015) 40px,
+      rgba(0, 229, 204, 0.015) 41px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-blade-runner h1,
+body.theme-blade-runner h2,
+body.theme-blade-runner h3,
+body.theme-blade-runner h4 {
+  font-family: 'Oxanium', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+body.theme-blade-runner h1 {
+  color: var(--br-neon-teal);
+  text-shadow:
+    0 0 10px rgba(0, 229, 204, 0.9),
+    0 0 30px rgba(0, 229, 204, 0.5),
+    0 0 60px rgba(0, 229, 204, 0.25);
+  animation: br-flicker 6s ease-in-out infinite;
+}
+
+body.theme-blade-runner h2 {
+  color: var(--br-neon-amber);
+  border-bottom: 1px solid rgba(255, 184, 48, 0.35);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(255, 184, 48, 0.4);
+}
+
+body.theme-blade-runner h3 {
+  color: var(--br-neon-pink);
+  text-shadow: 0 0 8px rgba(255, 63, 142, 0.4);
+}
+
+body.theme-blade-runner label,
+body.theme-blade-runner .form-label {
+  font-family: 'Share Tech Mono', monospace;
+  color: rgba(176, 212, 216, 0.7);
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-blade-runner input[type="text"],
+body.theme-blade-runner input[type="number"],
+body.theme-blade-runner textarea {
+  background-color: rgba(6, 12, 16, 0.85) !important;
+  color: var(--br-text) !important;
+  border: 1px solid rgba(0, 229, 204, 0.3);
+  border-radius: 0;
+}
+
+body.theme-blade-runner input[type="text"]:focus,
+body.theme-blade-runner input[type="number"]:focus,
+body.theme-blade-runner textarea:focus {
+  outline: none;
+  border-color: var(--br-neon-teal);
+  box-shadow: 0 0 0 2px rgba(0, 229, 204, 0.25), 0 0 8px rgba(0, 229, 204, 0.3);
+}
+
+body.theme-blade-runner input[type="checkbox"] {
+  accent-color: var(--br-neon-teal);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-blade-runner .custom-select__control {
+  background: rgba(6, 12, 16, 0.85);
+  border: 1px solid rgba(0, 229, 204, 0.3);
+  border-radius: 0;
+  color: var(--br-text);
+}
+
+body.theme-blade-runner .custom-select__control:focus-visible,
+body.theme-blade-runner .custom-select__control:focus-within {
+  outline: 2px solid var(--br-neon-teal);
+  box-shadow: 0 0 0 3px rgba(0, 229, 204, 0.2), 0 0 12px rgba(0, 229, 204, 0.25);
+}
+
+body.theme-blade-runner .custom-select__menu {
+  background: #050a0d;
+  border: 1px solid rgba(0, 229, 204, 0.3);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(0, 229, 204, 0.15);
+}
+
+body.theme-blade-runner .custom-select__option {
+  color: var(--br-text);
+  border-bottom: 1px solid rgba(0, 229, 204, 0.08);
+}
+
+body.theme-blade-runner .custom-select__option:hover {
+  background: rgba(0, 229, 204, 0.12);
+}
+
+body.theme-blade-runner .custom-select__value span {
+  color: var(--br-text);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-blade-runner .submit-button {
+  background: linear-gradient(135deg, #008a7a, #00b8a4);
+  color: #000;
+  border: 1px solid var(--br-neon-teal);
+  box-shadow:
+    0 4px 16px rgba(0, 229, 204, 0.45),
+    0 0 8px rgba(0, 229, 204, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: 'Oxanium', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-blade-runner .submit-button:hover {
+  box-shadow:
+    0 6px 24px rgba(0, 229, 204, 0.7),
+    0 0 16px rgba(0, 229, 204, 0.5);
+}
+
+body.theme-blade-runner .add-button {
+  background: rgba(255, 184, 48, 0.08);
+  color: var(--br-neon-amber);
+  border: 1px solid rgba(255, 184, 48, 0.35);
+  font-family: 'Oxanium', sans-serif;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+body.theme-blade-runner .add-button:hover {
+  background: rgba(255, 184, 48, 0.18);
+}
+
+body.theme-blade-runner .btn-outline-secondary {
+  color: rgba(176, 212, 216, 0.5);
+  border-color: rgba(176, 212, 216, 0.25);
+}
+
+body.theme-blade-runner .btn-outline-secondary:hover {
+  background-color: rgba(176, 212, 216, 0.08);
+  color: var(--br-text);
+}
+
+body.theme-blade-runner .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(255, 184, 48, 0.7));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-blade-runner hr {
+  border-color: rgba(0, 229, 204, 0.2);
+}
+
+body.theme-blade-runner .d-flex.mb-3 img {
+  filter: drop-shadow(0 0 12px rgba(0, 229, 204, 0.45));
+}
+
+/* ── Animations ──────────────────────────────────────────────── */
+@keyframes br-flicker {
+  0%, 92%, 100% {
+    text-shadow:
+      0 0 10px rgba(0, 229, 204, 0.9),
+      0 0 30px rgba(0, 229, 204, 0.5),
+      0 0 60px rgba(0, 229, 204, 0.25);
+    opacity: 1;
+  }
+  93% {
+    opacity: 0.85;
+    text-shadow: 0 0 5px rgba(0, 229, 204, 0.5);
+  }
+  94% {
+    opacity: 1;
+  }
+}

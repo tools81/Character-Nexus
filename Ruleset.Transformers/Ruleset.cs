@@ -14,6 +14,7 @@ namespace Transformers
         public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_transformers.png";
         public string FormResource => "Ruleset.Transformers.Json.Character.Form.json";
         public string  Instructions => string.Empty;
+        public string Stylesheet => File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Transformers.css");
 
         public string NewCharacter()
         {

@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+  --at-sky: #4FC3F7;
+  --at-sun: #FFD740;
+  --at-grass: #66BB6A;
+  --at-coral: #FF7043;
+  --at-purple: #AB47BC;
+  --at-bg: #B3E5FC;
+  --at-card: #E1F5FE;
+  --at-dark-text: #1A237E;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-amazing-tales {
+  background:
+    radial-gradient(ellipse at top, rgba(255, 215, 64, 0.2) 0%, transparent 60%),
+    linear-gradient(180deg, #b3e5fc 0%, #e1f5fe 60%, #c8e6c9 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--at-dark-text);
+  font-family: 'Nunito', sans-serif;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-amazing-tales h1,
+body.theme-amazing-tales h2,
+body.theme-amazing-tales h3,
+body.theme-amazing-tales h4 {
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 0.03em;
+}
+
+body.theme-amazing-tales h1 {
+  color: var(--at-coral);
+  text-shadow:
+    3px 3px 0 rgba(255, 112, 67, 0.3),
+    0 0 20px rgba(255, 112, 67, 0.2);
+}
+
+body.theme-amazing-tales h2 {
+  color: var(--at-purple);
+  border-bottom: 3px dotted rgba(171, 71, 188, 0.4);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-amazing-tales h3 {
+  color: var(--at-grass);
+}
+
+body.theme-amazing-tales label,
+body.theme-amazing-tales .form-label {
+  font-family: 'Fredoka One', cursive;
+  color: #37474F;
+  font-size: 0.9rem;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-amazing-tales input[type="text"],
+body.theme-amazing-tales input[type="number"],
+body.theme-amazing-tales textarea {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  color: var(--at-dark-text) !important;
+  border: 2px solid rgba(79, 195, 247, 0.6);
+  border-radius: 12px;
+}
+
+body.theme-amazing-tales input[type="text"]:focus,
+body.theme-amazing-tales input[type="number"]:focus,
+body.theme-amazing-tales textarea:focus {
+  outline: none;
+  border-color: var(--at-sky);
+  box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.3);
+}
+
+body.theme-amazing-tales input[type="checkbox"] {
+  accent-color: var(--at-coral);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-amazing-tales .custom-select__control {
+  background: rgba(255, 255, 255, 0.85);
+  border: 2px solid rgba(79, 195, 247, 0.6);
+  border-radius: 12px;
+  color: var(--at-dark-text);
+}
+
+body.theme-amazing-tales .custom-select__control:focus-visible,
+body.theme-amazing-tales .custom-select__control:focus-within {
+  outline: 2px solid var(--at-sky);
+  box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.3);
+}
+
+body.theme-amazing-tales .custom-select__menu {
+  background: #e1f5fe;
+  border: 2px solid rgba(79, 195, 247, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(79, 195, 247, 0.25);
+}
+
+body.theme-amazing-tales .custom-select__option {
+  color: var(--at-dark-text);
+  border-bottom: 1px solid rgba(79, 195, 247, 0.2);
+}
+
+body.theme-amazing-tales .custom-select__option:hover {
+  background: rgba(79, 195, 247, 0.2);
+}
+
+body.theme-amazing-tales .custom-select__value span {
+  color: var(--at-dark-text);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-amazing-tales .submit-button {
+  background: linear-gradient(135deg, #e64a19, var(--at-coral));
+  color: #fff;
+  border: 2px solid rgba(255, 215, 64, 0.5);
+  box-shadow:
+    0 4px 12px rgba(255, 112, 67, 0.4),
+    3px 3px 0 rgba(0, 0, 0, 0.1);
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 0.05em;
+  border-radius: 24px;
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+body.theme-amazing-tales .submit-button:hover {
+  box-shadow:
+    0 6px 18px rgba(255, 112, 67, 0.55),
+    3px 3px 0 rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+body.theme-amazing-tales .add-button {
+  background: rgba(102, 187, 106, 0.2);
+  color: #2E7D32;
+  border: 2px solid rgba(102, 187, 106, 0.5);
+  font-family: 'Fredoka One', cursive;
+  border-radius: 24px;
+  transition: background 0.2s ease;
+}
+
+body.theme-amazing-tales .add-button:hover {
+  background: rgba(102, 187, 106, 0.35);
+}
+
+body.theme-amazing-tales .btn-outline-secondary {
+  color: #546E7A;
+  border-color: rgba(84, 110, 122, 0.5);
+  border-radius: 24px;
+}
+
+body.theme-amazing-tales .btn-outline-secondary:hover {
+  background-color: rgba(84, 110, 122, 0.12);
+}
+
+body.theme-amazing-tales .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(255, 215, 64, 0.7));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-amazing-tales hr {
+  border-color: rgba(79, 195, 247, 0.4);
+  border-width: 2px;
+}
+
+body.theme-amazing-tales .d-flex.mb-3 img {
+  filter: drop-shadow(0 4px 8px rgba(79, 195, 247, 0.4));
+}

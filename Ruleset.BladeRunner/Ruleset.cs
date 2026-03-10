@@ -14,6 +14,7 @@ namespace BladeRunner
         public string LogoSource => "https://characternexus.blob.core.windows.net/resources/logo_blade_runner.png";
         public string FormResource => "Ruleset.BladeRunner.Json.Character.Form.json";
         public string  Instructions => File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Blade_Runner_Instructions.html");
+        public string Stylesheet => File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Resources/Blade_Runner.css");
 
         public string NewCharacter()
         {

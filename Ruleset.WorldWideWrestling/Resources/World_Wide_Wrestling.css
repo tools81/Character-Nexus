@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Staatliches&display=swap');
+
+:root {
+  --wwwf-gold: #FFD700;
+  --wwwf-red: #E60000;
+  --wwwf-blue: #0066CC;
+  --wwwf-dark: #0A0A0A;
+  --wwwf-charcoal: #1A1A1A;
+  --wwwf-text: #EEEEEE;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-world-wide-wrestling {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(255, 215, 0, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 100%, rgba(230, 0, 0, 0.08) 0%, transparent 55%),
+    linear-gradient(180deg, #0a0a0a 0%, #111111 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--wwwf-text);
+  font-family: 'Staatliches', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-world-wide-wrestling h1 {
+  font-family: 'Alfa Slab One', serif;
+  color: var(--wwwf-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-shadow:
+    3px 3px 0 var(--wwwf-red),
+    6px 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+body.theme-world-wide-wrestling h2,
+body.theme-world-wide-wrestling h3,
+body.theme-world-wide-wrestling h4 {
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+body.theme-world-wide-wrestling h2 {
+  color: var(--wwwf-red);
+  border-bottom: 3px solid var(--wwwf-gold);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-world-wide-wrestling h3 {
+  color: var(--wwwf-blue);
+}
+
+body.theme-world-wide-wrestling label,
+body.theme-world-wide-wrestling .form-label {
+  font-family: 'Anton', sans-serif;
+  color: rgba(238, 238, 238, 0.55);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-world-wide-wrestling input[type="text"],
+body.theme-world-wide-wrestling input[type="number"],
+body.theme-world-wide-wrestling textarea {
+  background-color: rgba(20, 20, 20, 0.95) !important;
+  color: var(--wwwf-text) !important;
+  border: 2px solid rgba(255, 215, 0, 0.35);
+  border-radius: 4px;
+}
+
+body.theme-world-wide-wrestling input[type="text"]:focus,
+body.theme-world-wide-wrestling input[type="number"]:focus,
+body.theme-world-wide-wrestling textarea:focus {
+  outline: none;
+  border-color: var(--wwwf-gold);
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.25);
+}
+
+body.theme-world-wide-wrestling input[type="checkbox"] {
+  accent-color: var(--wwwf-red);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-world-wide-wrestling .custom-select__control {
+  background: rgba(20, 20, 20, 0.95);
+  border: 2px solid rgba(255, 215, 0, 0.35);
+  border-radius: 4px;
+  color: var(--wwwf-text);
+}
+
+body.theme-world-wide-wrestling .custom-select__control:focus-visible,
+body.theme-world-wide-wrestling .custom-select__control:focus-within {
+  outline: 2px solid var(--wwwf-gold);
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+}
+
+body.theme-world-wide-wrestling .custom-select__menu {
+  background: #111111;
+  border: 2px solid rgba(255, 215, 0, 0.35);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.9);
+}
+
+body.theme-world-wide-wrestling .custom-select__option {
+  color: var(--wwwf-text);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.08);
+}
+
+body.theme-world-wide-wrestling .custom-select__option:hover {
+  background: rgba(255, 215, 0, 0.12);
+}
+
+body.theme-world-wide-wrestling .custom-select__value span {
+  color: var(--wwwf-text);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-world-wide-wrestling .submit-button {
+  background: linear-gradient(135deg, #aa0000, var(--wwwf-red));
+  color: #fff;
+  border: 2px solid rgba(255, 215, 0, 0.5);
+  box-shadow:
+    0 4px 16px rgba(230, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-world-wide-wrestling .submit-button:hover {
+  box-shadow:
+    0 6px 24px rgba(230, 0, 0, 0.75),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+body.theme-world-wide-wrestling .add-button {
+  background: rgba(0, 102, 204, 0.12);
+  color: var(--wwwf-blue);
+  border: 1px solid rgba(0, 102, 204, 0.4);
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+body.theme-world-wide-wrestling .add-button:hover {
+  background: rgba(0, 102, 204, 0.22);
+}
+
+body.theme-world-wide-wrestling .btn-outline-secondary {
+  color: rgba(238, 238, 238, 0.5);
+  border-color: rgba(238, 238, 238, 0.25);
+}
+
+body.theme-world-wide-wrestling .btn-outline-secondary:hover {
+  background-color: rgba(238, 238, 238, 0.08);
+  color: var(--wwwf-text);
+}
+
+body.theme-world-wide-wrestling .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.8));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-world-wide-wrestling hr {
+  border-color: rgba(255, 215, 0, 0.3);
+  border-width: 2px;
+}
+
+body.theme-world-wide-wrestling .d-flex.mb-3 img {
+  filter: drop-shadow(0 0 16px rgba(255, 215, 0, 0.5));
+}

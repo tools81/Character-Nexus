@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&family=Oswald:wght@400;600;700&display=swap');
+
+:root {
+  --fo-pip-green: #5CFB6A;
+  --fo-pip-dim: #2E7A35;
+  --fo-amber: #FFB000;
+  --fo-vault-yellow: #F5C400;
+  --fo-vault-blue: #1A3B6E;
+  --fo-rust: #8B3A1A;
+  --fo-bg: #050A05;
+  --fo-text: #A8E8AA;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-fallout {
+  background:
+    radial-gradient(ellipse at top, rgba(92, 251, 106, 0.06) 0%, transparent 50%),
+    linear-gradient(180deg, #050a05 0%, #090f09 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--fo-text);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* CRT scanlines */
+body.theme-fallout::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.18) 2px,
+    rgba(0, 0, 0, 0.18) 4px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-fallout h1 {
+  font-family: 'VT323', monospace;
+  color: var(--fo-pip-green);
+  text-shadow:
+    0 0 10px rgba(92, 251, 106, 0.9),
+    0 0 30px rgba(92, 251, 106, 0.4);
+  animation: fo-flicker 5s ease-in-out infinite;
+}
+
+body.theme-fallout h2,
+body.theme-fallout h3,
+body.theme-fallout h4 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+body.theme-fallout h2 {
+  color: var(--fo-amber);
+  border-bottom: 1px solid rgba(255, 176, 0, 0.35);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-fallout h3 {
+  color: var(--fo-vault-yellow);
+}
+
+body.theme-fallout label,
+body.theme-fallout .form-label {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--fo-pip-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-fallout input[type="text"],
+body.theme-fallout input[type="number"],
+body.theme-fallout textarea {
+  background-color: rgba(5, 10, 5, 0.85) !important;
+  color: var(--fo-text) !important;
+  border: 1px solid rgba(92, 251, 106, 0.3);
+  border-radius: 0;
+}
+
+body.theme-fallout input[type="text"]:focus,
+body.theme-fallout input[type="number"]:focus,
+body.theme-fallout textarea:focus {
+  outline: none;
+  border-color: var(--fo-pip-green);
+  box-shadow: 0 0 0 2px rgba(92, 251, 106, 0.2), 0 0 6px rgba(92, 251, 106, 0.3);
+}
+
+body.theme-fallout input[type="checkbox"] {
+  accent-color: var(--fo-pip-green);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-fallout .custom-select__control {
+  background: rgba(5, 10, 5, 0.85);
+  border: 1px solid rgba(92, 251, 106, 0.3);
+  border-radius: 0;
+  color: var(--fo-text);
+}
+
+body.theme-fallout .custom-select__control:focus-visible,
+body.theme-fallout .custom-select__control:focus-within {
+  outline: 2px solid var(--fo-pip-green);
+  box-shadow: 0 0 0 3px rgba(92, 251, 106, 0.15);
+}
+
+body.theme-fallout .custom-select__menu {
+  background: #030703;
+  border: 1px solid rgba(92, 251, 106, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.9), 0 0 12px rgba(92, 251, 106, 0.1);
+}
+
+body.theme-fallout .custom-select__option {
+  color: var(--fo-text);
+  border-bottom: 1px solid rgba(92, 251, 106, 0.08);
+}
+
+body.theme-fallout .custom-select__option:hover {
+  background: rgba(92, 251, 106, 0.12);
+}
+
+body.theme-fallout .custom-select__value span {
+  color: var(--fo-text);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-fallout .submit-button {
+  background: linear-gradient(135deg, var(--fo-pip-dim), #3d9e45);
+  color: #000;
+  border: 1px solid var(--fo-pip-green);
+  box-shadow:
+    0 4px 16px rgba(92, 251, 106, 0.4),
+    0 0 8px rgba(92, 251, 106, 0.3);
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-fallout .submit-button:hover {
+  box-shadow:
+    0 6px 24px rgba(92, 251, 106, 0.65),
+    0 0 16px rgba(92, 251, 106, 0.5);
+}
+
+body.theme-fallout .add-button {
+  background: rgba(255, 176, 0, 0.08);
+  color: var(--fo-amber);
+  border: 1px solid rgba(255, 176, 0, 0.35);
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+body.theme-fallout .add-button:hover {
+  background: rgba(255, 176, 0, 0.18);
+}
+
+body.theme-fallout .btn-outline-secondary {
+  color: var(--fo-pip-dim);
+  border-color: rgba(46, 122, 53, 0.4);
+}
+
+body.theme-fallout .btn-outline-secondary:hover {
+  background-color: rgba(46, 122, 53, 0.15);
+  color: var(--fo-text);
+}
+
+body.theme-fallout .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(245, 196, 0, 0.7));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-fallout hr {
+  border-color: rgba(92, 251, 106, 0.2);
+}
+
+body.theme-fallout .d-flex.mb-3 img {
+  filter: drop-shadow(0 0 12px rgba(92, 251, 106, 0.4));
+}
+
+/* ── Animations ──────────────────────────────────────────────── */
+@keyframes fo-flicker {
+  0%, 88%, 92%, 100% {
+    text-shadow:
+      0 0 10px rgba(92, 251, 106, 0.9),
+      0 0 30px rgba(92, 251, 106, 0.4);
+    opacity: 1;
+  }
+  89% { opacity: 0.8; }
+  90% { opacity: 1; }
+  91% { opacity: 0.7; }
+}

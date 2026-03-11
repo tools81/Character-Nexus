@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Special+Elite&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  --coc-parchment: #F4EBD9;
+  --coc-parchment-dk: #E8DCC0;
+  --coc-ink: #2C1810;
+  --coc-ink-fade: #5C4838;
+  --coc-burgundy: #6B1F1F;
+  --coc-eldritch: #4A2C5C;
+  --coc-seal: #8B4513;
+  --coc-bg: #2A2420;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-call-of-cthulhu {
+  background:
+    radial-gradient(ellipse at center, #2A2420 0%, #1A1410 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--coc-ink);
+  font-family: 'Crimson Text', serif;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-call-of-cthulhu h1 {
+  font-family: 'IM Fell English', serif;
+  color: var(--coc-ink);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+body.theme-call-of-cthulhu h2,
+body.theme-call-of-cthulhu h3,
+body.theme-call-of-cthulhu h4 {
+  font-family: 'Special Elite', cursive;
+  letter-spacing: 0.05em;
+}
+
+body.theme-call-of-cthulhu h2 {
+  color: var(--coc-burgundy);
+  border-bottom: 2px solid rgba(107, 31, 31, 0.35);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-call-of-cthulhu h3 {
+  color: var(--coc-eldritch);
+}
+
+body.theme-call-of-cthulhu label,
+body.theme-call-of-cthulhu .form-label {
+  font-family: 'Special Elite', cursive;
+  color: var(--coc-ink-fade);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-call-of-cthulhu input[type="text"],
+body.theme-call-of-cthulhu input[type="number"],
+body.theme-call-of-cthulhu textarea {
+  background-color: rgba(244, 235, 217, 0.9) !important;
+  color: var(--coc-ink) !important;
+  border: 1px solid rgba(44, 24, 16, 0.35);
+  border-radius: 2px;
+}
+
+body.theme-call-of-cthulhu input[type="text"]:focus,
+body.theme-call-of-cthulhu input[type="number"]:focus,
+body.theme-call-of-cthulhu textarea:focus {
+  outline: none;
+  border-color: var(--coc-burgundy);
+  box-shadow: 0 0 0 2px rgba(107, 31, 31, 0.25);
+}
+
+body.theme-call-of-cthulhu input[type="checkbox"] {
+  accent-color: var(--coc-burgundy);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-call-of-cthulhu .custom-select__control {
+  background: rgba(244, 235, 217, 0.9);
+  border: 1px solid rgba(44, 24, 16, 0.35);
+  border-radius: 2px;
+  color: var(--coc-ink);
+}
+
+body.theme-call-of-cthulhu .custom-select__control:focus-visible,
+body.theme-call-of-cthulhu .custom-select__control:focus-within {
+  outline: 2px solid var(--coc-burgundy);
+  box-shadow: 0 0 0 3px rgba(107, 31, 31, 0.2);
+}
+
+body.theme-call-of-cthulhu .custom-select__menu {
+  background: var(--coc-parchment-dk);
+  border: 1px solid rgba(44, 24, 16, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+body.theme-call-of-cthulhu .custom-select__option {
+  color: var(--coc-ink);
+  border-bottom: 1px solid rgba(44, 24, 16, 0.1);
+}
+
+body.theme-call-of-cthulhu .custom-select__option:hover {
+  background: rgba(107, 31, 31, 0.12);
+}
+
+body.theme-call-of-cthulhu .custom-select__value span {
+  color: var(--coc-ink);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-call-of-cthulhu .submit-button {
+  background: linear-gradient(135deg, var(--coc-burgundy), #8B2727);
+  color: var(--coc-parchment);
+  border: 1px solid rgba(44, 24, 16, 0.4);
+  box-shadow:
+    0 4px 12px rgba(107, 31, 31, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: 'Special Elite', cursive;
+  letter-spacing: 0.05em;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-call-of-cthulhu .submit-button:hover {
+  box-shadow:
+    0 6px 20px rgba(107, 31, 31, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+body.theme-call-of-cthulhu .add-button {
+  background: rgba(74, 44, 92, 0.12);
+  color: var(--coc-eldritch);
+  border: 1px solid rgba(74, 44, 92, 0.35);
+  font-family: 'Special Elite', cursive;
+  transition: background 0.2s ease;
+}
+
+body.theme-call-of-cthulhu .add-button:hover {
+  background: rgba(74, 44, 92, 0.22);
+}
+
+body.theme-call-of-cthulhu .btn-outline-secondary {
+  color: var(--coc-ink-fade);
+  border-color: rgba(92, 72, 56, 0.4);
+}
+
+body.theme-call-of-cthulhu .btn-outline-secondary:hover {
+  background-color: rgba(92, 72, 56, 0.12);
+}
+
+body.theme-call-of-cthulhu .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(74, 44, 92, 0.6));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-call-of-cthulhu hr {
+  border-color: rgba(107, 31, 31, 0.3);
+}
+
+body.theme-call-of-cthulhu .d-flex.mb-3 img {
+  filter: drop-shadow(0 4px 8px rgba(44, 24, 16, 0.5));
+}

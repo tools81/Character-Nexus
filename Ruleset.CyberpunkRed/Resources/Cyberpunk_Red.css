@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Share+Tech+Mono&family=Barlow:wght@400;500;700&display=swap');
+
+:root {
+  --cp-hot: #FF0055;
+  --cp-yellow: #FFE000;
+  --cp-chrome: #C8D8E8;
+  --cp-cyan: #00FFEE;
+  --cp-ink: #080808;
+  --cp-panel: #0D0D0D;
+  --cp-text: #C0C8D0;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-cyberpunk-red {
+  background:
+    radial-gradient(ellipse at top, rgba(255, 0, 85, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at bottom, rgba(0, 255, 238, 0.05) 0%, transparent 55%),
+    linear-gradient(180deg, #080808 0%, #0d0d0d 100%) !important;
+  background-attachment: fixed !important;
+  background-image:
+    radial-gradient(circle, rgba(255,0,85,0.04) 1px, transparent 1px) !important;
+  background-size: 14px 14px !important;
+  color: var(--cp-text);
+  font-family: 'Barlow', sans-serif;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-cyberpunk-red h1,
+body.theme-cyberpunk-red h2,
+body.theme-cyberpunk-red h3,
+body.theme-cyberpunk-red h4 {
+  font-family: 'Black Ops One', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+body.theme-cyberpunk-red h1 {
+  color: var(--cp-hot);
+  text-shadow:
+    0 0 10px rgba(255, 0, 85, 0.9),
+    0 0 30px rgba(255, 0, 85, 0.4),
+    2px 2px 0 #000;
+  animation: cp-glitch 7s ease-in-out infinite;
+}
+
+body.theme-cyberpunk-red h2 {
+  color: var(--cp-yellow);
+  border-bottom: 2px solid rgba(255, 0, 85, 0.4);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-cyberpunk-red h3 {
+  color: var(--cp-cyan);
+  text-shadow: 0 0 8px rgba(0, 255, 238, 0.4);
+}
+
+body.theme-cyberpunk-red label,
+body.theme-cyberpunk-red .form-label {
+  font-family: 'Share Tech Mono', monospace;
+  color: rgba(200, 216, 232, 0.6);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-cyberpunk-red input[type="text"],
+body.theme-cyberpunk-red input[type="number"],
+body.theme-cyberpunk-red textarea {
+  background-color: rgba(8, 8, 8, 0.9) !important;
+  color: var(--cp-chrome) !important;
+  border: 1px solid rgba(255, 0, 85, 0.35);
+  border-radius: 0;
+}
+
+body.theme-cyberpunk-red input[type="text"]:focus,
+body.theme-cyberpunk-red input[type="number"]:focus,
+body.theme-cyberpunk-red textarea:focus {
+  outline: none;
+  border-color: var(--cp-hot);
+  box-shadow: 0 0 0 2px rgba(255, 0, 85, 0.3), 0 0 8px rgba(255, 0, 85, 0.2);
+}
+
+body.theme-cyberpunk-red input[type="checkbox"] {
+  accent-color: var(--cp-hot);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-cyberpunk-red .custom-select__control {
+  background: rgba(8, 8, 8, 0.9);
+  border: 1px solid rgba(255, 0, 85, 0.35);
+  border-radius: 0;
+  color: var(--cp-chrome);
+}
+
+body.theme-cyberpunk-red .custom-select__control:focus-visible,
+body.theme-cyberpunk-red .custom-select__control:focus-within {
+  outline: 2px solid var(--cp-hot);
+  box-shadow: 0 0 0 3px rgba(255, 0, 85, 0.25);
+}
+
+body.theme-cyberpunk-red .custom-select__menu {
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 0, 85, 0.35);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 0, 85, 0.1);
+}
+
+body.theme-cyberpunk-red .custom-select__option {
+  color: var(--cp-chrome);
+  border-bottom: 1px solid rgba(255, 0, 85, 0.08);
+}
+
+body.theme-cyberpunk-red .custom-select__option:hover {
+  background: rgba(255, 0, 85, 0.15);
+}
+
+body.theme-cyberpunk-red .custom-select__value span {
+  color: var(--cp-chrome);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-cyberpunk-red .submit-button {
+  background: linear-gradient(135deg, #aa0038, var(--cp-hot));
+  color: #fff;
+  border: 1px solid rgba(255, 224, 0, 0.3);
+  box-shadow:
+    0 4px 16px rgba(255, 0, 85, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: 'Black Ops One', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-cyberpunk-red .submit-button:hover {
+  box-shadow:
+    0 6px 24px rgba(255, 0, 85, 0.75),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+body.theme-cyberpunk-red .add-button {
+  background: rgba(255, 224, 0, 0.08);
+  color: var(--cp-yellow);
+  border: 1px solid rgba(255, 224, 0, 0.35);
+  font-family: 'Black Ops One', cursive;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+body.theme-cyberpunk-red .add-button:hover {
+  background: rgba(255, 224, 0, 0.18);
+}
+
+body.theme-cyberpunk-red .btn-outline-secondary {
+  color: rgba(200, 216, 232, 0.5);
+  border-color: rgba(200, 216, 232, 0.25);
+}
+
+body.theme-cyberpunk-red .btn-outline-secondary:hover {
+  background-color: rgba(200, 216, 232, 0.08);
+  color: var(--cp-chrome);
+}
+
+body.theme-cyberpunk-red .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(0, 255, 238, 0.7));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-cyberpunk-red hr {
+  border-color: rgba(255, 0, 85, 0.3);
+}
+
+body.theme-cyberpunk-red .d-flex.mb-3 img {
+  filter: drop-shadow(0 0 12px rgba(255, 0, 85, 0.5));
+}
+
+/* ── Animations ──────────────────────────────────────────────── */
+@keyframes cp-glitch {
+  0%, 90%, 100% {
+    text-shadow:
+      0 0 10px rgba(255, 0, 85, 0.9),
+      0 0 30px rgba(255, 0, 85, 0.4),
+      2px 2px 0 #000;
+    clip-path: none;
+  }
+  91% {
+    clip-path: inset(20% 0 60% 0);
+    transform: translateX(-3px);
+    text-shadow: 0 0 10px rgba(0, 255, 238, 0.9), 2px 2px 0 #000;
+  }
+  92% {
+    clip-path: inset(60% 0 10% 0);
+    transform: translateX(3px);
+  }
+  93% {
+    clip-path: none;
+    transform: none;
+  }
+}

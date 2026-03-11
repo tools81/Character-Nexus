@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Oswald:wght@400;600;700&display=swap');
+
+:root {
+  --par-red: #FF0000;
+  --par-red-dk: #CC0000;
+  --par-yellow: #FFD700;
+  --par-blue: #0066FF;
+  --par-white: #F8F8F8;
+  --par-ink: #1A1A1A;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-paranoia {
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 20px,
+      rgba(255, 0, 0, 0.015) 20px,
+      rgba(255, 0, 0, 0.015) 40px
+    ),
+    linear-gradient(180deg, #f8f8f8 0%, #f0f0f0 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--par-ink);
+  font-family: 'Oswald', sans-serif;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-paranoia h1 {
+  font-family: 'Archivo Black', sans-serif;
+  color: var(--par-red);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+body.theme-paranoia h2,
+body.theme-paranoia h3,
+body.theme-paranoia h4 {
+  font-family: 'Bebas Neue', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+body.theme-paranoia h2 {
+  color: var(--par-red-dk);
+  border-bottom: 4px solid var(--par-red);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-paranoia h3 {
+  color: var(--par-blue);
+}
+
+body.theme-paranoia label,
+body.theme-paranoia .form-label {
+  font-family: 'Bebas Neue', cursive;
+  color: #4A4A4A;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-paranoia input[type="text"],
+body.theme-paranoia input[type="number"],
+body.theme-paranoia textarea {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: var(--par-ink) !important;
+  border: 2px solid rgba(204, 0, 0, 0.35);
+  border-radius: 0;
+}
+
+body.theme-paranoia input[type="text"]:focus,
+body.theme-paranoia input[type="number"]:focus,
+body.theme-paranoia textarea:focus {
+  outline: none;
+  border-color: var(--par-red);
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.2);
+}
+
+body.theme-paranoia input[type="checkbox"] {
+  accent-color: var(--par-red);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-paranoia .custom-select__control {
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(204, 0, 0, 0.35);
+  border-radius: 0;
+  color: var(--par-ink);
+}
+
+body.theme-paranoia .custom-select__control:focus-visible,
+body.theme-paranoia .custom-select__control:focus-within {
+  outline: 2px solid var(--par-red);
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.15);
+}
+
+body.theme-paranoia .custom-select__menu {
+  background: #fff;
+  border: 2px solid rgba(204, 0, 0, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+body.theme-paranoia .custom-select__option {
+  color: var(--par-ink);
+  border-bottom: 1px solid rgba(204, 0, 0, 0.1);
+}
+
+body.theme-paranoia .custom-select__option:hover {
+  background: rgba(255, 0, 0, 0.08);
+}
+
+body.theme-paranoia .custom-select__value span {
+  color: var(--par-ink);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-paranoia .submit-button {
+  background: linear-gradient(135deg, var(--par-red-dk), var(--par-red));
+  color: #fff;
+  border: none;
+  box-shadow:
+    0 4px 12px rgba(255, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 0;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-paranoia .submit-button:hover {
+  box-shadow:
+    0 6px 20px rgba(255, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+body.theme-paranoia .add-button {
+  background: rgba(0, 102, 255, 0.08);
+  color: var(--par-blue);
+  border: 2px solid rgba(0, 102, 255, 0.4);
+  font-family: 'Bebas Neue', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 0;
+  transition: background 0.2s ease;
+}
+
+body.theme-paranoia .add-button:hover {
+  background: rgba(0, 102, 255, 0.15);
+}
+
+body.theme-paranoia .btn-outline-secondary {
+  color: #555;
+  border-color: #999;
+  border-radius: 0;
+}
+
+body.theme-paranoia .btn-outline-secondary:hover {
+  background-color: rgba(85, 85, 85, 0.08);
+}
+
+body.theme-paranoia .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.6));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-paranoia hr {
+  border-color: var(--par-red);
+  border-width: 3px;
+}
+
+body.theme-paranoia .d-flex.mb-3 img {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}

@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=IBM+Plex+Mono:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap');
+
+:root {
+  --tftl-teal: #5B9A8B;
+  --tftl-rust: #B4846C;
+  --tftl-paper: #E8E3DA;
+  --tftl-ink: #2A2A2A;
+  --tftl-bg: #1E2428;
+  --tftl-slate: #2A3038;
+  --tftl-accent: #7BBBA F;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-tales-from-the-loop {
+  background:
+    radial-gradient(ellipse at 40% 30%, rgba(91, 154, 139, 0.08) 0%, transparent 50%),
+    linear-gradient(180deg, #1e2428 0%, #171c20 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--tftl-paper);
+  font-family: 'Courier Prime', monospace;
+}
+
+/* Subtle noise/grain */
+body.theme-tales-from-the-loop::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 3px,
+      rgba(255, 255, 255, 0.008) 3px,
+      rgba(255, 255, 255, 0.008) 4px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-tales-from-the-loop h1 {
+  font-family: 'Special Elite', cursive;
+  color: var(--tftl-paper);
+  letter-spacing: 0.06em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.theme-tales-from-the-loop h2,
+body.theme-tales-from-the-loop h3,
+body.theme-tales-from-the-loop h4 {
+  font-family: 'Special Elite', cursive;
+  letter-spacing: 0.04em;
+}
+
+body.theme-tales-from-the-loop h2 {
+  color: var(--tftl-teal);
+  border-bottom: 1px solid rgba(91, 154, 139, 0.4);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-tales-from-the-loop h3 {
+  color: var(--tftl-rust);
+}
+
+body.theme-tales-from-the-loop label,
+body.theme-tales-from-the-loop .form-label {
+  font-family: 'IBM Plex Mono', monospace;
+  color: rgba(232, 227, 218, 0.5);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-tales-from-the-loop input[type="text"],
+body.theme-tales-from-the-loop input[type="number"],
+body.theme-tales-from-the-loop textarea {
+  background-color: rgba(30, 36, 40, 0.9) !important;
+  color: var(--tftl-paper) !important;
+  border: 1px solid rgba(91, 154, 139, 0.35);
+  border-radius: 2px;
+}
+
+body.theme-tales-from-the-loop input[type="text"]:focus,
+body.theme-tales-from-the-loop input[type="number"]:focus,
+body.theme-tales-from-the-loop textarea:focus {
+  outline: none;
+  border-color: var(--tftl-teal);
+  box-shadow: 0 0 0 2px rgba(91, 154, 139, 0.25);
+}
+
+body.theme-tales-from-the-loop input[type="checkbox"] {
+  accent-color: var(--tftl-teal);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-tales-from-the-loop .custom-select__control {
+  background: rgba(30, 36, 40, 0.9);
+  border: 1px solid rgba(91, 154, 139, 0.35);
+  border-radius: 2px;
+  color: var(--tftl-paper);
+}
+
+body.theme-tales-from-the-loop .custom-select__control:focus-visible,
+body.theme-tales-from-the-loop .custom-select__control:focus-within {
+  outline: 2px solid var(--tftl-teal);
+  box-shadow: 0 0 0 3px rgba(91, 154, 139, 0.2);
+}
+
+body.theme-tales-from-the-loop .custom-select__menu {
+  background: #1a1e22;
+  border: 1px solid rgba(91, 154, 139, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+}
+
+body.theme-tales-from-the-loop .custom-select__option {
+  color: var(--tftl-paper);
+  border-bottom: 1px solid rgba(91, 154, 139, 0.1);
+}
+
+body.theme-tales-from-the-loop .custom-select__option:hover {
+  background: rgba(91, 154, 139, 0.15);
+}
+
+body.theme-tales-from-the-loop .custom-select__value span {
+  color: var(--tftl-paper);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-tales-from-the-loop .submit-button {
+  background: linear-gradient(135deg, #3a6b60, var(--tftl-teal));
+  color: #fff;
+  border: 1px solid rgba(91, 154, 139, 0.5);
+  box-shadow:
+    0 4px 16px rgba(91, 154, 139, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-tales-from-the-loop .submit-button:hover {
+  box-shadow:
+    0 6px 24px rgba(91, 154, 139, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+body.theme-tales-from-the-loop .add-button {
+  background: rgba(180, 132, 108, 0.1);
+  color: var(--tftl-rust);
+  border: 1px solid rgba(180, 132, 108, 0.4);
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+body.theme-tales-from-the-loop .add-button:hover {
+  background: rgba(180, 132, 108, 0.2);
+}
+
+body.theme-tales-from-the-loop .btn-outline-secondary {
+  color: rgba(232, 227, 218, 0.45);
+  border-color: rgba(232, 227, 218, 0.2);
+}
+
+body.theme-tales-from-the-loop .btn-outline-secondary:hover {
+  background-color: rgba(232, 227, 218, 0.07);
+  color: var(--tftl-paper);
+}
+
+body.theme-tales-from-the-loop .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(91, 154, 139, 0.6));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-tales-from-the-loop hr {
+  border-color: rgba(91, 154, 139, 0.3);
+}
+
+body.theme-tales-from-the-loop .d-flex.mb-3 img {
+  filter: drop-shadow(0 4px 12px rgba(91, 154, 139, 0.3));
+}

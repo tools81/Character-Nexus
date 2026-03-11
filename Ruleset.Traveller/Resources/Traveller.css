@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Rajdhani:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+:root {
+  --trv-red: #CC0000;
+  --trv-grey: #4A5568;
+  --trv-amber: #FFB366;
+  --trv-dark: #0A0A0A;
+  --trv-panel: #1A1A2E;
+  --trv-mid: #12121E;
+  --trv-text: #C8C8C8;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-traveller {
+  background:
+    radial-gradient(ellipse at top, rgba(204, 0, 0, 0.06) 0%, transparent 45%),
+    linear-gradient(180deg, #0a0a0a 0%, #12121e 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--trv-text);
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* Grid pattern */
+body.theme-traveller::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(204, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(204, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-traveller h1 {
+  font-family: 'Michroma', sans-serif;
+  color: var(--trv-red);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-shadow: 0 0 12px rgba(204, 0, 0, 0.4);
+}
+
+body.theme-traveller h2,
+body.theme-traveller h3,
+body.theme-traveller h4 {
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+body.theme-traveller h2 {
+  color: var(--trv-amber);
+  border-bottom: 2px solid rgba(204, 0, 0, 0.4);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-traveller h3 {
+  color: var(--trv-text);
+}
+
+body.theme-traveller label,
+body.theme-traveller .form-label {
+  font-family: 'Roboto Mono', monospace;
+  color: rgba(200, 200, 200, 0.5);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-traveller input[type="text"],
+body.theme-traveller input[type="number"],
+body.theme-traveller textarea {
+  background-color: rgba(10, 10, 10, 0.95) !important;
+  color: var(--trv-text) !important;
+  border: 1px solid rgba(204, 0, 0, 0.35);
+  border-radius: 0;
+}
+
+body.theme-traveller input[type="text"]:focus,
+body.theme-traveller input[type="number"]:focus,
+body.theme-traveller textarea:focus {
+  outline: none;
+  border-color: var(--trv-red);
+  box-shadow: 0 0 0 2px rgba(204, 0, 0, 0.25);
+}
+
+body.theme-traveller input[type="checkbox"] {
+  accent-color: var(--trv-red);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-traveller .custom-select__control {
+  background: rgba(10, 10, 10, 0.95);
+  border: 1px solid rgba(204, 0, 0, 0.35);
+  border-radius: 0;
+  color: var(--trv-text);
+}
+
+body.theme-traveller .custom-select__control:focus-visible,
+body.theme-traveller .custom-select__control:focus-within {
+  outline: 2px solid var(--trv-red);
+  box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.2);
+}
+
+body.theme-traveller .custom-select__menu {
+  background: #0d0d1a;
+  border: 1px solid rgba(204, 0, 0, 0.35);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.9);
+}
+
+body.theme-traveller .custom-select__option {
+  color: var(--trv-text);
+  border-bottom: 1px solid rgba(204, 0, 0, 0.08);
+}
+
+body.theme-traveller .custom-select__option:hover {
+  background: rgba(204, 0, 0, 0.12);
+}
+
+body.theme-traveller .custom-select__value span {
+  color: var(--trv-text);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-traveller .submit-button {
+  background: linear-gradient(135deg, #880000, var(--trv-red));
+  color: #fff;
+  border: 1px solid rgba(255, 179, 102, 0.3);
+  box-shadow:
+    0 4px 16px rgba(204, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: 'Michroma', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 0;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-traveller .submit-button:hover {
+  box-shadow:
+    0 6px 24px rgba(204, 0, 0, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+body.theme-traveller .add-button {
+  background: rgba(255, 179, 102, 0.08);
+  color: var(--trv-amber);
+  border: 1px solid rgba(255, 179, 102, 0.35);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: background 0.2s ease;
+}
+
+body.theme-traveller .add-button:hover {
+  background: rgba(255, 179, 102, 0.15);
+}
+
+body.theme-traveller .btn-outline-secondary {
+  color: rgba(200, 200, 200, 0.45);
+  border-color: rgba(200, 200, 200, 0.2);
+  border-radius: 0;
+}
+
+body.theme-traveller .btn-outline-secondary:hover {
+  background-color: rgba(200, 200, 200, 0.07);
+  color: var(--trv-text);
+}
+
+body.theme-traveller .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(255, 179, 102, 0.6));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-traveller hr {
+  border-color: rgba(204, 0, 0, 0.3);
+}
+
+body.theme-traveller .d-flex.mb-3 img {
+  filter: drop-shadow(0 4px 12px rgba(204, 0, 0, 0.4));
+}

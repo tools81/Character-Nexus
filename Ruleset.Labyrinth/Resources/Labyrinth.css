@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=IM+Fell+English+SC&display=swap');
+
+:root {
+  --lab-purple: #4A1C5F;
+  --lab-purple-lt: #7A3A9A;
+  --lab-gold: #D4AF37;
+  --lab-gold-dk: #A8892A;
+  --lab-midnight: #1A0F2E;
+  --lab-stone: #8A7A6A;
+  --lab-text: #D0C0B0;
+  --lab-parchment: #E8D8C0;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-labyrinth {
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(74, 28, 95, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
+    linear-gradient(180deg, #1a0f2e 0%, #120a22 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--lab-text);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Subtle ornamental dots */
+body.theme-labyrinth::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, rgba(212, 175, 55, 0.2), transparent),
+    radial-gradient(1px 1px at 60% 70%, rgba(212, 175, 55, 0.15), transparent),
+    radial-gradient(1px 1px at 80% 15%, rgba(212, 175, 55, 0.1), transparent),
+    radial-gradient(1px 1px at 40% 85%, rgba(212, 175, 55, 0.15), transparent);
+  background-size: 400% 400%;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-labyrinth h1 {
+  font-family: 'Cinzel Decorative', cursive;
+  color: var(--lab-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow:
+    0 0 16px rgba(212, 175, 55, 0.5),
+    0 0 40px rgba(212, 175, 55, 0.2),
+    2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+body.theme-labyrinth h2,
+body.theme-labyrinth h3,
+body.theme-labyrinth h4 {
+  font-family: 'IM Fell English SC', serif;
+  letter-spacing: 0.06em;
+}
+
+body.theme-labyrinth h2 {
+  color: var(--lab-purple-lt);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-labyrinth h3 {
+  color: var(--lab-gold);
+  opacity: 0.85;
+}
+
+body.theme-labyrinth label,
+body.theme-labyrinth .form-label {
+  font-family: 'IM Fell English SC', serif;
+  color: rgba(208, 192, 176, 0.5);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-labyrinth input[type="text"],
+body.theme-labyrinth input[type="number"],
+body.theme-labyrinth textarea {
+  background-color: rgba(26, 15, 46, 0.8) !important;
+  color: var(--lab-parchment) !important;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 2px;
+}
+
+body.theme-labyrinth input[type="text"]:focus,
+body.theme-labyrinth input[type="number"]:focus,
+body.theme-labyrinth textarea:focus {
+  outline: none;
+  border-color: var(--lab-gold);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2), 0 0 10px rgba(212, 175, 55, 0.1);
+}
+
+body.theme-labyrinth input[type="checkbox"] {
+  accent-color: var(--lab-gold);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-labyrinth .custom-select__control {
+  background: rgba(26, 15, 46, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 2px;
+  color: var(--lab-parchment);
+}
+
+body.theme-labyrinth .custom-select__control:focus-visible,
+body.theme-labyrinth .custom-select__control:focus-within {
+  outline: 2px solid var(--lab-gold);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+body.theme-labyrinth .custom-select__menu {
+  background: #150b25;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.85), 0 0 20px rgba(74, 28, 95, 0.3);
+}
+
+body.theme-labyrinth .custom-select__option {
+  color: var(--lab-parchment);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+}
+
+body.theme-labyrinth .custom-select__option:hover {
+  background: rgba(74, 28, 95, 0.3);
+}
+
+body.theme-labyrinth .custom-select__value span {
+  color: var(--lab-parchment);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-labyrinth .submit-button {
+  background: linear-gradient(135deg, var(--lab-gold-dk), var(--lab-gold));
+  color: var(--lab-midnight);
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  box-shadow:
+    0 4px 16px rgba(212, 175, 55, 0.35),
+    0 0 30px rgba(212, 175, 55, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  font-family: 'Cinzel Decorative', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-labyrinth .submit-button:hover {
+  box-shadow:
+    0 6px 24px rgba(212, 175, 55, 0.55),
+    0 0 40px rgba(212, 175, 55, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+body.theme-labyrinth .add-button {
+  background: rgba(74, 28, 95, 0.2);
+  color: var(--lab-purple-lt);
+  border: 1px solid rgba(122, 58, 154, 0.4);
+  font-family: 'IM Fell English SC', serif;
+  transition: background 0.2s ease;
+}
+
+body.theme-labyrinth .add-button:hover {
+  background: rgba(74, 28, 95, 0.35);
+}
+
+body.theme-labyrinth .btn-outline-secondary {
+  color: rgba(208, 192, 176, 0.45);
+  border-color: rgba(208, 192, 176, 0.2);
+}
+
+body.theme-labyrinth .btn-outline-secondary:hover {
+  background-color: rgba(74, 28, 95, 0.15);
+  color: var(--lab-text);
+}
+
+body.theme-labyrinth .dice-roll-btn {
+  filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.6));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-labyrinth hr {
+  border-color: rgba(212, 175, 55, 0.25);
+}
+
+body.theme-labyrinth .d-flex.mb-3 img {
+  filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.35));
+}

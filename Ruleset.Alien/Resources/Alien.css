@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Saira+Condensed:wght@400;600;700;800&family=Courier+Prime:wght@400;700&display=swap');
+
+:root {
+  --al-warning: #F4C430;
+  --al-caution: #D97D00;
+  --al-crt-green: #33FF33;
+  --al-emergency: #FF4400;
+  --al-panel: #1C1C1C;
+  --al-dark: #0D0D0D;
+  --al-metal: #4A4A4A;
+  --al-text: #AFAFAF;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-alien {
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(255, 255, 255, 0.015) 1px,
+      rgba(255, 255, 255, 0.015) 2px
+    ),
+    linear-gradient(180deg, #0d0d0d 0%, #111111 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--al-text);
+  font-family: 'Courier Prime', monospace;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-alien h1,
+body.theme-alien h2,
+body.theme-alien h3,
+body.theme-alien h4 {
+  font-family: 'Saira Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+body.theme-alien h1 {
+  color: var(--al-warning);
+  text-shadow:
+    0 0 8px rgba(244, 196, 48, 0.6),
+    2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+body.theme-alien h2 {
+  color: var(--al-crt-green);
+  border-bottom: 1px solid rgba(51, 255, 51, 0.3);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px rgba(51, 255, 51, 0.4);
+}
+
+body.theme-alien h3 {
+  color: var(--al-caution);
+}
+
+body.theme-alien label,
+body.theme-alien .form-label {
+  font-family: 'Michroma', sans-serif;
+  color: rgba(175, 175, 175, 0.65);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-alien input[type="text"],
+body.theme-alien input[type="number"],
+body.theme-alien textarea {
+  background-color: rgba(13, 13, 13, 0.9) !important;
+  color: var(--al-text) !important;
+  border: 1px solid rgba(244, 196, 48, 0.3);
+  border-radius: 0;
+}
+
+body.theme-alien input[type="text"]:focus,
+body.theme-alien input[type="number"]:focus,
+body.theme-alien textarea:focus {
+  outline: none;
+  border-color: var(--al-warning);
+  box-shadow: 0 0 0 2px rgba(244, 196, 48, 0.25);
+}
+
+body.theme-alien input[type="checkbox"] {
+  accent-color: var(--al-warning);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-alien .custom-select__control {
+  background: rgba(13, 13, 13, 0.9);
+  border: 1px solid rgba(244, 196, 48, 0.3);
+  border-radius: 0;
+  color: var(--al-text);
+}
+
+body.theme-alien .custom-select__control:focus-visible,
+body.theme-alien .custom-select__control:focus-within {
+  outline: 2px solid var(--al-warning);
+  box-shadow: 0 0 0 3px rgba(244, 196, 48, 0.2);
+}
+
+body.theme-alien .custom-select__menu {
+  background: #0a0a0a;
+  border: 1px solid rgba(244, 196, 48, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.9);
+}
+
+body.theme-alien .custom-select__option {
+  color: var(--al-text);
+  border-bottom: 1px solid rgba(244, 196, 48, 0.08);
+}
+
+body.theme-alien .custom-select__option:hover {
+  background: rgba(244, 196, 48, 0.12);
+}
+
+body.theme-alien .custom-select__value span {
+  color: var(--al-text);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-alien .submit-button {
+  background: linear-gradient(135deg, #9a7c00, #c9a020);
+  color: #000;
+  border: 1px solid var(--al-warning);
+  box-shadow:
+    0 4px 16px rgba(244, 196, 48, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: 'Michroma', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-alien .submit-button:hover {
+  box-shadow:
+    0 6px 24px rgba(244, 196, 48, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+body.theme-alien .add-button {
+  background: rgba(51, 255, 51, 0.08);
+  color: var(--al-crt-green);
+  border: 1px solid rgba(51, 255, 51, 0.3);
+  font-family: 'Michroma', sans-serif;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+body.theme-alien .add-button:hover {
+  background: rgba(51, 255, 51, 0.15);
+}
+
+body.theme-alien .btn-outline-secondary {
+  color: var(--al-metal);
+  border-color: rgba(74, 74, 74, 0.5);
+}
+
+body.theme-alien .btn-outline-secondary:hover {
+  background-color: rgba(74, 74, 74, 0.2);
+  color: var(--al-text);
+}
+
+body.theme-alien .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(51, 255, 51, 0.6));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-alien hr {
+  border-color: rgba(244, 196, 48, 0.25);
+}
+
+body.theme-alien .d-flex.mb-3 img {
+  filter: drop-shadow(0 0 12px rgba(244, 196, 48, 0.4));
+}

@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600&family=Special+Elite&display=swap');
+
+:root {
+  --dg-terminal: #00FF41;
+  --dg-blood: #8B0000;
+  --dg-white: #F5F5F0;
+  --dg-dark: #050A05;
+  --dg-panel: #0A0F0A;
+  --dg-mid: #0F160F;
+  --dg-text: #C8D8C8;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-delta-green {
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(0, 255, 65, 0.012) 1px,
+      rgba(0, 255, 65, 0.012) 2px
+    ),
+    linear-gradient(180deg, #050a05 0%, #080d08 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--dg-text);
+  font-family: 'Courier Prime', monospace;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-delta-green h1 {
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--dg-terminal);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.5);
+}
+
+body.theme-delta-green h2,
+body.theme-delta-green h3,
+body.theme-delta-green h4 {
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+body.theme-delta-green h2 {
+  color: var(--dg-white);
+  border-bottom: 1px solid rgba(0, 255, 65, 0.3);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-delta-green h3 {
+  color: rgba(0, 255, 65, 0.7);
+}
+
+body.theme-delta-green label,
+body.theme-delta-green .form-label {
+  font-family: 'IBM Plex Mono', monospace;
+  color: rgba(200, 216, 200, 0.5);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-delta-green input[type="text"],
+body.theme-delta-green input[type="number"],
+body.theme-delta-green textarea {
+  background-color: rgba(5, 10, 5, 0.95) !important;
+  color: var(--dg-white) !important;
+  border: 1px solid rgba(0, 255, 65, 0.25);
+  border-radius: 0;
+  font-family: 'Courier Prime', monospace;
+}
+
+body.theme-delta-green input[type="text"]:focus,
+body.theme-delta-green input[type="number"]:focus,
+body.theme-delta-green textarea:focus {
+  outline: none;
+  border-color: var(--dg-terminal);
+  box-shadow: 0 0 0 2px rgba(0, 255, 65, 0.2), 0 0 8px rgba(0, 255, 65, 0.1);
+}
+
+body.theme-delta-green input[type="checkbox"] {
+  accent-color: var(--dg-terminal);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-delta-green .custom-select__control {
+  background: rgba(5, 10, 5, 0.95);
+  border: 1px solid rgba(0, 255, 65, 0.25);
+  border-radius: 0;
+  color: var(--dg-white);
+}
+
+body.theme-delta-green .custom-select__control:focus-visible,
+body.theme-delta-green .custom-select__control:focus-within {
+  outline: 2px solid var(--dg-terminal);
+  box-shadow: 0 0 0 3px rgba(0, 255, 65, 0.15);
+}
+
+body.theme-delta-green .custom-select__menu {
+  background: #060b06;
+  border: 1px solid rgba(0, 255, 65, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.9);
+}
+
+body.theme-delta-green .custom-select__option {
+  color: var(--dg-text);
+  border-bottom: 1px solid rgba(0, 255, 65, 0.06);
+}
+
+body.theme-delta-green .custom-select__option:hover {
+  background: rgba(0, 255, 65, 0.08);
+}
+
+body.theme-delta-green .custom-select__value span {
+  color: var(--dg-text);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-delta-green .submit-button {
+  background: linear-gradient(135deg, #004d00, rgba(0, 180, 50, 0.8));
+  color: #000;
+  border: 1px solid var(--dg-terminal);
+  box-shadow:
+    0 4px 16px rgba(0, 255, 65, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 0;
+  font-weight: 600;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-delta-green .submit-button:hover {
+  box-shadow:
+    0 6px 24px rgba(0, 255, 65, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+body.theme-delta-green .add-button {
+  background: rgba(139, 0, 0, 0.1);
+  color: #CC3333;
+  border: 1px solid rgba(139, 0, 0, 0.35);
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: background 0.2s ease;
+}
+
+body.theme-delta-green .add-button:hover {
+  background: rgba(139, 0, 0, 0.2);
+}
+
+body.theme-delta-green .btn-outline-secondary {
+  color: rgba(200, 216, 200, 0.45);
+  border-color: rgba(200, 216, 200, 0.2);
+  border-radius: 0;
+}
+
+body.theme-delta-green .btn-outline-secondary:hover {
+  background-color: rgba(200, 216, 200, 0.07);
+  color: var(--dg-text);
+}
+
+body.theme-delta-green .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(0, 255, 65, 0.6));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-delta-green hr {
+  border-color: rgba(0, 255, 65, 0.2);
+}
+
+body.theme-delta-green .d-flex.mb-3 img {
+  filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.3));
+}

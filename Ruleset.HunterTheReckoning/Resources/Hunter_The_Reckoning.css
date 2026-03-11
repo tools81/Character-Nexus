@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:wght@400;700&family=Oswald:wght@400;600;700&display=swap');
+
+:root {
+  --htr-blood: #C41E3A;
+  --htr-yellow: #FFD800;
+  --htr-green: #9ACD32;
+  --htr-dark: #1A1A1A;
+  --htr-asphalt: #2D2D2D;
+  --htr-text: #DDDDDD;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-hunter-the-reckoning {
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.04) 2px,
+      rgba(0, 0, 0, 0.04) 4px
+    ),
+    linear-gradient(180deg, #1a1a1a 0%, #111111 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--htr-text);
+  font-family: 'Courier Prime', monospace;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-hunter-the-reckoning h1,
+body.theme-hunter-the-reckoning h2,
+body.theme-hunter-the-reckoning h3,
+body.theme-hunter-the-reckoning h4 {
+  font-family: 'Bebas Neue', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+body.theme-hunter-the-reckoning h1 {
+  color: var(--htr-blood);
+  text-shadow:
+    2px 2px 0 #000,
+    0 0 20px rgba(196, 30, 58, 0.5);
+  letter-spacing: 0.12em;
+}
+
+body.theme-hunter-the-reckoning h2 {
+  color: var(--htr-yellow);
+  border-bottom: 3px solid var(--htr-blood);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-hunter-the-reckoning h3 {
+  color: var(--htr-green);
+}
+
+body.theme-hunter-the-reckoning label,
+body.theme-hunter-the-reckoning .form-label {
+  font-family: 'Oswald', sans-serif;
+  color: rgba(221, 221, 221, 0.55);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-hunter-the-reckoning input[type="text"],
+body.theme-hunter-the-reckoning input[type="number"],
+body.theme-hunter-the-reckoning textarea {
+  background-color: rgba(30, 30, 30, 0.9) !important;
+  color: var(--htr-text) !important;
+  border: 1px solid rgba(196, 30, 58, 0.4);
+  border-radius: 0;
+}
+
+body.theme-hunter-the-reckoning input[type="text"]:focus,
+body.theme-hunter-the-reckoning input[type="number"]:focus,
+body.theme-hunter-the-reckoning textarea:focus {
+  outline: none;
+  border-color: var(--htr-blood);
+  box-shadow: 0 0 0 2px rgba(196, 30, 58, 0.3);
+}
+
+body.theme-hunter-the-reckoning input[type="checkbox"] {
+  accent-color: var(--htr-blood);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-hunter-the-reckoning .custom-select__control {
+  background: rgba(30, 30, 30, 0.9);
+  border: 1px solid rgba(196, 30, 58, 0.4);
+  border-radius: 0;
+  color: var(--htr-text);
+}
+
+body.theme-hunter-the-reckoning .custom-select__control:focus-visible,
+body.theme-hunter-the-reckoning .custom-select__control:focus-within {
+  outline: 2px solid var(--htr-blood);
+  box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.25);
+}
+
+body.theme-hunter-the-reckoning .custom-select__menu {
+  background: #111111;
+  border: 1px solid rgba(196, 30, 58, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+}
+
+body.theme-hunter-the-reckoning .custom-select__option {
+  color: var(--htr-text);
+  border-bottom: 1px solid rgba(196, 30, 58, 0.1);
+}
+
+body.theme-hunter-the-reckoning .custom-select__option:hover {
+  background: rgba(196, 30, 58, 0.15);
+}
+
+body.theme-hunter-the-reckoning .custom-select__value span {
+  color: var(--htr-text);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-hunter-the-reckoning .submit-button {
+  background: linear-gradient(135deg, #8a0f22, var(--htr-blood));
+  color: #fff;
+  border: 1px solid rgba(255, 216, 0, 0.3);
+  box-shadow:
+    0 4px 16px rgba(196, 30, 58, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: 'Bebas Neue', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-radius: 0;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-hunter-the-reckoning .submit-button:hover {
+  box-shadow:
+    0 6px 24px rgba(196, 30, 58, 0.75),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+body.theme-hunter-the-reckoning .add-button {
+  background: rgba(154, 205, 50, 0.1);
+  color: var(--htr-green);
+  border: 1px solid rgba(154, 205, 50, 0.35);
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: background 0.2s ease;
+}
+
+body.theme-hunter-the-reckoning .add-button:hover {
+  background: rgba(154, 205, 50, 0.2);
+}
+
+body.theme-hunter-the-reckoning .btn-outline-secondary {
+  color: rgba(221, 221, 221, 0.5);
+  border-color: rgba(221, 221, 221, 0.25);
+  border-radius: 0;
+}
+
+body.theme-hunter-the-reckoning .btn-outline-secondary:hover {
+  background-color: rgba(221, 221, 221, 0.08);
+  color: var(--htr-text);
+}
+
+body.theme-hunter-the-reckoning .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(196, 30, 58, 0.7));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-hunter-the-reckoning hr {
+  border-color: rgba(196, 30, 58, 0.35);
+  border-width: 2px;
+}
+
+body.theme-hunter-the-reckoning .d-flex.mb-3 img {
+  filter: drop-shadow(0 4px 12px rgba(196, 30, 58, 0.4));
+}

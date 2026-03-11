@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root {
+  --dune-spice: #D2691E;
+  --dune-gold: #DAA520;
+  --dune-sand: #EDC9AF;
+  --dune-parchment: #F4E8D0;
+  --dune-imperial: #1A4D6D;
+  --dune-ink: #2C1A0C;
+  --dune-bg: #1A1008;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-dune {
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(210, 105, 30, 0.1) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 100%, rgba(218, 165, 32, 0.08) 0%, transparent 50%),
+    linear-gradient(180deg, #1a1008 0%, #110b04 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--dune-sand);
+  font-family: 'EB Garamond', serif;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-dune h1 {
+  font-family: 'Cinzel', serif;
+  color: var(--dune-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-shadow:
+    0 0 20px rgba(218, 165, 32, 0.4),
+    2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+body.theme-dune h2,
+body.theme-dune h3,
+body.theme-dune h4 {
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+body.theme-dune h2 {
+  color: var(--dune-spice);
+  border-bottom: 1px solid rgba(218, 165, 32, 0.35);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-dune h3 {
+  color: var(--dune-imperial);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+body.theme-dune label,
+body.theme-dune .form-label {
+  font-family: 'Cinzel', serif;
+  color: rgba(237, 201, 175, 0.55);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-dune input[type="text"],
+body.theme-dune input[type="number"],
+body.theme-dune textarea {
+  background-color: rgba(244, 232, 208, 0.1) !important;
+  color: var(--dune-parchment) !important;
+  border: 1px solid rgba(218, 165, 32, 0.35);
+  border-radius: 2px;
+}
+
+body.theme-dune input[type="text"]:focus,
+body.theme-dune input[type="number"]:focus,
+body.theme-dune textarea:focus {
+  outline: none;
+  border-color: var(--dune-gold);
+  box-shadow: 0 0 0 2px rgba(218, 165, 32, 0.25);
+}
+
+body.theme-dune input[type="checkbox"] {
+  accent-color: var(--dune-spice);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-dune .custom-select__control {
+  background: rgba(26, 16, 8, 0.9);
+  border: 1px solid rgba(218, 165, 32, 0.35);
+  border-radius: 2px;
+  color: var(--dune-parchment);
+}
+
+body.theme-dune .custom-select__control:focus-visible,
+body.theme-dune .custom-select__control:focus-within {
+  outline: 2px solid var(--dune-gold);
+  box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.2);
+}
+
+body.theme-dune .custom-select__menu {
+  background: #1c1208;
+  border: 1px solid rgba(218, 165, 32, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+}
+
+body.theme-dune .custom-select__option {
+  color: var(--dune-parchment);
+  border-bottom: 1px solid rgba(218, 165, 32, 0.08);
+}
+
+body.theme-dune .custom-select__option:hover {
+  background: rgba(210, 105, 30, 0.15);
+}
+
+body.theme-dune .custom-select__value span {
+  color: var(--dune-parchment);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-dune .submit-button {
+  background: linear-gradient(135deg, #8a4010, var(--dune-spice));
+  color: var(--dune-parchment);
+  border: 1px solid rgba(218, 165, 32, 0.4);
+  box-shadow:
+    0 4px 16px rgba(210, 105, 30, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-dune .submit-button:hover {
+  box-shadow:
+    0 6px 24px rgba(210, 105, 30, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+body.theme-dune .add-button {
+  background: rgba(26, 77, 109, 0.12);
+  color: #4A8FAD;
+  border: 1px solid rgba(26, 77, 109, 0.4);
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+body.theme-dune .add-button:hover {
+  background: rgba(26, 77, 109, 0.22);
+}
+
+body.theme-dune .btn-outline-secondary {
+  color: rgba(237, 201, 175, 0.5);
+  border-color: rgba(237, 201, 175, 0.25);
+}
+
+body.theme-dune .btn-outline-secondary:hover {
+  background-color: rgba(237, 201, 175, 0.08);
+  color: var(--dune-sand);
+}
+
+body.theme-dune .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(218, 165, 32, 0.7));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-dune hr {
+  border-color: rgba(218, 165, 32, 0.3);
+}
+
+body.theme-dune .d-flex.mb-3 img {
+  filter: drop-shadow(0 0 12px rgba(218, 165, 32, 0.4));
+}

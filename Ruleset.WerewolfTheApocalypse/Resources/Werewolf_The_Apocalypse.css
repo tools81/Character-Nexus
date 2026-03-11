@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cinzel:wght@400;600;700&family=Philosopher:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --wta-earth: #5C4033;
+  --wta-rage: #8B1A1A;
+  --wta-moon: #C5C5BA;
+  --wta-life: #4A7C59;
+  --wta-parchment: #E8D5B7;
+  --wta-ink: #2A1810;
+  --wta-bg: #1C1510;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-werewolf-the-apocalypse {
+  background:
+    radial-gradient(ellipse at top, rgba(74, 124, 89, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom, rgba(139, 26, 26, 0.08) 0%, transparent 50%),
+    linear-gradient(180deg, #1c1510 0%, #120e0a 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--wta-moon);
+  font-family: 'Philosopher', serif;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-werewolf-the-apocalypse h1 {
+  font-family: 'UnifrakturCook', cursive;
+  color: var(--wta-moon);
+  text-shadow:
+    0 0 20px rgba(139, 26, 26, 0.6),
+    2px 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.04em;
+}
+
+body.theme-werewolf-the-apocalypse h2,
+body.theme-werewolf-the-apocalypse h3,
+body.theme-werewolf-the-apocalypse h4 {
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+body.theme-werewolf-the-apocalypse h2 {
+  color: var(--wta-rage);
+  border-bottom: 2px solid rgba(139, 26, 26, 0.4);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-werewolf-the-apocalypse h3 {
+  color: var(--wta-life);
+}
+
+body.theme-werewolf-the-apocalypse label,
+body.theme-werewolf-the-apocalypse .form-label {
+  font-family: 'Cinzel', serif;
+  color: rgba(197, 197, 186, 0.55);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-werewolf-the-apocalypse input[type="text"],
+body.theme-werewolf-the-apocalypse input[type="number"],
+body.theme-werewolf-the-apocalypse textarea {
+  background-color: rgba(232, 213, 183, 0.12) !important;
+  color: var(--wta-parchment) !important;
+  border: 1px solid rgba(92, 64, 51, 0.5);
+  border-radius: 2px;
+}
+
+body.theme-werewolf-the-apocalypse input[type="text"]:focus,
+body.theme-werewolf-the-apocalypse input[type="number"]:focus,
+body.theme-werewolf-the-apocalypse textarea:focus {
+  outline: none;
+  border-color: var(--wta-life);
+  box-shadow: 0 0 0 2px rgba(74, 124, 89, 0.25);
+}
+
+body.theme-werewolf-the-apocalypse input[type="checkbox"] {
+  accent-color: var(--wta-rage);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-werewolf-the-apocalypse .custom-select__control {
+  background: rgba(28, 21, 16, 0.9);
+  border: 1px solid rgba(92, 64, 51, 0.5);
+  border-radius: 2px;
+  color: var(--wta-parchment);
+}
+
+body.theme-werewolf-the-apocalypse .custom-select__control:focus-visible,
+body.theme-werewolf-the-apocalypse .custom-select__control:focus-within {
+  outline: 2px solid var(--wta-life);
+  box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.2);
+}
+
+body.theme-werewolf-the-apocalypse .custom-select__menu {
+  background: #1a100c;
+  border: 1px solid rgba(92, 64, 51, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+}
+
+body.theme-werewolf-the-apocalypse .custom-select__option {
+  color: var(--wta-parchment);
+  border-bottom: 1px solid rgba(92, 64, 51, 0.12);
+}
+
+body.theme-werewolf-the-apocalypse .custom-select__option:hover {
+  background: rgba(74, 124, 89, 0.15);
+}
+
+body.theme-werewolf-the-apocalypse .custom-select__value span {
+  color: var(--wta-parchment);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-werewolf-the-apocalypse .submit-button {
+  background: linear-gradient(135deg, #5a0e0e, var(--wta-rage));
+  color: var(--wta-parchment);
+  border: 1px solid rgba(197, 197, 186, 0.3);
+  box-shadow:
+    0 4px 16px rgba(139, 26, 26, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-werewolf-the-apocalypse .submit-button:hover {
+  box-shadow:
+    0 6px 24px rgba(139, 26, 26, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+body.theme-werewolf-the-apocalypse .add-button {
+  background: rgba(74, 124, 89, 0.1);
+  color: var(--wta-life);
+  border: 1px solid rgba(74, 124, 89, 0.4);
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+body.theme-werewolf-the-apocalypse .add-button:hover {
+  background: rgba(74, 124, 89, 0.2);
+}
+
+body.theme-werewolf-the-apocalypse .btn-outline-secondary {
+  color: rgba(197, 197, 186, 0.5);
+  border-color: rgba(197, 197, 186, 0.25);
+}
+
+body.theme-werewolf-the-apocalypse .btn-outline-secondary:hover {
+  background-color: rgba(197, 197, 186, 0.08);
+  color: var(--wta-moon);
+}
+
+body.theme-werewolf-the-apocalypse .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(139, 26, 26, 0.7));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-werewolf-the-apocalypse hr {
+  border-color: rgba(92, 64, 51, 0.4);
+}
+
+body.theme-werewolf-the-apocalypse .d-flex.mb-3 img {
+  filter: drop-shadow(0 4px 12px rgba(139, 26, 26, 0.4));
+}

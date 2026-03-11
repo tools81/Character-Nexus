@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Fredoka+One&family=Boogaloo&display=swap');
+
+:root {
+  --toon-red: #FF3333;
+  --toon-blue: #3366FF;
+  --toon-yellow: #FFDD00;
+  --toon-green: #33CC33;
+  --toon-orange: #FF8800;
+  --toon-ink: #111111;
+  --toon-white: #FFFFFF;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-toon {
+  background:
+    radial-gradient(circle at 15% 15%, rgba(255, 221, 0, 0.15) 0%, transparent 30%),
+    radial-gradient(circle at 85% 85%, rgba(51, 102, 255, 0.1) 0%, transparent 30%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1) 0%, #f0eedd 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--toon-ink);
+  font-family: 'Boogaloo', cursive;
+}
+
+/* Halftone dots */
+body.theme-toon::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 10px 10px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-toon h1 {
+  font-family: 'Luckiest Guy', cursive;
+  color: var(--toon-red);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-shadow:
+    3px 3px 0 var(--toon-yellow),
+    5px 5px 0 rgba(0, 0, 0, 0.15);
+  -webkit-text-stroke: 2px var(--toon-ink);
+}
+
+body.theme-toon h2,
+body.theme-toon h3,
+body.theme-toon h4 {
+  font-family: 'Fredoka One', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+body.theme-toon h2 {
+  color: var(--toon-blue);
+  border-bottom: 3px solid var(--toon-yellow);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-toon h3 {
+  color: var(--toon-green);
+}
+
+body.theme-toon label,
+body.theme-toon .form-label {
+  font-family: 'Fredoka One', cursive;
+  color: #555;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-toon input[type="text"],
+body.theme-toon input[type="number"],
+body.theme-toon textarea {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: var(--toon-ink) !important;
+  border: 2px solid var(--toon-ink);
+  border-radius: 8px;
+}
+
+body.theme-toon input[type="text"]:focus,
+body.theme-toon input[type="number"]:focus,
+body.theme-toon textarea:focus {
+  outline: none;
+  border-color: var(--toon-blue);
+  box-shadow: 0 0 0 3px rgba(51, 102, 255, 0.2), 3px 3px 0 rgba(0, 0, 0, 0.15);
+}
+
+body.theme-toon input[type="checkbox"] {
+  accent-color: var(--toon-red);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-toon .custom-select__control {
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--toon-ink);
+  border-radius: 8px;
+  color: var(--toon-ink);
+}
+
+body.theme-toon .custom-select__control:focus-visible,
+body.theme-toon .custom-select__control:focus-within {
+  outline: 2px solid var(--toon-blue);
+  box-shadow: 0 0 0 3px rgba(51, 102, 255, 0.2);
+}
+
+body.theme-toon .custom-select__menu {
+  background: #fff;
+  border: 2px solid var(--toon-ink);
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+body.theme-toon .custom-select__option {
+  color: var(--toon-ink);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+}
+
+body.theme-toon .custom-select__option:hover {
+  background: rgba(255, 221, 0, 0.25);
+}
+
+body.theme-toon .custom-select__value span {
+  color: var(--toon-ink);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-toon .submit-button {
+  background: linear-gradient(135deg, #cc2200, var(--toon-red));
+  color: #fff;
+  border: 2px solid var(--toon-ink);
+  box-shadow:
+    3px 3px 0 var(--toon-ink),
+    0 4px 12px rgba(255, 51, 51, 0.4);
+  font-family: 'Fredoka One', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 20px;
+  transition: box-shadow 0.15s ease, transform 0.1s ease;
+}
+
+body.theme-toon .submit-button:hover {
+  box-shadow:
+    2px 2px 0 var(--toon-ink),
+    0 3px 8px rgba(255, 51, 51, 0.5);
+  transform: translate(1px, 1px);
+}
+
+body.theme-toon .add-button {
+  background: rgba(51, 204, 51, 0.12);
+  color: #228822;
+  border: 2px solid rgba(51, 204, 51, 0.5);
+  font-family: 'Fredoka One', cursive;
+  text-transform: uppercase;
+  border-radius: 20px;
+  transition: background 0.2s ease;
+}
+
+body.theme-toon .add-button:hover {
+  background: rgba(51, 204, 51, 0.22);
+}
+
+body.theme-toon .btn-outline-secondary {
+  color: #555;
+  border-color: #888;
+  border-radius: 20px;
+}
+
+body.theme-toon .btn-outline-secondary:hover {
+  background-color: rgba(85, 85, 85, 0.1);
+}
+
+body.theme-toon .dice-roll-btn {
+  filter: drop-shadow(0 0 3px rgba(255, 136, 0, 0.7));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-toon hr {
+  border-color: var(--toon-ink);
+  border-width: 2px;
+}
+
+body.theme-toon .d-flex.mb-3 img {
+  filter: drop-shadow(3px 3px 0 rgba(0, 0, 0, 0.25));
+}

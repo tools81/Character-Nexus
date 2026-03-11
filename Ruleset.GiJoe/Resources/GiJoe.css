@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;900&family=Oswald:wght@400;600;700&family=Courier+Prime:wght@400;700&display=swap');
+
+:root {
+  --gij-olive: #5A6B4F;
+  --gij-olive-dark: #3A4B2F;
+  --gij-tan: #D4C5A0;
+  --gij-manila: #F5EDD6;
+  --gij-red: #C8281E;
+  --gij-joe-blue: #0047AB;
+  --gij-ink: #1A1A1A;
+  --gij-bg: #3A3A3A;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-gi-joe {
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(0,0,0,0.02) 10px,
+      rgba(0,0,0,0.02) 20px
+    ),
+    linear-gradient(180deg, #3a3a3a 0%, #2d2d2d 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--gij-ink);
+  font-family: 'Courier Prime', monospace;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-gi-joe h1,
+body.theme-gi-joe h2,
+body.theme-gi-joe h3,
+body.theme-gi-joe h4 {
+  font-family: 'Saira Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+body.theme-gi-joe h1 {
+  color: var(--gij-red);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+body.theme-gi-joe h2 {
+  color: var(--gij-joe-blue);
+  border-bottom: 3px solid var(--gij-olive-dark);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-gi-joe h3 {
+  color: var(--gij-olive);
+}
+
+body.theme-gi-joe label,
+body.theme-gi-joe .form-label {
+  font-family: 'Saira Condensed', sans-serif;
+  color: #4A4A4A;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-gi-joe input[type="text"],
+body.theme-gi-joe input[type="number"],
+body.theme-gi-joe textarea {
+  background-color: rgba(250, 246, 232, 0.95) !important;
+  color: var(--gij-ink) !important;
+  border: 1px solid rgba(90, 107, 79, 0.4);
+  border-radius: 2px;
+}
+
+body.theme-gi-joe input[type="text"]:focus,
+body.theme-gi-joe input[type="number"]:focus,
+body.theme-gi-joe textarea:focus {
+  outline: none;
+  border-color: var(--gij-olive);
+  box-shadow: 0 0 0 2px rgba(90, 107, 79, 0.25);
+}
+
+body.theme-gi-joe input[type="checkbox"] {
+  accent-color: var(--gij-olive);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-gi-joe .custom-select__control {
+  background: rgba(250, 246, 232, 0.95);
+  border: 1px solid rgba(90, 107, 79, 0.4);
+  border-radius: 2px;
+  color: var(--gij-ink);
+}
+
+body.theme-gi-joe .custom-select__control:focus-visible,
+body.theme-gi-joe .custom-select__control:focus-within {
+  outline: 2px solid var(--gij-olive);
+  box-shadow: 0 0 0 3px rgba(90, 107, 79, 0.2);
+}
+
+body.theme-gi-joe .custom-select__menu {
+  background: var(--gij-manila);
+  border: 1px solid rgba(90, 107, 79, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+body.theme-gi-joe .custom-select__option {
+  color: var(--gij-ink);
+  border-bottom: 1px solid rgba(90, 107, 79, 0.12);
+}
+
+body.theme-gi-joe .custom-select__option:hover {
+  background: rgba(90, 107, 79, 0.15);
+}
+
+body.theme-gi-joe .custom-select__value span {
+  color: var(--gij-ink);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-gi-joe .submit-button {
+  background: linear-gradient(135deg, #8a1c14, var(--gij-red));
+  color: #fff;
+  border: 1px solid rgba(0, 71, 171, 0.3);
+  box-shadow:
+    0 4px 12px rgba(200, 40, 30, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: 'Saira Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-gi-joe .submit-button:hover {
+  box-shadow:
+    0 6px 20px rgba(200, 40, 30, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+body.theme-gi-joe .add-button {
+  background: rgba(0, 71, 171, 0.1);
+  color: var(--gij-joe-blue);
+  border: 1px solid rgba(0, 71, 171, 0.35);
+  font-family: 'Saira Condensed', sans-serif;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+body.theme-gi-joe .add-button:hover {
+  background: rgba(0, 71, 171, 0.2);
+}
+
+body.theme-gi-joe .btn-outline-secondary {
+  color: #555;
+  border-color: rgba(85, 85, 85, 0.4);
+}
+
+body.theme-gi-joe .btn-outline-secondary:hover {
+  background-color: rgba(85, 85, 85, 0.1);
+}
+
+body.theme-gi-joe .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(200, 40, 30, 0.5));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-gi-joe hr {
+  border-color: rgba(90, 107, 79, 0.4);
+  border-width: 2px;
+}
+
+body.theme-gi-joe .d-flex.mb-3 img {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}

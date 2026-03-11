@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Indie+Flower&family=Shadows+Into+Light&display=swap');
+
+:root {
+  --kob-paper: #FFF9E3;
+  --kob-line: #A7BED3;
+  --kob-pen: #1E3A8A;
+  --kob-marker: #34D399;
+  --kob-highlight: #FDE68A;
+  --kob-red: #DC2626;
+  --kob-ink: #1A1A2E;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-kids-on-bikes {
+  background:
+    repeating-linear-gradient(
+      transparent,
+      transparent 27px,
+      var(--kob-line) 27px,
+      var(--kob-line) 28px
+    ),
+    linear-gradient(180deg, #fff9e3 0%, #fffcef 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--kob-ink);
+  font-family: 'Caveat', cursive;
+  font-size: 1.05rem;
+}
+
+/* Red margin line */
+body.theme-kids-on-bikes::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 60px;
+  width: 2px;
+  height: 100%;
+  background: rgba(220, 38, 38, 0.3);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-kids-on-bikes h1 {
+  font-family: 'Caveat', cursive;
+  color: var(--kob-pen);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+body.theme-kids-on-bikes h2,
+body.theme-kids-on-bikes h3,
+body.theme-kids-on-bikes h4 {
+  font-family: 'Indie Flower', cursive;
+}
+
+body.theme-kids-on-bikes h2 {
+  color: var(--kob-pen);
+  border-bottom: 2px solid var(--kob-line);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-kids-on-bikes h3 {
+  color: #166534;
+}
+
+body.theme-kids-on-bikes label,
+body.theme-kids-on-bikes .form-label {
+  font-family: 'Shadows Into Light', cursive;
+  color: #4A5568;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-kids-on-bikes input[type="text"],
+body.theme-kids-on-bikes input[type="number"],
+body.theme-kids-on-bikes textarea {
+  background-color: rgba(255, 252, 230, 0.8) !important;
+  color: var(--kob-ink) !important;
+  border: none;
+  border-bottom: 2px solid var(--kob-line) !important;
+  border-radius: 0;
+  box-shadow: none !important;
+  font-family: 'Caveat', cursive;
+}
+
+body.theme-kids-on-bikes input[type="text"]:focus,
+body.theme-kids-on-bikes input[type="number"]:focus,
+body.theme-kids-on-bikes textarea:focus {
+  outline: none;
+  border-bottom-color: var(--kob-pen) !important;
+  box-shadow: none !important;
+}
+
+body.theme-kids-on-bikes input[type="checkbox"] {
+  accent-color: var(--kob-pen);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-kids-on-bikes .custom-select__control {
+  background: rgba(255, 252, 230, 0.8);
+  border: none;
+  border-bottom: 2px solid var(--kob-line);
+  border-radius: 0;
+  color: var(--kob-ink);
+}
+
+body.theme-kids-on-bikes .custom-select__control:focus-visible,
+body.theme-kids-on-bikes .custom-select__control:focus-within {
+  outline: none;
+  border-bottom-color: var(--kob-pen);
+  box-shadow: none;
+}
+
+body.theme-kids-on-bikes .custom-select__menu {
+  background: #fffce6;
+  border: 1px solid var(--kob-line);
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+body.theme-kids-on-bikes .custom-select__option {
+  color: var(--kob-ink);
+  border-bottom: 1px solid rgba(167, 190, 211, 0.3);
+  font-family: 'Caveat', cursive;
+}
+
+body.theme-kids-on-bikes .custom-select__option:hover {
+  background: rgba(253, 230, 138, 0.5);
+}
+
+body.theme-kids-on-bikes .custom-select__value span {
+  color: var(--kob-ink);
+  font-family: 'Caveat', cursive;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-kids-on-bikes .submit-button {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #fff;
+  border: none;
+  box-shadow:
+    0 3px 8px rgba(30, 58, 138, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  font-family: 'Indie Flower', cursive;
+  letter-spacing: 0.04em;
+  border-radius: 8px;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-kids-on-bikes .submit-button:hover {
+  box-shadow:
+    0 5px 16px rgba(30, 58, 138, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+body.theme-kids-on-bikes .add-button {
+  background: rgba(52, 211, 153, 0.12);
+  color: #0D9488;
+  border: 1px dashed rgba(52, 211, 153, 0.5);
+  font-family: 'Indie Flower', cursive;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+body.theme-kids-on-bikes .add-button:hover {
+  background: rgba(52, 211, 153, 0.22);
+}
+
+body.theme-kids-on-bikes .btn-outline-secondary {
+  color: #6B7280;
+  border-color: var(--kob-line);
+  font-family: 'Caveat', cursive;
+  border-radius: 8px;
+}
+
+body.theme-kids-on-bikes .btn-outline-secondary:hover {
+  background-color: rgba(167, 190, 211, 0.15);
+}
+
+body.theme-kids-on-bikes .dice-roll-btn {
+  filter: drop-shadow(0 0 3px rgba(52, 211, 153, 0.5));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-kids-on-bikes hr {
+  border-color: var(--kob-line);
+  border-width: 2px;
+}
+
+body.theme-kids-on-bikes .d-flex.mb-3 img {
+  filter: drop-shadow(2px 3px 6px rgba(0, 0, 0, 0.2));
+}

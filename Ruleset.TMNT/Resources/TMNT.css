@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Titan+One&family=Comic+Neue:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --tmnt-red: #E63946;
+  --tmnt-blue: #0066CC;
+  --tmnt-orange: #FF6B35;
+  --tmnt-purple: #6A0DAD;
+  --tmnt-yellow: #FFD23F;
+  --tmnt-ink: #1A1A1A;
+  --tmnt-paper: #FFFDF4;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-t-m-n-t {
+  background:
+    radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(0, 102, 204, 0.06) 0%, transparent 40%),
+    linear-gradient(180deg, #f5f0e0 0%, #ede8d5 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--tmnt-ink);
+  font-family: 'Comic Neue', cursive;
+}
+
+/* Ben-Day dots halftone overlay */
+body.theme-t-m-n-t::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.06) 1px, transparent 1px);
+  background-size: 8px 8px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-t-m-n-t h1 {
+  font-family: 'Bangers', cursive;
+  color: var(--tmnt-ink);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-shadow:
+    3px 3px 0 var(--tmnt-yellow),
+    5px 5px 0 rgba(0, 0, 0, 0.15);
+  -webkit-text-stroke: 2px var(--tmnt-ink);
+}
+
+body.theme-t-m-n-t h2,
+body.theme-t-m-n-t h3,
+body.theme-t-m-n-t h4 {
+  font-family: 'Titan One', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+body.theme-t-m-n-t h2 {
+  color: var(--tmnt-blue);
+  border-bottom: 3px solid var(--tmnt-ink);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+  -webkit-text-stroke: 1px var(--tmnt-ink);
+}
+
+body.theme-t-m-n-t h3 {
+  color: var(--tmnt-red);
+}
+
+body.theme-t-m-n-t label,
+body.theme-t-m-n-t .form-label {
+  font-family: 'Titan One', cursive;
+  color: #4A4A4A;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-t-m-n-t input[type="text"],
+body.theme-t-m-n-t input[type="number"],
+body.theme-t-m-n-t textarea {
+  background-color: rgba(255, 253, 244, 0.95) !important;
+  color: var(--tmnt-ink) !important;
+  border: 2px solid var(--tmnt-ink);
+  border-radius: 4px;
+}
+
+body.theme-t-m-n-t input[type="text"]:focus,
+body.theme-t-m-n-t input[type="number"]:focus,
+body.theme-t-m-n-t textarea:focus {
+  outline: none;
+  border-color: var(--tmnt-blue);
+  box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.25);
+}
+
+body.theme-t-m-n-t input[type="checkbox"] {
+  accent-color: var(--tmnt-red);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-t-m-n-t .custom-select__control {
+  background: rgba(255, 253, 244, 0.95);
+  border: 2px solid var(--tmnt-ink);
+  border-radius: 4px;
+  color: var(--tmnt-ink);
+}
+
+body.theme-t-m-n-t .custom-select__control:focus-visible,
+body.theme-t-m-n-t .custom-select__control:focus-within {
+  outline: 2px solid var(--tmnt-blue);
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+}
+
+body.theme-t-m-n-t .custom-select__menu {
+  background: var(--tmnt-paper);
+  border: 2px solid var(--tmnt-ink);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+body.theme-t-m-n-t .custom-select__option {
+  color: var(--tmnt-ink);
+  border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+}
+
+body.theme-t-m-n-t .custom-select__option:hover {
+  background: rgba(255, 210, 63, 0.25);
+}
+
+body.theme-t-m-n-t .custom-select__value span {
+  color: var(--tmnt-ink);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-t-m-n-t .submit-button {
+  background: linear-gradient(135deg, var(--tmnt-red), #c02030);
+  color: #fff;
+  border: 2px solid var(--tmnt-ink);
+  box-shadow:
+    3px 3px 0 var(--tmnt-ink),
+    0 4px 12px rgba(230, 57, 70, 0.4);
+  font-family: 'Bangers', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+body.theme-t-m-n-t .submit-button:hover {
+  box-shadow:
+    2px 2px 0 var(--tmnt-ink),
+    0 3px 8px rgba(230, 57, 70, 0.5);
+  transform: translate(1px, 1px);
+}
+
+body.theme-t-m-n-t .add-button {
+  background: rgba(0, 102, 204, 0.1);
+  color: var(--tmnt-blue);
+  border: 2px solid var(--tmnt-blue);
+  font-family: 'Titan One', cursive;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+body.theme-t-m-n-t .add-button:hover {
+  background: rgba(0, 102, 204, 0.2);
+}
+
+body.theme-t-m-n-t .btn-outline-secondary {
+  color: #555;
+  border-color: #888;
+}
+
+body.theme-t-m-n-t .btn-outline-secondary:hover {
+  background-color: rgba(85, 85, 85, 0.1);
+}
+
+body.theme-t-m-n-t .dice-roll-btn {
+  filter: drop-shadow(0 0 3px rgba(230, 57, 70, 0.6));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-t-m-n-t hr {
+  border-color: var(--tmnt-ink);
+  border-width: 2px;
+}
+
+body.theme-t-m-n-t .d-flex.mb-3 img {
+  filter: drop-shadow(3px 3px 0 rgba(0, 0, 0, 0.3));
+}

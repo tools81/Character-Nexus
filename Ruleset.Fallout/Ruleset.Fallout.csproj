@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -14,6 +14,12 @@
     <ProjectReference Include="..\Utility\Utility.csproj" />
     <EmbeddedResource Include="Json\*.json" />
     <EmbeddedResource Include="Json\Table\*.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

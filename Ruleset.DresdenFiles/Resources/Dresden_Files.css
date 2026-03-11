@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Permanent+Marker&family=Courier+Prime:wght@400;700&display=swap');
+
+:root {
+  --df-manila: #F4E4C1;
+  --df-manila-dk: #E8D4A8;
+  --df-ink: #1A1A1A;
+  --df-red: #B91C1C;
+  --df-stamp: #C2410C;
+  --df-pin: #DC2626;
+  --df-bg: #2A2018;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-dresden-files {
+  background:
+    radial-gradient(ellipse at center, #2a2018 0%, #1c1510 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--df-ink);
+  font-family: 'Courier Prime', monospace;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-dresden-files h1 {
+  font-family: 'Permanent Marker', cursive;
+  color: var(--df-ink);
+  letter-spacing: 0.02em;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+body.theme-dresden-files h2,
+body.theme-dresden-files h3,
+body.theme-dresden-files h4 {
+  font-family: 'Special Elite', cursive;
+  letter-spacing: 0.05em;
+}
+
+body.theme-dresden-files h2 {
+  color: var(--df-red);
+  border-bottom: 2px solid rgba(185, 28, 28, 0.3);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-dresden-files h3 {
+  color: #5C3A1A;
+}
+
+body.theme-dresden-files label,
+body.theme-dresden-files .form-label {
+  font-family: 'Special Elite', cursive;
+  color: #5C4A30;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-dresden-files input[type="text"],
+body.theme-dresden-files input[type="number"],
+body.theme-dresden-files textarea {
+  background-color: rgba(244, 228, 193, 0.92) !important;
+  color: var(--df-ink) !important;
+  border: 1px solid rgba(26, 26, 26, 0.3);
+  border-radius: 1px;
+}
+
+body.theme-dresden-files input[type="text"]:focus,
+body.theme-dresden-files input[type="number"]:focus,
+body.theme-dresden-files textarea:focus {
+  outline: none;
+  border-color: var(--df-red);
+  box-shadow: 0 0 0 2px rgba(185, 28, 28, 0.2);
+}
+
+body.theme-dresden-files input[type="checkbox"] {
+  accent-color: var(--df-red);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-dresden-files .custom-select__control {
+  background: rgba(244, 228, 193, 0.92);
+  border: 1px solid rgba(26, 26, 26, 0.3);
+  border-radius: 1px;
+  color: var(--df-ink);
+}
+
+body.theme-dresden-files .custom-select__control:focus-visible,
+body.theme-dresden-files .custom-select__control:focus-within {
+  outline: 2px solid var(--df-red);
+  box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.15);
+}
+
+body.theme-dresden-files .custom-select__menu {
+  background: var(--df-manila-dk);
+  border: 1px solid rgba(26, 26, 26, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+body.theme-dresden-files .custom-select__option {
+  color: var(--df-ink);
+  border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+}
+
+body.theme-dresden-files .custom-select__option:hover {
+  background: rgba(185, 28, 28, 0.12);
+}
+
+body.theme-dresden-files .custom-select__value span {
+  color: var(--df-ink);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-dresden-files .submit-button {
+  background: linear-gradient(135deg, #7f1d1d, var(--df-red));
+  color: var(--df-manila);
+  border: 1px solid rgba(26, 26, 26, 0.3);
+  box-shadow:
+    0 4px 12px rgba(185, 28, 28, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: 'Special Elite', cursive;
+  letter-spacing: 0.06em;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-dresden-files .submit-button:hover {
+  box-shadow:
+    0 6px 20px rgba(185, 28, 28, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+body.theme-dresden-files .add-button {
+  background: rgba(194, 65, 12, 0.1);
+  color: var(--df-stamp);
+  border: 1px solid rgba(194, 65, 12, 0.35);
+  font-family: 'Special Elite', cursive;
+  transition: background 0.2s ease;
+}
+
+body.theme-dresden-files .add-button:hover {
+  background: rgba(194, 65, 12, 0.2);
+}
+
+body.theme-dresden-files .btn-outline-secondary {
+  color: #5C4A30;
+  border-color: rgba(92, 74, 48, 0.4);
+}
+
+body.theme-dresden-files .btn-outline-secondary:hover {
+  background-color: rgba(244, 228, 193, 0.15);
+}
+
+body.theme-dresden-files .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(185, 28, 28, 0.5));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-dresden-files hr {
+  border-color: rgba(185, 28, 28, 0.3);
+}
+
+body.theme-dresden-files .d-flex.mb-3 img {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}

@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Orbitron:wght@600;700;800&display=swap');
+
+:root {
+  --st-lcars-orange: #FF9966;
+  --st-lcars-peach: #FFCC99;
+  --st-lcars-violet: #CC99CC;
+  --st-lcars-blue: #9999FF;
+  --st-lcars-purple: #9966CC;
+  --st-lcars-gold: #FFAA00;
+  --st-bg-dark: #000000;
+  --st-bg-panel: #111111;
+  --st-text: #FFCC99;
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-star-trek {
+  background:
+    radial-gradient(ellipse at top, rgba(255, 153, 102, 0.05) 0%, transparent 50%),
+    linear-gradient(180deg, #000000 0%, #111111 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--st-text);
+  font-family: 'Antonio', sans-serif;
+}
+
+/* Starfield */
+body.theme-star-trek::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 15% 25%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px 1px at 55% 65%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 80% 15%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(2px 2px at 35% 80%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1px 1px at 70% 45%, rgba(255,255,255,0.5), transparent);
+  background-size: 200% 200%;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-star-trek h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--st-lcars-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 12px rgba(255, 153, 102, 0.5);
+}
+
+body.theme-star-trek h2,
+body.theme-star-trek h3,
+body.theme-star-trek h4 {
+  font-family: 'Antonio', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+body.theme-star-trek h2 {
+  color: var(--st-lcars-violet);
+  border-bottom: 2px solid var(--st-lcars-orange);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+body.theme-star-trek h3 {
+  color: var(--st-lcars-blue);
+}
+
+body.theme-star-trek label,
+body.theme-star-trek .form-label {
+  font-family: 'Orbitron', sans-serif;
+  color: rgba(255, 204, 153, 0.6);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-star-trek input[type="text"],
+body.theme-star-trek input[type="number"],
+body.theme-star-trek textarea {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  color: var(--st-lcars-peach) !important;
+  border: 1px solid rgba(255, 153, 102, 0.4);
+  border-radius: 12px;
+}
+
+body.theme-star-trek input[type="text"]:focus,
+body.theme-star-trek input[type="number"]:focus,
+body.theme-star-trek textarea:focus {
+  outline: none;
+  border-color: var(--st-lcars-orange);
+  box-shadow: 0 0 0 2px rgba(255, 153, 102, 0.3);
+}
+
+body.theme-star-trek input[type="checkbox"] {
+  accent-color: var(--st-lcars-orange);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-star-trek .custom-select__control {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 153, 102, 0.4);
+  border-radius: 12px;
+  color: var(--st-lcars-peach);
+}
+
+body.theme-star-trek .custom-select__control:focus-visible,
+body.theme-star-trek .custom-select__control:focus-within {
+  outline: 2px solid var(--st-lcars-orange);
+  box-shadow: 0 0 0 3px rgba(255, 153, 102, 0.25);
+}
+
+body.theme-star-trek .custom-select__menu {
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 153, 102, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.9);
+}
+
+body.theme-star-trek .custom-select__option {
+  color: var(--st-lcars-peach);
+  border-bottom: 1px solid rgba(255, 153, 102, 0.1);
+}
+
+body.theme-star-trek .custom-select__option:hover {
+  background: rgba(255, 153, 102, 0.15);
+}
+
+body.theme-star-trek .custom-select__value span {
+  color: var(--st-lcars-peach);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-star-trek .submit-button {
+  background: linear-gradient(135deg, #cc6633, var(--st-lcars-orange));
+  color: #000;
+  border: 1px solid rgba(255, 204, 153, 0.4);
+  box-shadow:
+    0 4px 16px rgba(255, 153, 102, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 20px;
+  transition: box-shadow 0.2s ease;
+}
+
+body.theme-star-trek .submit-button:hover {
+  box-shadow:
+    0 6px 24px rgba(255, 153, 102, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+body.theme-star-trek .add-button {
+  background: rgba(153, 102, 204, 0.12);
+  color: var(--st-lcars-violet);
+  border: 1px solid rgba(153, 102, 204, 0.4);
+  font-family: 'Antonio', sans-serif;
+  text-transform: uppercase;
+  border-radius: 20px;
+  transition: background 0.2s ease;
+}
+
+body.theme-star-trek .add-button:hover {
+  background: rgba(153, 102, 204, 0.22);
+}
+
+body.theme-star-trek .btn-outline-secondary {
+  color: rgba(255, 204, 153, 0.5);
+  border-color: rgba(255, 204, 153, 0.25);
+  border-radius: 20px;
+}
+
+body.theme-star-trek .btn-outline-secondary:hover {
+  background-color: rgba(255, 204, 153, 0.08);
+  color: var(--st-text);
+}
+
+body.theme-star-trek .dice-roll-btn {
+  filter: drop-shadow(0 0 4px rgba(255, 170, 0, 0.7));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-star-trek hr {
+  border-color: rgba(255, 153, 102, 0.3);
+}
+
+body.theme-star-trek .d-flex.mb-3 img {
+  filter: drop-shadow(0 0 12px rgba(255, 153, 102, 0.4));
+}

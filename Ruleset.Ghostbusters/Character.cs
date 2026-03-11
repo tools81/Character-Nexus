@@ -42,7 +42,7 @@ namespace Ghostbusters
 
             for (int i = 0; i < Traits.Count; i++)
             {
-                dict.Add($"Trait [{i}]", Traits[i].Name);
+                dict.Add($"Trait [{i}]", Traits[i].Value.ToString());
             }
 
             for (int i = 0; i < Talents.Count; i++)
@@ -51,7 +51,11 @@ namespace Ghostbusters
             }
 
             dict.Add("Goal", Goal.Name);
-            dict.Add("BrowniePoints", BrowniePoints.ToString());
+
+            for (int i = 0; i < Math.Min(BrowniePoints, 16); i++)
+            {
+                dict.Add($"Brownie Point [{i}]", "Yes");
+            }
 
             for (int i = 0; i < Gears.Count; i++)
             {

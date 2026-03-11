@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \" import sys, json for line in sys.stdin: line = line.strip\\(\\) if not line: continue try: obj = json.loads\\(line\\) role = obj.get\\(''message'', {}\\).get\\(''role'', ''''\\) content = obj.get\\(''message'', {}\\).get\\(''content'', []\\) if isinstance\\(content, list\\): for block in content: if isinstance\\(block, dict\\): if block.get\\(''type''\\) == ''text'': print\\(f''[{role}] TEXT:'', block[''text''][:400]\\) elif block.get\\(''type''\\) == ''tool_use'': print\\(f''[{role}] TOOL_USE:'', block[''name''], str\\(block.get\\(''input'', {}\\)\\)[:300]\\) except Exception as e: pass \")",
+      "Bash(C:/Python312/python.exe -c \"import pypdf; print\\(''pypdf ok''\\)\")",
+      "Bash(C:/Python312/python.exe -m pip install pypdf -q)",
+      "Bash(C:/Python312/python.exe -c \":*)",
+      "Bash(C:/Python312/python.exe:*)",
+      "Bash(python3 -c \":*)",
+      "Bash(python -c \":*)"
+    ]
+  }
+}

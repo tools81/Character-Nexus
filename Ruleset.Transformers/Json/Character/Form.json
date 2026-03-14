@@ -1,0 +1,2486 @@
+{
+  "title": "Hero Editor",
+  "fields": [
+    {
+      "name": "id",
+      "id": "id",
+      "label": "Id",
+      "type": "hidden",
+      "className": "form-control"
+    },
+    {
+      "name": "name",
+      "id": "name",
+      "label": "Name",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown"
+    },
+    {
+      "name": "image",
+      "id": "image",
+      "label": "Image",
+      "type": "image",
+      "className": "form-control"
+    },
+    {
+      "name": "description",
+      "id": "description",
+      "label": "Description",
+      "type": "textarea",
+      "className": "form-control"
+    },
+    {
+      "name": "notes",
+      "id": "notes",
+      "label": "Notes",
+      "type": "textarea",
+      "className": "form-control"
+    },
+    {
+      "name": "level",
+      "id": "level",
+      "label": "Level",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 1,
+        "max": 20
+      },
+      "default": 1
+    },
+    {
+      "name": "faction",
+      "label": "Faction",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Autobots",
+          "label": "Autobots",
+          "description": "The Autobots are the heroic faction of Transformers, known for their commitment to protecting humanity and fighting against the Decepticons. They value freedom, justice, and compassion, often putting the needs of others before their own. Led by Optimus Prime, the Autobots are dedicated to defending Earth and its inhabitants from the threats posed by the Decepticons.",
+          "image": "https://characternexus.blob.core.windows.net/resources/Transformers/Faction_Autobots.png"
+        },
+        {
+          "value": "Decepticons",
+          "label": "Decepticons",
+          "description": "The Decepticons are the villainous faction of Transformers, driven by a desire for power and domination. They are often ruthless and aggressive, seeking to conquer Earth and subjugate humanity. Led by Megatron, the Decepticons are known for their cunning and willingness to use any means necessary to achieve their goals, including deception, manipulation, and brute force.",
+          "image": "https://characternexus.blob.core.windows.net/resources/Transformers/Faction_Decepticons.png"
+        },
+        {
+          "value": "Unaligned",
+          "label": "Unaligned",
+          "description": "The Unaligned faction consists of Transformers who do not align themselves with either the Autobots or Decepticons. These individuals may have their own motivations, goals, or beliefs that prevent them from joining either side. They can be mercenaries, independent operators, or simply those who choose to remain neutral in the ongoing conflict between the Autobots and Decepticons.",
+          "image": "https://characternexus.blob.core.windows.net/resources/Transformers/Faction_Unaligned.png"
+        }
+      ]
+    },
+    {
+      "name": "influences",
+      "label": "Influences",
+      "type": "array",
+      "component": {
+        "name": "influences",
+        "label": "Influences",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Bureaucrat",
+            "label": "Bureaucrat",
+            "description": "Never in the limelight, but always foundational to the execution and planning of leadership, you're an administrator or functionary. Whether you're a desk jockey running the numbers on the Energon flow at the Space Bridge or the assistant putting the final touches on the mayor's policies, you are vital to making Cybertron run through coordination and service."
+          },
+          {
+            "value": "Cube Player",
+            "label": "Cube Player",
+            "description": "Cube, an ancient and celebrated tradition on Cybertron, is a team sport similar in style to Earth's rugby, where players must hold onto an artificial intelligence-guided Energon cube for a set amount of time without it being knocked away by an opponent. The violent sport eventually died our when the war became so all-encompassing that even the game stadiums were no longer safe."
+          },
+          {
+            "value": "Experiment",
+            "label": "Experiment",
+            "description": "Cybertronian technology is beyond human understanding, and the pursuit of science and technology is a commonly dedicated lifepath for Cybertronians. But you were not a scientist, technologist, or machinist; you were their experiment. Your body has been modified, altered, or upgraded. You may have experienced a unique forging or spent years in a laboratory being torn down and rebuilt repeatedly. Becoming an experiment was sometimes voluntary, but not always. There are benefits to having a modified body, but the process often takes its toll as well."
+          },
+          {
+            "value": "Former Senator",
+            "label": "Former Senator",
+            "description": "Leadership requires the best and brightest, those who can enact strong policy, and those who make backroom deals with the best of them. On Cybertron, you directed some form of local government at the head and were part of the well-oiled machine."
+          },
+          {
+            "value": "Gladiator",
+            "label": "Gladiator",
+            "description": "You were a champion of the many arenas of Cybertron, fighting for glory day in and day out. Gladiatorial combat was one of the most popular sporting events on Cybertron, and you may have had a fan following if you were successful. Although fighting skill is an essential part of surviving as a Gladiator, the best of them have powerful personalities, and you do, too."
+          },
+          {
+            "value": "Hunter",
+            "label": "Hunter",
+            "description": "Hunting is a popular pastime for many Cybertronians, and you are no different. Once you traveled off-planet to other alien worlds, tracking down beasts worthy of their prowess. During the wars, the invaluable skills you honed came into high demand to track down criminals and traitors."
+          },
+          {
+            "value": "Inventor",
+            "label": "Inventor",
+            "description": "Whether you were a hobbyist or a scientist working directly for a faction, you were a technological genius so vital to the development of Cybertron that you may have even belonged to the scientist caste, one of the most highly respected segments of Cybertronian society."
+          },
+          {
+            "value": "Machinist",
+            "label": "Machinist",
+            "description": "Day in and day out, chained to the repair bays, working as a machinist can be grueling and exhausting work. But, whenever another Cybertronian gets their fuel line in a twist, internal chassis scoring, or a crankshaft stuck in their skid plate, you’re there, toolkit in hand, ready for a bit of remove and rebuild. "
+          },
+          {
+            "value": "Racer",
+            "label": "Racer",
+            "description": "The Cybertronian that doesn't engage in racing is rare, but you take it to a whole new level. You engage in the racing circuit, taking breakneck turns for pure pleasure and thriving off the thrill of leaving everyone in your dust. Or, perhaps you're from Velocitron, one of the Cybertronian colonies renowned for its racing culture. Velocitronians are known for their extreme focus on souping themselves up with rare and experimental technology to get that lightning edge."
+          },
+          {
+            "value": "Scavenger",
+            "label": "Scavenger",
+            "description": "As technologically advanced as Cybertronians are, they have always needed more materials. Some of those materials are rare, hoarded, and even illegal. You're an expert in tracking down and acquiring parts and minerals for the scientist caste to work with, often making deals or working with the seedier members of society to get the job done."
+          },
+          {
+            "value": "Security",
+            "label": "Security",
+            "description": "Security patrols were the most common martial order on Cybertron, and many Autobots have been part of one of these contingents at some point in their lives. While you don't seek out combat situations, you're always ready to deal with them when they arrive. Some security forces are directly associated with the government, but others protect private households or defend key laboratories and factories."
+          },
+          {
+            "value": "War Veteran",
+            "label": "War Veteran",
+            "description": "You have seen your fair share of combat and experienced many victories and defeats. While you might be full of exciting war stories to awe your allies with, you've also lost those close to you. It's a dark truth of the Cybertronian experience that nearly all who have survived to the present day are veterans of the many wars. War is inevitable and inescapable as a Cybertronian, and it always leaves its mark."
+          }
+        ]
+      }
+    },
+    {
+      "name": "origin",
+      "label": "Origin",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Champion",
+          "label": "Champion",
+          "description": "Sports cars, luxury sedans, even limousines, you chose an Alt Mode that is sleek, fancy, and cool. Although you have a reputation for being egotistical, others can’t help but gravitate toward your beauty. As a Champion, you may be ideal for leadership, well-spoken and witty, or so full of yourself that others don’t take you seriously.",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Social\",\"value\":1}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Cutter",
+          "label": "Cutter",
+          "description": "Aquatic, amphibious, and submersible, when a situation calls for a Cutter, no other Chassis will do. From battling Decepticons at sea to searching the depths of underground rivers for Energon, you have a reputation of being quirky and only comfortable at sea.",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Lookout",
+          "label": "Lookout",
+          "description": "You take infiltration to another level. Focused on spycraft, theft, and reconnaissance, you put yourself at great risk to gain invaluable information on enemy plans. These duties often put you in similar battlefield roles as the Outrider. Like the Outriders, you make an excellent scout, but many consider you to be less trustworthy due to your more duplicitous nature. The truth is that you're often friendly and fun, with a strong sense of humor. Despite their shady practices, they get a lot of mileage out of their charm and can win over the steeliest of hearts. Your Alt Mode can appear as nearly any vehicle or piece of equipment, though rarely a large one, usually nondescript and functional. If your Alt Mode isn't a vehicle, you deploy emergency jets to fly off. Your flight may not be as fast as when you're on the ground, but it's more maneuverable.",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Monolith",
+          "label": "Monolith",
+          "description": "You disguise yourself as the biggest, toughest, and most impressive vehicle you can find, from vans and sports utility vehicles to big rigs and military trucks. Built for battle, you use your power to lay into the enemy, and your bulk to protect your friends. Many of your kind are gentle giants, and others become soldiers, bodyguards, or selfless leaders. While you have a reputation for being slow and meandering, no one ever doubts the impact you'll make when you arrive.",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Outrider",
+          "label": "Outrider",
+          "description": "Adventurous by nature, you are a natural explorer capable of navigating the most challenging terrain and tracking down enemies, traps, and rare materials. You prefer all-terrain vehicles, including four-wheel drive, SUVs, and even the occasional amphibious vehicle. Despite not being the most durable of warriors, you have a reputation for being quick on your feet and impossible to pin down.",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Rainmaker",
+          "label": "Rainmaker",
+          "description": "You are built for one thing: war. Your Alt Mode is most likely a military vehicle packing massive firepower. However, it is not unheard of for those of your kind to choose a less obtrusive Alt Mode that is still bristling with shoulder-mounted cannons and torso-mounted missile launchers in Bot Mode. Whether aggressive or simply defensive, no one wants to get on the wrong side of you.",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Seeker",
+          "label": "Seeker",
+          "description": "More common among Decepticons, your chosen Chassis is the rarest seen among Autobots. Aerial superiority provides you an incredible tactical advantage, but at the expense of subtly. Every nation on Earth carefully monitors its air space, dealing with unidentified flying objects immediately and efficiently. However, despite this risk, the allure of taking to the sky makes many landbound Cybertronians jealous of your freedoms.",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Support",
+          "label": "Support",
+          "description": "Like the structures you're named after, Supports prop others up. Though you don't tend to participate in the fighting actively, you brave the thick of battle in the name of helping your allies. That said, like any Cybertronian since the war broke out, you typically carry a weapon at all times and know how to use it. You're likely to choose Alt Modes that let you assist humans in emergencies between missions, like ambulances, rescue helicopters, fire trucks, and bulldozers.",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
+          "userChoices": "null"
+        }
+      ]
+    },
+    {
+      "name": "role",
+      "label": "Role",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Analyst",
+          "label": "Analyst",
+          "description": "Sensors and processors: the two things that Analysts say win wars. A comprehensive understanding of a situation can be the difference between success and failure. Verifiable knowledge before, during, and after a battle increases its odds of success.<br />Often employed as communications specialists or negotiators and fixers, Analysts are masters of acquiring and manipulating information and intelligence. This road may be less focused on combat, but that doesn't make it less dangerous.",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1},{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\"},{\"type\":\"perks\",\"value\":\"Analyze Target\"},{\"type\":\"perks\",\"value\":\"Informed Accuracy\"},{\"type\":\"perks\",\"value\":\"Unsurprising\"},{\"type\":\"perks\",\"value\":\"Work the Numbers\"}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Field Commander",
+          "label": "Field Commander",
+          "description": "Navigating battlefields is no easy task, and it can be even more difficult when bumping into allies. War calls for confident leaders with tactical minds who can manage a dangerous situation while keeping others safe. Field Commanders learn to move tactically, with a drive to achieve their goals without sacrificing their forces. A quintessential leader, the Field Commander excels equally in combat and diplomacy.",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1},{\"type\":\"essences\",\"name\":\"Social\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\"},{\"type\":\"perks\",\"value\":\"Never Forsaken\"},{\"type\":\"perks\",\"value\":\"Issue Command\"},{\"type\":\"perks\",\"value\":\"Prepare for War\"}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Gunner",
+          "label": "Gunner",
+          "description": "Your arsenal is something the team relies on. You manage a situation by providing covering fire, direct fire, or knowing the right way to avoid getting a hole shot through your metal. A Gunner adapts to combat and reflects that in how they switch their attack style. Your companions know you pack heat and trust you to use the most efficient firepower you have available.",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1},{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\"},{\"type\":\"perks\",\"value\":\"Imprompturret\"},{\"type\":\"perks\",\"value\":\"Armament\"},{\"type\":\"perks\",\"value\":\"Pistol Whip\"},{\"type\":\"perks\",\"value\":\"Rapid Reload\"}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Modemaster",
+          "label": "Modemaster",
+          "description": "Some overachieving Cybertronians don't settle for being a vehicle and a sentient robot at once. They take on additional Alt Modes, or symbiotically house Cybertronian assistants. With a wider variety of abilities splitting their attention, Modemasters lose the potency more focused Cybertronians enjoy. They more than make up for it as the most flexible combatants on a Cybertronian battlefield.<br />Modemasters use a Custom Frame to define their own essence progression rather than a fixed table. At 1st level, rank the four Essences 1st through 4th to determine your boost schedule.",
+          "bonusAdjustments": "[]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\"},{\"type\":\"perks\",\"value\":\"Fully Hybrid\"},{\"type\":\"perks\",\"value\":\"Custom Frame\"},{\"type\":\"perks\",\"value\":\"Mass Shift\"},{\"type\":\"perks\",\"value\":\"Quick Change\"}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Scientist",
+          "label": "Scientist",
+          "description": "Chemistry makes up all matter in the universe, and physics dictates how it all works together. The better one understands these two scientific disciplines, the more fully they understand everything. Before the Cybertronian Civil War, Scientists were amongst the most respected inhabitants on the planet. Even with basic weapon and armor training, Scientists' most powerful weapon remains their knowledge.",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1},{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\"},{\"type\":\"perks\",\"value\":\"Intrafilum\"},{\"type\":\"perks\",\"value\":\"Broad Understanding\"},{\"type\":\"perks\",\"value\":\"Circuit Breaker\"},{\"type\":\"perks\",\"value\":\"Energon Battery\"}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Scout",
+          "label": "Scout",
+          "description": "Scouts push the boundaries of the battlefield, moving ahead of the front liners to establish the front line. They excel at going unnoticed, allowing them to surveil in secret before rejoining the squad with valuable intel. In order to get so far behind enemy lines, Scouts employ every stealth and subtlety tactic they know. When those fail, they get out of the situation as fast as their tires can take them.",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1},{\"type\":\"essences\",\"name\":\"Social\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\"},{\"type\":\"perks\",\"value\":\"Disappear\"},{\"type\":\"perks\",\"value\":\"Ally Awareness\"},{\"type\":\"perks\",\"value\":\"Forward Observation\"},{\"type\":\"perks\",\"value\":\"Keen Sensors\"}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Warrior",
+          "label": "Warrior",
+          "description": "Even though war moved further away from hand to hand combat with every evolution, Warriors did not evolve in the same direction. A special kind of soldier, Warriors prefer engaging with the enemy face to face. When others call this behavior monstrous, Warriors scoff. Anyone who can pull a trigger or push a button from a safe distance is just as responsible for casualty counts, if not more. Warriors at least give each other a fighting chance.",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1},{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\"},{\"type\":\"perks\",\"value\":\"Hardcore\"},{\"type\":\"perks\",\"value\":\"Foot Soldier\"},{\"type\":\"perks\",\"value\":\"Manifest Melee Weapon\"},{\"type\":\"perks\",\"value\":\"Wisdom Through Experience\"}]",
+          "userChoices": "null"
+        }
+      ]
+    },
+    {
+      "name": "focus.analyst",
+      "label": "Focus",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Manipulator",
+          "label": "Manipulator",
+          "description": "Blurring the line between perception and reality.",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Diversion\"}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Social\",\"value\":1}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Spec Ops",
+          "label": "Spec Ops",
+          "description": "A special operative who takes on deep cover missions.",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Unassuming\"}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Social\",\"value\":1}]",
+          "userChoices": "null"
+        }
+      ],
+      "dependsOn": {
+        "field": "role",
+        "value": "Analyst"
+      }
+    },
+    {
+      "name": "focus.field commander",
+      "label": "Focus",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Ambassador",
+          "label": "Ambassador",
+          "description": "A diplomat who believes peace is always worth pursuing, even on the battlefield.",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Bend A Knee or Stand Tall\"}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Social\",\"value\":1}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Strategist",
+          "label": "Strategist",
+          "description": "A tactical mastermind who coordinates allies to maximum effect.",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Strategize\"}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
+          "userChoices": "null"
+        }
+      ],
+      "dependsOn": {
+        "field": "role",
+        "value": "Field Commander"
+      }
+    },
+    {
+      "name": "focus.gunner",
+      "label": "Focus",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Gunslinger",
+          "label": "Gunslinger",
+          "description": "A quick-draw artist who thrives in close-range gunfights.",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Quick Draw\"}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Sharpshooter",
+          "label": "Sharpshooter",
+          "description": "A patient marksman who takes precise, calculated shots from a distance.",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Long Shot\"}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
+          "userChoices": "null"
+        }
+      ],
+      "dependsOn": {
+        "field": "role",
+        "value": "Gunner"
+      }
+    },
+    {
+      "name": "focus.modemaster",
+      "label": "Focus",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Microlinked",
+          "label": "Microlinked",
+          "description": "A Modemaster bonded with a Mini-Con ally who docks to their frame.",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Mini-Con Ally\"}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Social\",\"value\":1}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Triple Changer",
+          "label": "Triple Changer",
+          "description": "A Modemaster who gains an additional Alt Mode, becoming one of the rare triple-changers.",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Everything In Threes\"}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1}]",
+          "userChoices": "null"
+        }
+      ],
+      "dependsOn": {
+        "field": "role",
+        "value": "Modemaster"
+      }
+    },
+    {
+      "name": "focus.scientist",
+      "label": "Focus",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Medical Officer",
+          "label": "Medical Officer",
+          "description": "The hardest fight on any battlefield is the fight to keep the injured functioning.",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Patch Up\"}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Gadgeteer",
+          "label": "Gadgeteer",
+          "description": "The right tool for the job is always within reach when you make your own tools.",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Technologist\"}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
+          "userChoices": "null"
+        }
+      ],
+      "dependsOn": {
+        "field": "role",
+        "value": "Scientist"
+      }
+    },
+    {
+      "name": "focus.scout",
+      "label": "Focus",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Outrider",
+          "label": "Outrider",
+          "description": "Outriders get in and get out of situations faster than anyone, and ride circles around enemies they engage with.",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Burn Rubber\"}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Prowler",
+          "label": "Prowler",
+          "description": "Prowlers take the opportunity to attack their enemies while their backs are turned.",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Stunning Surprise\"}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1}]",
+          "userChoices": "null"
+        }
+      ],
+      "dependsOn": {
+        "field": "role",
+        "value": "Scout"
+      }
+    },
+    {
+      "name": "focus.warrior",
+      "label": "Focus",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Sentinel",
+          "label": "Sentinel",
+          "description": "A skilled combatant focused on self-defense and waiting for an opening.",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Stalwart Defense\"}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1}]",
+          "userChoices": "null"
+        },
+        {
+          "value": "Wrecker",
+          "label": "Wrecker",
+          "description": "A Warrior who spends so much time in melee, they can tell one enemy from another by the smell of their gob exhaust.",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Warrior Rush\"}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1}]",
+          "userChoices": "null"
+        }
+      ],
+      "dependsOn": {
+        "field": "role",
+        "value": "Warrior"
+      }
+    },
+    {
+      "name": "perks",
+      "label": "Perks",
+      "type": "array",
+      "component": {
+        "name": "perks",
+        "label": "Perks",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "For the Allspark!",
+            "label": "For the Allspark!",
+            "description": "Cybertronians are living robots that change their bodies into the likeness of weapons, vehicles, robotic beasts, and machinery. Though durable, even they can be defeated, so they've learned how to protect themselves when they can, and blend in when they can't. They hide amongst the technology of this world as robots in disguise. As an Autobot, you live a life of secrecy as much for your own protection as to not disturb humanity.<br />Every Autobot character gains the following benefits:<br /><ul><li>↑1 to Infiltration Skill Tests when in Alt Mode, or ↑2 if the Alt Mode is appropriate to the environment.</li><li>Immunity to carbon-based diseases, but affected by electromagnetic damage and viruses that affect machines.</li><li>Standard Issue Autobot Equipment.</li><li>Roll Out: When you roll for Initiative, if you are not surprised, you can choose to convert to your Alt Mode before combat begins without needing to spend an action.</li></ul>"
+          },
+          {
+            "value": "Work the Numbers",
+            "label": "Work the Numbers",
+            "description": "At the beginning of every round of combat after the first, you can spend an Energon Point to move a creature in the combat up or down one place in the Initiative order. For example, Astrotrain rolled a 16 for Initiative, going first in a combat that also includes Hubcap, an Analyst who rolled 14 Initiative and therefore goes second, and Hoist, who rolled a 3 and is going third. At the beginning of Round 2, before anyone has gone, Hubcap could spend an Energon Point to move himself up in initiative order, going first regardless of how much higher Astrotrain's Initiative result was. Hubcap could instead move Hoist to second in Initiative order, even though Hubcap's Initiative result was 11 higher than Hoist's."
+          },
+          {
+            "value": "Analyze Target",
+            "label": "Analyze Target",
+            "description": "You see the enemy as walking datafiles of valuable information. As a Standard action, make an Alertness Skill Test against the Willpower or Cleverness of a Target you can see. On a success, you can learn a valuable piece of information of your choice about them, such as their Rank in a specific Skill, or a Defense score."
+          },
+          {
+            "value": "Informed Accuracy",
+            "label": "Informed Accuracy",
+            "description": "To know your enemy is to know their weakness. When you attack a creature that you've used Analyze Target on in this combat, you gain ↑ on the attack equal to the number of times you used Analyze Target on them."
+          },
+          {
+            "value": "Unsurprising",
+            "label": "Unsurprising",
+            "description": "Odds are low that you get caught off guard. If you would be Surprised, you instead can act, but treat your Speed score as though it were equal to your level (up to your actual Speed score). For example, at 1st level, when Surprised, you act as though you have Speed 1, meaning you can only take a Move or Standard action. If at 10th level you have 9 Speed, you act normally when Surprised, and are able to take a Move action, Standard action, and 7 Free actions (not 8, like a Speed 10 character)."
+          },
+          {
+            "value": "Data Analyst",
+            "label": "Data Analyst",
+            "description": "You're so comfortable working a computer, you wish you weren't this good so it would last longer. At 2nd level, you gain an Edge on Science and Technology Skill Tests related to extracting or processing data, such as hacking into an enemy computer. If extracting or processing the data normally takes 2 Rounds or longer, it takes you half as much time."
+          },
+          {
+            "value": "Determine Probability",
+            "label": "Determine Probability",
+            "description": "Given all of the information available, you process your likelihood of success. At 5th level, once per turn, instead of using a Standard action that requires a Skill Test, you can use a Free action to run a simulation in your head of you using that Standard action. Roll the Skill Test as though you were actually attempting that Skill Test. If this simulated Skill Test succeeds, you can use your Standard action to use the results of the simulated Skill Test instead of making another Skill Test. On a failure, you can ignore the results and use your Standard action differently. For example, on an investigation, Nightbeat gets into a fight with Scorponok. He suspects he's outmatched by the towering beast, but he decides to take a moment to work out his odds. As a Free action, he rolls a Targeting Skill Test as though he were attacking Scorponok with his blaster. He gets a result of 26, almost the highest result he could roll. It doesn't beat Scorponok's Toughness. Nightbeat decides not to use a Standard action to accept those results and instead uses it to convert into a sports car, and uses his Move action to get as far away as fast as he can."
+          },
+          {
+            "value": "Quick Study",
+            "label": "Quick Study",
+            "description": "You've been at this long enough to know what to look for. At 7th level, using Analyze Target is a Move action or a Standard action."
+          },
+          {
+            "value": "Pinpoint",
+            "label": "Pinpoint",
+            "description": "Even Cybertronians have soft and vulnerable spots. At 9th level, when you use the Aim action, instead of ↑1 on your shot, you can choose to ignore one of the target's Armor Upgrades for each Free action you spend Aiming."
+          },
+          {
+            "value": "Postmortem Interrogation",
+            "label": "Postmortem Interrogation",
+            "description": "Downed bots have tales to tell. At 12th level, once per scene, you can extract information from a Defeated Cybertronian. Roll a Science or Technology Skill Test against a DIF equal to the target's Level or Threat Level. On a success, you can ask the GM a question. The GM must answer the question truthfully, but from the Defeated Cybertronian's perspective. You can ask another question for every 5 by which your results exceed the DIF."
+          },
+          {
+            "value": "Target Breakdown",
+            "label": "Target Breakdown",
+            "description": "You share intel as quickly as you gather it. At 13th level, you can spend a number of Free actions equal to the number of times you used Analyze Target on a target to give an ally ↑ on an attack against that target equal to that number."
+          },
+          {
+            "value": "Psychoanalyst",
+            "label": "Psychoanalyst",
+            "description": "Brains, whether Cybertronian or organic, are just sophisticated processors. And you know processors. At 14th level, as a Standard action, you can roll a Science or Technology Skill Test against the Willpower or Cleverness of a target who can hear you. On a success, the target suffers a Stun 2 effect."
+          },
+          {
+            "value": "Just the Facts",
+            "label": "Just the Facts",
+            "description": "You can smell a liar from a light-year away. At 16th level, you become Immune to Deception Skill Tests from creatures your level or lower and Resistant to Deception Skill Tests from creatures higher level than you."
+          },
+          {
+            "value": "Swift Study",
+            "label": "Swift Study",
+            "description": "You can barely glance at a target yet know everything you need to about them. At 18th level, using Analyze Target is a Free action. You can use any number of Free actions on Analyze Target in a single turn, but you can only target one creature per turn."
+          },
+          {
+            "value": "Never Forsaken",
+            "label": "Never Forsaken",
+            "description": "You steel yourself to save your team at any cost. When you are Defeated, you can spend an Energon Point to stay conscious with 1 Health, but you become Wounded. While Wounded, you lose 1 Health at the beginning of each of your turns. You stabilize if you receive any healing."
+          },
+          {
+            "value": "Issue Command",
+            "label": "Issue Command",
+            "description": "Many of your allies trust your commands more than their own instincts. As a Move action, you can issue a command, granting allies who follow your command ↑1 to a Skill Test or +1 bonus to a Defense based on certain circumstances. You set the terms and the bonus allies receive. This bonus lasts until the beginning of your next turn."
+          },
+          {
+            "value": "Prepare for War",
+            "label": "Prepare for War",
+            "description": "If you want peace, you need to be ready to fight for it. When you roll for Initiative and you are not Surprised, you gain an Edge on your Initiative Skill Test."
+          },
+          {
+            "value": "Irrefutable Order",
+            "label": "Irrefutable Order",
+            "description": "Your commands are not suggestions. At 2nd level, when you use Issue Command, allies who do not follow your command suffer ↓1 on all Skill Tests until the beginning of your next turn."
+          },
+          {
+            "value": "Synch Up",
+            "label": "Synch Up",
+            "description": "Your team moves as one. At 5th level, once per combat as a Move action, choose a number of allies up to your Social score. Until the beginning of your next turn, those allies can use your Initiative result instead of their own when determining turn order."
+          },
+          {
+            "value": "Stoic",
+            "label": "Stoic",
+            "description": "You cannot be shaken. At 7th level, you become Immune to the Frightened condition and Resistant to Intimidation Skill Tests."
+          },
+          {
+            "value": "Battle Scan",
+            "label": "Battle Scan",
+            "description": "You survey the field and immediately see what needs to be done. At 9th level, at the start of each combat, you can make a free Alertness Skill Test. On a success, you gain one of the following benefits of your choice: learn one enemy's current Health, learn one enemy's highest Defense score, or grant one ally ↑1 on their first attack this combat."
+          },
+          {
+            "value": "Hardened",
+            "label": "Hardened",
+            "description": "Years of command have made you resilient. At 12th level, you gain +1 Health and become trained in Restricted Armor Upgrades."
+          },
+          {
+            "value": "Let Cool Heads Prevail",
+            "label": "Let Cool Heads Prevail",
+            "description": "You know when to press and when to hold. At 13th level, once per combat as a Free action, you can end one of the following conditions affecting an ally within 30ft: Frightened, Stunned, or Rattled."
+          },
+          {
+            "value": "The First Rule Of Soldiering",
+            "label": "The First Rule Of Soldiering",
+            "description": "Don't get shot. At 14th level, once per combat when an attack targets an ally within 30ft that you can see, you can use a Contingency action to impose ↓2 on that attack."
+          },
+          {
+            "value": "Complex Command",
+            "label": "Complex Command",
+            "description": "Your commands contain layers of instruction your team has learned to parse instantly. At 15th level, when you use Issue Command, you can set two terms instead of one. Allies who follow both terms gain the full benefit; allies who follow only one term gain ↑1 or +1 to a Defense (your choice)."
+          },
+          {
+            "value": "Stand Together",
+            "label": "Stand Together",
+            "description": "Your presence on the battlefield inspires those around you to push past their limits. At 18th level, once per combat as a Standard action, allies within 30ft who can hear you each gain 2 Temporary Health and ↑1 on all Skill Tests until the beginning of your next turn."
+          },
+          {
+            "value": "Bend A Knee or Stand Tall",
+            "label": "Bend A Knee or Stand Tall",
+            "description": "You open negotiations from a position of strength. When you make a Persuasion Skill Test to prevent combat or end a confrontation peacefully, you gain ↑1. Additionally, when you succeed on such a test, enemies who agreed to stand down cannot attack for the remainder of the scene unless attacked first."
+          },
+          {
+            "value": "Bah-Weep-Graaaaagnah Wheep Ni Ni Bong",
+            "label": "Bah-Weep-Graaaaagnah Wheep Ni Ni Bong",
+            "description": "The universal greeting. At 3rd level, once per scene, you can attempt to address any creature regardless of language barriers. Make a Persuasion Skill Test against the creature's Willpower or Cleverness. On a success, the creature understands your intent and you understand its response, even without a shared language."
+          },
+          {
+            "value": "Minimize Casualties",
+            "label": "Minimize Casualties",
+            "description": "You take steps to protect non-combatants and limit collateral damage. At 6th level, once per combat, you can issue a command that designates a protected zone or individual. Allies who comply gain ↑1 on attacks, while enemies within the zone suffer ↓1 on attacks targeting civilians or non-combatants."
+          },
+          {
+            "value": "The Right Of All Sentient Beings",
+            "label": "The Right Of All Sentient Beings",
+            "description": "You believe deeply in freedom for all. At 10th level, once per scene, you can spend an Energon Point to grant an ally who is Charmed, Mesmerized, or otherwise mentally controlled an immediate Skill Test to end that condition, with an Edge."
+          },
+          {
+            "value": "Not On My Watch",
+            "label": "Not On My Watch",
+            "description": "You place yourself between danger and those you protect. At 17th level, once per combat when an ally within 30ft would be reduced to 0 Health, you can use a Contingency action to move up to your Movement toward that ally and take the damage instead."
+          },
+          {
+            "value": "Martyr",
+            "label": "Martyr",
+            "description": "You are willing to pay the ultimate price for your cause. At 20th level, if you are Defeated, choose one of the following effects: all allies within 60ft gain ↑2 on all Skill Tests until the end of the scene, or all enemies within 60ft suffer ↓2 on all Skill Tests until the end of the scene."
+          },
+          {
+            "value": "Strategize",
+            "label": "Strategize",
+            "description": "You analyze the battlefield to find the optimal approach. Once per scene before rolling Initiative, you can make an Alertness or Smarts-based Skill Test against DIF 10. On a success, choose one ally: they act first in the initiative order this combat."
+          },
+          {
+            "value": "Follow My Lead",
+            "label": "Follow My Lead",
+            "description": "Your allies trust your instincts completely. At 3rd level, when you use Issue Command, allies who follow your command also gain the benefits of your Prepare for War perk on their next Initiative roll."
+          },
+          {
+            "value": "Watchful Eyes",
+            "label": "Watchful Eyes",
+            "description": "You maintain situational awareness for your entire team. At 6th level, you and allies within 30ft cannot be Surprised as long as you are conscious."
+          },
+          {
+            "value": "Flexible Directives",
+            "label": "Flexible Directives",
+            "description": "Your commands adapt to changing circumstances. At 10th level, you can change the terms of an active Issue Command as a Free action once per turn."
+          },
+          {
+            "value": "Lock Down",
+            "label": "Lock Down",
+            "description": "You restrict enemy movement with tactical precision. At 17th level, when you use Issue Command, you can include a directive to mark one enemy. Allies who comply with the command gain ↑1 on attacks against the marked enemy and can use a Contingency action to attack them."
+          },
+          {
+            "value": "Stronger Together",
+            "label": "Stronger Together",
+            "description": "Your team is greater than the sum of its parts. At 20th level, allies within 30ft who follow your Issue Commands deal 1 additional damage on successful attacks."
+          },
+          {
+            "value": "Imprompturret",
+            "label": "Imprompturret",
+            "description": "You can turn yourself into a makeshift weapons platform. As a Standard action, you can enter a Turret Stance. While in Turret Stance, you cannot move, but you gain ↑1 on all ranged attacks and ignore the first range penalty on your attacks. You can exit Turret Stance at the start of your turn as a Free action."
+          },
+          {
+            "value": "Armament",
+            "label": "Armament",
+            "description": "You keep your weapons ready at all times. You are never considered unarmed and can draw or stow a weapon as part of any action without spending additional actions. Additionally, you can use a Free action to switch between two weapons you are holding."
+          },
+          {
+            "value": "Pistol Whip",
+            "label": "Pistol Whip",
+            "description": "You know how to use a gun as a bludgeon when the situation calls for it. You can make melee attacks with your ranged weapons using the Might Skill. These attacks deal 1 Blunt damage on a hit."
+          },
+          {
+            "value": "Rapid Reload",
+            "label": "Rapid Reload",
+            "description": "Reloading is a reflex, not a deliberate act. Reloading a weapon costs a Free action instead of a Move or Standard action for you."
+          },
+          {
+            "value": "Covering Fire",
+            "label": "Covering Fire",
+            "description": "You lay down suppressing fire to protect your allies. At 2nd level, as a Standard action, make a ranged attack against a target. Whether or not you hit, until the beginning of your next turn, that target suffers ↓1 on any Skill Test targeting a creature other than you."
+          },
+          {
+            "value": "Nowhere's Safe",
+            "label": "Nowhere's Safe",
+            "description": "No cover is good enough against you. At 5th level, when an enemy benefits from Cover, reduce the Defense bonus they gain from Cover by 1 (minimum 0)."
+          },
+          {
+            "value": "Bang Bang",
+            "label": "Bang Bang",
+            "description": "More shots, more chances to hit. At 7th level, once per turn when you make a ranged attack and miss, you can spend 1 Energon Point to immediately make another ranged attack against the same target."
+          },
+          {
+            "value": "Worth A Shot",
+            "label": "Worth A Shot",
+            "description": "Even long odds don't stop you from trying. At 9th level, once per combat, you can make a ranged attack against a target at double your weapon's maximum range. This attack suffers ↓1."
+          },
+          {
+            "value": "Scratch Resistant",
+            "label": "Scratch Resistant",
+            "description": "You've learned to keep moving to avoid the worst hits. At 12th level, when you take damage from a ranged attack, you can use a Contingency action to move up to 10ft. This movement does not provoke opportunity attacks."
+          },
+          {
+            "value": "Absolutely Nowhere's Safe",
+            "label": "Absolutely Nowhere's Safe",
+            "description": "At 13th level, your Nowhere's Safe perk now reduces Cover Defense bonuses by 2 (minimum 0) and you can make ranged attacks against targets in Full Cover as long as you know their location."
+          },
+          {
+            "value": "Worth Another Shot",
+            "label": "Worth Another Shot",
+            "description": "At 14th level, once per combat, you can make two ranged attacks against a target at double your weapon's maximum range. The attacks suffer ↓1. Additionally, your Worth A Shot uses per combat increase to two."
+          },
+          {
+            "value": "Hard Target",
+            "label": "Hard Target",
+            "description": "You're difficult to pin down at range. At 16th level, ranged attacks against you suffer ↓1 when you moved at least 10ft during your last turn."
+          },
+          {
+            "value": "Bang Bang Bang",
+            "label": "Bang Bang Bang",
+            "description": "At 18th level, once per turn when you make a ranged attack and miss, you can spend 1 Energon Point to make up to two additional ranged attacks against the same target. Each subsequent miss costs another Energon Point."
+          },
+          {
+            "value": "Quick Draw",
+            "label": "Quick Draw",
+            "description": "You draw faster than the eye can follow. You can draw a weapon as part of an attack without using an action. Additionally, you gain ↑1 on your first attack in combat."
+          },
+          {
+            "value": "Straight Shooter",
+            "label": "Straight Shooter",
+            "description": "You put rounds exactly where they need to go. At 3rd level, when you take the Aim action, you gain an additional ↑1 on your next attack (total ↑2 from Aiming)."
+          },
+          {
+            "value": "Gun Runner",
+            "label": "Gun Runner",
+            "description": "You maintain full combat effectiveness while on the move. At 6th level, you no longer suffer penalties for making ranged attacks after moving, and moving does not grant enemies ↑ on attacks against you."
+          },
+          {
+            "value": "Same Principle",
+            "label": "Same Principle",
+            "description": "Every weapon works on the same principle to you. At 10th level, you are Qualified with all Standard and Limited Weapons, even those you are not trained with. You suffer no penalties when using weapons you are Qualified with."
+          },
+          {
+            "value": "Shoot Out",
+            "label": "Shoot Out",
+            "description": "You enter a focused duel with a single opponent. At 17th level, as a Standard action, challenge one creature to a Shoot Out. Both you and the target immediately make a ranged attack against each other as a Contested Targeting Skill Test. The winner deals their attack's effect to the loser. Until the end of your next turn, you both gain ↑1 on attacks against each other."
+          },
+          {
+            "value": "Bullet Barrage",
+            "label": "Bullet Barrage",
+            "description": "At 20th level, once per combat as a Standard action, you make a ranged attack against every enemy you can see within your weapon's range. Make a single Targeting Skill Test and apply it against each target's Defense."
+          },
+          {
+            "value": "Long Shot",
+            "label": "Long Shot",
+            "description": "Distance is your friend. You do not suffer range penalties on ranged attacks until you exceed twice your weapon's maximum range."
+          },
+          {
+            "value": "Calculated Attack",
+            "label": "Calculated Attack",
+            "description": "You take your time to ensure the shot counts. At 3rd level, when you spend 2 or more Free actions Aiming, your attack ignores one Defense bonus from Cover."
+          },
+          {
+            "value": "Piercing Shot",
+            "label": "Piercing Shot",
+            "description": "Your shots cut through armor. At 6th level, once per turn, your ranged attack can ignore 1 point of a target's Armor bonus."
+          },
+          {
+            "value": "Specialty Flexibility",
+            "label": "Specialty Flexibility",
+            "description": "Your training transfers between disciplines. At 10th level, you can apply any ranged weapon Specialization you have to any ranged weapon you are wielding, even if the weapon type differs."
+          },
+          {
+            "value": "Snipe From The Hip",
+            "label": "Snipe From The Hip",
+            "description": "Your instincts are so sharp you can shoot accurately without aiming. At 17th level, you gain all the benefits of the Aim action on your first ranged attack each round without spending the action to Aim."
+          },
+          {
+            "value": "Drilling Shot",
+            "label": "Drilling Shot",
+            "description": "Your shot passes through one target and into the next. At 20th level, once per turn, when you hit a target with a ranged attack, you can have the shot continue to an additional target in line behind the first. Make a new Targeting Skill Test against the second target."
+          },
+          {
+            "value": "Fully Hybrid",
+            "label": "Fully Hybrid",
+            "description": "Your mastery of transformation is unparalleled. You can spend a Free action to partially transform, gaining the benefits of your Alt Mode while in Bot Mode (or vice versa) until the beginning of your next turn. You can use this ability a number of times per day equal to your current Mass Shifts per day."
+          },
+          {
+            "value": "Custom Frame",
+            "label": "Custom Frame",
+            "description": "Your body is uniquely suited to your diverse abilities. At 1st level, rank the four Essences (Strength, Speed, Smarts, Social) in order of priority. Your 1st priority Essence gains +1 at levels 2, 5, 9, 14, 18, and 20. Your 2nd priority gains +1 at levels 3, 7, 11, 15, and 19. Your 3rd priority gains +1 at levels 4, 8, 13, and 16. Your 4th priority gains +1 at levels 6, 12, and 17. Choose one Skill from the Essences you ranked 1st and 2nd as your starting Role Skills."
+          },
+          {
+            "value": "Mass Shift",
+            "label": "Mass Shift",
+            "description": "You can temporarily alter your mass, density, and size. As a Standard action, spend 1 Energon Point to use one Mass Shift option: shrink one Size Class (gain ↑1 on Infiltration, ↓1 Strength), grow one Size Class (gain ↑1 Strength, ↓1 on Infiltration), increase density (+2 Toughness, -10ft Movement), or decrease density (+10ft Movement, -2 Toughness). The effect lasts until the start of your next turn. You have a number of Mass Shifts per day based on your level."
+          },
+          {
+            "value": "Quick Change",
+            "label": "Quick Change",
+            "description": "Transformation is faster for you than for most. You can Convert between Bot Mode and Alt Mode as a Free action instead of a Move action."
+          },
+          {
+            "value": "Hybridization",
+            "label": "Hybridization",
+            "description": "You gain one Hybridization from the following list. You may select each Hybridization only once: Alternate Propulsion (gain a second movement type from a Chassis you don't have), Distributed Sensors (you are never Surprised), Enhanced Processor (+2 to all Mental Defenses), Hardened Chassis (+1 Health), Integrated Weapon (gain one Standard weapon as an Integrated weapon), Morphic Limbs (+1 to Might and Finesse attacks), Redundant Systems (once per combat, ignore the first instance of the Wounded condition)."
+          },
+          {
+            "value": "Jack Of All Forms",
+            "label": "Jack Of All Forms",
+            "description": "At 5th level, you gain the Alt Mode benefits of any Chassis as a temporary Alt Mode for 1 hour by spending 1 Energon Point and spending 10 minutes concentrating on the new form. You can only maintain one temporary Alt Mode at a time."
+          },
+          {
+            "value": "Quick Change II",
+            "label": "Quick Change II",
+            "description": "At 9th level, you gain the benefits of Quick Change a second time. Additionally, you can now Convert as a Free action even in response to triggers (such as when an enemy attacks you)."
+          },
+          {
+            "value": "Helical Spring",
+            "label": "Helical Spring",
+            "description": "At 13th level, when you Convert to your Alt Mode, you can immediately move up to half your Alt Mode Movement as a Free action."
+          },
+          {
+            "value": "Master Of All Forms",
+            "label": "Master Of All Forms",
+            "description": "At 16th level, your Jack Of All Forms ability no longer requires Energon Points or concentration time. You can take on any temporary Alt Mode as a Free action."
+          },
+          {
+            "value": "Mini-Con Ally",
+            "label": "Mini-Con Ally",
+            "description": "A Mini-Con ally docks to your frame. They could be a distinct individual with whom you formed a deep bond, or an aspect of your personality made manifest. Your Mini-Con has STRENGTH 2, SPEED 2, SMARTS 2, SOCIAL 2, TOUGHNESS 12, EVASION 12, WILLPOWER 12, CLEVERNESS 12, and 8 Skill Points. Assign its purpose (a Skill) at creation. For every 2 Skill Points you invest in a Skill matching its purpose, your Mini-Con gains two Essence Point Increases or one Essence Point Increase and one Mini-Con Perk."
+          },
+          {
+            "value": "Kitted Purpose",
+            "label": "Kitted Purpose",
+            "description": "At 3rd level, when your Mini-Con is docked to you, you gain the benefits of a Limited Kit of a Specialty associated with their purpose."
+          },
+          {
+            "value": "Ambush Deployment",
+            "label": "Ambush Deployment",
+            "description": "At 6th level, if you deploy a Mini-Con in Combat, you and your Mini-Con (or Mini-Cons) gain an Edge on attacks targeting enemies adjacent to you."
+          },
+          {
+            "value": "Multi-Purpose",
+            "label": "Multi-Purpose",
+            "description": "At 10th level, choose one: your Mini-Con gains an Additional Purpose, or you gain a second Mini-Con ally."
+          },
+          {
+            "value": "Reinforced Bond",
+            "label": "Reinforced Bond",
+            "description": "At 17th level, you gain +1 Health and +2 to all Defenses. When you assign a Mini-Con Health when they deploy, you can also assign them +1 or +2 to all their Defenses, reducing your own bonus to Defenses by an equal amount."
+          },
+          {
+            "value": "Emergency Deployment and Docking",
+            "label": "Emergency Deployment and Docking",
+            "description": "At 20th level, if you are Defeated with one or more docked Mini-Con, your Mini-Cons deploy with 2 Temporary Health each. Additionally, when one of your Mini-Cons is Defeated but you're not, a tractor beam moves your Defeated Mini-Con 30ft closer to you each turn until they are within your Reach."
+          },
+          {
+            "value": "Everything In Threes",
+            "label": "Everything In Threes",
+            "description": "You gain an additional Alt Mode. Choose a Chassis tied to an Origin. You gain the Alt Mode benefits of that Chassis as a second choice when you Convert. You cannot choose a Chassis whose Alt Mode Size is two Size Classes larger than the Alt Mode Size of your original Chassis."
+          },
+          {
+            "value": "Unexpected Alternative",
+            "label": "Unexpected Alternative",
+            "description": "Triple Changers are rare, and you use that to your advantage. At 3rd level, when an enemy who has seen you Convert into only one of your Alt Modes sees you Convert into your other Alt Mode for the first time, you gain an Edge on Skill Tests targeting them until the end of your next turn."
+          },
+          {
+            "value": "Shape Shifter",
+            "label": "Shape Shifter",
+            "description": "At 6th level, you become immune to Maneuver attacks and the Prone Condition. Momentarily Acting Smaller doesn't count as rough terrain for you."
+          },
+          {
+            "value": "Quick Change III",
+            "label": "Quick Change III",
+            "description": "At 10th level, you gain the benefits of Quick Change a third time."
+          },
+          {
+            "value": "Third Dimension",
+            "label": "Third Dimension",
+            "description": "At 17th level, when you change Movement types during your move, you do not subtract the distance you have already moved from the new Movement type. Instead, you move up to the full distance of your second Movement type."
+          },
+          {
+            "value": "Mercurial Nature",
+            "label": "Mercurial Nature",
+            "description": "The spirit of Amalgamous Prime moves you. At 20th level, you gain a Hybridization, and unlimited uses of Mass Shift per day."
+          },
+          {
+            "value": "Intrafilum",
+            "label": "Intrafilum",
+            "description": "When treating an adjacent Cybertronian, as a Free action, you can spend an Energon Point to restore 1 Health."
+          },
+          {
+            "value": "Broad Understanding",
+            "label": "Broad Understanding",
+            "description": "Although you have your field of expertise, to know science is to think a certain way that applies across disciplines. Outside of combat, as long as you have at least one Science Specialization, you roll all Science Skill Tests as though you were Specialized, although Skill Tests outside your Specialization suffer ↓2."
+          },
+          {
+            "value": "Circuit Breaker",
+            "label": "Circuit Breaker",
+            "description": "You've jolted enough allies conscious to know the effect electricity has on Cybertronian physiology. You can use the Technology Skill for attacks with Electric weapons."
+          },
+          {
+            "value": "Energon Battery",
+            "label": "Energon Battery",
+            "description": "Your allies understand that you use Energon unselfishly, and make sure you get more than your share. You store a number of personal Energon Points equal to your highest Essence Score, not your lowest."
+          },
+          {
+            "value": "Walk Them Through It",
+            "label": "Walk Them Through It",
+            "description": "You help others help you. At 2nd level, allies without ranks in Technology or Science can Lend Assistance to you on Technology and Science Skill Tests."
+          },
+          {
+            "value": "Thesis",
+            "label": "Thesis",
+            "description": "Everything comes back to science; you just need to figure out how. At 5th level, outside of Combat, once per scene, you can use Science in place of another Smarts-based Skill for a Skill Test, but the Skill Test takes longer. If the Skill Test takes less than a full turn, it takes your full turn. Otherwise, it takes twice as long as stated."
+          },
+          {
+            "value": "Augment Power",
+            "label": "Augment Power",
+            "description": "At 7th level, once per turn, you can give an ally ↑1 on a Skill Test as a Free action. Once per combat, you can give an ally ↑2 on a Skill Test as a Free action."
+          },
+          {
+            "value": "Energon Bank",
+            "label": "Energon Bank",
+            "description": "You supply Energon for the benefit of others. At 9th level, with your permission, allies within 30ft can spend your Energon Points instead of their own to gain the benefits of an ability that uses Energon Points."
+          },
+          {
+            "value": "Applied Science",
+            "label": "Applied Science",
+            "description": "When the stakes are high, you have trouble concentrating on anything other than science. At 12th level, once per scene, you can use Broad Understanding and Thesis in Combat."
+          },
+          {
+            "value": "Overcharge Engines",
+            "label": "Overcharge Engines",
+            "description": "Revving an engine is not just for show. At 13th level, you can use Technology to go faster. Once per turn, make a Technology Skill Test as a Free action. Until the end of your turn, increase your Movements a number of feet equal to your Skill Test results, rounded up to the nearest 5. This movement ignores Rough Terrain penalties."
+          },
+          {
+            "value": "Flashy",
+            "label": "Flashy",
+            "description": "You know from experience how much a shock to the eye hurts. At 14th level, when you successfully attack with an Electric weapon, you can make a Science Skill Test against the Toughness of the target. On a success, they become Blinded 2."
+          },
+          {
+            "value": "Technobabble",
+            "label": "Technobabble",
+            "description": "At 16th level, you can use Thesis in place of Social-Based Skills as well. You can use Thesis three times per scene outside of Combat, or once per Combat, and Thesis no longer takes extra time to use."
+          },
+          {
+            "value": "Multiplication",
+            "label": "Multiplication",
+            "description": "At 18th level, double the listed number of uses and all numeric benefits of your Scientist Role Perks. For example, you can use Augment Power twice per turn. This does not apply to Focus Perks."
+          },
+          {
+            "value": "Patch Up",
+            "label": "Patch Up",
+            "description": "After a quick soldering, you'll have them up and back in action in no time. Once per turn, you can spend an Energon Point to make a Skill Test to Repair a Cybertronian or vehicle, or Heal an organic lifeform as a Free action. You always count as having a Standard Medicine Kit and a Standard Repair Kit on you."
+          },
+          {
+            "value": "Sirens Blaring",
+            "label": "Sirens Blaring",
+            "description": "You have the right of way in emergencies. At 3rd level, when Resetting Your Initiative, you gain an Edge and ↑1 on your Initiative Skill Test."
+          },
+          {
+            "value": "Preventative Measures",
+            "label": "Preventative Measures",
+            "description": "By applying care to vulnerable areas, you prevent inevitable damage. At 6th level, you can treat a healthy ally. As long as the target doesn't have any Damage or Temporary Health, and you haven't used Preventative Measures on them yet today, you can make a Science or Technology Test as though you were Healing or Repairing them. They gain the amount of Temporary Health equal to the amount you would have Healed or Repaired."
+          },
+          {
+            "value": "Rocket Surgery",
+            "label": "Rocket Surgery",
+            "description": "The well of Energon within you allows you to propel healing energies toward allies. At 10th level, you can Heal or Repair an ally from 30ft away. Additionally, you always count as having a Limited Medicine Kit and a Limited Repair Kit on you."
+          },
+          {
+            "value": "Intensive",
+            "label": "Intensive",
+            "description": "You find new ways to push your limits without burning out. At 17th level, you are no longer limited in the number of times you can use Patch Up on your turn. Additionally, when you Repair more than one Cybertronian on your turn, you can choose to roll Technology once and apply the result to all injured allies within 30ft. Finally, you always count as having a Restricted Medicine Kit and a Restricted Repair Kit on you."
+          },
+          {
+            "value": "Miracle Worker",
+            "label": "Miracle Worker",
+            "description": "Somehow, the more pressure you're under, the more likely you are to succeed. At 20th level, your d2 can trigger a Critical Success on Science and Technology Skill Tests."
+          },
+          {
+            "value": "Technologist",
+            "label": "Technologist",
+            "description": "If you think of organic life as biological machines, technology is just another word for science! When a Scientist Role Perk only uses the Science Skill, you can use Science or Technology."
+          },
+          {
+            "value": "Construct",
+            "label": "Construct",
+            "description": "Whatever your allies need, you can build it. At 3rd level, you can build any Weapon, any Armor Upgrade, and any Kit. As a Standard action, spend 1 Energon Point and make a Technology Skill Test against the Requisition Difficulty of the item you are building. On a failure, your attempt is wasted but you do not spend your Energon Point."
+          },
+          {
+            "value": "Deconstruct",
+            "label": "Deconstruct",
+            "description": "You disrupt the functionality of enemy equipment. At 6th level, as a Standard action, spend 1 Energon Point and make a Technology Skill Test against the Requisition Difficulty of a Kit, Gear, or Weapon used by an adjacent enemy. On a success: a Kit is destroyed; a Gear cannot be used unless repaired (DIF 10 Technology, or DIF 20 on Critical Success); a Weapon causes the attacker to suffer ↓ unless repaired (same DIF)."
+          },
+          {
+            "value": "Training Through Familiarity",
+            "label": "Training Through Familiarity",
+            "description": "Having now built a wide variety of equipment, you have a better sense of how to use it. At 10th level, you become trained in Limited Weapons, and can requisition Standard and Limited Kits even if you don't meet the prerequisite. You don't suffer a Snag when you Construct a Standard or Limited Kit."
+          },
+          {
+            "value": "Siphon",
+            "label": "Siphon",
+            "description": "You jack into an enemy and draw from their power supply. At 17th level, as a Standard action, make a Technology Skill Test against the Toughness or Evasion of an adjacent Cybertronian. On a success, you deal 1 Damage and gain 1 Energon Point."
+          },
+          {
+            "value": "Perpetual Power Source",
+            "label": "Perpetual Power Source",
+            "description": "To preserve Energon, you've developed alternative energy sources for your inventions. At 20th level, you no longer spend Energon Points when you Construct equipment."
+          },
+          {
+            "value": "Disappear",
+            "label": "Disappear",
+            "description": "For a Scout to survive getting seen, they need to get unseen again as quickly as possible. As a Free action, you can spend an Energon Point to turn Invisible until the end of your turn."
+          },
+          {
+            "value": "Ally Awareness",
+            "label": "Ally Awareness",
+            "description": "You always keep the whereabouts and safety of your allies in mind. If an ally has an ability that affects allies within a certain range, you gain the benefits of that ability as long as you are within 5 times the range of the ability. Additionally, once per scene as a Free action, you can use the memory of advice an ally once gave you to gain the benefits of Lend Assistance."
+          },
+          {
+            "value": "Forward Observation",
+            "label": "Forward Observation",
+            "description": "You take in every aspect of what you witness. Alertness is both a Smarts and Social Skill for you. When you roll an Alertness Skill Test and the creatures you're observing aren't aware of your presence, you can score a Critical Success with your d2."
+          },
+          {
+            "value": "Keen Sensors",
+            "label": "Keen Sensors",
+            "description": "Your natural perception made you particularly qualified for scouting. You gain the Acute Sense General Perk."
+          },
+          {
+            "value": "Mark Target",
+            "label": "Mark Target",
+            "description": "At 2nd level, at the beginning of a scene (including Combat), designate a creature you see or a specific individual you expect will be in the scene. You gain ↑1 on Skill Tests related to that creature until the end of the scene."
+          },
+          {
+            "value": "Hidden In Plain Sight",
+            "label": "Hidden In Plain Sight",
+            "description": "Even though you are visible, you are unnoticeable. At 5th level, you can Hide, even if you do not have cover, darkness, or another effect that limits the vision of observers."
+          },
+          {
+            "value": "Hindsight",
+            "label": "Hindsight",
+            "description": "You have a 3D Holographic memory. At 7th level, when discussing a previous scene, you can make new Alertness Skill Tests about it as though you were still there. You gain an Edge on these Skill Tests."
+          },
+          {
+            "value": "Mimicry Vocoder",
+            "label": "Mimicry Vocoder",
+            "description": "At 9th level, you can recreate the voice of an individual you've heard speak. You automatically open locks that require a voice print. When speaking with creatures who can't see you clearly, you automatically deceive them if they have only a passing familiarity with the individual you're imitating. You gain an Edge on Deception Skill Tests to convince creatures more familiar with the individual."
+          },
+          {
+            "value": "Resourceful",
+            "label": "Resourceful",
+            "description": "You make the most of a worst case scenario. At 12th level, before rolling for Initiative, choose one: Roll Initiative Skill Tests with an Edge; Gain 1 Temporary Health; +10ft to one type of Movement; Act normally if you would be Surprised; or an ally who can hear you gains the benefits of Mark Target for the creature you designated."
+          },
+          {
+            "value": "Additional Marks",
+            "label": "Additional Marks",
+            "description": "Your experience qualifies you for more complicated missions. At 13th level, you can use Mark Target on up to five creatures you see, or two specific individuals."
+          },
+          {
+            "value": "New Plan",
+            "label": "New Plan",
+            "description": "At 14th level, when you use a Contingency Action, if the triggering action never occurs, you gain an additional Move action or two additional Free actions on your next turn."
+          },
+          {
+            "value": "Extremely Resourceful",
+            "label": "Extremely Resourceful",
+            "description": "You find new depths when you dig down deep. At 16th level, when you use Resourceful, you gain two benefits instead of one."
+          },
+          {
+            "value": "Mark Everybot",
+            "label": "Mark Everybot",
+            "description": "On some missions, every target is your priority. At 18th level, once per day, you can use Mark Target on every creature in a scene, even those who enter the scene later."
+          },
+          {
+            "value": "Burn Rubber",
+            "label": "Burn Rubber",
+            "description": "On the first round of Combat, if you Push Yourself to buy additional movement, you gain an additional 10ft of Movement for every Free action you spend in conjunction with your Move action, and you can buy up to your Movement in additional movement. If you are surprised, you can still use a Move action to move, and Free actions to gain additional Movement, but you use the regular rules to Push Yourself."
+          },
+          {
+            "value": "Barrel Through",
+            "label": "Barrel Through",
+            "description": "If you can't outrun them, you run them over! At 3rd level, you gain ↑1 on Maneuver attacks. When you Ram a target, if you moved at least 20ft before the attack, you deal 1 additional damage on a success, including if you use Ram to Trip your target."
+          },
+          {
+            "value": "Scramble",
+            "label": "Scramble",
+            "description": "Moving fast is always the answer, even if you don't use it to move far. At 6th level, as a Standard action, you can force attacks to target your Evasion, even if the attack normally dictates the Defense it targets. If the attack hits and normally has an Effect with a numeric value (such as 1 Sharp), reduce the numeric Effect by 1."
+          },
+          {
+            "value": "Roll With It",
+            "label": "Roll With It",
+            "description": "You ride the force of a blow to safety. At 10th level, once per turn, when you take Damage, you can immediately move 10ft away from the source of the attack."
+          },
+          {
+            "value": "Caution To The Wind",
+            "label": "Caution To The Wind",
+            "description": "Sometimes the best defense is a timely offense. At 17th level, you can take a penalty up to -3 to all of your Defenses to gain an equal ↑ on a Skill Test."
+          },
+          {
+            "value": "Dust Up",
+            "label": "Dust Up",
+            "description": "Your enemies can eat your dust. At 20th level, when you use your Move action to move, you gain the benefits of Concealment until the beginning of your next turn."
+          },
+          {
+            "value": "Stunning Surprise",
+            "label": "Stunning Surprise",
+            "description": "The suddenness of your ambushes disorients your enemies. When you attack a creature who is unaware of your exact location, your attack deals Stun 1 in addition to its normal effect."
+          },
+          {
+            "value": "Pop Out",
+            "label": "Pop Out",
+            "description": "Before your enemies realize you came out of hiding to attack them, you're gone again. At 3rd level, when you attack while Hidden, you can make an immediate Infiltration Skill Test against the Willpower or Cleverness of the enemies who could have seen you. On a success, you continue to gain the benefits of Hide after your attack."
+          },
+          {
+            "value": "Silent As A Shadow",
+            "label": "Silent As A Shadow",
+            "description": "The only reason your next victims believe you're still nearby is the dreadful silence you leave behind. At 6th level, all of your attacks and movement are considered Silent."
+          },
+          {
+            "value": "Infiltrator",
+            "label": "Infiltrator",
+            "description": "Excelling at infiltration provides insight into a surprisingly wide range of situations. At 10th level, once per scene outside of Combat, you can roll Infiltration in place of another Skill Test."
+          },
+          {
+            "value": "Telltale Sign",
+            "label": "Telltale Sign",
+            "description": "You terrify your enemies with a calling card on your victims. At 17th level, when you successfully Pop Out, you can use your stealth to Frighten one creature who failed to notice you. Make an Infiltration Skill Test as a Free action against their Willpower or Cleverness. On a success, they are Frightened 1."
+          },
+          {
+            "value": "Knock Down, Drag Out",
+            "label": "Knock Down, Drag Out",
+            "description": "Sometimes, the only thing scarier than finding one of your victims is not finding one of your victims. At 20th level, when you successfully use Stunning Surprise against a target at least 3 levels lower than you, your attack knocks the target Unconscious for 1 round. If you then use Pop Out on the same turn, your Infiltration Skill Test to hide also hides their Unconscious body."
+          },
+          {
+            "value": "Hardcore",
+            "label": "Hardcore",
+            "description": "When you take enough damage to be Defeated, you can spend an Energon Point to instead lose a limb but otherwise ignore the effect of the attack. You can use Hardcore as long as you have the Energon Points and limbs to spare."
+          },
+          {
+            "value": "Foot Soldier",
+            "label": "Foot Soldier",
+            "description": "Slow and steady wins the fight. When in Bot Mode, treat your Speed as if it was 2 higher when calculating how many Free actions you get on your turn."
+          },
+          {
+            "value": "Manifest Melee Weapon",
+            "label": "Manifest Melee Weapon",
+            "description": "When you need a weapon, you can make one out of the energy flowing through you. As a Free action once per combat, you can create an integrated Energon Weapon without needing to spend an Energon Point, as long as the weapon you create is based on a Standard Melee weapon. This weapon lasts until the end of Combat, or until you are Defeated."
+          },
+          {
+            "value": "Wisdom Through Experience",
+            "label": "Wisdom Through Experience",
+            "description": "You gain valuable insight from getting up close and personal with the enemy. Once per scene following a combat, when looking for clues or theorizing about enemy plans, you may ask your GM if one of your ideas has merit. The GM must answer Yes or No truthfully and provide a hint as to why. If the GM feels it falls in between, they can say Maybe and provide two hints."
+          },
+          {
+            "value": "Charge",
+            "label": "Charge",
+            "description": "If you Move at least 10ft away from your past position and then Attack with a Might weapon immediately after, you gain ↑1 on the Might Skill Test."
+          },
+          {
+            "value": "Tough It Out",
+            "label": "Tough It Out",
+            "description": "At 5th level, once per Combat, you can make a Brawn Skill Test to Repair your damage as a Standard action. The DIF is the same as the Technology Skill Test to Repair damage."
+          },
+          {
+            "value": "Expanded Arsenal",
+            "label": "Expanded Arsenal",
+            "description": "You dig down deep to find a greater expression of your fighting ability. At 7th level, when you Manifest a Melee Weapon, you can create a Limited Melee Weapon."
+          },
+          {
+            "value": "No Escape",
+            "label": "No Escape",
+            "description": "You will give an enemy quarter, but you do not let them retreat. At 9th level, when an enemy moves within the Reach of your melee weapon, you interrupt their movement to immediately attack them."
+          },
+          {
+            "value": "Battle Hardened",
+            "label": "Battle Hardened",
+            "description": "At 12th level, you gain +1 Health. Additionally, you gain a Limited or Restricted weapon of your choice as personal gear. You must meet the requirements of the weapon to choose it."
+          },
+          {
+            "value": "Extended Attack",
+            "label": "Extended Attack",
+            "description": "By extending yourself through gumption and partial conversion, you can hit further targets. At 13th level, as a Move action, you can double the Reach of a Melee weapon until the beginning of your next turn."
+          },
+          {
+            "value": "How I Got These Dents",
+            "label": "How I Got These Dents",
+            "description": "Every scratch comes with a scary story. At 14th level, you gain ↑ on Intimidation Skill Tests equal to the amount of damage you currently have."
+          },
+          {
+            "value": "Instruments of Destruction",
+            "label": "Instruments of Destruction",
+            "description": "You can call forth an exceptional weapon to fight with. At 16th level, when you Manifest a Melee Weapon, you can create a Restricted Melee Weapon."
+          },
+          {
+            "value": "Soldier On",
+            "label": "Soldier On",
+            "description": "At 18th level, if an attack targeting you scores a Critical Hit, once per Combat you may attempt a Brawn Skill Test against a DIF equal to 10 plus the Damage dealt to ignore the attack."
+          },
+          {
+            "value": "Stalwart Defense",
+            "label": "Stalwart Defense",
+            "description": "You use one of your External Hardpoints to defend yourself. Choose whether you defend yourself with a shield or a parrying weapon. Shield: On your turn, you can choose to gain +2 Toughness, +2 Evasion, or +1 Toughness and Evasion until the beginning of your next turn. Weapon: You gain a Close Combat Blade, Close Combat Bludgeon, Short Blade, or Short Bludgeon. You gain ↑1 on offhand attacks. On your turn, you can choose to gain +1 Toughness or +1 Evasion until the beginning of your next turn."
+          },
+          {
+            "value": "Wait For An Opening",
+            "label": "Wait For An Opening",
+            "description": "When your enemy lets their guard down, you strike true. At 3rd level, when you attack on another creature's turn, such as with a Contingency action to Attack or your No Escape Perk, you gain an Edge on the Skill Test."
+          },
+          {
+            "value": "Disarming Defenses",
+            "label": "Disarming Defenses",
+            "description": "You deflect ammunition back at the weapon that fired it, or tilt your body until your attacker twists their wrist too far. At 6th level, when an attack misses you by an amount equal to your Stalwart Defense bonus to your Defense, you disarm your attacker of the weapon they attacked with."
+          },
+          {
+            "value": "Stand Firm",
+            "label": "Stand Firm",
+            "description": "Holding your ground prepares you for incoming attacks. At 10th level, as a Move action, you can double the bonus granted by your Stalwart Defense until the beginning of your next turn."
+          },
+          {
+            "value": "Sword and Board",
+            "label": "Sword and Board",
+            "description": "At 17th level, you gain both a Shield and Parrying Weapon in one External Hardpoint. On your turn, you can choose to gain +3 Toughness, +3 Evasion, +2 Toughness and +1 Evasion, or +1 Toughness and +2 Evasion until the beginning of your next turn. Additionally, you gain ↑1 on offhand attacks."
+          },
+          {
+            "value": "Make An Opening",
+            "label": "Make An Opening",
+            "description": "You're done waiting. At 20th level, once per turn, you can take a Contingency action to Attack as a Free action."
+          },
+          {
+            "value": "Warrior Rush",
+            "label": "Warrior Rush",
+            "description": "You know your place on the battlefield and rush to get there as soon as possible. On the first turn of combat, double your Movements until the beginning of your next turn."
+          },
+          {
+            "value": "Manifest Enhancement",
+            "label": "Manifest Enhancement",
+            "description": "At 3rd level, as a Free action once per round, you can manifest a Weapon Upgrade for a Melee weapon without needing to spend an Energon Point, as long as the Weapon Upgrade you create is based on an Upgrade with an Availability equal to the Availability of a Weapon you can use Manifest Melee Weapon to create. This Weapon Upgrade lasts until the end of your turn."
+          },
+          {
+            "value": "Plow",
+            "label": "Plow",
+            "description": "You knock over any obstacle in your way. At 6th level, when you make a Ram attack (in your Alt Mode or driving a vehicle with a Ram attack), any movement you make this turn ignores Rough Terrain, and your Ram attack gains Multiple Targets (3). You can use Ram on up to three targets within your Reach at any point in your movement."
+          },
+          {
+            "value": "Duke It Out",
+            "label": "Duke It Out",
+            "description": "Sometimes, the most vulnerable area to target is an enemy's pride. At 10th level, once per combat as long as you haven't used your Standard action this turn, you can challenge a creature of your level or higher to fight you one-on-one as a Free action. If they refuse, you gain an Edge on Skill Tests targeting them until the beginning of your next turn. If they accept, you both immediately make a Melee attack as a Contested Skill Test. The winner deals their attack's effect to the loser."
+          },
+          {
+            "value": "Indomitable",
+            "label": "Indomitable",
+            "description": "You fear nothing. At 17th level, you become immune to the Frightened Condition and attempts to Intimidate you suffer a Snag."
+          },
+          {
+            "value": "Last Stand",
+            "label": "Last Stand",
+            "description": "If this is the end for you, you try to ensure that your enemy, too, shall fall. At 20th level, if you are Defeated in combat, you can first immediately take a full turn, as long as you spend your actions doing everything you can to attack the creature that Defeated you."
+          },
+          {
+            "value": "Diversion",
+            "label": "Diversion",
+            "description": "You put enemies in a lose-lose situation. Roll a Deception, Intimidation, or Persuasion Skill Test against a target's Willpower or Cleverness as a Standard action. On a success, if they attack you on their next turn, they suffer a Snag. If they don't attack you, your allies gain an Edge on attacks that target them. This lasts until the end of the next round."
+          },
+          {
+            "value": "Holo-Projector",
+            "label": "Holo-Projector",
+            "description": "Well-aimed light can trick the eye into believing in images that aren't there. At 3rd level, as a Move action, you can create a holographic image within 20ft of you until the end of your next turn. You gain an Edge on a Deception Skill Test, as long as the target of your Skill Test can see your holographic image and you use it to create a believable but confusing situation, per the GM's discretion."
+          },
+          {
+            "value": "In My Sights",
+            "label": "In My Sights",
+            "description": "At 6th level, when you use the Aim action, instead of gaining ↑ on your attack, you can announce to the target that you're aiming at them. You suffer ↓ on your attack equal to the number of Free actions you spent aiming (maximum ↓3) but your allies gain that amount of ↑ on their attacks or the benefits of Pinpoint."
+          },
+          {
+            "value": "Holographic Doubles",
+            "label": "Holographic Doubles",
+            "description": "At 10th level, as a Standard action, you can create a Holographic copy of yourself adjacent to you. Once activated, you can spend a Free action to create an additional Holographic double, until you run out of unoccupied adjacent spaces. Attacks that target you suffer ↓1 for each Holographic double. One Holographic double disappears whenever you're unsuccessfully attacked, and whenever you roll a Skill Test. Otherwise, they last until the end of the scene."
+          },
+          {
+            "value": "Electro-Disruptor",
+            "label": "Electro-Disruptor",
+            "description": "You scramble the senses of a fellow Cybertronian. At 17th level, you can use a communication device or Limited Communication Kit to hack a bot's brain. As a Standard action outside of Combat, roll a Technology Skill Test against the Willpower or Cleverness of a creature within range of the communication device that you can see. On a success, the target becomes Mesmerized by you or an ally of your choice that they can see for the remainder of the scene."
+          },
+          {
+            "value": "Vanish",
+            "label": "Vanish",
+            "description": "Turning your holo-projector around, you make yourself disappear. At 20th level, you can turn Invisible as a Move action. This lasts until the end of the scene, you successfully attack a target, an enemy successfully attacks you, or you end the effect as a Free action."
+          },
+          {
+            "value": "Unassuming",
+            "label": "Unassuming",
+            "description": "What's not to trust? You gain ↑1 on Deception and Infiltration Skill Tests. Additionally, you're Qualified with all one-handed Limited Weapons."
+          },
+          {
+            "value": "Target Vulnerability",
+            "label": "Target Vulnerability",
+            "description": "You quickly assess the best way to overcome an enemy. At 3rd level, when you Attack with a one-handed weapon, you can also attempt an Alertness Skill Test against a target's Willpower or Cleverness. On a success, your attack deals 1 additional damage."
+          },
+          {
+            "value": "Whisper Campaign",
+            "label": "Whisper Campaign",
+            "description": "The more controversial the statement, the harder you make it seem like you said it. At 6th level, when you attempt a Social-based Skill Test, designate an adjacent creature. If you fail the Skill Test and there are negative consequences for failure, such as a loss of trust, you can try to have the consequences affect the designated creature instead. If the creature resists, roll a Contested Skill Test between your Deception and their Persuasion. You gain an Edge on this roll."
+          },
+          {
+            "value": "Exploit Trust",
+            "label": "Exploit Trust",
+            "description": "It's always the one you least suspect. At 10th level, when you attack a Surprised character, or if you attack a target outside of Combat, you gain an Edge on the attack and deal 1 additional damage. If you've used Target Vulnerability on your target, this additional damage stacks."
+          },
+          {
+            "value": "Opportunist",
+            "label": "Opportunist",
+            "description": "You take advantage of vulnerable enemies. At 17th level, when you successfully attack a Stunned target, you extend the Stun effect by 1 round."
+          },
+          {
+            "value": "Precision",
+            "label": "Precision",
+            "description": "Excellence comes naturally to you. At 20th level, you succeed with a high degree of success on attacks if your result exceeds your target's Defense by 10 or more, instead of when your result doubles the target's Defense."
+          }
+        ]
+      }
+    },
+    {
+      "name": "hangups",
+      "label": "Hang-Ups",
+      "type": "array",
+      "component": {
+        "name": "hangups",
+        "label": "Hang-Ups",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Distressed",
+            "label": "Distressed",
+            "description": "You are often distracted by worries and concerns that may or may not be relevant to the current situation. When making an Alertness Skill Test to gain a better understanding of potential danger to others, take a ↓1."
+          },
+          {
+            "value": "Earthspoiled",
+            "label": "Earthspoiled",
+            "description": "You are excited by and attached to the cornucopia of beautiful treasures the Earth and human culture have to offer you. When exposed to a gorgeous piece of Earth art or culture, your Skill Tests suffer ↓1."
+          },
+          {
+            "value": "Glacial",
+            "label": "Glacial",
+            "description": "Your personality is cold and uncharismatic, and you struggle to connect with others. Many consider you rude or even hostile even when you're not. Take a ↓1 on all Persuasion Skill Tests unless you’re using the Truth Specialty."
+          },
+          {
+            "value": "Idolizer",
+            "label": "Idolizer",
+            "description": "You have something of a hero-worship complex. The hero you cherish and follow might be one of your teammates, or it might be one of the heroes of the many Cybertronian wars. It could even be one of the Primes or even a Titan. Your Willpower Defense is 9 + Smarts."
+          },
+          {
+            "value": "Impulsive",
+            "label": "Impulsive",
+            "description": "You are reckless and rash, taking that shot at the lead Decepticon when your mission is only supposed to be reconnaissance. No matter the circumstances, you never gain the benefits of Surprise. Additionally, take a ↓1 on your first Skill Test after you roll Initiative."
+          },
+          {
+            "value": "Mode Attachment",
+            "label": "Mode Attachment",
+            "description": "You are deeply uncomfortable in one of your Modes. When you choose this Hang-Up, choose either Bot Mode or one of your Alt Modes. When converting into the selected mode, you must make a Technology Skill Test when converting against a DIF equal to 10 + half your level (rounding up). If you fail, you can’t change forms that turn, and the action is lost."
+          },
+          {
+            "value": "Skeptical",
+            "label": "Skeptical",
+            "description": "You are an objective observer, and concepts such as hope and inspiration don't impact you. You gain no benefits when an ally uses Lend Assistance on you. "
+          },
+          {
+            "value": "Subordinate",
+            "label": "Subordinate",
+            "description": "You are most comfortable knowing your specific place in the chain of command, even if it is at the bottom. You often struggle to make your own decisions without receiving orders from a superior. Take a ↓1 on any Skill Test that is not directly related to your mission as stated."
+          },
+          {
+            "value": "Treacherous",
+            "label": "Treacherous",
+            "description": "You are untrustworthy, unreliable, and everyone knows it. You can never use the Lend Assistance action, not because you don't want to, but because no one accepts your help."
+          },
+          {
+            "value": "Vainglorious",
+            "label": "Vainglorious",
+            "description": "You are pompous and self-important, and your reputation and good looks take precedence over being effective (though this does not necessarily mean you are ineffective). On your first turn, after you roll Initiative, you must spend your Standard action delivering a speech to your enemies or preening and chest-thrusting."
+          },
+          {
+            "value": "Violent",
+            "label": "Violent",
+            "description": "You are eager for war and seek to be in the center of conflict. Any Skill Test you take during combat that is not explicitly related to said combat takes a ↓1."
+          },
+          {
+            "value": "Whimsical",
+            "label": "Whimsical",
+            "description": "You don't take anything seriously and like to focus on lighthearted fun and playing tricks on your friends. Whenever you make an Infiltration Skill Test that is not 'just for fun' you take a ↓1."
+          }
+        ]
+      }
+    },
+    {
+      "type": "group",
+      "name": "essences",
+      "label": "Essences",
+      "children": [
+        {
+          "name": "essences.Strength",
+          "id": "essences.strength",
+          "label": "Strength",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 1,
+            "max": 15
+          },
+          "default": 1
+        },
+        {
+          "name": "essences.Speed",
+          "id": "essences.speed",
+          "label": "Speed",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 1,
+            "max": 15
+          },
+          "default": 1
+        },
+        {
+          "name": "essences.Smarts",
+          "id": "essences.smarts",
+          "label": "Smarts",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 1,
+            "max": 15
+          },
+          "default": 1
+        },
+        {
+          "name": "essences.Social",
+          "id": "essences.social",
+          "label": "Social",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": 1,
+            "max": 15
+          },
+          "default": 1
+        }
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Athletics",
+      "id": "skills.athletics",
+      "label": "Athletics",
+      "description": "Stamina, muscle memory, and core power focused on a physical activity, such as climbing, jumping, sprinting, swimming, and most sports. Athletics is a primary combat Skill, used to Attack with most thrown weapons.",
+      "essenceType": "Strength",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Athletics",
+      "label": "Athletics Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Athletics",
+        "id": "specialization.Athletics",
+        "label": "Athletics Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Climbing",
+            "label": "Climbing",
+            "description": "Scaling vertical heights by finding foot and handholds, using lengths of rope, and the like."
+          },
+          {
+            "value": "Running",
+            "label": "Running",
+            "description": "Maintaining long distance runs or making the most out of a Sprint."
+          },
+          {
+            "value": "Sports Activity",
+            "label": "Sports Activity",
+            "description": "Organized play with a narrow spectrum of focused training. Choose a sport or activity not covered by another Skill (like how archery would be covered by Targeting) to gain the benefits of specialization on Strength Skill rolls with that sport."
+          },
+          {
+            "value": "Swimming",
+            "label": "Swimming",
+            "description": "Traversing aquatic situations, from laps to deep dives."
+          },
+          {
+            "value": "Weapon Trait",
+            "label": "Weapon Trait",
+            "description": "All weapons of a specific Trait that uses Athletics to attack."
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Brawn",
+      "id": "skills.brawn",
+      "label": "Brawn",
+      "description": "The measure of your tolerance for prolonged physicality. Unlike a burst of strength, Brawn covers extended, constant physical demands. Many pieces of equipment that are not mounted to a character's Hardpoints have a Brawn requirement. If you don't meet equipment's Brawn requirement, you suffer -1 when using it for each Brawn Skill Rank you don't possess. Also, situations that test your mettle, like surviving a vehicle crash, call for a Brawn Skill Test.",
+      "essenceType": "Strength",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Brawn",
+      "label": "Brawn Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Brawn",
+        "id": "specialization.Brawn",
+        "label": "Brawn Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Endurance",
+            "label": "Endurance",
+            "description": "Tapping into your physical reserves, such as on a forced march or going extended periods without fuel."
+          },
+          {
+            "value": "Force",
+            "label": "Force",
+            "description": "Utilizing strength to lift, push, or drag heavy objects, such as pulling significant levels of weight behind you, most often using rope, ties, or yoke. It is a DIF 10 Brawn Skill Test to drag double your Carrying Weight at half Movement rate for one minute; DIF 20 to triple, 30 to quadruple, etc."
+          },
+          {
+            "value": "Mettle",
+            "label": "Mettle",
+            "description": "When your limits are pushed, how hard you push back, like when you're forced to eject from a crashing spaceship."
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Conditioning",
+      "id": "skills.conditioning",
+      "label": "Conditioning",
+      "description": "Conditioning helps you get tough through training and modifications, as well as learning how to take a hit and the safest ways to recover. For each Skill Point invested in Conditioning, you gain 1 Health.",
+      "essenceType": "Strength",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Intimidation",
+      "id": "skills.intimidation",
+      "label": "Intimidation",
+      "description": "Getting your way using your physical presence to imply the potential for harm, whether in combat or in conversation.",
+      "essenceType": "Strength",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Intimidation",
+      "label": "Intimidation Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Intimidation",
+        "id": "specialization.Intimidation",
+        "label": "Intimidation Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Distract",
+            "label": "Distract",
+            "description": "Pulling another creature's focus away from their task through your physical threats."
+          },
+          {
+            "value": "Frighten",
+            "label": "Frighten",
+            "description": "Causing another being to panic, likely fleeing from your presence or freezing in place."
+          },
+          {
+            "value": "Taunt",
+            "label": "Taunt",
+            "description": "Provoking a target to further interact negatively with you."
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Might",
+      "id": "skills.might",
+      "label": "Might",
+      "description": "Short bursts of raw power. Might is a primary combat Skill, used to Attack in close combat with power and force.",
+      "essenceType": "Strength",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Might",
+      "label": "Might Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Might",
+        "id": "specialization.Might",
+        "label": "Might Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Grappling",
+            "label": "Grappling",
+            "description": "Overpowering an opponent and holding them against their will."
+          },
+          {
+            "value": "Martial Arts",
+            "label": "Martial Arts",
+            "description": "The study and mastery of a power-based Cybertronian martial arts, such as Crystalocution."
+          },
+          {
+            "value": "Weapon Classification",
+            "label": "Weapon Classification",
+            "description": "A weapon Classification that uses Might to attack, such as heavy swords or clubs."
+          },
+          {
+            "value": "Weapon Trait",
+            "label": "Weapon Trait",
+            "description": "All weapons of a specific Trait that uses Might to attack, such as Blunt or Silent."
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Acrobatics",
+      "id": "skills.acrobatics",
+      "label": "Acrobatics",
+      "description": "Balancing across a high wire, carefully moving around a laser grid trap, and performing flips and cartwheels. Any time you're maintaining your equilibrium and balance while in motion, Acrobatics comes into play.",
+      "essenceType": "Speed",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Acrobatics",
+      "label": "Acrobatics Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Acrobatics",
+        "id": "specialization.Acrobatics",
+        "label": "Acrobatics Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Balance",
+            "label": "Balance",
+            "description": "The ability to stay upright and in control of your Movements despite outside stimuli or loose or narrow footing."
+          },
+          {
+            "value": "Coordination",
+            "label": "Coordination",
+            "description": "Using your hands in concert with your body."
+          },
+          {
+            "value": "Escape",
+            "label": "Escape",
+            "description": "Working your way out of restraints by twisting, jerking, and bending."
+          },
+          {
+            "value": "Gymnastics",
+            "label": "Gymnastics",
+            "description": "Moving gracefully, such as with flips, cartwheels, or parkour."
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Driving",
+      "id": "skills.driving",
+      "label": "Driving",
+      "description": "As a natural driver, you can choose to maneuver your Alt Mode through your Driving Skill. Additionally, even Cybertronians can get in the driver's seat and control vehicles, providing you can fit.",
+      "essenceType": "Speed",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Driving",
+      "label": "Driving Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Driving",
+        "id": "specialization.Driving",
+        "label": "Driving Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Air",
+            "label": "Air",
+            "description": "Piloting aerial vehicles and flying Alt Modes."
+          },
+          {
+            "value": "Land",
+            "label": "Land",
+            "description": "Bikes, cars, snowmobiles, tanks, and anything in between that run on wheels, treads, or skids, including most Alt Modes."
+          },
+          {
+            "value": "Sea",
+            "label": "Sea",
+            "description": "Serving as captain or skipper on anything from a sailing ship to an aircraft carrier, as well as seacraft and submarine Alt Modes."
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Finesse",
+      "id": "skills.finesse",
+      "label": "Finesse",
+      "description": "Fast or precise application of dexterity and agility. Finesse is a primary combat Skill, used to Attack in close combat with delicacy and coordination.",
+      "essenceType": "Speed",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Finesse",
+      "label": "Finesse Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Finesse",
+        "id": "specialization.Finesse",
+        "label": "Finesse Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Dexterity",
+            "label": "Dexterity",
+            "description": "Controlling or maneuvering small objects with fine precision."
+          },
+          {
+            "value": "Martial Arts",
+            "label": "Martial Arts",
+            "description": "The study and mastery of agile Cybertronian martial arts, such as Metallikato."
+          },
+          {
+            "value": "Weapon Classification",
+            "label": "Weapon Classification",
+            "description": "A weapon Classification that uses Finesse to attack, such as specific swords or knives."
+          },
+          {
+            "value": "Weapon Trait",
+            "label": "Weapon Trait",
+            "description": "All weapons of a specific Trait that uses Finesse to attack, such as Maneuver or Sharp."
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Infiltration",
+      "id": "skills.infiltration",
+      "label": "Infiltration",
+      "description": "Remaining hidden, moving undetected, and evading capture. Infiltration also includes overcoming physical security measures and tricks of manual dexterity.",
+      "essenceType": "Speed",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Infiltration",
+      "label": "Infiltration Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Infiltration",
+        "id": "specialization.Infiltration",
+        "label": "Infiltration Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Burglary",
+            "label": "Burglary",
+            "description": "Picking locks, disabling traps, and leaving no traces behind."
+          },
+          {
+            "value": "Shadow",
+            "label": "Shadow",
+            "description": "Following a target unseen and utilizing social infiltration, such as blending in with other vehicles or convincingly using temporary modifications such as paint jobs or wraps."
+          },
+          {
+            "value": "Sleight of Hand",
+            "label": "Sleight of Hand",
+            "description": "Utilizing misdirection and manual dexterity to pick pockets, palm objects, plant items, and smuggle things on your person."
+          },
+          {
+            "value": "Stealth",
+            "label": "Stealth",
+            "description": "Moving and acting quietly while avoiding detection."
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Targeting",
+      "id": "skills.targeting",
+      "label": "Targeting",
+      "description": "Firing ranged weapons while judging for distance, arcs, wind-drag, and other factors. Targeting is a primary combat Skill, used to Attack with most ranged weapons.",
+      "essenceType": "Speed",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Targeting",
+      "label": "Targeting Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Targeting",
+        "id": "specialization.Targeting",
+        "label": "Targeting Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Vehicular Weaponry",
+            "label": "Vehicular Weaponry",
+            "description": "Operating as a gunner on a separate vehicle's weapons that aren't your Hardpoint or hand-held weapons."
+          },
+          {
+            "value": "Weapon Classification",
+            "label": "Weapon Classification",
+            "description": "A weapon Classification that uses Targeting to attack, such as Rifles or Grenades."
+          },
+          {
+            "value": "Weapon Trait",
+            "label": "Weapon Trait",
+            "description": "All weapons of a specific Trait that uses Targeting to attack, such as Sniper."
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Alertness",
+      "id": "skills.alertness",
+      "label": "Alertness",
+      "description": "Perceiving the world around you, including threats, clues, and opportunities, and deciphering them into useful information.",
+      "essenceType": "Smarts",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Alertness",
+      "label": "Alertness Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Alertness",
+        "id": "specialization.Alertness",
+        "label": "Alertness Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Insight",
+            "label": "Insight",
+            "description": "Judging another's intentions, detecting patterns in speech or behavior, and determining motivations and truth."
+          },
+          {
+            "value": "Investigation",
+            "label": "Investigation",
+            "description": "Searching an area for specific details, hidden images, items, and other secrets in the scene. Investigation generally takes time — from minutes to hours to comb a location for information."
+          },
+          {
+            "value": "Perception",
+            "label": "Perception",
+            "description": "Taking in a scene around you quickly through natural senses. This is not a deep search for specifics, but rather the collective make-up of information about the present scene."
+          },
+          {
+            "value": "Situational Awareness",
+            "label": "Situational Awareness",
+            "description": "Utilizing trained senses to read a situation for danger, including finding the nearest exits, evaluating the possibility for an ambush (and if so, from where), and other tactical information."
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Culture",
+      "id": "skills.culture",
+      "label": "Culture",
+      "description": "Recalling and understanding information about people and groups, including their history, customs, art styles, cuisines, and other aspects of society. Culture is also learning about languages, including communicating when there is no shared language or quickly picking up enough words to get by.",
+      "essenceType": "Smarts",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Culture",
+      "label": "Culture Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Culture",
+        "id": "specialization.Culture",
+        "label": "Culture Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Classified Intel",
+            "label": "Classified Intel",
+            "description": "Representing a focus on military culture, specifically on secret operations, special forces, enemy dossiers, and other need-to-know intel."
+          },
+          {
+            "value": "History",
+            "label": "History",
+            "description": "Knowing specific notes or moments in the local history, or the history of a specific culture."
+          },
+          {
+            "value": "Linguistics",
+            "label": "Linguistics",
+            "description": "Studying languages, allowing characters to learn useful phrases, understand meaning even if there is no shared language, and decipher archaic and dead languages."
+          },
+          {
+            "value": "Planetary",
+            "label": "Planetary",
+            "description": "Knowledge of a specific planet or location outside of Earth or Cybertron, as well as its general geography, history, and inhabitants."
+          },
+          {
+            "value": "Psychology",
+            "label": "Psychology",
+            "description": "Understanding how the mind works and using that knowledge to predict behavior."
+          },
+          {
+            "value": "Specific Culture",
+            "label": "Specific Culture",
+            "description": "Interest in and study of a particular people."
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Initiative",
+      "id": "skills.initiative",
+      "label": "Initiative",
+      "description": "Readiness for physical confrontation. Initiative is rolled to mark the beginning of combat and to determine turn order. If there's a question of what happens first when two PCs attempt to act simultaneously, use the Initiative Skill if parties can't come to a mutual decision and a Contested roll isn't appropriate.",
+      "essenceType": "Smarts",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Science",
+      "id": "skills.science",
+      "label": "Science",
+      "description": "Understanding and applying the scientific method, how hypotheses work, and the calculation of the logical path to a definitive answer.",
+      "essenceType": "Smarts",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Science",
+      "label": "Science Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Science",
+        "id": "specialization.Science",
+        "label": "Science Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Medicine",
+            "label": "Medicine",
+            "description": "Knowledge of anatomy, diagnosis, care, and treatment. Cybertronians use Science (Medicine) to save organic lives."
+          },
+          {
+            "value": "Specific Subject",
+            "label": "Specific Subject",
+            "description": "Expertise in an explicit discipline of Science, such as Biology, Chemistry, Physics, Zoology, and more."
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Survival",
+      "id": "skills.survival",
+      "label": "Survival",
+      "description": "Getting by in and utilizing wild and dangerous environments. Is that plant poisonous to humans? Does this substance have trace Energon? Did the Decepticons go this way in the forest toward their secret hideout?",
+      "essenceType": "Smarts",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Survival",
+      "label": "Survival Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Survival",
+        "id": "specialization.Survival",
+        "label": "Survival Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Camping",
+            "label": "Camping",
+            "description": "Creating a safe, sheltered location outdoors that is protected from the elements and Threats."
+          },
+          {
+            "value": "Foraging",
+            "label": "Foraging",
+            "description": "Identifying and scavenging Cybertronian food, Energon, and other supplies from the environment."
+          },
+          {
+            "value": "Specific Environment",
+            "label": "Specific Environment",
+            "description": "Prowess in specific climate and terrain, such as Deserts, Forests, or the Arctic."
+          },
+          {
+            "value": "Tracking",
+            "label": "Tracking",
+            "description": "Tracking and following a creature based on signs left behind, from broken twigs to disturbed earth and more."
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Technology",
+      "id": "skills.technology",
+      "label": "Technology",
+      "description": "Innovation, engineering, applied mathematics, and the research, experimentation, design, and use of computers and machinery.",
+      "essenceType": "Smarts",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Technology",
+      "label": "Technology Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Technology",
+        "id": "specialization.Technology",
+        "label": "Technology Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Advanced Technology",
+            "label": "Advanced Technology",
+            "description": "Knowing what to do when faced with unusual and advanced technology, such as high tech equipment found in government science labs, new Cybertronian tech, or even technology from unknown planetary origins."
+          },
+          {
+            "value": "Communications",
+            "label": "Communications",
+            "description": "Experienced with equipment for broadcasting, jamming, unjamming, encryption, and decryption."
+          },
+          {
+            "value": "Computers",
+            "label": "Computers",
+            "description": "Using computer software or hardware for intended purposes or otherwise, including modding, hacking, and more."
+          },
+          {
+            "value": "Engineering",
+            "label": "Engineering",
+            "description": "Working out complex physical problems to create, modify, and destroy machines and objects."
+          },
+          {
+            "value": "Explosives",
+            "label": "Explosives",
+            "description": "Knowing how to create, arm, and disarm explosive devices."
+          },
+          {
+            "value": "Repair",
+            "label": "Repair",
+            "description": "Seeing to the health and well-being of Cybertronians and the upkeep of vehicles."
+          },
+          {
+            "value": "Specific Technology",
+            "label": "Specific Technology",
+            "description": "Expertise in one particular type of technology, such as artificial intelligence, drones, mechanics, robotics, and more."
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Animal Handling",
+      "id": "skills.animal handling",
+      "label": "Animal Handling",
+      "description": "Caring for, training, and otherwise manipulating animal life. For Cybertronians, Animal Handling applies to all animals, native to any planet, including Cybertronian wildlife.",
+      "essenceType": "Social",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Animal Handling",
+      "label": "Animal Handling Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Animal Handling",
+        "id": "specialization.Animal Handling",
+        "label": "Animal Handling Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Calm",
+            "label": "Calm",
+            "description": "Make an aggressive animal comfortable in your presence."
+          },
+          {
+            "value": "Pet",
+            "label": "Pet",
+            "description": "Working with an animal companion, although uncommon, to accomplish tasks in concert and communication."
+          },
+          {
+            "value": "Training",
+            "label": "Training",
+            "description": "Teaching animals behaviors, tricks, or talents through repeated reinforcement. This can be helpful in situations where robotic presence isn't conducive to the mission, but where humans can't be trusted."
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Deception",
+      "id": "skills.deception",
+      "label": "Deception",
+      "description": "Lying through direct falsehood, misdirection, body language, and other methods to conceal the truth.",
+      "essenceType": "Social",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Deception",
+      "label": "Deception Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Deception",
+        "id": "specialization.Deception",
+        "label": "Deception Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Bluffing",
+            "label": "Bluffing",
+            "description": "Telling outright lies without giving away tells."
+          },
+          {
+            "value": "Disguise",
+            "label": "Disguise",
+            "description": "Altering your physical appearance, mannerisms, and voice to pass as someone else."
+          },
+          {
+            "value": "Distraction",
+            "label": "Distraction",
+            "description": "Keeping others' attention on you rather than the world around them through misdirection."
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Performance",
+      "id": "skills.performance",
+      "label": "Performance",
+      "description": "Any form of artistry, talent, or other creative outlet, like dance, singing, comedy, painting, poetry, cooking, and other artistic pursuits.",
+      "essenceType": "Social",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Performance",
+      "label": "Performance Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Performance",
+        "id": "specialization.Performance",
+        "label": "Performance Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Literary Arts",
+            "label": "Literary Arts",
+            "description": "Fiction, drama, poetry, and prose."
+          },
+          {
+            "value": "Performing Arts",
+            "label": "Performing Arts",
+            "description": "Dance, music, and acting."
+          },
+          {
+            "value": "Visual Arts",
+            "label": "Visual Arts",
+            "description": "Architecture, ceramics, drawing, mapmaking, painting, photography, and sculpting."
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Persuasion",
+      "id": "skills.persuasion",
+      "label": "Persuasion",
+      "description": "Convincing others to do or see things from your point of view through conversation and body language.",
+      "essenceType": "Social",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Persuasion",
+      "label": "Persuasion Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Persuasion",
+        "id": "specialization.Persuasion",
+        "label": "Persuasion Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Diplomacy",
+            "label": "Diplomacy",
+            "description": "Interacting socially with others in the fashion acceptable for your current situation."
+          },
+          {
+            "value": "Embellishments",
+            "label": "Embellishments",
+            "description": "The ability to pad the truth with additional information and slight alterations to the facts to make them even more attractive of an option."
+          },
+          {
+            "value": "Flattery",
+            "label": "Flattery",
+            "description": "The ability to use sweet words, friendly descriptions, and potentially sycophantic details to make someone consent to your requests."
+          },
+          {
+            "value": "Truth",
+            "label": "Truth",
+            "description": "Using plain and simple facts to make your point of view the obvious choice to follow."
+          }
+        ]
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "name": "skills.Streetwise",
+      "id": "skills.streetwise",
+      "label": "Streetwise",
+      "description": "Walking the walk and talking the talk in urban environments, knowing where to go, who to talk to, or more importantly who not to.",
+      "essenceType": "Social",
+      "type": "number",
+      "className": "form-control",
+      "validation": {
+        "required": true,
+        "min": 0,
+        "max": 6
+      },
+      "default": 0
+    },
+    {
+      "name": "specialization.Streetwise",
+      "label": "Streetwise Specializations",
+      "type": "array",
+      "component": {
+        "name": "specialization.Streetwise",
+        "id": "specialization.Streetwise",
+        "label": "Streetwise Specializations",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Black Market",
+            "label": "Black Market",
+            "description": "Connecting with and acquiring goods and services outside of traditional means."
+          },
+          {
+            "value": "Crime",
+            "label": "Crime",
+            "description": "Using knowledge and lingo to perceive and identify crime and criminal organizations."
+          },
+          {
+            "value": "Gossip",
+            "label": "Gossip",
+            "description": "The ability to seed the street-level populace with a topic and listen for what kind of rumors, lies, and possible clues come back about it over a short amount of time."
+          },
+          {
+            "value": "Transportation",
+            "label": "Transportation",
+            "description": "Includes everything from avoiding traffic to the best smuggling routes and even escaping an area or city without being noticed."
+          }
+        ]
+      }
+    }
+  ]
+}

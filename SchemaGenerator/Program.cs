@@ -12,6 +12,7 @@
             EverydayHeroes.GenerateFormSchema.InitializeSchema();
             Ghostbusters.GenerateFormSchema.InitializeSchema();
             Marvel.GenerateFormSchema.InitializeSchema();
+            Transformers.GenerateFormSchema.InitializeSchema();
             VampireTheMasquerade.GenerateFormSchema.InitializeSchema();
 
             Console.Read();

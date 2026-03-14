@@ -2,22 +2,23 @@
   {
     "name": "Manipulator",
     "description": "Blurring the line between perception and reality.",
+    "role": "Analyst",
     "bonusadjustments": [
       {
-        "type": "essence",
+        "type": "essences",
         "name": "Social",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "perk",
+        "type": "perks",
         "value": "Diversion"
       }
     ],
     "userchoice": [
       {
-        "type": "skillSpecialization",
+        "type": "specialization",
         "choices": [
           "Deception",
           "Persuasion",
@@ -31,7 +32,7 @@
         "value": 3,
         "bonuscharacteristics": [
           {
-            "type": "perk",
+            "type": "perks",
             "value": "Holo-Projector"
           }
         ]
@@ -40,7 +41,7 @@
         "value": 6,
         "bonuscharacteristics": [
           {
-            "type": "perk",
+            "type": "perks",
             "value": "In My Sights"
           }
         ]
@@ -49,14 +50,14 @@
         "value": 10,
         "bonusadjustments": [
           {
-            "type": "essence",
+            "type": "essences",
             "name": "Social",
             "value": 1
           }
         ],
         "bonuscharacteristics": [
           {
-            "type": "perk",
+            "type": "perks",
             "value": "Holographic Doubles"
           }
         ]
@@ -65,17 +66,16 @@
         "value": 17,
         "bonuscharacteristics": [
           {
-            "type": "perk",
+            "type": "perks",
             "value": "Electro-Disruptor"
           }
         ]
       },
-
       {
         "value": 20,
         "bonuscharacteristics": [
           {
-            "type": "perk",
+            "type": "perks",
             "value": "Vanish"
           }
         ]
@@ -85,22 +85,23 @@
   {
     "name": "Spec Ops",
     "description": "A special operative who takes on deep cover missions.",
+    "role":"Analyst",
     "bonusadjustments": [
       {
-        "type": "essence",
+        "type": "essences",
         "name": "Social",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "perk",
+        "type": "perks",
         "value": "Unassuming"
       }
     ],
     "userchoice": [
       {
-        "type": "skillSpecialization",
+        "type": "specialization",
         "choices": [
           "Deception",
           "Persuasion",
@@ -114,7 +115,7 @@
         "value": 3,
         "bonuscharacteristics": [
           {
-            "type": "perk",
+            "type": "perks",
             "value": "Target Vulnerability"
           }
         ]
@@ -123,7 +124,7 @@
         "value": 6,
         "bonuscharacteristics": [
           {
-            "type": "perk",
+            "type": "perks",
             "value": "Whisper Campaign"
           }
         ]
@@ -132,14 +133,14 @@
         "value": 10,
         "bonusadjustments": [
           {
-            "type": "essence",
+            "type": "essences",
             "name": "Social",
             "value": 1
           }
         ],
         "bonuscharacteristics": [
           {
-            "type": "perk",
+            "type": "perks",
             "value": "Exploit Trust"
           }
         ]
@@ -148,18 +149,1035 @@
         "value": 17,
         "bonuscharacteristics": [
           {
-            "type": "perk",
+            "type": "perks",
             "value": "Opportunist"
           }
         ]
       },
-
       {
         "value": 20,
         "bonuscharacteristics": [
           {
-            "type": "perk",
+            "type": "perks",
             "value": "Precision"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ambassador",
+    "description": "A diplomat who believes peace is always worth pursuing, even on the battlefield.",
+    "role": "Field Commander",
+    "bonusadjustments": [
+      {
+        "type": "essences",
+        "name": "Social",
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "perks",
+        "value": "Bend A Knee or Stand Tall"
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "specialization",
+        "choices": [
+          "Deception",
+          "Performance",
+          "Persuasion"
+        ],
+        "count": 1
+      }
+    ],
+    "levels": [
+      {
+        "value": 3,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Bah-Weep-Graaaaagnah Wheep Ni Ni Bong"
+          }
+        ]
+      },
+      {
+        "value": 6,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Minimize Casualties"
+          }
+        ]
+      },
+      {
+        "value": 10,
+        "bonusadjustments": [
+          {
+            "type": "essences",
+            "name": "Social",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "The Right Of All Sentient Beings"
+          }
+        ]
+      },
+      {
+        "value": 17,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Not On My Watch"
+          }
+        ]
+      },
+      {
+        "value": 20,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Martyr"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Strategist",
+    "description": "A tactical mastermind who coordinates allies to maximum effect.",
+    "role":"Field Commander",
+    "bonusadjustments": [
+      {
+        "type": "essences",
+        "name": "Smarts",
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "perks",
+        "value": "Strategize"
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "specialization",
+        "choices": [
+          "Alertness",
+          "Culture",
+          "Survival"
+        ],
+        "count": 1
+      }
+    ],
+    "levels": [
+      {
+        "value": 3,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Follow My Lead"
+          }
+        ]
+      },
+      {
+        "value": 6,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Watchful Eyes"
+          }
+        ]
+      },
+      {
+        "value": 10,
+        "bonusadjustments": [
+          {
+            "type": "essences",
+            "name": "Smarts",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Flexible Directives"
+          }
+        ]
+      },
+      {
+        "value": 17,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Lock Down"
+          }
+        ]
+      },
+      {
+        "value": 20,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Stronger Together"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Gunslinger",
+    "description": "A quick-draw artist who thrives in close-range gunfights.",
+    "role": "Gunner",
+    "bonusadjustments": [
+      {
+        "type": "essences",
+        "name": "Speed",
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "perks",
+        "value": "Quick Draw"
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "specialization",
+        "choices": [
+          "Acrobatics",
+          "Initiative",
+          "Targeting"
+        ],
+        "count": 1
+      }
+    ],
+    "levels": [
+      {
+        "value": 3,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Straight Shooter"
+          }
+        ]
+      },
+      {
+        "value": 6,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Gun Runner"
+          }
+        ]
+      },
+      {
+        "value": 10,
+        "bonusadjustments": [
+          {
+            "type": "essences",
+            "name": "Speed",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Same Principle"
+          }
+        ]
+      },
+      {
+        "value": 17,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Shoot Out"
+          }
+        ]
+      },
+      {
+        "value": 20,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Bullet Barrage"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sharpshooter",
+    "description": "A patient marksman who takes precise, calculated shots from a distance.",
+    "role": "Gunner",
+    "bonusadjustments": [
+      {
+        "type": "essences",
+        "name": "Smarts",
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "perks",
+        "value": "Long Shot"
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "specialization",
+        "choices": [
+          "Infiltration",
+          "Initiative"
+        ],
+        "count": 1
+      }
+    ],
+    "levels": [
+      {
+        "value": 3,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Calculated Attack"
+          }
+        ]
+      },
+      {
+        "value": 6,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Piercing Shot"
+          }
+        ]
+      },
+      {
+        "value": 10,
+        "bonusadjustments": [
+          {
+            "type": "essences",
+            "name": "Smarts",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Specialty Flexibility"
+          }
+        ]
+      },
+      {
+        "value": 17,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Snipe From The Hip"
+          }
+        ]
+      },
+      {
+        "value": 20,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Drilling Shot"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Microlinked",
+    "description": "A Modemaster bonded with a Mini-Con ally who docks to their frame.",
+    "role": "Modemaster",
+    "bonusadjustments": [
+      {
+        "type": "essences",
+        "name": "Social",
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "perks",
+        "value": "Mini-Con Ally"
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "specialization",
+        "choices": [
+          "Alertness",
+          "Brawn",
+          "Conditioning",
+          "Deception",
+          "Driving",
+          "Finesse",
+          "Infiltration",
+          "Initiative",
+          "Intimidation",
+          "Might",
+          "Performance",
+          "Persuasion",
+          "Science",
+          "Streetwise",
+          "Survival",
+          "Targeting",
+          "Technology"
+        ],
+        "count": 1
+      }
+    ],
+    "levels": [
+      {
+        "value": 3,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Kitted Purpose"
+          }
+        ]
+      },
+      {
+        "value": 6,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Ambush Deployment"
+          }
+        ]
+      },
+      {
+        "value": 10,
+        "bonusadjustments": [
+          {
+            "type": "essences",
+            "name": "Social",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Multi-Purpose"
+          }
+        ]
+      },
+      {
+        "value": 17,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Reinforced Bond"
+          }
+        ]
+      },
+      {
+        "value": 20,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Emergency Deployment and Docking"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Triple Changer",
+    "description": "A Modemaster who gains an additional Alt Mode, becoming one of the rare triple-changers.",
+    "role": "Modemaster",
+    "bonusadjustments": [
+      {
+        "type": "essences",
+        "name": "Strength",
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "perks",
+        "value": "Everything In Threes"
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "specialization",
+        "choices": [
+          "Alertness",
+          "Brawn",
+          "Conditioning",
+          "Deception",
+          "Driving",
+          "Finesse",
+          "Infiltration",
+          "Initiative",
+          "Intimidation",
+          "Might",
+          "Performance",
+          "Persuasion",
+          "Science",
+          "Streetwise",
+          "Survival",
+          "Targeting",
+          "Technology"
+        ],
+        "count": 1
+      }
+    ],
+    "levels": [
+      {
+        "value": 3,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Unexpected Alternative"
+          }
+        ]
+      },
+      {
+        "value": 6,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Shape Shifter"
+          }
+        ]
+      },
+      {
+        "value": 10,
+        "bonusadjustments": [
+          {
+            "type": "essences",
+            "name": "Strength",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Quick Change III"
+          }
+        ]
+      },
+      {
+        "value": 17,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Third Dimension"
+          }
+        ]
+      },
+      {
+        "value": 20,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Mercurial Nature"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Medical Officer",
+    "description": "The hardest fight on any battlefield is the fight to keep the injured functioning.",
+    "role": "Scientist",
+    "bonusadjustments": [
+      {
+        "type": "essences",
+        "name": "Smarts",
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "perks",
+        "value": "Patch Up"
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "specialization",
+        "choices": [
+          "Science",
+          "Technology"
+        ],
+        "count": 1
+      }
+    ],
+    "levels": [
+      {
+        "value": 3,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Sirens Blaring"
+          }
+        ]
+      },
+      {
+        "value": 6,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Preventative Measures"
+          }
+        ]
+      },
+      {
+        "value": 10,
+        "bonusadjustments": [
+          {
+            "type": "essences",
+            "name": "Smarts",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Rocket Surgery"
+          }
+        ]
+      },
+      {
+        "value": 17,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Intensive"
+          }
+        ]
+      },
+      {
+        "value": 20,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Miracle Worker"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Gadgeteer",
+    "description": "The right tool for the job is always within reach when you make your own tools.",
+    "role": "Scientist",
+    "bonusadjustments": [
+      {
+        "type": "essences",
+        "name": "Smarts",
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "perks",
+        "value": "Technologist"
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "specialization",
+        "choices": [
+          "Technology"
+        ],
+        "count": 1
+      }
+    ],
+    "levels": [
+      {
+        "value": 3,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Construct"
+          }
+        ]
+      },
+      {
+        "value": 6,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Deconstruct"
+          }
+        ]
+      },
+      {
+        "value": 10,
+        "bonusadjustments": [
+          {
+            "type": "essences",
+            "name": "Smarts",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Training Through Familiarity"
+          }
+        ]
+      },
+      {
+        "value": 17,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Siphon"
+          }
+        ]
+      },
+      {
+        "value": 20,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Perpetual Power Source"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Outrider",
+    "description": "Outriders get in and get out of situations faster than anyone, and ride circles around enemies they engage with.",
+    "role": "Scout",
+    "bonusadjustments": [
+      {
+        "type": "essences",
+        "name": "Speed",
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "perks",
+        "value": "Burn Rubber"
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "specialization",
+        "choices": [
+          "Driving",
+          "Initiative"
+        ],
+        "count": 1
+      }
+    ],
+    "levels": [
+      {
+        "value": 3,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Barrel Through"
+          }
+        ]
+      },
+      {
+        "value": 6,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Scramble"
+          }
+        ]
+      },
+      {
+        "value": 10,
+        "bonusadjustments": [
+          {
+            "type": "essences",
+            "name": "Speed",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Roll With It"
+          }
+        ]
+      },
+      {
+        "value": 17,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Caution To The Wind"
+          }
+        ]
+      },
+      {
+        "value": 20,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Dust Up"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Prowler",
+    "description": "Prowlers take the opportunity to attack their enemies while their backs are turned.",
+    "role": "Scout",
+    "bonusadjustments": [
+      {
+        "type": "essences",
+        "name": "Speed",
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "perks",
+        "value": "Stunning Surprise"
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "specialization",
+        "choices": [
+          "Finesse",
+          "Infiltration",
+          "Targeting"
+        ],
+        "count": 1
+      }
+    ],
+    "levels": [
+      {
+        "value": 3,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Pop Out"
+          }
+        ]
+      },
+      {
+        "value": 6,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Silent As A Shadow"
+          }
+        ]
+      },
+      {
+        "value": 10,
+        "bonusadjustments": [
+          {
+            "type": "essences",
+            "name": "Speed",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Infiltrator"
+          }
+        ]
+      },
+      {
+        "value": 17,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Telltale Sign"
+          }
+        ]
+      },
+      {
+        "value": 20,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Knock Down, Drag Out"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sentinel",
+    "description": "A skilled combatant focused on self-defense and waiting for an opening.",
+    "role": "Warrior",
+    "bonusadjustments": [
+      {
+        "type": "essences",
+        "name": "Speed",
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "perks",
+        "value": "Stalwart Defense"
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "specialization",
+        "choices": [
+          "Finesse",
+          "Initiative"
+        ],
+        "count": 1
+      }
+    ],
+    "levels": [
+      {
+        "value": 3,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Wait For An Opening"
+          }
+        ]
+      },
+      {
+        "value": 6,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Disarming Defenses"
+          }
+        ]
+      },
+      {
+        "value": 10,
+        "bonusadjustments": [
+          {
+            "type": "essences",
+            "name": "Speed",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Stand Firm"
+          }
+        ]
+      },
+      {
+        "value": 17,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Sword and Board"
+          }
+        ]
+      },
+      {
+        "value": 20,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Make An Opening"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Wrecker",
+    "description": "A Warrior who spends so much time in melee, they can tell one enemy from another by the smell of their gob exhaust.",
+    "role": "Warrior",
+    "bonusadjustments": [
+      {
+        "type": "essences",
+        "name": "Strength",
+        "value": 1
+      }
+    ],
+    "bonuscharacteristics": [
+      {
+        "type": "perks",
+        "value": "Warrior Rush"
+      }
+    ],
+    "userchoice": [
+      {
+        "type": "specialization",
+        "choices": [
+          "Brawn",
+          "Conditioning",
+          "Might"
+        ],
+        "count": 1
+      }
+    ],
+    "levels": [
+      {
+        "value": 3,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Manifest Enhancement"
+          }
+        ]
+      },
+      {
+        "value": 6,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Plow"
+          }
+        ]
+      },
+      {
+        "value": 10,
+        "bonusadjustments": [
+          {
+            "type": "essences",
+            "name": "Strength",
+            "value": 1
+          }
+        ],
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Duke It Out"
+          }
+        ]
+      },
+      {
+        "value": 17,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Indomitable"
+          }
+        ]
+      },
+      {
+        "value": 20,
+        "bonuscharacteristics": [
+          {
+            "type": "perks",
+            "value": "Last Stand"
           }
         ]
       }

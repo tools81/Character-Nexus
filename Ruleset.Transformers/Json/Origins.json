@@ -7,14 +7,14 @@
     "benefitdescription": "You have friends in high places. You have friends in low places, too. Whether they are Cybertronians, Earthlings, or some other alien peoples, you make friends wherever you go. You can spend an Energon Point to declare that you have a previously positive relationship with an NPC. This can be an enemy. Although this is not likely to change their objectives, they may still go easy on you or secretly help you with one of your goals.",
     "bonusadjustments": [
       {
-        "type": "essence",
+        "type": "essences",
         "name": "Social",
         "value": 1
       }
     ],
     "userchoice": [
       {
-        "type": "skill",
+        "type": "skills",
         "choices": [
           "Persuasion",
           "Streetwise"
@@ -30,7 +30,7 @@
     "altsize": "Long",
     "altcrew": 2,
     "altfirepoints": 2,
-    "altattack": "Ram",
+    "altattack": 1,
     "languages": "Cybertronian, Adopted Earth language, plus one additional language for every 3 points of Social you possess."
   },
   {
@@ -41,14 +41,14 @@
     "benefitdescription": "Once per scene, after Moving in your Alt Mode, you can Move an additional 10ft Ground Movement. If you do, you can also make a single attack as a Free action with the benefits of Surprise, even if this isn't the first turn of Combat.",
     "bonusadjustments": [
       {
-        "type": "essence",
+        "type": "essences",
         "name": "Strength",
         "value": 1
       }
     ],
     "userchoice": [
       {
-        "type": "skill",
+        "type": "skills",
         "choices": [
           "Athletics",
           "Might"
@@ -63,7 +63,7 @@
     "altsize": "Common or Long",
     "altcrew": 2,
     "altfirepoints": 2,
-    "altattack": "Ram",
+    "altattack": 1,
     "languages": "Cybertronian, Adopted Earth language, plus one additional language for every 3 points of Smarts you possess."
   },
   {
@@ -74,14 +74,14 @@
     "benefitdescription": "You gain a +2 bonus to Evasion and can defend with Evasion even if you're unaware of an attack.",
     "bonusadjustments": [
       {
-        "type": "essence",
+        "type": "essences",
         "name": "Speed",
         "value": 1
       }
     ],
     "userchoice": [
       {
-        "type": "skill",
+        "type": "skills",
         "choices": [
           "Finesse",
           "Infiltration",
@@ -98,7 +98,7 @@
     "altsize": "Common",
     "altcrew": 1,
     "altfirepoints": 1,
-    "altattack": "Ram",
+    "altattack": 1,
     "languages": "Cybertronian, Adopted Earth language, plus one additional language for every 3 points of Social you possess."
   },
   {
@@ -109,14 +109,14 @@
     "benefitdescription": "Cybertronians, like humans, often conflate size with authority. Choose a Social Skill. You gain ↑1 on Skill Tests with that Skill if the target is smaller than you.",
     "bonusadjustments": [
       {
-        "type": "essence",
+        "type": "essences",
         "name": "Strength",
         "value": 1
       }
     ],
     "userchoice": [
       {
-        "type": "skill",
+        "type": "skills",
         "choices": [
           "Brawn",
           "Might"
@@ -131,7 +131,7 @@
     "altsize": "Extended",
     "altcrew": 6,
     "altfirepoints": 4,
-    "altattack": "Ram",
+    "altattack": 1,
     "languages": "Cybertronian, Adopted Earth language, plus one additional language for every 3 points of Smarts you possess."
   },
   {
@@ -142,14 +142,14 @@
     "benefitdescription": "You never suffer the negative effects of Rough Terrain, and on any turn in which you end your move in Rough Terrain, you are considered to be in Cover until the beginning of your next turn.",
     "bonusadjustments": [
       {
-        "type": "essence",
+        "type": "essences",
         "name": "Smarts",
         "value": 1
       }
     ],
     "userchoice": [
       {
-        "type": "skill",
+        "type": "skills",
         "choices": [
           "Alertness",
           "Survival"
@@ -164,7 +164,7 @@
     "altsize": "Common or Long",
     "altcrew": 2,
     "altfirepoints": 2,
-    "altattack": "Ram",
+    "altattack": 1,
     "languages": "Cybertronian, Adopted Earth language, plus one additional language for every 3 points of Smarts you possess."
   },
   {
@@ -175,14 +175,14 @@
     "benefitdescription": "You have an additional Reinforced Integrated Weapon Hardpoint. Additionally, at 1st level you are trained to use Machine Guns, at 7th level you are trained to use Heavy Machine Guns and Rocket Launchers, and at 14th level you are trained to use Artillery Cannons and Missiles.<br />You suffer a Snag on Skill Tests to blend in.",
     "bonusadjustments": [
       {
-        "type": "essence",
+        "type": "essences",
         "name": "Speed",
         "value": 1
       }
     ],
     "userchoice": [
       {
-        "type": "skill",
+        "type": "skills",
         "choices": [
           "Initiative",
           "Targeting"
@@ -197,7 +197,7 @@
     "altsize": "Long",
     "altcrew": 2,
     "altfirepoints": 2,
-    "altattack": "Ram",
+    "altattack": 1,
     "languages": "Cybertronian, Adopted Earth language, plus one additional language for every 3 points of Smarts you possess."
   },
   {
@@ -208,14 +208,14 @@
     "benefitdescription": "When flying in Bot Mode, you don't have to move on your turn.",
     "bonusadjustments": [
       {
-        "type": "essence",
+        "type": "essences",
         "name": "Speed",
         "value": 1
       }
     ],
     "userchoice": [
       {
-        "type": "skill",
+        "type": "skills",
         "choices": [
           "Acrobatics",
           "Driving"
@@ -230,7 +230,7 @@
     "altsize": "Long",
     "altcrew": 2,
     "altfirepoints": 0,
-    "altattack": "Flyby",
+    "altattack": 1,
     "languages": "Cybertronian, Adopted Earth language, plus one additional language for every 3 points of Smarts you possess."
   },
   {
@@ -241,14 +241,14 @@
     "benefitdescription": "You have two additional Internal Hardpoints (Non-Weapon) and may choose to begin play with two attached options from the Support Equipment list. See Chapter 8: Equipment for the list of Support Equipment.",
     "bonusadjustments": [
       {
-        "type": "essence",
+        "type": "essences",
         "name": "Smarts",
         "value": 1
       }
     ],
     "userchoice": [
       {
-        "type": "skill",
+        "type": "skills",
         "choices": [
           "Science",
           "Technology"
@@ -263,7 +263,7 @@
     "altsize": "Long",
     "altcrew": 2,
     "altfirepoints": 2,
-    "altattack": "Ram",
+    "altattack": 1,
     "languages": "Cybertronian, Adopted Earth language, plus one additional language for every 2 points of Smarts you possess."
   }
 ]

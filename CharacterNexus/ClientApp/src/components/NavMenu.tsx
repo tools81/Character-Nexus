@@ -21,7 +21,12 @@ export default class NavMenu extends React.PureComponent<{}, { isOpen: boolean }
                     height="30"
                     className="logo"
                   />{' '}
-                  Character Nexus
+                  <img
+                    alt="Character Nexus"
+                    src="/Title.png"
+                    height="30"
+                    className="title"
+                  />
                 </Navbar.Brand>
               </Container>
             </Navbar>

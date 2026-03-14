@@ -46,7 +46,7 @@
   },
   {
     "name": "Postmortem Interrogation",
-    "description": "Downed bots have tales to tell. At 12th level, once per scene, you can extract information from a Defeated Cybertronian. Roll a Science or Technology Skill Test against a DIF equal to the target’s Level or Threat Level. On a success, you can ask the GM a question. The GM must answer the question truthfully, but from the Defeated Cybertronian's perspective. You can ask another question for every 5 by which your results exceed the DIF.",
+    "description": "Downed bots have tales to tell. At 12th level, once per scene, you can extract information from a Defeated Cybertronian. Roll a Science or Technology Skill Test against a DIF equal to the target's Level or Threat Level. On a success, you can ask the GM a question. The GM must answer the question truthfully, but from the Defeated Cybertronian's perspective. You can ask another question for every 5 by which your results exceed the DIF.",
     "type": "Role"
   },
   {
@@ -70,8 +70,733 @@
     "type": "Role"
   },
   {
+    "name": "Never Forsaken",
+    "description": "You steel yourself to save your team at any cost. When you are Defeated, you can spend an Energon Point to stay conscious with 1 Health, but you become Wounded. While Wounded, you lose 1 Health at the beginning of each of your turns. You stabilize if you receive any healing.",
+    "type": "Cybertronian"
+  },
+  {
+    "name": "Issue Command",
+    "description": "Many of your allies trust your commands more than their own instincts. As a Move action, you can issue a command, granting allies who follow your command ↑1 to a Skill Test or +1 bonus to a Defense based on certain circumstances. You set the terms and the bonus allies receive. This bonus lasts until the beginning of your next turn.",
+    "type": "Role"
+  },
+  {
+    "name": "Prepare for War",
+    "description": "If you want peace, you need to be ready to fight for it. When you roll for Initiative and you are not Surprised, you gain an Edge on your Initiative Skill Test.",
+    "type": "Role"
+  },
+  {
+    "name": "Irrefutable Order",
+    "description": "Your commands are not suggestions. At 2nd level, when you use Issue Command, allies who do not follow your command suffer ↓1 on all Skill Tests until the beginning of your next turn.",
+    "type": "Role"
+  },
+  {
+    "name": "Synch Up",
+    "description": "Your team moves as one. At 5th level, once per combat as a Move action, choose a number of allies up to your Social score. Until the beginning of your next turn, those allies can use your Initiative result instead of their own when determining turn order.",
+    "type": "Role"
+  },
+  {
+    "name": "Stoic",
+    "description": "You cannot be shaken. At 7th level, you become Immune to the Frightened condition and Resistant to Intimidation Skill Tests.",
+    "type": "Role"
+  },
+  {
+    "name": "Battle Scan",
+    "description": "You survey the field and immediately see what needs to be done. At 9th level, at the start of each combat, you can make a free Alertness Skill Test. On a success, you gain one of the following benefits of your choice: learn one enemy's current Health, learn one enemy's highest Defense score, or grant one ally ↑1 on their first attack this combat.",
+    "type": "Role"
+  },
+  {
+    "name": "Hardened",
+    "description": "Years of command have made you resilient. At 12th level, you gain +1 Health and become trained in Restricted Armor Upgrades.",
+    "type": "Role"
+  },
+  {
+    "name": "Let Cool Heads Prevail",
+    "description": "You know when to press and when to hold. At 13th level, once per combat as a Free action, you can end one of the following conditions affecting an ally within 30ft: Frightened, Stunned, or Rattled.",
+    "type": "Role"
+  },
+  {
+    "name": "The First Rule Of Soldiering",
+    "description": "Don't get shot. At 14th level, once per combat when an attack targets an ally within 30ft that you can see, you can use a Contingency action to impose ↓2 on that attack.",
+    "type": "Role"
+  },
+  {
+    "name": "Complex Command",
+    "description": "Your commands contain layers of instruction your team has learned to parse instantly. At 15th level, when you use Issue Command, you can set two terms instead of one. Allies who follow both terms gain the full benefit; allies who follow only one term gain ↑1 or +1 to a Defense (your choice).",
+    "type": "Role"
+  },
+  {
+    "name": "Stand Together",
+    "description": "Your presence on the battlefield inspires those around you to push past their limits. At 18th level, once per combat as a Standard action, allies within 30ft who can hear you each gain 2 Temporary Health and ↑1 on all Skill Tests until the beginning of your next turn.",
+    "type": "Role"
+  },
+  {
+    "name": "Bend A Knee or Stand Tall",
+    "description": "You open negotiations from a position of strength. When you make a Persuasion Skill Test to prevent combat or end a confrontation peacefully, you gain ↑1. Additionally, when you succeed on such a test, enemies who agreed to stand down cannot attack for the remainder of the scene unless attacked first.",
+    "type": "Focus"
+  },
+  {
+    "name": "Bah-Weep-Graaaaagnah Wheep Ni Ni Bong",
+    "description": "The universal greeting. At 3rd level, once per scene, you can attempt to address any creature regardless of language barriers. Make a Persuasion Skill Test against the creature's Willpower or Cleverness. On a success, the creature understands your intent and you understand its response, even without a shared language.",
+    "type": "Focus"
+  },
+  {
+    "name": "Minimize Casualties",
+    "description": "You take steps to protect non-combatants and limit collateral damage. At 6th level, once per combat, you can issue a command that designates a protected zone or individual. Allies who comply gain ↑1 on attacks, while enemies within the zone suffer ↓1 on attacks targeting civilians or non-combatants.",
+    "type": "Focus"
+  },
+  {
+    "name": "The Right Of All Sentient Beings",
+    "description": "You believe deeply in freedom for all. At 10th level, once per scene, you can spend an Energon Point to grant an ally who is Charmed, Mesmerized, or otherwise mentally controlled an immediate Skill Test to end that condition, with an Edge.",
+    "type": "Focus"
+  },
+  {
+    "name": "Not On My Watch",
+    "description": "You place yourself between danger and those you protect. At 17th level, once per combat when an ally within 30ft would be reduced to 0 Health, you can use a Contingency action to move up to your Movement toward that ally and take the damage instead.",
+    "type": "Focus"
+  },
+  {
+    "name": "Martyr",
+    "description": "You are willing to pay the ultimate price for your cause. At 20th level, if you are Defeated, choose one of the following effects: all allies within 60ft gain ↑2 on all Skill Tests until the end of the scene, or all enemies within 60ft suffer ↓2 on all Skill Tests until the end of the scene.",
+    "type": "Focus"
+  },
+  {
+    "name": "Strategize",
+    "description": "You analyze the battlefield to find the optimal approach. Once per scene before rolling Initiative, you can make an Alertness or Smarts-based Skill Test against DIF 10. On a success, choose one ally: they act first in the initiative order this combat.",
+    "type": "Focus"
+  },
+  {
+    "name": "Follow My Lead",
+    "description": "Your allies trust your instincts completely. At 3rd level, when you use Issue Command, allies who follow your command also gain the benefits of your Prepare for War perk on their next Initiative roll.",
+    "type": "Focus"
+  },
+  {
+    "name": "Watchful Eyes",
+    "description": "You maintain situational awareness for your entire team. At 6th level, you and allies within 30ft cannot be Surprised as long as you are conscious.",
+    "type": "Focus"
+  },
+  {
+    "name": "Flexible Directives",
+    "description": "Your commands adapt to changing circumstances. At 10th level, you can change the terms of an active Issue Command as a Free action once per turn.",
+    "type": "Focus"
+  },
+  {
+    "name": "Lock Down",
+    "description": "You restrict enemy movement with tactical precision. At 17th level, when you use Issue Command, you can include a directive to mark one enemy. Allies who comply with the command gain ↑1 on attacks against the marked enemy and can use a Contingency action to attack them.",
+    "type": "Focus"
+  },
+  {
+    "name": "Stronger Together",
+    "description": "Your team is greater than the sum of its parts. At 20th level, allies within 30ft who follow your Issue Commands deal 1 additional damage on successful attacks.",
+    "type": "Focus"
+  },
+  {
+    "name": "Imprompturret",
+    "description": "You can turn yourself into a makeshift weapons platform. As a Standard action, you can enter a Turret Stance. While in Turret Stance, you cannot move, but you gain ↑1 on all ranged attacks and ignore the first range penalty on your attacks. You can exit Turret Stance at the start of your turn as a Free action.",
+    "type": "Cybertronian"
+  },
+  {
+    "name": "Armament",
+    "description": "You keep your weapons ready at all times. You are never considered unarmed and can draw or stow a weapon as part of any action without spending additional actions. Additionally, you can use a Free action to switch between two weapons you are holding.",
+    "type": "Role"
+  },
+  {
+    "name": "Pistol Whip",
+    "description": "You know how to use a gun as a bludgeon when the situation calls for it. You can make melee attacks with your ranged weapons using the Might Skill. These attacks deal 1 Blunt damage on a hit.",
+    "type": "Role"
+  },
+  {
+    "name": "Rapid Reload",
+    "description": "Reloading is a reflex, not a deliberate act. Reloading a weapon costs a Free action instead of a Move or Standard action for you.",
+    "type": "Role"
+  },
+  {
+    "name": "Covering Fire",
+    "description": "You lay down suppressing fire to protect your allies. At 2nd level, as a Standard action, make a ranged attack against a target. Whether or not you hit, until the beginning of your next turn, that target suffers ↓1 on any Skill Test targeting a creature other than you.",
+    "type": "Role"
+  },
+  {
+    "name": "Nowhere's Safe",
+    "description": "No cover is good enough against you. At 5th level, when an enemy benefits from Cover, reduce the Defense bonus they gain from Cover by 1 (minimum 0).",
+    "type": "Role"
+  },
+  {
+    "name": "Bang Bang",
+    "description": "More shots, more chances to hit. At 7th level, once per turn when you make a ranged attack and miss, you can spend 1 Energon Point to immediately make another ranged attack against the same target.",
+    "type": "Role"
+  },
+  {
+    "name": "Worth A Shot",
+    "description": "Even long odds don't stop you from trying. At 9th level, once per combat, you can make a ranged attack against a target at double your weapon's maximum range. This attack suffers ↓1.",
+    "type": "Role"
+  },
+  {
+    "name": "Scratch Resistant",
+    "description": "You've learned to keep moving to avoid the worst hits. At 12th level, when you take damage from a ranged attack, you can use a Contingency action to move up to 10ft. This movement does not provoke opportunity attacks.",
+    "type": "Role"
+  },
+  {
+    "name": "Absolutely Nowhere's Safe",
+    "description": "At 13th level, your Nowhere's Safe perk now reduces Cover Defense bonuses by 2 (minimum 0) and you can make ranged attacks against targets in Full Cover as long as you know their location.",
+    "type": "Role"
+  },
+  {
+    "name": "Worth Another Shot",
+    "description": "At 14th level, once per combat, you can make two ranged attacks against a target at double your weapon's maximum range. The attacks suffer ↓1. Additionally, your Worth A Shot uses per combat increase to two.",
+    "type": "Role"
+  },
+  {
+    "name": "Hard Target",
+    "description": "You're difficult to pin down at range. At 16th level, ranged attacks against you suffer ↓1 when you moved at least 10ft during your last turn.",
+    "type": "Role"
+  },
+  {
+    "name": "Bang Bang Bang",
+    "description": "At 18th level, once per turn when you make a ranged attack and miss, you can spend 1 Energon Point to make up to two additional ranged attacks against the same target. Each subsequent miss costs another Energon Point.",
+    "type": "Role"
+  },
+  {
+    "name": "Quick Draw",
+    "description": "You draw faster than the eye can follow. You can draw a weapon as part of an attack without using an action. Additionally, you gain ↑1 on your first attack in combat.",
+    "type": "Focus"
+  },
+  {
+    "name": "Straight Shooter",
+    "description": "You put rounds exactly where they need to go. At 3rd level, when you take the Aim action, you gain an additional ↑1 on your next attack (total ↑2 from Aiming).",
+    "type": "Focus"
+  },
+  {
+    "name": "Gun Runner",
+    "description": "You maintain full combat effectiveness while on the move. At 6th level, you no longer suffer penalties for making ranged attacks after moving, and moving does not grant enemies ↑ on attacks against you.",
+    "type": "Focus"
+  },
+  {
+    "name": "Same Principle",
+    "description": "Every weapon works on the same principle to you. At 10th level, you are Qualified with all Standard and Limited Weapons, even those you are not trained with. You suffer no penalties when using weapons you are Qualified with.",
+    "type": "Focus"
+  },
+  {
+    "name": "Shoot Out",
+    "description": "You enter a focused duel with a single opponent. At 17th level, as a Standard action, challenge one creature to a Shoot Out. Both you and the target immediately make a ranged attack against each other as a Contested Targeting Skill Test. The winner deals their attack's effect to the loser. Until the end of your next turn, you both gain ↑1 on attacks against each other.",
+    "type": "Focus"
+  },
+  {
+    "name": "Bullet Barrage",
+    "description": "At 20th level, once per combat as a Standard action, you make a ranged attack against every enemy you can see within your weapon's range. Make a single Targeting Skill Test and apply it against each target's Defense.",
+    "type": "Focus"
+  },
+  {
+    "name": "Long Shot",
+    "description": "Distance is your friend. You do not suffer range penalties on ranged attacks until you exceed twice your weapon's maximum range.",
+    "type": "Focus"
+  },
+  {
+    "name": "Calculated Attack",
+    "description": "You take your time to ensure the shot counts. At 3rd level, when you spend 2 or more Free actions Aiming, your attack ignores one Defense bonus from Cover.",
+    "type": "Focus"
+  },
+  {
+    "name": "Piercing Shot",
+    "description": "Your shots cut through armor. At 6th level, once per turn, your ranged attack can ignore 1 point of a target's Armor bonus.",
+    "type": "Focus"
+  },
+  {
+    "name": "Specialty Flexibility",
+    "description": "Your training transfers between disciplines. At 10th level, you can apply any ranged weapon Specialization you have to any ranged weapon you are wielding, even if the weapon type differs.",
+    "type": "Focus"
+  },
+  {
+    "name": "Snipe From The Hip",
+    "description": "Your instincts are so sharp you can shoot accurately without aiming. At 17th level, you gain all the benefits of the Aim action on your first ranged attack each round without spending the action to Aim.",
+    "type": "Focus"
+  },
+  {
+    "name": "Drilling Shot",
+    "description": "Your shot passes through one target and into the next. At 20th level, once per turn, when you hit a target with a ranged attack, you can have the shot continue to an additional target in line behind the first. Make a new Targeting Skill Test against the second target.",
+    "type": "Focus"
+  },
+  {
+    "name": "Fully Hybrid",
+    "description": "Your mastery of transformation is unparalleled. You can spend a Free action to partially transform, gaining the benefits of your Alt Mode while in Bot Mode (or vice versa) until the beginning of your next turn. You can use this ability a number of times per day equal to your current Mass Shifts per day.",
+    "type": "Cybertronian"
+  },
+  {
+    "name": "Custom Frame",
+    "description": "Your body is uniquely suited to your diverse abilities. At 1st level, rank the four Essences (Strength, Speed, Smarts, Social) in order of priority. Your 1st priority Essence gains +1 at levels 2, 5, 9, 14, 18, and 20. Your 2nd priority gains +1 at levels 3, 7, 11, 15, and 19. Your 3rd priority gains +1 at levels 4, 8, 13, and 16. Your 4th priority gains +1 at levels 6, 12, and 17. Choose one Skill from the Essences you ranked 1st and 2nd as your starting Role Skills.",
+    "type": "Role"
+  },
+  {
+    "name": "Mass Shift",
+    "description": "You can temporarily alter your mass, density, and size. As a Standard action, spend 1 Energon Point to use one Mass Shift option: shrink one Size Class (gain ↑1 on Infiltration, ↓1 Strength), grow one Size Class (gain ↑1 Strength, ↓1 on Infiltration), increase density (+2 Toughness, -10ft Movement), or decrease density (+10ft Movement, -2 Toughness). The effect lasts until the start of your next turn. You have a number of Mass Shifts per day based on your level.",
+    "type": "Role"
+  },
+  {
+    "name": "Quick Change",
+    "description": "Transformation is faster for you than for most. You can Convert between Bot Mode and Alt Mode as a Free action instead of a Move action.",
+    "type": "Role"
+  },
+  {
+    "name": "Hybridization",
+    "description": "You gain one Hybridization from the following list. You may select each Hybridization only once: Alternate Propulsion (gain a second movement type from a Chassis you don't have), Distributed Sensors (you are never Surprised), Enhanced Processor (+2 to all Mental Defenses), Hardened Chassis (+1 Health), Integrated Weapon (gain one Standard weapon as an Integrated weapon), Morphic Limbs (+1 to Might and Finesse attacks), Redundant Systems (once per combat, ignore the first instance of the Wounded condition).",
+    "type": "Role"
+  },
+  {
+    "name": "Jack Of All Forms",
+    "description": "At 5th level, you gain the Alt Mode benefits of any Chassis as a temporary Alt Mode for 1 hour by spending 1 Energon Point and spending 10 minutes concentrating on the new form. You can only maintain one temporary Alt Mode at a time.",
+    "type": "Role"
+  },
+  {
+    "name": "Quick Change II",
+    "description": "At 9th level, you gain the benefits of Quick Change a second time. Additionally, you can now Convert as a Free action even in response to triggers (such as when an enemy attacks you).",
+    "type": "Role"
+  },
+  {
+    "name": "Helical Spring",
+    "description": "At 13th level, when you Convert to your Alt Mode, you can immediately move up to half your Alt Mode Movement as a Free action.",
+    "type": "Role"
+  },
+  {
+    "name": "Master Of All Forms",
+    "description": "At 16th level, your Jack Of All Forms ability no longer requires Energon Points or concentration time. You can take on any temporary Alt Mode as a Free action.",
+    "type": "Role"
+  },
+  {
+    "name": "Mini-Con Ally",
+    "description": "A Mini-Con ally docks to your frame. They could be a distinct individual with whom you formed a deep bond, or an aspect of your personality made manifest. Your Mini-Con has STRENGTH 2, SPEED 2, SMARTS 2, SOCIAL 2, TOUGHNESS 12, EVASION 12, WILLPOWER 12, CLEVERNESS 12, and 8 Skill Points. Assign its purpose (a Skill) at creation. For every 2 Skill Points you invest in a Skill matching its purpose, your Mini-Con gains two Essence Point Increases or one Essence Point Increase and one Mini-Con Perk.",
+    "type": "Focus"
+  },
+  {
+    "name": "Kitted Purpose",
+    "description": "At 3rd level, when your Mini-Con is docked to you, you gain the benefits of a Limited Kit of a Specialty associated with their purpose.",
+    "type": "Focus"
+  },
+  {
+    "name": "Ambush Deployment",
+    "description": "At 6th level, if you deploy a Mini-Con in Combat, you and your Mini-Con (or Mini-Cons) gain an Edge on attacks targeting enemies adjacent to you.",
+    "type": "Focus"
+  },
+  {
+    "name": "Multi-Purpose",
+    "description": "At 10th level, choose one: your Mini-Con gains an Additional Purpose, or you gain a second Mini-Con ally.",
+    "type": "Focus"
+  },
+  {
+    "name": "Reinforced Bond",
+    "description": "At 17th level, you gain +1 Health and +2 to all Defenses. When you assign a Mini-Con Health when they deploy, you can also assign them +1 or +2 to all their Defenses, reducing your own bonus to Defenses by an equal amount.",
+    "type": "Focus"
+  },
+  {
+    "name": "Emergency Deployment and Docking",
+    "description": "At 20th level, if you are Defeated with one or more docked Mini-Con, your Mini-Cons deploy with 2 Temporary Health each. Additionally, when one of your Mini-Cons is Defeated but you're not, a tractor beam moves your Defeated Mini-Con 30ft closer to you each turn until they are within your Reach.",
+    "type": "Focus"
+  },
+  {
+    "name": "Everything In Threes",
+    "description": "You gain an additional Alt Mode. Choose a Chassis tied to an Origin. You gain the Alt Mode benefits of that Chassis as a second choice when you Convert. You cannot choose a Chassis whose Alt Mode Size is two Size Classes larger than the Alt Mode Size of your original Chassis.",
+    "type": "Focus"
+  },
+  {
+    "name": "Unexpected Alternative",
+    "description": "Triple Changers are rare, and you use that to your advantage. At 3rd level, when an enemy who has seen you Convert into only one of your Alt Modes sees you Convert into your other Alt Mode for the first time, you gain an Edge on Skill Tests targeting them until the end of your next turn.",
+    "type": "Focus"
+  },
+  {
+    "name": "Shape Shifter",
+    "description": "At 6th level, you become immune to Maneuver attacks and the Prone Condition. Momentarily Acting Smaller doesn't count as rough terrain for you.",
+    "type": "Focus"
+  },
+  {
+    "name": "Quick Change III",
+    "description": "At 10th level, you gain the benefits of Quick Change a third time.",
+    "type": "Focus"
+  },
+  {
+    "name": "Third Dimension",
+    "description": "At 17th level, when you change Movement types during your move, you do not subtract the distance you have already moved from the new Movement type. Instead, you move up to the full distance of your second Movement type.",
+    "type": "Focus"
+  },
+  {
+    "name": "Mercurial Nature",
+    "description": "The spirit of Amalgamous Prime moves you. At 20th level, you gain a Hybridization, and unlimited uses of Mass Shift per day.",
+    "type": "Focus"
+  },
+  {
+    "name": "Intrafilum",
+    "description": "When treating an adjacent Cybertronian, as a Free action, you can spend an Energon Point to restore 1 Health.",
+    "type": "Cybertronian"
+  },
+  {
+    "name": "Broad Understanding",
+    "description": "Although you have your field of expertise, to know science is to think a certain way that applies across disciplines. Outside of combat, as long as you have at least one Science Specialization, you roll all Science Skill Tests as though you were Specialized, although Skill Tests outside your Specialization suffer ↓2.",
+    "type": "Role"
+  },
+  {
+    "name": "Circuit Breaker",
+    "description": "You've jolted enough allies conscious to know the effect electricity has on Cybertronian physiology. You can use the Technology Skill for attacks with Electric weapons.",
+    "type": "Role"
+  },
+  {
+    "name": "Energon Battery",
+    "description": "Your allies understand that you use Energon unselfishly, and make sure you get more than your share. You store a number of personal Energon Points equal to your highest Essence Score, not your lowest.",
+    "type": "Role"
+  },
+  {
+    "name": "Walk Them Through It",
+    "description": "You help others help you. At 2nd level, allies without ranks in Technology or Science can Lend Assistance to you on Technology and Science Skill Tests.",
+    "type": "Role"
+  },
+  {
+    "name": "Thesis",
+    "description": "Everything comes back to science; you just need to figure out how. At 5th level, outside of Combat, once per scene, you can use Science in place of another Smarts-based Skill for a Skill Test, but the Skill Test takes longer. If the Skill Test takes less than a full turn, it takes your full turn. Otherwise, it takes twice as long as stated.",
+    "type": "Role"
+  },
+  {
+    "name": "Augment Power",
+    "description": "At 7th level, once per turn, you can give an ally ↑1 on a Skill Test as a Free action. Once per combat, you can give an ally ↑2 on a Skill Test as a Free action.",
+    "type": "Role"
+  },
+  {
+    "name": "Energon Bank",
+    "description": "You supply Energon for the benefit of others. At 9th level, with your permission, allies within 30ft can spend your Energon Points instead of their own to gain the benefits of an ability that uses Energon Points.",
+    "type": "Role"
+  },
+  {
+    "name": "Applied Science",
+    "description": "When the stakes are high, you have trouble concentrating on anything other than science. At 12th level, once per scene, you can use Broad Understanding and Thesis in Combat.",
+    "type": "Role"
+  },
+  {
+    "name": "Overcharge Engines",
+    "description": "Revving an engine is not just for show. At 13th level, you can use Technology to go faster. Once per turn, make a Technology Skill Test as a Free action. Until the end of your turn, increase your Movements a number of feet equal to your Skill Test results, rounded up to the nearest 5. This movement ignores Rough Terrain penalties.",
+    "type": "Role"
+  },
+  {
+    "name": "Flashy",
+    "description": "You know from experience how much a shock to the eye hurts. At 14th level, when you successfully attack with an Electric weapon, you can make a Science Skill Test against the Toughness of the target. On a success, they become Blinded 2.",
+    "type": "Role"
+  },
+  {
+    "name": "Technobabble",
+    "description": "At 16th level, you can use Thesis in place of Social-Based Skills as well. You can use Thesis three times per scene outside of Combat, or once per Combat, and Thesis no longer takes extra time to use.",
+    "type": "Role"
+  },
+  {
+    "name": "Multiplication",
+    "description": "At 18th level, double the listed number of uses and all numeric benefits of your Scientist Role Perks. For example, you can use Augment Power twice per turn. This does not apply to Focus Perks.",
+    "type": "Role"
+  },
+  {
+    "name": "Patch Up",
+    "description": "After a quick soldering, you'll have them up and back in action in no time. Once per turn, you can spend an Energon Point to make a Skill Test to Repair a Cybertronian or vehicle, or Heal an organic lifeform as a Free action. You always count as having a Standard Medicine Kit and a Standard Repair Kit on you.",
+    "type": "Focus"
+  },
+  {
+    "name": "Sirens Blaring",
+    "description": "You have the right of way in emergencies. At 3rd level, when Resetting Your Initiative, you gain an Edge and ↑1 on your Initiative Skill Test.",
+    "type": "Focus"
+  },
+  {
+    "name": "Preventative Measures",
+    "description": "By applying care to vulnerable areas, you prevent inevitable damage. At 6th level, you can treat a healthy ally. As long as the target doesn't have any Damage or Temporary Health, and you haven't used Preventative Measures on them yet today, you can make a Science or Technology Test as though you were Healing or Repairing them. They gain the amount of Temporary Health equal to the amount you would have Healed or Repaired.",
+    "type": "Focus"
+  },
+  {
+    "name": "Rocket Surgery",
+    "description": "The well of Energon within you allows you to propel healing energies toward allies. At 10th level, you can Heal or Repair an ally from 30ft away. Additionally, you always count as having a Limited Medicine Kit and a Limited Repair Kit on you.",
+    "type": "Focus"
+  },
+  {
+    "name": "Intensive",
+    "description": "You find new ways to push your limits without burning out. At 17th level, you are no longer limited in the number of times you can use Patch Up on your turn. Additionally, when you Repair more than one Cybertronian on your turn, you can choose to roll Technology once and apply the result to all injured allies within 30ft. Finally, you always count as having a Restricted Medicine Kit and a Restricted Repair Kit on you.",
+    "type": "Focus"
+  },
+  {
+    "name": "Miracle Worker",
+    "description": "Somehow, the more pressure you're under, the more likely you are to succeed. At 20th level, your d2 can trigger a Critical Success on Science and Technology Skill Tests.",
+    "type": "Focus"
+  },
+  {
+    "name": "Technologist",
+    "description": "If you think of organic life as biological machines, technology is just another word for science! When a Scientist Role Perk only uses the Science Skill, you can use Science or Technology.",
+    "type": "Focus"
+  },
+  {
+    "name": "Construct",
+    "description": "Whatever your allies need, you can build it. At 3rd level, you can build any Weapon, any Armor Upgrade, and any Kit. As a Standard action, spend 1 Energon Point and make a Technology Skill Test against the Requisition Difficulty of the item you are building. On a failure, your attempt is wasted but you do not spend your Energon Point.",
+    "type": "Focus"
+  },
+  {
+    "name": "Deconstruct",
+    "description": "You disrupt the functionality of enemy equipment. At 6th level, as a Standard action, spend 1 Energon Point and make a Technology Skill Test against the Requisition Difficulty of a Kit, Gear, or Weapon used by an adjacent enemy. On a success: a Kit is destroyed; a Gear cannot be used unless repaired (DIF 10 Technology, or DIF 20 on Critical Success); a Weapon causes the attacker to suffer ↓ unless repaired (same DIF).",
+    "type": "Focus"
+  },
+  {
+    "name": "Training Through Familiarity",
+    "description": "Having now built a wide variety of equipment, you have a better sense of how to use it. At 10th level, you become trained in Limited Weapons, and can requisition Standard and Limited Kits even if you don't meet the prerequisite. You don't suffer a Snag when you Construct a Standard or Limited Kit.",
+    "type": "Focus"
+  },
+  {
+    "name": "Siphon",
+    "description": "You jack into an enemy and draw from their power supply. At 17th level, as a Standard action, make a Technology Skill Test against the Toughness or Evasion of an adjacent Cybertronian. On a success, you deal 1 Damage and gain 1 Energon Point.",
+    "type": "Focus"
+  },
+  {
+    "name": "Perpetual Power Source",
+    "description": "To preserve Energon, you've developed alternative energy sources for your inventions. At 20th level, you no longer spend Energon Points when you Construct equipment.",
+    "type": "Focus"
+  },
+  {
+    "name": "Disappear",
+    "description": "For a Scout to survive getting seen, they need to get unseen again as quickly as possible. As a Free action, you can spend an Energon Point to turn Invisible until the end of your turn.",
+    "type": "Cybertronian"
+  },
+  {
+    "name": "Ally Awareness",
+    "description": "You always keep the whereabouts and safety of your allies in mind. If an ally has an ability that affects allies within a certain range, you gain the benefits of that ability as long as you are within 5 times the range of the ability. Additionally, once per scene as a Free action, you can use the memory of advice an ally once gave you to gain the benefits of Lend Assistance.",
+    "type": "Role"
+  },
+  {
+    "name": "Forward Observation",
+    "description": "You take in every aspect of what you witness. Alertness is both a Smarts and Social Skill for you. When you roll an Alertness Skill Test and the creatures you're observing aren't aware of your presence, you can score a Critical Success with your d2.",
+    "type": "Role"
+  },
+  {
+    "name": "Keen Sensors",
+    "description": "Your natural perception made you particularly qualified for scouting. You gain the Acute Sense General Perk.",
+    "type": "Role"
+  },
+  {
+    "name": "Mark Target",
+    "description": "At 2nd level, at the beginning of a scene (including Combat), designate a creature you see or a specific individual you expect will be in the scene. You gain ↑1 on Skill Tests related to that creature until the end of the scene.",
+    "type": "Role"
+  },
+  {
+    "name": "Hidden In Plain Sight",
+    "description": "Even though you are visible, you are unnoticeable. At 5th level, you can Hide, even if you do not have cover, darkness, or another effect that limits the vision of observers.",
+    "type": "Role"
+  },
+  {
+    "name": "Hindsight",
+    "description": "You have a 3D Holographic memory. At 7th level, when discussing a previous scene, you can make new Alertness Skill Tests about it as though you were still there. You gain an Edge on these Skill Tests.",
+    "type": "Role"
+  },
+  {
+    "name": "Mimicry Vocoder",
+    "description": "At 9th level, you can recreate the voice of an individual you've heard speak. You automatically open locks that require a voice print. When speaking with creatures who can't see you clearly, you automatically deceive them if they have only a passing familiarity with the individual you're imitating. You gain an Edge on Deception Skill Tests to convince creatures more familiar with the individual.",
+    "type": "Role"
+  },
+  {
+    "name": "Resourceful",
+    "description": "You make the most of a worst case scenario. At 12th level, before rolling for Initiative, choose one: Roll Initiative Skill Tests with an Edge; Gain 1 Temporary Health; +10ft to one type of Movement; Act normally if you would be Surprised; or an ally who can hear you gains the benefits of Mark Target for the creature you designated.",
+    "type": "Role"
+  },
+  {
+    "name": "Additional Marks",
+    "description": "Your experience qualifies you for more complicated missions. At 13th level, you can use Mark Target on up to five creatures you see, or two specific individuals.",
+    "type": "Role"
+  },
+  {
+    "name": "New Plan",
+    "description": "At 14th level, when you use a Contingency Action, if the triggering action never occurs, you gain an additional Move action or two additional Free actions on your next turn.",
+    "type": "Role"
+  },
+  {
+    "name": "Extremely Resourceful",
+    "description": "You find new depths when you dig down deep. At 16th level, when you use Resourceful, you gain two benefits instead of one.",
+    "type": "Role"
+  },
+  {
+    "name": "Mark Everybot",
+    "description": "On some missions, every target is your priority. At 18th level, once per day, you can use Mark Target on every creature in a scene, even those who enter the scene later.",
+    "type": "Role"
+  },
+  {
+    "name": "Burn Rubber",
+    "description": "On the first round of Combat, if you Push Yourself to buy additional movement, you gain an additional 10ft of Movement for every Free action you spend in conjunction with your Move action, and you can buy up to your Movement in additional movement. If you are surprised, you can still use a Move action to move, and Free actions to gain additional Movement, but you use the regular rules to Push Yourself.",
+    "type": "Focus"
+  },
+  {
+    "name": "Barrel Through",
+    "description": "If you can't outrun them, you run them over! At 3rd level, you gain ↑1 on Maneuver attacks. When you Ram a target, if you moved at least 20ft before the attack, you deal 1 additional damage on a success, including if you use Ram to Trip your target.",
+    "type": "Focus"
+  },
+  {
+    "name": "Scramble",
+    "description": "Moving fast is always the answer, even if you don't use it to move far. At 6th level, as a Standard action, you can force attacks to target your Evasion, even if the attack normally dictates the Defense it targets. If the attack hits and normally has an Effect with a numeric value (such as 1 Sharp), reduce the numeric Effect by 1.",
+    "type": "Focus"
+  },
+  {
+    "name": "Roll With It",
+    "description": "You ride the force of a blow to safety. At 10th level, once per turn, when you take Damage, you can immediately move 10ft away from the source of the attack.",
+    "type": "Focus"
+  },
+  {
+    "name": "Caution To The Wind",
+    "description": "Sometimes the best defense is a timely offense. At 17th level, you can take a penalty up to -3 to all of your Defenses to gain an equal ↑ on a Skill Test.",
+    "type": "Focus"
+  },
+  {
+    "name": "Dust Up",
+    "description": "Your enemies can eat your dust. At 20th level, when you use your Move action to move, you gain the benefits of Concealment until the beginning of your next turn.",
+    "type": "Focus"
+  },
+  {
+    "name": "Stunning Surprise",
+    "description": "The suddenness of your ambushes disorients your enemies. When you attack a creature who is unaware of your exact location, your attack deals Stun 1 in addition to its normal effect.",
+    "type": "Focus"
+  },
+  {
+    "name": "Pop Out",
+    "description": "Before your enemies realize you came out of hiding to attack them, you're gone again. At 3rd level, when you attack while Hidden, you can make an immediate Infiltration Skill Test against the Willpower or Cleverness of the enemies who could have seen you. On a success, you continue to gain the benefits of Hide after your attack.",
+    "type": "Focus"
+  },
+  {
+    "name": "Silent As A Shadow",
+    "description": "The only reason your next victims believe you're still nearby is the dreadful silence you leave behind. At 6th level, all of your attacks and movement are considered Silent.",
+    "type": "Focus"
+  },
+  {
+    "name": "Infiltrator",
+    "description": "Excelling at infiltration provides insight into a surprisingly wide range of situations. At 10th level, once per scene outside of Combat, you can roll Infiltration in place of another Skill Test.",
+    "type": "Focus"
+  },
+  {
+    "name": "Telltale Sign",
+    "description": "You terrify your enemies with a calling card on your victims. At 17th level, when you successfully Pop Out, you can use your stealth to Frighten one creature who failed to notice you. Make an Infiltration Skill Test as a Free action against their Willpower or Cleverness. On a success, they are Frightened 1.",
+    "type": "Focus"
+  },
+  {
+    "name": "Knock Down, Drag Out",
+    "description": "Sometimes, the only thing scarier than finding one of your victims is not finding one of your victims. At 20th level, when you successfully use Stunning Surprise against a target at least 3 levels lower than you, your attack knocks the target Unconscious for 1 round. If you then use Pop Out on the same turn, your Infiltration Skill Test to hide also hides their Unconscious body.",
+    "type": "Focus"
+  },
+  {
+    "name": "Hardcore",
+    "description": "When you take enough damage to be Defeated, you can spend an Energon Point to instead lose a limb but otherwise ignore the effect of the attack. You can use Hardcore as long as you have the Energon Points and limbs to spare.",
+    "type": "Cybertronian"
+  },
+  {
+    "name": "Foot Soldier",
+    "description": "Slow and steady wins the fight. When in Bot Mode, treat your Speed as if it was 2 higher when calculating how many Free actions you get on your turn.",
+    "type": "Role"
+  },
+  {
+    "name": "Manifest Melee Weapon",
+    "description": "When you need a weapon, you can make one out of the energy flowing through you. As a Free action once per combat, you can create an integrated Energon Weapon without needing to spend an Energon Point, as long as the weapon you create is based on a Standard Melee weapon. This weapon lasts until the end of Combat, or until you are Defeated.",
+    "type": "Role"
+  },
+  {
+    "name": "Wisdom Through Experience",
+    "description": "You gain valuable insight from getting up close and personal with the enemy. Once per scene following a combat, when looking for clues or theorizing about enemy plans, you may ask your GM if one of your ideas has merit. The GM must answer Yes or No truthfully and provide a hint as to why. If the GM feels it falls in between, they can say Maybe and provide two hints.",
+    "type": "Role"
+  },
+  {
+    "name": "Charge",
+    "description": "If you Move at least 10ft away from your past position and then Attack with a Might weapon immediately after, you gain ↑1 on the Might Skill Test.",
+    "type": "Role"
+  },
+  {
+    "name": "Tough It Out",
+    "description": "At 5th level, once per Combat, you can make a Brawn Skill Test to Repair your damage as a Standard action. The DIF is the same as the Technology Skill Test to Repair damage.",
+    "type": "Role"
+  },
+  {
+    "name": "Expanded Arsenal",
+    "description": "You dig down deep to find a greater expression of your fighting ability. At 7th level, when you Manifest a Melee Weapon, you can create a Limited Melee Weapon.",
+    "type": "Role"
+  },
+  {
+    "name": "No Escape",
+    "description": "You will give an enemy quarter, but you do not let them retreat. At 9th level, when an enemy moves within the Reach of your melee weapon, you interrupt their movement to immediately attack them.",
+    "type": "Role"
+  },
+  {
+    "name": "Battle Hardened",
+    "description": "At 12th level, you gain +1 Health. Additionally, you gain a Limited or Restricted weapon of your choice as personal gear. You must meet the requirements of the weapon to choose it.",
+    "type": "Role"
+  },
+  {
+    "name": "Extended Attack",
+    "description": "By extending yourself through gumption and partial conversion, you can hit further targets. At 13th level, as a Move action, you can double the Reach of a Melee weapon until the beginning of your next turn.",
+    "type": "Role"
+  },
+  {
+    "name": "How I Got These Dents",
+    "description": "Every scratch comes with a scary story. At 14th level, you gain ↑ on Intimidation Skill Tests equal to the amount of damage you currently have.",
+    "type": "Role"
+  },
+  {
+    "name": "Instruments of Destruction",
+    "description": "You can call forth an exceptional weapon to fight with. At 16th level, when you Manifest a Melee Weapon, you can create a Restricted Melee Weapon.",
+    "type": "Role"
+  },
+  {
+    "name": "Soldier On",
+    "description": "At 18th level, if an attack targeting you scores a Critical Hit, once per Combat you may attempt a Brawn Skill Test against a DIF equal to 10 plus the Damage dealt to ignore the attack.",
+    "type": "Role"
+  },
+  {
+    "name": "Stalwart Defense",
+    "description": "You use one of your External Hardpoints to defend yourself. Choose whether you defend yourself with a shield or a parrying weapon. Shield: On your turn, you can choose to gain +2 Toughness, +2 Evasion, or +1 Toughness and Evasion until the beginning of your next turn. Weapon: You gain a Close Combat Blade, Close Combat Bludgeon, Short Blade, or Short Bludgeon. You gain ↑1 on offhand attacks. On your turn, you can choose to gain +1 Toughness or +1 Evasion until the beginning of your next turn.",
+    "type": "Focus"
+  },
+  {
+    "name": "Wait For An Opening",
+    "description": "When your enemy lets their guard down, you strike true. At 3rd level, when you attack on another creature's turn, such as with a Contingency action to Attack or your No Escape Perk, you gain an Edge on the Skill Test.",
+    "type": "Focus"
+  },
+  {
+    "name": "Disarming Defenses",
+    "description": "You deflect ammunition back at the weapon that fired it, or tilt your body until your attacker twists their wrist too far. At 6th level, when an attack misses you by an amount equal to your Stalwart Defense bonus to your Defense, you disarm your attacker of the weapon they attacked with.",
+    "type": "Focus"
+  },
+  {
+    "name": "Stand Firm",
+    "description": "Holding your ground prepares you for incoming attacks. At 10th level, as a Move action, you can double the bonus granted by your Stalwart Defense until the beginning of your next turn.",
+    "type": "Focus"
+  },
+  {
+    "name": "Sword and Board",
+    "description": "At 17th level, you gain both a Shield and Parrying Weapon in one External Hardpoint. On your turn, you can choose to gain +3 Toughness, +3 Evasion, +2 Toughness and +1 Evasion, or +1 Toughness and +2 Evasion until the beginning of your next turn. Additionally, you gain ↑1 on offhand attacks.",
+    "type": "Focus"
+  },
+  {
+    "name": "Make An Opening",
+    "description": "You're done waiting. At 20th level, once per turn, you can take a Contingency action to Attack as a Free action.",
+    "type": "Focus"
+  },
+  {
+    "name": "Warrior Rush",
+    "description": "You know your place on the battlefield and rush to get there as soon as possible. On the first turn of combat, double your Movements until the beginning of your next turn.",
+    "type": "Focus"
+  },
+  {
+    "name": "Manifest Enhancement",
+    "description": "At 3rd level, as a Free action once per round, you can manifest a Weapon Upgrade for a Melee weapon without needing to spend an Energon Point, as long as the Weapon Upgrade you create is based on an Upgrade with an Availability equal to the Availability of a Weapon you can use Manifest Melee Weapon to create. This Weapon Upgrade lasts until the end of your turn.",
+    "type": "Focus"
+  },
+  {
+    "name": "Plow",
+    "description": "You knock over any obstacle in your way. At 6th level, when you make a Ram attack (in your Alt Mode or driving a vehicle with a Ram attack), any movement you make this turn ignores Rough Terrain, and your Ram attack gains Multiple Targets (3). You can use Ram on up to three targets within your Reach at any point in your movement.",
+    "type": "Focus"
+  },
+  {
+    "name": "Duke It Out",
+    "description": "Sometimes, the most vulnerable area to target is an enemy's pride. At 10th level, once per combat as long as you haven't used your Standard action this turn, you can challenge a creature of your level or higher to fight you one-on-one as a Free action. If they refuse, you gain an Edge on Skill Tests targeting them until the beginning of your next turn. If they accept, you both immediately make a Melee attack as a Contested Skill Test. The winner deals their attack's effect to the loser.",
+    "type": "Focus"
+  },
+  {
+    "name": "Indomitable",
+    "description": "You fear nothing. At 17th level, you become immune to the Frightened Condition and attempts to Intimidate you suffer a Snag.",
+    "type": "Focus"
+  },
+  {
+    "name": "Last Stand",
+    "description": "If this is the end for you, you try to ensure that your enemy, too, shall fall. At 20th level, if you are Defeated in combat, you can first immediately take a full turn, as long as you spend your actions doing everything you can to attack the creature that Defeated you.",
+    "type": "Focus"
+  },
+  {
     "name": "Diversion",
-    "description": "You put enemies in a lose-lose situation. Roll a Deception, Intimidation, or Persuasion Skill Test against a target's Willpower or Cleverness as a Standard action. On a success, if they attack you on their next turn, they suffer a Snag. If they don’t attack you, your allies gain an Edge on attacks that target them. This lasts until the end of the next round.",
+    "description": "You put enemies in a lose-lose situation. Roll a Deception, Intimidation, or Persuasion Skill Test against a target's Willpower or Cleverness as a Standard action. On a success, if they attack you on their next turn, they suffer a Snag. If they don't attack you, your allies gain an Edge on attacks that target them. This lasts until the end of the next round.",
     "type": "Focus"
   },
   {
@@ -91,7 +816,7 @@
   },
   {
     "name": "Electro-Disruptor",
-    "description": "You scramble the senses of a fellow Cybertronian. At 17th level, you can use a communication device or Limited Communication Kit to hack a bot's brain. As a Standard action outside of Combat, roll a Technology Skill Test against the Willpower or Cleverness of a creature within range of the communication device (which is usually at least a mile) that you can see (either through surveillance equipment or with your own sensors). On a success, the target becomes Mesmerized by you or an ally of your choice that they can see for the remainder of the scene.",
+    "description": "You scramble the senses of a fellow Cybertronian. At 17th level, you can use a communication device or Limited Communication Kit to hack a bot's brain. As a Standard action outside of Combat, roll a Technology Skill Test against the Willpower or Cleverness of a creature within range of the communication device that you can see. On a success, the target becomes Mesmerized by you or an ally of your choice that they can see for the remainder of the scene.",
     "type": "Focus"
   },
   {
@@ -127,16 +852,6 @@
   {
     "name": "Precision",
     "description": "Excellence comes naturally to you. At 20th level, you succeed with a high degree of success on attacks if your result exceeds your target's Defense by 10 or more, instead of when your result doubles the target's Defense.",
-    "type": "Focus"
-  },
-  {
-    "name": "Issue Command",
-    "description": "Excellence comes naturally to you. At 20th level, you succeed with a high degree of success on attacks if your result exceeds your target's Defense by 10 or more, instead of when your result doubles the target's Defense.Many of your allies trust your commands more than their own instincts. As a Move action, you can issue a command, granting allies who follow your command ↑1 to a Skill Test or +1 bonus to a Defense based on certain circumstances. You set the terms and the bonus allies receive. This bonus lasts until the beginning of your next turn.",
-    "type": "Focus"
-  },
-  {
-    "name": "Prepare for War",
-    "description": "If you want peace, you need to be ready to fight for it. When you roll for Initiative and you are not Surprised, you gain an Edge on your Initiative Skill Test.",
     "type": "Focus"
   }
 ]

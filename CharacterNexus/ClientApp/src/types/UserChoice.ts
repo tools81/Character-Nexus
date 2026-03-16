@@ -1,5 +1,6 @@
 export interface UserChoice {
     origin?: string;
+    label?: string;
     type: string;
     choices: string[];
     count: number;

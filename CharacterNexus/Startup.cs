@@ -56,6 +56,7 @@ namespace CharacterNexus
             services.AddSingleton<IRuleset, Marvel.Ruleset>();
             services.AddSingleton<IRuleset, Transformers.Ruleset>();
             services.AddSingleton<IRuleset, VampireTheMasquerade.Ruleset>();
+            services.AddSingleton<IRuleset, WorldWideWrestling.Ruleset>();
 
             services.AddSingleton<IStorage, AzureBlobStorage.Storage>();
         }

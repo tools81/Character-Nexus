@@ -14,6 +14,7 @@
             Marvel.GenerateFormSchema.InitializeSchema();
             Transformers.GenerateFormSchema.InitializeSchema();
             VampireTheMasquerade.GenerateFormSchema.InitializeSchema();
+            WorldWideWrestling.GenerateFormSchema.InitializeSchema();
 
             Console.Read();
         }        

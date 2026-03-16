@@ -6,6 +6,7 @@ namespace Utility
     public class UserChoice
     {
         public string Type { get; set; }
+        public string Label { get; set; }
         public List<string> Choices { get; set; }
         public int Count { get; set; }
         public string Category { get; set; }  //Characteristic or Adjustment

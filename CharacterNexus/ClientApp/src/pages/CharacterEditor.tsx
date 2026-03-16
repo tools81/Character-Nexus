@@ -388,7 +388,7 @@ const FormContents = ({
 
             {userChoices.map((item: any, index: number) => (
               <div key={item.type}>
-                <p>Choose {item.count}</p>
+                <p>{item.label ?? `Choose ${item.count}`}</p>
 
                 {choiceFields
                   .filter((field: any) =>

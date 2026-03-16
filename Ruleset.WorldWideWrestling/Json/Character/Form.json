@@ -1,0 +1,2886 @@
+{
+  "title": "Wrestler Editor",
+  "fields": [
+    {
+      "name": "id",
+      "id": "id",
+      "label": "Id",
+      "type": "hidden",
+      "className": "form-control"
+    },
+    {
+      "name": "name",
+      "id": "name",
+      "label": "Name",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown"
+    },
+    {
+      "name": "image",
+      "id": "image",
+      "label": "Image",
+      "type": "image",
+      "className": "form-control"
+    },
+    {
+      "name": "role",
+      "label": "Role",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Babyface",
+          "label": "Babyface",
+          "description": "",
+          "advanced": false
+        },
+        {
+          "value": "Heel",
+          "label": "Heel",
+          "description": "",
+          "advanced": false
+        },
+        {
+          "value": "Celebrity",
+          "label": "Celebrity",
+          "description": "You are what wrestling means to the wider world. Celebrity wrestlers bring the fame of their non-wrestling careers back to the promotion, giving them pull with management to shape their own storylines.",
+          "advanced": true
+        },
+        {
+          "value": "Icon",
+          "label": "Icon",
+          "description": "You're the personification of what wrestlers want to be. Iconic wrestlers make even the most difficult maneuvers look easy and can work with anyone to make the fans go wild.",
+          "advanced": true
+        },
+        {
+          "value": "Legend",
+          "label": "Legend",
+          "description": "You're legendary, an inspiration to the fans. Legendary wrestlers are always popular and reflect that glory onto anyone they work with.",
+          "advanced": true
+        },
+        {
+          "value": "Lucha Libre",
+          "label": "Lucha Libre",
+          "description": "If you are playing a wrestler who's been studying Lucha Libre, you now can use Tecnico and Rudo in the same way as the Luchador.",
+          "advanced": true
+        }
+      ]
+    },
+    {
+      "name": "gimmick",
+      "label": "Gimmick",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "The Ace",
+          "label": "The Ace",
+          "description": "You are the top star of your division, the face of the company. Consistently either holding the title or in contention for it, you're under constant pressure to represent your promotion and take it to new heights. You also have the biggest target on your back for those who envy your spot.",
+          "bonusAdjustments": "[{\"type\":\"stats\",\"name\":\"Body\",\"value\":-1},{\"type\":\"stats\",\"name\":\"Look\",\"value\":1},{\"type\":\"stats\",\"name\":\"Real\",\"value\":1},{\"type\":\"stats\",\"name\":\"Work\",\"value\":-1},{\"type\":\"injury\",\"name\":\"\",\"value\":2}]",
+          "bonusCharacteristics": "[{\"type\":\"moves\",\"value\":\"Finishing Move\"},{\"type\":\"moves\",\"value\":\"Carry the Company\"}]",
+          "userChoices": "[{\"type\":\"stats\",\"label\":\"Increase one +1 and Decrease one -1\",\"choices\":[\"Look\",\"Body\",\"Real\",\"Work\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"moves\",\"label\":null,\"choices\":[\"Fighting Spirit\",\"Amazing Entrance\",\"Strong Style\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
+        },
+        {
+          "value": "The Anointed",
+          "label": "The Anointed",
+          "description": "You're the next big thing, whether the audience, and the other wrestlers, admit it or not. Someone backstage is putting all of their weight behind you. You just have to hold up your end in the ring.",
+          "bonusAdjustments": "[{\"type\":\"stats\",\"name\":\"Look\",\"value\":1},{\"type\":\"stats\",\"name\":\"Real\",\"value\":-2},{\"type\":\"stats\",\"name\":\"Work\",\"value\":-1}]",
+          "bonusCharacteristics": "[{\"type\":\"moves\",\"value\":\"Finishing Move\"}]",
+          "userChoices": "[{\"type\":\"stats\",\"label\":\"Increase one +1\",\"choices\":[\"Look\",\"Body\",\"Real\",\"Work\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"moves\",\"label\":null,\"choices\":[\"Picture Perfect\",\"Special Snowflake\",\"Always Learning\",\"I Am the Future\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
+        },
+        {
+          "value": "The Anti-Hero",
+          "label": "The Anti-Hero",
+          "description": "You are the badass that everyone loves. Whether you're sticking it to the Man or telling it like it is, the injury identifies with your non-conformity. How do you keep your rebellion from going too far? A babyface Anti-Hero is the people's champion, representing the everyman's rejection of the stultifying bullshit they have to put up with every day. A heel Anti-Hero is a nasty, conniving jerk, a selfish mercenary always looking for the maximum profit in any situation.",
+          "bonusAdjustments": "[{\"type\":\"stats\",\"name\":\"Body\",\"value\":-2},{\"type\":\"stats\",\"name\":\"Real\",\"value\":1},{\"type\":\"stats\",\"name\":\"Work\",\"value\":-1}]",
+          "bonusCharacteristics": "[{\"type\":\"moves\",\"value\":\"Finishing Move\"}]",
+          "userChoices": "[{\"type\":\"stats\",\"label\":\"Increase one +1\",\"choices\":[\"Look\",\"Body\",\"Real\",\"Work\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"moves\",\"label\":null,\"choices\":[\"Rules? What Rules?\",\"Anything You Need To Do To Win\",\"Mouth Of The People\",\"Twitch The Curtain\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
+        },
+        {
+          "value": "The Call-Up",
+          "label": "The Call-Up",
+          "description": "You've made a living on the road or in the minor leagues, honing your skills in relative obscurity. You've got a cult following and a lot of experience. Finally, you have an opportunity to make your name on the big stage. Will you take it?",
+          "bonusAdjustments": "[{\"type\":\"stats\",\"name\":\"Body\",\"value\":-1},{\"type\":\"stats\",\"name\":\"Real\",\"value\":-1}]",
+          "bonusCharacteristics": "[{\"type\":\"moves\",\"value\":\"Finishing Move\"}]",
+          "userChoices": "[{\"type\":\"stats\",\"label\":\"Increase two +1 and Decrease one -1\",\"choices\":[\"Look\",\"Body\",\"Real\",\"Work\"],\"count\":2,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"moves\",\"label\":null,\"choices\":[\"10-Year Veteran\",\"Seen It All\",\"Hungry\",\"Reputation\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
+        },
+        {
+          "value": "The Clown",
+          "label": "The Clown",
+          "description": "You are the quintessential entertainer. You bring comedy to the ring and grease the wheels backstage. You may not have many Championships, but you move a lot of merch and you always get a pop from the crowd. Is that enough for you?",
+          "bonusAdjustments": "[{\"type\":\"stats\",\"name\":\"Body\",\"value\":-2},{\"type\":\"stats\",\"name\":\"Look\",\"value\":1},{\"type\":\"stats\",\"name\":\"Real\",\"value\":1},{\"type\":\"stats\",\"name\":\"Work\",\"value\":-1}]",
+          "bonusCharacteristics": "[{\"type\":\"moves\",\"value\":\"Finishing Move\"}]",
+          "userChoices": "[{\"type\":\"stats\",\"label\":\"Increase one +1\",\"choices\":[\"Look\",\"Body\",\"Real\",\"Work\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"moves\",\"label\":null,\"choices\":[\"Funny is Money\",\"Surprisingly Talented\",\"Comic Relief\",\"Celebrity Promo\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
+        },
+        {
+          "value": "The Fighter",
+          "label": "The Fighter",
+          "description": "You have a legitimate fighting background or you're a natural-born hardass who's found somewhere to get paid to scrap. You know how to hurt people for real, when you want to. This company is getting what it wants from you, but how long will you get what you want from them?",
+          "bonusAdjustments": "[{\"type\":\"stats\",\"name\":\"Body\",\"value\":1},{\"type\":\"stats\",\"name\":\"Look\",\"value\":-2},{\"type\":\"stats\",\"name\":\"Real\",\"value\":-1}]",
+          "bonusCharacteristics": "[{\"type\":\"moves\",\"value\":\"Finishing Move\"},{\"type\":\"moves\",\"value\":\"Shoot Fighter\"}]",
+          "userChoices": "[{\"type\":\"stats\",\"label\":\"Increase one +1\",\"choices\":[\"Look\",\"Body\",\"Real\",\"Work\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"moves\",\"label\":null,\"choices\":[\"Martial Arts Training\",\"You know it's fake right?\",\"Stare Down\",\"Stretcher\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
+        },
+        {
+          "value": "The Hardcore",
+          "label": "The Hardcore",
+          "description": "You're not the best in the ring or the best looking, but you know how to get a pop through naked aggression and rampant bloodshed. Some in the business look down on you, but you're a legend in the making for your diehard fans. How long can that fact be ignored?",
+          "bonusAdjustments": "[{\"type\":\"stats\",\"name\":\"Real\",\"value\":-1},{\"type\":\"stats\",\"name\":\"Work\",\"value\":-1}]",
+          "bonusCharacteristics": "[{\"type\":\"moves\",\"value\":\"Finishing Move\"},{\"type\":\"moves\",\"value\":\"Tables and Ladder and Chairs, Oh My\"}]",
+          "userChoices": "[{\"type\":\"stats\",\"label\":\"Increase one +1\",\"choices\":[\"Look\",\"Body\",\"Real\",\"Work\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"moves\",\"label\":null,\"choices\":[\"High Pain Tolerance\",\"What a Weirdo\",\"Master of Hardcore\",\"Red Means Green\",\"Are You Not Entertained\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
+        },
+        {
+          "value": "The Jobber",
+          "label": "The Jobber",
+          "description": "You're a nobody to the fans, but critical to the franchise: you're here to lose so that your opponents look great. You aren't famous, but you're key to making others popular. It's taken for granted that you'll always be there to do the job. Is that enough for you?",
+          "bonusAdjustments": "[{\"type\":\"stats\",\"name\":\"Look\",\"value\":-2},{\"type\":\"stats\",\"name\":\"Work\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"moves\",\"value\":\"Finishing Move\"},{\"type\":\"moves\",\"value\":\"Career Wrestler\"}]",
+          "userChoices": "[{\"type\":\"stats\",\"label\":\"Increase one +1 and Decrease one -1\",\"choices\":[\"Look\",\"Body\",\"Real\",\"Work\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"moves\",\"label\":null,\"choices\":[\"Ham-n-Egger\",\"Sympathetic\",\"Jobber to the Stars\",\"Experienced Hand\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
+        },
+        {
+          "value": "The Luchador",
+          "label": "The Luchador",
+          "description": "You are an iconic Lucha Libre competitor. Whether born into the business or donning the mask out of love for the sport, you represent the unique culture of Mexican wrestling. What does it mean to carry that responsibility with you?",
+          "bonusAdjustments": "[{\"type\":\"stats\",\"name\":\"Look\",\"value\":-1},{\"type\":\"stats\",\"name\":\"Real\",\"value\":-1}]",
+          "bonusCharacteristics": "[{\"type\":\"moves\",\"value\":\"Finishing Move\"}]",
+          "userChoices": "[{\"type\":\"stats\",\"label\":\"Increase one +1\",\"choices\":[\"Look\",\"Body\",\"Real\",\"Work\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"moves\",\"label\":null,\"choices\":[\"Amazing Athleticism\",\"El Hifo De...\",\"Human Highlight Reel\",\"Tradicional\",\"Capitan del Parejas\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
+        },
+        {
+          "value": "The Luminary",
+          "label": "The Luminary",
+          "description": "You started in the ring, but are now legitimately more famous for your appearances in other media than your wrestling career. Now older and slower, you have real emotional and financial investment behind you. Is it possible to keep your broad appeal or have you peaked?",
+          "bonusAdjustments": "[{\"type\":\"stats\",\"name\":\"Body\",\"value\":-1},{\"type\":\"stats\",\"name\":\"Look\",\"value\":1},{\"type\":\"stats\",\"name\":\"Real\",\"value\":1},{\"type\":\"stats\",\"name\":\"Work\",\"value\":-2}]",
+          "bonusCharacteristics": "[{\"type\":\"moves\",\"value\":\"Finishing Move\"},{\"type\":\"moves\",\"value\":\"I'm the Draw\"}]",
+          "userChoices": "[{\"type\":\"stats\",\"label\":\"Increase one +1\",\"choices\":[\"Look\",\"Real\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"moves\",\"label\":null,\"choices\":[\"Merchandising\",\"Nemesis\",\"High Expectations\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
+        },
+        {
+          "value": "The Manager",
+          "label": "The Manager",
+          "description": "You're the sizzle on the steak. You don't compete, but you have the charisma, the talk, the walk and the ideas to keep your client in the spotlight - in and out of the ring. Are you satisfied to be in charge of making others popular?",
+          "bonusAdjustments": "[{\"type\":\"stats\",\"name\":\"Body\",\"value\":-1},{\"type\":\"stats\",\"name\":\"Look\",\"value\":2},{\"type\":\"stats\",\"name\":\"Work\",\"value\":-2}]",
+          "bonusCharacteristics": "[{\"type\":\"moves\",\"value\":\"Meal Ticket\"},{\"type\":\"moves\",\"value\":\"Mouth Piece\"}]",
+          "userChoices": "[{\"type\":\"stats\",\"label\":\"Increase one +1\",\"choices\":[\"Look\",\"Body\",\"Real\",\"Work\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"moves\",\"label\":null,\"choices\":[\"Never Unprepared\",\"Brain for the Business\",\"Backstage Politics\",\"Loyal\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
+        },
+        {
+          "value": "The Monster",
+          "label": "The Monster",
+          "description": "You're physically enormous and intimidating. You may have a supernatural edge, or simply be mean - either way, you make people nervous, in and out of the ring. You carry a proud wrestling tradition on your freakishly broad shoulders. Is that all you are?",
+          "bonusAdjustments": "[{\"type\":\"stats\",\"name\":\"Body\",\"value\":1},{\"type\":\"stats\",\"name\":\"Real\",\"value\":-2},{\"type\":\"stats\",\"name\":\"Work\",\"value\":-1}]",
+          "bonusCharacteristics": "[{\"type\":\"moves\",\"value\":\"Finishing Move\"}]",
+          "userChoices": "[{\"type\":\"stats\",\"label\":\"Increase one +1\",\"choices\":[\"Look\",\"Body\",\"Real\",\"Work\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"moves\",\"label\":null,\"choices\":[\"Prodigious Size\",\"Surprising Agility\",\"Intimidating\",\"Not of this World\",\"Shoot Kill\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
+        },
+        {
+          "value": "The Provocateur",
+          "label": "The Provocateur",
+          "description": "You're the sui generis, the strange one, the weirdo. Whether you've been saddled with this role or you’ve sought it out, you’re great at pushing boundaries. But will you go too far?",
+          "bonusAdjustments": "[{\"type\":\"stats\",\"name\":\"Body\",\"value\":-2},{\"type\":\"stats\",\"name\":\"Look\",\"value\":1},{\"type\":\"stats\",\"name\":\"Work\",\"value\":-1}]",
+          "bonusCharacteristics": "[{\"type\":\"moves\",\"value\":\"Finishing Move\"}]",
+          "userChoices": "[{\"type\":\"stats\",\"label\":\"Increase one +1\",\"choices\":[\"Look\",\"Body\",\"Real\",\"Work\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"moves\",\"label\":null,\"choices\":[\"Strangely Captivating\",\"Showstopper\",\"Mind Games\",\"Play to the Crowd\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
+        },
+        {
+          "value": "The Technician",
+          "label": "The Technician",
+          "description": "Whether you were an amateur sensation or a workhorse in the minor leagues, you have all the skills. Your wrestling ability stands out, but you’re continually fighting the assumption your only have one dimension to you. Do you?",
+          "bonusAdjustments": "[{\"type\":\"stats\",\"name\":\"Look\",\"value\":-2},{\"type\":\"stats\",\"name\":\"Real\",\"value\":-1},{\"type\":\"stats\",\"name\":\"Work\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"moves\",\"value\":\"Finishing Move\"}]",
+          "userChoices": "[{\"type\":\"stats\",\"label\":\"Increase one +1\",\"choices\":[\"Look\",\"Body\",\"Real\",\"Work\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"moves\",\"label\":null,\"choices\":[\"Former Amateur Champion\",\"Technical Expert\",\"Excellence of Execution\",\"Tweener\",\"Sportsmanship\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
+        },
+        {
+          "value": "The Veteran",
+          "label": "The Veteran",
+          "description": "You are an established name. You work every night, whether to help out the new blood or to keep a lock on your position on the card. You have a dedicated fan base, and you're ready to create an enduring legacy.",
+          "bonusAdjustments": "[{\"type\":\"stats\",\"name\":\"Body\",\"value\":-1},{\"type\":\"stats\",\"name\":\"Real\",\"value\":-1},{\"type\":\"stats\",\"name\":\"Work\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"moves\",\"value\":\"Finishing Move\"},{\"type\":\"moves\",\"value\":\"Ring General\"}]",
+          "userChoices": "[{\"type\":\"stats\",\"label\":\"Increase one +1\",\"choices\":[\"Look\",\"Body\",\"Real\",\"Work\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"moves\",\"label\":null,\"choices\":[\"Top of the Card\",\"Respect the Business\",\"Bury 'em\",\"Put 'em Over\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
+        }
+      ]
+    },
+    {
+      "name": "hailing.The Ace",
+      "label": "Hailing from",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Tokyo, Japan",
+          "label": "Tokyo, Japan",
+          "description": ""
+        },
+        {
+          "value": "Kagoshima Prefecture, Japan",
+          "label": "Kagoshima Prefecture, Japan",
+          "description": ""
+        },
+        {
+          "value": "Venice Beach, California",
+          "label": "Venice Beach, California",
+          "description": ""
+        },
+        {
+          "value": "Elsewhere",
+          "label": "Elsewhere",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Ace"
+      }
+    },
+    {
+      "name": "hailing.The Anointed",
+      "label": "Hailing from",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Los Angeles, California",
+          "label": "Los Angeles, California",
+          "description": ""
+        },
+        {
+          "value": "Muncie, Indiana",
+          "label": "Muncie, Indiana",
+          "description": ""
+        },
+        {
+          "value": "Houston, Texas",
+          "label": "Houston, Texas",
+          "description": ""
+        },
+        {
+          "value": "Elsewhere",
+          "label": "Elsewhere",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Anointed"
+      }
+    },
+    {
+      "name": "hailing.The Anti-Hero",
+      "label": "Hailing from",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Detroit, Michigan",
+          "label": "Detroit, Michigan",
+          "description": ""
+        },
+        {
+          "value": "Brooklyn, New York",
+          "label": "Brooklyn, New York",
+          "description": ""
+        },
+        {
+          "value": "Alligator, Mississippi",
+          "label": "Alligator, Mississippi",
+          "description": ""
+        },
+        {
+          "value": "Elsewhere",
+          "label": "Elsewhere",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Anti-Hero"
+      }
+    },
+    {
+      "name": "hailing.The Call-Up",
+      "label": "Hailing from",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Seattle, Washington",
+          "label": "Seattle, Washington",
+          "description": ""
+        },
+        {
+          "value": "Grand Rapids, Michigan",
+          "label": "Grand Rapids, Michigan",
+          "description": ""
+        },
+        {
+          "value": "Dubuque, Iowa",
+          "label": "Dubuque, Iowa",
+          "description": ""
+        },
+        {
+          "value": "Elsewhere",
+          "label": "Elsewhere",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Call-Up"
+      }
+    },
+    {
+      "name": "hailing.The Clown",
+      "label": "Hailing from",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Kalamazoo, Michigan",
+          "label": "Kalamazoo, Michigan",
+          "description": ""
+        },
+        {
+          "value": "Pineville, West Virginia",
+          "label": "Pineville, West Virginia",
+          "description": ""
+        },
+        {
+          "value": "Edinburgh, Scotland",
+          "label": "Edinburgh, Scotland",
+          "description": ""
+        },
+        {
+          "value": "Elsewhere",
+          "label": "Elsewhere",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Clown"
+      }
+    },
+    {
+      "name": "hailing.The Fighter",
+      "label": "Hailing from",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Kuwana, Japan",
+          "label": "Kuwana, Japan",
+          "description": ""
+        },
+        {
+          "value": "Wigan, United Kingdom",
+          "label": "Wigan, United Kingdom",
+          "description": ""
+        },
+        {
+          "value": "Rio de Janeiro, Brazil",
+          "label": "Rio de Janeiro, Brazil",
+          "description": ""
+        },
+        {
+          "value": "Elsewhere",
+          "label": "Elsewhere",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Fighter"
+      }
+    },
+    {
+      "name": "hailing.The Hardcore",
+      "label": "Hailing from",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Peoria, Illinois",
+          "label": "Peoria, Illinois",
+          "description": ""
+        },
+        {
+          "value": "Truth or Consequences, New Mexico",
+          "label": "Truth or Consequences, New Mexico",
+          "description": ""
+        },
+        {
+          "value": "Union City, New Jersey",
+          "label": "Union City, New Jersey",
+          "description": ""
+        },
+        {
+          "value": "Elsewhere",
+          "label": "Elsewhere",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Hardcore"
+      }
+    },
+    {
+      "name": "hailing.The Jobber",
+      "label": "Hailing from",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Hillsboro, Iowa",
+          "label": "Hillsboro, Iowa",
+          "description": ""
+        },
+        {
+          "value": "Rumford, Maine",
+          "label": "Rumford, Maine",
+          "description": ""
+        },
+        {
+          "value": "Right Here!",
+          "label": "Right Here!",
+          "description": ""
+        },
+        {
+          "value": "Elsewhere",
+          "label": "Elsewhere",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Jobber"
+      }
+    },
+    {
+      "name": "hailing.The Luchador",
+      "label": "Hailing from",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Mexico City, Mexico",
+          "label": "Mexico City, Mexico",
+          "description": ""
+        },
+        {
+          "value": "Gómez Palacio, Durango, Mexico",
+          "label": "Gómez Palacio, Durango, Mexico",
+          "description": ""
+        },
+        {
+          "value": "Boyle Heights, CA",
+          "label": "Boyle Heights, CA",
+          "description": ""
+        },
+        {
+          "value": "Elsewhere",
+          "label": "Elsewhere",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Luchador"
+      }
+    },
+    {
+      "name": "hailing.The Luminary",
+      "label": "Hailing from",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Mexico City, Mexico",
+          "label": "Mexico City, Mexico",
+          "description": ""
+        },
+        {
+          "value": "Venice Beach, California",
+          "label": "Venice Beach, California",
+          "description": ""
+        },
+        {
+          "value": "Parts Unknown",
+          "label": "Parts Unknown",
+          "description": ""
+        },
+        {
+          "value": "Elsewhere",
+          "label": "Elsewhere",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Luminary"
+      }
+    },
+    {
+      "name": "hailing.The Manager",
+      "label": "Hailing from",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Memphis, Tennessee",
+          "label": "Memphis, Tennessee",
+          "description": ""
+        },
+        {
+          "value": "New York City",
+          "label": "New York City",
+          "description": ""
+        },
+        {
+          "value": "Las Vegas, Nevada",
+          "label": "Las Vegas, Nevada",
+          "description": ""
+        },
+        {
+          "value": "Elsewhere",
+          "label": "Elsewhere",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Manager"
+      }
+    },
+    {
+      "name": "hailing.The Monster",
+      "label": "Hailing from",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Parts Unknown",
+          "label": "Parts Unknown",
+          "description": ""
+        },
+        {
+          "value": "Dead Horse, Alaska",
+          "label": "Dead Horse, Alaska",
+          "description": ""
+        },
+        {
+          "value": "Kill Devil Hills, North Carolina",
+          "label": "Kill Devil Hills, North Carolina",
+          "description": ""
+        },
+        {
+          "value": "Elsewhere",
+          "label": "Elsewhere",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Monster"
+      }
+    },
+    {
+      "name": "hailing.The Provocateur",
+      "label": "Hailing from",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Sin City",
+          "label": "Sin City",
+          "description": ""
+        },
+        {
+          "value": "Milan, Italy",
+          "label": "Milan, Italy",
+          "description": ""
+        },
+        {
+          "value": "Tinseltown",
+          "label": "Tinseltown",
+          "description": ""
+        },
+        {
+          "value": "Elsewhere",
+          "label": "Elsewhere",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Provocateur"
+      }
+    },
+    {
+      "name": "hailing.The Technician",
+      "label": "Hailing from",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "St. Paul, Minnesota",
+          "label": "St. Paul, Minnesota",
+          "description": ""
+        },
+        {
+          "value": "Calgary, Alberta Canada",
+          "label": "Calgary, Alberta Canada",
+          "description": ""
+        },
+        {
+          "value": "Manchester, England",
+          "label": "Manchester, England",
+          "description": ""
+        },
+        {
+          "value": "Elsewhere",
+          "label": "Elsewhere",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Technician"
+      }
+    },
+    {
+      "name": "hailing.The Veteran",
+      "label": "Hailing from",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Hollywood, California",
+          "label": "Hollywood, California",
+          "description": ""
+        },
+        {
+          "value": "Toronto, Ontario Canada",
+          "label": "Toronto, Ontario Canada",
+          "description": ""
+        },
+        {
+          "value": "Charlotte, North Carolina",
+          "label": "Charlotte, North Carolina",
+          "description": ""
+        },
+        {
+          "value": "Elsewhere",
+          "label": "Elsewhere",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Veteran"
+      }
+    },
+    {
+      "name": "entrance.The Ace",
+      "label": "Entrance",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Licensed Tie-In",
+          "label": "Licensed Tie-In",
+          "description": ""
+        },
+        {
+          "value": "High Tempo & Exciting",
+          "label": "High Tempo & Exciting",
+          "description": ""
+        },
+        {
+          "value": "High-Concept & Production-Filled",
+          "label": "High-Concept & Production-Filled",
+          "description": ""
+        },
+        {
+          "value": "Something Else",
+          "label": "Something Else",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Ace"
+      }
+    },
+    {
+      "name": "entrance.The Anointed",
+      "label": "Entrance",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Classic & Impressive",
+          "label": "Classic & Impressive",
+          "description": ""
+        },
+        {
+          "value": "Showy & Ostentatious",
+          "label": "Showy & Ostentatious",
+          "description": ""
+        },
+        {
+          "value": "Mild & Unremarkable",
+          "label": "Mild & Unremarkable",
+          "description": ""
+        },
+        {
+          "value": "Something Else",
+          "label": "Something Else",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Anointed"
+      }
+    },
+    {
+      "name": "entrance.The Anti-Hero",
+      "label": "Entrance",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Loud & Flashy",
+          "label": "Loud & Flashy",
+          "description": ""
+        },
+        {
+          "value": "Downhome & Gritty",
+          "label": "Downhome & Gritty",
+          "description": ""
+        },
+        {
+          "value": "Silent & Serious",
+          "label": "Silent & Serious",
+          "description": ""
+        },
+        {
+          "value": "Something Else",
+          "label": "Something Else",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Anti-Hero"
+      }
+    },
+    {
+      "name": "entrance.The Call-Up",
+      "label": "Entrance",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Reused From A Retired Wrestler",
+          "label": "Reused From A Retired Wrestler",
+          "description": ""
+        },
+        {
+          "value": "Custom Song From a Local Band",
+          "label": "Custom Song From a Local Band",
+          "description": ""
+        },
+        {
+          "value": "Fresh & Intriguing",
+          "label": "Fresh & Intriguing",
+          "description": ""
+        },
+        {
+          "value": "Something Else",
+          "label": "Something Else",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Call-Up"
+      }
+    },
+    {
+      "name": "entrance.The Clown",
+      "label": "Entrance",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Silly & Comical",
+          "label": "Silly & Comical",
+          "description": ""
+        },
+        {
+          "value": "Generic & Forgettable",
+          "label": "Generic & Forgettable",
+          "description": ""
+        },
+        {
+          "value": "Overly Melodramatic",
+          "label": "Overly Melodramatic",
+          "description": ""
+        },
+        {
+          "value": "Something Else",
+          "label": "Something Else",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Clown"
+      }
+    },
+    {
+      "name": "entrance.The Fighter",
+      "label": "Entrance",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Heavy & Threatening",
+          "label": "Heavy & Threatening",
+          "description": ""
+        },
+        {
+          "value": "Explosive & Impulsive",
+          "label": "Explosive & Impulsive",
+          "description": ""
+        },
+        {
+          "value": "Simple & Direct",
+          "label": "Simple & Direct",
+          "description": ""
+        },
+        {
+          "value": "Something Else",
+          "label": "Something Else",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Fighter"
+      }
+    },
+    {
+      "name": "entrance.The Hardcore",
+      "label": "Entrance",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Raucous & Aggressive",
+          "label": "Raucous & Aggressive",
+          "description": ""
+        },
+        {
+          "value": "Ironic & Jokey",
+          "label": "Ironic & Jokey",
+          "description": ""
+        },
+        {
+          "value": "Sudden & Loud",
+          "label": "Sudden & Loud",
+          "description": ""
+        },
+        {
+          "value": "Something Else",
+          "label": "Something Else",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Hardcore"
+      }
+    },
+    {
+      "name": "entrance.The Jobber",
+      "label": "Entrance",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "None",
+          "label": "None",
+          "description": ""
+        },
+        {
+          "value": "Silly & Overblown",
+          "label": "Silly & Overblown",
+          "description": ""
+        },
+        {
+          "value": "Strangely Sympathetic",
+          "label": "Strangely Sympathetic",
+          "description": ""
+        },
+        {
+          "value": "Something Else",
+          "label": "Something Else",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Jobber"
+      }
+    },
+    {
+      "name": "entrance.The Luchador",
+      "label": "Entrance",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "American Nü Metal",
+          "label": "American Nü Metal",
+          "description": ""
+        },
+        {
+          "value": "Popular Hit",
+          "label": "Popular Hit",
+          "description": ""
+        },
+        {
+          "value": "Pulse-Pounding & Frenetic",
+          "label": "Pulse-Pounding & Frenetic",
+          "description": ""
+        },
+        {
+          "value": "Something Else",
+          "label": "Something Else",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Luchador"
+      }
+    },
+    {
+      "name": "entrance.The Luminary",
+      "label": "Entrance",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Custom Composition",
+          "label": "Custom Composition",
+          "description": ""
+        },
+        {
+          "value": "Pop Music Tie-In",
+          "label": "Pop Music Tie-In",
+          "description": ""
+        },
+        {
+          "value": "Crowd-Pleasing Classic",
+          "label": "Crowd-Pleasing Classic",
+          "description": ""
+        },
+        {
+          "value": "Something Else",
+          "label": "Something Else",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Luminary"
+      }
+    },
+    {
+      "name": "entrance.The Manager",
+      "label": "Entrance",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "None",
+          "label": "None",
+          "description": ""
+        },
+        {
+          "value": "Generic & Celebratory",
+          "label": "Generic & Celebratory",
+          "description": ""
+        },
+        {
+          "value": "Uses Client's Entrance",
+          "label": "Uses Client's Entrance",
+          "description": ""
+        },
+        {
+          "value": "Something Else",
+          "label": "Something Else",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Manager"
+      }
+    },
+    {
+      "name": "entrance.The Monster",
+      "label": "Entrance",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Thunderous & Impressive",
+          "label": "Thunderous & Impressive",
+          "description": ""
+        },
+        {
+          "value": "Overblown & Odd",
+          "label": "Overblown & Odd",
+          "description": ""
+        },
+        {
+          "value": "Weird & Mysterious",
+          "label": "Weird & Mysterious",
+          "description": ""
+        },
+        {
+          "value": "Something Else",
+          "label": "Something Else",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Monster"
+      }
+    },
+    {
+      "name": "entrance.The Provocateur",
+      "label": "Entrance",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Cinematic & Dramatic",
+          "label": "Cinematic & Dramatic",
+          "description": ""
+        },
+        {
+          "value": "Dark & Emotional",
+          "label": "Dark & Emotional",
+          "description": ""
+        },
+        {
+          "value": "Off-Kilter & Frenetic",
+          "label": "Off-Kilter & Frenetic",
+          "description": ""
+        },
+        {
+          "value": "Something Else",
+          "label": "Something Else",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Provocateur"
+      }
+    },
+    {
+      "name": "entrance.The Technician",
+      "label": "Entrance",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Generic & Easy",
+          "label": "Generic & Easy",
+          "description": ""
+        },
+        {
+          "value": "Loud & Overblown",
+          "label": "Loud & Overblown",
+          "description": ""
+        },
+        {
+          "value": "Raw & Intense",
+          "label": "Raw & Intense",
+          "description": ""
+        },
+        {
+          "value": "Something Else",
+          "label": "Something Else",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Technician"
+      }
+    },
+    {
+      "name": "entrance.The Veteran",
+      "label": "Entrance",
+      "type": "select",
+      "className": "form-select",
+      "options": [
+        {
+          "value": "Classic Orchestral",
+          "label": "Classic Orchestral",
+          "description": ""
+        },
+        {
+          "value": "Solemn & Dignified",
+          "label": "Solemn & Dignified",
+          "description": ""
+        },
+        {
+          "value": "Iconic Symbolism",
+          "label": "Iconic Symbolism",
+          "description": ""
+        },
+        {
+          "value": "Something Else",
+          "label": "Something Else",
+          "description": ""
+        }
+      ],
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Veteran"
+      }
+    },
+    {
+      "name": "questions.The Ace.Who trained with me in the dojo?",
+      "id": "questions.The Ace.Who trained with me in the dojo?",
+      "label": "Who trained with me in the dojo?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Ace"
+      }
+    },
+    {
+      "name": "questions.The Ace.Who cares about this company even more than me?",
+      "id": "questions.The Ace.Who cares about this company even more than me?",
+      "label": "Who cares about this company even more than me?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Ace"
+      }
+    },
+    {
+      "name": "questions.The Ace.Who do I have amazing chemistry with in the ring?",
+      "id": "questions.The Ace.Who do I have amazing chemistry with in the ring?",
+      "label": "Who do I have amazing chemistry with in the ring?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Ace"
+      }
+    },
+    {
+      "name": "questions.The Ace.Who is trying to steal my spotlight?",
+      "id": "questions.The Ace.Who is trying to steal my spotlight?",
+      "label": "Who is trying to steal my spotlight?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Ace"
+      }
+    },
+    {
+      "name": "questions.The Anointed.Who did I debut with, then leave behind?",
+      "id": "questions.The Anointed.Who did I debut with, then leave behind?",
+      "label": "Who did I debut with, then leave behind?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Anointed"
+      }
+    },
+    {
+      "name": "questions.The Anointed.Who has taken me under their wing?",
+      "id": "questions.The Anointed.Who has taken me under their wing?",
+      "label": "Who has taken me under their wing?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Anointed"
+      }
+    },
+    {
+      "name": "questions.The Anointed.Who is jealous of my rapid rise?",
+      "id": "questions.The Anointed.Who is jealous of my rapid rise?",
+      "label": "Who is jealous of my rapid rise?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Anointed"
+      }
+    },
+    {
+      "name": "questions.The Anointed.Who has attached themselves to me to feed off of my success?",
+      "id": "questions.The Anointed.Who has attached themselves to me to feed off of my success?",
+      "label": "Who has attached themselves to me to feed off of my success?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Anointed"
+      }
+    },
+    {
+      "name": "questions.The Anti-Hero.Who did I kick the shit out of to prove how tough I am?",
+      "id": "questions.The Anti-Hero.Who did I kick the shit out of to prove how tough I am?",
+      "label": "Who did I kick the shit out of to prove how tough I am?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Anti-Hero"
+      }
+    },
+    {
+      "name": "questions.The Anti-Hero.With whom do I have a reluctant alliance against a mutual enemy?",
+      "id": "questions.The Anti-Hero.With whom do I have a reluctant alliance against a mutual enemy?",
+      "label": "With whom do I have a reluctant alliance against a mutual enemy?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Anti-Hero"
+      }
+    },
+    {
+      "name": "questions.The Anti-Hero.Who have I called out as a slave to management?",
+      "id": "questions.The Anti-Hero.Who have I called out as a slave to management?",
+      "label": "Who have I called out as a slave to management?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Anti-Hero"
+      }
+    },
+    {
+      "name": "questions.The Anti-Hero.Who wishes they were as cool as me?",
+      "id": "questions.The Anti-Hero.Who wishes they were as cool as me?",
+      "label": "Who wishes they were as cool as me?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Anti-Hero"
+      }
+    },
+    {
+      "name": "questions.The Call-Up.Who has sung my praises to get me on the roster?",
+      "id": "questions.The Call-Up.Who has sung my praises to get me on the roster?",
+      "label": "Who has sung my praises to get me on the roster?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Call-Up"
+      }
+    },
+    {
+      "name": "questions.The Call-Up.Who thinks I'm completely overrated?",
+      "id": "questions.The Call-Up.Who thinks I'm completely overrated?",
+      "label": "Who thinks I'm completely overrated?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Call-Up"
+      }
+    },
+    {
+      "name": "questions.The Call-Up.With whom do I have an old rivalry that can now be restarted?",
+      "id": "questions.The Call-Up.With whom do I have an old rivalry that can now be restarted?",
+      "label": "With whom do I have an old rivalry that can now be restarted?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Call-Up"
+      }
+    },
+    {
+      "name": "questions.The Call-Up.Who's spot am I threatening to take now that I'm here?",
+      "id": "questions.The Call-Up.Who's spot am I threatening to take now that I'm here?",
+      "label": "Who's spot am I threatening to take now that I'm here?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Call-Up"
+      }
+    },
+    {
+      "name": "questions.The Clown.Who asks me for tips to add something fresh to their act?",
+      "id": "questions.The Clown.Who asks me for tips to add something fresh to their act?",
+      "label": "Who asks me for tips to add something fresh to their act?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Clown"
+      }
+    },
+    {
+      "name": "questions.The Clown.Who am I overshadowing with my antics?",
+      "id": "questions.The Clown.Who am I overshadowing with my antics?",
+      "label": "Who am I overshadowing with my antics?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Clown"
+      }
+    },
+    {
+      "name": "questions.The Clown.Who always turns to me to save their segments when they drop the ball?",
+      "id": "questions.The Clown.Who always turns to me to save their segments when they drop the ball?",
+      "label": "Who always turns to me to save their segments when they drop the ball?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Clown"
+      }
+    },
+    {
+      "name": "questions.The Clown.Who thinks I'm a waste of a roster slot?",
+      "id": "questions.The Clown.Who thinks I'm a waste of a roster slot?",
+      "label": "Who thinks I'm a waste of a roster slot?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Clown"
+      }
+    },
+    {
+      "name": "questions.The Fighter.Who has earned my respect with their legit fighting skills?",
+      "id": "questions.The Fighter.Who has earned my respect with their legit fighting skills?",
+      "label": "Who has earned my respect with their legit fighting skills?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Fighter"
+      }
+    },
+    {
+      "name": "questions.The Fighter.Who did I beat when they challenged me to a shoot fight?",
+      "id": "questions.The Fighter.Who did I beat when they challenged me to a shoot fight?",
+      "label": "Who did I beat when they challenged me to a shoot fight?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Fighter"
+      }
+    },
+    {
+      "name": "questions.The Fighter.Who wants to add more entertainment to my repertoire?",
+      "id": "questions.The Fighter.Who wants to add more entertainment to my repertoire?",
+      "label": "Who wants to add more entertainment to my repertoire?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Fighter"
+      }
+    },
+    {
+      "name": "questions.The Fighter.Who am I afraid of?",
+      "id": "questions.The Fighter.Who am I afraid of?",
+      "label": "Who am I afraid of?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Fighter"
+      }
+    },
+    {
+      "name": "questions.The Hardcore.Who is jealous of my devoted fan base?",
+      "id": "questions.The Hardcore.Who is jealous of my devoted fan base?",
+      "label": "Who is jealous of my devoted fan base?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Hardcore"
+      }
+    },
+    {
+      "name": "questions.The Hardcore.Who is willing to make me bleed?",
+      "id": "questions.The Hardcore.Who is willing to make me bleed?",
+      "label": "Who is willing to make me bleed?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Hardcore"
+      }
+    },
+    {
+      "name": "questions.The Hardcore.Who has returned from an injury I gave them?",
+      "id": "questions.The Hardcore.Who has returned from an injury I gave them?",
+      "label": "Who has returned from an injury I gave them?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Hardcore"
+      }
+    },
+    {
+      "name": "questions.The Hardcore.Who can take everything I can dish out?",
+      "id": "questions.The Hardcore.Who can take everything I can dish out?",
+      "label": "Who can take everything I can dish out?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Hardcore"
+      }
+    },
+    {
+      "name": "questions.The Jobber.Who can't remember who I am?",
+      "id": "questions.The Jobber.Who can't remember who I am?",
+      "label": "Who can't remember who I am?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Jobber"
+      }
+    },
+    {
+      "name": "questions.The Jobber.Who was my tag team partner before they made it big?",
+      "id": "questions.The Jobber.Who was my tag team partner before they made it big?",
+      "label": "Who was my tag team partner before they made it big?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Jobber"
+      }
+    },
+    {
+      "name": "questions.The Jobber.Who thinks they're too important to work with me?",
+      "id": "questions.The Jobber.Who thinks they're too important to work with me?",
+      "label": "Who thinks they're too important to work with me?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Jobber"
+      }
+    },
+    {
+      "name": "questions.The Jobber.Who is trying to get me bigger paydays to reward me for my work?",
+      "id": "questions.The Jobber.Who is trying to get me bigger paydays to reward me for my work?",
+      "label": "Who is trying to get me bigger paydays to reward me for my work?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Jobber"
+      }
+    },
+    {
+      "name": "questions.The Luchador.Who allied with me on my first team?",
+      "id": "questions.The Luchador.Who allied with me on my first team?",
+      "label": "Who allied with me on my first team?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Luchador"
+      }
+    },
+    {
+      "name": "questions.The Luchador.Who is ripping off my high-flying style?",
+      "id": "questions.The Luchador.Who is ripping off my high-flying style?",
+      "label": "Who is ripping off my high-flying style?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Luchador"
+      }
+    },
+    {
+      "name": "questions.The Luchador.Who thinks I don't deserve my mask (or overall look)?",
+      "id": "questions.The Luchador.Who thinks I don't deserve my mask (or overall look)?",
+      "label": "Who thinks I don't deserve my mask (or overall look)?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Luchador"
+      }
+    },
+    {
+      "name": "questions.The Luchador.Who is trying to convince me to change my style, my mask, or both?",
+      "id": "questions.The Luchador.Who is trying to convince me to change my style, my mask, or both?",
+      "label": "Who is trying to convince me to change my style, my mask, or both?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Luchador"
+      }
+    },
+    {
+      "name": "questions.The Luminary.Who was instrumental to my early success?",
+      "id": "questions.The Luminary.Who was instrumental to my early success?",
+      "label": "Who was instrumental to my early success?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Luminary"
+      }
+    },
+    {
+      "name": "questions.The Luminary.Who wants me to just retire already?",
+      "id": "questions.The Luminary.Who wants me to just retire already?",
+      "label": "Who wants me to just retire already?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Luminary"
+      }
+    },
+    {
+      "name": "questions.The Luminary.Who is honored to be on my team?",
+      "id": "questions.The Luminary.Who is honored to be on my team?",
+      "label": "Who is honored to be on my team?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Luminary"
+      }
+    },
+    {
+      "name": "questions.The Luminary.Who knows about (at least) one my dirty secrets?",
+      "id": "questions.The Luminary.Who knows about (at least) one my dirty secrets?",
+      "label": "Who knows about (at least) one my dirty secrets?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Luminary"
+      }
+    },
+    {
+      "name": "questions.The Manager.Who do I manage/accompany to the ring?",
+      "id": "questions.The Manager.Who do I manage/accompany to the ring?",
+      "label": "Who do I manage/accompany to the ring?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Manager"
+      }
+    },
+    {
+      "name": "questions.The Manager.Who is trying to undermine me with my client?",
+      "id": "questions.The Manager.Who is trying to undermine me with my client?",
+      "label": "Who is trying to undermine me with my client?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Manager"
+      }
+    },
+    {
+      "name": "questions.The Manager.Who turned on me when I was their Manager?",
+      "id": "questions.The Manager.Who turned on me when I was their Manager?",
+      "label": "Who turned on me when I was their Manager?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Manager"
+      }
+    },
+    {
+      "name": "questions.The Manager.Who knows I have their best interests at heart?",
+      "id": "questions.The Manager.Who knows I have their best interests at heart?",
+      "label": "Who knows I have their best interests at heart?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Manager"
+      }
+    },
+    {
+      "name": "questions.The Monster.Who is legitimately terrified of me?",
+      "id": "questions.The Monster.Who is legitimately terrified of me?",
+      "label": "Who is legitimately terrified of me?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Monster"
+      }
+    },
+    {
+      "name": "questions.The Monster.Who's made me look weak?",
+      "id": "questions.The Monster.Who's made me look weak?",
+      "label": "Who's made me look weak?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Monster"
+      }
+    },
+    {
+      "name": "questions.The Monster.Who helps me come up with new directions for my character?",
+      "id": "questions.The Monster.Who helps me come up with new directions for my character?",
+      "label": "Who helps me come up with new directions for my character?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Monster"
+      }
+    },
+    {
+      "name": "questions.The Monster.Who can stand up to me in the ring?",
+      "id": "questions.The Monster.Who can stand up to me in the ring?",
+      "label": "Who can stand up to me in the ring?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Monster"
+      }
+    },
+    {
+      "name": "questions.The Provocateur.Who saw the potential in me to excel at being such an oddball?",
+      "id": "questions.The Provocateur.Who saw the potential in me to excel at being such an oddball?",
+      "label": "Who saw the potential in me to excel at being such an oddball?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Provocateur"
+      }
+    },
+    {
+      "name": "questions.The Provocateur.Who thinks I'm all smoke and no fire?",
+      "id": "questions.The Provocateur.Who thinks I'm all smoke and no fire?",
+      "label": "Who thinks I'm all smoke and no fire?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Provocateur"
+      }
+    },
+    {
+      "name": "questions.The Provocateur.Who is trying to steal my approach?",
+      "id": "questions.The Provocateur.Who is trying to steal my approach?",
+      "label": "Who is trying to steal my approach?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Provocateur"
+      }
+    },
+    {
+      "name": "questions.The Provocateur.Who's starstruck by me, even though we're peers?",
+      "id": "questions.The Provocateur.Who's starstruck by me, even though we're peers?",
+      "label": "Who's starstruck by me, even though we're peers?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Provocateur"
+      }
+    },
+    {
+      "name": "questions.The Technician.Who was holding me back as my tag team partner?",
+      "id": "questions.The Technician.Who was holding me back as my tag team partner?",
+      "label": "Who was holding me back as my tag team partner?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Technician"
+      }
+    },
+    {
+      "name": "questions.The Technician.Who's learning new skills by watching me in the ring?",
+      "id": "questions.The Technician.Who's learning new skills by watching me in the ring?",
+      "label": "Who's learning new skills by watching me in the ring?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Technician"
+      }
+    },
+    {
+      "name": "questions.The Technician.Who's jealous of my technical ability?",
+      "id": "questions.The Technician.Who's jealous of my technical ability?",
+      "label": "Who's jealous of my technical ability?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Technician"
+      }
+    },
+    {
+      "name": "questions.The Technician.Who is trying to teach me skills I need for outside of the ring?",
+      "id": "questions.The Technician.Who is trying to teach me skills I need for outside of the ring?",
+      "label": "Who is trying to teach me skills I need for outside of the ring?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Technician"
+      }
+    },
+    {
+      "name": "questions.The Veteran.Who have I decided is killing the business with their performance?",
+      "id": "questions.The Veteran.Who have I decided is killing the business with their performance?",
+      "label": "Who have I decided is killing the business with their performance?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Veteran"
+      }
+    },
+    {
+      "name": "questions.The Veteran.Who is my protégé?",
+      "id": "questions.The Veteran.Who is my protégé?",
+      "label": "Who is my protégé?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Veteran"
+      }
+    },
+    {
+      "name": "questions.The Veteran.Who has no respect for all the work I've put into this company?",
+      "id": "questions.The Veteran.Who has no respect for all the work I've put into this company?",
+      "label": "Who has no respect for all the work I've put into this company?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Veteran"
+      }
+    },
+    {
+      "name": "questions.The Veteran.Who is desperately seeking my approval?",
+      "id": "questions.The Veteran.Who is desperately seeking my approval?",
+      "label": "Who is desperately seeking my approval?",
+      "type": "text",
+      "className": "form-control",
+      "default": "Unknown",
+      "dependsOn": {
+        "field": "gimmick",
+        "value": "The Veteran"
+      }
+    },
+    {
+      "type": "group",
+      "name": "stats",
+      "label": "Stats",
+      "children": [
+        {
+          "name": "stats.Body",
+          "id": "stats.body",
+          "label": "Body",
+          "description": "Your physical strength, conditioning, and athletic ability. Body is most important for you if you want to enjoy physical dominance over other wrestlers and shine in the ring due to your physical prowess.",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": -2,
+            "max": 3
+          },
+          "default": 0
+        },
+        {
+          "name": "stats.Look",
+          "id": "stats.look",
+          "label": "Look",
+          "description": "Your charisma, 'it' factor and ability to inhabit your character and get the fans interested in your story. Look is most important for you if you want to cut exciting promos and create a memorable character for the fans to follow.",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": -2,
+            "max": 3
+          },
+          "default": 0
+        },
+        {
+          "name": "stats.Real",
+          "id": "stats.real",
+          "label": "Real",
+          "description": "Your ability to 'break the fourth wall,' bring in real-world concerns, and blend legit issues with your storyline conflicts. Real is most important for you if you want to blur the line between character and performer and captivate the audience with your actual personality.",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": -2,
+            "max": 3
+          },
+          "default": 0
+        },
+        {
+          "name": "stats.Work",
+          "id": "stats.work",
+          "label": "Work",
+          "description": "Your ability to tell a story in the ring, execute moves correctly, and make others look good as you show off your own skill. Work is most important for you if you want to build your reputation on five-star matches and mastery of the artform.",
+          "type": "number",
+          "className": "form-control",
+          "validation": {
+            "required": true,
+            "min": -2,
+            "max": 3
+          },
+          "default": 0
+        }
+      ]
+    },
+    {
+      "name": "wants",
+      "label": "Wants",
+      "type": "array",
+      "component": {
+        "name": "wants",
+        "label": "Wants",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "A New Championship Title",
+            "label": "A New Championship Title",
+            "description": "",
+            "gimmick": "General"
+          },
+          {
+            "value": "Join a Group",
+            "label": "Join a Group",
+            "description": "",
+            "gimmick": "General"
+          },
+          {
+            "value": "Revenge",
+            "label": "Revenge",
+            "description": "",
+            "gimmick": "General"
+          },
+          {
+            "value": "Domination",
+            "label": "Domination",
+            "description": "",
+            "gimmick": "General"
+          },
+          {
+            "value": "Adulation of the Crowd",
+            "label": "Adulation of the Crowd",
+            "description": "",
+            "gimmick": "General"
+          },
+          {
+            "value": "A Record-Breaking Title Run",
+            "label": "A Record-Breaking Title Run",
+            "description": "",
+            "gimmick": "Ace"
+          },
+          {
+            "value": "Validation from a Mentor",
+            "label": "Validation from a Mentor",
+            "description": "",
+            "gimmick": "The Anointed"
+          },
+          {
+            "value": "Take Down the Boss",
+            "label": "Take Down the Boss",
+            "description": "",
+            "gimmick": "The Anti-Hero"
+          },
+          {
+            "value": "Prove You Belong on this Roster",
+            "label": "Prove You Belong on this Roster",
+            "description": "",
+            "gimmick": "The Call-Up"
+          },
+          {
+            "value": "To Overshadow the Main Event",
+            "label": "To Overshadow the Main Event",
+            "description": "",
+            "gimmick": "The Clown"
+          },
+          {
+            "value": "A Legit Fight with a Worthy Opponent",
+            "label": "A Legit Fight with a Worthy Opponent",
+            "description": "",
+            "gimmick": "The Fighter"
+          },
+          {
+            "value": "Raise the Bar for Violence",
+            "label": "Raise the Bar for Violence",
+            "description": "",
+            "gimmick": "The Hardcore"
+          },
+          {
+            "value": "A Win Over a Main Event Star",
+            "label": "A Win Over a Main Event Star",
+            "description": "",
+            "gimmick": "The Jobber"
+          },
+          {
+            "value": "Unmask My Nemesis",
+            "label": "Unmask My Nemesis",
+            "description": "",
+            "gimmick": "The Luchador"
+          },
+          {
+            "value": "Mainstream Recognition",
+            "label": "Mainstream Recognition",
+            "description": "",
+            "gimmick": "The Luminary"
+          },
+          {
+            "value": "Compete in the Ring, Win or Lose",
+            "label": "Compete in the Ring, Win or Lose",
+            "description": "",
+            "gimmick": "The Manager"
+          },
+          {
+            "value": "Achieve an Impossible Feat",
+            "label": "Achieve an Impossible Feat",
+            "description": "",
+            "gimmick": "The Monster"
+          },
+          {
+            "value": "Bring an Opponent into Your World",
+            "label": "Bring an Opponent into Your World",
+            "description": "",
+            "gimmick": "The Provocateur"
+          },
+          {
+            "value": "Make a Superior Opponent Tap Out",
+            "label": "Make a Superior Opponent Tap Out",
+            "description": "",
+            "gimmick": "The Technician"
+          },
+          {
+            "value": "To Cement Your Legacy",
+            "label": "To Cement Your Legacy",
+            "description": "",
+            "gimmick": "The Veteran"
+          }
+        ]
+      }
+    },
+    {
+      "name": "moves",
+      "label": "Moves",
+      "type": "array",
+      "component": {
+        "name": "moves",
+        "label": "Moves",
+        "type": "select",
+        "className": "form-select",
+        "options": [
+          {
+            "value": "Athletic Feat",
+            "label": "Athletic Feat",
+            "description": "This Move covers impressive performances of the physical body, including demonstrances of strength, flexibility, endurance, and tone and build. The feat itself can involve props (like bending iron bars or crushing rocks), an assistant or subject (like throwing someone across the ring or backflipping onto the top of a human pyramid), or an contest (like a pose-down or eating 100 hot dogs).<br /> The 7-9 result represents how this is a strain, even for someone with these gifts-an Athletic Feat is always something the wrestler doesn't normally do! If the player chooses to forfeit their next match and the bout hasn't yet been announced, then you apply the forfeit to their most appropriate feud or storyline. If someone comes to their aid, they do not choose the someone, you do. That can be someone already in the segment or you could debut someone this way. It's also appropriate for another player to swoop in to save the day. In the ring, if the wrestler is pushing their opponent around just to show off, rather than to move the match along, use this Move instead of rolling +Body for the Wrestling Move. A Botch on an Athletic Feat already causes an Injury, but you can also include another Hard Move if the moment is ripe for it.<br /><strong>Roll +Body.</strong><br /><strong>On a 10+:</strong> you do it easily. Gain +1 Heat with your opponent or if you don't have an opponent and you're just showing off, gain +2 Momentum.<br /><strong>On a 7-9:</strong> it's a cool move but you show the strain. Gain +1 Momentum and pick either: you do it, but it hurts (forfeit your next scheduled match while you recover), or someone steps in to cover for you and you pull it off with their help (if it's another player wrestler, they gain +1 Momentum).<br /><strong>On a Botch:</strong> ouch! Take an Injury, and gain +1 Momentum.",
+            "classification": "Basic"
+          },
+          {
+            "value": "Break Kayfabe",
+            "label": "Break Kayfabe",
+            "description": "The key question for this is 'are you breaking kayfabe?'. This can be a difficult call to interpret in the moment; pause and ask when it's unclear. The player should telegraph this as much as possible. In addition, some Move results demand that a player's wrestler act in a certain way—if the subject of one of those Moves wants to refuse that demand, they need to Break Kayfabe to do so. Finally, Break Kayfabe can only work on camera. If the scene takes place off-camera, there's no kayfabe to break and characters can switch between wrestling reality and legit concerns freely and without consequences. A Botch on Break Kayfabe should bring in a Hard Move on top of the three 7-9 results whenever the moment is ripe for it.<br /><strong>Roll +Real.</strong><br /><strong>On a 10+:</strong> it's exactly what the crowd was waiting for, gain +1 Audience.<br /><strong>On a 7-9:</strong> you blur the line, gain +1 Momentum and pick 1: Creative BOOKs you into an embarrassing loss as punishment for going off-script; the truth you reveal loses you -1 Heat with someone involved; or you lose the faith of someone who was investing in you backstage.<br /><strong>On a Botch:</strong> all three, and gain +1 Momentum.",
+            "classification": "Basic"
+          },
+          {
+            "value": "Cheap Heat",
+            "label": "Cheap Heat",
+            "description": "Even when the insult or compliment is buried inside of Cut A Promo or an attempt to Work The Audience, it still triggers (this is an exception to the 'one Move at a time' rule). You can only get Cheap Heat once per Episode.<br /><strong>When you insult or praise the audience or their hometown:</strong> gain +1 Momentum.",
+            "classification": "Basic"
+          },
+          {
+            "value": "Cut A Promo",
+            "label": "Cut A Promo",
+            "description": "The trigger uses the phrase 'take the mic' but a promo doesn't require a literal mic if the context doesn't include it. Cut A Promo is one of the most common Moves. It triggers after anything a wrestler says which demands a response or pushes a feud forward. If a player is having trouble coming up with the content of their promo, they can describe the basic points that the wrestler is trying to get across and the dice result will tell you whether the audience gets it or not.<br />The subject of the promo can be a single wrestler or a group, depending on the context, but if there are multiple possibilities the player chooses who to gain the +1 Heat with when they choose that 7-9 option. A Botch on Cut A Promo is a good time to push a NPW, announce legit badness (like someone backstage turning sour on them), turn the audience on them, or change your booking on the fly to give them a loss in their next match.<br /><strong>Roll +Look.</strong><br /><strong>On a 10+:</strong> you connect with the audience, pick 2 from the 7-9 list.<br /><strong>On a 7-9:</strong> you have their attention, pick 1: make Creative BOOK you in a match; add a stipulation to a relevant match; they come out to respond to your promo; or gain +1 Heat with the subject of your promo.<br /><strong>On a Botch:</strong> it doesn't connect. Gain +1 Momentum.",
+            "classification": "Basic"
+          },
+          {
+            "value": "Over",
+            "label": "Over",
+            "description": "Whoever is in the Top Spot at the top of an Episode makes this Move. If multiple wrestlers are in the Top Spot, they all make it separately. The first segment (or segments) of the Episode should be the platform for making their choices known to the audience (like calling out an opponent or announcing a vignette that is going to be featured later). The player can spend their Momentum on choices in any order, so they could (potentially) call out an opponent, make a match with them as the main event and then add a stipulation; alternately they could add a stipulation to a previously booked match, then call for an unrelated non-wrestling segment to kick off something new. If they decide not to take any options and start with 3 Momentum, they cannot retroactively spend on choices. Once the Over Move choices have been made, the Episode gets underway and it cannot be made again. If you are playing a session that contains multiple discrete Episodes and the same wrestler is in the Top Spot for consecutive Episodes, they make the Move each time. It's per-Episode, not per session.<br /><strong>When you're in the Top Spot, the Episode opens with you.</strong> Gain +3 Momentum, then spend Momentum 1-for-1 to:<ul><li>Get any match you wish as the main event.</li><li>Add a stipulation to an upcoming match.</li><li>Call out anyone on the roster (and gain +1 Heat with them).</li><li>Declare a non-wrestling segment for later in the show (when that segment starts, take +1 Momentum).</li></ul>Start the Episode with any Momentum you don't spend.",
+            "classification": "Basic"
+          },
+          {
+            "value": "Play Politics",
+            "label": "Play Politics",
+            "description": "Play Politics triggers when a wrestler is having an argument off-camera. This can be with another player's wrestler or with an NPW, and it should be an argument where the characters are truly at odds or want different outcomes and aren't willing to back down. If an argument of this type happens on-camera, and a wrestler breaks character as part of it, that's Break Kayfabe instead.<br /> If two players are arguing, they both roll. The higher result makes the Move, so that player is the 'you' and the other is the 'they' when picking the results. If one player Botches their roll and the other doesn't, they may still be subject to a Hard Move (up to you), but you do not apply the Play Politics Botch result. If they both Botch, just apply the Botch result once (losing -1 Heat with each other, and you make a Hard Move).<br />Often, an argument will start, you'll get to a point where one (or both) players make this Move, and then you use the results to guide the rest of the scene. Sometimes you'll realize at the end of an off-camera scene that an argument just happened. You still roll for the Move. Sometimes the results will be post-facto fit to how things went down, rather than guides to what happens next. It's fine both ways!<br /><strong>Roll +Audience.</strong> If you're arguing with another player wrestler, they also make this Move, and whoever rolls higher gets the result.<br /><strong>On a 10+:</strong> you pick 1 from the 7-9 list, and then they pick 1.<br /><strong>On a 7-9:</strong> they pick 1, and then you pick 1: they agree that you're right; the argument stays a private matter; Creative sets up a match or other segment that the person who selected this option wants to see; or change your Want to something they want to see as a result of your argument.<br /><strong>On a Botch:</strong> you lose -1 Heat with them (or with each other, if confronting a player wrestler), and Creative makes as Hard a Move as you're asking for.",
+            "classification": "Basic"
+          },
+          {
+            "value": "Run-In",
+            "label": "Run-In",
+            "description": "This is an 'I'm bored' Move—it's always available to a player who feels like they haven't had enough screen time and is a great way to get their wrestler into a storyline with someone they haven't been booked with yet! The player can have a storyline reason to run in (like a heel taking advantage of a babyface's weakened state to beat them up) or shape it based on how the roll goes (like deciding on what your beef with them is after finding out that you're going to have a grudge match).<br /> The 7-9 result 'You attack them in the ring! This BOOKs them as the winner' is based on a wrestling trope that, if you attack someone in the ring, you are interfering on behalf of their opponent. This draws that opponent a disqualification, which awards your target a win. Use referee's discretion to make the moment fit this result, if necessary.<br />On a Botch, the Hard Move could be what stops the run-in from happening, or it can be a result of the aborted attempt not getting over with the audience.<br /><strong>Roll +Heat with the wrestler you're coming after</strong> (establish Heat at +1 if necessary).<br /><strong>On a 10+:</strong> it's a hot angle! You both gain +1 Heat with each other and you pick 1 from the 7-9 list.<br /><strong>On a 7-9:</strong> your target gains +1 Heat with you and they pick 1: you attack them in the ring (this BOOKs them as the winner, as their opponent gets DQed for your interference); you distract them from outside the ring and their opponent takes control of the match (booked into a grudge match with them later this Episode); or you shove the ref, start a brawl, or otherwise cause a No Contest (you both take +1 Momentum).<br /><strong>On a Botch:</strong> you get stopped before you hit the ring. Gain +1 Momentum.",
+            "classification": "Basic"
+          },
+          {
+            "value": "Work The Audience",
+            "label": "Work The Audience",
+            "description": "The basic Work The Audience context is in front of a live crowd, usually before a match. Sometimes it can be unclear whether something a wrestler says is Work The Audience or Cut A Promo. The key difference is that Work The Audience doesn't demand a response or push a feud forward, while Cut A Promo does. If the intention is to just pop the crowd, then it's not Cut A Promo. Work The Audience can also be made in the middle of a match. The player does not need to be in control of the match to Work The Audience, as long as they can narrate what their wrestler does to get the crowd on their side.<br />A Botch already turns the audience against the wrestler (by taking away their ability to use this Move for the Episode), so any additional Hard Move should revolve around that. Unless they're really asking for it, though, you can go easy on them.<br /><strong>Roll +Audience.</strong><br /><strong>On a 10+:</strong> they pop big. If you want, you can spend 1 Momentum to gain +1 Heat with your current or upcoming opponent (the crowd can't wait to see you go at it!). Else, bask in the moment and gain +1 Momentum.<br /><strong>On a 7-9:</strong> they play along. Gain +1 Momentum.<br /><strong>On a Botch:</strong> you've lost them. You can't Work The Audience again this Episode. Gain +1 Momentum.",
+            "classification": "Basic"
+          },
+          {
+            "value": "Athletic Feat — Mythic Moment",
+            "label": "Athletic Feat — Mythic Moment",
+            "description": "Mythic Moments are unlocked via a Promotion Advance in Living Promotions. Triggered when a player hits a natural 12+ on the Basic Move and spends all current Momentum.<br /><strong>You've exceeded human capacity to join the pantheon of wrestling legends.</strong> Pick either:<ul><li>Your feat becomes imitated worldwide, by fans and other wrestlers. Gain +1 Audience. Your Audience Reset number permanently goes up by 1 (Max +3).</li><li>You become immortalized in the highlight reels of your Promotion. Describe exactly how that looks. Gain +1 Momentum when you make your first appearance in every Episode from now on.</li></ul>",
+            "classification": "Mythic Moment"
+          },
+          {
+            "value": "Break Kayfabe — Mythic Moment",
+            "label": "Break Kayfabe — Mythic Moment",
+            "description": "Mythic Moments are unlocked via a Promotion Advance in Living Promotions. Triggered when a player hits a natural 12+ on the Basic Move and spends all current Momentum.<br /><strong>Your action becomes the symbol of when things changed.</strong> Pick either:<ul><li>You BOOK all of your matches until the next Audience reset. Your Audience Reset number permanently goes up by 1 (Max +3).</li><li>You expose something backstage impossible to ignore. Creative must acknowledge this on-screen and you pick one Tier Effect to reflect the change you demand. Gain +1 Audience.</li></ul>",
+            "classification": "Mythic Moment"
+          },
+          {
+            "value": "Cut A Promo — Mythic Moment",
+            "label": "Cut A Promo — Mythic Moment",
+            "description": "Mythic Moments are unlocked via a Promotion Advance in Living Promotions. Triggered when a player hits a natural 12+ on the Basic Move and spends all current Momentum.<br /><strong>Your promo becomes part of professional wrestling canon.</strong> Pick 1:<ul><li>Simply referencing this promo counts for the Cheap Heat Move, for everyone on the roster, forever.</li><li>Your promo goes viral, and everybody knows it even if they don't know you. Your Audience Reset number permanently goes up by 1 (Max +3).</li><li>This takes you to the next level of your craft. Take an Advanced Role right now, without spending an Advance.</li></ul>",
+            "classification": "Mythic Moment"
+          },
+          {
+            "value": "Work The Audience — Mythic Moment",
+            "label": "Work The Audience — Mythic Moment",
+            "description": "Mythic Moments are unlocked via a Promotion Advance in Living Promotions. Triggered when a player hits a natural 12+ on the Basic Move and spends all current Momentum.<br /><strong>They'll never forget being in this crowd.</strong> Pick either:<ul><li>Add an Audience Move of your choice to the rest of this Episode.</li><li>You whip them into a real frenzy. Gain +1 Audience as they storm the ring!</li></ul>",
+            "classification": "Mythic Moment"
+          },
+          {
+            "value": "Run-In — Mythic Moment",
+            "label": "Run-In — Mythic Moment",
+            "description": "Mythic Moments are unlocked via a Promotion Advance in Living Promotions. Triggered when a player hits a natural 12+ on the Basic Move and spends all current Momentum.<br /><strong>You've perfectly captured a turning point in the storyline.</strong> BOOK the result of your run-in on the fly. Then, gain +1 Heat with each other and pick 1:<ul><li>It's turned to a blood feud. You and your target can only wrestle each other until this thing is resolved.</li><li>You've gained the upper hand. You can pick any stipulations you want for your opponent's matches until the next Audience Reset (whether you're booked in them or not).</li><li>This is going to get settled tonight! Your big match is the new main event of the Episode. You and your opponent both gain +1 Audience, as the crowd gets exactly what they want.</li></ul>",
+            "classification": "Mythic Moment"
+          },
+          {
+            "value": "Wrestling — Mythic Moment",
+            "label": "Wrestling — Mythic Moment",
+            "description": "Mythic Moments are unlocked via a Promotion Advance in Living Promotions. Triggered when a player hits a natural 12+ on the Basic Move and spends all current Momentum.<br /><strong>This move goes into your highlight reel.</strong> Keep control of the match, and pick 1:<ul><li>You impress everyone. You are now BOOKED to win the match.</li><li>You steal the show. Gain +1 Audience.</li><li>You do the job. Your opponent gains +1 Audience.</li><li>You upstage someone. Say who comes out to help your opponent. You gain +1 Heat with each other, and you're BOOKED to lose the match.</li></ul>",
+            "classification": "Mythic Moment"
+          },
+          {
+            "value": "Babyface",
+            "label": "Babyface",
+            "description": "As mentioned previously, the 'something you believe in' doesn't have to be a particularly positive or honorable thing. But it should be clear that the wrestler has something they care about more than breaking the rules. This may include giving up a victory or opportunity to win! Note that this Move lets you stop a cheater from cheating to win a match. This can be used whenever someone tries to cheat to win, whether it's just part of narration or a result of the Heel Move.<br /><strong>When you stand up for something you believe in,</strong> spend 2 Momentum and pick 1:<ul><li>Gain +1 Heat with your opponent.</li><li>Leave your opponent speechless.</li><li>Make Creative book you in a match.</li><li>Expose villainous behavior to BOOK a cheater to lose a match.</li></ul>",
+            "classification": "Role"
+          },
+          {
+            "value": "Heel",
+            "label": "Heel",
+            "description": "Doing 'something underhanded' will be contextual to each match and should generally be clearly telegraphed by the player. This Move lets you just win a match by cheating, as long as you have the 2 Momentum to spend. You can do this before the end of the match is announced, or after (in order to swerve the BOOKING). If multiple players used the Heel Move to win a match, apply them in sequence. Sometimes a match result will be subject to multiple attempts to change it, especially if the Babyface Move is used to 'counter' the cheating win. Whether it's appropriate to continue using the Move to cheat out a win multiple times in one match is up to Creative.<br /><strong>When you do something underhanded to get what you want,</strong> spend 2 Momentum and pick 1:<ul><li>Gain +1 Heat with your opponent.</li><li>Leave someone helplessly lying on the floor.</li><li>Postpone one of your matches.</li><li>Cheat in order to BOOK yourself to win a match.</li></ul>",
+            "classification": "Role"
+          },
+          {
+            "value": "Técnico",
+            "label": "Técnico",
+            "description": "In addition to generally standing up for what you believe in, you act with respect for others and for wrestling tradition. You count as a Babyface for the purposes of any Move or rule concerned with Role. When bringing an ally to your aid, they can be anyone you're already established as friendly with. If it's another player's wrestler they must come when called (or Break Kayfabe instead).<br /><strong>Lucha Libre Role — Técnico:</strong> add the following to your Babyface Move:<ul><li>An ally comes to your aid and gain +1 Heat with them.</li></ul>",
+            "classification": "Role"
+          },
+          {
+            "value": "Rudo",
+            "label": "Rudo",
+            "description": "In addition to generally being underhanded and selfish, you are disobedient and disrespectful to authority figures in particular, and other wrestlers in general. You are willing to abandon anyone to save your own skin. You count as a Heel for the purposes of any Move or rule concerned with Role.<br /><strong>Lucha Libre Role — Rudo:</strong> add the following to your Heel Move:<ul><li>Leave an ongoing match to save yourself. Lose the match, and you and your opponent gain +1 Heat with each other.</li></ul>",
+            "classification": "Role"
+          },
+          {
+            "value": "Advanced Role — Celebrity",
+            "label": "Advanced Role — Celebrity",
+            "description": "A wrestler who has transcended 'good' and 'bad' through fame gained outside of the wrestling world. Gained by spending an Advance.<br /><strong>Add the following to your basic Role Move:</strong><ul><li>Creative must BOOK you to win your next match.</li></ul>",
+            "classification": "Role"
+          },
+          {
+            "value": "Advanced Role — Icon",
+            "label": "Advanced Role — Icon",
+            "description": "A wrestler who has transcended 'good' and 'bad' through devotion to their craft. Gained by spending an Advance.<br /><strong>Add the following to your basic Role Move:</strong><ul><li>Make any roll a 10+, for you or someone else.</li></ul>",
+            "classification": "Role"
+          },
+          {
+            "value": "Advanced Role — Legend",
+            "label": "Advanced Role — Legend",
+            "description": "A wrestler who has transcended 'good' and 'bad' through the fans' love of their character. Gained by spending an Advance.<br /><strong>Add the following to your basic Role Move:</strong><ul><li>You and your opponent count as having +1 Audience for the rest of a match or segment.</li></ul>",
+            "classification": "Role"
+          },
+          {
+            "value": "Champions Advantage",
+            "label": "Champions Advantage",
+            "description": "If your Championship is at stake in a match, you can roll out of the ring and get counted out whenever you have control. You lose the match, but retain the title, as titles do not change hands on a countout.<br /><strong>Roll +Audience.</strong><br /><strong>On a 10+:</strong> gain +1 Heat with your opponent and pick 1 from the 7-9 list.<br /><strong>On a 7-9:</strong> pick 1: announce the rematch on your own terms (add a stipulation if you'd like); you avoid immediate retribution by fleeing backstage; or Creative BOOKs your next match with a No Disqualification stipulation, whether you like it or not.<br /><strong>On a Botch:</strong> the crowd really wanted to see you win or lose that match! Lose -1 Audience.",
+            "classification": "In-Ring"
+          },
+          {
+            "value": "Interrupt",
+            "label": "Interrupt",
+            "description": "When you want to take control of the match, spend 1 Momentum and narrate how you counter, disrupt or otherwise interrupt the current sequence. You gain control of the match and narrate the next sequence.",
+            "classification": "In-Ring"
+          },
+          {
+            "value": "Tag Team",
+            "label": "Tag Team",
+            "description": "When you're in a tag team match, you can do the following:<ul><li>If you make a hot tag to your partner to bring them into the match at a critical moment, roll +Heat with them. They gain that result of the Wrestling Move (i.e. retain control and gain Momentum, choose whether to gain Momentum or retain control, or Botch).</li><li>You can abandon the team by spending 2 Momentum and describing how you leave your partner to the mercy of the other team. This BOOKs your team to lose the match, and you gain +1 Heat with each other.</li></ul>",
+            "classification": "In-Ring"
+          },
+          {
+            "value": "The Comeback",
+            "label": "The Comeback",
+            "description": "You can voluntarily hand off narration to your opponent. If you do so when you have the upper hand and the audience can see that your opponent is at your mercy, and you have no Momentum, gain +1 Momentum.",
+            "classification": "In-Ring"
+          },
+          {
+            "value": "Work Real Stiff",
+            "label": "Work Real Stiff",
+            "description": "When you want to actually hurt your opponent, roll +Real.<br /><strong>On a 10+:</strong> you really lay them out, pick 2 from the 7-9 list.<br /><strong>On a 7-9:</strong> it hurts, pick 1:<ul><li>You injure your opponent.</li><li>The match is BOOKED to end in a no contest.</li><li>Your opponent loses -1 Audience, as you break the illusion of their toughness.</li><li>You gain +1 Audience, as the audience can see you're a legit badass.</li></ul><strong>On a Botch:</strong> it hurts you. Take an Injury, and Creative makes a Hard Move.",
+            "classification": "In-Ring"
+          },
+          {
+            "value": "Wrestling",
+            "label": "Wrestling",
+            "description": "Narrate a sequence of maneuvers and moments that lead up to a showcase spot. This showcase is something you want people to remember about the match.<ul><li>If you showcase your physical strength, acrobatic skill or a signature maneuver that requires incredible athletic ability, roll +Body.</li><li>If you showcase your technique, create or subvert what the audience expects to happen next, or demonstrate a signature maneuver that requires high-level wrestling skills, roll +Work.</li><li>If you work with your opponent to showcase an innovative or exciting maneuver that requires both of you to achieve, roll +Heat with them.</li></ul><strong>On a 10+:</strong> the crowd pops as you nail the spot. Retain control of the match and gain +1 Momentum.<br /><strong>On a 7-9:</strong> you keep their attention. Choose whether to hand control of the match to your opponent and gain +1 Momentum, or retain control of the match.<br /><strong>On a Botch:</strong> you botch the spot. Your opponent describes how they counter you (or save you from disaster) and takes control of the match.",
+            "classification": "In-Ring"
+          },
+          {
+            "value": "Put Over",
+            "label": "Put Over",
+            "description": "After a wrestler in a match rolls the dice for a Move, recap what they just did in the most glowing light (including covering up or explaining away an error or Botch). Bump the die roll up to the next result level, from a Botch (6-) to a partial hit (7-9), or from a partial hit to a full hit (10+). The Announcer can use this Move on each wrestler once per match.",
+            "classification": "In-Ring"
+          },
+          {
+            "value": "Battle Royal",
+            "label": "Battle Royal",
+            "description": "Narrate a sequence of maneuvers and moments that lead up to you attempting to eliminate an opponent by sending them over the top rope.<ul><li>If you use your superior strength or athleticism, roll +Body.</li><li>If you use your knowledge of leverage and superior ring awareness, roll +Work.</li><li>If you team up with someone else to do it, roll +Heat with the wrestler who helps you.</li></ul><strong>On a 10+:</strong> the crowd pops as they go flying. They are eliminated! Retain control of the match and take +1 Momentum.<br /><strong>On a 7-9:</strong> they don't quite go over and are still in the match. Choose whether to hand them control of the match and take +1 Momentum, or retain control of the match and pick who comes after you now.<br /><strong>On a Botch:</strong> they were ready for you. Your opponent describes how they counter your attempt and takes control of the match.<br />Any time a player's wrestler is in danger of being eliminated, they can use the Interrupt Move to save themselves (and take control of the match, as usual).",
+            "classification": "Match Stipulation"
+          },
+          {
+            "value": "Catch-As-Catch-Can Match",
+            "label": "Catch-As-Catch-Can Match",
+            "description": "Add the following to the standard Wrestling Move:<ul><li>If you showcase your superior technique or knowledge of legitimate amateur wrestling holds, counters and pins, roll +Real.</li><li>You can only gain Momentum from a 7-9 or 10+ if you roll on +Work or +Real.</li><li>If you Botch when you roll on +Real, your opponent may spend 1 Momentum to give you an Injury, punishing you for your slip-up.</li></ul>",
+            "classification": "Match Stipulation"
+          },
+          {
+            "value": "Death Match",
+            "label": "Death Match",
+            "description": "See Death Match (p. 89) for the full rules. In summary:<ul><li>When a Death Match starts, each competitor gains +1 Momentum.</li><li>The match proceeds using the standard rules for a Hardcore Match (p. 83), as violence, blood and (improvised) weaponry are all involved. In addition, whoever added this Stipulation declares what the Bad Shit in the match is.</li><li>Whoever is sent into the Bad Shit can Interrupt to pull up just short, or just narrowly avoid the Bad Shit. Once each wrestler has paid 1 Momentum to avoid the Bad Shit, the cost goes to 2; once each wrestler has paid 2, it goes to 3, and so on. Only stopping yourself from going into the Bad Shit requires the escalating Momentum cost.</li><li>You don't want to go into the Bad Shit, but somebody's going to eventually. When you do: take an Injury; gain (1 + Current Injuries) Momentum and take control of the match; if this is your last Injury box, you've gone past your physical limits and the match ends in a no contest (you still gain the Momentum).</li><li>Whoever is booked to win a Death Match adds their +Real or +Audience to their Finishing Move, whichever is higher.</li></ul>",
+            "classification": "Match Stipulation"
+          },
+          {
+            "value": "Death Match Fallout",
+            "label": "Death Match Fallout",
+            "description": "After a Death Match, including if it ends in a no contest, all participants roll +Real.<br /><strong>On a 10+:</strong> the wounds were mostly superficial or you're just tough enough to deal. Erase down to 1 Injury check if you have more than 1. Pick 1: you and your opponent both gain +1 Heat with each other; or appear unexpectedly at the top of the next Episode and make the Over Move in addition to whoever is in the Top Spot (if you're already in the Top Spot, take +4 Momentum instead of +3).<br /><strong>On a 7-9:</strong> you survived. Erase 1 Injury check if you have more than 1 (if you have only 1, you keep that Injury). Gain +1 Heat with your opponent.<br /><strong>On a Botch:</strong> you need serious medical care. You are evacuated immediately and must miss the next Episode as you recover (play another NPW if appropriate). When you return, erase 1 Injury check and start the Episode with an additional +1 Momentum.",
+            "classification": "Match Stipulation"
+          },
+          {
+            "value": "Empty Arena Match",
+            "label": "Empty Arena Match",
+            "description": "See Empty Arenas & Empty Arena Matches (p. 91) for running Empty Arena Seasons. When you do, you can use the Reshoot Move (see Reshoot).",
+            "classification": "Match Stipulation"
+          },
+          {
+            "value": "Reshoot",
+            "label": "Reshoot",
+            "description": "Used in Empty Arena Match seasons. When you don't like how things are going or you want to try it another way, spend 2 Momentum and pick one:<ul><li>Reframe the segment to your liking (including who's present, the setting or scenery, the premise, or anything else that you think could be better).</li><li>Change a stipulation that's been made in the segment, or something else about an upcoming match that was addressed in the segment.</li><li>Allow another player's wrestler to roll on one of your stats for a Move (they still pick the results and/or take the consequences based on the roll).</li></ul>",
+            "classification": "Match Stipulation"
+          },
+          {
+            "value": "Exhibition Wrestling",
+            "label": "Exhibition Wrestling",
+            "description": "Use this instead of the standard Wrestling Move:<ul><li>If you showcase your physical strength, acrobatic skill, or a signature maneuver that requires incredible athletic ability, roll +Body and check it off.</li><li>If you showcase your technique, create, or subvert what the audience expects to happen next, or demonstrate a signature maneuver that requires high-level wrestling skills, roll +Work and check it off.</li><li>If you work with your opponent to showcase an innovative or exciting maneuver that requires both of you to succeed, roll +Heat and check it off.</li><li>If you have a Move that allows you to roll another Stat for the Wrestling Move, check off your choice of the above.</li></ul><strong>On a 10+:</strong> the crowd pops as you nail the spot. Retain control of the match and choose whether you cash in your checks for Momentum.<br /><strong>On a 7-9:</strong> you keep their attention. Choose whether to hand control of the match to your opponent or retain control of the match.<br /><strong>On a Botch:</strong> you botch the spot. Your opponent describes how they counter you (or save you from disaster) and takes control of the match. Erase one check.<br /><strong>During the Match:</strong> when you cash in your checks, gain Momentum equal to Stats checked and erase your checks; roll +Stats Currently Checked for the Finishing Move; after the match (win or lose), gain Momentum equal to Stats checked at the end of the match.",
+            "classification": "Match Stipulation"
+          },
+          {
+            "value": "Hardcore",
+            "label": "Hardcore",
+            "description": "When you draw first blood or revel in violence in the ring, roll +Real.<br /><strong>On a 10+:</strong> the crowd goes nuts! Retain control of the match and pick 2:<br /><strong>On a 7-9:</strong> the crowd pops! Gain +1 Momentum and pick 1, and your opponent takes control of the match:<ul><li>Someone in the match gets injured, but it isn't discovered until afterwards.</li><li>Gain +1 Heat with your opponent.</li><li>They gain +1 Heat with you.</li></ul><strong>On a Botch:</strong> you played it too safe or went too hard. Your opponent describes how they counter or save the spot and takes control of the match. Choose whether you take an Injury or lose all of your Momentum.",
+            "classification": "Match Stipulation"
+          },
+          {
+            "value": "Mountevan's Rules",
+            "label": "Mountevan's Rules",
+            "description": "A formal rules stipulation (World of Sport style) using public warnings instead of standard match flow. Use these results for the standard Wrestling Move:<br /><strong>On a 10+:</strong> the crowd pops as you nail the spot. Retain control of the match and either take +1 Momentum or trick your opponent into taking a public warning.<br /><strong>On a 7-9:</strong> you keep their attention. Choose whether to hand control of the match to your opponent and take +1 Momentum, or retain control of the match.<br /><strong>On a Botch:</strong> you botch the spot. Choose whether you take a public warning and keep control of the match, or your opponent describes how they counter you and takes control of the match.<br />When a wrestler takes their third public warning, their opponent is awarded a fall. This BOOKs them to win the match (or win the fall, if playing a two-of-three-falls match).",
+            "classification": "Match Stipulation"
+          },
+          {
+            "value": "Mountevan's Rules Interrupt",
+            "label": "Mountevan's Rules Interrupt",
+            "description": "Replaces the standard Interrupt Move when Mountevan's Rules are in effect. When you want to take control of the match, pick one in order to gain control of the match and narrate the next sequence:<ul><li>Spend 1 Momentum and narrate how you counter, disrupt or otherwise interrupt the current sequence.</li><li>Take a public warning and narrate how you break the rules to take charge of the action.</li></ul>",
+            "classification": "Match Stipulation"
+          },
+          {
+            "value": "Regal Wrangle",
+            "label": "Regal Wrangle",
+            "description": "A Royal Rumble-style elimination match. Narrate a sequence of maneuvers and moments that lead up to you attempting to eliminate an opponent by sending them over the top rope.<ul><li>If you use your superior strength or athleticism, roll +Body.</li><li>If you use your knowledge of leverage and superior ring awareness, roll +Work.</li><li>If you team up with someone else to do it, roll +Heat with the wrestler who helps you.</li></ul><strong>On a 10+:</strong> the crowd pops. Retain control of the match and take +1 Momentum. Choose whether they are eliminated, or they stay in the match because the next entrant enters the ring (you choose the entrant).<br /><strong>On a 7-9:</strong> they don't quite go over and are still in the match. Choose whether to hand them control of the match and take +1 Momentum, or retain control of the match and pick the next entrant.<br /><strong>On a Botch:</strong> they were ready for you and you get taken to the top rope! They take control of the match. You can spend 1 Momentum to stay in the ring, or you get dumped out, and take +1 Heat with whoever dumped you.",
+            "classification": "Match Stipulation"
+          },
+          {
+            "value": "Straight Match",
+            "label": "Straight Match",
+            "description": "Use the standard Wrestling Move as normal, with the following addition: when you hit 10+ on the Wrestling Move, retain control of the match and pick either:<ul><li>Gain +1 Momentum.</li><li>Spend 1 Momentum to go for the victory.</li></ul>Going for the victory entails anything which would win the match per its other stipulations (from a pinfall to grabbing the object of the match off of a pole). When you go for the victory, your opponent can Interrupt or use another appropriate Move to kick out, break the pin or otherwise steal victory from your grasp. If they cannot or choose not to, then you roll for your Finishing Move, and that result determines who wins the match.",
+            "classification": "Match Stipulation"
+          },
+          {
+            "value": "Gatekeeper",
+            "label": "Gatekeeper",
+            "description": "Universally acknowledged as a savvy and skilled wrestler, those on the up-and-up have to get through you to gain legitimacy in the eyes of the fans. Requires Work +2 or higher. Each Specialist Move can only be taken by one wrestler on the roster.<br /><strong>Whenever a wrestler you have Heat with is booked into a high-stakes match,</strong> you can demand to have a match with them first. Creative decides the details, but cannot deny you this demand.<ul><li>When you lose one of these matches in a manner satisfactory to you, you and your opponent both gain +1 Momentum, and they are BOOKED to win their next match.</li></ul>",
+            "classification": "Specialist"
+          },
+          {
+            "value": "Giant",
+            "label": "Giant",
+            "description": "You are a physical phenomenon! Your name on the marquee is an intrinsic draw. This is in tension with your lack of prospects outside of wrestling for stable employment, so you end up having to do a lot of things that you don't like to keep your place on the roster. Requires Body +2 or higher. Each Specialist Move can only be taken by one wrestler on the roster.<br /><strong>Take +1 Body (Max +4).</strong> You change Role (Heel to Babyface or vice versa) whenever Creative demands it. You keep your Advanced Role, if any.<ul><li>You can choose to take +2 Momentum instead of +1 Heat with your opponent when you make a Creative-imposed Role turn.</li></ul>",
+            "classification": "Specialist"
+          },
+          {
+            "value": "Iconoclast",
+            "label": "Iconoclast",
+            "description": "You are a gunslinger with sights on those with overlarge egos and an incessant need for attention. You aim to forge your own legend on the bones of theirs, and you don't care if it's 'in storyline' or not. Requires Real +2 or higher. Each Specialist Move can only be taken by one wrestler on the roster.<br /><strong>When you Cut A Promo on someone in an Advanced Role,</strong> choose to roll on +Look or +Real, whichever is higher. If on +Real, you must reference some legit issue you have with them. Add the following to the Cut A Promo 7-9 result list:<ul><li>You are BOOKED to win your next match with them.</li></ul>",
+            "classification": "Specialist"
+          },
+          {
+            "value": "Time Bomb",
+            "label": "Time Bomb",
+            "description": "You've been in this business too long, and it's taken a toll on your body. You know your bump card only has so many punches left on it, and you'd rather flame out than fade away. Requires 2 or more Injuries currently checked. Each Specialist Move can only be taken by one wrestler on the roster.<br /><strong>You decide when it's time to hang up your boots.</strong> At the top of any Episode, you can BOOK a retirement match with any opponent of your choice. When your opponent wins, they gain +1 Audience. Once retired, create a new wrestler or take over an NPW wrestler for the remainder of the Season.<ul><li>If the BOOKING is swerved such that they don't win, take +1 Heat with them. The feud continues until your opponent retires you.</li></ul>",
+            "classification": "Specialist"
+          },
+          {
+            "value": "Prodigal",
+            "label": "Prodigal",
+            "description": "You leave, then you come back. You still keep one foot firmly in the wrestling business, but you've earned enough leeway to take time off to tour with your band or make an occasional action flick. Your aura as someone who's made it 'outside' the business gives you a lot of credibility with the fans. Requires Audience +2 or higher. Each Specialist Move can only be taken by one wrestler on the roster.<br /><strong>Whenever you take an Episode off, your next appearance is a triumphant return!</strong> When you return, call out someone on the roster with lower +Audience than you (or whoever seems to need help the most, if there's no clear candidate). You take +1 Heat with each other and Creative BOOKs a match between the two of you on the card for that Episode, starting a feud.<ul><li>If your opponent gains +1 Audience from a match with you during your feud, they gain an additional +1 Audience, and you move on to another opponent (or go back to your other life).</li></ul>",
+            "classification": "Specialist"
+          },
+          {
+            "value": "Bored Crowd",
+            "label": "Bored Crowd",
+            "description": "Unlocked via a Promotion Advance in Living Promotions. Use a Bored Crowd to represent the fallout from a relevant Botch or to reflect a new Struggle the Promotion faces. Why are these people even here? This crowd is not into the show — you'll really need to work at it.<br /><strong>When working in front of a Bored Crowd:</strong><ul><li>Wrestlers start the Episode with no Momentum (ignore the automatic Momentum they get from their Audience score, as well as any other Moves that give them Momentum at the beginning of an Episode). If someone is in the Top Spot, they make the Over Move but do not take unspent Momentum.</li><li>If you apply this Move mid-Episode, all wrestlers lose 1 Momentum.</li><li>Any wrestler who manages to gain Audience in front of this crowd gains the Momentum for their new Audience score at the same time, as the fans finally start cheering for something.</li></ul>",
+            "classification": "Audience"
+          },
+          {
+            "value": "Hostile Crowd",
+            "label": "Hostile Crowd",
+            "description": "Unlocked via a Promotion Advance in Living Promotions. This audience is unhappy with what's been going on in your company. They're looking for things to boo and don't have much goodwill to spread around. Appropriate for an Episode after a high-profile firing, a return to a town where the Promotion bombed, or after a run of success to remind wrestlers they still have to work at it.<br /><strong>When working in front of a Hostile Crowd:</strong><ul><li>When a wrestler gains Audience, they also have to spend 1 Momentum. If they don't have it or don't want to spend it, they don't gain the Audience.</li><li>When a wrestler Botches on any roll, including on the Wrestling Move, they lose 1 Momentum in addition to the standard effects (for most Basic Moves, this cancels out the Momentum gain).</li><li>If a wrestler hits a 10+ on Work The Audience, they've won the crowd over—temporarily. Ignore the other effects of this Audience Move for the rest of their match or segment.</li></ul>",
+            "classification": "Audience"
+          },
+          {
+            "value": "Indie Crowd",
+            "label": "Indie Crowd",
+            "description": "Unlocked via a Promotion Advance in Living Promotions. This crowd is made up of die-hard fans who know the biographies and histories of your wrestlers and have favorites based on their pedigree, not necessarily their current storylines. They love wrestlers more than companies. Appropriate for a big homecoming show for a rising star, or to represent an audience in a smaller town or ad hoc venue.<br /><strong>When working in front of an Indie Crowd:</strong><ul><li>Each wrestler's Audience for this Episode is equal to their +Work. If they're in the Top Spot, they take an additional +1 Audience. If they have 0 or negative Work, they count as having Audience +1. If they end the Episode with 0 Audience, it's up to Creative whether they truly face being fired or not. Return Audience scores to their pre-Episode position after the Episode.</li><li>When a wrestler hits the Wrestling Move on a 10+, they gain an additional +1 Momentum in addition to the standard effects.</li><li>When a wrestler Botches on any Move, the crowd turns on them. Decide whether they ironically chant for someone else (and that wrestler gains +1 Momentum) or for themselves (and nobody can make the Work The Audience Move for the rest of the show).</li></ul>",
+            "classification": "Audience"
+          },
+          {
+            "value": "Old-School Crowd",
+            "label": "Old-School Crowd",
+            "description": "Unlocked via a Promotion Advance in Living Promotions. Kayfabe is dead, but don't tell this crowd. This crowd loves the babyfaces and hates the heels — working for them is both easy (they respond the way you want) and hard (they don't respect the difference between the wrestler and the character they're playing). Appropriate for a throwback feel, a small town off the beaten path, or even as the normal audience for a territory-era Promotion.<br /><strong>When working in front of an Old-School Crowd:</strong><ul><li>Each wrestler's +Real is -1 from its usual rating (minimum -2).</li><li>When a Babyface gains Audience, they take +1 Momentum as the crowd erupts with euphoria. When a Heel gains Audience, they take +1 Momentum as the crowd storms the ring with rage.</li><li>If a Babyface and Heel gain Audience as the result of the same match or segment, the crowd riots and the Episode comes to a premature end!</li></ul>",
+            "classification": "Audience"
+          },
+          {
+            "value": "Starstruck Crowd",
+            "label": "Starstruck Crowd",
+            "description": "Unlocked via a Promotion Advance in Living Promotions. This crowd is here to see the stars. Whether motivated by nostalgia, marketing tie-ins with crossover celebrities, or a casual-fan-friendly card, this crowd pops for the wrestlers they know and sits on their hands for unfamiliar faces. Appropriate for a show in a newer or larger venue, the first Episode after the Promotion Tiers Up, or for the big show of the year.<br /><strong>When working in front of a Starstruck Crowd:</strong><ul><li>Whoever is in the Top Spot for this Episode can be joined but is not bumped out of it.</li><li>The max Momentum you can spend on a roll is equal to your Audience (+5 if you're in the Top Spot).</li><li>When someone in the Top Spot makes their first appearance (including the first appearance after gaining it in the Episode), they take +1 Momentum.</li><li>Whenever a wrestler Botches a Move, the crowd tunes out. In addition to the effects of the Botch, you lose -1 Heat with whoever you're working with (or the most appropriate wrestler if you're not in a match or are alone in a segment).</li></ul>",
+            "classification": "Audience"
+          },
+          {
+            "value": "Deal With It",
+            "label": "Deal With It",
+            "description": "Available when playing out scenes or Episodes on the road. When you face an obstacle on the road that requires you to take definitive action to solve, decide which Stat is most applicable and roll +Stat.<br /><strong>On a 10+:</strong> you get what you want and pick 2 from the 7-9 list.<br /><strong>On a 7-9:</strong> Creative offers a tough choice, a hard bargain, or an unwanted complication to get what you want. It's up to you if you want to take it, and pick 1:<ul><li>Gain +1 Momentum.</li><li>Ask a leading question about the situation for Creative to answer.</li><li>You owe someone a favor.</li><li>Someone owes you a favor.</li></ul><strong>On a Botch:</strong> you don't get what you wanted, but you do get what you deserve. This may include an Injury, if the situation warrants. Gain +1 Momentum.",
+            "classification": "Road"
+          },
+          {
+            "value": "Going Home",
+            "label": "Going Home",
+            "description": "Available when playing out scenes or Episodes on the road. Used when going home to see family. If you accept the status quo: describe what that looks like and how quickly you get back to work. Then your next roll (whether on the road or in the next Episode on camera) counts as one result level lower than what you roll (a 10+ counts as a 7-9, a 7-9 counts as a Botch). If that roll is a Botch, something happens at home while you're away that's as sad as it is inevitable. Start the next Episode with +1 Momentum.<br />If you set your house in order: describe what that looks like and choose the most appropriate Stat to roll.<br /><strong>On a 10+:</strong> you make positive progress; gain +1 Momentum and they ask you one of the hard questions.<br /><strong>On a 7-9:</strong> they ask you one of the hard questions, and everything hinges on your answer: if you answer honestly, it's up to Creative if it brings them to your side and makes them supportive; if you answer dishonestly, things get more complicated whether they believe you or not, and you cannot roll on the same Stat next time you try to set your house in order.<br /><strong>On a Botch:</strong> you make things worse. Face a sad yet inevitable consequence.",
+            "classification": "Road"
+          },
+          {
+            "value": "Hit The Streets",
+            "label": "Hit The Streets",
+            "description": "Available when playing out scenes or Episodes on the road. When you promote the next event in person, roll on the most appropriate Stat for how you go about it.<br /><strong>On a 10+:</strong> you pull in fans to see you at the next event. Gain +1 Momentum. The next time you Work The Audience, count a 7-9 as a 10+ as they pop to finally see you live!<br /><strong>On a 7-9:</strong> you get some interest, but it's only because you lie or exaggerate about something you know isn't going to happen. Gain +1 Momentum. If the thing you lied about does happen, gain +1 Momentum then as well!<br /><strong>On a Botch:</strong> you actively discourage them from coming. Choose whether you lose -1 Audience, or you get booked into a dumb promotional stunt at the show in place of your current in-ring storyline.",
+            "classification": "Road"
+          },
+          {
+            "value": "In The Car",
+            "label": "In The Car",
+            "description": "Available when playing out scenes or Episodes on the road. When you share a ride with someone and open up to them, roll +Heat (if you have no Heat, roll flat instead of establishing at +1).<br /><strong>On a 10+:</strong> it's a good bonding experience, gain +1 Momentum and pick 1 from the 7-9 list.<br /><strong>On a 7-9:</strong> you open up to them and they decide how to reciprocate, they pick 1:<ul><li>You open up too much, giving them some juicy gossip.</li><li>You promise a favor that you already know is going to cause trouble.</li><li>They promise you a favor that you're not sure they'll keep.</li><li>You get the dirt on someone you didn't expect.</li></ul><strong>On a Botch:</strong> lose -1 Heat with them (they describe why) and there's a misadventure before you get to your next stop.",
+            "classification": "Road"
+          },
+          {
+            "value": "Social Media Presence",
+            "label": "Social Media Presence",
+            "description": "Available when playing out scenes or Episodes on the road. When you share something personally meaningful with the internet in order to get clicks, roll +Real. (If you could normally replace +Real with another stat, you may do so online as well.)<br /><strong>On a 10+:</strong> it goes viral. You count as having +1 Audience at the top of the next Episode, including starting with the Momentum for that Audience. If this takes you to the Top Spot, you join anyone already there without bouncing them out. After your first appearance on-screen, go back to your original Audience.<br /><strong>On a 7-9:</strong> gain +1 Momentum and pick 1. You connect with your True Fans, but:<ul><li>…it doesn't really fit your character, lose -1 Heat with your opponent in your main feud.</li><li>…it makes someone else look good, they also gain +1 Momentum.</li><li>…it exposes you to ridicule; Creative BOOKs you in a match to humiliate or punish you.</li><li>…your words are twisted and taken out of context; at the start of the next Episode, take 1 less Momentum for your Audience rating than normal.</li></ul><strong>On a Botch:</strong> congratulations, you played yourself. Lose -1 Audience. If you are part of a Living Promotion, you can instead choose to add a Struggle that relates to the headache you've generated for the company.",
+            "classification": "Road"
+          },
+          {
+            "value": "With Special Guest",
+            "label": "With Special Guest",
+            "description": "Available when playing out scenes or Episodes on the road. When you trade off your legacy to earn cash, roll +Work. If you have an Advanced Role, add an additional +1.<br /><strong>On a 10+:</strong> the event leaves you invigorated, gain +1 Momentum and choose two from the 7-9 list.<br /><strong>On a 7-9:</strong> it's a mixed bag at best, choose 1:<ul><li>The event leaves you feeling good.</li><li>You don't give away something valuable (a secret, an heirloom, your dignity).</li><li>You earn enough not to have to do this again soon.</li><li>You catch wind of a beneficial booking, and Creative adds it to what they have On Deck for the next regular Episode.</li></ul><strong>On a Botch:</strong> nobody comes to your table, you have a misadventure during the event, or both.",
+            "classification": "Road"
+          },
+          {
+            "value": "Under The Learning Tree",
+            "label": "Under The Learning Tree",
+            "description": "Available when playing out scenes or Episodes on the road. Any wrestler with a +3 in a Stat counts as a master. If you travel with a master for an Episode and accept their mentorship, they'll assign you some kind of task, test or threshold to meet the next time you're in the ring. If you achieve what they ask of you, move your matching Stat up by 1 (max of +3) and another Stat down by 1 (min of -2).<ul><li>If the master is another player's wrestler, they choose their test and decide whether you've achieved it or not.</li><li>If the master is an NPW, Creative will tell you what Stat they embody and chooses the test. It's up to them whether you pass or not, but unless you Botch during the critical moment or it's otherwise made clear that you don't make it, Creative should err on the side of you passing.</li></ul>",
+            "classification": "Road"
+          },
+          {
+            "value": "Work The Media",
+            "label": "Work The Media",
+            "description": "Available when playing out scenes or Episodes on the road. When you appear on a media outlet to hype an upcoming show, Cut A Promo. If you are part of a Living Promotion, roll +Tier instead of +Look. Apply the Cut A Promo result to the show you're hyping up once it starts.<ul><li>If the event isn't live, you can spend 1 Momentum to do another take; reroll the dice.</li><li>If Mythic Moments are unlocked, it's possible to get the Cut A Promo Mythic Moment on this Move.</li></ul>",
+            "classification": "Road"
+          },
+          {
+            "value": "Get Through The Night",
+            "label": "Get Through The Night",
+            "description": "Used when including substance abuse, addiction and recovery in your games (see p. 154). When you take a recovery drug, spend all your Momentum, and erase an Injury check if you have one. This can keep you from retiring or being fired if that's on the table. Then, roll +Real:<br /><strong>On a 10+:</strong> you completely get away with it.<br /><strong>On a 7-9:</strong> you don't, pick 1:<ul><li>You're still feeling it, and have -1 to your highest stat for the next Episode.</li><li>Someone finds out about your use.</li></ul><strong>On a Botch:</strong> as a 7-9 and also X out your right-most Injury box.",
+            "classification": "Addiction & Recovery"
+          },
+          {
+            "value": "Time To Party",
+            "label": "Time To Party",
+            "description": "Used when including substance abuse, addiction and recovery in your games (see p. 154). When you take something recreational, roll +Body.<br /><strong>On a 10+:</strong> pick 2 positives, and Creative picks 1 negative.<br /><strong>On a 7-9:</strong> pick 1 positive and Creative picks 2 negatives.<br /><strong>On a Botch:</strong> you and Creative each pick 1 negative, and X out your right-most Injury box.<br /><strong>Positives:</strong><ul><li>You find camaraderie; take +1 Heat with someone unexpected.</li><li>You open your mind; ask others to pitch ideas for your next segment, and you can use them as if they were your own without repercussions.</li><li>Fans get involved; you gain +2 Momentum, and they end up with a great story.</li><li>You save someone's night, and they owe you a favor.</li></ul><strong>Negatives:</strong><ul><li>Someone saves your night, and you owe them a favor.</li><li>You're caught by an authority figure and taken out of your hottest feud as punishment.</li><li>You lose control of the situation; lose -1 Heat with someone.</li><li>The story gets out. Lose -1 Audience. If you are playing in a Living Promotion, you can choose to add a Struggle to the Promotion instead.</li><li>You get in a fight you can't remember. Take an Injury.</li></ul>",
+            "classification": "Addiction & Recovery"
+          },
+          {
+            "value": "Big Shoulders",
+            "label": "Big Shoulders",
+            "description": "Taken after completing recovery. Namedropping your recovery counts for Cheap Heat, for both you and your opponents. You can be namedropped a number of times per Episode equal to your +Audience. Each use, by you or by an opponent, counts towards this limit. If you are in the Top Spot, this has uses equal to the starting Momentum you have after making the Over Move.<ul><li>You can no longer use the Basic Move Cheap Heat.</li></ul>",
+            "classification": "Addiction & Recovery"
+          },
+          {
+            "value": "A Problem Yourself",
+            "label": "A Problem Yourself",
+            "description": "Taken after completing recovery. You retain a volatile reputation from your time as an addict. When you play on your past or act like you're still on the sauce on-camera, roll +Real.<br /><strong>On a 10+:</strong> it draws in the crowd, take +1 Momentum. Then you pick 1 and they (your opponent, or Creative) pick 1:<br /><strong>On a 7-9:</strong> your opponent picks 2:<ul><li>Gain +1 Heat with them.</li><li>They gain +1 Heat with you.</li><li>Add a stipulation to a relevant match.</li><li>You are BOOKED to lose your next match, specifically to make a statement about this kind of behavior.</li></ul><strong>On a Botch:</strong> you work yourself into a shoot and get the cravings again. Check off an Injury box.",
+            "classification": "Addiction & Recovery"
+          },
+          {
+            "value": "Finishing Move",
+            "label": "Finishing Move",
+            "description": "When you're BOOKED to win a match, roll 2d6.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Carry The Company",
+            "label": "Carry The Company",
+            "description": "You are the designated face of the promotion. When a title match is announced, roll +Real.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Fighting Spirit",
+            "label": "Fighting Spirit",
+            "description": "Once per match, when your opponent clearly has the upper hand and presses the attack, narrate how you ignore the pain and take control of the match. This works as the Interrupt Move, without needing to spend Momentum. If you have higher +Body than your opponent, also gain +1 Momentum.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Amazing Entrance",
+            "label": "Amazing Entrance",
+            "description": "A lot of money is spent on this. Roll +Audience when you make your first full entrance in an Episode.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Strong Style",
+            "label": "Strong Style",
+            "description": "When you work stiff without intent to injure, roll +Real for the Wrestling Move. If you hit on a 10+ without spending Momentum, gain an extra +1 Momentum. If you Botch, you injure them anyway.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Picture Perfect",
+            "label": "Picture Perfect",
+            "description": "You were born to do this. Take +1 Look (Max +3).",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Special Snowflake",
+            "label": "Special Snowflake",
+            "description": "When you go to an authority figure to save you from the consequences of your actions, roll +Real.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Always Learning",
+            "label": "Always Learning",
+            "description": "When you work a match with someone you know is better than you, roll +Work.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "I Am The Future",
+            "label": "I Am The Future",
+            "description": "When you keep a promise or follow through on a threat you made on camera, roll +Look.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Anything You Need To Do To Win",
+            "label": "Anything You Need To Do To Win",
+            "description": "You can use both the Babyface and Heel Role Moves.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Twitch The Curtain",
+            "label": "Twitch The Curtain",
+            "description": "When you air your legit grievances on camera, you can roll +Real for any Move you make outside of the ring for the rest of the Episode. At the end of the Episode, if you haven't gained any Audience, you lose -1 Audience.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Rules? What Rules?",
+            "label": "Rules? What Rules?",
+            "description": "When you break the rules in a match to your own advantage, roll +Look.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Mouth of the People",
+            "label": "Mouth of the People",
+            "description": "When you speak truth to power or act as the fans have been demanding, roll +Audience.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "10-Year Veteran",
+            "label": "10-Year Veteran",
+            "description": "You've been wrestling longer than most of the 'top talent' in this company. You start and reset to Audience +2 instead of Audience +1.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Seen It All",
+            "label": "Seen It All",
+            "description": "You've wrestled in every kind of venue and against every kind of opponent there is. When you're in a match with a stipulation, gain +1 Momentum at the beginning of the match.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Hungry",
+            "label": "Hungry",
+            "description": "You want this so bad you can taste it. When you know you're BOOKED to lose a match and you go for a win anyway, roll +Work.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Reputation",
+            "label": "Reputation",
+            "description": "When you appear on camera for the first time in an Episode, roll +Real.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Funny Is Money",
+            "label": "Funny Is Money",
+            "description": "Take +1 Look (max +3). You can still Work the Audience even after you've Botched a roll for it.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Surprisingly Talented",
+            "label": "Surprisingly Talented",
+            "description": "When you roll +Work for the Wrestling Move and hit it with a 10+, gain +1 Heat with your opponent.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Comic Relief",
+            "label": "Comic Relief",
+            "description": "When you insert yourself into a tense situation, (on or off-camera) roll +Real.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Celebrity Promo",
+            "label": "Celebrity Promo",
+            "description": "When you carry a guest star or non-wrestling celebrity through a segment, roll +Look.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Shoot Fighter",
+            "label": "Shoot Fighter",
+            "description": "As long as you have a higher +Work than your opponent, they have to spend 2 Momentum to Interrupt instead of 1. You can choose to compare +Real if you have Martial Arts Training or +Body if you have You Know It's Fake, Right? instead of +Work, on a match-by-match basis.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Martial Arts Training",
+            "label": "Martial Arts Training",
+            "description": "You use your real skills, when you want to. Take +1 Real (max +3).",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "You Know It's Fake, Right?",
+            "label": "You Know It's Fake, Right?",
+            "description": "Take +1 Body (max +3). Whenever you make a Move that involves physically dominating your opponent to get what you want, you can roll +Body instead of the usual stat.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Stare Down",
+            "label": "Stare Down",
+            "description": "You are known for your intensity. Whenever you stare someone down outside the ring, roll +Heat with them.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Stretcher",
+            "label": "Stretcher",
+            "description": "Your job is to break in fresh meat. Whenever you injure someone, roll +Real.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Tables and Ladders and Chairs, Oh My",
+            "label": "Tables and Ladders and Chairs, Oh My",
+            "description": "Spend 1 Momentum to add the Hardcore Stipulation Move to any match you're booked in: no disqualification, no count outs, and weapons allowed.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "High Pain Tolerance",
+            "label": "High Pain Tolerance",
+            "description": "You can take it. Take +1 Body (Max +3).",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "What a Weirdo",
+            "label": "What a Weirdo",
+            "description": "You have sideshow charisma! Take +1 Look (Max +3).",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Master of Hardcore",
+            "label": "Master of Hardcore",
+            "description": "You know how to bleed right. When you're in a Hardcore Match, and you would take an injury, roll +Body.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Red Means Green",
+            "label": "Red Means Green",
+            "description": "When you're covered in blood, substitute +Look for any other stat.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Are You Not Entertained",
+            "label": "Are You Not Entertained",
+            "description": "When you suffer gross injury, endure humiliation or go down in the face of overwhelming odds, roll +Real.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Career Wrestler",
+            "label": "Career Wrestler",
+            "description": "If you end an Episode with Audience +4, you can change to anyother Gimmick, per the repackaging rules. If you end an Episode with Audience0, you aren't fired—instead, reset your Audience.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Ham-n-Egger",
+            "label": "Ham-n-Egger",
+            "description": "Part of your appeal is how ordinary you are. Take +1 Real (max +3).",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Sympathetic",
+            "label": "Sympathetic",
+            "description": "They want to be on your side. Roll +Work instead of +Audience when you make the Work the Audience Move.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Jobber to the Stars",
+            "label": "Jobber to the Stars",
+            "description": "When competing against an NPW jobber, you don't count as a Jobber and you're BOOKED to win! You can pick the Finishing Move from any other player's Gimmick to replace your Do The Job Move.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Experienced Hand",
+            "label": "Experienced Hand",
+            "description": "When you pitch an idea for another wrestler, roll +Real.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Amazing Athleticism",
+            "label": "Amazing Athleticism",
+            "description": "You make jaws drop with your astounding moves! Take +1 Work (Max +3).",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "El Hijo De...",
+            "label": "El Hijo De...",
+            "description": "You inherited your mask from another popular luchador. Take +1 Look (Max +3).",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Human Highlight Reel",
+            "label": "Human Highlight Reel",
+            "description": "The first time in an Episode that you roll a 10+ (before spending Momentum) on a high-flying maneuver, gain +1 Audience.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Tradicional",
+            "label": "Tradicional",
+            "description": "You refuse to be seen without your mask. Whenever your mask is at risk of being removed, roll +Work if it's your choice, or roll +Real if it's someone else's. Gain +1 Heat with your foe",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Capitan del Parejas",
+            "label": "Capitan del Parejas",
+            "description": "Tag team wrestling is Lucha Libre.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "I'm the Draw",
+            "label": "I'm the Draw",
+            "description": "You're a multimedia star. Whenever you would lose Audience, choose: lose the Audience and Creative BOOKS you to win your next match to get them back on your side; or lose all your Momentum instead of losing the Audience.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Merchandising",
+            "label": "Merchandising",
+            "description": "Your face is on everything. Gain +1 Momentum when you first appear during an Episode.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Nemesis",
+            "label": "Nemesis",
+            "description": "If you're in the Top Spot, your agent demands a match that ties in the antagonist from your latest movie (or TV show, or comic book) to your storyline in the promotion. Work with Creative to come up with the nature of this rival (including whether they are a separate performer or played by an existing member of the roster). You must be booked against them as the main event of the next Episode. You start with +2 Heat with your nemesis.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "High Expectations",
+            "label": "High Expectations",
+            "description": "You represent something extraordinarily meaningful to your fans. When you change Role, roll +Real.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Meal Ticket",
+            "label": "Meal Ticket",
+            "description": "When you interfere on your client's behalf to win them a match, roll 2d6.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Mouthpiece",
+            "label": "Mouthpiece",
+            "description": "When you speak for your client, they can roll on your Stat instead of theirs for any Move they would normally make.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Never Unprepared",
+            "label": "Never Unprepared",
+            "description": "You always have a plan, and everyone knows it. Take +1 Look (Max +3).",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Brain for the Business",
+            "label": "Brain for the Business",
+            "description": "You're a student of the game and you know how to get the reactions you want. Take +1 Real (Max +3).",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Backstage Politics",
+            "label": "Backstage Politics",
+            "description": "When you make the Play Politics Move, you can choose to roll +Real instead of +Audience. If you are arguing on behalf of your client, add this to the 7-9 result options",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Loyal",
+            "label": "Loyal",
+            "description": "When you take action in your client's best interests, roll +Look.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Prodigious Size",
+            "label": "Prodigious Size",
+            "description": "You're just plain enormous! Take +1 Body (Max +3).",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Surprising Agility",
+            "label": "Surprising Agility",
+            "description": "You're light on your feet and capable of more than people think! Take +1 Work (Max +3).",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Intimidating",
+            "label": "Intimidating",
+            "description": "When you are not in the ring, roll +Body instead of +Look any time you can bring your imposing size to bear on the situation.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Not of this World",
+            "label": "Not of this World",
+            "description": "Pick or create a signature match stipulation that showcases your wrestling persona by changing the physical environment of the match. You can add this stipulation to one match per Episode (even if the match already has one). Start the match with +1 Momentum.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Shoot Kill",
+            "label": "Shoot Kill",
+            "description": "When you really go after someone, in or out of the ring, you can roll +Body instead of any other stat if the fact that you are larger and stronger is appropriate to the situation.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Strangely Captivating",
+            "label": "Strangely Captivating",
+            "description": "When you're the sole focus of a segment, roll +Look instead of +Real.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Showstopper",
+            "label": "Showstopper",
+            "description": "Once per Episode, you can appear in any segment (in ring or out) and turn it into something about you. When you make your appearance, declare your agenda for the segment, and continue on from there. If a player's wrestler tries to buck your plan, they Break Kayfabe.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Mind Games",
+            "label": "Mind Games",
+            "description": "When you engage in bizarre, outlandish or mysterious behavior to psych someone out, roll +Look.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Play to the Crowd",
+            "label": "Play to the Crowd",
+            "description": "When you use your gimmick to highlight, address or confront a real issue real people have in their lives, roll +Real.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Former Amateur Champion",
+            "label": "Former Amateur Champion",
+            "description": "You hold legit amateur wrestling accolades. Take +1 Real (Max +3).",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Technical Expert",
+            "label": "Technical Expert",
+            "description": "You're a student of the sport, and you've learned well. Take +1 Work (Max +3).",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Excellence of Execution",
+            "label": "Excellence of Execution",
+            "description": "You roll +Work for your Finishing Move (instead of flat 2d6).",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Tweener",
+            "label": "Tweener",
+            "description": "You use the opposite Role Move of anyone you're squaring off with (in or out of the ring). So, if you're facing a Babyface, you use the Heel Move, and if you're facing a Heel, you use the Babyface Move. You still choose whether you're a Babyface or Heel in general and count as that choice for everything other than making Role Moves.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Sportsmanship",
+            "label": "Sportsmanship",
+            "description": "When you shake hands with another wrestler, roll +Real.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Ring General",
+            "label": "Ring General",
+            "description": "Gain +1 Momentum when you start a match.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Top of the Card",
+            "label": "Top of the Card",
+            "description": "You can make the Over Move even when you're not in the Top Spot. You have as much Momentum to spend as you start the Episode with due to your current Audience. When you are in the Top Spot, you have 4 Momentum to spend instead of 3.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Respect the Business",
+            "label": "Respect the Business",
+            "description": "When you Play Politics in order to preserve wrestling tradition, you count as having 1 more Audience. When you act to preserve wrestling tradition on camera, you can roll +Look instead of any other Stat.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Bury'em",
+            "label": "Bury'em",
+            "description": "When you go to management to stop another wrestler's push, roll +Real.",
+            "classification": "Gimmick"
+          },
+          {
+            "value": "Put'em Over",
+            "label": "Put'em Over",
+            "description": "When you show vulnerability to an opponent in the ring in order to make them look good, roll +Work.",
+            "classification": "Gimmick"
+          }
+        ]
+      }
+    }
+  ]
+}

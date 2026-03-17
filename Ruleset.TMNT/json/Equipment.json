@@ -1,0 +1,938 @@
+[
+  {
+    "name": "Tie Clasp",
+    "description": "Microphone. Average listening range 600ft.",
+    "cost": 15,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Electric Condenser Lavalier Mic",
+    "description": "Can be hung around neck or attached to cloth. Battery operated or plugged in.",
+    "cost": 50,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Broadcast Quality Tie Tack",
+    "description": "High quality broadcast microphone concealed in a tie tack.",
+    "cost": 160,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Keyhole and Tube Mics",
+    "description": "Mics with long hollow tubes, either stiff or flexible, which can be placed in cracks, mounted on walls, or placed in keyholes.",
+    "cost": 170,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Contact Mics",
+    "description": "Translates vibrations into sound. Requires a sounding board such as a wall, window or device.",
+    "cost": 250,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Vibration Pocket Detector",
+    "description": "Detects vibrations.",
+    "cost": 600,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Low Frequency Converter",
+    "description": "Converts low frequency signals.",
+    "cost": 500,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Frequency Equalizer",
+    "description": "Controls cut off of certain frequencies and boosts others.",
+    "cost": 190,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Test Transmitter",
+    "description": "Basic test transmitter.",
+    "cost": 65,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Additional Transducer",
+    "description": "Add-on transducer component.",
+    "cost": 75,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Telephone Induction Unit",
+    "description": "Telephone induction surveillance unit.",
+    "cost": 65,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Sound Amplifier",
+    "description": "Basic sound amplifier.",
+    "cost": 50,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Sound Amplifier (high quality)",
+    "description": "High quality sound amplifier.",
+    "cost": 250,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Commercial Wireless Mic",
+    "description": "Entertainment-grade commercial wireless microphone.",
+    "cost": 50,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Compact Commercial Wireless Mic",
+    "description": "Compact wireless mic approximately the size of a pack of cigarettes.",
+    "cost": 70,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Special Bugs",
+    "description": "Come in a variety of sizes from postage stamp to martini olive type, complete with mic, transmitter and amplifier. Average range 60 feet.",
+    "cost": 400,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Room Bug",
+    "description": "Taps into the wall current (needs capacitor). Range: 1200ft. Homemade cost $100, police version $500.",
+    "cost": 100,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Transmitter (typical)",
+    "description": "Standard typical transmitter.",
+    "cost": 200,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Transmitter (quality crystal)",
+    "description": "High quality crystal transmitter.",
+    "cost": 500,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Bumper Beeper",
+    "description": "Attaches to automobile bumper via magnetized clip. Antenna can be permanently mounted or detachable. Transmits a signal that can be followed up to five miles away (battery powered). Receiver can locate beeper by intensity/strength of signal. Price includes receiver.",
+    "cost": 1100,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Dash Beeper",
+    "description": "Identical in operation/function to the bumper beeper but can be concealed in the dashboard inside the car.",
+    "cost": 1200,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Mini (spy) Beeper",
+    "description": "Same basic function as bumper beeper but about the size of a half dollar and half an inch thick. Can be slipped into pockets, briefcases, bags, purses, vehicles (although will rattle around), etc. Range approximately two mile maximum radius.",
+    "cost": 0,
+    "type": "Surveillance Equipment"
+  },
+  {
+    "name": "Field Strength Meter",
+    "description": "Bug detector. Picks up radio signals and registers them.",
+    "cost": 350,
+    "type": "Bug Detectors"
+  },
+  {
+    "name": "Broadband Receiver",
+    "description": "Bug detector. Causes a feedback and makes a howl when near a transmitter.",
+    "cost": 425,
+    "type": "Bug Detectors"
+  },
+  {
+    "name": "Drop in Cartridge",
+    "description": "Telephone bug. Battery powered, fits in the telephone receiver.",
+    "cost": 320,
+    "type": "Telephone Bugs"
+  },
+  {
+    "name": "Room Bug Mini-Transmitter",
+    "description": "Telephone bug. Looks like a telephone jack, battery operated.",
+    "cost": 240,
+    "type": "Telephone Bugs"
+  },
+  {
+    "name": "Telephone Line Transmitter",
+    "description": "Telephone bug. Taps right into telephone line and power, needs no batteries, will run indefinitely. A little larger box than the mini-transmitter.",
+    "cost": 250,
+    "type": "Telephone Bugs"
+  },
+  {
+    "name": "Night Sight Goggles",
+    "description": "Night vision optic system. Image intensifier (passive), relies on ambient light which is electronically amplified to give a visible picture. Range: 1600ft. Weight: 1.5lbs.",
+    "cost": 9000,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Night Sight Binoculars",
+    "description": "Night vision optic system. Image intensifier (passive), relies on ambient light which is electronically amplified to give a visible picture. Range: 1600ft. Weight: 4lbs.",
+    "cost": 7500,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Night Sight Monocular Eye Piece",
+    "description": "Night vision optic system. Image intensifier (passive), relies on ambient light. Range: 1600ft.",
+    "cost": 5600,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Night Sight Weapon Sight",
+    "description": "Night vision optic system for weapons. Image intensifier (passive), relies on ambient light. Range: 1600ft.",
+    "cost": 2000,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Night Sight Pocket Night Viewer",
+    "description": "Night vision pocket viewer. Image intensifier (passive). Range: 800ft.",
+    "cost": 3900,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Night Sight Large Tri-Pod Mount",
+    "description": "Large tri-pod mounted night vision unit. Range: 1600ft. Weight: 30lbs.",
+    "cost": 18000,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Infrared Goggles",
+    "description": "Infrared optic system. Relays on a source of infrared light (pencil thin beam) projected from the sight or goggle to illuminate its target. View limited to about 6 square feet. Range: 1200ft.",
+    "cost": 6800,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Infrared Binoculars",
+    "description": "Infrared optic system. Relays on a source of infrared light projected from the sight or goggle to illuminate its target. Range: 1200ft.",
+    "cost": 4700,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Infrared Monocular Eye Piece",
+    "description": "Infrared optic system. Relays on a source of infrared light projected from the sight or goggle. Range: 1200ft.",
+    "cost": 2200,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Infrared Weapon Sight",
+    "description": "Infrared optic weapon sight. Range: 1200ft.",
+    "cost": 1200,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Thermo-Imager Goggles",
+    "description": "Converts infrared radiation of warm objects into a visible image. Electrically cooled, runs from nickel cadmium batteries (rechargeable), 8 hour running life. Sees in darkness, shadows and through smoke. Range: 1600ft.",
+    "cost": 32000,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Thermo-Imager Binoculars",
+    "description": "Converts infrared radiation of warm objects into a visible image. Electrically cooled, 8 hour battery life. Range: 1600ft.",
+    "cost": 28000,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Thermo-Imager Monocular Eye Piece",
+    "description": "Converts infrared radiation of warm objects into a visible image. Electrically cooled, 8 hour battery life. Range: 1600ft.",
+    "cost": 24000,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Thermo-Imager Weapon Sight",
+    "description": "Converts infrared radiation of warm objects into a visible image. Electrically cooled, 8 hour battery life. Range: 1600ft.",
+    "cost": 20000,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Binoculars (2000ft, Best Magnification)",
+    "description": "Binoculars and telescopic sight. Best magnification. Range: 2000ft.",
+    "cost": 1600,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Binoculars (1600ft, Medium Magnification)",
+    "description": "Binoculars and telescopic sight. Medium magnification. Range: 1600ft.",
+    "cost": 1000,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Binoculars (1600ft, Low Magnification)",
+    "description": "Binoculars and telescopic sight. Low magnification. Range: 1600ft.",
+    "cost": 600,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Weapon Sight (Best Magnification)",
+    "description": "Telescopic weapon sight. Best magnification.",
+    "cost": 800,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Weapon Sight (Medium Magnification)",
+    "description": "Telescopic weapon sight. Medium magnification.",
+    "cost": 400,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Weapon Sight (Low Magnification)",
+    "description": "Telescopic weapon sight. Low magnification.",
+    "cost": 230,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Illuminating Peglight",
+    "description": "Designed for military use as markers for routes and mine fields. Emits beta light which emits no heat and gives no infrared emissions. Can be seen from distances up to 70 feet.",
+    "cost": 0,
+    "type": "Goggles and Binoculars"
+  },
+  {
+    "name": "Portable Explosives Detector",
+    "description": "Responds to vapor from explosives such as dynamite, gelignite, T.N.T., and others. An alarm lamp lights up when an explosive is detected. Range: 3.5 feet.",
+    "cost": 1900,
+    "type": "Detection Equipment"
+  },
+  {
+    "name": "Letter Bomb Detector",
+    "description": "Electronic instrument that examines letters in minutes with an audio alarm that sounds when electrically conductive material is detected.",
+    "cost": 700,
+    "type": "Detection Equipment"
+  },
+  {
+    "name": "Radar Signal Detector (military)",
+    "description": "Mini-radar receiver that can fit in one hand. Small, lightweight, easy to conceal. Recently developed for the U.S. Army. Effective range: 80 feet, 4 miles maximum.",
+    "cost": 3000,
+    "type": "Detection Equipment"
+  },
+  {
+    "name": "Commercial Radar Detector",
+    "description": "Also known as the Fuzz Buster. Used for detecting police radar scans.",
+    "cost": 120,
+    "type": "Detection Equipment"
+  },
+  {
+    "name": "Motion Detector (commercial)",
+    "description": "Detects movement within the field. Range: 120 square feet.",
+    "cost": 500,
+    "type": "Detection Equipment"
+  },
+  {
+    "name": "Ground Sensor System",
+    "description": "Uses seismic and passive infrared sensors to detect vehicles, men, direction and numbers. Control unit with map display, monitor and a dozen sensor units. Range: Between transmitter 600 feet, and can register activity up to 4 miles away.",
+    "cost": 54000,
+    "type": "Detection Equipment"
+  },
+  {
+    "name": "Microwave Fence",
+    "description": "Units emit an invisible microwave curtain or fence that will light up or buzz quietly once an intruder breaches its curtain. Control units, eight transmitters and receivers. Range: Between transmitters 600 feet, registers activity up to 4 miles away.",
+    "cost": 60000,
+    "type": "Detection Equipment"
+  },
+  {
+    "name": "Psychological Stress Evaluator",
+    "description": "Used by law enforcement agencies, private investigators, some corporations, clinics and law firms. Functions like a polygraph but measures and records stress and anxiety without attaching sensors to the subject by monitoring the voice quality. Includes a tape recorder.",
+    "cost": 4000,
+    "type": "Emotion and Stress Detectors"
+  },
+  {
+    "name": "Polygraph Stress Machine",
+    "description": "Sensors attached to skin which monitor and record glandular changes including sweat.",
+    "cost": 2400,
+    "type": "Emotion and Stress Detectors"
+  },
+  {
+    "name": "Polygraph Stress Monitor (superior quality)",
+    "description": "Sensors attached to skin and body which record breathing, heart rate/beat, blood pressure, and skin resistance. All three functions fed into a chart recorder with three pens to mark results.",
+    "cost": 4500,
+    "type": "Emotion and Stress Detectors"
+  },
+  {
+    "name": "35mm Camera",
+    "description": "Standard 35mm still camera.",
+    "cost": 250,
+    "type": "Photographic Equipment"
+  },
+  {
+    "name": "Extra Lens 28mm F28",
+    "description": "28mm, F28 camera lens.",
+    "cost": 80,
+    "type": "Photographic Equipment"
+  },
+  {
+    "name": "Extra Lens 135mm F35",
+    "description": "135mm, F35 camera lens.",
+    "cost": 80,
+    "type": "Photographic Equipment"
+  },
+  {
+    "name": "Flash (average)",
+    "description": "Average camera flash unit.",
+    "cost": 50,
+    "type": "Photographic Equipment"
+  },
+  {
+    "name": "35mm Film Black and White (36 exposures)",
+    "description": "Black and white 35mm film, 36 exposure roll.",
+    "cost": 3,
+    "type": "Photographic Equipment"
+  },
+  {
+    "name": "35mm Film Color (36 exposures)",
+    "description": "Color 35mm film, 36 exposure roll.",
+    "cost": 5,
+    "type": "Photographic Equipment"
+  },
+  {
+    "name": "Super 8mm Sound Movie Camera",
+    "description": "Super 8mm sound movie camera.",
+    "cost": 525,
+    "type": "Photographic Equipment"
+  },
+  {
+    "name": "Super 8mm Film",
+    "description": "Approximately 15 minutes of running time.",
+    "cost": 8,
+    "type": "Photographic Equipment"
+  },
+  {
+    "name": "Slide Projector",
+    "description": "Standard slide projector.",
+    "cost": 150,
+    "type": "Photographic Equipment"
+  },
+  {
+    "name": "Projection Screen",
+    "description": "Standard projection screen.",
+    "cost": 50,
+    "type": "Photographic Equipment"
+  },
+  {
+    "name": "Video System",
+    "description": "Includes video recorder, tuner and timer.",
+    "cost": 750,
+    "type": "Photographic Equipment"
+  },
+  {
+    "name": "Color Camera with Mike",
+    "description": "Color video camera with built-in microphone.",
+    "cost": 700,
+    "type": "Photographic Equipment"
+  },
+  {
+    "name": "Video Tape Cassette",
+    "description": "Standard video tape cassette.",
+    "cost": 15,
+    "type": "Photographic Equipment"
+  },
+  {
+    "name": "Telescope",
+    "description": "Zoom 15-60X power, 1000-4000mm. Can be attached to 35mm camera.",
+    "cost": 190,
+    "type": "Photographic Equipment"
+  },
+  {
+    "name": "35mm Camera Adapter",
+    "description": "Adapter for attaching 35mm camera to telescope.",
+    "cost": 30,
+    "type": "Photographic Equipment"
+  },
+  {
+    "name": "Basic Computer",
+    "description": "48k memory and keyboard.",
+    "cost": 500,
+    "type": "Computers and Equipment"
+  },
+  {
+    "name": "Monitor (Black and White)",
+    "description": "Black and white T.V. monitor for data display.",
+    "cost": 100,
+    "type": "Computers and Equipment"
+  },
+  {
+    "name": "Color Monitor",
+    "description": "Color computer monitor.",
+    "cost": 250,
+    "type": "Computers and Equipment"
+  },
+  {
+    "name": "Hard Copy Printer",
+    "description": "Computer printer for hard copy output.",
+    "cost": 500,
+    "type": "Computers and Equipment"
+  },
+  {
+    "name": "Modem",
+    "description": "Device for sending and receiving data.",
+    "cost": 180,
+    "type": "Computers and Equipment"
+  },
+  {
+    "name": "Basic Phone",
+    "description": "Standard telephone.",
+    "cost": 50,
+    "type": "Telephone Equipment"
+  },
+  {
+    "name": "Telephone Answering Machine",
+    "description": "Standard telephone answering machine.",
+    "cost": 120,
+    "type": "Telephone Equipment"
+  },
+  {
+    "name": "Tape Recorder (pocket sized)",
+    "description": "Pocket sized tape recorder. 30 to 60 minute recording time.",
+    "cost": 100,
+    "type": "Telephone Equipment"
+  },
+  {
+    "name": "Walkie-Talkie (commercial)",
+    "description": "Commercial walkie-talkie. Range: 1 mile. Price per pair.",
+    "cost": 250,
+    "type": "Radio Communication"
+  },
+  {
+    "name": "Walkie-Talkie (police/military)",
+    "description": "Police and military grade walkie-talkie. Range: 2 miles.",
+    "cost": 2400,
+    "type": "Radio Communication"
+  },
+  {
+    "name": "Field Radio",
+    "description": "Field radio. Range: 25 miles.",
+    "cost": 1800,
+    "type": "Radio Communication"
+  },
+  {
+    "name": "C.B. Radio",
+    "description": "Citizens Band radio. Range: 2 miles.",
+    "cost": 100,
+    "type": "Radio Communication"
+  },
+  {
+    "name": "Police Band Scanner",
+    "description": "Scans police radio bands. Range: 25 miles.",
+    "cost": 150,
+    "type": "Radio Communication"
+  },
+  {
+    "name": "T-Shirt (cotton)",
+    "description": "Basic cotton t-shirt.",
+    "cost": 8,
+    "type": "Clothing"
+  },
+  {
+    "name": "Shirt (short sleeve)",
+    "description": "Short sleeve shirt.",
+    "cost": 13,
+    "type": "Clothing"
+  },
+  {
+    "name": "Shirt (long sleeve)",
+    "description": "Long sleeve shirt.",
+    "cost": 14,
+    "type": "Clothing"
+  },
+  {
+    "name": "Pants (work)",
+    "description": "Work pants.",
+    "cost": 16,
+    "type": "Clothing"
+  },
+  {
+    "name": "Tennis Shoes",
+    "description": "Standard tennis shoes.",
+    "cost": 20,
+    "type": "Clothing"
+  },
+  {
+    "name": "Shoes (leather)",
+    "description": "Leather shoes.",
+    "cost": 50,
+    "type": "Clothing"
+  },
+  {
+    "name": "Boots (leather)",
+    "description": "Leather boots.",
+    "cost": 60,
+    "type": "Clothing"
+  },
+  {
+    "name": "Speed Suit (coveralls)",
+    "description": "Speed suit style coveralls.",
+    "cost": 33,
+    "type": "Clothing"
+  },
+  {
+    "name": "Coveralls (cotton)",
+    "description": "Cotton coveralls.",
+    "cost": 36,
+    "type": "Clothing"
+  },
+  {
+    "name": "Coveralls (work)",
+    "description": "Work coveralls.",
+    "cost": 30,
+    "type": "Clothing"
+  },
+  {
+    "name": "Coveralls (disposable)",
+    "description": "Disposable coveralls.",
+    "cost": 5,
+    "type": "Clothing"
+  },
+  {
+    "name": "Lab Coat (disposable)",
+    "description": "Disposable lab coat.",
+    "cost": 5,
+    "type": "Clothing"
+  },
+  {
+    "name": "Coveralls (insulated)",
+    "description": "Coveralls that insulate against cold.",
+    "cost": 52,
+    "type": "Clothing"
+  },
+  {
+    "name": "Hard Hat",
+    "description": "Maximum electrical impact resistance.",
+    "cost": 7,
+    "type": "Clothing"
+  },
+  {
+    "name": "Flight Jacket",
+    "description": "Standard flight jacket.",
+    "cost": 60,
+    "type": "Clothing"
+  },
+  {
+    "name": "Polar Coat",
+    "description": "Can withstand cold and wind to -20 degrees.",
+    "cost": 18,
+    "type": "Clothing"
+  },
+  {
+    "name": "Gloves (leather, heavy duty)",
+    "description": "Heavy duty leather gloves.",
+    "cost": 10,
+    "type": "Clothing"
+  },
+  {
+    "name": "Gloves (leather, palm only)",
+    "description": "Leather palm-only gloves.",
+    "cost": 5,
+    "type": "Clothing"
+  },
+  {
+    "name": "Gloves (leather welders)",
+    "description": "Leather welding gloves.",
+    "cost": 12,
+    "type": "Clothing"
+  },
+  {
+    "name": "Gloves (leather racing)",
+    "description": "Leather racing gloves.",
+    "cost": 20,
+    "type": "Clothing"
+  },
+  {
+    "name": "Sun Glasses (light adjusting)",
+    "description": "Light adjusting sun glasses.",
+    "cost": 25,
+    "type": "Accessories"
+  },
+  {
+    "name": "Sun Glasses (aviator)",
+    "description": "Aviator style sun glasses.",
+    "cost": 45,
+    "type": "Accessories"
+  },
+  {
+    "name": "Shooting Glasses",
+    "description": "Change color and density in response to changes in light and weather. Also reduces glare and improves visibility.",
+    "cost": 72,
+    "type": "Accessories"
+  },
+  {
+    "name": "Jet Pack",
+    "description": "Speed: 80mph maximum. Duration of flight: 40 minutes maximum. S.D.C.: 100. Maximum height: 300 feet. Fuel cost: $500 per tank (40 minute flight capacity).",
+    "cost": 80000,
+    "type": "Other Equipment and Gimmicks"
+  },
+  {
+    "name": "Electro-adhesive Pad",
+    "description": "Hand-held device that adheres strongly to any metal surface by passing a small current through two metal electrodes. Used by astronauts; hand-held pads are more flexible. Includes Electro-adhesive Pad (2) and Generator/hip and hand packs (12 lbs). Can hold up to 1000 lbs. Works only on metal.",
+    "cost": 75000,
+    "type": "Other Equipment and Gimmicks"
+  },
+  {
+    "name": "Electro-adhesive Pad (shoe form)",
+    "description": "Shoe-form version of the electro-adhesive pad. Can hold up to 1000 lbs. Works only on metal.",
+    "cost": 80000,
+    "type": "Other Equipment and Gimmicks"
+  },
+  {
+    "name": "Space Suit (complete)",
+    "description": "Self-contained environmental suit, insulated, heat and cold shielded, with oxygen and life support system.",
+    "cost": 250000,
+    "type": "Other Equipment and Gimmicks"
+  },
+  {
+    "name": "The Pick (lock pick)",
+    "description": "Small thin steel tool ending in a slight upward curve or special tip configuration. Used to raise the pins of the lock. Good range of pick thickness is .025-.035. Available through locksmiths and locksmith suppliers. NOTE: Smiths and suppliers will not sell to anyone off the street. Price per pick, at least a dozen needed for a proper range.",
+    "cost": 20,
+    "type": "Lock Picking Tools"
+  },
+  {
+    "name": "Tension Bar",
+    "description": "L-shaped tool constructed of clock spring steel. Used along with a pick to open locks by manipulating the position of the locking pins. Generally 3.5 to 4.5 inches long.",
+    "cost": 30,
+    "type": "Lock Picking Tools"
+  },
+  {
+    "name": "Car Opener",
+    "description": "Window prying tool. Fairly easy to find and purchase or construct.",
+    "cost": 25,
+    "type": "Lock Picking Tools"
+  },
+  {
+    "name": "Cross Bar",
+    "description": "Old standby lock/entry tool using sheer force.",
+    "cost": 12,
+    "type": "Lock Picking Tools"
+  },
+  {
+    "name": "Drill",
+    "description": "Old standby entry tool using sheer force.",
+    "cost": 25,
+    "type": "Lock Picking Tools"
+  },
+  {
+    "name": "Bolt Cutters",
+    "description": "Old standby tool. Good for shearing chains, cable and padlocks.",
+    "cost": 80,
+    "type": "Lock Picking Tools"
+  },
+  {
+    "name": "Key Blank",
+    "description": "Used for making key impressions. Must be obtained the same way as lock picks.",
+    "cost": 30,
+    "type": "Lock Picking Tools"
+  },
+  {
+    "name": "Lock File",
+    "description": "Used in lock picking and key making.",
+    "cost": 10,
+    "type": "Lock Picking Tools"
+  },
+  {
+    "name": "Automatic Lock Pick / Release Gun",
+    "description": "Only sold to law enforcement agencies. Throws all pins into position at once and never damages the lock mechanism. Opens all types of locks (tumbler, spool, regular or mushroom). Street cost $1200 minimum, may cost as much as 200% more.",
+    "cost": 40,
+    "type": "Lock Picking Tools"
+  },
+  {
+    "name": "Flashlight",
+    "description": "Standard police/guard flashlight.",
+    "cost": 26,
+    "type": "Police/Guard Accessories"
+  },
+  {
+    "name": "Flashlight Holder",
+    "description": "Holster/holder for a flashlight.",
+    "cost": 8,
+    "type": "Police/Guard Accessories"
+  },
+  {
+    "name": "Chemical Spray - Small (tear gas)",
+    "description": "Tear gas spray canister. 24 one-second bursts up to 10 feet.",
+    "cost": 6,
+    "type": "Police/Guard Accessories"
+  },
+  {
+    "name": "Chemical Spray - Large (tear gas)",
+    "description": "Tear gas spray canister. 70 one-second bursts up to 15 feet.",
+    "cost": 9,
+    "type": "Police/Guard Accessories"
+  },
+  {
+    "name": "Handcuffs (nickel, heavy duty)",
+    "description": "Heavy duty nickel handcuffs.",
+    "cost": 18,
+    "type": "Police/Guard Accessories"
+  },
+  {
+    "name": "Night Sticks",
+    "description": "High density, unbreakable plastic night sticks.",
+    "cost": 8,
+    "type": "Police/Guard Accessories"
+  },
+  {
+    "name": "Holster (trouser)",
+    "description": "Trouser/hip holster.",
+    "cost": 11,
+    "type": "Police/Guard Accessories"
+  },
+  {
+    "name": "Holster (ankle)",
+    "description": "Ankle holster.",
+    "cost": 28,
+    "type": "Police/Guard Accessories"
+  },
+  {
+    "name": "Holster (shoulder)",
+    "description": "Shoulder holster.",
+    "cost": 28,
+    "type": "Police/Guard Accessories"
+  },
+  {
+    "name": "Hand Cuffs (novelty)",
+    "description": "Novelty handcuffs. S.D.C. 40.",
+    "cost": 10,
+    "type": "Miscellaneous"
+  },
+  {
+    "name": "Hand Cuffs (police)",
+    "description": "Police grade handcuffs. S.D.C. 80.",
+    "cost": 20,
+    "type": "Miscellaneous"
+  },
+  {
+    "name": "Sap Glove",
+    "description": "Six ounces of powdered lead built into each glove just above the knuckles, adding weight and strength to the force of one's blow. +2 to damage. Available from most security guard suppliers.",
+    "cost": 30,
+    "type": "Miscellaneous"
+  },
+  {
+    "name": "Fibre Glass Night Stick",
+    "description": "Fibre glass night stick. Does 1D6 damage.",
+    "cost": 10,
+    "type": "Miscellaneous"
+  },
+  {
+    "name": "Steel Rod Encased Night Stick",
+    "description": "Steel rod encased night stick. Does 1D6 damage.",
+    "cost": 20,
+    "type": "Miscellaneous"
+  },
+  {
+    "name": "Portable Telephone Scrambler",
+    "description": "Converts normal speech into unintelligible gibberish over the telephone line and converts received gibberish into clear speech. 25 different scrambling codes. Fully transistorized, can be used on any conventional phone. Comes with impact resistance carrying case.",
+    "cost": 1400,
+    "type": "Miscellaneous"
+  },
+  {
+    "name": "Bullet Resistant Attache Case",
+    "description": "Bullet resistant attache case. A.R. 15, S.D.C. 140.",
+    "cost": 440,
+    "type": "Miscellaneous"
+  },
+  {
+    "name": "Courier Briefcase",
+    "description": "Reinforced courier briefcase. A.R. 11, S.D.C. 90.",
+    "cost": 225,
+    "type": "Miscellaneous"
+  },
+  {
+    "name": "Acoustic Noise Generator",
+    "description": "Muffles conversations and distorts bugging systems by 30%.",
+    "cost": 900,
+    "type": "Miscellaneous"
+  },
+  {
+    "name": "Organic Acid I",
+    "description": "Affects only organic substances. Does 2D6 damage each melee for a total of four melees. Not a common household item; must be acquired from a chemical supplier, industry or illegal outlet. Price per 1/2 gallon.",
+    "cost": 75,
+    "type": "Acids"
+  },
+  {
+    "name": "Organic Acid II (Concentrated)",
+    "description": "Does 4D6 damage to all other substances. Not a common household item; must be acquired from a chemical supplier, industry or illegal outlet. Price per 1/2 gallon.",
+    "cost": 120,
+    "type": "Acids"
+  },
+  {
+    "name": "Cleanser Acid",
+    "description": "Acid cleanser. Does 1D8 damage per melee for a total of four melees. 1D8 damage per melee to organics and plastics. Price per 1/2 gallon.",
+    "cost": 180,
+    "type": "Acids"
+  },
+  {
+    "name": "Metal Dissolver",
+    "description": "Industrial acid. Does 4D6 damage per melee for a total of four melees. Does 1D8 damage per melee for total of four melees to organics and plastics. Price per 1/2 gallon.",
+    "cost": 600,
+    "type": "Acids"
+  },
+  {
+    "name": "Dynamite",
+    "description": "Nitroglycerin-based explosive widely used in mining and road construction. Can be detonated with blasting caps, fuses and timing devices. Damage one stick: 5-40 to 12 sq. feet, 1-8 for an additional 20 feet. Black market price per stick. Availability: 45%.",
+    "cost": 30,
+    "type": "Explosives"
+  },
+  {
+    "name": "Detonation Caps/Fuses",
+    "description": "Used to detonate explosives. Black market price each. Availability: 32%.",
+    "cost": 30,
+    "type": "Explosives"
+  },
+  {
+    "name": "Plastic Explosive",
+    "description": "Very localized blast explosive that can be molded and formed like putty. Inert until activated by an electrical blasting cap. Damage: 2 ounces equals one stick of dynamite. Black market price per 2oz. Availability: 19%.",
+    "cost": 100,
+    "type": "Explosives"
+  },
+  {
+    "name": "Gelatin Explosive",
+    "description": "Very localized blast explosive that can be molded and formed like putty. Inert until activated by an electrical blasting cap. Damage: 2 ounces equals one stick of dynamite. Black market price per ounce. Availability: 18%.",
+    "cost": 140,
+    "type": "Explosives"
+  },
+  {
+    "name": "Liquid Nitroglycerin",
+    "description": "Extremely dangerous, unstable chemical explosive concentrate. A severe jar, jerk or bump can cause it to detonate, 30% chance. Damage: one ounce equals four sticks of dynamite. Black market price per ounce. Availability: 20%.",
+    "cost": 200,
+    "type": "Explosives"
+  },
+  {
+    "name": "Mortar Shells",
+    "description": "Military mortar ammunition. Black market price each. Availability: 10%.",
+    "cost": 100,
+    "type": "Explosives"
+  },
+  {
+    "name": "Exploding Hand Grenade",
+    "description": "Effective range thrown: 60-80 feet, max range 160 feet. Damage: 5-30 to a 15 sq. foot area, 1-6 for an additional 20 sq. feet. Black market cost $60 each. Availability: 30%.",
+    "cost": 60,
+    "type": "Grenades"
+  },
+  {
+    "name": "Fragmentation Grenade",
+    "description": "Specifically designed to hurl hundreds of tiny fragments to inflict greater damage. Damage: 6-36 to a 20 sq. foot area, 2-12 for an additional 20 sq. feet. Black market cost $60 each.",
+    "cost": 60,
+    "type": "Grenades"
+  },
+  {
+    "name": "White Phosphorous Grenade",
+    "description": "Ignites/flames on contact with air, setting the area ablaze. Damage: 3D6 per melee aflame, affects a 15 sq. foot area. Burns for 2D4 melees.",
+    "cost": 60,
+    "type": "Grenades"
+  },
+  {
+    "name": "Smoke Grenade",
+    "description": "Creates a smoke screen, 30 sq. foot area. Can come in a variety of colors for signalling and target designation. Black market cost $30 each. Availability: 40%.",
+    "cost": 30,
+    "type": "Grenades"
+  },
+  {
+    "name": "Rifle Launched Grenade",
+    "description": "Basically does the same damage as corresponding hand grenades but can be fired from a rifle. Approximate rifle range: 800-900 feet. Illuminating flares can also be fired from rifles, dropping down and lighting up a 90 sq. foot area. Duration: 40-60 seconds. Black market cost $80 each. Availability: 20%.",
+    "cost": 80,
+    "type": "Grenades"
+  },
+  {
+    "name": "Homemade Bomb (Molotov Cocktail)",
+    "description": "A bottle filled with gasoline with a rag stuffed in it. The rag is lit and the bottle thrown, shattering on impact and spraying ignited gasoline. If the bottle does not shatter on impact it will explode from pressure within a minute or two. Damage: 2-12 per melee until the flame is put out, effects approximately 12 sq. feet. Effective range thrown: 40 feet.",
+    "cost": 5,
+    "type": "Grenades"
+  }
+]

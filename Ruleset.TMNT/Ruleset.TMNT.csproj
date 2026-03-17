@@ -8,10 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Utility\Utility.csproj" />
     <EmbeddedResource Include="Json\*.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Json\Character\" />
+    <!-- <EmbeddedResource Include="Json\Character\Form.json" /> -->
   </ItemGroup>
 
   <ItemGroup>

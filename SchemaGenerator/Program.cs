@@ -12,6 +12,7 @@
             EverydayHeroes.GenerateFormSchema.InitializeSchema();
             Ghostbusters.GenerateFormSchema.InitializeSchema();
             Marvel.GenerateFormSchema.InitializeSchema();
+            TMNT.GenerateFormSchema.InitializeSchema();
             Transformers.GenerateFormSchema.InitializeSchema();
             VampireTheMasquerade.GenerateFormSchema.InitializeSchema();
             WorldWideWrestling.GenerateFormSchema.InitializeSchema();

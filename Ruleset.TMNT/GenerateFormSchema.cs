@@ -1,12 +1,15 @@
+using System;
+using System.Collections.Generic;
 using System.Dynamic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Utility;
 
 namespace TMNT
 {
-    public class GenerateFormSchema
+    public static class GenerateFormSchema
     {
         private static readonly List<object> _fields = [];
         private static readonly string _jsonFilesPath = $"{new DirectoryInfo(AppContext.BaseDirectory).Parent.Parent.Parent.Parent}/Ruleset.TMNT/Json/";
@@ -110,7 +113,7 @@ namespace TMNT
             obj.label = "Animal";
             obj.type = "select";
             obj.className = "form-select";
-            obj.options = [];
+            obj.options = new List<object>();
 
             foreach (var animal in animals)
             {
@@ -138,7 +141,7 @@ namespace TMNT
             obj.label = "Alignment";
             obj.type = "select";
             obj.className = "form-select";
-            obj.options = [];
+            obj.options = new List<object>();
 
             foreach (var alignment in alignments)
             {
@@ -161,7 +164,7 @@ namespace TMNT
             obj.label = "Education";
             obj.type = "select";
             obj.className = "form-select";
-            obj.options = [];
+            obj.options = new List<object>();
 
             foreach (var education in educations)
             {
@@ -184,7 +187,7 @@ namespace TMNT
             obj.label = "Mutation";
             obj.type = "select";
             obj.className = "form-select";
-            obj.options = [];
+            obj.options = new List<object>();
 
             foreach (var mutation in mutations)
             {
@@ -206,7 +209,7 @@ namespace TMNT
             obj.label = "Organization";
             obj.type = "select";
             obj.className = "form-select";
-            obj.options = [];
+            obj.options = new List<object>();
 
             foreach (var org in organizations)
             {
@@ -223,7 +226,7 @@ namespace TMNT
 
         private static void GenerateAttributesSchema(List<Attribute> attributes)
         {
-            var children = [];
+            var children = new List<object>();
 
             foreach (var attr in attributes)
             {
@@ -255,7 +258,7 @@ namespace TMNT
                 obj.label = fieldLabel;
                 obj.type = "select";
                 obj.className = "form-select";
-                obj.options = [];
+                obj.options = new List<object>();
                 obj.dependsOn = new { field = "animal", value = group.Key };
 
                 foreach (var (name, description, _, cost) in group)
@@ -277,10 +280,10 @@ namespace TMNT
         {
             dynamic obj = new ExpandoObject();
             obj.name = "psionic";
-            obj.label = "Psionic";
+            obj.label = "Psionics";
             obj.type = "select";
             obj.className = "form-select";
-            obj.options = [];
+            obj.options = new List<object>();
 
             foreach (var psionic in psionics)
             {
@@ -295,38 +298,41 @@ namespace TMNT
                 });
             }
 
-            _fields.Add(obj);
-        }
-
-        private static void GenerateSkillsSchema(List<Skill> skills)
-        {
-            dynamic obj = new ExpandoObject();
-            obj.name = "skills";
-            obj.label = "Skills";
-            obj.type = "select";
-            obj.className = "form-select";
-            obj.options = [];
-
-            foreach (var skill in skills)
-            {
-                obj.options.Add(new
-                {
-                    value = skill.Name,
-                    label = skill.Name,
-                    description = skill.Description,
-                    category = skill.Category
-                });
-            }
-
             dynamic array = new
             {
-                name = "skills",
-                label = "Skills",
+                name = "psionics",
+                label = "Psionics",
                 type = "array",
                 component = obj
             };
 
             _fields.Add(array);
+        }
+
+        private static void GenerateSkillsSchema(List<Skill> skills)
+        {
+            _fields.Add(new
+            {
+                type = "divider"
+            });
+
+            _fields.Add(new
+            {
+                type = "textblock",
+                label = "Skills",
+                text = "Skills",
+                name = "skillsLabel"
+            });
+
+            foreach (var skill in skills)
+            {
+                _fields.Add(new { name = $"skills.{skill.Name}", id = $"skills.{skill.Name}", label = skill.Name, type = "number", className = "form-control", @default = 0 });
+            } 
+
+            _fields.Add(new
+            {
+                type = "divider"
+            });
         }
 
         private static void GenerateWeaponsSchema(List<Weapon> weapons)
@@ -336,7 +342,7 @@ namespace TMNT
             obj.label = "Weapons";
             obj.type = "select";
             obj.className = "form-select";
-            obj.options = [];
+            obj.options = new List<object>();
 
             foreach (var weapon in weapons)
             {
@@ -374,7 +380,7 @@ namespace TMNT
             obj.label = "Equipment";
             obj.type = "select";
             obj.className = "form-select";
-            obj.options = [];
+            obj.options = new List<object>();
 
             foreach (var item in equipment)
             {
@@ -406,7 +412,7 @@ namespace TMNT
             obj.label = "Vehicle";
             obj.type = "select";
             obj.className = "form-select";
-            obj.options = [];
+            obj.options = new List<object>();
 
             foreach (var vehicle in vehicles)
             {
@@ -429,7 +435,7 @@ namespace TMNT
             obj.label = "Armor";
             obj.type = "select";
             obj.className = "form-select";
-            obj.options = [];
+            obj.options = new List<object>();
 
             foreach (var armor in armors)
             {

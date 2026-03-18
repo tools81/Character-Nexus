@@ -3,12 +3,13 @@
   <PropertyGroup>
 	<TargetFramework>net8.0</TargetFramework>
 	<LangVersion>12</LangVersion>
+  <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Utility\Utility.csproj" />
     <EmbeddedResource Include="Json\*.json" />
-    <!-- <EmbeddedResource Include="Json\Character\Form.json" /> -->
+    <EmbeddedResource Include="Json\Character\Form.json" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,0 +1,2397 @@
+﻿[
+  {
+    "name": "Laminated",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 5,
+    "locations": [
+      "Head",
+      "Torso",
+      "Arm",
+      "Leg"
+    ],
+    "set": "General"
+  },
+  {
+    "name": "Resin",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 10,
+    "locations": [
+      "Head",
+      "Torso",
+      "Arm",
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "set": "General"
+  },
+  {
+    "name": "Microcarbon",
+    "description": "",
+    "resistancephysical": 3,
+    "resistanceenergy": 3,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 15,
+    "locations": [
+      "Head",
+      "Torso",
+      "Arm",
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "set": "General"
+  },
+  {
+    "name": "Padded",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [
+      "Padded"
+    ],
+    "weight": 4,
+    "cost": 1,
+    "locations": [
+      "Torso"
+    ],
+    "set": "General"
+  },
+  {
+    "name": "Asbestos Lining",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 3,
+    "resistanceradiation": 0,
+    "effects": [
+      "Asbestos Lining"
+    ],
+    "weight": 4,
+    "cost": 3,
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "set": "General"
+  },
+  {
+    "name": "Dense",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [
+      "Dense"
+    ],
+    "weight": 4,
+    "cost": 7,
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      }
+    ],
+    "set": "General"
+  },
+  {
+    "name": "BioCommMesh",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [
+      "BioCommMesh"
+    ],
+    "weight": 2,
+    "cost": 9,
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 4"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 2"
+      }
+    ],
+    "set": "General"
+  },
+  {
+    "name": "Pneumatic",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [
+      "Pneumatic"
+    ],
+    "weight": 2,
+    "cost": 9,
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 4"
+      }
+    ],
+    "set": "General"
+  },
+  {
+    "name": "Brawling",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [
+      "Brawling"
+    ],
+    "weight": 1,
+    "cost": 1,
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "set": "General"
+  },
+  {
+    "name": "Braced",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [
+      "Braced"
+    ],
+    "weight": 1,
+    "cost": 1,
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "set": "General"
+  },
+  {
+    "name": "Stabilized",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [
+      "Stabilized"
+    ],
+    "weight": 1,
+    "cost": 1,
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      }
+    ],
+    "set": "General"
+  },
+  {
+    "name": "Aerodynamic",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [
+      "Aerodynamic"
+    ],
+    "weight": 0,
+    "cost": 1,
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      }
+    ],
+    "set": "General"
+  },
+  {
+    "name": "Weighted",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [
+      "Weighted"
+    ],
+    "weight": 1,
+    "cost": 3,
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 4"
+      }
+    ],
+    "set": "General"
+  },
+  {
+    "name": "Cushioned",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [
+      "Cushioned"
+    ],
+    "weight": 0,
+    "cost": 1,
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "set": "General"
+  },
+  {
+    "name": "Muffled",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [
+      "Muffled"
+    ],
+    "weight": 0,
+    "cost": 2,
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      }
+    ],
+    "set": "General"
+  },
+  {
+    "name": "Raider II Helm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 5,
+    "set": "Power Armor Raider",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "Raider II Chest Piece",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 10,
+    "set": "Power Armor Raider",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 4
+  },
+  {
+    "name": "Raider II Arm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 7,
+    "set": "Power Armor Raider",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "Raider II Leg",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 7,
+    "set": "Power Armor Raider",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "T-45b Helm",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 3,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 1
+  },
+  {
+    "name": "T-45b Chest Piece",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 7,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 1
+  },
+  {
+    "name": "T-45b Arm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 7,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 1
+  },
+  {
+    "name": "T-45b Leg",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 7,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 1
+  },
+  {
+    "name": "T-45c Helm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 6,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 2
+  },
+  {
+    "name": "T-45c Chest Piece",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 14,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 4
+  },
+  {
+    "name": "T-45c Arm",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 10,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 2
+  },
+  {
+    "name": "T-45c Leg",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 10,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 2
+  },
+  {
+    "name": "T-45d Helm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 9,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "T-45d Chest Piece",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 3,
+    "cost": 21,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 5
+  },
+  {
+    "name": "T-45d Arm",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 3,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 15,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "T-45d Leg",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 3,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 15,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "T-45e Helm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 12,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "T-45e Chest Piece",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 4,
+    "cost": 28,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 7
+  },
+  {
+    "name": "T-45e Arm",
+    "description": "",
+    "resistancephysical": 3,
+    "resistanceenergy": 3,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 3,
+    "cost": 20,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "T-45e Leg",
+    "description": "",
+    "resistancephysical": 3,
+    "resistanceenergy": 3,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 3,
+    "cost": 20,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 3
+  },
+
+  {
+    "name": "T-45f Helm",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 3,
+    "cost": 15,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 4
+  },
+  {
+    "name": "T-45f Chest Piece",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 5,
+    "cost": 35,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 8
+  },
+  {
+    "name": "T-45f Arm",
+    "description": "",
+    "resistancephysical": 3,
+    "resistanceenergy": 4,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 4,
+    "cost": 25,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 4
+  },
+  {
+    "name": "T-45f Leg",
+    "description": "",
+    "resistancephysical": 3,
+    "resistanceenergy": 4,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 4,
+    "cost": 25,
+    "set": "Power Armor T-45",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 4
+  },
+  {
+    "name": "T-51b Helm",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 4,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 1
+  },
+  {
+    "name": "T-51b Chest Piece",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 9,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 1
+  },
+  {
+    "name": "T-51b Arm",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 6,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 1
+  },
+  {
+    "name": "T-51b Leg",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 6,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 1
+  },
+  {
+    "name": "T-51c Helm",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 8,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 1
+  },
+  {
+    "name": "T-51c Chest Piece",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 18,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "T-51c Arm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 13,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 1
+  },
+  {
+    "name": "T-51c Leg",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 13,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 1
+  },
+  {
+    "name": "T-51d Helm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 12,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 2
+  },
+  {
+    "name": "T-51d Chest Piece",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 3,
+    "cost": 27,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 4
+  },
+  {
+    "name": "T-51d Arm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 19,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 2
+  },
+  {
+    "name": "T-51d Leg",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 19,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 2
+  },
+  {
+    "name": "T-51e Helm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 16,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "T-51e Chest Piece",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 4,
+    "cost": 36,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 6
+  },
+  {
+    "name": "T-51e Arm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 3,
+    "cost": 26,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "T-51e Leg",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 3,
+    "cost": 26,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 3
+  },
+
+  {
+    "name": "T-51f Helm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 3,
+    "cost": 20,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "T-51f Chest Piece",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 5,
+    "cost": 45,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 7
+  },
+  {
+    "name": "T-51f Arm",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 4,
+    "cost": 32,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "T-51f Leg",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 4,
+    "cost": 32,
+    "set": "Power Armor T-51",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "T-60b Helm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 32,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Head"
+    ],
+    "health": 1
+  },
+  {
+    "name": "T-60b Chest Piece",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 37,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Torso"
+    ],
+    "health": 2
+  },
+  {
+    "name": "T-60b Arm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 35,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Arm"
+    ],
+    "health": 1
+  },
+  {
+    "name": "T-60b Leg",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 35,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Leg"
+    ],
+    "health": 1
+  },
+  {
+    "name": "T-60c Helm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 3,
+    "cost": 64,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 2
+  },
+  {
+    "name": "T-60c Chest Piece",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 74,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "T-60c Arm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 70,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 2
+  },
+  {
+    "name": "T-60c Leg",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 70,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 2
+  },
+  {
+    "name": "T-60d Helm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 96,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 2
+  },
+  {
+    "name": "T-60d Chest Piece",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 3,
+    "cost": 111,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 5
+  },
+  {
+    "name": "T-60d Arm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 105,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 2
+  },
+  {
+    "name": "T-60d Leg",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 105,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 2
+  },
+  {
+    "name": "T-60e Helm",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 128,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "T-60e Chest Piece",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 4,
+    "cost": 148,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 7
+  },
+  {
+    "name": "T-60e Arm",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 3,
+    "cost": 140,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "T-60e Leg",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 3,
+    "cost": 140,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 3
+  },
+
+  {
+    "name": "T-60f Helm",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 3,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 3,
+    "cost": 160,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 4
+  },
+  {
+    "name": "T-60f Chest Piece",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 5,
+    "cost": 185,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 8
+  },
+  {
+    "name": "T-60f Arm",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 3,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 4,
+    "cost": 175,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 4
+  },
+  {
+    "name": "T-60f Leg",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 3,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 4,
+    "cost": 175,
+    "set": "Power Armor T-60",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 4
+  },
+  {
+    "name": "MkII Helm",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 7,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Head"
+    ],
+    "health": 1
+  },
+  {
+    "name": "Mk II Chest Piece",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 14,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Torso"
+    ],
+    "health": 1
+  },
+  {
+    "name": "Mk II Arm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 10,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Arm"
+    ],
+    "health": 1
+  },
+  {
+    "name": "Mk II Leg",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 10,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Leg"
+    ],
+    "health": 1
+  },
+  {
+    "name": "Mk III Helm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 0,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 1,
+    "cost": 14,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 1
+  },
+  {
+    "name": "Mk III Chest Piece",
+    "description": "",
+    "resistancephysical": 0,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 28,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 2
+  },
+  {
+    "name": "Mk III Arm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 20,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 1
+  },
+  {
+    "name": "Mk III Leg",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 20,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 1
+  },
+  {
+    "name": "Mk IV Helm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 21,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 2
+  },
+  {
+    "name": "Mk IV Chest Piece",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 3,
+    "cost": 42,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "Mk IV Arm",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 30,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 2
+  },
+  {
+    "name": "Mk IV Leg",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 30,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 2"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 2
+  },
+  {
+    "name": "Mk V Helm",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 1,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 2,
+    "cost": 28,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 2
+  },
+  {
+    "name": "Mk V Chest Piece",
+    "description": "",
+    "resistancephysical": 1,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 4,
+    "cost": 56,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 4
+  },
+  {
+    "name": "Mk V Arm",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 3,
+    "cost": 40,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 2
+  },
+  {
+    "name": "Mk V Leg",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 3,
+    "cost": 40,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 1"
+      }
+    ],
+    "health": 2
+  },
+
+  {
+    "name": "Mk VI Helm",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 3,
+    "cost": 35,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Head"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 3
+  },
+  {
+    "name": "Mk VI Chest Piece",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 2,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 5,
+    "cost": 70,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Torso"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 5
+  },
+  {
+    "name": "Mk VI Arm",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 3,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 4,
+    "cost": 50,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Arm"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 4
+  },
+  {
+    "name": "X-01f Leg",
+    "description": "",
+    "resistancephysical": 2,
+    "resistanceenergy": 3,
+    "resistanceradiation": 0,
+    "effects": [],
+    "weight": 4,
+    "cost": 50,
+    "set": "Power Armor X-01",
+    "locations": [
+      "Leg"
+    ],
+    "prerequisites": [
+      {
+        "type": "perk",
+        "name": "Armorer",
+        "formula": ">= 3"
+      },
+      {
+        "type": "perk",
+        "name": "Science!",
+        "formula": ">= 2"
+      }
+    ],
+    "health": 4
+  }
+]

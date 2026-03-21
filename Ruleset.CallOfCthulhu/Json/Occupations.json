@@ -1,3 +1,1028 @@
 [
-
+  {
+    "name": "Accountant",
+    "description": "Either employed within a business or working as a freelance consultant with a portfolio of self-employed clients or businesses. Diligence and an attention to detail means that most accountants can make good researchers, being able to support investigations through the careful analysis of personal and business transactions, financial statements, and other records.",
+    "credit": "30-70",
+    "suggestedContacts": "Business associates, legal professions, financial sector (bankers, other accountants).",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting", "Law", "Library Use", "Listen", "Persuade", "Spot Hidden"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Acrobat",
+    "description": "Acrobats may be either amateur-athletes competing in staged meets—possibly even the Olympics—or professionals employed with the entertainment sector (e.g. circuses, carnivals, theatrical performances).",
+    "credit": "9-20",
+    "suggestedContacts": "Amateur athletic circles, sports writers, circuses, carnivals.",
+    "skillPoints": "EDU * 2 + DEX * 2",
+    "skills": ["Climb", "Dodge", "Jump", "Throw", "Spot Hidden", "Swim"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Stage Actor",
+    "description": "Usually a stage or film actor. Many stage actors have a background in the classics and, considering themselves legitimate, have a tendency to look down upon the commercial efforts of the film industry.",
+    "credit": "9-40",
+    "suggestedContacts": "Theatre industry, newspaper arts critics, actor's guild or union.",
+    "skillPoints": "EDU * 2 + APP * 2",
+    "skills": ["Art/Craft (Acting)", "Disguise", "Fighting", "History", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Film Star",
+    "description": "Movie stars and the film industry have long captured the interest of people across the world. Many stars are made overnight and most of them lead flashy, high profile lives, ever in the media spotlight.",
+    "credit": "20-90",
+    "suggestedContacts": "Film industry, media critics, writers.",
+    "skillPoints": "EDU * 2 + APP * 2",
+    "skills": ["Art/Craft (Acting)", "Disguise", "Drive Auto", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Agency Detective",
+    "description": "Company Operatives are plainclothes detectives, sent out on cases requiring them to solve mysteries, prevent murders, locate missing people, and so on.",
+    "credit": "20-45",
+    "suggestedContacts": "Local law enforcement, clients.",
+    "skillPoints": "EDU * 2 + (STR * 2 or DEX * 2)",
+    "skills": ["Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Fighting (Brawl)", "Firearms", "Law", "Library Use", "Psychology", "Stealth", "Track"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Alienist [Classic]",
+    "description": "In the 1920s, alienist is the term given for those who treat mental illness (early psychiatrists). Psychoanalysis is barely known in the U.S., and its basis in sexual life and toilet training is felt to be indecent. Psychiatry, a standard medical education augmented by behaviorism, is more common.",
+    "credit": "10-60",
+    "suggestedContacts": "Others in the field of mental illness, medical doctors, and occasionally detectives in law enforcement.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Law", "Listen", "Medicine", "Other Language", "Psychoanalysis", "Psychology", "Science (Biology)", "Science (Chemistry)"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Animal Trainer",
+    "description": "May be employed by film studios, a traveling circus, a horse stable, or possibly working freelance. Whether training guide dogs for the blind or teaching a lion to jump through a flaming hoop, the animal trainer usually works alone, spending long hours in close proximity with the animals in their care.",
+    "credit": "10-40",
+    "suggestedContacts": "Zoos, circus folk, patrons, actors.",
+    "skillPoints": "EDU * 2 + (APP * 2 or POW * 2)",
+    "skills": ["Animal Handling", "Jump", "Listen", "Natural World", "Science (Zoology)", "Stealth", "Track"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Antiquarian [Lovecraftian]",
+    "description": "A person who delights in the timeless excellence of design and execution, and in the power of ancient lore. Probably the most Lovecraft-like occupation available to an investigator. An independent income allows the antiquarian to explore things old and obscure.",
+    "credit": "30-70",
+    "suggestedContacts": "Booksellers, antique collectors, historical societies.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Appraise", "Art/Craft (any)", "History", "Library Use", "Other Language", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Spot Hidden"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Antique Dealer",
+    "description": "Antique dealers usually own their own shop, retail items out of their homes, or go on extended buying trips, making a profit on reselling to urban stores.",
+    "credit": "30-50",
+    "suggestedContacts": "Local historians, other antique dealers, possibly criminal fences.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting", "Appraise", "Drive Auto", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "History", "Library Use", "Navigate"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Archaeologist [Lovecraftian]",
+    "description": "The study and exploration of the past. Primarily the identification, examination, and analysis of recovered materials relating to human history. The work involves painstaking research and meticulous study, not to mention a willing attitude to getting one's hands dirty.",
+    "credit": "10-40",
+    "suggestedContacts": "Patrons, museums, universities.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Appraise", "Archaeology", "History", "Other Language (any)", "Library Use", "Spot Hidden", "Mechanical Repair", "Navigate or Science (e.g. chemistry, physics, geology)"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Architect",
+    "description": "Architects are trained to design and plan buildings, whether a small conversion to a private house or a multi-million dollar construction project. Architects must be aware of local planning laws, health and safety regulation, and general public safety.",
+    "credit": "30-70",
+    "suggestedContacts": "Local building and city engineering departments, construction firms.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting", "Art/Craft (Technical Drawing)", "Law", "Own Language", "Computer Use or Library Use", "Persuade", "Psychology", "Science (Mathematics)"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Artist",
+    "description": "May be a painter, sculptor, etc. Sometimes self-absorbed and driven with a particular vision, sometimes blessed with a great talent that is able to inspire passion and understanding.",
+    "credit": "9-50",
+    "suggestedContacts": "Art galleries, critics, wealthy patrons, the advertising industry.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or POW * 2)",
+    "skills": ["Art/Craft (any)", "History or Natural World", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Other Language", "Psychology", "Spot Hidden"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Asylum Attendant",
+    "description": "Although there are private sanitariums for those few who can afford them, the vast bulk of the mentally ill are housed in state and county facilities. They employ a large number of attendants, often chosen more for their strength and size rather than medical learning.",
+    "credit": "8-20",
+    "suggestedContacts": "Medical staff, patients, and relatives of patients. Access to medical records, as well as drugs and other medical supplies.",
+    "skillPoints": "EDU * 2 + (STR * 2 or DEX * 2)",
+    "skills": ["Dodge", "Fighting (Brawl)", "First Aid", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Listen", "Psychology", "Stealth"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Athlete",
+    "description": "Probably plays in a professional baseball, football, cricket, or basketball team. Successful professional athletes will enjoy a certain amount of celebrity within the arena of their expertise.",
+    "credit": "9-70",
+    "suggestedContacts": "Sports personalities, sports writers, other media stars.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Climb", "Jump", "Fighting (Brawl)", "Ride", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Swim", "Throw"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Author [Lovecraftian]",
+    "description": "As distinct from the journalist, the author uses words to define and explore the human condition, especially the range of human emotions. Their labors are solitary and the rewards solipsistic: only a relative handful make much money in the present day.",
+    "credit": "9-30",
+    "suggestedContacts": "Publishers, critics, historians, etc.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Art (Literature)", "History", "Library Use", "Natural World or Occult", "Other Language", "Own Language", "Psychology"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Bartender",
+    "description": "Normally not the owner of the bar, the bartender is everyone's friend. For some it's a career or their business, for many it's a means to an end. In the 1920s the profession is made illegal by the Prohibition Act; however, there's no shortage of work for a bartender, as someone has to serve the drinks in the speakeasies and secret gin joints.",
+    "credit": "8-25",
+    "suggestedContacts": "Regular customers, possibly organized crime.",
+    "skillPoints": "EDU * 2 + APP * 2",
+    "skills": ["Accounting", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Fighting (Brawl)", "Listen", "Psychology", "Spot Hidden"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Big Game Hunter",
+    "description": "Big game hunters are skilled trackers and hunters who usually earn their living leading safaris for wealthy clients. Most are specialized in one part of the world, such as the Canadian woods, African plains, and other locales.",
+    "credit": "20-50",
+    "suggestedContacts": "Foreign government officials, game wardens, past (usually wealthy) clients, black-market gangs and traders, zoo owners.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Firearms", "Listen or Spot Hidden", "Natural World", "Navigate", "Other Language or Survival (any)", "Science (Biology, Botany, or Zoology)", "Stealth", "Track"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Book Dealer",
+    "description": "A book dealer may be the owner of a retail outlet or niche mail order service, or specialize in buying trips across the country and even overseas. Many will have wealthy or regular clients, who provide lists of sought-after and rare works.",
+    "credit": "20-40",
+    "suggestedContacts": "Bibliographers, book dealers, libraries and universities, clients.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting", "Appraise", "Drive Auto", "History", "Library Use", "Own Language", "Other Language", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Bounty Hunter",
+    "description": "Bounty hunters track down and return fugitives to justice. Most often, freelancers are employed by Bail Bondsmen to track down bail jumpers. Bounty hunters may freely cross state lines in pursuit of their quarry.",
+    "credit": "9-30",
+    "suggestedContacts": "Bail bondsmen, local police, criminal informants.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Drive Auto", "Electronic or Electrical Repair", "Fighting or Firearms", "Interpersonal skill (Fast Talk, Charm, Intimidate, or Persuade)", "Law", "Psychology", "Track", "Stealth"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Boxer/Wrestler",
+    "description": "Professional boxers and wrestlers are managed by individuals (promoters) possibly backed by outside interests, and usually locked into contracts. Amateur and post-professional boxers and wrestlers can sometimes be found making a living from illegal bare-knuckle fights.",
+    "credit": "9-60",
+    "suggestedContacts": "Sports promoters, journalists, organized crime, professional trainers.",
+    "skillPoints": "EDU * 2 + STR * 2",
+    "skills": ["Dodge", "Fighting (Brawl)", "Intimidate", "Jump", "Psychology", "Spot Hidden"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Butler/Valet/Maid",
+    "description": "This occupation covers those who are employed in a servant capacity and includes butler, valet, and lady's maid. A butler is usually employed as a domestic servant for a large household. A valet or lady's maid provides personal services.",
+    "credit": "9-40",
+    "suggestedContacts": "Waiting staff of other households, local businesses and household suppliers.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting or Appraise", "Art/Craft (any, e.g. Cook, Tailor, Barber)", "First Aid", "Listen", "Psychology", "Spot Hidden"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Clergy, Member of the",
+    "description": "The hierarchy of the Church usually assigns clergy to their respective parishes or sends them on evangelical missions. Many clergy (not just Catholic priests) bear witness to confessions and, though they are not at liberty to divulge such secrets, they are free to act upon them.",
+    "credit": "9-60",
+    "suggestedContacts": "Church hierarchy, local congregations, community leaders.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting", "History", "Library Use", "Listen", "Other Language", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Computer Programmer/Technician [Modern]",
+    "description": "Usually designing, writing, testing, debugging, and/or maintaining the source code of computer programs, the computer programmer is an expert in many different subjects, including formal logic and application platforms.",
+    "credit": "10-70",
+    "suggestedContacts": "Other IT workers, corporate workers and managers, specialized Internet web communities.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Computer Use", "Electrical Repair", "Electronics", "Library Use", "Science (Mathematics)", "Spot Hidden"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Hacker [Modern]",
+    "description": "The computer hacker uses computers and computer networks as a means of protest to promote political ends (sometimes referred to as hacktivists) or for criminal gain. Illegally breaking into computers and other user accounts is required.",
+    "credit": "10-70",
+    "suggestedContacts": "IT workers, specialized Internet web communities, political groups, criminal enterprises.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Computer Use", "Electrical Repair", "Electronics", "Library Use", "Spot Hidden", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Cowboy/girl",
+    "description": "Cowboys work the ranges and ranches of the West. Some own their own ranches, but many are simply hired where and when work is available. Good money can also be made by those willing to risk life and limb on the rodeo circuit.",
+    "credit": "9-20",
+    "suggestedContacts": "Local businesspeople, state agricultural departments, rodeo promoters, and entertainers.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Dodge", "Fighting or Firearms", "First Aid or Natural World", "Jump", "Ride", "Survival (any)", "Throw", "Track"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Craftsperson",
+    "description": "May be equally termed an artisan or master craftsperson. The craftsperson is essentially skilled in the manual production of items or materials. Possible trades include: furniture, jewelry, watchmaker, potter, blacksmith, textiles, calligraphy, sewing, carpentry, book binding, glassblowing, toy maker, stained glass.",
+    "credit": "10-40",
+    "suggestedContacts": "Local business people, other craftspersons and artists.",
+    "skillPoints": "EDU * 2 + DEX * 2",
+    "skills": ["Accounting", "Art/Craft (any two)", "Mechanical Repair", "Natural World", "Spot Hidden"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Criminal: Assassin",
+    "description": "Hit men are the cold-blooded killers of the underworld. Usually hired from somewhere out of town, they arrive, do their work, then quickly disappear. It's strictly business.",
+    "credit": "30-60",
+    "suggestedContacts": "Few, mostly underworld; people prefer not to know them too well. The best will have earned a formidable reputation on the street.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Disguise", "Electrical Repair", "Fighting", "Firearms", "Locksmith", "Mechanical Repair", "Stealth", "Psychology"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Criminal: Bank Robber",
+    "description": "Criminals who specialize in robbing banks and financial institutions, often working as part of an organized gang.",
+    "credit": "5-75",
+    "suggestedContacts": "Other gang members (current and retired), criminal freelancers, organized crime.",
+    "skillPoints": "EDU * 2 + (STR * 2 or DEX * 2)",
+    "skills": ["Drive Auto", "Electrical or Mechanical Repair", "Fighting", "Firearms", "Intimidate", "Locksmith", "Operate Heavy Machinery"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Criminal: Bootlegger/Thug",
+    "description": "Whether bootleggers, corner-boys, or thugs, these are the soldiers of organized crime. They are supported by criminal organizations and are the ones usually expected to take the fall for the gangsters above them.",
+    "credit": "5-30",
+    "suggestedContacts": "Organized crime, street-level law enforcement, local traders.",
+    "skillPoints": "EDU * 2 + STR * 2",
+    "skills": ["Drive Auto", "Fighting", "Firearms", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology", "Stealth", "Spot Hidden"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Criminal: Burglar",
+    "description": "Criminals who specialize in breaking and entering, taking valuables from homes and businesses.",
+    "credit": "5-40",
+    "suggestedContacts": "Fences, other burglars.",
+    "skillPoints": "EDU * 2 + DEX * 2",
+    "skills": ["Appraise", "Climb", "Electrical or Mechanical Repair", "Listen", "Locksmith", "Sleight of Hand", "Stealth", "Spot Hidden"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Criminal: Conman",
+    "description": "Confidence tricksters are usually smooth talkers. Working alone or in a team, they descend on wealthy individuals or communities, fleecing their targets of their hard-earned savings.",
+    "credit": "10-65",
+    "suggestedContacts": "Other confidence artists, freelance criminals.",
+    "skillPoints": "EDU * 2 + APP * 2",
+    "skills": ["Appraise", "Art/Craft (Acting)", "Law or Other Language", "Listen", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology", "Sleight of Hand"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Criminal: Freelance/Solo",
+    "description": "Criminals who work independently, perhaps occasionally teaming up with others when the reward is worth the effort and risk. Freelance thugs might work as muggers, stickup men, and armed robbers.",
+    "credit": "5-65",
+    "suggestedContacts": "Other petty criminals, street-level law enforcement.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or APP * 2)",
+    "skills": ["Art/Craft (Acting) or Disguise", "Appraise", "Interpersonal skill (Charm, Fast Talk, or Intimidate)", "Fighting or Firearms", "Locksmith or Mechanical Repair", "Stealth", "Psychology", "Spot Hidden"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Criminal: Gun Moll [Classic]",
+    "description": "A female professional criminal. While many are fiercely independent, some are at the beck and call of mobster boyfriends—however, in reality this could easily be the other way around, with the moll working her boyfriend for all she can before skedaddling with all the cash and furs she can carry.",
+    "credit": "10-80",
+    "suggestedContacts": "Gangsters, law enforcement, local businesses.",
+    "skillPoints": "EDU * 2 + APP * 2",
+    "skills": ["Art/Craft (any)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Fighting (Brawl) or Firearms (Handgun)", "Drive Auto", "Listen", "Stealth"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Criminal: Fence",
+    "description": "A fence is someone who trades in stolen property, usually taking in stolen goods and then selling them to other criminals or (unwitting) legitimate customers. Principally a middleman between thieves and buyers.",
+    "credit": "20-40",
+    "suggestedContacts": "Organized crime, trade contacts, black market and legitimate buyers.",
+    "skillPoints": "EDU * 2 + APP * 2",
+    "skills": ["Accounting", "Appraise", "Art/Craft (Forgery)", "History", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Library Use", "Spot Hidden"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Criminal: Forger/Counterfeiter",
+    "description": "Forgers are the artists of the criminal world, specializing in forging official documents, deeds and transfers, and providing phony signatures. The best engrave plates for counterfeiting currency.",
+    "credit": "20-60",
+    "suggestedContacts": "Organized crime, businesspeople.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting", "Appraise", "Art/Craft (Forgery)", "History", "Library Use", "Spot Hidden", "Sleight of Hand"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Criminal: Smuggler",
+    "description": "Smuggling is always a lucrative and high-risk business. The smuggler usually has a public profession, such as boat captain, pilot, or businessman, allowing them to transport illicit products to a needy market.",
+    "credit": "20-60",
+    "suggestedContacts": "Organized crime, Coast Guard, U.S. Customs officials.",
+    "skillPoints": "EDU * 2 + (APP * 2 or DEX * 2)",
+    "skills": ["Firearms", "Listen", "Navigate", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Drive Auto or Pilot (Aircraft or Boat)", "Psychology", "Sleight of Hand", "Spot Hidden"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Criminal: Street Punk",
+    "description": "Street punks are typically young street hoods, possibly looking for a chance to hook-up with real gangsters. Experience is probably limited to stealing cars, shoplifting, mugging, and burglary.",
+    "credit": "3-10",
+    "suggestedContacts": "Petty criminals, other punks, the local fence, maybe the local gangster, certainly the local police.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Climb", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Fighting", "Firearms", "Jump", "Sleight of Hand", "Stealth", "Throw"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Cult Leader",
+    "description": "America has always generated new religions. The leader is either a firm believer in the dogma they impart to the cult's members or simply in it for the money and power.",
+    "credit": "30-60",
+    "suggestedContacts": "While the majority of followers will be regular people, the more charismatic the leader, the greater the possibility of celebrity followers, such as movie stars and rich widows.",
+    "skillPoints": "EDU * 2 + APP * 2",
+    "skills": ["Accounting", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Occult", "Psychology", "Spot Hidden"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Deprogrammer [Modern]",
+    "description": "Deprogramming is the act of persuading (or forcing) a person to abandon their belief or allegiance to a religious or social community. Normally the deprogrammer is hired by relatives of an individual who has joined some form of cult.",
+    "credit": "20-50",
+    "suggestedContacts": "Local and federal law enforcement, criminals, religious community.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Drive Auto", "Fighting (Brawl) or Firearms", "History", "Occult", "Psychology", "Stealth"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Designer",
+    "description": "Designers work in many fields, from fashion to furniture and most points in-between. The designer may work freelance, for a design house or for a business designing consumer products, processes, laws, games, graphics, and so on.",
+    "credit": "20-60",
+    "suggestedContacts": "Advertising, media, furnishings, architectural, other.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting", "Art (Photography)", "Art/Craft (any)", "Computer Use or Library Use", "Mechanical Repair", "Psychology", "Spot Hidden"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Dilettante [Lovecraftian]",
+    "description": "Dilettantes are self-supporting, living off an inheritance, trust fund, or some other source of income that does not require them to work. Probably well educated, though not necessarily accomplished in anything. Money frees the dilettante to be eccentric and outspoken.",
+    "credit": "50-99",
+    "suggestedContacts": "Variable, but usually people of a similar background and tastes, fraternal organizations, bohemian circles, high society at large.",
+    "skillPoints": "EDU * 2 + APP * 2",
+    "skills": ["Art/Craft (any)", "Firearms", "Other Language", "Ride", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)"],
+    "specialtyCount": 3
+  },
+  {
+    "name": "Diver",
+    "description": "Divers could work in the military, law enforcement, or in civilian occupations like sponge gathering, salvage, conservation, or even treasure hunting.",
+    "credit": "9-30",
+    "suggestedContacts": "Coast guard, ship captains, military, law enforcement, smugglers.",
+    "skillPoints": "EDU * 2 + DEX * 2",
+    "skills": ["Diving", "First Aid", "Mechanical Repair", "Pilot (Boat)", "Science (Biology)", "Spot Hidden", "Swim"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Doctor of Medicine [Lovecraftian]",
+    "description": "Most likely a general practitioner, surgeon, or other specialist, such as a psychiatrist or an independent medical researcher. Apart from personal goals, three aims—helping patients, gaining money and prestige, and promoting a more rational and wiser society—are common to the profession.",
+    "credit": "30-80",
+    "suggestedContacts": "Other physicians, medical workers, patients and ex-patients.",
+    "skillPoints": "EDU * 4",
+    "skills": ["First Aid", "Medicine", "Other Language (Latin)", "Psychology", "Science (Biology and Pharmacy)"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Drifter",
+    "description": "As opposed to someone who is poverty-stricken, the drifter's wandering life is chosen, perhaps compensating for a social, philosophical, or economic lack, or perhaps due to a desire to break free of societal constraints. The drifter takes jobs, sometimes for days or months.",
+    "credit": "0-5",
+    "suggestedContacts": "Other hobos, a few friendly railroad guards, soft touches in numerous towns.",
+    "skillPoints": "EDU * 2 + (APP * 2 or DEX * 2 or STR * 2)",
+    "skills": ["Climb", "Jump", "Listen", "Navigate", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Stealth"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Driver: Chauffeur",
+    "description": "A chauffeur is either directly employed by an individual or firm, or works for an agency that hires both car and chauffeur out for single engagements or on a retainer basis.",
+    "credit": "10-40",
+    "suggestedContacts": "Successful business people (criminals included), political representatives.",
+    "skillPoints": "EDU * 2 + DEX * 2",
+    "skills": ["Drive Auto", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Listen", "Mechanical Repair", "Navigate", "Spot Hidden"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Driver",
+    "description": "Professional drivers may work for a company, private individual, or possibly have their own cab or rig.",
+    "credit": "9-20",
+    "suggestedContacts": "Customers, businesses, law enforcement and general street level life.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Accounting", "Drive Auto", "Listen", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Mechanical Repair", "Navigate", "Psychology"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Taxi Driver",
+    "description": "Taxi drivers may work for large or small companies, or possibly have their own cab and license. Taxis are required to be fitted with approved meters, periodically checked by the city's taxi board.",
+    "credit": "9-30",
+    "suggestedContacts": "Street scene, possibly a notable customer now and then.",
+    "skillPoints": "EDU * 2 + DEX * 2",
+    "skills": ["Accounting", "Drive Auto", "Electrical Repair", "Fast Talk", "Mechanical Repair", "Navigate", "Spot Hidden"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Editor",
+    "description": "Editors work assigning stories to reporters, writing newspaper and magazine editorials, dealing with crises, and meeting deadlines. Occasionally they edit. Large newspapers have many editors, including managing editors who are more involved with business operations than news.",
+    "credit": "10-30",
+    "suggestedContacts": "News industry, local government, specialists (e.g. fashion designers, sports, business), publishers.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting", "History", "Own Language", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology", "Spot Hidden"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Elected Official",
+    "description": "Popularly-elected officials enjoy prestige commensurate with their position. Small-town mayors and township supervisors find their influence extends little beyond their municipality's borders. The mayors of big cities are well paid, wielding more influence and power than the governor of their respective state.",
+    "credit": "50-90",
+    "suggestedContacts": "Political operatives, government, news media, business, foreign governments, possibly organized crime.",
+    "skillPoints": "EDU * 2 + APP * 2",
+    "skills": ["Charm", "History", "Intimidate", "Fast Talk", "Listen", "Own Language", "Persuade", "Psychology"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Engineer",
+    "description": "A specialist in mechanical or electrical devices, employed in a civilian business or in the military, but also including inventors. The engineer applies scientific knowledge, mathematics, and a liberal amount of ingenuity to design solutions for technical problems.",
+    "credit": "30-60",
+    "suggestedContacts": "Business or military workers, local government, architects.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Art/Craft (Technical Drawing)", "Electrical Repair", "Library Use", "Mechanical Repair", "Operate Heavy Machine", "Science (Engineering and Physics)"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Entertainer",
+    "description": "This occupation might include clown, singer, dancer, comedian, juggler, musician, or anyone else who earns a living in front of an audience. These people love to be seen, love to show what they do best, and love the consequent applause.",
+    "credit": "9-70",
+    "suggestedContacts": "Vaudeville, theater, film industry, entertainment critics, organized crime, and television (for modern-day).",
+    "skillPoints": "EDU * 2 + APP * 2",
+    "skills": ["Art/Craft (e.g. Acting, Singer, Comedian, etc.)", "Disguise", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Listen", "Psychology"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Explorer [Classic]",
+    "description": "In the early twentieth century there are still unknown areas of the world that some people can make a career of exploring. Scientific grants, private donations, and museum contracts, combined with newspaper, magazine, book, and film rights often generate enough money to support the adventurer.",
+    "credit": "55-80",
+    "suggestedContacts": "Major libraries, universities, museums, wealthy patrons, other explorers, publishers, foreign government officials, local tribes people.",
+    "skillPoints": "EDU * 2 + (APP * 2 or DEX * 2 or STR * 2)",
+    "skills": ["Climb or Swim", "Firearms", "History", "Jump", "Natural World", "Navigate", "Other Language", "Survival"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Farmer",
+    "description": "An agricultural worker who might own the land on which they raise crops or livestock, or who is employed to do the same. Rigorous and demanding, the life of the farmer is suited to those who enjoy manual labor and outdoor activities.",
+    "credit": "9-30",
+    "suggestedContacts": "Local bank, local politicians, state agricultural department.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Art/Craft (Farming)", "Drive Auto (or Wagon)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Mechanical Repair", "Natural World", "Operate Heavy Machinery", "Track"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Federal Agent",
+    "description": "There are a vast variety of federal law enforcement agencies and agents. Some are uniformed, such as the U.S. Marshals, while others, like the Federal Bureau of Investigation, are plainclothes and operate similar to detectives.",
+    "credit": "20-40",
+    "suggestedContacts": "Federal agencies, law enforcement, organized crime.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Drive Auto", "Fighting (Brawl)", "Firearms", "Law", "Persuade", "Stealth", "Spot Hidden"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Firefighter",
+    "description": "Firefighters are civil servants, employed by the communities they serve. They work around the clock, on shifts lasting several days, eating, sleeping, and entertaining themselves within the confines of the fire station. Organized along military lines, promotion through lieutenant, captain, and chief is possible.",
+    "credit": "9-30",
+    "suggestedContacts": "Civic workers, medical workers, law enforcement.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Climb", "Dodge", "Drive Auto", "First Aid", "Jump", "Mechanical Repair", "Operate Heavy Machinery", "Throw"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Foreign Correspondent",
+    "description": "Foreign correspondents are the elite of news reporters. They work on salary, enjoy expense accounts, and travel the globe. Natural disasters, political upheaval, and war are the primary focus of the foreign correspondent.",
+    "credit": "10-40",
+    "suggestedContacts": "National or worldwide news industry, foreign governments, military.",
+    "skillPoints": "EDU * 4",
+    "skills": ["History", "Other Language", "Own Language", "Listen", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Forensic Surgeon",
+    "description": "A highly specialized occupation, most forensic surgeons are employed by a city, county, or state to conduct autopsies, determine causes of death, and make recommendations to the prosecutor's office. Forensic surgeons are often called to give testimony at criminal proceedings.",
+    "credit": "40-60",
+    "suggestedContacts": "Laboratories, law enforcement, medical profession.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Other Language (Latin)", "Library Use", "Medicine", "Persuade", "Science (Biology)", "Science (Forensics)", "Science (Pharmacy)", "Spot Hidden"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Gambler",
+    "description": "Gamblers are the dandies of the criminal world. Sharp dressers, they usually possess bags of charm, either earthy or sophisticated. Whether frequenting the racetrack, card table, or casino, such individuals often base their life upon chance.",
+    "credit": "8-50",
+    "suggestedContacts": "Bookies, organized crime, street scene.",
+    "skillPoints": "EDU * 2 + (APP * 2 or DEX * 2)",
+    "skills": ["Accounting", "Art/Craft (Acting)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Listen", "Psychology", "Sleight of Hand", "Spot Hidden"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Gangster: Boss",
+    "description": "The gangster boss oversees the business, makes deals, and determines how to solve problems. For the most part, the gangster boss is untouchable, able to field a small army of underlings to do his or her bidding. Gangsterism rose to prominence in the 1920s.",
+    "credit": "60-95",
+    "suggestedContacts": "Organized crime, street-level crime, police, city government, politicians, judges, unions, lawyers, businesses, and residents of the same ethnic community.",
+    "skillPoints": "EDU * 2 + APP * 2",
+    "skills": ["Fighting", "Firearms", "Law", "Listen", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology", "Spot Hidden"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Gangster: Underling",
+    "description": "Underlings usually have specific areas of responsibility, such as overseeing illicit shipments, collecting protection money, and so on.",
+    "credit": "9-20",
+    "suggestedContacts": "Street-level crime, police, businesses and residents of the same ethnic community.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Drive Auto", "Fighting", "Firearms", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Gentleman/Lady",
+    "description": "A man or woman of good breeding, courteous behavior, and good conduct. Usually the term is applied to a member of the upper class who is independently wealthy (either by inheritance or regular allowance).",
+    "credit": "40-90",
+    "suggestedContacts": "Upper classes and landed gentry, politics, servants and agricultural workers.",
+    "skillPoints": "EDU * 2 + APP * 2",
+    "skills": ["Art/Craft (any)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Firearms (Rifle/Shotgun)", "History", "Other Language (any)", "Navigate", "Ride"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Hobo",
+    "description": "Riding the rails continually, on the move from one town to another, they are penniless poets and vagabonds—explorers of the road, adventurers, and thieves. Life on the road or rails is dangerous.",
+    "credit": "0-5",
+    "suggestedContacts": "Other hobos, a few friendly railroad guards, soft touches in numerous towns.",
+    "skillPoints": "EDU * 2 + (APP * 2 or DEX * 2)",
+    "skills": ["Art/Craft (any)", "Climb", "Jump", "Listen", "Locksmith or Sleight of Hand", "Navigate", "Stealth"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Hospital Orderly",
+    "description": "The typical hospital orderly is in charge of emptying waste, cleaning rooms, taxiing patients, and any other odd job requiring slightly more skill than that of a janitor.",
+    "credit": "6-15",
+    "suggestedContacts": "Hospital and medical workers, patients. Access to drugs, medical records, etc.",
+    "skillPoints": "EDU * 2 + STR * 2",
+    "skills": ["Electrical Repair", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Fighting (Brawl)", "First Aid", "Listen", "Mechanical Repair", "Psychology", "Stealth"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Journalist: Investigative Journalist",
+    "description": "Uses words to report and comment upon topics and incidents of the day. The best investigative journalists report, but keep themselves independent of the corruption and self-serving they witness.",
+    "credit": "9-30",
+    "suggestedContacts": "News industry, politicians, street-level crime or law enforcement.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Art/Craft (Art or Photography)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "History", "Library Use", "Own Language", "Psychology"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Journalist: Reporter",
+    "description": "Reporters work in the news and media industries, either freelance or for a newspaper, magazine, website, or news agency. Most work outside of the office, interviewing witnesses, checking records, and gathering stories.",
+    "credit": "9-30",
+    "suggestedContacts": "News and media industries, political organizations and government, business, law enforcement, street criminals, high society.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Art/Craft (Acting)", "History", "Listen", "Own Language", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology", "Stealth", "Spot Hidden"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Judge",
+    "description": "An official who presides over court legal proceedings, either alone or within a group of peers. Judges are either appointed or elected, sometimes for a term of specified length, other times for life. Most judges are licensed attorneys.",
+    "credit": "50-80",
+    "suggestedContacts": "Legal connections, possibly organized crime.",
+    "skillPoints": "EDU * 4",
+    "skills": ["History", "Intimidate", "Law", "Library Use", "Listen", "Own Language", "Persuade", "Psychology"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Laboratory Assistant",
+    "description": "Working in a scientific environment, the assistant (or technician) performs laboratory and administrative tasks under the supervision of a lead scientist. Tasks may include sampling, testing, recording and analyzing results, and setting up or performing experiments.",
+    "credit": "10-30",
+    "suggestedContacts": "Universities, scientists, librarians.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Computer Use or Library Use", "Electrical Repair", "Other Language", "Science (Chemistry and two others)", "Spot Hidden"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Laborer: Unskilled",
+    "description": "Laborers include factory workers, mill hands, stevedores, road crews, miners, construction, and so on. While technically unskilled, the average laborer is often an expert in the use of power tools, lifting gear, and other equipment to be found on site.",
+    "credit": "9-30",
+    "suggestedContacts": "Other workers and supervisors within their industry.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Drive Auto", "Electrical Repair", "Fighting", "First Aid", "Mechanical Repair", "Operate Heavy Machinery", "Throw"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Laborer: Lumberjack",
+    "description": "A lumberjack works in the forestry industry, felling trees and processing timber. The work is physically demanding and potentially dangerous.",
+    "credit": "9-30",
+    "suggestedContacts": "Forestry workers, wilderness guides and conservationists.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Climb", "Dodge", "Fighting (Chainsaw)", "First Aid", "Jump", "Mechanical Repair", "Natural World or Science (Biology or Botany)", "Throw"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Laborer: Miner",
+    "description": "Mining is physically demanding and dangerous work. Miners extract coal, ore, and other minerals from the earth.",
+    "credit": "9-30",
+    "suggestedContacts": "Union officials, political organizations.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Climb", "Geology", "Jump", "Mechanical Repair", "Operate Heavy Machinery", "Stealth", "Spot Hidden"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Lawyer",
+    "description": "Learned in the law of the state in which they serve, the lawyer acts as an attorney, counsel, or solicitor, able to relate abstract legal theories and knowledge to present solutions for their clients. With the right client, a lawyer could become a celebrity in his or her own right.",
+    "credit": "30-80",
+    "suggestedContacts": "Organized crime, financiers, district attorneys and judges.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting", "Law", "Library Use", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Librarian [Lovecraftian]",
+    "description": "Librarians are most often employed by public institutions or universities, responsible for cataloging and maintaining stock, as well as dealing with lender enquiries. Some large businesses might employ a librarian to manage a large collection.",
+    "credit": "9-35",
+    "suggestedContacts": "Booksellers, community groups, specialist researchers.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting", "Library Use", "Other Language", "Own Language"],
+    "specialtyCount": 4
+  },
+  {
+    "name": "Mechanic and Skilled Trades",
+    "description": "This occupation includes all types of trades requiring specialized training, time on the job as an apprentice or trainee, etc. Carpenters, stonemasons, plumbers, electricians, millwrights, mechanics, and others all qualify as skilled trades.",
+    "credit": "9-40",
+    "suggestedContacts": "Union members, trade-relevant specialists.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Art/Craft (Carpentry, Welding, Plumbing, etc.)", "Climb", "Drive Auto", "Electrical Repair", "Mechanical Repair", "Operate Heavy Machinery"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Military Officer",
+    "description": "Officers are command rank and most commissions demand some form of higher education. All armed services have established officer training programs. Upon graduation the cadet is promoted to the rank of Army or Marine Second Lieutenant or Naval Ensign.",
+    "credit": "20-70",
+    "suggestedContacts": "Military, federal government.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Accounting", "Firearms", "Navigate", "First Aid", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Missionary",
+    "description": "Missionaries visit remote corners of the globe dispensing the word of God. May be Catholic, Protestant, Islamic, or from another branch of faith. Sometimes a missionary may be independent of all except his or her own vision.",
+    "credit": "0-30",
+    "suggestedContacts": "Church hierarchy, foreign officials.",
+    "skillPoints": "EDU * 2 + APP * 2",
+    "skills": ["Art/Craft (any)", "First Aid", "Mechanical Repair", "Medicine", "Natural World", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Mountain Climber",
+    "description": "Mountain climbing as a sport became popular in the 19th century. Most climbers are weekend and vacation sportsmen and women; only a few have the reputations needed to attract the financing and sponsorship required for major climbs.",
+    "credit": "30-60",
+    "suggestedContacts": "Other climbers, environmentalists, patrons, sponsors, local rescue or law enforcement, park rangers, sports clubs.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Climb", "First Aid", "Jump", "Listen", "Navigate", "Other Language", "Survival (Alpine or as appropriate)", "Track"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Museum Curator",
+    "description": "A museum curator can be responsible for a large facility like a university or other publicly funded institution, or any sort of smaller museum, often specializing in local geology or other such topics.",
+    "credit": "10-30",
+    "suggestedContacts": "Local universities and scholars, publishers, museum patrons.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting", "Appraise", "Archaeology", "History", "Library Use", "Occult", "Other Language", "Spot Hidden"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Musician",
+    "description": "May perform in an orchestra, group, or solo, with any instrument you care to think of. Getting noticed is hard and then getting a recording contract is difficult. The 1920s is, of course, the Jazz Age, and musicians work in small combos and dance orchestras in large and medium-sized cities and towns across America.",
+    "credit": "9-30",
+    "suggestedContacts": "Club owners, musicians' union, organized crime, street-level criminals.",
+    "skillPoints": "EDU * 2 + (APP * 2 or DEX * 2)",
+    "skills": ["Art/Craft (Instrument)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Listen", "Psychology"],
+    "specialtyCount": 4
+  },
+  {
+    "name": "Nurse",
+    "description": "Nurses are trained healthcare assistants, usually working in hospitals, nursing homes, or with General Practitioners. Generally, a nurse will assist an individual, sick or well, with activities contributing to health or recovery.",
+    "credit": "9-30",
+    "suggestedContacts": "Hospital workers, physicians, community workers.",
+    "skillPoints": "EDU * 4",
+    "skills": ["First Aid", "Listen", "Medicine", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology", "Science (Biology)", "Science (Chemistry)", "Spot Hidden"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Occultist",
+    "description": "Occultists are students of esoteric secrets and arcane magic. They fully believe in paranormal abilities and actively attempt to learn about and discover these powers within themselves. Most are familiar with a broad range of different philosophies and magical theories.",
+    "credit": "9-65",
+    "suggestedContacts": "Libraries, occult societies or fraternities, other occultists.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Anthropology", "History", "Library Use", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Occult", "Other Language", "Science (Astronomy)"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Outdoorsman/woman",
+    "description": "The outdoor enthusiast spends much of his or her time living in the wilderness, often alone for long periods. Commonly skilled in hunting and fishing, and able to be self-sufficient in all but the harshest of environments.",
+    "credit": "5-20",
+    "suggestedContacts": "Local people and native folk, traders.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Firearms", "First Aid", "Listen", "Natural World", "Navigate", "Spot Hidden", "Survival (any)", "Track"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Parapsychologist",
+    "description": "Parapsychologists do not pretend to enjoy extraordinary powers, but instead spend their efforts attempting to observe, record, and study such instances. Sometimes nicknamed ghost hunters, they make use of technology to try to capture hard evidence of paranormal activity.",
+    "credit": "9-30",
+    "suggestedContacts": "Universities, parapsychological publications.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Anthropology", "Art/Craft (Photography)", "History", "Library Use", "Occult", "Other Language", "Psychology"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Pharmacist",
+    "description": "Pharmacists have long been more closely regulated than physicians. They are licensed by individual states, most of them requiring a high school education and three years of pharmacy school. A pharmacist may be employed in a hospital or a drug store, or perhaps they own a dispensary.",
+    "credit": "35-75",
+    "suggestedContacts": "Local community, local physicians, hospitals and patients. Access to all manner of chemicals and drugs.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting", "First Aid", "Other Language (Latin)", "Library Use", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology", "Science (Pharmacy)", "Science (Chemistry)"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Photographer",
+    "description": "Photography as an art form has been around a long time, with most photographers working freelance, for an advertising firm, or in a portrait studio. Others are employed in the newspaper, media, and film industries.",
+    "credit": "9-30",
+    "suggestedContacts": "Advertising industry, local clients (including political organizations and newspapers).",
+    "skillPoints": "EDU * 4",
+    "skills": ["Art/Craft (Photography)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology", "Science (Chemistry)", "Stealth", "Spot Hidden"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Photojournalist",
+    "description": "Photojournalists are essentially reporters who use cameras, but who are also expected to write prose to accompany an image. In the 1920s, newsreels came into being; heavy, bulky 35mm film equipment was hauled around the globe in search of exciting news stories.",
+    "credit": "10-30",
+    "suggestedContacts": "News industry, film industry (1920s), foreign governments and authorities.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Art/Craft (Photography)", "Climb", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Other Language", "Psychology", "Science (Chemistry)"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Pilot",
+    "description": "Professional aviators may be employed by business, for example the U.S. Mail, or work as pilots for a large or small commercial passenger line. In the U.S. there was no national regulation of pilots until the passing of the Air Commerce Act of 1926.",
+    "credit": "20-70",
+    "suggestedContacts": "Old military contacts, cabin crew, mechanics, airfield staff, carnival entertainers.",
+    "skillPoints": "EDU * 2 + DEX * 2",
+    "skills": ["Electrical Repair", "Mechanical Repair", "Navigate", "Operate Heavy Machine", "Pilot (Aircraft)", "Science (Astronomy)"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Aviator [Classic]",
+    "description": "An aviator is a stunt pilot, working at carnivals or offering daring leisure rides for those willing to pay. Often fame could be won by competing in organized air races. During the twenties, Hollywood makes fair use of stunt pilots.",
+    "credit": "30-60",
+    "suggestedContacts": "Old military contacts, other pilots, airfield mechanics, businessmen.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting", "Electrical Repair", "Listen", "Mechanical Repair", "Navigate", "Pilot (Aircraft)", "Spot Hidden"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Police Detective",
+    "description": "The plainclothes branch of police agencies, detectives examine crime scenes, gather evidence, conduct interviews, and try to solve homicides, major burglaries, and other felonies. They work the streets, often in close cooperation with a uniformed patrol.",
+    "credit": "20-50",
+    "suggestedContacts": "Law enforcement, street level crime, coroner's office, judiciary, organized crime.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Art/Craft (Acting) or Disguise", "Firearms", "Law", "Listen", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology", "Spot Hidden"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Uniformed Police Officer",
+    "description": "The uniformed police officer is employed by cities and towns, by County sheriffs' departments, and state or regional police forces. The job may be on foot, behind the wheel of a patrol car, or sitting at a desk.",
+    "credit": "9-30",
+    "suggestedContacts": "Law enforcement, local businesses and residents, street level crime, organized crime.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Fighting (Brawl)", "Firearms", "First Aid", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Law", "Psychology", "Spot Hidden"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Private Investigator",
+    "description": "The private eye usually acts in non-police situations, gathering information and evidence for private clients in impending civil cases, tracking down fleeing spouses or business partners, or acting as an agent for private defense attorneys in criminal cases.",
+    "credit": "9-30",
+    "suggestedContacts": "Law enforcement, clients.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Art/Craft (Photography)", "Disguise", "Law", "Library Use", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology", "Spot Hidden"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Professor [Lovecraftian]",
+    "description": "Professors are academics employed by colleges and universities. Larger corporations may also employ such academics for research and product development. The professor is qualified to teach and to perform competent research, and may have a discernible academic reputation in his or her area of expertise.",
+    "credit": "20-70",
+    "suggestedContacts": "Scholars, universities, libraries.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Library Use", "Other Language", "Own Language", "Psychology"],
+    "specialtyCount": 4
+  },
+  {
+    "name": "Prospector",
+    "description": "Though the days of the California Gold Rush and the Nevada Comstock Lode are long gone, the independent prospector is still a feature of the American West. Roaming the mountains, they endlessly search for the big strike that will make them rich. In these days, oil may be as good as gold.",
+    "credit": "0-10",
+    "suggestedContacts": "Local businesses and residents.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Climb", "First Aid", "History", "Mechanical Repair", "Navigate", "Science (Geology)", "Spot Hidden"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Prostitute",
+    "description": "Depending on circumstance, breeding, and background, a prostitute may be a high-rolling expensive call girl, male gigolo, or streetwalker. Often driven by circumstance, many dream of a way out.",
+    "credit": "5-50",
+    "suggestedContacts": "Street scene, police, possibly organized crime, personal clientele.",
+    "skillPoints": "EDU * 2 + APP * 2",
+    "skills": ["Art/Craft (any)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Dodge", "Psychology", "Sleight of Hand", "Stealth"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Psychiatrist",
+    "description": "In the modern era a psychiatrist is a physician specialized in the diagnosis and treatment of mental disorders. Psychiatrists are trained in psychopharmacological treatments and are authorized to prescribe psychiatric medication.",
+    "credit": "30-80",
+    "suggestedContacts": "Others in the field of mental illness, physicians and possibly legal professions.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Other Language", "Listen", "Medicine", "Persuade", "Psychoanalysis", "Psychology", "Science (Biology)", "Science (Chemistry)"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Psychologist/Psychoanalyst",
+    "description": "While commonly known for the fields of psychotherapy and counseling, this is just one branch of psychology. Other specialists include organizational psychologists who work with businesses and governments, as well as academics conducting research or teaching psychology.",
+    "credit": "10-40",
+    "suggestedContacts": "Psychological community, patients.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting", "Library Use", "Listen", "Persuade", "Psychoanalysis", "Psychology"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Researcher",
+    "description": "The academic world sponsors a good deal of research, particularly in the fields of astronomy, physics, and other theoretical sciences. Field researchers are usually highly experienced, independent, and resourceful, possibly employed by private interests or undertaking academic research for a university.",
+    "credit": "9-30",
+    "suggestedContacts": "Scholars, and academics, large businesses and corporations, foreign governments and individuals.",
+    "skillPoints": "EDU * 4",
+    "skills": ["History", "Library Use", "Interpersonal skill (Charm, Fast Talk Intimidate, or Persuade)", "Other Language", "Spot Hidden"],
+    "specialtyCount": 3
+  },
+  {
+    "name": "Sailor: Naval",
+    "description": "Naval sailors go through an initial period of basic training. Upon graduation they are assigned rates and stations. The Navy also has a need for technically trained mechanics, radio operators, air controllers, etc. The highest enlisted rank is Chief Petty Officer.",
+    "credit": "9-30",
+    "suggestedContacts": "Military, veterans' associations.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Electrical or Mechanical Repair", "Fighting", "Firearms", "First Aid", "Navigate", "Pilot (Boat)", "Survival (Sea)", "Swim"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Sailor: Commercial",
+    "description": "Commercial sailors may work aboard a fishing vessel, charter boat, or haulage tankers, carrying oil or commodities. Charter boats work both coasts, as well as on the Great Lakes, catering to sport fisherman and vacationers.",
+    "credit": "20-40",
+    "suggestedContacts": "Coast Guard, smugglers, organized crime.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["First Aid", "Mechanical Repair", "Natural World", "Navigate", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Pilot (Boat)", "Spot Hidden", "Swim"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Salesperson",
+    "description": "An integral part of many businesses, salespeople work to promote and sell their employer's goods or services. Most spend much of their time traveling, meeting, and entertaining clients. Some are mainly office-based, while others travel between communities to sell their wares door-to-door.",
+    "credit": "9-40",
+    "suggestedContacts": "Businesses within the same sector, favored customers.",
+    "skillPoints": "EDU * 2 + APP * 2",
+    "skills": ["Accounting", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Drive Auto", "Listen", "Psychology", "Stealth or Sleight of Hand"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Scientist",
+    "description": "Natural philosophers who delve reality in the pursuit of knowledge. Where science is applied to creating useful items, one might employ an engineer, but if one wishes to expand the bounds of what is possible, one will require scientists.",
+    "credit": "9-50",
+    "suggestedContacts": "Other scientists and academics, universities, their employers and former employers.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Any three science specialisms", "Computer Use or Library Use", "Other Language", "Own Language", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Spot Hidden"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Secretary",
+    "description": "A position that ranges from highly-paid private executive assistants to those in the typing pool. The work concerns supporting executives and managers with a range of communication and organizational skills. Being at the hub of the business, most secretaries know more about the inner workings and operations of the business than their bosses do.",
+    "credit": "9-30",
+    "suggestedContacts": "Other office workers, senior executives in client firms.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or APP * 2)",
+    "skills": ["Accounting", "Art/Craft (Typing or Short Hand)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Own Language", "Library Use or Computer Use", "Psychology"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "Shopkeeper",
+    "description": "The owner of a small shop, market stall, or perhaps restaurant. Usually self-employed, but may be the manager running the shop on behalf of the owner. Possibly family-run, with relations also working on the premises.",
+    "credit": "20-40",
+    "suggestedContacts": "Local residents and businesses, local police, local government, customers.",
+    "skillPoints": "EDU * 2 + (APP * 2 or DEX * 2)",
+    "skills": ["Accounting", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Electrical Repair", "Listen", "Mechanical Repair", "Psychology", "Spot Hidden"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Soldier/Marine",
+    "description": "This refers to the enlisted ranks of the Army and Marines and includes the lowest ranks of Private up through Gunnery Sergeant. All enlisted persons receive basic training—boot camp—where raw recruits are taught how to march, shoot, and salute.",
+    "credit": "9-30",
+    "suggestedContacts": "Military, veterans associations.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Climb or Swim", "Dodge", "Fighting", "Firearms", "Stealth", "Survival", "First Aid or Mechanical Repair or Other Language", "First Aid or Mechanical Repair or Other Language"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Spy",
+    "description": "Spies work for the intelligence community of a political state or organization. They may appear in any form of occupation, from ambassador to kitchen cleaner, in order to obtain the information they require. Some work deep cover for many years.",
+    "credit": "20-60",
+    "suggestedContacts": "Generally only the person the spy reports to, possibly other connections developed while under cover.",
+    "skillPoints": "EDU * 2 + (APP * 2 or DEX * 2)",
+    "skills": ["Art/Craft (Acting) or Disguise", "Firearms", "Listen", "Other Language", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology", "Sleight of Hand", "Stealth"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Student/Intern",
+    "description": "May be a student enrolled at a college or university, or the employee of a company receiving minimal compensation for valuable on-the-job training.",
+    "credit": "5-10",
+    "suggestedContacts": "Academics and other students, while interns may also know business people.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Language (Own or Other)", "Library Use", "Listen", "Three fields of study"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Stuntman",
+    "description": "The film and television industry employs stuntmen and women to simulate falls from buildings, car crashes, and other catastrophes. Stunt performers will usually be trained in fighting techniques and stage combat. There is always risk in the performance of all stunt work, and health and safety is a key element.",
+    "credit": "10-50",
+    "suggestedContacts": "The film and television industries, various explosive and pyrotechnic firms, actors and directors.",
+    "skillPoints": "EDU * 2 + (DEX * 2 or STR * 2)",
+    "skills": ["Climb", "Dodge", "Electrical Repair or Mechanical Repair", "Fighting", "First Aid", "Jump", "Swim", "Diving or Drive Automobile or Pilot (any) or Ride"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Tribe Member",
+    "description": "In the sense of family allegiance, at least, tribalism is everywhere. In a tribe, the primacy of kinship and custom is self-evident. A tribal group is nominally relatively small. In place of a blanket of law and general individual rights, the tribal personality defers to personal honor.",
+    "credit": "0-15",
+    "suggestedContacts": "Fellow tribe members.",
+    "skillPoints": "EDU * 2 + (STR * 2 or DEX * 2)",
+    "skills": ["Climb", "Fighting or Throw", "Listen", "Natural World", "Occult", "Spot Hidden", "Swim", "Survival (any)"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Undertaker",
+    "description": "Undertakers, also known as morticians or funeral directors, manage the business of funeral rites. This work includes the burial or cremation of the dead. With burials, the undertaker will perform embalming, as well as dressing, casketing, and cosmetizing the appearance of the deceased.",
+    "credit": "20-40",
+    "suggestedContacts": "Few.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting", "Drive Auto", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "History", "Occult", "Psychology", "Science (Biology)", "Science (Chemistry)"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Union Activist",
+    "description": "Union activists are organizers, leaders, and sometimes either visionaries or malcontents with an axe to grind. Normally a friend to the workers and an enemy of the bosses. Unions exist in all walk of life, be it stevedores, construction workers, miners, or actors.",
+    "credit": "5-30",
+    "suggestedContacts": "Other labor leaders and activists, political friends, possibly organized crime. In the 1920s, also socialists, communists, and subversive anarchists.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Fighting (Brawl)", "Law", "Listen", "Operate Heavy Machinery", "Psychology"],
+    "specialtyCount": 0
+  },
+  {
+    "name": "Waitress/Waiter",
+    "description": "Serves customers and clients within a hotel, bar, or other drinking or eating establishment. Traditionally low-paid, the waitress earns tips from clients by providing good service and trying to establish a rapport.",
+    "credit": "9-20",
+    "suggestedContacts": "Customers, organized crime.",
+    "skillPoints": "EDU * 2 + (APP * 2 or DEX * 2)",
+    "skills": ["Accounting", "Art/Craft (any)", "Dodge", "Listen", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology"],
+    "specialtyCount": 1
+  },
+  {
+    "name": "White-Collar Worker: Clerk/Executive",
+    "description": "The lowest-level white-collar position of a clerk to a middle or senior manager. Clerks are habitually underpaid and the work is drudgery, with those recognized as having talent being earmarked for promotion someday.",
+    "credit": "9-20",
+    "suggestedContacts": "Other office workers.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting", "Language (Own or Other)", "Law", "Library Use or Computer Use", "Listen", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "White-Collar Worker: Middle/Senior Manager",
+    "description": "Middle and senior managers attract higher salaries, with greater responsibilities and say in how the business is managed day-to-day. Executive types are often family-oriented, with a spouse at home and children.",
+    "credit": "20-80",
+    "suggestedContacts": "Old college connections, Masons or other fraternal groups, local and federal government, media and marketing.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Accounting", "Other Language", "Law", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology"],
+    "specialtyCount": 2
+  },
+  {
+    "name": "Zealot",
+    "description": "Intense and vision-driven, scorning an easy life, the zealot agitates for a better life for humanity, or for some advantage for the group imagined to be the most worthwhile part of humanity. Some fanatics promote their beliefs through violence; however, the peaceable majority may be just as implacable.",
+    "credit": "0-30",
+    "suggestedContacts": "Religious or fraternal groups, news media.",
+    "skillPoints": "EDU * 2 + (APP * 2 or POW * 2)",
+    "skills": ["History", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Interpersonal skill (Charm, Fast Talk, Intimidate, or Persuade)", "Psychology", "Stealth"],
+    "specialtyCount": 3
+  },
+  {
+    "name": "Zookeeper",
+    "description": "Zookeepers are responsible for the feeding and care of the animals in their charge; groundskeepers and attendants take care of other chores. Often the zookeeper is specialized in a particular breed of animal. The Zookeeper is able to use the Medicine skill on animals.",
+    "credit": "9-40",
+    "suggestedContacts": "Scientists, environmentalists.",
+    "skillPoints": "EDU * 4",
+    "skills": ["Animal Handling", "Accounting", "Dodge", "First Aid", "Natural World", "Medicine", "Science (Pharmacy)", "Science (Zoology)"],
+    "specialtyCount": 0
+  }
 ]

@@ -1,9 +1,175 @@
 [
   {
-    "name": "15 to 19",
-    "description": "",
+    "name": "15 to 19 years old",
+    "description": "Deduct 5 points among STR and SIZ. Deduct 5 points from EDU. Roll twice to generate a Luck score (see Luck, above) and use the higher value.",
     "bonusadjustments": [
-
+      {
+        "type": "characteristics",
+        "name": "Education",
+        "value": -5
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "characteristics",
+        "label": "Deduct 5 points total",
+        "choices": [
+          "Strength",
+          "Size"
+        ],
+        "count": 1,
+        "category": "Adjustment",
+        "value": -5
+      }
+    ]
+  },
+  {
+    "name": "20 to 39 years old",
+    "description": "Make an improvement check for EDU."
+  },
+  {
+    "name": "40 to 49 years old",
+    "description": "Make 2 improvement checks for EDU and deduct 5 points among STR, CON or DEX, and reduce APP by 5.",
+    "bonusadjustments": [
+      {
+        "type": "characteristics",
+        "name": "Appearance",
+        "value": -5
+      },
+      {
+        "type": "movement",
+        "value": -1
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "characteristics",
+        "label": "Deduct 5 points total",
+        "choices": [
+          "Strength",
+          "Constitution",
+          "Dexterity"
+        ],
+        "count": 1,
+        "category": "Adjustment",
+        "value": -5
+      }
+    ]
+  },
+  {
+    "name": "50 to 59 years old",
+    "description": "Make 3 improvement checks for EDU and deduct 10 points among STR, CON or DEX, and reduce APP by 10.",
+    "bonusadjustments": [
+      {
+        "type": "characteristics",
+        "name": "Appearance",
+        "value": -10
+      },
+      {
+        "type": "movement",
+        "value": -2
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "characteristics",
+        "label": "Deduct 10 points total",
+        "choices": [
+          "Strength",
+          "Constitution",
+          "Dexterity"
+        ],
+        "count": 1,
+        "category": "Adjustment",
+        "value": -10
+      }
+    ]
+  },
+  {
+    "name": "60 to 69 years old",
+    "description": "Make 4 improvement checks for EDU and deduct 20 points among STR, CON or DEX, and reduce APP by 15.",
+    "bonusadjustments": [
+      {
+        "type": "characteristics",
+        "name": "Appearance",
+        "value": -15
+      },
+      {
+        "type": "movement",
+        "value": -3
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "characteristics",
+        "label": "Deduct 20 points total",
+        "choices": [
+          "Strength",
+          "Constitution",
+          "Dexterity"
+        ],
+        "count": 1,
+        "category": "Adjustment",
+        "value": -20
+      }
+    ]
+  },
+  {
+    "name": "70 to 79 years old",
+    "description": "Make 4 improvement checks for EDU and deduct 40 points among STR, CON or DEX, and reduce APP by 20.",
+    "bonusadjustments": [
+      {
+        "type": "characteristics",
+        "name": "Appearance",
+        "value": -20
+      },
+      {
+        "type": "movement",
+        "value": -4
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "characteristics",
+        "label": "Deduct 40 points total",
+        "choices": [
+          "Strength",
+          "Constitution",
+          "Dexterity"
+        ],
+        "count": 1,
+        "category": "Adjustment",
+        "value": -40
+      }
+    ]
+  },
+  {
+    "name": "80 to 89 years old",
+    "description": "Make 4 improvement checks for EDU and deduct 80 points among STR, CON or DEX, and reduce APP by 25.",
+    "bonusadjustments": [
+      {
+        "type": "characteristics",
+        "name": "Appearance",
+        "value": -25
+      },
+      {
+        "type": "movement",
+        "value": -5
+      }
+    ],
+    "userchoices": [
+      {
+        "type": "characteristics",
+        "label": "Deduct 80 points total",
+        "choices": [
+          "Strength",
+          "Constitution",
+          "Dexterity"
+        ],
+        "count": 1,
+        "category": "Adjustment",
+        "value": -80
+      }
     ]
   }
 ]

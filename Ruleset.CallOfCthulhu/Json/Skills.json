@@ -1,3 +1,524 @@
 [
-
+  {
+    "name": "Accounting",
+    "description": "Grants understanding of accountancy procedures and reveals the financial functioning of a business or person. Inspecting the books, one might detect cheated employees, siphoned-off funds, payment of bribes or blackmail, and whether the financial condition is better or worse than claimed. Looking through old accounts, one could see how money was gained or lost in the past (grain, slave-trading, whiskey-running, etc.) and to whom and for what payment was made. Pushing examples: taking more time to examine; visiting banks or businesses to validate findings; double checking the math and data.",
+    "value": 5,
+    "filter": ""
+  },
+  {
+    "name": "Acting",
+    "description": "The performer is trained in theatrical and/or film acting (in the modern era, this may also include television), able to adopt a persona, memorize scripts, and utilize stagecraft and make-up to alter their appearance. See Disguise skill.",
+    "value": 5,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Animal Handling",
+    "description": "The skill is most commonly applied to the care of animals. It may include birds, cats, monkeys, and so on (at the Keeper's discretion). For riding animals, such as horses or camels, the Ride skill is used for breaking in and controlling such mounts. Pushing examples: taking greater personal risk, in terms of getting closer to, or directly handling the animal. Sample Consequences of failing a Pushed roll: the animal attacks the trainer or someone else nearby (note: if you successfully tame an animal, it may escape if the failed check occurs). If an insane investigator falls a pushed roll, he or she might be found behaving like the animal they were trying to control.",
+    "value": 5,
+    "filter": "Uncommon"
+  },
+  {
+    "name": "Anthropology",
+    "description": "Enables the user to identify and understand an individual's way of life through observation. If the skill-user observes another culture from within for a time, or works from accurate records concerning an extinct culture, then simple predictions about that culture's ways and beliefs may be made, even though the evidence may be incomplete. Studying the culture for a month or more, the anthropologist begins to understand how the culture functions and, in conjunction with Psychology, may predict the actions and beliefs of those being studied. Pushing examples: taking more time to study the culture, going 'native' for a period; taking an active role in a ceremony, rite, etc.",
+    "value": 1,
+    "filter": ""
+  },
+  {
+    "name": "Appraise",
+    "description": "Enables the user to estimate the value of a particular item, including the quality, material used, and workmanship. Where relevant, the skill-user could pinpoint the age of the item, assess its historical relevance, and detect forgeries. Pushing examples: checking an item's validity with another expert; conducting testing; researching an item.",
+    "value": 5,
+    "filter": ""
+  },
+  {
+    "name": "Archaeology",
+    "description": "Allows dating and identification of artifacts from past cultures, and the detection of fakes. Ensures experience in setting up and excavating a dig site. On inspecting a site, the user might deduce the purposes and way of life of those who dwelt there (often conjectural). Archaeology also helps identify written forms of extinct human languages. Pushing examples: taking more time to study the site or item; conducting further research; consulting another expert.",
+    "value": 1,
+    "filter": ""
+  },
+  {
+    "name": "Art and Craft",
+    "description": "The investigator sheet contains blank spaces for specializations of this skill. Many of these examples are skills directly linked to a profession, while others might just be a leisure pursuit. You may spend skill points to purchase any skill specialization. If successful, the item made is of high quality and/or precision. An art or craft skill might also be used to make a duplicate of a fake item. In such a case, the difficulty level would depend on the intricacy and artisanship required to make the item.",
+    "value": 5,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Artillery",
+    "description": "This skill assumes some form of military training and experience, allowing the user to work in the operation of weapons in warfare, like to work in a crew or detachment to operate the projection of munitions beyond the range of a single person to operate, and either an individual cannot use the weapon without a crew or the difficulty level should be raised (at the Keeper's discretion, dependent on the type of weapon employed). Note: as a combat skill, this cannot be pushed.",
+    "value": 1,
+    "filter": "Uncommon"
+  },
+  {
+    "name": "Astronomy",
+    "description": "The user knows how to find out which stars and planets are where when eclipses and other significant events occur, and the names of important stars. The skill also provides knowledge of current perceptions about life on other worlds, the existence or the formation of galaxies, and the ability to calculate orbits, discuss stellar life-cycles, and (in the modern day) have knowledge of infrared astronomy or long-baseline interferometry.",
+    "value": 1,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Axe",
+    "description": "This skill is for larger wood axes. A small hatchet can be used with basic brawling skill. If thrown, use the Throw skill.",
+    "value": 15,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Biology",
+    "description": "The study of life and living organisms, including cytology, ecology, genetics, histology, microbiology, physiology, and so on. With this skill one might develop a vaccine against some hideous Mythos bacterium, isolate the hallucinogenic properties of some jungle plant, or perform analysis of blood and organic matter.",
+    "value": 1,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Botany",
+    "description": "The study of plant life including classification of species, structure, growth, reproduction, chemical properties, evolutionary principles, diseases, and microscopy. Sub-disciplines of botany include agronomy, forestry, horticulture, and paleobotany. With this skill one might identify the properties of a particular plant (whether poisonous, edible, or psychotropic for example) and its particular uses.",
+    "value": 1,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Bow",
+    "description": "Use of bows and crossbows, ranging from medieval longbows to modern, high-powered compound bows.",
+    "value": 15,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Brawl",
+    "description": "Includes all unarmed fighting and basic weapons that anyone could pick up and make use of, such as clubs (up to cricket bats or baseball bats), knives, and many improvised weapons, such as bottles and chair legs. To determine the damage done with an improvised weapon, the Keeper should refer to the weapons list and pick something comparable.",
+    "value": 25,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Chainsaw",
+    "description": "The chain-powered, mass-produced chainsaw appeared in 1927, however for game purposes this skill covers any similar device.",
+    "value": 10,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Charm",
+    "description": "Charm takes many forms, including physical attraction, seduction, flattery, or simply warmth of personality. Charm may be used to compel someone to act in a certain way, but not in a manner completely contrary to that person's normal behavior. Charm is opposed by the Charm or Psychology skills. Charm may be used for bargaining, to haggle the price of an item or service down; if successful, the seller is won over and they may well reduce the price a little. Remember that this is about being charming: if the investigator begins to take an alternative approach, the Keeper may ask for a different skill to be used. Pushing examples: overly flattering the target with affection; presenting an expensive gift; building trust by imparting a secret.",
+    "value": 15,
+    "filter": ""
+  },
+  {
+    "name": "Chemistry",
+    "description": "A study of the composition of substances, the effects of temperature, energy, and pressure upon them, as well as how they affect one another. With chemistry, one might create or extract complex chemical compounds, including simple explosives, poisons, gases, and acids, requiring a week or so to produce the proper equipment and chemicals. The user could also analyze an unknown substance, given proper equipment and reagents.",
+    "value": 1,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Climb",
+    "description": "This skill allows a character to climb walls and other vertical surfaces with or without ropes and climbing gear. The skill also encompasses rappelling. Conditions, such as firmness of surface, available handholds, wind, visibility, rain, etc. may all affect the difficulty level. Failing this skill on the first roll indicates that the investigator's efforts are beyond the investigator's capability. Pushing examples: taking the longer route; climbing the wall more carefully; strengthening one's reach.",
+    "value": 20,
+    "filter": ""
+  },
+  {
+    "name": "Computer Use",
+    "description": "This skill allows the investigator to program in various computer languages, penetrate and analyze obscure data, break into a secured system, explore a complicated network, and detect or exploit intrusions, back doors, and viruses. Special programs may be required for some actions. The Internet places a wealth of information at the fingertips of an investigator. Use of the Internet to find highly specific or esoteric information would require a combined dice roll for Computer Use and Library Use. Pushing examples: taking longer to develop a program; using another's code or program; using unlicensed software (e.g. a virus) to exploit a system.",
+    "value": 5,
+    "filter": "Modern"
+  },
+  {
+    "name": "Credit Rating",
+    "description": "Represents how prosperous and financially confident the investigator appears to be. Money opens doors; if the investigator is attempting to use his or her financial status to achieve a goal then use of the Credit Rating skill may be appropriate. Credit Rating can be used in place of APP to gauge an impression (e.g. wealthier people tend to dress in more expensive clothing). Credit Rating is not so much a skill as a gauge of financial wealth, and should not be ticked as other skills are ticked. Credit Rating can be a useful resource in play, and so should be paid for with skill points when creating an investigator. Each occupation has a starting range for Credit Rating, and skill points should be spent to achieve a rating therein.",
+    "value": 0,
+    "filter": ""
+  },
+  {
+    "name": "Cryptography",
+    "description": "The study of secret codes and languages developed by one or more persons to conceal the contents of a conversation or message. A specialized branch of mathematics, this skill enables the identification, creation, and deciphering of a code. Codes are usually written, but may take other forms, such as a message hidden within a musical composition, graphic art, or computer coding (in modern-day settings). Cracking a code can be painstaking work, often requiring lengthy research and number crunching.",
+    "value": 1,
+    "filter": ""
+  },
+  {
+    "name": "Cthulhu Mythos",
+    "description": "This skill reflects understanding of the inhuman (Lovecraftian) Cthulhu Mythos. It is not founded on the accumulation of knowledge as academic skills are. Rather, it results from the experience and taming of the human mind to the Cthulhu Mythos. Thus, Cthulhu Mythos skill derived from encounters with things of the cosmos (the 'experience') is unlike other situations and entities. Also referred to as 'That which man should not know,' the Cthulhu Mythos is antithetical to human understanding, and exposure to it undermines human sanity. No starting investigator may take points in Cthulhu Mythos as a starting skill (unless agreed with the Keeper). There is no skill box for Cthulhu Mythos on the investigator sheet, as successful use of the skill does not offer an increase in the investigator's percentiles in the skill. Instead, points in Cthulhu Mythos are gained by encounters with the Mythos that result in insanity, by insane insights into the true nature of the universe, and by reading forbidden tomes and other Mythos writings. A character's Sanity may never be higher than 99 minus his or her Cthulhu Mythos skill. As Cthulhu Mythos proliferates, it effectively weeds out Sanity points, and leaves the investigator vulnerable.",
+    "value": 0,
+    "filter": ""
+  },
+  {
+    "name": "Demolitions",
+    "description": "With this skill the user is familiar in the safe use of explosives, including setting and defusing explosive charges. Mines and similar devices are designed to be easy to set off but difficult to defuse. This skill also encompasses military-grade demolitions (anti-personnel mines, plastique, etc.). Pushing examples: taking until the very last second to defuse the bomb; double-checking all the circuits/connections by hand.",
+    "value": 1,
+    "filter": "Uncommon"
+  },
+  {
+    "name": "Disguise",
+    "description": "Whenever you want to appear to be someone other than whom you are. The user changes posture, costume, and/or adds make-up to take on the appearance of another person or sort of person. Theatrical make-up may help as will fake ID.",
+    "value": 5,
+    "filter": "Uncommon"
+  },
+  {
+    "name": "Diving",
+    "description": "The user is trained in the use and maintenance of diving equipment for swimming underwater, including underwater navigation, proper weighting and emergency procedures. Prior to the invention of the Aqua-Lung in 1942, rigid diving suits were used for significant depths, though it is possible to dive shallower depths through a connecting tube. Pushing examples: pushing the limits of the equipment.",
+    "value": 1,
+    "filter": "Uncommon"
+  },
+  {
+    "name": "Dodge",
+    "description": "Allows an investigator to instinctively evade blows, thrown missiles, etc. When a character uses Dodge, they may do so any number of times in a combat round (but only once per attack). Dodge can increase through experience, like other skills. If an attack can be seen, a character can try to dodge it. It is impossible to dodge bullets because they cannot be seen until it is too late, although it is possible to take evasive action that results in being harder to hit (see Diving for Cover in the Call of Cthulhu Rulebook). Note: as a combat skill, this cannot be pushed.",
+    "value": 0,
+    "filter": ""
+  },
+  {
+    "name": "Drive Auto",
+    "description": "Anyone with this skill can drive a car or light truck, make ordinary maneuvers, and cope with ordinary vehicle problems. If the investigator wants to lose a pursuer or tail someone, a Drive roll would be appropriate. Pushing examples: driving the vehicle to its limit; not slowing to take a risky turn.",
+    "value": 20,
+    "filter": ""
+  },
+  {
+    "name": "Electrical Repair",
+    "description": "Enables the investigator to repair or reconfigure electrical equipment, such as generators, electric motors, fuse boxes, and burglar alarms. In the present day, this skill has little to do with the Electronics skill, and the two skills may require special parts or tools. Jobs in the 1920s may call for this skill and for Mechanical Repair in combination. Pushing examples: taking longer to construct or repair a device; consulting other methodologies.",
+    "value": 10,
+    "filter": ""
+  },
+  {
+    "name": "Electronics",
+    "description": "For troubleshooting and repairing electronic equipment. Allows the creation of electronic devices to some extent. For the present day—use Physics and Electrical Repair for electronic devices of the 1920s.",
+    "value": 1,
+    "filter": "Modern"
+  },
+  {
+    "name": "Engineering",
+    "description": "Grouped here for convenience. Science is about identifying certain phenomena; engineering is about standing on those phenomena and taking such findings to produce practical applications, such as machines, structures, and materials.",
+    "value": 1,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Fast Talk",
+    "description": "Fast Talk is specially limited to verbal trickery, deception, and misdirection, such as bamboozling a bouncer to let you inside a club, getting someone to sign a form they haven't read, making a policeman look the other way, and so on. The skill is opposed by Psychology or Fast Talk. After a brief period (usually after the fast talker has left the scene) the target will realize that they have been conned. The effect of Fast Talk is always temporary, though it will last longer if a Hard success is achieved. Fast Talk may be used to haggle the price of an item or similar good. Pushing examples: getting close and personal to the target; taking a calculated risk in order to persuade or prevent the target from calling you out; trying to bluff even when confronted.",
+    "value": 5,
+    "filter": ""
+  },
+  {
+    "name": "Fighting",
+    "description": "The Fighting skill covers all forms of hand-to-hand combat. You may spend skill points to purchase any skill specialization. The generic Fighting skill cannot be purchased. Choose specializations appropriate to your investigator's occupation and history. Those opting for a Fighting (Brawl) skill of 50% or higher may wish to choose some type of formal combat training as part of their background to account for his or her skill level. Note: as a combat skill, this cannot be pushed.",
+    "value": 0,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Fine Art",
+    "description": "The artist is accomplished in the art of painting (oils, acrylic, watercolor), as well as sketching in charcoal, crayon, or pastel. While serious works of art might take many days or months to complete, the artist may quickly sketch, according to usual skill, accurate portraits of people by skill, according to usual skill. The skill also denotes a familiarity with the art world, and the artist may be able to determine a particular artist's work.",
+    "value": 5,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Firearms",
+    "description": "Covers all manner of firearms, as well as bows and crossbows. You may spend skill points to purchase any skill specialization. The generic Firearms skill cannot be purchased. Choose specializations appropriate to your investigator's occupation and history. Note: as a combat skill, this cannot be pushed.",
+    "value": 0,
+    "filter": "Specializations"
+  },
+  {
+    "name": "First Aid",
+    "description": "The ability to provide emergency medical care. This might encompass applying a splint to a broken limb, stopping bleeding, treating a burn, resuscitating a drowning victim, dressing and cleaning a wound, etc. First Aid cannot be used to treat disease. Other use of Medicine skill is required. To be effective, First Aid must be delivered within one hour, in which case it grants 1 hit point. It may be attempted twice, but after that only Medicine can make further improvements. People can work together to administer First Aid, with a success granted for either one roll—only one person rolls, and use of First Aid can rouse an unconscious person to consciousness. When treating a dying character, successful First Aid stabilizes them for one hour and grants 1 temporary hit point, and the character must make a successful CON roll to remain stable thereafter; otherwise the character is dying and loses the temporary hit point, and must now make a CON roll per round thereafter to stave-off death; if the character survives until the following morning, First Aid can be attempted again (by up to two individuals).",
+    "value": 30,
+    "filter": ""
+  },
+  {
+    "name": "Flail",
+    "description": "Flail (10%): nunchaku, morning stars, and similar medieval weapons.",
+    "value": 10,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Flamethrower",
+    "description": "Weapons projecting a stream of ignited flammable liquid or gas. May either be carried by the operator or mounted on a vehicle.",
+    "value": 10,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Forensics",
+    "description": "The analysis and identification of evidence. Normally associated with crime scene investigation (examination of fingerprints, DNA, hair, and body fluids) and laboratory work in order to determine fact and provide expert witness and evidence for legal disputes.",
+    "value": 5,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Forgery",
+    "description": "At fine detail, the user can produce high quality fake documents, be it a person's handwriting, a bureaucratic form or permit, or a duplicate of a tome. The forger will require appropriate materials (inks, grades of paper, etc.) as well as an original from which to copy. A successful roll indicates the forgery will pass a normal, cursory inspection. Someone spending time carefully examining the forgery would use an appraisal skill (opposed by the original forger's skill) when checking whether the fake can be spotted.",
+    "value": 5,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Garrote",
+    "description": "Requires the victim to make a Fighting Maneuver to escape, or suffer 1D6 damage per round.",
+    "value": 15,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Geology",
+    "description": "Used to determine the approximate age of rock strata, recognize fossil types, distinguish minerals and crystals, locate promising sites for drilling or mining, evaluate soils, anticipate volcanism, seismic events, avalanches, and other such phenomena.",
+    "value": 1,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Handgun",
+    "description": "Use for all pistol-like firearms when firing discrete shots. Use the Submachine Gun skill when firing bursts. In modern era games, use the Submachine Gun skill when firing bursts.",
+    "value": 20,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Heavy Weapons",
+    "description": "Use for grenade launchers, anti-tank rockets, etc.",
+    "value": 10,
+    "filter": "Specializations"
+  },
+  {
+    "name": "History",
+    "description": "Enables an investigator to remember the significance of a country, city, region, or person, as pertinent. A successful roll might be used to help identify tools, techniques, or ideas that are extraordinary or unknown today. Pushing examples: taking more time to examine; conducting further research; consulting another expert; hiring assistants to conduct detailed research; taking months, and at a huge cost.",
+    "value": 5,
+    "filter": ""
+  },
+  {
+    "name": "Hypnosis",
+    "description": "The user is able to induce a trancelike state in a willing target who experiences heightened suggestibility, concentration, and responsiveness to hypnotic suggestion. The limits of hypnosis should be decided by the Keeper after discussion with the player; it may only be used on willing subjects or the Keeper may allow it to be used on unwilling targets in a more aggressive manner. This skill may be utilized as hypnotherapy for those suffering mental trauma, reducing the effects of a phobia or mania. A successfully hypnotherapy session overcomes the phobia or mania on one occasion. A series of successful hypnotherapy sessions may be needed to fully and permanently remove such conditions (a minimum of 1D6 sessions, at the Keeper's discretion).",
+    "value": 1,
+    "filter": "Uncommon"
+  },
+  {
+    "name": "Intimidate",
+    "description": "Intimidation can take many forms, including physical force, psychological manipulation, and threats. It is used to frighten or compel a target to act in a certain way. Intimidate is opposed by Intimidate or Psychology. Backing up intimidation with a weapon or some other power imbalance will make the task easier or more difficult level. When pushing an Intimidation roll, one possible consequence of failure is carrying out ones threat, perhaps increasing it to something more severe.",
+    "value": 15,
+    "filter": ""
+  },
+  {
+    "name": "Jump",
+    "description": "With this skill the investigator may leap up or down vertically, or jump horizontally from a standing or running start. When failing, Jump may be used to lessen the potential fall damage. Jumping categories are as follows: a regular jump, a hard jump, or an extreme jump (respectively requiring Regular success, Hard success and Extreme success). As a guide, a Regular success would be required for an investigator to safely leap down vertically to his or her own height, jump horizontally from a standing start beyond their own height (a running jump's own height), or run and then jump horizontally to a distance of twice the jumper's own height. One might achieve double that distance with an Extreme success, although bear in mind the world record for the long jump is around 29 feet. If falling, a successful Jump roll prepares for the fall, reducing resultant damage by half.",
+    "value": 20,
+    "filter": ""
+  },
+  {
+    "name": "Language (Other)",
+    "description": "When choosing this skill, the exact language must be specified and written next to the skill. In infancy and early childhood, most humans use a single language. The tongue chosen by the player for the Own Language automatically starts as equal to the investigator's EDU characteristic; thereafter, the investigator understands, speaks, reads, and writes at that percentage or higher (if further skill points are added during investigator creation). Suggestions regarding Other Languages: At 5% skill a language(s) can be correctly identified without a roll.",
+    "value": 1,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Language (Own)",
+    "description": "The tongue chosen by the player for the Own Language automatically starts as equal to the investigator's EDU characteristic; thereafter, the investigator understands, speaks, reads, and writes at that percentage or higher (if further skill points are added during investigator creation). See Language (Other) skill.",
+    "value": 0,
+    "filter": ""
+  },
+  {
+    "name": "Law",
+    "description": "Represents the chance of knowing pertinent law, precedent, legal maneuvers, or court procedure. The practice of law as a profession can lead to great rewards and political office, but it requires intense application over many years—and Credit Rating is also extremely crucial in this regard. In the United States, the State Bar of a particular commonwealth or state must sanction only particular lawyers. When in a foreign country, it is suggested that the level of difficulty be extended by one level when using the skill, unless the character has spent many months studying that nation's legal system.",
+    "value": 5,
+    "filter": ""
+  },
+  {
+    "name": "Library Use",
+    "description": "Library Use enables an investigator to find a piece of information, such as a certain book, newspaper, or reference in a library or collection of documents, assuming the item is there. Use of this skill marks several hours of continuous search. A library might have a locked case or rare-book special collection, but Persuade, Fast Talk, Charm, Intimidate, Credit Rating, or special credentials may have to be used to get access to the books or information in question. Pushing examples: pressing the librarian for extensive assistance; taking longer to systematically work through the stacks.",
+    "value": 20,
+    "filter": ""
+  },
+  {
+    "name": "Listen",
+    "description": "Measures the ability of an investigator to interpret and understand sound, including overheard conversations, matters behind a closed door, and whispered words in a cafe. The Keeper may use it to determine the course of an impending encounter: was your investigator awakened by that creaking step? By extension, a high Listen roll can indicate a good level of general awareness in a character. Pushing examples: stopping dead still and listening; getting closer to the sound source (e.g. putting your ear to the train track or the door); telling everyone to be quiet (making a noise yourself) and then listening.",
+    "value": 20,
+    "filter": ""
+  },
+  {
+    "name": "Locksmith",
+    "description": "A locksmith can open car doors, hot-wire autos, jimmy windows, figure out combinations, open locks with the use of skeleton keys, picks, and other tools. Especially difficult locks may require a higher difficulty level. Pushing examples: completely disassembling the lock; taking longer; using force to pry the mechanism.",
+    "value": 1,
+    "filter": ""
+  },
+  {
+    "name": "Lore",
+    "description": "This skill represents a character's expert understanding of a subject that falls outside the normal bounds of human knowledge. Specializations of Lore should be specific and unusual, such as: Dream Lore, Necronomicon (History of) Lore, UFO Lore, Vampire Lore, Werewolf Lore, Yaddithian Lore. Where the Keeper wishes to test an investigator's knowledge of something that falls within the bounds of one of these fields of Lore, but the investigator lacks the relevant Lore specialization, the Keeper may allow for another (more general) skill to be used but require a higher level of success.",
+    "value": 1,
+    "filter": "Specializations, Uncommon"
+  },
+  {
+    "name": "Machine Gun",
+    "description": "Use for firing machine guns from bipods, tripods, and mounted weapons. If single shots are fired from a bipod, use Rifle skill. The differences between submachine gun, and light machine gun are tenuous today.",
+    "value": 10,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Mathematics",
+    "description": "The study of numbers and logic, including mathematical theories and applied and theoretical solution design and development. The skill might allow the identification of non-Euclidian geometries, solve puzzling formulae, and decrypt complex patterns or codes (see Cryptography for specialized study of codes).",
+    "value": 10,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Mechanical Repair",
+    "description": "This skill allows the investigator to repair a broken machine or to create a new one. Basic carpentry and plumbing projects can be performed, as well as constructing items (such as a pulley system) and repairing items (such as a steam pump). Special tools or parts may be required. This skill can be used to open common household locks, but nothing more advanced—see the Locksmith skill for more complex locks. Mechanical Repair is a companion skill to Electrical Repair, and both may be necessary to fix complex devices, such as a car or an aircraft. Pushing examples: completely dismantling the device; taking longer; using excessive force to knock the device into action (e.g. hitting the thing till it works).",
+    "value": 10,
+    "filter": ""
+  },
+  {
+    "name": "Medicine",
+    "description": "The user diagnoses and treats accidents, injuries, diseases, poisonings, etc., and makes public health recommendations. If an era has no good treatment, a malady, the effect is limited, uncertain, or inconclusive. The Medicine skill grants knowledge of a wide variety of drugs and potions, natural and man-made, and to determine their side effects and contraindications. Treatment using the Medicine skill takes a minimum of one hour and can be delivered any time after damage is taken, but if this is not performed on the same day, the difficulty is increased (requiring a Hard success). A character treated successfully with Medicine recovers 1D3 hit points (in addition to any First Aid they have received), except in the case of a dying character, who must initially receive successful First Aid to stabilized them before a Medicine roll is made. Pushing examples: consulting with colleagues; conducting further research; trying something experimental or more risky; performing some form of clinical experiment.",
+    "value": 1,
+    "filter": ""
+  },
+  {
+    "name": "Meteorology",
+    "description": "The scientific study of the atmosphere, including weather systems and patterns, and atmospheric phenomena. Use this skill to determine long-range weather patterns and to forecast effects like rain, snow, and fog.",
+    "value": 1,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Natural World",
+    "description": "Originally the study of plant and animal life in its environment. By the nineteenth century, this study had broadened to represent a separate discipline. Natural World may or may not be accurate—this is the region of approximations. One might be able to identify the birds by the calls they hear, while another considers the county fair, or decide whether a butterfly collection is fraudulent or sufficiently framed. Pushing examples: spending much longer (forgetful of the time) examining the habitat; tasting the unknown mushroom; going to a witch-doctor using combination of herbs, etc.",
+    "value": 10,
+    "filter": ""
+  },
+  {
+    "name": "Navigate",
+    "description": "Allows the user to find his or her way in storms or clear weather, on land or at sea. Those of higher levels can work with astronomical tables, charts, instruments, and satellite location gear as they exist in the era of play. One could also use this skill to determine topographic information, such as whether an island of many square miles or the interior of a single room—use of modern technology may lower or increase the difficulty level. Pushing examples: getting the map out and delaying while you attempt to work out where you are; going back to where you started from and trying again.",
+    "value": 10,
+    "filter": ""
+  },
+  {
+    "name": "Occult",
+    "description": "The user recognizes occult paraphernalia, words, and concepts, and understands the theory behind the practices of magic and occult codes. The occultist is familiar with the families of secret knowledge passed down from Egypt and other parts of the ancient world, from Renaissance West, and perhaps from Asia and Africa as well. Certain books may provide skill points of Occult as a skill bonus (at the Keeper's discretion). Whether non-Mythos magic is real or fraudulent in your game is for the Keeper to determine.",
+    "value": 5,
+    "filter": ""
+  },
+  {
+    "name": "Operate Heavy Machinery",
+    "description": "Required to drive and operate a tank, backhoe, steam shovel, or other large-scale construction machine. For very different sorts of machines, the Keeper may decide to raise the difficulty level if the problems encountered are mostly unfamiliar ones; someone used to running a bulldozer, for instance, will not be quickly competent with the steam turbines in a ship's engine room. Pushing examples: going step-by-step with the operating manual; taking time to practice; seeking a teacher.",
+    "value": 1,
+    "filter": ""
+  },
+  {
+    "name": "Persuade",
+    "description": "Represents a target about a particular idea, concept, or belief through reasoned argument, debate, and discussion. Persuade may be employed without reference to truth. The successful application of Persuade takes time: at least half an hour. If you want to persuade someone quickly, you should use Fast Talk. Depending on the goal expressed by the player, if the investigator uses sufficient time, the effect may linger. Persuade may be used for bargaining, to haggle the price of an item or service down; if successful, the seller is won over and they will reduce the price significantly. Pushing examples: getting close and personal to advance your argument or appeal to the target's reason; demonstrating through logical reasoning and examples, in detail, using carefully preplanned suggestion techniques (possibly also subliminal messages) to make the target as receptive as possible; putting on a grand show (staging, fireworks, free gifts, free drinks, bribes, etc.) in order to really push your point of view front-and-center for a group of people.",
+    "value": 10,
+    "filter": ""
+  },
+  {
+    "name": "Pharmacy",
+    "description": "The study of chemical compounds and their effect on living organisms. Traditionally this has involved the formulation, creation, and dispensing of medications (whether a witch-doctor using combination of herbs or a modern pharmacist operating in a laboratory). The application of this skill ensures the safe and effective use of pharmaceutical drugs, including combining ingredients, identification of toxins, and knowledge of possible side effects.",
+    "value": 1,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Photography",
+    "description": "In the 1920s, the user is able to prepare the necessary chemicals to make flashpowder (see Dangerous Photography, page 173). In the present day, the skill extends to cover video cameras, video playback equipment, digital photography, and digital editing, where the user excels at the manipulation of digital images. Radically different versions can be created from an original source, such as changing the location of a person in a photograph, who they are with, and what they are doing. Those proficient may also be able to detect when an image has been manipulated.",
+    "value": 5,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Physics",
+    "description": "Grants theoretical understanding of pressure, materials, motion, magnetism, electricity, optics, radioactivity, and related phenomena, and some ability to construct experimental devices to test ideas. The degree of knowledge depends on the era of use. Practical devices, such as automobiles, are not the province of physicists, however experimental devices may be, perhaps in conjunction with Electronics or Mechanical Repair.",
+    "value": 1,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Pilot",
+    "description": "The air we traverse 'off' Drive Automobile; this is the expensive Skill for flying aircraft. It may cost many skill points to purchase any skill specialization. The generic Pilot skill cannot be purchased. An investigator might have several specializations of this skill, and each specialization is listed independently, as the Keeper sees fit.",
+    "value": 1,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Psychoanalysis",
+    "description": "The skill refers to the range of emotional therapies, not just to Freudian procedures. Formal psychotherapy was still in its infancy in the 1920s, though some procedures were as old as humanity. Sometimes it was looked on as a fraudulent study, even in the 1920s. The common term then for an analyst or scholar of emotional disorders was 'alienist.' In the present day, a combination of therapies has evolved, and this skill now could be justly named Psychiatric Treatment. Intensive psychoanalysis can return Sanity points to an investigator patient. Once per game month, to learn the progress of the therapy, make a 1D100 roll against the analyst or doctor's Psychoanalysis skill. If the roll succeeds, the patient gains 1D3 Sanity points. If the roll fails, add no points. If the roll is fumbled, then the patient loses 1D6 Sanity points, and treatment by that analyst concludes; there has been some sort of serious incident or dramatic setback in the therapy, and the relationship between patient and analyst has irreparably and fatally broken down.",
+    "value": 1,
+    "filter": ""
+  },
+  {
+    "name": "Psychology",
+    "description": "A perception skill common to all humans; it allows the user to study an individual and form an idea of another person's character and motives. The Keeper may choose to make concealed Psychology skill rolls on the player's behalf, announcing only the information, true or false, that the user gained by employing it. Pushing examples: being very unsubtle and asking highly personal, intimate, or downright direct questions of the target; immersing yourself in data regarding a specific person (the target of your study) in order to think like them and understand their motivations.",
+    "value": 10,
+    "filter": ""
+  },
+  {
+    "name": "Read Lips",
+    "description": "This skill allows the investigative listener to listen-in on a conversation, enabling them to hear the speakers. Line of sight is necessary, and if only one speaker's lips can be seen (the other presumably with their back to the lip reader) then only half the conversation can be determined. Read Lips may also be used to silently communicate with another person (if both are proficient), allowing for information exchange without speaking. Pushing examples: putting yourself in an obvious position and staring unsubtle at the target(s); filming the target (and thus likely to be observed filming the target).",
+    "value": 1,
+    "filter": "Uncommon"
+  },
+  {
+    "name": "Ride",
+    "description": "This skill is intended to apply to saddle horses, donkeys, and mules, granting knowledge of basic care of the riding animal, the riding gear needed to handle the steed and keep it on difficult terrain. Should a steed unexpectedly rear or stumble, the rider's chance of remaining mounted equals his or her Ride skill, perhaps modified up or down the level of difficulty by one level. An unfamiliar mount (such as a camel) might be ridden successfully, but the level of difficulty would be raised. Pushing examples: whipping or pushing the mount aggressively; taking a running course to bypass a ravine or high ditch; taking the risk of keeping your mount rather than jumping clear in trouble approaches.",
+    "value": 5,
+    "filter": ""
+  },
+  {
+    "name": "Rifle/Shotgun",
+    "description": "Use any type of rifle (whether lever-action, bolt-action, or semi-automatic) or scatter gun. When using a shotgun firing at a target a shotgun expands to a spreading pattern; the user's choice to hit doesn't decrease with range, but the damage-dealt does. When an assault rifle fires a single shot (or multiple singles) use this Rifle skill.",
+    "value": 25,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Science",
+    "description": "Each specialty covers a particular discipline and the list given is not exhaustive. Many specializations share and overlap in knowledge, for example Mathematics and Cryptography, Botany and Biology, Chemistry and Pharmacy. When a character possesses two related specializations, the character may roll against an allied specialty with the level of difficulty increased (or a Penalty die) at the Keeper's discretion.",
+    "value": 1,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Shotgun",
+    "description": "Use for shotguns. See Firearms (Rifle/Shotgun).",
+    "value": 25,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Sleight of Hand",
+    "description": "Allows the visual covering-up, secreting, or masking of an object or objects, perhaps with debris, cloth, or other intervening or illusion-promoting materials; perhaps by using a secret panel or false compartment. Larger objects of any sort should be increasingly hard in concealment. Sleight of hand includes pick-pocketing, palming a card, and clandestine use of a cell phone.",
+    "value": 10,
+    "filter": ""
+  },
+  {
+    "name": "Spear",
+    "description": "Spear (20%): lances and spears. If thrown, use Throw skill.",
+    "value": 20,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Spot Hidden",
+    "description": "This skill allows the user to spot a secret door or compartment, notice a hidden intruder, find an inconspicuous clue, recognize a repainted automobile, become aware of ambushers, notice a bulging pocket, or anything similar. This is an important skill in the armory of an investigator. When an investigator is searching for a character who is hiding, the opponent's Stealth skill is used to set the difficulty level for the roll.",
+    "value": 25,
+    "filter": ""
+  },
+  {
+    "name": "Stealth",
+    "description": "The art of moving quietly and hiding without alerting those who might hear or see. When attempting to avoid detection, use a Stealth skill roll. Ability with the skill suggests either that the character is adept at moving quietly (light-footed) or skilled in camouflage techniques. The skill might also suggest that the character can maintain a level of patience and cool-headedness to remain still and unseen for long periods.",
+    "value": 20,
+    "filter": ""
+  },
+  {
+    "name": "Submachine Gun",
+    "description": "Use when firing any machine pistol or submachine gun; also for assault rifles set on burst or full automatic fire.",
+    "value": 15,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Survival",
+    "description": "Knowledge of this skill provides the expertise required to survive in extreme environments, such as in desert or arctic conditions, as well as upon the sea or in wilderness terrain. Inherent is the knowledge of hunting, building shelters, hazards (such as the avoidance of poisonous plants), etc., according to the given environment. You may spend skill points to purchase any skill specialization. The generic Survival skill cannot be purchased. An environment specialization can be determined when this skill is chosen, for example: Survival (Desert), (Sea), (Arctic), etc. When a character does not have the obvious survival specialty, they may roll against an allied specialty with the level of difficulty increased (or a Penalty die at the Keeper's discretion). Pushing examples: trying something risky (e.g. drinking the water without purifying it first; eating uncooked hazards); using all of one's clothing to improve a shelter; burning every possession to make a signal fire.",
+    "value": 10,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Swim",
+    "description": "The ability to float and to move through water or other liquid. Only roll Swim in times of crisis or danger, or when the Keeper thinks it appropriate. Failing a pushed Swim roll can result in loss of hit points. It may also lead to the person being washed away downstream, partially or completely drowned. Pushing examples: taking a big breath and really 'going for it'; your remaining strength; pushing your physical limits.",
+    "value": 20,
+    "filter": ""
+  },
+  {
+    "name": "Sword",
+    "description": "Sword (20%): all blades over two feet in length.",
+    "value": 20,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Throw",
+    "description": "Use Throw to target a hit with an object. A palm-sized object can be hurled to STR divided by 5 in yards. The effective range can be extended up to STR divided by 2 in yards, but a penalty die is applied to the Throw roll. If the Throw roll fails, the object lands at a random location away from the target. The Keeper should compare the closeness of the die roll result to the highest number which would have indicated success and choose a distance between the target and object that feels reasonable. The Throw skill is used in combat when throwing rocks, spears, grenades, or boomerangs. Once an item has been thrown, it is quite literally out of the investigator's hands and therefore there is nothing the player can do to justify a pushed roll. If multiple missiles are available, there is no roll connected with failure, and it is only a matter of time until the investigator is successful; don't roll dice. If multiple missiles are available and there is a distinct risk connected with failure then the Keeper might ask for a Pushed roll.",
+    "value": 20,
+    "filter": ""
+  },
+  {
+    "name": "Track",
+    "description": "With Track, an investigator can follow a person, vehicle, or animal over earth, and through plants/leaves. Factors such as time passed since the tracks were made, rain, and the type of ground covered, may affect the difficulty level. Pushing examples: backtracking and taking more time to study the area; walking in increasing spirals to secure the tracks (taking longer, possibly making more noise and making oneself more visible).",
+    "value": 10,
+    "filter": ""
+  },
+  {
+    "name": "Whip",
+    "description": "Whip (05%): bolas and whips.",
+    "value": 5,
+    "filter": "Specializations"
+  },
+  {
+    "name": "Zoology",
+    "description": "The study of biology that relates specifically to the animal kingdom, including the structure, evolution, classification, behavioral habits, and distribution of animals, both living and extinct. Use this skill to identify animals both from interaction with the environment (tracks, droppings, marks, etc.), likely behaviors, and territorial traits.",
+    "value": 1,
+    "filter": "Specializations"
+  }
 ]

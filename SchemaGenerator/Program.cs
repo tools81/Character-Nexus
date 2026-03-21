@@ -8,6 +8,7 @@
         {
             AmazingTales.GenerateFormSchema.InitializeSchema();
             BladeRunner.GenerateFormSchema.InitializeSchema();
+            CallOfCthulhu.GenerateFormSchema.InitializeSchema();
             DarkCrystal.GenerateFormSchema.InitializeSchema();
             EverydayHeroes.GenerateFormSchema.InitializeSchema();
             Ghostbusters.GenerateFormSchema.InitializeSchema();

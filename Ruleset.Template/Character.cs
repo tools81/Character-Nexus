@@ -4,19 +4,19 @@ namespace Template
 {
     internal class Character : ICharacter
     {
-        public Guid Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Image { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Image { get; set; }
 
-        public CharacterSegment CharacterSegment => throw new NotImplementedException();
+        public CharacterSegment CharacterSegment { get => GetCharacterSegment(); }
 
-        public string? CharacterSheet { get; set; }
-
-        public CharacterSegment GetCharacterSegment() => throw new NotImplementedException();
+        public string? CharacterSheet { get; set; }       
 
         public byte[] BuildCharacterSheet()
         {
             throw new NotImplementedException();
         }
+
+        private CharacterSegment GetCharacterSegment() => throw new NotImplementedException();
     }
 }

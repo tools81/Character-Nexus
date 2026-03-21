@@ -16,6 +16,7 @@ namespace Template
 
         public string FormResource => "Ruleset.Template.Json.Character.Form.json";
         public string  Instructions => string.Empty;
+        public string Stylesheet => string.Empty;
 
         public string NewCharacter()
         {

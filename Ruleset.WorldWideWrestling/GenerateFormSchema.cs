@@ -151,6 +151,7 @@ namespace WorldWideWrestling
                     value = gimmick.Name,
                     label = gimmick.Name,
                     description = gimmick.Description,
+                    image = gimmick.Image,
                     bonusAdjustments = JsonConvert.SerializeObject(gimmick.BonusAdjustments, _jsonSettings),
                     bonusCharacteristics = JsonConvert.SerializeObject(gimmick.BonusCharacteristics, _jsonSettings),
                     userChoices = JsonConvert.SerializeObject(gimmick.UserChoices, _jsonSettings)

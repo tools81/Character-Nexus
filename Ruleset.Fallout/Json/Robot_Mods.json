@@ -1,0 +1,217 @@
+[
+	{
+		"name": "Behavioral Analysis Mod",
+		"description": "Employed to aid Miss Nanny model robots in their childcare duties, these behavioral analysis modules were a successful offshoot from a U.S. Military designed to engineer robots that could assist in interrogations by interpreting behavior and determining truthfulness. The fate of the original project is unknown, but the offshoot used in Miss Nanny robots was well-received.",
+		"effects": [
+			"Reduce the difficulty of Speech tests by 1 (min. 0)"
+		],
+		"weight": 0,
+		"cost": 50,
+		"rarity": 3,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Robotics Expert",
+				"formula": ">= 1"
+			}
+		]
+	},
+	{
+		"name": "Diagnosis Mod",
+		"description": "Designed to allow Mister Handy robots to be repurposed as nurses and field medics during a crisis, the diagnosis module allows the robot to discern the nature of injuries and illnesses on a patient and devise the correct treatment quickly. Proper bedside manner, however, was not included in the module.",
+		"effects": [
+			"Reduce the difficulty of Medicine tests by 1 (min. 0)"
+		],
+		"weight": 0,
+		"cost": 50,
+		"rarity": 3,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Robotics Expert",
+				"formula": ">= 1"
+			}
+		]
+	},
+	{
+		"name": "Hacking Module",
+		"description": "In addition to a library of decryption software and known software flaws, the hacking module fits the robot with an external interface jack, allowing them to connect directly to a computer and interface with it directly. Ideal for robots whose manipulator claws are poorly suited to operating a keyboard.",
+		"effects": [
+			"Reduces the difficulty of Science tests to hack into locked computer systems by 1 (min. 0)"
+		],
+		"weight": 0,
+		"cost": 25,
+		"rarity": 2,
+		"prerequisites": []
+	},
+	{
+		"name": "Hazard Detection Mod",
+		"description": "Developed for cheap, disposable trap-clearance robots to accompany soldiers in enemy territory, this hazard detection and analysis system modifies the robot's sensory awareness to identify and categorize potential environmental threats and hazards. Repurposed for the Miss Nanny to spot dangers to children in the household, the system's developers never fully removed the urge to go towards hazards to investigate them more closely.",
+		"effects": [
+			"Reduce the difficulty of Survival tests to detect and disable traps and similar hazards by 1 (min. 0)"
+		],
+		"weight": 0,
+		"cost": 25,
+		"rarity": 2,
+		"prerequisites": []
+	},
+	{
+		"name": "Integral Boiler Mod",
+		"description": "A standard part of the domestic model Mister Handy, the internal boiler was to be used to provide hot tea and coffee in the morning for the robot's owners, as well as a ready source of hot water for food preparation and household cleaning purposes. Post-War, Mister Handy units with a functional boiler are sought-after companions, as thoroughly boiling water is one way to clean it and make it safe to drink. A self-cleaning mechanism keeps it from becoming contaminated between uses, though this does take some time to work.",
+		"effects": [
+			"Once per scene out of combat, turn 2 dirty waters into 1 purified water in ten minutes"
+		],
+		"weight": -10,
+		"cost": 15,
+		"rarity": 1,
+		"prerequisites": []
+	},
+	{
+		"name": "Lockpick Module",
+		"description": "In addition to a catalogue of locking mechanisms and their known weaknesses and configurations, this module refits a manipulator claw with a hidden set of locksmith's tools in an articulated mount, allowing the robot to pick locks without needing to handle tools directly.",
+		"effects": [
+			"Reduce the difficulty of Lockpick tests by 1 (min. 0)",
+			"Does not need bobby pins or other lockpicking tools"
+		],
+		"weight": -5,
+		"cost": 25,
+		"rarity": 2,
+		"prerequisites": []
+	},
+	{
+		"name": "Radiation Coils",
+		"description": "A series of antennae placed on the surface of the robot projects deadly radiation over a short distance to harm and repel intruders. An internal switch allows the robot to disable the coils if allies stray too near, as the radiation is just as harmful to friends (at least, if those friends are normal humans).",
+		"effects": [
+			"Can turn on or off at the start of a turn. While on, all creatures within Reach suffer 3 Radiation damage at the end of the robot's turn"
+		],
+		"weight": -10,
+		"cost": 50,
+		"rarity": 3,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Robotics Expert",
+				"formula": ">= 1"
+			}
+		]
+	},
+	{
+		"name": "Recon Sensors",
+		"description": "Designed to aid with target acquisition and patrol efficiency in Mister Gutsy military robots, these recon sensors allow the robot to not only detect foes more easily (and more quickly determine friend from foe, after a number of early friendly-fire incidents) but also to track and predict the movements of enemies who were no longer visible, making it harder for enemies to escape.",
+		"effects": [
+			"Reduce difficulty of tests to detect hidden opponents by 1 (min. 0)",
+			"Enemies visible to you who attempt to hide add +1 to the difficulty of their Sneak tests"
+		],
+		"weight": -5,
+		"cost": 50,
+		"rarity": 3,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Robotics Expert",
+				"formula": ">= 1"
+			}
+		]
+	},
+	{
+		"name": "Regeneration Field",
+		"description": "An experimental technology designed to provide aid to injured people where extensive medical care is in short supply, the robot is fitted with a device which projects a restorative signal over a short distance which stimulates the human body's natural healing processes.",
+		"effects": [
+			"Outside of combat, allies regain 2 HP at the start of each scene you are present within"
+		],
+		"weight": -25,
+		"cost": 125,
+		"rarity": 5,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Robotics Expert",
+				"formula": ">= 2"
+			},
+			{
+				"type": "perk",
+				"name": "Science!",
+				"formula": ">= 2"
+			}
+		]
+	},
+	{
+		"name": "Resistance Field",
+		"description": "An unusual technology intended to provide soldiers with additional protection from enemy fire. The robot emits a magnetic field directed towards the enemy which disrupts the flight path of bullets and other projectiles, causing them to lose momentum and efficacy.",
+		"effects": [
+			"Allies within Close range receive +2 Physical damage resistance"
+		],
+		"weight": -20,
+		"cost": 75,
+		"rarity": 4,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Robotics Expert",
+				"formula": ">= 1"
+			},
+			{
+				"type": "perk",
+				"name": "Science!",
+				"formula": ">= 1"
+			}
+		]
+	},
+	{
+		"name": "Sensor Array",
+		"description": "Additional sensor modules and sensory processing systems accompany the robot's normal optical and auditory sensors, allowing it to perceive the world in more detail and in more ways than normal eyes and ears can.",
+		"effects": [
+			"Re-roll 1d20 on all PER tests",
+			"May attempt PER tests to detect things which cannot normally be detected by the naked eye, such as radiation"
+		],
+		"weight": -15,
+		"cost": 50,
+		"rarity": 3,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Robotics Expert",
+				"formula": ">= 1"
+			}
+		]
+	},
+	{
+		"name": "Stealth Field",
+		"description": "Based on the same technology as the Stealth Boy, the robot produces a low-level refraction field which bends and displaces light, camouflaging itself and those nearby. The lower intensity camouflage allows the field to last far longer without burning out the components of the device or draining the robot's power supply, but it cannot provide true invisibility.",
+		"effects": [
+			"Allies within Close range may re-roll 1d20 on Stealth tests"
+		],
+		"weight": -20,
+		"cost": 50,
+		"rarity": 3,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Robotics Expert",
+				"formula": ">= 1"
+			}
+		]
+	},
+	{
+		"name": "Tesla Coils",
+		"description": "A collection of antennae on the robot's outer surface allow it to direct electrical discharges over a short distance to nearby aggressors. The partially directed nature of these discharges mean that allies are not at risk of more than a mild shock, while enemies may suffer severe electrical burns.",
+		"effects": [
+			"Can turn on or off at the start of a turn. While on, all enemies within Reach suffer 4 Piercing 1, Stun Energy damage at the end of the robot's turn"
+		],
+		"weight": -25,
+		"cost": 100,
+		"rarity": 5,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Robotics Expert",
+				"formula": ">= 2"
+			},
+			{
+				"type": "perk",
+				"name": "Science!",
+				"formula": ">= 1"
+			}
+		]
+	}
+]

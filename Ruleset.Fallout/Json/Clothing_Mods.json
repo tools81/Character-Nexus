@@ -1,20 +1,70 @@
 [
 	{
 		"name": "Ballistic Weave",
-		"effects": [
-			{
-				"type": "ResistancePhysical",
-				"value": "+2"
-			},
-			{
-				"type": "ResistanceEnergy",
-				"value": "+2"
-			}
-		], 
+		"description": "",
+		"resistancephysical": 2,
+		"resistanceenergy": 2,
 		"weight": 0,
-		"cost": 20,
-		"perks": [
-		
+		"cost": 20
+	},
+	{
+		"name": "Ballistic Weave Mk II",
+		"description": "",
+		"resistancephysical": 3,
+		"resistanceenergy": 3,
+		"weight": 0,
+		"cost": 30,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Armorer",
+				"formula": ">= 1"
+			}
+		]
+	},
+	{
+		"name": "Ballistic Weave Mk III",
+		"description": "",
+		"resistancephysical": 4,
+		"resistanceenergy": 4,
+		"weight": 0,
+		"cost": 40,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Armorer",
+				"formula": ">= 2"
+			}
+		]
+	},
+	{
+		"name": "Ballistic Weave Mk IV",
+		"description": "",
+		"resistancephysical": 5,
+		"resistanceenergy": 5,
+		"weight": 0,
+		"cost": 50,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Armorer",
+				"formula": ">= 3"
+			}
+		]
+	},
+	{
+		"name": "Ballistic Weave Mk V",
+		"description": "",
+		"resistancephysical": 6,
+		"resistanceenergy": 6,
+		"weight": 0,
+		"cost": 60,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Armorer",
+				"formula": ">= 4"
+			}
 		]
 	}
 ]

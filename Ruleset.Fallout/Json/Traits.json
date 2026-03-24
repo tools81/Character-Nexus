@@ -2,9 +2,9 @@
     {
         "name": "The Chain That Binds",
         "description": "",
-        "choice": [
+        "userchoices": [
             {
-                "type": "Skill",
+                "type": "skills",
                 "choices": [
                     "Energy Weapons",
                     "Science",
@@ -17,9 +17,9 @@
     {
         "name": "Necrotic Post-Human",
         "description": "",
-        "adjustment": [
+        "bonusadjustments": [
             {
-                "type": "Immunity",
+                "type": "immunity",
                 "name": "Radiation",
                 "value": 0
             }
@@ -28,129 +28,129 @@
     {
         "name": "Forced Evolution",
         "description": "",
-        "adjustment": [
+        "bonusadjustments": [
             {
-                "type": "Attribute",
+                "type": "attributes",
                 "name": "Strength",
                 "value": 2
             },
             {
-                "type": "AttributeMax",
+                "type": "attributemax",
                 "name": "Strength",
                 "value": 12
             },
             {
-                "type": "Attribute",
+                "type": "attributes",
                 "name": "Endurance",
                 "value": 2
             },
             {
-                "type": "AttributeMax",
+                "type": "attributemax",
                 "name": "Endurance",
                 "value": 12
             },
             {
-                "type": "AttributeMax",
+                "type": "attributemax",
                 "name": "Intelligence",
                 "value": 6
             },
             {
-                "type": "AttributeMax",
+                "type": "attributemax",
                 "name": "Charisma",
                 "value": 6
             },
             {
-                "type": "SkillMax",
+                "type": "skillmax",
                 "name": "Athletics",
                 "value": 4
             },
             {
-                "type": "SkillMax",
+                "type": "skillmax",
                 "name": "Barter",
                 "value": 4
             },
             {
-                "type": "SkillMax",
+                "type": "skillmax",
                 "name": "Big Guns",
                 "value": 4
             },
             {
-                "type": "SkillMax",
+                "type": "skillmax",
                 "name": "Energy Weapons",
                 "value": 4
             },
             {
-                "type": "SkillMax",
+                "type": "skillmax",
                 "name": "Explosives",
                 "value": 4
             },
             {
-                "type": "SkillMax",
+                "type": "skillmax",
                 "name": "Lockpick",
                 "value": 4
             },
             {
-                "type": "SkillMax",
+                "type": "skillmax",
                 "name": "Medicine",
                 "value": 4
             },
             {
-                "type": "SkillMax",
+                "type": "skillmax",
                 "name": "Melee Weapons",
                 "value": 4
             },
             {
-                "type": "SkillMax",
+                "type": "skillmax",
                 "name": "Pilot",
                 "value": 4
             },
             {
-                "type": "SkillMax",
+                "type": "skillmax",
                 "name": "Repair",
                 "value": 4
             },
             {
-                "type": "SkillMax",
+                "type": "skillmax",
                 "name": "Science",
                 "value": 4
             },
             {
-                "type": "SkillMax",
+                "type": "skillmax",
                 "name": "Small Guns",
                 "value": 4
             },
             {
-                "type": "SkillMax",
+                "type": "skillmax",
                 "name": "Sneak",
                 "value": 4
             },
             {
-                "type": "SkillMax",
+                "type": "skillmax",
                 "name": "Speech",
                 "value": 4
             },
             {
-                "type": "SkillMax",
+                "type": "skillmax",
                 "name": "Survival",
                 "value": 4
             },
             {
-                "type": "SkillMax",
+                "type": "skillmax",
                 "name": "Throwing",
                 "value": 4
             },
             {
-                "type": "SkillMax",
+                "type": "skillmax",
                 "name": "Unarmed",
                 "value": 4
             },
             {
-                "type": "Immunity",
+                "type": "immunity",
                 "name": "Radiation",
                 "value": 0
             },
             {
-                "type": "Immunity",
+                "type": "immunity",
                 "name": "Poison",
                 "value": 0
             }
@@ -159,14 +159,14 @@
     {
         "name": "Mister Handy Robot",
         "description": "",
-        "adjustment": [
+        "bonusadjustments": [
             {
-                "type": "Immunity",
+                "type": "immunity",
                 "name": "Radiation",
                 "value": 0
             },
             {
-                "type": "Immunity",
+                "type": "immunity",
                 "name": "Poison",
                 "value": 0
             }
@@ -175,9 +175,9 @@
     {
         "name": "Educated",
         "description": "",
-        "choice": [
+        "userchoices": [
             {
-                "type": "Skill",
+                "type": "skills",
                 "choices": [
                     "Energy Weapons",
                     "Repair",
@@ -194,9 +194,9 @@
     {
         "name": "Gifted",
         "description": "",
-        "choice": [
+        "userchoices": [
             {
-                "type": "Attribute",
+                "type": "attributes",
                 "choices": [
                     "Strength",
                     "Perception",
@@ -221,9 +221,9 @@
     {
         "name": "Vault Kid",
         "description": "",
-        "choice": [
+        "userchoices": [
             {
-                "type": "Skill",
+                "type": "skills",
                 "choices": [
                     "Athletics",
                     "Barter",

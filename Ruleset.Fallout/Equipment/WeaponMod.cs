@@ -19,6 +19,9 @@ namespace Fallout
 
         [JsonProperty("bonusadjustments")]
         public List<BonusAdjustment> BonusAdjustments { get; set; } = [];
+        
+        [JsonProperty("bonuscharacteristics")]
+        public List<BonusAdjustment> BonusCharacteristics { get; set; } = [];
 
         [JsonProperty("cost")]
         public int Cost { get; set; }

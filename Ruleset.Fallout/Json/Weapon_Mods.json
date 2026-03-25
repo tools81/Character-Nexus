@@ -4,13 +4,7 @@
 		"prefix": "Hardened",
 		"weapontype": "Small Guns",
 		"slot": "Receiver",
-		"bonusadjustments": [
-			{
-				"type": "damage",
-				"name": "Damage",
-				"value": 1
-			}
-		],
+		"damage": 1,
 		"cost": 20,
 		"prerequisites": [
 		]
@@ -20,18 +14,8 @@
 		"prefix": "Powerful",
 		"weapontype": "Small Guns",
 		"slot": "Receiver",
-		"bonusadjustments": [
-			{
-				"type": "damage",
-				"name": "Damage",
-				"value": 2
-			},
-			{
-				"type": "weight",
-				"name": "Weight",
-				"value": 1
-			}
-		],
+		"damage": 2,
+		"weight": 1,
 		"cost": 25,
 		"prerequisites": [
 			{
@@ -46,23 +30,9 @@
 		"prefix": "Advanced",
 		"weapontype": "Small Guns",
 		"slot": "Receiver",
-		"bonusadjustments": [
-			{
-				"type": "damage",
-				"name": "Damage",
-				"value": 3
-			},
-			{
-				"type": "fireRate",
-				"name": "Fire Rate",
-				"value": 1
-			},
-			{
-				"type": "weight",
-				"name": "Weight",
-				"value": 2
-			}
-		],
+		"damage": 3,
+		"firerate": 1,
+		"weight": 2,
 		"cost": 35,
 		"prerequisites": [
 			{
@@ -77,11 +47,8 @@
 		"prefix": "Calibrated",
 		"weapontype": "Small Guns",
 		"slot": "Receiver",
-		"bonusCharacteristics": [
-			{
-				"type": "weapon_effect",
-				"name": "Vicious"
-			}
+		"effects": [
+			"Vicious"
 		],
 		"cost": 25,
 		"prerequisites": [
@@ -92,32 +59,14 @@
 		"prefix": "Auto",
 		"weapontype": "Small Guns",
 		"slot": "Receiver",
-		"bonusadjustments": [
-			{
-				"type": "damage",
-				"name": "Damage",
-				"value": 1
-			},
-			{
-				"type": "fireRate",
-				"name": "Fire Rate",
-				"value": 2
-			},
-			{
-				"type": "weight",
-				"name": "Weight",
-				"value": 1
-			}
+		"damage": 1,
+		"firerate": 2,
+		"weight": 1,
+		"effects": [
+			"Burst"
 		],
-		"bonusCharacteristics": [
-			{
-				"type": "weapon_effect",
-				"name": "Burst"
-			},
-			{
-				"type": "weapon_quality",
-				"name": "Inaccurate"
-			}
+		"qualities": [
+			"Inaccurate"
 		],
 		"cost": 30,
 		"prerequisites": [
@@ -133,13 +82,7 @@
 		"prefix": "Hair Trigger",
 		"weapontype": "Small Guns",
 		"slot": "Receiver",
-		"bonusadjustments": [
-			{
-				"type": "fireRate",
-				"name": "Fire Rate",
-				"value": 1
-			}
-		],
+		"firerate": 1,
 		"cost": 20,
 		"prerequisites": [
 			{

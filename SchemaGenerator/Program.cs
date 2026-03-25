@@ -11,6 +11,7 @@
             CallOfCthulhu.GenerateFormSchema.InitializeSchema();
             DarkCrystal.GenerateFormSchema.InitializeSchema();
             EverydayHeroes.GenerateFormSchema.InitializeSchema();
+            Fallout.GenerateFormSchema.InitializeSchema();
             Ghostbusters.GenerateFormSchema.InitializeSchema();
             Marvel.GenerateFormSchema.InitializeSchema();
             TMNT.GenerateFormSchema.InitializeSchema();

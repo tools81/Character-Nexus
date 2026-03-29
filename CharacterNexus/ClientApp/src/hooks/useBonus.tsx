@@ -40,14 +40,16 @@ export const handleRemoveFieldValue = (
   // ARRAY FIELD (checkbox group, multi-select)
   // ─────────────────────────────────────────────
   if (Array.isArray(currentValue)) {
-    const indexToRemove = currentValue.findIndex(
-      (v: any) => v === choice || v?.value === choice
+    const pipeIndex = typeof choice === "string" ? choice.indexOf("|") : -1;
+    const itemValue = pipeIndex > -1 ? choice.substring(0, pipeIndex) : choice;
+    const newValue = currentValue.filter(
+      (v: any) => v !== itemValue && v?.value !== itemValue
     );
-
-    if (indexToRemove !== -1) {
-      unregister(`${fieldName}.${indexToRemove}`);
-    }
-
+    setValue(fieldName, newValue, {
+      shouldDirty: true,
+      shouldTouch: true,
+      shouldValidate: true
+    });
     return;
   }
 

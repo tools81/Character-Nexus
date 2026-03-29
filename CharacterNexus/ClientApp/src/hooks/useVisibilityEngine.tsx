@@ -11,7 +11,7 @@ export interface FieldConfig {
   dependsOn?: DependsOn;
 }
 
-const isFieldVisible = (
+export const isFieldVisible = (
   field: FieldConfig,
   values: Record<string, any>
 ): boolean => {
@@ -21,6 +21,9 @@ const isFieldVisible = (
   const { field: dependsOnField, value: expectedValue } = field.dependsOn;
   const actualValue = values?.[dependsOnField];
 
+  if (typeof expectedValue === "string" && expectedValue.includes(",")) {
+    return expectedValue.split(",").map(v => v.trim()).includes(String(actualValue));
+  }
   return actualValue === expectedValue;
 };
 
@@ -54,5 +57,6 @@ export const useVisibilityEngine = (
   return {
     visibilityMap,
     isVisible: (fieldName: string) => visibilityMap[fieldName.toLowerCase()] !== false,
+    values: values ?? {},
   };
 };

@@ -17,11 +17,14 @@ namespace Fallout
         [JsonProperty("slot")]
         public string Slot { get; set; }
 
+        [JsonProperty("description")]
+        public string? Description { get; set; }
+
         [JsonProperty("bonusadjustments")]
         public List<BonusAdjustment> BonusAdjustments { get; set; } = [];
         
         [JsonProperty("bonuscharacteristics")]
-        public List<BonusAdjustment> BonusCharacteristics { get; set; } = [];
+        public List<BonusCharacteristic> BonusCharacteristics { get; set; } = [];
 
         [JsonProperty("cost")]
         public int Cost { get; set; }

@@ -8,32 +8,26 @@ namespace Fallout
         [JsonProperty("name")]
         public string Name { get; set; }
 
+        [JsonProperty("prefix")]
+        public string Prefix { get; set; }
+
         [JsonProperty("description")]
-        public string Description { get; set; }
-
-        [JsonProperty("resistancephysical")]
-        public int ResistancePhysical { get; set; }
-
-        [JsonProperty("resistanceenergy")]
-        public int ResistanceEnergy { get; set; }
-
-        [JsonProperty("resistanceradiation")]
-        public int ResistanceRadiation { get; set; }
-
-        [JsonProperty("effects")]
-        public List<string> Effects { get; set; } = [];
-
-        [JsonProperty("weight")]
-        public int Weight { get; set; }
-
-        [JsonProperty("cost")]
-        public int Cost { get; set; }
+        public string? Description { get; set; }
 
         [JsonProperty("set")]
         public string Set { get; set; }
 
         [JsonProperty("locations")]
         public List<string> Locations { get; set; } = [];
+
+        [JsonProperty("bonusadjustments")]
+        public List<BonusAdjustment> BonusAdjustments { get; set; } = [];
+
+        [JsonProperty("bonuscharacteristics")]
+        public List<BonusCharacteristic> BonusCharacteristics { get; set; } = [];
+
+        [JsonProperty("cost")]
+        public int Cost { get; set; }
 
         [JsonProperty("skill")]
         public string? Skill { get; set; }

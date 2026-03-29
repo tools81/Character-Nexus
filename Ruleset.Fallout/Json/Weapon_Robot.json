@@ -1,0 +1,134 @@
+[
+    {
+        "name": "10mm Auto Pistol Attachment",
+        "description": "You can make ranged attacks using a 10mm auto pistol (see 10mm pistol, with an automatic receiver mod, p.95).",
+        "image": "",
+        "weapontype": "Small Guns",
+        "damage": 4,
+        "effects": [],
+        "damagetype": "Physical",
+        "firerate": 2,
+        "range": "C",
+        "qualities": [
+            "Close Quarters",
+            "Reliable"
+        ],
+        "weight": 4,
+        "cost": 50,
+        "rarity": 1,
+        "ammunition": "10mm",
+        "modsets": [],
+        "installedmods": [
+            {
+                "name": "Automatic",
+                "prefix": "Auto",
+                "weapontype": "Small Guns",
+                "slot": "Receiver",
+                "bonusAdjustments": [
+                    {
+                        "type": "fireRate",
+                        "value": 2
+                    },
+                    {
+                        "type": "damage",
+                        "value": 1
+                    },
+                    {
+                        "type": "weight",
+                        "value": 1
+                    }
+                ],
+                "bonuscharacteristics": [
+                    {
+                        "type": "effects",
+                        "value": "Burst"
+                    },
+                    {
+                        "type": "qualities",
+                        "value": "Inaccurate"
+                    }
+                ],
+                "cost": 30
+            }
+        ]
+    },
+    {
+        "name": "Buzz-Saw Attachment",
+        "description": "You can cut objects and make melee attacks with a circular saw. The buzz-saw inflicts 3D Piercing 1 physical damage.",
+        "image": "",
+        "weapontype": "Melee",
+        "damage": 3,
+        "effects": [
+            "Piercing 1"
+        ],
+        "damagetype": "Physical",
+        "qualities": [],
+        "weight": 1,
+        "cost": 25,
+        "rarity": 1,
+        "installedmods": [],
+        "modsets": []
+    },
+    {
+        "name": "Flamer Attachment",
+        "description": "You can set objects alight, cook food, or make ranged attacks with a short-range flamethrower (see flamer, p.106).",
+        "image": "",
+        "weapontype": "Big Guns",
+        "damage": 3,
+        "effects": [
+            "Burst",
+            "Persistent",
+            "Spread"
+        ],
+        "damagetype": "Physical",
+        "firerate": 4,
+        "range": "C",
+        "qualities": [
+            "Debilitating",
+            "Inaccurate",
+            "Two-Handed"
+        ],
+        "weight": 16,
+        "cost": 137,
+        "rarity": 3,
+        "ammunition": "Flamer Fuel",
+        "modsets": []
+    },
+    {
+        "name": "Laser Emitter Attachment",
+        "description": "You can cut objects or make ranged attacks using a laser (see laser gun, p.101).",
+        "image": "",
+        "weapontype": "Energy",
+        "damage": 4,
+        "effects": [
+            "Piercing 1"
+        ],
+        "damagetype": "Energy",
+        "firerate": 2,
+        "range": "C",
+        "qualities": [
+            "Close Quarters"
+        ],
+        "weight": 4,
+        "cost": 69,
+        "rarity": 2,
+        "installedmods": [],
+        "ammunition": "Fusion Cell",
+        "modsets": []
+    },
+    {
+        "name": "Pincer Attachment",
+        "description": "You can pick up objects with an individual pincer that weighes no more than 40 lbs. and manipulate objects in your environment. You may also make unarmed attacks (2D physical damage) with the pincer.",
+        "image": "",
+        "weapontype": "Melee",
+        "damage": 2,
+        "effects": [],
+        "damagetype": "Physical",
+        "qualities": [],
+        "weight": 1,
+        "cost": 25,
+        "rarity": 1,
+        "installedmods": [],
+        "modsets": []
+    }
+]

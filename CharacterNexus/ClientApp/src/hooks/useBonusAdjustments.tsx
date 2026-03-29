@@ -25,7 +25,7 @@ export function useBonusAdjustments(
       type = `${type}.${name}`;
     }
 
-    const current = getValues(type);
+    const current = getValues(type) ?? 0;
     setValue(type, +current + +bonusValue);
     // const exists = current.some((i: any) => i && i.value === bonusValue);
 

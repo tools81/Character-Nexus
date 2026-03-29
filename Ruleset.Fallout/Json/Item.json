@@ -8,7 +8,8 @@
 		],
 		"weight": 0,
 		"cost": 60,
-		"rarity": 2
+		"rarity": 2,
+    	"quantity": 1
 	},
 	{
 		"name": "Backpack, Small",
@@ -19,7 +20,18 @@
 		],
 		"weight": 0,
 		"cost": 30,
-		"rarity": 1
+		"rarity": 1,
+    	"quantity": 1
+	},
+	{
+		"name": "Bag of Fertilizer",
+		"description": "",
+		"type": "Utility",
+		"effects": [],
+		"weight": 1,
+		"cost": 3,
+		"rarity": 1,
+		"quantity": 1
 	},
 	{
 		"name": "Bobby Pin",
@@ -31,7 +43,8 @@
 		],
 		"weight": 0,
 		"cost": 1,
-		"rarity": 0
+		"rarity": 0,
+    	"quantity": 1
 	},
 	{
 		"name": "Deluxe Toolkit",
@@ -43,7 +56,8 @@
 		],
 		"weight": 20,
 		"cost": 150,
-		"rarity": 3
+		"rarity": 3,
+    	"quantity": 1
 	},
 	{
 		"name": "Doctor's Bag",
@@ -55,7 +69,8 @@
 		],
 		"weight": 10,
 		"cost": 300,
-		"rarity": 3
+		"rarity": 3,
+    	"quantity": 1
 	},
 	{
 		"name": "Electronic Lockpicker",
@@ -68,7 +83,8 @@
 		],
 		"weight": 4,
 		"cost": 375,
-		"rarity": 4
+		"rarity": 4,
+    	"quantity": 1
 	},
 	{
 		"name": "First Aid Kit",
@@ -79,7 +95,8 @@
 		],
 		"weight": 2,
 		"cost": 100,
-		"rarity": 2
+		"rarity": 2,
+    	"quantity": 1
 	},
 	{
 		"name": "Flashlight",
@@ -90,7 +107,8 @@
 		],
 		"weight": 2,
 		"cost": 100,
-		"rarity": 3
+		"rarity": 3,
+    	"quantity": 1
 	},
 	{
 		"name": "Geiger Counter",
@@ -101,10 +119,11 @@
 		],
 		"weight": 8,
 		"cost": 325,
-		"rarity": 3
+		"rarity": 3,
+    	"quantity": 1
 	},
 	{
-		"name": "Holotags",
+		"name": "Brotherhood Holotags",
 		"description": "A small, durable, identifying item used by the Brotherhood of Steel. Holotags contain information to identify their wearer in case of death. They also act as a 'black box' data recorder for a suit of Power Armor, providing the Brotherhood record of the deaths of their fallen warriors. Though not especially valuable by themselves, the Brotherhood often pays a reward to any who bring in holotags they find.",
 		"type": "Utility",
 		"effects": [
@@ -112,7 +131,8 @@
 		],
 		"weight": 0,
 		"cost": 5,
-		"rarity": 2
+		"rarity": 2,
+    	"quantity": 1
 	},
 	{
 		"name": "Holotape Player",
@@ -123,7 +143,8 @@
 		],
 		"weight": 3,
 		"cost": 250,
-		"rarity": 2
+		"rarity": 2,
+    	"quantity": 1
 	},
 	{
 		"name": "Lantern",
@@ -134,7 +155,8 @@
 		],
 		"weight": 3,
 		"cost": 15,
-		"rarity": 2
+		"rarity": 2,
+    	"quantity": 1
 	},
 	{
 		"name": "Lock Pick Set",
@@ -146,7 +168,8 @@
 		],
 		"weight": 2,
 		"cost": 150,
-		"rarity": 2
+		"rarity": 2,
+    	"quantity": 1
 	},
 	{
 		"name": "Multi-Tool",
@@ -157,7 +180,18 @@
 		],
 		"weight": 1,
 		"cost": 100,
-		"rarity": 2
+		"rarity": 2,
+    	"quantity": 1
+	},
+	{
+		"name": "Note",
+		"description": "A paper note of some personal relevance.",
+		"type": "Utility",
+		"effects": [],
+		"weight": 0,
+		"cost": 0,
+		"rarity": 0,
+    	"quantity": 1
 	},
 	{
 		"name": "Pack Brahmin",
@@ -168,7 +202,18 @@
 		],
 		"weight": 0,
 		"cost": 200,
-		"rarity": 3
+		"rarity": 3,
+    	"quantity": 1
+	},
+	{
+		"name": "Personal Trinket",
+		"description": "These trinkets hold particular sentimental value for your character, and once per quest, outside of combat, you can have your character spend a few moments looking at the trinket, thinking about what it means to them. If you do, you regain 1 Luck Point.",
+		"type": "Trinket",
+		"effects": [],
+		"weight": 0,
+		"cost": 0,
+		"rarity": 0,
+    	"quantity": 1
 	},
 	{
 		"name": "Pip-Boy",
@@ -179,7 +224,8 @@
 		],
 		"weight": 0,
 		"cost": 0,
-		"rarity": 0
+		"rarity": 0,
+    	"quantity": 1
 	},
 	{
 		"name": "Radio",
@@ -190,7 +236,8 @@
 		],
 		"weight": 2,
 		"cost": 75,
-		"rarity": 2
+		"rarity": 2,
+    	"quantity": 1
 	},
 	{
 		"name": "Signal Flare",
@@ -201,7 +248,8 @@
 		],
 		"weight": 0,
 		"cost": 10,
-		"rarity": 1
+		"rarity": 1,
+    	"quantity": 1
 	},
 	{
 		"name": "Torch",
@@ -212,6 +260,17 @@
 		],
 		"weight": 1,
 		"cost": 10,
-		"rarity": 1
+		"rarity": 1,
+    	"quantity": 1
+	},
+	{
+		"name": "Vault-Tec Canteen",
+		"description": "Aesthetically, the canteen appears as a hip flask wrapped in a fabric coating featuring traditional Vault-Tec colors.",
+		"type": "Utility",
+		"effects": [],
+		"weight": 0,
+		"cost": 0,
+		"rarity": 0,
+    	"quantity": 1
 	}
 ]

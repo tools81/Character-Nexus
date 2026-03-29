@@ -1,21 +1,18 @@
 import { ChangeEvent } from "react";
-import { set, useWatch } from "react-hook-form";
+import { useWatch } from "react-hook-form";
 import {
   UseFormRegister,
   FieldValues,
   UseFormGetValues,
-  UseFormSetValue,
-  UseFormUnregister
+  UseFormSetValue
 } from "react-hook-form";
 import { BonusAdjustments } from "../types/BonusAdjustment";
 import { BonusCharacteristics } from "../types/BonusCharacteristic";
-import { toCamelCase } from "../utils/toCamelCase";
-import { handleRemoveBonusAdjustment, handleRemoveFieldValue } from "../hooks/useBonus";
+import { handleRemoveBonusAdjustment } from "../hooks/useBonus";
 import { Prerequisites } from "../types/Prerequisite";
 
 interface Props {
   register: UseFormRegister<FieldValues>;
-  unregister: UseFormUnregister<FieldValues>;
   getValues: UseFormGetValues<FieldValues>;
   setValue: UseFormSetValue<FieldValues>;
   id: string;
@@ -37,7 +34,6 @@ interface Props {
 
 const InputSwitch = ({
   register,
-  unregister,
   getValues,
   setValue,
   id,
@@ -77,8 +73,7 @@ const InputSwitch = ({
             bonusAdjustments,
             setBonusAdjustments,
             getValues,
-            setValue,
-            unregister
+            setValue
           )
         }
       />
@@ -98,8 +93,7 @@ const handleInputChange = (
   bonusAdjustments: any,
   setBonusAdjustments: React.Dispatch<React.SetStateAction<BonusAdjustments>>,
   getValues: UseFormGetValues<FieldValues>,
-  setValue: UseFormSetValue<FieldValues>,
-  unregister: UseFormUnregister<FieldValues>
+  setValue: UseFormSetValue<FieldValues>
 ) => {
   if (event.target.value == null) {
     return;
@@ -136,55 +130,28 @@ const handleInputChange = (
       );
     }
 
-    //Remove items previously added by the same input
-    setBonusAdjustments(
-      bonusAdjustments.filter((a: any) => a.origin !== event.target.name)
-    );
-
-    if (event.target.checked) {
-      for (const adjustment of fieldBonusAdjustments) {
-        setBonusAdjustments((prevBonusAdjustments) => [
-          ...prevBonusAdjustments,
-          {
-            origin: event.target.name,
-            type: adjustment.Type,
-            name: adjustment.Name,
-            value: adjustment.Value,
-          },
-        ]);
-      }
-    }
+    const filteredAdjustments = bonusAdjustments.filter((a: any) => a.origin !== event.target.name);
+    const newAdjustments = event.target.checked
+      ? fieldBonusAdjustments.map((adjustment: any) => ({
+          origin: event.target.name,
+          type: adjustment.Type,
+          name: adjustment.Name,
+          value: adjustment.Value,
+        }))
+      : [];
+    setBonusAdjustments([...filteredAdjustments, ...newAdjustments]);
   }
 
   if (fieldBonusCharacteristics) {
-      for (const characteristic of bonusCharacteristics.reverse()) {
-        handleRemoveFieldValue(
-          getValues,
-          setValue,
-          unregister,
-          characteristic.type,
-          characteristic.value
-        );
-      }
-  
-      //Remove items previously added by the same input
-      setBonusCharacteristics(
-        bonusCharacteristics.filter((c: any) => c.origin !== event.target.name)
-      );
-      
-      if (event.target.checked) {
-        //Add to the existing state of characteristics
-        for (const characteristic of fieldBonusCharacteristics) {
-          setBonusCharacteristics((existingCharacteristics) => [
-            ...existingCharacteristics,
-            {
-              origin: event.target.name,
-              type: characteristic.type,
-              value: characteristic.value,
-            },
-          ]);
-        }
-      }
+      const filteredCharacteristics = bonusCharacteristics.filter((c: any) => c.origin !== event.target.name);
+      const newCharacteristics = event.target.checked
+        ? fieldBonusCharacteristics.map((characteristic: any) => ({
+            origin: event.target.name,
+            type: characteristic.type,
+            value: characteristic.value,
+          }))
+        : [];
+      setBonusCharacteristics([...filteredCharacteristics, ...newCharacteristics]);
     }
 };
 

@@ -17,6 +17,9 @@ namespace Fallout
         [JsonProperty("cost")]
         public int Cost { get; set; }
 
+        [JsonProperty("quantity")]
+        public int? Quantity { get; set; }
+
         [JsonProperty("rarity")]
         public int Rarity { get; set; }
     }

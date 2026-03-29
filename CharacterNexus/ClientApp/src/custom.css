@@ -44,6 +44,10 @@ textarea {
   color: whitesmoke;
 }
 
+td .card-img-top {
+  object-fit: contain;
+}
+
 .plus-icon {
   height: 100%;
   width: 100%; 
@@ -67,6 +71,11 @@ textarea {
 .slide-in {
   transform: translateY(100%);
   animation: slideInY 1s ease forwards;
+}
+
+.quantity-input {
+  width: 10%;
+  text-align: center;
 }
 
 .contactIcon {
@@ -216,6 +225,15 @@ textarea {
   opacity: 0.75;
 }
 
+.option-cost {
+  font-size: 1em;
+}
+
+span .inline-icon {
+  height: 1.25em; 
+  width: auto;
+  vertical-align: middle
+}
 
 @keyframes slideInY {
   to {

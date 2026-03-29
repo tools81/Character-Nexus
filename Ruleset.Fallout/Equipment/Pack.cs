@@ -8,26 +8,17 @@ namespace Fallout
         [JsonProperty("name")]
         public string Name { get; set; }
 
+        [JsonProperty("origin")]
+        public string? Origin { get; set; }
+
         [JsonProperty("description")]
         public string Description { get; set; }
 
-        [JsonProperty("caps")]
-        public int? Caps { get; set; }
+        [JsonProperty("bonusadjustments")]
+        public List<BonusAdjustment> BonusAdjustments { get; set; } = [];
 
-        [JsonProperty("weapons")]
-        public List<string>? Weapons { get; set; }
-
-        [JsonProperty("clothings")]
-        public List<string>? Clothings { get; set; }
-
-        [JsonProperty("items")]
-        public List<string>? Items { get; set; }
-
-        [JsonProperty("armors")]
-        public List<string>? Armors { get; set; }
-
-        [JsonProperty("ammos")]
-        public List<string>? Ammos { get; set; }
+        [JsonProperty("bonuscharacteristics")]
+        public List<BonusCharacteristic> BonusCharacteristics { get; set; } = [];
 
         [JsonProperty("mods")]
         public List<string>? Mods { get; set; }

@@ -1,78 +1,77 @@
 [
   {
     "name": "Brotherhood of Steel Initiate",
+    "origin": "Brotherhood Initiate",
     "description": "You are a new recruit to the Brotherhood of Steel training to fight the Brotherhood's battles. You aspire to become a Knight of the Brotherhood, to be entrusted with mighty Power Armor, weapons, and other advanced technology to preserve human knowledge and civilization.",
-    "weapons": [
-      "Combat Knife"
-    ],
-    "clothings": [
-      "Brotherhood Fatigues",
-      "Brotherhood Hood"
-    ],
-    "items": [
-      "Brotherhood Holotags|1"
+    "bonuscharacteristics": [
+      { "type": "weapons", "value": "Combat Knife" },
+      { "type": "clothings", "value": "Brotherhood Fatigues" },
+      { "type": "clothings", "value": "Brotherhood Hood" },
+      { "type": "items", "value": "Brotherhood Holotags|1" }
     ],
     "userchoices": [
       {
-        "type": "Weapon",
+        "type": "weapons",
         "choices": [
           "Laser Pistol",
           "10mm Pistol"
         ],
+        "category": "Characteristic",
         "count": 1
       },
       {
-        "type": "Ammo",
+        "type": "ammos",
         "choices": [
           "Fusion Cell|15",
           "10mm|15"
         ],
+        "category": "Characteristic",
         "count": 1
       }
     ]
   },
   {
     "name": "Brotherhood of Steel Scribe",
+    "origin": "Brotherhood Initiate",
     "description": "One of the Brotherhood's best and brightest, your life is dedicated to researching science and technology in order to preserve that knowledge, keeping records to ensure history is not forgotten, and to maintaining and improving the weapons, armor, and vehicles of the Brotherhood. While not as combat-ready as others in the Brotherhood, sometimes your duties require venturing into the field.",
-    "weapons": [
-      "Combat Knife"
-    ],
-    "clothings": [
-      "Brotherhood Field Scribe Armor",
-      "Brotherhood Scribe Hat"
-    ],
-    "items": [
-      "Brotherhood Holotags|1"
+    "bonuscharacteristics": [
+      { "type": "weapons", "value": "Combat Knife" },
+      { "type": "clothings", "value": "Brotherhood Field Scribe Armor" },
+      { "type": "clothings", "value": "Brotherhood Scribe Hat" },
+      { "type": "items", "value": "Brotherhood Holotags|1" }
     ],
     "userchoices": [
       {
-        "type": "Weapon",
+        "type": "weapons",
         "choices": [
           "Laser Pistol",
           "10mm Pistol"
         ],
+        "category": "Characteristic",
         "count": 1
       },
       {
-        "type": "Ammo",
+        "type": "ammos",
         "choices": [
           "Fusion Cell|15",
           "10mm|15"
         ],
+        "category": "Characteristic",
         "count": 1
       }
     ]
   },
   {
     "name": "Miss Nanny",
+    "origin": "Mister Handy",
     "description": "You were built and programmed to be a caretaker, performing domestic cleaning duties and taking care of kids. Your line was produced with a feminine voice and persona, as that was thought to be most acceptable to customers and most fitting for your role as maid and nanny.",
-    "caps": 10,
-    "weapons": [
-      "Pincer Arm Attachment",
-      "Flamer Arm Attachment"
+    "bonusadjustments": [
+      { "type": "caps", "value": 10 }
     ],
-    "armors": [
-      "Standard Plating"
+    "bonuscharacteristics": [
+      { "type": "weapons", "value": "Pincer Arm Attachment" },
+      { "type": "weapons", "value": "Flamer Arm Attachment" },
+      { "type": "robotArmors", "value": "Standard Plating" }
     ],
     "mods": [
       "Behavioral Analysis",
@@ -80,31 +79,31 @@
     ],
     "userchoices": [
       {
-        "type": "Weapon",
+        "type": "weapons",
         "choices": [
           "Buzz-saw Arm Attachment",
           "Laser Emitter Arm Attachment"
         ],
+        "category": "Characteristic",
         "count": 1
       }
     ]
   },
   {
     "name": "Mister Farmhand",
+    "origin": "Mister Handy",
     "description": "You were built and programmed to assist on a farm, tending to crop fields and herds of livestock. Your line was produced with a masculine (and stereotypically rural) voice and persona and outfitted to help with farm work such as harvesting crops and killing vermin.",
-    "caps": 25,
-    "weapons": [
-      "Pincer Arm Attachment",
-      "Buzz-saw Arm Attachment",
-      "Laser Emitter Arm Attachment"
+    "bonusadjustments": [
+      { "type": "caps", "value": 25 }
     ],
-    "armors": [
-      "Standard Plating"
-    ],
-    "items": [
-      "Bag of Fertilizer|1",
-      "Mutfruit|2",
-      "Mutfruit|2"
+    "bonuscharacteristics": [
+      { "type": "weapons", "value": "Pincer Arm Attachment" },
+      { "type": "weapons", "value": "Buzz-saw Arm Attachment" },
+      { "type": "weapons", "value": "Laser Emitter Arm Attachment" },
+      { "type": "armors", "value": "Standard Plating" },
+      { "type": "items", "value": "Bag of Fertilizer|1" },
+      { "type": "consumeables", "value": "Mutfruit|2" },
+      { "type": "consumeables", "value": "Mutfruit|2" }
     ],
     "mods": [
       "Behavioral Analysis",
@@ -113,15 +112,16 @@
   },
   {
     "name": "Mister Gutsy",
+    "origin": "Mister Handy",
     "description": "You were built and programmed as a military robot for a variety of combat roles. Your line was produced with a masculine voice and persona based on a stereotypical drill sergeant, and you're more heavily armed and armored than most Mister Handy robots.",
-    "caps": 10,
-    "weapons": [
-      "10mm Auto Pistol Arm",
-      "Buzz-saw Arm Attachment",
-      "Laser Emitter Arm Attachment"
+    "bonusadjustments": [
+      { "type": "caps", "value": 10 }
     ],
-    "armors": [
-      "Mister Gutsy Plating"
+    "bonuscharacteristics": [
+      { "type": "weapons", "value": "10mm Auto Pistol Arm" },
+      { "type": "weapons", "value": "Buzz-saw Arm Attachment" },
+      { "type": "weapons", "value": "Laser Emitter Arm Attachment" },
+      { "type": "armors", "value": "Mister Gutsy Plating" }
     ],
     "mods": [
       "Recon Sensors"
@@ -129,18 +129,17 @@
   },
   {
     "name": "Mister Handy",
+    "origin": "Mister Handy",
     "description": "You're one of the domestic models of Mister Handy robots, a robotic butler programmed to assist in maintaining a household. Your line was programmed with a masculine voice and persona based on the stereotype of a British butler.",
-    "caps": 10,
-    "weapons": [
-      "Pincer Arm Attachment",
-      "Buzz-saw Arm Attachment",
-      "Flamer Arm Attachment"
+    "bonusadjustments": [
+      { "type": "caps", "value": 10 }
     ],
-    "armors": [
-      "Standard Plating"
-    ],
-    "items": [
-      "Robot Repair Kit|1"
+    "bonuscharacteristics": [
+      { "type": "weapons", "value": "Pincer Arm Attachment" },
+      { "type": "weapons", "value": "Buzz-saw Arm Attachment" },
+      { "type": "weapons", "value": "Flamer Arm Attachment" },
+      { "type": "armors", "value": "Standard Plating" },
+      { "type": "consumeables", "value": "Robot Repair Kit|1" }
     ],
     "mods": [
       "Integral Boiler"
@@ -148,51 +147,48 @@
   },
   {
     "name": "Nurse Handy",
+    "origin": "Mister Handy",
     "description": "You're one of the medical models of the Mister Handy line, intended to act as a medic, nurse, or orderly in a hospital, with some advanced models even serving as doctors (the Doctor Handy, MD., model). Your line was programmed with the same masculine voice and persona as the standard Mister Handy.",
-    "caps": 10,
-    "weapons": [
-      "Pincer Arm Attachment",
-      "Buzz-saw Arm Attachment"
+    "bonusadjustments": [
+      { "type": "caps", "value": 10 }
     ],
-    "armors": [
-      "Standard Plating"
-    ],
-    "items": [
-      "Stimpack|1"
+    "bonuscharacteristics": [
+      { "type": "weapons", "value": "Pincer Arm Attachment" },
+      { "type": "weapons", "value": "Buzz-saw Arm Attachment" },
+      { "type": "armors", "value": "Standard Plating" },
+      { "type": "consumeables", "value": "Stimpack|1" }
     ],
     "mods": [
       "Diagnosis"
     ],
     "userchoices": [
       {
-        "type": "Weapon",
+        "type": "weapons",
         "choices": [
           "Flamer Arm Attachment",
           "Laser Emitter Arm Attachment"
         ],
+        "category": "Characteristic",
         "count": 1
       }
     ]
   },
   {
     "name": "Brute",
+    "origin": "Super Mutant",
     "description": "You're big, tough, and more than capable of surviving in the wasteland with little more than brute force and determination.",
-    "caps": 5,
-    "weapons": [
-      "Pipe Rifle"
+    "bonusadjustments": [
+      { "type": "caps", "value": 5 }
     ],
-    "armors": [
-      "Raider Armor Torso"
-    ],
-    "items": [
-      "(Random) Personal Trinket|1"
-    ],
-    "ammos": [
-      ".38|9"
+    "bonuscharacteristics": [
+      { "type": "weapons", "value": "Pipe Rifle" },
+      { "type": "armors", "value": "Raider Armor Torso" },
+      { "type": "items", "value": "Personal Trinket|1" },
+      { "type": "ammos", "value": "38|9" }
     ],
     "userchoices": [
       {
-        "type": "Armor",
+        "type": "armors",
         "choices": [
           "Raider Armor Head",
           "Raider Armor Left Leg",
@@ -200,38 +196,37 @@
           "Raider Armor Left Arm",
           "Raider Armor Right Arm"
         ],
+        "category": "Characteristic",
         "count": 1
       },
       {
-        "type": "Weapon",
+        "type": "weapons",
         "choices": [
           "Baseball Bat",
           "Machete"
         ],
+        "category": "Characteristic",
         "count": 1
       }
     ]
   },
   {
     "name": "Skirmisher",
+    "origin": "Super Mutant",
     "description": "You're bigger and tougher than most of your fellow mutants, but only because you know the secret of getting better punchier gear.",
-    "caps": 5,
-    "weapons": [
-      "Heavy Bolt-Action Pipe Rifle",
-      "Board"
+    "bonusadjustments": [
+      { "type": "caps", "value": 5 }
     ],
-    "armors": [
-      "Raider Armor Torso"
-    ],
-    "items": [
-      "(Random) Personal Trinket|1"
-    ],
-    "ammos": [
-      ".308|12"
+    "bonuscharacteristics": [
+      { "type": "weapons", "value": "Heavy Bolt-Action Pipe Rifle" },
+      { "type": "weapons", "value": "Board" },
+      { "type": "armors", "value": "Raider Armor Torso" },
+      { "type": "items", "value": "Personal Trinket|1" },
+      { "type": "ammos", "value": "308|12" }
     ],
     "userchoices": [
       {
-        "type": "Armor",
+        "type": "armors",
         "choices": [
           "Raider Armor Head",
           "Raider Armor Left Leg",
@@ -239,69 +234,63 @@
           "Raider Armor Left Arm",
           "Raider Armor Right Arm"
         ],
+        "category": "Characteristic",
         "count": 1
       }
     ]
   },
   {
     "name": "Vault-Tec Resident",
+    "origin": "Vault Dweller",
     "description": "You-or one of your ancestors-chose to wait out the encroaching threat of atomic war in safety and comfort. And you did, surviving in a fortified underground bunker through the duration of the war. Of course, depending on the Vault you resided in, the experience may not have been so safe or comfortable...",
-    "caps": 10,
-    "weapons": [
-      "Switchblade",
-      "10mm Pistol"
+    "bonusadjustments": [
+      { "type": "caps", "value": 10 }
     ],
-    "clothings": [
-      "Vault Jumpsuit"
-    ],
-    "items": [
-      "Purified Water|1",
-      "Vault-Tec Canteen|1",
-      "Pip-Boy|1",
-      "Stimpack|2"
-    ],
-    "ammos": [
-      "10mm|9"
+    "bonuscharacteristics": [
+      { "type": "weapons", "value": "Switchblade" },
+      { "type": "weapons", "value": "10mm Pistol" },
+      { "type": "clothings", "value": "Vault Jumpsuit" },
+      { "type": "consumeables", "value": "Purified Water|1" },
+      { "type": "items", "value": "Vault-Tec Canteen|1" },
+      { "type": "items", "value": "Pip-Boy|1" },
+      { "type": "consumeables", "value": "Stimpack|2" },
+      { "type": "ammos", "value": "10mm|9" }
     ]
   },
   {
     "name": "Vault-Tec Security",
+    "origin": "Vault Dweller",
     "description": "You were a Vault-Tec employee, or a Vault Dweller entrusted by the Overseer with maintaining the Vault's safety and security. Or you got into the weapons locker before you escaped the Vault you lived in.",
-    "caps": 10,
-    "weapons": [
-      "Baton",
-      "10mm Pistol"
+    "bonusadjustments": [
+      { "type": "caps", "value": 10 }
     ],
-    "armors": [
-      "Vault-Tec Security Armor",
-      "Vault-Tec Security Helmet"
-    ],
-    "clothings": [
-      "Vault Jumpsuit"
-    ],
-    "items": [
-      "Purified Water|1",
-      "Vault-Tec Canteen|1",
-      "Pip-Boy|1",
-      "Stimpack|1"
-    ],
-    "ammos": [
-      "10mm|12"
+    "bonuscharacteristics": [
+      { "type": "weapons", "value": "Baton" },
+      { "type": "weapons", "value": "10mm Pistol" },
+      { "type": "armors", "value": "Vault-Tec Security Armor" },
+      { "type": "armors", "value": "Vault-Tec Security Helmet" },
+      { "type": "clothings", "value": "Vault Jumpsuit" },
+      { "type": "consumeables", "value": "Purified Water|1" },
+      { "type": "items", "value": "Vault-Tec Canteen|1" },
+      { "type": "items", "value": "Pip-Boy|1" },
+      { "type": "consumeables", "value": "Stimpack|1" },
+      { "type": "ammos", "value": "10mm|12" }
     ]
   },
   {
     "name": "Mercenary",
+    "origin": "Survivor",
     "description": "You travel the wasteland as a hired gun, fighting or defending who pays. Sometimes the job is honest, sometimes it's messy, but when times are good you can afford to live by a code and only take the upstanding jobs. Times aren't always good.",
-    "caps": 15,
-    "clothings": [
-      "Tough Clothing"
+    "bonusadjustments": [
+      { "type": "caps", "value": 15 }
     ],
-    "items": [
-      "Note|1"
+    "bonuscharacteristics": [
+      { "type": "clothings", "value": "Tough Clothing" },
+      { "type": "items", "value": "Note|1" }
     ],
     "userchoices": [
       {
-        "type": "Armor",
+        "type": "armors",
         "choices": [
           "Leather Armor Chest",
           "Leather Armor Left Leg",
@@ -309,138 +298,134 @@
           "Leather Armor Left Arm",
           "Leather Armor Right Arm"
         ],
+        "category": "Characteristic",
         "count": 2
       },
       {
-        "type": "Weapon",
+        "type": "weapons",
         "choices": [
           "Baseball Bat",
           "Machete",
           "Tire Iron"
         ],
+        "category": "Characteristic",
         "count": 1
       },
       {
-        "type": "Weapon",
+        "type": "weapons",
         "choices": [
           "10mm Automatic Pistol",
-          ".44 Pistol",
+          "44 Pistol",
           "Hunting Rifle",
           "Bolt-Action Pipe Gun"
         ],
+        "category": "Characteristic",
         "count": 1
       },
       {
-        "type": "Ammo",
+        "type": "ammos",
         "choices": [
           "10mm|15",
-          ".44|15",
-          ".308|15",
-          ".38|15"
+          "44|15",
+          "308|15",
+          "38|15"
         ],
+        "category": "Characteristic",
         "count": 1
       }
     ]
   },
   {
     "name": "Raider",
+    "origin": "Survivor",
     "description": "Might makes right in the wasteland. You take what you need from others and defend yourself from anyone trying to do the same. Occasionally, you might band together with a few other like-minded folks to take something none of you could've raided on your own, but mostly it's everyone for themselves.",
-    "caps": 15,
-    "weapons": [
-      "Pipe Gun",
-      "Molotov Cocktail"
+    "bonusadjustments": [
+      { "type": "caps", "value": 15 }
     ],
-    "armors": [
-      "Raider Armor Chest"
-    ],
-    "clothings": [
-      "Harness"
-    ],
-    "items": [
-      "Note|1"
-    ],
-    "ammos": [
-      ".38|15"
+    "bonuscharacteristics": [
+      { "type": "weapons", "value": "Pipe Gun" },
+      { "type": "weapons", "value": "Molotov Cocktail" },
+      { "type": "armors", "value": "Raider Armor Chest" },
+      { "type": "clothings", "value": "Harness" },
+      { "type": "items", "value": "Note|1" },
+      { "type": "ammos", "value": "38|15" }
     ],
     "userchoices": [
       {
-        "type": "Armor",
+        "type": "armors",
         "choices": [
           "Raider Armor Left Arm",
           "Raider Armor Right Arm"
         ],
+        "category": "Characteristic",
         "count": 2
       },
       {
-        "type": "Weapon",
+        "type": "weapons",
         "choices": [
           "Lead Pipe",
           "Pool Cue",
           "Tire Iron"
         ],
+        "category": "Characteristic",
         "count": 1
       },
       {
-        "type": "Item",
+        "type": "consumeables",
         "choices": [
           "Jet|1",
           "RadAway|1"
         ],
+        "category": "Characteristic",
         "count": 1
       }
     ]
   },
   {
     "name": "Settler",
+    "origin": "Survivor",
     "description": "It's not the easiest life in the wasteland, but given a bit of hard work, and help from a few neighbors, it's possible to carve out something like home. Maybe you're a fighter and others rely on you for defense, maybe you grow the food others rely on to survive, or maybe you're good at fixing things, or have a knack for getting people to cooperate.",
-    "caps": 45,
-    "weapons": [
-      "Pipe Gun"
+    "bonusadjustments": [
+      { "type": "caps", "value": 45 }
     ],
-    "clothings": [
-      "Tough Clothing"
-    ],
-    "items": [
-      "(Random) Personal Trinket|1",
-      "(Random) Food|2"
-    ],
-    "ammos": [
-      ".38|9"
+    "bonuscharacteristics": [
+      { "type": "weapons", "value": "Pipe Gun" },
+      { "type": "clothings", "value": "Tough Clothing" },
+      { "type": "items", "value": "Personal Trinket|1" },
+      { "type": "consumeables", "value": "Iguana Bits|2" },
+      { "type": "ammos", "value": "38|9" }
     ],
     "userchoices": [
       {
-        "type": "Weapon",
+        "type": "weapons",
         "choices": [
           "Switchblade",
           "Pipe Wrench",
           "Rolling Pin",
           "Knuckles"
         ],
+        "category": "Characteristic",
         "count": 1
       }
     ]
   },
   {
     "name": "Trader",
+    "origin": "Survivor",
     "description": "You travel from settlement to settlement, a caravan of brahmin laden with supplies seeking to trade with settlers and drifters alike. You're ready for trouble-you can't let yourself be too easy a target for raiders-and often hire folks to help protect you and your wares.",
-    "caps": 50,
-    "weapons": [
-      "Pipe Gun"
+    "bonusadjustments": [
+      { "type": "caps", "value": 50 }
     ],
-    "clothings": [
-      "Tough Clothing"
-    ],
-    "items": [
-      "(Random) Person Trinket|1",
-      "(Random) Loot|3",
-      "A Pack Brahmin"
-    ],
-    "ammos": [
-      ".38|12"
+    "bonuscharacteristics": [
+      { "type": "weapons", "value": "Pipe Gun" },
+      { "type": "clothings", "value": "Tough Clothing" },
+      { "type": "items", "value": "Person Trinket|1" },
+      { "type": "items", "value": "Pack Brahmin|1" },
+      { "type": "ammos", "value": "38|12" }
     ],
     "userchoices": [
       {
-        "type": "Armor",
+        "type": "armors",
         "choices": [
           "Leather Armor Chest",
           "Leather Armor Left Leg",
@@ -448,43 +433,43 @@
           "Leather Armor Left Arm",
           "Leather Armor Right Arm"
         ],
+        "category": "Characteristic",
         "count": 2
       }
     ]
   },
   {
     "name": "Wanderer",
-    "description": "You travel from settlement to settlement, scavenging from the ruins of the old world and either using what you find or selling it on for something more useful. You'll take on odd jobs and day work where you need to, but you’re not one to settle down.",
-    "caps": 30,
-    "weapons": [
-      "Pipe Gun"
+    "origin": "Survivor",
+    "description": "You travel from settlement to settlement, scavenging from the ruins of the old world and either using what you find or selling it on for something more useful. You'll take on odd jobs and day work where you need to, but you're not one to settle down.",
+    "bonusadjustments": [
+      { "type": "caps", "value": 30 }
     ],
-    "clothings": [
-      "Drifter Outfit"
-    ],
-    "items": [
-      "(Random) Person Trinket|1"
-    ],
-    "ammos": [
-      ".38|12"
+    "bonuscharacteristics": [
+      { "type": "weapons", "value": "Pipe Gun" },
+      { "type": "clothings", "value": "Drifter Outfit" },
+      { "type": "items", "value": "Person Trinket|1" },
+      { "type": "ammos", "value": "38|12" }
     ],
     "userchoices": [
       {
-        "type": "Weapon",
+        "type": "weapons",
         "choices": [
           "Switchblade",
           "Pipe Wrench",
           "Rolling Pin",
           "Knuckles"
         ],
+        "category": "Characteristic",
         "count": 1
       },
       {
-        "type": "Item",
+        "type": "consumeables",
         "choices": [
           "Jet|1",
           "RadAway|1"
         ],
+        "category": "Characteristic",
         "count": 1
       }
     ]

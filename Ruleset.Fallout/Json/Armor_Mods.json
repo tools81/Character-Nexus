@@ -1,580 +1,427 @@
 [
 	{
 		"name": "Welded",
+		"prefix": "Welded",
 		"description": "",
-		"resistancephysical": 1,
-		"resistanceenergy": 1,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 1,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 1 },
+			{ "type": "resistanceEnergy", "value": 1 },
+			{ "type": "weight", "value": 1 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 3,
 		"set": "Raider",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		]
+		"locations": [ "Head", "Torso", "Arm", "Leg" ]
 	},
 	{
 		"name": "Tempered",
+		"prefix": "Tempered",
 		"description": "",
-		"resistancephysical": 2,
-		"resistanceenergy": 2,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 1,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 2 },
+			{ "type": "resistanceEnergy", "value": 2 },
+			{ "type": "weight", "value": 1 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 6,
 		"set": "Raider",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		]
+		"locations": [ "Head", "Torso", "Arm", "Leg" ]
 	},
 	{
 		"name": "Hardened",
+		"prefix": "Hardened",
 		"description": "",
-		"resistancephysical": 3,
-		"resistanceenergy": 3,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 2,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 3 },
+			{ "type": "resistanceEnergy", "value": 3 },
+			{ "type": "weight", "value": 2 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 9,
 		"set": "Raider",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		],
+		"locations": [ "Head", "Torso", "Arm", "Leg" ],
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Armorer",
-				"formula": ">= 1"
-			}
+			{ "type": "perks", "name": "Armorer", "formula": ">= 1" }
 		]
 	},
 	{
 		"name": "Buttressed",
+		"prefix": "Buttressed",
 		"description": "",
-		"resistancephysical": 4,
-		"resistanceenergy": 4,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 3,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 4 },
+			{ "type": "resistanceEnergy", "value": 4 },
+			{ "type": "weight", "value": 3 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 12,
 		"set": "Raider",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		],
+		"locations": [ "Head", "Torso", "Arm", "Leg" ],
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Armorer",
-				"formula": ">= 1"
-			}
+			{ "type": "perks", "name": "Armorer", "formula": ">= 1" }
 		]
 	},
 	{
 		"name": "Boiled Leather",
+		"prefix": "Boiled Leather",
 		"description": "",
-		"resistancephysical": 1,
-		"resistanceenergy": 1,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 1,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 1 },
+			{ "type": "resistanceEnergy", "value": 1 },
+			{ "type": "weight", "value": 1 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 5,
 		"set": "Leather",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		]
+		"locations": [ "Head", "Torso", "Arm", "Leg" ]
 	},
 	{
 		"name": "Girded Leather",
+		"prefix": "Girded Leather",
 		"description": "",
-		"resistancephysical": 2,
-		"resistanceenergy": 2,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 1,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 2 },
+			{ "type": "resistanceEnergy", "value": 2 },
+			{ "type": "weight", "value": 1 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 10,
 		"set": "Leather",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		]
+		"locations": [ "Head", "Torso", "Arm", "Leg" ]
 	},
 	{
 		"name": "Treated Leather",
+		"prefix": "Treated Leather",
 		"description": "",
-		"resistancephysical": 3,
-		"resistanceenergy": 3,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 1,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 3 },
+			{ "type": "resistanceEnergy", "value": 3 },
+			{ "type": "weight", "value": 1 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 15,
 		"set": "Leather",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		],
+		"locations": [ "Head", "Torso", "Arm", "Leg" ],
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Armorer",
-				"formula": ">= 1"
-			}
+			{ "type": "perks", "name": "Armorer", "formula": ">= 1" }
 		]
 	},
 	{
 		"name": "Shadowed Leather",
+		"prefix": "Shadowed Leather",
 		"description": "",
-		"resistancephysical": 3,
-		"resistanceenergy": 3,
-		"resistanceradiation": 0,
-		"effects": [
-			"Shadowed"
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 3 },
+			{ "type": "resistanceEnergy", "value": 3 },
+			{ "type": "weight", "value": 1 }
 		],
-		"weight": 1,
+		"bonusCharacteristics": [
+			{ "type": "effects", "value": "Shadowed" }
+		],
 		"cost": 20,
 		"set": "Leather",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		],
+		"locations": [ "Head", "Torso", "Arm", "Leg" ],
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Armorer",
-				"formula": ">= 1"
-			}
+			{ "type": "perks", "name": "Armorer", "formula": ">= 1" }
 		]
 	},
 	{
 		"name": "Studded Leather",
+		"prefix": "Studded Leather",
 		"description": "",
-		"resistancephysical": 4,
-		"resistanceenergy": 4,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 2,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 4 },
+			{ "type": "resistanceEnergy", "value": 4 },
+			{ "type": "weight", "value": 2 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 25,
 		"set": "Leather",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		],
+		"locations": [ "Head", "Torso", "Arm", "Leg" ],
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Armorer",
-				"formula": ">= 1"
-			}
+			{ "type": "perks", "name": "Armorer", "formula": ">= 1" }
 		]
 	},
 	{
 		"name": "Painted Metal",
+		"prefix": "Painted Metal",
 		"description": "",
-		"resistancephysical": 1,
-		"resistanceenergy": 1,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 1,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 1 },
+			{ "type": "resistanceEnergy", "value": 1 },
+			{ "type": "weight", "value": 1 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 10,
 		"set": "Metal",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		]
+		"locations": [ "Head", "Torso", "Arm", "Leg" ]
 	},
 	{
 		"name": "Enameled Metal",
+		"prefix": "Enameled Metal",
 		"description": "",
-		"resistancephysical": 2,
-		"resistanceenergy": 2,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 2,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 2 },
+			{ "type": "resistanceEnergy", "value": 2 },
+			{ "type": "weight", "value": 2 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 20,
 		"set": "Metal",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		],
+		"locations": [ "Head", "Torso", "Arm", "Leg" ],
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Armorer",
-				"formula": ">= 1"
-			}
+			{ "type": "perks", "name": "Armorer", "formula": ">= 1" }
 		]
 	},
 	{
 		"name": "Shadowed Metal",
+		"prefix": "Shadowed Metal",
 		"description": "",
-		"resistancephysical": 2,
-		"resistanceenergy": 2,
-		"resistanceradiation": 0,
-		"effects": [
-			"Shadowed"
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 2 },
+			{ "type": "resistanceEnergy", "value": 2 },
+			{ "type": "weight", "value": 2 }
 		],
-		"weight": 2,
+		"bonusCharacteristics": [
+			{ "type": "effects", "value": "Shadowed" }
+		],
 		"cost": 25,
 		"set": "Metal",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		],
+		"locations": [ "Head", "Torso", "Arm", "Leg" ],
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Armorer",
-				"formula": ">= 1"
-			}
+			{ "type": "perks", "name": "Armorer", "formula": ">= 1" }
 		]
 	},
 	{
 		"name": "Alloyed Metal",
+		"prefix": "Alloyed Metal",
 		"description": "",
-		"resistancephysical": 3,
-		"resistanceenergy": 3,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 3,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 3 },
+			{ "type": "resistanceEnergy", "value": 3 },
+			{ "type": "weight", "value": 3 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 30,
 		"set": "Metal",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		],
+		"locations": [ "Head", "Torso", "Arm", "Leg" ],
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Armorer",
-				"formula": ">= 1"
-			}
+			{ "type": "perks", "name": "Armorer", "formula": ">= 1" }
 		]
 	},
 	{
 		"name": "Polished Metal",
+		"prefix": "Polished Metal",
 		"description": "",
-		"resistancephysical": 4,
-		"resistanceenergy": 4,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 4,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 4 },
+			{ "type": "resistanceEnergy", "value": 4 },
+			{ "type": "weight", "value": 4 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 40,
 		"set": "Metal",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		],
+		"locations": [ "Head", "Torso", "Arm", "Leg" ],
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Armorer",
-				"formula": ">= 2"
-			}
+			{ "type": "perks", "name": "Armorer", "formula": ">= 2" }
 		]
 	},
 	{
 		"name": "Reinforced",
+		"prefix": "Reinforced",
 		"description": "",
-		"resistancephysical": 1,
-		"resistanceenergy": 1,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 1,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 1 },
+			{ "type": "resistanceEnergy", "value": 1 },
+			{ "type": "weight", "value": 1 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 15,
 		"set": "Combat",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		]
+		"locations": [ "Head", "Torso", "Arm", "Leg" ]
 	},
 	{
 		"name": "Shadowed",
+		"prefix": "Shadowed",
 		"description": "",
-		"resistancephysical": 1,
-		"resistanceenergy": 1,
-		"resistanceradiation": 0,
-		"effects": [
-			"Shadowed"
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 1 },
+			{ "type": "resistanceEnergy", "value": 1 },
+			{ "type": "weight", "value": 1 }
 		],
-		"weight": 1,
+		"bonusCharacteristics": [
+			{ "type": "effects", "value": "Shadowed" }
+		],
 		"cost": 15,
 		"set": "Combat",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		],
+		"locations": [ "Head", "Torso", "Arm", "Leg" ],
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Armorer",
-				"formula": ">= 1"
-			}
+			{ "type": "perks", "name": "Armorer", "formula": ">= 1" }
 		]
 	},
 	{
 		"name": "Fiberglass",
+		"prefix": "Fiberglass",
 		"description": "",
-		"resistancephysical": 2,
-		"resistanceenergy": 2,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 1,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 2 },
+			{ "type": "resistanceEnergy", "value": 2 },
+			{ "type": "weight", "value": 1 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 30,
 		"set": "Combat",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		],
+		"locations": [ "Head", "Torso", "Arm", "Leg" ],
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Armorer",
-				"formula": ">= 1"
-			}
+			{ "type": "perks", "name": "Armorer", "formula": ">= 1" }
 		]
 	},
 	{
 		"name": "Polymer",
+		"prefix": "Polymer",
 		"description": "",
-		"resistancephysical": 3,
-		"resistanceenergy": 3,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 2,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 3 },
+			{ "type": "resistanceEnergy", "value": 3 },
+			{ "type": "weight", "value": 2 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 45,
 		"set": "Combat",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		],
+		"locations": [ "Head", "Torso", "Arm", "Leg" ],
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Armorer",
-				"formula": ">= 1"
-			}
+			{ "type": "perks", "name": "Armorer", "formula": ">= 1" }
 		]
 	},
 	{
 		"name": "Laminated",
+		"prefix": "Laminated",
 		"description": "",
-		"resistancephysical": 1,
-		"resistanceenergy": 1,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 1,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 1 },
+			{ "type": "resistanceEnergy", "value": 1 },
+			{ "type": "weight", "value": 1 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 5,
 		"set": "Synth",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		]
+		"locations": [ "Head", "Torso", "Arm", "Leg" ]
 	},
 	{
 		"name": "Resin",
+		"prefix": "Resin",
 		"description": "",
-		"resistancephysical": 2,
-		"resistanceenergy": 2,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 1,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 2 },
+			{ "type": "resistanceEnergy", "value": 2 },
+			{ "type": "weight", "value": 1 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 10,
 		"set": "Synth",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		],
+		"locations": [ "Head", "Torso", "Arm", "Leg" ],
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Armorer",
-				"formula": ">= 1"
-			}
+			{ "type": "perks", "name": "Armorer", "formula": ">= 1" }
 		]
 	},
 	{
 		"name": "Microcarbon",
+		"prefix": "Microcarbon",
 		"description": "",
-		"resistancephysical": 3,
-		"resistanceenergy": 3,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 2,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 3 },
+			{ "type": "resistanceEnergy", "value": 3 },
+			{ "type": "weight", "value": 2 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 15,
 		"set": "Synth",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		],
+		"locations": [ "Head", "Torso", "Arm", "Leg" ],
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Armorer",
-				"formula": ">= 1"
-			}
+			{ "type": "perks", "name": "Armorer", "formula": ">= 1" }
 		]
 	},
 	{
 		"name": "Nanofilament",
+		"prefix": "Nanofilament",
 		"description": "",
-		"resistancephysical": 4,
-		"resistanceenergy": 4,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 3,
+		"bonusAdjustments": [
+			{ "type": "resistancePhysical", "value": 4 },
+			{ "type": "resistanceEnergy", "value": 4 },
+			{ "type": "weight", "value": 3 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 20,
 		"set": "Synth",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		],
+		"locations": [ "Head", "Torso", "Arm", "Leg" ],
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Armorer",
-				"formula": ">= 1"
-			}
+			{ "type": "perks", "name": "Armorer", "formula": ">= 1" }
 		]
 	},
 	{
 		"name": "Wielded Rebar",
+		"prefix": "Wielded Rebar",
 		"description": "Enemies who attack you with a melee or unarmed attack and suffer a complication suffer 2D damage",
-		"resistancephysical": 0,
-		"resistanceenergy": 0,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 2,
+		"bonusAdjustments": [
+			{ "type": "weight", "value": 2 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 25,
 		"set": "Power Armor Raider",
-		"locations": [
-			"Torso"
-		],
+		"locations": [ "Torso" ],
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Armorer",
-				"formula": ">= 1"
-			}
+			{ "type": "perks", "name": "Armorer", "formula": ">= 1" }
 		]
 	},
 	{
 		"name": "EMP Shielding",
+		"prefix": "EMP Shielding",
 		"description": "+2 Energy damage resistance",
-		"resistancephysical": 0,
-		"resistanceenergy": 0,
-		"resistanceradiation": 0,
-		"effects": [],
-		"weight": 2,
+		"bonusAdjustments": [
+			{ "type": "weight", "value": 2 }
+		],
+		"bonusCharacteristics": [],
 		"cost": 25,
 		"set": "Power Armor X-01",
-		"locations": [
-			"Head",
-			"Torso",
-			"Arm",
-			"Leg"
-		],
+		"locations": [ "Head", "Torso", "Arm", "Leg" ],
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Armorer",
-				"formula": ">= 1"
-			}
+			{ "type": "perks", "name": "Armorer", "formula": ">= 1" }
 		]
 	},
 	{
 		"name": "Rad Scrubber",
+		"prefix": "Rad Scrubber",
 		"description": "Ignore radiation from Irradiated food or drink consumed while armor is powered",
-		"resistancephysical": 0,
-		"resistanceenergy": 0,
-		"resistanceradiation": 0,
-		"effects": [
-			"Rad Scrubber"
+		"bonusAdjustments": [
+			{ "type": "weight", "value": 1 }
 		],
-		"weight": 1,
+		"bonusCharacteristics": [
+			{ "type": "effects", "value": "Rad Scrubber" }
+		],
 		"cost": 100,
 		"set": "Power Armor General",
-		"locations": [
-			"Head"
-		],
+		"locations": [ "Head" ],
 		"skill": "Science",
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Science!",
-				"formula": ">= 2"
-			}
+			{ "type": "perks", "name": "Science!", "formula": ">= 2" }
 		]
 	},
 	{
 		"name": "Sensor Array",
+		"prefix": "Sensor Array",
 		"description": "Re-roll 1d20 on all PER tests while armor is powered",
-		"resistancephysical": 0,
-		"resistanceenergy": 0,
-		"resistanceradiation": 0,
-		"effects": [
-			"Sensor Array"
+		"bonusAdjustments": [
+			{ "type": "weight", "value": 1 }
 		],
-		"weight": 1,
+		"bonusCharacteristics": [
+			{ "type": "effects", "value": "Sensor Array" }
+		],
 		"cost": 100,
 		"set": "Power Armor General",
-		"locations": [
-			"Head"
-		],
+		"locations": [ "Head" ],
 		"skill": "Science",
 		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Science!",
-				"formula": ">= 3"
-			}
+			{ "type": "perks", "name": "Science!", "formula": ">= 3" }
 		]
 	}
 ]

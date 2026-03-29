@@ -50,6 +50,7 @@ namespace Fallout
         [JsonProperty("ammunition")]
         public string? Ammunition { get; set; }
 
+        [JsonProperty("installedmods")]
         public List<WeaponMod> InstalledMods { get; set; } = [];
     }
 }

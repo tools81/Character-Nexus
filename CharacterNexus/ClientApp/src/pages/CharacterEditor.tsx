@@ -1,15 +1,17 @@
-import { useState } from "react";
-import { useForm, useFieldArray, FormProvider } from "react-hook-form";
+import { useState, useEffect, useMemo, useRef } from "react";
+import { useForm, useFieldArray, useWatch, FormProvider, useFormContext } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../store/configureStore";
 import { saveCharacter } from "../store/slices/characterSlice";
 import { BonusAdjustments } from "../types/BonusAdjustment";
 import { BonusCharacteristics } from "../types/BonusCharacteristic";
+import { UserChoices } from "../types/UserChoice";
 import InputText from "../components/InputText";
 import InputTextArea from "../components/InputTextArea";
 import InputNumber from "../components/InputNumber";
 import InputHidden from "../components/InputHidden";
 import InputSelect from "../components/InputSelect";
+import InputModSelect from "../components/InputModSelect";
 import InputSwitch from "../components/InputSwitch";
 import InputImage from "../components/InputImage";
 import InputDatePicker from "../components/InputDatePicker";
@@ -22,13 +24,301 @@ import RightCollapsiblePane from "../components/RightCollapsiblePane";
 import { useFieldCalculations } from "../hooks/useFieldCalculations";
 import { useBonusCharacteristics } from "../hooks/useBonusCharacteristics";
 import { useBonusAdjustments } from "../hooks/useBonusAdjustments";
+import { handleRemoveBonusAdjustment, handleRemoveFieldValue } from "../hooks/useBonus";
 import { useModal } from "../hooks/useModal";
 import { useDisableEngine } from "../hooks/useDisableEngine";
-import { useVisibilityEngine } from "../hooks/useVisibilityEngine";
+import { useVisibilityEngine, isFieldVisible } from "../hooks/useVisibilityEngine";
 import { useCharacterLoader } from "../hooks/useCharacterLoader";
 import { useUserChoices } from "../hooks/useUserChoices";
 import { useRulesetTheme } from "../hooks/useRulesetTheme";
 
+/* =======================================================
+   ArrayItem — handles a single non-modifiableitem array
+   entry, including an optional quantity input when the
+   selected option carries a quantity property.
+======================================================= */
+interface ArrayItemProps {
+  component: any;
+  fieldName: string;
+  disabledMap: Record<string, boolean>;
+  visibilityMap: Record<string, boolean>;
+  isVisible: (field: any) => boolean;
+  renderField: (field: any, disabledMap: Record<string, boolean>, visibilityMap: Record<string, boolean>, isVisible: (field: any) => boolean, includeLabel?: boolean) => React.ReactNode;
+  onRemove: () => void;
+}
+
+const ArrayItem = ({ component, fieldName, disabledMap, visibilityMap, isVisible, renderField, onRemove }: ArrayItemProps) => {
+  const { register, getValues, setValue } = useFormContext();
+  const valueFieldName = `${fieldName}.value`;
+  const watchedValue = useWatch({ name: valueFieldName });
+  const watchedQuantity = useWatch({ name: `${fieldName}.quantity` });
+  const prevValueRef = useRef<string | undefined>(undefined);
+
+  const selectedOption = component.options?.find((o: any) => o.value === watchedValue);
+  const hasQuantity = selectedOption?.quantity != null || watchedQuantity != null;
+
+  useEffect(() => {
+    const prevValue = prevValueRef.current;
+    prevValueRef.current = watchedValue;
+
+    if (selectedOption?.quantity != null) {
+      if (!prevValue) {
+        // On mount: only set default quantity if none already exists (e.g. from bonus characteristics)
+        const existingQty = getValues(`${fieldName}.quantity`);
+        if (existingQty == null) {
+          setValue(`${fieldName}.quantity`, selectedOption.quantity, { shouldDirty: true });
+        }
+      } else {
+        // User changed selection: reset to the new option's default quantity
+        setValue(`${fieldName}.quantity`, selectedOption.quantity, { shouldDirty: true });
+      }
+    }
+  }, [watchedValue]);
+
+  const childComponent = { ...component, name: valueFieldName };
+
+  return (
+    <div className="input-group">
+      {renderField(childComponent, disabledMap, visibilityMap, isVisible, false)}
+      {hasQuantity && (
+        <input
+          type="number"
+          className="quantity-input"
+          min={0}
+          {...register(`${fieldName}.quantity`, { valueAsNumber: true })}
+        />
+      )}
+      <button type="button" className="btn btn-outline-secondary" onClick={onRemove}>
+        Remove
+      </button>
+    </div>
+  );
+};
+
+/* =======================================================
+   FieldArray — module-level so React never remounts it
+   due to CharacterEditor re-renders
+======================================================= */
+interface FieldArrayProps {
+  field: any;
+  disabledMap: Record<string, boolean>;
+  visibilityMap: Record<string, boolean>;
+  isVisible: (fieldName: string) => boolean;
+  renderField: (
+    field: any,
+    disabledMap: Record<string, boolean>,
+    visibilityMap: Record<string, boolean>,
+    isVisible: (name: string) => boolean,
+    includeLabel?: boolean
+  ) => React.ReactNode;
+}
+
+const FieldArray = ({ field, disabledMap, visibilityMap, isVisible, renderField }: FieldArrayProps) => {
+  const { control } = useFormContext();
+  const { fields, append, remove } = useFieldArray({ name: field.name, control });
+
+  const handleAddSelect = () => append({ value: "" });
+
+  return (
+    <div {...!isVisible(field.name) ? { style: { display: 'none' } } : {}}>
+      <label>{field.label}</label>
+      {fields.map((item, index) => {
+        const childComponent = { ...field.component, name: `${field.name}.${index}` };
+        if (field.component.type === "modifiableitem") {
+          childComponent.onRemove = () => remove(index);
+          return <div key={item.id}>{renderField(childComponent, disabledMap, visibilityMap, isVisible, false)}</div>;
+        }
+        return (
+          <ArrayItem
+            key={item.id}
+            component={field.component}
+            fieldName={`${field.name}.${index}`}
+            disabledMap={disabledMap}
+            visibilityMap={visibilityMap}
+            isVisible={isVisible}
+            renderField={renderField}
+            onRemove={() => remove(index)}
+          />
+        );
+      })}
+      <section>
+        <button type="button" className="add-button" onClick={() => handleAddSelect()}>
+          Add
+        </button>
+      </section>
+      <div className="pb-3" />
+    </div>
+  );
+};
+
+/* =======================================================
+   ModifiableItem — module-level so React never remounts
+   it due to CharacterEditor re-renders. Form methods come
+   from context; state is passed via props.
+======================================================= */
+interface ModifiableItemProps {
+  field: any;
+  bonusAdjustments: BonusAdjustments;
+  setBonusAdjustments: React.Dispatch<React.SetStateAction<BonusAdjustments>>;
+  bonusCharacteristics: BonusCharacteristics;
+  setBonusCharacteristics: React.Dispatch<React.SetStateAction<BonusCharacteristics>>;
+  userChoices: UserChoices;
+  setUserChoices: React.Dispatch<React.SetStateAction<UserChoices>>;
+  openUserChoiceModal: (choices: UserChoices) => void;
+}
+
+const ModifiableItem = ({
+  field,
+  bonusAdjustments,
+  setBonusAdjustments,
+  bonusCharacteristics,
+  setBonusCharacteristics,
+  userChoices,
+  setUserChoices,
+  openUserChoiceModal,
+}: ModifiableItemProps) => {
+  const { register, unregister, getValues, setValue, control } = useFormContext();
+
+  const itemFieldName = field.name; // e.g. "weapons.0"
+  const watchedItemData = useWatch({ name: itemFieldName });
+  const watchedItem = watchedItemData?.value;
+
+  const selectedItemOption = field.options?.find((o: any) => o.value === watchedItem);
+  const itemValueFieldName = `${itemFieldName}.value`;
+
+  const modSets: string[] = useMemo(
+    () => selectedItemOption?.modSets ? JSON.parse(selectedItemOption.modSets) : [],
+    [selectedItemOption]
+  );
+
+  const availableModOptions = useMemo(
+    () => (field.modOptions ?? []).filter((mod: any) => modSets.includes(mod.value)),
+    [field.modOptions, modSets]
+  );
+
+  const watchedMods: any[] = watchedItemData?.mods ?? [];
+  const itemDisplayLabel = useMemo(() => {
+    if (!selectedItemOption) return undefined;
+    const prefixes = watchedMods
+      .map((mod: any) => {
+        const modValue = typeof mod === "object" ? mod?.value ?? mod : mod;
+        return availableModOptions.find((o: any) => o.value === modValue)?.prefix;
+      })
+      .filter(Boolean);
+    return prefixes.length > 0
+      ? `${prefixes.join(" ")} ${selectedItemOption.label}`
+      : undefined;
+  }, [watchedMods, selectedItemOption, availableModOptions]);
+
+  useEffect(() => {
+    if (!selectedItemOption?.stats) return;
+    const stats: { label: string; value: string; field?: string }[] = JSON.parse(selectedItemOption.stats);
+    for (const stat of stats) {
+      if (!stat.field) continue;
+      const numeric = Number(stat.value);
+      setValue(`${itemFieldName}.${stat.field}`, isNaN(numeric) ? stat.value : numeric);
+    }
+  }, [watchedItem]);
+
+  const { fields: modFields, append: appendMod, remove: removeMod } = useFieldArray({
+    name: `${itemFieldName}.mods`,
+    control
+  });
+
+  const handleRemoveMod = (modIndex: number) => {
+    const modOrigin = `${itemFieldName}.mods.${modIndex}`;
+
+    const adjToRemove = bonusAdjustments.filter(a => a.origin === modOrigin);
+    for (const adj of [...adjToRemove].reverse()) {
+      handleRemoveBonusAdjustment(getValues, setValue, adj.type, adj.name, adj.value);
+    }
+    setBonusAdjustments(prev => prev.filter(a => a.origin !== modOrigin));
+
+    const charToRemove = bonusCharacteristics.filter(c => c.origin === modOrigin);
+    for (const char of [...charToRemove].reverse()) {
+      handleRemoveFieldValue(getValues, setValue, unregister, char.type, char.value);
+    }
+    setBonusCharacteristics(prev => prev.filter(c => c.origin !== modOrigin));
+
+    removeMod(modIndex);
+  };
+
+  return (
+    <div className="border rounded p-2 mb-2">
+      <div className="input-group">
+        <InputSelect
+          register={register}
+          unregister={unregister}
+          getValues={getValues}
+          setValue={setValue}
+          name={itemValueFieldName}
+          includeLabel={false}
+          label={field.label}
+          options={field.options}
+          className={field.className}
+          bonusCharacteristics={bonusCharacteristics}
+          setBonusCharacteristics={setBonusCharacteristics}
+          bonusAdjustments={bonusAdjustments}
+          setBonusAdjustments={setBonusAdjustments}
+          userChoices={userChoices}
+          setUserChoices={setUserChoices}
+          openUserChoiceModal={openUserChoiceModal}
+          displayLabel={itemDisplayLabel}
+        />
+        <button type="button" className="btn btn-outline-secondary" onClick={field.onRemove}>
+          Remove
+        </button>
+      </div>
+      {modFields.length > 0 && (
+        <div className="ms-3">
+          {modFields.map((item, modIndex) => (
+            <div key={item.id} className="input-group mb-1">
+              <InputModSelect
+                register={register}
+                unregister={unregister}
+                getValues={getValues}
+                setValue={setValue}
+                name={`${itemFieldName}.mods.${modIndex}`}
+                itemFieldName={itemFieldName}
+                label="Mod"
+                options={availableModOptions}
+                className={field.className}
+                bonusAdjustments={bonusAdjustments}
+                setBonusAdjustments={setBonusAdjustments}
+                bonusCharacteristics={bonusCharacteristics}
+                setBonusCharacteristics={setBonusCharacteristics}
+              />
+              <button type="button" className="btn btn-outline-secondary" onClick={() => handleRemoveMod(modIndex)}>
+                Remove Mod
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+      {modSets.length > 0 && (
+        <button type="button" className="add-button" onClick={() => appendMod({ value: "" })}>
+          Add Mod
+        </button>
+      )}
+      {selectedItemOption?.stats && (() => {
+        const stats: { label: string; value: string; field?: string }[] = JSON.parse(selectedItemOption.stats);
+        return (
+          <div className="d-flex flex-wrap gap-3 mt-2">
+            {stats.map(stat => {
+              const liveValue = stat.field ? watchedItemData?.[stat.field] : undefined;
+              const displayValue = liveValue != null ? liveValue : stat.value;
+              return <span key={stat.label}><small>{stat.label}</small> {displayValue}</span>;
+            })}
+          </div>
+        );
+      })()}
+    </div>
+  );
+};
+
+/* =======================================================
+   CharacterEditor
+======================================================= */
 const CharacterEditor: React.FC = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
@@ -60,36 +350,6 @@ const CharacterEditor: React.FC = () => {
     await dispatch(saveCharacter({ rulesetName: currentRuleset.name, characterData: data, imageFile: imageData ?? undefined }));
 
     navigate("/ruleset");
-  };
-
-  // Field rendering helper
-  const FieldArray = ({ field, disabledMap, visibilityMap, isVisible }: { field: any, disabledMap: Record<string, boolean>, visibilityMap: Record<string, boolean>, isVisible: (fieldName: string) => boolean }) => {
-    const { fields, append, remove } = useFieldArray({ name: field.name, control });
-
-    const handleAddSelect = (component: any) => append({ value: "" });
-
-    return (
-      <div {...!isVisible(field.name) ? { style: { display: 'none' } } : {}}>
-        <label>{field.label}</label>
-        {fields.map((item, index) => {
-          const childComponent = { ...field.component, name: `${field.name}.${index}` };
-          return (
-            <div key={item.id} className="input-group">
-              {renderField(childComponent, disabledMap, visibilityMap, isVisible, false )}
-              <button type="button" className="btn btn-outline-secondary" onClick={() => remove(index)}>
-                Remove
-              </button>
-            </div>
-          );
-        })}
-        <section>
-          <button type="button" className="add-button" onClick={() => handleAddSelect(field.component)}>
-            Add
-          </button>
-        </section>
-        <div className="pb-3" />
-      </div>
-    );
   };
 
   const renderField = (
@@ -172,7 +432,6 @@ const CharacterEditor: React.FC = () => {
           <DisabledPrereqWrapper component={field} disabled={disabledMap?.[field.name] === true}>
             <InputSwitch
               register={register}
-              unregister={unregister}
               getValues={getValues}
               setValue={setValue}
               id={field.id}
@@ -186,12 +445,12 @@ const CharacterEditor: React.FC = () => {
               bonusAdjustments={bonusAdjustments}
               setBonusAdjustments={setBonusAdjustments}
               prerequisites={field.prerequisites}
-              disabled={disabledMap?.[field.name] === true} 
+              disabled={disabledMap?.[field.name] === true}
               visible={isVisible(field.name)}
             />
           </DisabledPrereqWrapper>
         );
-      case "select": 
+      case "select":
         return (
           <DisabledPrereqWrapper component={field} disabled={disabledMap?.[field.name] === true}>
             <InputSelect
@@ -213,7 +472,7 @@ const CharacterEditor: React.FC = () => {
               openUserChoiceModal={openUserChoiceModal}
               dice={field.dice}
               disabled={disabledMap?.[field.name] === true}
-              visible={isVisible(field.name)}
+              visible={isVisible(field)}
             />
           </DisabledPrereqWrapper>
         );
@@ -299,8 +558,29 @@ const CharacterEditor: React.FC = () => {
             <div className="card-body">{field.text}</div>
           </div>
         );
+      case "modifiableitem":
+        return (
+          <ModifiableItem
+            field={field}
+            bonusAdjustments={bonusAdjustments}
+            setBonusAdjustments={setBonusAdjustments}
+            bonusCharacteristics={bonusCharacteristics}
+            setBonusCharacteristics={setBonusCharacteristics}
+            userChoices={userChoices}
+            setUserChoices={setUserChoices}
+            openUserChoiceModal={openUserChoiceModal}
+          />
+        );
       case "array":
-        return <FieldArray field={field} disabledMap={disabledMap} visibilityMap={visibilityMap} isVisible={isVisible} />;
+        return (
+          <FieldArray
+            field={field}
+            disabledMap={disabledMap}
+            visibilityMap={visibilityMap}
+            isVisible={isVisible}
+            renderField={renderField}
+          />
+        );
       case "image":
         return (
           <DisabledPrereqWrapper component={field} disabled={disabledMap?.[field.name] === true}
@@ -370,15 +650,22 @@ const FormContents = ({
   userChoiceModal,
 }: any) => {
   const disabledMap = useDisableEngine(schema);
-  const { visibilityMap, isVisible } = useVisibilityEngine(
+  const { visibilityMap, isVisible, values } = useVisibilityEngine(
     schema.fields,
     control
   );
-  
+
+  const resolveVisible = (fieldOrName: any): boolean => {
+    if (typeof fieldOrName === 'object' && fieldOrName !== null) {
+      return isFieldVisible(fieldOrName, values);
+    }
+    return isVisible(fieldOrName);
+  };
+
   return (
     <>
       {schema.fields.map((field: any) =>
-        renderField(field, disabledMap, visibilityMap, isVisible, field.includeLabel ?? true)
+        renderField(field, disabledMap, visibilityMap, resolveVisible, field.includeLabel ?? true)
       )}
 
       <userChoiceModal.Modal>

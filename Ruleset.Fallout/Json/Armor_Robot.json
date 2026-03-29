@@ -1,68 +1,63 @@
 [
 	{
-		"name": "Standard Plating",
+		"name": "Standard Plating (Base)",
 		"description": "The default factory plating provided with all brand-new Mister Handy models. This has no cost, as it's the default which a Mister Handy character begins with most of the time.",
 		"resistancephysical": 2,
 		"resistanceenergy": 0,
-		"locations": [
-			"Optics",
-			"Main Body",
-			"Arms",
-			"Thruster"
-		],
 		"carry": 0,
 		"cost": 0,
 		"prerequisites": []
 	},
 	{
-		"name": "Mister Gutsy Plating",
+		"name": "Mister Gutsy Plating (Base)",
 		"description": "Like the standard plating, but with better thermal absorption properties to reinforce it against energy weaponry, this is the standard plating for a Mister Gutsy. It is the default for all Mister Handy characters who select the Mister Gutsy starting package.",
 		"resistancephysical": 2,
 		"resistanceenergy": 2,
-		"locations": [
-			"Optics",
-			"Main Body",
-			"Arms",
-			"Thruster"
-		],
 		"carry": -10,
 		"cost": 0,
 		"prerequisites": []
 	},
 	{
-		"name": "Factory Armor",
+		"name": "Factory Armor (Optics)",
 		"description": "A standardized, factory-made set of armor plating designed to fit any Mister Handy model.",
 		"resistancephysical": 1,
 		"resistanceenergy": 1,
-		"locations": [
-			"Optics",
-			"Arms",
-			"Thruster"
-		],
 		"carry": 0,
 		"cost": 10,
 		"prerequisites": []
 	},
 	{
-		"name": "Factory Armor",
+		"name": "Factory Armor (Arms)",
 		"description": "A standardized, factory-made set of armor plating designed to fit any Mister Handy model.",
 		"resistancephysical": 1,
 		"resistanceenergy": 1,
-		"locations": [
-			"Main Body"
-		],
+		"carry": 0,
+		"cost": 10,
+		"prerequisites": []
+	},
+	{
+		"name": "Factory Armor (Thruster)",
+		"description": "A standardized, factory-made set of armor plating designed to fit any Mister Handy model.",
+		"resistancephysical": 1,
+		"resistanceenergy": 1,
+		"carry": 0,
+		"cost": 10,
+		"prerequisites": []
+	},
+	{
+		"name": "Factory Armor (Main Body)",
+		"description": "A standardized, factory-made set of armor plating designed to fit any Mister Handy model.",
+		"resistancephysical": 1,
+		"resistanceenergy": 1,
 		"carry": 0,
 		"cost": 20,
 		"prerequisites": []
 	},
 	{
-		"name": "Factory Storage Armor",
+		"name": "Factory Storage Armor (Main Body)",
 		"description": "A factory-made set of standard armor which also provides additional storage compartments to increase a robot's carrying capacity.",
 		"resistancephysical": 1,
 		"resistanceenergy": 1,
-		"locations": [
-			"Main Body"
-		],
 		"carry": 20,
 		"cost": 25,
 		"prerequisites": [
@@ -74,41 +69,46 @@
 		]
 	},
 	{
-		"name": "Primal Plate",
+		"name": "Primal Plate (Optics)",
 		"description": "Makeshift supplementary armor that can be affixed to a robot's structure to provide extra protection from physical hazards. The bulk and crude design reduces the robot's carrying capacity, however.",
 		"resistancephysical": 2,
 		"resistanceenergy": 0,
-		"locations": [
-			"Optics",
-			"Arms",
-			"Thruster"
-		],
 		"carry": -10,
 		"cost": 10,
 		"prerequisites": []
 	},
 	{
-		"name": "Primal Plate",
+		"name": "Primal Plate (Arms)",
 		"description": "Makeshift supplementary armor that can be affixed to a robot's structure to provide extra protection from physical hazards. The bulk and crude design reduces the robot's carrying capacity, however.",
 		"resistancephysical": 2,
 		"resistanceenergy": 0,
-		"locations": [
-			"Main Body"
-		],
+		"carry": -10,
+		"cost": 10,
+		"prerequisites": []
+	},
+	{
+		"name": "Primal Plate (Thruster)",
+		"description": "Makeshift supplementary armor that can be affixed to a robot's structure to provide extra protection from physical hazards. The bulk and crude design reduces the robot's carrying capacity, however.",
+		"resistancephysical": 2,
+		"resistanceenergy": 0,
+		"carry": -10,
+		"cost": 10,
+		"prerequisites": []
+	},
+	{
+		"name": "Primal Plate (Main Body)",
+		"description": "Makeshift supplementary armor that can be affixed to a robot's structure to provide extra protection from physical hazards. The bulk and crude design reduces the robot's carrying capacity, however.",
+		"resistancephysical": 2,
+		"resistanceenergy": 0,
 		"carry": -20,
 		"cost": 20,
 		"prerequisites": []
 	},
 	{
-		"name": "Serrated Plate",
+		"name": "Serrated Plate (Optics)",
 		"description": "Makeshift armor plating with jagged, serrated edges. Like primal plate, but more hazardous to those who would do the robot ill, as the sharp protrusions can lead to injury. Special: When a melee attack is made against a location fitted with serrated plate and the attacker suffers a complication, the attacker suffers 2D Persistent (Physical) damage. In addition, melee attacks made using arms fitted with serrated plate gain the Persistent (Physical) damage effect.",
 		"resistancephysical": 2,
 		"resistanceenergy": 0,
-		"locations": [
-			"Optics",
-			"Arms",
-			"Thruster"
-		],
 		"carry": -10,
 		"cost": 15,
 		"prerequisites": [
@@ -120,33 +120,10 @@
 		]
 	},
 	{
-		"name": "Serrated Plate",
+		"name": "Serrated Plate (Arms)",
 		"description": "Makeshift armor plating with jagged, serrated edges. Like primal plate, but more hazardous to those who would do the robot ill, as the sharp protrusions can lead to injury. Special: When a melee attack is made against a location fitted with serrated plate and the attacker suffers a complication, the attacker suffers 2D Persistent (Physical) damage. In addition, melee attacks made using arms fitted with serrated plate gain the Persistent (Physical) damage effect.",
 		"resistancephysical": 2,
 		"resistanceenergy": 0,
-		"locations": [
-			"Main Body"
-		],
-		"carry": -20,
-		"cost": 30,
-		"prerequisites": [
-			{
-				"type": "perk",
-				"name": "Armorer",
-				"formula": ">= 1"
-			}
-		]
-	},
-	{
-		"name": "Noxious Plate",
-		"description": "Makeshift armor coated in toxic materials which are hazardous to the health of any who seeks to inflict harm on the robot or its companions. Special: When a melee attack is made against a location fitted with noxious plate and the attacker suffers a complication, the attacker suffers 2D Persistent (Poison) damage. In addition, melee attacks made using arms fitted with noxious plate gain the Persistent (Poison) damage effect.",
-		"resistancephysical": 2,
-		"resistanceenergy": 0,
-		"locations": [
-			"Optics",
-			"Arms",
-			"Thruster"
-		],
 		"carry": -10,
 		"cost": 15,
 		"prerequisites": [
@@ -158,13 +135,25 @@
 		]
 	},
 	{
-		"name": "Noxious Plate",
-		"description": "Makeshift armor coated in toxic materials which are hazardous to the health of any who seeks to inflict harm on the robot or its companions. Special: When a melee attack is made against a location fitted with noxious plate and the attacker suffers a complication, the attacker suffers 2D Persistent (Poison) damage. In addition, melee attacks made using arms fitted with noxious plate gain the Persistent (Poison) damage effect.",
+		"name": "Serrated Plate (Thruster)",
+		"description": "Makeshift armor plating with jagged, serrated edges. Like primal plate, but more hazardous to those who would do the robot ill, as the sharp protrusions can lead to injury. Special: When a melee attack is made against a location fitted with serrated plate and the attacker suffers a complication, the attacker suffers 2D Persistent (Physical) damage. In addition, melee attacks made using arms fitted with serrated plate gain the Persistent (Physical) damage effect.",
 		"resistancephysical": 2,
 		"resistanceenergy": 0,
-		"locations": [
-			"Main Body"
-		],
+		"carry": -10,
+		"cost": 15,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Armorer",
+				"formula": ">= 1"
+			}
+		]
+	},
+	{
+		"name": "Serrated Plate (Main Body)",
+		"description": "Makeshift armor plating with jagged, serrated edges. Like primal plate, but more hazardous to those who would do the robot ill, as the sharp protrusions can lead to injury. Special: When a melee attack is made against a location fitted with serrated plate and the attacker suffers a complication, the attacker suffers 2D Persistent (Physical) damage. In addition, melee attacks made using arms fitted with serrated plate gain the Persistent (Physical) damage effect.",
+		"resistancephysical": 2,
+		"resistanceenergy": 0,
 		"carry": -20,
 		"cost": 30,
 		"prerequisites": [
@@ -176,15 +165,70 @@
 		]
 	},
 	{
-		"name": "Toxic Plate",
+		"name": "Noxious Plate (Optics)",
+		"description": "Makeshift armor coated in toxic materials which are hazardous to the health of any who seeks to inflict harm on the robot or its companions. Special: When a melee attack is made against a location fitted with noxious plate and the attacker suffers a complication, the attacker suffers 2D Persistent (Poison) damage. In addition, melee attacks made using arms fitted with noxious plate gain the Persistent (Poison) damage effect.",
+		"resistancephysical": 2,
+		"resistanceenergy": 0,
+		"carry": -10,
+		"cost": 15,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Armorer",
+				"formula": ">= 1"
+			}
+		]
+	},
+	{
+		"name": "Noxious Plate (Arms)",
+		"description": "Makeshift armor coated in toxic materials which are hazardous to the health of any who seeks to inflict harm on the robot or its companions. Special: When a melee attack is made against a location fitted with noxious plate and the attacker suffers a complication, the attacker suffers 2D Persistent (Poison) damage. In addition, melee attacks made using arms fitted with noxious plate gain the Persistent (Poison) damage effect.",
+		"resistancephysical": 2,
+		"resistanceenergy": 0,
+		"carry": -10,
+		"cost": 15,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Armorer",
+				"formula": ">= 1"
+			}
+		]
+	},
+	{
+		"name": "Noxious Plate (Thruster)",
+		"description": "Makeshift armor coated in toxic materials which are hazardous to the health of any who seeks to inflict harm on the robot or its companions. Special: When a melee attack is made against a location fitted with noxious plate and the attacker suffers a complication, the attacker suffers 2D Persistent (Poison) damage. In addition, melee attacks made using arms fitted with noxious plate gain the Persistent (Poison) damage effect.",
+		"resistancephysical": 2,
+		"resistanceenergy": 0,
+		"carry": -10,
+		"cost": 15,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Armorer",
+				"formula": ">= 1"
+			}
+		]
+	},
+	{
+		"name": "Noxious Plate (Main Body)",
+		"description": "Makeshift armor coated in toxic materials which are hazardous to the health of any who seeks to inflict harm on the robot or its companions. Special: When a melee attack is made against a location fitted with noxious plate and the attacker suffers a complication, the attacker suffers 2D Persistent (Poison) damage. In addition, melee attacks made using arms fitted with noxious plate gain the Persistent (Poison) damage effect.",
+		"resistancephysical": 2,
+		"resistanceenergy": 0,
+		"carry": -20,
+		"cost": 30,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Armorer",
+				"formula": ">= 1"
+			}
+		]
+	},
+	{
+		"name": "Toxic Plate (Optics)",
 		"description": "Makeshift armor made with irradiated metal plating, dangerous to living creatures nearby. Special: When a melee attack is made against a location fitted with toxic plate and the attacker suffers a complication, the attacker suffers 2D Radiation damage. In addition, melee attacks made using arms fitted with toxic plate gain the Radioactive damage effect.",
 		"resistancephysical": 2,
 		"resistanceenergy": 0,
-		"locations": [
-			"Optics",
-			"Arms",
-			"Thruster"
-		],
 		"carry": -10,
 		"cost": 15,
 		"prerequisites": [
@@ -196,13 +240,40 @@
 		]
 	},
 	{
-		"name": "Toxic Plate",
+		"name": "Toxic Plate (Arms)",
 		"description": "Makeshift armor made with irradiated metal plating, dangerous to living creatures nearby. Special: When a melee attack is made against a location fitted with toxic plate and the attacker suffers a complication, the attacker suffers 2D Radiation damage. In addition, melee attacks made using arms fitted with toxic plate gain the Radioactive damage effect.",
 		"resistancephysical": 2,
 		"resistanceenergy": 0,
-		"locations": [
-			"Main Body"
-		],
+		"carry": -10,
+		"cost": 15,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Armorer",
+				"formula": ">= 3"
+			}
+		]
+	},
+	{
+		"name": "Toxic Plate (Thruster)",
+		"description": "Makeshift armor made with irradiated metal plating, dangerous to living creatures nearby. Special: When a melee attack is made against a location fitted with toxic plate and the attacker suffers a complication, the attacker suffers 2D Radiation damage. In addition, melee attacks made using arms fitted with toxic plate gain the Radioactive damage effect.",
+		"resistancephysical": 2,
+		"resistanceenergy": 0,
+		"carry": -10,
+		"cost": 15,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Armorer",
+				"formula": ">= 3"
+			}
+		]
+	},
+	{
+		"name": "Toxic Plate (Main Body)",
+		"description": "Makeshift armor made with irradiated metal plating, dangerous to living creatures nearby. Special: When a melee attack is made against a location fitted with toxic plate and the attacker suffers a complication, the attacker suffers 2D Radiation damage. In addition, melee attacks made using arms fitted with toxic plate gain the Radioactive damage effect.",
+		"resistancephysical": 2,
+		"resistanceenergy": 0,
 		"carry": -20,
 		"cost": 30,
 		"prerequisites": [
@@ -214,41 +285,46 @@
 		]
 	},
 	{
-		"name": "Actuated Frame",
+		"name": "Actuated Frame (Optics)",
 		"description": "A specially made set of armor plates fitted with actuators and motive systems which aid the robot's actions. Special: Melee attacks made from arms fitted with an actuated frame inflict +1D damage. If the robot's Thruster is fitted with an actuated frame, it may make both a Move minor action and a Sprint major action in the same turn.",
 		"resistancephysical": 1,
 		"resistanceenergy": 1,
-		"locations": [
-			"Optics",
-			"Arms",
-			"Thruster"
-		],
 		"carry": 10,
 		"cost": 15,
 		"prerequisites": []
 	},
 	{
-		"name": "Actuated Frame",
+		"name": "Actuated Frame (Arms)",
 		"description": "A specially made set of armor plates fitted with actuators and motive systems which aid the robot's actions. Special: Melee attacks made from arms fitted with an actuated frame inflict +1D damage. If the robot's Thruster is fitted with an actuated frame, it may make both a Move minor action and a Sprint major action in the same turn.",
 		"resistancephysical": 1,
 		"resistanceenergy": 1,
-		"locations": [
-			"Main Body"
-		],
+		"carry": 10,
+		"cost": 15,
+		"prerequisites": []
+	},
+	{
+		"name": "Actuated Frame (Thruster)",
+		"description": "A specially made set of armor plates fitted with actuators and motive systems which aid the robot's actions. Special: Melee attacks made from arms fitted with an actuated frame inflict +1D damage. If the robot's Thruster is fitted with an actuated frame, it may make both a Move minor action and a Sprint major action in the same turn.",
+		"resistancephysical": 1,
+		"resistanceenergy": 1,
+		"carry": 10,
+		"cost": 15,
+		"prerequisites": []
+	},
+	{
+		"name": "Actuated Frame (Main Body)",
+		"description": "A specially made set of armor plates fitted with actuators and motive systems which aid the robot's actions. Special: Melee attacks made from arms fitted with an actuated frame inflict +1D damage. If the robot's Thruster is fitted with an actuated frame, it may make both a Move minor action and a Sprint major action in the same turn.",
+		"resistancephysical": 1,
+		"resistanceenergy": 1,
 		"carry": 20,
 		"cost": 30,
 		"prerequisites": []
 	},
 	{
-		"name": "Voltaic Frame",
+		"name": "Voltaic Frame (Optics)",
 		"description": "A specially made set of armor plates fitted with additional conduits and capacitors to bolster the effectiveness of energy weaponry. Special: Any of the robot's attacks which deal energy damage inflict +1D if the robot is fitted with any voltaic frame armor. This bonus increases by +1D for every two additional locations fitted with Voltaic Frame.",
 		"resistancephysical": 2,
 		"resistanceenergy": 2,
-		"locations": [
-			"Optics",
-			"Arms",
-			"Thruster"
-		],
 		"carry": 10,
 		"cost": 20,
 		"prerequisites": [
@@ -260,13 +336,40 @@
 		]
 	},
 	{
-		"name": "Voltaic Frame",
+		"name": "Voltaic Frame (Arms)",
 		"description": "A specially made set of armor plates fitted with additional conduits and capacitors to bolster the effectiveness of energy weaponry. Special: Any of the robot's attacks which deal energy damage inflict +1D if the robot is fitted with any voltaic frame armor. This bonus increases by +1D for every two additional locations fitted with Voltaic Frame.",
 		"resistancephysical": 2,
 		"resistanceenergy": 2,
-		"locations": [
-			"Main Body"
-		],
+		"carry": 10,
+		"cost": 20,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Armorer",
+				"formula": ">= 2"
+			}
+		]
+	},
+	{
+		"name": "Voltaic Frame (Thruster)",
+		"description": "A specially made set of armor plates fitted with additional conduits and capacitors to bolster the effectiveness of energy weaponry. Special: Any of the robot's attacks which deal energy damage inflict +1D if the robot is fitted with any voltaic frame armor. This bonus increases by +1D for every two additional locations fitted with Voltaic Frame.",
+		"resistancephysical": 2,
+		"resistanceenergy": 2,
+		"carry": 10,
+		"cost": 20,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Armorer",
+				"formula": ">= 2"
+			}
+		]
+	},
+	{
+		"name": "Voltaic Frame (Main Body)",
+		"description": "A specially made set of armor plates fitted with additional conduits and capacitors to bolster the effectiveness of energy weaponry. Special: Any of the robot's attacks which deal energy damage inflict +1D if the robot is fitted with any voltaic frame armor. This bonus increases by +1D for every two additional locations fitted with Voltaic Frame.",
+		"resistancephysical": 2,
+		"resistanceenergy": 2,
 		"carry": 20,
 		"cost": 40,
 		"prerequisites": [
@@ -278,13 +381,10 @@
 		]
 	},
 	{
-		"name": "Hydraulic Frame",
+		"name": "Hydraulic Frame (Optics)",
 		"description": "A specially made set of armor plates which conceal powerful hydraulics which enhance the robot's movements. Special: Melee attacks made from arms fitted with a hydraulic frame inflict +2 damage and gain the Stun damage effect.",
 		"resistancephysical": 3,
 		"resistanceenergy": 3,
-		"locations": [
-			"Optics"
-		],
 		"carry": 10,
 		"cost": 20,
 		"prerequisites": [
@@ -296,13 +396,10 @@
 		]
 	},
 	{
-		"name": "Hydraulic Frame",
+		"name": "Hydraulic Frame (Main Body)",
 		"description": "A specially made set of armor plates which conceal powerful hydraulics which enhance the robot's movements. Special: Melee attacks made from arms fitted with a hydraulic frame inflict +1DD damage and gain the Stun damage effect.",
 		"resistancephysical": 3,
 		"resistanceenergy": 3,
-		"locations": [
-			"Main Body"
-		],
 		"carry": 10,
 		"cost": 60,
 		"prerequisites": [
@@ -314,14 +411,25 @@
 		]
 	},
 	{
-		"name": "Hydraulic Frame",
+		"name": "Hydraulic Frame (Arms)",
 		"description": "A specially made set of armor plates which conceal powerful hydraulics which enhance the robot's movements. Special: Melee attacks made from arms fitted with a hydraulic frame inflict +1DD damage and gain the Stun damage effect.",
 		"resistancephysical": 3,
 		"resistanceenergy": 3,
-		"locations": [
-			"Arms",
-			"Thruster"
-		],
+		"carry": 5,
+		"cost": 30,
+		"prerequisites": [
+			{
+				"type": "perk",
+				"name": "Armorer",
+				"formula": ">= 3"
+			}
+		]
+	},
+	{
+		"name": "Hydraulic Frame (Thruster)",
+		"description": "A specially made set of armor plates which conceal powerful hydraulics which enhance the robot's movements. Special: Melee attacks made from arms fitted with a hydraulic frame inflict +1DD damage and gain the Stun damage effect.",
+		"resistancephysical": 3,
+		"resistanceenergy": 3,
 		"carry": 5,
 		"cost": 30,
 		"prerequisites": [

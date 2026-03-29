@@ -35,6 +35,7 @@ interface Props {
   dice?: boolean;
   disabled?: boolean;
   visible?: boolean;
+  displayLabel?: string;
 }
 
 /* =======================================================
@@ -60,7 +61,8 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
     openUserChoiceModal,
     dice,
     disabled,
-    visible = true
+    visible = true,
+    displayLabel
   } = props;
 
   const selectRef = useRef<HTMLSelectElement | null>(null);
@@ -150,8 +152,10 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
                 {selectedValue.image && (
                   <img src={selectedValue.image} alt="" />
                 )}
-                <span>{selectedValue.label}</span>
+                <span>{displayLabel ?? selectedValue.label}</span>
               </div>
+            ) : normalizedValue ? (
+              <span>{String(normalizedValue)}</span>
             ) : (
               <span>Select…</span>
             )}
@@ -171,8 +175,13 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
                       <img src={option.image} alt="" />
                     )}
                   </div>
-                  <div>
-                    <strong>{option.label}</strong>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      <strong>{option.label}</strong>
+                      {option.cost != null && (
+                        <span className="option-cost" dangerouslySetInnerHTML={{ __html: option.cost }} />
+                      )}
+                    </div>
                     {option.description && (
                       <div
                         className="description"
@@ -287,29 +296,24 @@ const handleSelectChange = (
       );
     }
 
-    setBonusAdjustments(bonusAdjustments.filter((a: any) => a.origin !== event.target.name));
-
-    for (const adjustment of selectBonusAdjustments) {
-      setBonusAdjustments(prev => [
-        ...prev,
-        { origin: event.target.name, type: adjustment.type, name: adjustment.name, value: adjustment.value },
-      ]);
-    }
+    const filteredAdjustments = bonusAdjustments.filter((a: any) => a.origin !== event.target.name);
+    const newAdjustments = selectBonusAdjustments.map((adjustment: any) => ({
+      origin: event.target.name,
+      type: adjustment.type,
+      name: adjustment.name,
+      value: adjustment.value,
+    }));
+    setBonusAdjustments([...filteredAdjustments, ...newAdjustments]);
   }
 
   if (selectBonusCharacteristics) {
-    for (const characteristic of bonusCharacteristics.reverse()) {
-      handleRemoveFieldValue(getValues, setValue, unregister, characteristic.type, characteristic.value);
-    }
-
-    setBonusCharacteristics(bonusCharacteristics.filter((c: any) => c.origin !== event.target.name));
-
-    for (const characteristic of selectBonusCharacteristics) {
-      setBonusCharacteristics(prev => [
-        ...prev,
-        { origin: event.target.name, type: characteristic.type, value: characteristic.value },
-      ]);
-    }
+    const filteredCharacteristics = bonusCharacteristics.filter((c: any) => c.origin !== event.target.name);
+    const newCharacteristics = selectBonusCharacteristics.map((characteristic: any) => ({
+      origin: event.target.name,
+      type: characteristic.type,
+      value: characteristic.value,
+    }));
+    setBonusCharacteristics([...filteredCharacteristics, ...newCharacteristics]);
   }
 
   if (selectUserChoices) {

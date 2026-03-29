@@ -30,7 +30,7 @@ export const usePrerequisites = (
       try {
         const prereqs = JSON.parse(component.prerequisites) as Prerequisite[];
         prereqs.forEach(p => {
-          const name = p.type ? `${p.type}.${p.name}` : p.name;
+          const name = (p.type && p.name) ? `${p.type}.${p.name}` : (p.type || p.name);
           names.add(name);
         });
       } catch {
@@ -70,18 +70,18 @@ export const usePrerequisites = (
             const prereqs = JSON.parse(component.prerequisites) as Prerequisite[];
 
             for (const p of prereqs) {
-              const name = p.type ? `${p.type}.${p.name}` : p.name;
-              const value = getValues(name);
+              const fieldPath = (p.type && p.name) ? `${p.type}.${p.name}` : (p.type || p.name);
+              const value = getValues(fieldPath);
               const expr = `${JSON.stringify(value)}${p.formula}`;
 
               let result = Function(`return ${expr}`)();
 
               if (!result && p.logicalOr && p.logicalOr.length > 0) {
                 for (const orPrereq of p.logicalOr) {
-                  const orName = orPrereq.type
+                  const orPath = (orPrereq.type && orPrereq.name)
                     ? `${orPrereq.type}.${orPrereq.name}`
-                    : orPrereq.name;
-                  const orValue = getValues(orName);
+                    : (orPrereq.type || orPrereq.name);
+                  const orValue = getValues(orPath);
                   const orExpr = `${JSON.stringify(orValue)}${orPrereq.formula}`;
                   result = Function(`return ${orExpr}`)();
                   if (result) break;

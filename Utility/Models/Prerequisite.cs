@@ -6,7 +6,7 @@ namespace Utility
     {
         public string Type { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
-        public string Formula { get; set; } = string.Empty;      
+        public string Formula { get; set; } = string.Empty;
         public List<Prerequisite> LogicalOr { get; set; } = new List<Prerequisite>();
     }
 }

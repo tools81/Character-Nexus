@@ -11,6 +11,9 @@ namespace Fallout
         [JsonProperty("description")]
         public string Description { get; set; }
 
+        [JsonProperty("image")]
+        public string Image { get; set; }
+
         [JsonProperty("resistancephysical")]
         public int ResistancePhysical { get; set; }
 
@@ -34,6 +37,8 @@ namespace Fallout
 
         [JsonProperty("modsets")]
         public List<string> ModSets { get; set; } = [];
+
+        public List<string> Effects { get; set; } = [];
         public List<ArmorMod> InstalledMods { get; set; } = [];
     }
 }

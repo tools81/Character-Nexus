@@ -12,73 +12,80 @@
       "name": "health",
       "id": "health",
       "label": "Health",
-      "type": "hidden",
+      "type": "number",
       "className": "form-control",
       "calculation": "[attributes.Resilience] * 30 === 0 ? 15 : [attributes.Resilience] * 30",
-      "default": 15
+      "pinnedStat": true
     },
     {
       "name": "focus",
       "id": "focus",
       "label": "Focus",
-      "type": "hidden",
+      "type": "number",
       "className": "form-control",
       "calculation": "[attributes.Vigilance] * 30 === 0 ? 15 : [attributes.Vigilance] * 30",
-      "default": 15
+      "pinnedStat": true
     },
     {
       "name": "healthDamageReduction",
       "id": "healthDamageReduction",
       "label": "Health Damage Reduction",
-      "type": "hidden",
-      "className": "form-control"
+      "type": "number",
+      "className": "form-control",
+      "pinnedStat": true
     },
     {
       "name": "focusDamageReduction",
       "id": "focusDamageReduction",
       "label": "Focus Damage Reduction",
-      "type": "hidden",
-      "className": "form-control"
+      "type": "number",
+      "className": "form-control",
+      "pinnedStat": true
     },
     {
       "name": "run",
       "id": "run",
       "label": "Run",
-      "type": "hidden",
+      "type": "number",
       "className": "form-control",
-      "calculation": "5 + ([attributes.Agility] % 5 == 0 ? [attributes.Agility] / 5 : 0)"
+      "calculation": "5 + ([attributes.Agility] % 5 == 0 ? [attributes.Agility] / 5 : 0)",
+      "pinnedStat": true
     },
     {
       "name": "climb",
       "id": "climb",
       "label": "Climb",
-      "type": "hidden",
+      "type": "number",
       "className": "form-control",
-      "calculation": "Math.ceil([run] / 2)"
+      "calculation": "Math.ceil([run] / 2)",
+      "pinnedStat": true
     },
     {
       "name": "swim",
       "id": "swim",
       "label": "Swim",
-      "type": "hidden",
+      "type": "number",
       "className": "form-control",
-      "calculation": "Math.ceil([run] / 2)"
+      "calculation": "Math.ceil([run] / 2)",
+      "pinnedStat": true
     },
     {
       "name": "karma",
       "id": "karma",
       "label": "Karma",
-      "type": "hidden",
+      "type": "number",
       "className": "form-control",
-      "calculation": "[rank]"
+      "calculation": "[rank]",
+      "pinnedStat": true
     },
     {
       "name": "initiativeModifier",
       "id": "initiativeModifier",
       "label": "Initiative Modifier",
-      "type": "hidden",
+      "type": "number",
       "className": "form-control",
-      "calculation": "[attributes.Vigilance]"
+      "calculation": "[attributes.Vigilance]",
+      "pinnedStat": true
     },
     {
       "name": "name",
@@ -214,199 +221,199 @@
           "value": "Alien",
           "label": "Alien",
           "description": "The character is not human and probably not from Earth or at least Earth-616. The Marvel Multiverse features all sorts of different alien races. The most common of these - Kree, Skrulls, and so on - have their own entries. If the character doesn't fit on of those, the this origin applies.",
-          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Alien Heritage\"},{\"type\":\"tag\",\"value\":\"Extreme Appearance\"}]"
+          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Alien Heritage\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Extreme Appearance\",\"conditions\":[]}]"
         },
         {
           "value": "Alien-Kree",
           "label": "Alien-Kree",
           "description": "The character is a member of the Kree, a humanoid race from the planet Hala who formed the interstellar Kree Empire in the region of space known as the Large Magellanic Cloud. They resemble humans but are stronger and tougher. Many of them have blue skin, but a good number of them have pink skin.<br />The air on Hala has much more nitrogen in it, and Kree who are raised in it (or something like it) have a hard time breathing the air on Earth.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Breathe Different\"},{\"type\":\"trait\",\"value\":\"Enhanced Physique\"},{\"type\":\"tag\",\"value\":\"Alien Heritage\"},{\"type\":\"tag\",\"value\":\"Extreme Appearance\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Breathe Different\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Enhanced Physique\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Alien Heritage\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Extreme Appearance\",\"conditions\":[]}]"
         },
         {
           "value": "Alien-Shi'ar",
           "label": "Alien-Shi'ar",
           "description": "The character is a member of the Shi'ar, an avian humanoid race from the planet Chandilar who formed the interstellar Shi'ar Empire in the Shi'ar Galaxy. They resemble humand but are much stronger and have feathers instead of hair on their heads.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Enhanced Physique\"},{\"type\":\"tag\",\"value\":\"Alien Heritage\"},{\"type\":\"tag\",\"value\":\"Extreme Appearance\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Enhanced Physique\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Alien Heritage\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Extreme Appearance\",\"conditions\":[]}]"
         },
         {
           "value": "Alien-Skrull",
           "label": "Alien-Skrull",
           "description": "The character is a member of the Skrull, a reptilian humanoid race of shape-shifters who formed the interstellar Skrull Empire. In their natural form, they have green skin, red or green eyes, pointed ears and fullowed chins. They sprang from the planet Skrullos in the Andromeda Galaxy.<br />The original Skrulls could not shape-shift, but the Celestials experimented on them to form Eternal Skrulls and Deviant Skrulls, much like they did with humans on Earth. The Deviant Skrulls became the dominant form of the species, driving the originals to extinction.",
-          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Alien Heritage\"},{\"type\":\"tag\",\"value\":\"Extreme Appearance\"},{\"type\":\"powers\",\"value\":\"Disguise\"},{\"type\":\"powers\",\"value\":\"Extended Reach\"},{\"type\":\"powers\",\"value\":\"Flexible Bones\"},{\"type\":\"powers\",\"value\":\"Shape-shift\"},{\"type\":\"powers\",\"value\":\"Slip Free\"}]"
+          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Alien Heritage\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Extreme Appearance\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Disguise\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Extended Reach\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Flexible Bones\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Shape-shift\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Slip Free\",\"conditions\":[]}]"
         },
         {
           "value": "Atlantean",
           "label": "Atlantean",
           "description": "The character is a member Homo mermanus, a variant race of humanity. Atlanteans breathe water through gills on both sides of their neck, and they cannot breathe air for longer than ten minutes.<br />If they live in the Atlantic Ocean, they likely have blue skin and hail from Atlantis. If they come from the Pacific Ocean, they likely have green skin and live in Lemuria.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Breathe Different\"},{\"type\":\"trait\",\"value\":\"Enhanced Physique\"},{\"type\":\"tag\",\"value\":\"Amphibious\"},{\"type\":\"tag\",\"value\":\"Extreme Appearance\"},{\"type\":\"powers\",\"value\":\"Heightened Senses\"},{\"type\":\"powers\",\"value\":\"Speed Swim\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Breathe Different\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Enhanced Physique\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Amphibious\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Extreme Appearance\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Heightened Senses\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Speed Swim\",\"conditions\":[]}]"
         },
         {
           "value": "Deviant",
           "label": "Deviant",
           "description": "The character is a member of Homo descendus, a variant race of humanity created by the Celestials. They are scattered across Earth, but they mainly live in underground cities beneath the Pacific Ocean, close to Lemuria.<br />Only one hundred Deviants were originally created, but many more have been born over the millenia since then. They vary a great deal physically, coming in all sizes, shapes, colors and textures. Each is born with a unique physical mutation, and they have the latent genetic ability to develop powers, much like mutants.<br />Eternals are compelled to kill Deviant mutates as part of their principle 'Correct excess deviation.'",
-          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Extreme Appearance\"},{\"type\":\"tag\",\"value\":\"Hunted\"}]"
+          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Extreme Appearance\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Hunted\",\"conditions\":[]}]"
         },
         {
           "value": "Eternal",
           "label": "Eternal",
           "description": "The character is a member of Homo immortalis, a variant race of humanity created by the Celestials. They are scattered across Earth, but their headquarters lies in the city of Olympia, high in the mountains in Greece and folded into an echo dimension. Some live on Titan (a moon of Saturn) instead.<br />The Eternals live by three principles: <ul><li>Protect Celestials.</li><li>Protect the Machine (a sentient AI deeply connected with the Earth).</li><li>Correct excess deviation.</li></ul><br />Only one hundred Eternals were originally created, and only two have been born since: Thanos and Eros. The character is either one of the lesser-known one hundred or a new Eternal brought to life through extraordinary means.<br />Through a ritual usually initiated by the Prime Eternal (their official leader), Eternals can be called to be part of a collective being known as the Uni-Mind.",
-          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Eternally Immortal\"},{\"type\":\"tag\",\"value\":\"Mahd Wy'ry\"}]"
+          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Eternally Immortal\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Mahd Wy'ry\",\"conditions\":[]}]"
         },
         {
           "value": "God",
           "label": "God",
           "description": "The character is a god (of a sort) and has access to powers that come with their heritage.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"God Heritage\"},{\"type\":\"trait\",\"value\":\"Enhanced Physique\"},{\"type\":\"tag\",\"value\":\"Worshipped\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"God Heritage\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Enhanced Physique\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Worshipped\",\"conditions\":[]}]"
         },
         {
           "value": "High Tech",
           "label": "High Tech",
           "description": "The character's powers arise from high-tech devices that are well beyond the limits of modern-day engineering. This can come in many forms.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Tech Reliance\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Tech Reliance\",\"conditions\":[]}]"
         },
         {
           "value": "High Tech-Android",
           "label": "High Tech-Android",
           "description": "The character is an artificial person. Their body (when they have one) is made of plastic, metal and circuitry rather than flesh and blood. Their powers come from techology embedded in their artificial body.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Tech Reliance\"},{\"type\":\"tag\",\"value\":\"A.I.\"},{\"type\":\"tag\",\"value\":\"Extreme Appearance\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Tech Reliance\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"A.I.\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Extreme Appearance\",\"conditions\":[]}]"
         },
         {
           "value": "High Tech-Battle Suit",
           "label": "High Tech-Battle Suit",
           "description": "The character wears a high-tech suit that grants them powers. When the battle suit is removed, the character no longer has access to the powers it grants. They are entirely - or at least mostly - normal underneath.<br />Most characters with this origin have the Extreme Appearance tag when wearing their battle suit.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Tech Reliance\"},{\"type\":\"tag\",\"value\":\"Extreme Appearance\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Tech Reliance\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Extreme Appearance\",\"conditions\":[]}]"
         },
         {
           "value": "High Tech-Cybernetics",
           "label": "High Tech-Cybernetics",
           "description": "The character has high-tech, surgically embedded implants that grant them powers. These cannot be removed without great care or pain.<br />If the implants are obious, the character gets the Extreme Appearance tage. Otherwise, the implants have been hidden inside their body (as with the lacing of Wolverine's skeleton with adamantium) and might be visible only when in use (like when Wolverine uses his claws), if then.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Tech Reliance\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Tech Reliance\",\"conditions\":[]}]"
         },
         {
           "value": "High Tech-Pym Particles",
           "label": "High Tech-Pym Particles",
           "description": "The character uses Pym Particles (named after their inventor, Henry Pym) to dramatically grow or shrink in size.<br />After long-enough exposure to Pym Particles, many people are able to generate such particles on their own without the need of external aid. They may still need to use extra Pym Particles to reach extremely large or small sizes.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Tech Reliance\"},{\"type\":\"powers\",\"value\":\"Grow 1\"},{\"type\":\"powers\",\"value\":\"Shrink 1\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Tech Reliance\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Grow 1\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Shrink 1\",\"conditions\":[]}]"
         },
         {
           "value": "Inhuman",
           "label": "Inhuman",
           "description": "The character is a member of Homo sapiens inhumanas, a variant race of humanity genetically engineered by the Kree. For millennia, they lived isolated from the world, but they emerged in recent years, led by Black Bolt.<br />All Inhumans carry a latent gene that can be activated by the Terrigen Mist. The explosion of a Terrigen Bomb spread the mist across the entrie planet, revealing that many humans (including Kamala Khan) had Inhuman genetics. Black Bolt was later forced to destroy the Inhumans, leaving few outside of the royal family alive.<br />The character is one of those rare Inhumans whow survived.",
-          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Inhuman Genes\"}]"
+          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Inhuman Genes\",\"conditions\":[]}]"
         },
         {
           "value": "Magic",
           "label": "Magic",
           "description": "The character's powers arise from supernatural means. There are many different traditions within magic, each with their own teachings.",
-          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Supernatural\"}]"
+          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Supernatural\",\"conditions\":[]}]"
         },
         {
           "value": "Magic-Chaos",
           "label": "Magic-Chaos",
           "description": "The character is able to use chaos magic, which allows them to bend reality to their will. It stems from the ancient got Chthon.",
-          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Chaotic\"},{\"type\":\"tag\",\"value\":\"Supernatural\"}]"
+          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Chaotic\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Supernatural\",\"conditions\":[]}]"
         },
         {
           "value": "Magic-Demonic",
           "label": "Magic-Demonic",
           "description": "The character taps into (or is cursed by) the powers of Hell. They may be a native of one of the Nine Circles of Hell, or their powers might simply come from a Hellish source.",
-          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Cursed\"},{\"type\":\"tag\",\"value\":\"Supernatural\"}]"
+          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Cursed\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Supernatural\",\"conditions\":[]}]"
         },
         {
           "value": "Magic-Sorcery",
           "label": "Magic-Sorcery",
           "description": "The character's powers arise from the study and practice of sorcery.",
-          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Sorcerous\"},{\"type\":\"tag\",\"value\":\"Supernatural\"}]"
+          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Sorcerous\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Supernatural\",\"conditions\":[]}]"
         },
         {
           "value": "Monstrous",
           "label": "Monstrous",
           "description": "The character is some kind of monster. They may have a human form - or may have once been human - but they get their powers from their unnatural monstrousness.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Monster\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Monster\",\"conditions\":[]}]"
         },
         {
           "value": "Monstrous-Dhampir",
           "label": "Monstrous-Dhampir",
           "description": "The character was once alive but was embraced by a vampire and has risen from death as a vampire, but became a dhampir. Dhampir is a term used to refer to individuals born of a union between a human and a vampire or had their vampirism halted, basically human-vampire hybrids.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Monster\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Monster\",\"conditions\":[]}]"
         },
         {
           "value": "Monstrous-Vampire",
           "label": "Monstrous-Vampire",
           "description": "The character was once alive but was embraced by a vampire and has risen from death as a vampire too. They can transmit this magical disease to victims of their choosing.<br />When a character becomes a vampire, they go up one rank and gain the listed tags, traits, and powers. They do not gain any additional powers or traits from this bump in rank, but they do gain 5 ability points and add +1 to their damage multiplier. If they have the Heroic tag, they also add 1 to their Karma.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Anathema\"},{\"type\":\"trait\",\"value\":\"Bloodthirsty\"},{\"type\":\"trait\",\"value\":\"Monster\"},{\"type\":\"trait\",\"value\":\"Weakness\"},{\"type\":\"tag\",\"value\":\"Alternate Form\"},{\"type\":\"tag\",\"value\":\"Deceased\"},{\"type\":\"tag\",\"value\":\"Imageless\"},{\"type\":\"powers\",\"value\":\"Animal Communication\"},{\"type\":\"powers\",\"value\":\"Command\"},{\"type\":\"powers\",\"value\":\"Healing Factor\"},{\"type\":\"powers\",\"value\":\"Leech Life\"},{\"type\":\"powers\",\"value\":\"Mighty 1\"},{\"type\":\"powers\",\"value\":\"Sturdy 2\"},{\"type\":\"powers\",\"value\":\"Telepathic Link\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Anathema\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Bloodthirsty\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Monster\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Weakness\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Alternate Form\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Deceased\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Imageless\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Animal Communication\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Command\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Healing Factor\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Leech Life\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Mighty 1\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Sturdy 2\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Telepathic Link\",\"conditions\":[]}]"
         },
         {
           "value": "Monstrous-Werewolf",
           "label": "Monstrous-Werewolf",
           "description": "The character is afflicted with lycanthropy, a magical disease that causes them to take on the shape of a werewolf during the three nights of the full moon. They can transmit this magical disease to victims of their choosing who survive their attacks.<br />When a character becomes a werewolf, they gain the Lunar Transformation and Alternate Form tags. Whe the character takes on their werewolf form, they go up one rank and gain the rest of the listed tags, traits, and powers. They do not gain any additional powers or traits from this bump in rank, but they do gain 5 ability points and add +1 to their damage multiplier. If they have the Heroic tag, they also add 1 to their Karma.<br />When they return to human form, they lose the benefits of their werewolf form.<br />They character can switch forms voluntarily at any point - except during the three nights the the moon is at its fullest. On those nights, while the moon is above the horizon, the character must transform into a werewolf and is ruled by their animal nature. They cannot help but hunt and attack any people or creatures they come across, no matter if they are friend or foe.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Berserker\"},{\"type\":\"trait\",\"value\":\"Monster\"},{\"type\":\"trait\",\"value\":\"Weakness\"},{\"type\":\"tag\",\"value\":\"Alternate Form\"},{\"type\":\"tag\",\"value\":\"Extreme Appearance\"},{\"type\":\"tag\",\"value\":\"Lunar Transformation\"},{\"type\":\"powers\",\"value\":\"Evasion\"},{\"type\":\"powers\",\"value\":\"Healing Factor\"},{\"type\":\"powers\",\"value\":\"Heightened Senses\"},{\"type\":\"powers\",\"value\":\"Mighty 1\"},{\"type\":\"powers\",\"value\":\"Sturdy 2\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Berserker\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Monster\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Weakness\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Alternate Form\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Extreme Appearance\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Lunar Transformation\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Evasion\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Healing Factor\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Heightened Senses\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Mighty 1\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Sturdy 2\",\"conditions\":[]}]"
         },
         {
           "value": "Mutant",
           "label": "Mutant",
           "description": "The character's powers spring from them being a member of the subspecies Homo superior. They have a latent X-Gene that grants them powers, often triggered at adolescence.",
-          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Hounded\"},{\"type\":\"tag\",\"value\":\"Krakoan\"},{\"type\":\"tag\",\"value\":\"X-Gene\"}]"
+          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Hounded\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Krakoan\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"X-Gene\",\"conditions\":[]}]"
         },
         {
           "value": "Mutant-X-men '97",
           "label": "Mutant-X-men '97",
           "description": "The character's powers spring from them being a member of the subspecies Homo superior.",
-          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Hounded\"},{\"type\":\"tag\",\"value\":\"X-Gene\"}]"
+          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Hounded\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"X-Gene\",\"conditions\":[]}]"
         },
         {
           "value": "Mythic",
           "label": "Mythic",
           "description": "The character is a creature or person of myth and legend. While they may appear human, they are something else.",
-          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Supernatural\"}]"
+          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Supernatural\",\"conditions\":[]}]"
         },
         {
           "value": "Mythic-Asgardian",
           "label": "Mythic-Asgardian",
           "description": "The character is a member of the Asgardian people, resembling the Norse gods. They call Asgard their home.<br />The character can be one of the many gods who have been named throughout history, or they can be one of the lesser-known gods of Asgard. They should choose something that they are the god of.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"God Heritage\"},{\"type\":\"trait\",\"value\":\"Enhanced Physique\"},{\"type\":\"tag\",\"value\":\"Supernatural\"},{\"type\":\"tag\",\"value\":\"Worshipped\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"God Heritage\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Enhanced Physique\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Supernatural\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Worshipped\",\"conditions\":[]}]"
         },
         {
           "value": "Mythic-Olympian",
           "label": "Mythic-Olympian",
           "description": "The character is a member of the Olympian people, resembling the gods of Ancient Greece and Rome. They call Olympus their home.<br />They character can be one of the many gods who have been named throughout history, or they can be one of the lesser-known gods of Olympus. They should choose something that they are the god of.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"God Heritage\"},{\"type\":\"trait\",\"value\":\"Enhanced Physique\"},{\"type\":\"tag\",\"value\":\"Supernatural\"},{\"type\":\"tag\",\"value\":\"Worshipped\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"God Heritage\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Enhanced Physique\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Supernatural\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Worshipped\",\"conditions\":[]}]"
         },
         {
           "value": "Special Training",
           "label": "Special Training",
           "description": "The character's powers come from long hours of practice. Their intense focus grants them abilities that would astonish most people. Powers are limited to those that do not provide superhuman abilities.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Determination\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Determination\",\"conditions\":[]}]"
         },
         {
           "value": "Spirit of Vengeance",
           "label": "Spirit of Vengeance",
           "description": "The character has been possessed by a Spirit of Vengeance. Their purpose is to find sinners and impose penance.<br />When a character becomes possessed by a Spirit of Vengeance, they gain the Alternate Form tag, which they can use voluntarily at any point. When the character takes on their Ghost Rider form, they gain access to the listed tags, traits, and powers. When they return to human form, they lose the benefits of their Ghost Rider form.",
-          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Alternate Form\"},{\"type\":\"tag\",\"value\":\"Cursed\"},{\"type\":\"tag\",\"value\":\"Supernatural\"},{\"type\":\"powers\",\"value\":\"Elemental Protection 2\"},{\"type\":\"powers\",\"value\":\"Environmental Protection\"},{\"type\":\"powers\",\"value\":\"Healing Factor\"},{\"type\":\"powers\",\"value\":\"Hellfire Chains\"},{\"type\":\"powers\",\"value\":\"Mighty 2\"},{\"type\":\"powers\",\"value\":\"Penance Stare\"},{\"type\":\"powers\",\"value\":\"Possess Vehicle\"},{\"type\":\"powers\",\"value\":\"Sense Sins\"}]"
+          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Alternate Form\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Cursed\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Supernatural\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Elemental Protection 2\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Environmental Protection\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Healing Factor\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Hellfire Chains\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Mighty 2\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Penance Stare\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Possess Vehicle\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Sense Sins\",\"conditions\":[]}]"
         },
         {
           "value": "Symbiote",
           "label": "Symbiote",
           "description": "The character has bonded with one of the Klyntar, a race of alien symbiotes created by the alien god Knull. Most of these creatures on Earth display spiderlike powers.<br />When a character bonds with a symbiote, they go up one rank and gain the listed tags, traits, and powers. Any remaining powers they select are often from the Spider-Powers set but do not have to be. Many symbiotes have the Disguise power.<br />If the symbiote is Venom or one of its progeny, Spider-Man (Peter Parker) cannot gain any benefits from his Spider-Sense power against the bonded character.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Anathema\"},{\"type\":\"powers\",\"value\":\"Environmental Protection\"},{\"type\":\"powers\",\"value\":\"Mighty 1\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Anathema\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Environmental Protection\",\"conditions\":[]},{\"type\":\"powers\",\"value\":\"Mighty 1\",\"conditions\":[]}]"
         },
         {
           "value": "Unknown",
           "label": "Unknown",
           "description": "The character has developed powers but is not entirely sure how. It could be that the player or the Narrator knows, but the character does not, or maybe nobody else does either. Astonishing things happen all the time in the Marvel Multiverse, and there's no way to classify them all.<br />The source of the powers may be explained in time. It could turn out that the character actually has a standard type of origin, or it could be that they have an origin that's utterly unique.",
-          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Mysterious\"}]"
+          "bonusCharacteristics": "[{\"type\":\"tag\",\"value\":\"Mysterious\",\"conditions\":[]}]"
         },
         {
           "value": "Weird Science",
           "label": "Weird Science",
           "description": "The character's powers arose from a scientific experiment of accident that's hard - if not impossible - to reproduce. Often, they had the latent genetic potential to develop powers and were somehow exposed to the right triggers - which would have likely killed most other people.<br />These kinds of character are sometimes call mutates. The difference between a mutate and a mutant is that a mutant's powers come to them naturally, but a mutate's powers require a triggering incident that might never happen. In this sense, Inhumans are all mutates who share a gene with a known rigger: the Terrigen Mist.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Weird\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Weird\",\"conditions\":[]}]"
         },
         {
           "value": "Weird Science-Gamma Mutate",
           "label": "Weird Science-Gamma Mutate",
           "description": "The character has a genetic mutation that gave them powers once they were exposed to enough gamma radiation, transforming them physically. This often gives them a monstrous appearance and changes their coloration drastically, usually to green, although some become red or even blue. They can often transorm back into their original form as well.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Weird\"},{\"type\":\"tag\",\"value\":\"Extreme Appearance\"},{\"type\":\"tag\",\"value\":\"Green Door\"},{\"type\":\"tag\",\"value\":\"Immunity\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Weird\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Extreme Appearance\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Green Door\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Immunity\",\"conditions\":[]}]"
         }
       ]
     },
@@ -420,121 +427,121 @@
           "value": "Adventurer",
           "label": "Adventurer",
           "description": "The character focuses on having adventures.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Fearless\"},{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"tag\",\"value\":\"Black Market Access\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Fearless\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Connections\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Black Market Access\",\"conditions\":[]}]"
         },
         {
           "value": "Assassin",
           "label": "Assassin",
           "description": "The character is a hired killer.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"trait\",\"value\":\"Signature Attack\"},{\"type\":\"tag\",\"value\":\"Streetwise\"},{\"type\":\"tag\",\"value\":\"Villianous\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Signature Attack\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Streetwise\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Villianous\",\"conditions\":[]}]"
         },
         {
           "value": "Criminal",
           "label": "Criminal",
           "description": "The character did something that put them on the wrong side of the law.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"tag\",\"value\":\"Black Market Access\"},{\"type\":\"tag\",\"value\":\"Streetwise\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Black Market Access\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Streetwise\",\"conditions\":[]}]"
         },
         {
           "value": "Educator",
           "label": "Educator",
           "description": "The character educates others.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"trait\",\"value\":\"Font of Information\"},{\"type\":\"trait\",\"value\":\"Presence\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Font of Information\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Presence\",\"conditions\":[]}]"
         },
         {
           "value": "Engineer",
           "label": "Engineer",
           "description": "The character designs and builds things to solve problems.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Gearhead\"},{\"type\":\"trait\",\"value\":\"Inventor\"},{\"type\":\"tag\",\"value\":\"Lab Access\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Gearhead\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Inventor\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Lab Access\",\"conditions\":[]}]"
         },
         {
           "value": "Entertainer",
           "label": "Entertainer",
           "description": "The character entertains others for a living.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Famous\"},{\"type\":\"trait\",\"value\":\"Presence\"},{\"type\":\"trait\",\"value\":\"Public Speaking\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Famous\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Presence\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Public Speaking\",\"conditions\":[]}]"
         },
         {
           "value": "Health Care Worker",
           "label": "Health Care Worker",
           "description": "The character is a doctor, nurse, therapist or other person dedicated to helping heal others.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Clinician\"},{\"type\":\"trait\",\"value\":\"First Aid\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Clinician\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"First Aid\",\"conditions\":[]}]"
         },
         {
           "value": "Investigator",
           "label": "Investigator",
           "description": "The character is trained to solve mysteries.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"trait\",\"value\":\"Interrogation\"},{\"type\":\"trait\",\"value\":\"Investigation\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Interrogation\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Investigation\",\"conditions\":[]}]"
         },
         {
           "value": "Journalist",
           "label": "Journalist",
           "description": "The character works as a reporter or editor for a news organization.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Audience\"},{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"trait\",\"value\":\"Pundit\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Audience\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Connections\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Pundit\",\"conditions\":[]}]"
         },
         {
           "value": "Law Enforcer",
           "label": "Law Enforcer",
           "description": "The character works as a law enforcement officer.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Interrogation\"},{\"type\":\"trait\",\"value\":\"Investigation\"},{\"type\":\"tag\",\"value\":\"Authority\"},{\"type\":\"tag\",\"value\":\"Backup\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Interrogation\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Investigation\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Authority\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Backup\",\"conditions\":[]}]"
         },
         {
           "value": "Lawyer",
           "label": "Lawyer",
           "description": "The character has a law degree and knows how to use it.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Dealmaker\"},{\"type\":\"trait\",\"value\":\"Legal Eagle\"},{\"type\":\"trait\",\"value\":\"Public Speaking\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Dealmaker\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Legal Eagle\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Public Speaking\",\"conditions\":[]}]"
         },
         {
           "value": "Leader",
           "label": "Leader",
           "description": "The character is the leader of a city, region, state or nation.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Presence\"},{\"type\":\"tag\",\"value\":\"Authority\"},{\"type\":\"tag\",\"value\":\"Powerful\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Presence\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Authority\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Powerful\",\"conditions\":[]}]"
         },
         {
           "value": "Military",
           "label": "Military",
           "description": "The character serves (or at least once served) in a military organization and relies on that training.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Battle Ready\"},{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"trait\",\"value\":\"Situational Awareness\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Battle Ready\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Connections\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Situational Awareness\",\"conditions\":[]}]"
         },
         {
           "value": "Outsider",
           "label": "Outsider",
           "description": "The character comes from another planet, dimension or time and is not familiar with how things work on this Earth.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"trait\",\"value\":\"Fresh Eyes\"},{\"type\":\"trait\",\"value\":\"Stranger\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Fresh Eyes\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Stranger\",\"conditions\":[]}]"
         },
         {
           "value": "Ruler",
           "label": "Ruler",
           "description": "The character is the leader of a city, region, state, or nation.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Regal\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Regal\",\"conditions\":[]}]"
         },
         {
           "value": "Scientist",
           "label": "Scientist",
           "description": "The character solves problems by means of scientific research.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Inventor\"},{\"type\":\"trait\",\"value\":\"Scientific Expertise\"},{\"type\":\"tag\",\"value\":\"Lab Access\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Inventor\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Scientific Expertise\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Lab Access\",\"conditions\":[]}]"
         },
         {
           "value": "Soldier",
           "label": "Soldier",
           "description": "The character served in a military organization.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Battle Ready\"},{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"trait\",\"value\":\"Situational Awareness\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Battle Ready\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Connections\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Situational Awareness\",\"conditions\":[]}]"
         },
         {
           "value": "Spy",
           "label": "Spy",
           "description": "The character is an expert in espionage.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"trait\",\"value\":\"Leverage\"},{\"type\":\"tag\",\"value\":\"Black Market Access\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Leverage\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Black Market Access\",\"conditions\":[]}]"
         },
         {
           "value": "Student",
           "label": "Student",
           "description": "The character attends school or college on a full-time basis.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Quick Learner\"},{\"type\":\"tag\",\"value\":\"Mentor\"},{\"type\":\"tag\",\"value\":\"Obligation\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Quick Learner\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Mentor\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Obligation\",\"conditions\":[]}]"
         },
         {
           "value": "Tycoon",
           "label": "Tycoon",
           "description": "The character is wildly wealthy and well-known.",
-          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\"},{\"type\":\"trait\",\"value\":\"Famous\"},{\"type\":\"tag\",\"value\":\"Rich\"}]"
+          "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Famous\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Rich\",\"conditions\":[]}]"
         }
       ]
     },
@@ -655,7 +662,7 @@
             "value": "Battle Ready",
             "label": "Battle Ready",
             "description": "The character is always mentally prepared for any sort of trouble to start.",
-            "bonusAdjustments": "[{\"type\":\"Focus\",\"name\":\"\",\"value\":30}]"
+            "bonusAdjustments": "[{\"type\":\"Focus\",\"name\":\"\",\"value\":30,\"conditions\":[]}]"
           },
           {
             "value": "Beguiling",
@@ -673,7 +680,7 @@
             "value": "Big",
             "label": "Big",
             "description": "The character's size is big, which applies -1 to their Melee and Agility defenses, adds +1 to their Run Speed, and increases their reach to 2.",
-            "bonusAdjustments": "[{\"type\":\"AttributeDefense\",\"name\":\"Melee\",\"value\":-1},{\"type\":\"AttributeDefense\",\"name\":\"Agility\",\"value\":-1},{\"type\":\"Run\",\"name\":\"\",\"value\":1}]"
+            "bonusAdjustments": "[{\"type\":\"AttributeDefense\",\"name\":\"Melee\",\"value\":-1,\"conditions\":[]},{\"type\":\"AttributeDefense\",\"name\":\"Agility\",\"value\":-1,\"conditions\":[]},{\"type\":\"Run\",\"name\":\"\",\"value\":1,\"conditions\":[]}]"
           },
           {
             "value": "Bloodthirsty",
@@ -973,7 +980,7 @@
             "value": "Small",
             "label": "Small",
             "description": "The character's size is small, which adds +1 to their Melee and Agility defenses and takes -1 from their Run Speed.",
-            "bonusAdjustments": "[{\"type\":\"AttributeDefense\",\"name\":\"Melee\",\"value\":1},{\"type\":\"AttributeDefense\",\"name\":\"Agility\",\"value\":1},{\"type\":\"Run\",\"name\":\"\",\"value\":-1}]"
+            "bonusAdjustments": "[{\"type\":\"AttributeDefense\",\"name\":\"Melee\",\"value\":1,\"conditions\":[]},{\"type\":\"AttributeDefense\",\"name\":\"Agility\",\"value\":1,\"conditions\":[]},{\"type\":\"Run\",\"name\":\"\",\"value\":-1,\"conditions\":[]}]"
           },
           {
             "value": "Sneaky",
@@ -1400,7 +1407,7 @@
                   "id": "Basic-Accuracy 1",
                   "label": "Accuracy 1",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Agility\",\"value\":1},{\"type\":\"attributeCheck\",\"name\":\"Agility\",\"value\":1}]",
+                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Agility\",\"value\":1,\"conditions\":[]},{\"type\":\"attributeCheck\",\"name\":\"Agility\",\"value\":1,\"conditions\":[]}]",
                   "prerequisites": "null"
                 },
                 "text": {
@@ -1417,7 +1424,7 @@
                   "id": "Basic-Accuracy 2",
                   "label": "Accuracy 2",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Agility\",\"value\":2},{\"type\":\"attributeCheck\",\"name\":\"Agility\",\"value\":2}]",
+                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Agility\",\"value\":2,\"conditions\":[]},{\"type\":\"attributeCheck\",\"name\":\"Agility\",\"value\":2,\"conditions\":[]}]",
                   "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"Accuracy 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
@@ -1434,7 +1441,7 @@
                   "id": "Basic-Accuracy 3",
                   "label": "Accuracy 3",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Agility\",\"value\":3},{\"type\":\"attributeCheck\",\"name\":\"Agility\",\"value\":3}]",
+                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Agility\",\"value\":3,\"conditions\":[]},{\"type\":\"attributeCheck\",\"name\":\"Agility\",\"value\":3,\"conditions\":[]}]",
                   "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"accuracy 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
@@ -1451,7 +1458,7 @@
                   "id": "Basic-Accuracy 4",
                   "label": "Accuracy 4",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Agility\",\"value\":4},{\"type\":\"attributeCheck\",\"name\":\"Agility\",\"value\":4}]",
+                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Agility\",\"value\":4,\"conditions\":[]},{\"type\":\"attributeCheck\",\"name\":\"Agility\",\"value\":4,\"conditions\":[]}]",
                   "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"accuracy 3\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
@@ -1519,7 +1526,7 @@
                   "id": "Basic-Brilliance 1",
                   "label": "Brilliance 1",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Logic\",\"value\":1},{\"type\":\"attributeCheck\",\"name\":\"Logic\",\"value\":1}]",
+                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Logic\",\"value\":1,\"conditions\":[]},{\"type\":\"attributeCheck\",\"name\":\"Logic\",\"value\":1,\"conditions\":[]}]",
                   "prerequisites": "null"
                 },
                 "text": {
@@ -1536,7 +1543,7 @@
                   "id": "Basic-Brilliance 2",
                   "label": "Brilliance 2",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Logic\",\"value\":2},{\"type\":\"attributeCheck\",\"name\":\"Logic\",\"value\":2}]",
+                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Logic\",\"value\":2,\"conditions\":[]},{\"type\":\"attributeCheck\",\"name\":\"Logic\",\"value\":2,\"conditions\":[]}]",
                   "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"brilliance 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
@@ -1553,7 +1560,7 @@
                   "id": "Basic-Brilliance 3",
                   "label": "Brilliance 3",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Logic\",\"value\":3},{\"type\":\"attributeCheck\",\"name\":\"Logic\",\"value\":3}]",
+                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Logic\",\"value\":3,\"conditions\":[]},{\"type\":\"attributeCheck\",\"name\":\"Logic\",\"value\":3,\"conditions\":[]}]",
                   "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"brilliance 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
@@ -1570,7 +1577,7 @@
                   "id": "Basic-Brilliance 4",
                   "label": "Brilliance 4",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Logic\",\"value\":4},{\"type\":\"attributeCheck\",\"name\":\"Logic\",\"value\":4}]",
+                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Logic\",\"value\":4,\"conditions\":[]},{\"type\":\"attributeCheck\",\"name\":\"Logic\",\"value\":4,\"conditions\":[]}]",
                   "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"brilliance 3\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
@@ -1604,7 +1611,7 @@
                   "id": "Basic-Discipline 1",
                   "label": "Discipline 1",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Ego\",\"value\":1},{\"type\":\"attributeCheck\",\"name\":\"Ego\",\"value\":1}]",
+                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Ego\",\"value\":1,\"conditions\":[]},{\"type\":\"attributeCheck\",\"name\":\"Ego\",\"value\":1,\"conditions\":[]}]",
                   "prerequisites": "null"
                 },
                 "text": {
@@ -1621,7 +1628,7 @@
                   "id": "Basic-Discipline 2",
                   "label": "Discipline 2",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Ego\",\"value\":2},{\"type\":\"attributeCheck\",\"name\":\"Ego\",\"value\":2}]",
+                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Ego\",\"value\":2,\"conditions\":[]},{\"type\":\"attributeCheck\",\"name\":\"Ego\",\"value\":2,\"conditions\":[]}]",
                   "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"discipline 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
@@ -1638,7 +1645,7 @@
                   "id": "Basic-Discipline 3",
                   "label": "Discipline 3",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Ego\",\"value\":3},{\"type\":\"attributeCheck\",\"name\":\"Ego\",\"value\":3}]",
+                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Ego\",\"value\":3,\"conditions\":[]},{\"type\":\"attributeCheck\",\"name\":\"Ego\",\"value\":3,\"conditions\":[]}]",
                   "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"discipline 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
@@ -1655,7 +1662,7 @@
                   "id": "Basic-Discipline 4",
                   "label": "Discipline 4",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Ego\",\"value\":4},{\"type\":\"attributeCheck\",\"name\":\"Ego\",\"value\":4}]",
+                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Ego\",\"value\":4,\"conditions\":[]},{\"type\":\"attributeCheck\",\"name\":\"Ego\",\"value\":4,\"conditions\":[]}]",
                   "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"discipline 3\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
@@ -1893,7 +1900,7 @@
                   "id": "Basic-Mighty 1",
                   "label": "Mighty 1",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Melee\",\"value\":1},{\"type\":\"attributeCheck\",\"name\":\"Melee\",\"value\":1}]",
+                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Melee\",\"value\":1,\"conditions\":[]},{\"type\":\"attributeCheck\",\"name\":\"Melee\",\"value\":1,\"conditions\":[]}]",
                   "prerequisites": "null"
                 },
                 "text": {
@@ -1910,7 +1917,7 @@
                   "id": "Basic-Mighty 2",
                   "label": "Mighty 2",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Melee\",\"value\":2},{\"type\":\"attributeCheck\",\"name\":\"Melee\",\"value\":2}]",
+                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Melee\",\"value\":2,\"conditions\":[]},{\"type\":\"attributeCheck\",\"name\":\"Melee\",\"value\":2,\"conditions\":[]}]",
                   "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"mighty 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
@@ -1927,7 +1934,7 @@
                   "id": "Basic-Mighty 3",
                   "label": "Mighty 3",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Melee\",\"value\":3},{\"type\":\"attributeCheck\",\"name\":\"Melee\",\"value\":3}]",
+                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Melee\",\"value\":3,\"conditions\":[]},{\"type\":\"attributeCheck\",\"name\":\"Melee\",\"value\":3,\"conditions\":[]}]",
                   "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=3\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"mighty 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
@@ -1944,7 +1951,7 @@
                   "id": "Basic-Mighty 4",
                   "label": "Mighty 4",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Melee\",\"value\":4},{\"type\":\"attributeCheck\",\"name\":\"Melee\",\"value\":4}]",
+                  "bonusAdjustments": "[{\"type\":\"attributeDamage\",\"name\":\"Melee\",\"value\":4,\"conditions\":[]},{\"type\":\"attributeCheck\",\"name\":\"Melee\",\"value\":4,\"conditions\":[]}]",
                   "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"mighty 3\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
@@ -2012,7 +2019,7 @@
                   "id": "Basic-Sturdy 1",
                   "label": "Sturdy 1",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"HealthDamageReduction\",\"name\":\"\",\"value\":1}]",
+                  "bonusAdjustments": "[{\"type\":\"HealthDamageReduction\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
                   "prerequisites": "null"
                 },
                 "text": {
@@ -2029,7 +2036,7 @@
                   "id": "Basic-Sturdy 2",
                   "label": "Sturdy 2",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"HealthDamageReduction\",\"name\":\"\",\"value\":2}]",
+                  "bonusAdjustments": "[{\"type\":\"HealthDamageReduction\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
                   "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=2\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"sturdy 1\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
@@ -2046,7 +2053,7 @@
                   "id": "Basic-Sturdy 3",
                   "label": "Sturdy 3",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"HealthDamageReduction\",\"name\":\"\",\"value\":3}]",
+                  "bonusAdjustments": "[{\"type\":\"HealthDamageReduction\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
                   "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=4\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"sturdy 2\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {
@@ -2063,7 +2070,7 @@
                   "id": "Basic-Sturdy 4",
                   "label": "Sturdy 4",
                   "type": "switch",
-                  "bonusAdjustments": "[{\"type\":\"HealthDamageReduction\",\"name\":\"\",\"value\":4}]",
+                  "bonusAdjustments": "[{\"type\":\"HealthDamageReduction\",\"name\":\"\",\"value\":4,\"conditions\":[]}]",
                   "prerequisites": "[{\"type\":\"\",\"name\":\"rank\",\"formula\":\">=6\",\"logicalOr\":[]},{\"type\":\"powers\",\"name\":\"sturdy 3\",\"formula\":\"=== true\",\"logicalOr\":[]}]"
                 },
                 "text": {

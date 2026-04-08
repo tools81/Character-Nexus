@@ -154,10 +154,10 @@ namespace Marvel
                     name = "health",
                     id = "health",
                     label = "Health",
-                    type = "hidden",
+                    type = "number",
                     className = "form-control",
                     calculation = "[attributes.Resilience] * 30 === 0 ? 15 : [attributes.Resilience] * 30",
-                    @default = 15
+                    pinnedStat = true
                 }
             );
             _fields.Add(
@@ -166,10 +166,10 @@ namespace Marvel
                     name = "focus",
                     id = "focus",
                     label = "Focus",
-                    type = "hidden",
+                    type = "number",
                     className = "form-control",
                     calculation = "[attributes.Vigilance] * 30 === 0 ? 15 : [attributes.Vigilance] * 30",
-                    @default = 15
+                    pinnedStat = true
                 }
             );
             _fields.Add(
@@ -178,8 +178,9 @@ namespace Marvel
                     name = "healthDamageReduction",
                     id = "healthDamageReduction",
                     label = "Health Damage Reduction",
-                    type = "hidden",
-                    className = "form-control"
+                    type = "number",
+                    className = "form-control",
+                    pinnedStat = true
                 }
             );
             _fields.Add(
@@ -188,8 +189,9 @@ namespace Marvel
                     name = "focusDamageReduction",
                     id = "focusDamageReduction",
                     label = "Focus Damage Reduction",
-                    type = "hidden",
-                    className = "form-control"
+                    type = "number",
+                    className = "form-control",
+                    pinnedStat = true
                 }
             );
             _fields.Add(
@@ -198,9 +200,10 @@ namespace Marvel
                     name = "run",
                     id = "run",
                     label = "Run",
-                    type = "hidden",
+                    type = "number",
                     className = "form-control",
-                    calculation = "5 + ([attributes.Agility] % 5 == 0 ? [attributes.Agility] / 5 : 0)"
+                    calculation = "5 + ([attributes.Agility] % 5 == 0 ? [attributes.Agility] / 5 : 0)",
+                    pinnedStat = true
                 }
             );
             _fields.Add(
@@ -209,9 +212,10 @@ namespace Marvel
                     name = "climb",
                     id = "climb",
                     label = "Climb",
-                    type = "hidden",
+                    type = "number",
                     className = "form-control",
-                    calculation = "Math.ceil([run] / 2)"
+                    calculation = "Math.ceil([run] / 2)",
+                    pinnedStat = true
                 }
             );
             _fields.Add(
@@ -220,9 +224,10 @@ namespace Marvel
                     name = "swim",
                     id = "swim",
                     label = "Swim",
-                    type = "hidden",
+                    type = "number",
                     className = "form-control",
-                    calculation = "Math.ceil([run] / 2)"
+                    calculation = "Math.ceil([run] / 2)",
+                    pinnedStat = true
                 }
             );
             _fields.Add(
@@ -231,9 +236,10 @@ namespace Marvel
                     name = "karma",
                     id = "karma",
                     label = "Karma",
-                    type = "hidden",
+                    type = "number",
                     className = "form-control",
-                    calculation = "[rank]"
+                    calculation = "[rank]",
+                    pinnedStat = true
                 }
             );
             _fields.Add(
@@ -242,9 +248,10 @@ namespace Marvel
                     name = "initiativeModifier",
                     id = "initiativeModifier",
                     label = "Initiative Modifier",
-                    type = "hidden",
+                    type = "number",
                     className = "form-control",
-                    calculation = "[attributes.Vigilance]"
+                    calculation = "[attributes.Vigilance]",
+                    pinnedStat = true
                 }
             );
             _fields.Add(

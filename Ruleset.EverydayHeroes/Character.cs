@@ -50,15 +50,18 @@ namespace EverydayHeroes
         public List<string> EquipmentProficiency { get; set; }
         public List<string> SavingThrowProficiency { get; set; }
         public int Speed { get => 30; }
-        public string HitDice { get => GetHitDice(); }
-        public int HitPoints { get => GetHitPoints(); }
-        public int Defense { get => GetDefense(); }
-        public int Initiative { get => GetInitiative(); }
+        public string HitDice { get; set; }
+        public int HitPoints { get; set; }
+        public int HitPointModifier { get; set; }
+        public int DefenseBonus { get; set; }
+        public string DefenseModifier { get; set; }
+        public int Defense { get; set; }
+        public int Initiative { get; set; }
         public bool HasDamageReduction { get; set; }
-        public int DamageReduction { get => GetDamageReduction(); }
-        public int ProficiencyBonus { get => GetProficiencyBonus(); }
-        public int PassivePerception { get => GetPassivePerception(); }  
-        public int WealthLevel { get => GetWealthLevel(); } 
+        public int DamageReduction { get; set; }
+        public int ProficiencyBonus { get; set; }
+        public int PassivePerception { get; set; }  
+        public int WealthLevel { get; set; } 
         public int GeniusPoints { get; set; }    
         public int FocusPoints { get; set; }
         public int InfluencePoints { get; set; }
@@ -79,64 +82,6 @@ namespace EverydayHeroes
                 Details = $"{Archetype.Name} | {Class.Name}",
                 CharacterSheet = CharacterSheet
             };
-        }
-
-        private int GetProficiencyBonus()
-        {
-            if (Level >= 9) return 4;
-            if (Level >= 5) return 3;
-
-            return 2;
-        }
-
-        private string GetHitDice()
-        {
-            return $"{Level}{Archetype.HitDice}";
-        }
-
-        private int GetHitPoints()
-        {
-            return Archetype.Hitpoints + ((Archetype.HitpointsPerLevel + Attributes.FirstOrDefault(a => a.Name == "Constitution").Modifier) * Level);
-        }
-
-        private int GetDefense()
-        {
-            return 10 + Attributes.FirstOrDefault(a => a.Name == Archetype.DefenseModifier).Modifier + Archetype.DefenseBonusPerLevel[Level];
-        }
-
-        private int GetInitiative()
-        {
-            return Attributes.FirstOrDefault(a => a.Name == "Dexterity").Modifier;
-        }
-
-        private int GetDamageReduction()
-        {
-            return HasDamageReduction ? GetProficiencyBonus() : 0;
-        }
-
-        private int GetPassivePerception()
-        {
-            var perceptionSkill = Skills.FirstOrDefault(s => s.Name == "Perception");
-            var value = 10 + Attributes.FirstOrDefault(a => a.Name == "Wisdom").Modifier + Attributes.FirstOrDefault(a => a.Name == perceptionSkill.AbilityModifier).Modifier;
-
-            if (perceptionSkill.Proficient)
-            {
-                if (perceptionSkill.Expertise)
-                {
-                    value += ProficiencyBonus * 2;
-                }
-                else
-                {
-                    value += ProficiencyBonus;
-                }
-            }
-
-            return value;
-        }
-
-        private int GetWealthLevel()
-        {
-            return Profession.WealthLevel;
         }
 
         public byte[] BuildCharacterSheet()

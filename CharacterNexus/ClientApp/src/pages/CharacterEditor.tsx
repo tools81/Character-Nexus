@@ -21,9 +21,11 @@ import FormListGroup from "../components/FormListGroup";
 import FormAccordion from "../components/FormAccordion";
 import DisabledPrereqWrapper from "../components/DisabledPrereqWrapper";
 import RightCollapsiblePane from "../components/RightCollapsiblePane";
+import LeftCollapsiblePane from "../components/LeftCollapsiblePane";
 import { useFieldCalculations } from "../hooks/useFieldCalculations";
 import { useBonusCharacteristics } from "../hooks/useBonusCharacteristics";
 import { useBonusAdjustments } from "../hooks/useBonusAdjustments";
+import { useConditionalBonuses } from "../hooks/useConditionalBonuses";
 import { handleRemoveBonusAdjustment, handleRemoveFieldValue } from "../hooks/useBonus";
 import { useModal } from "../hooks/useModal";
 import { useDisableEngine } from "../hooks/useDisableEngine";
@@ -328,6 +330,9 @@ const CharacterEditor: React.FC = () => {
 
   const [bonusCharacteristics, setBonusCharacteristics] = useState<BonusCharacteristics>([]);
   const [bonusAdjustments, setBonusAdjustments] = useState<BonusAdjustments>([]);
+  const [openPane, setOpenPane] = useState<"left" | "right" | null>(null);
+  const handleLeftToggle = () => setOpenPane(prev => prev === "left" ? null : "left");
+  const handleRightToggle = () => setOpenPane(prev => prev === "right" ? null : "right");
 
   const methods = useForm({ shouldUnregister: false });
   const { register, unregister, handleSubmit, watch, control, getValues, setValue, reset } = methods;
@@ -340,6 +345,7 @@ const CharacterEditor: React.FC = () => {
 
   useBonusAdjustments(bonusAdjustments, getValues, setValue);
   useBonusCharacteristics(bonusCharacteristics, getValues, setValue);
+  useConditionalBonuses(bonusAdjustments, setBonusAdjustments, bonusCharacteristics, setBonusCharacteristics, getValues, watch);
   useFieldCalculations(schema, getValues, setValue, watch);
 
   // Submit handler
@@ -637,7 +643,8 @@ const CharacterEditor: React.FC = () => {
         </div>
         <br />
       </form>
-      {currentRuleset && <RightCollapsiblePane title={currentRuleset.name} htmlContent={currentRuleset.instructions} />}
+      {schema && <LeftCollapsiblePane schema={schema} isOpen={openPane === "left"} onToggle={handleLeftToggle} />}
+      {currentRuleset && <RightCollapsiblePane title={currentRuleset.name} htmlContent={currentRuleset.instructions} isOpen={openPane === "right"} onToggle={handleRightToggle} />}
     </FormProvider>
   );
 };
@@ -664,9 +671,11 @@ const FormContents = ({
 
   return (
     <>
-      {schema.fields.map((field: any) =>
-        renderField(field, disabledMap, visibilityMap, resolveVisible, field.includeLabel ?? true)
-      )}
+      {schema.fields
+        .filter((field: any) => !field.pinnedStat)
+        .map((field: any) =>
+          renderField(field, disabledMap, visibilityMap, resolveVisible, field.includeLabel ?? true)
+        )}
 
       <userChoiceModal.Modal>
         {({ userChoices, close }: any) => (

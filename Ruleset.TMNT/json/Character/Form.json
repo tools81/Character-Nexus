@@ -132,7 +132,7 @@
           "weight": "40 lbs",
           "build": "Medium",
           "bio": 60,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":2},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":2}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":2,\"conditions\":[]}]"
         },
         {
           "value": "Alligator & Crocodile",
@@ -143,7 +143,7 @@
           "weight": "to 175 lbs",
           "build": "Long",
           "bio": 40,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":3},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":1},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":1}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":3,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":1,\"conditions\":[]}]"
         },
         {
           "value": "Apes",
@@ -154,7 +154,7 @@
           "weight": "175 lbs (Chimp); 200-800 lbs (Gorilla); 150 lbs (Orangutan)",
           "build": "Medium",
           "bio": 10,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":6},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":2},{\"type\":\"attributes\",\"name\":\"MA\",\"value\":2},{\"type\":\"attributes\",\"name\":\"PS\",\"value\":4},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":3}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":6,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"MA\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PS\",\"value\":4,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":3,\"conditions\":[]}]"
         },
         {
           "value": "Armadillo",
@@ -165,7 +165,7 @@
           "weight": "20-30 lbs",
           "build": "Medium",
           "bio": 60,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":2},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":3}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":3,\"conditions\":[]}]"
         },
         {
           "value": "Baboon",
@@ -176,7 +176,7 @@
           "weight": "40-65 lbs",
           "build": "Medium",
           "bio": 35,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":4},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":2},{\"type\":\"attributes\",\"name\":\"MA\",\"value\":3},{\"type\":\"attributes\",\"name\":\"PS\",\"value\":3},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":2}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":4,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"MA\",\"value\":3,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PS\",\"value\":3,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":2,\"conditions\":[]}]"
         },
         {
           "value": "Badger",
@@ -187,7 +187,7 @@
           "weight": "12-16 lbs",
           "build": "Short",
           "bio": 65,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":3},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":4}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":3,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":4,\"conditions\":[]}]"
         },
         {
           "value": "Bat",
@@ -198,7 +198,7 @@
           "weight": "36 oz",
           "build": "Medium",
           "bio": 70,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":1},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":1},{\"type\":\"attributes\",\"name\":\"MA\",\"value\":1},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":2}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"MA\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":2,\"conditions\":[]}]"
         },
         {
           "value": "Bear",
@@ -209,7 +209,7 @@
           "weight": "300-400 lbs (Black); 400-600 lbs (Grizzly); 700-900 lbs (Brown); 800-1,000 lbs (Polar)",
           "build": "Short",
           "bio": 5,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":6},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":4}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":6,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":4,\"conditions\":[]}]"
         },
         {
           "value": "Beaver",
@@ -220,7 +220,7 @@
           "weight": "40-60 lbs",
           "build": "Short",
           "bio": 40,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":5},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":1},{\"type\":\"attributes\",\"name\":\"PS\",\"value\":3},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":1}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":5,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PS\",\"value\":3,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":1,\"conditions\":[]}]"
         },
         {
           "value": "Boar",
@@ -231,7 +231,7 @@
           "weight": "200-300 lbs",
           "build": "Short",
           "bio": 30,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":2},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":1},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":1}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":1,\"conditions\":[]}]"
         },
         {
           "value": "Buffalo",
@@ -253,7 +253,7 @@
           "weight": "to 1,000 lbs",
           "build": "Medium",
           "bio": 0,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":1},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":4}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":4,\"conditions\":[]}]"
         },
         {
           "value": "Canines, Wild",
@@ -264,7 +264,7 @@
           "weight": "Coyote: 25-30 lbs; Wolf: 60-75 lbs",
           "build": "Medium",
           "bio": 50,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":4},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":2},{\"type\":\"attributes\",\"name\":\"MA\",\"value\":2},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":2}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":4,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"MA\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":2,\"conditions\":[]}]"
         },
         {
           "value": "Canine: Fox",
@@ -275,7 +275,7 @@
           "weight": "9-10 lbs",
           "build": "Long",
           "bio": 60,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":2},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":8},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":3}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":8,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":3,\"conditions\":[]}]"
         },
         {
           "value": "Cat — Domestic",
@@ -286,7 +286,7 @@
           "weight": "to 10 lbs",
           "build": "Medium",
           "bio": 70,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"ME\",\"value\":2},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":3}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"ME\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":3,\"conditions\":[]}]"
         },
         {
           "value": "Cat — Wild",
@@ -297,7 +297,7 @@
           "weight": "Bobcat: 18-22 lbs; Lynx: 25-35 lbs",
           "build": "Short",
           "bio": 65,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"ME\",\"value\":2},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":3}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"ME\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":3,\"conditions\":[]}]"
         },
         {
           "value": "Cheetah",
@@ -308,7 +308,7 @@
           "weight": "to 125 lbs",
           "build": "Long",
           "bio": 40,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":10}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":10,\"conditions\":[]}]"
         },
         {
           "value": "Chicken",
@@ -341,7 +341,7 @@
           "weight": "8-15 lbs",
           "build": "Medium",
           "bio": 65,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":3},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":2}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":3,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":2,\"conditions\":[]}]"
         },
         {
           "value": "Deer",
@@ -352,7 +352,7 @@
           "weight": "to 400 lbs",
           "build": "Medium",
           "bio": 20,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":1},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":1},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":3}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":3,\"conditions\":[]}]"
         },
         {
           "value": "Dog",
@@ -363,7 +363,7 @@
           "weight": "Varies by breed",
           "build": "Medium",
           "bio": 60,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":2}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":2,\"conditions\":[]}]"
         },
         {
           "value": "Duck",
@@ -385,7 +385,7 @@
           "weight": "to 10,000 lbs",
           "build": "Short",
           "bio": 0,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":2},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":3}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":3,\"conditions\":[]}]"
         },
         {
           "value": "Elk",
@@ -396,7 +396,7 @@
           "weight": "to 1,100 lbs",
           "build": "Medium",
           "bio": 0,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1},{\"type\":\"attributes\",\"name\":\"PS\",\"value\":2}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PS\",\"value\":2,\"conditions\":[]}]"
         },
         {
           "value": "Felines",
@@ -407,7 +407,7 @@
           "weight": "Jaguar: to 300 lbs; Lion: to 400 lbs; Tiger: to 500 lbs",
           "build": "Medium",
           "bio": 20,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":2},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":6},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":2}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":6,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":2,\"conditions\":[]}]"
         },
         {
           "value": "Frog",
@@ -418,7 +418,7 @@
           "weight": "to 3 lbs",
           "build": "Medium",
           "bio": 80,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":2}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":2,\"conditions\":[]}]"
         },
         {
           "value": "Goat",
@@ -429,7 +429,7 @@
           "weight": "to 75 lbs",
           "build": "Medium",
           "bio": 55,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":2},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":4},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":1}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":4,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":1,\"conditions\":[]}]"
         },
         {
           "value": "Hippopotamus",
@@ -451,7 +451,7 @@
           "weight": "800-1,400 lbs",
           "build": "Medium",
           "bio": 0,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":2},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":6}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":6,\"conditions\":[]}]"
         },
         {
           "value": "Marten & Mink",
@@ -462,7 +462,7 @@
           "weight": "23 lbs",
           "build": "Long",
           "bio": 70,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":2},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":1},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":2},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":5}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":5,\"conditions\":[]}]"
         },
         {
           "value": "Mole",
@@ -484,7 +484,7 @@
           "weight": "5-20 lbs",
           "build": "Long",
           "bio": 45,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":3},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":1},{\"type\":\"attributes\",\"name\":\"MA\",\"value\":1},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":2},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":1},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":2}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":3,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"MA\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":2,\"conditions\":[]}]"
         },
         {
           "value": "Moose",
@@ -495,7 +495,7 @@
           "weight": "to 1,500 lbs",
           "build": "Medium",
           "bio": 0,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":4},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":1}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":4,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":1,\"conditions\":[]}]"
         },
         {
           "value": "Mountain Lion",
@@ -506,7 +506,7 @@
           "weight": "100-175 lbs",
           "build": "Long",
           "bio": 40,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PP\",\"value\":3},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":2}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PP\",\"value\":3,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":2,\"conditions\":[]}]"
         },
         {
           "value": "Muskrat",
@@ -517,7 +517,7 @@
           "weight": "14 lbs",
           "build": "Short",
           "bio": 70,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":3},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":1},{\"type\":\"attributes\",\"name\":\"MA\",\"value\":1}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":3,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"MA\",\"value\":1,\"conditions\":[]}]"
         },
         {
           "value": "Opossum",
@@ -539,7 +539,7 @@
           "weight": "River Otter: 15-20 lbs; Sea Otter: 45-60 lbs",
           "build": "Long",
           "bio": 50,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":3},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":2},{\"type\":\"attributes\",\"name\":\"MA\",\"value\":3},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":4},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":3}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":3,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"MA\",\"value\":3,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":4,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":3,\"conditions\":[]}]"
         },
         {
           "value": "Owl",
@@ -550,7 +550,7 @@
           "weight": "to 25 lbs",
           "build": "Short",
           "bio": 60,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PP\",\"value\":4},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":1}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PP\",\"value\":4,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":1,\"conditions\":[]}]"
         },
         {
           "value": "Parrot",
@@ -583,7 +583,7 @@
           "weight": "to 800 lbs",
           "build": "Medium",
           "bio": 25,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":3},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":1},{\"type\":\"attributes\",\"name\":\"MA\",\"value\":1}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":3,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"MA\",\"value\":1,\"conditions\":[]}]"
         },
         {
           "value": "Pigeon",
@@ -616,7 +616,7 @@
           "weight": "5-8 lbs",
           "build": "Medium",
           "bio": 70,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":4}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":4,\"conditions\":[]}]"
         },
         {
           "value": "Raccoon",
@@ -627,7 +627,7 @@
           "weight": "15-18 lbs",
           "build": "Short",
           "bio": 55,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":4},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":2},{\"type\":\"attributes\",\"name\":\"MA\",\"value\":2},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":4,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"MA\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1,\"conditions\":[]}]"
         },
         {
           "value": "Rhinoceros",
@@ -638,7 +638,7 @@
           "weight": "3,000-8,000 lbs",
           "build": "Long",
           "bio": 0,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":4},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":4}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PS\",\"value\":4,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":4,\"conditions\":[]}]"
         },
         {
           "value": "Rodent",
@@ -649,7 +649,7 @@
           "weight": "Mice/Hamsters: to 1 lb; Rats/Guinea Pigs: to 5 lbs",
           "build": "Medium",
           "bio": 80,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":2},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":1},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"ME\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1,\"conditions\":[]}]"
         },
         {
           "value": "Sheep",
@@ -693,7 +693,7 @@
           "weight": "to 1 lb",
           "build": "Long",
           "bio": 80,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":4}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":4,\"conditions\":[]}]"
         },
         {
           "value": "Turkey",
@@ -726,7 +726,7 @@
           "weight": "2-8 oz",
           "build": "Long",
           "bio": 75,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PP\",\"value\":9},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":7}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PP\",\"value\":9,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":7,\"conditions\":[]}]"
         },
         {
           "value": "Wild Birds",
@@ -759,7 +759,7 @@
           "weight": "Hawks/Falcons: 8-15 lbs; Eagles: up to 25 lbs",
           "build": "Medium",
           "bio": 70,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PP\",\"value\":3},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":2}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"PP\",\"value\":3,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Spd\",\"value\":2,\"conditions\":[]}]"
         },
         {
           "value": "Wolverine",
@@ -770,7 +770,7 @@
           "weight": "20-30 lbs",
           "build": "Short",
           "bio": 50,
-          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":3},{\"type\":\"attributes\",\"name\":\"PS\",\"value\":2},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":5},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":10}]"
+          "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":3,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PS\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":5,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":10,\"conditions\":[]}]"
         }
       ]
     },
@@ -834,13 +834,13 @@
           "value": "Self-Taught Survivalist",
           "label": "Self-Taught Survivalist",
           "description": "Everything is self-taught as the animal lives in the wild with no help or assistance. Character mistrusts humans and other animals. Basic reading, writing and arithmetic are at a low level. Character can pick only one (1) Secondary skill. Has scavenged 3D6 times $100 in various equipment, most in poor condition.",
-          "bonusAdjustments": "[{\"type\":\"skills\",\"name\":\"Prowl\",\"value\":24},{\"type\":\"skills\",\"name\":\"Survival Skills\",\"value\":24},{\"type\":\"skills\",\"name\":\"Escape Artist\",\"value\":10},{\"type\":\"skills\",\"name\":\"Climbing\",\"value\":15},{\"type\":\"skills\",\"name\":\"Swimming\",\"value\":10},{\"type\":\"sdc\",\"name\":\"\",\"value\":10},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":6},{\"type\":\"attributes\",\"name\":\"PS\",\"value\":3},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":2}]"
+          "bonusAdjustments": "[{\"type\":\"skills\",\"name\":\"Prowl\",\"value\":24,\"conditions\":[]},{\"type\":\"skills\",\"name\":\"Survival Skills\",\"value\":24,\"conditions\":[]},{\"type\":\"skills\",\"name\":\"Escape Artist\",\"value\":10,\"conditions\":[]},{\"type\":\"skills\",\"name\":\"Climbing\",\"value\":15,\"conditions\":[]},{\"type\":\"skills\",\"name\":\"Swimming\",\"value\":10,\"conditions\":[]},{\"type\":\"sdc\",\"name\":\"\",\"value\":10,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":6,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PS\",\"value\":3,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":2,\"conditions\":[]}]"
         },
         {
           "value": "Fringe Dweller",
           "label": "Fringe Dweller",
           "description": "By skulking around the fringes of society the character picks up a rudimentary education. The character probably has a small number of human friends but distrusts people in general. Also knows Hand to Hand Basic. Knows 14 Secondary skills. Has scavenged 3D6 times $200 in equipment.",
-          "bonusAdjustments": "[{\"type\":\"skills\",\"name\":\"Prowl\",\"value\":12},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1}]"
+          "bonusAdjustments": "[{\"type\":\"skills\",\"name\":\"Prowl\",\"value\":12,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":1,\"conditions\":[]}]"
         },
         {
           "value": "Mentor Trained",

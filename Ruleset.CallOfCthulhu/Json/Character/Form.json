@@ -72,7 +72,7 @@
           "value": "15 to 19 years old",
           "label": "15 to 19 years old",
           "description": "Deduct 5 points among STR and SIZ. Deduct 5 points from EDU. Roll twice to generate a Luck score (see Luck, above) and use the higher value.",
-          "bonusAdjustments": "[{\"type\":\"characteristics\",\"name\":\"Education\",\"value\":-5}]",
+          "bonusAdjustments": "[{\"type\":\"characteristics\",\"name\":\"Education\",\"value\":-5,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"characteristics\",\"label\":\"Deduct 5 points total\",\"choices\":[\"Strength\",\"Size\"],\"count\":1,\"category\":\"Adjustment\",\"value\":-5}]"
         },
         {
@@ -86,35 +86,35 @@
           "value": "40 to 49 years old",
           "label": "40 to 49 years old",
           "description": "Make 2 improvement checks for EDU and deduct 5 points among STR, CON or DEX, and reduce APP by 5.",
-          "bonusAdjustments": "[{\"type\":\"characteristics\",\"name\":\"Appearance\",\"value\":-5},{\"type\":\"movement\",\"name\":\"\",\"value\":-1}]",
+          "bonusAdjustments": "[{\"type\":\"characteristics\",\"name\":\"Appearance\",\"value\":-5,\"conditions\":[]},{\"type\":\"movement\",\"name\":\"\",\"value\":-1,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"characteristics\",\"label\":\"Deduct 5 points total\",\"choices\":[\"Strength\",\"Constitution\",\"Dexterity\"],\"count\":1,\"category\":\"Adjustment\",\"value\":-5}]"
         },
         {
           "value": "50 to 59 years old",
           "label": "50 to 59 years old",
           "description": "Make 3 improvement checks for EDU and deduct 10 points among STR, CON or DEX, and reduce APP by 10.",
-          "bonusAdjustments": "[{\"type\":\"characteristics\",\"name\":\"Appearance\",\"value\":-10},{\"type\":\"movement\",\"name\":\"\",\"value\":-2}]",
+          "bonusAdjustments": "[{\"type\":\"characteristics\",\"name\":\"Appearance\",\"value\":-10,\"conditions\":[]},{\"type\":\"movement\",\"name\":\"\",\"value\":-2,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"characteristics\",\"label\":\"Deduct 10 points total\",\"choices\":[\"Strength\",\"Constitution\",\"Dexterity\"],\"count\":1,\"category\":\"Adjustment\",\"value\":-10}]"
         },
         {
           "value": "60 to 69 years old",
           "label": "60 to 69 years old",
           "description": "Make 4 improvement checks for EDU and deduct 20 points among STR, CON or DEX, and reduce APP by 15.",
-          "bonusAdjustments": "[{\"type\":\"characteristics\",\"name\":\"Appearance\",\"value\":-15},{\"type\":\"movement\",\"name\":\"\",\"value\":-3}]",
+          "bonusAdjustments": "[{\"type\":\"characteristics\",\"name\":\"Appearance\",\"value\":-15,\"conditions\":[]},{\"type\":\"movement\",\"name\":\"\",\"value\":-3,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"characteristics\",\"label\":\"Deduct 20 points total\",\"choices\":[\"Strength\",\"Constitution\",\"Dexterity\"],\"count\":1,\"category\":\"Adjustment\",\"value\":-20}]"
         },
         {
           "value": "70 to 79 years old",
           "label": "70 to 79 years old",
           "description": "Make 4 improvement checks for EDU and deduct 40 points among STR, CON or DEX, and reduce APP by 20.",
-          "bonusAdjustments": "[{\"type\":\"characteristics\",\"name\":\"Appearance\",\"value\":-20},{\"type\":\"movement\",\"name\":\"\",\"value\":-4}]",
+          "bonusAdjustments": "[{\"type\":\"characteristics\",\"name\":\"Appearance\",\"value\":-20,\"conditions\":[]},{\"type\":\"movement\",\"name\":\"\",\"value\":-4,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"characteristics\",\"label\":\"Deduct 40 points total\",\"choices\":[\"Strength\",\"Constitution\",\"Dexterity\"],\"count\":1,\"category\":\"Adjustment\",\"value\":-40}]"
         },
         {
           "value": "80 to 89 years old",
           "label": "80 to 89 years old",
           "description": "Make 4 improvement checks for EDU and deduct 80 points among STR, CON or DEX, and reduce APP by 25.",
-          "bonusAdjustments": "[{\"type\":\"characteristics\",\"name\":\"Appearance\",\"value\":-25},{\"type\":\"movement\",\"name\":\"\",\"value\":-5}]",
+          "bonusAdjustments": "[{\"type\":\"characteristics\",\"name\":\"Appearance\",\"value\":-25,\"conditions\":[]},{\"type\":\"movement\",\"name\":\"\",\"value\":-5,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"characteristics\",\"label\":\"Deduct 80 points total\",\"choices\":[\"Strength\",\"Constitution\",\"Dexterity\"],\"count\":1,\"category\":\"Adjustment\",\"value\":-80}]"
         }
       ]

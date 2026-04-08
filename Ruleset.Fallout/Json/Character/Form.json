@@ -12,53 +12,53 @@
       "name": "healthPoints",
       "id": "healthPoints",
       "label": "Health Points",
-      "type": "hidden",
+      "type": "number",
       "className": "form-control",
       "calculation": "2 + ([attributes.Endurance] * 2)",
-      "default": 10
-    },
-    {
-      "name": "carryWeight",
-      "id": "carryWeight",
-      "label": "Carry Weight",
-      "type": "hidden",
-      "className": "form-control",
-      "calculation": "150 + ([attributes.Strength] * 10)",
-      "default": 150
-    },
-    {
-      "name": "meleeDamage",
-      "id": "meleeDamage",
-      "label": "Melee Damage",
-      "type": "hidden",
-      "className": "form-control",
-      "calculation": "Math.max(1, Math.floor([attributes.Strength] / 2))",
-      "default": 1
+      "pinnedStat": true
     },
     {
       "name": "initiative",
       "id": "initiative",
       "label": "Initiative",
-      "type": "hidden",
+      "type": "number",
       "className": "form-control",
       "calculation": "[attributes.Agility] + [attributes.Perception]",
-      "default": 0
-    },
-    {
-      "name": "damageResistance",
-      "id": "damageResistance",
-      "label": "Damage Resistance",
-      "type": "hidden",
-      "className": "form-control",
-      "default": 0
+      "pinnedStat": true
     },
     {
       "name": "defense",
       "id": "defense",
       "label": "Defense",
-      "type": "hidden",
+      "type": "number",
       "className": "form-control",
-      "default": 0
+      "pinnedStat": true
+    },
+    {
+      "name": "damageResistance",
+      "id": "damageResistance",
+      "label": "Damage Resistance",
+      "type": "number",
+      "className": "form-control",
+      "pinnedStat": true
+    },
+    {
+      "name": "meleeDamage",
+      "id": "meleeDamage",
+      "label": "Melee Damage",
+      "type": "number",
+      "className": "form-control",
+      "calculation": "Math.max(1, Math.floor([attributes.Strength] / 2))",
+      "pinnedStat": true
+    },
+    {
+      "name": "carryWeight",
+      "id": "carryWeight",
+      "label": "Carry Weight",
+      "type": "number",
+      "className": "form-control",
+      "calculation": "150 + ([attributes.Strength] * 10)",
+      "pinnedStat": true
     },
     {
       "name": "name",
@@ -165,21 +165,21 @@
             "value": "Necrotic Post-Human",
             "label": "Necrotic Post-Human",
             "description": "",
-            "bonusAdjustments": "[{\"type\":\"immunity\",\"name\":\"Radiation\",\"value\":0}]",
+            "bonusAdjustments": "[{\"type\":\"immunity\",\"name\":\"Radiation\",\"value\":0,\"conditions\":[]}]",
             "userChoices": null
           },
           {
             "value": "Forced Evolution",
             "label": "Forced Evolution",
             "description": "",
-            "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"Strength\",\"value\":2},{\"type\":\"attributemax\",\"name\":\"Strength\",\"value\":12},{\"type\":\"attributes\",\"name\":\"Endurance\",\"value\":2},{\"type\":\"attributemax\",\"name\":\"Endurance\",\"value\":12},{\"type\":\"attributemax\",\"name\":\"Intelligence\",\"value\":6},{\"type\":\"attributemax\",\"name\":\"Charisma\",\"value\":6},{\"type\":\"skillmax\",\"name\":\"Athletics\",\"value\":4},{\"type\":\"skillmax\",\"name\":\"Barter\",\"value\":4},{\"type\":\"skillmax\",\"name\":\"Big Guns\",\"value\":4},{\"type\":\"skillmax\",\"name\":\"Energy Weapons\",\"value\":4},{\"type\":\"skillmax\",\"name\":\"Explosives\",\"value\":4},{\"type\":\"skillmax\",\"name\":\"Lockpick\",\"value\":4},{\"type\":\"skillmax\",\"name\":\"Medicine\",\"value\":4},{\"type\":\"skillmax\",\"name\":\"Melee Weapons\",\"value\":4},{\"type\":\"skillmax\",\"name\":\"Pilot\",\"value\":4},{\"type\":\"skillmax\",\"name\":\"Repair\",\"value\":4},{\"type\":\"skillmax\",\"name\":\"Science\",\"value\":4},{\"type\":\"skillmax\",\"name\":\"Small Guns\",\"value\":4},{\"type\":\"skillmax\",\"name\":\"Sneak\",\"value\":4},{\"type\":\"skillmax\",\"name\":\"Speech\",\"value\":4},{\"type\":\"skillmax\",\"name\":\"Survival\",\"value\":4},{\"type\":\"skillmax\",\"name\":\"Throwing\",\"value\":4},{\"type\":\"skillmax\",\"name\":\"Unarmed\",\"value\":4},{\"type\":\"immunity\",\"name\":\"Radiation\",\"value\":0},{\"type\":\"immunity\",\"name\":\"Poison\",\"value\":0}]",
+            "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"Strength\",\"value\":2,\"conditions\":[]},{\"type\":\"attributemax\",\"name\":\"Strength\",\"value\":12,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"Endurance\",\"value\":2,\"conditions\":[]},{\"type\":\"attributemax\",\"name\":\"Endurance\",\"value\":12,\"conditions\":[]},{\"type\":\"attributemax\",\"name\":\"Intelligence\",\"value\":6,\"conditions\":[]},{\"type\":\"attributemax\",\"name\":\"Charisma\",\"value\":6,\"conditions\":[]},{\"type\":\"skillmax\",\"name\":\"Athletics\",\"value\":4,\"conditions\":[]},{\"type\":\"skillmax\",\"name\":\"Barter\",\"value\":4,\"conditions\":[]},{\"type\":\"skillmax\",\"name\":\"Big Guns\",\"value\":4,\"conditions\":[]},{\"type\":\"skillmax\",\"name\":\"Energy Weapons\",\"value\":4,\"conditions\":[]},{\"type\":\"skillmax\",\"name\":\"Explosives\",\"value\":4,\"conditions\":[]},{\"type\":\"skillmax\",\"name\":\"Lockpick\",\"value\":4,\"conditions\":[]},{\"type\":\"skillmax\",\"name\":\"Medicine\",\"value\":4,\"conditions\":[]},{\"type\":\"skillmax\",\"name\":\"Melee Weapons\",\"value\":4,\"conditions\":[]},{\"type\":\"skillmax\",\"name\":\"Pilot\",\"value\":4,\"conditions\":[]},{\"type\":\"skillmax\",\"name\":\"Repair\",\"value\":4,\"conditions\":[]},{\"type\":\"skillmax\",\"name\":\"Science\",\"value\":4,\"conditions\":[]},{\"type\":\"skillmax\",\"name\":\"Small Guns\",\"value\":4,\"conditions\":[]},{\"type\":\"skillmax\",\"name\":\"Sneak\",\"value\":4,\"conditions\":[]},{\"type\":\"skillmax\",\"name\":\"Speech\",\"value\":4,\"conditions\":[]},{\"type\":\"skillmax\",\"name\":\"Survival\",\"value\":4,\"conditions\":[]},{\"type\":\"skillmax\",\"name\":\"Throwing\",\"value\":4,\"conditions\":[]},{\"type\":\"skillmax\",\"name\":\"Unarmed\",\"value\":4,\"conditions\":[]},{\"type\":\"immunity\",\"name\":\"Radiation\",\"value\":0,\"conditions\":[]},{\"type\":\"immunity\",\"name\":\"Poison\",\"value\":0,\"conditions\":[]}]",
             "userChoices": null
           },
           {
             "value": "Mister Handy Robot",
             "label": "Mister Handy Robot",
             "description": "",
-            "bonusAdjustments": "[{\"type\":\"immunity\",\"name\":\"Radiation\",\"value\":0},{\"type\":\"immunity\",\"name\":\"Poison\",\"value\":0}]",
+            "bonusAdjustments": "[{\"type\":\"immunity\",\"name\":\"Radiation\",\"value\":0,\"conditions\":[]},{\"type\":\"immunity\",\"name\":\"Poison\",\"value\":0,\"conditions\":[]}]",
             "userChoices": null
           },
           {
@@ -1357,7 +1357,7 @@
           "label": "Brotherhood of Steel Initiate",
           "description": "You are a new recruit to the Brotherhood of Steel training to fight the Brotherhood's battles. You aspire to become a Knight of the Brotherhood, to be entrusted with mighty Power Armor, weapons, and other advanced technology to preserve human knowledge and civilization.",
           "bonusAdjustments": null,
-          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Combat Knife\"},{\"type\":\"clothings\",\"value\":\"Brotherhood Fatigues\"},{\"type\":\"clothings\",\"value\":\"Brotherhood Hood\"},{\"type\":\"items\",\"value\":\"Brotherhood Holotags|1\"}]",
+          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Combat Knife\",\"conditions\":[]},{\"type\":\"clothings\",\"value\":\"Brotherhood Fatigues\",\"conditions\":[]},{\"type\":\"clothings\",\"value\":\"Brotherhood Hood\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Brotherhood Holotags|1\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"weapons\",\"label\":null,\"choices\":[\"Laser Pistol\",\"10mm Pistol\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"ammos\",\"label\":null,\"choices\":[\"Fusion Cell|15\",\"10mm|15\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
@@ -1365,7 +1365,7 @@
           "label": "Brotherhood of Steel Scribe",
           "description": "One of the Brotherhood's best and brightest, your life is dedicated to researching science and technology in order to preserve that knowledge, keeping records to ensure history is not forgotten, and to maintaining and improving the weapons, armor, and vehicles of the Brotherhood. While not as combat-ready as others in the Brotherhood, sometimes your duties require venturing into the field.",
           "bonusAdjustments": null,
-          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Combat Knife\"},{\"type\":\"clothings\",\"value\":\"Brotherhood Field Scribe Armor\"},{\"type\":\"clothings\",\"value\":\"Brotherhood Scribe Hat\"},{\"type\":\"items\",\"value\":\"Brotherhood Holotags|1\"}]",
+          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Combat Knife\",\"conditions\":[]},{\"type\":\"clothings\",\"value\":\"Brotherhood Field Scribe Armor\",\"conditions\":[]},{\"type\":\"clothings\",\"value\":\"Brotherhood Scribe Hat\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Brotherhood Holotags|1\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"weapons\",\"label\":null,\"choices\":[\"Laser Pistol\",\"10mm Pistol\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"ammos\",\"label\":null,\"choices\":[\"Fusion Cell|15\",\"10mm|15\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         }
       ]
@@ -1384,16 +1384,16 @@
           "value": "Brute",
           "label": "Brute",
           "description": "You're big, tough, and more than capable of surviving in the wasteland with little more than brute force and determination.",
-          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":5}]",
-          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pipe Rifle\"},{\"type\":\"armors\",\"value\":\"Raider Armor Torso\"},{\"type\":\"items\",\"value\":\"Personal Trinket|1\"},{\"type\":\"ammos\",\"value\":\"38|9\"}]",
+          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":5,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pipe Rifle\",\"conditions\":[]},{\"type\":\"armors\",\"value\":\"Raider Armor Torso\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Personal Trinket|1\",\"conditions\":[]},{\"type\":\"ammos\",\"value\":\"38|9\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"armors\",\"label\":null,\"choices\":[\"Raider Armor Head\",\"Raider Armor Left Leg\",\"Raider Armor Right Leg\",\"Raider Armor Left Arm\",\"Raider Armor Right Arm\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"weapons\",\"label\":null,\"choices\":[\"Baseball Bat\",\"Machete\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
           "value": "Skirmisher",
           "label": "Skirmisher",
           "description": "You're bigger and tougher than most of your fellow mutants, but only because you know the secret of getting better punchier gear.",
-          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":5}]",
-          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Heavy Bolt-Action Pipe Rifle\"},{\"type\":\"weapons\",\"value\":\"Board\"},{\"type\":\"armors\",\"value\":\"Raider Armor Torso\"},{\"type\":\"items\",\"value\":\"Personal Trinket|1\"},{\"type\":\"ammos\",\"value\":\"308|12\"}]",
+          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":5,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Heavy Bolt-Action Pipe Rifle\",\"conditions\":[]},{\"type\":\"weapons\",\"value\":\"Board\",\"conditions\":[]},{\"type\":\"armors\",\"value\":\"Raider Armor Torso\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Personal Trinket|1\",\"conditions\":[]},{\"type\":\"ammos\",\"value\":\"308|12\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"armors\",\"label\":null,\"choices\":[\"Raider Armor Head\",\"Raider Armor Left Leg\",\"Raider Armor Right Leg\",\"Raider Armor Left Arm\",\"Raider Armor Right Arm\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         }
       ]
@@ -1412,40 +1412,40 @@
           "value": "Miss Nanny",
           "label": "Miss Nanny",
           "description": "You were built and programmed to be a caretaker, performing domestic cleaning duties and taking care of kids. Your line was produced with a feminine voice and persona, as that was thought to be most acceptable to customers and most fitting for your role as maid and nanny.",
-          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":10}]",
-          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pincer Arm Attachment\"},{\"type\":\"weapons\",\"value\":\"Flamer Arm Attachment\"},{\"type\":\"robotArmors\",\"value\":\"Standard Plating\"}]",
+          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":10,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pincer Arm Attachment\",\"conditions\":[]},{\"type\":\"weapons\",\"value\":\"Flamer Arm Attachment\",\"conditions\":[]},{\"type\":\"robotArmors\",\"value\":\"Standard Plating\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"weapons\",\"label\":null,\"choices\":[\"Buzz-saw Arm Attachment\",\"Laser Emitter Arm Attachment\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
           "value": "Mister Farmhand",
           "label": "Mister Farmhand",
           "description": "You were built and programmed to assist on a farm, tending to crop fields and herds of livestock. Your line was produced with a masculine (and stereotypically rural) voice and persona and outfitted to help with farm work such as harvesting crops and killing vermin.",
-          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":25}]",
-          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pincer Arm Attachment\"},{\"type\":\"weapons\",\"value\":\"Buzz-saw Arm Attachment\"},{\"type\":\"weapons\",\"value\":\"Laser Emitter Arm Attachment\"},{\"type\":\"armors\",\"value\":\"Standard Plating\"},{\"type\":\"items\",\"value\":\"Bag of Fertilizer|1\"},{\"type\":\"consumeables\",\"value\":\"Mutfruit|2\"},{\"type\":\"consumeables\",\"value\":\"Mutfruit|2\"}]",
+          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":25,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pincer Arm Attachment\",\"conditions\":[]},{\"type\":\"weapons\",\"value\":\"Buzz-saw Arm Attachment\",\"conditions\":[]},{\"type\":\"weapons\",\"value\":\"Laser Emitter Arm Attachment\",\"conditions\":[]},{\"type\":\"armors\",\"value\":\"Standard Plating\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Bag of Fertilizer|1\",\"conditions\":[]},{\"type\":\"consumeables\",\"value\":\"Mutfruit|2\",\"conditions\":[]},{\"type\":\"consumeables\",\"value\":\"Mutfruit|2\",\"conditions\":[]}]",
           "userChoices": null
         },
         {
           "value": "Mister Gutsy",
           "label": "Mister Gutsy",
           "description": "You were built and programmed as a military robot for a variety of combat roles. Your line was produced with a masculine voice and persona based on a stereotypical drill sergeant, and you're more heavily armed and armored than most Mister Handy robots.",
-          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":10}]",
-          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"10mm Auto Pistol Arm\"},{\"type\":\"weapons\",\"value\":\"Buzz-saw Arm Attachment\"},{\"type\":\"weapons\",\"value\":\"Laser Emitter Arm Attachment\"},{\"type\":\"armors\",\"value\":\"Mister Gutsy Plating\"}]",
+          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":10,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"10mm Auto Pistol Arm\",\"conditions\":[]},{\"type\":\"weapons\",\"value\":\"Buzz-saw Arm Attachment\",\"conditions\":[]},{\"type\":\"weapons\",\"value\":\"Laser Emitter Arm Attachment\",\"conditions\":[]},{\"type\":\"armors\",\"value\":\"Mister Gutsy Plating\",\"conditions\":[]}]",
           "userChoices": null
         },
         {
           "value": "Mister Handy",
           "label": "Mister Handy",
           "description": "You're one of the domestic models of Mister Handy robots, a robotic butler programmed to assist in maintaining a household. Your line was programmed with a masculine voice and persona based on the stereotype of a British butler.",
-          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":10}]",
-          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pincer Arm Attachment\"},{\"type\":\"weapons\",\"value\":\"Buzz-saw Arm Attachment\"},{\"type\":\"weapons\",\"value\":\"Flamer Arm Attachment\"},{\"type\":\"armors\",\"value\":\"Standard Plating\"},{\"type\":\"consumeables\",\"value\":\"Robot Repair Kit|1\"}]",
+          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":10,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pincer Arm Attachment\",\"conditions\":[]},{\"type\":\"weapons\",\"value\":\"Buzz-saw Arm Attachment\",\"conditions\":[]},{\"type\":\"weapons\",\"value\":\"Flamer Arm Attachment\",\"conditions\":[]},{\"type\":\"armors\",\"value\":\"Standard Plating\",\"conditions\":[]},{\"type\":\"consumeables\",\"value\":\"Robot Repair Kit|1\",\"conditions\":[]}]",
           "userChoices": null
         },
         {
           "value": "Nurse Handy",
           "label": "Nurse Handy",
           "description": "You're one of the medical models of the Mister Handy line, intended to act as a medic, nurse, or orderly in a hospital, with some advanced models even serving as doctors (the Doctor Handy, MD., model). Your line was programmed with the same masculine voice and persona as the standard Mister Handy.",
-          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":10}]",
-          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pincer Arm Attachment\"},{\"type\":\"weapons\",\"value\":\"Buzz-saw Arm Attachment\"},{\"type\":\"armors\",\"value\":\"Standard Plating\"},{\"type\":\"consumeables\",\"value\":\"Stimpack|1\"}]",
+          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":10,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pincer Arm Attachment\",\"conditions\":[]},{\"type\":\"weapons\",\"value\":\"Buzz-saw Arm Attachment\",\"conditions\":[]},{\"type\":\"armors\",\"value\":\"Standard Plating\",\"conditions\":[]},{\"type\":\"consumeables\",\"value\":\"Stimpack|1\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"weapons\",\"label\":null,\"choices\":[\"Flamer Arm Attachment\",\"Laser Emitter Arm Attachment\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         }
       ]
@@ -1464,40 +1464,40 @@
           "value": "Mercenary",
           "label": "Mercenary",
           "description": "You travel the wasteland as a hired gun, fighting or defending who pays. Sometimes the job is honest, sometimes it's messy, but when times are good you can afford to live by a code and only take the upstanding jobs. Times aren't always good.",
-          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":15}]",
-          "bonusCharacteristics": "[{\"type\":\"clothings\",\"value\":\"Tough Clothing\"},{\"type\":\"items\",\"value\":\"Note|1\"}]",
+          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":15,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"clothings\",\"value\":\"Tough Clothing\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Note|1\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"armors\",\"label\":null,\"choices\":[\"Leather Armor Chest\",\"Leather Armor Left Leg\",\"Leather Armor Right Leg\",\"Leather Armor Left Arm\",\"Leather Armor Right Arm\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"weapons\",\"label\":null,\"choices\":[\"Baseball Bat\",\"Machete\",\"Tire Iron\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"weapons\",\"label\":null,\"choices\":[\"10mm Automatic Pistol\",\"44 Pistol\",\"Hunting Rifle\",\"Bolt-Action Pipe Gun\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"ammos\",\"label\":null,\"choices\":[\"10mm|15\",\"44|15\",\"308|15\",\"38|15\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
           "value": "Raider",
           "label": "Raider",
           "description": "Might makes right in the wasteland. You take what you need from others and defend yourself from anyone trying to do the same. Occasionally, you might band together with a few other like-minded folks to take something none of you could've raided on your own, but mostly it's everyone for themselves.",
-          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":15}]",
-          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pipe Gun\"},{\"type\":\"weapons\",\"value\":\"Molotov Cocktail\"},{\"type\":\"armors\",\"value\":\"Raider Armor Chest\"},{\"type\":\"clothings\",\"value\":\"Harness\"},{\"type\":\"items\",\"value\":\"Note|1\"},{\"type\":\"ammos\",\"value\":\"38|15\"}]",
+          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":15,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pipe Gun\",\"conditions\":[]},{\"type\":\"weapons\",\"value\":\"Molotov Cocktail\",\"conditions\":[]},{\"type\":\"armors\",\"value\":\"Raider Armor Chest\",\"conditions\":[]},{\"type\":\"clothings\",\"value\":\"Harness\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Note|1\",\"conditions\":[]},{\"type\":\"ammos\",\"value\":\"38|15\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"armors\",\"label\":null,\"choices\":[\"Raider Armor Left Arm\",\"Raider Armor Right Arm\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"weapons\",\"label\":null,\"choices\":[\"Lead Pipe\",\"Pool Cue\",\"Tire Iron\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"consumeables\",\"label\":null,\"choices\":[\"Jet|1\",\"RadAway|1\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
           "value": "Settler",
           "label": "Settler",
           "description": "It's not the easiest life in the wasteland, but given a bit of hard work, and help from a few neighbors, it's possible to carve out something like home. Maybe you're a fighter and others rely on you for defense, maybe you grow the food others rely on to survive, or maybe you're good at fixing things, or have a knack for getting people to cooperate.",
-          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":45}]",
-          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pipe Gun\"},{\"type\":\"clothings\",\"value\":\"Tough Clothing\"},{\"type\":\"items\",\"value\":\"Personal Trinket|1\"},{\"type\":\"consumeables\",\"value\":\"Iguana Bits|2\"},{\"type\":\"ammos\",\"value\":\"38|9\"}]",
+          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":45,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pipe Gun\",\"conditions\":[]},{\"type\":\"clothings\",\"value\":\"Tough Clothing\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Personal Trinket|1\",\"conditions\":[]},{\"type\":\"consumeables\",\"value\":\"Iguana Bits|2\",\"conditions\":[]},{\"type\":\"ammos\",\"value\":\"38|9\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"weapons\",\"label\":null,\"choices\":[\"Switchblade\",\"Pipe Wrench\",\"Rolling Pin\",\"Knuckles\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
           "value": "Trader",
           "label": "Trader",
           "description": "You travel from settlement to settlement, a caravan of brahmin laden with supplies seeking to trade with settlers and drifters alike. You're ready for trouble-you can't let yourself be too easy a target for raiders-and often hire folks to help protect you and your wares.",
-          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":50}]",
-          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pipe Gun\"},{\"type\":\"clothings\",\"value\":\"Tough Clothing\"},{\"type\":\"items\",\"value\":\"Person Trinket|1\"},{\"type\":\"items\",\"value\":\"Pack Brahmin|1\"},{\"type\":\"ammos\",\"value\":\"38|12\"}]",
+          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":50,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pipe Gun\",\"conditions\":[]},{\"type\":\"clothings\",\"value\":\"Tough Clothing\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Person Trinket|1\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Pack Brahmin|1\",\"conditions\":[]},{\"type\":\"ammos\",\"value\":\"38|12\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"armors\",\"label\":null,\"choices\":[\"Leather Armor Chest\",\"Leather Armor Left Leg\",\"Leather Armor Right Leg\",\"Leather Armor Left Arm\",\"Leather Armor Right Arm\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
           "value": "Wanderer",
           "label": "Wanderer",
           "description": "You travel from settlement to settlement, scavenging from the ruins of the old world and either using what you find or selling it on for something more useful. You'll take on odd jobs and day work where you need to, but you're not one to settle down.",
-          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":30}]",
-          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pipe Gun\"},{\"type\":\"clothings\",\"value\":\"Drifter Outfit\"},{\"type\":\"items\",\"value\":\"Person Trinket|1\"},{\"type\":\"ammos\",\"value\":\"38|12\"}]",
+          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":30,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pipe Gun\",\"conditions\":[]},{\"type\":\"clothings\",\"value\":\"Drifter Outfit\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Person Trinket|1\",\"conditions\":[]},{\"type\":\"ammos\",\"value\":\"38|12\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"weapons\",\"label\":null,\"choices\":[\"Switchblade\",\"Pipe Wrench\",\"Rolling Pin\",\"Knuckles\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"consumeables\",\"label\":null,\"choices\":[\"Jet|1\",\"RadAway|1\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         }
       ]
@@ -1516,16 +1516,16 @@
           "value": "Vault-Tec Resident",
           "label": "Vault-Tec Resident",
           "description": "You-or one of your ancestors-chose to wait out the encroaching threat of atomic war in safety and comfort. And you did, surviving in a fortified underground bunker through the duration of the war. Of course, depending on the Vault you resided in, the experience may not have been so safe or comfortable...",
-          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":10}]",
-          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Switchblade\"},{\"type\":\"weapons\",\"value\":\"10mm Pistol\"},{\"type\":\"clothings\",\"value\":\"Vault Jumpsuit\"},{\"type\":\"consumeables\",\"value\":\"Purified Water|1\"},{\"type\":\"items\",\"value\":\"Vault-Tec Canteen|1\"},{\"type\":\"items\",\"value\":\"Pip-Boy|1\"},{\"type\":\"consumeables\",\"value\":\"Stimpack|2\"},{\"type\":\"ammos\",\"value\":\"10mm|9\"}]",
+          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":10,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Switchblade\",\"conditions\":[]},{\"type\":\"weapons\",\"value\":\"10mm Pistol\",\"conditions\":[]},{\"type\":\"clothings\",\"value\":\"Vault Jumpsuit\",\"conditions\":[]},{\"type\":\"consumeables\",\"value\":\"Purified Water|1\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Vault-Tec Canteen|1\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Pip-Boy|1\",\"conditions\":[]},{\"type\":\"consumeables\",\"value\":\"Stimpack|2\",\"conditions\":[]},{\"type\":\"ammos\",\"value\":\"10mm|9\",\"conditions\":[]}]",
           "userChoices": null
         },
         {
           "value": "Vault-Tec Security",
           "label": "Vault-Tec Security",
           "description": "You were a Vault-Tec employee, or a Vault Dweller entrusted by the Overseer with maintaining the Vault's safety and security. Or you got into the weapons locker before you escaped the Vault you lived in.",
-          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":10}]",
-          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Baton\"},{\"type\":\"weapons\",\"value\":\"10mm Pistol\"},{\"type\":\"armors\",\"value\":\"Vault-Tec Security Armor\"},{\"type\":\"armors\",\"value\":\"Vault-Tec Security Helmet\"},{\"type\":\"clothings\",\"value\":\"Vault Jumpsuit\"},{\"type\":\"consumeables\",\"value\":\"Purified Water|1\"},{\"type\":\"items\",\"value\":\"Vault-Tec Canteen|1\"},{\"type\":\"items\",\"value\":\"Pip-Boy|1\"},{\"type\":\"consumeables\",\"value\":\"Stimpack|1\"},{\"type\":\"ammos\",\"value\":\"10mm|12\"}]",
+          "bonusAdjustments": "[{\"type\":\"caps\",\"name\":\"\",\"value\":10,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Baton\",\"conditions\":[]},{\"type\":\"weapons\",\"value\":\"10mm Pistol\",\"conditions\":[]},{\"type\":\"armors\",\"value\":\"Vault-Tec Security Armor\",\"conditions\":[]},{\"type\":\"armors\",\"value\":\"Vault-Tec Security Helmet\",\"conditions\":[]},{\"type\":\"clothings\",\"value\":\"Vault Jumpsuit\",\"conditions\":[]},{\"type\":\"consumeables\",\"value\":\"Purified Water|1\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Vault-Tec Canteen|1\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Pip-Boy|1\",\"conditions\":[]},{\"type\":\"consumeables\",\"value\":\"Stimpack|1\",\"conditions\":[]},{\"type\":\"ammos\",\"value\":\"10mm|12\",\"conditions\":[]}]",
           "userChoices": null
         }
       ]
@@ -1641,7 +1641,7 @@
             "cost": "50 <img src=\"https://characternexus.blob.core.windows.net/resources/Fallout/bottlecap.png\" alt=\"bottlecap(s)\" class=\"inline-icon\">",
             "image": "",
             "description": "You can make ranged attacks using a 10mm auto pistol (see 10mm pistol, with an automatic receiver mod, p.95).",
-            "installedMods": "[{\"name\":\"Automatic\",\"prefix\":\"Auto\",\"weapontype\":\"Small Guns\",\"slot\":\"Receiver\",\"description\":null,\"bonusadjustments\":[{\"type\":\"fireRate\",\"name\":\"\",\"value\":2},{\"type\":\"damage\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}],\"bonuscharacteristics\":[{\"type\":\"effects\",\"value\":\"Burst\"},{\"type\":\"qualities\",\"value\":\"Inaccurate\"}],\"cost\":30,\"prerequisites\":[]}]",
+            "installedMods": "[{\"name\":\"Automatic\",\"prefix\":\"Auto\",\"weapontype\":\"Small Guns\",\"slot\":\"Receiver\",\"description\":null,\"bonusadjustments\":[{\"type\":\"fireRate\",\"name\":\"\",\"value\":2,\"conditions\":[]},{\"type\":\"damage\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}],\"bonuscharacteristics\":[{\"type\":\"effects\",\"value\":\"Burst\",\"conditions\":[]},{\"type\":\"qualities\",\"value\":\"Inaccurate\",\"conditions\":[]}],\"cost\":30,\"prerequisites\":[]}]",
             "stats": "[{\"label\":\"DMG:\",\"value\":\"4\",\"field\":\"damage\"},{\"label\":\"Type:\",\"value\":\"Physical\",\"field\":\"damageType\"},{\"label\":\"Weight:\",\"value\":\"4\",\"field\":\"weight\"},{\"label\":\"Rate:\",\"value\":\"2\",\"field\":\"fireRate\"},{\"label\":\"Range:\",\"value\":\"C\",\"field\":\"range\"},{\"label\":\"Ammo:\",\"value\":\"10mm\",\"field\":\"ammunition\"},{\"label\":\"Qualities:\",\"value\":\"Close Quarters, Reliable\",\"field\":\"qualities\"}]"
           },
           {
@@ -2272,7 +2272,7 @@
             "prefix": "Hardened",
             "slot": "Receiver",
             "description": "+1 Damage",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -2282,7 +2282,7 @@
             "prefix": "Powerful",
             "slot": "Receiver",
             "description": "+2 Damage, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 1\\\" || i?.value === \\\"Gun Nut 1\\\")\",\"logicalOr\":[]}]"
           },
@@ -2292,7 +2292,7 @@
             "prefix": "Advanced",
             "slot": "Receiver",
             "description": "+1 Fire Rate, +3 Damage, +2 Weight",
-            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":1},{\"type\":\"damage\",\"name\":\"\",\"value\":3},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"damage\",\"name\":\"\",\"value\":3,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 2\\\" || i?.value === \\\"Gun Nut 2\\\")\",\"logicalOr\":[]}]"
           },
@@ -2303,7 +2303,7 @@
             "slot": "Receiver",
             "description": "Adds Vicious (Effects)",
             "bonusAdjustments": null,
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"Vicious\"}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"Vicious\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -2312,8 +2312,8 @@
             "prefix": "Auto",
             "slot": "Receiver",
             "description": "+2 Fire Rate, +1 Damage, +1 Weight, Adds Burst (Effects), Adds Inaccurate (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":2},{\"type\":\"damage\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"Burst\"},{\"type\":\"qualities\",\"value\":\"Inaccurate\"}]",
+            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":2,\"conditions\":[]},{\"type\":\"damage\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"Burst\",\"conditions\":[]},{\"type\":\"qualities\",\"value\":\"Inaccurate\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 1\\\" || i?.value === \\\"Gun Nut 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2332,7 +2332,7 @@
             "prefix": "38",
             "slot": "Receiver",
             "description": "+3 Weight",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":3}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 4\\\" || i?.value === \\\"Gun Nut 4\\\")\",\"logicalOr\":[]}]"
           },
@@ -2342,7 +2342,7 @@
             "prefix": "308",
             "slot": "Receiver",
             "description": "+4 Weight",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":4}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":4,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 4\\\" || i?.value === \\\"Gun Nut 4\\\")\",\"logicalOr\":[]}]"
           },
@@ -2352,7 +2352,7 @@
             "prefix": "45",
             "slot": "Receiver",
             "description": "+1 Fire Rate, +2 Weight",
-            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 2\\\" || i?.value === \\\"Gun Nut 2\\\")\",\"logicalOr\":[]}]"
           },
@@ -2362,8 +2362,8 @@
             "prefix": ".350",
             "slot": "Receiver",
             "description": "+4 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":4}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":4,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 4\\\" || i?.value === \\\"Gun Nut 4\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2372,7 +2372,7 @@
             "prefix": "Auto",
             "slot": "Receiver",
             "description": "-1 Range, +2 Fire Rate, +2 Weight",
-            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":-1},{\"type\":\"fireRate\",\"name\":\"\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":-1,\"conditions\":[]},{\"type\":\"fireRate\",\"name\":\"\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 2\\\" || i?.value === \\\"Gun Nut 2\\\")\",\"logicalOr\":[]}]"
           },
@@ -2382,8 +2382,8 @@
             "prefix": "Snub Nose",
             "slot": "Barrel",
             "description": "-1 Weight, Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":-1}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":-1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -2393,7 +2393,7 @@
             "slot": "Barrel",
             "description": "Adds  (Qualities)",
             "bonusAdjustments": null,
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 3\\\" || i?.value === \\\"Gun Nut 3\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2402,7 +2402,7 @@
             "prefix": "Long",
             "slot": "Barrel",
             "description": "+1 Range, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 1\\\" || i?.value === \\\"Gun Nut 1\\\")\",\"logicalOr\":[]}]"
           },
@@ -2412,7 +2412,7 @@
             "prefix": "Ported",
             "slot": "Barrel",
             "description": "+1 Range, +1 Fire Rate, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1},{\"type\":\"fireRate\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1,\"conditions\":[]},{\"type\":\"fireRate\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 4\\\" || i?.value === \\\"Gun Nut 4\\\")\",\"logicalOr\":[]}]"
           },
@@ -2422,8 +2422,8 @@
             "prefix": "Vented",
             "slot": "Barrel",
             "description": "+1 Range, +1 Fire Rate, +1 Weight, Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1},{\"type\":\"fireRate\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1,\"conditions\":[]},{\"type\":\"fireRate\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 4\\\" || i?.value === \\\"Gun Nut 4\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2432,8 +2432,8 @@
             "prefix": "Sawed Off",
             "slot": "Barrel",
             "description": "-2 Weight, Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":-2}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":-2,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -2442,7 +2442,7 @@
             "prefix": "Shielded",
             "slot": "Barrel",
             "description": "+1 Damage",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 3\\\" || i?.value === \\\"Gun Nut 3\\\")\",\"logicalOr\":[]},{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Repair\\\" || i?.value === \\\"Repair\\\")\",\"logicalOr\":[]}]"
           },
@@ -2452,8 +2452,8 @@
             "prefix": "Finned",
             "slot": "Barrel",
             "description": "+1 Range, +1 Damage, +2 Weight, Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1},{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1,\"conditions\":[]},{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 2\\\" || i?.value === \\\"Gun Nut 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2462,8 +2462,8 @@
             "prefix": "High Capacity",
             "slot": "Magazine",
             "description": "+1 Fire Rate, +1 Weight, Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 2\\\" || i?.value === \\\"Gun Nut 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2473,7 +2473,7 @@
             "slot": "Magazine",
             "description": "Adds  (Qualities)",
             "bonusAdjustments": null,
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 1\\\" || i?.value === \\\"Gun Nut 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2482,7 +2482,7 @@
             "prefix": "Quick High Capacity",
             "slot": "Magazine",
             "description": "+1 Fire Rate, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 2\\\" || i?.value === \\\"Gun Nut 2\\\")\",\"logicalOr\":[]}]"
           },
@@ -2503,7 +2503,7 @@
             "slot": "Grip",
             "description": "Adds  (Effects)",
             "bonusAdjustments": null,
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 1\\\" || i?.value === \\\"Gun Nut 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2512,8 +2512,8 @@
             "prefix": "",
             "slot": "Stock",
             "description": "+1 Weight, Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 1\\\" || i?.value === \\\"Gun Nut 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2522,8 +2522,8 @@
             "prefix": "Marksman's",
             "slot": "Stock",
             "description": "+2 Weight, Adds  (Qualities), Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"},{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]},{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 2\\\" || i?.value === \\\"Gun Nut 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2532,8 +2532,8 @@
             "prefix": "Recoil Compensated",
             "slot": "Stock",
             "description": "+1 Fire Rate, +2 Weight, Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 3\\\" || i?.value === \\\"Gun Nut 3\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2552,8 +2552,8 @@
             "prefix": "Scoped",
             "slot": "Sight",
             "description": "+1 Weight, Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -2562,8 +2562,8 @@
             "prefix": "Scoped",
             "slot": "Sight",
             "description": "+1 Range, +1 Weight, Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 2\\\" || i?.value === \\\"Science! 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2572,8 +2572,8 @@
             "prefix": "Night Vision",
             "slot": "Sight",
             "description": "+1 Weight, Adds  (Qualities), Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"},{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]},{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 2\\\" || i?.value === \\\"Science! 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2582,8 +2582,8 @@
             "prefix": "Night Vision",
             "slot": "Sight",
             "description": "+1 Range, +1 Weight, Adds  (Qualities), Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"},{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]},{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 3\\\" || i?.value === \\\"Science! 3\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2592,8 +2592,8 @@
             "prefix": "Recon",
             "slot": "Sight",
             "description": "+1 Weight, Adds  (Qualities), Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"},{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]},{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 3\\\" || i?.value === \\\"Science! 3\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2602,7 +2602,7 @@
             "prefix": "Bayoneted",
             "slot": "Muzzle",
             "description": "+2 Weight",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -2612,7 +2612,7 @@
             "prefix": "Compensated",
             "slot": "Muzzle",
             "description": "+1 Weight",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 1\\\" || i?.value === \\\"Gun Nut 1\\\")\",\"logicalOr\":[]}]"
           },
@@ -2622,7 +2622,7 @@
             "prefix": "Muzzled",
             "slot": "Muzzle",
             "description": "+1 Fire Rate, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 1\\\" || i?.value === \\\"Gun Nut 1\\\")\",\"logicalOr\":[]}]"
           },
@@ -2632,8 +2632,8 @@
             "prefix": "Suppressed",
             "slot": "Muzzle",
             "description": "+2 Weight, Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 2\\\" || i?.value === \\\"Gun Nut 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2642,7 +2642,7 @@
             "prefix": "Three-Crank",
             "slot": "Capacitor",
             "description": "+1 Damage",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -2652,7 +2652,7 @@
             "prefix": "Four-Crank",
             "slot": "Capacitor",
             "description": "+2 Damage, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 1\\\" || i?.value === \\\"Science! 1\\\")\",\"logicalOr\":[]}]"
           },
@@ -2662,7 +2662,7 @@
             "prefix": "Five-Crank",
             "slot": "Capacitor",
             "description": "+3 Damage, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":3},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":3,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 2\\\" || i?.value === \\\"Science! 2\\\")\",\"logicalOr\":[]}]"
           },
@@ -2672,7 +2672,7 @@
             "prefix": "Six-Crank",
             "slot": "Capacitor",
             "description": "+4 Damage, +2 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":4},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":4,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 3\\\" || i?.value === \\\"Science! 3\\\")\",\"logicalOr\":[]}]"
           },
@@ -2682,7 +2682,7 @@
             "prefix": "Long",
             "slot": "Dish",
             "description": "+1 Damage, +2 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 4\\\" || i?.value === \\\"Science! 4\\\")\",\"logicalOr\":[]}]"
           },
@@ -2693,7 +2693,7 @@
             "slot": "Muzzle",
             "description": "Adds  (Effects)",
             "bonusAdjustments": null,
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 3\\\" || i?.value === \\\"Science! 3\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2702,7 +2702,7 @@
             "prefix": "Automatic",
             "slot": "Muzzle",
             "description": "+2 Fire Rate",
-            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 4\\\" || i?.value === \\\"Science! 4\\\")\",\"logicalOr\":[]}]"
           },
@@ -2713,7 +2713,7 @@
             "slot": "Capacitor",
             "description": "Adds  (Effects)",
             "bonusAdjustments": null,
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -2722,7 +2722,7 @@
             "prefix": "Boosted",
             "slot": "Capacitor",
             "description": "-1 Fire Rate, +1 Damage",
-            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":-1},{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":-1,\"conditions\":[]},{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -2733,7 +2733,7 @@
             "slot": "Capacitor",
             "description": "Adds  (Effects)",
             "bonusAdjustments": null,
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 1\\\" || i?.value === \\\"Science! 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2752,7 +2752,7 @@
             "prefix": "Long",
             "slot": "Barrell",
             "description": "+1 Range, +2 Weight",
-            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -2762,8 +2762,8 @@
             "prefix": "Scattergun",
             "slot": "Barrel",
             "description": "-1 Damage, +1 Weight, Adds  (Qualities), Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":-1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"},{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":-1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]},{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -2772,7 +2772,7 @@
             "prefix": "Automatic",
             "slot": "Barrel",
             "description": "-1 Damage, +1 Range, +1 Fire Rate, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":-1},{\"type\":\"range\",\"name\":\"Range\",\"value\":1},{\"type\":\"fireRate\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":-1,\"conditions\":[]},{\"type\":\"range\",\"name\":\"Range\",\"value\":1,\"conditions\":[]},{\"type\":\"fireRate\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 1\\\" || i?.value === \\\"Science! 1\\\")\",\"logicalOr\":[]}]"
           },
@@ -2782,7 +2782,7 @@
             "prefix": "",
             "slot": "Barrel",
             "description": "+1 Range, +2 Weight",
-            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 1\\\" || i?.value === \\\"Science! 1\\\")\",\"logicalOr\":[]}]"
           },
@@ -2792,7 +2792,7 @@
             "prefix": "Improved",
             "slot": "Barrel",
             "description": "+1 Damage, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 1\\\" || i?.value === \\\"Science! 1\\\")\",\"logicalOr\":[]}]"
           },
@@ -2802,7 +2802,7 @@
             "prefix": "Sniper",
             "slot": "Barrel",
             "description": "+2 Damage, +1 Range, -1 Fire Rate, +2 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2},{\"type\":\"range\",\"name\":\"Range\",\"value\":1},{\"type\":\"fireRate\",\"name\":\"\",\"value\":-1},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]},{\"type\":\"range\",\"name\":\"Range\",\"value\":1,\"conditions\":[]},{\"type\":\"fireRate\",\"name\":\"\",\"value\":-1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 1\\\" || i?.value === \\\"Science! 1\\\")\",\"logicalOr\":[]}]"
           },
@@ -2812,8 +2812,8 @@
             "prefix": "Thrower",
             "slot": "Barrel",
             "description": "+2 Damage, -1 Range, +2 Fire Rate, +1 Weight, Adds  (Effects), Adds  (Effects), Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2},{\"type\":\"range\",\"name\":\"Range\",\"value\":-1},{\"type\":\"fireRate\",\"name\":\"\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"},{\"type\":\"effects\",\"value\":\"\"},{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]},{\"type\":\"range\",\"name\":\"Range\",\"value\":-1,\"conditions\":[]},{\"type\":\"fireRate\",\"name\":\"\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]},{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]},{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 2\\\" || i?.value === \\\"Science! 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2823,7 +2823,7 @@
             "slot": "Grip",
             "description": "Adds  (Effects)",
             "bonusAdjustments": null,
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 1\\\" || i?.value === \\\"Gun Nut 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2832,8 +2832,8 @@
             "prefix": "",
             "slot": "Stock",
             "description": "+1 Weight, Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -2842,8 +2842,8 @@
             "prefix": "",
             "slot": "Stock",
             "description": "+1 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -2852,8 +2852,8 @@
             "prefix": "Marksman's",
             "slot": "Stock",
             "description": "+2 Weight, Adds  (Qualities), Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"},{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]},{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 2\\\" || i?.value === \\\"Gun Nut 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2862,8 +2862,8 @@
             "prefix": "Recoil Compensated",
             "slot": "Stock",
             "description": "+1 Fire Rate, +2 Weight, Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 3\\\" || i?.value === \\\"Gun Nut 3\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2882,8 +2882,8 @@
             "prefix": "Scoped",
             "slot": "Sight",
             "description": "+2 Weight, Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -2892,8 +2892,8 @@
             "prefix": "Scoped",
             "slot": "Sight",
             "description": "+1 Range, +1 Weight, Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 2\\\" || i?.value === \\\"Science! 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2902,8 +2902,8 @@
             "prefix": "Night Vision",
             "slot": "Sight",
             "description": "+1 Weight, Adds  (Qualities), Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"},{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]},{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 2\\\" || i?.value === \\\"Science! 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2912,8 +2912,8 @@
             "prefix": "Scoped",
             "slot": "Sight",
             "description": "+1 Range, +1 Weight, Adds  (Qualities), Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"},{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]},{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 3\\\" || i?.value === \\\"Science! 3\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2922,8 +2922,8 @@
             "prefix": "Recon",
             "slot": "Sight",
             "description": "+1 Weight, Adds  (Qualities), Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"},{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]},{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 3\\\" || i?.value === \\\"Science! 3\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2932,8 +2932,8 @@
             "prefix": "Scattered",
             "slot": "Muzzle",
             "description": "-1 Fire Rate, -1 Range, +1 Weight, Adds  (Effects), Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":-1},{\"type\":\"range\",\"name\":\"Range\",\"value\":-1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"},{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":-1,\"conditions\":[]},{\"type\":\"range\",\"name\":\"Range\",\"value\":-1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]},{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 1\\\" || i?.value === \\\"Science! 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -2942,7 +2942,7 @@
             "prefix": "Focused",
             "slot": "Muzzle",
             "description": "+1 Range, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 1\\\" || i?.value === \\\"Science! 1\\\")\",\"logicalOr\":[]}]"
           },
@@ -2952,7 +2952,7 @@
             "prefix": "Targeting",
             "slot": "Muzzle",
             "description": "+1 Fire Rate, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 1\\\" || i?.value === \\\"Science! 1\\\")\",\"logicalOr\":[]}]"
           },
@@ -2962,7 +2962,7 @@
             "prefix": "Napalmer",
             "slot": "Fuel",
             "description": "+1 Damage, +7 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":7}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":7,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -2972,7 +2972,7 @@
             "prefix": "Long",
             "slot": "Barrel",
             "description": "+2 Weight",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -2982,7 +2982,7 @@
             "prefix": "High Capacity",
             "slot": "Propellant Tank",
             "description": "+1 Fire Rate, +3 Weight",
-            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":3}]",
+            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -2992,7 +2992,7 @@
             "prefix": "Max Capacity",
             "slot": "Propellant Tank",
             "description": "+2 Fire Rate, +6 Weight",
-            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":6}]",
+            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":6,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -3002,7 +3002,7 @@
             "prefix": "Compressed",
             "slot": "Nozzle",
             "description": "+1 Damage",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -3012,8 +3012,8 @@
             "prefix": "Vaporizing",
             "slot": "Nozzle",
             "description": "+1 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3022,8 +3022,8 @@
             "prefix": "Excited",
             "slot": "Capacitor",
             "description": "+1 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 3\\\" || i?.value === \\\"Science! 3\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3032,8 +3032,8 @@
             "prefix": "Incendiary",
             "slot": "Capacitor",
             "description": "+1 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3042,7 +3042,7 @@
             "prefix": "Boosted",
             "slot": "Capacitor",
             "description": "+1 Damage, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -3052,8 +3052,8 @@
             "prefix": "Agitated",
             "slot": "Capacitor",
             "description": "+1 Damage, +3 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":3}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 3\\\" || i?.value === \\\"Science! 3\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3062,7 +3062,7 @@
             "prefix": "Charging",
             "slot": "Barrel",
             "description": "+4 Damage, -3 Fire Rate, +1 Range, +10 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":4},{\"type\":\"fireRate\",\"name\":\"FireRate\",\"value\":-3},{\"type\":\"range\",\"name\":\"Range\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":10}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":4,\"conditions\":[]},{\"type\":\"fireRate\",\"name\":\"FireRate\",\"value\":-3,\"conditions\":[]},{\"type\":\"range\",\"name\":\"Range\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":10,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 4\\\" || i?.value === \\\"Science! 4\\\")\",\"logicalOr\":[]}]"
           },
@@ -3072,7 +3072,7 @@
             "prefix": "Tactical",
             "slot": "Sight",
             "description": "+1 Weight",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 4\\\" || i?.value === \\\"Science! 4\\\")\",\"logicalOr\":[]}]"
           },
@@ -3082,8 +3082,8 @@
             "prefix": "Focused",
             "slot": "Nozzle",
             "description": "+1 Range, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"range\",\"name\":\"Range\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3092,7 +3092,7 @@
             "prefix": "High-Speed",
             "slot": "Barrel",
             "description": "+1 Damage, +1 Fire Rate, -1 Range, +5 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1},{\"type\":\"fireRate\",\"name\":\"\",\"value\":1},{\"type\":\"range\",\"name\":\"Range\",\"value\":-1},{\"type\":\"weight\",\"name\":\"\",\"value\":5}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]},{\"type\":\"fireRate\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"range\",\"name\":\"Range\",\"value\":-1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":5,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 3\\\" || i?.value === \\\"Gun Nut 3\\\")\",\"logicalOr\":[]}]"
           },
@@ -3102,7 +3102,7 @@
             "prefix": "High-Powered",
             "slot": "Barrel",
             "description": "+2 Damage, -2 Fire Rate, +3 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2},{\"type\":\"fireRate\",\"name\":\"\",\"value\":-2},{\"type\":\"weight\",\"name\":\"\",\"value\":3}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]},{\"type\":\"fireRate\",\"name\":\"\",\"value\":-2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 4\\\" || i?.value === \\\"Gun Nut 4\\\")\",\"logicalOr\":[]}]"
           },
@@ -3112,7 +3112,7 @@
             "prefix": "Tactical",
             "slot": "Sight",
             "description": "+5 Weight",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":5}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":5,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -3122,7 +3122,7 @@
             "prefix": "Bayoneted Shredding",
             "slot": "Muzzle",
             "description": "+5 Weight",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":5}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":5,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 2\\\" || i?.value === \\\"Gun Nut 2\\\")\",\"logicalOr\":[]}]"
           },
@@ -3132,7 +3132,7 @@
             "prefix": "Triple Barrel",
             "slot": "Barrel",
             "description": "+1 Fire Rate, +16 Weight",
-            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"FireRate\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":16}]",
+            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"FireRate\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":16,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 2\\\" || i?.value === \\\"Gun Nut 2\\\")\",\"logicalOr\":[]}]"
           },
@@ -3142,7 +3142,7 @@
             "prefix": "Quad Barrel",
             "slot": "Barrel",
             "description": "+2 Fire Rate, +20 Weight",
-            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"FireRate\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":20}]",
+            "bonusAdjustments": "[{\"type\":\"fireRate\",\"name\":\"FireRate\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":20,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 3\\\" || i?.value === \\\"Gun Nut 3\\\")\",\"logicalOr\":[]}]"
           },
@@ -3152,8 +3152,8 @@
             "prefix": "Scoped",
             "slot": "Sight",
             "description": "+6 Weight, Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":6}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":6,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 2\\\" || i?.value === \\\"Gun Nut 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3162,8 +3162,8 @@
             "prefix": "Night Vision",
             "slot": "Sight",
             "description": "+6 Weight, Adds  (Qualities), Adds  (Qualities)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":6}]",
-            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\"},{\"type\":\"qualities\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":6,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]},{\"type\":\"qualities\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 4\\\" || i?.value === \\\"Gun Nut 4\\\")\",\"logicalOr\":[]},{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 1\\\" || i?.value === \\\"Science! 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3172,7 +3172,7 @@
             "prefix": "Targeting",
             "slot": "Sight",
             "description": "+7 Weight",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":7}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":7,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 2\\\" || i?.value === \\\"Gun Nut 2\\\")\",\"logicalOr\":[]},{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 2\\\" || i?.value === \\\"Science! 2\\\")\",\"logicalOr\":[]}]"
           },
@@ -3182,7 +3182,7 @@
             "prefix": "Bayoneted Shredding",
             "slot": "Muzzle",
             "description": "+1 Weight",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -3192,8 +3192,8 @@
             "prefix": "Muzzled",
             "slot": "Muzzle",
             "description": "+2 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Gun Nut 2\\\" || i?.value === \\\"Gun Nut 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3203,7 +3203,7 @@
             "slot": "Melee",
             "description": "Adds  (Effects)",
             "bonusAdjustments": null,
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 2\\\" || i?.value === \\\"Blacksmith 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3212,7 +3212,7 @@
             "prefix": "Electrified",
             "slot": "Melee",
             "description": "+1 Damage",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 2\\\" || i?.value === \\\"Blacksmith 2\\\")\",\"logicalOr\":[]},{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 1\\\" || i?.value === \\\"Science! 1\\\")\",\"logicalOr\":[]}]"
           },
@@ -3222,8 +3222,8 @@
             "prefix": "Electrified Serrated",
             "slot": "Melee",
             "description": "+1 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 3\\\" || i?.value === \\\"Blacksmith 3\\\")\",\"logicalOr\":[]},{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 1\\\" || i?.value === \\\"Science! 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3232,8 +3232,8 @@
             "prefix": "Stunning",
             "slot": "Melee",
             "description": "+2 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 3\\\" || i?.value === \\\"Blacksmith 3\\\")\",\"logicalOr\":[]},{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 1\\\" || i?.value === \\\"Science! 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3242,8 +3242,8 @@
             "prefix": "Serrated",
             "slot": "Melee",
             "description": "+1 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 1\\\" || i?.value === \\\"Blacksmith 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3252,8 +3252,8 @@
             "prefix": "Stealth",
             "slot": "Melee",
             "description": "+1 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 2\\\" || i?.value === \\\"Blacksmith 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3262,8 +3262,8 @@
             "prefix": "Serrated",
             "slot": "Melee",
             "description": "+2 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 2\\\" || i?.value === \\\"Blacksmith 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3272,7 +3272,7 @@
             "prefix": "Curved",
             "slot": "Melee",
             "description": "+1 Damage, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -3282,8 +3282,8 @@
             "prefix": "Extended",
             "slot": "Melee",
             "description": "+1 Damage, +3 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":3}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 3\\\" || i?.value === \\\"Blacksmith 3\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3292,8 +3292,8 @@
             "prefix": "Searing",
             "slot": "Melee",
             "description": "+1 Damage, +1 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 3\\\" || i?.value === \\\"Blacksmith 3\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3302,8 +3302,8 @@
             "prefix": "Serrated",
             "slot": "Melee",
             "description": "+1 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 1\\\" || i?.value === \\\"Blacksmith 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3313,7 +3313,7 @@
             "slot": "Melee",
             "description": "Adds  (Effects)",
             "bonusAdjustments": null,
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3322,8 +3322,8 @@
             "prefix": "Spiked",
             "slot": "Melee",
             "description": "+1 Damage, +1 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3332,8 +3332,8 @@
             "prefix": "Sharp",
             "slot": "Melee",
             "description": "+1 Damage, +1 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3342,7 +3342,7 @@
             "prefix": "Chain-Wrapped",
             "slot": "Melee",
             "description": "+2 Damage, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 1\\\" || i?.value === \\\"Blacksmith 1\\\")\",\"logicalOr\":[]}]"
           },
@@ -3352,8 +3352,8 @@
             "prefix": "Bladed",
             "slot": "Melee",
             "description": "+2 Damage, +2 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 2\\\" || i?.value === \\\"Blacksmith 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3363,7 +3363,7 @@
             "slot": "Melee",
             "description": "Adds  (Effects)",
             "bonusAdjustments": null,
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3372,8 +3372,8 @@
             "prefix": "Spiked",
             "slot": "Melee",
             "description": "+1 Damage, +1 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3382,8 +3382,8 @@
             "prefix": "Sharp",
             "slot": "Melee",
             "description": "+1 Damage, +1 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3392,7 +3392,7 @@
             "prefix": "Chain-Wrapped",
             "slot": "Melee",
             "description": "+2 Damage, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 1\\\" || i?.value === \\\"Blacksmith 1\\\")\",\"logicalOr\":[]}]"
           },
@@ -3402,8 +3402,8 @@
             "prefix": "Bladed",
             "slot": "Melee",
             "description": "+2 Damage, +2 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 2\\\" || i?.value === \\\"Blacksmith 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3412,8 +3412,8 @@
             "prefix": "Spiked",
             "slot": "Melee",
             "description": "+1 Damage, +1 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3422,7 +3422,7 @@
             "prefix": "Puncturing",
             "slot": "Melee",
             "description": "+2 Damage, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 1\\\" || i?.value === \\\"Blacksmith 1\\\")\",\"logicalOr\":[]}]"
           },
@@ -3432,8 +3432,8 @@
             "prefix": "Bladed",
             "slot": "Melee",
             "description": "+2 Damage, +2 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 1\\\" || i?.value === \\\"Blacksmith 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3442,8 +3442,8 @@
             "prefix": "Spiked",
             "slot": "Melee",
             "description": "+1 Damage, +1 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3452,7 +3452,7 @@
             "prefix": "Heavy",
             "slot": "Melee",
             "description": "+2 Damage, +2 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 2\\\" || i?.value === \\\"Blacksmith 2\\\")\",\"logicalOr\":[]}]"
           },
@@ -3462,7 +3462,7 @@
             "prefix": "Hooked",
             "slot": "Melee",
             "description": "+1 Damage",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -3472,8 +3472,8 @@
             "prefix": "Weighted",
             "slot": "Melee",
             "description": "+2 Damage, +7 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":7}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":7,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 1\\\" || i?.value === \\\"Blacksmith 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3482,8 +3482,8 @@
             "prefix": "Puncturing",
             "slot": "Melee",
             "description": "+2 Damage, +1 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 1\\\" || i?.value === \\\"Blacksmith 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3492,7 +3492,7 @@
             "prefix": "Heavy",
             "slot": "Melee",
             "description": "+3 Damage, +2 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":3},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":3,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 2\\\" || i?.value === \\\"Blacksmith 2\\\")\",\"logicalOr\":[]}]"
           },
@@ -3502,8 +3502,8 @@
             "prefix": "Barbed",
             "slot": "Melee",
             "description": "+1 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3512,8 +3512,8 @@
             "prefix": "Sharp",
             "slot": "Melee",
             "description": "+1 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3522,8 +3522,8 @@
             "prefix": "Spiked",
             "slot": "Melee",
             "description": "+1 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3532,8 +3532,8 @@
             "prefix": "Sharp",
             "slot": "Melee",
             "description": "+1 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3542,7 +3542,7 @@
             "prefix": "Shock",
             "slot": "Melee",
             "description": "+2 Damage",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 2\\\" || i?.value === \\\"Blacksmith 2\\\")\",\"logicalOr\":[]},{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 1\\\" || i?.value === \\\"Science! 1\\\")\",\"logicalOr\":[]}]"
           },
@@ -3552,8 +3552,8 @@
             "prefix": "Stun",
             "slot": "Melee",
             "description": "+3 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":3}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":3,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 2\\\" || i?.value === \\\"Blacksmith 2\\\")\",\"logicalOr\":[]},{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 1\\\" || i?.value === \\\"Science! 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3562,8 +3562,8 @@
             "prefix": "Puncturing",
             "slot": "Melee",
             "description": "+1 Damage, +5 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":5}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":5,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 2\\\" || i?.value === \\\"Blacksmith 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3572,7 +3572,7 @@
             "prefix": "Heavy",
             "slot": "Melee",
             "description": "+2 Damage, +9 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":9}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":9,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 2\\\" || i?.value === \\\"Blacksmith 2\\\")\",\"logicalOr\":[]}]"
           },
@@ -3582,7 +3582,7 @@
             "prefix": "Heated",
             "slot": "Melee",
             "description": "+1 Damage",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 2\\\" || i?.value === \\\"Blacksmith 2\\\")\",\"logicalOr\":[]}]"
           },
@@ -3592,8 +3592,8 @@
             "prefix": "Stun",
             "slot": "Melee",
             "description": "+2 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 3\\\" || i?.value === \\\"Blacksmith 3\\\")\",\"logicalOr\":[]},{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Science! 1\\\" || i?.value === \\\"Science! 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3602,8 +3602,8 @@
             "prefix": "Bladed",
             "slot": "Melee",
             "description": "+1 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 2\\\" || i?.value === \\\"Blacksmith 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3612,8 +3612,8 @@
             "prefix": "Barbed",
             "slot": "Melee",
             "description": "+1 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3622,8 +3622,8 @@
             "prefix": "Spiked",
             "slot": "Melee",
             "description": "+1 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3633,7 +3633,7 @@
             "slot": "Melee",
             "description": "Adds  (Effects)",
             "bonusAdjustments": null,
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3642,8 +3642,8 @@
             "prefix": "Puncturing",
             "slot": "Melee",
             "description": "+1 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 1\\\" || i?.value === \\\"Blacksmith 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3652,7 +3652,7 @@
             "prefix": "Lead-lined",
             "slot": "Melee",
             "description": "+2 Damage, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 1\\\" || i?.value === \\\"Blacksmith 1\\\")\",\"logicalOr\":[]}]"
           },
@@ -3662,7 +3662,7 @@
             "prefix": "Large",
             "slot": "Melee",
             "description": "+1 Damage, +2 Weight",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -3673,7 +3673,7 @@
             "slot": "Melee",
             "description": "Adds  (Effects)",
             "bonusAdjustments": null,
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3683,7 +3683,7 @@
             "slot": "Melee",
             "description": "Adds  (Effects)",
             "bonusAdjustments": null,
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": null
           },
           {
@@ -3692,8 +3692,8 @@
             "prefix": "Puncturing",
             "slot": "Melee",
             "description": "+1 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 1\\\" || i?.value === \\\"Blacksmith 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3702,8 +3702,8 @@
             "prefix": "Bladed",
             "slot": "Melee",
             "description": "+1 Damage, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 1\\\" || i?.value === \\\"Blacksmith 1\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3712,8 +3712,8 @@
             "prefix": "Puncturing",
             "slot": "Melee",
             "description": "+2 Damage, +1 Weight, Adds  (Effects)",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\"}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 2\\\" || i?.value === \\\"Blacksmith 2\\\")\",\"logicalOr\":[]}]"
           },
           {
@@ -3722,7 +3722,7 @@
             "prefix": "Heated",
             "slot": "Melee",
             "description": "+2 Damage",
-            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"damage\",\"name\":\"Damage\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"\",\"formula\":\".some(i => i === \\\"Blacksmith 3\\\" || i?.value === \\\"Blacksmith 3\\\")\",\"logicalOr\":[]}]"
           }
@@ -4367,7 +4367,7 @@
             "prefix": "Welded",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+1 Resistance Physical, +1 Resistance Energy, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":1},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -4377,7 +4377,7 @@
             "prefix": "Tempered",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+2 Resistance Physical, +2 Resistance Energy, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":2},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":2,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -4387,7 +4387,7 @@
             "prefix": "Hardened",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+3 Resistance Physical, +3 Resistance Energy, +2 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":3},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":3},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":3,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":3,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Armorer\",\"formula\":\">= 1\",\"logicalOr\":[]}]"
           },
@@ -4397,7 +4397,7 @@
             "prefix": "Buttressed",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+4 Resistance Physical, +4 Resistance Energy, +3 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":4},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":4},{\"type\":\"weight\",\"name\":\"\",\"value\":3}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":4,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":4,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Armorer\",\"formula\":\">= 1\",\"logicalOr\":[]}]"
           },
@@ -4407,7 +4407,7 @@
             "prefix": "Boiled Leather",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+1 Resistance Physical, +1 Resistance Energy, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":1},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -4417,7 +4417,7 @@
             "prefix": "Girded Leather",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+2 Resistance Physical, +2 Resistance Energy, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":2},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":2,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -4427,7 +4427,7 @@
             "prefix": "Treated Leather",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+3 Resistance Physical, +3 Resistance Energy, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":3},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":3},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":3,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":3,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Armorer\",\"formula\":\">= 1\",\"logicalOr\":[]}]"
           },
@@ -4437,8 +4437,8 @@
             "prefix": "Shadowed Leather",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+3 Resistance Physical, +3 Resistance Energy, +1 Weight, Adds Shadowed (Effects)",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":3},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":3},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"Shadowed\"}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":3,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":3,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"Shadowed\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Armorer\",\"formula\":\">= 1\",\"logicalOr\":[]}]"
           },
           {
@@ -4447,7 +4447,7 @@
             "prefix": "Studded Leather",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+4 Resistance Physical, +4 Resistance Energy, +2 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":4},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":4},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":4,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":4,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Armorer\",\"formula\":\">= 1\",\"logicalOr\":[]}]"
           },
@@ -4457,7 +4457,7 @@
             "prefix": "Painted Metal",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+1 Resistance Physical, +1 Resistance Energy, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":1},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -4467,7 +4467,7 @@
             "prefix": "Enameled Metal",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+2 Resistance Physical, +2 Resistance Energy, +2 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":2},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":2,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Armorer\",\"formula\":\">= 1\",\"logicalOr\":[]}]"
           },
@@ -4477,8 +4477,8 @@
             "prefix": "Shadowed Metal",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+2 Resistance Physical, +2 Resistance Energy, +2 Weight, Adds Shadowed (Effects)",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":2},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"Shadowed\"}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":2,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"Shadowed\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Armorer\",\"formula\":\">= 1\",\"logicalOr\":[]}]"
           },
           {
@@ -4487,7 +4487,7 @@
             "prefix": "Alloyed Metal",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+3 Resistance Physical, +3 Resistance Energy, +3 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":3},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":3},{\"type\":\"weight\",\"name\":\"\",\"value\":3}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":3,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":3,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Armorer\",\"formula\":\">= 1\",\"logicalOr\":[]}]"
           },
@@ -4497,7 +4497,7 @@
             "prefix": "Polished Metal",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+4 Resistance Physical, +4 Resistance Energy, +4 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":4},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":4},{\"type\":\"weight\",\"name\":\"\",\"value\":4}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":4,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":4,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":4,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Armorer\",\"formula\":\">= 2\",\"logicalOr\":[]}]"
           },
@@ -4507,7 +4507,7 @@
             "prefix": "Reinforced",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+1 Resistance Physical, +1 Resistance Energy, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":1},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -4517,8 +4517,8 @@
             "prefix": "Shadowed",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+1 Resistance Physical, +1 Resistance Energy, +1 Weight, Adds Shadowed (Effects)",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":1},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"Shadowed\"}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"Shadowed\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Armorer\",\"formula\":\">= 1\",\"logicalOr\":[]}]"
           },
           {
@@ -4527,7 +4527,7 @@
             "prefix": "Fiberglass",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+2 Resistance Physical, +2 Resistance Energy, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":2},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":2,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Armorer\",\"formula\":\">= 1\",\"logicalOr\":[]}]"
           },
@@ -4537,7 +4537,7 @@
             "prefix": "Polymer",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+3 Resistance Physical, +3 Resistance Energy, +2 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":3},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":3},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":3,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":3,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Armorer\",\"formula\":\">= 1\",\"logicalOr\":[]}]"
           },
@@ -4547,7 +4547,7 @@
             "prefix": "Laminated",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+1 Resistance Physical, +1 Resistance Energy, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":1},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":1},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": null
           },
@@ -4557,7 +4557,7 @@
             "prefix": "Resin",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+2 Resistance Physical, +2 Resistance Energy, +1 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":2},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":2},{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":2,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":2,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Armorer\",\"formula\":\">= 1\",\"logicalOr\":[]}]"
           },
@@ -4567,7 +4567,7 @@
             "prefix": "Microcarbon",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+3 Resistance Physical, +3 Resistance Energy, +2 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":3},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":3},{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":3,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":3,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Armorer\",\"formula\":\">= 1\",\"logicalOr\":[]}]"
           },
@@ -4577,7 +4577,7 @@
             "prefix": "Nanofilament",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+4 Resistance Physical, +4 Resistance Energy, +3 Weight",
-            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":4},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":4},{\"type\":\"weight\",\"name\":\"\",\"value\":3}]",
+            "bonusAdjustments": "[{\"type\":\"resistancePhysical\",\"name\":\"\",\"value\":4,\"conditions\":[]},{\"type\":\"resistanceEnergy\",\"name\":\"\",\"value\":4,\"conditions\":[]},{\"type\":\"weight\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Armorer\",\"formula\":\">= 1\",\"logicalOr\":[]}]"
           },
@@ -4587,7 +4587,7 @@
             "prefix": "Wielded Rebar",
             "slot": "Torso",
             "description": "Enemies who attack you with a melee or unarmed attack and suffer a complication suffer 2D damage",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Armorer\",\"formula\":\">= 1\",\"logicalOr\":[]}]"
           },
@@ -4597,7 +4597,7 @@
             "prefix": "EMP Shielding",
             "slot": "Head/Torso/Arm/Leg",
             "description": "+2 Energy damage resistance",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "bonusCharacteristics": null,
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Armorer\",\"formula\":\">= 1\",\"logicalOr\":[]}]"
           },
@@ -4607,8 +4607,8 @@
             "prefix": "Rad Scrubber",
             "slot": "Head",
             "description": "Ignore radiation from Irradiated food or drink consumed while armor is powered",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"Rad Scrubber\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"Rad Scrubber\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Science!\",\"formula\":\">= 2\",\"logicalOr\":[]}]"
           },
           {
@@ -4617,8 +4617,8 @@
             "prefix": "Sensor Array",
             "slot": "Head",
             "description": "Re-roll 1d20 on all PER tests while armor is powered",
-            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1}]",
-            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"Sensor Array\"}]",
+            "bonusAdjustments": "[{\"type\":\"weight\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
+            "bonusCharacteristics": "[{\"type\":\"effects\",\"value\":\"Sensor Array\",\"conditions\":[]}]",
             "prerequisites": "[{\"type\":\"perks\",\"name\":\"Science!\",\"formula\":\">= 3\",\"logicalOr\":[]}]"
           }
         ]

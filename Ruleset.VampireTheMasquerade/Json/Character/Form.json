@@ -255,42 +255,42 @@
           "value": "Alleycat",
           "label": "Alleycat",
           "description": "A combative assault-feeder, you stalk, overpower, and drink from whomever you can, when you can. You may or may not attempt to threaten or Dominate victims into silence or mask the feeding as a robbery. Think about how you arrived at this direct approach to feeding and what makes you comfortable with an unlife of stalking, attacking, feeding, and escaping. You could have been homeless, an SAS soldier, a cartel hit-man, or a big-game hunter.",
-          "bonusAdjustments": "[{\"type\":\"humanity\",\"name\":\"\",\"value\":-1},{\"type\":\"backgrounds\",\"name\":\"Contacts\",\"value\":3}]",
+          "bonusAdjustments": "[{\"type\":\"humanity\",\"name\":\"\",\"value\":-1,\"conditions\":[]},{\"type\":\"backgrounds\",\"name\":\"Contacts\",\"value\":3,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"specialties\",\"label\":null,\"choices\":[\"Intimidation.Stickups\",\"Brawl.Grappling\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"label\":null,\"choices\":[\"Celerity\",\"Potence\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Bagger",
           "label": "Bagger",
           "description": "You steal, buy, or otherwise procure cold blood rather than hunt, relying on the black market or your skills as a burglar or ambulance chaser. Perhaps you still work the night shift at the hospital. Ventrue may not pick this Predator type.",
-          "bonusAdjustments": "[{\"type\":\"merits\",\"name\":\"Iron Gullet\",\"value\":3},{\"type\":\"flaws\",\"name\":\"Enemy\",\"value\":2}]",
+          "bonusAdjustments": "[{\"type\":\"merits\",\"name\":\"Iron Gullet\",\"value\":3,\"conditions\":[]},{\"type\":\"flaws\",\"name\":\"Enemy\",\"value\":2,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"specialties\",\"label\":null,\"choices\":[\"Larceny.Lockpicking\",\"Streetwise.Black Market\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"label\":null,\"choices\":[\"Blood Sorcery\",\"Obfuscate\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Blood Leech",
           "label": "Blood Leech",
           "description": "You drink from other vampires, either by hunting, coercion or by taking Blood as payment - the only truly moral way of feeding you can think of. Unfortunately, this practice is usually forbidden in Kindred society. It is either risky as all fuck or requires a position of enviable power.",
-          "bonusAdjustments": "[{\"type\":\"humanity\",\"name\":\"\",\"value\":-1},{\"type\":\"potency\",\"name\":\"\",\"value\":1},{\"type\":\"flaws\",\"name\":\"Prey Exclusion\",\"value\":2}]",
+          "bonusAdjustments": "[{\"type\":\"humanity\",\"name\":\"\",\"value\":-1,\"conditions\":[]},{\"type\":\"potency\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"flaws\",\"name\":\"Prey Exclusion\",\"value\":2,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"specialties\",\"label\":null,\"choices\":[\"Brawl.Kindred\",\"Stealth.Kindred\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"label\":null,\"choices\":[\"Celerity\",\"Protean\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"flaws\",\"label\":null,\"choices\":[\"Diablerist\",\"Shunned\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Cleaver",
           "label": "Cleaver",
           "description": "You feed covertly from your (or someone's) mortal family and friends with whom you still maintain ties. The most extreme cleavers adopt children, marry a human, and try to maintain a family life for as long as they can. Add your family to the Relationship Map.<br >Cleavers often go to great lengths to keep the truth of their condition from their family, but some also maintain unwholesome relationships with their own kin. The Camarilla forbids taking a human family in this fashion, and it frowns on cleavers as Masquerade breaches waiting to happen. Wiser Kindred may massacre your family for your own good if they find out your secret and care what happens to you.",
-          "bonusAdjustments": "[{\"type\":\"backgrounds\",\"name\":\"Herd\",\"value\":2},{\"type\":\"flaws\",\"name\":\"Cleaver\",\"value\":1}]",
+          "bonusAdjustments": "[{\"type\":\"backgrounds\",\"name\":\"Herd\",\"value\":2,\"conditions\":[]},{\"type\":\"flaws\",\"name\":\"Cleaver\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"specialties\",\"label\":null,\"choices\":[\"Persuasion.Gaslighting\",\"Subterfuge.Coverups\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"label\":null,\"choices\":[\"Animalism\",\"Dominate\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Consensualist",
           "label": "Consensualist",
           "description": "You never feed against your victim's free will. You masquerade as a representative of a charity blood drive, as a blood-drinking kink-lord in the 'real vampire community,' or by actually telling your victims what you are and getting their permission to feed. The Camarilla call that last method a Masquerade breach, but many Anarch philosophers consider it an acceptable risk. You could have been anything in life, but a sex-worker, a political organizer, or a lawyer could all be wary of feeding without consent.",
-          "bonusAdjustments": "[{\"type\":\"humanity\",\"name\":\"\",\"value\":1},{\"type\":\"flaws\",\"name\":\"Dark Secret\",\"value\":1},{\"type\":\"flaws\",\"name\":\"Prey Exclusion\",\"value\":1}]",
+          "bonusAdjustments": "[{\"type\":\"humanity\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"flaws\",\"name\":\"Dark Secret\",\"value\":1,\"conditions\":[]},{\"type\":\"flaws\",\"name\":\"Prey Exclusion\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"specialties\",\"label\":null,\"choices\":[\"Medicine.Phlebotomy\",\"Persuasion.Victims\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"label\":null,\"choices\":[\"Auspex\",\"Fortitude\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Farmer",
           "label": "Farmer",
           "description": "You only feed from animals. Your Hunger constantly gnaws at you, but you have not killed a single human being so far (except perhaps that one time), and you intend to keep it that way. You could have been anyone in life, but your choice speaks to someone obsessed by morality. Perhaps you were an activist, priest, aidworker, or vegan in life, but the choice never to risk a human life is one anyone could arrive at and struggle to maintain. Ventrue may not pick this Predator type.<br >You cannot pick this Predator type if your Blood Potency is 3 or higher.",
-          "bonusAdjustments": "[{\"type\":\"humanity\",\"name\":\"\",\"value\":1},{\"type\":\"flaws\",\"name\":\"Vegan\",\"value\":2}]",
+          "bonusAdjustments": "[{\"type\":\"humanity\",\"name\":\"\",\"value\":1,\"conditions\":[]},{\"type\":\"flaws\",\"name\":\"Vegan\",\"value\":2,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"specialties\",\"label\":null,\"choices\":[\"Animal Ken.Cats\",\"Animal Ken.Dogs\",\"Animal Ken.Falconry\",\"Animal Ken.Horses\",\"Animal Ken.Rats\",\"Animal Ken.Snakes\",\"Animal Ken.Wolves\",\"Survival.Hunting\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"label\":null,\"choices\":[\"Animalism\",\"Protean\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
@@ -304,21 +304,21 @@
           "value": "Sandman",
           "label": "Sandman",
           "description": "You rely on your stealth or Disciplines to feed from sleeping victims. If they never wake during the feeding, they won’t know you exist. Perhaps you were very anti-social in life; you don’t feel cut out for the intense interpersonal nightlife or physical violence of more extroverted hunters.",
-          "bonusAdjustments": "[{\"type\":\"backgrounds\",\"name\":\"Resources\",\"value\":1}]",
+          "bonusAdjustments": "[{\"type\":\"backgrounds\",\"name\":\"Resources\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"specialties\",\"label\":null,\"choices\":[\"Medicine.Anesthetics\",\"Steath.Break-in\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"label\":null,\"choices\":[\"Auspex\",\"Obfuscate\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Scene Queen",
           "label": "Scene Queen",
           "description": "You rely on your familiarity with a certain subculture and a wellcrafted pose, feeding on an exclusive subculture that believes you to be one of them. Your victims adore you for your status in the scene, and the ones who understand what you are disbelieved. You may belong to the street or be literal upper-class, abusing the weak with false hope and promises of taking them to the next level. In life, you almost certainly belonged to a scene similar to the one you stalk now.",
-          "bonusAdjustments": "[{\"type\":\"backgrounds\",\"name\":\"Fame\",\"value\":1},{\"type\":\"backgrounds\",\"name\":\"Contacts\",\"value\":1},{\"type\":\"flaws\",\"name\":\"Dark Secret\",\"value\":1}]",
+          "bonusAdjustments": "[{\"type\":\"backgrounds\",\"name\":\"Fame\",\"value\":1,\"conditions\":[]},{\"type\":\"backgrounds\",\"name\":\"Contacts\",\"value\":1,\"conditions\":[]},{\"type\":\"flaws\",\"name\":\"Dark Secret\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"specialties\",\"label\":null,\"choices\":[\"Ettiquete.Anarch\",\"Ettiquete.Camarilla\",\"Ettiquete.Celebrities\",\"Ettiquete.Corporate\",\"Ettiquete.Elysium\",\"Ettiquete.Feudal\",\"Ettiquete.One-Percenter\",\"Ettiquete.Secret Society\",\"Leadership.Command\",\"Leadership.Inspiration\",\"Leadership.Oratory\",\"Leadership.Praxis\",\"Leadership.Team Dynamic\",\"Leadership.War Pack\",\"Streetwise.Arms Dealing\",\"Streetwise.Black Market\",\"Streetwise.Bribery\",\"Streetwise.Drugs\",\"Streetwise.Fence Stolen Goods\",\"Streetwise.Gangs\",\"Streetwise.Graffiti\",\"Streetwise.Personal Rep\",\"Streetwise.Sex Trade\",\"Streetwise.Urban Survival\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"label\":null,\"choices\":[\"Dominate\",\"Potence\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"flaws\",\"label\":null,\"choices\":[\"Disliked\",\"Prey Exclusion\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Siren",
           "label": "Siren",
           "description": "You feed almost exclusively during or while feigning sex, and you rely on your Disciplines, seduction skills, or the unquenchable appetites of others to conceal your carnivorous nature. You have mastered the art of the one night stand or move through the sex-club scene like a dark star. You think of yourself as a sexy beast, but in your darkest moments, you fear that you're at best a problematic lover, at worst a habitual rapist. A former lover who escaped destruction might be your Touchstone or your stalker. (If so, add them to the Relationship Map.) Maybe in life you were a pick-up artist, movie producer, author, a glorious slutty kinkster – or a virgin who intends to make up for lost time post-mortem.",
-          "bonusAdjustments": "[{\"type\":\"merits\",\"name\":\"Beautiful\",\"value\":2},{\"type\":\"flaws\",\"name\":\"Enemy\",\"value\":1}]",
+          "bonusAdjustments": "[{\"type\":\"merits\",\"name\":\"Beautiful\",\"value\":2,\"conditions\":[]},{\"type\":\"flaws\",\"name\":\"Enemy\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"specialties\",\"label\":null,\"choices\":[\"Persuasion.Seduction\",\"Subterfuge.Seduction\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"label\":null,\"choices\":[\"Fortitude\",\"Presence\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         }
       ]
@@ -333,25 +333,25 @@
           "value": "Childer",
           "label": "Childer",
           "description": "Embraced within the last 15 years, down to as recently as last week or last night for an all-fledgling chronicle. The more recent the Embrace, the more likely the characters are to be thinbloods of the 14th, 15th, or 16th Generation. However, new childer of the 12th and 13th Generation remain plausible even tonight.",
-          "bonusAdjustments": "[{\"type\":\"bloodPotency\",\"name\":\"\",\"value\":0}]"
+          "bonusAdjustments": "[{\"type\":\"bloodPotency\",\"name\":\"\",\"value\":0,\"conditions\":[]}]"
         },
         {
           "value": "Neonate",
           "label": "Neonate",
           "description": "Embraced within a human lifetime, roughly between World War II and the present. Neonates are most likely of the 12th or 13th Generation. Thinbloods were vanishingly rare before recent decades, mostly because older Kindred persecuted them mercilessly as signs of Gehenna.",
-          "bonusAdjustments": "[{\"type\":\"bloodPotency\",\"name\":\"\",\"value\":1}]"
+          "bonusAdjustments": "[{\"type\":\"bloodPotency\",\"name\":\"\",\"value\":1,\"conditions\":[]}]"
         },
         {
           "value": "Ancillae",
           "label": "Ancillae",
           "description": "Embraced between the American Revolution and World War II, under 250 years old. An ancilla came of age during the modern era or at least in an era when the divine right of princes were becoming an eccentric joke instead of the foundation of society. It was the contrast between their relative modernity and the medieval mindset of the Camarilla that led to the rise of the Anarch Movement. Even hard-line Camarilla ancillae believe the system should loosen up – which other Kindred interpret to mean 'give us more power.' Ancilla characters can be as low as 10th or 11th Generation.",
-          "bonusAdjustments": "[{\"type\":\"bloodPotency\",\"name\":\"\",\"value\":2}]"
+          "bonusAdjustments": "[{\"type\":\"bloodPotency\",\"name\":\"\",\"value\":2,\"conditions\":[]}]"
         },
         {
           "value": "Elder",
           "label": "Elder",
           "description": "Older than 250 years old, Ninth Generation or lower. The Beckoning slowly calls the elders to the Gehenna War, and they are not available as player characters in this book.",
-          "bonusAdjustments": "[{\"type\":\"bloodPotency\",\"name\":\"\",\"value\":3}]"
+          "bonusAdjustments": "[{\"type\":\"bloodPotency\",\"name\":\"\",\"value\":3,\"conditions\":[]}]"
         }
       ]
     },

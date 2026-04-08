@@ -148,59 +148,59 @@ namespace Fallout
                 name = "healthPoints",
                 id = "healthPoints",
                 label = "Health Points",
-                type = "hidden",
+                type = "number",
                 className = "form-control",
                 calculation = "2 + ([attributes.Endurance] * 2)",
-                @default = 10
-            });
-            _fields.Add(new
-            {
-                name = "carryWeight",
-                id = "carryWeight",
-                label = "Carry Weight",
-                type = "hidden",
-                className = "form-control",
-                calculation = "150 + ([attributes.Strength] * 10)",
-                @default = 150
-            });
-            _fields.Add(new
-            {
-                name = "meleeDamage",
-                id = "meleeDamage",
-                label = "Melee Damage",
-                type = "hidden",
-                className = "form-control",
-                calculation = "Math.max(1, Math.floor([attributes.Strength] / 2))",
-                @default = 1
+                pinnedStat = true
             });
             _fields.Add(new
             {
                 name = "initiative",
                 id = "initiative",
                 label = "Initiative",
-                type = "hidden",
+                type = "number",
                 className = "form-control",
                 calculation = "[attributes.Agility] + [attributes.Perception]",
-                @default = 0
+                pinnedStat = true
+            }); 
+            _fields.Add(new
+            {
+                name = "defense",
+                id = "defense",
+                label = "Defense",
+                type = "number",
+                className = "form-control",
+                pinnedStat = true
             });
             _fields.Add(new
             {
                 name = "damageResistance",
                 id = "damageResistance",
                 label = "Damage Resistance",
-                type = "hidden",
+                type = "number",
                 className = "form-control",
-                @default = 0
+                pinnedStat = true
             });
             _fields.Add(new
             {
-                name = "defense",
-                id = "defense",
-                label = "Defense",
-                type = "hidden",
+                name = "meleeDamage",
+                id = "meleeDamage",
+                label = "Melee Damage",
+                type = "number",
                 className = "form-control",
-                @default = 0
-            });
+                calculation = "Math.max(1, Math.floor([attributes.Strength] / 2))",
+                pinnedStat = true
+            });                      
+            _fields.Add(new
+            {
+                name = "carryWeight",
+                id = "carryWeight",
+                label = "Carry Weight",
+                type = "number",
+                className = "form-control",
+                calculation = "150 + ([attributes.Strength] * 10)",
+                pinnedStat = true
+            });                       
             _fields.Add(new
             {
                 name = "name",

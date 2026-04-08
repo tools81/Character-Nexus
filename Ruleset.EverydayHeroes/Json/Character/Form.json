@@ -107,6 +107,104 @@
       "default": 1
     },
     {
+      "name": "defenseBonus",
+      "id": "defenseBonus",
+      "label": "Defense Bonus",
+      "type": "hidden",
+      "className": "form-control",
+      "default": 0
+    },
+    {
+      "name": "defenseModifier",
+      "id": "defenseModifier",
+      "label": "Defense Modifier",
+      "type": "hidden",
+      "className": "form-control"
+    },
+    {
+      "name": "hasDamageReduction",
+      "id": "hasDamageReduction",
+      "label": "Has Damage Reduction",
+      "type": "hidden",
+      "className": "form-control"
+    },
+    {
+      "name": "hitDice",
+      "id": "hitdice",
+      "label": "Hit Dice",
+      "type": "text",
+      "className": "form-control",
+      "pinnedStat": true
+    },
+    {
+      "name": "hitpoints",
+      "id": "hitpoints",
+      "label": "Hit Points",
+      "type": "number",
+      "className": "form-control",
+      "calculation": "Math.ceil([hitpointmodifier] + (([attributes.constitution] - 10) / 2)) * [level])",
+      "pinnedStat": true
+    },
+    {
+      "name": "initiative",
+      "id": "initiative",
+      "label": "Initiative",
+      "type": "number",
+      "className": "form-control",
+      "calculation": "Math.ceil(([attributes.dexterity] - 10) / 2))",
+      "pinnedStat": true,
+      "default": 0
+    },
+    {
+      "name": "proficiencyBonus",
+      "id": "proficiencyBonus",
+      "label": "Proficiency Bonus",
+      "type": "number",
+      "className": "form-control",
+      "calculation": "[level] >= 9 ? 4 : ([level] >= 5 ? 3 : 2)",
+      "pinnedStat": true,
+      "default": 2
+    },
+    {
+      "name": "defense",
+      "id": "defense",
+      "label": "Defense",
+      "type": "number",
+      "className": "form-control",
+      "calculation": "10 + [defenseBonus] + defenseModifier.contains('|') ? Math.max(...defenseModifier.split('|').map(mod => [attributes[mod]])) : [attributes[defenseModifier]]",
+      "pinnedStat": true,
+      "default": 10
+    },
+    {
+      "name": "damageReduction",
+      "id": "damageReduction",
+      "label": "Damage Reduction",
+      "type": "number",
+      "className": "form-control",
+      "calculation": "[hasDamageReduction] ? [proficiencyBonus] : 0",
+      "pinnedStat": true,
+      "default": 0
+    },
+    {
+      "name": "passivePerception",
+      "id": "passivePerception",
+      "label": "Passive Perception",
+      "type": "number",
+      "className": "form-control",
+      "calculation": "10 + ([skills.proficient.perception] ? [proficiencyBonus] : 0) + ([attributes.wisdom] - 10) / 2",
+      "pinnedStat": true,
+      "default": 10
+    },
+    {
+      "name": "wealthLevel",
+      "id": "wealthLevel",
+      "label": "Wealth Level",
+      "type": "number",
+      "className": "form-control",
+      "pinnedStat": true,
+      "default": 2
+    },
+    {
       "name": "archetype",
       "label": "Archetype",
       "type": "select",
@@ -161,7 +259,7 @@
           "label": "Brawler",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Brawler.png",
           "description": "You break stuff and hit people. Sometimes you mix it up by hitting stuff and breaking people.<br />You imprinted on comics as a kid, and it shows in your approach to a fight. With fists like hammers and the ability to turn nearly anything into a deadly weapon, you are dangerous and everyone knows it.<br />The brawler charges into melee combat, hitting hard and destroying everything in their path. They enjoy using improvised weapons but are also great unarmed combatants. The brawler doesn't need to carry weapons to fight at full strength.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentProficiency\",\"value\":\"Improvised\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Strength\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Constitution\"},{\"type\":\"talent\",\"value\":\"Crush\"},{\"type\":\"talent\",\"value\":\"Hurl\"},{\"type\":\"talent\",\"value\":\"Smash\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Improvised\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Strength\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Constitution\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Crush\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Hurl\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Smash\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Acrobatics\",\"Athletics\",\"Endurance\",\"Intimidation\",\"Mechanics\",\"Streetwise\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
@@ -169,7 +267,7 @@
           "label": "Heavy Gunner",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Heavy_Gunner.png",
           "description": "You leverage your beefy biceps by using them to treat big guns as if they were made of plastic. The louder the gun, the bigger the explosion, the wider your smile.<br />The heavy gunner applies their Strength modifier to large firearms and deals extra damage with nearly any weapon. The heavy gunner is especially dangerous when they have access to restricted military weapons, but they are still effective with nonrestricted big guns from the advanced and military weapons lists.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"},{\"type\":\"equipmentProficiency\",\"value\":\"Military\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Strength\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Constitution\"},{\"type\":\"talent\",\"value\":\"Big Guns\"},{\"type\":\"talent\",\"value\":\"Salvo\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Military\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Strength\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Constitution\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Big Guns\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Salvo\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Acrobatics\",\"Endurance\",\"Intimidation\",\"Mechanics\",\"Natural Sciences\",\"Vehicles\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
@@ -177,7 +275,7 @@
           "label": "MMA Fighter",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_MMA_Fighter.png",
           "description": "You are highly trained in the modern discipline of mixed martial arts and the philosophy of eschewing martial arts tradition for pure pragmatism. You can use your skills both in the ring as a competitor, and on the streets as a hero. One on one, you have few equals.<br />The MMA fighter is an unarmed strike specialist who performs combinations of special punches and grappling attacks to ensure their opponent's ultimate defeat. The MMA fighter is not an especially strong damage dealer, but they are adept at neutralizing difficult and dangerous opponents one-on-one. Be sure to take advantage of the Off-Hand Attack bonus action when fighting unarmed.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Strength\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Dexterity\"},{\"type\":\"talent\",\"value\":\"Heavy Hands\"},{\"type\":\"talent\",\"value\":\"Pin\"},{\"type\":\"talent\",\"value\":\"Submission Move\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Strength\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Dexterity\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Heavy Hands\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Pin\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Submission Move\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Acrobatics\",\"Athletics\",\"Deception\",\"Endurance\",\"Intimidation\",\"Medicine\",\"Streetwise\"],\"count\":3,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"skills.expertise\",\"label\":null,\"choices\":[\"Acrobatics\",\"Athletics\",\"Endurance\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         }
       ],
@@ -197,7 +295,7 @@
           "label": "Martial Artist",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Martial_Artist.png",
           "description": "Through rigorous physical training and mental discipline, you have turned your body into a potentially deadly weapon. You prefer the weapons of an idealized past to those of the modern world<br />The martial artist specializes in rapid attacks and high mobility. They freely mix unarmed strikes and weapon attacks to precise effect. Their mobility helps them enter melee combat quickly.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentProficiency\",\"value\":\"Historical\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Strength\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Dexterity\"},{\"type\":\"talent\",\"value\":\"Martial Arts\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Historical\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Strength\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Dexterity\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Martial Arts\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Acrobatics\",\"Athletics\",\"Endurance\",\"Performance\",\"Sleight of Hand\",\"Stealth\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
@@ -205,7 +303,7 @@
           "label": "Scoundrel",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Scoundrel.png",
           "description": "Honorable combat is a sucker bet. There isn't a low blow, dirty trick, or cheap shot you don't know. You have mastered skills that can be put to disreputable uses. These skills don't make you a bad person, but you do have the necessary credentials to play the part.<br />The scoundrel is a capable fighter who boasts a range of useful skill proficiencies. Getting advantage on attacks is key to their success in a fight. For this reason, shotguns are a great weapon choice for scoundrels in ranged combat, since the shot property always offers advantage within 30 feet.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Charisma\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Dexterity\"},{\"type\":\"talent\",\"value\":\"Vital Strike\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Charisma\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Dexterity\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Vital Strike\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Acrobatics\",\"Deception\",\"Intimidation\",\"Security\",\"Sleight of Hand\",\"Stealth\",\"Streetwise\",\"Vehicles\"],\"count\":3,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"skills.expertise\",\"label\":null,\"choices\":[\"Deception\",\"Security\",\"Sleight of Hand\",\"Stealth\",\"Streetwise\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
@@ -213,7 +311,7 @@
           "label": "Sharpshooter",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Sharpshooter.png",
           "description": "You are a master of modern firearms, able to make impossible shots look effortless. Whether you're sniping targets from a mile away or dancing through a hail of bullets with a gun in either hand, you rarely miss your mark.<br />The sharpshooter focuses on ranged weapons, using either dual pistols or long guns. Both are highly effective at bringing down foes quickly. Sharpshooters are not especially durable and stick to cover in combat.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Intelligence\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Dexterity\"},{\"type\":\"talent\",\"value\":\"Gunslinging\"},{\"type\":\"talent\",\"value\":\"Sharpshooting\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Intelligence\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Dexterity\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Gunslinging\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Sharpshooting\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Acrobatics\",\"Intimidation\",\"Mechanics\",\"Perception\",\"Sleight of Hand\",\"Stealth\",\"Vehicles\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
         }
       ],
@@ -233,7 +331,7 @@
           "label": "Bodyguard",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Bodyguard.png",
           "description": "You are dedicated to the protection of others. You do whatever it takes to keep your allies safe from harm, even if it risks your own life. Fortunately, it takes quite a lot to take you down.<br />Bodyguards have abilities to protect their allies from harm and have among the best defenses of any hero. Concealable weapons are a great thematic choice for bodyguards, but they can make good use of high damage weapons when discretion isn't needed.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Strength\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Constitution\"},{\"type\":\"talent\",\"value\":\"Get Down\"},{\"type\":\"talent\",\"value\":\"Take a Bullet\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Strength\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Constitution\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Get Down\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Take a Bullet\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Athletics\",\"Endurance\",\"Medicine\",\"Perception\",\"Security\",\"Streetwise\",\"Survival\"],\"count\":3,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"skills.expertise\",\"label\":null,\"choices\":[\"Endurance\",\"Intimidation\",\"Security\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
@@ -241,7 +339,7 @@
           "label": "Commando",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Commando.png",
           "description": "You are the consummate warrior, dangerous with any weapon and trained to survive every circumstance. You are ready for whatever the enemy has to throw at you. The only thing you might be unprepared for is peace.<br />The commando is an all-around combat class that offers a great blend of defense and offense. Unlike the other tough heroes, they can't directly protect their allies, but they are versatile and can use nearly any weapon. You might consider investing in Dexterity if you want to lean into offensive strategies.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"},{\"type\":\"equipmentProficiency\",\"value\":\"Military\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Strength\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Constitution\"},{\"type\":\"talent\",\"value\":\"Fighting Spirit\"},{\"type\":\"talent\",\"value\":\"Watch Your Six\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Military\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Strength\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Constitution\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Fighting Spirit\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Watch Your Six\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Athletics\",\"Endurance\",\"Mechanics\",\"Persuasion\",\"Streetwise\",\"Survival\",\"Vehicles\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
@@ -249,7 +347,7 @@
           "label": "Scrapper",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Scrapper.png",
           "description": "You haven't been killed yet, but not for lack of anyone trying. You can take a beating and dish out a double helping in return. When the dust settles, you'll be the one left standing.<br />The scrapper excels at getting in the enemy's face and forcing them to engage. If the enemy tries to go around them, they can punish them for it. If the enemy attacks the scrapper, they can punish them for it. If you want to be unstoppable in combat, this is the class for you.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"},{\"type\":\"equipmentProficiency\",\"value\":\"Improvised\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Intelligence\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Constitution\"},{\"type\":\"talent\",\"value\":\"Opportunist\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Improvised\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Intelligence\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Constitution\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Opportunist\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Acrobatics\",\"Athletics\",\"Endurance\",\"Intimidation\",\"Persuasion\",\"Streetwise\",\"Vehicles\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         }
       ],
@@ -269,7 +367,7 @@
           "label": "Engineer",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Engineer.png",
           "description": "You love technology. You see the material world as a giant set of tools to build whatever you can imagine. Whether it's programming drones with artificial intelligence or inventing new and wondrous machines, where others see impossibility, you see inevitability.<br />Engineers are capable combatants thanks to their mechanical companion and plans that deal electrical damage. They also offer strong support to members of their team and bring a number of useful skills to the table.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Intelligence\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Dexterity\"},{\"type\":\"talent\",\"value\":\"Mechanical Companion\"},{\"type\":\"talent\",\"value\":\"Field Repairs\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Intelligence\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Dexterity\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Mechanical Companion\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Field Repairs\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Arts and Crafts\",\"Computers\",\"Investigation\",\"Mechanics\",\"Natural Sciences\",\"Security\",\"Vehicles\"],\"count\":3,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"skills.expertise\",\"label\":null,\"choices\":[\"Computers\",\"Mechanics\",\"Vehicles\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
@@ -277,7 +375,7 @@
           "label": "Hacker",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Hacker.png",
           "description": "You feel more at home in the abstract digital realm than you do in analog reality. You are the new mind, the new flesh, and the new cybernetic entity born of an ever-advancing interface between human and machine. When knowledge is power, you are near infinite.<br />Hacker plans revolve around computers, information, and an understanding of human behavior in the digital sphere. The hacker can easily overcome technological challenges and exploit the increasingly digital world. They are vulnerable in a physical fight but excel at avoiding the need for such primitive conflict.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Intelligence\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Wisdom\"},{\"type\":\"talent\",\"value\":\"Digital Ghost\"},{\"type\":\"talent\",\"value\":\"Its For You\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Intelligence\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Wisdom\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Digital Ghost\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Its For You\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Computers\",\"Deception\",\"Investigation\",\"Insight\",\"Mechanics\",\"Natural Sciences\",\"Security\",\"Social Sciences\",\"Stealth\",\"Streetwise\"],\"count\":4,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"skills.expertise\",\"label\":null,\"choices\":[\"Computers\",\"Security\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
@@ -285,7 +383,7 @@
           "label": "Mastermind",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Mastermind.png",
           "description": "You are always at least one step ahead of your enemies, plotting, scheming, and planning your next masterstroke. Your allies benefit from your genius as well. If only you could find someone to truly challenge you.<br />Mastermind plans involve strategies that were retroactively enacted in the past, to be revealed only in the present moment. This makes the mastermind very powerful outside combat, with the ability to shortcut difficult challenges. In combat, however, they are rather weak and vulnerable.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Intelligence\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Wisdom\"},{\"type\":\"talent\",\"value\":\"Know-It-All\"},{\"type\":\"talent\",\"value\":\"Youre Doing It Wrong\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Intelligence\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Wisdom\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Know-It-All\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Youre Doing It Wrong\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Computers\",\"Deception\",\"Insight\",\"Investigation\",\"Medicine\",\"Natural Sciences\",\"Perception\",\"Persuasion\",\"Security\",\"Social Sciences\",\"Streetwise\"],\"count\":4,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"skills.expertise\",\"label\":null,\"choices\":[\"Computers\",\"Deception\",\"Insight\",\"Investigation\",\"Perception\",\"Persuasion\",\"Security\",\"Social Sciences\",\"Streetwise\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
@@ -293,7 +391,7 @@
           "label": "Scientist",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Scientist.png",
           "description": "Your mastery of the sciences is normally applied in the lab, making new discoveries and advancing human knowledge. But when lives are on the line, you are ready to demonstrate that knowledge truly is power.<br />A scientist's plans are themed around biology and chemistry to damage enemies and aid allies. They are a great choice if you want to play a support role in combat or to tend to the injuries of other heroes. They are one of the more highly skilled classes with a range of expertise available to them.",
-          "bonusCharacteristics": "[{\"type\":\"savingThrowProficiency\",\"value\":\"Intelligence\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Constitution\"},{\"type\":\"talent\",\"value\":\"Dangerous Stuff\"}]",
+          "bonusCharacteristics": "[{\"type\":\"savingThrowProficiency\",\"value\":\"Intelligence\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Constitution\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Dangerous Stuff\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Computers\",\"Investigation\",\"Mechanics\",\"Medicine\",\"Natural Sciences\",\"Security\",\"Social Sciences\"],\"count\":3,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"skills.expertise\",\"label\":null,\"choices\":[\"Computers\",\"Mechanics\",\"Medicine\",\"Natural Sciences\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
         }
       ],
@@ -313,7 +411,7 @@
           "label": "Hunter",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Hunter.png",
           "description": "Whether it's big game or a fugitive from justice, your prey was doomed the moment you set your sights on them. You can hunt with a faithful companion or go it alone and focus only on your chosen target. Either way, there can be only one outcome.<br />The hunter is both a skilled hero and one that can hold their own in combat. Their animal companion can be both fun and effective but makes the hunter a complex class to play in combat.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Strength\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Wisdom\"},{\"type\":\"talent\",\"value\":\"Hunting Companion\"},{\"type\":\"talent\",\"value\":\"Hunters Mark\"},{\"type\":\"talent\",\"value\":\"Animal Husbandry\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Strength\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Wisdom\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Hunting Companion\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Hunters Mark\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Animal Husbandry\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Acrobatics\",\"Arts and Crafts\",\"Athletics\",\"Endurance\",\"Insight\",\"Medicine\",\"Perception\",\"Stealth\",\"Survival\"],\"count\":3,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"skills.expertise\",\"label\":null,\"choices\":[\"Endurance\",\"Perception\",\"Stealth\",\"Survival\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
@@ -321,7 +419,7 @@
           "label": "Master",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Master.png",
           "description": "Through long training and meditation you have achieved something rare: karmic harmony, inner balance, and the ability to kick prodigious amounts of ass. You need no weapons to make your presence felt by those who would disturb your tranquility.<br />The master is a melee combatant with a diverse range of both offensive and defensive moves. They don't hit especially hard, but they can strike quickly, and in unexpected ways. Like a true ascetic, they don't need material equipment to be at their best.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentProficiency\",\"value\":\"Improvised\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Charisma\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Wisdom\"},{\"type\":\"talent\",\"value\":\"Mystic Arts\"},{\"type\":\"talent\",\"value\":\"Ki\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Improvised\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Charisma\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Wisdom\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Mystic Arts\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Ki\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Acrobatics\",\"Arts and Crafts\",\"Deception\",\"Endurance\",\"Medicine\",\"Perception\",\"Performance\",\"Sleight of Hand\",\"Survival\"],\"count\":3,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
@@ -329,7 +427,7 @@
           "label": "Sleuth",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Sleuth.png",
           "description": "Evil never sleeps, so neither do you. Your keen perception pierces the veil of the devious. Your inner darkness gives you insight into the worst villains humanity has to offer. It's a dirty job, but someone's gotta do it.<br />The sleuth has the skills necessary to solve mysteries and avoid dangers. They are the most defensive of the Wise Heroes with abilities to help them stay alive. At higher levels they gain offense to make them dangerous to unwary enemies.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Intelligence\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Wisdom\"},{\"type\":\"talent\",\"value\":\"Deduction\"},{\"type\":\"talent\",\"value\":\"Sixth Sense\"},{\"type\":\"talent\",\"value\":\"Weak Spot\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Intelligence\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Wisdom\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Deduction\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Sixth Sense\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Weak Spot\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Arts and Crafts\",\"Computers\",\"Deception\",\"Insight\",\"Investigation\",\"Perception\",\"Security\",\"Stealth\",\"Streetwise\",\"Vehicles\"],\"count\":3,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"skills.expertise\",\"label\":null,\"choices\":[\"Insight\",\"Investigation\",\"Perception\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         }
       ],
@@ -349,7 +447,7 @@
           "label": "Duelist",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Duelist.png",
           "description": "Duelists are fighters who prefer style over brutality. Any fool can swing a stick around like a caveman. True combat prowess unites the body, mind, and soul to a singular purpose.<br />The duelist is a melee specialist who masters a mixture of offensive and defensive combat tricks, allowing them to react to the situation at hand. A duelist who wants to focus on combat performance should have a strong Dexterity score.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentProficiency\",\"value\":\"Historical\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Charisma\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Dexterity\"},{\"type\":\"talent\",\"value\":\"Precision\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Historical\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Charisma\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Dexterity\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Precision\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Acrobatics\",\"Athletics\",\"Deception\",\"Endurance\",\"Intimidation\",\"Performance\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
@@ -357,7 +455,7 @@
           "label": "Icon",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Icon.png",
           "description": "You are too cool for school, a legend among those who know of you. You add something special to everything you do and you make sure everyone knows about it. You're sure you were born to be a hero.<br />The icon offers an even mix of offense, defense, and social skills. Their abilities are unique, fun, and versatile, but if you're looking for a powerhouse in combat, this is not the class for you. If you want to be wonderfully ridiculous, you have come to the right place.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Charisma\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Dexterity\"},{\"type\":\"talent\",\"value\":\"Banter\"},{\"type\":\"talent\",\"value\":\"Center of Attention\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Charisma\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Dexterity\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Banter\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Center of Attention\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Acrobatics\",\"Athletics\",\"Arts and Crafts\",\"Deception\",\"Intimidation\",\"Performance\",\"Persuasion\",\"Streetwise\"],\"count\":3,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
@@ -365,7 +463,7 @@
           "label": "Leader",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Leader.png",
           "description": "You are a natural leader. Even when you are not in a position of power, people listen to what you say and follow your example. You can turn a band of demoralized misfits into a world-class team of highly motivated winners.<br />The leader focuses on supporting their allies in combat. Their best attack is their strongest ally's attack. Their skill selection also allows them to be the face of a team.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Charisma\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Constitution\"},{\"type\":\"talent\",\"value\":\"Command\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Charisma\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Constitution\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Command\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Deception\",\"Insight\",\"Intimidation\",\"Medicine\",\"Perception\",\"Performance\",\"Persuasion\",\"Social Sciences\"],\"count\":3,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"skills.expertise\",\"label\":null,\"choices\":[\"Intimidation\",\"Persuasion\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
@@ -373,7 +471,7 @@
           "label": "Manipulator",
           "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Class_Manipulator.png",
           "description": "People think you are charming, useful, and mostly harmless. That's exactly what you want people to think. In reality, you have everyone dancing on your strings to whatever tune you want to play for them.<br />The manipulator focuses on weakening or controlling opponents in a fight and rarely makes attacks. With the right allies, these are powerful abilities. They also have the strongest set of social skills for any hero and shine in noncombat situations.",
-          "bonusCharacteristics": "[{\"type\":\"savingThrowProficiency\",\"value\":\"Charisma\"},{\"type\":\"savingThrowProficiency\",\"value\":\"Wisdom\"},{\"type\":\"talent\",\"value\":\"Demoralize\"}]",
+          "bonusCharacteristics": "[{\"type\":\"savingThrowProficiency\",\"value\":\"Charisma\",\"conditions\":[]},{\"type\":\"savingThrowProficiency\",\"value\":\"Wisdom\",\"conditions\":[]},{\"type\":\"talent\",\"value\":\"Demoralize\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Deception\",\"Insight\",\"Intimidation\",\"Performance\",\"Persuasion\",\"Sleight of Hand\"],\"count\":3,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"skills.expertise\",\"label\":null,\"choices\":[\"Deception\",\"Intimidation\",\"Persuasion\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         }
       ],
@@ -416,7 +514,7 @@
           "value": "Caregiver",
           "label": "Caregiver",
           "description": "You spent a significant portion of your childhood taking care of someone dear to you. It's given you a strong sense of compassion, as well as experience in medical care.<br />Special feature: Soothing. You gain advantage on Charisma (Persuasion) checks when dealing with people who are angry, afraid, or in pain.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Medicine\"}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Medicine\",\"conditions\":[]}]",
           "bonusAdjustments": "null",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Wisdom\",\"Charisma\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
@@ -424,7 +522,7 @@
           "value": "Cosmopolitan",
           "label": "Cosmopolitan",
           "description": "You traveled or read widely and picked up useful knowledge from various cultures. You have the gift of feeling at home wherever you roam.<br />Special feature: Common Tongue. You know basic informational phrases in a large number of languages and can understand simple replies. This allows rudimentary communication no matter where you go or what language the people speak there.",
-          "bonusCharacteristics": "[{\"type\":\"attribute\",\"value\":\"Wisdom\"},{\"type\":\"skills.proficient\",\"value\":\"Social Sciences\"}]",
+          "bonusCharacteristics": "[{\"type\":\"attribute\",\"value\":\"Wisdom\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Social Sciences\",\"conditions\":[]}]",
           "bonusAdjustments": "null",
           "userChoices": "null"
         },
@@ -480,7 +578,7 @@
           "value": "On The Run",
           "label": "On The Run",
           "description": "You spent a portion of your life on the run. You might still be running from the law, a personal vendetta, or bill collectors. You're accustomed to looking over your shoulder for your persecutors.<br />Special feature: On Edge. Whenever you roll initiative, you can reroll once and must use the new result.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Perception\"}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Perception\",\"conditions\":[]}]",
           "bonusAdjustments": "null",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Dexterity\",\"Constitution\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
@@ -520,7 +618,7 @@
           "value": "Raised By Assassins",
           "label": "Raised By Assassins",
           "description": "Yours was not a usual childhood. A surrogate parent, government agency, or band of ninjas raised you from a young age to be a cold-hearted killer.<br />Special feature: ",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Deception\"},{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Deception\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]}]",
           "bonusAdjustments": "null",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Dexterity\",\"Constitution\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
@@ -529,14 +627,14 @@
           "label": "Religious Tradition",
           "description": "You grew up in a family with strong faith. Whether you still believe today, the practice left you with insight into the human condition.<br />Special feature: Positive Reinforcement. Through words of encouragement or prayer, as a reaction, you can give advantage to an ally on a single saving throw. You cannot use this feature again until you finish a long rest.",
           "bonusCharacteristics": "null",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Wisdom\",\"value\":1}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Wisdom\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Insight\",\"Performance\",\"Social Sciences\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
           "value": "Rural Family",
           "label": "Rural Family",
           "description": "You grew up outside the cities and among straightforward, honest folk. You learned the value of hard work and gained practical skills.<br />Special feature: ",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Mechanics\"},{\"type\":\"skills.proficient\",\"value\":\"Survival\"},{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Mechanics\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Survival\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]}]",
           "bonusAdjustments": "null",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Constitution\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
@@ -545,7 +643,7 @@
           "label": "Social Butterfly",
           "description": "You had a knack for making friends from an early age. Your popularity and congeniality opens doors for you.<br />Special feature: Life of the Party. You gain advantage on Charisma (Deception) and Charisma (Persuasion) checks made while at a party or other social event.",
           "bonusCharacteristics": "null",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Charisma\",\"value\":1}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Charisma\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Deception\",\"Persuasion\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
@@ -560,7 +658,7 @@
           "value": "Subsistence",
           "label": "Subsistence",
           "description": "You grew up off the grid and learned to live off the land and your own resourcefulness. Whether due to religious, political, or shared social beliefs, you are proud of your self-sufficiency.<br />Special feature: Natural Medicine. You can use Wisdom (Survival) in place of Intelligence (Medicine) to treat minor wounds and illnesses.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]}]",
           "bonusAdjustments": "null",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Wisdom\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Survival\",\"Athletics\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
@@ -577,7 +675,7 @@
           "label": "Technophile",
           "description": "You have loved technology since an early age. Your skills make you the person all your friends call when they have computer problems.<br />Special feature: There's an App for That. You always have the latest and greatest cell phone before the general public. Your phone can substitute as any plausible tool in the equipment list. The GM has final say on what is plausible for your phone to do.",
           "bonusCharacteristics": "null",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Computers\",\"Mechanics\",\"Security\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
@@ -600,96 +698,96 @@
           "value": "Academia",
           "label": "Academia",
           "description": "You're dedicated to the pursuit of knowledge and to sharing it with the next generation. You work with a university, library, museum, or other institution of culture and learning.<br />Sample careers: Librarian, museum docent, preschool teacher, private school teacher, public school teacher, university professor<br />Special feature: Debate. You can use Intelligence instead of Charisma on checks involving persuasion, as long as the check relates to topics of academia. You gain advantage on such checks.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Persuasion\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Persuasion\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Dexterity\",\"Constitution\",\"Wisdom\",\"Charisma\"],\"count\":2,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Natural Sciences\",\"Social Sciences\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
           "value": "Agriculture",
           "label": "Agriculture",
           "description": "You work in an ancient profession of the civilized world: raising plants and animals for produce and trade. Your work involves established techniques and modern technology.<br />Sample careers: Animal trainer, breeder, cowhand, crop scientist, farmer, rancher<br />Special feature: Animal Husbandry. You gain advantage on Wisdom and Charisma checks made to influence animal behavior.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Mechanics\"},{\"type\":\"skills.proficient\",\"value\":\"Natural Sciences\"},{\"type\":\"skills.proficient\",\"value\":\"Survival\"},{\"type\":\"skills.proficient\",\"value\":\"Vehicles\"},{\"type\":\"equipmentproficiency\",\"value\":\"Basic\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Strength\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Mechanics\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Natural Sciences\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Survival\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Vehicles\",\"conditions\":[]},{\"type\":\"equipmentproficiency\",\"value\":\"Basic\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Strength\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Dexterity\",\"Constitution\",\"Intelligence\",\"Wisdom\",\"Charisma\"],\"count\":2,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Athletics",
           "label": "Athletics",
           "description": "You make your living as an athlete. Choose your emphasis from among the many varieties of sport and fitness activities.<br />Sample careers: Baseball, basketball, football, hockey, or soccer player, boxer, golfer, gymnast, martial artist, skater, Olympic athlete, professional athlete, swimmer, wrestler<br />Special feature: Sports. Choose one real-world sport. You gain advantage on Strength, Dexterity, and Constitution checks when performing an action performed as part of that sport.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Endurance\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Strength\",\"value\":1},{\"type\":\"attribute\",\"name\":\"Dexterity\",\"value\":1},{\"type\":\"attribute\",\"name\":\"Constitution\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Endurance\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Strength\",\"value\":1,\"conditions\":[]},{\"type\":\"attribute\",\"name\":\"Dexterity\",\"value\":1,\"conditions\":[]},{\"type\":\"attribute\",\"name\":\"Constitution\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Acrobatics\",\"Athletics\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
           "value": "Counseling",
           "label": "Counseling",
           "description": "You work as a therapist, helping people cope with the emotional stresses of life. Your deep understanding of the human psyche gives you insight into people's motives and emotions.<br />Sample careers: Behavioral therapist, crisis counselor, marriage counselor, psychologist<br />Special feature: Crisis Management. You have advantage on Charisma (Persuasion) checks made to calm someone down or to persuade someone against violent action.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Insight\"},{\"type\":\"skills.proficient\",\"value\":\"Persuasion\"},{\"type\":\"skills.proficient\",\"value\":\"Social Sciences\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Wisdom\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Insight\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Persuasion\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Social Sciences\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Wisdom\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Dexterity\",\"Constitution\",\"Intelligence\",\"Charisma\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Creative",
           "label": "Creative",
           "description": "You're a professional artist or entertainer. Your creativity and dedication to your craft can carry you from busking for spare change to superstardom.<br />Sample careers: Actor, artist, dancer, editor, game designer, graphic designer, musician, online personality, photographer, singer, songwriter, stage magician, writer<br />Special feature: Artistic Focus. Choose one type of performance or art as your specialty. You gain advantage on ability checks when practicing the chosen type of art or performance.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Insight\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Charisma\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Insight\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Charisma\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Dexterity\",\"Constitution\",\"Intelligence\",\"Wisdom\"],\"count\":2,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Arts and Crafts\",\"Performance\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
           "value": "Crime",
           "label": "Crime",
           "description": "You break the law to make your living. Regardless of your particular flavor of criminality, you must stay one step ahead of law enforcement and navigate a world where business disputes are settled by violence rather than lawyers.<br />Sample careers: Bank robber, cat burglar, con artist, enforcer, forger, gang member, grifter, hitman, jewel thief<br />Special feature: Criminal Record. You have advantage on Charisma checks when interacting with the criminal underworld. You have disadvantage on Charisma checks when interacting with anyone from a law enforcement or private security profession, if they know about your record.",
-          "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Dexterity\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":2}]",
+          "bonusCharacteristics": "[{\"type\":\"equipmentproficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Dexterity\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Constitution\",\"Intelligence\",\"Wisdom\",\"Charisma\"],\"count\":2,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Deception\",\"Intimidation\",\"Security\",\"Sleight of Hand\",\"Stealth\",\"Streetwise\"],\"count\":3,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
           "value": "Customer Service",
           "label": "Customer Service",
           "description": "You work on the front lines of capitalism, greeting customers, taking their money, answering questions, and taking the heat for things you have no power over.<br />Sample careers: Assistant manager, cashier, front desk, greeter, phone support, sales assistant, server, stocker, usher<br />Special feature: De-escalation. You gain advantage on Charisma checks to calm angry people or to persuade someone to show you mercy.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Deception\"},{\"type\":\"skills.proficient\",\"value\":\"Persuasion\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Charisma\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Deception\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Persuasion\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Charisma\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Dexterity\",\"Constitution\",\"Intelligence\",\"Wisdom\"],\"count\":3,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Daredevil",
           "label": "Daredevil",
           "description": "You make your living doing dangerous things. Whatever the specifics, you put your life on the line every time you go to work. If that which does not kill you makes you stronger, you must be very strong indeed.<br />Sample careers: Extreme sports enthusiast, search and rescue expert, skydiver, street racer, stunt performer, test pilot, test subject, treasure hunter<br />Special feature: Safety First. You take half damage as a passenger in a vehicle crash. (Drivers are also considered passengers in the vehicle rules.)",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Acrobatics\"},{\"type\":\"skills.proficient\",\"value\":\"Athletics\"},{\"type\":\"skills.proficient\",\"value\":\"Vehicles\"},{\"type\":\"equipmentproficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentproficiency\",\"value\":\"Improvised\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Dexterity\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Acrobatics\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Athletics\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Vehicles\",\"conditions\":[]},{\"type\":\"equipmentproficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentproficiency\",\"value\":\"Improvised\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Dexterity\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Constitution\",\"Intelligence\",\"Wisdom\",\"Charisma\"],\"count\":3,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Emergency Services",
           "label": "Emergency Services",
           "description": "You dedicate yourself to saving lives by standing among the ranks of the nation's first responders. The work may be stressful, but it is also personally rewarding.<br />Sample careers: Ambulance driver, emergency medical technician, firefighter, paramedic, rescue worker<br />Special feature: Emergency Medicine. If you successfully use the First Aid action to stabilize an ally, the ally can spend one Hit Die to recover hit points equal to the appropriate die roll plus their Constitution modifier.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Medicine\"},{\"type\":\"skills.proficient\",\"value\":\"Vehicles\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Dexterity\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Medicine\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Vehicles\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Dexterity\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Constitution\",\"Intelligence\",\"Wisdom\",\"Charisma\"],\"count\":2,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Espionage",
           "label": "Espionage",
           "description": "You work as a clandestine field agent. Though most of your work involves collecting intelligence through your contacts, you must occasionally put your life on the line for the sake of your country.<br />Sample careers: Diplomatic attaché, field operative, secret agent, spy<br />Special feature: Safe House. While employed by the agency, you have access to a level 3 safe house somewhere in the city. This safe house serves as a secure haven that no one else knows about and can be used for a long rest. (See chapter 6 for details on safe houses.)",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Deception\"},{\"type\":\"skills.proficient\",\"value\":\"Security\"},{\"type\":\"skills.proficient\",\"value\":\"Stealth\"},{\"type\":\"equipmentproficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\"}]",
-          "bonusAdjustments": "[{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Deception\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Security\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Stealth\",\"conditions\":[]},{\"type\":\"equipmentproficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Dexterity\",\"Intelligence\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Acrobatics\",\"Athletics\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
           "value": "Faith",
           "label": "Faith",
           "description": "You dedicate your life to your religious faith. This work involves both the rigors of scholarship and becoming a spiritual leader for your parishioners.<br />Sample careers: Ordained clergy of any faith, religious studies expert, theological scholar<br />Special feature: Trusted. You gain advantage on Charisma checks when dealing with committed members of your faith.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Insight\"},{\"type\":\"skills.proficient\",\"value\":\"Persuasion\"},{\"type\":\"skills.proficient\",\"value\":\"Social Sciences\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Wisdom\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":2}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Insight\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Persuasion\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Social Sciences\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Wisdom\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Dexterity\",\"Constitution\",\"Intelligence\",\"Charisma\"],\"count\":2,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Finance",
           "label": "Finance",
           "description": "In a capitalist world, capital is king. Whether you own a sizable business, provide venture capital, or play the markets for a living, your job involves turning money into more money.<br />Sample careers: Accountant, day trader, finance advisor, investment banker, venture capitalist<br />Special feature: Personal Assistant. You employ a personal assistant who runs routine errands for you whenever you need them.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Insight\"},{\"type\":\"skills.proficient\",\"value\":\"Persuasion\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":5}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Insight\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Persuasion\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":5,\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
@@ -697,143 +795,143 @@
           "label": "Independent",
           "description": "You're independently wealthy, deriving your income from your considerable standing assets such as family holdings and trust funds. You spend your time in leisure, pursuing volunteer work, or whatever interests you.<br />Sample careers: Dilettante, trust fund kid, well-off pensioner or retiree<br />Special feature: Pulling Strings. You know how to wheedle favors from others and gain advantage on Charisma checks to receive special privileges, such as backstage access, tickets to a sold-out show, or a meeting with a public official.",
           "bonusCharacteristics": "null",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Charisma\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":4}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Charisma\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":4,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Dexterity\",\"Constitution\",\"Intelligence\",\"Wisdom\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Acrobatics\",\"Arts and Crafts\",\"Athletics\",\"Computers\",\"Deception\",\"Endurance\",\"Insight\",\"Intimidation\",\"Investigation\",\"Mechanics\",\"Medicine\",\"Natural Sciences\",\"Perception\",\"Performance\",\"Persuasion\",\"Security\",\"Sleight of Hand\",\"Social Sciences\",\"Stealth\",\"Streetwise\",\"Survival\",\"Vehicles\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
           "value": "Information Technology",
           "label": "Information Technology",
           "description": "As an IT professional, you are one of the most sought-after professionals in the modern world. Whatever your specialty, you’re a person of the information era, plugged in and churning through the dataverse.<br />Sample careers: Hacker, IT support, software developer, software engineer<br />Special feature: Tech Support. You gain advantage on Intelligence (Computer) checks to fix a broken computer system or to understand how to operate a computer system correctly.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Computers\"},{\"type\":\"skills.proficient\",\"value\":\"Security\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":4}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Computers\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Security\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":4,\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Intelligence",
           "label": "Intelligence",
           "description": "You work for a government intelligence agency or private security firm, collecting and analyzing actionable information for your employer.<br />Sample careers: Analyst, counterterrorism expert, cryptographer, handler, operations officer, profiler<br />Special feature: That's Need to Know. Your extensive access to classified government data gives you advantage on Intelligence (Investigation) checks made to gather information about people and organizations.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Computers\"},{\"type\":\"skills.proficient\",\"value\":\"Investigation\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":4}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Computers\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Investigation\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":4,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Dexterity\",\"Constitution\",\"Wisdom\",\"Charisma\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Investigative Services",
           "label": "Investigative Services",
           "description": "You work for the private sector, dealing with civil investigations and protecting your clients’ assets from thieves and saboteurs.<br />Sample careers: Bounty hunter, corporate security, military contractor, private investigator, repo specialist<br />Special feature: Investigative Expertise. You gain expertise in either Investigation or Security. You must be proficient in a skill to gain expertise in that skill.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"\"},{\"type\":\"skills.proficient\",\"value\":\"Investigation\"},{\"type\":\"skills.proficient\",\"value\":\"Security\"},{\"type\":\"equipmentproficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Investigation\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Security\",\"conditions\":[]},{\"type\":\"equipmentproficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Dexterity\",\"Constitution\",\"Wisdom\",\"Charisma\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Journalism",
           "label": "Journalism",
           "description": "You're passionate about uncovering things people want to keep hidden and then presenting an engaging report to inform the public about it. Along the way, you discover nefarious deeds, injustices, and buried truths.<br />Sample careers: Blogger, investigative reporter, journalist, news anchor, paparazzi, photojournalist<br />Special feature: I'm with the Press. You gain advantage on Charisma (Persuasion) checks made to convince people to talk with you and answer basic questions. At the GM's discretion, your credentials may allow you to access off-limit areas.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Insight\"},{\"type\":\"skills.proficient\",\"value\":\"Investigation\"},{\"type\":\"skills.proficient\",\"value\":\"Streetwise\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Wisdom\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":2}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Insight\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Investigation\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Streetwise\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Wisdom\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Dexterity\",\"Constitution\",\"Intelligence\",\"Charisma\"],\"count\":2,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Law",
           "label": "Law",
           "description": "You apply the written law to real world situations, working for the government, a company, a law firm, or in private practice. Your expertise in legal matters is invaluable to your clients.<br />Sample careers: Corporate lawyer, judge, patent lawyer, prosecutor, public defender<br />Special feature: Dangerous Mind. You can use Intelligence instead of Charisma on checks involving intimidation or persuasion as long as you cite the law when doing so.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Investigation\"},{\"type\":\"skills.proficient\",\"value\":\"Social Sciences\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":4}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Investigation\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Social Sciences\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":4,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Dexterity\",\"Constitution\",\"Wisdom\",\"Charisma\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Law Encforcement",
           "label": "Law Encforcement",
           "description": "Enforcing the law isn't an easy job. You take pride in your work and strive to serve and protect the public.<br />Sample careers: Border agent, detective, narcotics agent, FBI agent, parole officer, police officer, state trooper, S.W.A.T., undercover cop, U.S. marshal<br />Special feature: Police Powers. You can make arrests, investigate suspected crimes, and call for backup using your police radio.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Investigation\"},{\"type\":\"skills.proficient\",\"value\":\"Perception\"},{\"type\":\"skills.proficient\",\"value\":\"Vehicles\"},{\"type\":\"equipmentproficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Strength\",\"value\":1},{\"type\":\"attribute\",\"name\":\"Constitution\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Investigation\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Perception\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Vehicles\",\"conditions\":[]},{\"type\":\"equipmentproficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Strength\",\"value\":1,\"conditions\":[]},{\"type\":\"attribute\",\"name\":\"Constitution\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Medicine",
           "label": "Medicine",
           "description": "Your dedication to the practice of medicine has given you the opportunity to save many lives and make a difference for everyday people. The practice is both an intellectual challenge and a weighty responsibility.<br />Sample careers: Dentist, ER doctor, general practice physician, nurse, psychiatrist, specialist physician, surgeon, veterinarian<br />Special feature: Prescriptions. You have access to a range of prescription pharmaceuticals and otherwise-restricted drugs pertaining to your medical discipline. Abuse of this power can put you in serious legal jeopardy.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Insight\"},{\"type\":\"skills.proficient\",\"value\":\"Medicine\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Insight\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Medicine\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Dexterity\",\"Constitution\",\"Wisdom\",\"Charisma\"],\"count\":2,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Military",
           "label": "Military",
           "description": "You are a proud member of the national armed forces. As career military, you're trained for fighting and learned a range of useful skills.<br />Sample careers: Air Force special tactics, Army ranger, enlisted soldier, Green Beret, Marine, Military police, Navy SEAL, officer, pilot, seaman<br />Special feature: Servicemember. You gain the following benefits:<br /><ul><li>When on mission or on base, you have access to military weapons, vehicles, and equipment. This includes the weapons and armor in your iconic equipment.</li><li>You can travel for free to many destinations if you're traveling alone.</li><li>You are provided with room and board while living on base.</li></ul>",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Athletics\"},{\"type\":\"skills.proficient\",\"value\":\"Perception\"},{\"type\":\"skills.proficient\",\"value\":\"Stealth\"},{\"type\":\"equipmentproficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\"},{\"type\":\"equipmentproficiency\",\"value\":\"Military\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Strength\",\"value\":1},{\"type\":\"attribute\",\"name\":\"Constitution\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":2}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Athletics\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Perception\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Stealth\",\"conditions\":[]},{\"type\":\"equipmentproficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\",\"conditions\":[]},{\"type\":\"equipmentproficiency\",\"value\":\"Military\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Strength\",\"value\":1,\"conditions\":[]},{\"type\":\"attribute\",\"name\":\"Constitution\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Outdoors",
           "label": "Outdoors",
           "description": "You prefer to work in the great outdoors rather than participate in the indoor rat race. The pay is not great, but you much prefer the company you keep.<br />Sample careers: Conservationist, explorer, fish and game warden, hunter, mountain climber, park ranger, survivalist, wildlife photographer<br />Special feature: Tracker. You gain advantage on Wisdom (Survival) checks to track in a wilderness setting.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Athletics\"},{\"type\":\"skills.proficient\",\"value\":\"Perception\"},{\"type\":\"skills.proficient\",\"value\":\"Stealth\"},{\"type\":\"skills.proficient\",\"value\":\"Survival\"},{\"type\":\"equipmentproficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Constitution\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":2}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Athletics\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Perception\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Stealth\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Survival\",\"conditions\":[]},{\"type\":\"equipmentproficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentproficiency\",\"value\":\"Advanced\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Constitution\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Dexterity\",\"Intelligence\",\"Wisdom\",\"Charisma\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Politics",
           "label": "Politics",
           "description": "A passion for helping others or a desire for power drew you into public service. The job does grant both power and privilege. Just don’t let it go to your head.<br />Sample careers: Councilmember, governor, legislator, mayor, political consultant<br />Special feature: Grassroots Organizing. You have a cadre of dedicated constituents you can call on for tasks, such as picketing a corporation or marching for a cause. Their willingness to act is at the GM's discretion.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Deception\"},{\"type\":\"skills.proficient\",\"value\":\"Persuasion\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Charisma\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Deception\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Persuasion\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Charisma\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Dexterity\",\"Constitution\",\"Intelligence\",\"Wisdom\"],\"count\":2,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Private Security",
           "label": "Private Security",
           "description": "You ensure that people, places, or things under your protection come to no harm while you remain on guard. It's rarely exciting, but the job gives you plenty of time to reflect.<br />Sample careers: Bodyguard, bouncer, mall cop, night guard, security guard<br />Special feature: I'm Calling the Police. You have a good relationship with law enforcement. You gain advantage on Charisma checks when dealing with law enforcement. Furthermore, the police respond if you call to report a security problem related to your official duties.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Intimidation\"},{\"type\":\"skills.proficient\",\"value\":\"Perception\"},{\"type\":\"skills.proficient\",\"value\":\"Security\"},{\"type\":\"equipmentproficiency\",\"value\":\"Basic\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Wisdom\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":2}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Intimidation\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Perception\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Security\",\"conditions\":[]},{\"type\":\"equipmentproficiency\",\"value\":\"Basic\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Wisdom\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Dexterity\",\"Constitution\",\"Intelligence\",\"Charisma\"],\"count\":2,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Science",
           "label": "Science",
           "description": "You are dedicated to advancing the systems of knowledge, whether for public good or personal gain. You might be a resident scientist at a research institute, working for a large corporation, or a mad genius tinkering in your basement.<br />Sample careers: Data analyst, engineer, inventor, lab researcher, mathematician, product developer, research scientist<br />Special feature: Science Lessons. When you use the Help action, you do not need to be within reach of the person you're helping and can do so from anywhere they can hear your voice, including over the phone.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Computers\"},{\"type\":\"skills.proficient\",\"value\":\"Natural Sciences\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Computers\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Natural Sciences\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Dexterity\",\"Constitution\",\"Wisdom\",\"Charisma\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
           "value": "Student",
           "label": "Student",
           "description": "You're currently a student in high school, college, or graduate school. You might have a job, but you put your focus and energy into your studies.<br />Sample careers: Blood donor, intern, part-time work, teacher's aide, volunteer<br />Special feature: All-Nighter. You can remove one level of Exhaustion from yourself. You must finish a long rest before you can do this again.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Computers\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Computers\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Dexterity\",\"Constitution\",\"Wisdom\",\"Charisma\"],\"count\":3,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Natural Sciences\",\"Social Sciences\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
           "value": "Trades",
           "label": "Trades",
           "description": "You enjoy working with your hands and your mind, building and fixing useful things. If they don't find you handsome, they will at least find you handy.<br />Sample careers: Carpenter, construction worker, electrician, flooring specialist, plumber, shoemaker, tailor<br />Special feature: Handy. Choose a specific trade you focus on. You gain advantage on Intelligence checks for activities performed in the practice of that trade.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Arts and Crafts\"},{\"type\":\"skills.proficient\",\"value\":\"Mechanics\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Dexterity\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Arts and Crafts\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Mechanics\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Dexterity\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Constitution\",\"Intelligence\",\"Wisdom\",\"Charisma\"],\"count\":2,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Transportation",
           "label": "Transportation",
           "description": "You're an expert in operating some kind of vehicle. Whether you work in the civilian sector or military, you are on a path of mastery in your chosen form of transportation.<br />Sample careers: Boat captain, bus driver, commercial pilot, rideshare driver, taxi driver, race car driver<br />Special feature: Experienced Driver. You can ignore the effects from the first level of the Body Damage, Loss of Control, and Loss of Power conditions when driving a vehicle.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Mechanics\"},{\"type\":\"skills.proficient\",\"value\":\"Vehicles\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Dexterity\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":2}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Mechanics\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Vehicles\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Dexterity\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Constitution\",\"Intelligence\",\"Wisdom\",\"Charisma\"],\"count\":3,\"category\":\"Adjustment\",\"value\":1}]"
         },
         {
           "value": "Unemployed",
           "label": "Unemployed",
           "description": "For whatever reason, you don't have regular work and haven't had a paying job in a long time. You make your way by resourcefulness, charity, or some mix of the two.<br />Sample careers: Beggar, hermit, hobo, institutionalized person, prisoner, recluse<br />Special feature: Colorful Character. The story of the trials you have overcome in life gives you advantage on Charisma (Persuasion) checks made to ask for help or acts of mercy.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Endurance\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Constitution\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Endurance\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Constitution\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Dexterity\",\"Intelligence\",\"Wisdom\",\"Charisma\"],\"count\":3,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Streetwise\",\"Survival\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         },
         {
           "value": "White Collar",
           "label": "White Collar",
           "description": "You work in an office, tending to the minutia of everyday life. Your true potential is yet to be revealed, you're certain of it.<br />Sample careers: Accountant, human resources, mail clerk, management consultant, marketer, office manager, salesperson, tax preparer<br />Special feature: Management Material. You can use the Help action as a bonus action. You must finish a short rest (coffee break) before you can do this again.",
-          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Computers\"},{\"type\":\"skills.proficient\",\"value\":\"Persuasion\"}]",
-          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3}]",
+          "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Computers\",\"conditions\":[]},{\"type\":\"skills.proficient\",\"value\":\"Persuasion\",\"conditions\":[]}]",
+          "bonusAdjustments": "[{\"type\":\"attribute\",\"name\":\"Intelligence\",\"value\":1,\"conditions\":[]},{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"attribute\",\"label\":null,\"choices\":[\"Strength\",\"Dexterity\",\"Constitution\",\"Wisdom\",\"Charisma\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         }
       ]
@@ -1557,8 +1655,8 @@
             "value": "Advanced Commando Training",
             "label": "Advanced Commando Training",
             "description": "Scale: Major<br />You're an especially dangerous person, capable of feats in combat few others can match.<br /><ul><li>You gain Military Equipment proficiency.</li><li>By pushing yourself to the limit, you can take an additional action during your turn. You can do this only once before you finish a long rest.</li><li>You gain a +2 bonus to your Defense.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Military\"}]",
-            "bonusAdjustments": "[{\"type\":\"defense\",\"name\":\"Defense\",\"value\":2}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Military\",\"conditions\":[]}]",
+            "bonusAdjustments": "[{\"type\":\"defense\",\"name\":\"Defense\",\"value\":2,\"conditions\":[]}]",
             "userChoices": "null",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Commando'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Commando Training\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\",\"logicalOr\":[]}]"
           },
@@ -1567,7 +1665,7 @@
             "label": "Advanced Duelist Training",
             "description": "Scale: Major<br />You have become an expert in the lunge and parry maneuvers, dancing around opponents and striking when they are most vulnerable.<br /><ul><li>You gain 1 additional influence die.</li><li>Your influence dice are now d8 instead of d6. (Ignore this if your archetype is Charming Hero.)</li><li>You can add your Charisma modifier to initiative.</li><li>Opportunity attacks made against you have disadvantage.</li><li>You learn one additional trick chosen from the list of duelist tricks.</li></ul>",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"tricks\",\"label\":null,\"choices\":[\"Duelist\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Duelist'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Duelist Training\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\",\"logicalOr\":[]}]"
           },
@@ -1575,8 +1673,8 @@
             "value": "Advanced Engineer Training",
             "label": "Advanced Engineer Training",
             "description": "Scale: Major<br />Your mastering of the technical world is impressive enough to put most people in awe of your skills.<br /><ul><li>You gain expertise in Mechanics.</li><li>You gain an additional 1 Genius point.</li><li>You learn 2 additional plans, either from the Engineer or shared plan list.</li><li>You can only use Engineer plan enhancements up to Level 5.</li><li>If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 5.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"skills.expertise\",\"value\":\"Mechanics\"}]",
-            "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1}]",
+            "bonusCharacteristics": "[{\"type\":\"skills.expertise\",\"value\":\"Mechanics\",\"conditions\":[]}]",
+            "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"plans\",\"label\":null,\"choices\":[\"Coordinated Maneuvers\",\"Dirty Little Secrets\",\"Expect the Unexpected\",\"Know the Layout\",\"The Right Tool\",\"Watch Your Step\",\"When a Plan Comes Together\",\"Customize\",\"Cut the Power\",\"Demolish\",\"Emergency Jetpack\",\"My Robot Can Do That\",\"Overload\",\"Shocking Blow\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Engineer'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Engineer Training\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\",\"logicalOr\":[]}]"
           },
@@ -1584,8 +1682,8 @@
             "value": "Advanced Hacker Training",
             "label": "Advanced Hacker Training",
             "description": "Scale: Major<br />When sysops hear your name they either tremble in fear, or stand in awe of your elite skills.<br /><ul><li>You gain expertise in Computers.</li><li>You gain an additional 1 Genius point.</li><li>You learn two additional plans, either from the Hacker or shared plan list.</li><li>You can only use hacker plan enhancements up to Level 5.</li><li>If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 5.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"skills.expertise\",\"value\":\"Computers\"}]",
-            "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1}]",
+            "bonusCharacteristics": "[{\"type\":\"skills.expertise\",\"value\":\"Computers\",\"conditions\":[]}]",
+            "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"plans\",\"label\":null,\"choices\":[\"Coordinated Maneuvers\",\"Dirty Little Secrets\",\"Expect the Unexpected\",\"Know the Layout\",\"The Right Tool\",\"Watch Your Step\",\"When a Plan Comes Together\",\"Brick It\",\"Cha-Ching\",\"Did My Homework\",\"I'm In\",\"RTFM\",\"Sucks to be You\",\"We Interrupt This Program\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Hacker'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Hacker Training\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\",\"logicalOr\":[]}]"
           },
@@ -1593,7 +1691,7 @@
             "value": "Advanced Heavy Gunner Training",
             "label": "Advanced Heavy Gunner Training",
             "description": "Scale: Major<br />The sound of explosives and heavy machine gun fire are music to your ears.<br /><ul><li>You gain Military Equipment proficiency.</li><li>When you damage any target with Suppressive Fire or an explosive, the damage is increased by double your proficiency bonus.</li><li>When you take the Suppressive Fire action, you can double the area covered.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Military\"}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Military\",\"conditions\":[]}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Heavy Gunner'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Heavy Gunner Training\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\",\"logicalOr\":[]}]"
@@ -1603,7 +1701,7 @@
             "label": "Advanced Hunter Training",
             "description": "Scale: Major<br />You have further honed your hunting skills, focusing on what it takes to survive encounters with dangerous prey.<br /><li>Choose one from Perception, Stealth, or Survival. You must be proficient in the chosen skill. You gain expertise in the chosen skill.</li><li>You gain 1 additional Focus point.</li><li>You can spend 1 Focus to reroll a missed attack roll against a marked target made by you or your hunting companion. You may only do this once per attack.</li><li>After an opponent hits you with an attack, you gain a +4 bonus to Defense against any further attacks that same opponent makes against you until the start of your next turn.</li></ul>",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"skills.expertise\",\"label\":null,\"choices\":[\"Perception\",\"Stealth\",\"Survival\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Hunter'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Hunter Training\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\",\"logicalOr\":[]}]"
           },
@@ -1612,7 +1710,7 @@
             "label": "Advanced Icon Training",
             "description": "Scale: Major<br />You are definitely the GOAT, don't let anyone tell you differently!<br /><ul><li>You gain 1 additional influence die.</li><li>Your influence dice are now d8 instead of d6. (Ignore this if your archetype is Charming Hero.)</li><li>You learn one additional trick chosen from the list of Icon tricks.</li><li>Whenever you roll a 1 on an influence die or a damage die, you can reroll that die once, taking the new result.</li><li>As a reaction, when an opponent within 5 feet that can see you targets you with an attack, you can cause that attack to have disadvantage. They cannot change targets in reaction to you doing this.</li></ul>",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"tricks\",\"label\":null,\"choices\":[\"Icon\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Icon'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Icon Training\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\",\"logicalOr\":[]}]"
           },
@@ -1621,7 +1719,7 @@
             "label": "Advanced Leader Training",
             "description": "Scale: Major<br />You have further developed your leadership skills allowing you to better direct and motivate your allies.<br /><ul><li>You gain 1 additional influence die.</li><li>Your influence dice are now d8 instead of d6. (Ignore this if your archetype is Charming Hero.)</li><li>You learn one additional trick chosen from the list of Leader tricks.</li><li>You encourage camaraderie among your allies. Whenever you and your allies finish a short rest, you and any ally that can hear you each regain 1 spent Hit Die, whether it was spent during this rest or earlier. You can do this only once before finishing a long rest.</li><li>As an action you can grant yourself and up to 6 allies that can hear you temporary hit points equal to your Hero level plus your Charisma modifier. You cannot take this action again until you finish a short or long rest.</li></ul>",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"tricks\",\"label\":null,\"choices\":[\"Leader\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Leader'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Leader Training\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\",\"logicalOr\":[]}]"
           },
@@ -1630,7 +1728,7 @@
             "label": "Advanced Maniputator Training",
             "description": "Scale: Major<br />You not only get into the heads of your enemies, you live there rent-free.<br /><ul><li>You gain 1 additional influence die.</li><li>Your influence dice are now d8 instead of d6. (Ignore this if your archetype is Charming Hero.)</li><li>You learn one additional trick, chosen from the list of Manipulator tricks.</li><li>You can perfectly mimic the voice of another person, as long as you have heard them speak for at least 1 minute. A successful Wisdom (Insight) check contested by your Charisma (Deception) check allows a listener to determine that the voice is fake.</li><li>You can use your Demoralize ability as a bonus action. You can still use it as an action as well, allowing you to use it twice during your turn if you like.</li></ul>",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"tricks\",\"label\":null,\"choices\":[\"Manipulator\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Manipulator'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Manipulator Training\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\",\"logicalOr\":[]}]"
           },
@@ -1638,7 +1736,7 @@
             "value": "Advanced Martial Arts Training",
             "label": "Advanced Martial Arts Training",
             "description": "Scale: Major<br />You have trained to strike efficiently with your hands and feet and are skilled in weapons used for sport and training.<br /><ul><li>You gain Historical Equipment proficiency.</li><li>Your unarmed strike damage is improved by one die step.</li><li>You can make an unarmed strike as a bonus action.</li><li>Climbing and swimming are not difficult movement for you.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Historical\"}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Historical\",\"conditions\":[]}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Martial Artist'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Agile Hero Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Agile'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\",\"logicalOr\":[]}]"
@@ -1648,7 +1746,7 @@
             "label": "Advanced Master Training",
             "description": "Scale: Major<br />Your great wisdom and inner peace have given you the ability to elegantly avoid danger and knock people's lights out.<br /><ul><li>You gain 1 additional focus point.</li><li>When an opponent's attack misses you, and you are adjacent to a different opponent, you may take a reaction to cause the missed attack to hit the adjacent opponent.</li><li>When you hit a target with an unarmed strike, simple melee weapon, or improvised weapon, you can spend 1 focus point to attempt to stun that target. It must make a Constitution saving throw or be Stunned until the end of your next turn. The save DC is 8 + your Wisdom modifier + your proficiency bonus.</li></ul>",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "null",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Master'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Master Training\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\",\"logicalOr\":[]}]"
           },
@@ -1657,7 +1755,7 @@
             "label": "Advanced Mastermind Training",
             "description": "Scale: Major<br />You have devised plans within plans within plans. How about two more plans?<br /><ul><li>Choose either Investigation or Social Sciences. You gain expertise in the chosen skill.</li><li>You gain an additional 1 Genius point.</li><li>You learn 2 additional plans from the mastermind or shared plan list.</li><li>You can only use mastermind plan enhancements up to Level 5.</li><li>If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 5.</li></ul>",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"skills.expertise\",\"label\":null,\"choices\":[\"Investigation\",\"Social Sciences\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"plans\",\"label\":null,\"choices\":[\"Coordinated Maneuvers\",\"Dirty Little Secrets\",\"Expect the Unexpected\",\"Know the Layout\",\"The Right Tool\",\"Watch Your Step\",\"When a Plan Comes Together\",\"I Had it Poisoned\",\"I Had Them Bugged\",\"I Have the Perfect Disguise\",\"I Knew You'd Do That\",\"I Lured You Into Danger\",\"I'll Tell You How It's Done\",\"They'll Never See Us Coming\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Mastermind'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Mastermind Training\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\",\"logicalOr\":[]}]"
           },
@@ -1675,7 +1773,7 @@
             "label": "Advanced Scientist Training",
             "description": "Scale: Major<br />Your mastery of the elements of nature knows few equals.<br /><ul><li>Choose either Medicine or Natural Sciences. You gain expertise in the chosen skill.</li><li>You gain an additional 1 Genius point.</li><li>You learn 2 additional plans from the scientist or shared plan list.</li><li>You can only use scientist plan enhancements up to Level 5. If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 5.</ul>",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"skills.expertise\",\"label\":null,\"choices\":[\"Medicine\",\"Natural Sciences\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"plans\",\"label\":null,\"choices\":[\"Coordinated Maneuvers\",\"Dirty Little Secrets\",\"Expect the Unexpected\",\"Know the Layout\",\"The Right Tool\",\"Watch Your Step\",\"When a Plan Comes Together\",\"Adrenaline Shot\",\"Can of Whoop Ass\",\"I Have the Cure\",\"Inferno Bomb\",\"Knockout Gas\",\"Right Into My Trap\",\"Smokescreen\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Scientist'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Scientist Training\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\",\"logicalOr\":[]}]"
           },
@@ -1720,7 +1818,7 @@
             "label": "Advanced Sleuth Training",
             "description": "Scale: Major<br />Your intuition has given you the ability to get the drop on your enemies and hit them where it hurts.<br /><ul><li>Choose one from Insight, Investigation, Perception, Security, and Streetwise. You gain expertise in the chosen skill.</li><li>You gain 1 additional Focus point.</li><li>As a bonus action, you can spend 1 Focus point to gain advantage on your next attack roll. If the attack hits, you deal an additional 2d6 damage to the target.</li><li>When you make a Dexterity saving throw to take half damage from an effect, you take no damage on a successful save, and half damage on a failed one.</li></ul>",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"skills.expertise\",\"label\":null,\"choices\":[\"Insight\",\"Investigation\",\"Perception\",\"Security\",\"Streetwise\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Sleuth'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Sleuth Training\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\",\"logicalOr\":[]}]"
           },
@@ -1728,7 +1826,7 @@
             "value": "Agile Hero Training",
             "label": "Agile Hero Training",
             "description": "Scale: Major<br />You have trained your reflexes to a razor's edge. Your movements are both swift and elegant.<br /><ul><li>You gain Basic Equipment proficiency.</li><li>Choose one from Acrobatics, Sleight of Hand, Stealth, and Vehicles. You gain proficiency in the chosen skill.<li>You can take the Dash or Disengage action as a bonus action.</li><li>During a foot chase, you have advantage on Strength (Athletics) checks made as part of a Gain Ground action.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"\"}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"\",\"conditions\":[]}]",
             "bonusAdjustments": "null",
             "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Acrobatics\",\"Sleight of Hand\",\"Stealth\",\"Vehicles\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"archetype\",\"name\":\"\",\"formula\":\"!== 'Agile'\",\"logicalOr\":[]},{\"type\":\"attribute\",\"name\":\"Dexterity\",\"formula\":\">= 13\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 2\",\"logicalOr\":[]}]"
@@ -1791,7 +1889,7 @@
             "value": "Bodyguard Training",
             "label": "Bodyguard Training",
             "description": "Scale: Major<br />You gladly put yourself in danger to protect others, and have trained to do exactly that.<br /><ul><li>You gain Advanced Equipment proficiency.</li><li>When an ally within 5 feet is hit by an attack, you can use your reaction to cause the attack to hit you instead.</li><li>If you are in cover and adjacent to a willing ally, you can take a bonus action on your turn to move that ally into cover. You can move up to 5 feet during this action to make room for your ally</li><li>You do not damage allies if you roll a critical miss when firing into melee combat.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Bodyguard'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Tough Hero Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Tough'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\",\"logicalOr\":[]}]"
@@ -1800,7 +1898,7 @@
             "value": "Brawler Training",
             "label": "Brawler Training",
             "description": "Scale: Major<br />You have trained yourself to be an engine of destruction, letting nothing stand between you and your target.<br /><ul><li>You gain Improvised Equipment proficiency.</li><li>You have advantage on any Strength check you make to break an object. In addition, your melee attacks have +1 Penetration Value.</li><li>As a bonus action, you can move up to your speed, but you must move toward an opponent. If there are no enemies present, you may move toward an obviously dangerous situation instead.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Improvised\"}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Improvised\",\"conditions\":[]}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Brawler'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Brawler Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Strong'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\",\"logicalOr\":[]}]"
@@ -1819,7 +1917,7 @@
             "label": "Charming Hero Training",
             "description": "Scale: Major<br />You have a way with words and/or looks that could kill.<br /><ul><li>Choose two from Deception, Intimidation, Performance, and Persuasion. You gain proficiency in the chosen skills.</li><li>Choose one from Deception, Intimidation, Performance, and Persuasion). You must be proficient in the chosen skill. You gain expertise in the chosen skill.</li><li>You have two influence dice, which are d6s. An influence die is expended when it is rolled. You regain all of your expended influence dice when you finish a short or long rest.</li><li>When you make a Charisma check, after rolling but before determining the result, you can roll an influence die and add it to your result.</li></ul>",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":2,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Deception\",\"Intimidation\",\"Performance\",\"Persuasion\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"skills.expertise\",\"label\":null,\"choices\":[\"Deception\",\"Intimidation\",\"Performance\",\"Persuasion\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"archetype\",\"name\":\"\",\"formula\":\"!== 'Charming'\",\"logicalOr\":[]},{\"type\":\"attribute\",\"name\":\"Charisma\",\"formula\":\">= 13\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 2\",\"logicalOr\":[]}]"
           },
@@ -1827,7 +1925,7 @@
             "value": "Commando Training",
             "label": "Commando Training",
             "description": "Scale: Major<br />You give your all in combat, making you a very difficult target to take down.<br /><ul><li>You gain Advanced Equipment proficiency.</li><li>You can take the Second Wind action as a bonus action.</li><li>You can draw, arm, and throw a grenade as a bonus action. You must have a free hand or already be holding the grenade to do this.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Commando'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Tough Hero Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Tough'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\",\"logicalOr\":[]}]"
@@ -1863,8 +1961,8 @@
             "value": "Duelist Training",
             "label": "Duelist Training",
             "description": "Scale: Major<br />You have learned the ancient art of grace in combat, keeping you one step ahead of your opponent.<br /><ul><li>Basic Equipment and Historical Equipment proficiency.</li><li>You gain 1 additional influence die.</li><li>While wielding a finesse weapon, your Defense bonus is increased by +1.</li><li>You learn two tricks, chosen from the list of duelist tricks.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentProficiency\",\"value\":\"Historical\"}]",
-            "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Historical\",\"conditions\":[]}]",
+            "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"tricks\",\"label\":null,\"choices\":[\"Duelist\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Duelist'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Charming Hero Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Charming'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\",\"logicalOr\":[]}]"
           },
@@ -1872,7 +1970,7 @@
             "value": "Engineer Training",
             "label": "Engineer Training",
             "description": "Scale: Major<br />You have studied the worlds of technology and machinery and have gained startling insights.<br /><ul><li>You gain proficiency in Mechanics.</li><li>You gain a Mechanical Companion from the engineer's list of mechanical companions. (This does not include talents related to the Mechanical Companion. The companion follows standard companion rules.)</li><li>You learn 1 additional plan from the engineer plan list.</li><li>You can only use engineer plan enhancements up to Level 3.</li><li>If you are not a Smart Hero archetype, you can use shared plan enhancements only up to Level 3.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Mechanics\"}]",
+            "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Mechanics\",\"conditions\":[]}]",
             "bonusAdjustments": "null",
             "userChoices": "[{\"type\":\"plans\",\"label\":null,\"choices\":[\"Customize\",\"Cut the Power\",\"Demolish\",\"Emergency Jetpack\",\"My Robot Can Do That\",\"Overload\",\"Shocking Blow\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Engineer'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Smart Hero Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Smart'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\",\"logicalOr\":[]}]"
@@ -1881,7 +1979,7 @@
             "value": "Equipment Training",
             "label": "Equipment Training",
             "description": "Scale: Minor<br />You have trained to use various kinds of combat equipment.",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]}]",
             "bonusAdjustments": "null",
             "userChoices": "[{\"type\":\"equipmentProficiency\",\"label\":null,\"choices\":[\"Advanced\",\"Historical\",\"Improvised\",\"Military\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "null"
@@ -1909,7 +2007,7 @@
             "label": "Fortunes Fool",
             "description": "Scale: Major<br />You have learned to trust in providence, and somehow it has come to treat you kindly in return for your faith.<br /><ul><li>You gain 3 luck points, which are replenished each time you take a long rest.</li><li>You may spend a luck point to reroll an attack roll, saving throw, or ability check after the roll but before you know the result.</li></ul><br />If multiple d20s are rolled due to advantage or disadvantage, you choose only one to be re-rolled.",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"luckpoints\",\"name\":\"\",\"value\":3}]",
+            "bonusAdjustments": "[{\"type\":\"luckpoints\",\"name\":\"\",\"value\":3,\"conditions\":[]}]",
             "userChoices": "null",
             "prerequisites": "null"
           },
@@ -1980,8 +2078,8 @@
             "value": "Hacker Training",
             "label": "Hacker Training",
             "description": "Scale: Major<br />You have dived deeply into the digital ocean and become one of the elites of that realm.<br /><ul><li>You gain proficiency in Computers.</li><li>You gain an additional 1 Genius point.</li><li>You learn 1 additional plan from the hacker plan list.</li><li>You can only use hacker plan enhancements up to Level 3.</li><li>If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 3.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Computers\"}]",
-            "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1}]",
+            "bonusCharacteristics": "[{\"type\":\"skills.proficient\",\"value\":\"Computers\",\"conditions\":[]}]",
+            "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"plans\",\"label\":null,\"choices\":[\"Brick It\",\"Cha-Ching\",\"Did My Homework\",\"I'm In\",\"RTFM\",\"Sucks to be You\",\"We Interrupt This Program\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Hacker'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Smart Hero Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Smart'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\",\"logicalOr\":[]}]"
           },
@@ -2008,7 +2106,7 @@
             "label": "Healthy",
             "description": "Scale: Major<br />Through rigorous activity and good living, you have become more resilient to injury and fatigue in battle.<br /><ul><li>On taking this feat, increase your hit point maximum by 2 per character level.</li><li>Each time you gain a level, increase your hit point maximum by 2.</li></ul>",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"hitpoints\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"hitpoints\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "userChoices": "null",
             "prerequisites": "null"
           },
@@ -2016,7 +2114,7 @@
             "value": "Heavy Gunner Training",
             "label": "Heavy Gunner Training",
             "description": "Scale: Major<br />You like big guns and you cannot lie, someone does you wrong and they are gonna die.<br /><ul><li>You gain Advanced Equipment proficiency.</li><li>You may use Strength instead of Dexterity when you make a ranged attack with a non-light ranged weapon.</li><li>You can ignore the stationary property of weapons.</li><li>Before making an attack with a non-light ranged weapon you can declare you are being reckless. You gain advantage on your attack rolls with that weapon but all opponents attacking you have advantage on their attack rolls. This lasts until the start of your next turn.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Heavy Gunner'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Strong Hero Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Strong'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">=4\",\"logicalOr\":[]}]"
@@ -2025,8 +2123,8 @@
             "value": "Hunter Training",
             "label": "Hunter Training",
             "description": "Scale: Major<br />You have learned the art of tracking prey and bringing them to ground.<br /><li>You gain the Advanced Equipment proficiency.</li><li>Choose one from Perception, Stealth, and Survival. You gain proficiency in the chosen skill.<li>You gain 1 additional Focus point.<li>As a bonus action, you can spend 1 Focus to mark one target opponent you can see.<li>You gain advantage on Wisdom (Perception) checks against a marked target.<li>You gain advantage on Wisdom (Streetwise) and Wisdom (Survival) checks made to track or find a marked target.<li>You can spend 1 Focus to reroll a damage roll you make against a marked target. If multiple dice are rolled for damage, you reroll all damage dice. You may only do this once per attack.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"}]",
-            "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":1}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]}]",
+            "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "null",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Hunter'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Wise Hero Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Wise'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\",\"logicalOr\":[]}]"
           },
@@ -2034,8 +2132,8 @@
             "value": "Icon Training",
             "label": "Icon Training",
             "description": "Scale: Major<br />You are the bee's knees, the cat's pajamas, and perhaps the GOAT!<br /><ul><li>You gain Basic Equipment and Advanced Equipment proficiencies.</li><li>You gain 1 additional influence die.</li><li>You learn two tricks, chosen from the list of icon tricks.</li><li>As a bonus action, you can give your allies an opening by drawing the attention of an opponent you are aware of who can hear you within 60 feet. The next attack one of your allies makes against that target before the start of your next turn has advantage.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"}]",
-            "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]}]",
+            "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"tricks\",\"label\":null,\"choices\":[\"Icon\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Icon'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Charming Hero Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Charming'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\",\"logicalOr\":[]}]"
           },
@@ -2062,7 +2160,7 @@
             "label": "Investments",
             "description": "Scale: Minor<br />You have either made wise investments or come into an inheritance of some kind. Each time you take this feat, you gain +1 Wealth Level (maximum 5).",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"wealthlevel\",\"name\":\"\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "null",
             "prerequisites": "null"
           },
@@ -2097,8 +2195,8 @@
             "value": "Leader Training",
             "label": "Leader Training",
             "description": "Scale: Major<br />Your allies respect your wisdom and advice allowing you to direct them in combat and lift their spirits in rest.<br /><ul><li>You gain Basic and Advanced Equipment proficiency.</li><li>You gain 1 additional influence die.</li><li>You learn two tricks, chosen from the list of leader tricks.</li><li>As an action, you can command one of your allies. That ally can use a reaction to make one attack or move up to its speed.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"}]",
-            "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]}]",
+            "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"tricks\",\"label\":null,\"choices\":[\"Leader\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Leader'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Charming Hero Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Charming'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\",\"logicalOr\":[]}]"
           },
@@ -2107,7 +2205,7 @@
             "label": "Maniputator Training",
             "description": "Scale: Major<br />You have learned the art of not only influencing others, but bending them to your will.<br /><ul><li>You gain 1 additional influence die.</li><li>You learn two tricks, chosen from the list of Manipulator tricks.</li><li>You can demoralize an opponent within 60 feet as an action. The target must make a Wisdom saving throw against a DC of 8 + your Charisma modifier + your proficiency bonus. On a failed save, the target has disadvantage on attack rolls, disadvantage on ability checks, and attack rolls against the target have advantage. This effect lasts until the end of your next turn.</li></ul>",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"influencepoints\",\"name\":\"InfluencePoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"tricks\",\"label\":null,\"choices\":[\"Manipulator\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Manipulator'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Charming Hero Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Charming'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\",\"logicalOr\":[]}]"
           },
@@ -2115,7 +2213,7 @@
             "value": "Martial Arts Training",
             "label": "Martial Arts Training",
             "description": "Scale: Major<br />Your heightened awareness and reflexes have made you a difficult target and adept at off-hand strikes.<br /><ul><li>Your unarmed strike damage is improved by one die step.</li><li>You ignore difficult terrain when you move.</li><li>You treat all melee weapons that don't have the heavy property as if they had the finesse property.</li><li>When you make a Dexterity saving throw to take half damage from an effect, you take no damage on a successful save, and half damage on a failed one.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Historical\"}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Historical\",\"conditions\":[]}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Martial Artist'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Martial Artist Training\",\"formula\":\"=== true\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 8\",\"logicalOr\":[]}]"
@@ -2124,8 +2222,8 @@
             "value": "Master Training",
             "label": "Master Training",
             "description": "Scale: Major<br />Your contemplative meditation has brought you to a state of inner harmony and butt-kicking.<br /><li>You gain Improvised Equipment proficiency.</li><li>You gain 1 additional focus point.</li><li>You have damage reduction 15 against falling.</li><li>You can spend 1 focus point to take the Dash, Disengage, or Dodge action as a bonus action.</li><li>You can spend 1 focus to make an unarmed strike as a bonus action.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Improvised\"}]",
-            "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":1}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Improvised\",\"conditions\":[]}]",
+            "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "null",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Master'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Wise Hero Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Wise'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\",\"logicalOr\":[]}]"
           },
@@ -2134,7 +2232,7 @@
             "label": "Mastermind Training",
             "description": "Scale: Major<br />You have spent an awful lot of time trying to outsmart everyone, and it's working.<br /><li>Choose either Investigation or Social Sciences. You gain proficiency in the chosen skill.</li><li>You gain an additional 1 Genius point.</li><li>You learn 1 additional plan from the mastermind plan list.</li><li>You can only use mastermind plan enhancements up to Level 3.</li><li>If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 3.</li></ul>",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Investigation\",\"Social Sciences\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"plans\",\"label\":null,\"choices\":[\"I Had it Poisoned\",\"I Had Them Bugged\",\"I Have the Perfect Disguise\",\"I Knew You'd Do That\",\"I Lured You Into Danger\",\"I'll Tell You How It's Done\",\"They'll Never See Us Coming\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Mastermind'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Smart Hero Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Smart'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\",\"logicalOr\":[]}]"
           },
@@ -2260,7 +2358,7 @@
             "label": "Scientist Training",
             "description": "Scale: Major<br />For those willing to master knowledge, the universe can be your sandbox.<br /><ul><li>Choose either Medicine or Natural Sciences. You gain proficiency in the chosen skill.</li><li>You gain an additional 1 Genius point.</li><li>You learn 1 additional plan from the scientist plan list.</li><li>You can only use scientist plan enhancements up to Level 3.</li><li>If you are not a Smart Hero (archetype), you can only use shared plan enhancements up to Level 3.</li></ul>",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1}]",
+            "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"GeniusPoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Medicine\",\"Natural Sciences\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"plans\",\"label\":null,\"choices\":[\"Adrenaline Shot\",\"Can of Whoop Ass\",\"I Have the Cure\",\"Inferno Bomb\",\"Knockout Gas\",\"Right Into My Trap\",\"Smokescreen\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Scientist'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Smart Hero Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Smart'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\",\"logicalOr\":[]}]"
           },
@@ -2268,7 +2366,7 @@
             "value": "Scoudrel Training",
             "label": "Scoudrel Training",
             "description": "Scale: Major<br />You have gotten pretty good at getting the upper hand through under-handed tactics.<br /><ul><li>You gain Advanced Equipment proficiency.</li><li>Choose one from Acrobatics, Deception, Intimidation, Security, Sleight of Hand, Stealth, and Streetwise. You gain proficiency in the chosen skill.</li><li>You can Hide, Object Interaction, or make a Security or Sleight of Hand check as a bonus action.</li><li>You have advantage on attack rolls against any opponent that has not acted this combat.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]}]",
             "bonusAdjustments": "null",
             "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Acrobatics\",\"Deception\",\"Intimidation\",\"Security\",\"Sleight of Hand\",\"Stealth\",\"Streetwise\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Scoundrel'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Agile Hero Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Agile'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\",\"logicalOr\":[]}]"
@@ -2286,7 +2384,7 @@
             "value": "Scrapper Training",
             "label": "Scrapper Training",
             "description": "Scale: Major<br />You love one-on-one combat and seek to force a confrontation with your chosen opponent.<br /><ul><li>You gain Advanced Equipment proficiency.</li><li>Enemies taking the Disengage action provoke opportunity attacks from you before leaving your reach.</li><li>Enemies within your reach that attack one of your allies other than you provoke an opportunity attack from you.</li><li>When you damage an opponent with an opportunity attack, their speed becomes 0 until the end of their current turn, preventing further movement.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Scrapper'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Tough Hero Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Tough'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\",\"logicalOr\":[]}]"
@@ -2304,7 +2402,7 @@
             "value": "Sharpshooter Training",
             "label": "Sharpshooter Training",
             "description": "Scale: Major<br />Handling ranged weapons has become second nature to you and using them requires about as much thought as breathing.<br /><ul><li>You gain Advanced Equipment proficiency.</li><li>You can draw two one-handed light weapons as a free action.</li><li>You can reload two ranged weapons with the same action, without needing a free hand.</li><li>You can ignore the slow-firing property on ranged weapons.</li><li>When using a two-handed ranged weapon, you do not have disadvantage with attack rolls at long range.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Sharpshooter'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Agile Hero Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Agile'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\",\"logicalOr\":[]}]"
@@ -2340,8 +2438,8 @@
             "value": "Sleuth Training",
             "label": "Sleuth Training",
             "description": "Scale: Major<br />You have honed your awareness of your environment and are adept at spotting an opponent's weaknesses.<br /><ul><li>You gain Advanced Equipment proficiency.</li><li>Choose one from Insight, Investigation, Perception, Security, and Streetwise. You gain proficiency in the chosen skill.</li><li>You cannot be surprised.</li><li>You can take the Search action as a bonus action.</li><li>You gain 1 additional Focus point.</li><li>You can spend 1 Focus point to reroll a failed Intelligence ability check. This may only be done once per ability check.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\"}]",
-            "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":1}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Advanced\",\"conditions\":[]}]",
+            "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":1,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Insight\",\"Investigation\",\"Perception\",\"Security\",\"Streetwise\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"class\",\"name\":\"\",\"formula\":\"!== 'Sleuth'\",\"logicalOr\":[]},{\"type\":\"feat\",\"name\":\"Wise Hero Training\",\"formula\":\"=== true\",\"logicalOr\":[{\"type\":\"\",\"name\":\"archetype\",\"formula\":\"=== 'Wise'\",\"logicalOr\":[]}]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 4\",\"logicalOr\":[]}]"
           },
@@ -2350,7 +2448,7 @@
             "label": "Smart Hero Training",
             "description": "Scale: Major<br />You have sharpened your wits to a razor's edge and turned your mind into the greatest weapon of all.<br /><ul><li>You gain 2 Genius points. You can enact any plan you know by spending 1 Genius point. Genius points recharge when you finish a long rest. Your Plan DC formula is 8 + your Intelligence modifier + your proficiency bonus.</li><li>You learn two plans from the Shared Plans list for Smart Heroes.</li><li>You can only use shared plan enhancements up to Level 1.</li></ul>",
             "bonusCharacteristics": "null",
-            "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"\",\"value\":2}]",
+            "bonusAdjustments": "[{\"type\":\"geniuspoints\",\"name\":\"\",\"value\":2,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"plans\",\"label\":null,\"choices\":[\"Coordinated Maneuvers\",\"Dirty Little Secrets\",\"Expect the Unexpected\",\"Know the Layout\",\"The Right Tool\",\"Watch Your Step\",\"When a Plan Comes Together\"],\"count\":2,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"archetype\",\"name\":\"\",\"formula\":\"!== 'Smart'\",\"logicalOr\":[]},{\"type\":\"attribute\",\"name\":\"Intelligence\",\"formula\":\">= 13\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 2\",\"logicalOr\":[]}]"
           },
@@ -2376,7 +2474,7 @@
             "value": "Strong Hero Training",
             "label": "Strong Hero Training",
             "description": "Scale: Major<br />You have learned how to use your strength to focus an aggressive offense.<br /><ul><li>You gain Basic Equipment proficiency.</li><li>You gain proficiency in one of the following skills: Athletics, Acrobatics, or Endurance.</li><li>Before making an attack, you can declare you are being reckless. You gain advantage on all melee weapon attack rolls but all opponents attacking you have advantage on their attack rolls. This lasts until the start of your next turn.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]}]",
             "bonusAdjustments": "null",
             "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Athletics\",\"Acrobatics\",\"Endurance\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"archetype\",\"name\":\"\",\"formula\":\"!== 'Strong'\",\"logicalOr\":[]},{\"type\":\"attribute\",\"name\":\"Strength\",\"formula\":\">= 13\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 2\",\"logicalOr\":[]}]"
@@ -2412,7 +2510,7 @@
             "value": "Tough Hero Training",
             "label": "Tough Hero Training",
             "description": "Scale: Major<br />You have toughened yourself up to where you find a little pain and exertion rather exhilarating.<br /><ul><li>You gain Basic Equipment proficiency.</li><li>You gain damage reduction (against all damage types) equal to your proficiency bonus.</li><li>Once during your turn, when you attack an opponent that has damaged you since the end of your last turn, you gain a +2 bonus on the attack roll.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"},{\"type\":\"HasDamageReduction\",\"value\":\"true\"}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]},{\"type\":\"HasDamageReduction\",\"value\":\"true\",\"conditions\":[]}]",
             "bonusAdjustments": "null",
             "userChoices": "null",
             "prerequisites": "[{\"type\":\"archetype\",\"name\":\"\",\"formula\":\"!== 'Tough'\",\"logicalOr\":[]},{\"type\":\"attribute\",\"name\":\"Constitution\",\"formula\":\">= 13\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 2\",\"logicalOr\":[]}]"
@@ -2439,8 +2537,8 @@
             "value": "Wise Hero Training",
             "label": "Wise Hero Training",
             "description": "Scale: Major<br />You have learned to act with efficiency rather than speed, carefully choosing the correct course of action.<br /><ul><li>You gain Basic Equipment proficiency.</li><li>Choose one from Insight, Perception, Streetwise, and Survival. You gain proficiency in the chosen skill.</li><li>You gain 2 focus points. Your Focus recharges whenever you finish a short or long rest.</li><li>You can spend one focus point to reroll a failed Wisdom ability check. This may only be done once per ability check.</li><li>You can choose not to fall Prone when you Dive for Cover.</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\"}]",
-            "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":2}]",
+            "bonusCharacteristics": "[{\"type\":\"equipmentProficiency\",\"value\":\"Basic\",\"conditions\":[]}]",
+            "bonusAdjustments": "[{\"type\":\"focuspoints\",\"name\":\"FocusPoints\",\"value\":2,\"conditions\":[]}]",
             "userChoices": "[{\"type\":\"skills.proficient\",\"label\":null,\"choices\":[\"Insight\",\"Perception\",\"Streetwise\",\"Survival\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]",
             "prerequisites": "[{\"type\":\"archetype\",\"name\":\"\",\"formula\":\"!== 'Wise'\",\"logicalOr\":[]},{\"type\":\"attribute\",\"name\":\"Wisdom\",\"formula\":\">= 13\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 2\",\"logicalOr\":[]}]"
           }
@@ -3471,145 +3569,145 @@
             "value": "Badass Pack",
             "label": "Badass Pack",
             "description": "<ul><li>Clothes: Jeans, tank top, steel-toe boots</li><li>Items: Multitool</li><li>Armors: Armored clothing</li><li>Vehicles: Muscle car</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Multitool\"},{\"type\":\"armor\",\"value\":\"Armored Clothing\"},{\"type\":\"vehicle\",\"value\":\"Muscle car\"}]"
+            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Multitool\",\"conditions\":[]},{\"type\":\"armor\",\"value\":\"Armored Clothing\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"Muscle car\",\"conditions\":[]}]"
           },
           {
             "value": "Bodyguard Pack",
             "label": "Bodyguard Pack",
             "description": "<ul><li>Clothes: Dark 3-piece suit, dress shoes, concealed holster, earpiece</li><li>Weapons: 9mm semi-auto pistol, Stun gun</li><li>Armors: Light ballistic vest</li><li>Vehicles: Luxury car</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"weapon\",\"value\":\"Pistol, 9mm semi-auto\"},{\"type\":\"weapon\",\"value\":\"Stun gun\"},{\"type\":\"armor\",\"value\":\"Ballistic vest, light\"},{\"type\":\"vehicle\",\"value\":\"Luxury car\"}]"
+            "bonusCharacteristics": "[{\"type\":\"weapon\",\"value\":\"Pistol, 9mm semi-auto\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Stun gun\",\"conditions\":[]},{\"type\":\"armor\",\"value\":\"Ballistic vest, light\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"Luxury car\",\"conditions\":[]}]"
           },
           {
             "value": "Detective Pack",
             "label": "Detective Pack",
             "description": "<ul><li>Clothes: Business casual shirt and pants, overcoat, rugged shoes</li><li>Items: Evidence kit</li><li>Weapons: Holdout pistol, Stun gun</li><li>Vehicles: Common car</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Evidence kit\"},{\"type\":\"weapon\",\"value\":\"Pistol, holdout\"},{\"type\":\"weapon\",\"value\":\"Stun gun\"},{\"type\":\"vehicle\",\"value\":\"Common car\"}]"
+            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Evidence kit\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Pistol, holdout\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Stun gun\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"Common car\",\"conditions\":[]}]"
           },
           {
             "value": "Duelist Pack",
             "label": "Duelist Pack",
             "description": "<ul><li>Clothes: Fencing uniform, cage helmet, stylish urban clothing, athletic shoes</li><li>Weapons: Rapier, Dagger</li><li>Armor: Armored clothing</li><li>Vehicles: Common car</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"weapon\",\"value\":\"Rapier\"},{\"type\":\"weapon\",\"value\":\"Dagger\"},{\"type\":\"armor\",\"value\":\"Armored clothing\"},{\"type\":\"vehicle\",\"value\":\"Common car\"}]"
+            "bonusCharacteristics": "[{\"type\":\"weapon\",\"value\":\"Rapier\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Dagger\",\"conditions\":[]},{\"type\":\"armor\",\"value\":\"Armored clothing\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"Common car\",\"conditions\":[]}]"
           },
           {
             "value": "Entertainer Pack",
             "label": "Entertainer Pack",
             "description": "<ul><li>Clothes: Stylish clothing and footwear, a brimmed hat or cap</li><li>Items: Disguise kit</li><li>Weapons: Pepper spray</li><li>Vehicles: Sports car</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Disguise kit\"},{\"type\":\"weapon\",\"value\":\"Pepper spray\"},{\"type\":\"vehicle\",\"value\":\"Sports car\"}]"
+            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Disguise kit\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Pepper spray\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"Sports car\",\"conditions\":[]}]"
           },
           {
             "value": "Everyday Pack",
             "label": "Everyday Pack",
             "description": "<ul><li>Clothes: Jeans, t-shirt, light jacket, sneakers</li><li>Vehicles: Common car</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"vehicle\",\"value\":\"Common car\"}]"
+            "bonusCharacteristics": "[{\"type\":\"vehicle\",\"value\":\"Common car\",\"conditions\":[]}]"
           },
           {
             "value": "Executive Pack",
             "label": "Executive Pack",
             "description": "<ul><li>Clothes: Designer 3-piece suit or designer business dress, dress shoes or sensible heels</li><li>Vehicles: Luxury car</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"vehicle\",\"value\":\"Luxury car\"}]"
+            "bonusCharacteristics": "[{\"type\":\"vehicle\",\"value\":\"Luxury car\",\"conditions\":[]}]"
           },
           {
             "value": "Fitness Pack",
             "label": "Fitness Pack",
             "description": "<ul><li>Clothes: Sweatpants, t-shirt, hoodie, sneakers</li><li>Smart watch</li><li>Vehicles: Common car</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Smart watch\"},{\"type\":\"vehicle\",\"value\":\"Luxury car\"}]"
+            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Smart watch\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"Luxury car\",\"conditions\":[]}]"
           },
           {
             "value": "Hacker Pack",
             "label": "Hacker Pack",
             "description": "<ul><li>Clothes: Comfortable pants, geek shirt, sneakers, hoodie, small backpack</li><li>Hacker kit</li><li>Laptop computer</li><li>Vehicles: Common car</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Hacker kit\"},{\"type\":\"item\",\"value\":\"Laptop computer\"},{\"type\":\"vehicle\",\"value\":\"Common car\"}]"
+            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Hacker kit\",\"conditions\":[]},{\"type\":\"item\",\"value\":\"Laptop computer\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"Common car\",\"conditions\":[]}]"
           },
           {
             "value": "Hunter Pack",
             "label": "Hunter Pack",
             "description": "<ul><li>Clothes: Camouflage pants, t-shirt, camouflage hunting jacket, hiking boots</li><li>Items: Camping kit, Survival kit</li><li>Weapons: Hunting rifle, Large knife</li><li>Vehicles: Pickup truck, ATV</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Camping kit\"},{\"type\":\"item\",\"value\":\"Survival kit\"},{\"type\":\"weapon\",\"value\":\"Rifle, hunting\"},{\"type\":\"weapon\",\"value\":\"Knife, large\"},{\"type\":\"vehicle\",\"value\":\"Pickup truck\"},{\"type\":\"vehicle\",\"value\":\"ATV\"}]"
+            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Camping kit\",\"conditions\":[]},{\"type\":\"item\",\"value\":\"Survival kit\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Rifle, hunting\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Knife, large\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"Pickup truck\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"ATV\",\"conditions\":[]}]"
           },
           {
             "value": "Martial Artist Pack",
             "label": "Martial Artist Pack",
             "description": "<ul><li>Clothes: Traditional martial arts uniform, tabi slippers</li><li>Vehicles: Common car</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"vehicle\",\"value\":\"Common car\"}]"
+            "bonusCharacteristics": "[{\"type\":\"vehicle\",\"value\":\"Common car\",\"conditions\":[]}]"
           },
           {
             "value": "Mechanic Pack",
             "label": "Mechanic Pack",
             "description": "<ul><li>Clothes: A set of overalls with many pockets, stained t-shirt, work boots</li><li>Items: Multitool, Mechanics kit, Welders kit</li><li>Vehicles: Van</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Multitool\"},{\"type\":\"item\",\"value\":\"Mechanics kit\"},{\"type\":\"item\",\"value\":\"Welders kit\"},{\"type\":\"vehicle\",\"value\":\"Van\"}]"
+            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Multitool\",\"conditions\":[]},{\"type\":\"item\",\"value\":\"Mechanics kit\",\"conditions\":[]},{\"type\":\"item\",\"value\":\"Welders kit\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"Van\",\"conditions\":[]}]"
           },
           {
             "value": "Parent Pack",
             "label": "Parent Pack",
             "description": "<ul><li>Clothes: Everyday urban clothing</li><li>Vehicles: Minivan</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"vehicle\",\"value\":\"Minivan\"}]"
+            "bonusCharacteristics": "[{\"type\":\"vehicle\",\"value\":\"Minivan\",\"conditions\":[]}]"
           },
           {
             "value": "Police Pack",
             "label": "Police Pack",
             "description": "<ul><li>Clothes: Police uniform</li><li>Items: Police kit, Police cruiser kit</li><li>Weapons: 9mm semi-auto pistol, Taser, Small wooden club</li><li>Armors: Medium ballistic vest</li><li>Vehicles: Police Cruiser</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Police kit\"},{\"type\":\"item\",\"value\":\"Police cruiser kit\"},{\"type\":\"weapon\",\"value\":\"Pistol, 9mm semi-auto\"},{\"type\":\"weapon\",\"value\":\"Taser\"},{\"type\":\"weapon\",\"value\":\"Club, small wooden\"},{\"type\":\"armor\",\"value\":\"Ballistic vest, medium\"},{\"type\":\"vehicle\",\"value\":\"Police cruiser\"}]"
+            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Police kit\",\"conditions\":[]},{\"type\":\"item\",\"value\":\"Police cruiser kit\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Pistol, 9mm semi-auto\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Taser\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Club, small wooden\",\"conditions\":[]},{\"type\":\"armor\",\"value\":\"Ballistic vest, medium\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"Police cruiser\",\"conditions\":[]}]"
           },
           {
             "value": "Riot Control Pack",
             "label": "Riot Control Pack",
             "description": "<ul><li>Clothes: Police uniform, police shoes, riot helmet with face shield</li><li>Items: Police kit, Police cruiser kit, Zip ties</li><li>Weapons: Tear gas grenade x2</li><li>Armors: Modern combat armor</li><li>Vehicles: Police van</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Police kit\"},{\"type\":\"item\",\"value\":\"Police cruiser kit\"},{\"type\":\"item\",\"value\":\"Zip ties\"},{\"type\":\"weapon\",\"value\":\"Grenade, tear gas\"},{\"type\":\"weapon\",\"value\":\"Grenade, tear gas\"},{\"type\":\"weapon\",\"value\":\"Club, large wooden\"},{\"type\":\"armor\",\"value\":\"Modern combat armor\"},{\"type\":\"vehicle\",\"value\":\"Police van\"}]"
+            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Police kit\",\"conditions\":[]},{\"type\":\"item\",\"value\":\"Police cruiser kit\",\"conditions\":[]},{\"type\":\"item\",\"value\":\"Zip ties\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Grenade, tear gas\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Grenade, tear gas\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Club, large wooden\",\"conditions\":[]},{\"type\":\"armor\",\"value\":\"Modern combat armor\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"Police van\",\"conditions\":[]}]"
           },
           {
             "value": "Scientist Pack",
             "label": "Scientist Pack",
             "description": "<ul><li>Clothes: Straight leg pants, long sleeve shirt, lab coat, safety goggles</li><li>Items: Laptop computer, Chemistry kit, First Aid kit</li><li>Vehicles: Common car</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Laptop computer\"},{\"type\":\"item\",\"value\":\"Chemistry kit\"},{\"type\":\"item\",\"value\":\"First Aid kit\"},{\"type\":\"vehicle\",\"value\":\"Common car\"}]"
+            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Laptop computer\",\"conditions\":[]},{\"type\":\"item\",\"value\":\"Chemistry kit\",\"conditions\":[]},{\"type\":\"item\",\"value\":\"First Aid kit\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"Common car\",\"conditions\":[]}]"
           },
           {
             "value": "Sniper Pack",
             "label": "Sniper Pack",
             "description": "<ul><li>Clothes: Inconspicuous clothing</li><li>Items: Binoculars</li><li>Weapons: Sniper rifle</li><li>Vehicles: Common car</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Binoculars\"},{\"type\":\"weapon\",\"value\":\"Rifle, sniper\"},{\"type\":\"vehicle\",\"value\":\"Common car\"}]"
+            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Binoculars\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Rifle, sniper\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"Common car\",\"conditions\":[]}]"
           },
           {
             "value": "Socialite Pack",
             "label": "Socialite Pack",
             "description": "<ul><li>Clothes: Fashionable designer clothing and shoes</li><li>Weapons: Pepper spray</li><li>Vehicles: Luxury car</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"weapon\",\"value\":\"Pepper spray\"},{\"type\":\"vehicle\",\"value\":\"Luxury car\"}]"
+            "bonusCharacteristics": "[{\"type\":\"weapon\",\"value\":\"Pepper spray\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"Luxury car\",\"conditions\":[]}]"
           },
           {
             "value": "Soldier Pack",
             "label": "Soldier Pack",
             "description": "<ul><li>Clothes: Military fatigues, combat boots</li><li>Items: Soldiers kit</li><li>Weapons: Assault carbine rifle, Fragmentation grenade x2</li><li>Armors: Heavy ballistic vest</li><li>Vehicles: 4WD vehicle</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Soldiers kit\"},{\"type\":\"weapon\",\"value\":\"Rifle, assault carbine\"},{\"type\":\"weapon\",\"value\":\"Grenade, fragmentation\"},{\"type\":\"weapon\",\"value\":\"Grenade, fragmentation\"},{\"type\":\"armor\",\"value\":\"Ballistic vest, heavy\"},{\"type\":\"vehicle\",\"value\":\"4WD vehicle\"}]"
+            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Soldiers kit\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Rifle, assault carbine\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Grenade, fragmentation\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Grenade, fragmentation\",\"conditions\":[]},{\"type\":\"armor\",\"value\":\"Ballistic vest, heavy\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"4WD vehicle\",\"conditions\":[]}]"
           },
           {
             "value": "Spy Pack",
             "label": "Spy Pack",
             "description": "<ul><li>Clothes: Professional attire appropriate to the local area, concealed holster, secret pocket</li><li>Items: Disguise kit, Surveillance kit</li><li>Weapons: Concealed carry pistol</li><li>Vehicles: Luxury car</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Disguise kit\"},{\"type\":\"item\",\"value\":\"Surveillance kit\"},{\"type\":\"weapon\",\"value\":\"Pistol, concealed carry\"},{\"type\":\"vehicle\",\"value\":\"Luxury car\"}]"
+            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Disguise kit\",\"conditions\":[]},{\"type\":\"item\",\"value\":\"Surveillance kit\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Pistol, concealed carry\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"Luxury car\",\"conditions\":[]}]"
           },
           {
             "value": "Street Criminal Pack",
             "label": "Street Criminal Pack",
             "description": "<ul><li>Clothes: Jeans, t-shirt, hoodie, sneakers, small backpack</li><li>Items: Burglars kit</li><li>Weapons: 9mm semi-auto pistol</li><li>Vehicles: Motorcycle</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Burglars kit\"},{\"type\":\"weapon\",\"value\":\"Pistol, 9mm semi-auto\"},{\"type\":\"vehicle\",\"value\":\"Motorcycle\"}]"
+            "bonusCharacteristics": "[{\"type\":\"item\",\"value\":\"Burglars kit\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Pistol, 9mm semi-auto\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"Motorcycle\",\"conditions\":[]}]"
           },
           {
             "value": "Thug Pack",
             "label": "Thug Pack",
             "description": "<ul><li>Clothes: Jeans, an old t-shirt, combat boots</li><li>Weapons: Holdout pistol, Brass knuckles</li><li>Armor: Armored clothing</li><li>Vehicles: Junker</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"weapon\",\"value\":\"Pistol, holdout\"},{\"type\":\"weapon\",\"value\":\"Brass knuckles\"},{\"type\":\"armor\",\"value\":\"Armored clothing\"},{\"type\":\"vehicle\",\"value\":\"Junker\"}]"
+            "bonusCharacteristics": "[{\"type\":\"weapon\",\"value\":\"Pistol, holdout\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Brass knuckles\",\"conditions\":[]},{\"type\":\"armor\",\"value\":\"Armored clothing\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"Junker\",\"conditions\":[]}]"
           },
           {
             "value": "Underworld Pack",
             "label": "Underworld Pack",
             "description": "<ul><li>Clothes: Stylish club outfit, trendy jacket, fashionable shoes, concealed carry holsters</li><li>Weapons: Concealed carry pistol x2</li><li>Armor: Light ballistic vest</li><li>Vehicles: Common car</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"weapon\",\"value\":\"Pistol, concealed carry\"},{\"type\":\"weapon\",\"value\":\"Pistol, concealed carry\"},{\"type\":\"armor\",\"value\":\"Ballistic vest, light\"},{\"type\":\"vehicle\",\"value\":\"Common car\"}]"
+            "bonusCharacteristics": "[{\"type\":\"weapon\",\"value\":\"Pistol, concealed carry\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Pistol, concealed carry\",\"conditions\":[]},{\"type\":\"armor\",\"value\":\"Ballistic vest, light\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"Common car\",\"conditions\":[]}]"
           },
           {
             "value": "Weekend Warrior Pack",
             "label": "Weekend Warrior Pack",
             "description": "<ul><li>Clothes: Camouflage clothing, combat boots, baseball hat</li><li>Weapons: 9mm semi-auto pistol, Tactical rifle</li><li>Armor: Medium ballistic vest</li><li>Vehicles: 4WD vehicle</li></ul>",
-            "bonusCharacteristics": "[{\"type\":\"weapon\",\"value\":\"Pistol, 9mm semi-auto\"},{\"type\":\"weapon\",\"value\":\"Rifle, tactical\"},{\"type\":\"armor\",\"value\":\"Ballistic vest, medium\"},{\"type\":\"vehicle\",\"value\":\"4WD vehicle\"}]"
+            "bonusCharacteristics": "[{\"type\":\"weapon\",\"value\":\"Pistol, 9mm semi-auto\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Rifle, tactical\",\"conditions\":[]},{\"type\":\"armor\",\"value\":\"Ballistic vest, medium\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"4WD vehicle\",\"conditions\":[]}]"
           }
         ]
       }

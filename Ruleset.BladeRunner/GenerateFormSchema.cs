@@ -124,9 +124,10 @@ namespace BladeRunner
                     name = "health",
                     id = "health",
                     label = "Health",
-                    type = "hidden",
+                    type = "number",
                     className = "form-control",
-                    calculation = $"Math.ceil(((2 * [attributes.strength] + 6) + (2 * [attributes.agility] + 6)) / 4)"
+                    calculation = $"Math.ceil(((2 * [attributes.strength] + 6) + (2 * [attributes.agility] + 6)) / 4)",
+                    pinnedStat = true
                 }
             );
             _fields.Add(
@@ -135,9 +136,10 @@ namespace BladeRunner
                     name = "resolve",
                     id = "resolve",
                     label = "Resolve",
-                    type = "hidden",
+                    type = "number",
                     className = "form-control",
-                    calculation = $"Math.ceil(((2 * [attributes.intelligence] + 6) + (2 * [attributes.empathy] + 6)) / 4)"
+                    calculation = $"Math.ceil(((2 * [attributes.intelligence] + 6) + (2 * [attributes.empathy] + 6)) / 4)",
+                    pinnedStat = true
                 }
             );
             _fields.Add(
@@ -146,8 +148,9 @@ namespace BladeRunner
                     name = "chinyen",
                     id = "chinyen",
                     label = "Chinyen",
-                    type = "hidden",
-                    className = "form-control"
+                    type = "number",
+                    className = "form-control",
+                    pinnedStat = true
                 }
             );
             _fields.Add(
@@ -156,8 +159,9 @@ namespace BladeRunner
                     name = "promotionpoints",
                     id = "promotionpoints",
                     label = "Promotion Points",
-                    type = "hidden",
-                    className = "form-control"
+                    type = "number",
+                    className = "form-control",
+                    pinnedStat = true
                 }
             );
             _fields.Add(
@@ -166,8 +170,9 @@ namespace BladeRunner
                     name = "humanitypoints",
                     id = "humanitypoints",
                     label = "Humanity Points",
-                    type = "hidden",
-                    className = "form-control"
+                    type = "number",
+                    className = "form-control",
+                    pinnedStat = true
                 }
             );
             _fields.Add(

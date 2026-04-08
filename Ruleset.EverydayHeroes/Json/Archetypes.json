@@ -3,177 +3,552 @@
     "name": "Strong",
     "description": "You have trained your body for strength and explosive power. You hit hard, excelling in close combat. As a hero, you fight because others can't.<br />Strong heroes are dubale fighters who make high damage attacks. They specialize in melee attacks, whether they favor unarmed strikes or close combat weapons.'",
     "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Arch_Strong.png",
-    "hitdice": "d10",
-    "hitpoints": 10,
-    "hitpointsperlevel": 6,
     "defensemodifier": "Strength",
-    "defensebonusperlevel": [
-      1,
-      1,
-      2,
-      2,
-      2,
-      2,
-      3,
-      3,
-      3,
-      3
+    "bonusadjustments": [
+      {
+        "type": "HitPoints",
+        "value": 10
+      },
+      {
+        "type": "HitPointModifier",
+        "value": 6
+      },
+      {
+        "type": "DefenseBonus",
+        "value": 1,
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Strong'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 1"
+          }
+        ]
+      },
+      {
+        "type": "DefenseBonus",
+        "value": 1,
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Strong'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 3"
+          }
+        ]
+      },
+      {
+        "type": "DefenseBonus",
+        "value": 1,
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Strong'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 7"
+          }
+        ]
+      }
     ],
-    "talentsperlevel": [
-      [
-        "Reckless Attack"
-      ],
-      [
-        "Power Attack"
-      ]
+    "bonuscharacteristics": [
+      {
+        "type": "hitDice",
+        "value": "d10"
+      },
+      {
+        "type": "talent",
+        "value": "Reckless Attack",
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Strong'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 1"
+          }
+        ]
+      },
+      {
+        "type": "talent",
+        "value": "Power Attack",
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Strong'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 2"
+          }
+        ]
+      }
     ]
   },
   {
     "name": "Agile",
     "description": "You are a master of speed and precision. You have honed your reflexes to the point you can act faster than you can think. Your pinpoint accuracty makes you a deadly foe in any fight.<br />Agile heroes focus on ranged attacks and light weapons. Their high mobility and rapid attacks make them deadly heroes in combat.",
     "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Arch_Agile.png",
-    "hitdice": "d8",
-    "hitpoints": 8,
-    "hitpointsperlevel": 5,
     "defensemodifier": "Dexterity",
-    "defensebonusperlevel": [
-      1,
-      1,
-      1,
-      1,
-      2,
-      2,
-      2,
-      2,
-      3,
-      3
+    "bonusadjustments": [
+      {
+        "type": "HitPoints",
+        "value": 5
+      },
+      {
+        "type": "HitPointModifier",
+        "value": 5
+      },
+      {
+        "type": "DefenseBonus",
+        "value": 1,
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Dexterity'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 1"
+          }
+        ]
+      },
+      {
+        "type": "DefenseBonus",
+        "value": 1,
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Dexterity'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 5"
+          }
+        ]
+      },
+      {
+        "type": "DefenseBonus",
+        "value": 1,
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Dexterity'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 9"
+          }
+        ]
+      }
     ],
-    "talentsperlevel": [
-      [
-        "Fast Reflexes"
-      ],
-      [
-        "Quickness"
-      ]
+    "bonuscharacteristics": [
+      {
+        "type": "hitDice",
+        "value": "d8"
+      },
+      {
+        "type": "talent",
+        "value": "Fast Reflexes",
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Dexterity'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 1"
+          }
+        ]
+      },
+      {
+        "type": "talent",
+        "value": "Quickness",
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Dexterity'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 2"
+          }
+        ]
+      }
     ]
   },
   {
     "name": "Tough",
     "description": "You don't know what it means to give up. No matter what knocks you down, you get up again. Where there is a fight to be found, you'll be in the thick of it, often risking your life to protect others.<br />Tough heroes are durable characters, sometimes at the expense of offensive options or out of combat abilities. Many excel at protecting their teammates.",
     "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Arch_Tough.png",
-    "hitdice": "d12",
-    "hitpoints": 12,
-    "hitpointsperlevel": 7,
     "defensemodifier": "Constitution|Dexterity",
-    "defensebonusperlevel": [
-      2,
-      2,
-      2,
-      2,
-      3,
-      3,
-      3,
-      3,
-      4,
-      4
+    "bonusadjustments": [
+      {
+        "type": "HitPoints",
+        "value": 12
+      },
+      {
+        "type": "HitPointModifier",
+        "value": 7
+      },
+      {
+        "type": "DefenseBonus",
+        "value": 2,
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Tough'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 1"
+          }
+        ]
+      },
+      {
+        "type": "DefenseBonus",
+        "value": 1,
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Tough'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 5"
+          }
+        ]
+      },
+      {
+        "type": "DefenseBonus",
+        "value": 1,
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Tough'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 9"
+          }
+        ]
+      }
     ],
-    "talentsperlevel": [
-      [
-        "Payback"
-      ],
-      [
-        "Tough as Nails"
-      ]
+    "bonuscharacteristics": [
+      {
+        "type": "hitDice",
+        "value": "d12"
+      },
+      {
+        "type": "talent",
+        "value": "Payback",
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Tough'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 1"
+          }
+        ]
+      },
+      {
+        "type": "talent",
+        "value": "Tough as Nails",
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Tough'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 2"
+          }
+        ]
+      }
     ]
   },
   {
     "name": "Smart",
     "description": "While other are playing checkers, you're playing 4-dimensional chess. The human mind is the ultimate weapon, and yours is honed to a razor's edge.<br />Smart Heroes use their genius to enact plans. Plans are powerful but limited effects that can break the fourth wall, effectively changing the past to affect the present.",
     "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Arch_Smart.png",
-    "hitdice": "d6",
-    "hitpoints": 6,
-    "hitpointsperlevel": 4,
     "defensemodifier": "Intelligence",
-    "defensebonusperlevel": [
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      1,
-      1,
-      2,
-      2
+    "bonusadjustments": [
+      {
+        "type": "HitPoints",
+        "value": 6
+      },
+      {
+        "type": "HitPointModifier",
+        "value": 4
+      },
+      {
+        "type": "DefenseBonus",
+        "value": 1,
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Smart'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 5"
+          }
+        ]
+      },
+      {
+        "type": "DefenseBonus",
+        "value": 1,
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Smart'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 9"
+          }
+        ]
+      }
     ],
-    "talentsperlevel": [
-      [
-        "Plans",
-        "Genius"
-      ],
-      [
-        "Mental Refresh"
-      ]
+    "bonuscharacteristics": [
+      {
+        "type": "hitDice",
+        "value": "d6"
+      },
+      {
+        "type": "talent",
+        "value": "Genius",
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Smart'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 1"
+          }
+        ]
+      },
+      {
+        "type": "talent",
+        "value": "Mental Refresh",
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Smart'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 2"
+          }
+        ]
+      }
     ]
   },
   {
     "name": "Wise",
     "description": "You are known as a person who thinks before you act. You observe the world around you and move with its rhythms instead of struggling against the tide. By first knowing yourself, you can reach out and make the world a better place.<br />Wise Heroes are thematically diverse, but they all have a Focus mechanic that can be spent to activate special actions and abilities.",
     "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Arch_Wise.png",
-    "hitdice": "d10",
-    "hitpoints": 10,
-    "hitpointsperlevel": 6,
     "defensemodifier": "Wisdom|Dexterity",
-    "defensebonusperlevel": [
-      2,
-      2,
-      2,
-      2,
-      3,
-      3,
-      3,
-      3,
-      4,
-      4
+    "bonusadjustments": [
+      {
+        "type": "HitPoints",
+        "value": 10
+      },
+      {
+        "type": "HitPointModifier",
+        "value": 6
+      },
+      {
+        "type": "DefenseBonus",
+        "value": 2,
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Wise'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 1"
+          }
+        ]
+      },
+      {
+        "type": "DefenseBonus",
+        "value": 1,
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Wise'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 5"
+          }
+        ]
+      },
+      {
+        "type": "DefenseBonus",
+        "value": 1,
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Wise'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 9"
+          }
+        ]
+      }
     ],
-    "talentsperlevel": [
-      [
-        "Focus",
-        "Concentration"
-      ],
-      [
-        "One Step Ahead"
-      ]
+    "bonuscharacteristics": [
+      {
+        "type": "hitDice",
+        "value": "d10"
+      },
+      {
+        "type": "talent",
+        "value": "Focus",
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Wise'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 1"
+          }
+        ]
+      },
+      {
+        "type": "talent",
+        "value": "Concentration",
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Wise'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 1"
+          }
+        ]
+      },
+      {
+        "type": "talent",
+        "value": "One Step Ahead",
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Wise'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 2"
+          }
+        ]
+      }
     ]
   },
   {
     "name": "Charming",
     "description": "When you smile, the whole world smiles with you. It might be your beauty, your golden voice, or your way with words, but your ability to influence others is the key to your success.<br />Charming heroes use influence dice to boost their other die rolls. They focus on helping allies and hindering enemies in combat rather than relying on their own strengths.",
     "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Arch_Charming.png",
-    "hitdice": "d8",
-    "hitpoints": 8,
-    "hitpointsperlevel": 5,
     "defensemodifier": "Charisma|Dexterity",
-    "defensebonusperlevel": [
-      1,
-      1,
-      1,
-      1,
-      2,
-      2,
-      2,
-      2,
-      3,
-      3
+    "bonusadjustments": [
+      {
+        "type": "HitPoints",
+        "value": 8
+      },
+      {
+        "type": "HitPointModifier",
+        "value": 5
+      },
+      {
+        "type": "DefenseBonus",
+        "value": 1,
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Charming'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 1"
+          }
+        ]
+      },
+      {
+        "type": "DefenseBonus",
+        "value": 1,
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Charming'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 5"
+          }
+        ]
+      },
+      {
+        "type": "DefenseBonus",
+        "value": 1,
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Charming'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 9"
+          }
+        ]
+      }
     ],
-    "talentsperlevel": [
-      [
-        "Influence",
-        "Tricks"
-      ],
-      [
-        "Charm"
-      ]
+    "bonuscharacteristics": [
+      {
+        "type": "hitDice",
+        "value": "d8"
+      },
+      {
+        "type": "talent",
+        "value": "Influence",
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Charming'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 1"
+          }
+        ]
+      },
+      {
+        "type": "talent",
+        "value": "Charm",
+        "conditions": [
+          {
+            "type": "Archetype",
+            "formula": "=== 'Charming'"
+          },
+          {
+            "type": "Level",
+            "formula": ">= 2"
+          }
+        ]
+      }
     ]
   }
 ]

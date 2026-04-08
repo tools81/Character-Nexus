@@ -8,11 +8,8 @@ namespace EverydayHeroes
         public string Name { get; set; }
         public string Description { get; set; } 
         public string Image { get; set; }
-        public string HitDice { get; set; }
-        public int Hitpoints { get; set; }
-        public int HitpointsPerLevel { get; set; }
         public string DefenseModifier { get; set; }
-        public List<int> DefenseBonusPerLevel { get; set; }     
-        public List<List<string>> TalentsPerLevel { get; set; }
+        public List<BonusAdjustment> BonusAdjustments { get; set; }    
+        public List<BonusCharacteristic> BonusCharacteristics { get; set; }
     }
 }

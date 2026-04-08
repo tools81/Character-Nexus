@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 interface RightCollapsiblePaneProps {
   htmlContent: string;
   title?: string;
+  isOpen: boolean;
+  onToggle: () => void;
 }
 
 const HANDLE_SIZE = 32;
@@ -10,8 +12,9 @@ const HANDLE_SIZE = 32;
 const RightCollapsiblePane: React.FC<RightCollapsiblePaneProps> = ({
   htmlContent,
   title = "Details",
+  isOpen,
+  onToggle,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
 
   const panelWidth = "clamp(320px, 33vw, 100vw)";
 
@@ -30,7 +33,7 @@ const RightCollapsiblePane: React.FC<RightCollapsiblePaneProps> = ({
     >
       {/* Handle (inside sliding container) */}
       <div
-        onClick={() => setIsOpen((v) => !v)}
+        onClick={onToggle}
         style={{
           position: "absolute",
           left: 0,

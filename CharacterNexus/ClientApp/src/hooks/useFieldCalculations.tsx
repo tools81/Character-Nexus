@@ -1,5 +1,17 @@
 import { useEffect, useRef } from "react";
 
+function getValueCaseInsensitive(allValues: any, path: string): any {
+  const parts = path.split(".");
+  let current = allValues;
+  for (const part of parts) {
+    if (current == null || typeof current !== "object") return undefined;
+    const key = Object.keys(current).find(k => k.toLowerCase() === part.toLowerCase());
+    if (key === undefined) return undefined;
+    current = current[key];
+  }
+  return current;
+}
+
 export function useFieldCalculations(
   schema: any,
   getValues: (field: string) => any,
@@ -50,6 +62,18 @@ export function useFieldCalculations(
 
     calculatedFieldsRef.current = calculatedFields;
 
+    // Seed prevDependencyValuesRef with current values so the first watch
+    // callback correctly detects changes (important for loaded characters).
+    const allValues = (getValues as () => any)();
+    dependencyNames.forEach(depName => {
+      prevDependencyValuesRef.current[depName] = getValueCaseInsensitive(allValues, depName);
+    });
+
+    // Run immediately so derived stats are populated on mount.
+    for (const { name: fieldName, calculation } of calculatedFields) {
+      evaluateCalculation(fieldName, calculation);
+    }
+
     // Watch only the dependency fields and recalculate when they change
     const unsubscribe = watch(() => {
       if (!calculatedFieldsRef.current) return;
@@ -61,7 +85,7 @@ export function useFieldCalculations(
         if (matches) {
           for (const match of matches) {
             const depName = match.slice(1, -1);
-            const newValue = getValues(depName);
+            const newValue = getValueCaseInsensitive((getValues as () => any)(), depName);
             const oldValue = prevDependencyValuesRef.current[depName];
             if (newValue !== oldValue) {
               prevDependencyValuesRef.current[depName] = newValue;
@@ -89,10 +113,11 @@ export function useFieldCalculations(
 
     let calcFields = calculation.match(/\[([^\]]+)\]/g);
     if (calcFields) {
+      const snapshot = (getValues as () => any)();
       let formula = calculation;
       calcFields.forEach((calcField: string) => {
         const depName = calcField.slice(1, -1); // Remove the square brackets
-        const depValue = getValues(depName) !== undefined ? getValues(depName) : 0;
+        const depValue = getValueCaseInsensitive(snapshot, depName) ?? 0;
         formula = formula.replace(calcField, JSON.stringify(depValue));
       });
 

@@ -347,7 +347,127 @@ namespace EverydayHeroes
                         max = 20
                     },
                     @default = 1
-                });            
+                });       
+            _fields.Add(
+                new
+                {
+                    name = "defenseBonus",
+                    id = "defenseBonus",
+                    label = "Defense Bonus",
+                    type = "hidden",
+                    className = "form-control",
+                    @default = 0
+                }); 
+            _fields.Add(
+                new
+                {
+                    name = "defenseModifier",
+                    id = "defenseModifier",
+                    label = "Defense Modifier",
+                    type = "hidden",
+                    className = "form-control"
+                }); 
+            _fields.Add(
+                new
+                {
+                    name = "hasDamageReduction",
+                    id = "hasDamageReduction",
+                    label = "Has Damage Reduction",
+                    type = "hidden",
+                    className = "form-control"
+                }); 
+            _fields.Add(
+                new
+                {
+                    name = "hitDice",
+                    id = "hitdice",
+                    label = "Hit Dice",
+                    type = "text",
+                    className = "form-control",
+                    pinnedStat = true,
+                }); 
+            _fields.Add(
+                new
+                {
+                    name = "hitpoints",
+                    id = "hitpoints",
+                    label = "Hit Points",
+                    type = "number",
+                    className = "form-control",
+                    calculation = $"Math.ceil([hitpointmodifier] + (([attributes.constitution] - 10) / 2)) * [level])",
+                    pinnedStat = true,
+                }); 
+            _fields.Add(
+                new
+                {
+                    name = "initiative",
+                    id = "initiative",
+                    label = "Initiative",
+                    type = "number",
+                    className = "form-control",
+                    calculation = $"Math.ceil(([attributes.dexterity] - 10) / 2))",
+                    pinnedStat = true,
+                    @default = 0
+                });
+            _fields.Add(
+                new
+                {
+                    name = "proficiencyBonus",
+                    id = "proficiencyBonus",
+                    label = "Proficiency Bonus",
+                    type = "number",
+                    className = "form-control",
+                    calculation = $"[level] >= 9 ? 4 : ([level] >= 5 ? 3 : 2)",
+                    pinnedStat = true,
+                    @default = 2
+                });   
+            _fields.Add(
+                new
+                {
+                    name = "defense",
+                    id = "defense",
+                    label = "Defense",
+                    type = "number",
+                    className = "form-control",
+                    calculation = $"10 + [defenseBonus] + defenseModifier.contains('|') ? Math.max(...defenseModifier.split('|').map(mod => [attributes[mod]])) : [attributes[defenseModifier]]",
+                    pinnedStat = true,
+                    @default = 10
+                });             
+            _fields.Add(
+                new
+                {
+                    name = "damageReduction",
+                    id = "damageReduction",
+                    label = "Damage Reduction",
+                    type = "number",
+                    className = "form-control",
+                    calculation = $"[hasDamageReduction] ? [proficiencyBonus] : 0",
+                    pinnedStat = true,
+                    @default = 0
+                }); 
+            _fields.Add(
+                new
+                {
+                    name = "passivePerception",
+                    id = "passivePerception",
+                    label = "Passive Perception",
+                    type = "number",
+                    className = "form-control",
+                    calculation = $"10 + ([skills.proficient.perception] ? [proficiencyBonus] : 0) + ([attributes.wisdom] - 10) / 2",
+                    pinnedStat = true,
+                    @default = 10
+                }); 
+            _fields.Add(
+                new
+                {
+                    name = "wealthLevel",
+                    id = "wealthLevel",
+                    label = "Wealth Level",
+                    type = "number",
+                    className = "form-control",
+                    pinnedStat = true,
+                    @default = 2
+                });              
         }
 
         private static void GenerateAttributeSchema(List<Attribute> attributes, string name, string label)

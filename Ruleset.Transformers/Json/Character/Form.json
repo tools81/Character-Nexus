@@ -159,56 +159,56 @@
           "value": "Champion",
           "label": "Champion",
           "description": "Sports cars, luxury sedans, even limousines, you chose an Alt Mode that is sleek, fancy, and cool. Although you have a reputation for being egotistical, others can’t help but gravitate toward your beauty. As a Champion, you may be ideal for leadership, well-spoken and witty, or so full of yourself that others don’t take you seriously.",
-          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Social\",\"value\":1}]",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Social\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Cutter",
           "label": "Cutter",
           "description": "Aquatic, amphibious, and submersible, when a situation calls for a Cutter, no other Chassis will do. From battling Decepticons at sea to searching the depths of underground rivers for Energon, you have a reputation of being quirky and only comfortable at sea.",
-          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1}]",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Lookout",
           "label": "Lookout",
           "description": "You take infiltration to another level. Focused on spycraft, theft, and reconnaissance, you put yourself at great risk to gain invaluable information on enemy plans. These duties often put you in similar battlefield roles as the Outrider. Like the Outriders, you make an excellent scout, but many consider you to be less trustworthy due to your more duplicitous nature. The truth is that you're often friendly and fun, with a strong sense of humor. Despite their shady practices, they get a lot of mileage out of their charm and can win over the steeliest of hearts. Your Alt Mode can appear as nearly any vehicle or piece of equipment, though rarely a large one, usually nondescript and functional. If your Alt Mode isn't a vehicle, you deploy emergency jets to fly off. Your flight may not be as fast as when you're on the ground, but it's more maneuverable.",
-          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1}]",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Monolith",
           "label": "Monolith",
           "description": "You disguise yourself as the biggest, toughest, and most impressive vehicle you can find, from vans and sports utility vehicles to big rigs and military trucks. Built for battle, you use your power to lay into the enemy, and your bulk to protect your friends. Many of your kind are gentle giants, and others become soldiers, bodyguards, or selfless leaders. While you have a reputation for being slow and meandering, no one ever doubts the impact you'll make when you arrive.",
-          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1}]",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Outrider",
           "label": "Outrider",
           "description": "Adventurous by nature, you are a natural explorer capable of navigating the most challenging terrain and tracking down enemies, traps, and rare materials. You prefer all-terrain vehicles, including four-wheel drive, SUVs, and even the occasional amphibious vehicle. Despite not being the most durable of warriors, you have a reputation for being quick on your feet and impossible to pin down.",
-          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Rainmaker",
           "label": "Rainmaker",
           "description": "You are built for one thing: war. Your Alt Mode is most likely a military vehicle packing massive firepower. However, it is not unheard of for those of your kind to choose a less obtrusive Alt Mode that is still bristling with shoulder-mounted cannons and torso-mounted missile launchers in Bot Mode. Whether aggressive or simply defensive, no one wants to get on the wrong side of you.",
-          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1}]",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Seeker",
           "label": "Seeker",
           "description": "More common among Decepticons, your chosen Chassis is the rarest seen among Autobots. Aerial superiority provides you an incredible tactical advantage, but at the expense of subtly. Every nation on Earth carefully monitors its air space, dealing with unidentified flying objects immediately and efficiently. However, despite this risk, the allure of taking to the sky makes many landbound Cybertronians jealous of your freedoms.",
-          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1}]",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Support",
           "label": "Support",
           "description": "Like the structures you're named after, Supports prop others up. Though you don't tend to participate in the fighting actively, you brave the thick of battle in the name of helping your allies. That said, like any Cybertronian since the war broke out, you typically carry a weapon at all times and know how to use it. You're likely to choose Alt Modes that let you assist humans in emergencies between missions, like ambulances, rescue helicopters, fire trucks, and bulldozers.",
-          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         }
       ]
@@ -223,24 +223,24 @@
           "value": "Analyst",
           "label": "Analyst",
           "description": "Sensors and processors: the two things that Analysts say win wars. A comprehensive understanding of a situation can be the difference between success and failure. Verifiable knowledge before, during, and after a battle increases its odds of success.<br />Often employed as communications specialists or negotiators and fixers, Analysts are masters of acquiring and manipulating information and intelligence. This road may be less focused on combat, but that doesn't make it less dangerous.",
-          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1},{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\"},{\"type\":\"perks\",\"value\":\"Analyze Target\"},{\"type\":\"perks\",\"value\":\"Informed Accuracy\"},{\"type\":\"perks\",\"value\":\"Unsurprising\"},{\"type\":\"perks\",\"value\":\"Work the Numbers\"}]",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1,\"conditions\":[]},{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Analyze Target\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Informed Accuracy\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Unsurprising\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Work the Numbers\",\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Field Commander",
           "label": "Field Commander",
           "description": "Navigating battlefields is no easy task, and it can be even more difficult when bumping into allies. War calls for confident leaders with tactical minds who can manage a dangerous situation while keeping others safe. Field Commanders learn to move tactically, with a drive to achieve their goals without sacrificing their forces. A quintessential leader, the Field Commander excels equally in combat and diplomacy.",
-          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1},{\"type\":\"essences\",\"name\":\"Social\",\"value\":1}]",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\"},{\"type\":\"perks\",\"value\":\"Never Forsaken\"},{\"type\":\"perks\",\"value\":\"Issue Command\"},{\"type\":\"perks\",\"value\":\"Prepare for War\"}]",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1,\"conditions\":[]},{\"type\":\"essences\",\"name\":\"Social\",\"value\":1,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Never Forsaken\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Issue Command\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Prepare for War\",\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Gunner",
           "label": "Gunner",
           "description": "Your arsenal is something the team relies on. You manage a situation by providing covering fire, direct fire, or knowing the right way to avoid getting a hole shot through your metal. A Gunner adapts to combat and reflects that in how they switch their attack style. Your companions know you pack heat and trust you to use the most efficient firepower you have available.",
-          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1},{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\"},{\"type\":\"perks\",\"value\":\"Imprompturret\"},{\"type\":\"perks\",\"value\":\"Armament\"},{\"type\":\"perks\",\"value\":\"Pistol Whip\"},{\"type\":\"perks\",\"value\":\"Rapid Reload\"}]",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1,\"conditions\":[]},{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Imprompturret\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Armament\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Pistol Whip\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Rapid Reload\",\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
@@ -248,31 +248,31 @@
           "label": "Modemaster",
           "description": "Some overachieving Cybertronians don't settle for being a vehicle and a sentient robot at once. They take on additional Alt Modes, or symbiotically house Cybertronian assistants. With a wider variety of abilities splitting their attention, Modemasters lose the potency more focused Cybertronians enjoy. They more than make up for it as the most flexible combatants on a Cybertronian battlefield.<br />Modemasters use a Custom Frame to define their own essence progression rather than a fixed table. At 1st level, rank the four Essences 1st through 4th to determine your boost schedule.",
           "bonusAdjustments": "[]",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\"},{\"type\":\"perks\",\"value\":\"Fully Hybrid\"},{\"type\":\"perks\",\"value\":\"Custom Frame\"},{\"type\":\"perks\",\"value\":\"Mass Shift\"},{\"type\":\"perks\",\"value\":\"Quick Change\"}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Fully Hybrid\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Custom Frame\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Mass Shift\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Quick Change\",\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Scientist",
           "label": "Scientist",
           "description": "Chemistry makes up all matter in the universe, and physics dictates how it all works together. The better one understands these two scientific disciplines, the more fully they understand everything. Before the Cybertronian Civil War, Scientists were amongst the most respected inhabitants on the planet. Even with basic weapon and armor training, Scientists' most powerful weapon remains their knowledge.",
-          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1},{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\"},{\"type\":\"perks\",\"value\":\"Intrafilum\"},{\"type\":\"perks\",\"value\":\"Broad Understanding\"},{\"type\":\"perks\",\"value\":\"Circuit Breaker\"},{\"type\":\"perks\",\"value\":\"Energon Battery\"}]",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1,\"conditions\":[]},{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Intrafilum\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Broad Understanding\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Circuit Breaker\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Energon Battery\",\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Scout",
           "label": "Scout",
           "description": "Scouts push the boundaries of the battlefield, moving ahead of the front liners to establish the front line. They excel at going unnoticed, allowing them to surveil in secret before rejoining the squad with valuable intel. In order to get so far behind enemy lines, Scouts employ every stealth and subtlety tactic they know. When those fail, they get out of the situation as fast as their tires can take them.",
-          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1},{\"type\":\"essences\",\"name\":\"Social\",\"value\":1}]",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\"},{\"type\":\"perks\",\"value\":\"Disappear\"},{\"type\":\"perks\",\"value\":\"Ally Awareness\"},{\"type\":\"perks\",\"value\":\"Forward Observation\"},{\"type\":\"perks\",\"value\":\"Keen Sensors\"}]",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1,\"conditions\":[]},{\"type\":\"essences\",\"name\":\"Social\",\"value\":1,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Disappear\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Ally Awareness\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Forward Observation\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Keen Sensors\",\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Warrior",
           "label": "Warrior",
           "description": "Even though war moved further away from hand to hand combat with every evolution, Warriors did not evolve in the same direction. A special kind of soldier, Warriors prefer engaging with the enemy face to face. When others call this behavior monstrous, Warriors scoff. Anyone who can pull a trigger or push a button from a safe distance is just as responsible for casualty counts, if not more. Warriors at least give each other a fighting chance.",
-          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1},{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\"},{\"type\":\"perks\",\"value\":\"Hardcore\"},{\"type\":\"perks\",\"value\":\"Foot Soldier\"},{\"type\":\"perks\",\"value\":\"Manifest Melee Weapon\"},{\"type\":\"perks\",\"value\":\"Wisdom Through Experience\"}]",
+          "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1,\"conditions\":[]},{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1,\"conditions\":[]}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Hardcore\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Foot Soldier\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Manifest Melee Weapon\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Wisdom Through Experience\",\"conditions\":[]}]",
           "userChoices": "null"
         }
       ]
@@ -287,16 +287,16 @@
           "value": "Manipulator",
           "label": "Manipulator",
           "description": "Blurring the line between perception and reality.",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Diversion\"}]",
-          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Social\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Diversion\",\"conditions\":[]}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Social\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Spec Ops",
           "label": "Spec Ops",
           "description": "A special operative who takes on deep cover missions.",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Unassuming\"}]",
-          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Social\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Unassuming\",\"conditions\":[]}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Social\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         }
       ],
@@ -315,16 +315,16 @@
           "value": "Ambassador",
           "label": "Ambassador",
           "description": "A diplomat who believes peace is always worth pursuing, even on the battlefield.",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Bend A Knee or Stand Tall\"}]",
-          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Social\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Bend A Knee or Stand Tall\",\"conditions\":[]}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Social\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Strategist",
           "label": "Strategist",
           "description": "A tactical mastermind who coordinates allies to maximum effect.",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Strategize\"}]",
-          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Strategize\",\"conditions\":[]}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         }
       ],
@@ -343,16 +343,16 @@
           "value": "Gunslinger",
           "label": "Gunslinger",
           "description": "A quick-draw artist who thrives in close-range gunfights.",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Quick Draw\"}]",
-          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Quick Draw\",\"conditions\":[]}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Sharpshooter",
           "label": "Sharpshooter",
           "description": "A patient marksman who takes precise, calculated shots from a distance.",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Long Shot\"}]",
-          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Long Shot\",\"conditions\":[]}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         }
       ],
@@ -371,16 +371,16 @@
           "value": "Microlinked",
           "label": "Microlinked",
           "description": "A Modemaster bonded with a Mini-Con ally who docks to their frame.",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Mini-Con Ally\"}]",
-          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Social\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Mini-Con Ally\",\"conditions\":[]}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Social\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Triple Changer",
           "label": "Triple Changer",
           "description": "A Modemaster who gains an additional Alt Mode, becoming one of the rare triple-changers.",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Everything In Threes\"}]",
-          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Everything In Threes\",\"conditions\":[]}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         }
       ],
@@ -399,16 +399,16 @@
           "value": "Medical Officer",
           "label": "Medical Officer",
           "description": "The hardest fight on any battlefield is the fight to keep the injured functioning.",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Patch Up\"}]",
-          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Patch Up\",\"conditions\":[]}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Gadgeteer",
           "label": "Gadgeteer",
           "description": "The right tool for the job is always within reach when you make your own tools.",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Technologist\"}]",
-          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Technologist\",\"conditions\":[]}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         }
       ],
@@ -427,16 +427,16 @@
           "value": "Outrider",
           "label": "Outrider",
           "description": "Outriders get in and get out of situations faster than anyone, and ride circles around enemies they engage with.",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Burn Rubber\"}]",
-          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Burn Rubber\",\"conditions\":[]}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Prowler",
           "label": "Prowler",
           "description": "Prowlers take the opportunity to attack their enemies while their backs are turned.",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Stunning Surprise\"}]",
-          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Stunning Surprise\",\"conditions\":[]}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         }
       ],
@@ -455,16 +455,16 @@
           "value": "Sentinel",
           "label": "Sentinel",
           "description": "A skilled combatant focused on self-defense and waiting for an opening.",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Stalwart Defense\"}]",
-          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Stalwart Defense\",\"conditions\":[]}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Speed\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         },
         {
           "value": "Wrecker",
           "label": "Wrecker",
           "description": "A Warrior who spends so much time in melee, they can tell one enemy from another by the smell of their gob exhaust.",
-          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Warrior Rush\"}]",
-          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1}]",
+          "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"Warrior Rush\",\"conditions\":[]}]",
+          "BonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Strength\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         }
       ],

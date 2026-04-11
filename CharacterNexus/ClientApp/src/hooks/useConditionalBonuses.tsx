@@ -5,6 +5,18 @@ import { BonusCharacteristic, BonusCharacteristics } from "../types/BonusCharact
 import { BonusCondition } from "../types/BonusCondition";
 
 /**
+ * Resolves a BonusCondition to a form field path.
+ * Mirrors the prerequisite path convention: "type.name" when name is present,
+ * otherwise just "type" — lowercased to match registered field names.
+ */
+function conditionFieldPath(condition: BonusCondition): string {
+  const base = condition.type ?? "";
+  const sub = condition.name ?? "";
+  const path = (base && sub) ? `${base}.${sub}` : (base || sub);
+  return path.toLowerCase();
+}
+
+/**
  * Evaluates all conditions on a bonus item (AND logic).
  * Handles array fields via Array.includes when the current value is an array.
  */
@@ -13,7 +25,8 @@ function evaluateConditions(
   getValues: UseFormGetValues<any>
 ): boolean {
   for (const condition of conditions) {
-    const value = getValues(condition.field);
+    const fieldPath = conditionFieldPath(condition);
+    const value = getValues(fieldPath);
 
     let result: boolean;
     try {
@@ -66,10 +79,10 @@ export function useConditionalBonuses(
     const conditionFields = new Set<string>();
 
     for (const adj of bonusAdjustments) {
-      if (adj.conditions?.length) adj.conditions.forEach(c => conditionFields.add(c.field));
+      if (adj.conditions?.length) adj.conditions.forEach(c => conditionFields.add(conditionFieldPath(c)));
     }
     for (const char of bonusCharacteristics) {
-      if (char.conditions?.length) char.conditions.forEach(c => conditionFields.add(c.field));
+      if (char.conditions?.length) char.conditions.forEach(c => conditionFields.add(conditionFieldPath(c)));
     }
 
     if (conditionFields.size === 0) return;

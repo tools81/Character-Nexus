@@ -51,6 +51,7 @@ namespace EverydayHeroes
         public List<string> SavingThrowProficiency { get; set; }
         public int Speed { get => 30; }
         public string HitDice { get; set; }
+        public int HitPointBase { get; set; }
         public int HitPoints { get; set; }
         public int HitPointModifier { get; set; }
         public int DefenseBonus { get; set; }

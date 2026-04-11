@@ -11,7 +11,7 @@ import { BonusAdjustments } from "../types/BonusAdjustment";
 import { BonusCharacteristics } from "../types/BonusCharacteristic";
 import { UserChoices } from "../types/UserChoice";
 import { toCamelCase } from "../utils/toCamelCase";
-import { handleRemoveBonusAdjustment, handleRemoveFieldValue } from "../hooks/useBonus";
+import { handleRemoveFieldValue } from "../hooks/useBonus";
 import { DropdownDivider } from "react-bootstrap";
 import DiceRollButton from "./DiceRollButton";
 
@@ -286,22 +286,13 @@ const handleSelectChange = (
   if (event.target.value == null) return;
 
   if (selectBonusAdjustments) {
-    for (const adjustment of bonusAdjustments.reverse()) {
-      handleRemoveBonusAdjustment(
-        getValues,
-        setValue,
-        adjustment.type,
-        adjustment.name,
-        adjustment.value
-      );
-    }
-
     const filteredAdjustments = bonusAdjustments.filter((a: any) => a.origin !== event.target.name);
     const newAdjustments = selectBonusAdjustments.map((adjustment: any) => ({
       origin: event.target.name,
       type: adjustment.type,
       name: adjustment.name,
       value: adjustment.value,
+      conditions: adjustment.conditions ?? undefined,
     }));
     setBonusAdjustments([...filteredAdjustments, ...newAdjustments]);
   }

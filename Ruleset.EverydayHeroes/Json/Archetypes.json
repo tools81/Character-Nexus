@@ -3,10 +3,9 @@
     "name": "Strong",
     "description": "You have trained your body for strength and explosive power. You hit hard, excelling in close combat. As a hero, you fight because others can't.<br />Strong heroes are dubale fighters who make high damage attacks. They specialize in melee attacks, whether they favor unarmed strikes or close combat weapons.'",
     "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Arch_Strong.png",
-    "defensemodifier": "Strength",
     "bonusadjustments": [
       {
-        "type": "HitPoints",
+        "type": "HitPointBase",
         "value": 10
       },
       {
@@ -29,7 +28,7 @@
       },
       {
         "type": "DefenseBonus",
-        "value": 1,
+        "value": 2,
         "conditions": [
           {
             "type": "Archetype",
@@ -43,7 +42,7 @@
       },
       {
         "type": "DefenseBonus",
-        "value": 1,
+        "value": 3,
         "conditions": [
           {
             "type": "Archetype",
@@ -58,7 +57,11 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "hitDice",
+        "type": "defensemodifier",
+        "value": "Strength"
+      },
+      {
+        "type": "hitdice",
         "value": "d10"
       },
       {
@@ -95,10 +98,9 @@
     "name": "Agile",
     "description": "You are a master of speed and precision. You have honed your reflexes to the point you can act faster than you can think. Your pinpoint accuracty makes you a deadly foe in any fight.<br />Agile heroes focus on ranged attacks and light weapons. Their high mobility and rapid attacks make them deadly heroes in combat.",
     "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Arch_Agile.png",
-    "defensemodifier": "Dexterity",
     "bonusadjustments": [
       {
-        "type": "HitPoints",
+        "type": "HitPointBase",
         "value": 5
       },
       {
@@ -121,7 +123,7 @@
       },
       {
         "type": "DefenseBonus",
-        "value": 1,
+        "value": 3,
         "conditions": [
           {
             "type": "Archetype",
@@ -135,7 +137,7 @@
       },
       {
         "type": "DefenseBonus",
-        "value": 1,
+        "value": 3,
         "conditions": [
           {
             "type": "Archetype",
@@ -150,7 +152,11 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "hitDice",
+        "type": "defensemodifier",
+        "value": "Dexterity"
+      },
+      {
+        "type": "hitdice",
         "value": "d8"
       },
       {
@@ -187,10 +193,9 @@
     "name": "Tough",
     "description": "You don't know what it means to give up. No matter what knocks you down, you get up again. Where there is a fight to be found, you'll be in the thick of it, often risking your life to protect others.<br />Tough heroes are durable characters, sometimes at the expense of offensive options or out of combat abilities. Many excel at protecting their teammates.",
     "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Arch_Tough.png",
-    "defensemodifier": "Constitution|Dexterity",
     "bonusadjustments": [
       {
-        "type": "HitPoints",
+        "type": "HitPointBase",
         "value": 12
       },
       {
@@ -213,7 +218,7 @@
       },
       {
         "type": "DefenseBonus",
-        "value": 1,
+        "value": 3,
         "conditions": [
           {
             "type": "Archetype",
@@ -227,7 +232,7 @@
       },
       {
         "type": "DefenseBonus",
-        "value": 1,
+        "value": 4,
         "conditions": [
           {
             "type": "Archetype",
@@ -242,7 +247,11 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "hitDice",
+        "type": "defensemodifier",
+        "value": "Constitution|Dexterity"
+      },
+      {
+        "type": "hitdice",
         "value": "d12"
       },
       {
@@ -279,10 +288,9 @@
     "name": "Smart",
     "description": "While other are playing checkers, you're playing 4-dimensional chess. The human mind is the ultimate weapon, and yours is honed to a razor's edge.<br />Smart Heroes use their genius to enact plans. Plans are powerful but limited effects that can break the fourth wall, effectively changing the past to affect the present.",
     "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Arch_Smart.png",
-    "defensemodifier": "Intelligence",
     "bonusadjustments": [
       {
-        "type": "HitPoints",
+        "type": "HitPointBase",
         "value": 6
       },
       {
@@ -305,7 +313,7 @@
       },
       {
         "type": "DefenseBonus",
-        "value": 1,
+        "value": 2,
         "conditions": [
           {
             "type": "Archetype",
@@ -320,7 +328,11 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "hitDice",
+        "type": "defensemodifier",
+        "value": "Intelligence"
+      },
+      {
+        "type": "hitdice",
         "value": "d6"
       },
       {
@@ -357,10 +369,9 @@
     "name": "Wise",
     "description": "You are known as a person who thinks before you act. You observe the world around you and move with its rhythms instead of struggling against the tide. By first knowing yourself, you can reach out and make the world a better place.<br />Wise Heroes are thematically diverse, but they all have a Focus mechanic that can be spent to activate special actions and abilities.",
     "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Arch_Wise.png",
-    "defensemodifier": "Wisdom|Dexterity",
     "bonusadjustments": [
       {
-        "type": "HitPoints",
+        "type": "HitPointBase",
         "value": 10
       },
       {
@@ -383,7 +394,7 @@
       },
       {
         "type": "DefenseBonus",
-        "value": 1,
+        "value": 3,
         "conditions": [
           {
             "type": "Archetype",
@@ -397,7 +408,7 @@
       },
       {
         "type": "DefenseBonus",
-        "value": 1,
+        "value": 4,
         "conditions": [
           {
             "type": "Archetype",
@@ -412,7 +423,11 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "hitDice",
+        "type": "defensemodifier",
+        "value": "Wisdom|Dexterity"
+      },
+      {
+        "type": "hitdice",
         "value": "d10"
       },
       {
@@ -463,10 +478,9 @@
     "name": "Charming",
     "description": "When you smile, the whole world smiles with you. It might be your beauty, your golden voice, or your way with words, but your ability to influence others is the key to your success.<br />Charming heroes use influence dice to boost their other die rolls. They focus on helping allies and hindering enemies in combat rather than relying on their own strengths.",
     "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Arch_Charming.png",
-    "defensemodifier": "Charisma|Dexterity",
     "bonusadjustments": [
       {
-        "type": "HitPoints",
+        "type": "HitPointBase",
         "value": 8
       },
       {
@@ -489,7 +503,7 @@
       },
       {
         "type": "DefenseBonus",
-        "value": 1,
+        "value": 2,
         "conditions": [
           {
             "type": "Archetype",
@@ -503,7 +517,7 @@
       },
       {
         "type": "DefenseBonus",
-        "value": 1,
+        "value": 3,
         "conditions": [
           {
             "type": "Archetype",
@@ -518,7 +532,11 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "hitDice",
+        "type": "defensemodifier",
+        "value": "Charisma|Dexterity"
+      },
+      {
+        "type": "hitdice",
         "value": "d8"
       },
       {

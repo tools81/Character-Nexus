@@ -144,17 +144,6 @@ const handleInputChange = (
     : null;
 
   if (fieldBonusAdjustments) {
-    // Remove bonuses provided by the component if user changes selection
-    for (const adjustment of bonusAdjustments.reverse()) {
-      handleRemoveBonusAdjustment(
-        getValues,
-        setValue,
-        adjustment.type,
-        adjustment.name,
-        adjustment.value
-      );
-    }
-
     //Remove items previously added by the same input
     setBonusAdjustments(
       bonusAdjustments.filter((a: any) => a.origin !== event.target.name)

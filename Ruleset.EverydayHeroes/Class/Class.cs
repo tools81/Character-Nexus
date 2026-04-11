@@ -12,6 +12,5 @@ namespace EverydayHeroes
         public List<BonusAdjustment>? BonusAdjustments { get; set; }
         public List<BonusCharacteristic>? BonusCharacteristics { get; set; }
         public List<UserChoice>? UserChoices { get; set; }
-        public List<List<string>> TalentPerLevel { get; set; }
     }
 }

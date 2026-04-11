@@ -65,12 +65,20 @@ const handleRemoveCharacteristic = (
   const currentValue = getValues(fieldName);
 
   if (Array.isArray(currentValue)) {
-    const pipeIndex = choice.indexOf("|");
-    const itemValue = pipeIndex > -1 ? choice.substring(0, pipeIndex) : choice;
+    const items = choice.split(",").map(s => s.trim()).filter(Boolean);
+    const itemValues = items.map(item => {
+      const pipeIndex = item.indexOf("|");
+      return pipeIndex > -1 ? item.substring(0, pipeIndex) : item;
+    });
     const newValue = currentValue.filter(
-      (v: any) => v !== itemValue && v?.value !== itemValue
+      (v: any) => !itemValues.includes(typeof v === "object" && v !== null ? v.value : v)
     );
     setValue(fieldName, newValue, { shouldDirty: true, shouldTouch: true, shouldValidate: true });
+    return;
+  }
+
+  if (typeof currentValue === "string" || currentValue === null) {
+    setValue(fieldName, "", { shouldDirty: true, shouldTouch: true, shouldValidate: true });
     return;
   }
 
@@ -93,30 +101,29 @@ const handleSetFieldValue = (
   // ARRAY FIELD (checkbox group, multi-select)
   // ─────────────────────────────────────────────
   if (Array.isArray(currentValue)) {
-    const pipeIndex = choice.indexOf("|");
-    const itemValue = pipeIndex > -1 ? choice.substring(0, pipeIndex) : choice;
-    const quantity = pipeIndex > -1 ? parseInt(choice.substring(pipeIndex + 1), 10) : null;
+    const items = choice.split(",").map(s => s.trim()).filter(Boolean);
+    let updated = [...currentValue];
 
-    const existingIndex = currentValue.findIndex(
-      (v: any) => v === itemValue || v?.value === itemValue
-    );
+    for (const item of items) {
+      const pipeIndex = item.indexOf("|");
+      const itemValue = pipeIndex > -1 ? item.substring(0, pipeIndex) : item;
+      const quantity = pipeIndex > -1 ? parseInt(item.substring(pipeIndex + 1), 10) : null;
 
-    if (existingIndex > -1) {
-      if (quantity != null) {
-        const existingQty = currentValue[existingIndex]?.quantity ?? 0;
-        setValue(
-          `${fieldName}.${existingIndex}.quantity`,
-          existingQty + quantity,
-          { shouldDirty: true, shouldTouch: true, shouldValidate: true }
-        );
-      }
-    } else {
-      setValue(
-        fieldName,
-        [...currentValue, quantity != null ? { value: itemValue, quantity } : { value: itemValue }],
-        { shouldDirty: true, shouldTouch: true, shouldValidate: true }
+      const existingIndex = updated.findIndex(
+        (v: any) => v === itemValue || v?.value === itemValue
       );
+
+      if (existingIndex > -1) {
+        if (quantity != null) {
+          const existingQty = updated[existingIndex]?.quantity ?? 0;
+          updated[existingIndex] = { ...updated[existingIndex], quantity: existingQty + quantity };
+        }
+      } else {
+        updated = [...updated, quantity != null ? { value: itemValue, quantity } : { value: itemValue }];
+      }
     }
+
+    setValue(fieldName, updated, { shouldDirty: true, shouldTouch: true, shouldValidate: true });
     return;
   }
 
@@ -140,6 +147,14 @@ const handleSetFieldValue = (
       });
       return;
     }
+  }
+
+  // ─────────────────────────────────────────────
+  // PLAIN STRING / PRIMITIVE FIELD (e.g. hidden inputs like defensemodifier)
+  // ─────────────────────────────────────────────
+  if (typeof currentValue === "string" || currentValue === null) {
+    setValue(fieldName, choice, { shouldDirty: true, shouldTouch: true, shouldValidate: true });
+    return;
   }
 
   // ─────────────────────────────────────────────

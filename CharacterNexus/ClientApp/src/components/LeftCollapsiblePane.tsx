@@ -108,7 +108,16 @@ const LeftCollapsiblePane: React.FC<LeftCollapsiblePaneProps> = ({ schema, isOpe
                 {field.label}
               </div>
               <div style={{ fontSize: 26, fontWeight: 700, lineHeight: 1 }}>
-                {values[i] ?? "—"}
+                {Array.isArray(values[i])
+                  ? values[i].length > 0
+                    ? values[i].map((v: any, j: number) => (
+                        <div key={j} style={{ fontSize: 14, fontWeight: 600 }}>
+                          {typeof v === "object" && v !== null ? v.value : v}
+                        </div>
+                      ))
+                    : "—"
+                  : (values[i] != null && typeof values[i] === "object" ? values[i].value : (values[i] === "" || Number.isNaN(values[i]) ? "—" : values[i]) ?? "—") ?? "—"
+                }
               </div>
             </div>
           ))}

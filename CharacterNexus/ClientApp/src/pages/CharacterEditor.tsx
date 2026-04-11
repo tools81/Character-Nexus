@@ -26,7 +26,7 @@ import { useFieldCalculations } from "../hooks/useFieldCalculations";
 import { useBonusCharacteristics } from "../hooks/useBonusCharacteristics";
 import { useBonusAdjustments } from "../hooks/useBonusAdjustments";
 import { useConditionalBonuses } from "../hooks/useConditionalBonuses";
-import { handleRemoveBonusAdjustment, handleRemoveFieldValue } from "../hooks/useBonus";
+import { handleRemoveFieldValue } from "../hooks/useBonus";
 import { useModal } from "../hooks/useModal";
 import { useDisableEngine } from "../hooks/useDisableEngine";
 import { useVisibilityEngine, isFieldVisible } from "../hooks/useVisibilityEngine";
@@ -230,10 +230,6 @@ const ModifiableItem = ({
   const handleRemoveMod = (modIndex: number) => {
     const modOrigin = `${itemFieldName}.mods.${modIndex}`;
 
-    const adjToRemove = bonusAdjustments.filter(a => a.origin === modOrigin);
-    for (const adj of [...adjToRemove].reverse()) {
-      handleRemoveBonusAdjustment(getValues, setValue, adj.type, adj.name, adj.value);
-    }
     setBonusAdjustments(prev => prev.filter(a => a.origin !== modOrigin));
 
     const charToRemove = bonusCharacteristics.filter(c => c.origin === modOrigin);
@@ -656,6 +652,7 @@ const FormContents = ({
   choiceFields,
   userChoiceModal,
 }: any) => {
+  const { register } = useFormContext();
   const disabledMap = useDisableEngine(schema);
   const { visibilityMap, isVisible, values } = useVisibilityEngine(
     schema.fields,
@@ -671,6 +668,17 @@ const FormContents = ({
 
   return (
     <>
+      {schema.fields
+        .filter((field: any) => field.pinnedStat)
+        .map((field: any) => (
+          <InputHidden
+            key={field.name}
+            register={register}
+            name={field.name}
+            className={field.className}
+            defaultValue={field.default}
+          />
+        ))}
       {schema.fields
         .filter((field: any) => !field.pinnedStat)
         .map((field: any) =>

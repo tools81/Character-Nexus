@@ -347,12 +347,30 @@ namespace EverydayHeroes
                         max = 20
                     },
                     @default = 1
-                });       
+                });  
             _fields.Add(
                 new
                 {
-                    name = "defenseBonus",
-                    id = "defenseBonus",
+                    name = "hitpointbase",
+                    id = "hitpointbase",
+                    label = "Hit Point Base",
+                    type = "hidden",
+                    className = "form-control"
+                });  
+            _fields.Add(
+                new
+                {
+                    name = "hitpointmodifier",
+                    id = "hitpointmodifier",
+                    label = "Hit Point Modifier",
+                    type = "hidden",
+                    className = "form-control"
+                });   
+            _fields.Add(
+                new
+                {
+                    name = "defensebonus",
+                    id = "defensebonus",
                     label = "Defense Bonus",
                     type = "hidden",
                     className = "form-control",
@@ -361,8 +379,8 @@ namespace EverydayHeroes
             _fields.Add(
                 new
                 {
-                    name = "defenseModifier",
-                    id = "defenseModifier",
+                    name = "defensemodifier",
+                    id = "defensemodifier",
                     label = "Defense Modifier",
                     type = "hidden",
                     className = "form-control"
@@ -370,8 +388,8 @@ namespace EverydayHeroes
             _fields.Add(
                 new
                 {
-                    name = "hasDamageReduction",
-                    id = "hasDamageReduction",
+                    name = "hasdamagereduction",
+                    id = "hasdamagereduction",
                     label = "Has Damage Reduction",
                     type = "hidden",
                     className = "form-control"
@@ -379,12 +397,12 @@ namespace EverydayHeroes
             _fields.Add(
                 new
                 {
-                    name = "hitDice",
+                    name = "hitdice",
                     id = "hitdice",
                     label = "Hit Dice",
                     type = "text",
                     className = "form-control",
-                    pinnedStat = true,
+                    pinnedStat = true
                 }); 
             _fields.Add(
                 new
@@ -394,8 +412,8 @@ namespace EverydayHeroes
                     label = "Hit Points",
                     type = "number",
                     className = "form-control",
-                    calculation = $"Math.ceil([hitpointmodifier] + (([attributes.constitution] - 10) / 2)) * [level])",
-                    pinnedStat = true,
+                    calculation = $"Math.ceil([hitpointbase] + (([attribute.constitution] - 10) / 2)) + (Math.ceil([hitpointmodifier] + (([attribute.constitution] - 10) / 2)) * ([level] - 1))",
+                    pinnedStat = true
                 }); 
             _fields.Add(
                 new
@@ -405,15 +423,15 @@ namespace EverydayHeroes
                     label = "Initiative",
                     type = "number",
                     className = "form-control",
-                    calculation = $"Math.ceil(([attributes.dexterity] - 10) / 2))",
+                    calculation = $"Math.ceil(([attribute.dexterity] - 10) / 2)",
                     pinnedStat = true,
                     @default = 0
                 });
             _fields.Add(
                 new
                 {
-                    name = "proficiencyBonus",
-                    id = "proficiencyBonus",
+                    name = "proficiencybonus",
+                    id = "proficiencybonus",
                     label = "Proficiency Bonus",
                     type = "number",
                     className = "form-control",
@@ -429,44 +447,63 @@ namespace EverydayHeroes
                     label = "Defense",
                     type = "number",
                     className = "form-control",
-                    calculation = $"10 + [defenseBonus] + defenseModifier.contains('|') ? Math.max(...defenseModifier.split('|').map(mod => [attributes[mod]])) : [attributes[defenseModifier]]",
+                    calculation = $"10 + [defensebonus] + [defensemodifier].split('|').reduce((best, mod) => Math.max(best, (values.attribute[mod] - 10) / 2 ?? 0), 0)",
                     pinnedStat = true,
                     @default = 10
                 });             
             _fields.Add(
                 new
                 {
-                    name = "damageReduction",
-                    id = "damageReduction",
+                    name = "damagereduction",
+                    id = "damagereduction",
                     label = "Damage Reduction",
                     type = "number",
                     className = "form-control",
-                    calculation = $"[hasDamageReduction] ? [proficiencyBonus] : 0",
+                    calculation = $"[hasdamagereduction] ? [proficiencybonus] : 0",
                     pinnedStat = true,
                     @default = 0
                 }); 
             _fields.Add(
                 new
                 {
-                    name = "passivePerception",
-                    id = "passivePerception",
+                    name = "passiveperception",
+                    id = "passiveperception",
                     label = "Passive Perception",
                     type = "number",
                     className = "form-control",
-                    calculation = $"10 + ([skills.proficient.perception] ? [proficiencyBonus] : 0) + ([attributes.wisdom] - 10) / 2",
+                    calculation = $"10 + ([skills.proficient.perception] ? [proficiencybonus] : 0) + ([attributes.wisdom] - 10) / 2",
                     pinnedStat = true,
                     @default = 10
                 }); 
             _fields.Add(
                 new
                 {
-                    name = "wealthLevel",
-                    id = "wealthLevel",
+                    name = "wealthlevel",
+                    id = "wealthlevel",
                     label = "Wealth Level",
                     type = "number",
                     className = "form-control",
-                    pinnedStat = true,
-                    @default = 2
+                    pinnedStat = true
+                });
+            _fields.Add(
+                new
+                {
+                    name = "savingthrowproficiency",
+                    id = "savingthrowproficiency",
+                    label = "Saving Throw Prof",
+                    type = "array",
+                    className = "form-control",
+                    pinnedStat = true
+                });
+            _fields.Add(
+                new
+                {
+                    name = "equipmentproficiency",
+                    id = "equipmentproficiency",
+                    label = "Equipment Prof",
+                    type = "array",
+                    className = "form-control",
+                    pinnedStat = true
                 });              
         }
 
@@ -528,7 +565,9 @@ namespace EverydayHeroes
                         value = archetype.Name,
                         label = archetype.Name,
                         image = archetype.Image,
-                        description = archetype.Description
+                        description = archetype.Description,
+                        bonusAdjustments = JsonConvert.SerializeObject(archetype.BonusAdjustments, _jsonSettings),
+                        bonusCharacteristics = JsonConvert.SerializeObject(archetype.BonusCharacteristics, _jsonSettings)
                     }
                 );
             }
@@ -559,6 +598,7 @@ namespace EverydayHeroes
                             label = cl.Name,
                             image = cl.Image,
                             description = cl.Description,
+                            bonusAdjustments = JsonConvert.SerializeObject(cl.BonusAdjustments, _jsonSettings),
                             bonusCharacteristics = JsonConvert.SerializeObject(cl.BonusCharacteristics, _jsonSettings),
                             userChoices = JsonConvert.SerializeObject(cl.UserChoices, _jsonSettings)
                         }

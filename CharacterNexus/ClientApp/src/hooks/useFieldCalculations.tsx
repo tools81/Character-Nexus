@@ -35,9 +35,10 @@ export function useFieldCalculations(
       if (field.calculation) {
         calculatedFields.push({ name: field.name, calculation: field.calculation });
 
-        // Extract field names from brackets [fieldName]
-        const matches = field.calculation.match(/\[([^\]]+)\]/g);
+        // Extract field names from brackets [fieldName], skipping JS property access like obj[prop]
+        const matches = field.calculation.match(/(?<![.\w])\[([^\]]+)\]/g);
         if (matches) {
+          console.log(`Field "${field.name}" depends on:`, matches.map((m: string) => m.slice(1, -1)));
           matches.forEach((match: string) => {
             const depName = match.slice(1, -1); // Remove brackets
             dependencyNames.add(depName);
@@ -81,7 +82,7 @@ export function useFieldCalculations(
       // Check if any dependency values have changed
       let hasChanged = false;
       for (const { calculation } of calculatedFieldsRef.current) {
-        const matches = calculation.match(/\[([^\]]+)\]/g);
+        const matches = calculation.match(/(?<![.\w])\[([^\]]+)\]/g);
         if (matches) {
           for (const match of matches) {
             const depName = match.slice(1, -1);
@@ -111,19 +112,28 @@ export function useFieldCalculations(
   const evaluateCalculation = (fieldName: string, calculation: string) => {
     if (!calculation) return;
 
-    let calcFields = calculation.match(/\[([^\]]+)\]/g);
+    // Only match [token] when NOT preceded by an identifier char or dot,
+    // so that JS property access like values.attribute[mod] is left alone.
+    const tokenRegex = /(?<![.\w])\[([^\]]+)\]/g;
+    let calcFields = calculation.match(tokenRegex);
     if (calcFields) {
       const snapshot = (getValues as () => any)();
       let formula = calculation;
       calcFields.forEach((calcField: string) => {
         const depName = calcField.slice(1, -1); // Remove the square brackets
         const depValue = getValueCaseInsensitive(snapshot, depName) ?? 0;
-        formula = formula.replace(calcField, JSON.stringify(depValue));
+        // If the value is numeric (including numeric strings from hidden inputs),
+        // substitute as a plain number so + performs arithmetic, not concatenation.
+        const numericValue = Number(depValue);
+        const substituted = (depValue !== "" && depValue !== null && !isNaN(numericValue))
+          ? String(numericValue)
+          : JSON.stringify(depValue ?? "");
+        formula = formula.replace(new RegExp(calcField.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g"), substituted);
       });
 
       try {
         // eslint-disable-next-line no-new-func
-        const newValue = Function("return " + formula)();
+        const newValue = new Function("values", "return " + formula)(snapshot);
         const currentValue = getValues(fieldName);
         if (currentValue !== newValue) {
           setValue(fieldName, newValue);

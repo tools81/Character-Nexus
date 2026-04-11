@@ -1,4 +1,5 @@
 export interface BonusCondition {
-    field: string;   // dot-path into the form, e.g. "class" or "attributes.strength"
+    type: string;    // maps to the form field type/path segment, e.g. "Archetype" or "level"
+    name?: string;   // optional sub-path, combined as "type.name" (matching C# BonusCondition)
     formula: string; // same syntax as Prerequisite.formula, e.g. ">= 4" or "=== \"Fighter\""
 }

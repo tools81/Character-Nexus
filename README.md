@@ -288,3 +288,81 @@ Prerequisites control whether a field or option is available based on current fo
 - `logicalOr` — nested list of prerequisites where any one passing is sufficient
 
 If prerequisites are not met, the field is rendered as disabled. The `useDisableEngine` hook evaluates all prerequisites reactively.
+
+---
+
+## Equipment Mods
+
+Some rulesets allow equipment (weapons, armor, etc.) to have interchangeable modifications applied at character creation. This is handled through the `modifiableitem` field type and the mod system.
+
+### How it works
+
+An equipment item declares which categories of mods it accepts via a `modSets` list. A mod item declares which equipment category it belongs to via its `WeaponType` (or equivalent) property. When a `modifiableitem` field is rendered and the user selects a piece of equipment, the available mods are filtered to only those whose identifier matches one of the item's `modSets`.
+
+The user can then add one or more mods from the filtered list. Each installed mod is tracked in the form state under `fieldName.mods[]` as a `useFieldArray`. Adding a mod fires its `bonusAdjustments` and `bonusCharacteristics` through the same hooks as any other bonus. Removing a mod reverses those bonuses.
+
+### C# model structure
+
+**Equipment item** (e.g. `Weapon`):
+```csharp
+public string WeaponType { get; set; }       // Category identifier, e.g. "MeleeWeapon"
+public List<string> ModSets { get; set; }    // Mod categories this item accepts, e.g. ["MeleeWeapon.Grip", "MeleeWeapon.Blade"]
+```
+
+**Mod item** (e.g. `WeaponMod`):
+```csharp
+public string WeaponType { get; set; }            // Must match the equipment's WeaponType
+public string Name { get; set; }                  // Mod name, combined with WeaponType as the option value
+public string Prefix { get; set; }                // Display prefix added to the item name when equipped
+public string Slot { get; set; }                  // Slot the mod occupies (displayed in the label)
+public List<BonusAdjustment> BonusAdjustments     // Numeric bonuses applied when equipped
+public List<BonusCharacteristic> BonusCharacteristics  // Characteristics applied when equipped
+public List<Prerequisite> Prerequisites           // Requirements to install this mod
+```
+
+### GenerateFormSchema setup
+
+Equipment fields use `type = "modifiableitem"` wrapped inside a parent `type = "array"` field. The parent array provides the list rendering and add/remove controls; the inner `modifiableitem` is the `component` of the array.
+
+```csharp
+dynamic obj = new ExpandoObject();
+obj.name = "weapons";
+obj.type = "modifiableitem";
+obj.options = weapons.Select(w => new {
+    value = w.Name,
+    label = w.Name,
+    // modSets values must match the mod option values: "WeaponType.ModName"
+    modSets = JsonConvert.SerializeObject(
+        w.ModSets.Select(m => $"{w.WeaponType}.{m}").ToList(), _jsonSettings),
+    stats = JsonConvert.SerializeObject(weaponStats, _jsonSettings)
+}).ToList();
+
+obj.modOptions = weaponMods.Select(mod => new {
+    value = $"{mod.WeaponType}.{mod.Name}",   // Must match item modSets values
+    label = $"{mod.Prefix} ({mod.Slot})",
+    bonusAdjustments = JsonConvert.SerializeObject(mod.BonusAdjustments, _jsonSettings),
+    bonusCharacteristics = JsonConvert.SerializeObject(mod.BonusCharacteristics, _jsonSettings),
+    prerequisites = JsonConvert.SerializeObject(mod.Prerequisites, _jsonSettings)
+}).ToList();
+
+// Wrap in an array field
+_fields.Add(new {
+    name = "weapons",
+    label = "Weapons",
+    type = "array",
+    component = obj
+});
+```
+
+The key constraint is that `modSets` values on the equipment option and `value` on the mod option must share the same format: `"WeaponType.ModSetName"`. The `ModifiableItem` React component filters `modOptions` to only those whose `value` appears in the selected item's `modSets` list.
+
+### Stats display
+
+Equipment options can include a `stats` property — a JSON-serialized array of `{ label, value, field }` objects. `field` is the name of a sub-field on the item in form state (e.g. `"damage"`, `"fireRate"`) that will be read live and override the static `value` if present. This allows mod-affected stats to update in real time.
+
+```csharp
+var weaponStats = new List<object> {
+    new { label = "DMG:",    value = weapon.Damage.ToString(), field = "damage" },
+    new { label = "Range:",  value = weapon.Range,             field = "range" }
+};
+```

@@ -21,7 +21,8 @@ import FormListGroup from "../components/FormListGroup";
 import FormAccordion from "../components/FormAccordion";
 import DisabledPrereqWrapper from "../components/DisabledPrereqWrapper";
 import RightCollapsiblePane from "../components/RightCollapsiblePane";
-import LeftCollapsiblePane from "../components/LeftCollapsiblePane";
+import StatsBar from "../components/StatsBar";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 import { useFieldCalculations } from "../hooks/useFieldCalculations";
 import { useBonusCharacteristics } from "../hooks/useBonusCharacteristics";
 import { useBonusAdjustments } from "../hooks/useBonusAdjustments";
@@ -326,8 +327,7 @@ const CharacterEditor: React.FC = () => {
 
   const [bonusCharacteristics, setBonusCharacteristics] = useState<BonusCharacteristics>([]);
   const [bonusAdjustments, setBonusAdjustments] = useState<BonusAdjustments>([]);
-  const [openPane, setOpenPane] = useState<"left" | "right" | null>(null);
-  const handleLeftToggle = () => setOpenPane(prev => prev === "left" ? null : "left");
+  const [openPane, setOpenPane] = useState<"right" | null>(null);
   const handleRightToggle = () => setOpenPane(prev => prev === "right" ? null : "right");
 
   const methods = useForm({ shouldUnregister: false });
@@ -621,11 +621,22 @@ const CharacterEditor: React.FC = () => {
 
   return (
     <FormProvider {...methods}>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="d-flex mb-3">
-          {currentRuleset && <img src={currentRuleset.logoSource} alt={currentRuleset.name} className="p-2" />}
-        </div>
-
+      {schema && (
+        <StatsBar
+          schema={schema}
+          onInstructionsToggle={currentRuleset?.instructions ? handleRightToggle : undefined}
+          instructionsOpen={openPane === "right"}
+        />
+      )}
+      {currentRuleset && (
+        <RightCollapsiblePane
+          title={currentRuleset.name}
+          htmlContent={currentRuleset.instructions}
+          isOpen={openPane === "right"}
+          onToggle={handleRightToggle}
+        />
+      )}
+      <form onSubmit={handleSubmit(onSubmit)} className="character-editor-form">
         <FormContents
           schema={schema}
           control={control}
@@ -633,14 +644,11 @@ const CharacterEditor: React.FC = () => {
           choiceFields={choiceFields}
           userChoiceModal={userChoiceModal}
         />
-
         <div className="center-container">
-          <button className="submit-button" type="submit">Submit</button>
+          <button className="submit-button" type="submit">Save Character</button>
         </div>
         <br />
       </form>
-      {schema && <LeftCollapsiblePane schema={schema} isOpen={openPane === "left"} onToggle={handleLeftToggle} />}
-      {currentRuleset && <RightCollapsiblePane title={currentRuleset.name} htmlContent={currentRuleset.instructions} isOpen={openPane === "right"} onToggle={handleRightToggle} />}
     </FormProvider>
   );
 };
@@ -653,11 +661,29 @@ const FormContents = ({
   userChoiceModal,
 }: any) => {
   const { register } = useFormContext();
+  const isMobile = useMediaQuery("(max-width: 767px)");
   const disabledMap = useDisableEngine(schema);
   const { visibilityMap, isVisible, values } = useVisibilityEngine(
     schema.fields,
     control
   );
+
+  // Derive ordered unique tab list from schema; fields without a tab go to a default tab
+  const tabs: string[] = useMemo(() => {
+    const seen = new Set<string>();
+    const result: string[] = [];
+    for (const field of schema.fields) {
+      if (field.pinnedStat || !field.tab) continue;
+      if (!seen.has(field.tab)) {
+        seen.add(field.tab);
+        result.push(field.tab);
+      }
+    }
+    return result;
+  }, [schema]);
+
+  const hasTabs = tabs.length > 0;
+  const [activeTab, setActiveTab] = useState<string>(() => tabs[0] ?? "");
 
   const resolveVisible = (fieldOrName: any): boolean => {
     if (typeof fieldOrName === 'object' && fieldOrName !== null) {
@@ -666,24 +692,78 @@ const FormContents = ({
     return isVisible(fieldOrName);
   };
 
+  const renderHiddenRegistrations = () =>
+    schema.fields
+      .filter((field: any) => field.pinnedStat)
+      .map((field: any) => (
+        <InputHidden
+          key={field.name}
+          register={register}
+          name={field.name}
+          className={field.className}
+          defaultValue={field.default}
+        />
+      ));
+
+  const renderTabFields = (tab: string) =>
+    schema.fields
+      .filter((field: any) => !field.pinnedStat && field.tab === tab)
+      .map((field: any) =>
+        renderField(field, disabledMap, visibilityMap, resolveVisible, field.includeLabel ?? true)
+      );
+
+  const renderUnlabelledFields = () =>
+    schema.fields
+      .filter((field: any) => !field.pinnedStat && !field.tab)
+      .map((field: any) =>
+        renderField(field, disabledMap, visibilityMap, resolveVisible, field.includeLabel ?? true)
+      );
+
   return (
     <>
-      {schema.fields
-        .filter((field: any) => field.pinnedStat)
-        .map((field: any) => (
-          <InputHidden
-            key={field.name}
-            register={register}
-            name={field.name}
-            className={field.className}
-            defaultValue={field.default}
-          />
-        ))}
-      {schema.fields
-        .filter((field: any) => !field.pinnedStat)
-        .map((field: any) =>
-          renderField(field, disabledMap, visibilityMap, resolveVisible, field.includeLabel ?? true)
-        )}
+      {renderHiddenRegistrations()}
+
+      {hasTabs ? (
+        <>
+          {/* Tab bar: scrollable pill tabs on mobile, full labelled bar on desktop */}
+          {isMobile ? (
+            <div className="tab-bar tab-bar--mobile">
+              <div className="tab-bar__scroll">
+                {tabs.map(tab => (
+                  <button
+                    key={tab}
+                    type="button"
+                    className={`tab-bar__pill${activeTab === tab ? " active" : ""}`}
+                    onClick={() => setActiveTab(tab)}
+                  >
+                    {tab}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className="tab-bar tab-bar--desktop">
+              {tabs.map(tab => (
+                <button
+                  key={tab}
+                  type="button"
+                  className={`tab-bar__tab${activeTab === tab ? " active" : ""}`}
+                  onClick={() => setActiveTab(tab)}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* Active tab content */}
+          <div className="tab-content">
+            {renderTabFields(activeTab)}
+          </div>
+        </>
+      ) : (
+        renderUnlabelledFields()
+      )}
 
       <userChoiceModal.Modal>
         {({ userChoices, close }: any) => (

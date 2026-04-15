@@ -115,7 +115,8 @@ namespace BladeRunner
                     id = "id",
                     label = "Id",
                     type = "hidden",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 }
             );
             _fields.Add(
@@ -183,7 +184,8 @@ namespace BladeRunner
                     label = "Name",
                     type = "text",
                     className = "form-control",
-                    @default = "Unknown"
+                    @default = "Unknown",
+                    tab = "Identity"
                 }
             );
             _fields.Add(
@@ -193,7 +195,8 @@ namespace BladeRunner
                     id = "image",
                     label = "Image",
                     type = "image",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 }
             );
             _fields.Add(
@@ -203,7 +206,8 @@ namespace BladeRunner
                     id = "appearance",
                     label = "Appearance",
                     type = "textarea",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 }
             );
             _fields.Add(
@@ -213,7 +217,8 @@ namespace BladeRunner
                     id = "notes",
                     label = "Notes",
                     type = "textarea",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 }
             );
         }
@@ -242,6 +247,7 @@ namespace BladeRunner
                 );
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -269,6 +275,7 @@ namespace BladeRunner
                 );
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -296,6 +303,7 @@ namespace BladeRunner
                 );
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -320,14 +328,15 @@ namespace BladeRunner
                     },
                     @default = 1
                 });
-            }            
+            }
 
             var group = new
             {
                 type = "group",
                 name,
                 label,
-                children
+                children,
+                tab = "Attributes"
             };
 
             _fields.Add(group);
@@ -439,7 +448,8 @@ namespace BladeRunner
                 type = "group",
                 name,
                 label,
-                children
+                children,
+                tab = "Origins"
             };
 
             _fields.Add(group);
@@ -513,7 +523,8 @@ namespace BladeRunner
                 type = "group",
                 name,
                 label,
-                children
+                children,
+                tab = "Origins"
             };
 
             _fields.Add(group);
@@ -541,6 +552,7 @@ namespace BladeRunner
                 );
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -566,6 +578,7 @@ namespace BladeRunner
                 );
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -598,7 +611,8 @@ namespace BladeRunner
                 type = "group",
                 name,
                 label,
-                children
+                children,
+                tab = "Skills"
             };
 
             _fields.Add(group);
@@ -631,7 +645,8 @@ namespace BladeRunner
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Skills"
             };
 
             _fields.Add(array);
@@ -664,7 +679,8 @@ namespace BladeRunner
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Augmentations"
             };
 
             _fields.Add(array);
@@ -698,7 +714,8 @@ namespace BladeRunner
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -732,7 +749,8 @@ namespace BladeRunner
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -766,7 +784,8 @@ namespace BladeRunner
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -800,7 +819,8 @@ namespace BladeRunner
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);

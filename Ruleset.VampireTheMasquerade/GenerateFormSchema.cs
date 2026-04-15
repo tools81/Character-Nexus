@@ -239,7 +239,8 @@ namespace VampireTheMasquerade
                     id = "id",
                     label = "Id",
                     type = "hidden",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -249,7 +250,8 @@ namespace VampireTheMasquerade
                     label = "Name",
                     type = "text",
                     className = "form-control",
-                    @default = "Unknown"
+                    @default = "Unknown",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -258,7 +260,8 @@ namespace VampireTheMasquerade
                     id = "image",
                     label = "Image",
                     type = "image",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -268,7 +271,8 @@ namespace VampireTheMasquerade
                     label = "Appearance",
                     type = "textarea",
                     className = "form-control",
-                    @default = "Unknown"
+                    @default = "Unknown",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -278,7 +282,8 @@ namespace VampireTheMasquerade
                     label = "Distinguishing Features",
                     type = "textarea",
                     className = "form-control",
-                    @default = "Unknown"
+                    @default = "Unknown",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -288,7 +293,8 @@ namespace VampireTheMasquerade
                     label = "Concept",
                     type = "text",
                     className = "form-control",
-                    @default = "Unknown"
+                    @default = "Unknown",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -297,7 +303,8 @@ namespace VampireTheMasquerade
                     id = "age",
                     label = "Age",
                     type = "number",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -306,7 +313,8 @@ namespace VampireTheMasquerade
                     id = "dateOfBirth",
                     label = "Date of Birth",
                     type = "date",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -315,7 +323,8 @@ namespace VampireTheMasquerade
                     id = "dateOfDeath",
                     label = "Date of Death",
                     type = "date",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -325,7 +334,8 @@ namespace VampireTheMasquerade
                     label = "Sire",
                     type = "text",
                     className = "form-control",
-                    @default = "Unknown"
+                    @default = "Unknown",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -335,7 +345,8 @@ namespace VampireTheMasquerade
                     label = "Chronicle",
                     type = "text",
                     className = "form-control",
-                    @default = "Unknown"
+                    @default = "Unknown",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -345,7 +356,8 @@ namespace VampireTheMasquerade
                     label = "Ambition",
                     type = "text",
                     className = "form-control",
-                    @default = "Unknown"
+                    @default = "Unknown",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -355,7 +367,8 @@ namespace VampireTheMasquerade
                     label = "Desire",
                     type = "text",
                     className = "form-control",
-                    @default = "Unknown"
+                    @default = "Unknown",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -365,7 +378,8 @@ namespace VampireTheMasquerade
                     label = "Chronicle Tenets",
                     type = "textarea",
                     className = "form-control",
-                    @default = "Unknown"
+                    @default = "Unknown",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -375,8 +389,9 @@ namespace VampireTheMasquerade
                     label = "Touchstones and Convictions",
                     type = "textarea",
                     className = "form-control",
-                    @default = "Unknown"
-                }); 
+                    @default = "Unknown",
+                    tab = "Identity"
+                });
             _fields.Add(
                 new
                 {
@@ -385,8 +400,9 @@ namespace VampireTheMasquerade
                     label = "Notes",
                     type = "textarea",
                     className = "form-control",
-                    @default = "Unknown"
-                });  
+                    @default = "Unknown",
+                    tab = "Identity"
+                });
             _fields.Add(
                 new
                 {
@@ -395,8 +411,9 @@ namespace VampireTheMasquerade
                     label = "History",
                     type = "textarea",
                     className = "form-control",
-                    @default = "Unknown"
-                });         
+                    @default = "Unknown",
+                    tab = "Identity"
+                });
         }
 
         private static void GenerateTemporaryValuesSchema()
@@ -453,7 +470,8 @@ namespace VampireTheMasquerade
             {
                 name = "humanity.label",
                 text = "Humanity",
-                type = "textblock"    
+                type = "textblock",
+                tab = "Status"
             });
             _fields.Add(
                 new
@@ -470,14 +488,16 @@ namespace VampireTheMasquerade
                         max = 10
                     },
                     count = 10,
-                    @default = 7
+                    @default = 7,
+                    tab = "Status"
                 });
 
             _fields.Add( new
             {
                 name = "bloodPotency.label",
                 text = "Blood Potency",
-                type = "textblock"    
+                type = "textblock",
+                tab = "Status"
             });
             _fields.Add(
                 new
@@ -494,14 +514,16 @@ namespace VampireTheMasquerade
                         max = 10
                     },
                     count = 10,
-                    @default = 1
+                    @default = 1,
+                    tab = "Status"
                 });
 
             _fields.Add( new
             {
                 name = "hunger.label",
                 text = "Hunger",
-                type = "textblock"    
+                type = "textblock",
+                tab = "Status"
             });
             _fields.Add(
                 new
@@ -518,14 +540,16 @@ namespace VampireTheMasquerade
                         max = 5
                     },
                     count = 5,
-                    @default = 0
+                    @default = 0,
+                    tab = "Status"
                 });
 
             _fields.Add( new
             {
-                type = "divider"    
+                type = "divider",
+                tab = "Status"
             });
-            
+
             _fields.Add(
                 new
                 {
@@ -534,7 +558,8 @@ namespace VampireTheMasquerade
                     label = "Total Experience",
                     type = "number",
                     className = "form-control",
-                    @default = 0
+                    @default = 0,
+                    tab = "Status"
                 });
             _fields.Add(
                 new
@@ -544,7 +569,8 @@ namespace VampireTheMasquerade
                     label = "Spent Experience",
                     type = "number",
                     className = "form-control",
-                    @default = 0
+                    @default = 0,
+                    tab = "Status"
                 });
         }
 
@@ -572,6 +598,7 @@ namespace VampireTheMasquerade
                 );
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -598,6 +625,7 @@ namespace VampireTheMasquerade
                 );
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -623,21 +651,24 @@ namespace VampireTheMasquerade
                 );
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
         private static void GenerateAttributeSchema(List<Attribute> attributes, string name, string label)
-        {              
+        {
             _fields.Add( new
             {
                 name = $"{name}.label",
                 text = label,
-                type = "textblock"    
+                type = "textblock",
+                tab = "Attributes"
             });
 
             _fields.Add( new
             {
-                type = "divider"    
+                type = "divider",
+                tab = "Attributes"
             });
 
             var physicalChildren = new List<object>();
@@ -667,7 +698,8 @@ namespace VampireTheMasquerade
                 type = "group",
                 name = $"{name}.physical",
                 label = "Physical",
-                children = physicalChildren
+                children = physicalChildren,
+                tab = "Attributes"
             };
 
             _fields.Add(physicalGroup);
@@ -699,7 +731,8 @@ namespace VampireTheMasquerade
                 type = "group",
                 name = $"{name}.social",
                 label = "Social",
-                children = socialChildren
+                children = socialChildren,
+                tab = "Attributes"
             };
 
             _fields.Add(socialGroup);
@@ -731,14 +764,16 @@ namespace VampireTheMasquerade
                 type = "group",
                 name = $"{name}.mental",
                 label = "Mental",
-                children = mentalChildren
+                children = mentalChildren,
+                tab = "Attributes"
             };
 
             _fields.Add(mentalGroup);
 
             _fields.Add( new
             {
-                type = "divider"    
+                type = "divider",
+                tab = "Attributes"
             });
         }
 
@@ -748,12 +783,14 @@ namespace VampireTheMasquerade
             {
                 name = $"{name}.label",
                 text = label,
-                type = "textblock"    
+                type = "textblock",
+                tab = "Skills"
             });
 
             _fields.Add( new
             {
-                type = "divider"    
+                type = "divider",
+                tab = "Skills"
             });
 
             var physicalChildren = new List<object>();
@@ -827,7 +864,8 @@ namespace VampireTheMasquerade
                 type = "group",
                 name = $"physical.{name}",
                 label = "Physical",
-                children = physicalChildren
+                children = physicalChildren,
+                tab = "Skills"
             };
 
             _fields.Add(physicalGroup);
@@ -903,7 +941,8 @@ namespace VampireTheMasquerade
                 type = "group",
                 name = $"social.{name}",
                 label = "Social",
-                children = socialChildren
+                children = socialChildren,
+                tab = "Skills"
             };
 
             _fields.Add(socialGroup);
@@ -979,14 +1018,16 @@ namespace VampireTheMasquerade
                 type = "group",
                 name = $"mental.{name}",
                 label = "Mental",
-                children = mentalChildren
+                children = mentalChildren,
+                tab = "Skills"
             };
 
             _fields.Add(mentalGroup);
 
             _fields.Add( new
             {
-                type = "divider"    
+                type = "divider",
+                tab = "Skills"
             });
         }
 
@@ -1014,6 +1055,7 @@ namespace VampireTheMasquerade
                 );
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -1024,7 +1066,8 @@ namespace VampireTheMasquerade
                 id = name,
                 label,
                 type = "accordion",
-                items = new List<object>()
+                items = new List<object>(),
+                tab = "Disciplines"
             };
 
             foreach (var discipline in disciplines)
@@ -1118,7 +1161,8 @@ namespace VampireTheMasquerade
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Disciplines"
             };
 
             _fields.Add(array);
@@ -1132,7 +1176,8 @@ namespace VampireTheMasquerade
                 id = name,
                 label = "Backgrounds",
                 type = "accordion",
-                items = new List<object>()
+                items = new List<object>(),
+                tab = "Advantages"
             };
 
             foreach (var advantage in advantages.Where(a => a.Category == "Background").OrderBy(a => a.Name))
@@ -1244,7 +1289,8 @@ namespace VampireTheMasquerade
                 id = name,
                 label = "Merits",
                 type = "accordion",
-                items = new List<object>()
+                items = new List<object>(),
+                tab = "Advantages"
             };
 
             foreach (var advantage in advantages.Where(a => a.Category == "Merit").OrderBy(a => a.Name))
@@ -1380,7 +1426,8 @@ namespace VampireTheMasquerade
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -1413,10 +1460,11 @@ namespace VampireTheMasquerade
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
-            _fields.Add(array);            
+            _fields.Add(array);
         }
 
         private static void GenerateGearSchema(List<Gear> gears, string name, string label)
@@ -1446,10 +1494,11 @@ namespace VampireTheMasquerade
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
-            _fields.Add(array);            
+            _fields.Add(array);
         }
     }
 }

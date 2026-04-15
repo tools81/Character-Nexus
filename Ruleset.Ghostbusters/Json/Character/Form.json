@@ -6,7 +6,8 @@
       "id": "id",
       "label": "Id",
       "type": "hidden",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "name",
@@ -14,7 +15,8 @@
       "label": "Name",
       "type": "text",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "alias",
@@ -22,7 +24,8 @@
       "label": "Alias",
       "type": "text",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "browniePoints",
@@ -35,49 +38,56 @@
         "min": 0,
         "max": 100
       },
-      "default": 20
+      "default": 20,
+      "tab": "Identity"
     },
     {
       "name": "image",
       "id": "image",
       "label": "Image",
       "type": "image",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "description",
       "id": "description",
       "label": "Description",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "notes",
       "id": "notes",
       "label": "Notes",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "residence",
       "id": "residence",
       "label": "Residence",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "telex",
       "id": "telex",
       "label": "Telex",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "phone",
       "id": "phone",
       "label": "Phone",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "goal",
@@ -110,7 +120,8 @@
           "label": "Serving Humanity",
           "description": "Boy Scout types: Andy Griffith, Mother Theresa, The Batman. You're interested in doing good deeds, in helping the oppressed, in Saving The World.<br />Every time you successfully finish a Ghostbusting adventure, you get Brownie Points. Each participant dedicated to the service of humanity gets one Ghost Die worth of Brownie Points for each Enemy of Mankind you vanquish. For real heavy dudes, the Ghostmaster may award two or more dice worth of points. Any victory over a government agency is a special case, and usually entails bonus award.<br />Each time (as decided by the Ghostmaster) that the team fails, you get nthing but add one Brownie Point to the ultimate total received when finally you rid the world of your redoubtable opponent."
         }
-      ]
+      ],
+      "tab": "Goal"
     },
     {
       "type": "group",
@@ -169,12 +180,14 @@
           },
           "default": 1
         }
-      ]
+      ],
+      "tab": "Traits"
     },
     {
       "name": "Brains.label",
       "text": "Brains Talent",
-      "type": "textblock"
+      "type": "textblock",
+      "tab": "Talents"
     },
     {
       "name": "talents.Brains",
@@ -290,12 +303,14 @@
           "value": "Zoology",
           "label": "Zoology"
         }
-      ]
+      ],
+      "tab": "Talents"
     },
     {
       "name": "Muscle.label",
       "text": "Muscle Talent",
-      "type": "textblock"
+      "type": "textblock",
+      "tab": "Talents"
     },
     {
       "name": "talents.Muscle",
@@ -355,12 +370,14 @@
           "value": "Wrestle",
           "label": "Wrestle"
         }
-      ]
+      ],
+      "tab": "Talents"
     },
     {
       "name": "Moves.label",
       "text": "Moves Talent",
-      "type": "textblock"
+      "type": "textblock",
+      "tab": "Talents"
     },
     {
       "name": "talents.Moves",
@@ -448,12 +465,14 @@
           "value": "Throw",
           "label": "Throw"
         }
-      ]
+      ],
+      "tab": "Talents"
     },
     {
       "name": "Cool.label",
       "text": "Cool Talent",
-      "type": "textblock"
+      "type": "textblock",
+      "tab": "Talents"
     },
     {
       "name": "talents.Cool",
@@ -509,7 +528,8 @@
           "value": "Tell Fibs",
           "label": "Tell Fibs"
         }
-      ]
+      ],
+      "tab": "Talents"
     },
     {
       "name": "gears",
@@ -594,7 +614,8 @@
             "label": "Walkie-Talkie"
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "weapons",
@@ -723,7 +744,8 @@
             "label": "Umbrella"
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     }
   ]
 }

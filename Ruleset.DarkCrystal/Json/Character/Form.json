@@ -6,7 +6,8 @@
       "id": "id",
       "label": "Id",
       "type": "hidden",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "name",
@@ -14,21 +15,24 @@
       "label": "Name",
       "type": "text",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "image",
       "id": "image",
       "label": "Image",
       "type": "image",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "notes",
       "id": "notes",
       "label": "Notes",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "gender",
@@ -44,7 +48,8 @@
           "value": "Female",
           "label": "Female"
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "clan",
@@ -108,7 +113,8 @@
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Vapra Clan\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"trait\",\"label\":null,\"choices\":[\"Wealth\",\"Metalworking\",\"Skilled Flyer\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "trait",
@@ -289,7 +295,8 @@
             "clan": "Vapra"
           }
         ]
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "flaw",
@@ -390,7 +397,8 @@
             "label": "Untrustworthy"
           }
         ]
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "gear",
@@ -595,16 +603,19 @@
             "label": "Firca Flute"
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.agility",
       "id": "skills.Agility",
       "label": "Agility",
-      "type": "switch"
+      "type": "switch",
+      "tab": "Skills"
     },
     {
       "name": "specialization.Agility",
@@ -633,16 +644,19 @@
             "description": "are used when dodging attacks and reacting quickly to situations."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.animals",
       "id": "skills.Animals",
       "label": "Animals",
-      "type": "switch"
+      "type": "switch",
+      "tab": "Skills"
     },
     {
       "name": "specialization.Animals",
@@ -671,16 +685,19 @@
             "description": "is used to follow creatures, even Gelfling, through the wilderness."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.fighting",
       "id": "skills.Fighting",
       "label": "Fighting",
-      "type": "switch"
+      "type": "switch",
+      "tab": "Skills"
     },
     {
       "name": "specialization.Fighting",
@@ -709,16 +726,19 @@
             "description": "is used to put all your force into attacks and use heavy weapons."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.lore",
       "id": "skills.Lore",
       "label": "Lore",
-      "type": "switch"
+      "type": "switch",
+      "tab": "Skills"
     },
     {
       "name": "specialization.Lore",
@@ -747,16 +767,19 @@
             "description": "is used when tending to your allies' wounds, and identifying maladies."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.brawn",
       "id": "skills.Brawn",
       "label": "Brawn",
-      "type": "switch"
+      "type": "switch",
+      "tab": "Skills"
     },
     {
       "name": "specialization.Brawn",
@@ -785,16 +808,19 @@
             "description": "is used when shielding yourself or others from harm."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.scouting",
       "id": "skills.Scouting",
       "label": "Scouting",
-      "type": "switch"
+      "type": "switch",
+      "tab": "Skills"
     },
     {
       "name": "specialization.Scouting",
@@ -823,16 +849,19 @@
             "description": "is used when using sleight of hand, or operating machinery."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.social",
       "id": "skills.Social",
       "label": "Social",
-      "type": "switch"
+      "type": "switch",
+      "tab": "Skills"
     },
     {
       "name": "specialization.Social",
@@ -861,7 +890,8 @@
             "description": "is used when trying to determine emotions or motivations."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     }
   ]
 }

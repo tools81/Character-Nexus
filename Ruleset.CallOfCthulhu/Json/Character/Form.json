@@ -6,7 +6,8 @@
       "id": "id",
       "label": "Id",
       "type": "hidden",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "name",
@@ -14,35 +15,40 @@
       "label": "Name",
       "type": "text",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "image",
       "id": "image",
       "label": "Image",
       "type": "image",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "pronoun",
       "id": "pronoun",
       "label": "Pronoun",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "birthplace",
       "id": "birthplace",
       "label": "Birthplace",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "residence",
       "id": "residence",
       "label": "Residence",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "era",
@@ -60,7 +66,8 @@
           "label": "Modern",
           "description": ""
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "age",
@@ -117,7 +124,8 @@
           "bonusAdjustments": "[{\"type\":\"characteristics\",\"name\":\"Appearance\",\"value\":-25,\"conditions\":[]},{\"type\":\"movement\",\"name\":\"\",\"value\":-5,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"characteristics\",\"label\":\"Deduct 80 points total\",\"choices\":[\"Strength\",\"Constitution\",\"Dexterity\"],\"count\":1,\"category\":\"Adjustment\",\"value\":-80}]"
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "occupation",
@@ -2174,7 +2182,8 @@
           ],
           "specialtyCount": 0
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "type": "group",
@@ -2316,7 +2325,8 @@
           },
           "default": 0
         }
-      ]
+      ],
+      "tab": "Characteristics"
     },
     {
       "type": "group",
@@ -2371,91 +2381,106 @@
           "className": "form-control",
           "default": 0
         }
-      ]
+      ],
+      "tab": "Characteristics"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Background"
     },
     {
       "type": "textblock",
       "label": "Background",
       "text": "Background",
-      "name": "backgroundLabel"
+      "name": "backgroundLabel",
+      "tab": "Background"
     },
     {
       "name": "description",
       "id": "description",
       "label": "Description",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Background"
     },
     {
       "name": "ideology",
       "id": "ideology",
       "label": "Ideology / Beliefs",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Background"
     },
     {
       "name": "significantPeople",
       "id": "significantPeople",
       "label": "Significant People",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Background"
     },
     {
       "name": "meaningfulLocations",
       "id": "meaningfulLocations",
       "label": "Meaningful Locations",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Background"
     },
     {
       "name": "treasuredPosessions",
       "id": "treasuredPosessions",
       "label": "Treasured Possessions",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Background"
     },
     {
       "name": "traits",
       "id": "traits",
       "label": "Traits",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Background"
     },
     {
       "name": "scars",
       "id": "scars",
       "label": "Injuries & Scars",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Background"
     },
     {
       "name": "encounters",
       "id": "encounters",
       "label": "Encounters with Strange Entities",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Background"
     },
     {
       "name": "story",
       "id": "story",
       "label": "Story",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Background"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Background"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "type": "textblock",
       "label": "Skills",
       "text": "Skills",
-      "name": "skillsLabel"
+      "name": "skillsLabel",
+      "tab": "Skills"
     },
     {
       "name": "skills.Accounting",
@@ -2463,7 +2488,8 @@
       "label": "Accounting",
       "type": "number",
       "className": "form-control",
-      "default": 5
+      "default": 5,
+      "tab": "Skills"
     },
     {
       "name": "skills.Acting",
@@ -2471,7 +2497,8 @@
       "label": "Acting",
       "type": "number",
       "className": "form-control",
-      "default": 5
+      "default": 5,
+      "tab": "Skills"
     },
     {
       "name": "skills.Animal Handling",
@@ -2479,7 +2506,8 @@
       "label": "Animal Handling",
       "type": "number",
       "className": "form-control",
-      "default": 5
+      "default": 5,
+      "tab": "Skills"
     },
     {
       "name": "skills.Anthropology",
@@ -2487,7 +2515,8 @@
       "label": "Anthropology",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Appraise",
@@ -2495,7 +2524,8 @@
       "label": "Appraise",
       "type": "number",
       "className": "form-control",
-      "default": 5
+      "default": 5,
+      "tab": "Skills"
     },
     {
       "name": "skills.Archaeology",
@@ -2503,7 +2533,8 @@
       "label": "Archaeology",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Art and Craft",
@@ -2511,7 +2542,8 @@
       "label": "Art and Craft",
       "type": "number",
       "className": "form-control",
-      "default": 5
+      "default": 5,
+      "tab": "Skills"
     },
     {
       "name": "skills.Artillery",
@@ -2519,7 +2551,8 @@
       "label": "Artillery",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Astronomy",
@@ -2527,7 +2560,8 @@
       "label": "Astronomy",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Axe",
@@ -2535,7 +2569,8 @@
       "label": "Axe",
       "type": "number",
       "className": "form-control",
-      "default": 15
+      "default": 15,
+      "tab": "Skills"
     },
     {
       "name": "skills.Biology",
@@ -2543,7 +2578,8 @@
       "label": "Biology",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Botany",
@@ -2551,7 +2587,8 @@
       "label": "Botany",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Bow",
@@ -2559,7 +2596,8 @@
       "label": "Bow",
       "type": "number",
       "className": "form-control",
-      "default": 15
+      "default": 15,
+      "tab": "Skills"
     },
     {
       "name": "skills.Brawl",
@@ -2567,7 +2605,8 @@
       "label": "Brawl",
       "type": "number",
       "className": "form-control",
-      "default": 25
+      "default": 25,
+      "tab": "Skills"
     },
     {
       "name": "skills.Chainsaw",
@@ -2575,7 +2614,8 @@
       "label": "Chainsaw",
       "type": "number",
       "className": "form-control",
-      "default": 10
+      "default": 10,
+      "tab": "Skills"
     },
     {
       "name": "skills.Charm",
@@ -2583,7 +2623,8 @@
       "label": "Charm",
       "type": "number",
       "className": "form-control",
-      "default": 15
+      "default": 15,
+      "tab": "Skills"
     },
     {
       "name": "skills.Chemistry",
@@ -2591,7 +2632,8 @@
       "label": "Chemistry",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Climb",
@@ -2599,7 +2641,8 @@
       "label": "Climb",
       "type": "number",
       "className": "form-control",
-      "default": 20
+      "default": 20,
+      "tab": "Skills"
     },
     {
       "name": "skills.Computer Use",
@@ -2607,7 +2650,8 @@
       "label": "Computer Use",
       "type": "number",
       "className": "form-control",
-      "default": 5
+      "default": 5,
+      "tab": "Skills"
     },
     {
       "name": "skills.Credit Rating",
@@ -2615,7 +2659,8 @@
       "label": "Credit Rating",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Cryptography",
@@ -2623,7 +2668,8 @@
       "label": "Cryptography",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Cthulhu Mythos",
@@ -2631,7 +2677,8 @@
       "label": "Cthulhu Mythos",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Demolitions",
@@ -2639,7 +2686,8 @@
       "label": "Demolitions",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Disguise",
@@ -2647,7 +2695,8 @@
       "label": "Disguise",
       "type": "number",
       "className": "form-control",
-      "default": 5
+      "default": 5,
+      "tab": "Skills"
     },
     {
       "name": "skills.Diving",
@@ -2655,7 +2704,8 @@
       "label": "Diving",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Dodge",
@@ -2663,7 +2713,8 @@
       "label": "Dodge",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Drive Auto",
@@ -2671,7 +2722,8 @@
       "label": "Drive Auto",
       "type": "number",
       "className": "form-control",
-      "default": 20
+      "default": 20,
+      "tab": "Skills"
     },
     {
       "name": "skills.Electrical Repair",
@@ -2679,7 +2731,8 @@
       "label": "Electrical Repair",
       "type": "number",
       "className": "form-control",
-      "default": 10
+      "default": 10,
+      "tab": "Skills"
     },
     {
       "name": "skills.Electronics",
@@ -2687,7 +2740,8 @@
       "label": "Electronics",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Engineering",
@@ -2695,7 +2749,8 @@
       "label": "Engineering",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Fast Talk",
@@ -2703,7 +2758,8 @@
       "label": "Fast Talk",
       "type": "number",
       "className": "form-control",
-      "default": 5
+      "default": 5,
+      "tab": "Skills"
     },
     {
       "name": "skills.Fighting",
@@ -2711,7 +2767,8 @@
       "label": "Fighting",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Fine Art",
@@ -2719,7 +2776,8 @@
       "label": "Fine Art",
       "type": "number",
       "className": "form-control",
-      "default": 5
+      "default": 5,
+      "tab": "Skills"
     },
     {
       "name": "skills.Firearms",
@@ -2727,7 +2785,8 @@
       "label": "Firearms",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.First Aid",
@@ -2735,7 +2794,8 @@
       "label": "First Aid",
       "type": "number",
       "className": "form-control",
-      "default": 30
+      "default": 30,
+      "tab": "Skills"
     },
     {
       "name": "skills.Flail",
@@ -2743,7 +2803,8 @@
       "label": "Flail",
       "type": "number",
       "className": "form-control",
-      "default": 10
+      "default": 10,
+      "tab": "Skills"
     },
     {
       "name": "skills.Flamethrower",
@@ -2751,7 +2812,8 @@
       "label": "Flamethrower",
       "type": "number",
       "className": "form-control",
-      "default": 10
+      "default": 10,
+      "tab": "Skills"
     },
     {
       "name": "skills.Forensics",
@@ -2759,7 +2821,8 @@
       "label": "Forensics",
       "type": "number",
       "className": "form-control",
-      "default": 5
+      "default": 5,
+      "tab": "Skills"
     },
     {
       "name": "skills.Forgery",
@@ -2767,7 +2830,8 @@
       "label": "Forgery",
       "type": "number",
       "className": "form-control",
-      "default": 5
+      "default": 5,
+      "tab": "Skills"
     },
     {
       "name": "skills.Garrote",
@@ -2775,7 +2839,8 @@
       "label": "Garrote",
       "type": "number",
       "className": "form-control",
-      "default": 15
+      "default": 15,
+      "tab": "Skills"
     },
     {
       "name": "skills.Geology",
@@ -2783,7 +2848,8 @@
       "label": "Geology",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Handgun",
@@ -2791,7 +2857,8 @@
       "label": "Handgun",
       "type": "number",
       "className": "form-control",
-      "default": 20
+      "default": 20,
+      "tab": "Skills"
     },
     {
       "name": "skills.Heavy Weapons",
@@ -2799,7 +2866,8 @@
       "label": "Heavy Weapons",
       "type": "number",
       "className": "form-control",
-      "default": 10
+      "default": 10,
+      "tab": "Skills"
     },
     {
       "name": "skills.History",
@@ -2807,7 +2875,8 @@
       "label": "History",
       "type": "number",
       "className": "form-control",
-      "default": 5
+      "default": 5,
+      "tab": "Skills"
     },
     {
       "name": "skills.Hypnosis",
@@ -2815,7 +2884,8 @@
       "label": "Hypnosis",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Intimidate",
@@ -2823,7 +2893,8 @@
       "label": "Intimidate",
       "type": "number",
       "className": "form-control",
-      "default": 15
+      "default": 15,
+      "tab": "Skills"
     },
     {
       "name": "skills.Jump",
@@ -2831,7 +2902,8 @@
       "label": "Jump",
       "type": "number",
       "className": "form-control",
-      "default": 20
+      "default": 20,
+      "tab": "Skills"
     },
     {
       "name": "skills.Language (Other)",
@@ -2839,7 +2911,8 @@
       "label": "Language (Other)",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Language (Own)",
@@ -2847,7 +2920,8 @@
       "label": "Language (Own)",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Law",
@@ -2855,7 +2929,8 @@
       "label": "Law",
       "type": "number",
       "className": "form-control",
-      "default": 5
+      "default": 5,
+      "tab": "Skills"
     },
     {
       "name": "skills.Library Use",
@@ -2863,7 +2938,8 @@
       "label": "Library Use",
       "type": "number",
       "className": "form-control",
-      "default": 20
+      "default": 20,
+      "tab": "Skills"
     },
     {
       "name": "skills.Listen",
@@ -2871,7 +2947,8 @@
       "label": "Listen",
       "type": "number",
       "className": "form-control",
-      "default": 20
+      "default": 20,
+      "tab": "Skills"
     },
     {
       "name": "skills.Locksmith",
@@ -2879,7 +2956,8 @@
       "label": "Locksmith",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Lore",
@@ -2887,7 +2965,8 @@
       "label": "Lore",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Machine Gun",
@@ -2895,7 +2974,8 @@
       "label": "Machine Gun",
       "type": "number",
       "className": "form-control",
-      "default": 10
+      "default": 10,
+      "tab": "Skills"
     },
     {
       "name": "skills.Mathematics",
@@ -2903,7 +2983,8 @@
       "label": "Mathematics",
       "type": "number",
       "className": "form-control",
-      "default": 10
+      "default": 10,
+      "tab": "Skills"
     },
     {
       "name": "skills.Mechanical Repair",
@@ -2911,7 +2992,8 @@
       "label": "Mechanical Repair",
       "type": "number",
       "className": "form-control",
-      "default": 10
+      "default": 10,
+      "tab": "Skills"
     },
     {
       "name": "skills.Medicine",
@@ -2919,7 +3001,8 @@
       "label": "Medicine",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Meteorology",
@@ -2927,7 +3010,8 @@
       "label": "Meteorology",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Natural World",
@@ -2935,7 +3019,8 @@
       "label": "Natural World",
       "type": "number",
       "className": "form-control",
-      "default": 10
+      "default": 10,
+      "tab": "Skills"
     },
     {
       "name": "skills.Navigate",
@@ -2943,7 +3028,8 @@
       "label": "Navigate",
       "type": "number",
       "className": "form-control",
-      "default": 10
+      "default": 10,
+      "tab": "Skills"
     },
     {
       "name": "skills.Occult",
@@ -2951,7 +3037,8 @@
       "label": "Occult",
       "type": "number",
       "className": "form-control",
-      "default": 5
+      "default": 5,
+      "tab": "Skills"
     },
     {
       "name": "skills.Operate Heavy Machinery",
@@ -2959,7 +3046,8 @@
       "label": "Operate Heavy Machinery",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Persuade",
@@ -2967,7 +3055,8 @@
       "label": "Persuade",
       "type": "number",
       "className": "form-control",
-      "default": 10
+      "default": 10,
+      "tab": "Skills"
     },
     {
       "name": "skills.Pharmacy",
@@ -2975,7 +3064,8 @@
       "label": "Pharmacy",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Photography",
@@ -2983,7 +3073,8 @@
       "label": "Photography",
       "type": "number",
       "className": "form-control",
-      "default": 5
+      "default": 5,
+      "tab": "Skills"
     },
     {
       "name": "skills.Physics",
@@ -2991,7 +3082,8 @@
       "label": "Physics",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Pilot",
@@ -2999,7 +3091,8 @@
       "label": "Pilot",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Psychoanalysis",
@@ -3007,7 +3100,8 @@
       "label": "Psychoanalysis",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Psychology",
@@ -3015,7 +3109,8 @@
       "label": "Psychology",
       "type": "number",
       "className": "form-control",
-      "default": 10
+      "default": 10,
+      "tab": "Skills"
     },
     {
       "name": "skills.Read Lips",
@@ -3023,7 +3118,8 @@
       "label": "Read Lips",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Ride",
@@ -3031,7 +3127,8 @@
       "label": "Ride",
       "type": "number",
       "className": "form-control",
-      "default": 5
+      "default": 5,
+      "tab": "Skills"
     },
     {
       "name": "skills.Rifle/Shotgun",
@@ -3039,7 +3136,8 @@
       "label": "Rifle/Shotgun",
       "type": "number",
       "className": "form-control",
-      "default": 25
+      "default": 25,
+      "tab": "Skills"
     },
     {
       "name": "skills.Science",
@@ -3047,7 +3145,8 @@
       "label": "Science",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
       "name": "skills.Shotgun",
@@ -3055,7 +3154,8 @@
       "label": "Shotgun",
       "type": "number",
       "className": "form-control",
-      "default": 25
+      "default": 25,
+      "tab": "Skills"
     },
     {
       "name": "skills.Sleight of Hand",
@@ -3063,7 +3163,8 @@
       "label": "Sleight of Hand",
       "type": "number",
       "className": "form-control",
-      "default": 10
+      "default": 10,
+      "tab": "Skills"
     },
     {
       "name": "skills.Spear",
@@ -3071,7 +3172,8 @@
       "label": "Spear",
       "type": "number",
       "className": "form-control",
-      "default": 20
+      "default": 20,
+      "tab": "Skills"
     },
     {
       "name": "skills.Spot Hidden",
@@ -3079,7 +3181,8 @@
       "label": "Spot Hidden",
       "type": "number",
       "className": "form-control",
-      "default": 25
+      "default": 25,
+      "tab": "Skills"
     },
     {
       "name": "skills.Stealth",
@@ -3087,7 +3190,8 @@
       "label": "Stealth",
       "type": "number",
       "className": "form-control",
-      "default": 20
+      "default": 20,
+      "tab": "Skills"
     },
     {
       "name": "skills.Submachine Gun",
@@ -3095,7 +3199,8 @@
       "label": "Submachine Gun",
       "type": "number",
       "className": "form-control",
-      "default": 15
+      "default": 15,
+      "tab": "Skills"
     },
     {
       "name": "skills.Survival",
@@ -3103,7 +3208,8 @@
       "label": "Survival",
       "type": "number",
       "className": "form-control",
-      "default": 10
+      "default": 10,
+      "tab": "Skills"
     },
     {
       "name": "skills.Swim",
@@ -3111,7 +3217,8 @@
       "label": "Swim",
       "type": "number",
       "className": "form-control",
-      "default": 20
+      "default": 20,
+      "tab": "Skills"
     },
     {
       "name": "skills.Sword",
@@ -3119,7 +3226,8 @@
       "label": "Sword",
       "type": "number",
       "className": "form-control",
-      "default": 20
+      "default": 20,
+      "tab": "Skills"
     },
     {
       "name": "skills.Throw",
@@ -3127,7 +3235,8 @@
       "label": "Throw",
       "type": "number",
       "className": "form-control",
-      "default": 20
+      "default": 20,
+      "tab": "Skills"
     },
     {
       "name": "skills.Track",
@@ -3135,7 +3244,8 @@
       "label": "Track",
       "type": "number",
       "className": "form-control",
-      "default": 10
+      "default": 10,
+      "tab": "Skills"
     },
     {
       "name": "skills.Whip",
@@ -3143,7 +3253,8 @@
       "label": "Whip",
       "type": "number",
       "className": "form-control",
-      "default": 5
+      "default": 5,
+      "tab": "Skills"
     },
     {
       "name": "skills.Zoology",
@@ -3151,10 +3262,12 @@
       "label": "Zoology",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "phobias",
@@ -3667,7 +3780,8 @@
             "description": "Fear of animals."
           }
         ]
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "manias",
@@ -4180,7 +4294,8 @@
             "description": "Insane fondness for animals."
           }
         ]
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "spells",
@@ -4858,7 +4973,8 @@
             "time": "1 round"
           }
         ]
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "weapons",
@@ -6476,7 +6592,8 @@
             ]
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "equipments",
@@ -9807,7 +9924,8 @@
             "era": "Modern"
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "type": "group",
@@ -9843,14 +9961,16 @@
           "type": "textarea",
           "className": "form-control"
         }
-      ]
+      ],
+      "tab": "Finance"
     },
     {
       "name": "notes",
       "id": "notes",
       "label": "Notes",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Finance"
     }
   ]
 }

@@ -6,7 +6,8 @@
       "id": "id",
       "label": "Id",
       "type": "hidden",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "health",
@@ -93,7 +94,8 @@
       "label": "Name",
       "type": "text",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "realName",
@@ -101,14 +103,16 @@
       "label": "Real Name",
       "type": "text",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "image",
       "id": "image",
       "label": "Image",
       "type": "image",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "rank",
@@ -121,42 +125,48 @@
         "min": 1,
         "max": 6
       },
-      "default": 1
+      "default": 1,
+      "tab": "Identity"
     },
     {
       "name": "height",
       "id": "height",
       "label": "Height",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "weight",
       "id": "weight",
       "label": "Weight",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "gender",
       "id": "gender",
       "label": "Gender",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "eyes",
       "id": "eyes",
       "label": "Eyes",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "hair",
       "id": "hair",
       "label": "Hair",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "size",
@@ -164,49 +174,56 @@
       "label": "Size",
       "type": "text",
       "className": "form-control",
-      "default": "Average"
+      "default": "Average",
+      "tab": "Identity"
     },
     {
       "name": "distinguishingFeatures",
       "id": "distinguishingFeatures",
       "label": "Distinguishing Features",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "teams",
       "id": "teams",
       "label": "Teams",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "base",
       "id": "base",
       "label": "Base",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "notes",
       "id": "notes",
       "label": "Notes",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "history",
       "id": "history",
       "label": "History",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "personality",
       "id": "personality",
       "label": "Personality",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "type": "divider"
@@ -415,7 +432,8 @@
           "description": "The character has a genetic mutation that gave them powers once they were exposed to enough gamma radiation, transforming them physically. This often gives them a monstrous appearance and changes their coloration drastically, usually to green, although some become red or even blue. They can often transorm back into their original form as well.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Weird\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Extreme Appearance\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Green Door\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Immunity\",\"conditions\":[]}]"
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "occupation",
@@ -543,7 +561,8 @@
           "description": "The character is wildly wealthy and well-known.",
           "bonusCharacteristics": "[{\"type\":\"trait\",\"value\":\"Connections\",\"conditions\":[]},{\"type\":\"trait\",\"value\":\"Famous\",\"conditions\":[]},{\"type\":\"tag\",\"value\":\"Rich\",\"conditions\":[]}]"
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "type": "group",
@@ -628,7 +647,8 @@
           },
           "default": 0
         }
-      ]
+      ],
+      "tab": "Attributes"
     },
     {
       "name": "trait",
@@ -1019,7 +1039,8 @@
             "bonusAdjustments": "null"
           }
         ]
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "tag",
@@ -1307,7 +1328,8 @@
             "description": "The character is a minor, under 18 years old."
           }
         ]
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "weapon",
@@ -1386,7 +1408,8 @@
             "description": null
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "id": "power",
@@ -7234,7 +7257,8 @@
             ]
           }
         }
-      ]
+      ],
+      "tab": "Features"
     }
   ]
 }

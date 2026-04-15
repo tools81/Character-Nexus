@@ -6,7 +6,8 @@
       "id": "id",
       "label": "Id",
       "type": "hidden",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "name",
@@ -14,28 +15,32 @@
       "label": "Name",
       "type": "text",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "image",
       "id": "image",
       "label": "Image",
       "type": "image",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "description",
       "id": "description",
       "label": "Description",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "notes",
       "id": "notes",
       "label": "Notes",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "level",
@@ -48,7 +53,8 @@
         "min": 1,
         "max": 20
       },
-      "default": 1
+      "default": 1,
+      "tab": "Identity"
     },
     {
       "name": "faction",
@@ -74,7 +80,8 @@
           "description": "The Unaligned faction consists of Transformers who do not align themselves with either the Autobots or Decepticons. These individuals may have their own motivations, goals, or beliefs that prevent them from joining either side. They can be mercenaries, independent operators, or simply those who choose to remain neutral in the ongoing conflict between the Autobots and Decepticons.",
           "image": "https://characternexus.blob.core.windows.net/resources/Transformers/Faction_Unaligned.png"
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "influences",
@@ -147,7 +154,8 @@
             "description": "You have seen your fair share of combat and experienced many victories and defeats. While you might be full of exciting war stories to awe your allies with, you've also lost those close to you. It's a dark truth of the Cybertronian experience that nearly all who have survived to the present day are veterans of the many wars. War is inevitable and inescapable as a Cybertronian, and it always leaves its mark."
           }
         ]
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "origin",
@@ -211,7 +219,8 @@
           "bonusAdjustments": "[{\"type\":\"essences\",\"name\":\"Smarts\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "null"
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "role",
@@ -275,7 +284,8 @@
           "bonusCharacteristics": "[{\"type\":\"perks\",\"value\":\"For the Allspark!\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Hardcore\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Foot Soldier\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Manifest Melee Weapon\",\"conditions\":[]},{\"type\":\"perks\",\"value\":\"Wisdom Through Experience\",\"conditions\":[]}]",
           "userChoices": "null"
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "focus.analyst",
@@ -303,7 +313,8 @@
       "dependsOn": {
         "field": "role",
         "value": "Analyst"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "focus.field commander",
@@ -331,7 +342,8 @@
       "dependsOn": {
         "field": "role",
         "value": "Field Commander"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "focus.gunner",
@@ -359,7 +371,8 @@
       "dependsOn": {
         "field": "role",
         "value": "Gunner"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "focus.modemaster",
@@ -387,7 +400,8 @@
       "dependsOn": {
         "field": "role",
         "value": "Modemaster"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "focus.scientist",
@@ -415,7 +429,8 @@
       "dependsOn": {
         "field": "role",
         "value": "Scientist"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "focus.scout",
@@ -443,7 +458,8 @@
       "dependsOn": {
         "field": "role",
         "value": "Scout"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "focus.warrior",
@@ -471,7 +487,8 @@
       "dependsOn": {
         "field": "role",
         "value": "Warrior"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "perks",
@@ -1339,7 +1356,8 @@
             "description": "Excellence comes naturally to you. At 20th level, you succeed with a high degree of success on attacks if your result exceeds your target's Defense by 10 or more, instead of when your result doubles the target's Defense."
           }
         ]
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hangups",
@@ -1412,7 +1430,8 @@
             "description": "You don't take anything seriously and like to focus on lighthearted fun and playing tricks on your friends. Whenever you make an Infiltration Skill Test that is not 'just for fun' you take a ↓1."
           }
         ]
-      }
+      },
+      "tab": "Features"
     },
     {
       "type": "group",
@@ -1471,10 +1490,12 @@
           },
           "default": 1
         }
-      ]
+      ],
+      "tab": "Attributes"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Athletics",
@@ -1489,7 +1510,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Athletics",
@@ -1528,10 +1550,12 @@
             "description": "All weapons of a specific Trait that uses Athletics to attack."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Brawn",
@@ -1546,7 +1570,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Brawn",
@@ -1575,10 +1600,12 @@
             "description": "When your limits are pushed, how hard you push back, like when you're forced to eject from a crashing spaceship."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Conditioning",
@@ -1593,10 +1620,12 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Intimidation",
@@ -1611,7 +1640,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Intimidation",
@@ -1640,10 +1670,12 @@
             "description": "Provoking a target to further interact negatively with you."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Might",
@@ -1658,7 +1690,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Might",
@@ -1692,10 +1725,12 @@
             "description": "All weapons of a specific Trait that uses Might to attack, such as Blunt or Silent."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Acrobatics",
@@ -1710,7 +1745,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Acrobatics",
@@ -1744,10 +1780,12 @@
             "description": "Moving gracefully, such as with flips, cartwheels, or parkour."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Driving",
@@ -1762,7 +1800,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Driving",
@@ -1791,10 +1830,12 @@
             "description": "Serving as captain or skipper on anything from a sailing ship to an aircraft carrier, as well as seacraft and submarine Alt Modes."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Finesse",
@@ -1809,7 +1850,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Finesse",
@@ -1843,10 +1885,12 @@
             "description": "All weapons of a specific Trait that uses Finesse to attack, such as Maneuver or Sharp."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Infiltration",
@@ -1861,7 +1905,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Infiltration",
@@ -1895,10 +1940,12 @@
             "description": "Moving and acting quietly while avoiding detection."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Targeting",
@@ -1913,7 +1960,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Targeting",
@@ -1942,10 +1990,12 @@
             "description": "All weapons of a specific Trait that uses Targeting to attack, such as Sniper."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Alertness",
@@ -1960,7 +2010,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Alertness",
@@ -1994,10 +2045,12 @@
             "description": "Utilizing trained senses to read a situation for danger, including finding the nearest exits, evaluating the possibility for an ambush (and if so, from where), and other tactical information."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Culture",
@@ -2012,7 +2065,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Culture",
@@ -2056,10 +2110,12 @@
             "description": "Interest in and study of a particular people."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Initiative",
@@ -2074,10 +2130,12 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Science",
@@ -2092,7 +2150,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Science",
@@ -2116,10 +2175,12 @@
             "description": "Expertise in an explicit discipline of Science, such as Biology, Chemistry, Physics, Zoology, and more."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Survival",
@@ -2134,7 +2195,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Survival",
@@ -2168,10 +2230,12 @@
             "description": "Tracking and following a creature based on signs left behind, from broken twigs to disturbed earth and more."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Technology",
@@ -2186,7 +2250,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Technology",
@@ -2235,10 +2300,12 @@
             "description": "Expertise in one particular type of technology, such as artificial intelligence, drones, mechanics, robotics, and more."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Animal Handling",
@@ -2253,7 +2320,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Animal Handling",
@@ -2282,10 +2350,12 @@
             "description": "Teaching animals behaviors, tricks, or talents through repeated reinforcement. This can be helpful in situations where robotic presence isn't conducive to the mission, but where humans can't be trusted."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Deception",
@@ -2300,7 +2370,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Deception",
@@ -2329,10 +2400,12 @@
             "description": "Keeping others' attention on you rather than the world around them through misdirection."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Performance",
@@ -2347,7 +2420,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Performance",
@@ -2376,10 +2450,12 @@
             "description": "Architecture, ceramics, drawing, mapmaking, painting, photography, and sculpting."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Persuasion",
@@ -2394,7 +2470,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Persuasion",
@@ -2428,10 +2505,12 @@
             "description": "Using plain and simple facts to make your point of view the obvious choice to follow."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "skills.Streetwise",
@@ -2446,7 +2525,8 @@
         "min": 0,
         "max": 6
       },
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "specialization.Streetwise",
@@ -2480,7 +2560,8 @@
             "description": "Includes everything from avoiding traffic to the best smuggling routes and even escaping an area or city without being noticed."
           }
         ]
-      }
+      },
+      "tab": "Skills"
     }
   ]
 }

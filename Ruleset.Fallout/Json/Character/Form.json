@@ -6,7 +6,8 @@
       "id": "id",
       "label": "Id",
       "type": "hidden",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "healthPoints",
@@ -66,14 +67,16 @@
       "label": "Name",
       "type": "text",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "image",
       "id": "image",
       "label": "Image",
       "type": "image",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "level",
@@ -81,7 +84,8 @@
       "label": "Level",
       "type": "number",
       "className": "form-control",
-      "default": 1
+      "default": 1,
+      "tab": "Identity"
     },
     {
       "name": "caps",
@@ -89,7 +93,8 @@
       "label": "Caps",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Identity"
     },
     {
       "type": "divider"
@@ -142,7 +147,8 @@
           "description": "When the bombs were falling, you or your predecessors were lucky enough to be safely secured in one of the one hundred and twenty-two Vault-Tec facilities, deep underground protected by thick blast doors and layers of rock and concrete. Your family either had enough money to buy their space or were randomly selected to enter the vault to be saved from the nuclear devastation above—perhaps only to be condemned to immoral experiments run by Vault-Tec on unwitting participants.<br />You are free from mutation and disease. The Vault-Tec program has afforded you a safe home for some time, but not without some cost. The vault you came from used you as a human test subject, manipulating your understanding of the world and your behavior in order to study you. That's left you with a profound psychological change, compared to the survivors on the surface you now know, and affects how you make your way through the wasteland.<br />Whether through design or poor planning, many of the vaults were not well stocked or prepared for the long wait until nuclear fallout had reached safe levels outside, and many fell into disrepair or out of supplies. Due to these shortcomings, many vault dwellers sought help from the surface, and many vaults opened in order to allow supplies to reach them. By opening their vault doors, the isolated societies inside opened themselves up to mixing with the survivors above, and established a permanent connection with the surface—the most notable example being the residents of Vault 15, who split up and went on to establish the settlement Shady Sands, as well as the raiding gangs of the Jackals, Vipers, and Khans when their vault opened.",
           "userChoices": null
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "traits",
@@ -225,7 +231,8 @@
             "userChoices": "[{\"type\":\"skills\",\"label\":null,\"choices\":[\"Athletics\",\"Barter\",\"Big Guns\",\"Energy Weapons\",\"Explosives\",\"Lockpick\",\"Medicine\",\"Melee Weapons\",\"Pilot\",\"Repair\",\"Science\",\"Small Guns\",\"Sneak\",\"Speech\",\"Survival\",\"Throwing\",\"Unarmed\"],\"count\":1,\"category\":\"Adjustment\",\"value\":2}]"
           }
         ]
-      }
+      },
+      "tab": "Origins"
     },
     {
       "type": "group",
@@ -330,7 +337,8 @@
           },
           "default": 5
         }
-      ]
+      ],
+      "tab": "Attributes"
     },
     {
       "type": "group",
@@ -575,7 +583,8 @@
           },
           "default": 0
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "name": "perks",
@@ -1340,7 +1349,8 @@
             "prerequisites": "[{\"type\":\"attribute\",\"name\":\"Endurance\",\"formula\":\"\",\"logicalOr\":[]},{\"type\":\"attribute\",\"name\":\"Luck\",\"formula\":\"\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\"\",\"logicalOr\":[]}]"
           }
         ]
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "pack",
@@ -1368,7 +1378,8 @@
           "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Combat Knife\",\"conditions\":[]},{\"type\":\"clothings\",\"value\":\"Brotherhood Field Scribe Armor\",\"conditions\":[]},{\"type\":\"clothings\",\"value\":\"Brotherhood Scribe Hat\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Brotherhood Holotags|1\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"weapons\",\"label\":null,\"choices\":[\"Laser Pistol\",\"10mm Pistol\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"ammos\",\"label\":null,\"choices\":[\"Fusion Cell|15\",\"10mm|15\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         }
-      ]
+      ],
+      "tab": "Features"
     },
     {
       "name": "pack",
@@ -1396,7 +1407,8 @@
           "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Heavy Bolt-Action Pipe Rifle\",\"conditions\":[]},{\"type\":\"weapons\",\"value\":\"Board\",\"conditions\":[]},{\"type\":\"armors\",\"value\":\"Raider Armor Torso\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Personal Trinket|1\",\"conditions\":[]},{\"type\":\"ammos\",\"value\":\"308|12\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"armors\",\"label\":null,\"choices\":[\"Raider Armor Head\",\"Raider Armor Left Leg\",\"Raider Armor Right Leg\",\"Raider Armor Left Arm\",\"Raider Armor Right Arm\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         }
-      ]
+      ],
+      "tab": "Features"
     },
     {
       "name": "pack",
@@ -1448,7 +1460,8 @@
           "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pincer Arm Attachment\",\"conditions\":[]},{\"type\":\"weapons\",\"value\":\"Buzz-saw Arm Attachment\",\"conditions\":[]},{\"type\":\"armors\",\"value\":\"Standard Plating\",\"conditions\":[]},{\"type\":\"consumeables\",\"value\":\"Stimpack|1\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"weapons\",\"label\":null,\"choices\":[\"Flamer Arm Attachment\",\"Laser Emitter Arm Attachment\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         }
-      ]
+      ],
+      "tab": "Features"
     },
     {
       "name": "pack",
@@ -1500,7 +1513,8 @@
           "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Pipe Gun\",\"conditions\":[]},{\"type\":\"clothings\",\"value\":\"Drifter Outfit\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Person Trinket|1\",\"conditions\":[]},{\"type\":\"ammos\",\"value\":\"38|12\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"weapons\",\"label\":null,\"choices\":[\"Switchblade\",\"Pipe Wrench\",\"Rolling Pin\",\"Knuckles\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"consumeables\",\"label\":null,\"choices\":[\"Jet|1\",\"RadAway|1\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         }
-      ]
+      ],
+      "tab": "Features"
     },
     {
       "name": "pack",
@@ -1528,7 +1542,8 @@
           "bonusCharacteristics": "[{\"type\":\"weapons\",\"value\":\"Baton\",\"conditions\":[]},{\"type\":\"weapons\",\"value\":\"10mm Pistol\",\"conditions\":[]},{\"type\":\"armors\",\"value\":\"Vault-Tec Security Armor\",\"conditions\":[]},{\"type\":\"armors\",\"value\":\"Vault-Tec Security Helmet\",\"conditions\":[]},{\"type\":\"clothings\",\"value\":\"Vault Jumpsuit\",\"conditions\":[]},{\"type\":\"consumeables\",\"value\":\"Purified Water|1\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Vault-Tec Canteen|1\",\"conditions\":[]},{\"type\":\"items\",\"value\":\"Pip-Boy|1\",\"conditions\":[]},{\"type\":\"consumeables\",\"value\":\"Stimpack|1\",\"conditions\":[]},{\"type\":\"ammos\",\"value\":\"10mm|12\",\"conditions\":[]}]",
           "userChoices": null
         }
-      ]
+      ],
+      "tab": "Features"
     },
     {
       "name": "robotMods",
@@ -1623,7 +1638,8 @@
       "dependsOn": {
         "field": "origin",
         "value": "Mister Handy"
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "robotWeapons",
@@ -1685,7 +1701,8 @@
       "dependsOn": {
         "field": "origin",
         "value": "Mister Handy"
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "weapons",
@@ -3731,7 +3748,8 @@
       "dependsOn": {
         "field": "origin",
         "value": "Brotherhood Initiate, Ghoul, Super Mutant, Survivor, Vault Dweller"
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "armors",
@@ -4626,7 +4644,8 @@
       "dependsOn": {
         "field": "origin",
         "value": "Brotherhood Initiate, Ghoul, Super Mutant, Survivor, Vault Dweller"
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "robotArmors",
@@ -4853,7 +4872,8 @@
       "dependsOn": {
         "field": "origin",
         "value": "Mister Handy"
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "clothings",
@@ -4912,7 +4932,8 @@
       "dependsOn": {
         "field": "origin",
         "value": "Brotherhood Initiate, Ghoul, Super Mutant, Survivor, Vault Dweller"
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "consumeables",
@@ -5849,7 +5870,8 @@
             "description": "A personal stealth device that generates a modulating field to transmit light from one side to the other, making the wearer nearly invisible to the naked eye."
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "items",
@@ -6023,7 +6045,8 @@
             "description": "Aesthetically, the canteen appears as a hip flask wrapped in a fabric coating featuring traditional Vault-Tec colors."
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "ammos",
@@ -6239,7 +6262,8 @@
             "description": "Literally junk. Uniquely suited as ammunition for the Junk Jet weapon. Weights, costs, and rarity vary by piece."
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     }
   ]
 }

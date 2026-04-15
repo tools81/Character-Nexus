@@ -91,7 +91,8 @@ namespace WorldWideWrestling
                 id = "id",
                 label = "Id",
                 type = "hidden",
-                className = "form-control"
+                className = "form-control",
+                tab = "Identity"
             });
             _fields.Add(new
             {
@@ -100,7 +101,8 @@ namespace WorldWideWrestling
                 label = "Name",
                 type = "text",
                 className = "form-control",
-                @default = "Unknown"
+                @default = "Unknown",
+                tab = "Identity"
             });
             _fields.Add(new
             {
@@ -108,7 +110,8 @@ namespace WorldWideWrestling
                 id = "image",
                 label = "Image",
                 type = "image",
-                className = "form-control"
+                className = "form-control",
+                tab = "Identity"
             });
         }
 
@@ -132,6 +135,7 @@ namespace WorldWideWrestling
                 });
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -158,6 +162,7 @@ namespace WorldWideWrestling
                 });
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -189,6 +194,7 @@ namespace WorldWideWrestling
                         };
                 }
 
+                obj.tab = "Origins";
                 _fields.Add(obj);
             }
         }
@@ -221,6 +227,7 @@ namespace WorldWideWrestling
                         };
                 }
 
+                obj.tab = "Origins";
                 _fields.Add(obj);
             }
         }
@@ -239,6 +246,7 @@ namespace WorldWideWrestling
                         type = "text",
                         className = "form-control",
                         @default = "Unknown",
+                        tab = "Origins",
                         dependsOn =
                         new
                         {
@@ -274,6 +282,7 @@ namespace WorldWideWrestling
                 type = "group",
                 name,
                 label,
+                tab = "Stats",
                 children
             });
         }        
@@ -303,6 +312,7 @@ namespace WorldWideWrestling
                 name,
                 label,
                 type = "array",
+                tab = "Features",
                 component = obj
             });
         }
@@ -332,6 +342,7 @@ namespace WorldWideWrestling
                 name,
                 label,
                 type = "array",
+                tab = "Features",
                 component = obj
             });
         }

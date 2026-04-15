@@ -6,7 +6,8 @@
       "id": "id",
       "label": "Id",
       "type": "hidden",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "name",
@@ -14,35 +15,40 @@
       "label": "Name",
       "type": "text",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "image",
       "id": "image",
       "label": "Image",
       "type": "image",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "origin",
       "id": "origin",
       "label": "Origin",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "disposition",
       "id": "disposition",
       "label": "Disposition",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "gender",
       "id": "gender",
       "label": "Gender",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "age",
@@ -50,28 +56,32 @@
       "label": "Age",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Identity"
     },
     {
       "name": "weight",
       "id": "weight",
       "label": "Weight",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "height",
       "id": "height",
       "label": "Height",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "size",
       "id": "size",
       "label": "Size",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "level",
@@ -84,7 +94,8 @@
         "min": 1,
         "max": 15
       },
-      "default": 1
+      "default": 1,
+      "tab": "Origins"
     },
     {
       "name": "xp",
@@ -92,7 +103,8 @@
       "label": "XP",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Stats"
     },
     {
       "name": "hitPoints",
@@ -100,7 +112,8 @@
       "label": "Hit Points",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Stats"
     },
     {
       "name": "sdc",
@@ -108,14 +121,16 @@
       "label": "SDC",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Stats"
     },
     {
       "name": "notes",
       "id": "notes",
       "label": "Notes",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "animal",
@@ -772,7 +787,8 @@
           "bio": 50,
           "bonusAdjustments": "[{\"type\":\"attributes\",\"name\":\"IQ\",\"value\":3,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PS\",\"value\":2,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PP\",\"value\":5,\"conditions\":[]},{\"type\":\"attributes\",\"name\":\"PE\",\"value\":10,\"conditions\":[]}]"
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "alignment",
@@ -822,7 +838,8 @@
           "description": "The category where megalomaniacs, violent, and most despicable characters fall. A cruel, brutal killer who trusts no one and has no value for any life other than their own. Will crush anyone or anything that gets in the way, lying, cheating, using and abusing anyone not more powerful than themselves. Even aberrant characters find these dishonorable people revolting. Diabolic characters will: rarely keep their word and have no honor; lie to and cheat anyone; most certainly attack and kill an unarmed foe; hurt and kill an innocent without a second thought or for pleasure; use torture for pleasure and information; kill for sheer pleasure; help someone only on a whim; rarely attempt to work within the law; blatantly break the law; despise honor, authority and self-discipline viewing them as weaknesses; not work well within a group constantly vying for power; always take dirty money, hot goods and drugs; betray a friend; and associate mostly with other evil alignments.",
           "type": "Evil"
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "education",
@@ -854,7 +871,8 @@
           "description": "Character goes public and is educated at a major university. Likes and trusts humanity in general. Education is four years of college. Select 3 skill programs and 10 Secondary skills. Although struggling for financing, at least 2D6 times $500 worth of equipment has been collected.",
           "bonusAdjustments": "null"
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "mutation",
@@ -927,7 +945,8 @@
           "label": "Deliberate Experimentation - Trained Assassin",
           "description": "Deliberately raised as an assassin or warrior. Knows 8 Secondary skills and choice of Expert, Martial Arts, or Assassin Hand to Hand combat. +15% bonus in all Military skills. Knows and respects some humans but distrusts all large organizations. Escaped the organization and is now considered very dangerous, hunted by law enforcement agencies and the organization. Took 1D6 times $20,000 worth of equipment and weapons before escaping."
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "organization",
@@ -980,7 +999,8 @@
           "label": "Military Organization",
           "description": "A military organization that uses the character for their own purposes. The organization may be a government agency, a private company, or a secret society. The character may have been created by the organization or may have been recruited by the organization for their skills and abilities."
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "type": "group",
@@ -1107,7 +1127,8 @@
           },
           "default": 0
         }
-      ]
+      ],
+      "tab": "Attributes"
     },
     {
       "name": "biped.aardvark",
@@ -1131,7 +1152,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Aardvark"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.alligator & crocodile",
@@ -1155,7 +1177,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Alligator & Crocodile"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.apes",
@@ -1179,7 +1202,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Apes"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.armadillo",
@@ -1203,7 +1227,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Armadillo"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.baboon",
@@ -1227,7 +1252,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Baboon"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.badger",
@@ -1251,7 +1277,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Badger"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.bat",
@@ -1269,7 +1296,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Bat"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.bear",
@@ -1293,7 +1321,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Bear"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.beaver",
@@ -1317,7 +1346,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Beaver"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.boar",
@@ -1341,7 +1371,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Boar"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.buffalo",
@@ -1365,7 +1396,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Buffalo"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.camel",
@@ -1389,7 +1421,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Camel"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.canines, wild",
@@ -1413,7 +1446,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Canines, Wild"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.canine: fox",
@@ -1437,7 +1471,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Canine: Fox"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.cat — domestic",
@@ -1461,7 +1496,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Cat — Domestic"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.cat — wild",
@@ -1485,7 +1521,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Cat — Wild"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.cheetah",
@@ -1509,7 +1546,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Cheetah"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.chicken",
@@ -1527,7 +1565,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Chicken"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.crow",
@@ -1545,7 +1584,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Crow"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.deer",
@@ -1569,7 +1609,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Deer"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.dog",
@@ -1593,7 +1634,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Dog"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.duck",
@@ -1617,7 +1659,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Duck"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.elephant",
@@ -1641,7 +1684,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Elephant"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.elk",
@@ -1665,7 +1709,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Elk"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.felines",
@@ -1689,7 +1734,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Felines"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.frog",
@@ -1713,7 +1759,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Frog"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.goat",
@@ -1737,7 +1784,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Goat"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.hippopotamus",
@@ -1761,7 +1809,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Hippopotamus"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.horse",
@@ -1785,7 +1834,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Horse"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.marten & mink",
@@ -1809,7 +1859,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Marten & Mink"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.mole",
@@ -1833,7 +1884,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Mole"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.monkey",
@@ -1857,7 +1909,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Monkey"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.moose",
@@ -1881,7 +1934,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Moose"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.mountain lion",
@@ -1905,7 +1959,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Mountain Lion"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.muskrat",
@@ -1929,7 +1984,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Muskrat"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.opossum",
@@ -1953,7 +2009,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Opossum"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.otter",
@@ -1977,7 +2034,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Otter"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.owl",
@@ -1995,7 +2053,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Owl"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.parrot",
@@ -2013,7 +2072,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Parrot"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.pet birds",
@@ -2031,7 +2091,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Pet Birds"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.pig",
@@ -2055,7 +2116,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Pig"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.pigeon",
@@ -2073,7 +2135,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Pigeon"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.porcupine",
@@ -2097,7 +2160,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Porcupine"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.rabbit",
@@ -2121,7 +2185,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Rabbit"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.raccoon",
@@ -2145,7 +2210,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Raccoon"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.rhinoceros",
@@ -2169,7 +2235,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Rhinoceros"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.rodent",
@@ -2193,7 +2260,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Rodent"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.sheep",
@@ -2217,7 +2285,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Sheep"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.skunk",
@@ -2241,7 +2310,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Skunk"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.sparrow",
@@ -2259,7 +2329,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Sparrow"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.squirrel",
@@ -2283,7 +2354,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Squirrel"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.turkey",
@@ -2301,7 +2373,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Turkey"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.turtle",
@@ -2325,7 +2398,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Turtle"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.weasel",
@@ -2349,7 +2423,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Weasel"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.wild birds",
@@ -2367,7 +2442,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Wild Birds"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.wild fowl",
@@ -2385,7 +2461,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Wild Fowl"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.wild predatory birds",
@@ -2403,7 +2480,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Wild Predatory Birds"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "biped.wolverine",
@@ -2427,7 +2505,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Wolverine"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.aardvark",
@@ -2451,7 +2530,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Aardvark"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.alligator & crocodile",
@@ -2475,7 +2555,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Alligator & Crocodile"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.apes",
@@ -2499,7 +2580,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Apes"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.armadillo",
@@ -2523,7 +2605,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Armadillo"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.baboon",
@@ -2547,7 +2630,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Baboon"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.badger",
@@ -2571,7 +2655,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Badger"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.bat",
@@ -2601,7 +2686,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Bat"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.bear",
@@ -2625,7 +2711,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Bear"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.beaver",
@@ -2649,7 +2736,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Beaver"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.boar",
@@ -2679,7 +2767,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Boar"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.buffalo",
@@ -2703,7 +2792,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Buffalo"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.camel",
@@ -2733,7 +2823,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Camel"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.canines, wild",
@@ -2757,7 +2848,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Canines, Wild"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.canine: fox",
@@ -2781,7 +2873,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Canine: Fox"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.cat — domestic",
@@ -2805,7 +2898,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Cat — Domestic"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.cat — wild",
@@ -2829,7 +2923,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Cat — Wild"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.cheetah",
@@ -2853,7 +2948,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Cheetah"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.chicken",
@@ -2877,7 +2973,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Chicken"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.crow",
@@ -2907,7 +3004,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Crow"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.deer",
@@ -2931,7 +3029,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Deer"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.dog",
@@ -2955,7 +3054,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Dog"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.duck",
@@ -2985,7 +3085,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Duck"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.elephant",
@@ -3009,7 +3110,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Elephant"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.elk",
@@ -3033,7 +3135,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Elk"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.felines",
@@ -3057,7 +3160,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Felines"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.frog",
@@ -3081,7 +3185,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Frog"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.goat",
@@ -3105,7 +3210,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Goat"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.hippopotamus",
@@ -3129,7 +3235,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Hippopotamus"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.horse",
@@ -3153,7 +3260,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Horse"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.marten & mink",
@@ -3177,7 +3285,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Marten & Mink"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.mole",
@@ -3201,7 +3310,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Mole"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.monkey",
@@ -3225,7 +3335,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Monkey"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.moose",
@@ -3249,7 +3360,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Moose"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.mountain lion",
@@ -3273,7 +3385,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Mountain Lion"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.muskrat",
@@ -3297,7 +3410,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Muskrat"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.opossum",
@@ -3321,7 +3435,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Opossum"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.otter",
@@ -3345,7 +3460,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Otter"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.owl",
@@ -3375,7 +3491,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Owl"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.parrot",
@@ -3405,7 +3522,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Parrot"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.pet birds",
@@ -3435,7 +3553,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Pet Birds"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.pig",
@@ -3459,7 +3578,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Pig"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.pigeon",
@@ -3489,7 +3609,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Pigeon"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.porcupine",
@@ -3513,7 +3634,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Porcupine"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.rabbit",
@@ -3537,7 +3659,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Rabbit"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.raccoon",
@@ -3561,7 +3684,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Raccoon"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.rhinoceros",
@@ -3585,7 +3709,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Rhinoceros"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.rodent",
@@ -3609,7 +3734,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Rodent"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.sheep",
@@ -3633,7 +3759,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Sheep"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.skunk",
@@ -3657,7 +3784,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Skunk"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.sparrow",
@@ -3681,7 +3809,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Sparrow"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.squirrel",
@@ -3705,7 +3834,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Squirrel"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.turkey",
@@ -3735,7 +3865,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Turkey"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.turtle",
@@ -3759,7 +3890,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Turtle"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.weasel",
@@ -3783,7 +3915,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Weasel"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.wild birds",
@@ -3813,7 +3946,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Wild Birds"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.wild fowl",
@@ -3843,7 +3977,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Wild Fowl"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.wild predatory birds",
@@ -3873,7 +4008,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Wild Predatory Birds"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "hand.wolverine",
@@ -3897,7 +4033,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Wolverine"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.aardvark",
@@ -3927,7 +4064,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Aardvark"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.alligator & crocodile",
@@ -3957,7 +4095,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Alligator & Crocodile"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.apes",
@@ -3987,7 +4126,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Apes"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.armadillo",
@@ -4017,7 +4157,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Armadillo"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.baboon",
@@ -4041,7 +4182,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Baboon"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.badger",
@@ -4071,7 +4213,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Badger"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.bat",
@@ -4095,7 +4238,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Bat"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.bear",
@@ -4125,7 +4269,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Bear"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.beaver",
@@ -4155,7 +4300,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Beaver"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.boar",
@@ -4185,7 +4331,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Boar"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.buffalo",
@@ -4215,7 +4362,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Buffalo"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.camel",
@@ -4245,7 +4393,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Camel"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.canines, wild",
@@ -4275,7 +4424,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Canines, Wild"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.canine: fox",
@@ -4305,7 +4455,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Canine: Fox"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.cat — domestic",
@@ -4335,7 +4486,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Cat — Domestic"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.cat — wild",
@@ -4365,7 +4517,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Cat — Wild"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.cheetah",
@@ -4395,7 +4548,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Cheetah"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.chicken",
@@ -4425,7 +4579,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Chicken"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.crow",
@@ -4455,7 +4610,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Crow"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.deer",
@@ -4485,7 +4641,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Deer"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.dog",
@@ -4515,7 +4672,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Dog"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.duck",
@@ -4545,7 +4703,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Duck"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.elephant",
@@ -4575,7 +4734,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Elephant"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.elk",
@@ -4605,7 +4765,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Elk"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.felines",
@@ -4635,7 +4796,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Felines"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.frog",
@@ -4665,7 +4827,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Frog"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.goat",
@@ -4695,7 +4858,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Goat"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.hippopotamus",
@@ -4725,7 +4889,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Hippopotamus"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.horse",
@@ -4755,7 +4920,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Horse"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.marten & mink",
@@ -4785,7 +4951,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Marten & Mink"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.mole",
@@ -4815,7 +4982,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Mole"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.monkey",
@@ -4839,7 +5007,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Monkey"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.moose",
@@ -4869,7 +5038,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Moose"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.mountain lion",
@@ -4899,7 +5069,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Mountain Lion"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.muskrat",
@@ -4929,7 +5100,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Muskrat"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.opossum",
@@ -4959,7 +5131,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Opossum"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.otter",
@@ -4989,7 +5162,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Otter"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.owl",
@@ -5019,7 +5193,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Owl"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.parrot",
@@ -5049,7 +5224,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Parrot"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.pet birds",
@@ -5079,7 +5255,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Pet Birds"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.pig",
@@ -5109,7 +5286,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Pig"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.porcupine",
@@ -5139,7 +5317,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Porcupine"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.rabbit",
@@ -5169,7 +5348,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Rabbit"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.raccoon",
@@ -5199,7 +5379,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Raccoon"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.rhinoceros",
@@ -5229,7 +5410,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Rhinoceros"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.rodent",
@@ -5259,7 +5441,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Rodent"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.sheep",
@@ -5289,7 +5472,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Sheep"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.skunk",
@@ -5319,7 +5503,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Skunk"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.sparrow",
@@ -5349,7 +5534,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Sparrow"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.squirrel",
@@ -5379,7 +5565,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Squirrel"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.turkey",
@@ -5409,7 +5596,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Turkey"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.turtle",
@@ -5439,7 +5627,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Turtle"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.weasel",
@@ -5469,7 +5658,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Weasel"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.wild birds",
@@ -5499,7 +5689,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Wild Birds"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.wild fowl",
@@ -5529,7 +5720,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Wild Fowl"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.wild predatory birds",
@@ -5559,7 +5751,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Wild Predatory Birds"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "look.wolverine",
@@ -5589,7 +5782,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Wolverine"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.aardvark",
@@ -5607,7 +5801,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Aardvark"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.alligator & crocodile",
@@ -5625,7 +5820,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Alligator & Crocodile"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.apes",
@@ -5643,7 +5839,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Apes"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.armadillo",
@@ -5661,7 +5858,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Armadillo"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.badger",
@@ -5685,7 +5883,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Badger"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.bat",
@@ -5703,7 +5902,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Bat"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.bear",
@@ -5739,7 +5939,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Bear"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.beaver",
@@ -5757,7 +5958,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Beaver"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.boar",
@@ -5781,7 +5983,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Boar"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.buffalo",
@@ -5799,7 +6002,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Buffalo"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.camel",
@@ -5817,7 +6021,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Camel"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.canines, wild",
@@ -5847,7 +6052,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Canines, Wild"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.canine: fox",
@@ -5871,7 +6077,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Canine: Fox"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.cat — domestic",
@@ -5901,7 +6108,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Cat — Domestic"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.cat — wild",
@@ -5919,7 +6127,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Cat — Wild"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.cheetah",
@@ -5943,7 +6152,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Cheetah"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.deer",
@@ -5967,7 +6177,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Deer"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.dog",
@@ -5991,7 +6202,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Dog"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.elephant",
@@ -6009,7 +6221,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Elephant"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.elk",
@@ -6027,7 +6240,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Elk"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.felines",
@@ -6051,7 +6265,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Felines"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.goat",
@@ -6069,7 +6284,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Goat"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.hippopotamus",
@@ -6087,7 +6303,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Hippopotamus"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.horse",
@@ -6105,7 +6322,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Horse"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.marten & mink",
@@ -6129,7 +6347,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Marten & Mink"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.mole",
@@ -6147,7 +6366,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Mole"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.moose",
@@ -6165,7 +6385,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Moose"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.mountain lion",
@@ -6189,7 +6410,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Mountain Lion"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.opossum",
@@ -6207,7 +6429,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Opossum"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.owl",
@@ -6225,7 +6448,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Owl"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.parrot",
@@ -6243,7 +6467,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Parrot"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.pet birds",
@@ -6261,7 +6486,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Pet Birds"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.porcupine",
@@ -6279,7 +6505,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Porcupine"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.rhinoceros",
@@ -6303,7 +6530,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Rhinoceros"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.rodent",
@@ -6327,7 +6555,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Rodent"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.sheep",
@@ -6345,7 +6574,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Sheep"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.skunk",
@@ -6363,7 +6593,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Skunk"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.sparrow",
@@ -6381,7 +6612,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Sparrow"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.squirrel",
@@ -6399,7 +6631,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Squirrel"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.turkey",
@@ -6417,7 +6650,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Turkey"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.weasel",
@@ -6441,7 +6675,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Weasel"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.wild predatory birds",
@@ -6465,7 +6700,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Wild Predatory Birds"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "naturalWeapon.wolverine",
@@ -6489,7 +6725,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Wolverine"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.aardvark",
@@ -6513,7 +6750,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Aardvark"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.alligator & crocodile",
@@ -6537,7 +6775,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Alligator & Crocodile"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.apes",
@@ -6561,7 +6800,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Apes"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.armadillo",
@@ -6585,7 +6825,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Armadillo"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.baboon",
@@ -6609,7 +6850,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Baboon"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.badger",
@@ -6633,7 +6875,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Badger"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.bat",
@@ -6657,7 +6900,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Bat"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.bear",
@@ -6681,7 +6925,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Bear"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.beaver",
@@ -6705,7 +6950,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Beaver"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.boar",
@@ -6729,7 +6975,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Boar"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.buffalo",
@@ -6753,7 +7000,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Buffalo"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.camel",
@@ -6777,7 +7025,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Camel"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.canines, wild",
@@ -6801,7 +7050,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Canines, Wild"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.canine: fox",
@@ -6825,7 +7075,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Canine: Fox"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.cat — domestic",
@@ -6849,7 +7100,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Cat — Domestic"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.cat — wild",
@@ -6873,7 +7125,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Cat — Wild"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.cheetah",
@@ -6897,7 +7150,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Cheetah"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.chicken",
@@ -6921,7 +7175,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Chicken"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.crow",
@@ -6945,7 +7200,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Crow"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.deer",
@@ -6969,7 +7225,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Deer"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.dog",
@@ -6993,7 +7250,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Dog"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.duck",
@@ -7017,7 +7275,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Duck"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.elephant",
@@ -7041,7 +7300,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Elephant"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.elk",
@@ -7065,7 +7325,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Elk"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.felines",
@@ -7089,7 +7350,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Felines"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.frog",
@@ -7113,7 +7375,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Frog"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.goat",
@@ -7137,7 +7400,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Goat"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.hippopotamus",
@@ -7161,7 +7425,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Hippopotamus"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.horse",
@@ -7185,7 +7450,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Horse"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.marten & mink",
@@ -7209,7 +7475,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Marten & Mink"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.mole",
@@ -7233,7 +7500,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Mole"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.monkey",
@@ -7257,7 +7525,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Monkey"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.moose",
@@ -7281,7 +7550,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Moose"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.mountain lion",
@@ -7305,7 +7575,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Mountain Lion"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.muskrat",
@@ -7329,7 +7600,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Muskrat"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.opossum",
@@ -7353,7 +7625,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Opossum"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.otter",
@@ -7377,7 +7650,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Otter"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.owl",
@@ -7401,7 +7675,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Owl"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.parrot",
@@ -7425,7 +7700,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Parrot"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.pet birds",
@@ -7449,7 +7725,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Pet Birds"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.pig",
@@ -7473,7 +7750,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Pig"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.pigeon",
@@ -7497,7 +7775,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Pigeon"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.porcupine",
@@ -7521,7 +7800,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Porcupine"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.rabbit",
@@ -7545,7 +7825,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Rabbit"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.raccoon",
@@ -7569,7 +7850,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Raccoon"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.rhinoceros",
@@ -7593,7 +7875,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Rhinoceros"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.rodent",
@@ -7617,7 +7900,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Rodent"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.sheep",
@@ -7641,7 +7925,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Sheep"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.skunk",
@@ -7665,7 +7950,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Skunk"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.sparrow",
@@ -7689,7 +7975,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Sparrow"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.squirrel",
@@ -7713,7 +8000,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Squirrel"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.turkey",
@@ -7737,7 +8025,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Turkey"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.turtle",
@@ -7761,7 +8050,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Turtle"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.weasel",
@@ -7785,7 +8075,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Weasel"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.wild birds",
@@ -7809,7 +8100,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Wild Birds"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.wild fowl",
@@ -7833,7 +8125,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Wild Fowl"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.wild predatory birds",
@@ -7857,7 +8150,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Wild Predatory Birds"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "speech.wolverine",
@@ -7881,7 +8175,8 @@
       "dependsOn": {
         "field": "animal",
         "value": "Wolverine"
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "psionics",
@@ -7974,16 +8269,19 @@
             "savingThrow": "None"
           }
         ]
-      }
+      },
+      "tab": "Features"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "type": "textblock",
       "label": "Skills",
       "text": "Skills",
-      "name": "skillsLabel"
+      "name": "skillsLabel",
+      "tab": "Skills"
     },
     {
       "name": "skills.Computer Operation",
@@ -7991,7 +8289,8 @@
       "label": "Computer Operation",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Computer Programming",
@@ -7999,7 +8298,8 @@
       "label": "Computer Programming",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Cryptography",
@@ -8007,7 +8307,8 @@
       "label": "Cryptography",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Laser",
@@ -8015,7 +8316,8 @@
       "label": "Laser",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Optic Systems",
@@ -8023,7 +8325,8 @@
       "label": "Optic Systems",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Radio: Basic Communications",
@@ -8031,7 +8334,8 @@
       "label": "Radio: Basic Communications",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Radio: Scramblers",
@@ -8039,7 +8343,8 @@
       "label": "Radio: Scramblers",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Radio: Satellite Relay",
@@ -8047,7 +8352,8 @@
       "label": "Radio: Satellite Relay",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Surveillance Systems",
@@ -8055,7 +8361,8 @@
       "label": "Surveillance Systems",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.TV-Video",
@@ -8063,7 +8370,8 @@
       "label": "TV-Video",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Cook",
@@ -8071,7 +8379,8 @@
       "label": "Cook",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Dance",
@@ -8079,7 +8388,8 @@
       "label": "Dance",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Fishing",
@@ -8087,7 +8397,8 @@
       "label": "Fishing",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Sewing",
@@ -8095,7 +8406,8 @@
       "label": "Sewing",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Sing",
@@ -8103,7 +8415,8 @@
       "label": "Sing",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Basic Electronics",
@@ -8111,7 +8424,8 @@
       "label": "Basic Electronics",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Electrical Engineer",
@@ -8119,7 +8433,8 @@
       "label": "Electrical Engineer",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Concealment",
@@ -8127,7 +8442,8 @@
       "label": "Concealment",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Detect Ambushes",
@@ -8135,7 +8451,8 @@
       "label": "Detect Ambushes",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Detect Concealment",
@@ -8143,7 +8460,8 @@
       "label": "Detect Concealment",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Disguise",
@@ -8151,7 +8469,8 @@
       "label": "Disguise",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Escape Artist",
@@ -8159,7 +8478,8 @@
       "label": "Escape Artist",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Forgery",
@@ -8167,7 +8487,8 @@
       "label": "Forgery",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Impersonation",
@@ -8175,7 +8496,8 @@
       "label": "Impersonation",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Interrogation",
@@ -8183,7 +8505,8 @@
       "label": "Interrogation",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Land Navigation",
@@ -8191,7 +8514,8 @@
       "label": "Land Navigation",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Palming",
@@ -8199,7 +8523,8 @@
       "label": "Palming",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Picking Locks",
@@ -8207,7 +8532,8 @@
       "label": "Picking Locks",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Pick Pockets",
@@ -8215,7 +8541,8 @@
       "label": "Pick Pockets",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Tracking",
@@ -8223,7 +8550,8 @@
       "label": "Tracking",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Wilderness Survival",
@@ -8231,7 +8559,8 @@
       "label": "Wilderness Survival",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Automotive Mechanics",
@@ -8239,7 +8568,8 @@
       "label": "Automotive Mechanics",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Aircraft Mechanics",
@@ -8247,7 +8577,8 @@
       "label": "Aircraft Mechanics",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Basic Mechanics",
@@ -8255,7 +8586,8 @@
       "label": "Basic Mechanics",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Computer Repair",
@@ -8263,7 +8595,8 @@
       "label": "Computer Repair",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Locksmith",
@@ -8271,7 +8604,8 @@
       "label": "Locksmith",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Mechanical Engineer",
@@ -8279,7 +8613,8 @@
       "label": "Mechanical Engineer",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Criminal Sciences & Forensics",
@@ -8287,7 +8622,8 @@
       "label": "Criminal Sciences & Forensics",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.First Aid",
@@ -8295,7 +8631,8 @@
       "label": "First Aid",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Paramedic",
@@ -8303,7 +8640,8 @@
       "label": "Paramedic",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Medical Doctor",
@@ -8311,7 +8649,8 @@
       "label": "Medical Doctor",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Pathology",
@@ -8319,7 +8658,8 @@
       "label": "Pathology",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Demolitions",
@@ -8327,7 +8667,8 @@
       "label": "Demolitions",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Demolitions Disposal",
@@ -8335,7 +8676,8 @@
       "label": "Demolitions Disposal",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Pilot Tank",
@@ -8343,7 +8685,8 @@
       "label": "Pilot Tank",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Hand to Hand: Basic",
@@ -8351,7 +8694,8 @@
       "label": "Hand to Hand: Basic",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Hand to Hand: Expert",
@@ -8359,7 +8703,8 @@
       "label": "Hand to Hand: Expert",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Hand to Hand: Martial Arts",
@@ -8367,7 +8712,8 @@
       "label": "Hand to Hand: Martial Arts",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Acrobatics",
@@ -8375,7 +8721,8 @@
       "label": "Acrobatics",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Athletics (General)",
@@ -8383,7 +8730,8 @@
       "label": "Athletics (General)",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Body Building",
@@ -8391,7 +8739,8 @@
       "label": "Body Building",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Boxing",
@@ -8399,7 +8748,8 @@
       "label": "Boxing",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Climbing",
@@ -8407,7 +8757,8 @@
       "label": "Climbing",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Fencing",
@@ -8415,7 +8766,8 @@
       "label": "Fencing",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Gymnastics",
@@ -8423,7 +8775,8 @@
       "label": "Gymnastics",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Prowl",
@@ -8431,7 +8784,8 @@
       "label": "Prowl",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Running",
@@ -8439,7 +8793,8 @@
       "label": "Running",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Swimming",
@@ -8447,7 +8802,8 @@
       "label": "Swimming",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Swimming: Advanced & S.C.U.B.A.",
@@ -8455,7 +8811,8 @@
       "label": "Swimming: Advanced & S.C.U.B.A.",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Wrestling",
@@ -8463,7 +8820,8 @@
       "label": "Wrestling",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Astrophysics",
@@ -8471,7 +8829,8 @@
       "label": "Astrophysics",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Biology",
@@ -8479,7 +8838,8 @@
       "label": "Biology",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Botany",
@@ -8487,7 +8847,8 @@
       "label": "Botany",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Chemistry",
@@ -8495,7 +8856,8 @@
       "label": "Chemistry",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Chemistry: Analytical",
@@ -8503,7 +8865,8 @@
       "label": "Chemistry: Analytical",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Mathematics: Basic",
@@ -8511,7 +8874,8 @@
       "label": "Mathematics: Basic",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Mathematics: Advanced",
@@ -8519,7 +8883,8 @@
       "label": "Mathematics: Advanced",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Art",
@@ -8527,7 +8892,8 @@
       "label": "Art",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Language",
@@ -8535,7 +8901,8 @@
       "label": "Language",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Photography",
@@ -8543,7 +8910,8 @@
       "label": "Photography",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Writing",
@@ -8551,7 +8919,8 @@
       "label": "Writing",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Pilot: Automobile",
@@ -8559,7 +8928,8 @@
       "label": "Pilot: Automobile",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Pilot: Race Car",
@@ -8567,7 +8937,8 @@
       "label": "Pilot: Race Car",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Pilot: Motorcycle",
@@ -8575,7 +8946,8 @@
       "label": "Pilot: Motorcycle",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Pilot: Truck",
@@ -8583,7 +8955,8 @@
       "label": "Pilot: Truck",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Pilot: Airplane",
@@ -8591,7 +8964,8 @@
       "label": "Pilot: Airplane",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Pilot: Boats (Sail Type)",
@@ -8599,7 +8973,8 @@
       "label": "Pilot: Boats (Sail Type)",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Pilot: Boats (Motor Type)",
@@ -8607,7 +8982,8 @@
       "label": "Pilot: Boats (Motor Type)",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Pilot: Basic Helicopter",
@@ -8615,7 +8991,8 @@
       "label": "Pilot: Basic Helicopter",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Pilot: Combat Helicopter",
@@ -8623,7 +9000,8 @@
       "label": "Pilot: Combat Helicopter",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Pilot: Jet",
@@ -8631,7 +9009,8 @@
       "label": "Pilot: Jet",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Pilot: Fighter Jet",
@@ -8639,7 +9018,8 @@
       "label": "Pilot: Fighter Jet",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Navigation",
@@ -8647,7 +9027,8 @@
       "label": "Navigation",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Read Sensory Equipment",
@@ -8655,7 +9036,8 @@
       "label": "Read Sensory Equipment",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.Weapon Systems",
@@ -8663,7 +9045,8 @@
       "label": "Weapon Systems",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.WP Sword",
@@ -8671,7 +9054,8 @@
       "label": "WP Sword",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.WP Blunt",
@@ -8679,7 +9063,8 @@
       "label": "WP Blunt",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.WP Forked and Spear",
@@ -8687,7 +9072,8 @@
       "label": "WP Forked and Spear",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.WP Targeting (Shuriken)",
@@ -8695,7 +9081,8 @@
       "label": "WP Targeting (Shuriken)",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.WP Bow",
@@ -8703,7 +9090,8 @@
       "label": "WP Bow",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.WP Chain",
@@ -8711,7 +9099,8 @@
       "label": "WP Chain",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.WP Knife",
@@ -8719,7 +9108,8 @@
       "label": "WP Knife",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.WP Paired Weapons",
@@ -8727,7 +9117,8 @@
       "label": "WP Paired Weapons",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
       "name": "skills.WP Staff",
@@ -8735,10 +9126,12 @@
       "label": "WP Staff",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "name": "weapons",
@@ -9440,7 +9833,8 @@
             "range": "150ft"
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "equipments",
@@ -10545,7 +10939,8 @@
             "type": "Grenades"
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "vehicle",
@@ -10691,7 +11086,8 @@
           "description": "Seats 6-8. Speed: 130mph. Range: 380 miles.",
           "cost": 1000000
         }
-      ]
+      ],
+      "tab": "Equipment"
     },
     {
       "name": "armor",
@@ -10852,7 +11248,8 @@
           "weight": "20lbs",
           "cost": 2200
         }
-      ]
+      ],
+      "tab": "Equipment"
     }
   ]
 }

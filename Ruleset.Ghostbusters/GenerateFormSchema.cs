@@ -106,7 +106,8 @@ namespace Ghostbusters
                     id = "id",
                     label = "Id",
                     type = "hidden",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -116,7 +117,8 @@ namespace Ghostbusters
                     label = "Name",
                     type = "text",
                     className = "form-control",
-                    @default = "Unknown"
+                    @default = "Unknown",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -126,7 +128,8 @@ namespace Ghostbusters
                     label = "Alias",
                     type = "text",
                     className = "form-control",
-                    @default = "Unknown"
+                    @default = "Unknown",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -142,7 +145,8 @@ namespace Ghostbusters
                         min = 0,
                         max = 100
                     },
-                    @default = 20
+                    @default = 20,
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -151,7 +155,8 @@ namespace Ghostbusters
                     id = "image",
                     label = "Image",
                     type = "image",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -160,7 +165,8 @@ namespace Ghostbusters
                     id = "description",
                     label = "Description",
                     type = "textarea",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -169,7 +175,8 @@ namespace Ghostbusters
                     id = "notes",
                     label = "Notes",
                     type = "textarea",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -178,7 +185,8 @@ namespace Ghostbusters
                     id = "residence",
                     label = "Residence",
                     type = "text",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -187,7 +195,8 @@ namespace Ghostbusters
                     id = "telex",
                     label = "Telex",
                     type = "text",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -196,7 +205,8 @@ namespace Ghostbusters
                     id = "phone",
                     label = "Phone",
                     type = "text",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
         }
 
@@ -228,7 +238,8 @@ namespace Ghostbusters
                 type = "group",
                 name,
                 label,
-                children
+                children,
+                tab = "Traits"
             };
 
             _fields.Add(group);
@@ -242,7 +253,8 @@ namespace Ghostbusters
                 {
                     name = $"{trait.Name}.label",
                     text = $"{trait.Name} Talent",
-                    type = "textblock"    
+                    type = "textblock",
+                    tab = "Talents"
                 });
 
                 dynamic obj = new ExpandoObject();
@@ -264,6 +276,7 @@ namespace Ghostbusters
                     );
                 }
 
+                obj.tab = "Talents";
                 _fields.Add(obj);
             }
         }
@@ -290,6 +303,7 @@ namespace Ghostbusters
                 );
             }
 
+            obj.tab = "Goal";
             _fields.Add(obj);
         }
 
@@ -319,7 +333,8 @@ namespace Ghostbusters
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -351,7 +366,8 @@ namespace Ghostbusters
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);

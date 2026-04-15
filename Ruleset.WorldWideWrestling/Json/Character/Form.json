@@ -6,7 +6,8 @@
       "id": "id",
       "label": "Id",
       "type": "hidden",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "name",
@@ -14,14 +15,16 @@
       "label": "Name",
       "type": "text",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "image",
       "id": "image",
       "label": "Image",
       "type": "image",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "role",
@@ -65,7 +68,8 @@
           "description": "If you are playing a wrestler who's been studying Lucha Libre, you now can use Tecnico and Rudo in the same way as the Luchador.",
           "advanced": true
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "gimmick",
@@ -208,7 +212,8 @@
           "bonusCharacteristics": "[{\"type\":\"moves\",\"value\":\"Finishing Move\",\"conditions\":[]},{\"type\":\"moves\",\"value\":\"Ring General\",\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"stats\",\"label\":\"Increase one +1\",\"choices\":[\"Look\",\"Body\",\"Real\",\"Work\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1},{\"type\":\"moves\",\"label\":null,\"choices\":[\"Top of the Card\",\"Respect the Business\",\"Bury 'em\",\"Put 'em Over\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null}]"
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "hailing.The Ace",
@@ -240,7 +245,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Ace"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "hailing.The Anointed",
@@ -272,7 +278,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Anointed"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "hailing.The Anti-Hero",
@@ -304,7 +311,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Anti-Hero"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "hailing.The Call-Up",
@@ -336,7 +344,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Call-Up"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "hailing.The Clown",
@@ -368,7 +377,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Clown"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "hailing.The Fighter",
@@ -400,7 +410,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Fighter"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "hailing.The Hardcore",
@@ -432,7 +443,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Hardcore"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "hailing.The Jobber",
@@ -464,7 +476,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Jobber"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "hailing.The Luchador",
@@ -496,7 +509,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Luchador"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "hailing.The Luminary",
@@ -528,7 +542,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Luminary"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "hailing.The Manager",
@@ -560,7 +575,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Manager"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "hailing.The Monster",
@@ -592,7 +608,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Monster"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "hailing.The Provocateur",
@@ -624,7 +641,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Provocateur"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "hailing.The Technician",
@@ -656,7 +674,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Technician"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "hailing.The Veteran",
@@ -688,7 +707,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Veteran"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "entrance.The Ace",
@@ -720,7 +740,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Ace"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "entrance.The Anointed",
@@ -752,7 +773,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Anointed"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "entrance.The Anti-Hero",
@@ -784,7 +806,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Anti-Hero"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "entrance.The Call-Up",
@@ -816,7 +839,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Call-Up"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "entrance.The Clown",
@@ -848,7 +872,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Clown"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "entrance.The Fighter",
@@ -880,7 +905,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Fighter"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "entrance.The Hardcore",
@@ -912,7 +938,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Hardcore"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "entrance.The Jobber",
@@ -944,7 +971,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Jobber"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "entrance.The Luchador",
@@ -976,7 +1004,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Luchador"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "entrance.The Luminary",
@@ -1008,7 +1037,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Luminary"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "entrance.The Manager",
@@ -1040,7 +1070,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Manager"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "entrance.The Monster",
@@ -1072,7 +1103,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Monster"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "entrance.The Provocateur",
@@ -1104,7 +1136,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Provocateur"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "entrance.The Technician",
@@ -1136,7 +1169,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Technician"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "entrance.The Veteran",
@@ -1168,7 +1202,8 @@
       "dependsOn": {
         "field": "gimmick",
         "value": "The Veteran"
-      }
+      },
+      "tab": "Origins"
     },
     {
       "name": "questions.The Ace.Who trained with me in the dojo?",
@@ -1177,6 +1212,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Ace"
@@ -1189,6 +1225,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Ace"
@@ -1201,6 +1238,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Ace"
@@ -1213,6 +1251,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Ace"
@@ -1225,6 +1264,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Anointed"
@@ -1237,6 +1277,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Anointed"
@@ -1249,6 +1290,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Anointed"
@@ -1261,6 +1303,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Anointed"
@@ -1273,6 +1316,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Anti-Hero"
@@ -1285,6 +1329,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Anti-Hero"
@@ -1297,6 +1342,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Anti-Hero"
@@ -1309,6 +1355,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Anti-Hero"
@@ -1321,6 +1368,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Call-Up"
@@ -1333,6 +1381,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Call-Up"
@@ -1345,6 +1394,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Call-Up"
@@ -1357,6 +1407,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Call-Up"
@@ -1369,6 +1420,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Clown"
@@ -1381,6 +1433,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Clown"
@@ -1393,6 +1446,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Clown"
@@ -1405,6 +1459,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Clown"
@@ -1417,6 +1472,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Fighter"
@@ -1429,6 +1485,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Fighter"
@@ -1441,6 +1498,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Fighter"
@@ -1453,6 +1511,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Fighter"
@@ -1465,6 +1524,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Hardcore"
@@ -1477,6 +1537,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Hardcore"
@@ -1489,6 +1550,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Hardcore"
@@ -1501,6 +1563,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Hardcore"
@@ -1513,6 +1576,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Jobber"
@@ -1525,6 +1589,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Jobber"
@@ -1537,6 +1602,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Jobber"
@@ -1549,6 +1615,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Jobber"
@@ -1561,6 +1628,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Luchador"
@@ -1573,6 +1641,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Luchador"
@@ -1585,6 +1654,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Luchador"
@@ -1597,6 +1667,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Luchador"
@@ -1609,6 +1680,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Luminary"
@@ -1621,6 +1693,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Luminary"
@@ -1633,6 +1706,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Luminary"
@@ -1645,6 +1719,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Luminary"
@@ -1657,6 +1732,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Manager"
@@ -1669,6 +1745,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Manager"
@@ -1681,6 +1758,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Manager"
@@ -1693,6 +1771,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Manager"
@@ -1705,6 +1784,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Monster"
@@ -1717,6 +1797,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Monster"
@@ -1729,6 +1810,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Monster"
@@ -1741,6 +1823,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Monster"
@@ -1753,6 +1836,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Provocateur"
@@ -1765,6 +1849,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Provocateur"
@@ -1777,6 +1862,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Provocateur"
@@ -1789,6 +1875,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Provocateur"
@@ -1801,6 +1888,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Technician"
@@ -1813,6 +1901,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Technician"
@@ -1825,6 +1914,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Technician"
@@ -1837,6 +1927,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Technician"
@@ -1849,6 +1940,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Veteran"
@@ -1861,6 +1953,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Veteran"
@@ -1873,6 +1966,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Veteran"
@@ -1885,6 +1979,7 @@
       "type": "text",
       "className": "form-control",
       "default": "Unknown",
+      "tab": "Origins",
       "dependsOn": {
         "field": "gimmick",
         "value": "The Veteran"
@@ -1894,6 +1989,7 @@
       "type": "group",
       "name": "stats",
       "label": "Stats",
+      "tab": "Stats",
       "children": [
         {
           "name": "stats.Body",
@@ -1957,6 +2053,7 @@
       "name": "wants",
       "label": "Wants",
       "type": "array",
+      "tab": "Features",
       "component": {
         "name": "wants",
         "label": "Wants",
@@ -2090,6 +2187,7 @@
       "name": "moves",
       "label": "Moves",
       "type": "array",
+      "tab": "Features",
       "component": {
         "name": "moves",
         "label": "Moves",

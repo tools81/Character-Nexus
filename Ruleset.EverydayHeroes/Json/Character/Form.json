@@ -14,84 +14,96 @@
       "label": "Name",
       "type": "text",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "image",
       "id": "image",
       "label": "Image",
       "type": "image",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "height",
       "id": "height",
       "label": "Height",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "weight",
       "id": "weight",
       "label": "Weight",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "skin",
       "id": "skin",
       "label": "Skin",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "eyes",
       "id": "eyes",
       "label": "Eyes",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "hair",
       "id": "hair",
       "label": "Hair",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "age",
       "id": "age",
       "label": "Age",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "maritalstatus",
       "id": "maritalstatus",
       "label": "Marital Status",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "pronouns",
       "id": "pronouns",
       "label": "Pronouns",
       "type": "text",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "biography",
       "id": "biography",
       "label": "Biography",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "notes",
       "id": "notes",
       "label": "Notes",
       "type": "textarea",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "level",
@@ -104,7 +116,8 @@
         "min": 1,
         "max": 20
       },
-      "default": 1
+      "default": 1,
+      "tab": "Origins"
     },
     {
       "name": "hitpointbase",
@@ -238,6 +251,7 @@
       "label": "Archetype",
       "type": "select",
       "className": "form-select",
+      "tab": "Origins",
       "options": [
         {
           "value": "Strong",
@@ -294,6 +308,7 @@
       "label": "Class",
       "type": "select",
       "className": "form-select",
+      "tab": "Origins",
       "options": [
         {
           "value": "Brawler",
@@ -333,6 +348,7 @@
       "label": "Class",
       "type": "select",
       "className": "form-select",
+      "tab": "Origins",
       "options": [
         {
           "value": "Martial Artist",
@@ -372,6 +388,7 @@
       "label": "Class",
       "type": "select",
       "className": "form-select",
+      "tab": "Origins",
       "options": [
         {
           "value": "Bodyguard",
@@ -411,6 +428,7 @@
       "label": "Class",
       "type": "select",
       "className": "form-select",
+      "tab": "Origins",
       "options": [
         {
           "value": "Engineer",
@@ -459,6 +477,7 @@
       "label": "Class",
       "type": "select",
       "className": "form-select",
+      "tab": "Origins",
       "options": [
         {
           "value": "Hunter",
@@ -498,6 +517,7 @@
       "label": "Class",
       "type": "select",
       "className": "form-select",
+      "tab": "Origins",
       "options": [
         {
           "value": "Duelist",
@@ -546,6 +566,7 @@
       "label": "Background",
       "type": "select",
       "className": "form-select",
+      "tab": "Origins",
       "options": [
         {
           "value": "Activist",
@@ -754,6 +775,7 @@
       "label": "Profession",
       "type": "select",
       "className": "form-select",
+      "tab": "Origins",
       "options": [
         {
           "value": "Academia",
@@ -998,7 +1020,8 @@
       ]
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Attributes"
     },
     {
       "type": "group",
@@ -1089,16 +1112,15 @@
           },
           "default": 8
         }
-      ]
-    },
-    {
-      "type": "divider"
+      ],
+      "tab": "Attributes"
     },
     {
       "type": "textblock",
       "label": "Skills",
       "text": "Skills",
-      "name": "skill"
+      "name": "skill",
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1124,7 +1146,8 @@
           "text": "Acrobatics",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1150,7 +1173,8 @@
           "text": "Arts and Crafts",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1176,7 +1200,8 @@
           "text": "Athletics",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1202,7 +1227,8 @@
           "text": "Computers",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1228,7 +1254,8 @@
           "text": "Deception",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1254,7 +1281,8 @@
           "text": "Endurance",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1280,7 +1308,8 @@
           "text": "Insight",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1306,7 +1335,8 @@
           "text": "Intimidation",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1332,7 +1362,8 @@
           "text": "Investigation",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1358,7 +1389,8 @@
           "text": "Mechanics",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1384,7 +1416,8 @@
           "text": "Medicine",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1410,7 +1443,8 @@
           "text": "Natural Sciences",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1436,7 +1470,8 @@
           "text": "Perception",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1462,7 +1497,8 @@
           "text": "Performance",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1488,7 +1524,8 @@
           "text": "Persuasion",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1514,7 +1551,8 @@
           "text": "Security",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1540,7 +1578,8 @@
           "text": "Sleight of Hand",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1566,7 +1605,8 @@
           "text": "Social Sciences",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1592,7 +1632,8 @@
           "text": "Stealth",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1618,7 +1659,8 @@
           "text": "Streetwise",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1644,7 +1686,8 @@
           "text": "Survival",
           "type": "textblock"
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1670,10 +1713,8 @@
           "text": "Vehicles",
           "type": "textblock"
         }
-      ]
-    },
-    {
-      "type": "divider"
+      ],
+      "tab": "Skills"
     },
     {
       "name": "feat",
@@ -2604,7 +2645,8 @@
             "prerequisites": "[{\"type\":\"archetype\",\"name\":\"\",\"formula\":\"!== 'Wise'\",\"logicalOr\":[]},{\"type\":\"attribute\",\"name\":\"Wisdom\",\"formula\":\">= 13\",\"logicalOr\":[]},{\"type\":\"level\",\"name\":\"\",\"formula\":\">= 2\",\"logicalOr\":[]}]"
           }
         ]
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "talent",
@@ -3277,7 +3319,8 @@
             "description": "When an ally that can see and hear you misses with an attack, you can use your reaction to instruct them on the proper technique, allowing them to reroll the attack."
           }
         ]
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "plan",
@@ -3473,7 +3516,8 @@
           "field": "archetype",
           "value": "Smart"
         }
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "trick",
@@ -3614,7 +3658,8 @@
           "field": "archetype",
           "value": "Charming"
         }
-      }
+      },
+      "tab": "Features"
     },
     {
       "name": "pack",
@@ -3771,7 +3816,8 @@
             "bonusCharacteristics": "[{\"type\":\"weapon\",\"value\":\"Pistol, 9mm semi-auto\",\"conditions\":[]},{\"type\":\"weapon\",\"value\":\"Rifle, tactical\",\"conditions\":[]},{\"type\":\"armor\",\"value\":\"Ballistic vest, medium\",\"conditions\":[]},{\"type\":\"vehicle\",\"value\":\"4WD vehicle\",\"conditions\":[]}]"
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "item",
@@ -4134,7 +4180,8 @@
             "description": "In addition to organizing cables and the like, these ties can be used as improvised restraints. A DC 20 Strength check can break them. A DC 20 Dexterity (Sleight of Hand) check allows escape. They can also easily be cut with any bladed instrument."
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "weapon",
@@ -4537,7 +4584,8 @@
             "description": "What robber of ancient tombs would be complete without a cracking bullwhip? It's employed more often as a tool for ranchers to intimidate livestock, but in a pinch it could be used as a weapon."
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "armor",
@@ -4620,7 +4668,8 @@
             "description": "These vests cover vital areas of the torso with a mesh that is nearly impossible to penetrate with a bladed or spiked weapon. They are not strong enough to stop ballistic weapons, but unlike a ballistic vest, they leave no vulnerable areas unprotected."
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "vehicle",
@@ -4903,7 +4952,8 @@
             "description": "This small pleasure craft is the rich person's money sink. The price level of 4 is only the beginning for yachts, which can be as expensive as you can imagine."
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     }
   ]
 }

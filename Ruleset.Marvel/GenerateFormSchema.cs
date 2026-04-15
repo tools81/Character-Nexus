@@ -145,7 +145,8 @@ namespace Marvel
                     id = "id",
                     label = "Id",
                     type = "hidden",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 }
             );
             _fields.Add(
@@ -262,7 +263,8 @@ namespace Marvel
                     label = "Name",
                     type = "text",
                     className = "form-control",
-                    @default = "Unknown"
+                    @default = "Unknown",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -272,7 +274,8 @@ namespace Marvel
                     label = "Real Name",
                     type = "text",
                     className = "form-control",
-                    @default = "Unknown"
+                    @default = "Unknown",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -281,7 +284,8 @@ namespace Marvel
                     id = "image",
                     label = "Image",
                     type = "image",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -297,7 +301,8 @@ namespace Marvel
                         min = 1,
                         max = 6
                     },
-                    @default = 1
+                    @default = 1,
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -306,7 +311,8 @@ namespace Marvel
                     id = "height",
                     label = "Height",
                     type = "text",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -315,7 +321,8 @@ namespace Marvel
                     id = "weight",
                     label = "Weight",
                     type = "text",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -324,7 +331,8 @@ namespace Marvel
                     id = "gender",
                     label = "Gender",
                     type = "text",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -333,7 +341,8 @@ namespace Marvel
                     id = "eyes",
                     label = "Eyes",
                     type = "text",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -342,7 +351,8 @@ namespace Marvel
                     id = "hair",
                     label = "Hair",
                     type = "text",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -352,7 +362,8 @@ namespace Marvel
                     label = "Size",
                     type = "text",
                     className = "form-control",
-                    @default = "Average"
+                    @default = "Average",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -361,7 +372,8 @@ namespace Marvel
                     id = "distinguishingFeatures",
                     label = "Distinguishing Features",
                     type = "textarea",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -370,7 +382,8 @@ namespace Marvel
                     id = "teams",
                     label = "Teams",
                     type = "text",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -379,7 +392,8 @@ namespace Marvel
                     id = "base",
                     label = "Base",
                     type = "text",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -388,7 +402,8 @@ namespace Marvel
                     id = "notes",
                     label = "Notes",
                     type = "textarea",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -397,7 +412,8 @@ namespace Marvel
                     id = "history",
                     label = "History",
                     type = "textarea",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -406,7 +422,8 @@ namespace Marvel
                     id = "personality",
                     label = "Personality",
                     type = "textarea",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
         }
 
@@ -433,6 +450,7 @@ namespace Marvel
                 );
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -459,6 +477,7 @@ namespace Marvel
                 );
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -490,7 +509,8 @@ namespace Marvel
                 type = "group",
                 name,
                 label,
-                children
+                children,
+                tab = "Attributes"
             };
 
             _fields.Add(group);
@@ -524,7 +544,8 @@ namespace Marvel
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Features"
             };
 
             _fields.Add(array);
@@ -538,7 +559,8 @@ namespace Marvel
                 id = name,
                 label,
                 type = "accordion",
-                items = new List<object>()
+                items = new List<object>(),
+                tab = "Features"
             };
 
             foreach (var powerset in powersets)
@@ -616,7 +638,8 @@ namespace Marvel
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Features"
             };
 
             _fields.Add(array);
@@ -650,7 +673,8 @@ namespace Marvel
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);

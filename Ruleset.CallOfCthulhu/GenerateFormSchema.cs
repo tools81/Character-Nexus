@@ -76,12 +76,12 @@ namespace CallOfCthulhu
 
         private static void GenerateDescriptionSchema(List<Era> eras, List<Age> ages)
         {
-            _fields.Add(new { name = "id", id = "id", label = "Id", type = "hidden", className = "form-control" });
-            _fields.Add(new { name = "name", id = "name", label = "Name", type = "text", className = "form-control", @default = "Unknown" });
-            _fields.Add(new { name = "image", id = "image", label = "Image", type = "image", className = "form-control" });
-            _fields.Add(new { name = "pronoun", id = "pronoun", label = "Pronoun", type = "text", className = "form-control" });
-            _fields.Add(new { name = "birthplace", id = "birthplace", label = "Birthplace", type = "text", className = "form-control" });
-            _fields.Add(new { name = "residence", id = "residence", label = "Residence", type = "text", className = "form-control" });
+            _fields.Add(new { name = "id", id = "id", label = "Id", type = "hidden", className = "form-control", tab = "Identity" });
+            _fields.Add(new { name = "name", id = "name", label = "Name", type = "text", className = "form-control", @default = "Unknown", tab = "Identity" });
+            _fields.Add(new { name = "image", id = "image", label = "Image", type = "image", className = "form-control", tab = "Identity" });
+            _fields.Add(new { name = "pronoun", id = "pronoun", label = "Pronoun", type = "text", className = "form-control", tab = "Identity" });
+            _fields.Add(new { name = "birthplace", id = "birthplace", label = "Birthplace", type = "text", className = "form-control", tab = "Identity" });
+            _fields.Add(new { name = "residence", id = "residence", label = "Residence", type = "text", className = "form-control", tab = "Identity" });
 
             // Era select
             dynamic eraObj = new ExpandoObject();
@@ -94,6 +94,7 @@ namespace CallOfCthulhu
             {
                 eraObj.options.Add(new { value = era.Name, label = era.Name, description = era.Description });
             }
+            eraObj.tab = "Origins";
             _fields.Add(eraObj);
 
             // Age select
@@ -114,6 +115,7 @@ namespace CallOfCthulhu
                     userChoices = JsonConvert.SerializeObject(age.UserChoices, _jsonSettings)
                 });
             }
+            ageObj.tab = "Origins";
             _fields.Add(ageObj);
         }
 
@@ -141,6 +143,7 @@ namespace CallOfCthulhu
                 });
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -164,14 +167,15 @@ namespace CallOfCthulhu
                 });
             }
 
-            _fields.Add(new { type = "group", name = "characteristics", label = "Characteristics", children });
+            _fields.Add(new { type = "group", name = "characteristics", label = "Characteristics", children, tab = "Characteristics" });
         }
 
         private static void GenerateSkillsSchema(List<Skill> skills)
         {
             _fields.Add(new
             {
-                type = "divider"
+                type = "divider",
+                tab = "Skills"
             });
 
             _fields.Add(new
@@ -179,17 +183,19 @@ namespace CallOfCthulhu
                 type = "textblock",
                 label = "Skills",
                 text = "Skills",
-                name = "skillsLabel"
+                name = "skillsLabel",
+                tab = "Skills"
             });
 
             foreach (var skill in skills)
             {
-                _fields.Add(new { name = $"skills.{skill.Name}", id = $"skills.{skill.Name}", label = skill.Name, type = "number", className = "form-control", @default = skill.Value });
-            } 
+                _fields.Add(new { name = $"skills.{skill.Name}", id = $"skills.{skill.Name}", label = skill.Name, type = "number", className = "form-control", @default = skill.Value, tab = "Skills" });
+            }
 
             _fields.Add(new
             {
-                type = "divider"
+                type = "divider",
+                tab = "Skills"
             });
         }
 
@@ -205,25 +211,25 @@ namespace CallOfCthulhu
                 new { name = "magicPoints", id = "magicPoints", label = "Magic Points", type = "number", className = "form-control", @default = 0 }
             };
 
-            _fields.Add(new { type = "group", name = "derivedStats", label = "Derived Stats", children });
+            _fields.Add(new { type = "group", name = "derivedStats", label = "Derived Stats", children, tab = "Characteristics" });
         }
 
         private static void GenerateBiographySchema()
         {
-            _fields.Add(new { type = "divider" });
-            _fields.Add(new { type = "textblock", label = "Background", text = "Background", name = "backgroundLabel" });
+            _fields.Add(new { type = "divider", tab = "Background" });
+            _fields.Add(new { type = "textblock", label = "Background", text = "Background", name = "backgroundLabel", tab = "Background" });
 
-            _fields.Add(new { name = "description", id = "description", label = "Description", type = "textarea", className = "form-control" });
-            _fields.Add(new { name = "ideology", id = "ideology", label = "Ideology / Beliefs", type = "textarea", className = "form-control" });
-            _fields.Add(new { name = "significantPeople", id = "significantPeople", label = "Significant People", type = "textarea", className = "form-control" });
-            _fields.Add(new { name = "meaningfulLocations", id = "meaningfulLocations", label = "Meaningful Locations", type = "textarea", className = "form-control" });
-            _fields.Add(new { name = "treasuredPosessions", id = "treasuredPosessions", label = "Treasured Possessions", type = "textarea", className = "form-control" });
-            _fields.Add(new { name = "traits", id = "traits", label = "Traits", type = "textarea", className = "form-control" });
-            _fields.Add(new { name = "scars", id = "scars", label = "Injuries & Scars", type = "textarea", className = "form-control" });
-            _fields.Add(new { name = "encounters", id = "encounters", label = "Encounters with Strange Entities", type = "textarea", className = "form-control" });
-            _fields.Add(new { name = "story", id = "story", label = "Story", type = "textarea", className = "form-control" });
+            _fields.Add(new { name = "description", id = "description", label = "Description", type = "textarea", className = "form-control", tab = "Background" });
+            _fields.Add(new { name = "ideology", id = "ideology", label = "Ideology / Beliefs", type = "textarea", className = "form-control", tab = "Background" });
+            _fields.Add(new { name = "significantPeople", id = "significantPeople", label = "Significant People", type = "textarea", className = "form-control", tab = "Background" });
+            _fields.Add(new { name = "meaningfulLocations", id = "meaningfulLocations", label = "Meaningful Locations", type = "textarea", className = "form-control", tab = "Background" });
+            _fields.Add(new { name = "treasuredPosessions", id = "treasuredPosessions", label = "Treasured Possessions", type = "textarea", className = "form-control", tab = "Background" });
+            _fields.Add(new { name = "traits", id = "traits", label = "Traits", type = "textarea", className = "form-control", tab = "Background" });
+            _fields.Add(new { name = "scars", id = "scars", label = "Injuries & Scars", type = "textarea", className = "form-control", tab = "Background" });
+            _fields.Add(new { name = "encounters", id = "encounters", label = "Encounters with Strange Entities", type = "textarea", className = "form-control", tab = "Background" });
+            _fields.Add(new { name = "story", id = "story", label = "Story", type = "textarea", className = "form-control", tab = "Background" });
 
-            _fields.Add(new { type = "divider" });
+            _fields.Add(new { type = "divider", tab = "Background" });
         }
 
         private static void GeneratePhobiasSchema(List<Phobia> phobias)
@@ -240,7 +246,7 @@ namespace CallOfCthulhu
                 obj.options.Add(new { value = phobia.Name, label = phobia.Name, description = phobia.Description });
             }
 
-            _fields.Add(new { name = "phobias", label = "Phobias", type = "array", component = obj });
+            _fields.Add(new { name = "phobias", label = "Phobias", type = "array", component = obj, tab = "Features" });
         }
 
         private static void GenerateManiaSchema(List<Mania> manias)
@@ -257,7 +263,7 @@ namespace CallOfCthulhu
                 obj.options.Add(new { value = mania.Name, label = mania.Name, description = mania.Description });
             }
 
-            _fields.Add(new { name = "manias", label = "Manias", type = "array", component = obj });
+            _fields.Add(new { name = "manias", label = "Manias", type = "array", component = obj, tab = "Features" });
         }
 
         private static void GenerateSpellsSchema(List<Spell> spells)
@@ -281,7 +287,7 @@ namespace CallOfCthulhu
                 });
             }
 
-            _fields.Add(new { name = "spells", label = "Spells", type = "array", component = obj });
+            _fields.Add(new { name = "spells", label = "Spells", type = "array", component = obj, tab = "Features" });
         }
 
         private static void GenerateWeaponsSchema(List<Weapon> weapons)
@@ -311,7 +317,7 @@ namespace CallOfCthulhu
                 });
             }
 
-            _fields.Add(new { name = "weapons", label = "Weapons", type = "array", component = obj });
+            _fields.Add(new { name = "weapons", label = "Weapons", type = "array", component = obj, tab = "Equipment" });
         }
 
         private static void GenerateEquipmentSchema(List<Equipment> equipments)
@@ -335,7 +341,7 @@ namespace CallOfCthulhu
                 });
             }
 
-            _fields.Add(new { name = "equipments", label = "Equipment", type = "array", component = obj });
+            _fields.Add(new { name = "equipments", label = "Equipment", type = "array", component = obj, tab = "Equipment" });
         }
 
         private static void GenerateFinanceSchema()
@@ -348,12 +354,12 @@ namespace CallOfCthulhu
                 new { name = "assets", id = "assets", label = "Assets", type = "textarea", className = "form-control" }
             };
 
-            _fields.Add(new { type = "group", name = "finance", label = "Finance", children });
+            _fields.Add(new { type = "group", name = "finance", label = "Finance", children, tab = "Finance" });
         }
 
         private static void GenerateNotesSchema()
         {
-            _fields.Add(new { name = "notes", id = "notes", label = "Notes", type = "textarea", className = "form-control" });
+            _fields.Add(new { name = "notes", id = "notes", label = "Notes", type = "textarea", className = "form-control", tab = "Finance" });
         }
     }
 }

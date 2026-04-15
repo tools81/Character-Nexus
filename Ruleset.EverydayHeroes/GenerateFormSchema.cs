@@ -231,7 +231,8 @@ namespace EverydayHeroes
                     label = "Name",
                     type = "text",
                     className = "form-control",
-                    @default = "Unknown"
+                    @default = "Unknown",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -240,7 +241,8 @@ namespace EverydayHeroes
                     id = "image",
                     label = "Image",
                     type = "image",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -249,7 +251,8 @@ namespace EverydayHeroes
                     id = "height",
                     label = "Height",
                     type = "text",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -258,7 +261,8 @@ namespace EverydayHeroes
                     id = "weight",
                     label = "Weight",
                     type = "text",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -267,7 +271,8 @@ namespace EverydayHeroes
                     id = "skin",
                     label = "Skin",
                     type = "text",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -276,7 +281,8 @@ namespace EverydayHeroes
                     id = "eyes",
                     label = "Eyes",
                     type = "text",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -285,7 +291,8 @@ namespace EverydayHeroes
                     id = "hair",
                     label = "Hair",
                     type = "text",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -294,7 +301,8 @@ namespace EverydayHeroes
                     id = "age",
                     label = "Age",
                     type = "text",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -303,7 +311,8 @@ namespace EverydayHeroes
                     id = "maritalstatus",
                     label = "Marital Status",
                     type = "text",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -312,7 +321,8 @@ namespace EverydayHeroes
                     id = "pronouns",
                     label = "Pronouns",
                     type = "text",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -321,7 +331,8 @@ namespace EverydayHeroes
                     id = "biography",
                     label = "Biography",
                     type = "textarea",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -330,7 +341,8 @@ namespace EverydayHeroes
                     id = "notes",
                     label = "Notes",
                     type = "textarea",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -346,7 +358,8 @@ namespace EverydayHeroes
                         min = 1,
                         max = 20
                     },
-                    @default = 1
+                    @default = 1,
+                    tab = "Origins"
                 });  
             _fields.Add(
                 new
@@ -511,7 +524,8 @@ namespace EverydayHeroes
         {
             _fields.Add(new
             {
-                type = "divider"
+                type = "divider",
+                tab = "Attributes"
             });
             
             var children = new List<object>();
@@ -541,7 +555,8 @@ namespace EverydayHeroes
                 type = "group",
                 name,
                 label,
-                children
+                children,
+                tab = "Attributes"
             };
 
             _fields.Add(group);
@@ -555,6 +570,7 @@ namespace EverydayHeroes
             obj.label = "Archetype";
             obj.type = "select";
             obj.className = "form-select";
+            obj.tab = "Origins";
             obj.options = new List<object>();
 
             foreach (var archetype in archetypes)
@@ -585,6 +601,7 @@ namespace EverydayHeroes
                 obj.label = "Class";
                 obj.type = "select";
                 obj.className = "form-select";
+                obj.tab = "Origins";
                 obj.options = new List<object>();
 
                 foreach (var cl in classes.Where(c => c.Archetype == archetype.Name))
@@ -624,6 +641,7 @@ namespace EverydayHeroes
             obj.label = "Background";
             obj.type = "select";
             obj.className = "form-select";
+            obj.tab = "Origins";
             obj.options = new List<object>();
 
             foreach (var background in backgrounds.OrderBy(t => t.Name))
@@ -654,6 +672,7 @@ namespace EverydayHeroes
             obj.label = "Profession";
             obj.type = "select";
             obj.className = "form-select";
+            obj.tab = "Origins";
             obj.options = new List<object>();
 
             foreach (var profession in professions.OrderBy(t => t.Name))
@@ -677,18 +696,14 @@ namespace EverydayHeroes
         }
 
         private static void GenerateSkillSchema(List<Skill> skills, string name, string label)
-        {        
-            _fields.Add(new
-            {
-                type = "divider"
-            });
-
+        {
             _fields.Add(new
             {
                 type = "textblock",
                 label,
                 text = label,
-                name
+                name,
+                tab = "Skills"
             });
 
             foreach (var skill in skills)
@@ -724,16 +739,12 @@ namespace EverydayHeroes
                     name = $"skills.{skill.Name}",
                     includeLabel = false,
                     label = "",
-                    children
+                    children,
+                    tab = "Skills"
                 };
 
                 _fields.Add(group);
-            } 
-
-            _fields.Add(new
-            {
-                type = "divider"
-            });           
+            }
         }
 
         private static void GenerateFeatSchema(List<Feat> feats, List<Plan> plans, string name, string label)
@@ -829,7 +840,8 @@ namespace EverydayHeroes
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Features"
             };
 
             _fields.Add(array);
@@ -862,7 +874,8 @@ namespace EverydayHeroes
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Features"
             };
 
             _fields.Add(array);
@@ -903,7 +916,8 @@ namespace EverydayHeroes
                 label,
                 type = "array",
                 dependsOn = obj.dependsOn,
-                component = obj
+                component = obj,
+                tab = "Features"
             };
 
             _fields.Add(array);
@@ -944,7 +958,8 @@ namespace EverydayHeroes
                 label,
                 type = "array",
                 dependsOn = obj.dependsOn,
-                component = obj
+                component = obj,
+                tab = "Features"
             };
 
             _fields.Add(array);
@@ -978,7 +993,8 @@ namespace EverydayHeroes
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -1011,7 +1027,8 @@ namespace EverydayHeroes
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -1044,7 +1061,8 @@ namespace EverydayHeroes
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -1077,7 +1095,8 @@ namespace EverydayHeroes
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -1110,7 +1129,8 @@ namespace EverydayHeroes
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);

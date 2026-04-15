@@ -102,7 +102,8 @@ namespace Transformers
                 id = "id",
                 label = "Id",
                 type = "hidden",
-                className = "form-control"
+                className = "form-control",
+                tab = "Identity"
             });           
             _fields.Add(new
             {
@@ -111,7 +112,8 @@ namespace Transformers
                 label = "Name",
                 type = "text",
                 className = "form-control",
-                @default = "Unknown"
+                @default = "Unknown",
+                tab = "Identity"
             });
             _fields.Add(new
             {
@@ -119,7 +121,8 @@ namespace Transformers
                 id = "image",
                 label = "Image",
                 type = "image",
-                className = "form-control"
+                className = "form-control",
+                tab = "Identity"
             });
             _fields.Add(new
             {
@@ -127,7 +130,8 @@ namespace Transformers
                 id = "description",
                 label = "Description",
                 type = "textarea",
-                className = "form-control"
+                className = "form-control",
+                tab = "Identity"
             });
             _fields.Add(new
             {
@@ -135,7 +139,8 @@ namespace Transformers
                 id = "notes",
                 label = "Notes",
                 type = "textarea",
-                className = "form-control"
+                className = "form-control",
+                tab = "Identity"
             });
             _fields.Add(new
             {
@@ -145,7 +150,8 @@ namespace Transformers
                 type = "number",
                 className = "form-control",
                 validation = new { required = true, min = 1, max = 20 },
-                @default = 1
+                @default = 1,
+                tab = "Identity"
             });
         }
 
@@ -169,6 +175,7 @@ namespace Transformers
                 });
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -193,6 +200,7 @@ namespace Transformers
                 });
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -218,6 +226,7 @@ namespace Transformers
                 });
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -257,6 +266,7 @@ namespace Transformers
                         };
                 }
 
+                obj.tab = "Origins";
                 _fields.Add(obj);
             }
         }
@@ -287,7 +297,8 @@ namespace Transformers
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Features"
             };
 
             _fields.Add(array);
@@ -317,7 +328,8 @@ namespace Transformers
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Features"
             };
 
             _fields.Add(array);
@@ -346,7 +358,8 @@ namespace Transformers
                 type = "group",
                 name,
                 label,
-                children
+                children,
+                tab = "Attributes"
             };
 
             _fields.Add(group);
@@ -377,7 +390,8 @@ namespace Transformers
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Features"
             };
 
             _fields.Add(array);
@@ -388,7 +402,7 @@ namespace Transformers
         {
             foreach (var skill in skills)
             {
-                _fields.Add(new { type = "divider" });
+                _fields.Add(new { type = "divider", tab = "Skills" });
 
                 _fields.Add(new
                 {
@@ -400,7 +414,8 @@ namespace Transformers
                     type = "number",
                     className = "form-control",
                     validation = new { required = true, min = 0, max = 6 },
-                    @default = 0
+                    @default = 0,
+                    tab = "Skills"
                 });
 
                 var skillSpecializations = specializations.Where(s => s.Type == skill.Name).ToList();
@@ -429,7 +444,8 @@ namespace Transformers
                         name = (string)specObj.name,
                         label = (string)specObj.label,
                         type = "array",
-                        component = specObj
+                        component = specObj,
+                        tab = "Skills"
                     };
 
                     _fields.Add(specArray);

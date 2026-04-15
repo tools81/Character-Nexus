@@ -89,21 +89,21 @@ namespace TMNT
 
         private static void GenerateDescriptionSchema()
         {
-            _fields.Add(new { name = "id", id = "id", label = "Id", type = "hidden", className = "form-control" });
-            _fields.Add(new { name = "name", id = "name", label = "Name", type = "text", className = "form-control", @default = "Unknown" });
-            _fields.Add(new { name = "image", id = "image", label = "Image", type = "image", className = "form-control" });
-            _fields.Add(new { name = "origin", id = "origin", label = "Origin", type = "text", className = "form-control" });
-            _fields.Add(new { name = "disposition", id = "disposition", label = "Disposition", type = "text", className = "form-control" });
-            _fields.Add(new { name = "gender", id = "gender", label = "Gender", type = "text", className = "form-control" });
-            _fields.Add(new { name = "age", id = "age", label = "Age", type = "number", className = "form-control", @default = 0 });
-            _fields.Add(new { name = "weight", id = "weight", label = "Weight", type = "text", className = "form-control" });
-            _fields.Add(new { name = "height", id = "height", label = "Height", type = "text", className = "form-control" });
-            _fields.Add(new { name = "size", id = "size", label = "Size", type = "text", className = "form-control" });
-            _fields.Add(new { name = "level", id = "level", label = "Level", type = "number", className = "form-control", validation = new { required = true, min = 1, max = 15 }, @default = 1 });
-            _fields.Add(new { name = "xp", id = "xp", label = "XP", type = "number", className = "form-control", @default = 0 });
-            _fields.Add(new { name = "hitPoints", id = "hitPoints", label = "Hit Points", type = "number", className = "form-control", @default = 0 });
-            _fields.Add(new { name = "sdc", id = "sdc", label = "SDC", type = "number", className = "form-control", @default = 0 });
-            _fields.Add(new { name = "notes", id = "notes", label = "Notes", type = "textarea", className = "form-control" });
+            _fields.Add(new { name = "id", id = "id", label = "Id", type = "hidden", className = "form-control", tab = "Identity" });
+            _fields.Add(new { name = "name", id = "name", label = "Name", type = "text", className = "form-control", @default = "Unknown", tab = "Identity" });
+            _fields.Add(new { name = "image", id = "image", label = "Image", type = "image", className = "form-control", tab = "Identity" });
+            _fields.Add(new { name = "origin", id = "origin", label = "Origin", type = "text", className = "form-control", tab = "Identity" });
+            _fields.Add(new { name = "disposition", id = "disposition", label = "Disposition", type = "text", className = "form-control", tab = "Identity" });
+            _fields.Add(new { name = "gender", id = "gender", label = "Gender", type = "text", className = "form-control", tab = "Identity" });
+            _fields.Add(new { name = "age", id = "age", label = "Age", type = "number", className = "form-control", @default = 0, tab = "Identity" });
+            _fields.Add(new { name = "weight", id = "weight", label = "Weight", type = "text", className = "form-control", tab = "Identity" });
+            _fields.Add(new { name = "height", id = "height", label = "Height", type = "text", className = "form-control", tab = "Identity" });
+            _fields.Add(new { name = "size", id = "size", label = "Size", type = "text", className = "form-control", tab = "Identity" });
+            _fields.Add(new { name = "level", id = "level", label = "Level", type = "number", className = "form-control", validation = new { required = true, min = 1, max = 15 }, @default = 1, tab = "Origins" });
+            _fields.Add(new { name = "xp", id = "xp", label = "XP", type = "number", className = "form-control", @default = 0, tab = "Stats" });
+            _fields.Add(new { name = "hitPoints", id = "hitPoints", label = "Hit Points", type = "number", className = "form-control", @default = 0, tab = "Stats" });
+            _fields.Add(new { name = "sdc", id = "sdc", label = "SDC", type = "number", className = "form-control", @default = 0, tab = "Stats" });
+            _fields.Add(new { name = "notes", id = "notes", label = "Notes", type = "textarea", className = "form-control", tab = "Identity" });
         }
 
         private static void GenerateAnimalSchema(List<Animal> animals)
@@ -131,6 +131,7 @@ namespace TMNT
                 });
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -154,6 +155,7 @@ namespace TMNT
                 });
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -177,6 +179,7 @@ namespace TMNT
                 });
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -199,6 +202,7 @@ namespace TMNT
                 });
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -221,6 +225,7 @@ namespace TMNT
                 });
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -244,7 +249,7 @@ namespace TMNT
                 });
             }
 
-            _fields.Add(new { type = "group", name = "attributes", label = "Attributes", children });
+            _fields.Add(new { type = "group", name = "attributes", label = "Attributes", children, tab = "Attributes" });
         }
 
         private static void GenerateAnimalDependentSchema(List<(string Name, string Description, string Animal, int Cost)> items, string fieldName, string fieldLabel)
@@ -272,6 +277,7 @@ namespace TMNT
                     });
                 }
 
+                obj.tab = "Features";
                 _fields.Add(obj);
             }
         }
@@ -303,7 +309,8 @@ namespace TMNT
                 name = "psionics",
                 label = "Psionics",
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Features"
             };
 
             _fields.Add(array);
@@ -313,7 +320,8 @@ namespace TMNT
         {
             _fields.Add(new
             {
-                type = "divider"
+                type = "divider",
+                tab = "Skills"
             });
 
             _fields.Add(new
@@ -321,17 +329,19 @@ namespace TMNT
                 type = "textblock",
                 label = "Skills",
                 text = "Skills",
-                name = "skillsLabel"
+                name = "skillsLabel",
+                tab = "Skills"
             });
 
             foreach (var skill in skills)
             {
-                _fields.Add(new { name = $"skills.{skill.Name}", id = $"skills.{skill.Name}", label = skill.Name, type = "number", className = "form-control", @default = 0 });
-            } 
+                _fields.Add(new { name = $"skills.{skill.Name}", id = $"skills.{skill.Name}", label = skill.Name, type = "number", className = "form-control", @default = 0, tab = "Skills" });
+            }
 
             _fields.Add(new
             {
-                type = "divider"
+                type = "divider",
+                tab = "Skills"
             });
         }
 
@@ -367,7 +377,8 @@ namespace TMNT
                 name = "weapons",
                 label = "Weapons",
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -399,7 +410,8 @@ namespace TMNT
                 name = "equipments",
                 label = "Equipment",
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -425,6 +437,7 @@ namespace TMNT
                 });
             }
 
+            obj.tab = "Equipment";
             _fields.Add(obj);
         }
 
@@ -451,6 +464,7 @@ namespace TMNT
                 });
             }
 
+            obj.tab = "Equipment";
             _fields.Add(obj);
         }
     }

@@ -127,7 +127,8 @@ namespace DarkCrystal
                     id = "id",
                     label = "Id",
                     type = "hidden",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -137,7 +138,8 @@ namespace DarkCrystal
                     label = "Name",
                     type = "text",
                     className = "form-control",
-                    @default = "Unknown"
+                    @default = "Unknown",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -146,7 +148,8 @@ namespace DarkCrystal
                     id = "image",
                     label = "Image",
                     type = "image",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
             _fields.Add(
                 new
@@ -155,7 +158,8 @@ namespace DarkCrystal
                     id = "notes",
                     label = "Notes",
                     type = "textarea",
-                    className = "form-control"
+                    className = "form-control",
+                    tab = "Identity"
                 });
         }
 
@@ -180,6 +184,7 @@ namespace DarkCrystal
                 );
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -208,6 +213,7 @@ namespace DarkCrystal
                 );
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
 
             //Add a div below dropdown after selecting a value, containing details of Origin
@@ -271,7 +277,8 @@ namespace DarkCrystal
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Features"
             };
 
             _fields.Add(array);
@@ -283,7 +290,8 @@ namespace DarkCrystal
             {
                 _fields.Add(new
                 {
-                    type = "divider"
+                    type = "divider",
+                    tab = "Skills"
                 });
 
                 var field = new
@@ -291,7 +299,8 @@ namespace DarkCrystal
                     name = $"skills.{element.Name.ToLower()}",
                     id = $"skills.{element.Name}",
                     label = element.Name,
-                    type = "switch"
+                    type = "switch",
+                    tab = "Skills"
                 };
 
                 _fields.Add(field);
@@ -324,7 +333,8 @@ namespace DarkCrystal
                     name = obj.name,
                     label = obj.label,
                     type = "array",
-                    component = obj
+                    component = obj,
+                    tab = "Skills"
                 };
 
                 _fields.Add(array);
@@ -357,7 +367,8 @@ namespace DarkCrystal
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Features"
             };
 
             _fields.Add(array);
@@ -389,7 +400,8 @@ namespace DarkCrystal
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);

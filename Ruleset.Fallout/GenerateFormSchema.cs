@@ -141,7 +141,8 @@ namespace Fallout
                 id = "id",
                 label = "Id",
                 type = "hidden",
-                className = "form-control"
+                className = "form-control",
+                tab = "Identity"
             });
             _fields.Add(new
             {
@@ -208,7 +209,8 @@ namespace Fallout
                 label = "Name",
                 type = "text",
                 className = "form-control",
-                @default = "Unknown"
+                @default = "Unknown",
+                tab = "Identity"
             });
             _fields.Add(new
             {
@@ -216,7 +218,8 @@ namespace Fallout
                 id = "image",
                 label = "Image",
                 type = "image",
-                className = "form-control"
+                className = "form-control",
+                tab = "Identity"
             });
             _fields.Add(new
             {
@@ -225,7 +228,8 @@ namespace Fallout
                 label = "Level",
                 type = "number",
                 className = "form-control",
-                @default = 1
+                @default = 1,
+                tab = "Identity"
             });
             _fields.Add(new
             {
@@ -234,7 +238,8 @@ namespace Fallout
                 label = "Caps",
                 type = "number",
                 className = "form-control",
-                @default = 0
+                @default = 0,
+                tab = "Identity"
             });
         }
 
@@ -261,6 +266,7 @@ namespace Fallout
                 });
             }
 
+            obj.tab = "Origins";
             _fields.Add(obj);
         }
 
@@ -294,7 +300,8 @@ namespace Fallout
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Origins"
             };
 
             _fields.Add(array);
@@ -329,7 +336,8 @@ namespace Fallout
                 type = "group",
                 name,
                 label,
-                children
+                children,
+                tab = "Attributes"
             });
         }
 
@@ -362,7 +370,8 @@ namespace Fallout
                 type = "group",
                 name,
                 label,
-                children
+                children,
+                tab = "Skills"
             });
         }
 
@@ -395,7 +404,8 @@ namespace Fallout
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Features"
             };
 
             _fields.Add(array);
@@ -435,6 +445,7 @@ namespace Fallout
                     });
                 }
 
+                obj.tab = "Features";
                 _fields.Add(obj);
             }
         }
@@ -508,7 +519,8 @@ namespace Fallout
                         {
                             field = "origin",
                             value = _nonRobotOrigins
-                        }
+                        },
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -583,7 +595,8 @@ namespace Fallout
                         {
                             field = "origin",
                             value = _nonRobotOrigins
-                        }
+                        },
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -620,7 +633,8 @@ namespace Fallout
                         {
                             field = "origin",
                             value = _robotOrigins
-                        }
+                        },
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -678,7 +692,8 @@ namespace Fallout
                 {
                     field = "origin",
                     value = _robotOrigins
-                }
+                },
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -715,7 +730,8 @@ namespace Fallout
                         {
                             field = "origin",
                             value = _robotOrigins
-                        }
+                        },
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -752,7 +768,8 @@ namespace Fallout
                         {
                             field = "origin",
                             value = _nonRobotOrigins
-                        }
+                        },
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -784,7 +801,8 @@ namespace Fallout
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -816,7 +834,8 @@ namespace Fallout
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);
@@ -848,7 +867,8 @@ namespace Fallout
                 name,
                 label,
                 type = "array",
-                component = obj
+                component = obj,
+                tab = "Equipment"
             };
 
             _fields.Add(array);

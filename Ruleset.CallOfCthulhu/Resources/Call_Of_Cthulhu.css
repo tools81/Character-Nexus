@@ -21,6 +21,9 @@ body.theme-call-of-cthulhu {
 }
 
 /* ── Typography ──────────────────────────────────────────────── */
+body.theme-call-of-cthulhu .tab-bar {
+  color: var(--coc-ink-fade);
+}
 body.theme-call-of-cthulhu h1 {
   font-family: 'IM Fell English', serif;
   color: var(--coc-ink);

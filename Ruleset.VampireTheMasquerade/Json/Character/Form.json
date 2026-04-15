@@ -6,7 +6,8 @@
       "id": "id",
       "label": "Id",
       "type": "hidden",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "name",
@@ -14,14 +15,16 @@
       "label": "Name",
       "type": "text",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "image",
       "id": "image",
       "label": "Image",
       "type": "image",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "appearance",
@@ -29,7 +32,8 @@
       "label": "Appearance",
       "type": "textarea",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "distinguishingFeatures",
@@ -37,7 +41,8 @@
       "label": "Distinguishing Features",
       "type": "textarea",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "concept",
@@ -45,28 +50,32 @@
       "label": "Concept",
       "type": "text",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "age",
       "id": "age",
       "label": "Age",
       "type": "number",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "dateOfBirth",
       "id": "dateOfBirth",
       "label": "Date of Birth",
       "type": "date",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "dateOfDeath",
       "id": "dateOfDeath",
       "label": "Date of Death",
       "type": "date",
-      "className": "form-control"
+      "className": "form-control",
+      "tab": "Identity"
     },
     {
       "name": "sire",
@@ -74,7 +83,8 @@
       "label": "Sire",
       "type": "text",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "chronicle",
@@ -82,7 +92,8 @@
       "label": "Chronicle",
       "type": "text",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "ambition",
@@ -90,7 +101,8 @@
       "label": "Ambition",
       "type": "text",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "desire",
@@ -98,7 +110,8 @@
       "label": "Desire",
       "type": "text",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "chronicleTenets",
@@ -106,7 +119,8 @@
       "label": "Chronicle Tenets",
       "type": "textarea",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "touchstonesConvictions",
@@ -114,7 +128,8 @@
       "label": "Touchstones and Convictions",
       "type": "textarea",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "notes",
@@ -122,7 +137,8 @@
       "label": "Notes",
       "type": "textarea",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "history",
@@ -130,7 +146,8 @@
       "label": "History",
       "type": "textarea",
       "className": "form-control",
-      "default": "Unknown"
+      "default": "Unknown",
+      "tab": "Identity"
     },
     {
       "name": "clan",
@@ -243,7 +260,8 @@
           "description": "The Ministry always has something to offer. This often cult-like clan recruits those able to employ temptation as a weapon. They Embrace those with the will and means to sway, entrap, and ultimately liberate their targets from whatever they seek: the victim's possessions, allegiance, or even faith. To the Serpents, everything has a price. The clan was formerly known as the Followers of Set. For as much as a cult as they are a clan, the majority of their members adhere to a disruptive system of beliefs. They are known as as a group of the devious type, tricksters, tempters and liars. Due to this their relationships in the modern age and in the past are rocky at best, given their tendencies to play all sides during major conflicts. Their entry into the Camarilla was rejected, leaving most to side up with the Anarchs.<br /><b>Bane: </b>Abhors the Light - When a Minister is exposed to direct illumination, be it naturally caused or artificial, they receive a penalty equal to their Bane Severity to all dice pools while subject to the light. They also add their Bane Severity to Aggravated damage taken from sunlight.<br /><b>Compulsion: </b>Transgression - The Minister suffers a burning desire to influence those around them to shatter the chains of their own making. They suffer a two-dice penalty to all dice pools that do not relate to enticing someone or themselves to break a Chronicle or personal Conviction. The Compulsion ends once the Minister causes someone, or themselves, at least one stain.",
           "userChoices": "[{\"type\":\"disciplines\",\"label\":null,\"choices\":[\"Obfuscate\",\"Presence\",\"Protean\"],\"count\":2,\"category\":\"Adjustment\",\"value\":2}]"
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "predator",
@@ -321,7 +339,8 @@
           "bonusAdjustments": "[{\"type\":\"merits\",\"name\":\"Beautiful\",\"value\":2,\"conditions\":[]},{\"type\":\"flaws\",\"name\":\"Enemy\",\"value\":1,\"conditions\":[]}]",
           "userChoices": "[{\"type\":\"specialties\",\"label\":null,\"choices\":[\"Persuasion.Seduction\",\"Subterfuge.Seduction\"],\"count\":1,\"category\":\"Characteristic\",\"value\":null},{\"type\":\"disciplines\",\"label\":null,\"choices\":[\"Fortitude\",\"Presence\"],\"count\":1,\"category\":\"Adjustment\",\"value\":1}]"
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "generation",
@@ -353,7 +372,8 @@
           "description": "Older than 250 years old, Ninth Generation or lower. The Beckoning slowly calls the elders to the Gehenna War, and they are not available as player characters in this book.",
           "bonusAdjustments": "[{\"type\":\"bloodPotency\",\"name\":\"\",\"value\":3,\"conditions\":[]}]"
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "coterie",
@@ -436,15 +456,18 @@
           "label": "Watchmen",
           "description": "The coterie patrols the city and protects it from intruders, especially Anarchs and werewolves. Camarilla coteries established in border cities to repel Sabbat influence or to colonize newly won territory also count as Watchmen. Anarch cities call their Watchmen (who also guard against reactionaries and Camarilla infiltrators) the Committee of Public Safety, the Cheka, or the Eyes of the People."
         }
-      ]
+      ],
+      "tab": "Origins"
     },
     {
       "name": "attributes.label",
       "text": "Attributes",
-      "type": "textblock"
+      "type": "textblock",
+      "tab": "Attributes"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Attributes"
     },
     {
       "type": "group",
@@ -493,7 +516,8 @@
           },
           "default": 1
         }
-      ]
+      ],
+      "tab": "Attributes"
     },
     {
       "type": "group",
@@ -542,7 +566,8 @@
           },
           "default": 1
         }
-      ]
+      ],
+      "tab": "Attributes"
     },
     {
       "type": "group",
@@ -591,18 +616,22 @@
           },
           "default": 1
         }
-      ]
+      ],
+      "tab": "Attributes"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Attributes"
     },
     {
       "name": "skill.label",
       "text": "Skills",
-      "type": "textblock"
+      "type": "textblock",
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1251,7 +1280,8 @@
             }
           ]
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -1916,7 +1946,8 @@
             }
           ]
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
       "type": "group",
@@ -2585,10 +2616,12 @@
             }
           ]
         }
-      ]
+      ],
+      "tab": "Skills"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Skills"
     },
     {
       "id": "disciplines",
@@ -4165,7 +4198,8 @@
             ]
           }
         }
-      ]
+      ],
+      "tab": "Disciplines"
     },
     {
       "name": "rituals",
@@ -4308,7 +4342,8 @@
             "description": "This ward uses the standard rules for Warding Circles (p. 275).<br /><b>Level: </b>5<br /><b>Type: </b>Ward<br /><b>Ingredients: </b>The caster draws the Warding Circle with a rowan wand dipped in the mixture of ash from a still-burning fire and Blood.<br /><b>Process: </b><br /><b>System: </b>"
           }
         ]
-      }
+      },
+      "tab": "Disciplines"
     },
     {
       "id": "advantages",
@@ -5197,7 +5232,8 @@
             ]
           }
         }
-      ]
+      ],
+      "tab": "Advantages"
     },
     {
       "id": "advantages",
@@ -6384,7 +6420,8 @@
             ]
           }
         }
-      ]
+      ],
+      "tab": "Advantages"
     },
     {
       "name": "weapons",
@@ -6487,7 +6524,8 @@
             "description": "<br /><b>Type: </b>Heavy impact<br /><b>Damage: </b>2"
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "armors",
@@ -6520,7 +6558,8 @@
             "description": "<br /><b>Ballistic: </b>0<br /><b>Physical: </b>2"
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "gears",
@@ -6548,12 +6587,14 @@
             "description": "At their core, XScopes use simple technology from a distance they determine if someone is living or dead by looking for heartbeat, respiration, and body heat. The SI has installed basic XScopes in every airport security scanner, set to send up a red flag to the duty agent if a blankbody trips them. Man-portable XScopes resemble large video cameras, and the SI often disguises them as exactly that. However, Kindred can deceive basic XScopes with Blush of Life.<br />Second-generation XScopes - mostly not in common use, although Heathrow, Reagan National, Da Vinci Airport in Rome, and other 'critical installations' deploy them already using specialized software to differentiate between natural blood flow and imitated life. For now, detecting thin-bloods remains just outside the technical threshold, although the Inquisition and CIA are pursuing several promising leads.<br />For non-Duskborn, concealing oneself from a second-generation XScope reading requires Blush of Life and a Composure + Stamina roll against Difficulty 5 + the operator's Resolve."
           }
         ]
-      }
+      },
+      "tab": "Equipment"
     },
     {
       "name": "humanity.label",
       "text": "Humanity",
-      "type": "textblock"
+      "type": "textblock",
+      "tab": "Status"
     },
     {
       "name": "humanity",
@@ -6567,12 +6608,14 @@
         "max": 10
       },
       "count": 10,
-      "default": 7
+      "default": 7,
+      "tab": "Status"
     },
     {
       "name": "bloodPotency.label",
       "text": "Blood Potency",
-      "type": "textblock"
+      "type": "textblock",
+      "tab": "Status"
     },
     {
       "name": "bloodPotency",
@@ -6586,12 +6629,14 @@
         "max": 10
       },
       "count": 10,
-      "default": 1
+      "default": 1,
+      "tab": "Status"
     },
     {
       "name": "hunger.label",
       "text": "Hunger",
-      "type": "textblock"
+      "type": "textblock",
+      "tab": "Status"
     },
     {
       "name": "hunger",
@@ -6605,10 +6650,12 @@
         "max": 5
       },
       "count": 5,
-      "default": 0
+      "default": 0,
+      "tab": "Status"
     },
     {
-      "type": "divider"
+      "type": "divider",
+      "tab": "Status"
     },
     {
       "name": "totalExperience",
@@ -6616,7 +6663,8 @@
       "label": "Total Experience",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Status"
     },
     {
       "name": "spentExperience",
@@ -6624,7 +6672,8 @@
       "label": "Spent Experience",
       "type": "number",
       "className": "form-control",
-      "default": 0
+      "default": 0,
+      "tab": "Status"
     }
   ]
 }

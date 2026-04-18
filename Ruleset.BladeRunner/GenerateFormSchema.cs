@@ -69,9 +69,10 @@ namespace BladeRunner
 
                 GenerateDescriptionSchema();
 
-                GenerateOriginSchema(origins, "origin", "Origin");
+                var choiceLookup = attributes.Cast<IBaseJson>().Concat(skills.Cast<IBaseJson>()).ToList();
+                GenerateOriginSchema(origins, choiceLookup, "origin", "Origin");
                 GenerateArchetypeSchema(archetypes, "archetype", "Archetype");
-                GenerateTenureSchema(tenures, "tenure", "Tenure");
+                GenerateTenureSchema(tenures, choiceLookup, "tenure", "Tenure");
                 GenerateAttributeSchema(attributes, "attributes", "Attributes");
                 GenerateKeyMemorySchema(tableMemoryWhenItems, tableMemoryWhoItems, tableMemoryWhereItems,
                     tableMemoryWhatItems, tableMemoryHowItems, "memory", "Key Memory");
@@ -220,7 +221,7 @@ namespace BladeRunner
             );
         }
 
-        private static void GenerateOriginSchema(List<Origin> origins, string name, string label)
+        private static void GenerateOriginSchema(List<Origin> origins, List<IBaseJson> choiceLookup, string name, string label)
         {
             dynamic obj = new ExpandoObject();
 
@@ -240,7 +241,7 @@ namespace BladeRunner
                         label = origin.Name,
                         description = origin.Description,
                         bonusAdjustments = JsonConvert.SerializeObject(origin.BonusAdjustments, _jsonSettings),
-                        userChoices = JsonConvert.SerializeObject(origin.UserChoices)
+                        userChoices = JsonConvert.SerializeObject(FormSchemaExtensions.EnrichUserChoices(origin.UserChoices, choiceLookup), _jsonSettings)
                     }
                 );
             }
@@ -276,7 +277,7 @@ namespace BladeRunner
             _fields.Add(obj);
         }
 
-        private static void GenerateTenureSchema(List<Tenure> tenures, string name, string label)
+        private static void GenerateTenureSchema(List<Tenure> tenures, List<IBaseJson> choiceLookup, string name, string label)
         {
             dynamic obj = new ExpandoObject();
 
@@ -296,7 +297,7 @@ namespace BladeRunner
                         label = tenure.Name,
                         description = tenure.Description,
                         bonusAdjustments = JsonConvert.SerializeObject(tenure.BonusAdjustments, _jsonSettings),
-                        userChoices = JsonConvert.SerializeObject(tenure.UserChoices, _jsonSettings)
+                        userChoices = JsonConvert.SerializeObject(FormSchemaExtensions.EnrichUserChoices(tenure.UserChoices, choiceLookup), _jsonSettings)
                     }
                 );
             }

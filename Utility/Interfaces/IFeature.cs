@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Utility
 {
-    public interface IFeature
+    public interface IFeature : IBaseJson
     {
 
     }

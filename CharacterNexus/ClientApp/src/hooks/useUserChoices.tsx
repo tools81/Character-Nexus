@@ -56,6 +56,8 @@ export function useUserChoices(
       item.choices.forEach((choice: any, index: any) => {
         const name = `choice.${item.type}.${origin}.${index}`;
 
+        const description = item.choiceDescriptions?.[index];
+
         if (item.category === "Characteristic") {
           const bonusChar = { origin, type: item.type, value: choice };
           newFields.push({
@@ -63,6 +65,7 @@ export function useUserChoices(
             key: name,
             name,
             label: choice,
+            description,
             type: "switch",
             defaultValue: false,
             bonusCharacteristics: JSON.stringify([bonusChar])
@@ -75,6 +78,7 @@ export function useUserChoices(
             key: name,
             name,
             label: choice,
+            description,
             type: "stepper",
             bonusAdjustments: JSON.stringify([bonusAdj]),
             defaultValue: 0

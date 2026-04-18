@@ -38,54 +38,6 @@ namespace EverydayHeroes
             return jsonObject;
         }
 
-        public IEnumerable<Attribute> GetAttributeList()
-        {
-            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.EverydayHeroes.Json.Attributes.json"))
-            {
-                using (var reader = new StreamReader(stream))
-                {
-                    var jsonContent = reader.ReadToEnd();
-                    return JsonTo.IEnumerable<Attribute>(jsonContent);
-                }
-            }
-        }
-
-        public IEnumerable<IClass> GetClassList()
-        {
-            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.EverydayHeroes.Json.Classes.json"))
-            {
-                using (var reader = new StreamReader(stream))
-                {
-                    var jsonContent = reader.ReadToEnd();
-                    return JsonTo.IEnumerable<Archetype>(jsonContent);
-                }
-            }
-        }
-
-        public IEnumerable<IFeature> GetFeatureList()
-        {
-            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.EverydayHeroes.Json.Features.json"))
-            {
-                using (var reader = new StreamReader(stream))
-                {
-                    var jsonContent = reader.ReadToEnd();
-                    return JsonTo.IEnumerable<Feature>(jsonContent);
-                }
-            }
-        }
-
-        public IEnumerable<IAbility> GetAbilityList()
-        {
-            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ruleset.EverydayHeroes.Json.Abilities.json"))
-            {
-                using (var reader = new StreamReader(stream))
-                {
-                    var jsonContent = reader.ReadToEnd();
-                    return JsonTo.IEnumerable<Ability>(jsonContent);
-                }
-            }
-        }
-
         public ICharacter? SaveCharacter(string data)
         {
             try

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Utility
 {
-    public interface IEquipment
+    public interface IEquipment : IBaseJson
     {
 
     }

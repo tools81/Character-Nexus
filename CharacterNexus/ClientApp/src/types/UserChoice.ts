@@ -3,6 +3,7 @@ export interface UserChoice {
     label?: string;
     type: string;
     choices: string[];
+    choiceDescriptions?: string[];
     count: number;
     category: string;
     value: string;

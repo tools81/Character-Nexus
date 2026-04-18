@@ -6,37 +6,38 @@
   {
     "name": "Replicant",
     "description": "Replicants are bioengineered beings desigend to resemble humans closely, created for labor and entertainment in off-world colonies. They possess advanced physical abilities and emotions, but their limited lifespan and societal oppression raise questions about their humanity, autonomy, and rights.",
-    "bonusadjustment": [
+    "bonusadjustments": [
       {
-        "type": "Chinyen",
+        "type": "chinyen",
         "name": "Chinyen",
         "value": -1
       },
       {
-        "type": "PromotionPoints",
+        "type": "promotionpoints",
         "name": "PromotionPoints",
         "value": -1
       },
       {
-        "type": "Health",
+        "type": "health",
         "name": "Health",
         "value": 2
       },
       {
-        "type": "Resolve",
+        "type": "resolve",
         "name": "Resolve",
         "value": -2
       }
     ],
-    "userchoice": [
+    "userchoices": [
       {
-        "type": "Attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Agility"
         ],
         "count": 1,
-        "value": 1
+        "value": 1, 
+        "category": "Adjustment"
       }
     ]
   }

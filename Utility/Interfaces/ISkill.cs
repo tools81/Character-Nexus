@@ -5,8 +5,7 @@ using System.Threading.Tasks;
 
 namespace Utility
 {
-    public interface ISkill
+    public interface ISkill : IBaseJson
     {
-        public string Description { get; set; }
     }
 }

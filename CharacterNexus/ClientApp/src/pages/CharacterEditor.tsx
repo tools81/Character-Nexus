@@ -794,15 +794,14 @@ const FormContents = ({
                     field.name?.startsWith(`choice.${item.type}.${item.origin}.`)
                   )
                   .map((field: any) => (
-                    <div key={field.id}>
-                      {renderField(
-                        field,
-                        disabledMap,
-                        visibilityMap,
-                        isVisible,
-                        field.includeLabel ?? true
-                      )}
-                    </div>
+                    <ChoiceFieldWithDescription
+                      key={field.id}
+                      field={field}
+                      disabledMap={disabledMap}
+                      visibilityMap={visibilityMap}
+                      isVisible={isVisible}
+                      renderField={renderField}
+                    />
                   ))}
 
                 {index < userChoices.length - 1 && (
@@ -819,5 +818,38 @@ const FormContents = ({
   );
 };
 
+
+function ChoiceFieldWithDescription({ field, disabledMap, visibilityMap, isVisible, renderField }: {
+  field: any;
+  disabledMap: any;
+  visibilityMap: any;
+  isVisible: any;
+  renderField: any;
+}) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div>
+      <div className="d-flex align-items-center gap-2">
+        <div className="flex-grow-1">
+          {renderField(field, disabledMap, visibilityMap, isVisible, field.includeLabel ?? true)}
+        </div>
+        {field.description && (
+          <button
+            type="button"
+            className="btn btn-link btn-sm p-0 text-muted flex-shrink-0"
+            onClick={() => setOpen(o => !o)}
+            aria-expanded={open}
+          >
+            {open ? "▲" : "▼"}
+          </button>
+        )}
+      </div>
+      {field.description && open && (
+        <small className="text-muted d-block mb-2 mt-1">{field.description}</small>
+      )}
+    </div>
+  );
+}
 
 export default CharacterEditor;

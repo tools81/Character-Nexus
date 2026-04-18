@@ -294,6 +294,26 @@ span .inline-icon {
   white-space: nowrap;
 }
 
+.stats-bar__pips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  max-width: 120px;
+}
+
+.stats-bar__pip {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-accent, #888);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.stats-bar__pip--filled {
+  background-color: var(--color-accent, #888);
+}
+
 .stats-bar__expand {
   background: none;
   border: none;

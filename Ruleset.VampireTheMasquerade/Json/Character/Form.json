@@ -6591,46 +6591,46 @@
       "tab": "Equipment"
     },
     {
-      "name": "humanity.label",
-      "text": "Humanity",
-      "type": "textblock",
-      "tab": "Status"
+      "name": "health",
+      "id": "health",
+      "label": "Health",
+      "type": "radiogroup",
+      "className": "form-control",
+      "count": 15,
+      "calculation": "[attributes.Stamina] + 3",
+      "pinnedStat": true,
+      "default": 3
+    },
+    {
+      "name": "willpower",
+      "id": "willpower",
+      "label": "Willpower",
+      "type": "radiogroup",
+      "className": "form-control",
+      "count": 15,
+      "calculation": "[attributes.Composure] + [attributes.Resolve]",
+      "pinnedStat": true,
+      "default": 0
     },
     {
       "name": "humanity",
       "id": "humanity",
-      "includeLabel": false,
+      "label": "Humanity",
       "type": "radiogroup",
       "className": "form-control",
-      "validation": {
-        "required": true,
-        "min": 0,
-        "max": 10
-      },
       "count": 10,
       "default": 7,
-      "tab": "Status"
-    },
-    {
-      "name": "bloodPotency.label",
-      "text": "Blood Potency",
-      "type": "textblock",
-      "tab": "Status"
+      "pinnedStat": true
     },
     {
       "name": "bloodPotency",
       "id": "bloodPotency",
-      "includeLabel": false,
+      "label": "Blood Potency",
       "type": "radiogroup",
       "className": "form-control",
-      "validation": {
-        "required": true,
-        "min": 0,
-        "max": 10
-      },
       "count": 10,
       "default": 1,
-      "tab": "Status"
+      "pinnedStat": true
     },
     {
       "name": "hunger.label",

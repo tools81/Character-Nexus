@@ -418,104 +418,58 @@ namespace VampireTheMasquerade
 
         private static void GenerateTemporaryValuesSchema()
         {     
-            // _fields.Add( new
-            // {
-            //     name = "health.label",
-            //     text = "Health",
-            //     type = "textblock"    
-            // });
-            // _fields.Add(
-            //     new
-            //     {
-            //         name = "health",
-            //         id = "health",
-            //         includeLabel = false,
-            //         type = "radiogroup",
-            //         className = "form-control",
-            //         validation = new
-            //         {
-            //             required = true,
-            //             min = 0,
-            //             max = 15
-            //         },
-            //         count = 15,
-            //         @default = 3
-            //     });
+            _fields.Add(
+                new
+                {
+                    name = "health",
+                    id = "health",
+                    label = "Health",
+                    type = "radiogroup",
+                    className = "form-control",
+                    count = 15,
+                    calculation = $"[attributes.Stamina] + 3",
+                    pinnedStat = true,
+                    @default = 3
+                });
 
-            // _fields.Add( new
-            // {
-            //     name = "willpower.label",
-            //     text = "Willpower",
-            //     type = "textblock"    
-            // });
-            // _fields.Add(
-            //     new
-            //     {
-            //         name = "willpower",
-            //         id = "willpower",
-            //         includeLabel = false,
-            //         type = "radiogroup",
-            //         className = "form-control",
-            //         validation = new
-            //         {
-            //             required = true,
-            //             min = 0,
-            //             max = 15
-            //         },
-            //         count = 15,
-            //         @default = 0
-            //     });
-            
-            _fields.Add( new
-            {
-                name = "humanity.label",
-                text = "Humanity",
-                type = "textblock",
-                tab = "Status"
-            });
+            _fields.Add(
+                new
+                {
+                    name = "willpower",
+                    id = "willpower",
+                    label = "Willpower",
+                    type = "radiogroup",
+                    className = "form-control",
+                    count = 15,
+                    calculation = $"[attributes.Composure] + [attributes.Resolve]",
+                    pinnedStat = true,
+                    @default = 0
+                });
+
             _fields.Add(
                 new
                 {
                     name = "humanity",
                     id = "humanity",
-                    includeLabel = false,
+                    label = "Humanity",
                     type = "radiogroup",
                     className = "form-control",
-                    validation = new
-                    {
-                        required = true,
-                        min = 0,
-                        max = 10
-                    },
                     count = 10,
                     @default = 7,
-                    tab = "Status"
+                    pinnedStat = true
                 });
 
-            _fields.Add( new
-            {
-                name = "bloodPotency.label",
-                text = "Blood Potency",
-                type = "textblock",
-                tab = "Status"
-            });
             _fields.Add(
                 new
                 {
                     name = "bloodPotency",
                     id = "bloodPotency",
-                    includeLabel = false,
+                    label = "Blood Potency",
                     type = "radiogroup",
                     className = "form-control",
-                    validation = new
-                    {
-                        required = true,
-                        min = 0,
-                        max = 10
-                    },
                     count = 10,
                     @default = 1,
-                    tab = "Status"
+                    pinnedStat = true
                 });
 
             _fields.Add( new

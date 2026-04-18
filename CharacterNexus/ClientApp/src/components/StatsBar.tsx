@@ -5,13 +5,14 @@ import { useMediaQuery } from "../hooks/useMediaQuery";
 interface PinnedField {
   name: string;
   label: string;
+  count?: number;
 }
 
 function collectPinnedFields(fields: any[]): PinnedField[] {
   const result: PinnedField[] = [];
   for (const field of fields) {
     if (field.pinnedStat && field.name) {
-      result.push({ name: field.name, label: field.label ?? field.name });
+      result.push({ name: field.name, label: field.label ?? field.name, count: field.count });
     }
     if (Array.isArray(field.items)) {
       collectPinnedFields(field.items).forEach(f => result.push(f));
@@ -57,10 +58,27 @@ const StatsBar: React.FC<StatsBarProps> = ({ schema, onInstructionsToggle, instr
   const statTiles = pinnedFields.map((field, i) => {
     const display = resolveDisplayValue(values[i]);
     if (display === null) return null;
+    let valueDisplay: React.ReactNode;
+    if (field.count != null) {
+      const numVal = Number(display);
+      if (!isNaN(numVal)) {
+        valueDisplay = (
+          <span className="stats-bar__pips">
+            {Array.from({ length: field.count }, (_, j) => (
+              <span key={j} className={`stats-bar__pip${j < numVal ? " stats-bar__pip--filled" : ""}`} />
+            ))}
+          </span>
+        );
+      } else {
+        valueDisplay = display;
+      }
+    } else {
+      valueDisplay = display;
+    }
     return (
       <div key={field.name} className="stats-bar__tile">
         <span className="stats-bar__label">{field.label}</span>
-        <span className="stats-bar__value">{display}</span>
+        <span className="stats-bar__value">{valueDisplay}</span>
       </div>
     );
   }).filter(Boolean);

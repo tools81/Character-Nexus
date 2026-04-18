@@ -75,7 +75,7 @@ export function useUserChoices(
             key: name,
             name,
             label: choice,
-            type: "number",
+            type: "stepper",
             bonusAdjustments: JSON.stringify([bonusAdj]),
             defaultValue: 0
           });

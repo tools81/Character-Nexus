@@ -1095,8 +1095,7 @@ namespace EverydayHeroes
                 name,
                 label,
                 type = "array",
-                component = obj,
-                tab = "Equipment"
+                component = obj
             };
 
             _fields.Add(array);
@@ -1129,8 +1128,7 @@ namespace EverydayHeroes
                 name,
                 label,
                 type = "array",
-                component = obj,
-                tab = "Equipment"
+                component = obj
             };
 
             _fields.Add(array);

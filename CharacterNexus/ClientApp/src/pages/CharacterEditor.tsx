@@ -9,6 +9,7 @@ import { UserChoices } from "../types/UserChoice";
 import InputText from "../components/InputText";
 import InputTextArea from "../components/InputTextArea";
 import InputNumber from "../components/InputNumber";
+import InputStepper from "../components/InputStepper";
 import InputHidden from "../components/InputHidden";
 import InputSelect from "../components/InputSelect";
 import InputModSelect from "../components/InputModSelect";
@@ -404,6 +405,20 @@ const CharacterEditor: React.FC = () => {
               visible={isVisible(field.name)}
             />
           </DisabledPrereqWrapper>
+        );
+      case "stepper":
+        return (
+          <InputStepper
+            register={register}
+            setValue={setValue}
+            name={field.name}
+            label={field.label}
+            inputBonusAdjustments={field.bonusAdjustments}
+            bonusAdjustments={bonusAdjustments}
+            setBonusAdjustments={setBonusAdjustments}
+            min={field.validation?.min}
+            max={field.validation?.max}
+          />
         );
       case "number":
         return (

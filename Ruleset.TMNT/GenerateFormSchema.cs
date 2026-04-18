@@ -318,29 +318,27 @@ namespace TMNT
 
         private static void GenerateSkillsSchema(List<Skill> skills)
         {
-            _fields.Add(new
-            {
-                type = "divider",
-                tab = "Skills"
-            });
-
-            _fields.Add(new
-            {
-                type = "textblock",
-                label = "Skills",
-                text = "Skills",
-                name = "skillsLabel",
-                tab = "Skills"
-            });
+            var children = new List<object>();
 
             foreach (var skill in skills)
             {
-                _fields.Add(new { name = $"skills.{skill.Name}", id = $"skills.{skill.Name}", label = skill.Name, type = "number", className = "form-control", @default = 0, tab = "Skills" });
+                children.Add(new
+                {
+                    name = $"skills.{skill.Name}",
+                    id = $"skills.{skill.Name}",
+                    label = skill.Name,
+                    type = "number",
+                    className = "form-control",
+                    @default = 0,                    
+                });
             }
 
             _fields.Add(new
             {
-                type = "divider",
+                type = "group",
+                name = "skills",
+                label = "Skills",
+                children,
                 tab = "Skills"
             });
         }

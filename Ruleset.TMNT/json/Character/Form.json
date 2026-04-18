@@ -8273,864 +8273,763 @@
       "tab": "Features"
     },
     {
-      "type": "divider",
-      "tab": "Skills"
-    },
-    {
-      "type": "textblock",
+      "type": "group",
+      "name": "skills",
       "label": "Skills",
-      "text": "Skills",
-      "name": "skillsLabel",
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Computer Operation",
-      "id": "skills.Computer Operation",
-      "label": "Computer Operation",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Computer Programming",
-      "id": "skills.Computer Programming",
-      "label": "Computer Programming",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Cryptography",
-      "id": "skills.Cryptography",
-      "label": "Cryptography",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Laser",
-      "id": "skills.Laser",
-      "label": "Laser",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Optic Systems",
-      "id": "skills.Optic Systems",
-      "label": "Optic Systems",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Radio: Basic Communications",
-      "id": "skills.Radio: Basic Communications",
-      "label": "Radio: Basic Communications",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Radio: Scramblers",
-      "id": "skills.Radio: Scramblers",
-      "label": "Radio: Scramblers",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Radio: Satellite Relay",
-      "id": "skills.Radio: Satellite Relay",
-      "label": "Radio: Satellite Relay",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Surveillance Systems",
-      "id": "skills.Surveillance Systems",
-      "label": "Surveillance Systems",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.TV-Video",
-      "id": "skills.TV-Video",
-      "label": "TV-Video",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Cook",
-      "id": "skills.Cook",
-      "label": "Cook",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Dance",
-      "id": "skills.Dance",
-      "label": "Dance",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Fishing",
-      "id": "skills.Fishing",
-      "label": "Fishing",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Sewing",
-      "id": "skills.Sewing",
-      "label": "Sewing",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Sing",
-      "id": "skills.Sing",
-      "label": "Sing",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Basic Electronics",
-      "id": "skills.Basic Electronics",
-      "label": "Basic Electronics",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Electrical Engineer",
-      "id": "skills.Electrical Engineer",
-      "label": "Electrical Engineer",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Concealment",
-      "id": "skills.Concealment",
-      "label": "Concealment",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Detect Ambushes",
-      "id": "skills.Detect Ambushes",
-      "label": "Detect Ambushes",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Detect Concealment",
-      "id": "skills.Detect Concealment",
-      "label": "Detect Concealment",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Disguise",
-      "id": "skills.Disguise",
-      "label": "Disguise",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Escape Artist",
-      "id": "skills.Escape Artist",
-      "label": "Escape Artist",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Forgery",
-      "id": "skills.Forgery",
-      "label": "Forgery",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Impersonation",
-      "id": "skills.Impersonation",
-      "label": "Impersonation",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Interrogation",
-      "id": "skills.Interrogation",
-      "label": "Interrogation",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Land Navigation",
-      "id": "skills.Land Navigation",
-      "label": "Land Navigation",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Palming",
-      "id": "skills.Palming",
-      "label": "Palming",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Picking Locks",
-      "id": "skills.Picking Locks",
-      "label": "Picking Locks",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Pick Pockets",
-      "id": "skills.Pick Pockets",
-      "label": "Pick Pockets",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Tracking",
-      "id": "skills.Tracking",
-      "label": "Tracking",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Wilderness Survival",
-      "id": "skills.Wilderness Survival",
-      "label": "Wilderness Survival",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Automotive Mechanics",
-      "id": "skills.Automotive Mechanics",
-      "label": "Automotive Mechanics",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Aircraft Mechanics",
-      "id": "skills.Aircraft Mechanics",
-      "label": "Aircraft Mechanics",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Basic Mechanics",
-      "id": "skills.Basic Mechanics",
-      "label": "Basic Mechanics",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Computer Repair",
-      "id": "skills.Computer Repair",
-      "label": "Computer Repair",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Locksmith",
-      "id": "skills.Locksmith",
-      "label": "Locksmith",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Mechanical Engineer",
-      "id": "skills.Mechanical Engineer",
-      "label": "Mechanical Engineer",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Criminal Sciences & Forensics",
-      "id": "skills.Criminal Sciences & Forensics",
-      "label": "Criminal Sciences & Forensics",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.First Aid",
-      "id": "skills.First Aid",
-      "label": "First Aid",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Paramedic",
-      "id": "skills.Paramedic",
-      "label": "Paramedic",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Medical Doctor",
-      "id": "skills.Medical Doctor",
-      "label": "Medical Doctor",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Pathology",
-      "id": "skills.Pathology",
-      "label": "Pathology",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Demolitions",
-      "id": "skills.Demolitions",
-      "label": "Demolitions",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Demolitions Disposal",
-      "id": "skills.Demolitions Disposal",
-      "label": "Demolitions Disposal",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Pilot Tank",
-      "id": "skills.Pilot Tank",
-      "label": "Pilot Tank",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Hand to Hand: Basic",
-      "id": "skills.Hand to Hand: Basic",
-      "label": "Hand to Hand: Basic",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Hand to Hand: Expert",
-      "id": "skills.Hand to Hand: Expert",
-      "label": "Hand to Hand: Expert",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Hand to Hand: Martial Arts",
-      "id": "skills.Hand to Hand: Martial Arts",
-      "label": "Hand to Hand: Martial Arts",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Acrobatics",
-      "id": "skills.Acrobatics",
-      "label": "Acrobatics",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Athletics (General)",
-      "id": "skills.Athletics (General)",
-      "label": "Athletics (General)",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Body Building",
-      "id": "skills.Body Building",
-      "label": "Body Building",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Boxing",
-      "id": "skills.Boxing",
-      "label": "Boxing",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Climbing",
-      "id": "skills.Climbing",
-      "label": "Climbing",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Fencing",
-      "id": "skills.Fencing",
-      "label": "Fencing",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Gymnastics",
-      "id": "skills.Gymnastics",
-      "label": "Gymnastics",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Prowl",
-      "id": "skills.Prowl",
-      "label": "Prowl",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Running",
-      "id": "skills.Running",
-      "label": "Running",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Swimming",
-      "id": "skills.Swimming",
-      "label": "Swimming",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Swimming: Advanced & S.C.U.B.A.",
-      "id": "skills.Swimming: Advanced & S.C.U.B.A.",
-      "label": "Swimming: Advanced & S.C.U.B.A.",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Wrestling",
-      "id": "skills.Wrestling",
-      "label": "Wrestling",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Astrophysics",
-      "id": "skills.Astrophysics",
-      "label": "Astrophysics",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Biology",
-      "id": "skills.Biology",
-      "label": "Biology",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Botany",
-      "id": "skills.Botany",
-      "label": "Botany",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Chemistry",
-      "id": "skills.Chemistry",
-      "label": "Chemistry",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Chemistry: Analytical",
-      "id": "skills.Chemistry: Analytical",
-      "label": "Chemistry: Analytical",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Mathematics: Basic",
-      "id": "skills.Mathematics: Basic",
-      "label": "Mathematics: Basic",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Mathematics: Advanced",
-      "id": "skills.Mathematics: Advanced",
-      "label": "Mathematics: Advanced",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Art",
-      "id": "skills.Art",
-      "label": "Art",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Language",
-      "id": "skills.Language",
-      "label": "Language",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Photography",
-      "id": "skills.Photography",
-      "label": "Photography",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Writing",
-      "id": "skills.Writing",
-      "label": "Writing",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Pilot: Automobile",
-      "id": "skills.Pilot: Automobile",
-      "label": "Pilot: Automobile",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Pilot: Race Car",
-      "id": "skills.Pilot: Race Car",
-      "label": "Pilot: Race Car",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Pilot: Motorcycle",
-      "id": "skills.Pilot: Motorcycle",
-      "label": "Pilot: Motorcycle",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Pilot: Truck",
-      "id": "skills.Pilot: Truck",
-      "label": "Pilot: Truck",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Pilot: Airplane",
-      "id": "skills.Pilot: Airplane",
-      "label": "Pilot: Airplane",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Pilot: Boats (Sail Type)",
-      "id": "skills.Pilot: Boats (Sail Type)",
-      "label": "Pilot: Boats (Sail Type)",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Pilot: Boats (Motor Type)",
-      "id": "skills.Pilot: Boats (Motor Type)",
-      "label": "Pilot: Boats (Motor Type)",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Pilot: Basic Helicopter",
-      "id": "skills.Pilot: Basic Helicopter",
-      "label": "Pilot: Basic Helicopter",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Pilot: Combat Helicopter",
-      "id": "skills.Pilot: Combat Helicopter",
-      "label": "Pilot: Combat Helicopter",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Pilot: Jet",
-      "id": "skills.Pilot: Jet",
-      "label": "Pilot: Jet",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Pilot: Fighter Jet",
-      "id": "skills.Pilot: Fighter Jet",
-      "label": "Pilot: Fighter Jet",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Navigation",
-      "id": "skills.Navigation",
-      "label": "Navigation",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Read Sensory Equipment",
-      "id": "skills.Read Sensory Equipment",
-      "label": "Read Sensory Equipment",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.Weapon Systems",
-      "id": "skills.Weapon Systems",
-      "label": "Weapon Systems",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.WP Sword",
-      "id": "skills.WP Sword",
-      "label": "WP Sword",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.WP Blunt",
-      "id": "skills.WP Blunt",
-      "label": "WP Blunt",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.WP Forked and Spear",
-      "id": "skills.WP Forked and Spear",
-      "label": "WP Forked and Spear",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.WP Targeting (Shuriken)",
-      "id": "skills.WP Targeting (Shuriken)",
-      "label": "WP Targeting (Shuriken)",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.WP Bow",
-      "id": "skills.WP Bow",
-      "label": "WP Bow",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.WP Chain",
-      "id": "skills.WP Chain",
-      "label": "WP Chain",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.WP Knife",
-      "id": "skills.WP Knife",
-      "label": "WP Knife",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.WP Paired Weapons",
-      "id": "skills.WP Paired Weapons",
-      "label": "WP Paired Weapons",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "name": "skills.WP Staff",
-      "id": "skills.WP Staff",
-      "label": "WP Staff",
-      "type": "number",
-      "className": "form-control",
-      "default": 0,
-      "tab": "Skills"
-    },
-    {
-      "type": "divider",
+      "children": [
+        {
+          "name": "skills.Computer Operation",
+          "id": "skills.Computer Operation",
+          "label": "Computer Operation",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Computer Programming",
+          "id": "skills.Computer Programming",
+          "label": "Computer Programming",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Cryptography",
+          "id": "skills.Cryptography",
+          "label": "Cryptography",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Laser",
+          "id": "skills.Laser",
+          "label": "Laser",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Optic Systems",
+          "id": "skills.Optic Systems",
+          "label": "Optic Systems",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Radio: Basic Communications",
+          "id": "skills.Radio: Basic Communications",
+          "label": "Radio: Basic Communications",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Radio: Scramblers",
+          "id": "skills.Radio: Scramblers",
+          "label": "Radio: Scramblers",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Radio: Satellite Relay",
+          "id": "skills.Radio: Satellite Relay",
+          "label": "Radio: Satellite Relay",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Surveillance Systems",
+          "id": "skills.Surveillance Systems",
+          "label": "Surveillance Systems",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.TV-Video",
+          "id": "skills.TV-Video",
+          "label": "TV-Video",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Cook",
+          "id": "skills.Cook",
+          "label": "Cook",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Dance",
+          "id": "skills.Dance",
+          "label": "Dance",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Fishing",
+          "id": "skills.Fishing",
+          "label": "Fishing",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Sewing",
+          "id": "skills.Sewing",
+          "label": "Sewing",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Sing",
+          "id": "skills.Sing",
+          "label": "Sing",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Basic Electronics",
+          "id": "skills.Basic Electronics",
+          "label": "Basic Electronics",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Electrical Engineer",
+          "id": "skills.Electrical Engineer",
+          "label": "Electrical Engineer",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Concealment",
+          "id": "skills.Concealment",
+          "label": "Concealment",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Detect Ambushes",
+          "id": "skills.Detect Ambushes",
+          "label": "Detect Ambushes",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Detect Concealment",
+          "id": "skills.Detect Concealment",
+          "label": "Detect Concealment",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Disguise",
+          "id": "skills.Disguise",
+          "label": "Disguise",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Escape Artist",
+          "id": "skills.Escape Artist",
+          "label": "Escape Artist",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Forgery",
+          "id": "skills.Forgery",
+          "label": "Forgery",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Impersonation",
+          "id": "skills.Impersonation",
+          "label": "Impersonation",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Interrogation",
+          "id": "skills.Interrogation",
+          "label": "Interrogation",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Land Navigation",
+          "id": "skills.Land Navigation",
+          "label": "Land Navigation",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Palming",
+          "id": "skills.Palming",
+          "label": "Palming",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Picking Locks",
+          "id": "skills.Picking Locks",
+          "label": "Picking Locks",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Pick Pockets",
+          "id": "skills.Pick Pockets",
+          "label": "Pick Pockets",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Tracking",
+          "id": "skills.Tracking",
+          "label": "Tracking",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Wilderness Survival",
+          "id": "skills.Wilderness Survival",
+          "label": "Wilderness Survival",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Automotive Mechanics",
+          "id": "skills.Automotive Mechanics",
+          "label": "Automotive Mechanics",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Aircraft Mechanics",
+          "id": "skills.Aircraft Mechanics",
+          "label": "Aircraft Mechanics",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Basic Mechanics",
+          "id": "skills.Basic Mechanics",
+          "label": "Basic Mechanics",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Computer Repair",
+          "id": "skills.Computer Repair",
+          "label": "Computer Repair",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Locksmith",
+          "id": "skills.Locksmith",
+          "label": "Locksmith",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Mechanical Engineer",
+          "id": "skills.Mechanical Engineer",
+          "label": "Mechanical Engineer",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Criminal Sciences & Forensics",
+          "id": "skills.Criminal Sciences & Forensics",
+          "label": "Criminal Sciences & Forensics",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.First Aid",
+          "id": "skills.First Aid",
+          "label": "First Aid",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Paramedic",
+          "id": "skills.Paramedic",
+          "label": "Paramedic",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Medical Doctor",
+          "id": "skills.Medical Doctor",
+          "label": "Medical Doctor",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Pathology",
+          "id": "skills.Pathology",
+          "label": "Pathology",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Demolitions",
+          "id": "skills.Demolitions",
+          "label": "Demolitions",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Demolitions Disposal",
+          "id": "skills.Demolitions Disposal",
+          "label": "Demolitions Disposal",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Pilot Tank",
+          "id": "skills.Pilot Tank",
+          "label": "Pilot Tank",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Hand to Hand: Basic",
+          "id": "skills.Hand to Hand: Basic",
+          "label": "Hand to Hand: Basic",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Hand to Hand: Expert",
+          "id": "skills.Hand to Hand: Expert",
+          "label": "Hand to Hand: Expert",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Hand to Hand: Martial Arts",
+          "id": "skills.Hand to Hand: Martial Arts",
+          "label": "Hand to Hand: Martial Arts",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Acrobatics",
+          "id": "skills.Acrobatics",
+          "label": "Acrobatics",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Athletics (General)",
+          "id": "skills.Athletics (General)",
+          "label": "Athletics (General)",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Body Building",
+          "id": "skills.Body Building",
+          "label": "Body Building",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Boxing",
+          "id": "skills.Boxing",
+          "label": "Boxing",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Climbing",
+          "id": "skills.Climbing",
+          "label": "Climbing",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Fencing",
+          "id": "skills.Fencing",
+          "label": "Fencing",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Gymnastics",
+          "id": "skills.Gymnastics",
+          "label": "Gymnastics",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Prowl",
+          "id": "skills.Prowl",
+          "label": "Prowl",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Running",
+          "id": "skills.Running",
+          "label": "Running",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Swimming",
+          "id": "skills.Swimming",
+          "label": "Swimming",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Swimming: Advanced & S.C.U.B.A.",
+          "id": "skills.Swimming: Advanced & S.C.U.B.A.",
+          "label": "Swimming: Advanced & S.C.U.B.A.",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Wrestling",
+          "id": "skills.Wrestling",
+          "label": "Wrestling",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Astrophysics",
+          "id": "skills.Astrophysics",
+          "label": "Astrophysics",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Biology",
+          "id": "skills.Biology",
+          "label": "Biology",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Botany",
+          "id": "skills.Botany",
+          "label": "Botany",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Chemistry",
+          "id": "skills.Chemistry",
+          "label": "Chemistry",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Chemistry: Analytical",
+          "id": "skills.Chemistry: Analytical",
+          "label": "Chemistry: Analytical",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Mathematics: Basic",
+          "id": "skills.Mathematics: Basic",
+          "label": "Mathematics: Basic",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Mathematics: Advanced",
+          "id": "skills.Mathematics: Advanced",
+          "label": "Mathematics: Advanced",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Art",
+          "id": "skills.Art",
+          "label": "Art",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Language",
+          "id": "skills.Language",
+          "label": "Language",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Photography",
+          "id": "skills.Photography",
+          "label": "Photography",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Writing",
+          "id": "skills.Writing",
+          "label": "Writing",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Pilot: Automobile",
+          "id": "skills.Pilot: Automobile",
+          "label": "Pilot: Automobile",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Pilot: Race Car",
+          "id": "skills.Pilot: Race Car",
+          "label": "Pilot: Race Car",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Pilot: Motorcycle",
+          "id": "skills.Pilot: Motorcycle",
+          "label": "Pilot: Motorcycle",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Pilot: Truck",
+          "id": "skills.Pilot: Truck",
+          "label": "Pilot: Truck",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Pilot: Airplane",
+          "id": "skills.Pilot: Airplane",
+          "label": "Pilot: Airplane",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Pilot: Boats (Sail Type)",
+          "id": "skills.Pilot: Boats (Sail Type)",
+          "label": "Pilot: Boats (Sail Type)",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Pilot: Boats (Motor Type)",
+          "id": "skills.Pilot: Boats (Motor Type)",
+          "label": "Pilot: Boats (Motor Type)",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Pilot: Basic Helicopter",
+          "id": "skills.Pilot: Basic Helicopter",
+          "label": "Pilot: Basic Helicopter",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Pilot: Combat Helicopter",
+          "id": "skills.Pilot: Combat Helicopter",
+          "label": "Pilot: Combat Helicopter",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Pilot: Jet",
+          "id": "skills.Pilot: Jet",
+          "label": "Pilot: Jet",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Pilot: Fighter Jet",
+          "id": "skills.Pilot: Fighter Jet",
+          "label": "Pilot: Fighter Jet",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Navigation",
+          "id": "skills.Navigation",
+          "label": "Navigation",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Read Sensory Equipment",
+          "id": "skills.Read Sensory Equipment",
+          "label": "Read Sensory Equipment",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.Weapon Systems",
+          "id": "skills.Weapon Systems",
+          "label": "Weapon Systems",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.WP Sword",
+          "id": "skills.WP Sword",
+          "label": "WP Sword",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.WP Blunt",
+          "id": "skills.WP Blunt",
+          "label": "WP Blunt",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.WP Forked and Spear",
+          "id": "skills.WP Forked and Spear",
+          "label": "WP Forked and Spear",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.WP Targeting (Shuriken)",
+          "id": "skills.WP Targeting (Shuriken)",
+          "label": "WP Targeting (Shuriken)",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.WP Bow",
+          "id": "skills.WP Bow",
+          "label": "WP Bow",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.WP Chain",
+          "id": "skills.WP Chain",
+          "label": "WP Chain",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.WP Knife",
+          "id": "skills.WP Knife",
+          "label": "WP Knife",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.WP Paired Weapons",
+          "id": "skills.WP Paired Weapons",
+          "label": "WP Paired Weapons",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        },
+        {
+          "name": "skills.WP Staff",
+          "id": "skills.WP Staff",
+          "label": "WP Staff",
+          "type": "number",
+          "className": "form-control",
+          "default": 0
+        }
+      ],
       "tab": "Skills"
     },
     {

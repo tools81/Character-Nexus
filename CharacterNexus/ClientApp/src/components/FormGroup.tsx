@@ -103,21 +103,21 @@ const FormGroup = ({
             <div
               key={childField.id ?? childField.name}
               className="form-group p-2"
+              style={{ display: "flex", flexDirection: "column" }}
             >
               {includeLabel && childField.type !== "group" && (
-                <>
-                  <label>{childField.label}</label>
-                  <br />
-                </>
+                <label>{childField.label}</label>
               )}
 
-              {renderField(
-                childField,
-                disabledMap,
-                visibilityMap,
-                isVisible,
-                false
-              )}
+              <div style={{ marginTop: "auto" }}>
+                {renderField(
+                  childField,
+                  disabledMap,
+                  visibilityMap,
+                  isVisible,
+                  false
+                )}
+              </div>
             </div>
           );
         })}

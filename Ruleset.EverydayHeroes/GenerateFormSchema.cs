@@ -175,23 +175,32 @@ namespace EverydayHeroes
                     return;
                 }
 
+                var choiceLookup = new Dictionary<string, List<IBaseJson>>(StringComparer.OrdinalIgnoreCase)
+                {
+                    ["attributes"] = attributes.Cast<IBaseJson>().ToList(),
+                    ["skills"]     = skills.Cast<IBaseJson>().ToList(),
+                    ["skills.proficient"] = skills.Cast<IBaseJson>().ToList(),
+                    ["feats"]      = feats.Cast<IBaseJson>().ToList(),
+                    ["talents"]    = talents.Cast<IBaseJson>().ToList(),
+                };
+
                 AddDescriptionFields();
-               
+
                 GenerateArchetypeSchema(archetypes, "archetype", "Archetype");
-                GenerateClassSchema(classes, archetypes, "class", "Class");
-                GenerateBackgroundSchema(backgrounds, "background", "Background");
-                GenerateProfessionSchema(professions, "profession", "Profession");
+                GenerateClassSchema(classes, archetypes, "class", "Class", choiceLookup);
+                GenerateBackgroundSchema(backgrounds, "background", "Background", choiceLookup);
+                GenerateProfessionSchema(professions, "profession", "Profession", choiceLookup);
                 GenerateAttributeSchema(attributes, "attributes", "Ability Scores");
-                GenerateSkillSchema(skills, "skill", "Skills");
-                GenerateFeatSchema(feats, plans, "feat", "Feats");
-                GenerateTalentSchema(talents, "talent", "Talents");
-                GeneratePlanSchema(plans, "plan", "Plans");
-                GenerateTrickSchema(tricks, "trick", "Tricks");
+                GenerateSkillSchema(skills, "skills", "Skills");
+                GenerateFeatSchema(feats, plans, "feats", "Feats", choiceLookup);
+                GenerateTalentSchema(talents, "talents", "Talents");
+                GeneratePlanSchema(plans, "plans", "Plans");
+                GenerateTrickSchema(tricks, "tricks", "Tricks");
                 GeneratePackSchema(packs, "pack", "Packs");
-                GenerateItemSchema(items, "item", "Items");
-                GenerateWeaponSchema(weapons, "weapon", "Weapons");
-                GenerateArmorSchema(armors, "armor", "Armors");
-                GenerateVehicleSchema(vehicles, "vehicle", "Vehicles");
+                GenerateItemSchema(items, "items", "Items");
+                GenerateWeaponSchema(weapons, "weapons", "Weapons");
+                GenerateArmorSchema(armors, "armors", "Armors");
+                GenerateVehicleSchema(vehicles, "vehicles", "Vehicles");
 
                 var schema = new
                 {
@@ -591,7 +600,7 @@ namespace EverydayHeroes
             _fields.Add(obj);         
         }
 
-        private static void GenerateClassSchema(List<Class> classes, List<Archetype> archetypes, string name, string label)
+        private static void GenerateClassSchema(List<Class> classes, List<Archetype> archetypes, string name, string label, Dictionary<string, List<IBaseJson>> choiceLookup)
         {
             foreach (var archetype in archetypes)
             {
@@ -617,7 +626,7 @@ namespace EverydayHeroes
                             description = cl.Description,
                             bonusAdjustments = JsonConvert.SerializeObject(cl.BonusAdjustments, _jsonSettings),
                             bonusCharacteristics = JsonConvert.SerializeObject(cl.BonusCharacteristics, _jsonSettings),
-                            userChoices = JsonConvert.SerializeObject(cl.UserChoices, _jsonSettings)
+                            userChoices = JsonConvert.SerializeObject(FormSchemaExtensions.EnrichUserChoices(cl.UserChoices, choiceLookup), _jsonSettings)
                         }
                     );
 
@@ -633,7 +642,7 @@ namespace EverydayHeroes
             }
         }
 
-        private static void GenerateBackgroundSchema(List<Background> backgrounds, string name, string label)
+        private static void GenerateBackgroundSchema(List<Background> backgrounds, string name, string label, Dictionary<string, List<IBaseJson>> choiceLookup)
         {
             dynamic obj = new ExpandoObject();
 
@@ -656,7 +665,7 @@ namespace EverydayHeroes
                         description = $"{background.Description}<br />Special feature: {background.SpecialFeature}",
                         bonusCharacteristics = JsonConvert.SerializeObject(background.BonusCharacteristics, _jsonSettings),
                         bonusAdjustments = JsonConvert.SerializeObject(background.BonusAdjustments, _jsonSettings),
-                        userChoices = JsonConvert.SerializeObject(background.UserChoices, _jsonSettings)
+                        userChoices = JsonConvert.SerializeObject(FormSchemaExtensions.EnrichUserChoices(background.UserChoices, choiceLookup), _jsonSettings)
                     }
                 );
             }
@@ -664,7 +673,7 @@ namespace EverydayHeroes
             _fields.Add(obj);
         }        
 
-        private static void GenerateProfessionSchema(List<Profession> professions, string name, string label)
+        private static void GenerateProfessionSchema(List<Profession> professions, string name, string label, Dictionary<string, List<IBaseJson>> choiceLookup)
         {
             dynamic obj = new ExpandoObject();
 
@@ -687,7 +696,7 @@ namespace EverydayHeroes
                         description = $"{profession.Description}<br />Sample careers: {profession.SampleCareers}<br />Special feature: {profession.SpecialFeature}",
                         bonusCharacteristics = JsonConvert.SerializeObject(profession.BonusCharacteristics, _jsonSettings),
                         bonusAdjustments = JsonConvert.SerializeObject(profession.BonusAdjustments, _jsonSettings),
-                        userChoices = JsonConvert.SerializeObject(profession.UserChoices, _jsonSettings)
+                        userChoices = JsonConvert.SerializeObject(FormSchemaExtensions.EnrichUserChoices(profession.UserChoices, choiceLookup), _jsonSettings)
                     }
                 );
             }
@@ -747,7 +756,7 @@ namespace EverydayHeroes
             }
         }
 
-        private static void GenerateFeatSchema(List<Feat> feats, List<Plan> plans, string name, string label)
+        private static void GenerateFeatSchema(List<Feat> feats, List<Plan> plans, string name, string label, Dictionary<string, List<IBaseJson>> choiceLookup)
         {
             dynamic obj = new ExpandoObject();
 
@@ -829,7 +838,7 @@ namespace EverydayHeroes
                         description = $"Scale: {feat.Scale}<br />{feat.Description}",
                         bonusCharacteristics = JsonConvert.SerializeObject(feat.BonusCharacteristics, _jsonSettings),
                         bonusAdjustments = JsonConvert.SerializeObject(feat.BonusAdjustments, _jsonSettings),
-                        userChoices = JsonConvert.SerializeObject(feat.UserChoices, _jsonSettings),
+                        userChoices = JsonConvert.SerializeObject(FormSchemaExtensions.EnrichUserChoices(feat.UserChoices, choiceLookup), _jsonSettings),
                         prerequisites = JsonConvert.SerializeObject(feat.Prerequisites, _jsonSettings)
                     }
                 );

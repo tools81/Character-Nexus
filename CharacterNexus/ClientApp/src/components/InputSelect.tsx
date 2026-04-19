@@ -307,14 +307,10 @@ const handleSelectChange = (
     setBonusCharacteristics([...filteredCharacteristics, ...newCharacteristics]);
   }
 
-  if (selectUserChoices) {
-    const value = selectUserChoices as UserChoices | null;
+  if (selectUserChoices?.length > 0) {
     for (const choice of selectUserChoices as UserChoices) {
       choice.origin = event.target.name;
     }
-
-    if (value && openUserChoiceModal) {
-      openUserChoiceModal(value);
-    }
-  }  
+    openUserChoiceModal(selectUserChoices as UserChoices);
+  }
 };

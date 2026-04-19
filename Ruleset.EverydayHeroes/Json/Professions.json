@@ -5,7 +5,7 @@
     "samplecareers": "Librarian, museum docent, preschool teacher, private school teacher, public school teacher, university professor",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Intelligence",
         "value": 1
       },
@@ -16,7 +16,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -54,7 +54,7 @@
     "samplecareers": "Animal trainer, breeder, cowhand, crop scientist, farmer, rancher",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Strength",
         "value": 1
       },
@@ -65,7 +65,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Dexterity",
           "Constitution",
@@ -109,17 +109,17 @@
     "samplecareers": "Baseball, basketball, football, hockey, or soccer player, boxer, golfer, gymnast, martial artist, skater, Olympic athlete, professional athlete, swimmer, wrestler",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Strength",
         "value": 1
       },
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Dexterity",
         "value": 1
       },
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Constitution",
         "value": 1
       },
@@ -154,7 +154,7 @@
     "samplecareers": "Behavioral therapist, crisis counselor, marriage counselor, psychologist",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Wisdom",
         "value": 1
       },
@@ -165,7 +165,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -201,7 +201,7 @@
     "samplecareers": "Actor, artist, dancer, editor, game designer, graphic designer, musician, online personality, photographer, singer, songwriter, stage magician, writer",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Charisma",
         "value": 1
       },
@@ -212,7 +212,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -250,7 +250,7 @@
     "samplecareers": "Bank robber, cat burglar, con artist, enforcer, forger, gang member, grifter, hitman, jewel thief",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Dexterity",
         "value": 1
       },
@@ -261,7 +261,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Constitution",
@@ -306,7 +306,7 @@
     "samplecareers": "Assistant manager, cashier, front desk, greeter, phone support, sales assistant, server, stocker, usher",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Charisma",
         "value": 1
       },
@@ -317,7 +317,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -349,7 +349,7 @@
     "samplecareers": "Extreme sports enthusiast, search and rescue expert, skydiver, street racer, stunt performer, test pilot, test subject, treasure hunter",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Dexterity",
         "value": 1
       },
@@ -360,7 +360,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Constitution",
@@ -388,11 +388,7 @@
       },
       {
         "type": "equipmentproficiency",
-        "value": "Basic"
-      },
-      {
-        "type": "equipmentproficiency",
-        "value": "Improvised"
+        "value": "Basic, Improvised"
       }
     ],
     "iconicequipment": "First aid kit, rugged clothes, a cool muscle car",
@@ -404,7 +400,7 @@
     "samplecareers": "Ambulance driver, emergency medical technician, firefighter, paramedic, rescue worker",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Dexterity",
         "value": 1
       },
@@ -415,7 +411,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Constitution",
@@ -453,7 +449,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Dexterity",
           "Intelligence"
@@ -487,11 +483,7 @@
       },
       {
         "type": "equipmentproficiency",
-        "value": "Basic"
-      },
-      {
-        "type": "equipmentproficiency",
-        "value": "Advanced"
+        "value": "Basic, Advanced"
       }
     ],
     "iconicequipment": "A concealed carry pistol or a holdout pistol, fake passport and ID, surveillance kit, a memento from the spy who loved you",
@@ -504,7 +496,7 @@
     "samplecareers": "Ordained clergy of any faith, religious studies expert, theological scholar",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Wisdom",
         "value": 1
       },
@@ -515,7 +507,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -551,7 +543,7 @@
     "samplecareers": "Accountant, day trader, finance advisor, investment banker, venture capitalist",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Intelligence",
         "value": 1
       },
@@ -579,7 +571,7 @@
     "samplecareers": "Dilettante, trust fund kid, well-off pensioner or retiree",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Charisma",
         "value": 1
       },
@@ -590,7 +582,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -641,7 +633,7 @@
     "samplecareers": "Hacker, IT support, software developer, software engineer",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Intelligence",
         "value": 1
       },
@@ -669,7 +661,7 @@
     "samplecareers": "Analyst, counterterrorism expert, cryptographer, handler, operations officer, profiler",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Intelligence",
         "value": 1
       },
@@ -680,7 +672,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -713,7 +705,7 @@
     "samplecareers": "Bounty hunter, corporate security, military contractor, private investigator, repo specialist",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Intelligence",
         "value": 1
       },
@@ -724,7 +716,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -752,11 +744,7 @@
       },
       {
         "type": "equipmentproficiency",
-        "value": "Basic"
-      },
-      {
-        "type": "equipmentproficiency",
-        "value": "Advanced"
+        "value": "Basic, Advanced"
       }
     ],
     "iconicequipment": "Inconspicuous clothing, laptop computer, concealed carry pistol, SLR camera, security license",
@@ -768,7 +756,7 @@
     "samplecareers": "Blogger, investigative reporter, journalist, news anchor, paparazzi, photojournalist",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Wisdom",
         "value": 1
       },
@@ -779,7 +767,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -816,7 +804,7 @@
     "samplecareers": "Corporate lawyer, judge, patent lawyer, prosecutor, public defender",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Intelligence",
         "value": 1
       },
@@ -827,7 +815,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -859,12 +847,12 @@
     "samplecareers": "Border agent, detective, narcotics agent, FBI agent, parole officer, police officer, state trooper, S.W.A.T., undercover cop, U.S. marshal",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Strength",
         "value": 1
       },
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Constitution",
         "value": 1
       },
@@ -888,11 +876,7 @@
       },
       {
         "type": "equipmentproficiency",
-        "value": "Basic"
-      },
-      {
-        "type": "equipmentproficiency",
-        "value": "Advanced"
+        "value": "Basic, Advanced"
       }
     ],
     "iconicequipment": "Police uniform, 9mm semi-auto service pistol, TASER, badge, handcuffs, police radio, use of an official vehicle",
@@ -904,7 +888,7 @@
     "samplecareers": "Dentist, ER doctor, general practice physician, nurse, psychiatrist, specialist physician, surgeon, veterinarian",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Intelligence",
         "value": 1
       },
@@ -915,7 +899,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -947,12 +931,12 @@
     "samplecareers": "Air Force special tactics, Army ranger, enlisted soldier, Green Beret, Marine, Military police, Navy SEAL, officer, pilot, seaman",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Strength",
         "value": 1
       },
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Constitution",
         "value": 1
       },
@@ -976,15 +960,7 @@
       },
       {
         "type": "equipmentproficiency",
-        "value": "Basic"
-      },
-      {
-        "type": "equipmentproficiency",
-        "value": "Advanced"
-      },
-      {
-        "type": "equipmentproficiency",
-        "value": "Military"
+        "value": "Basic,Advanced,Military"
       }
     ],
     "iconicequipment": "Military uniform, assault rifle (enlisted) or 9mm semi-auto service pistol (officer), medium ballistic vest, ballistic helmet, military ID, a letter from your sweetheart",
@@ -996,7 +972,7 @@
     "samplecareers": "Conservationist, explorer, fish and game warden, hunter, mountain climber, park ranger, survivalist, wildlife photographer",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Constitution",
         "value": 1
       },
@@ -1007,7 +983,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -1039,11 +1015,7 @@
       },
       {
         "type": "equipmentproficiency",
-        "value": "Basic"
-      },
-      {
-        "type": "equipmentproficiency",
-        "value": "Advanced"
+        "value": "Basic,Advanced"
       }
     ],
     "iconicequipment": "A hunting rifle, a 4-wheel drive vehicle, frame backpack, camping kit",
@@ -1055,7 +1027,7 @@
     "samplecareers": "Councilmember, governor, legislator, mayor, political consultant",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Charisma",
         "value": 1
       },
@@ -1066,7 +1038,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -1098,7 +1070,7 @@
     "samplecareers": "Bodyguard, bouncer, mall cop, night guard, security guard",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Wisdom",
         "value": 1
       },
@@ -1109,7 +1081,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -1149,7 +1121,7 @@
     "samplecareers": "Data analyst, engineer, inventor, lab researcher, mathematician, product developer, research scientist",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Intelligence",
         "value": 1
       },
@@ -1160,7 +1132,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -1191,7 +1163,7 @@
     "samplecareers": "Blood donor, intern, part-time work, teacher's aide, volunteer",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Intelligence",
         "value": 1
       },
@@ -1202,7 +1174,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -1239,7 +1211,7 @@
     "samplecareers": "Carpenter, construction worker, electrician, flooring specialist, plumber, shoemaker, tailor",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Dexterity",
         "value": 1
       },
@@ -1250,7 +1222,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Constitution",
@@ -1282,7 +1254,7 @@
     "samplecareers": "Boat captain, bus driver, commercial pilot, rideshare driver, taxi driver, race car driver",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Dexterity",
         "value": 1
       },
@@ -1293,7 +1265,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Constitution",
@@ -1325,7 +1297,7 @@
     "samplecareers": "Beggar, hermit, hobo, institutionalized person, prisoner, recluse",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Constitution",
         "value": 1
       },
@@ -1336,7 +1308,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -1373,7 +1345,7 @@
     "samplecareers": "Accountant, human resources, mail clerk, management consultant, marketer, office manager, salesperson, tax preparer",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Intelligence",
         "value": 1
       },
@@ -1384,7 +1356,7 @@
     ],
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",

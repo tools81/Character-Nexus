@@ -7,14 +7,14 @@
     "bonuscharacteristics": [
       { "type": "equipmentproficiency", "value": "Basic, Improvised" },
       { "type": "savingthrowproficiency", "value": "Strength, Constitution" },
-      { "type": "talent", "value": "Crush", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'Brawler'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Hurt", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'Brawler'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Smash", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'Brawler'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Rampage", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'Brawler'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Bits and Pieces", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'Brawler'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Haymaker", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'Brawler'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Unstoppable", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'Brawler'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Ultimate Brutality", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'Brawler'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Crush", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'Brawler'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Hurt", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'Brawler'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Smash", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'Brawler'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Rampage", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'Brawler'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Bits and Pieces", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'Brawler'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Haymaker", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'Brawler'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Unstoppable", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'Brawler'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Ultimate Brutality", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'Brawler'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -33,14 +33,14 @@
     "bonuscharacteristics": [
       { "type": "equipmentproficiency", "value": "Basic, Advanced, Military" },
       { "type": "savingthrowproficiency", "value": "Strength, Constitution" },
-      { "type": "talent", "value": "Big Guns", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'Heavy Gunner'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Salvo", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'Heavy Gunner'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Big Boom", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'Heavy Gunner'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Advanced Combat Training", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'Heavy Gunner'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Got You Covered", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'Heavy Gunner'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Make a mess", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'Heavy Gunner'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Bigger Boom", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'Heavy Gunner'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Ultimate Carnage", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'Heavy Gunner'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Big Guns", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'Heavy Gunner'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Salvo", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'Heavy Gunner'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Big Boom", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'Heavy Gunner'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Advanced Combat Training", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'Heavy Gunner'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Got You Covered", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'Heavy Gunner'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Make a mess", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'Heavy Gunner'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Bigger Boom", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'Heavy Gunner'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Ultimate Carnage", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'Heavy Gunner'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -59,16 +59,16 @@
     "bonuscharacteristics": [
       { "type": "equipmentproficiency", "value": "Basic" },
       { "type": "savingthrowproficiency", "value": "Strength, Dexterity" },
-      { "type": "talent", "value": "Heavy Hands", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Pin", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Submission Move", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Jab", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Takedown", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Advanced Combat Training", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Improved Heavy Hands", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Master Grappler", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "KO Punch", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "Level", "formula": ">= 9" }] },
-      { "type": "talent", "value": "Sleeper Hold", "conditions": [{ "type": "Class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Heavy Hands", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Pin", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Submission Move", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Jab", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Takedown", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Advanced Combat Training", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Improved Heavy Hands", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Master Grappler", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "KO Punch", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "level", "formula": ">= 9" }] },
+      { "type": "talents", "value": "Sleeper Hold", "conditions": [{ "type": "class", "name": "strong", "formula": "=== 'MMA Fighter'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -93,13 +93,13 @@
     "bonuscharacteristics": [
       { "type": "equipmentproficiency", "value": "Basic, Historical" },
       { "type": "savingthrowproficiency", "value": "Strength, Dexterity" },
-      { "type": "talent", "value": "Martial Arts", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Martial Artist'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Lightning Strikes", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Martial Artist'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Parkour", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Martial Artist'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Advanced Combat Training", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Martial Artist'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Evasion", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Martial Artist'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Advanced Martial Arts", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Martial Artist'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Lightning Strikes Twice", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Martial Artist'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Martial Arts", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Martial Artist'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Lightning Strikes", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Martial Artist'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Parkour", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Martial Artist'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Advanced Combat Training", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Martial Artist'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Evasion", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Martial Artist'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Advanced Martial Arts", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Martial Artist'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Lightning Strikes Twice", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Martial Artist'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -118,12 +118,12 @@
     "bonuscharacteristics": [
       { "type": "equipmentproficiency", "value": "Basic, Advanced" },
       { "type": "savingthrowproficiency", "value": "Charisma, Dexterity" },
-      { "type": "talent", "value": "Vital Strike", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Scoundrel'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Swift", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Scoundrel'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Surprise Strike", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Scoundrel'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Roll With It", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Scoundrel'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Covert expertise", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Scoundrel'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Master of Subterfuge", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Scoundrel'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Vital Strike", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Scoundrel'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Swift", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Scoundrel'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Surprise Strike", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Scoundrel'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Roll With It", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Scoundrel'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Covert expertise", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Scoundrel'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Master of Subterfuge", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Scoundrel'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -148,13 +148,13 @@
     "bonuscharacteristics": [
       { "type": "equipmentproficiency", "value": "Basic, Advanced" },
       { "type": "savingthrowproficiency", "value": "Intelligence, Dexterity" },
-      { "type": "talent", "value": "Gunslinging", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Sharpshooter'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Sharpshooting", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Sharpshooter'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Improved Gunslinging", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Sharpshooter'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Improved Sharpshooting", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Sharpshooter'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Advanced Combat Training", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Sharpshooter'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Headshot", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Sharpshooter'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Supreme Ranged Combat Training", "conditions": [{ "type": "Class", "name": "agile", "formula": "=== 'Sharpshooter'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Gunslinging", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Sharpshooter'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Sharpshooting", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Sharpshooter'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Improved Gunslinging", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Sharpshooter'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Improved Sharpshooting", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Sharpshooter'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Advanced Combat Training", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Sharpshooter'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Headshot", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Sharpshooter'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Supreme Ranged Combat Training", "conditions": [{ "type": "class", "name": "agile", "formula": "=== 'Sharpshooter'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -173,14 +173,14 @@
     "bonuscharacteristics": [
       { "type": "equipmentproficiency", "value": "Basic, Advanced" },
       { "type": "savingthrowproficiency", "value": "Strength, Constitution" },
-      { "type": "talent", "value": "Get Down", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Bodyguard'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Take a Bullet", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Bodyguard'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Come Get Some", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Bodyguard'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Friendly Fire", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Bodyguard'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Advanced Combat Training", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Bodyguard'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Pin Them Down", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Bodyguard'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Vigilance", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Bodyguard'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Human Shield", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Bodyguard'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Get Down", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Bodyguard'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Take a Bullet", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Bodyguard'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Come Get Some", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Bodyguard'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Friendly Fire", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Bodyguard'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Advanced Combat Training", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Bodyguard'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Pin Them Down", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Bodyguard'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Vigilance", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Bodyguard'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Human Shield", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Bodyguard'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -205,14 +205,14 @@
     "bonuscharacteristics": [
       { "type": "equipmentproficiency", "value": "Basic, Advanced, Military" },
       { "type": "savingthrowproficiency", "value": "Strength, Constitution" },
-      { "type": "talent", "value": "Fighting Spirit", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Commando'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Watch Your Six", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Commando'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Extra Effort", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Commando'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Grenadier", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Commando'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Advanced Combat Training", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Commando'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Maximum Effort", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Commando'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Situational Awareness", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Commando'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Master of Arms", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Commando'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Fighting Spirit", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Commando'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Watch Your Six", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Commando'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Extra Effort", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Commando'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Grenadier", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Commando'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Advanced Combat Training", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Commando'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Maximum Effort", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Commando'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Situational Awareness", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Commando'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Master of Arms", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Commando'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -231,13 +231,13 @@
     "bonuscharacteristics": [
       { "type": "equipmentproficiency", "value": "Basic, Advanced, Improvised" },
       { "type": "savingthrowproficiency", "value": "Intelligence, Constitution" },
-      { "type": "talent", "value": "Opportunist", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Scrapper'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Frenzy", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Scrapper'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "With Interest", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Scrapper'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Roll With It", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Scrapper'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Anger Issues", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Scrapper'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Indomitable", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Scrapper'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Ultimate Brutality", "conditions": [{ "type": "Class", "name": "tough", "formula": "=== 'Scrapper'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Opportunist", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Scrapper'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Frenzy", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Scrapper'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "With Interest", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Scrapper'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Roll With It", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Scrapper'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Anger Issues", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Scrapper'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Indomitable", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Scrapper'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Ultimate Brutality", "conditions": [{ "type": "class", "name": "tough", "formula": "=== 'Scrapper'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -256,13 +256,13 @@
     "bonuscharacteristics": [
       { "type": "equipmentproficiency", "value": "Basic" },
       { "type": "savingthrowproficiency", "value": "Intelligence, Dexterity" },
-      { "type": "talent", "value": "Mechanical Companion", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Engineer'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Field Repairs", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Engineer'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Fine Tuning", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Engineer'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Plans Improve", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Engineer'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Plans Improve", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Engineer'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Plans Improve", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Engineer'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Plans Improve", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Engineer'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Mechanical Companion", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Engineer'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Field Repairs", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Engineer'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Fine Tuning", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Engineer'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Plans Improve", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Engineer'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Plans Improve", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Engineer'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Plans Improve", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Engineer'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Plans Improve", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Engineer'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -287,12 +287,12 @@
     "bonuscharacteristics": [
       { "type": "equipmentproficiency", "value": "Basic" },
       { "type": "savingthrowproficiency", "value": "Intelligence, Wisdom" },
-      { "type": "talent", "value": "Digital Ghost", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Hacker'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Its For You", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Hacker'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Plans Improve", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Hacker'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Plans Improve", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Hacker'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Plans Improve", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Hacker'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Plans Improve", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Hacker'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Digital Ghost", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Hacker'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Its For You", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Hacker'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Plans Improve", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Hacker'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Plans Improve", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Hacker'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Plans Improve", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Hacker'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Plans Improve", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Hacker'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -317,12 +317,12 @@
     "bonuscharacteristics": [
       { "type": "equipmentproficiency", "value": "Basic" },
       { "type": "savingthrowproficiency", "value": "Intelligence, Wisdom" },
-      { "type": "talent", "value": "Know-It-All", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Mastermind'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Youre Doing It Wrong", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Mastermind'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Plans Improve", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Mastermind'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Plans Improve", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Mastermind'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Plans Improve", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Mastermind'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Plans Improve", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Mastermind'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Know-It-All", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Mastermind'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Youre Doing It Wrong", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Mastermind'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Plans Improve", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Mastermind'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Plans Improve", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Mastermind'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Plans Improve", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Mastermind'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Plans Improve", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Mastermind'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -346,13 +346,13 @@
     "description": "Your mastery of the sciences is normally applied in the lab, making new discoveries and advancing human knowledge. But when lives are on the line, you are ready to demonstrate that knowledge truly is power.<br />A scientist's plans are themed around biology and chemistry to damage enemies and aid allies. They are a great choice if you want to play a support role in combat or to tend to the injuries of other heroes. They are one of the more highly skilled classes with a range of expertise available to them.",
     "bonuscharacteristics": [
       { "type": "savingthrowproficiency", "value": "Intelligence, Constitution" },
-      { "type": "talent", "value": "Dangerous Stuff", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Scientist'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Plans Improve", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Scientist'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Hazardous Stuff", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Scientist'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Plans Improve", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Scientist'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Plans Improve", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Scientist'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Deadly Stuff", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Scientist'" }, { "type": "Level", "formula": ">= 9" }] },
-      { "type": "talent", "value": "Plans Improve", "conditions": [{ "type": "Class", "name": "smart", "formula": "=== 'Scientist'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Dangerous Stuff", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Scientist'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Plans Improve", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Scientist'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Hazardous Stuff", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Scientist'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Plans Improve", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Scientist'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Plans Improve", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Scientist'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Deadly Stuff", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Scientist'" }, { "type": "level", "formula": ">= 9" }] },
+      { "type": "talents", "value": "Plans Improve", "conditions": [{ "type": "class", "name": "smart", "formula": "=== 'Scientist'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -377,15 +377,15 @@
     "bonuscharacteristics": [
       { "type": "equipmentproficiency", "value": "Basic, Advanced" },
       { "type": "savingthrowproficiency", "value": "Strength, Wisdom" },
-      { "type": "talent", "value": "Hunting Companion", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Hunter'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Hunters Mark", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Hunter'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Animal Husbandry", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Hunter'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Companion Training", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Hunter'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Mark as Prey", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Hunter'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Advanced Combat Training", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Hunter'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Learn Their Moves", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Hunter'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "No Escape", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Hunter'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Marked for Death", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Hunter'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Hunting Companion", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Hunter'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Hunters Mark", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Hunter'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Animal Husbandry", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Hunter'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Companion Training", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Hunter'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Mark as Prey", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Hunter'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Advanced Combat Training", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Hunter'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Learn Their Moves", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Hunter'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "No Escape", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Hunter'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Marked for Death", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Hunter'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -410,16 +410,16 @@
     "bonuscharacteristics": [
       { "type": "equipmentproficiency", "value": "Basic, Improvised" },
       { "type": "savingthrowproficiency", "value": "Charisma, Wisdom" },
-      { "type": "talent", "value": "Mystic Arts", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Master'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Ki", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Master'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Dance in the Storm", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Master'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Flow Like the River", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Master'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Advanced Combat Training", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Master'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Ki Strike", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Master'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Balance Within", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Master'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Evasion", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Master'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Deep Focus", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Master'" }, { "type": "Level", "formula": ">= 9" }] },
-      { "type": "talent", "value": "Like the Willow", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Master'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Mystic Arts", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Master'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Ki", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Master'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Dance in the Storm", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Master'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Flow Like the River", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Master'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Advanced Combat Training", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Master'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Ki Strike", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Master'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Balance Within", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Master'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Evasion", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Master'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Deep Focus", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Master'" }, { "type": "level", "formula": ">= 9" }] },
+      { "type": "talents", "value": "Like the Willow", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Master'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -438,14 +438,14 @@
     "bonuscharacteristics": [
       { "type": "equipmentproficiency", "value": "Basic" },
       { "type": "savingthrowproficiency", "value": "Intelligence, Wisdom" },
-      { "type": "talent", "value": "Deduction", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Sleuth'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Sixth Sense", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Sleuth'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Weak Spot", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Sleuth'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Alert", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Sleuth'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Investigative expertise", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Sleuth'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Roll With It", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Sleuth'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Evasion", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Sleuth'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Elementary", "conditions": [{ "type": "Class", "name": "wise", "formula": "=== 'Sleuth'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Deduction", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Sleuth'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Sixth Sense", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Sleuth'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Weak Spot", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Sleuth'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Alert", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Sleuth'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Investigative expertise", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Sleuth'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Roll With It", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Sleuth'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Evasion", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Sleuth'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Elementary", "conditions": [{ "type": "class", "name": "wise", "formula": "=== 'Sleuth'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -470,11 +470,11 @@
     "bonuscharacteristics": [
       { "type": "equipmentproficiency", "value": "Basic, Historical" },
       { "type": "savingthrowproficiency", "value": "Charisma, Dexterity" },
-      { "type": "talent", "value": "Precision", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Duelist'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "En Garde", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Duelist'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Advanced Combat Training", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Duelist'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Fancy Footwork", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Duelist'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Panache", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Duelist'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Precision", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Duelist'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "En Garde", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Duelist'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Advanced Combat Training", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Duelist'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Fancy Footwork", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Duelist'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Panache", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Duelist'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -493,12 +493,12 @@
     "bonuscharacteristics": [
       { "type": "equipmentproficiency", "value": "Basic, Advanced" },
       { "type": "savingthrowproficiency", "value": "Charisma, Dexterity" },
-      { "type": "talent", "value": "Banter", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Icon'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Center of Attention", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Icon'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Flinch", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Icon'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Advanced Combat Training", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Icon'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Not My Style", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Icon'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Star of the Show", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Icon'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Banter", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Icon'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Center of Attention", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Icon'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Flinch", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Icon'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Advanced Combat Training", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Icon'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Not My Style", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Icon'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Star of the Show", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Icon'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -517,11 +517,11 @@
     "bonuscharacteristics": [
       { "type": "equipmentproficiency", "value": "Basic, Advanced" },
       { "type": "savingthrowproficiency", "value": "Charisma, Constitution" },
-      { "type": "talent", "value": "Command", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Leader'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Encouraging Banter", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Leader'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Improved Command", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Leader'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Rousing Speech", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Leader'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Aura of Leadership", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Leader'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Command", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Leader'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Encouraging Banter", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Leader'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Improved Command", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Leader'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Rousing Speech", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Leader'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Aura of Leadership", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Leader'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {
@@ -545,13 +545,13 @@
     "description": "People think you are charming, useful, and mostly harmless. That's exactly what you want people to think. In reality, you have everyone dancing on your strings to whatever tune you want to play for them.<br />The manipulator focuses on weakening or controlling opponents in a fight and rarely makes attacks. With the right allies, these are powerful abilities. They also have the strongest set of social skills for any hero and shine in noncombat situations.",
     "bonuscharacteristics": [
       { "type": "savingthrowproficiency", "value": "Charisma, Wisdom" },
-      { "type": "talent", "value": "Demoralize", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Manipulator'" }, { "type": "Level", "formula": ">= 1" }] },
-      { "type": "talent", "value": "Copycat", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Manipulator'" }, { "type": "Level", "formula": ">= 3" }] },
-      { "type": "talent", "value": "Hypnotize", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Manipulator'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "Improved Demoralize", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Manipulator'" }, { "type": "Level", "formula": ">= 5" }] },
-      { "type": "talent", "value": "False Identity", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Manipulator'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Social expertise", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Manipulator'" }, { "type": "Level", "formula": ">= 7" }] },
-      { "type": "talent", "value": "Master of Manipulation", "conditions": [{ "type": "Class", "name": "charming", "formula": "=== 'Manipulator'" }, { "type": "Level", "formula": ">= 9" }] }
+      { "type": "talents", "value": "Demoralize", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Manipulator'" }, { "type": "level", "formula": ">= 1" }] },
+      { "type": "talents", "value": "Copycat", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Manipulator'" }, { "type": "level", "formula": ">= 3" }] },
+      { "type": "talents", "value": "Hypnotize", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Manipulator'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "Improved Demoralize", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Manipulator'" }, { "type": "level", "formula": ">= 5" }] },
+      { "type": "talents", "value": "False Identity", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Manipulator'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Social expertise", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Manipulator'" }, { "type": "level", "formula": ">= 7" }] },
+      { "type": "talents", "value": "Master of Manipulation", "conditions": [{ "type": "class", "name": "charming", "formula": "=== 'Manipulator'" }, { "type": "level", "formula": ">= 9" }] }
     ],
     "userchoices": [
       {

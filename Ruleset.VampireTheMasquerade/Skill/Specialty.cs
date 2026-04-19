@@ -1,6 +1,8 @@
-﻿namespace VampireTheMasquerade
+﻿using Utility;
+
+namespace VampireTheMasquerade
 {
-    public class Specialty
+    public class Specialty : ISkill
     {
         public string Name { get; set; }
         public string Description { get; set; }

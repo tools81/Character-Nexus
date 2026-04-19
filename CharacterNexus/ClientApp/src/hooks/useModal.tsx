@@ -35,8 +35,8 @@ export function useModal(): UseUserChoiceModalReturn {
     if (!isOpen || choice === null) return null;
 
     return (
-      <div style={backdropStyle}>
-        <div style={modalStyle}>
+      <div className="choice-modal-backdrop">
+        <div className="choice-modal">
           {children({ userChoices: choice, close })}
         </div>
       </div>
@@ -46,20 +46,3 @@ export function useModal(): UseUserChoiceModalReturn {
   return { open, close, Modal };
 }
 
-const backdropStyle: React.CSSProperties = {
-  position: "fixed",
-  inset: 0,
-  background: "rgba(129, 127, 127, 0.33)",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-};
-
-const modalStyle: React.CSSProperties = {
-  overflowY: "auto",
-  background: "#110f38ff",
-  padding: "1rem",
-  borderRadius: "6px",
-  minWidth: "320px",
-  maxHeight: "400px"
-};

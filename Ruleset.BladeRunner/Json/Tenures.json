@@ -2,29 +2,29 @@
   {
     "name": "Rookie",
     "description": "0-1 years",
-    "userchoice": [
+    "userchoices": [
       {
-        "type": "Attribute",
+        "type": "attributes",
         "choices": [],
         "count": 4,
-        "value": 4
+        "value": 4,
+        "category": "Adjustment"
       },
       {
-        "type": "Skill",
+        "type": "skills",
         "choices": [],
         "count": 8,
-        "value": 8
+        "value": 8,
+        "category": "Adjustment"
       }
     ],
     "bonusadjustment": [
       {
-        "type": "Chinyen",
-        "name": "Chinyen",
+        "type": "chinyen",
         "value": -1
       },
       {
-        "type": "PromotionPoints",
-        "name": "PromotionPoints",
+        "type": "promotionpoints",
         "value": 2
       }
     ]
@@ -32,35 +32,36 @@
   {
     "name": "Seasoned",
     "description": "2-7 years",
-    "userchoice": [
+    "userchoices": [
       {
-        "type": "Attribute",
+        "type": "attributes",
         "choices": [],
         "count": 3,
-        "value": 3
+        "value": 3,
+        "category": "Adjustment"
       },
       {
-        "type": "Skill",
+        "type": "skills",
         "choices": [],
         "count": 10,
-        "value": 10
+        "value": 10,
+        "category": "Adjustment"
       },
       {
-        "type": "Specialty",
+        "type": "specialties",
         "choices": [],
         "count": 1,
-        "value": 1
+        "value": 1,
+        "category": "Characteristic"
       }
     ],
     "bonusadjustment": [
       {
-        "type": "Chinyen",
-        "name": "Chinyen",
+        "type": "chinyen",
         "value": 1
       },
       {
-        "type": "PromotionPoints",
-        "name": "PromotionPoints",
+        "type": "promotionpoints",
         "value": 3
       }
     ]
@@ -68,35 +69,36 @@
   {
     "name": "Veteran",
     "description": "8-15 years",
-    "userchoice": [
+    "userchoices": [
       {
-        "type": "Attribute",
+        "type": "attributes",
         "choices": [],
         "count": 2,
-        "value": 2
+        "value": 2,
+        "category": "Adjustment"
       },
       {
-        "type": "Skill",
+        "type": "skills",
         "choices": [],
         "count": 12,
-        "value": 12
+        "value": 12,
+        "category": "Adjustment"
       },
       {
-        "type": "Specialty",
+        "type": "specialties",
         "choices": [],
         "count": 2,
-        "value": 2
+        "value": 2,
+        "category": "Characteristic"
       }
     ],
     "bonusadjustment": [
       {
-        "type": "Chinyen",
-        "name": "Chinyen",
+        "type": "chinyen",
         "value": 1
       },
       {
-        "type": "PromotionPoints",
-        "name": "PromotionPoints",
+        "type": "promotionpoints",
         "value": 4
       }
     ]
@@ -104,35 +106,36 @@
   {
     "name": "Old-Timer",
     "description": "16+ years",
-    "userchoice": [
+    "userchoices": [
       {
-        "type": "Attribute",
+        "type": "attributes",
         "choices": [],
         "count": 1,
-        "value": 1
+        "value": 1,
+        "category": "Adjustment"
       },
       {
-        "type": "Skill",
+        "type": "skills",
         "choices": [],
         "count": 14,
-        "value": 14
+        "value": 14,
+        "category": "Adjustment"
       },
       {
-        "type": "Specialty",
+        "type": "specialties",
         "choices": [],
         "count": 3,
-        "value": 3
+        "value": 3,
+        "category": "Characteristic"
       }
     ],
     "bonusadjustment": [
       {
-        "type": "Chinyen",
-        "name": "Chinyen",
+        "type": "chinyen",
         "value": 2
       },
       {
-        "type": "PromotionPoints",
-        "name": "PromotionPoints",
+        "type": "promotionpoints",
         "value": 5
       }
     ]

@@ -69,7 +69,13 @@ namespace BladeRunner
 
                 GenerateDescriptionSchema();
 
-                var choiceLookup = attributes.Cast<IBaseJson>().Concat(skills.Cast<IBaseJson>()).ToList();
+                var choiceLookup = new Dictionary<string, List<IBaseJson>>(StringComparer.OrdinalIgnoreCase)
+                {
+                    ["attributes"]  = attributes.Cast<IBaseJson>().ToList(),
+                    ["skills"]      = skills.Cast<IBaseJson>().ToList(),
+                    ["specialties"] = specialties.Cast<IBaseJson>().ToList(),
+                };
+
                 GenerateOriginSchema(origins, choiceLookup, "origin", "Origin");
                 GenerateArchetypeSchema(archetypes, "archetype", "Archetype");
                 GenerateTenureSchema(tenures, choiceLookup, "tenure", "Tenure");
@@ -78,15 +84,15 @@ namespace BladeRunner
                     tableMemoryWhatItems, tableMemoryHowItems, "memory", "Key Memory");
                 GenerateKeyRelationshipSchema(tableRelationshipWhoItems, tableRelationshipWhatItems, tableRelationshipStatusItems,
                     "relationship", "Key Relationship");
-                GenerateSkillSchema(skills, "skill", "Skill");
+                GenerateSkillSchema(skills, "skills", "Skill");
                 GenerateHomeSchema(tableMemoryHomeItems, "home", "Home");
                 GenerateSignatureItemSchema(tableMemorySignatureItems, "signatureitem", "Signature Item");
-                GenerateSpecialtySchema(specialties, "specialty", "Specialties");
-                GenerateAugmentationSchema(augmentations, "augmentation", "Augmentations");
-                GenerateWeaponSchema(weapons, "weapon", "Weapons");
-                GenerateArmorSchema(armors, "armor", "Armor");
-                GenerateGearSchema(gears, "gear", "Gear");
-                GenerateVehicleSchema(vehicles, "vehicle", "Vehicle");                
+                GenerateSpecialtySchema(specialties, "specialties", "Specialties");
+                GenerateAugmentationSchema(augmentations, "augmentations", "Augmentations");
+                GenerateWeaponSchema(weapons, "weapons", "Weapons");
+                GenerateArmorSchema(armors, "armors", "Armor");
+                GenerateGearSchema(gears, "gears", "Gear");
+                GenerateVehicleSchema(vehicles, "vehicles", "Vehicle");                
 
                 var schema = new
                 {
@@ -221,7 +227,7 @@ namespace BladeRunner
             );
         }
 
-        private static void GenerateOriginSchema(List<Origin> origins, List<IBaseJson> choiceLookup, string name, string label)
+        private static void GenerateOriginSchema(List<Origin> origins, Dictionary<string, List<IBaseJson>> choiceLookup, string name, string label)
         {
             dynamic obj = new ExpandoObject();
 
@@ -277,7 +283,7 @@ namespace BladeRunner
             _fields.Add(obj);
         }
 
-        private static void GenerateTenureSchema(List<Tenure> tenures, List<IBaseJson> choiceLookup, string name, string label)
+        private static void GenerateTenureSchema(List<Tenure> tenures, Dictionary<string, List<IBaseJson>> choiceLookup, string name, string label)
         {
             dynamic obj = new ExpandoObject();
 

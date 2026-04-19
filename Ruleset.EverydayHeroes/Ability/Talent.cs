@@ -1,6 +1,8 @@
-﻿namespace EverydayHeroes
+﻿using Utility;
+
+namespace EverydayHeroes
 {
-    public class Talent
+    public class Talent : IAbility
     {
         public string Name { get; set; }
         public string Description { get; set; }

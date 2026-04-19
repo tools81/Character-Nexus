@@ -64,12 +64,18 @@ namespace Transformers
                 var specializations = JsonConvert.DeserializeObject<List<Specialization>>(jsonSpecializationsData);
                 if (specializations == null) { Console.WriteLine("Unable to read Specializations.json. Aborting..."); Console.Read(); return; }
 
+                var choiceLookup = new Dictionary<string, List<IBaseJson>>(StringComparer.OrdinalIgnoreCase)
+                {
+                    ["skills"]          = skills.Cast<IBaseJson>().ToList(),
+                    ["specialization"] = specializations.Cast<IBaseJson>().ToList(),
+                };
+
                 GenerateDescriptionSchema();
                 GenerateFactionsSchema(factions, "faction", "Faction");
                 GenerateInfluencesSchema(influences, "influences", "Influences");
-                GenerateOriginSchema(origins, "origin", "Origin");
-                GenerateRoleSchema(roles, "role", "Role");
-                GenerateFocusSchema(focuses, roles, "focus", "Focus");    
+                GenerateOriginSchema(origins, "origin", "Origin", choiceLookup);
+                GenerateRoleSchema(roles, "role", "Role", choiceLookup);
+                GenerateFocusSchema(focuses, roles, "focus", "Focus", choiceLookup);
                 GeneratePerksSchema(perks, "perks", "Perks");            
                 GenerateHangUpsSchema(hangUps, "hangups", "Hang-Ups");
                 GenerateEssencesSchema(essences, "essences", "Essences");                
@@ -179,7 +185,7 @@ namespace Transformers
             _fields.Add(obj);
         }
 
-        private static void GenerateOriginSchema(List<Origin> origins, string name, string label)
+        private static void GenerateOriginSchema(List<Origin> origins, string name, string label, Dictionary<string, List<IBaseJson>> choiceLookup)
         {
             dynamic obj = new ExpandoObject();
             obj.name = name;
@@ -196,7 +202,7 @@ namespace Transformers
                     label = origin.Name,
                     description = origin.Description,
                     bonusAdjustments = JsonConvert.SerializeObject(origin.BonusAdjustments, _jsonSettings),
-                    userChoices = JsonConvert.SerializeObject(origin.UserChoices, _jsonSettings)
+                    userChoices = JsonConvert.SerializeObject(FormSchemaExtensions.EnrichUserChoices(origin.UserChoices, choiceLookup), _jsonSettings)
                 });
             }
 
@@ -204,7 +210,7 @@ namespace Transformers
             _fields.Add(obj);
         }
 
-        private static void GenerateRoleSchema(List<Role> roles, string name, string label)
+        private static void GenerateRoleSchema(List<Role> roles, string name, string label, Dictionary<string, List<IBaseJson>> choiceLookup)
         {
             dynamic obj = new ExpandoObject();
             obj.name = name;
@@ -222,7 +228,7 @@ namespace Transformers
                     description = role.Description,
                     bonusAdjustments = JsonConvert.SerializeObject(role.BonusAdjustments, _jsonSettings),
                     bonusCharacteristics = JsonConvert.SerializeObject(role.BonusCharacteristics, _jsonSettings),
-                    userChoices = JsonConvert.SerializeObject(role.UserChoices, _jsonSettings)
+                    userChoices = JsonConvert.SerializeObject(FormSchemaExtensions.EnrichUserChoices(role.UserChoices, choiceLookup), _jsonSettings)
                 });
             }
 
@@ -230,7 +236,7 @@ namespace Transformers
             _fields.Add(obj);
         }
 
-        private static void GenerateFocusSchema(List<Focus> focuses, List<Role> roles, string name, string label)
+        private static void GenerateFocusSchema(List<Focus> focuses, List<Role> roles, string name, string label, Dictionary<string, List<IBaseJson>> choiceLookup)
         {
             foreach (var role in roles)
             {
@@ -254,7 +260,7 @@ namespace Transformers
                             description = foc.Description,
                             bonusCharacteristics = JsonConvert.SerializeObject(foc.BonusCharacteristics, _jsonSettings),
                             BonusAdjustments = JsonConvert.SerializeObject(foc.BonusAdjustments, _jsonSettings),
-                            userChoices = JsonConvert.SerializeObject(foc.UserChoices, _jsonSettings)
+                            userChoices = JsonConvert.SerializeObject(FormSchemaExtensions.EnrichUserChoices(foc.UserChoices, choiceLookup), _jsonSettings)
                         }
                     );
 

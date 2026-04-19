@@ -33,7 +33,13 @@ namespace CallOfCthulhu
                 var weapons = Load<Weapon>("Weapons.json");
                 var equipments = Load<Equipment>("Equipments.json");
 
-                GenerateDescriptionSchema(eras, ages);
+                var choiceLookup = new Dictionary<string, List<IBaseJson>>(StringComparer.OrdinalIgnoreCase)
+                {
+                    ["characteristics"] = characteristics.Cast<IBaseJson>().ToList(),
+                    ["skills"]          = skills.Cast<IBaseJson>().ToList(),
+                };
+                
+                GenerateDescriptionSchema(eras, ages, choiceLookup);
                 GenerateOccupationSchema(occupations);
                 GenerateCharacteristicsSchema(characteristics);
                 GenerateDerivedStatsSchema();
@@ -74,7 +80,7 @@ namespace CallOfCthulhu
             return result;
         }
 
-        private static void GenerateDescriptionSchema(List<Era> eras, List<Age> ages)
+        private static void GenerateDescriptionSchema(List<Era> eras, List<Age> ages, Dictionary<string, List<IBaseJson>> choiceLookup)
         {
             _fields.Add(new { name = "id", id = "id", label = "Id", type = "hidden", className = "form-control", tab = "Identity" });
             _fields.Add(new { name = "name", id = "name", label = "Name", type = "text", className = "form-control", @default = "Unknown", tab = "Identity" });
@@ -112,7 +118,7 @@ namespace CallOfCthulhu
                     label = age.Name,
                     description = age.Description,
                     bonusAdjustments = JsonConvert.SerializeObject(age.BonusAdjustments, _jsonSettings),
-                    userChoices = JsonConvert.SerializeObject(age.UserChoices, _jsonSettings)
+                    userChoices = JsonConvert.SerializeObject(FormSchemaExtensions.EnrichUserChoices(age.UserChoices, choiceLookup), _jsonSettings)
                 });
             }
             ageObj.tab = "Origins";

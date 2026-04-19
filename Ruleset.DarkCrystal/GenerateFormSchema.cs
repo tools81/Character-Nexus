@@ -89,15 +89,22 @@ namespace DarkCrystal
                     return;
                 }
 
+                var choiceLookup = new Dictionary<string, List<IBaseJson>>(StringComparer.OrdinalIgnoreCase)
+                {
+                    ["skills"]          = skills.Cast<IBaseJson>().ToList(),
+                    ["specializations"] = specializations.Cast<IBaseJson>().ToList(),
+                    ["traits"]          = traits.Cast<IBaseJson>().ToList(),
+                };
+
                 GenerateDescriptionSchema();
 
                 GenerateGenderSchema(genders, "gender", "Gender");
-                GenerateClanSchema(clans, "clan", "Clan");
-                GenerateTraitsSchema(traits, "trait", "Traits");
-                GenerateFlawsSchema(flaws, "flaw", "Flaws");
-                GenerateGearSchema(gears, "gear", "Gear");
+                GenerateClanSchema(clans, "clan", "Clan", choiceLookup);
+                GenerateTraitsSchema(traits, "traits", "Traits");
+                GenerateFlawsSchema(flaws, "flaws", "Flaws");
+                GenerateGearSchema(gears, "gears", "Gear");
 
-                GenerateSkillsSchema(skills, "skill", "Skills", specializations, "specialization", "Specializations"); //Specializations are grouped under skills
+                GenerateSkillsSchema(skills, "skills", "Skills", specializations, "specializations", "Specializations"); //Specializations are grouped under skills
 
                 var schema = new
                 {
@@ -188,7 +195,7 @@ namespace DarkCrystal
             _fields.Add(obj);
         }
 
-        public static void GenerateClanSchema(List<Clan> elements, string name, string label)
+        public static void GenerateClanSchema(List<Clan> elements, string name, string label, Dictionary<string, List<IBaseJson>> choiceLookup)
         {
             dynamic obj = new ExpandoObject();
 
@@ -208,7 +215,7 @@ namespace DarkCrystal
                         image = element.Image,
                         description = element.Description,
                         bonusCharacteristics = JsonConvert.SerializeObject(element.BonusCharacteristics, _jsonSettings),
-                        userChoices = JsonConvert.SerializeObject(element.UserChoices, _jsonSettings)
+                        userChoices = JsonConvert.SerializeObject(FormSchemaExtensions.EnrichUserChoices(element.UserChoices, choiceLookup), _jsonSettings)
                     }
                 );
             }

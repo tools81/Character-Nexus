@@ -3,7 +3,7 @@ using Utility;
 
 namespace EverydayHeroes
 {
-    public class Class
+    public class Class : IClass
     {
         public string Name { get; set; }
         public string Archetype { get; set; }

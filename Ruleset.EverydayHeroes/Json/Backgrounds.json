@@ -4,7 +4,7 @@
     "description": "Growing up, you were motivated to act on behalf of a social or political cause. You know how to influence people by your deeds and actions.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Wisdom",
           "Charisma"
@@ -31,7 +31,7 @@
     "description": "You have loved art since you were a child and developed a significant talent in one or more forms of artistic expression. The knowledge and practice gives you something to talk about at parties.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Wisdom",
           "Charisma"
@@ -58,7 +58,7 @@
     "description": "As a child, you spent your free time reading anything you could get your hands on. You absorbed practical knowledge as you immersed yourself in wonderful stories.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Wisdom",
           "Intelligence"
@@ -86,7 +86,7 @@
     "description": "You spent a significant portion of your childhood taking care of someone dear to you. It's given you a strong sense of compassion, as well as experience in medical care.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Wisdom",
           "Charisma"
@@ -110,7 +110,7 @@
     "description": "You traveled or read widely and picked up useful knowledge from various cultures. You have the gift of feeling at home wherever you roam.",
     "bonuscharacteristics": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "value": "Wisdom"
       },
       {
@@ -127,7 +127,7 @@
     "description": "You grew up playing games: computer games, roleplaying games, and/or board games. Whatever happens in life, you have a strategy for it.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Dexterity",
           "Intelligence"
@@ -155,7 +155,7 @@
     "description": "You straddle the line between two cultures—that of your native country and that of your new home. Despite challenges, you are stronger for your experiences.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Wisdom",
           "Constitution"
@@ -184,7 +184,7 @@
     "description": "As a kid, you went looking for trouble and found it in abundance: fighting, stealing, vandalism, or general mayhem. You either grew out of it or learned how to behave in a socially accepted manner",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -214,7 +214,7 @@
     "description": "You spent your weekends pretending to be a warrior of a past era, wizard, vampire, or the like. While the pastime didn't necessarily prepare you for modern life, it did give you some unusual skills.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity"
@@ -233,7 +233,7 @@
     "description": "Your family has a strong tradition of service in the armed forces. No matter what you do later in life, this culture still influences you.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Constitution"
@@ -258,7 +258,7 @@
     "description": "For whatever reason, you never fit in with your peers. While growing up was sometimes lonely, your isolation made you a keen observer of your surroundings.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Intelligence",
           "Wisdom"
@@ -285,7 +285,7 @@
     "description": "You spent a portion of your life on the run. You might still be running from the law, a personal vendetta, or bill collectors. You're accustomed to looking over your shoulder for your persecutors.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Dexterity",
           "Constitution"
@@ -309,7 +309,7 @@
     "description": "You don't have exciting stories in your background. You grew up solidly middle class and had an unremarkable childhood.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -359,7 +359,7 @@
     "description": "Your childhood contains a tragedy, since you lost both your parents. Raised in part by the state, you learned to make connections wherever you could.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Constitution",
           "Charisma"
@@ -386,7 +386,7 @@
     "description": "Your background is a mystery, even to you. You have no official records and only dim recollections of your life. It's not a topic you feel comfortable discussing with others.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -408,7 +408,7 @@
     "description": "Your family didn't have much money while you were growing up. Whether you felt deprived of childhood pleasures or celebrate your ability to make do without much, you know what it takes to make your way in the world.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -441,7 +441,7 @@
     "description": "Yours was not a usual childhood. A surrogate parent, government agency, or band of ninjas raised you from a young age to be a cold-hearted killer.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Dexterity",
           "Constitution"
@@ -458,11 +458,7 @@
       },
       {
         "type": "equipmentProficiency",
-        "value": "Basic"
-      },
-      {
-        "type": "equipmentProficiency",
-        "value": "Advanced"
+        "value": "Basic,Advanced"
       }
     ],
     "iconicequipment": "A memento of your lost childhood innocence",
@@ -473,7 +469,7 @@
     "description": "You grew up in a family with strong faith. Whether you still believe today, the practice left you with insight into the human condition.",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Wisdom",
         "value": 1
       }
@@ -498,7 +494,7 @@
     "description": "You grew up outside the cities and among straightforward, honest folk. You learned the value of hard work and gained practical skills.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Constitution"
@@ -529,7 +525,7 @@
     "description": "You had a knack for making friends from an early age. Your popularity and congeniality opens doors for you.",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Charisma",
         "value": 1
       }
@@ -553,7 +549,7 @@
     "description": "From an early age, you loved to compete and show off your athleticism. Even if you didn't continue on to pro sports, your love of fitness and your fighting spirit live on.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity"
@@ -580,7 +576,7 @@
     "description": "You grew up off the grid and learned to live off the land and your own resourcefulness. Whether due to religious, political, or shared social beliefs, you are proud of your self-sufficiency.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Wisdom"
@@ -613,7 +609,7 @@
     "description": "Something horrible happened to you when you were young. The event left you emotionally scarred but determined to thrive despite your trauma.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Constitution",
           "Wisdom"
@@ -640,7 +636,7 @@
     "description": "You have loved technology since an early age. Your skills make you the person all your friends call when they have computer problems.",
     "bonusadjustments": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Intelligence",
         "value": 1
       }
@@ -665,7 +661,7 @@
     "description": "You were born into wealth and privilege. You understand money and how to make it, though that doesn't necessarily mean you know how to keep it.",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Intelligence",
           "Charisma"

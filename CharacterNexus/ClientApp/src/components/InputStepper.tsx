@@ -21,7 +21,7 @@ const InputStepper = ({
   inputBonusAdjustments,
   bonusAdjustments,
   setBonusAdjustments,
-  min = 0,
+  min,
   max,
 }: Props) => {
   register(name);
@@ -53,7 +53,7 @@ const InputStepper = ({
   };
 
   const decrement = () => {
-    if (current > min) applyAdjustment(current - 1);
+    if (min === undefined ||current > min) applyAdjustment(current - 1);
   };
 
   const increment = () => {
@@ -69,7 +69,7 @@ const InputStepper = ({
           type="button"
           className="input-stepper__btn"
           onClick={decrement}
-          disabled={current <= min}
+          disabled={min !== undefined && current <= min}
           aria-label="Decrease"
         >
           −

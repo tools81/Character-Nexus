@@ -94,16 +94,24 @@ namespace Fallout
                 if (items      == null) { Console.WriteLine("Unable to read Item.json. Aborting...");         return; }
                 if (ammos      == null) { Console.WriteLine("Unable to read Ammo.json. Aborting...");         return; }
 
+                var choiceLookup = new Dictionary<string, List<IBaseJson>>(StringComparer.OrdinalIgnoreCase)
+                {
+                    ["attributes"] = attributes.Cast<IBaseJson>().ToList(),
+                    ["skills"]     = skills.Cast<IBaseJson>().ToList(),
+                    ["perks"]      = perks.Cast<IBaseJson>().ToList(),
+                    ["traits"]     = traits.Cast<IBaseJson>().ToList()
+                };
+                
                 GenerateDescriptionSchema();
 
                 _fields.Add(new { type = "divider" });
 
-                GenerateOriginSchema(origins, "origin", "Origin");
-                GenerateTraitSchema(traits, "traits", "Traits");
+                GenerateOriginSchema(origins, "origin", "Origin", choiceLookup);
+                GenerateTraitSchema(traits, "traits", "Traits", choiceLookup);
                 GenerateAttributeSchema(attributes, "attributes", "Attributes");
                 GenerateSkillSchema(skills, "skills", "Skills");
                 GeneratePerkSchema(perks, "perks", "Perks");
-                GeneratePackSchema(packs, origins, "pack", "Pack");
+                GeneratePackSchema(packs, origins, "pack", "Pack", choiceLookup);
                 GenerateRobotModSchema(robotMods, "robotMods", "Mods");
                 GenerateRobotWeaponSchema(robotWeapons, "robotWeapons", "Weapons");
                 GenerateWeaponSchema(weapons, weaponMods, "weapons", "Weapons");
@@ -243,7 +251,7 @@ namespace Fallout
             });
         }
 
-        private static void GenerateOriginSchema(List<Origin> origins, string name, string label)
+        private static void GenerateOriginSchema(List<Origin> origins, string name, string label, Dictionary<string, List<IBaseJson>> choiceLookup)
         {
             dynamic obj = new ExpandoObject();
             obj.name = name;
@@ -260,9 +268,7 @@ namespace Fallout
                     label = origin.Name,
                     image = origin.Image,
                     description = origin.Description,
-                    userChoices = origin.UserChoices?.Count > 0
-                        ? JsonConvert.SerializeObject(origin.UserChoices, _jsonSettings)
-                        : null
+                    userChoices = JsonConvert.SerializeObject(FormSchemaExtensions.EnrichUserChoices(origin.UserChoices, choiceLookup), _jsonSettings)
                 });
             }
 
@@ -270,7 +276,7 @@ namespace Fallout
             _fields.Add(obj);
         }
 
-        private static void GenerateTraitSchema(List<Trait> traits, string name, string label)
+        private static void GenerateTraitSchema(List<Trait> traits, string name, string label, Dictionary<string, List<IBaseJson>> choiceLookup)
         {
             dynamic obj = new ExpandoObject();
             obj.name = name;
@@ -289,9 +295,7 @@ namespace Fallout
                     bonusAdjustments = trait.BonusAdjustments?.Count > 0
                         ? JsonConvert.SerializeObject(trait.BonusAdjustments, _jsonSettings)
                         : null,
-                    userChoices = trait.UserChoices?.Count > 0
-                        ? JsonConvert.SerializeObject(trait.UserChoices, _jsonSettings)
-                        : null
+                    userChoices = JsonConvert.SerializeObject(FormSchemaExtensions.EnrichUserChoices(trait.UserChoices, choiceLookup), _jsonSettings)
                 });
             }
 
@@ -411,7 +415,7 @@ namespace Fallout
             _fields.Add(array);
         }
 
-        private static void GeneratePackSchema(List<Pack> packs, List<Origin> origins, string name, string label)
+        private static void GeneratePackSchema(List<Pack> packs, List<Origin> origins, string name, string label, Dictionary<string, List<IBaseJson>> choiceLookup)
         {
             foreach (var origin in origins)
             {
@@ -439,9 +443,7 @@ namespace Fallout
                         bonusCharacteristics = pack.BonusCharacteristics.Count > 0
                             ? JsonConvert.SerializeObject(pack.BonusCharacteristics, _jsonSettings)
                             : null,
-                        userChoices = pack.UserChoices?.Count > 0
-                            ? JsonConvert.SerializeObject(pack.UserChoices, _jsonSettings)
-                            : null
+                        userChoices = JsonConvert.SerializeObject(FormSchemaExtensions.EnrichUserChoices(pack.UserChoices, choiceLookup), _jsonSettings)
                     });
                 }
 

@@ -5,51 +5,51 @@
     "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Arch_Strong.png",
     "bonusadjustments": [
       {
-        "type": "HitPointBase",
+        "type": "hitpointbase",
         "value": 10
       },
       {
-        "type": "HitPointModifier",
+        "type": "hitpointmodifier",
         "value": 6
       },
       {
-        "type": "DefenseBonus",
+        "type": "defensebonus",
         "value": 1,
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Strong'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 1"
           }
         ]
       },
       {
-        "type": "DefenseBonus",
+        "type": "defensebonus",
         "value": 2,
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Strong'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 3"
           }
         ]
       },
       {
-        "type": "DefenseBonus",
+        "type": "defensebonus",
         "value": 3,
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Strong'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 7"
           }
         ]
@@ -65,29 +65,29 @@
         "value": "d10"
       },
       {
-        "type": "talent",
+        "type": "talents",
         "value": "Reckless Attack",
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Strong'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 1"
           }
         ]
       },
       {
-        "type": "talent",
+        "type": "talents",
         "value": "Power Attack",
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Strong'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 2"
           }
         ]
@@ -100,51 +100,51 @@
     "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Arch_Agile.png",
     "bonusadjustments": [
       {
-        "type": "HitPointBase",
+        "type": "hitpointbase",
         "value": 5
       },
       {
-        "type": "HitPointModifier",
+        "type": "hitpointmodifier",
         "value": 5
       },
       {
-        "type": "DefenseBonus",
+        "type": "defensebonus",
         "value": 1,
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Dexterity'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 1"
           }
         ]
       },
       {
-        "type": "DefenseBonus",
+        "type": "defensebonus",
         "value": 3,
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Dexterity'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 5"
           }
         ]
       },
       {
-        "type": "DefenseBonus",
+        "type": "defensebonus",
         "value": 3,
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Dexterity'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 9"
           }
         ]
@@ -160,29 +160,29 @@
         "value": "d8"
       },
       {
-        "type": "talent",
+        "type": "talents",
         "value": "Fast Reflexes",
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Dexterity'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 1"
           }
         ]
       },
       {
-        "type": "talent",
+        "type": "talents",
         "value": "Quickness",
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Dexterity'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 2"
           }
         ]
@@ -195,51 +195,51 @@
     "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Arch_Tough.png",
     "bonusadjustments": [
       {
-        "type": "HitPointBase",
+        "type": "hitpointbase",
         "value": 12
       },
       {
-        "type": "HitPointModifier",
+        "type": "hitpointmodifier",
         "value": 7
       },
       {
-        "type": "DefenseBonus",
+        "type": "defensebonus",
         "value": 2,
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Tough'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 1"
           }
         ]
       },
       {
-        "type": "DefenseBonus",
+        "type": "defensebonus",
         "value": 3,
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Tough'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 5"
           }
         ]
       },
       {
-        "type": "DefenseBonus",
+        "type": "defensebonus",
         "value": 4,
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Tough'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 9"
           }
         ]
@@ -255,29 +255,29 @@
         "value": "d12"
       },
       {
-        "type": "talent",
+        "type": "talents",
         "value": "Payback",
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Tough'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 1"
           }
         ]
       },
       {
-        "type": "talent",
+        "type": "talents",
         "value": "Tough as Nails",
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Tough'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 2"
           }
         ]
@@ -290,37 +290,37 @@
     "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Arch_Smart.png",
     "bonusadjustments": [
       {
-        "type": "HitPointBase",
+        "type": "hitpointbase",
         "value": 6
       },
       {
-        "type": "HitPointModifier",
+        "type": "hitpointmodifier",
         "value": 4
       },
       {
-        "type": "DefenseBonus",
+        "type": "defensebonus",
         "value": 1,
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Smart'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 5"
           }
         ]
       },
       {
-        "type": "DefenseBonus",
+        "type": "defensebonus",
         "value": 2,
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Smart'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 9"
           }
         ]
@@ -336,29 +336,29 @@
         "value": "d6"
       },
       {
-        "type": "talent",
+        "type": "talents",
         "value": "Genius",
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Smart'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 1"
           }
         ]
       },
       {
-        "type": "talent",
+        "type": "talents",
         "value": "Mental Refresh",
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Smart'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 2"
           }
         ]
@@ -371,51 +371,51 @@
     "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Arch_Wise.png",
     "bonusadjustments": [
       {
-        "type": "HitPointBase",
+        "type": "hitpointbase",
         "value": 10
       },
       {
-        "type": "HitPointModifier",
+        "type": "hitpointmodifier",
         "value": 6
       },
       {
-        "type": "DefenseBonus",
+        "type": "defensebonus",
         "value": 2,
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Wise'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 1"
           }
         ]
       },
       {
-        "type": "DefenseBonus",
+        "type": "defensebonus",
         "value": 3,
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Wise'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 5"
           }
         ]
       },
       {
-        "type": "DefenseBonus",
+        "type": "defensebonus",
         "value": 4,
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Wise'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 9"
           }
         ]
@@ -431,43 +431,43 @@
         "value": "d10"
       },
       {
-        "type": "talent",
+        "type": "talents",
         "value": "Focus",
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Wise'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 1"
           }
         ]
       },
       {
-        "type": "talent",
+        "type": "talents",
         "value": "Concentration",
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Wise'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 1"
           }
         ]
       },
       {
-        "type": "talent",
+        "type": "talents",
         "value": "One Step Ahead",
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Wise'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 2"
           }
         ]
@@ -480,51 +480,51 @@
     "image": "https://characternexus.blob.core.windows.net/resources/EverydayHeroes/Arch_Charming.png",
     "bonusadjustments": [
       {
-        "type": "HitPointBase",
+        "type": "hitpointbase",
         "value": 8
       },
       {
-        "type": "HitPointModifier",
+        "type": "hitpointmodifier",
         "value": 5
       },
       {
-        "type": "DefenseBonus",
+        "type": "defensebonus",
         "value": 1,
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Charming'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 1"
           }
         ]
       },
       {
-        "type": "DefenseBonus",
+        "type": "defensebonus",
         "value": 2,
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Charming'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 5"
           }
         ]
       },
       {
-        "type": "DefenseBonus",
+        "type": "defensebonus",
         "value": 3,
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Charming'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 9"
           }
         ]
@@ -540,29 +540,29 @@
         "value": "d8"
       },
       {
-        "type": "talent",
+        "type": "talents",
         "value": "Influence",
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Charming'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 1"
           }
         ]
       },
       {
-        "type": "talent",
+        "type": "talents",
         "value": "Charm",
         "conditions": [
           {
-            "type": "Archetype",
+            "type": "archetype",
             "formula": "=== 'Charming'"
           },
           {
-            "type": "Level",
+            "type": "level",
             "formula": ">= 2"
           }
         ]

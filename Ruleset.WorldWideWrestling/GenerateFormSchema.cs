@@ -54,9 +54,15 @@ namespace WorldWideWrestling
                 var moves = JsonConvert.DeserializeObject<List<Move>>(jsonMovesData);
                 if (moves == null) { Console.WriteLine("Unable to read Moves.json. Aborting..."); Console.Read(); return; }
 
+                var choiceLookup = new Dictionary<string, List<IBaseJson>>(StringComparer.OrdinalIgnoreCase)
+                {
+                    ["stats"] = stats.Cast<IBaseJson>().ToList(),
+                    ["moves"] = moves.Cast<IBaseJson>().ToList()
+                };
+                
                 GenerateDescriptionSchema();
                 GenerateRoleSchema(roles, "role", "Role");
-                GenerateGimmickSchema(gimmicks, "gimmick", "Gimmick");
+                GenerateGimmickSchema(gimmicks, "gimmick", "Gimmick", choiceLookup);
                 GenerateHailingSchema(hailings, gimmicks, "hailing", "Hailing from");
                 GenerateEntranceSchema(entrances, gimmicks, "entrance", "Entrance");
                 GenerateQuestionsSchema(questions, gimmicks, "questions", "Heat");
@@ -139,7 +145,7 @@ namespace WorldWideWrestling
             _fields.Add(obj);
         }
 
-        private static void GenerateGimmickSchema(List<Gimmick> gimmicks, string name, string label)
+        private static void GenerateGimmickSchema(List<Gimmick> gimmicks, string name, string label, Dictionary<string, List<IBaseJson>> choiceLookup)
         {
             dynamic obj = new ExpandoObject();
             obj.name = name;
@@ -158,7 +164,7 @@ namespace WorldWideWrestling
                     image = gimmick.Image,
                     bonusAdjustments = JsonConvert.SerializeObject(gimmick.BonusAdjustments, _jsonSettings),
                     bonusCharacteristics = JsonConvert.SerializeObject(gimmick.BonusCharacteristics, _jsonSettings),
-                    userChoices = JsonConvert.SerializeObject(gimmick.UserChoices, _jsonSettings)
+                    userChoices = JsonConvert.SerializeObject(FormSchemaExtensions.EnrichUserChoices(gimmick.UserChoices, choiceLookup), _jsonSettings)
                 });
             }
 

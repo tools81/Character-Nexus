@@ -837,7 +837,7 @@ function ChoiceFieldWithDescription({ field, disabledMap, visibilityMap, isVisib
         {field.description && (
           <button
             type="button"
-            className="btn btn-link btn-sm p-0 text-muted flex-shrink-0"
+            className="btn btn-link btn-sm p-0 flex-shrink-0"
             onClick={() => setOpen(o => !o)}
             aria-expanded={open}
           >
@@ -846,7 +846,7 @@ function ChoiceFieldWithDescription({ field, disabledMap, visibilityMap, isVisib
         )}
       </div>
       {field.description && open && (
-        <small className="text-muted d-block mb-2 mt-1">{field.description}</small>
+        <small className="d-block mb-2 mt-1" dangerouslySetInnerHTML={{ __html: field.description }} />
       )}
     </div>
   );

@@ -3,7 +3,7 @@ using Utility;
 
 namespace EverydayHeroes
 {
-    public class Background
+    public class Background : IFeature
     {
         public string Name { get; set; }
         public string Description { get; set; }

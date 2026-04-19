@@ -169,6 +169,13 @@ body.theme-vampire-the-masquerade .d-flex.mb-3 img {
   filter: drop-shadow(0 0 12px rgba(139, 0, 0, 0.5));
 }
 
+/* ── Choice Modal ────────────────────────────────────────────── */
+body.theme-vampire-the-masquerade .choice-modal {
+  background: rgba(10, 6, 6, 0.97);
+  border-color: rgba(139, 0, 0, 0.45);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.9), 0 0 20px rgba(139, 0, 0, 0.1);
+}
+
 /* ── Animations ──────────────────────────────────────────────── */
 @keyframes vtm-bleed {
   0%, 100% {

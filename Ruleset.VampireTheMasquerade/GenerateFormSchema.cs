@@ -194,14 +194,22 @@ namespace VampireTheMasquerade
                     return;
                 }
 
+                var choiceLookup = new Dictionary<string, List<IBaseJson>>(StringComparer.OrdinalIgnoreCase)
+                {
+                    ["attributes"]  = attributes.Cast<IBaseJson>().ToList(),
+                    ["skills"]      = skills.Cast<IBaseJson>().ToList(),
+                    ["specialties"] = specialties.Cast<IBaseJson>().ToList(),
+                    ["disciplines"] = disciplines.Cast<IBaseJson>().ToList(),
+                };
+
                 GenerateDescriptionSchema();
 
-                GenerateClanSchema(clans, "clan", "Clan");
-                GeneratePredatorSchema(predators, "predator", "Predator");
+                GenerateClanSchema(clans, "clan", "Clan", choiceLookup);
+                GeneratePredatorSchema(predators, "predator", "Predator", choiceLookup);
                 GenerateGenerationSchema(generations, "generation", "Generation");
                 GenerateCoterieSchema(coteries, "coterie", "Coterie"); 
                 GenerateAttributeSchema(attributes, "attributes", "Attributes");
-                GenerateSkillSchema(skills, specialties, "skill", "Skills");
+                GenerateSkillSchema(skills, specialties, "skills", "Skills");
                 GenerateDisciplineSchema(disciplines, powers, "disciplines", "Disciplines");
                 GenerateRitualSchema(rituals, "rituals", "Rituals");                                               
                 GenerateAdvantageSchema(advantages, backgrounds, merits, flaws, "advantages", "Advantages");
@@ -528,7 +536,7 @@ namespace VampireTheMasquerade
                 });
         }
 
-        private static void GenerateClanSchema(List<Clan> clans, string name, string label)
+        private static void GenerateClanSchema(List<Clan> clans, string name, string label, Dictionary<string, List<IBaseJson>> choiceLookup)
         {
             dynamic obj = new ExpandoObject();
 
@@ -547,7 +555,7 @@ namespace VampireTheMasquerade
                         label = clan.Name,
                         image = clan.Image,
                         description = $"{clan.Description}<br /><b>Bane: </b>{clan.Bane}<br /><b>Compulsion: </b>{clan.Compulsion}",
-                        userChoices = JsonConvert.SerializeObject(clan.UserChoices, _jsonSettings)
+                        userChoices = JsonConvert.SerializeObject(FormSchemaExtensions.EnrichUserChoices(clan.UserChoices, choiceLookup), _jsonSettings)
                     }
                 );
             }
@@ -985,7 +993,7 @@ namespace VampireTheMasquerade
             });
         }
 
-        private static void GeneratePredatorSchema(List<Predator> predators, string name, string label)
+        private static void GeneratePredatorSchema(List<Predator> predators, string name, string label, Dictionary<string, List<IBaseJson>> choiceLookup)
         {
             dynamic obj = new ExpandoObject();
 
@@ -1004,7 +1012,7 @@ namespace VampireTheMasquerade
                         label = predator.Name,
                         description = predator.Description,
                         bonusAdjustments = JsonConvert.SerializeObject(predator.BonusAdjustments, _jsonSettings),
-                        userChoices = JsonConvert.SerializeObject(predator.UserChoices, _jsonSettings)
+                        userChoices = JsonConvert.SerializeObject(FormSchemaExtensions.EnrichUserChoices(predator.UserChoices, choiceLookup), _jsonSettings)
                     }
                 );
             }

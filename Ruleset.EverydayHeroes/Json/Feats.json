@@ -6,7 +6,7 @@
     "scale": "Minor",
     "userchoices": [
       {
-        "type": "attribute",
+        "type": "attributes",
         "choices": [
           "Strength",
           "Dexterity",
@@ -65,13 +65,13 @@
     "scale": "Minor",
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       }
     ],
     "userchoices": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "choices": [
           "Advanced",
           "Historical",
@@ -90,7 +90,6 @@
     "scale": "Minor",
     "bonusadjustments": [
       {
-        "name": "",
         "type": "wealthlevel",
         "value": 1
       }
@@ -413,7 +412,6 @@
     "scale": "Major",
     "bonusadjustments": [
       {
-        "name": "",
         "type": "luckpoints",
         "Value": 3
       }
@@ -438,7 +436,6 @@
     "scale": "Major",
     "bonusadjustments": [
       {
-        "name": "",
         "type": "hitpoints",
         "value": 2
       }
@@ -479,7 +476,7 @@
         "formula": "!== 'Strong'"
       },
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Strength",
         "formula": ">= 13"
       },
@@ -490,7 +487,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       }
     ],
@@ -518,7 +515,7 @@
         "formula": "!== 'Brawler'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Brawler Training",
         "formula": "=== true",
         "logicalor": [
@@ -535,7 +532,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Improvised"
       }
     ]
@@ -551,7 +548,7 @@
         "formula": "!== 'Brawler'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Brawler Training",
         "formula": "=== true"
       },
@@ -572,7 +569,7 @@
         "formula": "!== 'Heavy Gunner'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Strong Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -589,7 +586,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ]
@@ -605,7 +602,7 @@
         "formula": "!== 'Heavy Gunner'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Heavy Gunner Training",
         "formula": "=== true"
       },
@@ -616,7 +613,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Military"
       }
     ]
@@ -632,7 +629,7 @@
         "formula": "!== 'MMA Fighter'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Strong Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -659,7 +656,7 @@
         "formula": "!== 'MMA Fighter'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "MMA Fighter Training",
         "formula": "=== true"
       },
@@ -680,7 +677,7 @@
         "formula": "!== 'Agile'"
       },
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Dexterity",
         "formula": ">= 13"
       },
@@ -691,7 +688,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "choices": "Basic"
       }
     ],
@@ -720,7 +717,7 @@
         "formula": "!== 'Martial Artist'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Martial Artist Training",
         "formula": "=== true"
       },
@@ -731,7 +728,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Historical"
       }
     ]
@@ -747,7 +744,7 @@
         "formula": "!== 'Martial Artist'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Agile Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -764,7 +761,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Historical"
       }
     ]
@@ -780,7 +777,7 @@
         "formula": "!== 'Scoundrel'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Agile Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -797,7 +794,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ],
@@ -829,7 +826,7 @@
         "formula": "!== 'Scoundrel'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Scoundrel Training",
         "formula": "=== true"
       },
@@ -866,7 +863,7 @@
         "formula": "!== 'Sharpshooter'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Agile Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -883,7 +880,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ]
@@ -899,7 +896,7 @@
         "formula": "!== 'Sharpshooter'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Sharpshooter Training",
         "formula": "=== true"
       },
@@ -920,7 +917,7 @@
         "formula": "!== 'Tough'"
       },
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Constitution",
         "formula": ">= 13"
       },
@@ -931,11 +928,11 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       },
       {
-        "type": "HasDamageReduction",
+        "type": "hasdamagereduction",
         "value": true
       }
     ]
@@ -951,7 +948,7 @@
         "formula": "!== 'Bodyguard'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Tough Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -968,7 +965,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ]
@@ -984,7 +981,7 @@
         "formula": "!== 'Bodyguard'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Bodyguard Training",
         "formula": "=== true"
       },
@@ -1005,7 +1002,7 @@
         "formula": "!== 'Commando'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Tough Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -1022,7 +1019,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ]
@@ -1038,7 +1035,7 @@
         "formula": "!== 'Commando'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Commando Training",
         "formula": "=== true"
       },
@@ -1049,13 +1046,12 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Military"
       }
     ],
     "bonusadjustments": [
       {
-        "name": "Defense",
         "type": "defense",
         "value": 2
       }
@@ -1072,7 +1068,7 @@
         "formula": "!== 'Scrapper'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Tough Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -1089,7 +1085,7 @@
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ]
@@ -1105,7 +1101,7 @@
         "formula": "!== 'Scrapper'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Scrapper Training",
         "formula": "=== true"
       },
@@ -1126,7 +1122,7 @@
         "formula": "!== 'Smart'"
       },
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Intelligence",
         "formula": ">= 13"
       },
@@ -1163,7 +1159,7 @@
         "formula": "!== 'Engineer'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Smart Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -1206,7 +1202,7 @@
         "formula": "!== 'Engineer'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Engineer Training",
         "formula": "=== true"
       },
@@ -1234,7 +1230,6 @@
     ],
     "bonusadjustments": [
       {
-        "name": "GeniusPoints",
         "type": "geniuspoints",
         "value": 1
       }
@@ -1251,7 +1246,7 @@
         "formula": "!== 'Hacker'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Smart Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -1284,7 +1279,6 @@
     ],
     "bonusadjustments": [
       {
-        "name": "GeniusPoints",
         "type": "geniuspoints",
         "value": 1
       }
@@ -1301,7 +1295,7 @@
         "formula": "!== 'Hacker'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Hacker Training",
         "formula": "=== true"
       },
@@ -1329,7 +1323,6 @@
     ],
     "bonusadjustments": [
       {
-        "name": "GeniusPoints",
         "type": "geniuspoints",
         "value": 1
       }
@@ -1346,7 +1339,7 @@
         "formula": "!== 'Mastermind'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Smart Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -1382,7 +1375,6 @@
     ],
     "bonusadjustments": [
       {
-        "name": "GeniusPoints",
         "type": "geniuspoints",
         "value": 1
       }
@@ -1399,7 +1391,7 @@
         "formula": "!== 'Mastermind'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Mastermind Training",
         "formula": "=== true"
       },
@@ -1430,7 +1422,6 @@
     ],
     "bonusadjustments": [
       {
-        "name": "GeniusPoints",
         "type": "geniuspoints",
         "value": 1
       }
@@ -1447,7 +1438,7 @@
         "formula": "!== 'Scientist'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Smart Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -1483,7 +1474,6 @@
     ],
     "bonusadjustments": [
       {
-        "name": "GeniusPoints",
         "type": "geniuspoints",
         "value": 1
       }
@@ -1500,7 +1490,7 @@
         "formula": "!== 'Scientist'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Scientist Training",
         "formula": "=== true"
       },
@@ -1531,7 +1521,6 @@
     ],
     "bonusadjustments": [
       {
-        "name": "GeniusPoints",
         "type": "geniuspoints",
         "value": 1
       }
@@ -1548,7 +1537,7 @@
         "formula": "!== 'Wise'"
       },
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Wisdom",
         "formula": ">= 13"
       },
@@ -1559,14 +1548,13 @@
     ],
     "bonusadjustments": [
       {
-        "name": "FocusPoints",
         "type": "focuspoints",
         "value": 2
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Basic"
       }
     ],
@@ -1595,7 +1583,7 @@
         "formula": "!== 'Hunter'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Wise Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -1612,14 +1600,13 @@
     ],
     "bonusadjustments": [
       {
-        "name": "FocusPoints",
         "type": "focuspoints",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ],
@@ -1647,7 +1634,7 @@
         "formula": "!== 'Hunter'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Hunter Training",
         "formula": "=== true"
       },
@@ -1658,7 +1645,6 @@
     ],
     "bonusadjustments": [
       {
-        "name": "FocusPoints",
         "type": "focuspoints",
         "value": 1
       }
@@ -1687,7 +1673,7 @@
         "formula": "!== 'Master'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Wise Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -1704,14 +1690,13 @@
     ],
     "bonusadjustments": [
       {
-        "name": "FocusPoints",
         "type": "focuspoints",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Improvised"
       }
     ]
@@ -1727,7 +1712,7 @@
         "formula": "!== 'Master'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Master Training",
         "formula": "=== true"
       },
@@ -1738,7 +1723,6 @@
     ],
     "bonusadjustments": [
       {
-        "name": "FocusPoints",
         "type": "focuspoints",
         "value": 1
       }
@@ -1755,7 +1739,7 @@
         "formula": "!== 'Sleuth'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Wise Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -1772,14 +1756,13 @@
     ],
     "bonusadjustments": [
       {
-        "name": "FocusPoints",
         "type": "focuspoints",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
+        "type": "equipmentproficiency",
         "value": "Advanced"
       }
     ],
@@ -1809,7 +1792,7 @@
         "formula": "!== 'Sleuth'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Sleuth Training",
         "formula": "=== true"
       },
@@ -1820,7 +1803,6 @@
     ],
     "bonusadjustments": [
       {
-        "name": "FocusPoints",
         "type": "focuspoints",
         "value": 1
       }
@@ -1851,7 +1833,7 @@
         "formula": "!== 'Charming'"
       },
       {
-        "type": "attribute",
+        "type": "attributes",
         "name": "Charisma",
         "formula": ">= 13"
       },
@@ -1862,7 +1844,6 @@
     ],
     "bonusadjustments": [
       {
-        "name": "InfluencePoints",
         "type": "influencepoints",
         "value": 2
       }
@@ -1903,7 +1884,7 @@
         "formula": "!== 'Duelist'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Charming Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -1920,19 +1901,14 @@
     ],
     "bonusadjustments": [
       {
-        "name": "InfluencePoints",
         "type": "influencepoints",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
-        "value": "Basic"
-      },
-      {
-        "type": "equipmentProficiency",
-        "value": "Historical"
+        "type": "equipmentproficiency",
+        "value": "Basic, Historical"
       }
     ],
     "userchoices": [
@@ -1957,7 +1933,7 @@
         "formula": "!== 'Duelist'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Duelist Training",
         "formula": "=== true"
       },
@@ -1968,7 +1944,6 @@
     ],
     "bonusadjustments": [
       {
-        "name": "InfluencePoints",
         "type": "influencepoints",
         "value": 1
       }
@@ -1995,7 +1970,7 @@
         "formula": "!== 'Icon'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Charming Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -2012,19 +1987,14 @@
     ],
     "bonusadjustments": [
       {
-        "name": "InfluencePoints",
         "type": "influencepoints",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
-        "value": "Basic"
-      },
-      {
-        "type": "equipmentProficiency",
-        "value": "Advanced"
+        "type": "equipmentproficiency",
+        "value": "Basic, Advanced"
       }
     ],
     "userchoices": [
@@ -2049,7 +2019,7 @@
         "formula": "!== 'Icon'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Icon Training",
         "formula": "=== true"
       },
@@ -2060,7 +2030,6 @@
     ],
     "bonusadjustments": [
       {
-        "name": "InfluencePoints",
         "type": "influencepoints",
         "value": 1
       }
@@ -2087,7 +2056,7 @@
         "formula": "!== 'Leader'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Charming Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -2104,19 +2073,14 @@
     ],
     "bonusadjustments": [
       {
-        "name": "InfluencePoints",
         "type": "influencepoints",
         "value": 1
       }
     ],
     "bonuscharacteristics": [
       {
-        "type": "equipmentProficiency",
-        "value": "Basic"
-      },
-      {
-        "type": "equipmentProficiency",
-        "value": "Advanced"
+        "type": "equipmentproficiency",
+        "value": "Basic, Advanced"
       }
     ],
     "userchoices": [
@@ -2141,7 +2105,7 @@
         "formula": "!== 'Leader'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Leader Training",
         "formula": "=== true"
       },
@@ -2152,7 +2116,6 @@
     ],
     "bonusadjustments": [
       {
-        "name": "InfluencePoints",
         "type": "influencepoints",
         "value": 1
       }
@@ -2179,7 +2142,7 @@
         "formula": "!== 'Manipulator'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Charming Hero Training",
         "formula": "=== true",
         "logicalor": [
@@ -2196,7 +2159,6 @@
     ],
     "bonusadjustments": [
       {
-        "name": "InfluencePoints",
         "type": "influencepoints",
         "value": 1
       }
@@ -2223,7 +2185,7 @@
         "formula": "!== 'Manipulator'"
       },
       {
-        "type": "feat",
+        "type": "feats",
         "name": "Manipulator Training",
         "formula": "=== true"
       },
@@ -2234,7 +2196,6 @@
     ],
     "bonusadjustments": [
       {
-        "name": "InfluencePoints",
         "type": "influencepoints",
         "value": 1
       }

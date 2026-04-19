@@ -3,7 +3,7 @@ using Utility;
 
 namespace EverydayHeroes
 {
-    public class Feat
+    public class Feat : IFeature
     {
         public string Name { get; set; }
         public string Description { get; set; }

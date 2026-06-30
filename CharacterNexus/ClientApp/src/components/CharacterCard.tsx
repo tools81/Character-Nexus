@@ -16,9 +16,10 @@ interface Props {
   onClick: () => void;
   onDelete: (name: string) => void;
   onEdit: (name: string) => void;
+  onExportToQuestSide?: (name: string) => void;
 }
 
-const CharacterCard = ({ id, name, image, level, levelName, details, characterSheet, onClick, onDelete, onEdit }: Props) => {
+const CharacterCard = ({ id, name, image, level, levelName, details, characterSheet, onClick, onDelete, onEdit, onExportToQuestSide }: Props) => {
   return (
     <>
       <div className="col">
@@ -50,11 +51,18 @@ const CharacterCard = ({ id, name, image, level, levelName, details, characterSh
                   </td>
                 </div>
                 <div className="col-1 pointer">
-                  <SiFoundryvirtualtabletop />                 
+                  <SiFoundryvirtualtabletop />
                 </div>
+                {onExportToQuestSide && (
+                  <div className="col-1 pointer">
+                    <td onClick={() => onExportToQuestSide(name)} title="Export to QuestSide">
+                      <img src="/questside.png" alt="QuestSide" style={{ width: '1em', height: '1em', objectFit: 'contain' }} />
+                    </td>
+                  </div>
+                )}
                 <div className="col-1 pointer">
                   <td onClick={() => onDelete(name)}>
-                    <FaRegTrashCan />                    
+                    <FaRegTrashCan />
                   </td>
                 </div>
                 <div className="col-sm text-end">

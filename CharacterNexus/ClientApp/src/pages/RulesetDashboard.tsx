@@ -4,6 +4,8 @@ import CharacterCard from '../components/CharacterCard';
 import AddCharacterCard from '../components/AddCharacterCard';
 import { useAppSelector, useAppDispatch } from '../store/configureStore';
 import { fetchCharacters, deleteCharacter, CharacterSegment } from '../store/slices/characterSegmentSlice';
+import { fetchCharacterByName } from '../store/slices/characterSlice';
+import { exportToQuestSide, RULESET_TO_SYSTEM } from '../utils/questSideExport';
 import { useRulesetTheme } from '../hooks/useRulesetTheme';
 
 const RulesetDashboard: React.FC = () => {
@@ -26,6 +28,27 @@ const RulesetDashboard: React.FC = () => {
   const editCharacter = (name: string) => navigate(`/charactereditor?character=${name}`);
   const deleteCharacterHandler = (id: string) =>
     currentRuleset && dispatch(deleteCharacter({ id, rulesetName: currentRuleset.name }));
+
+  const exportToQuestSideHandler = async (characterName: string) => {
+    if (!currentRuleset) return;
+    if (!RULESET_TO_SYSTEM[currentRuleset.name]) return;
+    try {
+      const character = await dispatch(
+        fetchCharacterByName({ rulesetName: currentRuleset.name, characterName })
+      ).unwrap();
+      const result = exportToQuestSide(currentRuleset.name, character);
+      if (!result) return;
+      const blob = new Blob([JSON.stringify(result.data, null, 2)], { type: 'application/json' });
+      const url  = URL.createObjectURL(blob);
+      const a    = document.createElement('a');
+      a.href     = url;
+      a.download = `${characterName.replace(/\s+/g, '_')}_${result.systemId}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch {
+      // fetchCharacterByName rejection is already handled in the slice
+    }
+  };
 
   if (!currentRuleset) return <div>No ruleset selected.</div>;
   if (isLoading) return <div>Loading characters...</div>;
@@ -51,6 +74,7 @@ const RulesetDashboard: React.FC = () => {
             onClick={() => editCharacter(character.name)}
             onEdit={() => editCharacter(character.name)}
             onDelete={() => deleteCharacterHandler(character.id)}
+            onExportToQuestSide={RULESET_TO_SYSTEM[currentRuleset.name] ? exportToQuestSideHandler : undefined}
           />
         ))}
       </div>

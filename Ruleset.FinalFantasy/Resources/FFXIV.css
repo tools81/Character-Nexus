@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;900&family=Exo+2:wght@400;600;700;800&family=Rajdhani:wght@500;600;700&family=Orbitron:wght@500;700;900&display=swap');
+
+:root {
+  --ff-parchment:    #E8D4B8;
+  --ff-aged-paper:   #D9C4A8;
+  --ff-paper-dark:   #C4A882;
+  --ff-border-dark:  #8B6F47;
+  --ff-border-gold:  #A0825A;
+  --ff-text-dark:    #2A1810;
+  --ff-text-brown:   #4A2C1F;
+  --ff-accent-orange:#C47B4A;
+  --ff-accent-red:   #B85C4A;
+  --ff-box-tan:      #D4BC9E;
+  --ff-box-cream:    #E5D8C5;
+  --ff-header-brown: #6B4423;
+  --ff-shadow:       rgba(42, 24, 16, 0.3);
+}
+
+/* ── Page background ─────────────────────────────────────────── */
+body.theme-final-fantasy {
+  background:
+    radial-gradient(circle at 30% 40%, rgba(107, 68, 35, 0.3) 0%, transparent 50%),
+    linear-gradient(135deg, #4A3422 0%, #3A2816 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--ff-text-dark);
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+body.theme-final-fantasy h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ff-header-brown);
+  text-shadow:
+    3px 3px 0 rgba(0, 0, 0, 0.12),
+    0 0 20px rgba(196, 123, 74, 0.2);
+  animation: ff-illuminate 4s ease-in-out infinite;
+}
+
+body.theme-final-fantasy h2 {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ff-header-brown);
+  border-left: 5px solid var(--ff-accent-orange);
+  border-bottom: 2px solid var(--ff-border-dark);
+  padding: 0.5rem 0.75rem;
+  background: var(--ff-aged-paper);
+  box-shadow: 3px 3px 0 var(--ff-shadow);
+}
+
+body.theme-final-fantasy h3 {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ff-accent-red);
+}
+
+body.theme-final-fantasy h4 {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ff-text-brown);
+}
+
+body.theme-final-fantasy label,
+body.theme-final-fantasy .form-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ff-header-brown);
+}
+
+/* ── Inputs ──────────────────────────────────────────────────── */
+body.theme-final-fantasy input[type="text"],
+body.theme-final-fantasy input[type="number"],
+body.theme-final-fantasy textarea {
+  background-color: var(--ff-box-cream) !important;
+  color: var(--ff-text-dark) !important;
+  border: 2px solid var(--ff-border-gold) !important;
+  border-radius: 0 !important;
+  box-shadow: 2px 2px 0 var(--ff-shadow);
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body.theme-final-fantasy input[type="text"]:focus,
+body.theme-final-fantasy input[type="number"]:focus,
+body.theme-final-fantasy textarea:focus {
+  outline: none !important;
+  border-color: var(--ff-accent-orange) !important;
+  box-shadow: 2px 2px 0 var(--ff-shadow), 0 0 0 2px rgba(196, 123, 74, 0.3) !important;
+}
+
+body.theme-final-fantasy input[type="checkbox"] {
+  accent-color: var(--ff-accent-orange);
+}
+
+/* ── Custom Select ───────────────────────────────────────────── */
+body.theme-final-fantasy .custom-select__control {
+  background: var(--ff-box-cream);
+  border: 2px solid var(--ff-border-gold) !important;
+  border-radius: 0 !important;
+  color: var(--ff-text-dark);
+  box-shadow: 2px 2px 0 var(--ff-shadow);
+}
+
+body.theme-final-fantasy .custom-select__control:focus-visible,
+body.theme-final-fantasy .custom-select__control:focus-within {
+  outline: 2px solid var(--ff-accent-orange);
+  box-shadow: 2px 2px 0 var(--ff-shadow), 0 0 0 3px rgba(196, 123, 74, 0.25);
+}
+
+body.theme-final-fantasy .custom-select__menu {
+  background: var(--ff-aged-paper);
+  border: 2px solid var(--ff-border-dark);
+  border-radius: 0;
+  box-shadow:
+    4px 4px 0 var(--ff-shadow),
+    0 8px 24px rgba(42, 24, 16, 0.25);
+}
+
+body.theme-final-fantasy .custom-select__option {
+  color: var(--ff-text-dark);
+  border-bottom: 1px solid var(--ff-border-gold);
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body.theme-final-fantasy .custom-select__option:hover {
+  background: rgba(196, 123, 74, 0.2);
+  color: var(--ff-header-brown);
+}
+
+body.theme-final-fantasy .custom-select__value span {
+  color: var(--ff-text-dark);
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+body.theme-final-fantasy .submit-button {
+  background: var(--ff-accent-orange);
+  color: var(--ff-parchment);
+  border: 2px solid var(--ff-border-dark);
+  border-radius: 0;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.25);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+body.theme-final-fantasy .submit-button:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+body.theme-final-fantasy .submit-button:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+body.theme-final-fantasy .add-button {
+  background: var(--ff-box-cream);
+  color: var(--ff-accent-orange);
+  border: 2px solid var(--ff-accent-orange);
+  border-radius: 0;
+  box-shadow: 2px 2px 0 var(--ff-shadow);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+body.theme-final-fantasy .add-button:hover {
+  background: rgba(196, 123, 74, 0.15);
+  transform: translate(-1px, -1px);
+}
+
+body.theme-final-fantasy .btn-outline-secondary {
+  color: var(--ff-border-dark);
+  border-color: var(--ff-border-dark);
+  border-radius: 0;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+body.theme-final-fantasy .btn-outline-secondary:hover {
+  background-color: rgba(139, 111, 71, 0.15);
+  color: var(--ff-text-brown);
+  border-color: var(--ff-border-gold);
+}
+
+body.theme-final-fantasy .dice-roll-btn {
+  filter: drop-shadow(2px 2px 0 rgba(139, 111, 71, 0.5));
+}
+
+/* ── Form containers ─────────────────────────────────────────── */
+body.theme-final-fantasy hr {
+  border-color: var(--ff-border-gold);
+  opacity: 0.6;
+}
+
+body.theme-final-fantasy .d-flex.mb-3 img {
+  border: 3px solid var(--ff-border-gold);
+  box-shadow: 3px 3px 0 var(--ff-shadow);
+}
+
+/* ── Pinned stats ────────────────────────────────────────────── */
+body.theme-final-fantasy .pinned-stat {
+  background: var(--ff-box-tan);
+  border: 2px solid var(--ff-border-dark);
+  border-top: 4px solid var(--ff-accent-orange);
+  box-shadow: 3px 3px 0 var(--ff-shadow);
+  border-radius: 0;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+}
+
+body.theme-final-fantasy .pinned-stat-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ff-header-brown);
+}
+
+body.theme-final-fantasy .pinned-stat-value {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  color: var(--ff-accent-red);
+}
+
+/* ── Tabs ────────────────────────────────────────────────────── */
+body.theme-final-fantasy .nav-tabs {
+  border-bottom: 3px solid var(--ff-border-dark);
+}
+
+body.theme-final-fantasy .nav-tabs .nav-link {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ff-text-brown);
+  border: 2px solid transparent;
+  border-radius: 0;
+  background: var(--ff-aged-paper);
+  border-color: var(--ff-border-gold);
+  margin-right: 2px;
+}
+
+body.theme-final-fantasy .nav-tabs .nav-link:hover {
+  color: var(--ff-header-brown);
+  background: var(--ff-parchment);
+  border-color: var(--ff-border-dark);
+}
+
+body.theme-final-fantasy .nav-tabs .nav-link.active {
+  color: var(--ff-parchment);
+  background: var(--ff-accent-orange);
+  border-color: var(--ff-border-dark);
+  border-bottom-color: var(--ff-accent-orange);
+  box-shadow: 2px 0 0 var(--ff-shadow);
+}
+
+/* ── Animations ──────────────────────────────────────────────── */
+@keyframes ff-illuminate {
+  0%, 100% {
+    text-shadow:
+      3px 3px 0 rgba(0, 0, 0, 0.12),
+      0 0 20px rgba(196, 123, 74, 0.2);
+  }
+  50% {
+    text-shadow:
+      3px 3px 0 rgba(0, 0, 0, 0.12),
+      0 0 30px rgba(196, 123, 74, 0.4),
+      0 0 8px rgba(184, 92, 74, 0.2);
+  }
+}

@@ -1,0 +1,645 @@
+[
+    {
+        "name": "Potion",
+        "description": "This weak concoction instantly restores a small amount of HP.",
+        "image": "",
+        "base": "Restores 3 HP to the user.",
+        "tier": "Low",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Hi-Potion",
+        "description": "This concoction instantly restores a fair amount of HP.",
+        "image": "",
+        "base": "Restores 1d6 + 3 HP to the user.",
+        "tier": "Average",
+        "price": 2,
+        "target": "Self"
+    },
+    {
+        "name": "Mega-Potion",
+        "description": "This potent concoction instantly restores a large amount of HP.",
+        "image": "",
+        "base": "Restores 1d6 + 6 HP to the user.",
+        "tier": "High",
+        "price": 3,
+        "target": "Self"
+    },
+    {
+        "name": "X-Potion",
+        "description": "This powerful concoction instantly restores a sizable amount of HP.",
+        "image": "",
+        "base": "Restores 2d6 + 6 HP to the user.",
+        "tier": "High",
+        "price": 4,
+        "target": "Self"
+    },
+    {
+        "name": "Ether",
+        "description": "Processed via the alchemical extraction of aetheric essence occurring in elemental crystals, the contents of this vial instantly restore a small amount of MP.",
+        "image": "",
+        "base": "Restores 1 MP to the user.",
+        "tier": "Low",
+        "price": 2,
+        "target": "Self"
+    },
+    {
+        "name": "Hi-Ether",
+        "description": "Processed via the alchemical extraction of aetheric essence occurring in elemental crystals, the contents of this vial instantly restore MP.",
+        "image": "",
+        "base": "Restores 1 MP to the user, or 2 MP if they are level 50 or below.",
+        "tier": "Average",
+        "price": 4,
+        "target": "Self"
+    },
+    {
+        "name": "Mega-Ether",
+        "description": "Processed via the alchemical extraction of aetheric essence occurring in elemental crystals, the contents of this vial instantly restore MP.",
+        "image": "",
+        "base": "Restores 1 MP to the user, or 2 MP if they are level 55 or below.",
+        "tier": "High",
+        "price": 5,
+        "target": "Self"
+    },
+    {
+        "name": "X-Ether",
+        "description": "Processed via the alchemical extraction of aetheric essence occurring in elemental crystals, the contents of this vial instantly restore a sizable amount of MP.",
+        "image": "",
+        "base": "Restores 1 MP to the user, or 2 MP if they are level 50 or below.",
+        "tier": "High",
+        "price": 6,
+        "target": "Self"
+    },
+    {
+        "name": "Fortifying Brew",
+        "description": "An alchemically crafted concoction that endows whomever imbibes it with enhanced vigor.",
+        "image": "",
+        "base": "Grants a barrier of 1d6 HP to the user.",
+        "tier": "Average",
+        "price": 2,
+        "target": "Self"
+    },
+    {
+        "name": "Antidote",
+        "description": "This alchemically crafted restorative instantly cures most instances of damage over time afflictions.",
+        "image": "",
+        "base": "Removes a single DOT from the user. The user may choose which DOT to remove.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Eye Drops",
+        "description": "This alchemically crafted restorative instantly cures most instances of blindness.",
+        "image": "",
+        "base": "Removes Blind from the user.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Echo Drops",
+        "description": "This alchemically crafted restorative instantly cures most instances of silence.",
+        "image": "",
+        "base": "Removes Silence from the user.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Smelling Salts",
+        "description": "This alchemically crafted restorative instantly rouses most sleeping targets.",
+        "image": "",
+        "base": "Removes Sleep from the user.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Spine Drops",
+        "description": "This alchemically crafted restorative instantly cures most instances of paralysis.",
+        "image": "",
+        "base": "Removes Paralysis from the user.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Gold Needle",
+        "description": "The properties of this solid-gold needle include curing petrification and pricking fingers.",
+        "image": "",
+        "base": "Removes Petrify from the user.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Remedy",
+        "description": "The potion pushers of Frondale's Phrontistery will swear upon the Twelve that this alchemically crafted restorative is capable of curing all that ails you. They're mostly right, but despite what it says on the tin, it cannot turn lead to gold or mend a broken heart.",
+        "image": "",
+        "base": "Removes a single enfeeblement from the user. The user may choose which enfeeblement to remove.",
+        "tier": "High",
+        "price": 3,
+        "target": "Self"
+    },
+    {
+        "name": "First Aid Kit",
+        "description": "A simple kit containing bandages, disinfectants, and other medical supplies an untrained medic needs to dress wounds out in the field.",
+        "image": "",
+        "base": "Restores 1d6 + 3 HP to the target.",
+        "tier": "Average",
+        "price": 3,
+        "target": "Single",
+        "range": "1 square"
+    },
+    {
+        "name": "Medical Kit",
+        "description": "A well-stocked, professional kit containing all the bandages, disinfectants, and other medical supplies a trained medic needs to dress wounds out in the field.",
+        "image": "",
+        "base": "Restores 2d6 + 6 HP to the target.",
+        "tier": "High",
+        "price": 5,
+        "target": "Single",
+        "range": "1 square"
+    },
+    {
+        "name": "Company-Issue Tonic",
+        "description": "This herbal concoction is guaranteed to clear passageways blocked with blood or bile, allowing for easier breathing and quick recovery from unconsciousness.",
+        "image": "",
+        "base": "Removes Knocked Out from the target, then restores 1d6 + 3 HP, grants Transcendent, and afflicts them with Weakness. *This item can also target a character outside the encounter map. When doing so, move the target to an empty square within 5 squares of the user after resolving the item's effects.",
+        "tier": "High",
+        "price": 5,
+        "target": "1 Knocked Out character",
+        "range": "5 squares"
+    },
+    {
+        "name": "Potent Poisoning Potion",
+        "description": "A powerful concoction which induces profuse internal bleeding.",
+        "image": "",
+        "base": "The target must make a VIT check with a CR of 12. If they fail, inflicts a DOT (3) on the target.",
+        "tier": "Average",
+        "price": 2,
+        "target": "Single",
+        "range": "1 square"
+    },
+    {
+        "name": "Potent Blinding Potion",
+        "description": "A powerful concoction which induces temporary loss of sight.",
+        "image": "",
+        "base": "The target must make a VIT check with a CR of 12. If they fail, inflicts Blind on the target.",
+        "tier": "Average",
+        "price": 2,
+        "target": "Single",
+        "range": "1 square"
+    },
+    {
+        "name": "Potent Silencing Potion",
+        "description": "A powerful concoction which induces temporary loss of voice.",
+        "image": "",
+        "base": "The target must make a VIT check with a CR of 12. If they fail, inflicts Silence on the target.",
+        "tier": "Average",
+        "price": 2,
+        "target": "Single",
+        "range": "1 square"
+    },
+    {
+        "name": "Potent Sleeping Potion",
+        "description": "A powerful concoction which instantly induces deep slumber.",
+        "image": "",
+        "base": "The target must make a VIT check with a CR of 12. If they fail, inflicts Sleep on the target.",
+        "tier": "Average",
+        "price": 2,
+        "target": "Single",
+        "range": "1 square"
+    },
+    {
+        "name": "Potent Paralyzing Potion",
+        "description": "A powerful concoction which induces temporary loss of motor skills.",
+        "image": "",
+        "base": "The target must make a VIT check with a CR of 12. If they fail, inflicts Paralysis on the target.",
+        "tier": "Average",
+        "price": 2,
+        "target": "Single",
+        "range": "1 square"
+    },
+    {
+        "name": "Fire Ward Potion",
+        "description": "Everyone knows this elementally charged concoction slightly increases resistance to fire-aspected damage.",
+        "image": "",
+        "base": "Reduces the damage the user takes from all fire-aspected abilities by 1 during this encounter.",
+        "tier": "Average",
+        "price": 2,
+        "target": "Self"
+    },
+    {
+        "name": "Ice Ward Potion",
+        "description": "Everyone knows this elementally charged concoction slightly increases resistance to ice-aspected damage.",
+        "image": "",
+        "base": "Reduces the damage the user takes from all ice-aspected abilities by 1 during this encounter.",
+        "tier": "Average",
+        "price": 2,
+        "target": "Self"
+    },
+    {
+        "name": "Wind Ward Potion",
+        "description": "Everyone knows this elementally charged concoction slightly increases resistance to wind-aspected damage.",
+        "image": "",
+        "base": "Reduces the damage the user takes from all wind-aspected abilities by 1 during this encounter.",
+        "tier": "Average",
+        "price": 2,
+        "target": "Self"
+    },
+    {
+        "name": "Earth Ward Potion",
+        "description": "Everyone knows this elementally charged concoction increases resistance to earth-aspected damage.",
+        "image": "",
+        "base": "Reduces the damage the user takes from all earth-aspected abilities by 1 during this encounter.",
+        "tier": "Average",
+        "price": 2,
+        "target": "Self"
+    },
+    {
+        "name": "Lightning Ward Potion",
+        "description": "Everyone knows this elementally charged concoction increases resistance to lightning-aspected damage.",
+        "image": "",
+        "base": "Reduces the damage the user takes from all lightning-aspected abilities by 1 during this encounter.",
+        "tier": "Average",
+        "price": 2,
+        "target": "Self"
+    },
+    {
+        "name": "Water Ward Potion",
+        "description": "Everyone knows this elementally charged concoction increases resistance to water-aspected damage.",
+        "image": "",
+        "base": "Reduces the damage the user takes from all water-aspected abilities by 1 during this encounter.",
+        "tier": "Average",
+        "price": 2,
+        "target": "Self"
+    },
+    {
+        "name": "Tincture of Strength",
+        "description": "This diluted brew temporarily increases strength for twice the duration of similar potions.",
+        "image": "",
+        "base": "If used during an encounter, increases the total of all the user's STR ability checks by 1 until the end of the phase. Otherwise, increases the total of the user's next STR check by 1.",
+        "tier": "High",
+        "price": 3,
+        "target": "Self"
+    },
+    {
+        "name": "Tincture of Dexterity",
+        "description": "This diluted brew temporarily increases dexterity for twice the duration of similar potions.",
+        "image": "",
+        "base": "If used during an encounter, increases the total of all the user's DEX ability checks by 1 until the end of the phase. Otherwise, increases the total of the user's next DEX check by 1.",
+        "tier": "High",
+        "price": 3,
+        "target": "Self"
+    },
+    {
+        "name": "Tincture of Vitality",
+        "description": "This diluted brew temporarily increases vitality for twice the duration of similar potions.",
+        "image": "",
+        "base": "If used during an encounter, increases the total of all the user's VIT ability checks by 1 until the end of the phase. Otherwise, increases the total of the user's next VIT check by 1.",
+        "tier": "High",
+        "price": 3,
+        "target": "Self"
+    },
+    {
+        "name": "Tincture of Intelligence",
+        "description": "This diluted brew temporarily increases intelligence for twice the duration of similar potions.",
+        "image": "",
+        "base": "If used during an encounter, increases the total of all the user's INT ability checks by 1 until the end of the phase. Otherwise, increases the total of the user's next INT check by 1.",
+        "tier": "High",
+        "price": 3,
+        "target": "Self"
+    },
+    {
+        "name": "Tincture of Mind",
+        "description": "This diluted brew temporarily increases mind for twice the duration of similar potions.",
+        "image": "",
+        "base": "If used during an encounter, increases the total of all the user's MND ability checks by 1 until the end of the phase. Otherwise, increases the total of the user's next MND check by 1.",
+        "tier": "High",
+        "price": 3,
+        "target": "Self"
+    },
+    {
+        "name": "Magicked Prism",
+        "description": "This peculiar contraption creates illusions by weaving together myriad shades of light, handed out at festivals and celebrations all across the realm, their visual effects vary wildly by season and their creators' whims.",
+        "image": "",
+        "base": "If used during an encounter, the next ability check made against the user incurs a -1 penalty. Otherwise, projects a harmless illusion into the air above the user.",
+        "tier": "High",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Fireworks",
+        "description": "From bottle rockets to simple sparklers, these pyrotechnical delights come in every shape, size, and shade imaginable. Handed out at festivals and celebrations all across the realm, their hues vary wildly by season and their creators' whims.",
+        "image": "",
+        "base": "If used during an encounter, deals 1 damage to all targets.",
+        "tier": "High",
+        "price": 1,
+        "target": "All enemies within range",
+        "range": "A 3x3 area centered on the user"
+    },
+    {
+        "name": "Sparkling Wine",
+        "description": "A reasonably priced bottle of sparkling wine. Many of Eorzea's wineries sell unique vintages, with the most famous of them being Wineport's own Realm Reborn Red. Though intended for consumption, many adventurers prefer to eschew the flavor in favor of shaking the bottles up to spray nearby revelers with their vinous contents.",
+        "image": "",
+        "base": "If used during an encounter, deals 1 damage to the target.",
+        "tier": "High",
+        "price": 1,
+        "target": "Single",
+        "range": "5 squares"
+    },
+    {
+        "name": "Coerthan Snowball",
+        "description": "A simple ball of compressed snow, perfect for hurling at friends and foes alike. *Adventurers may make a snowball at any time while traveling in the Coerthas central highlands, but may not possess more than one of them at a time.",
+        "image": "",
+        "base": "If used during an encounter, deals 1 damage to the target.",
+        "tier": "Special",
+        "price": 0,
+        "target": "Single",
+        "range": "5 squares"
+    },
+    {
+        "name": "Bomb",
+        "description": "A waterproof vessel packed with blasting powder and affixed with a fuse. Warning: Highly unstable. Not recommended for children, arsonists, or those who wish to live long, fruitful lives.",
+        "image": "",
+        "base": "Places a bomb in the target square. The bomb detonates at the start of the user's next turn, dealing 1d6 damage to all characters in a 3x3 area centered on the target square. Characters of medium size or smaller that take damage from this effect are moved 3 squares away from the target square, as determined by the user.",
+        "tier": "High",
+        "price": 2,
+        "target": "1 square within range",
+        "range": "1 square"
+    },
+    {
+        "name": "Picnic Set",
+        "description": "A picnic basket packed with a sumptuous feast. Quilted blanket included. Antling repellent not.",
+        "image": "",
+        "base": "At the start of the next encounter, grants Revivify (1) to all consuming targets who used a meal item during this rest.",
+        "tier": "High",
+        "price": 3,
+        "target": "4 characters"
+    },
+    {
+        "name": "Spectacles",
+        "description": "These corrective lenses do wonders for improving one's eyesight, even should the wearer have perfect vision to begin with.",
+        "image": "",
+        "base": "Increases Vigilance by 1. This item's effects last until the end of the adventure or until the GM determines that the owner's gear needs to be repaired.",
+        "tier": "Average",
+        "price": 2,
+        "target": "Self"
+    },
+    {
+        "name": "Goggles of Crafting",
+        "description": "A sturdy pair of crafter's goggles, ideal for shielding one's eyes from flying debris should a synthesis attempt end in failure.",
+        "image": "",
+        "base": "The owner may increase the value the die lands on when rolling to determine the outcome of crafting personal quests by 1.",
+        "tier": "Average",
+        "price": 3,
+        "target": "Self"
+    },
+    {
+        "name": "Goggles of Gathering",
+        "description": "A sturdy pair of gatherer's goggles, intended to keep the eyes safe from pollen, dirt, and flailing fins when harvesting materials from the land or sea.",
+        "image": "",
+        "base": "The owner may increase the value the die lands on when rolling to determine the outcome of gathering personal quests by 1.",
+        "tier": "Average",
+        "price": 3,
+        "target": "Self"
+    },
+    {
+        "name": "Warding Talisman",
+        "description": "A protective charm favored by the smallfolk of Eorzea, imbued with a prayer for safety believed to ward off danger.",
+        "image": "",
+        "base": "When this item is obtained, the GM chooses a specific enemy or character classification. So long as the owner possesses this item, grants the following ability. This ability can only be used once, after which the talisman loses its power and has no further effect. *This item can only be purchased at specific shops as determined by the GM. Protective Ward (Instant): Condition: Can be used in addition to another instant ability this turn. Trigger: When an ability used by the specific enemy or an enemy with the classification chosen by the GM scores a critical. Base Effect: The ability that triggered Protective Ward scores a direct hit but not a critical.",
+        "tier": "Special",
+        "price": 3,
+        "target": "Self",
+        "range": "The entire encounter map"
+    },
+    {
+        "name": "Smallclothes",
+        "description": "Undergarments come in all shapes, sizes, and designs. Whatever your particular preference may be, the hardworking weavers of Eorzea are sure to provide—no questions asked. Just be sure to have them cleaned regularly.",
+        "image": "",
+        "base": "This item may be used at the start of an adventure or after the owner sleeps for a full cycle. While in use, whenever the owner takes damage equaling their remaining HP, they are instead reduced to 1 HP. This effect cannot be resolved if the damage taken exceeds their remaining HP, and is removed at the end of an adventure or when the owner sleeps for a full cycle. Afterwards, this item cannot be used again until the owner spends one point of fortune to have it laundered.",
+        "tier": "Average",
+        "price": 2,
+        "target": "Self"
+    },
+    {
+        "name": "Aetheryte Pendulum",
+        "description": "A shard of aetheryte which can be attuned to new adventurers, allowing for swift travel to their sides in times of need.",
+        "image": "",
+        "base": "Up to five characters may attune to this item. At any time, the owner may choose one of the characters attuned to this item and teleport to the aetheryte nearest to them that the owner has attuned to. *This item can only be purchased at the Hourglass in Ul'dah, the Roost in Gridania, and the Mizzenmast Inn in Limsa Lominsa.",
+        "tier": "Special",
+        "price": 3,
+        "target": "Self"
+    },
+    {
+        "name": "Combat Mammet",
+        "description": "A clockwork puppet that will stand at your side in the face of danger. Just don't expect it to actually do anything.",
+        "image": "",
+        "base": "This item may be used during an encounter to deploy a mammet in 1 square occupied by the owner. Until the end of this encounter, the mammet is considered to be a small character with a Defense, Magic Defense, and Max HP of 5. The mammet moves with the owner, is immune to all movement effects, does not take turns, and cannot perform any actions. Only a single mammet may be deployed by a character at a time. When the mammet's HP is reduced to 0, it is removed from the encounter map. Afterwards, this item cannot be used again until the owner spends two points of fortune to have it repaired.",
+        "tier": "High",
+        "price": 3,
+        "target": "Self"
+    },
+    {
+        "name": "Eggs",
+        "description": "Culinary creations that venerate the oft-overlooked yet eminently esteemed egg. These dishes range from the humble boiled egg to the delectable dodo omelette.",
+        "image": "",
+        "base": "The user may reduce the value required to score a 'critical' by 1 when making an ability check. This effect may be resolved after seeing the result of an ability check, but can only be used once. This effect is removed when the user sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Seafood",
+        "description": "Culinary creations that dive deep into the bounty of Hydaelyn's seas, rivers, and lakes. These succulent seafood dishes will make your mouth water, and include such staples as rustic grilled carp and the sophisticated salmon meuniere.",
+        "image": "",
+        "base": "The user may receive one advantage die on a single ability check of their choosing. This effect is removed when the user sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Mushrooms",
+        "description": "Culinary creations that feature fabulous fungi foodstuffs, such as chanterelle saute and forest miqiabobs.",
+        "image": "",
+        "base": "The user may reroll all of the dice used to determine the amount of damage dealt or HP healed by a single ability of their choosing (*1). This effect is removed when the user sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Beverages",
+        "description": "Refreshing drinks perfect for quenching a bold adventurer's thirst. Be it orange juice or chamomile tea, a good beverage is sure to hit the spot.",
+        "image": "",
+        "base": "The user may, after making a Special (d20, Critical) ability check, increase the value the die landed on by 2 and use this new value to determine if the ability scores a critical or triggers a proc effect. This effect may be resolved after seeing the result of an ability check, but can only be used once. This effect is removed when the user sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Meat",
+        "description": "Culinary creations featuring meat, meat, and more meat! Few things can beat a juicy antelope steak, and jerked beef is ever a reliable companion on a long and weary road.",
+        "image": "",
+        "base": "The user may, after making an ability check for a physical ability, increase its total by 3 and use this new total to determine if the ability scores a direct hit (*1). This effect may be resolved after seeing the result of an ability check, but can only be used once. This effect is removed when the user sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Sweets",
+        "description": "Sweet treats few adventurers are able to resist. Who could possibly say no to a nice ginger cookie or tasty crumpet?",
+        "image": "",
+        "base": "The user may, after making an ability check for a magic ability, increase its total by 3 and use this new total to determine if the ability scores a direct hit (*1). This effect may be resolved after seeing the result of an ability check, but can only be used once. This effect is removed when the user sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Breads",
+        "description": "There's nothing better than the appetizing aroma of fresh-baked bread, save for being able to eat said bread hot out of the oven. Start your day off right with some La Noscean toast, and while you're at it, take some flatbread for the road!",
+        "image": "",
+        "base": "Before taking damage, the user may have the player who rolled the dice reroll all of the dice to determine the amount of damage they take (*2). If other characters suffer damage from the effect, the GM calculates the damage they take before rerolling the dice. This effect can only be used once. This effect is removed when the user sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Egg Platter",
+        "description": "Eminently shareable culinary creations, such as the eggcellent riviera breakfast, that put eggs front and center.",
+        "image": "",
+        "base": "Each consenting target may reduce the value required to score a critical by 1 when making an ability check. This effect may be resolved after seeing the result of an ability check, but can only be used once. This effect is removed when the target sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 2,
+        "target": "4 characters"
+    },
+    {
+        "name": "Seafood Platter",
+        "description": "Eminently shareable culinary creations, such as sweetfish skewers, that showcase the bounty of Hydaelyn's seas, rivers, and lakes.",
+        "image": "",
+        "base": "Each consenting target may receive one advantage die on a single ability check of their choosing. This effect is removed when the target sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 2,
+        "target": "4 characters"
+    },
+    {
+        "name": "Mushroom Platter",
+        "description": "Eminently shareable culinary creations, such as the high house supper set, that make the most of myriad mushrooms.",
+        "image": "",
+        "base": "Each consenting target may reroll all of the dice used to determine the amount of damage dealt or HP healed by a single ability of their choosing (*2). This effect is removed when the target sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 2,
+        "target": "4 characters"
+    },
+    {
+        "name": "Beverage Set",
+        "description": "Eminently shareable potables, such as a refreshing bottle of chilled red, perfect for slaking a party's thirst or making a toast after a job well done.",
+        "image": "",
+        "base": "Each consenting target may, after making a Special (d20, Critical) ability check, increase the value the die landed on by 2 and use this new value to determine if the ability scores a critical or triggers a proc effect. This effect may be resolved after seeing the result of an ability check, but can only be used once. This effect is removed when the target sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 2,
+        "target": "4 characters"
+    },
+    {
+        "name": "Meat Platter",
+        "description": "Eminently shareable culinary creations, such as the perfectly roasted Starlight dodo, that highlight the utter delectability of a good cut of meat.",
+        "image": "",
+        "base": "Each consenting target may, after making an ability check for a physical ability, increase its total by 3 and use this new total to determine if the ability scores a direct hit (*1). This effect may be resolved after seeing the result of an ability check, but can only be used once. This effect is removed when the target sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 2,
+        "target": "4 characters"
+    },
+    {
+        "name": "Sweets Platter",
+        "description": "Mountains of eminently shareable pastries and sweets, such as the redoubtable rolanberry tart. Guaranteed to satisfy an entire party's sweet tooth.",
+        "image": "",
+        "base": "Each consenting target may, after making an ability check for a magic ability, increase its total by 3 and use this new total to determine if the ability scores a direct hit (*1). This effect may be resolved after seeing the result of an ability check, but can only be used once. This effect is removed when the target sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 2,
+        "target": "4 characters"
+    },
+    {
+        "name": "Bread Platter",
+        "description": "Curated selections of delectable breads and culinary delights prepared from them, such as the eminently shareable sandwich basket.",
+        "image": "",
+        "base": "Before taking damage, each consenting target may have the player who rolled the dice reroll all of the dice to determine the amount of damage they take (*2). If other characters suffer damage from the effect, the GM calculates the damage they take before rerolling the dice. This effect can only be used once. This effect is removed when the target sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 2,
+        "target": "4 characters"
+    },
+    {
+        "name": "Red Drop",
+        "description": "A spherical fruit-flavored candy.",
+        "image": "",
+        "base": "Grants the user the Slow Resistance (1) trait (*4). This trait is removed when the user sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Blue Drop",
+        "description": "A spherical fruit-flavored candy.",
+        "image": "",
+        "base": "Grants the user the Silence Resistance (1) trait (*4). This trait is removed when the user sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Clear Drop",
+        "description": "A spherical fruit-flavored candy.",
+        "image": "",
+        "base": "Grants the user the Blind Resistance (1) trait (*4). This trait is removed when the user sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Purple Drop",
+        "description": "A spherical fruit-flavored candy.",
+        "image": "",
+        "base": "Grants the user the DOT Resistance (1) trait (*4). This trait is removed when the user sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "White Drop",
+        "description": "A spherical fruit-flavored candy.",
+        "image": "",
+        "base": "Grants the user the Stun Resistance (1) trait (*4). This trait is removed when the user sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Black Drop",
+        "description": "A spherical fruit-flavored candy.",
+        "image": "",
+        "base": "Grants the user the Sleep Resistance (1) trait (*4). This trait is removed when the user sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Yellow Drop",
+        "description": "A spherical fruit-flavored candy.",
+        "image": "",
+        "base": "Grants the user the Bind Resistance (1) trait (*4). This trait is removed when the user sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    },
+    {
+        "name": "Green Drop",
+        "description": "A spherical fruit-flavored candy.",
+        "image": "",
+        "base": "Grants the user the Heavy Resistance (1) trait (*4). This trait is removed when the user sleeps for a full cycle or at the end of the next encounter.",
+        "tier": "Average",
+        "price": 1,
+        "target": "Self"
+    }
+]

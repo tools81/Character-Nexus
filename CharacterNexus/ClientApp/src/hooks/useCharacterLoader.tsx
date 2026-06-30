@@ -39,13 +39,13 @@ export function useCharacterLoader(
     reset(currentCharacter);
 
     if (currentCharacter.image) {
+      setImagePreview(currentCharacter.image);
       fetch(currentCharacter.image)
         .then((res) => res.blob())
         .then((blob) => {
           const file = new File([blob], getFileNameFromUrl(currentCharacter.image), { type: blob.type });
           setValue("image", file, { shouldDirty: true });
           setImageData(file);
-          setImagePreview(URL.createObjectURL(file));
         });
     }
   }, [currentCharacter, reset, setValue]);

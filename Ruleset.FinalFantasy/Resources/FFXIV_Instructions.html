@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINAL FANTASY XIV — Adventurer's Codex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;900&family=Exo+2:wght@400;600;700;800&family=Rajdhani:wght@500;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --parchment:       #E8D4B8;
+            --aged-paper:      #D9C4A8;
+            --paper-dark:      #C4A882;
+            --border-dark:     #8B6F47;
+            --border-gold:     #A0825A;
+            --text-dark:       #2A1810;
+            --text-brown:      #4A2C1F;
+            --accent-orange:   #C47B4A;
+            --accent-red:      #B85C4A;
+            --box-tan:         #D4BC9E;
+            --box-cream:       #E5D8C5;
+            --header-brown:    #6B4423;
+            --shadow:          rgba(42,24,16,0.3);
+        }
+
+        .instr-container * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .instr-container body {
+            font-family: 'Noto Sans', sans-serif;
+            background: #4A3422;
+            background-image:
+                radial-gradient(circle at 30% 40%, rgba(107,68,35,0.3) 0%, transparent 50%);
+            color: var(--text-dark);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* Remove crystal particles, replace with paper texture */
+        .instr-container .crystal-particles {
+            display: none;
+        }
+
+        /* ── CONTAINER (Book Pages) ── */
+        .instr-container .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--parchment);
+            background-image:
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            border: 8px solid var(--border-gold);
+            box-shadow:
+                0 0 0 3px var(--border-dark),
+                0 0 0 11px var(--border-gold),
+                0 10px 40px var(--shadow),
+                inset 0 0 100px rgba(139,111,71,0.15);
+            position: relative;
+            z-index: 1;
+            animation: panel-open 0.6s ease-out;
+        }
+
+        @keyframes panel-open {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Golden lattice border pattern */
+        .instr-container .container::before {
+            content: '';
+            position: absolute;
+            inset: 15px;
+            border: 2px solid var(--border-gold);
+            background-image:
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 15px,
+                    var(--border-gold) 15px,
+                    var(--border-gold) 16px
+                ),
+                repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 15px,
+                    var(--border-gold) 15px,
+                    var(--border-gold) 16px
+                );
+            opacity: 0.2;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Weathering stains */
+        .instr-container .container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                /* Main age spots */
+                radial-gradient(circle at 80% 20%, rgba(139,111,71,0.15) 0%, transparent 25%),
+                radial-gradient(circle at 15% 60%, rgba(160,130,90,0.12) 0%, transparent 30%),
+                radial-gradient(circle at 70% 85%, rgba(107,68,35,0.1) 0%, transparent 20%),
+                radial-gradient(circle at 25% 15%, rgba(139,111,71,0.08) 0%, transparent 18%),
+                /* Worn edges */
+                linear-gradient(to right, rgba(107,68,35,0.15) 0%, transparent 5%, transparent 95%, rgba(107,68,35,0.15) 100%),
+                linear-gradient(to bottom, rgba(107,68,35,0.12) 0%, transparent 5%, transparent 95%, rgba(107,68,35,0.12) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Remove old crystal accents */
+        .instr-container .crystal-accent {
+            display: none;
+        }
+
+        /* Ornate golden corner decorations */
+        .corner-ornament {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border: 3px solid var(--border-gold);
+            z-index: 10;
+        }
+
+        .instr-container .corner-ornament::before,
+        .instr-container .corner-ornament::after {
+            content: '';
+            position: absolute;
+            background: var(--border-gold);
+        }
+
+        .instr-container .ornament-tl { 
+            top: -4px; 
+            left: -4px; 
+            border-right: none; 
+            border-bottom: none;
+            background: linear-gradient(135deg, var(--border-gold) 0%, transparent 50%);
+        }
+
+        .instr-container .ornament-tl::before {
+            width: 30px;
+            height: 3px;
+            top: 0;
+            left: 0;
+        }
+
+        .instr-container .ornament-tl::after {
+            width: 3px;
+            height: 30px;
+            top: 0;
+            left: 0;
+        }
+
+        .instr-container .ornament-tr { 
+            top: -4px; 
+            right: -4px; 
+            border-left: none; 
+            border-bottom: none;
+            background: linear-gradient(225deg, var(--border-gold) 0%, transparent 50%);
+        }
+
+        .instr-container .ornament-tr::before {
+            width: 30px;
+            height: 3px;
+            top: 0;
+            right: 0;
+        }
+
+        .instr-container .ornament-tr::after {
+            width: 3px;
+            height: 30px;
+            top: 0;
+            right: 0;
+        }
+
+        .instr-container .ornament-bl { 
+            bottom: -4px; 
+            left: -4px; 
+            border-right: none; 
+            border-top: none;
+            background: linear-gradient(45deg, var(--border-gold) 0%, transparent 50%);
+        }
+
+        .instr-container .ornament-bl::before {
+            width: 30px;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+        }
+
+        .instr-container .ornament-bl::after {
+            width: 3px;
+            height: 30px;
+            bottom: 0;
+            left: 0;
+        }
+
+        .instr-container .ornament-br { 
+            bottom: -4px; 
+            right: -4px; 
+            border-left: none; 
+            border-top: none;
+            background: linear-gradient(315deg, var(--border-gold) 0%, transparent 50%);
+        }
+
+        .instr-container .ornament-br::before {
+            width: 30px;
+            height: 3px;
+            bottom: 0;
+            right: 0;
+        }
+
+        .instr-container .ornament-br::after {
+            width: 3px;
+            height: 30px;
+            bottom: 0;
+            right: 0;
+        }
+
+        /* Remove scan line */
+        .instr-container .scan-line {
+            display: none;
+        }
+
+        /* ── HEADER BAR ── */
+        .instr-container .title-bar {
+            background: var(--header-brown);
+            border-bottom: 3px solid var(--border-dark);
+            padding: 0.9rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--box-cream);
+        }
+
+        .instr-container .title-bar::before {
+            content: '◆';
+            color: var(--accent-orange);
+            font-size: 1rem;
+        }
+
+        .instr-container .title-bar::after {
+            content: '◆';
+            color: var(--accent-orange);
+            font-size: 1rem;
+        }
+
+        /* ── HEADER ── */
+        .instr-container header {
+            padding: 2.5rem 2.5rem 2rem;
+            background: linear-gradient(135deg, var(--aged-paper) 0%, var(--parchment) 100%);
+            background-image:
+                radial-gradient(ellipse at 20% 30%, rgba(139,111,71,0.1) 0%, transparent 40%),
+                radial-gradient(ellipse at 85% 70%, rgba(160,130,90,0.08) 0%, transparent 35%),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E"),
+                linear-gradient(135deg, var(--aged-paper) 0%, var(--parchment) 100%);
+            border-bottom: 4px solid var(--border-dark);
+            position: relative;
+        }
+
+        /* Add subtle age spots to header */
+        .instr-container header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 15% 15%, rgba(107,68,35,0.06) 0%, transparent 25%),
+                radial-gradient(circle at 90% 85%, rgba(139,111,71,0.05) 0%, transparent 30%);
+            pointer-events: none;
+        }
+
+        /* Remove crystal watermark */
+        .instr-container header::before {
+            display: none;
+        }
+
+        .instr-container .system-label {
+            display: inline-block;
+            background: var(--accent-orange);
+            color: var(--parchment);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            padding: 0.4rem 1.2rem;
+            margin-bottom: 1.5rem;
+            border: 2px solid var(--border-dark);
+            text-transform: uppercase;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .instr-container h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            line-height: 1;
+            font-weight: 900;
+            color: var(--header-brown);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.3rem;
+            text-align: center;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .instr-container h1 .ff {
+            color: var(--accent-red);
+        }
+
+        .instr-container .subtitle {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--text-brown);
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        .instr-container .version-info {
+            margin-top: 1.5rem;
+            padding: 1rem 1.5rem;
+            background: var(--box-tan);
+            border: 3px solid var(--border-dark);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            line-height: 1.8;
+            color: var(--text-dark);
+            text-align: center;
+        }
+
+        /* ── CONTENT ── */
+        .instr-container .content {
+            padding: 2.5rem;
+            background: var(--parchment);
+            background-image:
+                radial-gradient(circle at 30% 40%, rgba(139,111,71,0.08) 0%, transparent 40%),
+                radial-gradient(circle at 75% 70%, rgba(160,130,90,0.06) 0%, transparent 35%),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulature type='fractalNoise' baseFrequency='0.9' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+            position: relative;
+        }
+
+        /* Add weathering overlay to content */
+        .instr-container .content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(ellipse at 10% 20%, rgba(107,68,35,0.05) 0%, transparent 50%),
+                radial-gradient(ellipse at 90% 80%, rgba(139,111,71,0.04) 0%, transparent 45%);
+            pointer-events: none;
+        }
+
+        /* ── INFO PANEL ── */
+        .instr-container .info-panel {
+            background: var(--accent-orange);
+            border: 4px solid var(--border-dark);
+            padding: 2rem 2rem;
+            margin-bottom: 2.5rem;
+            font-size: 1.05rem;
+            line-height: 2;
+            color: var(--parchment);
+            text-align: center;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .instr-container .info-panel::before {
+            content: '';
+            display: none;
+        }
+
+        /* ── SECTION HEADERS ── */
+        .instr-container h2 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--header-brown);
+            margin: 2.75rem 0 1.25rem;
+            padding: 1rem 1.5rem;
+            background: var(--aged-paper);
+            border: 3px solid var(--border-dark);
+            border-left: 6px solid var(--accent-orange);
+            position: relative;
+            animation: slideIn 0.4s ease-out backwards;
+            animation-delay: calc(var(--i,0) * 0.06s);
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container h2:first-child { margin-top: 0; }
+
+        .instr-container h2::before {
+            content: '◆';
+            position: absolute;
+            left: -2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--accent-orange);
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-15px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+
+        .instr-container h3 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent-red);
+            margin: 1.75rem 0 0.6rem;
+        }
+
+        .instr-container p {
+            font-size: 1.05rem;
+            line-height: 2;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .instr-container ul, .instr-container ol { margin: 0.75rem 0 1.25rem 1.5rem; }
+        .instr-container li {
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 0.4rem;
+            color: var(--text-medium);
+        }
+
+        .instr-container strong { 
+            color: var(--crystal-blue); 
+            font-weight: 700;
+        }
+        
+        .instr-container em     { 
+            color: var(--aether-purple); 
+            font-style: normal; 
+            font-weight: 600;
+        }
+
+        /* ── DIVIDER ── */
+        .instr-container .divider {
+            margin: 2.5rem 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--border-dark), transparent);
+            position: relative;
+        }
+
+        .instr-container .divider::before {
+            content: '◆';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--parchment);
+            padding: 0 1rem;
+            font-size: 1.5rem;
+            color: var(--accent-orange);
+        }
+
+        /* ── MENU PANEL ── */
+        .instr-container .menu-panel {
+            background: var(--box-cream);
+            border: 3px solid var(--border-dark);
+            padding: 1.5rem 1.75rem;
+            margin: 1.5rem 0;
+            font-size: 1rem;
+            line-height: 1.9;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+        .instr-container .menu-panel::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -0.75rem;
+            left: 1.5rem;
+            background: var(--accent-orange);
+            color: var(--parchment);
+            padding: 0.3rem 1rem;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            border: 2px solid var(--border-dark);
+        }
+
+        /* ── JOB CARDS ── */
+        .instr-container .job-grid {
+            display: grid;
+            gap: 1rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .job-card {
+            background: var(--box-cream);
+            border: 3px solid var(--border-dark);
+            padding: 1.5rem 1.75rem;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container .job-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container .job-stone {
+            position: absolute;
+            top: -1.2rem;
+            right: 1.5rem;
+            width: 65px;
+            height: 65px;
+            background: var(--accent-orange);
+            border: 3px solid var(--border-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container .job-name {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--header-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .job-role {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--accent-orange);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .job-desc {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-brown);
+            margin-bottom: 0.75rem;
+        }
+
+        .instr-container .job-trait {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-top: 2px solid var(--border-dark);
+            padding-top: 0.5rem;
+        }
+
+        /* ── ATTRIBUTE TABLE ── */
+        .instr-container .attr-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            border: 3px solid var(--border-dark);
+        }
+
+        .instr-container .attr-table th {
+            background: var(--accent-orange);
+            color: var(--parchment);
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.8rem;
+            text-align: left;
+            font-size: 0.85rem;
+            border: 2px solid var(--border-dark);
+        }
+
+        .instr-container .attr-table td {
+            padding: 0.7rem 0.8rem;
+            border: 2px solid var(--border-gold);
+            background: var(--box-cream);
+            color: var(--text-brown);
+            line-height: 1.7;
+        }
+
+        .instr-container .attr-table tbody tr:nth-child(even) td {
+            background: var(--box-tan);
+        }
+
+        .instr-container .attr-table tr:hover td { 
+            background: var(--aged-paper);
+        }
+
+        /* ── CRYSTAL ELEMENT BOX ── */
+        .instr-container .element-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.75rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .instr-container .element-card {
+            background: var(--box-cream);
+            border: 3px solid var(--border-dark);
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 2px 2px 0 rgba(0,0,0,0.15);
+        }
+
+        .instr-container .element-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container .element-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .instr-container .element-name {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-dark);
+        }
+
+        /* ── DICE BOX ── */
+        .instr-container .dice-box {
+            background: var(--accent-red);
+            color: var(--parchment);
+            border: 4px solid var(--border-dark);
+            padding: 2rem 1.75rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+        }
+
+        .instr-container .dice-title {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            margin-bottom: 0.75rem;
+        }
+
+        .instr-container .dice-desc {
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-top: 0.75rem;
+        }
+
+        /* ── FOOTER ── */
+        .instr-container footer {
+            background: var(--header-brown);
+            padding: 2.5rem 2rem;
+            border-top: 4px solid var(--border-dark);
+            text-align: center;
+        }
+
+        .instr-container .footer-motto {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--box-cream);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.75rem;
+        }
+
+        .instr-container .footer-sub {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            color: var(--aged-paper);
+            text-transform: uppercase;
+        }
+
+        .instr-container footer::before {
+            content: '◆ ◆ ◆';
+            display: block;
+            font-size: 1.8rem;
+            color: var(--accent-orange);
+            letter-spacing: 1em;
+            margin-bottom: 1.25rem;
+        }
+
+        @media (max-width: 480px) {
+            .instr-container h1 { font-size: 3rem; }
+            .instr-container h2 { font-size: 1.8rem; }
+            .instr-container h2::before { display: none; }
+            .instr-container .element-grid { grid-template-columns: repeat(2, 1fr); }
+            .instr-container .content { padding: 2rem 1.5rem; }
+            .instr-container header { padding: 2rem 1.5rem; }
+            .instr-container footer { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="crystal-particles"></div>
+
+<div class="container">
+    <div class="scan-line"></div>
+    <div class="corner-ornament ornament-tl"></div>
+    <div class="corner-ornament ornament-tr"></div>
+    <div class="corner-ornament ornament-bl"></div>
+    <div class="corner-ornament ornament-br"></div>
+
+    <!-- TITLE BAR -->
+    <div class="title-bar">
+        <span>CHARACTER CREATION</span>
+        <span>ADVENTURER'S CODEX</span>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="system-label">◆ TABLETOP RPG SYSTEM ◆</div>
+        <h1>
+            <span class="ff">FINAL FANTASY</span> XIV
+        </h1>
+        <div class="subtitle">
+            A Realm Reborn // Tabletop Edition
+        </div>
+        <div class="version-info">
+            <strong>SYSTEM:</strong> d20 / Job-Based Progression<br>
+            <strong>SETTING:</strong> Eorzea (Hydaelyn)<br>
+            <strong>PUBLISHER:</strong> Square Enix / Community Project<br>
+            <strong>ROLE:</strong> Warrior of Light
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <div class="info-panel">
+            Welcome to <strong>Eorzea</strong>, Warrior of Light. The realm calls for heroes to face the encroaching darkness. You shall join the <em>Scions of the Seventh Dawn</em>, wield the power of the <strong>Echo</strong>, and stand against primals and empire alike. Choose your <em>Race</em>, select your <strong>Job</strong>, and embark on an adventure across the Three Great City-States. The Crystal calls. Will you answer?
+        </div>
+
+        <!-- STEP 1: RACE -->
+        <h2 style="--i:1;">Step 1: Choose Your Race</h2>
+        <p>Your <strong>Race</strong> determines your physical appearance, cultural background, and starting attributes. The people of Eorzea are diverse and proud.</p>
+
+        <div class="job-grid">
+            <div class="job-card">
+                <div class="job-stone">👤</div>
+                <div class="job-name">Hyur</div>
+                <div class="job-role">The Wanderers</div>
+                <div class="job-desc">Adaptable humans who thrive anywhere. Highlanders are strong, Midlanders are balanced. Most common race in Eorzea.</div>
+                <div class="job-trait">Clans: Highlander (strong), Midlander (versatile)</div>
+            </div>
+            <div class="job-card">
+                <div class="job-stone">🧝</div>
+                <div class="job-name">Elezen</div>
+                <div class="job-role">The Tall Ones</div>
+                <div class="job-desc">Graceful and long-lived. Wildwood dwell in forests, Duskwight in caves. Proud heritage and keen senses.</div>
+                <div class="job-trait">Clans: Wildwood (DEX), Duskwight (INT)</div>
+            </div>
+            <div class="job-card">
+                <div class="job-stone">🦁</div>
+                <div class="job-name">Miqo'te</div>
+                <div class="job-role">The Cat People</div>
+                <div class="job-desc">Agile hunters with feline features. Seekers of the Sun are diurnal, Keepers of the Moon are nocturnal. Quick and perceptive.</div>
+                <div class="job-trait">Clans: Seeker (CHA), Keeper (DEX)</div>
+            </div>
+            <div class="job-card">
+                <div class="job-stone">🦎</div>
+                <div class="job-name">Au Ra</div>
+                <div class="job-role">The Dragonkin</div>
+                <div class="job-desc">Draconic humanoids with scales and horns. Raen are serene, Xaela are nomadic. Mysterious and powerful.</div>
+                <div class="job-trait">Clans: Raen (INT), Xaela (STR)</div>
+            </div>
+            <div class="job-card">
+                <div class="job-stone">⚔️</div>
+                <div class="job-name">Roegadyn</div>
+                <div class="job-role">The Giants</div>
+                <div class="job-desc">Massive and powerful. Sea Wolves are sailors, Hellsguard are mountain warriors. Unmatched physical strength.</div>
+                <div class="job-trait">Clans: Sea Wolf (VIT), Hellsguard (STR)</div>
+            </div>
+            <div class="job-card">
+                <div class="job-stone">🌾</div>
+                <div class="job-name">Lalafell</div>
+                <div class="job-role">The Small Folk</div>
+                <div class="job-desc">Diminutive but clever. Plainsfolk are merchants, Dunesfolk are scholars. Big hearts in small bodies.</div>
+                <div class="job-trait">Clans: Plainsfolk (DEX), Dunesfolk (INT)</div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- STEP 2: JOB -->
+        <h2 style="--i:2;">Step 2: Select Your Job</h2>
+        <p>Your <strong>Job</strong> defines your combat role and abilities. Jobs are grouped by role: Tank, Healer, DPS (Melee, Ranged Physical, Ranged Magical).</p>
+
+        <h3>Tank Jobs</h3>
+        <ul>
+            <li><strong>Paladin:</strong> Holy sword-and-shield protector (Gladiator base)</li>
+            <li><strong>Warrior:</strong> Berserker with massive axe (Marauder base)</li>
+            <li><strong>Dark Knight:</strong> Darkness-wielding greatsword user</li>
+            <li><strong>Gunbreaker:</strong> Gunblade-wielding defender</li>
+        </ul>
+
+        <h3>Healer Jobs</h3>
+        <ul>
+            <li><strong>White Mage:</strong> Pure healing magic (Conjurer base)</li>
+            <li><strong>Scholar:</strong> Strategic healer with fairy companion (Arcanist base)</li>
+            <li><strong>Astrologian:</strong> Fortune-reading celestial healer</li>
+            <li><strong>Sage:</strong> Barrier-focused tech healer</li>
+        </ul>
+
+        <h3>DPS Jobs (Melee)</h3>
+        <ul>
+            <li><strong>Monk:</strong> Martial artist with chakra (Pugilist base)</li>
+            <li><strong>Dragoon:</strong> Dragon-empowered lancer (Lancer base)</li>
+            <li><strong>Ninja:</strong> Stealth assassin with ninjutsu (Rogue base)</li>
+            <li><strong>Samurai:</strong> Eastern swordmaster with kenki</li>
+            <li><strong>Reaper:</strong> Scythe-wielder who bargains with a Voidsent</li>
+        </ul>
+
+        <h3>DPS Jobs (Ranged Physical)</h3>
+        <ul>
+            <li><strong>Bard:</strong> Archer who sings battle songs (Archer base)</li>
+            <li><strong>Machinist:</strong> Gadgeteer with firearms and robots</li>
+            <li><strong>Dancer:</strong> Elegant fighter who buffs allies</li>
+        </ul>
+
+        <h3>DPS Jobs (Ranged Magical)</h3>
+        <ul>
+            <li><strong>Black Mage:</strong> Destructive elemental magic (Thaumaturge base)</li>
+            <li><strong>Summoner:</strong> Calls forth primals/egi (Arcanist base)</li>
+            <li><strong>Red Mage:</strong> Balanced spellblade with dual magic</li>
+            <li><strong>Blue Mage:</strong> Learns enemy skills (Limited Job)</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <!-- STEP 3: ATTRIBUTES -->
+        <h2 style="--i:3;">Step 3: Assign Attributes</h2>
+        <p>Your character has <strong>six primary attributes</strong>. Assign points based on your Job's needs.</p>
+
+        <table class="attr-table">
+            <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Description</th>
+                    <th>Used By</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Strength (STR)</strong></td>
+                    <td>Physical power</td>
+                    <td>Tanks, Melee DPS</td>
+                </tr>
+                <tr>
+                    <td><strong>Dexterity (DEX)</strong></td>
+                    <td>Agility and precision</td>
+                    <td>Ninja, Bard, Machinist</td>
+                </tr>
+                <tr>
+                    <td><strong>Vitality (VIT)</strong></td>
+                    <td>Health and endurance</td>
+                    <td>All roles (survivability)</td>
+                </tr>
+                <tr>
+                    <td><strong>Intelligence (INT)</strong></td>
+                    <td>Magical knowledge</td>
+                    <td>Magical DPS (BLM, SMN, RDM)</td>
+                </tr>
+                <tr>
+                    <td><strong>Mind (MND)</strong></td>
+                    <td>Spiritual power</td>
+                    <td>Healers (WHM, SCH, AST, SGE)</td>
+                </tr>
+                <tr>
+                    <td><strong>Charisma (CHA)</strong></td>
+                    <td>Force of personality</td>
+                    <td>Social encounters, Bard</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="menu-panel" data-label="◆ ATTRIBUTE ALLOCATION ◆">
+            Use <strong>point-buy</strong> or <strong>standard array</strong> to assign attributes. Your Race provides bonuses to specific attributes. Prioritize your Job's primary stat (STR for tanks/melee, DEX for physical ranged, INT for magical DPS, MND for healers).
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- STEP 4: GRAND COMPANY -->
+        <h2 style="--i:4;">Step 4: Join a Grand Company</h2>
+        <p>The Three Great City-States each have a <strong>Grand Company</strong> — military organizations that defend Eorzea. Choose your allegiance.</p>
+
+        <h3>The Three Grand Companies</h3>
+        <ul>
+            <li><strong>Maelstrom (Limsa Lominsa):</strong> Naval power, pirates and sailors</li>
+            <li><strong>Order of the Twin Adder (Gridania):</strong> Forest protectors, nature and balance</li>
+            <li><strong>Immortal Flames (Ul'dah):</strong> Desert warriors, merchants and wealth</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <!-- STEP 5: CRYSTALS -->
+        <h2 style="--i:5;">Step 5: Elemental Affinity</h2>
+        <p>The six <strong>Elements</strong> govern magic and nature in Eorzea. Your character may have an affinity or resistance.</p>
+
+        <div class="element-grid">
+            <div class="element-card">
+                <div class="element-icon">🔥</div>
+                <div class="element-name">Fire</div>
+            </div>
+            <div class="element-card">
+                <div class="element-icon">❄️</div>
+                <div class="element-name">Ice</div>
+            </div>
+            <div class="element-card">
+                <div class="element-icon">🌪️</div>
+                <div class="element-name">Wind</div>
+            </div>
+            <div class="element-card">
+                <div class="element-icon">🪨</div>
+                <div class="element-name">Earth</div>
+            </div>
+            <div class="element-card">
+                <div class="element-icon">⚡</div>
+                <div class="element-name">Lightning</div>
+            </div>
+            <div class="element-card">
+                <div class="element-icon">💧</div>
+                <div class="element-name">Water</div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- STEP 6: EQUIPMENT -->
+        <h2 style="--i:6;">Step 6: Acquire Equipment</h2>
+        <p>Your starting gear depends on your Job. Tanks need armor, DPS need weapons, Healers need focus items.</p>
+
+        <h3>Starting Equipment by Role</h3>
+        <ul>
+            <li><strong>Tanks:</strong> Heavy armor, shield, weapon (sword/axe/greatsword/gunblade)</li>
+            <li><strong>Healers:</strong> Light robes, focus item (cane/codex/star globe/nouliths)</li>
+            <li><strong>Melee DPS:</strong> Medium armor, melee weapon (fists/lance/daggers/katana/scythe)</li>
+            <li><strong>Ranged Physical:</strong> Light armor, ranged weapon (bow/gun/chakrams)</li>
+            <li><strong>Ranged Magical:</strong> Cloth robes, magical focus (staff/grimoire/rapier/cane)</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <!-- STEP 7: MECHANICS -->
+        <h2 style="--i:7;">Step 7: Game Mechanics</h2>
+
+        <div class="dice-box">
+            <div class="dice-title">D20 SYSTEM</div>
+            <div class="dice-desc">
+                When you attempt an action, roll <strong>1d20</strong> and add your attribute modifier and proficiency bonus. If your total meets or exceeds the <strong>Difficulty Class (DC)</strong>, you succeed!<br><br>
+                <strong>Natural 20:</strong> Critical success!<br>
+                <strong>Natural 1:</strong> Critical failure!
+            </div>
+        </div>
+
+        <h3>Core Mechanics</h3>
+        <ul>
+            <li><strong>Hit Points (HP):</strong> Determined by Job and VIT</li>
+            <li><strong>Mana Points (MP):</strong> For magical abilities</li>
+            <li><strong>Limit Break:</strong> Party resource for powerful abilities</li>
+            <li><strong>Job Gauge:</strong> Class-specific resource mechanics</li>
+            <li><strong>Global Cooldown (GCD):</strong> Action timing mechanic</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <!-- STEP 8: ECHO -->
+        <h2 style="--i:8;">Step 8: The Echo</h2>
+        <p>As a <strong>Warrior of Light</strong>, you possess the <em>Echo</em> — a mysterious power that lets you transcend death, see visions, and resist primal influence.</p>
+
+        <div class="menu-panel" data-label="◆ THE BLESSING OF LIGHT ◆">
+            <strong>The Echo grants:</strong><br>
+            • Resistance to primal tempering<br>
+            • Visions of past and future<br>
+            • Ability to overcome death (revive)<br>
+            • Understanding of all languages<br>
+            • Connection to Hydaelyn (the Mothercrystal)<br><br>
+            This power marks you as a hero of destiny.
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- STEP 9: STORY -->
+        <h2 style="--i:9;">Step 9: Character Story</h2>
+        <p>Define your character's background, personality, and goals.</p>
+
+        <h3>Character Details</h3>
+        <ul>
+            <li><strong>Name:</strong> What are you called?</li>
+            <li><strong>Homeland:</strong> Which city-state or region?</li>
+            <li><strong>Profession Before Adventuring:</strong> Merchant? Soldier? Artisan?</li>
+            <li><strong>Why Did You Become an Adventurer?</strong></li>
+            <li><strong>What Drives You?</strong> Fame? Justice? Coin? Knowledge?</li>
+            <li><strong>Personality Traits:</strong> Bold? Cautious? Kind? Cynical?</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <!-- STEP 10: COMPLETE -->
+        <h2 style="--i:10;">Step 10: Ready for Adventure</h2>
+
+        <div class="menu-panel" style="border-color: var(--accent-orange);" data-label="◆ CHARACTER COMPLETE ◆">
+            <strong>✓</strong> Race chosen (with clan and bonuses)<br>
+            <strong>✓</strong> Job selected (role in party)<br>
+            <strong>✓</strong> Attributes assigned (STR, DEX, VIT, INT, MND, CHA)<br>
+            <strong>✓</strong> Grand Company joined (city-state allegiance)<br>
+            <strong>✓</strong> Elemental affinity determined<br>
+            <strong>✓</strong> Equipment acquired (based on Job)<br>
+            <strong>✓</strong> HP and MP calculated<br>
+            <strong>✓</strong> Echo power acknowledged<br>
+            <strong>✓</strong> Background and story defined<br>
+            <strong>✓</strong> Ready to face primals and empire!
+        </div>
+
+        <div class="info-panel" style="margin-top: 2rem;">
+            Your journey begins, Warrior of Light. The realm of <strong>Eorzea</strong> needs you. Face the primals. Stand against the Garlean Empire. Unite the city-states. Uncover the mysteries of the <em>Echo</em>. Your adventure across <strong>Hydaelyn</strong> awaits. <em>The Crystal's blessing upon you.</em>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-motto">
+            Shine Brightly, Warrior of Light
+        </div>
+        <div class="footer-sub">
+            Final Fantasy XIV TTRPG // Square Enix // d20 System // Job-Based Progression
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>

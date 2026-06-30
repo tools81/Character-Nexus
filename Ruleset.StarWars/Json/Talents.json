@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Grit",
+    "description": "Gain +1 strain threshold.",
+    "bonusadjustments": [
+      {
+        "type": "strainthreshold",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "name": "Precise Aim",
+    "description": "Once per round, may perform Precise Aim maneuver. Suffer a number of strain no greater than ranks in Precise Aim, then reduce target's melee and ranged defense by that number."
+  },
+  {
+    "name": "Targeted Blow",
+    "description": "After making a successful attack, may spend 1 Destiny Point to add damage equal to Agility to one hit."
+  },
+  {
+    "name": "Stalker",
+    "description": "Add [dice_boost] per rank of Stalker to all Stealth and Coordination checks."
+  },
+  {
+    "name": "Lethal Blows",
+    "description": "Add +10 per rank of Lethal Blows to any Critical Injury results inflicted on opponents."
+  },
+  {
+    "name": "Jump Up",
+    "description": "Once per round, may stand from seated or prone as an incidental."
+  },
+  {
+    "name": "Sniper Shot",
+    "description": "Before making a non-thrown ranged attack, may perform a Sniper Shot maneuver to increase the weapon's range by 1 range band per rank in Sniper Shot. Upgrade the difficulty of the attack by 1 per range band increase."
+  },
+  {
+    "name": "Deadly Accuracy",
+    "description": "When acquired, choose 1 combat skill. Add damage equal to ranks in that skill to one hit of successful attack made using that skill."
+  },
+  {
+    "name": "Quick Strike",
+    "description": "Add [dice_boost] per rank of Quick Strike to combat checks against targets that have not acted yet this encounter."
+  },
+  {
+    "name": "Dodge",
+    "description": "When targeted by combat check, may perform a Dodge incidental to suffer a number of strain no greater than ranks of Dodge, then upgrade the difficulty of the check by that number."
+  },
+  {
+    "name": "Dedication",
+    "description": "Gain +1 to a single characteristic. This cannot bring a characteristic above 6.",
+    "userchoices": [
+      {
+        "type": "attributes",
+        "choices": [],
+        "value": 1,
+        "count": 1,
+        "category": "Adjustment"
+      }
+    ]
+  },
+  {
+    "name": "Quick Draw",
+    "description": "Once per round, draw or holster a weapon or accessible item as an incidental."
+  },
+  {
+    "name": "Anatomy Lessons",
+    "description": "After making a successful attack, may spend 1 Destiny Point to add damage equal to Intellect to one hit."
+  },
+  {
+    "name": "Master Of Shadows",
+    "description": "Once per round, suffer 2 strain to decrease difficulty of next Stealth or Skulduggery check by one."
+  }
+]

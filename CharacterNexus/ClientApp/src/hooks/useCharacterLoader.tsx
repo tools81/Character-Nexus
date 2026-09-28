@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { UseFormReset, UseFormSetValue } from "react-hook-form";
 import { useAppDispatch, useAppSelector } from "../store/configureStore";
 import { fetchCharacterSchema, fetchCharacterByName } from "../store/slices/characterSlice";
@@ -7,7 +7,8 @@ import { getURLParameter } from "../utils/getUrlParameter";
 
 export function useCharacterLoader(
   reset: UseFormReset<any>,
-  setValue: UseFormSetValue<any>
+  setValue: UseFormSetValue<any>,
+  onCharacterLoaded?: () => void
 ) {
   const dispatch = useAppDispatch();
   const { currentRuleset } = useAppSelector((state: { ruleset: any }) => state.ruleset);
@@ -15,6 +16,10 @@ export function useCharacterLoader(
 
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [imageData, setImageData] = useState<File | null>(null);
+
+  // Keep the latest callback without re-running the load effect when it changes
+  const onLoadedRef = useRef(onCharacterLoaded);
+  onLoadedRef.current = onCharacterLoaded;
 
   // Load schema on ruleset change
   useEffect(() => {
@@ -37,6 +42,7 @@ export function useCharacterLoader(
     if (!currentCharacter) return;
 
     reset(currentCharacter);
+    onLoadedRef.current?.();
 
     if (currentCharacter.image) {
       setImagePreview(currentCharacter.image);

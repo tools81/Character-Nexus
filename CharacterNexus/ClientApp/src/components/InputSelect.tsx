@@ -1,4 +1,4 @@
-import { ChangeEvent, forwardRef, useEffect, useRef, useState } from "react";
+import { ChangeEvent, ReactNode, forwardRef, useEffect, useRef, useState } from "react";
 import {
   UseFormRegister,
   FieldValues,
@@ -29,13 +29,14 @@ interface Props {
   setBonusCharacteristics: React.Dispatch<React.SetStateAction<BonusCharacteristics>>;
   bonusAdjustments: BonusAdjustments;
   setBonusAdjustments: React.Dispatch<React.SetStateAction<BonusAdjustments>>;
-  userChoices: UserChoices;
-  setUserChoices: React.Dispatch<React.SetStateAction<UserChoices>>;
-  openUserChoiceModal: (choices: UserChoices) => void;
+  // Called with the selected option's user choices (empty when it has none)
+  onUserChoicesChange?: (origin: string, choices: UserChoices) => void;
   dice?: boolean;
   disabled?: boolean;
   visible?: boolean;
   displayLabel?: string;
+  // Rendered directly below the select (e.g. the user choice panel)
+  children?: ReactNode;
 }
 
 /* =======================================================
@@ -56,13 +57,12 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
     setBonusCharacteristics,
     bonusAdjustments,
     setBonusAdjustments,
-    userChoices,
-    setUserChoices,
-    openUserChoiceModal,
+    onUserChoicesChange,
     dice,
     disabled,
     visible = true,
-    displayLabel
+    displayLabel,
+    children
   } = props;
 
   const selectRef = useRef<HTMLSelectElement | null>(null);
@@ -221,9 +221,7 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
               setBonusCharacteristics,
               bonusAdjustments,
               setBonusAdjustments,
-              userChoices,
-              setUserChoices,
-              openUserChoiceModal,
+              onUserChoicesChange,
               getValues,
               setValue,
               unregister
@@ -245,6 +243,7 @@ const InputSelect = forwardRef<HTMLSelectElement, Props>((props, ref) => {
           ))}
         </select>
       </div>
+      {visible && children}
       {visible && <div className="pb-3" />}
     </>
   );
@@ -258,9 +257,7 @@ const handleSelectChange = (
   setBonusCharacteristics: React.Dispatch<React.SetStateAction<BonusCharacteristics>>,
   bonusAdjustments: any,
   setBonusAdjustments: React.Dispatch<React.SetStateAction<BonusAdjustments>>,
-  userChoices: any,
-  setUserChoices: React.Dispatch<React.SetStateAction<UserChoices>>,
-  openUserChoiceModal: (choices: UserChoices) => void,
+  onUserChoicesChange: ((origin: string, choices: UserChoices) => void) | undefined,
   getValues: UseFormGetValues<FieldValues>,
   setValue: UseFormSetValue<FieldValues>,
   unregister: UseFormUnregister<FieldValues>
@@ -307,10 +304,10 @@ const handleSelectChange = (
     setBonusCharacteristics([...filteredCharacteristics, ...newCharacteristics]);
   }
 
-  if (selectUserChoices?.length > 0) {
-    for (const choice of selectUserChoices as UserChoices) {
-      choice.origin = event.target.name;
-    }
-    openUserChoiceModal(selectUserChoices as UserChoices);
+  // Always report, so switching to an option without choices clears the old ones
+  const userChoices: UserChoices = selectUserChoices ?? [];
+  for (const choice of userChoices) {
+    choice.origin = event.target.name;
   }
+  onUserChoicesChange?.(event.target.name, userChoices);
 };

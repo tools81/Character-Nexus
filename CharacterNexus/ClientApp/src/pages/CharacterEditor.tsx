@@ -23,18 +23,20 @@ import FormAccordion from "../components/FormAccordion";
 import DisabledPrereqWrapper from "../components/DisabledPrereqWrapper";
 import RightCollapsiblePane from "../components/RightCollapsiblePane";
 import StatsBar from "../components/StatsBar";
+import UserChoicePanel, { hasUserChoiceOptions } from "../components/UserChoicePanel";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import { useFieldCalculations } from "../hooks/useFieldCalculations";
 import { useBonusCharacteristics } from "../hooks/useBonusCharacteristics";
 import { useBonusAdjustments } from "../hooks/useBonusAdjustments";
-import { useConditionalBonuses } from "../hooks/useConditionalBonuses";
+import { useConditionalBonuses, activeConditionalCopies } from "../hooks/useConditionalBonuses";
 import { handleRemoveFieldValue } from "../hooks/useBonus";
-import { useModal } from "../hooks/useModal";
 import { useDisableEngine } from "../hooks/useDisableEngine";
 import { useVisibilityEngine, isFieldVisible } from "../hooks/useVisibilityEngine";
 import { useCharacterLoader } from "../hooks/useCharacterLoader";
 import { useUserChoices } from "../hooks/useUserChoices";
 import { useRulesetTheme } from "../hooks/useRulesetTheme";
+import { collectLoadedBonuses } from "../utils/loadedBonuses";
+import { rowIndexIn, shiftRowPath } from "../utils/arrayRowPaths";
 
 /* =======================================================
    ArrayItem — handles a single non-modifiableitem array
@@ -115,11 +117,13 @@ interface FieldArrayProps {
     isVisible: (name: string) => boolean,
     includeLabel?: boolean
   ) => React.ReactNode;
+  onRemoveRow: (arrayName: string, index: number, remove: (index: number) => void) => void;
 }
 
-const FieldArray = ({ field, disabledMap, visibilityMap, isVisible, renderField }: FieldArrayProps) => {
+const FieldArray = ({ field, disabledMap, visibilityMap, isVisible, renderField, onRemoveRow }: FieldArrayProps) => {
   const { control } = useFormContext();
   const { fields, append, remove } = useFieldArray({ name: field.name, control });
+  const removeRow = (index: number) => onRemoveRow(field.name, index, remove);
 
   const handleAddSelect = () => append({ value: "" });
 
@@ -129,7 +133,7 @@ const FieldArray = ({ field, disabledMap, visibilityMap, isVisible, renderField 
       {fields.map((item, index) => {
         const childComponent = { ...field.component, name: `${field.name}.${index}` };
         if (field.component.type === "modifiableitem") {
-          childComponent.onRemove = () => remove(index);
+          childComponent.onRemove = () => removeRow(index);
           return <div key={item.id}>{renderField(childComponent, disabledMap, visibilityMap, isVisible, false)}</div>;
         }
         return (
@@ -141,7 +145,7 @@ const FieldArray = ({ field, disabledMap, visibilityMap, isVisible, renderField 
             visibilityMap={visibilityMap}
             isVisible={isVisible}
             renderField={renderField}
-            onRemove={() => remove(index)}
+            onRemove={() => removeRow(index)}
           />
         );
       })}
@@ -166,9 +170,8 @@ interface ModifiableItemProps {
   setBonusAdjustments: React.Dispatch<React.SetStateAction<BonusAdjustments>>;
   bonusCharacteristics: BonusCharacteristics;
   setBonusCharacteristics: React.Dispatch<React.SetStateAction<BonusCharacteristics>>;
-  userChoices: UserChoices;
-  setUserChoices: React.Dispatch<React.SetStateAction<UserChoices>>;
-  openUserChoiceModal: (choices: UserChoices) => void;
+  onUserChoicesChange: (origin: string, choices: UserChoices) => void;
+  renderChoicePanel: (origin: string, options?: any[]) => React.ReactNode;
 }
 
 const ModifiableItem = ({
@@ -177,9 +180,8 @@ const ModifiableItem = ({
   setBonusAdjustments,
   bonusCharacteristics,
   setBonusCharacteristics,
-  userChoices,
-  setUserChoices,
-  openUserChoiceModal,
+  onUserChoicesChange,
+  renderChoicePanel,
 }: ModifiableItemProps) => {
   const { register, unregister, getValues, setValue, control } = useFormContext();
 
@@ -260,15 +262,14 @@ const ModifiableItem = ({
           setBonusCharacteristics={setBonusCharacteristics}
           bonusAdjustments={bonusAdjustments}
           setBonusAdjustments={setBonusAdjustments}
-          userChoices={userChoices}
-          setUserChoices={setUserChoices}
-          openUserChoiceModal={openUserChoiceModal}
+          onUserChoicesChange={onUserChoicesChange}
           displayLabel={itemDisplayLabel}
         />
         <button type="button" className="btn btn-outline-secondary" onClick={field.onRemove}>
           Remove
         </button>
       </div>
+      {renderChoicePanel(itemValueFieldName, field.options)}
       {modFields.length > 0 && (
         <div className="ms-3">
           {modFields.map((item, modIndex) => (
@@ -336,14 +337,74 @@ const CharacterEditor: React.FC = () => {
 
   useRulesetTheme(currentRuleset);
 
-  const userChoiceModal = useModal();
-  const { imagePreview, imageData, setImagePreview, setImageData } = useCharacterLoader(reset, setValue);
-  const { userChoices, setUserChoices, choiceFields, openUserChoiceModal } = useUserChoices(unregister, setValue, watch, userChoiceModal);
-
-  useBonusAdjustments(bonusAdjustments, getValues, setValue);
-  useBonusCharacteristics(bonusCharacteristics, getValues, setValue);
-  useConditionalBonuses(bonusAdjustments, setBonusAdjustments, bonusCharacteristics, setBonusCharacteristics, getValues, watch);
+  const { setApplied: setAdjustmentsApplied } = useBonusAdjustments(bonusAdjustments, getValues, setValue);
+  const { setApplied: setCharacteristicsApplied } = useBonusCharacteristics(bonusCharacteristics, getValues, setValue);
+  const { resetActiveKeys, rewriteActiveKeys } = useConditionalBonuses(
+    bonusAdjustments, setBonusAdjustments, bonusCharacteristics, setBonusCharacteristics, getValues, watch
+  );
+  const { choicesByOrigin, choiceFields, setOriginChoices, restoreChoices, shiftChoicesForRemovedRow } = useUserChoices({
+    unregister,
+    getValues,
+    setValue,
+    watch,
+    setBonusCharacteristics,
+    setBonusAdjustments,
+  });
   useFieldCalculations(schema, getValues, setValue, watch);
+
+  // After a saved character is loaded into the form, rebuild its choice panels
+  // and the bonus state its selections would have produced. The saved values
+  // already include those bonuses, so they're recorded as applied rather than
+  // applied again; changing a selection later then undoes them correctly.
+  const restoreLoadedState = () => {
+    if (!schema) return;
+    const restoredChoiceFields = restoreChoices(schema.fields);
+    const { adjustments, characteristics } = collectLoadedBonuses(schema.fields, restoredChoiceFields, getValues);
+
+    const adjustmentCopies = activeConditionalCopies(adjustments, "adj", getValues);
+    const characteristicCopies = activeConditionalCopies(characteristics, "char", getValues);
+    const allAdjustments = [...adjustments, ...adjustmentCopies.map(c => c.copy)];
+    const allCharacteristics = [...characteristics, ...characteristicCopies.map(c => c.copy)];
+
+    setAdjustmentsApplied(() => allAdjustments);
+    setCharacteristicsApplied(() => allCharacteristics);
+    resetActiveKeys(adjustmentCopies.map(c => c.key), characteristicCopies.map(c => c.key));
+    setBonusAdjustments(allAdjustments);
+    setBonusCharacteristics(allCharacteristics);
+  };
+
+  // Declared after the bonus hooks so their effects run before a load is restored
+  const { imagePreview, imageData, setImagePreview, setImageData } = useCharacterLoader(reset, setValue, restoreLoadedState);
+
+  // Remove row `index` of a form array along with the bonuses and choices it granted.
+  // Rows after it move up one index, so everything keyed by their paths is renamed.
+  const removeArrayRow = (arrayName: string, index: number, remove: (index: number) => void) => {
+    const rowOf = (path?: string) => rowIndexIn(path, arrayName);
+    const shift = (path: string) => shiftRowPath(path, arrayName, index);
+
+    const renameEntry = <T extends { origin?: string; type: string }>(bonus: T): T =>
+      ({ ...bonus, origin: bonus.origin && shift(bonus.origin), type: shift(bonus.type) });
+
+    // Applied lists: bonuses that target data inside the removed row (e.g. mods)
+    // disappear with the row, so drop them without an undo. Everything else from
+    // the row stays listed as applied, so leaving state below undoes it.
+    const rewriteApplied = <T extends { origin?: string; type: string }>(applied: T[]): T[] =>
+      applied
+        .filter(b => !(rowOf(b.origin) === index && rowOf(b.type) === index))
+        .map(renameEntry);
+    // State: drop everything the removed row granted
+    const rewriteState = <T extends { origin?: string; type: string }>(bonuses: T[]): T[] =>
+      bonuses.filter(b => rowOf(b.origin) !== index).map(renameEntry);
+
+    setAdjustmentsApplied(rewriteApplied);
+    setCharacteristicsApplied(rewriteApplied);
+    setBonusAdjustments(rewriteState);
+    setBonusCharacteristics(rewriteState);
+    rewriteActiveKeys(key => (rowOf(key) === index ? null : shift(key)));
+    shiftChoicesForRemovedRow(arrayName, index);
+
+    remove(index);
+  };
 
   // Submit handler
   const onSubmit = async (data: any) => {
@@ -353,6 +414,21 @@ const CharacterEditor: React.FC = () => {
     await dispatch(saveCharacter({ rulesetName: currentRuleset.name, characterData: data, imageFile: imageData ?? undefined }));
 
     navigate("/ruleset");
+  };
+
+  // Collapsible container shown below a field whose options can grant user choices.
+  // It stays collapsed until the field is set to an option that has choices.
+  const renderChoicePanel = (origin: string, options?: any[]) => {
+    if (!hasUserChoiceOptions(options)) return null;
+    return (
+      <UserChoicePanel
+        userChoices={choicesByOrigin[origin]}
+        choiceFields={choiceFields.filter((f: any) => f.origin === origin)}
+        renderChoiceField={(choiceField: any) =>
+          renderField(choiceField, {}, {}, () => true, choiceField.includeLabel ?? true)
+        }
+      />
+    );
   };
 
   const renderField = (
@@ -484,13 +560,13 @@ const CharacterEditor: React.FC = () => {
               setBonusCharacteristics={setBonusCharacteristics}
               bonusAdjustments={bonusAdjustments}
               setBonusAdjustments={setBonusAdjustments}
-              userChoices={userChoices}
-              setUserChoices={setUserChoices}
-              openUserChoiceModal={openUserChoiceModal}
+              onUserChoicesChange={setOriginChoices}
               dice={field.dice}
               disabled={disabledMap?.[field.name] === true}
               visible={isVisible(field)}
-            />
+            >
+              {renderChoicePanel(field.name, field.options)}
+            </InputSelect>
           </DisabledPrereqWrapper>
         );
       case "date":
@@ -583,9 +659,8 @@ const CharacterEditor: React.FC = () => {
             setBonusAdjustments={setBonusAdjustments}
             bonusCharacteristics={bonusCharacteristics}
             setBonusCharacteristics={setBonusCharacteristics}
-            userChoices={userChoices}
-            setUserChoices={setUserChoices}
-            openUserChoiceModal={openUserChoiceModal}
+            onUserChoicesChange={setOriginChoices}
+            renderChoicePanel={renderChoicePanel}
           />
         );
       case "array":
@@ -596,6 +671,7 @@ const CharacterEditor: React.FC = () => {
             visibilityMap={visibilityMap}
             isVisible={isVisible}
             renderField={renderField}
+            onRemoveRow={removeArrayRow}
           />
         );
       case "image":
@@ -656,8 +732,6 @@ const CharacterEditor: React.FC = () => {
           schema={schema}
           control={control}
           renderField={renderField}
-          choiceFields={choiceFields}
-          userChoiceModal={userChoiceModal}
         />
         <div className="center-container">
           <button className="submit-button" type="submit">Save Character</button>
@@ -672,8 +746,6 @@ const FormContents = ({
   schema,
   control,
   renderField,
-  choiceFields,
-  userChoiceModal,
 }: any) => {
   const { register } = useFormContext();
   const isMobile = useMediaQuery("(max-width: 767px)");
@@ -780,76 +852,9 @@ const FormContents = ({
         renderUnlabelledFields()
       )}
 
-      <userChoiceModal.Modal>
-        {({ userChoices, close }: any) => (
-          <>
-            <h2>Choice:</h2>
-
-            {userChoices.map((item: any, index: number) => (
-              <div key={item.type}>
-                <p>{item.label ?? `Choose ${item.count}`}</p>
-
-                {choiceFields
-                  .filter((field: any) =>
-                    field.name?.startsWith(`choice.${item.type}.${item.origin}.`)
-                  )
-                  .map((field: any) => (
-                    <ChoiceFieldWithDescription
-                      key={field.id}
-                      field={field}
-                      disabledMap={disabledMap}
-                      visibilityMap={visibilityMap}
-                      isVisible={isVisible}
-                      renderField={renderField}
-                    />
-                  ))}
-
-                {index < userChoices.length - 1 && (
-                  <hr className="my-3" />
-                )}
-              </div>
-            ))}
-            <br />
-            <button className="center-container" onClick={close}>Close</button>
-          </>
-        )}
-      </userChoiceModal.Modal>
     </>
   );
 };
 
-
-function ChoiceFieldWithDescription({ field, disabledMap, visibilityMap, isVisible, renderField }: {
-  field: any;
-  disabledMap: any;
-  visibilityMap: any;
-  isVisible: any;
-  renderField: any;
-}) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <div>
-      <div className="d-flex align-items-center gap-2">
-        <div className="flex-grow-1">
-          {renderField(field, disabledMap, visibilityMap, isVisible, field.includeLabel ?? true)}
-        </div>
-        {field.description && (
-          <button
-            type="button"
-            className="btn btn-link btn-sm p-0 flex-shrink-0"
-            onClick={() => setOpen(o => !o)}
-            aria-expanded={open}
-          >
-            {open ? "▲" : "▼"}
-          </button>
-        )}
-      </div>
-      {field.description && open && (
-        <small className="d-block mb-2 mt-1" dangerouslySetInnerHTML={{ __html: field.description }} />
-      )}
-    </div>
-  );
-}
 
 export default CharacterEditor;

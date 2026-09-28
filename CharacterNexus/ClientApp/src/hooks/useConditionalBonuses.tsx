@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { UseFormGetValues, UseFormWatch } from "react-hook-form";
 import { BonusAdjustment, BonusAdjustments } from "../types/BonusAdjustment";
 import { BonusCharacteristic, BonusCharacteristics } from "../types/BonusCharacteristic";
@@ -55,6 +55,41 @@ function evaluateConditions(
 }
 
 /**
+ * Pairs each conditional bonus with a stable key: its origin plus its position
+ * among that origin's conditional bonuses. Keys don't shift when bonuses from
+ * other origins are added or removed.
+ */
+export function conditionalEntries<T extends { origin?: string; conditions?: BonusCondition[] }>(
+  bonuses: T[],
+  kind: "adj" | "char"
+): { key: string; bonus: T }[] {
+  const counts = new Map<string, number>();
+  const result: { key: string; bonus: T }[] = [];
+  for (const bonus of bonuses) {
+    if (!bonus.conditions?.length) continue;
+    const origin = bonus.origin ?? "";
+    const n = counts.get(origin) ?? 0;
+    counts.set(origin, n + 1);
+    result.push({ key: `${origin}:conditional:${kind}:${n}`, bonus });
+  }
+  return result;
+}
+
+/**
+ * Returns the active (condition-satisfied) copies for a list of bonuses, as the
+ * hook would add them to state. Used to rebuild state for a loaded character.
+ */
+export function activeConditionalCopies<T extends { origin?: string; conditions?: BonusCondition[] }>(
+  bonuses: T[],
+  kind: "adj" | "char",
+  getValues: UseFormGetValues<any>
+): { key: string; copy: T }[] {
+  return conditionalEntries(bonuses, kind)
+    .filter(({ bonus }) => evaluateConditions(bonus.conditions!, getValues))
+    .map(({ key, bonus }) => ({ key, copy: { ...bonus, origin: key, conditions: undefined } }));
+}
+
+/**
  * Watches all condition fields from pending conditional bonuses and keeps the
  * active bonus state arrays in sync as form values change.
  *
@@ -85,31 +120,23 @@ export function useConditionalBonuses(
       if (char.conditions?.length) char.conditions.forEach(c => conditionFields.add(conditionFieldPath(c)));
     }
 
-    if (conditionFields.size === 0) return;
+    // Nothing to evaluate and nothing active to clean up
+    if (conditionFields.size === 0 && activeAdjustmentKeys.current.size === 0 && activeCharacteristicKeys.current.size === 0) return;
 
     const evaluate = () => {
       // ── Adjustments ────────────────────────────────────────────────────────
       const nextAdjKeys = new Set<string>();
       const toAddAdj: BonusAdjustment[] = [];
-      const toRemoveAdjKeys: string[] = [];
 
-      bonusAdjustments.forEach((adj, idx) => {
-        if (!adj.conditions?.length) return; // unconditional — leave alone
-
-        const key = `${adj.origin ?? ""}:conditional:adj:${idx}`;
-        const qualifies = evaluateConditions(adj.conditions, getValues);
-
-        if (qualifies) {
-          nextAdjKeys.add(key);
-          if (!activeAdjustmentKeys.current.has(key)) {
-            toAddAdj.push({ ...adj, origin: key, conditions: undefined });
-          }
-        } else {
-          if (activeAdjustmentKeys.current.has(key)) {
-            toRemoveAdjKeys.push(key);
-          }
+      for (const { key, bonus } of conditionalEntries(bonusAdjustments, "adj")) {
+        if (!evaluateConditions(bonus.conditions!, getValues)) continue;
+        nextAdjKeys.add(key);
+        if (!activeAdjustmentKeys.current.has(key)) {
+          toAddAdj.push({ ...bonus, origin: key, conditions: undefined });
         }
-      });
+      }
+      // Remove copies whose condition failed or whose source bonus is gone
+      const toRemoveAdjKeys = Array.from(activeAdjustmentKeys.current).filter(k => !nextAdjKeys.has(k));
 
       if (toAddAdj.length > 0 || toRemoveAdjKeys.length > 0) {
         activeAdjustmentKeys.current = nextAdjKeys;
@@ -122,25 +149,15 @@ export function useConditionalBonuses(
       // ── Characteristics ────────────────────────────────────────────────────
       const nextCharKeys = new Set<string>();
       const toAddChar: BonusCharacteristic[] = [];
-      const toRemoveCharKeys: string[] = [];
 
-      bonusCharacteristics.forEach((char, idx) => {
-        if (!char.conditions?.length) return;
-
-        const key = `${char.origin ?? ""}:conditional:char:${idx}`;
-        const qualifies = evaluateConditions(char.conditions, getValues);
-
-        if (qualifies) {
-          nextCharKeys.add(key);
-          if (!activeCharacteristicKeys.current.has(key)) {
-            toAddChar.push({ ...char, origin: key, conditions: undefined });
-          }
-        } else {
-          if (activeCharacteristicKeys.current.has(key)) {
-            toRemoveCharKeys.push(key);
-          }
+      for (const { key, bonus } of conditionalEntries(bonusCharacteristics, "char")) {
+        if (!evaluateConditions(bonus.conditions!, getValues)) continue;
+        nextCharKeys.add(key);
+        if (!activeCharacteristicKeys.current.has(key)) {
+          toAddChar.push({ ...bonus, origin: key, conditions: undefined });
         }
-      });
+      }
+      const toRemoveCharKeys = Array.from(activeCharacteristicKeys.current).filter(k => !nextCharKeys.has(k));
 
       if (toAddChar.length > 0 || toRemoveCharKeys.length > 0) {
         activeCharacteristicKeys.current = nextCharKeys;
@@ -153,10 +170,27 @@ export function useConditionalBonuses(
 
     // Run immediately and subscribe to future changes on condition fields.
     evaluate();
+    if (conditionFields.size === 0) return;
     const subscription = watch((_, { name }) => {
       if (name && conditionFields.has(name)) evaluate();
     });
 
     return () => subscription.unsubscribe();
   }, [bonusAdjustments, bonusCharacteristics]);
+
+  // Replace the active key sets (used when rebuilding state for a loaded character)
+  const resetActiveKeys = useCallback((adjKeys: string[], charKeys: string[]) => {
+    activeAdjustmentKeys.current = new Set(adjKeys);
+    activeCharacteristicKeys.current = new Set(charKeys);
+  }, []);
+
+  // Rename or drop (return null) active keys, e.g. when array rows shift
+  const rewriteActiveKeys = useCallback((rewrite: (key: string) => string | null) => {
+    const apply = (keys: Set<string>) =>
+      new Set(Array.from(keys).map(rewrite).filter((k): k is string => k !== null));
+    activeAdjustmentKeys.current = apply(activeAdjustmentKeys.current);
+    activeCharacteristicKeys.current = apply(activeCharacteristicKeys.current);
+  }, []);
+
+  return { resetActiveKeys, rewriteActiveKeys };
 }

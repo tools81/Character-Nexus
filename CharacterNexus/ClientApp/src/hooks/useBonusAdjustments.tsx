@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { BonusAdjustments } from "../types/BonusAdjustment";
 
 /**
@@ -60,6 +60,14 @@ export function useBonusAdjustments(
     }
   }, [bonusAdjustments]);
 
+  // Rewrite the list of entries treated as already applied to the form values.
+  // Entries recorded here won't be applied again when they appear in state, but
+  // removing them from state later still undoes them. Used when loading a
+  // character (effects are already in the saved values) and when array rows shift.
+  const setApplied = useCallback((update: (applied: BonusAdjustments) => BonusAdjustments) => {
+    prevRef.current = update(prevRef.current);
+  }, []);
+
   const applyAdjustment = (type: string, name: string, bonusValue: number) => {
     if (!type || typeof type !== 'string') return;
 
@@ -74,4 +82,6 @@ export function useBonusAdjustments(
     const current = getValues(fieldPath) ?? 0;
     setValue(fieldPath, +current + +bonusValue);
   };
+
+  return { setApplied };
 }

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { BonusCharacteristics } from "../types/BonusCharacteristic";
 import { UseFormGetValues, UseFormSetValue, FieldValues } from "react-hook-form";
 
@@ -46,6 +46,16 @@ export function useBonusCharacteristics(
       handleSetFieldValue(getValues, setValue, fieldName, choice);
     }
   }, [bonusCharacteristics]);
+
+  // Rewrite the list of entries treated as already applied to the form values.
+  // Entries recorded here won't be applied again when they appear in state, but
+  // removing them from state later still undoes them. Used when loading a
+  // character (effects are already in the saved values) and when array rows shift.
+  const setApplied = useCallback((update: (applied: BonusCharacteristics) => BonusCharacteristics) => {
+    prevRef.current = update(prevRef.current);
+  }, []);
+
+  return { setApplied };
 }
 
 const handleRemoveCharacteristic = (
